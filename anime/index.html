@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta name="referrer" content="no-referrer" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>所有动画 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="Animes" />
+<meta property="og:description" content="Ian 的博客" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://huozhixue.github.io/anime/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Animes"/>
+<meta name="twitter:description" content="Ian 的博客"/>
+<meta name="application-name" content="个人博客">
+<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/anime/" /><link rel="alternate" href="/anime/index.xml" type="application/rss+xml" title="个人博客">
+    <link rel="feed" href="/anime/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item active" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/anime/" title="">动画</a><a class="menu-item" href="/game/" title="">游戏</a><a class="menu-item" href="/leetcode/" title="">力扣</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
+            <meting-js auto="https://music.163.com/#/playlist?id=37610359" fixed="true" order="random"></meting-js>
+            <main class="main">
+                <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster">所有动画<sup>  435</sup>
+        </h2><div class="tag-cloud-tags"><a href="/anime_tags/tv/">TV <sup>328</sup></a><a href="/anime_tags/%E5%89%A7%E5%9C%BA%E7%89%88/">剧场版 <sup>78</sup></a><a href="/anime_tags/%E7%9F%AD%E7%89%87/">短片 <sup>27</sup></a><a href="/anime_tags/%E7%9B%98%E7%82%B9/">盘点 <sup>2</sup></a></div><h3 class="group-title">2020年07月</h3><article class="archive-item">
+                        <a href="/anime/wu-shan-wu-xing/" class="archive-item-link">雾山五行</a>
+                        <span class="archive-item-date">07-26</span>
+                    </article><h3 class="group-title">2020年06月</h3><article class="archive-item">
+                        <a href="/anime/a-whisker-away/" class="archive-item-link">想哭的我戴上了猫的面具</a>
+                        <span class="archive-item-date">06-18</span>
+                    </article><h3 class="group-title">2020年04月</h3><article class="archive-item">
+                        <a href="/anime/sing-yesterday-for-me/" class="archive-item-link">昨日之歌</a>
+                        <span class="archive-item-date">04-04</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/wave-listen-to-me/" class="archive-item-link">听着这电波</a>
+                        <span class="archive-item-date">04-03</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/kakushigoto/" class="archive-item-link">隐瞒之事</a>
+                        <span class="archive-item-date">04-02</span>
+                    </article><h3 class="group-title">2020年01月</h3><article class="archive-item">
+                        <a href="/anime/dorohedoro/" class="archive-item-link">异兽魔都</a>
+                        <span class="archive-item-date">01-12</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/interspecies-reviewers/" class="archive-item-link">异种族风俗娘评鉴指南</a>
+                        <span class="archive-item-date">01-11</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/22_7/" class="archive-item-link">22/7</a>
+                        <span class="archive-item-date">01-11</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/smile-at-the-runway/" class="archive-item-link">请在T台上微笑</a>
+                        <span class="archive-item-date">01-10</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/id-invaded/" class="archive-item-link">异度侵入</a>
+                        <span class="archive-item-date">01-05</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/eizouken-ni-wa-te-wo-dasu-na/" class="archive-item-link">别对映像研出手！</a>
+                        <span class="archive-item-date">01-05</span>
+                    </article><h3 class="group-title">2019年12月</h3><article class="archive-item">
+                        <a href="/anime/2019/" class="archive-item-link">2019 盘点</a>
+                        <span class="archive-item-date">12-31</span>
+                    </article><h3 class="group-title">2019年10月</h3><article class="archive-item">
+                        <a href="/anime/beastars/" class="archive-item-link">动物狂想曲</a>
+                        <span class="archive-item-date">10-09</span>
+                    </article><h3 class="group-title">2019年07月</h3><article class="archive-item">
+                        <a href="/anime/ne-zha/" class="archive-item-link">哪吒之魔童降世</a>
+                        <span class="archive-item-date">07-26</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/tenki-no-ko/" class="archive-item-link">天气之子</a>
+                        <span class="archive-item-date">07-19</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/vinland-saga/" class="archive-item-link">冰海战记</a>
+                        <span class="archive-item-date">07-07</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/joshikousei-no-mudazukai-/" class="archive-item-link">女高中生的虚度日常</a>
+                        <span class="archive-item-date">07-05</span>
+                    </article><h3 class="group-title">2019年06月</h3><article class="archive-item">
+                        <a href="/anime/ride-your-wave/" class="archive-item-link">若能与你共乘海浪之上</a>
+                        <span class="archive-item-date">06-21</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/children-of-the-sea/" class="archive-item-link">海兽之子</a>
+                        <span class="archive-item-date">06-07</span>
+                    </article><h3 class="group-title">2019年05月</h3><article class="archive-item">
+                        <a href="/anime/promare/" class="archive-item-link">Promare</a>
+                        <span class="archive-item-date">05-24</span>
+                    </article><h3 class="group-title">2019年04月</h3><article class="archive-item">
+                        <a href="/anime/kimetsu-no-yaiba/" class="archive-item-link">鬼灭之刃</a>
+                        <span class="archive-item-date">04-06</span>
+                    </article><h3 class="group-title">2019年03月</h3><article class="archive-item">
+                        <a href="/anime/love-death-robots/" class="archive-item-link">爱，死亡和机器人</a>
+                        <span class="archive-item-date">03-15</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/sobae/" class="archive-item-link">日照雨</a>
+                        <span class="archive-item-date">03-06</span>
+                    </article><h3 class="group-title">2019年01月</h3><article class="archive-item">
+                        <a href="/anime/kaguya-sama-wa-kokurasetai/" class="archive-item-link">辉夜大小姐想让我告白</a>
+                        <span class="archive-item-date">01-12</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/white-snake/" class="archive-item-link">白蛇：缘起</a>
+                        <span class="archive-item-date">01-11</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/flying-babies/" class="archive-item-link">草裙舞女孩</a>
+                        <span class="archive-item-date">01-10</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/kemurikusa/" class="archive-item-link">烟草</a>
+                        <span class="archive-item-date">01-09</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/watashi-ni-tenshi-ga-maiorita/" class="archive-item-link">天使降临到了我身边</a>
+                        <span class="archive-item-date">01-08</span>
+                    </article><h3 class="group-title">2018年12月</h3><article class="archive-item">
+                        <a href="/anime/2018/" class="archive-item-link">2018 盘点</a>
+                        <span class="archive-item-date">12-31</span>
+                    </article><article class="archive-item">
+                        <a href="/anime/spider-man-into-the-spider-verse/" class="archive-item-link">蜘蛛侠：平行宇宙</a>
+                        <span class="archive-item-date">12-14</span>
+                    </article><ul class="pagination"><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/anime/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/anime/page/2/">2</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/anime/page/3/">3</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/anime/page/15/">15</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mapbox-gl@1.10.1/dist/mapbox-gl.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.5.1/dist/mermaid.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/theme/macarons.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mapbox-gl@1.10.1/dist/mapbox-gl.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl-language.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"mapbox":{"RTLTextPlugin":"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js","accessToken":"pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"ERGTM4IL3R","algoliaIndex":"home","algoliaSearchKey":"50e46a9b3000d000872c60826a2786f7","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+<script src="/js/autoload.js"></script>
+<script src="/js/theme.js"></script></body>
+</html>

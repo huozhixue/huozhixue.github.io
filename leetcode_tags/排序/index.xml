@@ -1,0 +1,142 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>排序 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E6%8E%92%E5%BA%8F/</link>
+        <description>排序 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 29 Mar 2019 02:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%8E%92%E5%BA%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>1030：距离顺序排列矩阵单元格（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1030/</link>
+    <pubDate>Fri, 29 Mar 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1030/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给出 R 行 C 列的矩阵，其中的单元格的整数坐标为 (r, c)，满足 0 &lt;= r &lt; R 且 0 &lt;= c &lt; C。</p>
+<p>另外，我们在该矩阵中给出了一个坐标为 (r0, c0) 的单元格。</p>
+<p>返回矩阵中的所有单元格的坐标，并按到 (r0, c0) 的距离从最小到最大的顺序排，
+其中，两单元格(r1, c1) 和 (r2, c2) 之间的距离是曼哈顿距离，|r1 - r2| + |c1 - c2|。
+（你可以按任何满足此条件的顺序返回答案。）</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= R &lt;= 100</li>
+<li>1 &lt;= C &lt;= 100</li>
+<li>0 &lt;= r0 &lt; R</li>
+<li>0 &lt;= c0 &lt; C</li>
+</ul>]]></description>
+</item><item>
+    <title>0912：排序数组（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0912/</link>
+    <pubDate>Mon, 24 Sep 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0912/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个整数数组 nums，请你将该数组升序排列。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 50000</li>
+<li>-50000 &lt;= nums[i] &lt;= 50000</li>
+</ul>]]></description>
+</item><item>
+    <title>0853：车队（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0853/</link>
+    <pubDate>Tue, 29 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0853/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>N  辆车沿着一条车道驶向位于 target 英里之外的共同目的地。</p>
+<p>每辆车 i 以恒定的速度 speed[i] （英里/小时），从初始位置 position[i] （英里） 沿车道驶向目的地。</p>
+<p>一辆车永远不会超过前面的另一辆车，但它可以追上去，并与前车以相同的速度紧接着行驶。</p>
+<p>此时，我们会忽略这两辆车之间的距离，也就是说，它们被假定处于相同的位置。</p>
+<p>车队 是一些由行驶在相同位置、具有相同速度的车组成的非空集合。注意，一辆车也可以是一个车队。</p>
+<p>即便一辆车在目的地才赶上了一个车队，它们仍然会被视作是同一个车队。</p>
+<p>会有多少车队到达目的地?</p>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= N &lt;= 10 ^ 4</li>
+<li>0 &lt; target &lt;= 10 ^ 6</li>
+<li>0 &lt; speed[i] &lt;= 10 ^ 6</li>
+<li>0 &lt;= position[i] &lt; target</li>
+<li>所有车的初始位置各不相同。</li>
+</ul>]]></description>
+</item><item>
+    <title>0274：H 指数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0274/</link>
+    <pubDate>Thu, 01 Oct 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0274/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一位研究者论文被引用次数的数组（被引用次数是非负整数）。编写一个方法，计算出研究者的 h 指数。</p>
+<p>h 指数的定义：h 代表“高引用次数”（high citations），一名科研人员的 h 指数是指他（她）的 （N 篇论文中）总共有 h 篇论文分别被引用了至少 h 次。且其余的 N - h 篇论文每篇被引用次数 不超过 h 次。</p>
+<p>例如：某人的 h 指数是 20，这表示他已发表的论文中，每篇被引用了至少 20 次的论文总共有 20 篇。</p>
+<p>提示：如果 h 有多种可能的值，h 指数是其中最大的那个。 </p>]]></description>
+</item><item>
+    <title>0220：存在重复元素 III（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0220/</link>
+    <pubDate>Sat, 08 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0220/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，
+使得 abs(nums[i] - nums[j]) &lt;= t ，同时又满足 abs(i - j) &lt;= k 。</p>
+<p>如果存在则返回 true，不存在返回 false。</p>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= nums.length &lt;= 2 * 10^4</li>
+<li>-2^31 &lt;= nums[i] &lt;= 2^31 - 1</li>
+<li>0 &lt;= k &lt;= 10^4</li>
+<li>0 &lt;= t &lt;= 2^31 - 1</li>
+</ul>]]></description>
+</item><item>
+    <title>0215：数组中的第K个最大元素</title>
+    <link>https://huozhixue.github.io/leetcode/0215/</link>
+    <pubDate>Mon, 03 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0215/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。</p>
+<p>说明:</p>
+<p>你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。</p>]]></description>
+</item><item>
+    <title>0179：最大数（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0179/</link>
+    <pubDate>Sun, 28 Jun 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0179/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一组非负整数 nums，重新排列它们每个数字的顺序（每个数字不可拆分）使之组成一个最大的整数。</p>
+<p>注意：输出结果可能非常大，所以你需要返回一个字符串而不是整数。</p>]]></description>
+</item><item>
+    <title>0164：最大间距（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0164/</link>
+    <pubDate>Sat, 13 Jun 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0164/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个无序的数组，找出数组在排序之后，相邻元素之间最大的差值。</p>
+<p>如果数组元素个数小于 2，则返回 0。</p>
+<p>说明:</p>
+<ul>
+<li>你可以假设数组中所有元素都是非负整数，且数值在 32 位有符号整数范围内。</li>
+<li>请尝试在线性时间复杂度和空间复杂度的条件下解决此问题。</li>
+</ul>]]></description>
+</item><item>
+    <title>0148：排序链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0148/</link>
+    <pubDate>Thu, 28 May 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0148/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。</p>
+<p>你可以在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序吗？</p>]]></description>
+</item><item>
+    <title>0147：对链表进行插入排序（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0147/</link>
+    <pubDate>Wed, 27 May 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0147/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>对链表进行插入排序。</p>
+<p></p>
+<p>插入排序的动画演示如上。从第一个元素开始，该链表可以被认为已经部分排序（用黑色表示）。
+每次迭代时，从输入数据中移除一个元素（用红色表示），并原地将其插入到已排好序的链表中。</p>]]></description>
+</item></channel>
+</rss>

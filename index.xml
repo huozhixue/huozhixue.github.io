@@ -1,0 +1,205 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>个人博客</title>
+        <link>https://huozhixue.github.io/</link>
+        <description>Ian 的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</lastBuildDate>
+            <atom:link href="https://huozhixue.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>力扣总结 数据结构进阶（一）：并查集</title>
+    <link>https://huozhixue.github.io/algorithm-union_find/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-union_find/</guid>
+    <description><![CDATA[并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构， 专门用于 动态处理 不相交集合的「查询」与「合并]]></description>
+</item><item>
+    <title>力扣总结 常见算法（九）：数学</title>
+    <link>https://huozhixue.github.io/algorithm-math/</link>
+    <pubDate>Mon, 21 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-math/</guid>
+    <description><![CDATA[<p>有很多问题需要应用到数学知识，包括代数、概率、几何、数论、组合等。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（八）：贪心</title>
+    <link>https://huozhixue.github.io/algorithm-greedy/</link>
+    <pubDate>Fri, 11 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-greedy/</guid>
+    <description><![CDATA[<p>贪心算法是一种高效的搜索方法。在每一步，都选择当前最好的分支，最终即能得到最优解。</p>
+<p>能用贪心算法解决的问题，对于贪心正确性的证明往往更加复杂。
+因此很多时候需要依赖一定的直觉才能想到贪心策略，即先构造后证明。</p>
+<p>而有些不能用贪心解决的问题，如果对用例的考虑不够周全，容易错误地采用贪心策略。
+因此使用贪心一定要慎重。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（七）：dfs 和 bfs</title>
+    <link>https://huozhixue.github.io/algorithm-dfs_bfs/</link>
+    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-dfs_bfs/</guid>
+    <description><![CDATA[<p>dfs（深度优先搜索算法）和 bfs（广度优先搜索算法）都是图形搜索方法，
+不同的在于 dfs 先尽可能深的搜索一个分支，再尝试别的路径，而 bfs 按离起点的距离一层层搜索。</p>
+<p>dfs 常借助递归实现，而 bfs 常借助队列实现。</p>
+<p>dfs 的思想就是回溯，是一种暴力通用解法。有时可以提前判断分支不满足要求，提前返回，被称为剪枝。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（六）：动态规划</title>
+    <link>https://huozhixue.github.io/algorithm-dp/</link>
+    <pubDate>Fri, 21 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-dp/</guid>
+    <description><![CDATA[<p>动态规划是一种特殊的分治法，适用于有重叠子问题的场景。</p>
+<p>存在大量重叠的子问题时，普通的递归写法会重复计算这些子问题，浪费大量时间。
+动态规划会保存所有子问题的结果，避免重复计算，将时间复杂度减少为多项式级别。</p>
+<p>动态规划也有递归和非递归两种形式。递归形式的动态规划也叫记忆化递归，非递归形式即是递推。</p>
+<p>python 在递归函数上加一个 @lru_cache(None) 的装饰器即可实现记忆化递归。
+非递归形式则根据参数量个数 k 创建一个 k 维的 list 用来保存子问题的结果。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（五）：二分查找</title>
+    <link>https://huozhixue.github.io/algorithm-binary_search/</link>
+    <pubDate>Tue, 11 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-binary_search/</guid>
+    <description><![CDATA[<p>二分查找是一种针对有序集合的高效查找算法，时间复杂度为 O(logN)。</p>
+<p>二分查找每一轮通过检查中间元素，将查找范围缩小一半，本质上是一种分治。</p>
+<p>很多情况下，python 中可以直接调用 bisect 来实现二分查找。
+有时中间元素的判定较为复杂，不是简单地比较大小，
+则可以结合 bisect 和 python 的魔法方法来实现。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（四）：双指针和滑动窗口</title>
+    <link>https://huozhixue.github.io/algorithm-two_pointers/</link>
+    <pubDate>Sat, 01 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-two_pointers/</guid>
+    <description><![CDATA[<p>双指针算法一般指两个变量在数组上相向移动来解决问题的算法。</p>
+<p>双指针算法常应用在具有某种有序性质的问题上，本质上是一种分治。</p>
+<p>广义来说，用两个变量在线性结构上遍历来解决问题的方法都可以归为双指针算法。
+比如链表上的快慢指针、滑动窗口。</p>
+<p>滑动窗口一般指两个变量在数组上同向移动来解决问题的算法，常应用在某种限制条件下的窗口最值问题。</p>
+<p>其中，固定窗口长度的问题，一般需要维护一个有序集合。
+在 python 中可以直接用 list 来实现，通过二分插入或弹出来维护。
+某些场景下还可以用堆或单调栈来维护有序集合，优化为线性时间复杂度。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（三）：递归和分治</title>
+    <link>https://huozhixue.github.io/algorithm-recursion/</link>
+    <pubDate>Wed, 21 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-recursion/</guid>
+    <description><![CDATA[<p>递归是指函数自己调用自己的语法现象。</p>
+<p>一般递归用于将问题不断转化为规模更小的子问题，直到变为可以直接求解的最简单子问题。
+这也就是分治法的思想。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（二）：位运算</title>
+    <link>https://huozhixue.github.io/algorithm-bit/</link>
+    <pubDate>Sun, 11 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-bit/</guid>
+    <description><![CDATA[<p>位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。</p>
+<p>很多位运算的问题具有较强的技巧性，需要很熟悉各个位运算符的性质。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（一）：排序</title>
+    <link>https://huozhixue.github.io/algorithm-sort/</link>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-sort/</guid>
+    <description><![CDATA[<p>排序算法是非常经典的一类算法，常作为算法教程的第一章。</p>
+<p>最常用的是快速排序、归并排序、堆排序，其思想也不仅应用在排序中。</p>
+<p>特别的，当数据范围相对于数据规模较小时，计数排序可能更快。
+而桶排序的应用较为灵活，能巧妙地解决一些问题。</p>
+<p>python 中一般直接调用 sort 函数来排序，采用的是 TimSort算法，
+一种结合了归并排序和插入排序的混合排序算法。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（八）：图</title>
+    <link>https://huozhixue.github.io/algorithm-graph/</link>
+    <pubDate>Thu, 11 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-graph/</guid>
+    <description><![CDATA[<p>图是一种比树形结构更复杂的非线性数据结构。
+树形结构中的结点是一对多的关系，且有明显的层次关系。
+图中的顶点是多对多的关系，无明显的层次关系。</p>
+<p>按顶点连线（边）是否有方向，可以将图分为有向图和无向图。</p>
+<p>有些图的边还附带数据信息（权），被称为网或网络。</p>
+<p>图的遍历和树的遍历相似，但图中可能出现回路，因此常用一个辅助数组或哈希表 vis 记录访问过的顶点。</p>
+<p>图最常见的问题有 最小生成树、最短路径、拓扑排序等。另外常使用并查集来解决连通性问题，这里先不涉及。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（七）：堆</title>
+    <link>https://huozhixue.github.io/algorithm-heap/</link>
+    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-heap/</guid>
+    <description><![CDATA[<p>堆 是一种特别的完全二叉树，每一个节点的值都大于等于或小于等于其孩子节点的值。</p>
+<p>堆可以在 O(logN) 时间内插入元素、删除根节点，在 O(1) 时间获得最大值或最小值。一般用于有序弹出元素的场景。</p>
+<p>python 中一般直接用内置库 heapq 表示（list 实现的），默认是小顶堆，即堆顶元素是最小值。</p>
+<p>额外地，图里面有个重要的 dijkstra 算法常借助堆实现，这里先不涉及。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（六）：树</title>
+    <link>https://huozhixue.github.io/algorithm-tree/</link>
+    <pubDate>Sun, 21 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-tree/</guid>
+    <description><![CDATA[树是一种非线性的数据结构，本质是节点的有限集。其定义是递归的： 有且仅有一个特定的称为根（root）的节点 当节点数量 &gt; 1 时，其余节点可分为若干]]></description>
+</item><item>
+    <title>力扣总结 数据结构（五）：栈和队列</title>
+    <link>https://huozhixue.github.io/algorithm-stack/</link>
+    <pubDate>Thu, 11 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-stack/</guid>
+    <description><![CDATA[<p>栈是一个后入先出的数据结构，插入和删除都在末尾进行。python 中一般直接用 list 表示。</p>
+<p>队列是一个先入先出的数据结构，插入在末尾，删除在开头。python 中一般直接用内置库 deque 表示。</p>
+<p>额外地，dfs 常借助栈实现，bfs 常借助队列实现，这里先不涉及。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（四）：哈希表</title>
+    <link>https://huozhixue.github.io/algorithm-hash/</link>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-hash/</guid>
+    <description><![CDATA[<p>哈希表是针对查询，空间换时间的一种数据结构，一般能够在 O(1) 时间内插入、查询、删除元素。</p>
+<p>哈希表分为哈希集合和哈希映射，哈希集合存储非重复值，哈希映射存储 key 唯一的 (key,value) 对。</p>
+<p>python 中一般直接用内置库 set 和 dict 表示哈希集合和哈希映射。
+另外还有一些特定用途的内置库，比如 Counter, defaultdict, OrderedDict。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（三）：字符串</title>
+    <link>https://huozhixue.github.io/algorithm-string/</link>
+    <pubDate>Thu, 21 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-string/</guid>
+    <description><![CDATA[<p>字符串和数组很相似，具有索引，且元素在内存中是连续存储的。</p>
+<p>不过字符串更关心整体或子串，而非单个元素。python 中的字符串是不可变的，不能直接修改、添加、删除元素，而应该用切片。</p>
+<p>字符串可以整体比较，还可以按字典序等来排序。字符串的查询可以用正则表达式，还有经典的 KMP 算法。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（二）：链表</title>
+    <link>https://huozhixue.github.io/algorithm-linked/</link>
+    <pubDate>Mon, 11 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-linked/</guid>
+    <description><![CDATA[<p>链表和数组是最基本的数据结构，是其他数据结构的基础。</p>
+<p>链表和数组都是线性结构，但在内存中，数组的元素是连续的，而链表不是。
+所以链表是把一些分离独立的元素按引用链接到一起。</p>
+<p>链表能在 O(1) 时间插入、删除元素，但需要 O(N) 时间访问到元素，与数组相反。</p>
+<p>python 中的内置库 deque 即是用双向链表实现的。</p>]]></description>
+</item><item>
+    <title>力扣总结 数据结构（一）：数组</title>
+    <link>https://huozhixue.github.io/algorithm-array/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-array/</guid>
+    <description><![CDATA[<p>链表和数组是最基本的数据结构，是其他数据结构的基础。除了基本的栈、堆可以用数组表示以外，一些进阶的数据结构
+比如并查集、树状数组也用数组来表示。</p>
+<p>数组和链表都是线性数据结构，区别在于数组具有索引，数组中的元素在内存中是连续存储的。</p>
+<p>数组能在 O(1) 时间内访问到元素，但需要 O(N) 时间插入、删除元素，与链表相反。</p>
+<p>很多常用算法也与数组密切相关，比如排序、二分查找、双指针，以及二维数组上的 bfs、dfs 等。现在暂不涉及。</p>]]></description>
+</item><item>
+    <title>后 BERT 时代小结</title>
+    <link>https://huozhixue.github.io/nlp-bert_family/</link>
+    <pubDate>Sun, 21 Jun 2020 17:49:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/nlp-bert_family/</guid>
+    <description><![CDATA[<p>2018年10月，Google 发布 BERT 模型，然后 BERT 横扫了 NLP 的各个任务：
+文本分类、序列标注、文本摘要、信息检索、问答系统、阅读理解等等。</p>]]></description>
+</item><item>
+    <title>博客搭建过程</title>
+    <link>https://huozhixue.github.io/hugo-blog/</link>
+    <pubDate>Fri, 08 May 2020 10:56:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/hugo-blog/</guid>
+    <description><![CDATA[<p>根据 hugo 主题 <strong>LoveIt</strong> 搭建博客的过程。</p>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,128 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>双指针 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+        <description>双指针 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 31 Jan 2019 02:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="self" type="application/rss+xml" /><item>
+    <title>0992：K 个不同整数的子数组（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0992/</link>
+    <pubDate>Thu, 31 Jan 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0992/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个正整数数组 A，如果 A 的某个子数组中不同整数的个数恰好为 K，则称 A 的这个连续、不一定不同的子数组为好子数组。</p>
+<p>（例如，[1,2,3,1,2] 中有 3 个不同的整数：1，2，以及 3。）</p>
+<p>返回 A 中好子数组的数目。</p>
+<p>1 &lt;= K &lt;= A.length</p>]]></description>
+</item><item>
+    <title>0844：比较含退格的字符串（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0844/</link>
+    <pubDate>Sun, 20 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0844/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。</p>
+<p>注意：如果对空文本输入退格字符，文本继续为空。</p>
+<p>你可以用 O(N) 的时间复杂度和 O(1) 的空间复杂度解决该问题吗？</p>]]></description>
+</item><item>
+    <title>0680：验证回文字符串 Ⅱ（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0680/</link>
+    <pubDate>Sun, 17 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0680/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。</p>]]></description>
+</item><item>
+    <title>0345：反转字符串中的元音字母（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0345/</link>
+    <pubDate>Fri, 11 Dec 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0345/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>编写一个函数，以字符串作为输入，反转该字符串中的元音字母。</p>
+<p>提示：</p>
+<ul>
+<li>元音字母不包含字母 &ldquo;y&rdquo; 。</li>
+</ul>]]></description>
+</item><item>
+    <title>0344：反转字符串</title>
+    <link>https://huozhixue.github.io/leetcode/0344/</link>
+    <pubDate>Thu, 10 Dec 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0344/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。</p>
+<p>不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。</p>
+<p>你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。</p>]]></description>
+</item><item>
+    <title>0228：汇总区间（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0228/</link>
+    <pubDate>Sun, 16 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0228/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个无重复元素的有序整数数组 nums 。</p>
+<p>返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表。也就是说，nums 的每个元素都恰好被某个区间范围所覆盖，并且不存在属于某个范围但不属于 nums 的数字 x 。</p>
+<p>列表中的每个区间范围 [a,b] 应该按如下格式输出：</p>
+<ul>
+<li>&ldquo;a-&gt;b&rdquo; ，如果 a != b</li>
+<li>&ldquo;a&rdquo; ，如果 a == b</li>
+</ul>
+<p>nums 中的所有值都 互不相同。nums 按升序排列。</p>]]></description>
+</item><item>
+    <title>0167：两数之和 II - 输入有序数组（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0167/</link>
+    <pubDate>Tue, 16 Jun 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0167/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个已按照 升序排列  的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target 。</p>
+<p>函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。
+numbers 的下标 从 1 开始计数 ，所以答案数组应当满足 1 &lt;= answer[0] &lt; answer[1] &lt;= numbers.length 。</p>
+<p>你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</p>
+<p>提示：</p>
+<ul>
+<li>2 &lt;= numbers.length &lt;= 3 * 10^4</li>
+<li>-1000 &lt;= numbers[i] &lt;= 1000</li>
+<li>numbers 按 递增顺序 排列</li>
+<li>-1000 &lt;= target &lt;= 1000</li>
+<li>仅存在一个有效答案</li>
+</ul>]]></description>
+</item><item>
+    <title>0053：最大子序和（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0053/</link>
+    <pubDate>Sun, 22 Feb 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0053/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 3 * 10^4</li>
+<li>-10^5 &lt;= nums[i] &lt;= 10^5</li>
+</ul>]]></description>
+</item><item>
+    <title>0044：通配符匹配（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0044/</link>
+    <pubDate>Fri, 13 Feb 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0044/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 &lsquo;?&rsquo; 和 &lsquo;*&rsquo; 的通配符匹配。</p>
+<ul>
+<li>&lsquo;?&rsquo; 可以匹配任何单个字符。</li>
+<li>&lsquo;*&rsquo; 可以匹配任意字符串（包括空字符串）。</li>
+<li>两个字符串完全匹配才算匹配成功。</li>
+<li>s 可能为空，且只包含从 a-z 的小写字母。</li>
+<li>p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。</li>
+</ul>]]></description>
+</item><item>
+    <title>0042：接雨水（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0042/</link>
+    <pubDate>Wed, 11 Feb 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0042/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>]]></description>
+</item></channel>
+</rss>

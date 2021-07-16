@@ -1,0 +1,209 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有动画 - 个人博客</title>
+        <link>https://huozhixue.github.io/anime/</link>
+        <description>所有动画 | 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 26 Jul 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/anime/" rel="self" type="application/rss+xml" /><item>
+    <title>雾山五行</title>
+    <link>https://huozhixue.github.io/anime/wu-shan-wu-xing/</link>
+    <pubDate>Sun, 26 Jul 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/wu-shan-wu-xing/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>想哭的我戴上了猫的面具</title>
+    <link>https://huozhixue.github.io/anime/a-whisker-away/</link>
+    <pubDate>Thu, 18 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/a-whisker-away/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>昨日之歌</title>
+    <link>https://huozhixue.github.io/anime/sing-yesterday-for-me/</link>
+    <pubDate>Sat, 04 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/sing-yesterday-for-me/</guid>
+    <description><![CDATA[<p>共 12 话</p>
+<div class="media" id="id-1" type="tv"><input type="text" />
+			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/tv\/Sing_Yesterday_For_Me",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + url;
+			}
+			else {
+				if (url.substr(0, 3) == 'id_'){
+					url = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					url = "https://www.iqiyi.com/" + url + ".html";
+				}
+				url = "https://jx.aidouer.net/?url=" + url;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			data[i] = pair;
+		}
+		if (random){
+			var t = new Date();
+			var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+			var tmp = data[0];
+			data[0] = data[cur];
+			data[cur] = tmp;
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-1"] = data;
+	</script>]]></description>
+</item><item>
+    <title>听着这电波</title>
+    <link>https://huozhixue.github.io/anime/wave-listen-to-me/</link>
+    <pubDate>Fri, 03 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/wave-listen-to-me/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>隐瞒之事</title>
+    <link>https://huozhixue.github.io/anime/kakushigoto/</link>
+    <pubDate>Thu, 02 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/kakushigoto/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>异兽魔都</title>
+    <link>https://huozhixue.github.io/anime/dorohedoro/</link>
+    <pubDate>Sun, 12 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/dorohedoro/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>22/7</title>
+    <link>https://huozhixue.github.io/anime/22_7/</link>
+    <pubDate>Sat, 11 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/22_7/</guid>
+    <description><![CDATA[<p>共 13 话</p>
+<div class="media" id="id-1" type="tv"><input type="text" />
+			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/tv\/22_7",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + url;
+			}
+			else {
+				if (url.substr(0, 3) == 'id_'){
+					url = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					url = "https://www.iqiyi.com/" + url + ".html";
+				}
+				url = "https://jx.aidouer.net/?url=" + url;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			data[i] = pair;
+		}
+		if (random){
+			var t = new Date();
+			var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+			var tmp = data[0];
+			data[0] = data[cur];
+			data[cur] = tmp;
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-1"] = data;
+	</script>]]></description>
+</item><item>
+    <title>异种族风俗娘评鉴指南</title>
+    <link>https://huozhixue.github.io/anime/interspecies-reviewers/</link>
+    <pubDate>Sat, 11 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/interspecies-reviewers/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>请在T台上微笑</title>
+    <link>https://huozhixue.github.io/anime/smile-at-the-runway/</link>
+    <pubDate>Fri, 10 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/smile-at-the-runway/</guid>
+    <description><![CDATA[<p>共 12 话</p>
+<div class="media" id="id-1" type="tv"><input type="text" />
+			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/tv\/Smile_at_the_Runway",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + url;
+			}
+			else {
+				if (url.substr(0, 3) == 'id_'){
+					url = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					url = "https://www.iqiyi.com/" + url + ".html";
+				}
+				url = "https://jx.aidouer.net/?url=" + url;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			data[i] = pair;
+		}
+		if (random){
+			var t = new Date();
+			var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+			var tmp = data[0];
+			data[0] = data[cur];
+			data[cur] = tmp;
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-1"] = data;
+	</script>]]></description>
+</item><item>
+    <title>别对映像研出手！</title>
+    <link>https://huozhixue.github.io/anime/eizouken-ni-wa-te-wo-dasu-na/</link>
+    <pubDate>Sun, 05 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/eizouken-ni-wa-te-wo-dasu-na/</guid>
+    <description><![CDATA[<p>共 12 话</p>]]></description>
+</item></channel>
+</rss>

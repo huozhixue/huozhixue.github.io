@@ -1,0 +1,81 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>盘点 - anime_tag - 个人博客</title>
+        <link>https://huozhixue.github.io/anime_tags/%E7%9B%98%E7%82%B9/</link>
+        <description>盘点 - anime_tag - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 31 Dec 2019 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/anime_tags/%E7%9B%98%E7%82%B9/" rel="self" type="application/rss+xml" /><item>
+    <title>2019 盘点</title>
+    <link>https://huozhixue.github.io/anime/2019/</link>
+    <pubDate>Tue, 31 Dec 2019 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/2019/</guid>
+    <description><![CDATA[<h3 id="动画">动画</h3>
+<div class="media" id="id-1" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1EJ411b71H-BV1D541147iF".split(/-/), titles = "19分钟看完2019年日本动画,[TV2] 中二电视台2019年金鸡排奖颁奖典礼".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + urls[i];
+			title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title]);
+		}
+		window.config.media["id-1"] = data;
+	</script>
+<h3 id="单素材-mad">单素材 MAD</h3>
+<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-2"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2019_0",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + url;
+			}
+			else {
+				if (url.substr(0, 3) == 'id_'){
+					url = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					url = "https://www.iqiyi.com/" + url + ".html";
+				}
+				url = "https://jx.aidouer.net/?url=" + url;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			data[i] = pair;
+		}
+		if (random){
+			var t = new Date();
+			var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+			var tmp = data[0];
+			data[0] = data[cur];
+			data[cur] = tmp;
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-2"] = data;
+	</script>]]></description>
+</item><item>
+    <title>2018 盘点</title>
+    <link>https://huozhixue.github.io/anime/2018/</link>
+    <pubDate>Mon, 31 Dec 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/anime/2018/</guid>
+    <description><![CDATA[动画 var data = []; var urls = "BV1ht411r7vr-BV1jt411W7sb-BV1Ct411W7jP-BV1Nt411H71g".split(/-/), titles = "18分钟看完2018年动画,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P1）,【TV2】中二电]]></description>
+</item></channel>
+</rss>

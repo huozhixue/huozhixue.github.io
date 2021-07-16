@@ -1,0 +1,181 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数组 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/</link>
+        <description>数组 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+    <title>1825：求出 MK 平均值(★★★)</title>
+    <link>https://huozhixue.github.io/leetcode/1825/</link>
+    <pubDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1825/</guid>
+    <description><![CDATA[<p>第 236 场周赛第 4 题</p>
+<h2 id="题目">题目</h2>
+<p>给你两个整数 m 和 k ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 MK 平均值 。</p>
+<p>MK 平均值 按照如下步骤计算：</p>
+<ol>
+<li>如果数据流中的整数少于 m 个，MK 平均值 为 -1 ，否则将数据流中最后 m 个元素拷贝到一个独立的容器中。</li>
+<li>从这个容器中删除最小的 k 个数和最大的 k 个数。</li>
+<li>计算剩余元素的平均值，并 向下取整到最近的整数 。</li>
+</ol>
+<p>请你实现 MKAverage 类：</p>
+<ul>
+<li>MKAverage(int m, int k) 用一个空的数据流和两个整数 m 和 k 初始化 MKAverage 对象。</li>
+<li>void addElement(int num) 往数据流中插入一个新的元素 num 。</li>
+<li>int calculateMKAverage() 对当前的数据流计算并返回 MK 平均数 ，结果需 向下取整到最近的整数 。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>3 &lt;= m &lt;= $10^5$</li>
+<li>1 &lt;= k*2 &lt; m</li>
+<li>1 &lt;= num &lt;= $10^5$</li>
+<li>addElement 与 calculateMKAverage 总操作次数不超过 $10^5$ 次。</li>
+</ul>]]></description>
+</item><item>
+    <title>1535：找出数组游戏的赢家（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1535/</link>
+    <pubDate>Sun, 05 Jul 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1535/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个由 不同 整数组成的整数数组 arr 和一个整数 k 。</p>
+<p>每回合游戏都在数组的前两个元素（即 arr[0] 和 arr[1] ）之间进行。比较 arr[0] 与 arr[1] 的大小，较大的整数将会取得这一回合的胜利并保留在位置 0 ，较小的整数移至数组的末尾。当一个整数赢得 k 个连续回合时，游戏结束，该整数就是比赛的 赢家 。</p>
+<p>返回赢得比赛的整数。</p>
+<p>题目数据 保证 游戏存在赢家。</p>]]></description>
+</item><item>
+    <title>1424：对角线遍历 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1424/</link>
+    <pubDate>Thu, 02 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1424/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个列表 nums ，里面每一个元素都是一个整数列表。请你依照下面各图的规则，按顺序返回 nums 中对角线上的整数。</p>]]></description>
+</item><item>
+    <title>0950：按递增顺序显示卡牌（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0950/</link>
+    <pubDate>Thu, 20 Dec 2018 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0950/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>牌组中的每张卡牌都对应有一个唯一的整数。你可以按你想要的顺序对这套卡片进行排序。</p>
+<p>最初，这些卡牌在牌组里是正面朝下的（即，未显示状态）。</p>
+<p>现在，重复执行以下步骤，直到显示所有卡牌为止：</p>
+<ul>
+<li>从牌组顶部抽一张牌，显示它，然后将其从牌组中移出。</li>
+<li>如果牌组中仍有牌，则将下一张处于牌组顶部的牌放在牌组的底部。</li>
+<li>如果仍有未显示的牌，那么返回步骤 1。否则，停止行动。</li>
+</ul>
+<p>返回能以递增顺序显示卡牌的牌组顺序。</p>
+<p>答案中的第一张牌被认为处于牌堆顶部。</p>]]></description>
+</item><item>
+    <title>0822：翻转卡片游戏（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0822/</link>
+    <pubDate>Sat, 28 Apr 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0822/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在桌子上有 N 张卡片，每张卡片的正面和背面都写着一个正数（正面与背面上的数有可能不一样）。</p>
+<p>我们可以先翻转任意张卡片，然后选择其中一张卡片。</p>
+<p>如果选中的那张卡片背面的数字 X 与任意一张卡片的正面的数字都不同，那么这个数字是我们想要的数字。</p>
+<p>哪个数是这些想要的数字中最小的数（找到这些数中的最小值）呢？如果没有一个数字符合要求的，输出 0。</p>
+<p>其中, fronts[i] 和 backs[i] 分别代表第 i 张卡片的正面和背面的数字。</p>
+<p>如果我们通过翻转卡片来交换正面与背面上的数，那么当初在正面的数就变成背面的数，背面的数就变成正面的数。</p>]]></description>
+</item><item>
+    <title>0641：设计循环双端队列（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0641/</link>
+    <pubDate>Mon, 17 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0641/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>设计实现双端队列。
+你的实现需要支持以下操作：</p>
+<ul>
+<li>MyCircularDeque(k)：构造函数,双端队列的大小为k。</li>
+<li>insertFront()：将一个元素添加到双端队列头部。 如果操作成功返回 true。</li>
+<li>insertLast()：将一个元素添加到双端队列尾部。如果操作成功返回 true。</li>
+<li>deleteFront()：从双端队列头部删除一个元素。 如果操作成功返回 true。</li>
+<li>deleteLast()：从双端队列尾部删除一个元素。如果操作成功返回 true。</li>
+<li>getFront()：从双端队列头部获得一个元素。如果双端队列为空，返回 -1。</li>
+<li>getRear()：获得双端队列的最后一个元素。 如果双端队列为空，返回 -1。</li>
+<li>isEmpty()：检查双端队列是否为空。</li>
+<li>isFull()：检查双端队列是否满了。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>所有值的范围为 [1, 1000]</li>
+<li>操作次数的范围为 [1, 1000]</li>
+<li>请不要使用内置的双端队列库</li>
+</ul>]]></description>
+</item><item>
+    <title>0622：设计循环队列（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0622/</link>
+    <pubDate>Wed, 28 Jun 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0622/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>设计你的循环队列实现。 循环队列是一种线性数据结构，其操作表现基于 FIFO（先进先出）原则并且队尾被连接在队首之后以形成一个循环。
+它也被称为“环形缓冲器”。</p>
+<p>循环队列的一个好处是我们可以利用这个队列之前用过的空间。在一个普通队列里，一旦一个队列满了，我们就不能插入下一个元素，即使在队列前面仍有空间。
+但是使用循环队列，我们能使用这些空间去存储新的值。</p>
+<p>你的实现应该支持如下操作：</p>
+<ul>
+<li>MyCircularQueue(k): 构造器，设置队列长度为 k 。</li>
+<li>Front: 从队首获取元素。如果队列为空，返回 -1 。</li>
+<li>Rear: 获取队尾元素。如果队列为空，返回 -1 。</li>
+<li>enQueue(value): 向循环队列插入一个元素。如果成功插入则返回真。</li>
+<li>deQueue(): 从循环队列中删除一个元素。如果成功删除则返回真。</li>
+<li>isEmpty(): 检查循环队列是否为空。</li>
+<li>isFull(): 检查循环队列是否已满。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>所有的值都在 0 至 1000 的范围内；</li>
+<li>操作数将在 1 至 1000 的范围内；</li>
+<li>请不要使用内置的队列库。</li>
+</ul>]]></description>
+</item><item>
+    <title>0495：提莫攻击（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0495/</link>
+    <pubDate>Sun, 11 Dec 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0495/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄，他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。现在，给出提莫对艾希的攻击时间序列和提莫攻击的中毒持续时间，你需要输出艾希的中毒状态总时长。</p>
+<p>你可以认为提莫在给定的时间点进行攻击，并立即使艾希处于中毒状态。</p>]]></description>
+</item><item>
+    <title>0463：岛屿的周长（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0463/</link>
+    <pubDate>Thu, 10 Nov 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0463/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个 row x col 的二维网格地图 grid ，其中：grid[i][j] = 1 表示陆地， grid[i][j] = 0 表示水域。</p>
+<p>网格中的格子 水平和垂直 方向相连（对角线方向不相连）。整个网格被水完全包围，
+但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。</p>
+<p>岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。格子是边长为 1 的正方形。
+网格为长方形，且宽度和高度均不超过 100 。计算这个岛屿的周长。</p>
+<p>提示：</p>
+<ul>
+<li>row == grid.length</li>
+<li>col == grid[i].length</li>
+<li>1 &lt;= row, col &lt;= 100</li>
+<li>grid[i][j] 为 0 或 1</li>
+</ul>]]></description>
+</item><item>
+    <title>0448：找到所有数组中消失的数字（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0448/</link>
+    <pubDate>Tue, 25 Oct 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0448/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个含 n 个整数的数组 nums ，其中 nums[i] 在区间 [1, n] 内。
+请你找出所有在 [1, n] 范围内但没有出现在 nums 中的数字，并以数组的形式返回结果。</p>
+<p>提示：</p>
+<ul>
+<li>n == nums.length</li>
+<li>1 &lt;= n &lt;= 10^5</li>
+<li>1 &lt;= nums[i] &lt;= n</li>
+</ul>
+<p>进阶：你能在不使用额外空间且时间复杂度为 O(n) 的情况下解决这个问题吗? 你可以假定返回的数组不算在额外空间内。</p>]]></description>
+</item></channel>
+</rss>

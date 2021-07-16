@@ -1,0 +1,120 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数学 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E5%AD%A6/</link>
+        <description>数学 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Feb 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>1753：移除石子的最大得分（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1753/</link>
+    <pubDate>Sat, 27 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1753/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>正在玩一个单人游戏，面前放置着大小分别为 a​​​​​​、b 和 c​​​​​​ 的 三堆 石子。</p>
+<p>每回合你都要从两个 不同的非空堆 中取出一颗石子，并在得分上加 1 分。当存在 两个或更多 的空堆时，游戏停止。</p>
+<p>给你三个整数 a 、b 和 c ，返回可以得到的 最大分数 。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= a, b, c &lt;= 105</li>
+</ul>]]></description>
+</item><item>
+    <title>1025：除数博弈（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1025/</link>
+    <pubDate>Sun, 24 Mar 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1025/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。</p>
+<p>最初，黑板上有一个数字 N 。在每个玩家的回合，玩家需要执行以下操作：</p>
+<ul>
+<li>选出任一 x，满足 0 &lt; x &lt; N 且 N % x == 0 。</li>
+<li>用 N - x 替换黑板上的数字 N 。</li>
+</ul>
+<p>如果玩家无法执行这些操作，就会输掉游戏。</p>
+<p>只有在爱丽丝在游戏中取得胜利时才返回 True，否则返回 False。假设两个玩家都以最佳状态参与游戏。</p>]]></description>
+</item><item>
+    <title>1006：笨阶乘（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1006/</link>
+    <pubDate>Tue, 05 Mar 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1006/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>通常，正整数 n 的阶乘是所有小于或等于 n 的正整数的乘积。例如，factorial(10) = 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1。</p>
+<p>相反，我们设计了一个笨阶乘 clumsy：在整数的递减序列中，我们以一个固定顺序的操作符序列来依次替换原有的乘法操作符：乘法(*)，除法(/)，加法(+)和减法(-)。</p>
+<p>例如，clumsy(10) = 10 * 9 / 8 + 7 - 6 * 5 / 4 + 3 - 2 * 1。然而，这些运算仍然使用通常的算术运算顺序：我们在任何加、减步骤之前执行所有的乘法和除法步骤，并且按从左到右处理乘法和除法步骤。</p>
+<p>另外，我们使用的除法是地板除法（floor division），所以 10 * 9 / 8 等于 11。这保证结果是一个整数。</p>
+<p>实现上面定义的笨函数：给定一个整数 N，它返回 N 的笨阶乘。</p>]]></description>
+</item><item>
+    <title>0877：石子游戏（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0877/</link>
+    <pubDate>Fri, 22 Jun 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0877/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>亚历克斯和李用几堆石子在做游戏。偶数堆石子排成一行，每堆都有正整数颗石子 piles[i] 。</p>
+<p>游戏以谁手中的石子最多来决出胜负。石子的总数是奇数，所以没有平局。</p>
+<p>亚历克斯和李轮流进行，亚历克斯先开始。 每回合，玩家从行的开始或结束处取走整堆石头。 这种情况一直持续到没有更多的石子堆为止，此时手中石子最多的玩家获胜。</p>
+<p>假设亚历克斯和李都发挥出最佳水平，当亚历克斯赢得比赛时返回 true ，当李赢得比赛时返回 false 。</p>]]></description>
+</item><item>
+    <title>0866：回文素数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0866/</link>
+    <pubDate>Mon, 11 Jun 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0866/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>求出大于或等于 N 的最小回文素数。</p>
+<p>回顾一下，如果一个数大于 1，且其因数只有 1 和它自身，那么这个数是素数。</p>
+<p>例如，2，3，5，7，11 以及 13 是素数。</p>
+<p>回顾一下，如果一个数从左往右读与从右往左读是一样的，那么这个数是回文数。</p>
+<p>例如，12321 是回文数。</p>
+<p>$1 &lt;= N &lt;= 10^8$。答案肯定存在，且小于 $2 * 10^8$。</p>]]></description>
+</item><item>
+    <title>0810：黑板异或游戏（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0810/</link>
+    <pubDate>Mon, 16 Apr 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0810/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>黑板上写着一个非负整数数组 nums[i] 。Alice 和 Bob 轮流从黑板上擦掉一个数字，Alice 先手。如果擦除一个数字后，剩余的所有数字按位异或运算得出的结果等于 0 的话，当前玩家游戏失败。 (另外，如果只剩一个数字，按位异或运算得到它本身；如果无数字剩余，按位异或运算结果为 0。）</p>
+<p>换种说法就是，轮到某个玩家时，如果当前黑板上所有数字按位异或运算结果等于 0，这个玩家获胜。</p>
+<p>假设两个玩家每步都使用最优解，当且仅当 Alice 获胜时返回 true。</p>]]></description>
+</item><item>
+    <title>0781：森林中的兔子（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0781/</link>
+    <pubDate>Wed, 27 Dec 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0781/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>森林中，每个兔子都有颜色。其中一些兔子（可能是全部）告诉你还有多少其他的兔子和自己有相同的颜色。我们将这些回答放在 answers 数组里。</p>
+<p>返回森林中兔子的最少数量。</p>]]></description>
+</item><item>
+    <title>0564：寻找最近的回文数（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0564/</link>
+    <pubDate>Sun, 23 Apr 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0564/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个整数 n ，你需要找到与它最近的回文数（不包括自身）。</p>
+<p>“最近的”定义为两个整数差的绝对值最小。如果有多个结果，返回最小的那个。</p>]]></description>
+</item><item>
+    <title>0507：完美数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0507/</link>
+    <pubDate>Fri, 23 Dec 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0507/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>对于一个 正整数，如果它和除了它自身以外的所有 正因子 之和相等，我们称它为 「完美数」。</p>
+<p>给定一个 整数 n， 如果是完美数，返回 true，否则返回 false。</p>
+<p>1 &lt;= num &lt;= 108。</p>]]></description>
+</item><item>
+    <title>0367：有效的完全平方数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0367/</link>
+    <pubDate>Tue, 02 Aug 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0367/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个 正整数 num ，编写一个函数，如果 num 是一个完全平方数，则返回 true ，否则返回 false 。</p>
+<p>进阶：不要 使用任何内置的库函数，如 sqrt 。</p>
+<p>提示： 1 &lt;= num &lt;= 2^31 - 1</p>]]></description>
+</item></channel>
+</rss>

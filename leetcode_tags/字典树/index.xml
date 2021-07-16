@@ -1,0 +1,63 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>字典树 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/</link>
+        <description>字典树 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 14 Sep 2017 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/" rel="self" type="application/rss+xml" /><item>
+    <title>0677：键值映射（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0677/</link>
+    <pubDate>Thu, 14 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0677/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>实现一个 MapSum 类，支持两个方法，insert 和 sum：</p>
+<ul>
+<li>MapSum() 初始化 MapSum 对象</li>
+<li>void insert(String key, int val) 插入 key-val 键值对，字符串表示键 key ，整数表示值 val 。如果键 key 已经存在，那么原来的键值对将被替代成新的键值对。</li>
+<li>int sum(string prefix) 返回所有以该前缀 prefix 开头的键 key 的值的总和。</li>
+</ul>]]></description>
+</item><item>
+    <title>0648：单词替换（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0648/</link>
+    <pubDate>Mon, 24 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0648/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在英语中，我们有一个叫做 词根(root)的概念，它可以跟着其他一些词组成另一个较长的单词——我们称这个词为 继承词(successor)。例如，词根an，跟随着单词 other(其他)，可以形成新的单词 another(另一个)。</p>
+<p>现在，给定一个由许多词根组成的词典和一个句子。你需要将句子中的所有继承词用词根替换掉。如果继承词有许多可以形成它的词根，则用最短的词根替换它。</p>
+<p>你需要输出替换之后的句子。</p>
+<p>sentence 中单词之间由一个空格隔开。sentence 没有前导或尾随空格。</p>]]></description>
+</item><item>
+    <title>0211：添加与搜索单词 - 数据结构设计（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0211/</link>
+    <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0211/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。</p>
+<p>实现词典类 WordDictionary ：</p>
+<ul>
+<li>WordDictionary() 初始化词典对象</li>
+<li>void addWord(word) 将 word 添加到数据结构中，之后可以对它进行匹配</li>
+<li>bool search(word) 如果数据结构中存在字符串与 word 匹配，则返回 true ；否则，返回  false 。word 中可能包含一些 &lsquo;.&rsquo; ，每个 . 都可以表示任何一个字母。</li>
+</ul>
+<p>ddWord 中的 word 由小写英文字母组成。search 中的 word 由 &lsquo;.&rsquo; 或小写英文字母组成。</p>]]></description>
+</item><item>
+    <title>0212：单词搜索 II（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0212/</link>
+    <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0212/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个 m x n 二维字符网格 board 和一个单词（字符串）列表 words，找出所有同时在二维网格和字典中出现的单词。</p>
+<p>单词必须按照字母顺序，通过 相邻的单元格 内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母在一个单词中不允许被重复使用。</p>]]></description>
+</item><item>
+    <title>0208：实现 Trie (前缀树)（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0208/</link>
+    <pubDate>Mon, 27 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0208/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。</p>]]></description>
+</item></channel>
+</rss>

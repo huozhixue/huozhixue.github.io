@@ -1,0 +1,175 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>困难 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/</link>
+        <description>困难 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>1825：求出 MK 平均值(★★★)</title>
+    <link>https://huozhixue.github.io/leetcode/1825/</link>
+    <pubDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1825/</guid>
+    <description><![CDATA[<p>第 236 场周赛第 4 题</p>
+<h2 id="题目">题目</h2>
+<p>给你两个整数 m 和 k ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 MK 平均值 。</p>
+<p>MK 平均值 按照如下步骤计算：</p>
+<ol>
+<li>如果数据流中的整数少于 m 个，MK 平均值 为 -1 ，否则将数据流中最后 m 个元素拷贝到一个独立的容器中。</li>
+<li>从这个容器中删除最小的 k 个数和最大的 k 个数。</li>
+<li>计算剩余元素的平均值，并 向下取整到最近的整数 。</li>
+</ol>
+<p>请你实现 MKAverage 类：</p>
+<ul>
+<li>MKAverage(int m, int k) 用一个空的数据流和两个整数 m 和 k 初始化 MKAverage 对象。</li>
+<li>void addElement(int num) 往数据流中插入一个新的元素 num 。</li>
+<li>int calculateMKAverage() 对当前的数据流计算并返回 MK 平均数 ，结果需 向下取整到最近的整数 。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>3 &lt;= m &lt;= $10^5$</li>
+<li>1 &lt;= k*2 &lt; m</li>
+<li>1 &lt;= num &lt;= $10^5$</li>
+<li>addElement 与 calculateMKAverage 总操作次数不超过 $10^5$ 次。</li>
+</ul>]]></description>
+</item><item>
+    <title>LCP32：批量处理任务(★★★)</title>
+    <link>https://huozhixue.github.io/leetcode/lcp32/</link>
+    <pubDate>Tue, 06 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/lcp32/</guid>
+    <description><![CDATA[<p>力扣杯 2021 春季赛第 5 题</p>
+<h2 id="题目">题目</h2>
+<p>某实验室计算机待处理任务以 [start,end,period] 格式记于二维数组 tasks，表示完成该任务的时间范围为起始时间 start 至结束时间 end 之间，
+需要计算机投入 period 的时长，注意：</p>
+<ul>
+<li>period 可为不连续时间</li>
+<li>首尾时间均包含在内</li>
+</ul>
+<p>处于开机状态的计算机可同时处理任意多个任务，请返回电脑最少开机多久，可处理完所有任务。</p>
+<p>2 &lt;= tasks.length &lt;= 10^5。</p>]]></description>
+</item><item>
+    <title>1627：带阈值的图连通性（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1627/</link>
+    <pubDate>Sat, 24 Oct 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1627/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有 n 座城市，编号从 1 到 n 。编号为 x 和 y 的两座城市直接连通的前提是： x 和 y 的公因数中，至少有一个 严格大于 某个阈值 threshold 。
+更正式地说，如果存在整数 z ，且满足以下所有条件，则编号 x 和 y 的城市之间有一条道路：</p>
+<ul>
+<li>x % z == 0</li>
+<li>y % z == 0</li>
+<li>z &gt; threshold</li>
+</ul>
+<p>给你两个整数 n 和 threshold ，以及一个待查询数组，请你判断每个查询 queries[i] = [ai, bi] 指向的城市 ai 和 bi 是否连通（即，它们之间是否存在一条路径）。</p>
+<p>返回数组 answer ，其中answer.length == queries.length 。
+如果第 i 个查询中指向的城市 ai 和 bi 连通，则 answer[i] 为 true ；如果不连通，则 answer[i] 为 false 。</p>]]></description>
+</item><item>
+    <title>1563：石子游戏 V（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1563/</link>
+    <pubDate>Sun, 02 Aug 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1563/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>几块石子 排成一行 ，每块石子都有一个关联值，关联值为整数，由数组 stoneValue 给出。</p>
+<p>游戏中的每一轮：Alice 会将这行石子分成两个 非空行（即，左侧行和右侧行）；Bob 负责计算每一行的值，即此行中所有石子的值的总和。Bob 会丢弃值最大的行，Alice 的得分为剩下那行的值（每轮累加）。如果两行的值相等，Bob 让 Alice 决定丢弃哪一行。下一轮从剩下的那一行开始。</p>
+<p>只 剩下一块石子 时，游戏结束。Alice 的分数最初为 0 。</p>
+<p>返回 Alice 能够获得的最大分数 。</p>]]></description>
+</item><item>
+    <title>1510：石子游戏 IV（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1510/</link>
+    <pubDate>Wed, 10 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1510/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>Alice 和 Bob 两个人轮流玩一个游戏，Alice 先手。</p>
+<p>一开始，有 n 个石子堆在一起。每个人轮流操作，正在操作的玩家可以从石子堆里拿走 任意 非零 平方数 个石子。</p>
+<p>如果石子堆里没有石子了，则无法操作的玩家输掉游戏。</p>
+<p>给你正整数 n ，且已知两个人都采取最优策略。如果 Alice 会赢得比赛，那么返回 True ，否则返回 False 。</p>]]></description>
+</item><item>
+    <title>1473：粉刷房子 III（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1473/</link>
+    <pubDate>Thu, 21 May 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1473/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在一个小城市里，有 m 个房子排成一排，你需要给每个房子涂上 n 种颜色之一（颜色编号为 1 到 n ）。有的房子去年夏天已经涂过颜色了，所以这些房子不需要被重新涂色。</p>
+<p>我们将连续相同颜色尽可能多的房子称为一个街区。（比方说 houses = [1,2,2,3,3,2,1,1] ，它包含 5 个街区  [{1}, {2,2}, {3,3}, {2}, {1,1}] 。）</p>
+<p>给你一个数组 houses ，一个 m * n 的矩阵 cost 和一个整数 target ，其中：</p>
+<ul>
+<li>houses[i]：是第 i 个房子的颜色，0 表示这个房子还没有被涂色。</li>
+<li>cost[i][j]：是将第 i 个房子涂成颜色 j+1 的花费。</li>
+</ul>
+<p>请你返回房子涂色方案的最小总花费，使得每个房子都被涂色后，恰好组成 target 个街区。如果没有可用的涂色方案，请返回 -1 。</p>
+<p>提示：</p>
+<ul>
+<li>m == houses.length == cost.length</li>
+<li>n == cost[i].length</li>
+<li>1 &lt;= m &lt;= 100</li>
+<li>1 &lt;= n &lt;= 20</li>
+<li>1 &lt;= target &lt;= m</li>
+<li>0 &lt;= houses[i] &lt;= n</li>
+<li>1 &lt;= cost[i][j] &lt;= 10^4</li>
+</ul>]]></description>
+</item><item>
+    <title>1439：有序矩阵中的第 k 个最小数组和（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1439/</link>
+    <pubDate>Fri, 17 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1439/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个 m * n 的矩阵 mat，以及一个整数 k ，矩阵中的每一行都以非递减的顺序排列。</p>
+<p>你可以从每一行中选出 1 个元素形成一个数组。返回所有可能数组中的第 k 个 最小 数组和。</p>
+<p>提示：</p>
+<ul>
+<li>m == mat.length</li>
+<li>n == mat.length[i]</li>
+<li>1 &lt;= m, n &lt;= 40</li>
+<li>1 &lt;= k &lt;= min(200, n ^ m)</li>
+<li>1 &lt;= mat[i][j] &lt;= 5000</li>
+<li>mat[i] 是一个非递减数组</li>
+</ul>]]></description>
+</item><item>
+    <title>1406：石子游戏 III（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1406/</link>
+    <pubDate>Sun, 15 Mar 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1406/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>Alice 和 Bob 用几堆石子在做游戏。几堆石子排成一行，每堆石子都对应一个得分，由数组 stoneValue 给出。</p>
+<p>Alice 和 Bob 轮流取石子，Alice 总是先开始。在每个玩家的回合中，该玩家可以拿走剩下石子中的的前 1、2 或 3 堆石子 。比赛一直持续到所有石头都被拿走。</p>
+<p>每个玩家的最终得分为他所拿到的每堆石子的对应得分之和。每个玩家的初始分数都是 0 。比赛的目标是决出最高分，得分最高的选手将会赢得比赛，比赛也可能会出现平局。</p>
+<p>假设 Alice 和 Bob 都采取 最优策略 。如果 Alice 赢了就返回 &ldquo;Alice&rdquo; ，Bob 赢了就返回 &ldquo;Bob&rdquo;，平局（分数相同）返回 &ldquo;Tie&rdquo; 。</p>]]></description>
+</item><item>
+    <title>1278：分割回文串III（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1278/</link>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1278/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个由小写字母组成的字符串 s，和一个整数 k。 1 &lt;= k &lt;= s.length &lt;= 100</p>
+<p>请你按下面的要求分割字符串：</p>
+<ul>
+<li>首先，你可以将 s 中的部分字符修改为其他的小写英文字母。</li>
+<li>接着，你需要把 s 分割成 k 个非空且不相交的子串，并且每个子串都是回文串。</li>
+</ul>
+<p>请返回以这种方式分割字符串所需修改的最少字符数。</p>]]></description>
+</item><item>
+    <title>1178：猜字谜（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1178/</link>
+    <pubDate>Tue, 27 Aug 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1178/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>外国友人仿照中国字谜设计了一个英文版猜字谜小游戏，请你来猜猜看吧。</p>
+<p>字谜的迷面 puzzle 按字符串形式给出，如果一个单词 word 符合下面两个条件，那么它就可以算作谜底：</p>
+<ul>
+<li>单词 word 中包含谜面 puzzle 的第一个字母。</li>
+<li>单词 word 中的每一个字母都可以在谜面 puzzle 中找到。</li>
+</ul>
+<p>例如，如果字谜的谜面是 &ldquo;abcdefg&rdquo;，那么可以作为谜底的单词有 &ldquo;faced&rdquo;, &ldquo;cabbage&rdquo;, 和 &ldquo;baggage&rdquo;；而 &ldquo;beefed&rdquo;（不含字母 &ldquo;a&rdquo;）以及 &ldquo;based&rdquo;（其中的 &ldquo;s&rdquo; 没有出现在谜面中）。</p>
+<p>返回一个答案数组 answer，数组中的每个元素 answer[i] 是在给出的单词列表 words 中可以作为字谜迷面 puzzles[i] 所对应的谜底的单词数目。</p>
+<p>words[i][j], puzzles[i][j] 都是小写英文字母。</p>
+<p>puzzles[i].length == 7。每个 puzzles[i] 所包含的字符都不重复。</p>]]></description>
+</item></channel>
+</rss>

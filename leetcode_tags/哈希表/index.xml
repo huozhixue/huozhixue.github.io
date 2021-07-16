@@ -1,0 +1,162 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>哈希表 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
+        <description>哈希表 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 27 Aug 2019 02:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>1178：猜字谜（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1178/</link>
+    <pubDate>Tue, 27 Aug 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1178/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>外国友人仿照中国字谜设计了一个英文版猜字谜小游戏，请你来猜猜看吧。</p>
+<p>字谜的迷面 puzzle 按字符串形式给出，如果一个单词 word 符合下面两个条件，那么它就可以算作谜底：</p>
+<ul>
+<li>单词 word 中包含谜面 puzzle 的第一个字母。</li>
+<li>单词 word 中的每一个字母都可以在谜面 puzzle 中找到。</li>
+</ul>
+<p>例如，如果字谜的谜面是 &ldquo;abcdefg&rdquo;，那么可以作为谜底的单词有 &ldquo;faced&rdquo;, &ldquo;cabbage&rdquo;, 和 &ldquo;baggage&rdquo;；而 &ldquo;beefed&rdquo;（不含字母 &ldquo;a&rdquo;）以及 &ldquo;based&rdquo;（其中的 &ldquo;s&rdquo; 没有出现在谜面中）。</p>
+<p>返回一个答案数组 answer，数组中的每个元素 answer[i] 是在给出的单词列表 words 中可以作为字谜迷面 puzzles[i] 所对应的谜底的单词数目。</p>
+<p>words[i][j], puzzles[i][j] 都是小写英文字母。</p>
+<p>puzzles[i].length == 7。每个 puzzles[i] 所包含的字符都不重复。</p>]]></description>
+</item><item>
+    <title>0974：和可被 K 整除的子数组（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0974/</link>
+    <pubDate>Sun, 13 Jan 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0974/</guid>
+    <description><![CDATA[<p>第 119 场周赛第 3 题</p>
+<h2 id="题目">题目</h2>
+<p>给定一个整数数组 A，返回其中元素之和可被 K 整除的（连续、非空）子数组的数目。</p>]]></description>
+</item><item>
+    <title>0843：猜猜这个单词（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0843/</link>
+    <pubDate>Sat, 19 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0843/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>这个问题是 LeetCode 平台新增的交互式问题 。</p>
+<p>我们给出了一个由一些独特的单词组成的单词列表，每个单词都是 6 个字母长，并且这个列表中的一个单词将被选作秘密。</p>
+<p>你可以调用 master.guess(word) 来猜单词。你所猜的单词应当是存在于原列表并且由 6 个小写字母组成的类型字符串。</p>
+<p>此函数将会返回一个整型数字，表示你的猜测与秘密单词的准确匹配（值和位置同时匹配）的数目。此外，如果你的猜测不在给定的单词列表中，它将返回 -1。</p>
+<p>对于每个测试用例，你有 10 次机会来猜出这个单词。当所有调用都结束时，如果您对 master.guess 的调用不超过 10 次，并且至少有一次猜到秘密，那么您将通过该测试用例。</p>
+<p>除了下面示例给出的测试用例外，还会有 5 个额外的测试用例，每个单词列表中将会有 100 个单词。这些测试用例中的每个单词的字母都是从 &lsquo;a&rsquo; 到 &lsquo;z&rsquo; 中随机选取的，并且保证给定单词列表中的每个单词都是唯一的。</p>]]></description>
+</item><item>
+    <title>0710：黑名单中的随机数（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0710/</link>
+    <pubDate>Tue, 17 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0710/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个包含 [0，n) 中不重复整数的黑名单 blacklist ，写一个函数从 [0, n) 中返回一个不在 blacklist 中的随机整数。</p>
+<p>对它进行优化使其尽量少调用系统方法 Math.random() 。</p>
+<p>提示:</p>
+<ul>
+<li>1 &lt;= n &lt;= 1000000000</li>
+<li>0 &lt;= blacklist.length &lt; min(100000, N)</li>
+<li>[0, n) 不包含 n ，详细参见 interval notation 。</li>
+</ul>]]></description>
+</item><item>
+    <title>0706：设计哈希映射（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0706/</link>
+    <pubDate>Fri, 13 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0706/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>不使用任何内建的哈希表库设计一个哈希映射（HashMap）。</p>
+<p>实现 MyHashMap 类：</p>
+<ul>
+<li>MyHashMap() 用空映射初始化对象</li>
+<li>void put(int key, int value) 向 HashMap 插入一个键值对 (key, value) 。如果 key 已经存在于映射中，则更新其对应的值 value 。</li>
+<li>int get(int key) 返回特定的 key 所映射的 value ；如果映射中不包含 key 的映射，返回 -1 。</li>
+<li>void remove(key) 如果映射中存在 key 的映射，则移除 key 和它所对应的 value 。</li>
+</ul>
+<p>进阶：你能否不使用内置的 HashMap 库解决此问题？</p>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= key, value &lt;= 10^6</li>
+<li>最多调用 10^4 次 put、get 和 remove 方法</li>
+</ul>]]></description>
+</item><item>
+    <title>0705：设计哈希集合（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0705/</link>
+    <pubDate>Thu, 12 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0705/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
+<p>实现 MyHashSet 类：</p>
+<ul>
+<li>void add(key) 向哈希集合中插入值 key 。</li>
+<li>bool contains(key) 返回哈希集合中是否存在这个值 key 。</li>
+<li>void remove(key) 将给定值 key 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。</li>
+</ul>
+<p>你可以不使用内建的哈希集合库解决此问题吗？</p>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= key &lt;= 10^6</li>
+<li>最多调用 10^4 次 add、remove 和 contains 。</li>
+</ul>]]></description>
+</item><item>
+    <title>0697：数组的度（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0697/</link>
+    <pubDate>Wed, 04 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0697/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个非空且只包含非负数的整数数组 nums，数组的度的定义是指数组里任一元素出现频数的最大值。</p>
+<p>你的任务是在 nums 中找到与 nums 拥有相同大小的度的最短连续子数组，返回其长度。</p>]]></description>
+</item><item>
+    <title>0676：实现一个魔法字典（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0676/</link>
+    <pubDate>Wed, 13 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0676/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>设计一个使用单词列表进行初始化的数据结构，单词列表中的单词 互不相同 。 
+如果给出一个单词，请判定能否只将这个单词中一个字母换成另一个字母，使得所形成的新单词存在于你构建的字典中。</p>
+<p>实现 MagicDictionary 类：</p>
+<ul>
+<li>MagicDictionary() 初始化对象</li>
+<li>void buildDict(String[] dictionary) 使用字符串数组 dictionary 设定该数据结构，dictionary 中的字符串互不相同</li>
+<li>bool search(String searchWord) 给定一个字符串 searchWord ，判定能否只将字符串中 一个 字母换成另一个字母，
+使得所形成的新字符串能够与字典中的任一字符串匹配。如果可以，返回 true ；否则，返回 false 。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= dictionary.length &lt;= 100</li>
+<li>1 &lt;= dictionary[i].length &lt;= 100</li>
+<li>dictionary[i] 仅由小写英文字母组成</li>
+<li>dictionary 中的所有字符串 互不相同</li>
+<li>1 &lt;= searchWord.length &lt;= 100</li>
+<li>searchWord 仅由小写英文字母组成</li>
+<li>buildDict 仅在 search 之前调用一次</li>
+<li>最多调用 100 次 search</li>
+</ul>]]></description>
+</item><item>
+    <title>0653：两数之和 IV - 输入 BST（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0653/</link>
+    <pubDate>Sun, 30 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0653/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个二叉搜索树和一个目标结果，如果 BST 中存在两个元素且它们的和等于给定的目标结果，则返回 true。</p>]]></description>
+</item><item>
+    <title>0645：错误的集合</title>
+    <link>https://huozhixue.github.io/leetcode/0645/</link>
+    <pubDate>Fri, 21 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0645/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>集合 s 包含从 1 到 n 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导
+致集合 丢失了一个数字 并且 有一个数字重复 。</p>
+<p>给定一个数组 nums 代表了集合 S 发生错误后的结果。</p>
+<p>请你找出重复出现的整数，再找到丢失的整数，将它们以数组的形式返回。</p>
+<p>提示：</p>
+<ul>
+<li>2 &lt;= nums.length &lt;= 10^4</li>
+<li>1 &lt;= nums[i] &lt;= 10^4</li>
+</ul>]]></description>
+</item></channel>
+</rss>

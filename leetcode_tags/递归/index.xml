@@ -1,0 +1,159 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>递归 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E9%80%92%E5%BD%92/</link>
+        <description>递归 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Apr 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E9%80%92%E5%BD%92/" rel="self" type="application/rss+xml" /><item>
+    <title>1823：找出游戏的获胜者(★★)</title>
+    <link>https://huozhixue.github.io/leetcode/1823/</link>
+    <pubDate>Mon, 12 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1823/</guid>
+    <description><![CDATA[<p>第 236 场周赛第 2 题</p>
+<h2 id="题目">题目</h2>
+<p>共有 n 名小伙伴一起做游戏。小伙伴们围成一圈，按 顺时针顺序 从 1 到 n 编号。
+确切地说，从第 i 名小伙伴顺时针移动一位会到达第 (i+1) 名小伙伴的位置，
+其中 1 &lt;= i &lt; n ，从第 n 名小伙伴顺时针移动一位会回到第 1 名小伙伴的位置。</p>
+<p>游戏遵循如下规则：</p>
+<ol>
+<li>从第 1 名小伙伴所在位置 开始 。</li>
+<li>沿着顺时针方向数 k 名小伙伴，计数时需要 包含 起始时的那位小伙伴。
+逐个绕圈进行计数，一些小伙伴可能会被数过不止一次。</li>
+<li>你数到的最后一名小伙伴需要离开圈子，并视作输掉游戏。</li>
+<li>如果圈子中仍然有不止一名小伙伴，从刚刚输掉的小伙伴的 顺时针下一位 小伙伴 开始，回到步骤 2 继续执行。</li>
+<li>否则，圈子中最后一名小伙伴赢得游戏。</li>
+</ol>
+<p>给你参与游戏的小伙伴总数 n ，和一个整数 k ，返回游戏的获胜者。</p>
+<p>提示： 1 &lt;= k &lt;= n &lt;= 500</p>]]></description>
+</item><item>
+    <title>0779：第K个语法符号（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0779/</link>
+    <pubDate>Mon, 25 Dec 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0779/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在第一行我们写上一个 0。接下来的每一行，将前一行中的0替换为01，1替换为10。</p>
+<p>给定行数 N 和序数 K，返回第 N 行中第 K个字符。（K从1开始）</p>
+<p>注意：</p>
+<ul>
+<li>N 的范围 [1, 30].</li>
+<li>K 的范围 [1, 2^(N-1)].</li>
+</ul>]]></description>
+</item><item>
+    <title>0395：至少有K个重复字符的最长子串（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0395/</link>
+    <pubDate>Wed, 07 Sep 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0395/</guid>
+    <description><![CDATA[<p>第 3 场周赛第 4 题</p>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串 s 和一个整数 k ，请你找出 s 中的最长子串， 
+要求该子串中的每一字符出现次数都不少于 k 。返回这一子串的长度。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= s.length &lt;= 10^4</li>
+<li>s 仅由小写英文字母组成</li>
+<li>1 &lt;= k &lt;= 10^5</li>
+</ul>]]></description>
+</item><item>
+    <title>0390：消除游戏（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0390/</link>
+    <pubDate>Sun, 28 Aug 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0390/</guid>
+    <description><![CDATA[<p>第 2 场周赛第 2 题</p>
+<h2 id="题目">题目</h2>
+<p>给定一个从1 到 n 排序的整数列表。
+首先，从左到右，从第一个数字开始，每隔一个数字进行删除，直到列表的末尾。
+第二步，在剩下的数字中，从右到左，从倒数第一个数字开始，每隔一个数字进行删除，直到列表开头。
+我们不断重复这两步，从左到右和从右到左交替进行，直到只剩下一个数字。
+返回长度为 n 的列表中，最后剩下的数字。</p>]]></description>
+</item><item>
+    <title>0372：超级次方（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0372/</link>
+    <pubDate>Sun, 07 Aug 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0372/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>你的任务是计算 ab 对 1337 取模，a 是一个正整数，b 是一个非常大的正整数且会以数组形式给出。</p>]]></description>
+</item><item>
+    <title>0273：整数转换英文表示（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0273/</link>
+    <pubDate>Wed, 30 Sep 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0273/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>将非负整数 num 转换为其对应的英文表示。</p>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= num &lt;= 2^31 - 1</li>
+</ul>]]></description>
+</item><item>
+    <title>0241：为运算表达式设计优先级（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0241/</link>
+    <pubDate>Sat, 29 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0241/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。
+你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。</p>]]></description>
+</item><item>
+    <title>0126：单词接龙 II(★★★)</title>
+    <link>https://huozhixue.github.io/leetcode/0126/</link>
+    <pubDate>Wed, 06 May 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0126/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定两个单词（beginWord 和 endWord）和一个字典 wordList，找出所有从 beginWord 到 endWord 的最短转换序列。
+转换需遵循如下规则：</p>
+<ul>
+<li>每次转换只能改变一个字母。</li>
+<li>转换后得到的单词必须是字典中的单词。</li>
+</ul>
+<p>说明:</p>
+<ul>
+<li>如果不存在这样的转换序列，返回一个空列表。</li>
+<li>所有单词具有相同的长度。</li>
+<li>所有单词只由小写字母组成。</li>
+<li>字典中不存在重复的单词。</li>
+<li>你可以假设 beginWord 和 endWord 是非空的，且二者不相同。</li>
+</ul>]]></description>
+</item><item>
+    <title>0060：排列序列（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0060/</link>
+    <pubDate>Sun, 01 Mar 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0060/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给出集合 [1,2,3,&hellip;,n]，其所有元素共有 n! 种排列。</p>
+<p>按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：</p>
+<pre><code>&quot;123&quot;
+&quot;132&quot;
+&quot;213&quot;
+&quot;231&quot;
+&quot;312&quot;
+&quot;321&quot;
+</code></pre>
+<p>给定 n 和 k，返回第 k 个排列。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= n &lt;= 9</li>
+<li>1 &lt;= k &lt;= n!</li>
+</ul>
+<p> </p>]]></description>
+</item><item>
+    <title>0050：Pow(x, n)（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0050/</link>
+    <pubDate>Thu, 19 Feb 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0050/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>实现 pow(x, n) ，即计算 x 的 n 次幂函数（即，xn）。</p>
+<p>提示：</p>
+<ul>
+<li>-100.0 &lt; x &lt; 100.0</li>
+<li>-2^31 &lt;= n &lt;= 2^31-1</li>
+<li>-10^4 &lt;= xn &lt;= 10^4</li>
+</ul>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,220 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有力扣 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode/</link>
+        <description>所有力扣 | 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 May 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>1845：座位预约管理系统（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1845/</link>
+    <pubDate>Tue, 04 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1845/</guid>
+    <description><![CDATA[<p>第  场周赛第  题</p>
+<h2 id="题目">题目</h2>
+<p>请你设计一个管理 n 个座位预约的系统，座位编号从 1 到 n 。</p>
+<p>请你实现 SeatManager 类：</p>
+<ul>
+<li>SeatManager(int n) 初始化一个 SeatManager 对象，它管理从 1 到 n 编号的 n 个座位。所有座位初始都是可预约的。</li>
+<li>int reserve() 返回可以预约座位的 最小编号 ，此座位变为不可预约。</li>
+<li>void unreserve(int seatNumber) 将给定编号 seatNumber 对应的座位变成可以预约。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= n &lt;= 105</li>
+<li>1 &lt;= seatNumber &lt;= n</li>
+<li>每一次对 reserve 的调用，题目保证至少存在一个可以预约的座位。</li>
+<li>每一次对 unreserve 的调用，题目保证 seatNumber 在调用函数前都是被预约状态。</li>
+<li>对 reserve 和 unreserve 的调用 总共 不超过 105 次。</li>
+</ul>]]></description>
+</item><item>
+    <title>1834：单线程 CPU（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1834/</link>
+    <pubDate>Fri, 23 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1834/</guid>
+    <description><![CDATA[<p>第  场周赛第  题</p>
+<h2 id="题目">题目</h2>
+<p>给你一个二维数组 tasks ，用于表示 n​​​​​​ 项从 0 到 n - 1 编号的任务。其中 tasks[i] = [enqueueTimei, processingTimei] 
+意味着第 i​​​​​​​​​​ 项任务将会于 enqueueTimei 时进入任务队列，需要 processingTimei 的时长完成执行。</p>
+<p>现有一个单线程 CPU ，同一时间只能执行 最多一项 任务，该 CPU 将会按照下述方式运行：</p>
+<ul>
+<li>如果 CPU 空闲，且任务队列中没有需要执行的任务，则 CPU 保持空闲状态。</li>
+<li>如果 CPU 空闲，但任务队列中有需要执行的任务，则 CPU 将会选择 执行时间最短 的任务开始执行。
+如果多个任务具有同样的最短执行时间，则选择下标最小的任务开始执行。</li>
+<li>一旦某项任务开始执行，CPU 在 执行完整个任务 前都不会停止。</li>
+<li>CPU 可以在完成一项任务后，立即开始执行一项新任务。</li>
+</ul>
+<p>返回 CPU 处理任务的顺序。</p>
+<p>提示：</p>
+<ul>
+<li>tasks.length == n</li>
+<li>1 &lt;= n &lt;= 10^5</li>
+<li>1 &lt;= enqueueTimei, processingTimei &lt;= 10^9</li>
+</ul>]]></description>
+</item><item>
+    <title>1825：求出 MK 平均值(★★★)</title>
+    <link>https://huozhixue.github.io/leetcode/1825/</link>
+    <pubDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1825/</guid>
+    <description><![CDATA[<p>第 236 场周赛第 4 题</p>
+<h2 id="题目">题目</h2>
+<p>给你两个整数 m 和 k ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 MK 平均值 。</p>
+<p>MK 平均值 按照如下步骤计算：</p>
+<ol>
+<li>如果数据流中的整数少于 m 个，MK 平均值 为 -1 ，否则将数据流中最后 m 个元素拷贝到一个独立的容器中。</li>
+<li>从这个容器中删除最小的 k 个数和最大的 k 个数。</li>
+<li>计算剩余元素的平均值，并 向下取整到最近的整数 。</li>
+</ol>
+<p>请你实现 MKAverage 类：</p>
+<ul>
+<li>MKAverage(int m, int k) 用一个空的数据流和两个整数 m 和 k 初始化 MKAverage 对象。</li>
+<li>void addElement(int num) 往数据流中插入一个新的元素 num 。</li>
+<li>int calculateMKAverage() 对当前的数据流计算并返回 MK 平均数 ，结果需 向下取整到最近的整数 。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>3 &lt;= m &lt;= $10^5$</li>
+<li>1 &lt;= k*2 &lt; m</li>
+<li>1 &lt;= num &lt;= $10^5$</li>
+<li>addElement 与 calculateMKAverage 总操作次数不超过 $10^5$ 次。</li>
+</ul>]]></description>
+</item><item>
+    <title>1823：找出游戏的获胜者(★★)</title>
+    <link>https://huozhixue.github.io/leetcode/1823/</link>
+    <pubDate>Mon, 12 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1823/</guid>
+    <description><![CDATA[<p>第 236 场周赛第 2 题</p>
+<h2 id="题目">题目</h2>
+<p>共有 n 名小伙伴一起做游戏。小伙伴们围成一圈，按 顺时针顺序 从 1 到 n 编号。
+确切地说，从第 i 名小伙伴顺时针移动一位会到达第 (i+1) 名小伙伴的位置，
+其中 1 &lt;= i &lt; n ，从第 n 名小伙伴顺时针移动一位会回到第 1 名小伙伴的位置。</p>
+<p>游戏遵循如下规则：</p>
+<ol>
+<li>从第 1 名小伙伴所在位置 开始 。</li>
+<li>沿着顺时针方向数 k 名小伙伴，计数时需要 包含 起始时的那位小伙伴。
+逐个绕圈进行计数，一些小伙伴可能会被数过不止一次。</li>
+<li>你数到的最后一名小伙伴需要离开圈子，并视作输掉游戏。</li>
+<li>如果圈子中仍然有不止一名小伙伴，从刚刚输掉的小伙伴的 顺时针下一位 小伙伴 开始，回到步骤 2 继续执行。</li>
+<li>否则，圈子中最后一名小伙伴赢得游戏。</li>
+</ol>
+<p>给你参与游戏的小伙伴总数 n ，和一个整数 k ，返回游戏的获胜者。</p>
+<p>提示： 1 &lt;= k &lt;= n &lt;= 500</p>]]></description>
+</item><item>
+    <title>LCP32：批量处理任务(★★★)</title>
+    <link>https://huozhixue.github.io/leetcode/lcp32/</link>
+    <pubDate>Tue, 06 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/lcp32/</guid>
+    <description><![CDATA[<p>力扣杯 2021 春季赛第 5 题</p>
+<h2 id="题目">题目</h2>
+<p>某实验室计算机待处理任务以 [start,end,period] 格式记于二维数组 tasks，表示完成该任务的时间范围为起始时间 start 至结束时间 end 之间，
+需要计算机投入 period 的时长，注意：</p>
+<ul>
+<li>period 可为不连续时间</li>
+<li>首尾时间均包含在内</li>
+</ul>
+<p>处于开机状态的计算机可同时处理任意多个任务，请返回电脑最少开机多久，可处理完所有任务。</p>
+<p>2 &lt;= tasks.length &lt;= 10^5。</p>]]></description>
+</item><item>
+    <title>1801：积压订单中的订单总数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1801/</link>
+    <pubDate>Wed, 24 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1801/</guid>
+    <description><![CDATA[<p>第  场周赛第  题</p>
+<h2 id="题目">题目</h2>
+<p>给你一个二维整数数组 orders ，其中每个 orders[i] = [pricei, amounti, orderTypei] 表示有 amounti 笔类型为 orderTypei 、价格为 pricei 的订单。</p>
+<p>订单类型 orderTypei 可以分为两种：</p>
+<ul>
+<li>0 表示这是一批采购订单 buy</li>
+<li>1 表示这是一批销售订单 sell</li>
+</ul>
+<p>注意，orders[i] 表示一批共计 amounti 笔的独立订单，这些订单的价格和类型相同。对于所有有效的 i ，
+由 orders[i] 表示的所有订单提交时间均早于 orders[i+1] 表示的所有订单。</p>
+<p>存在由未执行订单组成的 积压订单 。积压订单最初是空的。提交订单时，会发生以下情况：</p>
+<ul>
+<li>如果该订单是一笔采购订单 buy ，则可以查看积压订单中价格 最低 的销售订单 sell 。
+如果该销售订单 sell 的价格 低于或等于 当前采购订单 buy 的价格，则匹配并执行这两笔订单，并将销售订单 sell 从积压订单中删除。
+否则，采购订单 buy 将会添加到积压订单中。</li>
+<li>反之亦然，如果该订单是一笔销售订单 sell ，则可以查看积压订单中价格 最高 的采购订单 buy 。
+如果该采购订单 buy 的价格 高于或等于 当前销售订单 sell 的价格，则匹配并执行这两笔订单，并将采购订单 buy 从积压订单中删除。
+否则，销售订单 sell 将会添加到积压订单中。</li>
+</ul>
+<p>输入所有订单后，返回积压订单中的 订单总数 。由于数字可能很大，所以需要返回对 109 + 7 取余的结果。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= orders.length &lt;= 105</li>
+<li>orders[i].length == 3</li>
+<li>1 &lt;= pricei, amounti &lt;= 109</li>
+<li>orderTypei 为 0 或 1</li>
+</ul>]]></description>
+</item><item>
+    <title>1792：最大平均通过率（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1792/</link>
+    <pubDate>Mon, 15 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1792/</guid>
+    <description><![CDATA[<p>第 232 场周赛第 3 题</p>
+<h2 id="题目">题目</h2>
+<p>一所学校里有一些班级，每个班级里有一些学生，现在每个班都会进行一场期末考试。给你一个二维数组 classes ，其中 classes[i] = [passi, totali] ，
+表示你提前知道了第 i 个班级总共有 totali 个学生，其中只有 passi 个学生可以通过考试。</p>
+<p>给你一个整数 extraStudents ，表示额外有 extraStudents 个聪明的学生，他们 一定 能通过任何班级的期末考。
+你需要给这 extraStudents 个学生每人都安排一个班级，使得 所有 班级的 平均 通过率 最大 。</p>
+<p>一个班级的 通过率 等于这个班级通过考试的学生人数除以这个班级的总人数。平均通过率 是所有班级的通过率之和除以班级数目。</p>
+<p>请你返回在安排这 extraStudents 个学生去对应班级后的 最大 平均通过率。与标准答案误差范围在 10-5 以内的结果都会视为正确结果。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= classes.length &lt;= 10^5</li>
+<li>classes[i].length == 2</li>
+<li>1 &lt;= passi &lt;= totali &lt;= 10^5</li>
+<li>1 &lt;= extraStudents &lt;= 10^5</li>
+</ul>]]></description>
+</item><item>
+    <title>1791：找出星型图的中心节点</title>
+    <link>https://huozhixue.github.io/leetcode/1791/</link>
+    <pubDate>Sun, 14 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1791/</guid>
+    <description><![CDATA[<p>第 232 场周赛第 2 题</p>
+<h2 id="题目">题目</h2>
+<p>有一个无向的 星型 图，由 n 个编号从 1 到 n 的节点组成。星型图有一个 中心 节点，并且恰有 n - 1 条边将中心节点与其他每个节点连接起来。</p>
+<p>给你一个二维整数数组 edges ，其中 edges[i] = [ui, vi] 表示在节点 ui 和 vi 之间存在一条边。请你找出并返回 edges 所表示星型图的中心节点。</p>
+<p>题目数据给出的 edges 表示一个有效的星型图。</p>]]></description>
+</item><item>
+    <title>1753：移除石子的最大得分（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1753/</link>
+    <pubDate>Sat, 27 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1753/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>正在玩一个单人游戏，面前放置着大小分别为 a​​​​​​、b 和 c​​​​​​ 的 三堆 石子。</p>
+<p>每回合你都要从两个 不同的非空堆 中取出一颗石子，并在得分上加 1 分。当存在 两个或更多 的空堆时，游戏停止。</p>
+<p>给你三个整数 a 、b 和 c ，返回可以得到的 最大分数 。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= a, b, c &lt;= 105</li>
+</ul>]]></description>
+</item><item>
+    <title>1705：吃苹果的最大数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1705/</link>
+    <pubDate>Sun, 10 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1705/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有一棵特殊的苹果树，一连 n 天，每天都可以长出若干个苹果。在第 i 天，树上会长出 apples[i] 个苹果，
+这些苹果将会在 days[i] 天后（也就是说，第 i + days[i] 天时）腐烂，变得无法食用。也可能有那么几天，
+树上不会长出新的苹果，此时用 apples[i] == 0 且 days[i] == 0 表示。</p>
+<p>你打算每天 最多 吃一个苹果来保证营养均衡。注意，你可以在这 n 天之后继续吃苹果。</p>
+<p>给你两个长度为 n 的整数数组 days 和 apples ，返回你可以吃掉的苹果的最大数目。</p>
+<p>提示：</p>
+<ul>
+<li>apples.length == n</li>
+<li>days.length == n</li>
+<li>1 &lt;= n &lt;= 2 * 104</li>
+<li>0 &lt;= apples[i], days[i] &lt;= 2 * 104</li>
+<li>只有在 apples[i] = 0 时，days[i] = 0 才成立</li>
+</ul>]]></description>
+</item></channel>
+</rss>

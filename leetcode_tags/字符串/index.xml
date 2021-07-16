@@ -1,0 +1,141 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>字符串 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+        <description>字符串 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Jul 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="self" type="application/rss+xml" /><item>
+    <title>1541：平衡括号字符串的最少插入次数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1541/</link>
+    <pubDate>Sat, 11 Jul 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1541/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个括号字符串 s ，它只包含字符 &lsquo;(&rsquo; 和 &lsquo;)&rsquo; 。一个括号字符串被称为平衡的当它满足：</p>
+<ul>
+<li>任何左括号 &lsquo;(&rsquo; 必须对应两个连续的右括号 &lsquo;))&rsquo; 。</li>
+<li>左括号 &lsquo;(&rsquo; 必须在对应的连续两个右括号 &lsquo;))&rsquo; 之前。</li>
+</ul>
+<p>比方说 &ldquo;())&quot;， &ldquo;())(())))&rdquo; 和 &ldquo;(())())))&rdquo; 都是平衡的， &ldquo;)()&quot;， &ldquo;()))&rdquo; 和 &ldquo;(()))&rdquo; 都是不平衡的。</p>
+<p>你可以在任意位置插入字符 &lsquo;(&rsquo; 和 &lsquo;)&rsquo; 使字符串平衡。</p>
+<p>请你返回让 s 平衡的最少插入次数。</p>]]></description>
+</item><item>
+    <title>0678：有效的括号字符串（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0678/</link>
+    <pubDate>Fri, 15 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0678/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个只包含三种字符的字符串：（ ，） 和 *，写一个函数来检验这个字符串是否为有效字符串。有效字符串具有如下规则：</p>
+<ul>
+<li>任何左括号 ( 必须有相应的右括号 )。</li>
+<li>任何右括号 ) 必须有相应的左括号 ( 。</li>
+<li>左括号 ( 必须在对应的右括号之前 )。</li>
+<li>* 可以被视为单个右括号 ) ，或单个左括号 ( ，或一个空字符串。</li>
+<li>一个空字符串也被视为有效字符串。</li>
+</ul>]]></description>
+</item><item>
+    <title>0647：回文子串（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0647/</link>
+    <pubDate>Sun, 23 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0647/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
+<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>]]></description>
+</item><item>
+    <title>0591：标签验证器（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0591/</link>
+    <pubDate>Sat, 20 May 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0591/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个表示代码片段的字符串，你需要实现一个验证器来解析这段代码，并返回它是否合法。合法的代码片段需要遵守以下的所有规则：</p>
+<ol>
+<li>代码必须被合法的闭合标签包围。否则，代码是无效的。</li>
+<li>闭合标签（不一定合法）要严格符合格式：&lt;TAG_NAME&gt;TAG_CONTENT&lt;/TAG_NAME&gt;。其中，&lt;TAG_NAME&gt;是起始标签，&lt;/TAG_NAME&gt;是结束标签。
+起始和结束标签中的 TAG_NAME 应当相同。当且仅当 TAG_NAME 和 TAG_CONTENT 都是合法的，闭合标签才是合法的。</li>
+<li>合法的 TAG_NAME 仅含有大写字母，长度在范围 [1,9] 之间。否则，该 TAG_NAME 是不合法的。</li>
+<li>合法的 TAG_CONTENT 可以包含其他合法的闭合标签，cdata （请参考规则7）和任意字符（注意参考规则1）除了不匹配的&lt;、不匹配的起始和结束标签、
+不匹配的或带有不合法 TAG_NAME 的闭合标签。否则，TAG_CONTENT 是不合法的。</li>
+<li>一个起始标签，如果没有具有相同 TAG_NAME 的结束标签与之匹配，是不合法的。反之亦然。不过，你也需要考虑标签嵌套的问题。</li>
+<li>一个&lt;，如果你找不到一个后续的&gt;与之匹配，是不合法的。并且当你找到一个&lt;或&lt;/时，所有直到下一个&gt;的前的字符，都应当被解析为 TAG_NAME（不一定合法）。</li>
+<li>cdata 有如下格式：<![CDATA[CDATA_CONTENT]]>。CDATA_CONTENT 的范围被定义成 <![CDATA[ 和后续的第一个 ]]>之间的字符。</li>
+<li>CDATA_CONTENT 可以包含任意字符。cdata 的功能是阻止验证器解析CDATA_CONTENT，所以即使其中有一些字符可以被解析为标签（无论合法还是不合法），
+也应该将它们视为常规字符。</li>
+</ol>
+<p>注意:</p>
+<ul>
+<li>为简明起见，你可以假设输入的代码（包括提到的任意字符）只包含数字, 字母, &lsquo;&lt;&rsquo;,'&gt;','/','!','[',']&lsquo;和&rsquo; &lsquo;。</li>
+</ul>]]></description>
+</item><item>
+    <title>0214：最短回文串（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0214/</link>
+    <pubDate>Sun, 02 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0214/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可以用这种方式转换的最短回文串。</p>]]></description>
+</item><item>
+    <title>0125：验证回文串</title>
+    <link>https://huozhixue.github.io/leetcode/0125/</link>
+    <pubDate>Tue, 05 May 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0125/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p>
+<p>说明：本题中，我们将空字符串定义为有效的回文串。</p>]]></description>
+</item><item>
+    <title>0065：有效数字（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0065/</link>
+    <pubDate>Fri, 06 Mar 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0065/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有效数字（按顺序）可以分成以下几个部分：</p>
+<ul>
+<li>一个 小数 或者 整数</li>
+<li>（可选）一个 &lsquo;e&rsquo; 或 &lsquo;E&rsquo; ，后面跟着一个 整数</li>
+</ul>
+<p>小数（按顺序）可以分成以下几个部分：</p>
+<ul>
+<li>（可选）一个符号字符（'+' 或 &lsquo;-'）</li>
+<li>下述格式之一：
+<ul>
+<li>至少一位数字，后面跟着一个点 &lsquo;.&rsquo;</li>
+<li>至少一位数字，后面跟着一个点 &lsquo;.&rsquo; ，后面再跟着至少一位数字</li>
+<li>一个点 &lsquo;.&rsquo; ，后面跟着至少一位数字</li>
+</ul>
+</li>
+</ul>
+<p>整数（按顺序）可以分成以下几个部分：</p>
+<ul>
+<li>（可选）一个符号字符（'+&rsquo; 或 &lsquo;-'）</li>
+<li>至少一位数字</li>
+</ul>
+<p>部分有效数字列举如下：</p>
+<pre><code>[&quot;2&quot;, &quot;0089&quot;, &quot;-0.1&quot;, &quot;+3.14&quot;, &quot;4.&quot;, &quot;-.9&quot;, &quot;2e10&quot;, &quot;-90E3&quot;, &quot;3e+7&quot;, &quot;+6e-1&quot;, &quot;53.5e93&quot;, &quot;-123.456e789&quot;]
+</code></pre>
+<p>部分无效数字列举如下：</p>
+<pre><code>[&quot;abc&quot;, &quot;1a&quot;, &quot;1e&quot;, &quot;e3&quot;, &quot;99e2.5&quot;, &quot;--6&quot;, &quot;-+3&quot;, &quot;95a54e53&quot;]
+</code></pre>
+<p>给你一个字符串 s ，如果 s 是一个 有效数字 ，请返回 true 。</p>
+<p>s 仅含英文字母（大写和小写），数字（0-9），加号 &lsquo;+&rsquo; ，减号 &lsquo;-&rsquo; ，或者点 &lsquo;.&rsquo; 。</p>]]></description>
+</item><item>
+    <title>0028：实现 strStr()（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0028/</link>
+    <pubDate>Wed, 28 Jan 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0028/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>实现 strStr() 函数。</p>
+<p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。</p>]]></description>
+</item><item>
+    <title>0005：最长回文子串（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0005/</link>
+    <pubDate>Mon, 05 Jan 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0005/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。</p>]]></description>
+</item></channel>
+</rss>

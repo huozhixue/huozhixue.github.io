@@ -1,0 +1,225 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>堆 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%A0%86/</link>
+        <description>堆 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 May 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%A0%86/" rel="self" type="application/rss+xml" /><item>
+    <title>1845：座位预约管理系统（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1845/</link>
+    <pubDate>Tue, 04 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1845/</guid>
+    <description><![CDATA[<p>第  场周赛第  题</p>
+<h2 id="题目">题目</h2>
+<p>请你设计一个管理 n 个座位预约的系统，座位编号从 1 到 n 。</p>
+<p>请你实现 SeatManager 类：</p>
+<ul>
+<li>SeatManager(int n) 初始化一个 SeatManager 对象，它管理从 1 到 n 编号的 n 个座位。所有座位初始都是可预约的。</li>
+<li>int reserve() 返回可以预约座位的 最小编号 ，此座位变为不可预约。</li>
+<li>void unreserve(int seatNumber) 将给定编号 seatNumber 对应的座位变成可以预约。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= n &lt;= 105</li>
+<li>1 &lt;= seatNumber &lt;= n</li>
+<li>每一次对 reserve 的调用，题目保证至少存在一个可以预约的座位。</li>
+<li>每一次对 unreserve 的调用，题目保证 seatNumber 在调用函数前都是被预约状态。</li>
+<li>对 reserve 和 unreserve 的调用 总共 不超过 105 次。</li>
+</ul>]]></description>
+</item><item>
+    <title>1834：单线程 CPU（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1834/</link>
+    <pubDate>Fri, 23 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1834/</guid>
+    <description><![CDATA[<p>第  场周赛第  题</p>
+<h2 id="题目">题目</h2>
+<p>给你一个二维数组 tasks ，用于表示 n​​​​​​ 项从 0 到 n - 1 编号的任务。其中 tasks[i] = [enqueueTimei, processingTimei] 
+意味着第 i​​​​​​​​​​ 项任务将会于 enqueueTimei 时进入任务队列，需要 processingTimei 的时长完成执行。</p>
+<p>现有一个单线程 CPU ，同一时间只能执行 最多一项 任务，该 CPU 将会按照下述方式运行：</p>
+<ul>
+<li>如果 CPU 空闲，且任务队列中没有需要执行的任务，则 CPU 保持空闲状态。</li>
+<li>如果 CPU 空闲，但任务队列中有需要执行的任务，则 CPU 将会选择 执行时间最短 的任务开始执行。
+如果多个任务具有同样的最短执行时间，则选择下标最小的任务开始执行。</li>
+<li>一旦某项任务开始执行，CPU 在 执行完整个任务 前都不会停止。</li>
+<li>CPU 可以在完成一项任务后，立即开始执行一项新任务。</li>
+</ul>
+<p>返回 CPU 处理任务的顺序。</p>
+<p>提示：</p>
+<ul>
+<li>tasks.length == n</li>
+<li>1 &lt;= n &lt;= 10^5</li>
+<li>1 &lt;= enqueueTimei, processingTimei &lt;= 10^9</li>
+</ul>]]></description>
+</item><item>
+    <title>1801：积压订单中的订单总数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1801/</link>
+    <pubDate>Wed, 24 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1801/</guid>
+    <description><![CDATA[<p>第  场周赛第  题</p>
+<h2 id="题目">题目</h2>
+<p>给你一个二维整数数组 orders ，其中每个 orders[i] = [pricei, amounti, orderTypei] 表示有 amounti 笔类型为 orderTypei 、价格为 pricei 的订单。</p>
+<p>订单类型 orderTypei 可以分为两种：</p>
+<ul>
+<li>0 表示这是一批采购订单 buy</li>
+<li>1 表示这是一批销售订单 sell</li>
+</ul>
+<p>注意，orders[i] 表示一批共计 amounti 笔的独立订单，这些订单的价格和类型相同。对于所有有效的 i ，
+由 orders[i] 表示的所有订单提交时间均早于 orders[i+1] 表示的所有订单。</p>
+<p>存在由未执行订单组成的 积压订单 。积压订单最初是空的。提交订单时，会发生以下情况：</p>
+<ul>
+<li>如果该订单是一笔采购订单 buy ，则可以查看积压订单中价格 最低 的销售订单 sell 。
+如果该销售订单 sell 的价格 低于或等于 当前采购订单 buy 的价格，则匹配并执行这两笔订单，并将销售订单 sell 从积压订单中删除。
+否则，采购订单 buy 将会添加到积压订单中。</li>
+<li>反之亦然，如果该订单是一笔销售订单 sell ，则可以查看积压订单中价格 最高 的采购订单 buy 。
+如果该采购订单 buy 的价格 高于或等于 当前销售订单 sell 的价格，则匹配并执行这两笔订单，并将采购订单 buy 从积压订单中删除。
+否则，销售订单 sell 将会添加到积压订单中。</li>
+</ul>
+<p>输入所有订单后，返回积压订单中的 订单总数 。由于数字可能很大，所以需要返回对 109 + 7 取余的结果。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= orders.length &lt;= 105</li>
+<li>orders[i].length == 3</li>
+<li>1 &lt;= pricei, amounti &lt;= 109</li>
+<li>orderTypei 为 0 或 1</li>
+</ul>]]></description>
+</item><item>
+    <title>1792：最大平均通过率（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1792/</link>
+    <pubDate>Mon, 15 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1792/</guid>
+    <description><![CDATA[<p>第 232 场周赛第 3 题</p>
+<h2 id="题目">题目</h2>
+<p>一所学校里有一些班级，每个班级里有一些学生，现在每个班都会进行一场期末考试。给你一个二维数组 classes ，其中 classes[i] = [passi, totali] ，
+表示你提前知道了第 i 个班级总共有 totali 个学生，其中只有 passi 个学生可以通过考试。</p>
+<p>给你一个整数 extraStudents ，表示额外有 extraStudents 个聪明的学生，他们 一定 能通过任何班级的期末考。
+你需要给这 extraStudents 个学生每人都安排一个班级，使得 所有 班级的 平均 通过率 最大 。</p>
+<p>一个班级的 通过率 等于这个班级通过考试的学生人数除以这个班级的总人数。平均通过率 是所有班级的通过率之和除以班级数目。</p>
+<p>请你返回在安排这 extraStudents 个学生去对应班级后的 最大 平均通过率。与标准答案误差范围在 10-5 以内的结果都会视为正确结果。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= classes.length &lt;= 10^5</li>
+<li>classes[i].length == 2</li>
+<li>1 &lt;= passi &lt;= totali &lt;= 10^5</li>
+<li>1 &lt;= extraStudents &lt;= 10^5</li>
+</ul>]]></description>
+</item><item>
+    <title>1705：吃苹果的最大数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1705/</link>
+    <pubDate>Sun, 10 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1705/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有一棵特殊的苹果树，一连 n 天，每天都可以长出若干个苹果。在第 i 天，树上会长出 apples[i] 个苹果，
+这些苹果将会在 days[i] 天后（也就是说，第 i + days[i] 天时）腐烂，变得无法食用。也可能有那么几天，
+树上不会长出新的苹果，此时用 apples[i] == 0 且 days[i] == 0 表示。</p>
+<p>你打算每天 最多 吃一个苹果来保证营养均衡。注意，你可以在这 n 天之后继续吃苹果。</p>
+<p>给你两个长度为 n 的整数数组 days 和 apples ，返回你可以吃掉的苹果的最大数目。</p>
+<p>提示：</p>
+<ul>
+<li>apples.length == n</li>
+<li>days.length == n</li>
+<li>1 &lt;= n &lt;= 2 * 104</li>
+<li>0 &lt;= apples[i], days[i] &lt;= 2 * 104</li>
+<li>只有在 apples[i] = 0 时，days[i] = 0 才成立</li>
+</ul>]]></description>
+</item><item>
+    <title>1642：可以到达的最远建筑（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1642/</link>
+    <pubDate>Sun, 08 Nov 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1642/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个整数数组 heights ，表示建筑物的高度。另有一些砖块 bricks 和梯子 ladders 。</p>
+<p>你从建筑物 0 开始旅程，不断向后面的建筑物移动，期间可能会用到砖块或梯子。</p>
+<p>当从建筑物 i 移动到建筑物 i+1（下标 从 0 开始 ）时：</p>
+<ul>
+<li>如果当前建筑物的高度 大于或等于 下一建筑物的高度，则不需要梯子或砖块</li>
+<li>如果当前建筑的高度 小于 下一个建筑的高度，您可以使用 一架梯子 或 (h[i+1] - h[i]) 个砖块</li>
+</ul>
+<p>如果以最佳方式使用给定的梯子和砖块，返回你可以到达的最远建筑物的下标（下标 从 0 开始 ）。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= heights.length &lt;= 105</li>
+<li>1 &lt;= heights[i] &lt;= 106</li>
+<li>0 &lt;= bricks &lt;= 109</li>
+<li>0 &lt;= ladders &lt;= heights.length</li>
+</ul>]]></description>
+</item><item>
+    <title>1439：有序矩阵中的第 k 个最小数组和（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1439/</link>
+    <pubDate>Fri, 17 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1439/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个 m * n 的矩阵 mat，以及一个整数 k ，矩阵中的每一行都以非递减的顺序排列。</p>
+<p>你可以从每一行中选出 1 个元素形成一个数组。返回所有可能数组中的第 k 个 最小 数组和。</p>
+<p>提示：</p>
+<ul>
+<li>m == mat.length</li>
+<li>n == mat.length[i]</li>
+<li>1 &lt;= m, n &lt;= 40</li>
+<li>1 &lt;= k &lt;= min(200, n ^ m)</li>
+<li>1 &lt;= mat[i][j] &lt;= 5000</li>
+<li>mat[i] 是一个非递减数组</li>
+</ul>]]></description>
+</item><item>
+    <title>1046：最后一块石头的重量</title>
+    <link>https://huozhixue.github.io/leetcode/1046/</link>
+    <pubDate>Wed, 17 Apr 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1046/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有一堆石头，每块石头的重量都是正整数。</p>
+<p>每一回合，从中选出两块 最重的 石头，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x &lt;= y。
+那么粉碎的可能结果如下：</p>
+<ul>
+<li>如果 x == y，那么两块石头都会被完全粉碎；</li>
+<li>如果 x != y，那么重量为 x 的石头将会完全粉碎，而重量为 y 的石头新重量为 y-x。</li>
+</ul>
+<p>最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 0。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= stones.length &lt;= 30</li>
+<li>1 &lt;= stones[i] &lt;= 1000</li>
+</ul>]]></description>
+</item><item>
+    <title>0973：最接近原点的 K 个点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0973/</link>
+    <pubDate>Sat, 12 Jan 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0973/</guid>
+    <description><![CDATA[<p>第 119 场周赛第 2 题</p>
+<h2 id="题目">题目</h2>
+<p>我们有一个由平面上的点组成的列表 points。需要从中找出 K 个距离原点 (0, 0) 最近的点。</p>
+<p>（这里，平面上两点之间的距离是欧几里德距离。）</p>
+<p>你可以按任何顺序返回答案。除了点坐标的顺序之外，答案确保是唯一的。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= K &lt;= points.length &lt;= 10000</li>
+<li>-10000 &lt; points[i][0] &lt; 10000</li>
+<li>-10000 &lt; points[i][1] &lt; 10000</li>
+</ul>]]></description>
+</item><item>
+    <title>0871：最低加油次数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0871/</link>
+    <pubDate>Sat, 16 Jun 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0871/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>汽车从起点出发驶向目的地，该目的地位于出发位置东面 target 英里处。</p>
+<p>沿途有加油站，每个 station[i] 代表一个加油站，它位于出发位置东面 station[i][0] 英里处，并且有 station[i][1] 升汽油。</p>
+<p>假设汽车油箱的容量是无限的，其中最初有 startFuel 升燃料。它每行驶 1 英里就会用掉 1 升汽油。</p>
+<p>当汽车到达加油站时，它可能停下来加油，将所有汽油从加油站转移到汽车中。</p>
+<p>为了到达目的地，汽车所必要的最低加油次数是多少？如果无法到达目的地，则返回 -1 。</p>
+<p>注意：如果汽车到达加油站时剩余燃料为 0，它仍然可以在那里加油。如果汽车到达目的地时剩余燃料为 0，仍然认为它已经到达目的地。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= target, startFuel, stations[i][1] &lt;= 10^9</li>
+<li>0 &lt;= stations.length &lt;= 500</li>
+<li>0 &lt; stations[0][0] &lt; stations[1][0] &lt; &hellip; &lt; stations[stations.length-1][0] &lt; target</li>
+</ul>]]></description>
+</item></channel>
+</rss>

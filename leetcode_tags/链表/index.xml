@@ -1,0 +1,143 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>链表 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/</link>
+        <description>链表 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Jun 2018 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>0876：链表的中间结点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0876/</link>
+    <pubDate>Thu, 21 Jun 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0876/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个头结点为 head 的非空单链表，返回链表的中间结点。</p>
+<p>如果有两个中间结点，则返回第二个中间结点。</p>
+<p>提示：</p>
+<ul>
+<li>给定链表的结点数介于 1 和 100 之间。</li>
+</ul>]]></description>
+</item><item>
+    <title>0817：链表组件（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0817/</link>
+    <pubDate>Mon, 23 Apr 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0817/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定链表头结点 head，该链表上的每个结点都有一个 唯一的整型值 。</p>
+<p>同时给定列表 G，该列表是上述链表中整型值的一个子集。</p>
+<p>返回列表 G 中组件的个数，这里对组件的定义为：链表中一段最长连续结点的值（该值必须在列表 G 中）构成的集合。</p>
+<p>提示：</p>
+<ul>
+<li>如果 N 是给定链表 head 的长度，1 &lt;= N &lt;= 10000。</li>
+<li>链表中每个结点的值所在范围为 [0, N - 1]。</li>
+<li>1 &lt;= G.length &lt;= 10000</li>
+<li>G 是链表中所有结点的值的一个子集.</li>
+</ul>]]></description>
+</item><item>
+    <title>0725：分隔链表（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0725/</link>
+    <pubDate>Wed, 01 Nov 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0725/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。</p>
+<p>每部分的长度应该尽可能的相等: 任意两部分的长度差距不能超过 1，也就是说可能有些部分为 null。</p>
+<p>这k个部分应该按照在链表中出现的顺序进行输出，并且排在前面的部分的长度应该大于或等于后面的长度。</p>
+<p>返回一个符合上述规则的链表的列表。</p>
+<p>提示:</p>
+<ul>
+<li>root 的长度范围： [0, 1000].</li>
+<li>输入的每个节点的大小范围：[0, 999].</li>
+<li>k 的取值范围： [1, 50].</li>
+</ul>]]></description>
+</item><item>
+    <title>0707：设计链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0707/</link>
+    <pubDate>Sat, 14 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0707/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val 和 next。
+val 是当前节点的值，next 是指向下一个节点的指针/引用。如果要使用双向链表，
+则还需要一个属性 prev 以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。</p>
+<p>在链表类中实现这些功能：</p>
+<ul>
+<li>get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。</li>
+<li>addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。</li>
+<li>addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。</li>
+<li>addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val  的节点。如果 index 等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。</li>
+<li>deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>所有val值都在 [1, 1000] 之内。</li>
+<li>操作次数将在  [1, 1000] 之内。</li>
+<li>请不要使用内置的 LinkedList 库。</li>
+</ul>]]></description>
+</item><item>
+    <title>0445：两数相加 II</title>
+    <link>https://huozhixue.github.io/leetcode/0445/</link>
+    <pubDate>Sat, 22 Oct 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0445/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你两个 非空 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。</p>
+<p>你可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
+<p>如果输入链表不能修改该如何处理？换句话说，你不能对列表中的节点进行翻转。</p>]]></description>
+</item><item>
+    <title>0430：扁平化多级双向链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0430/</link>
+    <pubDate>Fri, 07 Oct 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0430/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>多级双向链表中，除了指向下一个节点和前一个节点指针之外，它还有一个子链表指针，可能指向单独的双向链表。
+这些子列表也可能会有一个或多个自己的子项，依此类推，生成多级数据结构，如下面的示例所示。</p>
+<p>给你位于列表第一级的头节点，请你扁平化列表，使所有结点出现在单级双链表中。</p>]]></description>
+</item><item>
+    <title>0328：奇偶链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0328/</link>
+    <pubDate>Tue, 24 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0328/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，
+而不是节点的值的奇偶性。</p>
+<p>请尝试使用原地算法完成。你的算法的空间复杂度应为 O(1)，时间复杂度应为 O(nodes)，nodes 为节点总数。</p>]]></description>
+</item><item>
+    <title>0237：删除链表中的节点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0237/</link>
+    <pubDate>Tue, 25 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0237/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点。传入函数的唯一参数为 要被删除的节点 。</p>
+<p>现有一个链表 &ndash; head = [4,5,1,9]，它可以表示为:</p>
+<p></p>
+<p>提示：</p>
+<ul>
+<li>链表至少包含两个节点。</li>
+<li>链表中所有节点的值都是唯一的。</li>
+<li>给定的节点为非末尾节点并且一定是链表中的一个有效节点。</li>
+<li>不要从你的函数中返回任何结果。</li>
+</ul>]]></description>
+</item><item>
+    <title>0234：回文链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0234/</link>
+    <pubDate>Sat, 22 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0234/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>请判断一个链表是否为回文链表。</p>
+<p>你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>]]></description>
+</item><item>
+    <title>0206：反转链表（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0206/</link>
+    <pubDate>Sat, 25 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0206/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>反转一个单链表。</p>
+<p>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>]]></description>
+</item></channel>
+</rss>

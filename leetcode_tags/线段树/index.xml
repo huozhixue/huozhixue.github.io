@@ -1,0 +1,38 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>线段树 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+        <description>线段树 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 26 May 2018 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="self" type="application/rss+xml" /><item>
+    <title>0850：矩形面积 II（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0850/</link>
+    <pubDate>Sat, 26 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0850/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>我们给出了一个（轴对齐的）矩形列表 rectangles 。 
+对于 rectangle[i] = [x1, y1, x2, y2]，其中（x1，y1）是矩形 i 左下角的坐标，
+（x2，y2）是该矩形右上角的坐标。</p>
+<p>找出平面中所有矩形叠加覆盖后的总面积。 由于答案可能太大，请返回它对 10 ^ 9 + 7 取模的结果。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= rectangles.length &lt;= 200</li>
+<li>rectanges[i].length = 4</li>
+<li>0 &lt;= rectangles[i][j] &lt;= 10^9</li>
+<li>矩形叠加覆盖后的总面积不会超越 2^63 - 1 ，这意味着可以用一个 64 位有符号整数来保存面积结果。</li>
+</ul>]]></description>
+</item><item>
+    <title>0053：最大子序和（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0053/</link>
+    <pubDate>Sun, 22 Feb 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0053/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 3 * 10^4</li>
+<li>-10^5 &lt;= nums[i] &lt;= 10^5</li>
+</ul>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,176 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>并查集 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+        <description>并查集 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Oct 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+    <title>1627：带阈值的图连通性（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1627/</link>
+    <pubDate>Sat, 24 Oct 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1627/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有 n 座城市，编号从 1 到 n 。编号为 x 和 y 的两座城市直接连通的前提是： x 和 y 的公因数中，至少有一个 严格大于 某个阈值 threshold 。
+更正式地说，如果存在整数 z ，且满足以下所有条件，则编号 x 和 y 的城市之间有一条道路：</p>
+<ul>
+<li>x % z == 0</li>
+<li>y % z == 0</li>
+<li>z &gt; threshold</li>
+</ul>
+<p>给你两个整数 n 和 threshold ，以及一个待查询数组，请你判断每个查询 queries[i] = [ai, bi] 指向的城市 ai 和 bi 是否连通（即，它们之间是否存在一条路径）。</p>
+<p>返回数组 answer ，其中answer.length == queries.length 。
+如果第 i 个查询中指向的城市 ai 和 bi 连通，则 answer[i] 为 true ；如果不连通，则 answer[i] 为 false 。</p>]]></description>
+</item><item>
+    <title>0990：等式方程的可满足性（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0990/</link>
+    <pubDate>Tue, 29 Jan 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0990/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4，
+并采用两种不同的形式之一：&ldquo;a==b&rdquo; 或 &ldquo;a!=b&rdquo;。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。</p>
+<p>只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回 true，否则返回 false。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= equations.length &lt;= 500</li>
+<li>equations[i].length == 4</li>
+<li>equations[i][0] 和 equations[i][3] 是小写字母</li>
+<li>equations[i][1] 要么是 &lsquo;='，要么是 &lsquo;!&rsquo;</li>
+<li>equations[i][2] 是 &lsquo;=&rsquo;</li>
+</ul>]]></description>
+</item><item>
+    <title>0959：由斜杠划分区域（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0959/</link>
+    <pubDate>Sat, 29 Dec 2018 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0959/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在由 1 x 1 方格组成的 N x N 网格 grid 中，每个 1 x 1 方块由 /、\ 或空格构成。这些字符会将方块划分为一些共边的区域。</p>
+<p>（请注意，反斜杠字符是转义的，因此 \ 用 &ldquo;\&rdquo; 表示。）。</p>
+<p>返回区域的数目。</p>]]></description>
+</item><item>
+    <title>0839：相似字符串组（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0839/</link>
+    <pubDate>Tue, 15 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0839/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。
+如果这两个字符串本身是相等的，那它们也是相似的。</p>
+<p>例如，&ldquo;tars&rdquo; 和 &ldquo;rats&rdquo; 是相似的 (交换 0 与 2 的位置)； &ldquo;rats&rdquo; 和 &ldquo;arts&rdquo; 也是相似的，
+但是 &ldquo;star&rdquo; 不与 &ldquo;tars&rdquo;，&ldquo;rats&rdquo;，或 &ldquo;arts&rdquo; 相似。</p>
+<p>总之，它们通过相似性形成了两个关联组：{&ldquo;tars&rdquo;, &ldquo;rats&rdquo;, &ldquo;arts&rdquo;} 和 {&ldquo;star&rdquo;}。
+注意，&ldquo;tars&rdquo; 和 &ldquo;arts&rdquo; 是在同一组中，即使它们并不相似。形式上，对每个组而言，
+要确定一个单词在组中，只需要这个词和该组中至少一个单词相似。</p>
+<p>给你一个字符串列表 strs。列表中的每个字符串都是 strs 中其它所有字符串的一个字母异位词。
+请问 strs 中有多少个相似字符串组？</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= strs.length &lt;= 300</li>
+<li>1 &lt;= strs[i].length &lt;= 300</li>
+<li>strs[i] 只包含小写字母。</li>
+<li>strs 中的所有单词都具有相同的长度，且是彼此的字母异位词。</li>
+</ul>]]></description>
+</item><item>
+    <title>0803：打砖块（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0803/</link>
+    <pubDate>Mon, 09 Apr 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0803/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有一个 m x n 的二元网格，其中 1 表示砖块，0 表示空白。砖块 稳定（不会掉落）的前提是：</p>
+<ul>
+<li>一块砖直接连接到网格的顶部，或者</li>
+<li>至少有一块相邻（4 个方向之一）砖块 稳定 不会掉落时</li>
+</ul>
+<p>给你一个数组 hits ，这是需要依次消除砖块的位置。每当消除 hits[i] = (rowi, coli) 位置上的砖块时，
+对应位置的砖块（若存在）会消失，然后其他的砖块可能因为这一消除操作而掉落。
+一旦砖块掉落，它会立即从网格中消失（即，它不会落在其他稳定的砖块上）。</p>
+<p>返回一个数组 result ，其中 result[i] 表示第 i 次消除操作对应掉落的砖块数目。</p>
+<p>注意，消除可能指向是没有砖块的空白位置，如果发生这种情况，则没有砖块掉落。</p>]]></description>
+</item><item>
+    <title>0785：判断二分图（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0785/</link>
+    <pubDate>Sun, 31 Dec 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0785/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>存在一个 无向图 ，图中有 n 个节点。其中每个节点都有一个介于 0 到 n - 1 之间的唯一编号。
+给你一个二维数组 graph ，其中 graph[u] 是一个节点数组，由节点 u 的邻接节点组成。
+形式上，对于 graph[u] 中的每个 v ，都存在一条位于节点 u 和节点 v 之间的无向边。
+该无向图同时具有以下属性：</p>
+<ul>
+<li>不存在自环（graph[u] 不包含 u）。</li>
+<li>不存在平行边（graph[u] 不包含重复值）。</li>
+<li>如果 v 在 graph[u] 内，那么 u 也应该在 graph[v] 内（该图是无向图）</li>
+<li>这个图可能不是连通图，也就是说两个节点 u 和 v 之间可能不存在一条连通彼此的路径。</li>
+</ul>
+<p>二分图 定义：如果能将一个图的节点集合分割成两个独立的子集 A 和 B ，
+并使图中的每一条边的两个节点一个来自 A 集合，一个来自 B 集合，就将这个图称为 二分图 。</p>
+<p>如果图是二分图，返回 true ；否则，返回 false 。</p>
+<p>提示：</p>
+<ul>
+<li>graph.length == n</li>
+<li>1 &lt;= n &lt;= 100</li>
+<li>0 &lt;= graph[u].length &lt; n</li>
+<li>0 &lt;= graph[u][i] &lt;= n - 1</li>
+<li>graph[u] 不会包含 u</li>
+<li>graph[u] 的所有值 互不相同</li>
+<li>如果 graph[u] 包含 v，那么 graph[v] 也会包含 u</li>
+</ul>]]></description>
+</item><item>
+    <title>0721：账户合并（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0721/</link>
+    <pubDate>Sat, 28 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0721/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，
+其余元素是 emails 表示该账户的邮箱地址。</p>
+<p>现在，我们想合并这些账户。如果两个账户都有一些共同的邮箱地址，则两个账户必定属于同一个人。
+请注意，即使两个账户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。
+一个人最初可以拥有任意数量的账户，但其所有账户都具有相同的名称。</p>
+<p>合并账户后，按以下格式返回账户：每个账户的第一个元素是名称，其余元素是按字符 ASCII 顺序排列的邮箱地址。
+账户本身可以以任意顺序返回。</p>]]></description>
+</item><item>
+    <title>0685：冗余连接 II（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0685/</link>
+    <pubDate>Fri, 22 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0685/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在本问题中，有根树指满足以下条件的 有向 图。该树只有一个根节点，所有其他节点都是该根节点的后继。
+该树除了根节点之外的每一个节点都有且只有一个父节点，而根节点没有父节点。</p>
+<p>输入一个有向图，该图由一个有着 n 个节点（节点值不重复，从 1 到 n）的树及一条附加的有向边构成。
+附加的边包含在 1 到 n 中的两个不同顶点间，这条附加的边不属于树中已存在的边。</p>
+<p>结果图是一个以边组成的二维数组 edges 。 每个元素是一对 [ui, vi]，用以表示 有向 图中连接顶点 ui 和顶点 vi 的边，
+其中 ui 是 vi 的一个父节点。</p>
+<p>返回一条能删除的边，使得剩下的图是有 n 个节点的有根树。若有多个答案，返回最后出现在给定二维数组的答案。</p>]]></description>
+</item><item>
+    <title>0684：冗余连接（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0684/</link>
+    <pubDate>Thu, 21 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0684/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>在本问题中, 树指的是一个连通且无环的无向图。</p>
+<p>输入一个图，该图由一个有着N个节点 (节点值不重复1, 2, &hellip;, N) 的树及一条附加的边构成。
+附加的边的两个顶点包含在1到N中间，这条附加的边不属于树中已存在的边。</p>
+<p>结果图是一个以边组成的二维数组。每一个边的元素是一对[u, v] ，满足 u &lt; v，表示连接顶点u 和v的无向图的边。</p>
+<p>返回一条可以删去的边，使得结果图是一个有着N个节点的树。如果有多个答案，则返回二维数组中最后出现的边。
+答案边 [u, v] 应满足相同的格式 u &lt; v。</p>]]></description>
+</item><item>
+    <title>0547：省份数量（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0547/</link>
+    <pubDate>Thu, 06 Apr 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0547/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，
+那么城市 a 与城市 c 间接相连。</p>
+<p>省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。</p>
+<p>给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] = 1 表示第 i 个城市和第 j 个城市直接相连，
+而 isConnected[i][j] = 0 表示二者不直接相连。</p>
+<p>返回矩阵中 省份 的数量。</p>]]></description>
+</item></channel>
+</rss>
