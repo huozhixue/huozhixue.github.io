@@ -9,88 +9,70 @@
 
 - WordDictionary() 初始化词典对象
 - void addWord(word) 将 word 添加到数据结构中，之后可以对它进行匹配
-- bool search(word) 如果数据结构中存在字符串与 word 匹配，则返回 true ；否则，返回  false 。word 中可能包含一些 '.' ，每个 . 都可以表示任何一个字母。
+- bool search(word) 如果数据结构中存在字符串与 word 匹配，则返回 true ；
+否则，返回  false 。word 中可能包含一些 '.' ，每个 . 都可以表示任何一个字母。
+ 
 
-ddWord 中的 word 由小写英文字母组成。search 中的 word 由 '.' 或小写英文字母组成。
+提示：
 
- <!--more--> 
+- 1 <= word.length <= 500
+- addWord 中的 word 由小写英文字母组成
+- search 中的 word 由 '.' 或小写英文字母组成
+- 最多调用 50000 次 addWord 和 search
+
 
 示例：
 
-	输入：
-	["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
-	[[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
-	输出：
-	[null,null,null,null,false,true,true,true]
-
-	解释：
-	WordDictionary wordDictionary = new WordDictionary();
-	wordDictionary.addWord("bad");
-	wordDictionary.addWord("dad");
-	wordDictionary.addWord("mad");
-	wordDictionary.search("pad"); // return False
-	wordDictionary.search("bad"); // return True
-	wordDictionary.search(".ad"); // return True
-	wordDictionary.search("b.."); // return True
+    输入：
+    ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
+    [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
+    输出：
+    [null,null,null,null,false,true,true,true]
+    
+    解释：
+    WordDictionary wordDictionary = new WordDictionary();
+    wordDictionary.addWord("bad");
+    wordDictionary.addWord("dad");
+    wordDictionary.addWord("mad");
+    wordDictionary.search("pad"); // return False
+    wordDictionary.search("bad"); // return True
+    wordDictionary.search(".ad"); // return True
+    wordDictionary.search("b.."); // return True
+     
 
 
 
 ## 分析
 
-### #1
+如果 search 不含 '.' ，即是 {{< lc "0208" >}}，最基本的前缀树即可。
 
-如果 search 不含 '.' ，那么就和 0208 完全一样。
+针对 '.'，考虑递归，遍历每一棵子树。
 
-匹配 search 时，遇到 '.'，要考虑 '.' 表示每个字母的情况下是否匹配，可以用递归。
 
-```python
-class WordDictionary:
-
-    def __init__(self):
-        T = lambda: defaultdict(T)
-        self.trie = T() 
-
-    def addWord(self, word: str) -> None:
-        reduce(dict.__getitem__, word, self.trie)['#'] = {}
-
-    def search(self, word: str) -> bool:
-        return self.startsWith(self.trie, word + '#')
-
-    def startsWith(self, trie: dict, prefix: str) -> bool:
-        for i, char in enumerate(prefix):
-            if char == '.':
-                return any(self.startsWith(t, prefix[i+1:]) for t in trie.values())
-            if char not in trie:
-                return False
-            trie = trie[char]
-        return True
-```
-
-344 ms
-
-### #2
-
-因为本题不需要判断前缀，所以也可以直接用哈希表。按长度分类存储，以节省时间。
- 
 ## 解答
 
 ```python
 class WordDictionary:
 
     def __init__(self):
-        self.d = defaultdict(set)
+        T = lambda: defaultdict(T)
+        self.trie = T()
 
     def addWord(self, word: str) -> None:
-        self.d[len(word)].add(word)
-
+        reduce(dict.__getitem__, word, self.trie)['#'] = {}
+156564\597
     def search(self, word: str) -> bool:
-        return any(self.isMatch(word, cand) for cand in self.d[len(word)])
+        return self.startsWith(self.trie, word + '#')
 
-    def isMatch(self, word, cand):
-        return all(w in [c, '.'] for w, c in zip(word, cand))
+    def startsWith(self, p, prefix):
+        for i, char in enumerate(prefix):
+            if char == '.':
+                return any(self.startsWith(pp, prefix[i+1:]) for pp in p.values())
+            if char not in p:
+                return False
+            p = p[char]
+        return True
 ```
-
-136 ms
-
+296 ms
 
 

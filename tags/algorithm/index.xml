@@ -3,7 +3,14 @@
         <title>algorithm - 标签 - 个人博客</title>
         <link>https://huozhixue.github.io/tags/algorithm/</link>
         <description>algorithm - 标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+    <title>力扣总结 数据结构进阶（二）：字典树</title>
+    <link>https://huozhixue.github.io/algorithm-trie/</link>
+    <pubDate>Sun, 11 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-trie/</guid>
+    <description><![CDATA[字典树，又叫前缀树，是一种 N 叉树，用于高效地存储、查找字符串前缀。 python 中可以用 defaultdict 来实现。 #1 基础 0208 实现 Trie (前缀树) #2 进阶 0211 添加与搜索单词 - 数据结]]></description>
+</item><item>
     <title>力扣总结 数据结构进阶（一）：并查集</title>
     <link>https://huozhixue.github.io/algorithm-union_find/</link>
     <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</pubDate>
@@ -92,17 +99,5 @@
     <guid>https://huozhixue.github.io/algorithm-bit/</guid>
     <description><![CDATA[<p>位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。</p>
 <p>很多位运算的问题具有较强的技巧性，需要很熟悉各个位运算符的性质。</p>]]></description>
-</item><item>
-    <title>力扣总结 常见算法（一）：排序</title>
-    <link>https://huozhixue.github.io/algorithm-sort/</link>
-    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-sort/</guid>
-    <description><![CDATA[<p>排序算法是非常经典的一类算法，常作为算法教程的第一章。</p>
-<p>最常用的是快速排序、归并排序、堆排序，其思想也不仅应用在排序中。</p>
-<p>特别的，当数据范围相对于数据规模较小时，计数排序可能更快。
-而桶排序的应用较为灵活，能巧妙地解决一些问题。</p>
-<p>python 中一般直接调用 sort 函数来排序，采用的是 TimSort算法，
-一种结合了归并排序和插入排序的混合排序算法。</p>]]></description>
 </item></channel>
 </rss>

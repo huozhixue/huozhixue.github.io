@@ -23,25 +23,30 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0648/</guid>
     <description><![CDATA[<h2 id="题目">题目</h2>
-<p>在英语中，我们有一个叫做 词根(root)的概念，它可以跟着其他一些词组成另一个较长的单词——我们称这个词为 继承词(successor)。例如，词根an，跟随着单词 other(其他)，可以形成新的单词 another(另一个)。</p>
-<p>现在，给定一个由许多词根组成的词典和一个句子。你需要将句子中的所有继承词用词根替换掉。如果继承词有许多可以形成它的词根，则用最短的词根替换它。</p>
+<p>在英语中，我们有一个叫做 词根(root)的概念，它可以跟着其他一些词组成另一个较长的单词——我们称这个词为 
+继承词(successor)。例如，词根an，跟随着单词 other(其他)，可以形成新的单词 another(另一个)。</p>
+<p>现在，给定一个由许多词根组成的词典和一个句子。你需要将句子中的所有继承词用词根替换掉。
+如果继承词有许多可以形成它的词根，则用最短的词根替换它。</p>
 <p>你需要输出替换之后的句子。</p>
-<p>sentence 中单词之间由一个空格隔开。sentence 没有前导或尾随空格。</p>]]></description>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= dictionary.length &lt;= 1000</li>
+<li>1 &lt;= dictionary[i].length &lt;= 100</li>
+<li>dictionary[i] 仅由小写字母组成。</li>
+<li>1 &lt;= sentence.length &lt;= 10^6</li>
+<li>sentence 仅由小写字母和空格组成。</li>
+<li>sentence 中单词的总量在范围 [1, 1000] 内。</li>
+<li>sentence 中每个单词的长度在范围 [1, 1000] 内。</li>
+<li>sentence 中单词之间由一个空格隔开。</li>
+<li>sentence 没有前导或尾随空格。</li>
+</ul>]]></description>
 </item><item>
     <title>0211：添加与搜索单词 - 数据结构设计（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0211/</link>
     <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0211/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。</p>
-<p>实现词典类 WordDictionary ：</p>
-<ul>
-<li>WordDictionary() 初始化词典对象</li>
-<li>void addWord(word) 将 word 添加到数据结构中，之后可以对它进行匹配</li>
-<li>bool search(word) 如果数据结构中存在字符串与 word 匹配，则返回 true ；否则，返回  false 。word 中可能包含一些 &lsquo;.&rsquo; ，每个 . 都可以表示任何一个字母。</li>
-</ul>
-<p>ddWord 中的 word 由小写英文字母组成。search 中的 word 由 &lsquo;.&rsquo; 或小写英文字母组成。</p>]]></description>
+    <description><![CDATA[题目 请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。 实现词典类 WordDictionary ： WordDictionary() 初始化词典对象 void addWord(word) 将 word 添加到数据结构中，]]></description>
 </item><item>
     <title>0212：单词搜索 II（★★★）</title>
     <link>https://huozhixue.github.io/leetcode/0212/</link>
@@ -58,6 +63,23 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0208/</guid>
     <description><![CDATA[<h2 id="题目">题目</h2>
-<p>实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。</p>]]></description>
+<p>实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。
+Trie（发音类似 &ldquo;try&rdquo;）或者说 前缀树 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。
+这一数据结构有相当多的应用情景，例如自动补完和拼写检查。</p>
+<p>请你实现 Trie 类：</p>
+<ul>
+<li>Trie() 初始化前缀树对象。</li>
+<li>void insert(String word) 向前缀树中插入字符串 word 。</li>
+<li>boolean search(String word) 如果字符串 word 在前缀树中，返回 true（即，在检索之前已经插入）；
+否则，返回 false 。</li>
+<li>boolean startsWith(String prefix) 如果之前已经插入的字符串 word 的前缀之一为 prefix ，
+返回 true ；否则，返回 false 。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= word.length, prefix.length &lt;= 2000</li>
+<li>word 和 prefix 仅由小写英文字母组成</li>
+<li>insert、search 和 startsWith 调用次数 总计 不超过 3 * 104 次</li>
+</ul>]]></description>
 </item></channel>
 </rss>
