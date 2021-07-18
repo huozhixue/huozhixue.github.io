@@ -19,4 +19,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_To_Aru_Majutsu_no_Index" >}}
+{{< media  auto="MAD_To_Aru_Majutsu_no_Index"  >}}

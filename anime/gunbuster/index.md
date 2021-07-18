@@ -13,5 +13,5 @@
 
 ## MAD
 
-{{< mad "BV1Dx411F7D1_119-BV1ps411f7i1"
-"44期MTV OVA「飞跃巅峰2」片头曲 → GROOVIN MAGIC,【飞跃巅峰AMV】唯见群星" >}}
+{{< media  "BV1Dx411F7D1_119-BV1ps411f7i1"
+"44期MTV OVA「飞跃巅峰2」片头曲 → GROOVIN MAGIC,【飞跃巅峰AMV】唯见群星"  >}}

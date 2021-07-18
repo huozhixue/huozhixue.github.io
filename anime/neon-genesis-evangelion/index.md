@@ -19,4 +19,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Neon_Genesis_Evangelion" >}}
+{{< media  auto="MAD_Neon_Genesis_Evangelion"  >}}

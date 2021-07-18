@@ -15,5 +15,5 @@
 
 ## MAD
 
-{{< mad "BV1Jx411F7ke"
-"【迷糊餐厅】All to myself" >}}
+{{< media  "BV1Jx411F7ke"
+"【迷糊餐厅】All to myself"  >}}

@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1hW411X7zM-BV1CW411U7oi"
-"第6话片段 石动双叶vs花柳香子 约定のRevue,【AMV/少女歌剧/燃向/Star Divine】让荣光落于刀锋之上" >}}
+{{< media  "BV1hW411X7zM-BV1CW411U7oi"
+"第6话片段 石动双叶vs花柳香子 约定のRevue,【AMV/少女歌剧/燃向/Star Divine】让荣光落于刀锋之上"  >}}
 

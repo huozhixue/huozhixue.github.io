@@ -9,7 +9,7 @@
 
 ## MAD
 
-{{< mad "BV1bW411z7x9" 
-"【恶魔人crybaby】关于美树的一点留恋" >}}
+{{< media  "BV1bW411z7x9" 
+"【恶魔人crybaby】关于美树的一点留恋"  >}}
 
 ## 感想

@@ -13,7 +13,7 @@
 
 ## MAD
 
-{{< mad "BV1ip411d7At"
-"【MAD】相聚一刻 在坟墓前" >}}
+{{< media  "BV1ip411d7At"
+"【MAD】相聚一刻 在坟墓前"  >}}
 
 

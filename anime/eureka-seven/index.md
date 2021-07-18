@@ -15,6 +15,6 @@
 
 ## MAD
 
-{{< mad "BV1Sx411c7sw-BV1ts411m73A" 
-"【MAD】 交響詩篇 -way of life-,交响诗篇十周年纪念【正式版】">}}
+{{< media  "BV1Sx411c7sw-BV1ts411m73A" 
+"【MAD】 交響詩篇 -way of life-,交响诗篇十周年纪念【正式版】" >}}
 

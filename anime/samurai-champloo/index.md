@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1Yx411T7VS-BV1P7411G7bo"
-"【混沌武士】生死流转【Samurai Champloo】,【混沌武士】Jazz HipHop-" >}}
+{{< media  "BV1Yx411T7VS-BV1P7411G7bo"
+"【混沌武士】生死流转【Samurai Champloo】,【混沌武士】Jazz HipHop-"  >}}

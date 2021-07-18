@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1ks411Z7Ut"
-"【冷番向】笼中之鸟【CLOVER】" >}}
+{{< media  "BV1ks411Z7Ut"
+"【冷番向】笼中之鸟【CLOVER】"  >}}
 

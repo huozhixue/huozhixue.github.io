@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "ac3440712-BV1qx411c7Km" 
-"圣枪修女MAD【迟来的幸福】,【AMV】圣枪修女 The Last Chapter" >}}
+{{< media  "ac3440712-BV1qx411c7Km" 
+"圣枪修女MAD【迟来的幸福】,【AMV】圣枪修女 The Last Chapter"  >}}

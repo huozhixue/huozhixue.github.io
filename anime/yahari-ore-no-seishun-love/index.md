@@ -13,4 +13,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Yahari_Ore_no_Seishun_Love" >}}
+{{< media  auto="MAD_Yahari_Ore_no_Seishun_Love"  >}}

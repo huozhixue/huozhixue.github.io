@@ -13,6 +13,6 @@
 
 ## MAD
 
-{{< mad "BV1cx411F7Pa" 
-"AMV 百变之星" >}}
+{{< media  "BV1cx411F7Pa" 
+"AMV 百变之星"  >}}
 

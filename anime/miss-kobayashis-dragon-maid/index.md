@@ -13,6 +13,6 @@
 
 ## MAD
 
-{{< mad "BV1Tx411J7iA-BV1nx41177fj-BV1pW41157QN" 
-"【小林家的龙女仆】手书 容身之所,【小埋操/第三期】龙女仆也要做操！,【AMV】Dragon Maids">}}
+{{< media  "BV1Tx411J7iA-BV1nx41177fj-BV1pW41157QN" 
+"【小林家的龙女仆】手书 容身之所,【小埋操/第三期】龙女仆也要做操！,【AMV】Dragon Maids" >}}
 

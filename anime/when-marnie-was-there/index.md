@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1ms411z7D9"
-"【吉卜力/剧情AMV】这是一支描绘秘密的画笔//Secret Drawing" >}}
+{{< media  "BV1ms411z7D9"
+"【吉卜力/剧情AMV】这是一支描绘秘密的画笔//Secret Drawing"  >}}

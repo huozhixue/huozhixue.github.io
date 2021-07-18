@@ -15,6 +15,6 @@
 
 ## MAD
 
-{{< mad "BV1cx411T7gz-BV1Hs411Z72f-BV1xx411c7rz-BV13x411F7NC-BV12x411F7Z2-BV1yx411F7aV" 
-"【天麻全篇回顾向】LIVE FOR LIFE,[合作MAD]天才麻将少女-残酷的愿望之中,【音MAD】杠杠杠杠杠杠杠杠杠【咲-Saki-×ココロオドル】,【咲-Saki-】咲X照到底有多相爱,【团子MAD】你喜欢麻将吗？（12.12修正）,咲-Saki- 阿知賀編 & 怜-Toki-千里山編 x 神样Dolls OP" >}}
+{{< media  "BV1cx411T7gz-BV1Hs411Z72f-BV1xx411c7rz-BV13x411F7NC-BV12x411F7Z2-BV1yx411F7aV" 
+"【天麻全篇回顾向】LIVE FOR LIFE,[合作MAD]天才麻将少女-残酷的愿望之中,【音MAD】杠杠杠杠杠杠杠杠杠【咲-Saki-×ココロオドル】,【咲-Saki-】咲X照到底有多相爱,【团子MAD】你喜欢麻将吗？（12.12修正）,咲-Saki- 阿知賀編 & 怜-Toki-千里山編 x 神样Dolls OP"  >}}
 

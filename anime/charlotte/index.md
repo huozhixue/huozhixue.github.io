@@ -9,7 +9,7 @@
 
 ## MAD
 
-{{< mad "BV1gs41127E4"
-"【MAD】the ultimate crisis - 夏洛特 Charlotte" >}}
+{{< media  "BV1gs41127E4"
+"【MAD】the ultimate crisis - 夏洛特 Charlotte"  >}}
 
 

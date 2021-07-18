@@ -17,5 +17,5 @@
 
 ## MAD
 
-{{< mad "BV1xs411o7vj-BV1ux411c7Vw"
-"钢炼AMV《最终的答案》,【钢炼mad】Hero-静止系" >}}
+{{< media  "BV1xs411o7vj-BV1ux411c7Vw"
+"钢炼AMV《最终的答案》,【钢炼mad】Hero-静止系"  >}}

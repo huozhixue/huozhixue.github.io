@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV1ax411T7WU-BV18x411T7dj"
-"银之匙；朝着歌声的方向,【静止系MAD】银之匙-kiss you" >}}
+{{< media  "BV1ax411T7WU-BV18x411T7dj"
+"银之匙；朝着歌声的方向,【静止系MAD】银之匙-kiss you"  >}}

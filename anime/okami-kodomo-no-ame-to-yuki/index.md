@@ -8,5 +8,5 @@
 
 ## MAD
 
-{{< mad "BV1rW411g7KP"
-"AMV - 妈妈说过 (Mama said)" >}}
+{{< media  "BV1rW411g7KP"
+"AMV - 妈妈说过 (Mama said)"  >}}

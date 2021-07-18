@@ -20,6 +20,6 @@
 
 ## MAD
 
-{{< mad "BV1ux41157ct"
-"【Fate/kaleid liner/雪下的誓言/AMV】 绝望与信念！！！" >}}
+{{< media  "BV1ux41157ct"
+"【Fate/kaleid liner/雪下的誓言/AMV】 绝望与信念！！！"  >}}
 

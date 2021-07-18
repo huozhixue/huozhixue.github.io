@@ -6,10 +6,10 @@
 
 <!--more-->
 
-{{< tv BV14t411B79V 12 >}}
+{{< media BV14t411B79V " " >}}
 
 ## MAD
 
-{{< mad "BV1rs411S7VQ" 
-"【AMV】【食灵零】命运的姐妹" >}}
+{{< media  "BV1rs411S7VQ" 
+"【AMV】【食灵零】命运的姐妹"  >}}
 

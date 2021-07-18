@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV14x411A7Mp-BV1Us411i7k5"
-"【AMV/玉子爱情故事】 Dandelion / 蒲公英,【MAD//玉子爱情故事】如果世界有了你的颜色[HBD]" >}}
+{{< media  "BV14x411A7Mp-BV1Us411i7k5"
+"【AMV/玉子爱情故事】 Dandelion / 蒲公英,【MAD//玉子爱情故事】如果世界有了你的颜色[HBD]"  >}}

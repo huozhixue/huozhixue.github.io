@@ -13,5 +13,5 @@
 
 ## MAD
 
-{{< mad "BV1ws411S7tm"
-"【静止画MAD】 introductory chapter 【路人女主】" >}}
+{{< media  "BV1ws411S7tm"
+"【静止画MAD】 introductory chapter 【路人女主】"  >}}

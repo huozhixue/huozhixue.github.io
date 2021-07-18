@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1Wt411k762"
-"【Towiko/哈露】BANANA FISH 完结纪念—Prayer X" >}}
+{{< media  "BV1Wt411k762"
+"【Towiko/哈露】BANANA FISH 完结纪念—Prayer X"  >}}

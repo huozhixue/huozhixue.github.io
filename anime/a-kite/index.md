@@ -7,5 +7,5 @@
 
 ## MAD
 
-{{< mad "BV13x411F7Uo"
-"【a KITE】Lost Dreams Revisited" >}}
+{{< media  "BV13x411F7Uo"
+"【a KITE】Lost Dreams Revisited"  >}}

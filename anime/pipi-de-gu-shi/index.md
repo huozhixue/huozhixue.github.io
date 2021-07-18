@@ -5,7 +5,7 @@
 
 <!--more-->
 
-{{< tv BV1Zx411471b 10 >}}
+{{< media BV1Zx411471b " " >}}
 
 ## MAD
 

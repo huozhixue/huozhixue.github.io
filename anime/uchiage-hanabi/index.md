@@ -8,5 +8,5 @@
 
 ## MAD
 
-{{< mad "BV11W41157jH"
-"【AMV】烟花" >}}
+{{< media  "BV11W41157jH"
+"【AMV】烟花"  >}}

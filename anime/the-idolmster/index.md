@@ -13,7 +13,7 @@
 
 ## MAD
 
-{{< mad auto="MAD_THE_IDOLMASTER" >}}
+{{< media  auto="MAD_THE_IDOLMASTER"  >}}
 
 ## 感想
 

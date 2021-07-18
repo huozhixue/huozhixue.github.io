@@ -13,5 +13,5 @@
 
 ## MAD
 
-{{< mad "BV1Yx411F7Qv-BV1Ks411Z7nx"
-"【LB静止画MAD】告别那个世界，再续梦幻般的青春华年,12:30带你看完Liittle Busters！" >}}
+{{< media  "BV1Yx411F7Qv-BV1Ks411Z7nx"
+"【LB静止画MAD】告别那个世界，再续梦幻般的青春华年,12:30带你看完Liittle Busters！"  >}}

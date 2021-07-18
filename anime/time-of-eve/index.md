@@ -11,7 +11,7 @@
 
 ## MAD
 
-{{< mad "BV1Ns411v79M_6-BV1ip411d7EX"
-"《夏娃的时间剧场版-笑与辉映的梦》by 夔晓,【AMV/夏娃的时间】Coffee" >}}
+{{< media  "BV1Ns411v79M_6-BV1ip411d7EX"
+"《夏娃的时间剧场版-笑与辉映的梦》by 夔晓,【AMV/夏娃的时间】Coffee"  >}}
 
 ## 感想

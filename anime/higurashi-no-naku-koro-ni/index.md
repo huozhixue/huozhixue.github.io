@@ -15,6 +15,6 @@
 
 ## MAD
 
-{{< mad "BV1vs411D7YR" 
-"寒蝉鸣泣之时 寒蝉之声奏响诗篇 with you 绊">}}
+{{< media  "BV1vs411D7YR" 
+"寒蝉鸣泣之时 寒蝉之声奏响诗篇 with you 绊" >}}
 

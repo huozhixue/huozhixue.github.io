@@ -5,11 +5,11 @@
 
 <!--more-->
 
-{{< tv BV1jJ411Y7Mz 24 >}}
+{{< media BV1jJ411Y7Mz " " >}}
 
 ## MAD
 
-{{< mad "BV15s411p7jF"
+{{< media "BV15s411p7jF"
 "【MAD 重启咲良田】惠献给相麻的レイン">}}
 
 ## 感想

@@ -17,6 +17,6 @@
 
 ## MAD
 
-{{< mad "BV1bx411c7hX" 
-"【MAD】アワビの片思ひ" >}}
+{{< media  "BV1bx411c7hX" 
+"【MAD】アワビの片思ひ"  >}}
 

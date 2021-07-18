@@ -23,6 +23,6 @@
 
 ## MAD
 
-{{< mad "BV1cx411c7AX-BV1Ns411e7za-BV1ex411w7QC" 
-"【2014】精灵宝可梦：效果拔群,【宠物小精灵xy】武藏——20年的坚强少女的心,【UTAU】皮卡皮卡皮卡皮卡丘！(NYANYANYA)" >}}
+{{< media  "BV1cx411c7AX-BV1Ns411e7za-BV1ex411w7QC" 
+"【2014】精灵宝可梦：效果拔群,【宠物小精灵xy】武藏——20年的坚强少女的心,【UTAU】皮卡皮卡皮卡皮卡丘！(NYANYANYA)"  >}}
 

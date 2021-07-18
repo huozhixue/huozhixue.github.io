@@ -6,5 +6,5 @@
 
 <!--more-->
 
-{{< tv BV1Kt411o7s6 52 >}}
+{{< media BV1Kt411o7s6 " " >}}
 

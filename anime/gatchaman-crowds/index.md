@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV1xs411o7QJ"
-"【MAD】科学小飞侠Crowds「Sign」" >}}
+{{< media  "BV1xs411o7QJ"
+"【MAD】科学小飞侠Crowds「Sign」"  >}}

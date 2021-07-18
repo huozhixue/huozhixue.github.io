@@ -13,7 +13,7 @@
 
 ## MAD
 
-{{< mad "BV1Es411U7VK-BV19x411P7AE-id_XMTQzMTI2MzkzNg"
-"【哆啦A梦伴我同行】只愿你留在我身边,【哆啦A梦】你可以放心离开了吧,【自制动画】哆啦A梦 大雄的bilibili" >}}
+{{< media  "BV1Es411U7VK-BV19x411P7AE-id_XMTQzMTI2MzkzNg"
+"【哆啦A梦伴我同行】只愿你留在我身边,【哆啦A梦】你可以放心离开了吧,【自制动画】哆啦A梦 大雄的bilibili"  >}}
 
 ## 感想

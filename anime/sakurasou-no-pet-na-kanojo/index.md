@@ -3,13 +3,13 @@
 
 共 24 话
 
-{{< tv BV1oW411f77t 24 >}}
+{{< media BV1oW411f77t " " >}}
 
 <!--more-->
 
 ## MAD
 
-{{< mad "BV1Cs411X7K1"
-"【MAD】青山长在，七海永存" >}}
+{{< media  "BV1Cs411X7K1"
+"【MAD】青山长在，七海永存"  >}}
 
 

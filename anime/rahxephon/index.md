@@ -15,6 +15,6 @@
 
 ## MAD
 
-{{< mad "BV1Fp411o7dE" 
-"【BC2018】蓝魂开始 Blue soul">}}
+{{< media  "BV1Fp411o7dE" 
+"【BC2018】蓝魂开始 Blue soul" >}}
 

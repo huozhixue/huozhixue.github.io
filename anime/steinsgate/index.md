@@ -17,5 +17,5 @@
 
 ## MAD
 
-{{< mad "BV1Xx411F7mB-BV1Tx411w7jE-BV1os411o7vL-BV1Kx411w7Xy-BV1iW411G7v8"
-"【纯弹幕MAD】命运石之门再现【NICO屏录版】【时长20分钟】,【静止画mad】OPERATION;SKULD【内嵌字幕】,【命运石之门MAD】Attractor Field,【音MAD】【Steins;Gate】ココロオカリン,【MAD】Steins;Gate 0 -the out of infinity-" >}}
+{{< media  "BV1Xx411F7mB-BV1Tx411w7jE-BV1os411o7vL-BV1Kx411w7Xy-BV1iW411G7v8"
+"【纯弹幕MAD】命运石之门再现【NICO屏录版】【时长20分钟】,【静止画mad】OPERATION;SKULD【内嵌字幕】,【命运石之门MAD】Attractor Field,【音MAD】【Steins;Gate】ココロオカリン,【MAD】Steins;Gate 0 -the out of infinity-"  >}}

@@ -15,5 +15,5 @@
 
 ## MAD
 
-{{< mad "BV1px411c7gt-BV1ex411P7xv-BV1Ns41127wg" 
-"【神MAD】ARIA水星领航员,水星领航员 ARIA,【水星领航员】爱的庭院 --ARIA10周年快乐~~" >}}
+{{< media  "BV1px411c7gt-BV1ex411P7xv-BV1Ns41127wg" 
+"【神MAD】ARIA水星领航员,水星领航员 ARIA,【水星领航员】爱的庭院 --ARIA10周年快乐~~"  >}}

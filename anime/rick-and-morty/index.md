@@ -1,21 +1,15 @@
 # 瑞克和莫蒂
 
 
-01-11：第一季，2013-12-02
+### tv
 
-12-21：第二季，2015-07-26
+共四季，2013-12-02 到 2019-11-10
 
-22-31：第三季，2017-04-01
+观看地址：{{< link "https://www.acfun.cn/bangumi/aa5024874" "acfun" >}}
 
-32-41：第四季，2019-11-10
+### MAD
 
-<!--more-->
-
-{{< media auto="tv/Rick_and_Morty" >}}
-
-## MAD
-
-{{< mad "BV16W41157jw-BV17t4y1i75f"
-"【瑞克和莫蒂/Rick and Morty】Get Schwifty,【瑞克和莫蒂】敬那个全宇宙最孤独的天才•2020混剪大赛" >}}
+{{< media  "BV16W41157jw-BV17t4y1i75f"
+"【瑞克和莫蒂/Rick and Morty】Get Schwifty,【瑞克和莫蒂】敬那个全宇宙最孤独的天才•2020混剪大赛"  >}}
 
 ## 感想

@@ -16,5 +16,5 @@
 
 ## MAD
 
-{{< mad auto="MAD_JoJos_Bizarre_Adventure" >}}
+{{< media  auto="MAD_JoJos_Bizarre_Adventure"  >}}
 ## 感想

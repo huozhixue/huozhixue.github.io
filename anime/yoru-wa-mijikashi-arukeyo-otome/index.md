@@ -11,7 +11,7 @@
 
 ## MAD
 
-{{< mad "BV1ZW411p7Dx"
-"【春宵苦短，少女前进吧!】Bloom" >}}
+{{< media  "BV1ZW411p7Dx"
+"【春宵苦短，少女前进吧!】Bloom"  >}}
 
 ## 感想

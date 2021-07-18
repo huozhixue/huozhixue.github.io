@@ -6,7 +6,7 @@
 
 <!--more-->
 
-{{< tv BV16s411U7kv 13 >}}
+{{< media BV16s411U7kv " " >}}
 
 ## MAD
 

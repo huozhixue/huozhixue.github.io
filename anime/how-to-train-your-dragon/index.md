@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV1nx411T79b"
-"【驯龙高手】 gone gone gone" >}}
+{{< media  "BV1nx411T79b"
+"【驯龙高手】 gone gone gone"  >}}

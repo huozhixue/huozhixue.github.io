@@ -5,11 +5,11 @@
 
 <!--more-->
 
-{{< tv BV14b411x7FQ 74 >}}
+{{< media BV14b411x7FQ " " >}}
 
 ## MAD
 
-{{< mad "BV1MW411B7vv" 
-"【怪物/monster AMV】 mirror" >}}
+{{< media  "BV1MW411B7vv" 
+"【怪物/monster AMV】 mirror"  >}}
 
 ## 感想

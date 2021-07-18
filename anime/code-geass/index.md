@@ -18,5 +18,5 @@
 
 ## MAD
 
-{{< mad "BV1gx411w76u"
-"【MAD】叛逆的鲁路修-Thank.you.for.your.life" >}}
+{{< media  "BV1gx411w76u"
+"【MAD】叛逆的鲁路修-Thank.you.for.your.life"  >}}

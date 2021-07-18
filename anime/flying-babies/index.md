@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1KQ4y1T7NN"
-"Gezzy's World" >}}
+{{< media  "BV1KQ4y1T7NN"
+"Gezzy's World"  >}}

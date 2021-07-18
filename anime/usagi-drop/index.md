@@ -9,8 +9,8 @@
 
 ## MAD
 
-{{< mad "BV1cx411w7S2-BV1Ex411F7SZ" 
-"【白兔糖MAD】生命中的太阳【完结纪念】,Ivy Bridge" >}}
+{{< media  "BV1cx411w7S2-BV1Ex411F7SZ" 
+"【白兔糖MAD】生命中的太阳【完结纪念】,Ivy Bridge"  >}}
 
 ## 感想
 

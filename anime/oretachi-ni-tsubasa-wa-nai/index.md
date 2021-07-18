@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1cW411b7Yh"
-"【静止系MAD】What a Wonderful World【我们没有翅膀】【MADMAX2017】" >}}
+{{< media  "BV1cW411b7Yh"
+"【静止系MAD】What a Wonderful World【我们没有翅膀】【MADMAX2017】"  >}}

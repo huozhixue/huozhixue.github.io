@@ -23,5 +23,5 @@
 
 ## MAD
 
-{{< mad "BV1ps411f75c-BV16E411H7YN"
-"【MMD】数码宝贝全员演奏【Butter-Fly】,【数码宝贝MAD/无限大/高燃】现在的我也怀揣着梦想" >}}
+{{< media  "BV1ps411f75c-BV16E411H7YN"
+"【MMD】数码宝贝全员演奏【Butter-Fly】,【数码宝贝MAD/无限大/高燃】现在的我也怀揣着梦想"  >}}

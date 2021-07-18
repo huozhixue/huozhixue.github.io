@@ -19,5 +19,5 @@
 
 ## MAD
 
-{{< mad auto="MAD_Mahou_Shoujo_Lyrical_Nanoha" >}}
+{{< media  auto="MAD_Mahou_Shoujo_Lyrical_Nanoha"  >}}
 

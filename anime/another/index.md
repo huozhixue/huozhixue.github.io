@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1as411o7Yf" 
-"【致郁向】【another】 双子的诅咒 【夜的第七章】">}}
+{{< media  "BV1as411o7Yf" 
+"【致郁向】【another】 双子的诅咒 【夜的第七章】" >}}
 

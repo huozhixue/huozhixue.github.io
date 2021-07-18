@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV1eW411Y724-BV1bs411R71u"
-"【来自深渊AMV】归属//Adscription,【来自深渊】奈落之底" >}}
+{{< media  "BV1eW411Y724-BV1bs411R71u"
+"【来自深渊AMV】归属//Adscription,【来自深渊】奈落之底"  >}}

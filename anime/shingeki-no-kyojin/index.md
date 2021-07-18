@@ -21,4 +21,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Shingeki_no_Kyojin" >}}
+{{< media  auto="MAD_Shingeki_no_Kyojin"  >}}

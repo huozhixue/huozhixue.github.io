@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1wx411F74Q"
-"【机器人狂欢节】建筑师【Big Contest 2012】" >}}
+{{< media  "BV1wx411F74Q"
+"【机器人狂欢节】建筑师【Big Contest 2012】"  >}}
 

@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1Cs411f7Hy"
-"【Key社】【MAD】Rewrite—苍空的镇魂歌" >}}
+{{< media  "BV1Cs411f7Hy"
+"【Key社】【MAD】Rewrite—苍空的镇魂歌"  >}}

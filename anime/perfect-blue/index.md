@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV14s411z7fL"
-"【AMV】Illusion - 幻觉" >}}
+{{< media  "BV14s411z7fL"
+"【AMV】Illusion - 幻觉"  >}}

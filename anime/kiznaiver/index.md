@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1sp411Z7eT" 
-"断 念">}}
+{{< media  "BV1sp411Z7eT" 
+"断 念" >}}
 

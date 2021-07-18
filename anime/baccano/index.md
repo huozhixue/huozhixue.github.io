@@ -3,7 +3,7 @@
 
 共 16 话
 
-{{< tv BV1Ax411q7qp 16 >}}
+{{< media BV1Ax411q7qp " " >}}
 
 <!--more-->
 

@@ -29,4 +29,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_bakemonogatari" >}}
+{{< media  auto="MAD_bakemonogatari"  >}}

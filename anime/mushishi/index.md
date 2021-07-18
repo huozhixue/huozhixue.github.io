@@ -15,4 +15,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Mushishi" >}}
+{{< media  auto="MAD_Mushishi"  >}}

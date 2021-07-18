@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1Rb411Y7Xn"
-"「 GAMERS电玩咖 」YES or YES" >}}
+{{< media  "BV1Rb411Y7Xn"
+"「 GAMERS电玩咖 」YES or YES"  >}}

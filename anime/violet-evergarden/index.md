@@ -11,4 +11,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Violet_Evergarden" >}}
+{{< media  auto="MAD_Violet_Evergarden"  >}}

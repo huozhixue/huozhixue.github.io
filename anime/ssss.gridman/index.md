@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1qt411k7Pi"
-"完结纪念！梦的英雄！——SSSS.GRIDMAN！" >}}
+{{< media  "BV1qt411k7Pi"
+"完结纪念！梦的英雄！——SSSS.GRIDMAN！"  >}}

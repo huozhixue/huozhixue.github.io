@@ -9,7 +9,7 @@
 
 ## MAD
 
-{{< mad "BV1EW411p7RN"
-"【误解/恐怖向AMV】诅咒" >}}
+{{< media  "BV1EW411p7RN"
+"【误解/恐怖向AMV】诅咒"  >}}
 
 

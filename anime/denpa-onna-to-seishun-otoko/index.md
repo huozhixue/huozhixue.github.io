@@ -5,9 +5,9 @@
 
 <!--more-->
 
-{{< tv BV19W411f7gp 13 >}}
+{{< media BV19W411f7gp " " >}}
 
 ## MAD
 
-{{< mad "BV1Qx411c7F9"
-"电波女萌战应援MAD" >}}
+{{< media  "BV1Qx411c7F9"
+"电波女萌战应援MAD"  >}}

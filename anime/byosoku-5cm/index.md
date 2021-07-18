@@ -9,7 +9,7 @@
 
 ## MAD
 
-{{< mad "BV1ys411Z7QY"
-"【秒五MAD】Time goes by" >}}
+{{< media  "BV1ys411Z7QY"
+"【秒五MAD】Time goes by"  >}}
 
 ## 感想

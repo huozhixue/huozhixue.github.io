@@ -24,6 +24,6 @@
 
 ## MAD
 
-{{< mad "BV124411F7UF-BV1px411A7AT-BV1HW41147EG-BV1HW41147oY"
-"龙珠GT剪辑 - 渐渐被你吸引,龙珠定格动画-弗利萨VS超级赛亚人DragonBall Stop Motion,[AMV] 龙珠系列中的女孩们,【误解向】孙悟空&布尔玛 ｢AMV｣" >}}
+{{< media  "BV124411F7UF-BV1px411A7AT-BV1HW41147EG-BV1HW41147oY"
+"龙珠GT剪辑 - 渐渐被你吸引,龙珠定格动画-弗利萨VS超级赛亚人DragonBall Stop Motion,[AMV] 龙珠系列中的女孩们,【误解向】孙悟空&布尔玛 ｢AMV｣"  >}}
 

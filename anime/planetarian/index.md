@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1kx411w7xX" 
-"[星之梦][Planetarium]haseo囧">}}
+{{< media  "BV1kx411w7xX" 
+"[星之梦][Planetarium]haseo囧" >}}
 

@@ -15,5 +15,5 @@
 
 ## MAD
 
-{{< mad "BV11x411K7yo"
-"【Love Live!】Honey❤Honey" >}}
+{{< media  "BV11x411K7yo"
+"【Love Live!】Honey❤Honey"  >}}

@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1yx411F7VR" 
-"【MAD】我们在那个夏天等待">}}
+{{< media  "BV1yx411F7VR" 
+"【MAD】我们在那个夏天等待" >}}
 

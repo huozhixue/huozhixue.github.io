@@ -9,7 +9,7 @@
 
 ## MAD
 
-{{< mad "BV1gp411d7En"
-"用“忍者杀手SE”的方式打开“MEGALO BOX”" >}}
+{{< media  "BV1gp411d7En"
+"用“忍者杀手SE”的方式打开“MEGALO BOX”"  >}}
 
 

@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1fJ411U7nM_3-BV16W411M7x9"
-"片段：Actress in time layers,【千年女优MAD】You were here" >}}
+{{< media  "BV1fJ411U7nM_3-BV16W411M7x9"
+"片段：Actress in time layers,【千年女优MAD】You were here"  >}}
 

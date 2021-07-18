@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1Bb411M7Dp"
-"【AMV】Sweet track" >}}
+{{< media  "BV1Bb411M7Dp"
+"【AMV】Sweet track"  >}}
 

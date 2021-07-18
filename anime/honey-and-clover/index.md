@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV1ms411Z7yu"
-"【AMV】H&C 即使迷茫也要找到自己的梦" >}}
+{{< media  "BV1ms411Z7yu"
+"【AMV】H&C 即使迷茫也要找到自己的梦"  >}}

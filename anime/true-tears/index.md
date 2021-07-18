@@ -6,10 +6,10 @@
 
 <!--more-->
 
-{{< tv BV11s41127FG 13 >}}
+{{< media BV11s41127FG " " >}}
 
 ## MAD
 
-{{< mad "BV1vx411w765-BV1jx411c7tR"
-"【真实之泪】心碎的记忆【Big Contest 2012】,【AMV】True tears -迷失的泪" >}}
+{{< media  "BV1vx411w765-BV1jx411c7tR"
+"【真实之泪】心碎的记忆【Big Contest 2012】,【AMV】True tears -迷失的泪"  >}}
 

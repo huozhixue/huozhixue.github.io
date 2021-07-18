@@ -15,4 +15,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Toaru_Kagaku_no_Railgun" >}}
+{{< media  auto="MAD_Toaru_Kagaku_no_Railgun"  >}}

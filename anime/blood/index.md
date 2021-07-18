@@ -13,5 +13,5 @@
 
 ## MAD
 
-{{< mad "BV1ns411o7Gf"
-"【BLood C】强大而美丽的小夜" >}}
+{{< media  "BV1ns411o7Gf"
+"【BLood C】强大而美丽的小夜"  >}}

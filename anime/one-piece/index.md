@@ -13,4 +13,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_One_Piece" >}}
+{{< media  auto="MAD_One_Piece"  >}}

@@ -9,7 +9,7 @@
 
 ## MAD
 
-{{< mad "BV1xs411Z7zW-BV1XE411D7UL" 
-"【妖旋】The Gore Never Bothered Me Anyway,【中文字幕】说唱对决：妮悠VS羽入" >}}
+{{< media  "BV1xs411Z7zW-BV1XE411D7UL" 
+"【妖旋】The Gore Never Bothered Me Anyway,【中文字幕】说唱对决：妮悠VS羽入"  >}}
 
 ## 感想

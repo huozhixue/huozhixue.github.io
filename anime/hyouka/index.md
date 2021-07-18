@@ -12,4 +12,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Hyouka" >}}
+{{< media  auto="MAD_Hyouka"  >}}

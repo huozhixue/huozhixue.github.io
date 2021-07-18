@@ -13,5 +13,5 @@
 
 ## MAD
 
-{{< mad "BV1Ys411f7bj"
-"【黑猫/AMV】爱哭鬼" >}}
+{{< media  "BV1Ys411f7bj"
+"【黑猫/AMV】爱哭鬼"  >}}

@@ -13,5 +13,5 @@
 
 ## MAD
 
-{{< mad "BV17x411K7WA-BV1ax411F7e1"
-"【境界线MAD】Horizon Ⅰ- 境界线上的地平线,境界线上的地平线～Save you from anything～【完成】" >}}
+{{< media  "BV17x411K7WA-BV1ax411F7e1"
+"【境界线MAD】Horizon Ⅰ- 境界线上的地平线,境界线上的地平线～Save you from anything～【完成】"  >}}

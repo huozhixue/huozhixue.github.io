@@ -13,4 +13,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Sora_no_otoshimono" >}}
+{{< media  auto="MAD_Sora_no_otoshimono"  >}}

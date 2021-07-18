@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1ds411178Q" 
-"Just Funkin' Dandy - Space Dandy Uptown Funk AMV">}}
+{{< media  "BV1ds411178Q" 
+"Just Funkin' Dandy - Space Dandy Uptown Funk AMV" >}}
 

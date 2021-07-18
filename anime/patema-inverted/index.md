@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1Xs41127cY"
-"【翻转的帕特玛/AMV】Hello,World" >}}
+{{< media  "BV1Xs41127cY"
+"【翻转的帕特玛/AMV】Hello,World"  >}}

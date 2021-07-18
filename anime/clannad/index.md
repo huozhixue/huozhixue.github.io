@@ -15,7 +15,7 @@
 
 ## MAD
 
-{{< mad auto="MAD_CLANNAD" >}}
+{{< media  auto="MAD_CLANNAD"  >}}
 
 ## 感想
 

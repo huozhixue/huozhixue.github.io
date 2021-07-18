@@ -3,10 +3,10 @@
 
 <!--more-->
 
-{{< video "蜘蛛侠：平行宇宙" "www.dt870.com/20190310/7hmx4qj5/index.m3u8" >}}
+{{< video "蜘蛛侠：平行宇宙" "https://video.buycar5.cn/share/DlWInNSqm8JyoqOM" >}}
 
 ## MAD
 
-{{< mad "BV1qb411b7nV" 
-"【史上最帅动画电影】本可以黑化，却选择了正义。黑蛛崛起！" >}}
+{{< media  "BV1qb411b7nV" 
+"【史上最帅动画电影】本可以黑化，却选择了正义。黑蛛崛起！"  >}}
 

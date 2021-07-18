@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad "BV1nx411F7Zb"
-"[原创MAD]妄想HERO[妄想代理人]" >}}
+{{< media  "BV1nx411F7Zb"
+"[原创MAD]妄想HERO[妄想代理人]"  >}}

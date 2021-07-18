@@ -9,5 +9,5 @@
 
 ## MAD
 
-{{< mad auto="MAD_Kimetsu_no_Yaiba" >}}
+{{< media  auto="MAD_Kimetsu_no_Yaiba"  >}}
 ## 感想

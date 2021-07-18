@@ -20,4 +20,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Fate_stay_night" >}}
+{{< media  auto="MAD_Fate_stay_night"  >}}

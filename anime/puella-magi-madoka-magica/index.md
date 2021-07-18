@@ -13,4 +13,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Puella_Magi_Madoka_Magica" >}}
+{{< media  auto="MAD_Puella_Magi_Madoka_Magica"  >}}

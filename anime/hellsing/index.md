@@ -15,6 +15,6 @@
 
 ## MAD
 
-{{< mad "BV1ux411w7V9" 
-"HELLSING血腥？一定是你的错觉">}}
+{{< media  "BV1ux411w7V9" 
+"HELLSING血腥？一定是你的错觉" >}}
 

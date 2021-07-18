@@ -23,6 +23,6 @@
 
 ## MAD
 
-{{< mad "BV19s411o7Xq-BV1fT4y177dx" 
-"【美少女战士MAD】月光传说（暴露年龄）,AMV - 美少女战士">}}
+{{< media  "BV19s411o7Xq-BV1fT4y177dx" 
+"【美少女战士MAD】月光传说（暴露年龄）,AMV - 美少女战士" >}}
 

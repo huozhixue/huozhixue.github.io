@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV1Bx411c79W" 
-"【AMV】Hold me now">}}
+{{< media  "BV1Bx411c79W" 
+"【AMV】Hold me now" >}}
 

@@ -23,5 +23,5 @@
 
 ## MAD
 
-{{< mad "BV1Hs411h7bB"
-"[头文字D][主题曲]Rage your dream" >}}
+{{< media  "BV1Hs411h7bB"
+"[头文字D][主题曲]Rage your dream"  >}}

@@ -11,5 +11,5 @@
 
 ## MAD
 
-{{< mad "BV1PW41157E4"
-"【BC2018】Frontier Psychiatrist" >}}
+{{< media  "BV1PW41157E4"
+"【BC2018】Frontier Psychiatrist"  >}}

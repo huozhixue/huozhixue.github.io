@@ -5,5 +5,5 @@
 
 共 24 话
 
-{{< tv BV1Vx411K7Nd 24 >}}
+{{< media BV1Vx411K7Nd " " >}}
 

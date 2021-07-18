@@ -15,6 +15,6 @@
 
 ## MAD
 
-{{< mad "BV18x411F7q4-BV1Ex411B72R"
-"【治愈系】最终幻想7MV,【最终幻想9高清版】主题歌MV—Melodies Of Life（生命的旋律）" >}}
+{{< media  "BV18x411F7q4-BV1Ex411B72R"
+"【治愈系】最终幻想7MV,【最终幻想9高清版】主题歌MV—Melodies Of Life（生命的旋律）"  >}}
 

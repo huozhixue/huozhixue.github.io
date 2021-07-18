@@ -5,9 +5,9 @@
 
 <!--more-->
 
-{{< tv BV1qx411c7vQ 24 >}}
+{{< media BV1qx411c7vQ " " >}}
 
 ## MAD
 
-{{< mad "BV16s411o7ZN"
-"【恋爱情结】天之弱" >}}
+{{< media  "BV16s411o7ZN"
+"【恋爱情结】天之弱"  >}}

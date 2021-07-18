@@ -9,4 +9,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Bloom_into_You" >}}
+{{< media  auto="MAD_Bloom_into_You"  >}}

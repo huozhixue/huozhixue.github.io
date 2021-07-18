@@ -9,6 +9,6 @@
 
 ## MAD
 
-{{< mad "BV187411q7mN-BV1EA411j7Tu"
-"【冰海战记/史诗】诸 神 的 黄 昏——「MAD贺年祭」,「MAD」冰海战记ED - Drown" >}}
+{{< media  "BV187411q7mN-BV1EA411j7Tu"
+"【冰海战记/史诗】诸 神 的 黄 昏——「MAD贺年祭」,「MAD」冰海战记ED - Drown"  >}}
 

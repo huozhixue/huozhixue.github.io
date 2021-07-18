@@ -23,5 +23,5 @@
 
 ## MAD
 
-{{< mad "BV1qx411F7Z1-BV1yK4y1b7dU-BV1u441117jN"
-"毁童年系列！这才是童年的<游基王>！,口 胡 王,【游戏王Vrains/燃/剧情向】AMV-螺旋病毒（Revolver/Soulburner/Playmaker/Ai）" >}}
+{{< media  "BV1qx411F7Z1-BV1yK4y1b7dU-BV1u441117jN"
+"毁童年系列！这才是童年的<游基王>！,口 胡 王,【游戏王Vrains/燃/剧情向】AMV-螺旋病毒（Revolver/Soulburner/Playmaker/Ai）"  >}}

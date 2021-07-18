@@ -5,9 +5,9 @@
 
 <!--more-->
 
-{{< tv BV1C441187ac 24 >}}
+{{< media BV1C441187ac " " >}}
 
 ## MAD
 
-{{< mad "BV1Zs411274B-BV1Wx411P7eV"
-"【GOSICK/催泪/AMV】细雪消融之时纯白的刹那，希望永远的温暖映照着你我二人,【GOSICK】从此再不分离" >}}
+{{< media  "BV1Zs411274B-BV1Wx411P7eV"
+"【GOSICK/催泪/AMV】细雪消融之时纯白的刹那，希望永远的温暖映照着你我二人,【GOSICK】从此再不分离"  >}}

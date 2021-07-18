@@ -17,4 +17,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Naruto" >}}
+{{< media  auto="MAD_Naruto"  >}}

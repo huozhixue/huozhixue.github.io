@@ -8,5 +8,5 @@
 
 ## MAD
 
-{{< mad "BV15W41137Q2"
-"【Akira】Shadows" >}}
+{{< media  "BV15W41137Q2"
+"【Akira】Shadows"  >}}

@@ -5,9 +5,9 @@
 
 <!--more-->
 
-{{< tv BV1Vx411C7hf 12 >}}
+{{< media BV1Vx411C7hf " " >}}
 
 ## MAD
 
-{{< mad "BV12x411w7Zi"
-"【坂道上的阿波罗】Memoirs" >}}
+{{< media  "BV12x411w7Zi"
+"【坂道上的阿波罗】Memoirs"  >}}

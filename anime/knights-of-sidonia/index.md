@@ -13,6 +13,6 @@
 
 ## MAD
 
-{{< mad "BV1Ws411U7PX-BV1vs411q7GU" 
-"【重力动画祭】为了他人【MAD】,【希骑/完结纪念/AMV】Knights of Sidonia ！！！">}}
+{{< media  "BV1Ws411U7PX-BV1vs411q7GU" 
+"【重力动画祭】为了他人【MAD】,【希骑/完结纪念/AMV】Knights of Sidonia ！！！" >}}
 

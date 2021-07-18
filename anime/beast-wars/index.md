@@ -7,6 +7,6 @@
 
 <!--more-->
 
-{{< tv BV1rx411q7M8 78 >}}
+{{< media BV1rx411q7M8 " " >}}
 
 

@@ -13,4 +13,4 @@
 
 ## MAD
 
-{{< mad auto="MAD_Touhou_Project" >}}
+{{< media  auto="MAD_Touhou_Project"  >}}
