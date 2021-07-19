@@ -1,14 +1,5 @@
-# 
+# 0841：钥匙和房间（★）
 
-3---
-title: "0841：钥匙和房间（★）"
-date: 2018-05-17T00:00:00+08:00
-hidden: false
-draft: false
-keywords: []
-description: ""
-leetcode_tags: [中等,图]
----
 
 
 ## 题目

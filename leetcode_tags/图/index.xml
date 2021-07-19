@@ -38,6 +38,27 @@
 <li>1 &lt;= trust[i][0], trust[i][1] &lt;= N</li>
 </ul>]]></description>
 </item><item>
+    <title>0841：钥匙和房间（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0841/</link>
+    <pubDate>Thu, 17 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0841/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>有 N 个房间，开始时你位于 0 号房间。每个房间有不同的号码：0，1，2，&hellip;，N-1，
+并且房间里可能有一些钥匙能使你进入下一个房间。</p>
+<p>在形式上，对于每个房间 i 都有一个钥匙列表 rooms[i]，
+每个钥匙 rooms[i][j] 由 [0,1，&hellip;，N-1] 中的一个整数表示，
+其中 N = rooms.length。 钥匙 rooms[i][j] = v 可以打开编号为 v 的房间。</p>
+<p>最初，除 0 号房间外的其余所有房间都被锁住。</p>
+<p>你可以自由地在房间之间来回走动。</p>
+<p>如果能进入每个房间返回 true，否则返回 false。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= rooms.length &lt;= 1000</li>
+<li>0 &lt;= rooms[i].length &lt;= 1000</li>
+<li>所有房间中的钥匙数量总计不超过 3000。</li>
+</ul>]]></description>
+</item><item>
     <title>0802：找到最终的安全状态（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0802/</link>
     <pubDate>Sun, 08 Apr 2018 00:00:00 &#43;0800</pubDate>
@@ -157,24 +178,6 @@ wi 是一个信号从源节点传递到目标节点的时间。</p>
 <li>queries[i].length == 2</li>
 <li>1 &lt;= Cj.length, Dj.length &lt;= 5</li>
 <li>Ai, Bi, Cj, Dj 由小写英文字母与数字组成</li>
-</ul>]]></description>
-</item><item>
-    <title>0332：重新安排行程（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0332/</link>
-    <pubDate>Sat, 28 Nov 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0332/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>给定一个机票的字符串二维数组 [from, to]，子数组中的两个成员分别表示飞机出发和降落的机场地点，
-对该行程进行重新规划排序。所有这些机票都属于一个从 JFK（肯尼迪国际机场）出发的先生，
-所以该行程必须从 JFK 开始。</p>
-<p>提示：</p>
-<ul>
-<li>如果存在多种有效的行程，请你按字符自然排序返回最小的行程组合。
-例如，行程 [&ldquo;JFK&rdquo;, &ldquo;LGA&rdquo;] 与 [&ldquo;JFK&rdquo;, &ldquo;LGB&rdquo;] 相比就更小，排序更靠前</li>
-<li>所有的机场都用三个大写字母表示（机场代码）。</li>
-<li>假定所有机票至少存在一种合理的行程。</li>
-<li>所有的机票必须都用一次 且 只能用一次。</li>
 </ul>]]></description>
 </item></channel>
 </rss>

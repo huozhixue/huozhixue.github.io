@@ -46,31 +46,58 @@
 
 ## 分析
 
+### #1
+
 结果的二进制表示最多 31 位。为了使结果最大，应该尽可能让二进制的高位取 1。
 
 第 31 位能否取 1 很好判断，只要存在两个数的第 31 位分别为 0 和 1 即可。
-如果第 31 位能取 1，即 $\overline{1...}$能取到，接着要判断 $\overline{11...}$ 能否取到。
+如果第 31 位能取 1，也就是 $\overline{1...}$能取到，接着要判断 $\overline{11...}$ 能否取到。
 
 遍历每一对数来判断太费时间。有个巧妙的想法是利用异或的一个重要性质：如果 x^y=z，那么 x^z=y。
-那么将每个数的后面 29 位都置 0 保存在哈希表中，
-然后判断哈希表中的每个值和 $\overline{110...0}$ 的异或是否在哈希表中即可。
-如果都不在，就说明取不到，将第 30 位置为 0。
+
+将每个数的后面 29 位都置 0 保存在哈希表 vis 中。
+如果 vis 中的某个值和 $\overline{110...0}$ 的异或在 vis 中，说明能取到，否则将第 30 位置 0。
 
 后面的依此类推，每一轮可以在 O(N) 时间内判断，因此最后是 O(31*N)=O(N)。
+
+```python
+def findMaximumXOR(self, nums: List[int]) -> int:
+    res = 0
+    for i in range(30, -1, -1):
+        tmp, vis = res | (1 << i), {num >> i << i for num in nums}
+        res = tmp if any(val ^ tmp in vis for val in vis) else res
+    return res
+```
+
+668 ms
+
+### #2
+
+有个更通用的字典树解法。
+
+遍历每个数 nums[j], 将 31 位二进制表示当作字符串，添加到字典树中。
+然后可以根据当前的字典树在 31 步内找到 max(nums[j]^nums[i] for i in range(j+1))。
 
 
 ## 解答
 
 ```python
 def findMaximumXOR(self, nums: List[int]) -> int:
-    res = 0
-    for i in range(30, -1, -1):
-        tmp, s = res | (1 << i), {num >> i << i for num in nums}
-        res = tmp if any(val ^ tmp in s for val in s) else res
+    T = lambda: defaultdict(T)
+    res, trie = 0, T()
+    for num in nums:
+        val = bin(num)[2:].zfill(31)
+        reduce(dict.__getitem__, val, trie)
+        p, tmp = trie, ''
+        for bit in val:
+            bit_rev = str(int(bit)^1)
+            tmp += '1' if bit_rev in p else '0'
+            p = p[bit_rev] if bit_rev in p else p[bit]
+        res = max(res, int(tmp, 2))
     return res
 ```
 
-980 ms
+4244 ms
 
 
 

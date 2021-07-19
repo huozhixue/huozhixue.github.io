@@ -42,7 +42,7 @@
 			if (url.substr(0, 2) == 'BV') {
 				url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + url;
 			}
-			else {
+			else if (url.substr(0, 4) != 'http' ) {
 				if (url.substr(0, 3) == 'id_'){
 					url = "https://v.youku.com/v_show/" + url + ".html";
 				}

@@ -9,13 +9,7 @@
     <pubDate>Thu, 14 Sep 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0677/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>实现一个 MapSum 类，支持两个方法，insert 和 sum：</p>
-<ul>
-<li>MapSum() 初始化 MapSum 对象</li>
-<li>void insert(String key, int val) 插入 key-val 键值对，字符串表示键 key ，整数表示值 val 。如果键 key 已经存在，那么原来的键值对将被替代成新的键值对。</li>
-<li>int sum(string prefix) 返回所有以该前缀 prefix 开头的键 key 的值的总和。</li>
-</ul>]]></description>
+    <description><![CDATA[题目 实现一个 MapSum 类，支持两个方法，insert 和 sum： MapSum() 初始化 MapSum 对象 void insert(String key, int val) 插入 key-val 键值对，字符串表示键 key ，整数表示值 val 。 如果键 key 已经存在，]]></description>
 </item><item>
     <title>0648：单词替换（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0648/</link>
@@ -41,6 +35,21 @@
 <li>sentence 没有前导或尾随空格。</li>
 </ul>]]></description>
 </item><item>
+    <title>0421：数组中两个数的最大异或值（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0421/</link>
+    <pubDate>Wed, 28 Sep 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0421/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，
+其中 0 ≤ i ≤ j &lt; n 。</p>
+<p>你能在O(n)的时间解决这个问题吗？</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 2 * 10^4</li>
+<li>0 &lt;= nums[i] &lt;= 2^31 - 1</li>
+</ul>]]></description>
+</item><item>
     <title>0211：添加与搜索单词 - 数据结构设计（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0211/</link>
     <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
@@ -53,9 +62,7 @@
     <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0212/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>给定一个 m x n 二维字符网格 board 和一个单词（字符串）列表 words，找出所有同时在二维网格和字典中出现的单词。</p>
-<p>单词必须按照字母顺序，通过 相邻的单元格 内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母在一个单词中不允许被重复使用。</p>]]></description>
+    <description><![CDATA[题目 给定一个 m x n 二维字符网格 board 和一个单词（字符串）列表 words， 找出所有同时在二维网格和字典中出现的单词。 单词必须按照字母顺序，通过 相邻]]></description>
 </item><item>
     <title>0208：实现 Trie (前缀树)（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0208/</link>

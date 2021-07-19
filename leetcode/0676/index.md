@@ -42,38 +42,15 @@
 	magicDictionary.search("hell"); // 返回 False
 	magicDictionary.search("leetcoded"); // 返回 False
 
-
 	 
 ## 分析
 
-### #1
+因为单词的长度较短且只含小写字母，所以可以遍历所有能转换得到的单词，判断是否在字典中即可。
 
-dictionary 的规模很小。因此最简单的就是按长度存在哈希表中，查询时遍历所有长度相同的单词判断即可。
+还有个巧妙的想法，可以将单词的某一位改为 '*' 作为单词的 key。
+例如 hit 的 key 为 '*it'、'h*t'、'hi*'。
 
-```python
-class MagicDictionary:
-
-    def __init__(self):
-        self.d = defaultdict(list)
-
-    def buildDict(self, dictionary: List[str]) -> None:
-        for word in dictionary:
-            self.d[len(word)].append(word)
-
-    def search(self, searchWord: str) -> bool:
-        return any(sum(a!=b for a,b in zip(word, searchWord))==1 for word in self.d[len(searchWord)])
-```
-
-184 ms
-
-### #2
-
-当 dictionary 的规模较大时，有个更巧妙的方法。
-
-可以将 word 的某一位改为 '*' 作为 word 的 key。例如 hit 的 key 为 '*it'、'h*t'、'hi*'。
-
-那么先将 dictionary 按 key 存在哈希表中，查询时找与 word 不同但 key 相同的单词即可。
-
+那么先将字典中的单词按所有的 key 存在哈希表中，查询时找 key 相同且不同的单词即可。
 
 ## 解答
 
@@ -81,21 +58,20 @@ class MagicDictionary:
 class MagicDictionary:
 
     def __init__(self):
-        self.d = defaultdict(list)
+        self.d = defaultdict(set)
 
     def buildDict(self, dictionary: List[str]) -> None:
         for word in dictionary:
             for i in range(len(word)):
                 key = word[:i] + '*' + word[i+1:]
-                self.d[key].append(word)
+                self.d[key].add(word)
 
     def search(self, searchWord: str) -> bool:
         for i in range(len(searchWord)):
             key = searchWord[:i] + '*' + searchWord[i+1:]
-            for word in self.d[key]:
-                if word != searchWord:
-                    return True
+            if key in self.d and (len(self.d[key]) > 1 or searchWord not in self.d[key]):
+                return True
         return False
 ```
 
-264 ms
+192 ms

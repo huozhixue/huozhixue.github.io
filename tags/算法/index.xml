@@ -1,0 +1,103 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>算法 - 标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+        <description>算法 - 标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>力扣总结 数据结构进阶（二）：字典树</title>
+    <link>https://huozhixue.github.io/algorithm-trie/</link>
+    <pubDate>Sun, 11 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-trie/</guid>
+    <description><![CDATA[字典树，又叫前缀树，是一种 N 叉树，用于高效地存储、查找字符串前缀。 python 中可以用 defaultdict 来实现。 #1 基础 0208 实现 Trie (前缀树) #2 进阶 0211 添加与搜索单词 - 数据结]]></description>
+</item><item>
+    <title>力扣总结 数据结构进阶（一）：并查集</title>
+    <link>https://huozhixue.github.io/algorithm-union_find/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-union_find/</guid>
+    <description><![CDATA[并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构， 专门用于 动态处理 不相交集合的「查询」与「合并]]></description>
+</item><item>
+    <title>力扣总结 常见算法（九）：数学</title>
+    <link>https://huozhixue.github.io/algorithm-math/</link>
+    <pubDate>Mon, 21 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-math/</guid>
+    <description><![CDATA[<p>有很多问题需要应用到数学知识，包括代数、概率、几何、数论、组合等。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（八）：贪心</title>
+    <link>https://huozhixue.github.io/algorithm-greedy/</link>
+    <pubDate>Fri, 11 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-greedy/</guid>
+    <description><![CDATA[<p>贪心算法是一种高效的搜索方法。在每一步，都选择当前最好的分支，最终即能得到最优解。</p>
+<p>能用贪心算法解决的问题，对于贪心正确性的证明往往更加复杂。
+因此很多时候需要依赖一定的直觉才能想到贪心策略，即先构造后证明。</p>
+<p>而有些不能用贪心解决的问题，如果对用例的考虑不够周全，容易错误地采用贪心策略。
+因此使用贪心一定要慎重。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（七）：dfs 和 bfs</title>
+    <link>https://huozhixue.github.io/algorithm-dfs_bfs/</link>
+    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-dfs_bfs/</guid>
+    <description><![CDATA[<p>dfs（深度优先搜索算法）和 bfs（广度优先搜索算法）都是图形搜索方法，
+不同的在于 dfs 先尽可能深的搜索一个分支，再尝试别的路径，而 bfs 按离起点的距离一层层搜索。</p>
+<p>dfs 常借助递归实现，而 bfs 常借助队列实现。</p>
+<p>dfs 的思想就是回溯，是一种暴力通用解法。有时可以提前判断分支不满足要求，提前返回，被称为剪枝。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（六）：动态规划</title>
+    <link>https://huozhixue.github.io/algorithm-dp/</link>
+    <pubDate>Fri, 21 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-dp/</guid>
+    <description><![CDATA[<p>动态规划是一种特殊的分治法，适用于有重叠子问题的场景。</p>
+<p>存在大量重叠的子问题时，普通的递归写法会重复计算这些子问题，浪费大量时间。
+动态规划会保存所有子问题的结果，避免重复计算，将时间复杂度减少为多项式级别。</p>
+<p>动态规划也有递归和非递归两种形式。递归形式的动态规划也叫记忆化递归，非递归形式即是递推。</p>
+<p>python 在递归函数上加一个 @lru_cache(None) 的装饰器即可实现记忆化递归。
+非递归形式则根据参数量个数 k 创建一个 k 维的 list 用来保存子问题的结果。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（五）：二分查找</title>
+    <link>https://huozhixue.github.io/algorithm-binary_search/</link>
+    <pubDate>Tue, 11 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-binary_search/</guid>
+    <description><![CDATA[<p>二分查找是一种针对有序集合的高效查找算法，时间复杂度为 O(logN)。</p>
+<p>二分查找每一轮通过检查中间元素，将查找范围缩小一半，本质上是一种分治。</p>
+<p>很多情况下，python 中可以直接调用 bisect 来实现二分查找。
+有时中间元素的判定较为复杂，不是简单地比较大小，
+则可以结合 bisect 和 python 的魔法方法来实现。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（四）：双指针和滑动窗口</title>
+    <link>https://huozhixue.github.io/algorithm-two_pointers/</link>
+    <pubDate>Sat, 01 May 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-two_pointers/</guid>
+    <description><![CDATA[<p>双指针算法一般指两个变量在数组上相向移动来解决问题的算法。</p>
+<p>双指针算法常应用在具有某种有序性质的问题上，本质上是一种分治。</p>
+<p>广义来说，用两个变量在线性结构上遍历来解决问题的方法都可以归为双指针算法。
+比如链表上的快慢指针、滑动窗口。</p>
+<p>滑动窗口一般指两个变量在数组上同向移动来解决问题的算法，常应用在某种限制条件下的窗口最值问题。</p>
+<p>其中，固定窗口长度的问题，一般需要维护一个有序集合。
+在 python 中可以直接用 list 来实现，通过二分插入或弹出来维护。
+某些场景下还可以用堆或单调栈来维护有序集合，优化为线性时间复杂度。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（三）：递归和分治</title>
+    <link>https://huozhixue.github.io/algorithm-recursion/</link>
+    <pubDate>Wed, 21 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-recursion/</guid>
+    <description><![CDATA[<p>递归是指函数自己调用自己的语法现象。</p>
+<p>一般递归用于将问题不断转化为规模更小的子问题，直到变为可以直接求解的最简单子问题。
+这也就是分治法的思想。</p>]]></description>
+</item><item>
+    <title>力扣总结 常见算法（二）：位运算</title>
+    <link>https://huozhixue.github.io/algorithm-bit/</link>
+    <pubDate>Sun, 11 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-bit/</guid>
+    <description><![CDATA[<p>位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。</p>
+<p>很多位运算的问题具有较强的技巧性，需要很熟悉各个位运算符的性质。</p>]]></description>
+</item></channel>
+</rss>

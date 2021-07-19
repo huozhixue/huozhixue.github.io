@@ -3,30 +3,36 @@
 
 ## 题目
 
-实现一个 MapSum 类，支持两个方法，insert 和 sum：
+实现一个 MapSum 类，支持两个方法，insert 和 sum：
 
 - MapSum() 初始化 MapSum 对象
-- void insert(String key, int val) 插入 key-val 键值对，字符串表示键 key ，整数表示值 val 。如果键 key 已经存在，那么原来的键值对将被替代成新的键值对。
+- void insert(String key, int val) 插入 key-val 键值对，字符串表示键 key ，整数表示值 val 。
+如果键 key 已经存在，那么原来的键值对将被替代成新的键值对。
 - int sum(string prefix) 返回所有以该前缀 prefix 开头的键 key 的值的总和。
-
-
- <!--more--> 
  
+提示：
+
+- 1 <= key.length, prefix.length <= 50
+- key 和 prefix 仅由小写英文字母组成
+- 1 <= val <= 1000
+- 最多调用 50 次 insert 和 sum
+
+
 示例：
 
-	输入：
-	["MapSum", "insert", "sum", "insert", "sum"]
-	[[], ["apple", 3], ["ap"], ["app", 2], ["ap"]]
-	输出：
-	[null, null, 3, null, 5]
-
-	解释：
-	MapSum mapSum = new MapSum();
-	mapSum.insert("apple", 3);  
-	mapSum.sum("ap");           // return 3 (apple = 3)
-	mapSum.insert("app", 2);    
-	mapSum.sum("ap");           // return 5 (apple + app = 3 + 2 = 5)
-
+    输入：
+    ["MapSum", "insert", "sum", "insert", "sum"]
+    [[], ["apple", 3], ["ap"], ["app", 2], ["ap"]]
+    输出：
+    [null, null, 3, null, 5]
+    
+    解释：
+    MapSum mapSum = new MapSum();
+    mapSum.insert("apple", 3);  
+    mapSum.sum("ap");           // return 3 (apple = 3)
+    mapSum.insert("app", 2);    
+    mapSum.sum("ap");           // return 5 (apple + app = 3 + 2 = 5)
+ 
 
 	 
 ## 分析
@@ -52,10 +58,9 @@ class MapSum:
 
 ### #2
 
-显然还可以用字典树优化时间。考虑每个节点都动态保存 p['val']=sum(prefix)，计算 sum 时只需要找到对应节点即可。
+还可以用字典树优化时间。在 insert 时可以动态维护前缀对应的键值和（每个节点都新加一个 'val' 属性来维护），计算 sum 时查询即可。
 
-注意到插入 key-val 时，若 key 已经存在，val 会更新，则相应的前缀节点的 p['val'] 都要更新 p['val'] += new_val - old_val。
-因此仍需要哈希保存 key-val 对。
+注意到 insert 时，若 key 已经存在，路径上所有的节点都需要更新 'val' 的值。
 
 
 ## 解答
@@ -64,27 +69,20 @@ class MapSum:
 class MapSum:
 
     def __init__(self):
-        self.trie = {}
-        self.d = {}
+        T = lambda: defaultdict(T)
+        self.trie = T()
+        self.d = defaultdict(int)
 
     def insert(self, key: str, val: int) -> None:
-        v = self.d.get(key, 0)
+        diff = val - self.d[key]
         self.d[key] = val
         p = self.trie
         for char in key:
-            if char not in p:
-                p[char] = {'val': val}
-            else:
-                p[char]['val'] += val - v
             p = p[char]
+            p['val'] = p.get('val', 0) + diff
 
     def sum(self, prefix: str) -> int:
-        p = self.trie
-        for char in prefix:
-            if char not in p:
-                return 0
-            p = p[char]
-        return p['val']
+        return reduce(dict.__getitem__, prefix, self.trie).get('val', 0)
 ```
 
-32 ms
+28 ms
