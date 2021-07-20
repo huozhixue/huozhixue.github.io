@@ -133,6 +133,18 @@
 <p>合并账户后，按以下格式返回账户：每个账户的第一个元素是名称，其余元素是按字符 ASCII 顺序排列的邮箱地址。
 账户本身可以以任意顺序返回。</p>]]></description>
 </item><item>
+    <title>0695：岛屿的最大面积（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0695/</link>
+    <pubDate>Mon, 02 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0695/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个包含了一些 0 和 1 的非空二维数组 grid 。</p>
+<p>一个 岛屿 是由一些相邻的 1 (代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在水平或者竖直方向上相邻。
+你可以假设 grid 的四个边缘都被 0（代表水）包围着。</p>
+<p>找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为 0 。)</p>
+<p>注意: 给定的矩阵grid 的长度和宽度都不超过 50。</p>]]></description>
+</item><item>
     <title>0685：冗余连接 II（★★★）</title>
     <link>https://huozhixue.github.io/leetcode/0685/</link>
     <pubDate>Fri, 22 Sep 2017 00:00:00 &#43;0800</pubDate>
@@ -159,18 +171,5 @@
 <p>结果图是一个以边组成的二维数组。每一个边的元素是一对[u, v] ，满足 u &lt; v，表示连接顶点u 和v的无向图的边。</p>
 <p>返回一条可以删去的边，使得结果图是一个有着N个节点的树。如果有多个答案，则返回二维数组中最后出现的边。
 答案边 [u, v] 应满足相同的格式 u &lt; v。</p>]]></description>
-</item><item>
-    <title>0547：省份数量（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0547/</link>
-    <pubDate>Thu, 06 Apr 2017 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0547/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，
-那么城市 a 与城市 c 间接相连。</p>
-<p>省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。</p>
-<p>给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] = 1 表示第 i 个城市和第 j 个城市直接相连，
-而 isConnected[i][j] = 0 表示二者不直接相连。</p>
-<p>返回矩阵中 省份 的数量。</p>]]></description>
 </item></channel>
 </rss>

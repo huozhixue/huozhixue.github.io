@@ -41,21 +41,20 @@
 
 ```python
 def findCircleNum(self, isConnected: List[List[int]]) -> int:
-	def find(i):
-		if p[i] != i:
-			p[i] = find(p[i])
-		return p[i]
+    def find(x):
+        if f[x] != x:
+            f[x] = find(f[x])
+        return f[x]
 
-	def union(i, j):
-		p[find(i)] = find(j)
-		
-	n = len(isConnected)
-	p = list(range(n))
-	for i in range(n):
-		for j in range(i+1, n):
-			if isConnected[i][j]:
-				union(i, j)
-	return sum(p[i]==i for i in range(n))
+    def union(x, y):
+        f[find(x)] = find(y)
+
+    n = len(isConnected)
+    f = list(range(n))
+    for i, j in product(range(n), range(n)):
+        if isConnected[i][j]:
+            union(i, j)
+    return sum(f[i] == i for i in range(n))
 ```
 
-48 ms
+188 ms

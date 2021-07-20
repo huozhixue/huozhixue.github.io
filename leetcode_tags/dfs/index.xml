@@ -20,6 +20,18 @@
 <p>返回在四个方向（上、下、左、右）上行走时，从起始方格到结束方格的不同路径的数目。</p>
 <p>每一个无障碍方格都要通过一次，但是一条路径中不能重复通过同一个方格。</p>]]></description>
 </item><item>
+    <title>0695：岛屿的最大面积（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0695/</link>
+    <pubDate>Mon, 02 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0695/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给定一个包含了一些 0 和 1 的非空二维数组 grid 。</p>
+<p>一个 岛屿 是由一些相邻的 1 (代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在水平或者竖直方向上相邻。
+你可以假设 grid 的四个边缘都被 0（代表水）包围着。</p>
+<p>找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为 0 。)</p>
+<p>注意: 给定的矩阵grid 的长度和宽度都不超过 50。</p>]]></description>
+</item><item>
     <title>0529：扫雷游戏（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0529/</link>
     <pubDate>Sun, 19 Mar 2017 00:00:00 &#43;0800</pubDate>
@@ -80,6 +92,23 @@
     <guid>https://huozhixue.github.io/leetcode/0212/</guid>
     <description><![CDATA[题目 给定一个 m x n 二维字符网格 board 和一个单词（字符串）列表 words， 找出所有同时在二维网格和字典中出现的单词。 单词必须按照字母顺序，通过 相邻]]></description>
 </item><item>
+    <title>0200：岛屿数量（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0200/</link>
+    <pubDate>Sun, 19 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0200/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个由 &lsquo;1&rsquo;（陆地）和 &lsquo;0&rsquo;（水）组成的的二维网格，请你计算网格中岛屿的数量。</p>
+<p>岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。</p>
+<p>此外，你可以假设该网格的四条边均被水包围。</p>
+<p>提示：</p>
+<ul>
+<li>m == grid.length</li>
+<li>n == grid[i].length</li>
+<li>1 &lt;= m, n &lt;= 300</li>
+<li>grid[i][j] 的值为 &lsquo;0&rsquo; 或 &lsquo;1&rsquo;</li>
+</ul>]]></description>
+</item><item>
     <title>0130：被围绕的区域（★）</title>
     <link>https://huozhixue.github.io/leetcode/0130/</link>
     <pubDate>Sun, 10 May 2015 00:00:00 &#43;0800</pubDate>
@@ -87,7 +116,14 @@
     <guid>https://huozhixue.github.io/leetcode/0130/</guid>
     <description><![CDATA[<h2 id="题目">题目</h2>
 <p>给你一个 m x n 的矩阵 board ，由若干字符 &lsquo;X&rsquo; 和 &lsquo;O&rsquo; ，找到所有被 &lsquo;X&rsquo; 围绕的区域，
-并将这些区域里所有的 &lsquo;O&rsquo; 用 &lsquo;X&rsquo; 填充。</p>]]></description>
+并将这些区域里所有的 &lsquo;O&rsquo; 用 &lsquo;X&rsquo; 填充。</p>
+<p>提示：</p>
+<ul>
+<li>m == board.length</li>
+<li>n == board[i].length</li>
+<li>1 &lt;= m, n &lt;= 200</li>
+<li>board[i][j] 为 &lsquo;X&rsquo; 或 &lsquo;O&rsquo;</li>
+</ul>]]></description>
 </item><item>
     <title>0093：复原IP地址（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0093/</link>
@@ -98,23 +134,5 @@
 <p>给定一个只包含数字的字符串，复原它并返回所有可能的 IP 地址格式。</p>
 <p>有效的 IP 地址 正好由四个整数（每个整数位于 0 到 255 之间组成，且不能含有前导 0），整数之间用 &lsquo;.&rsquo; 分隔。</p>
 <p>例如：&ldquo;0.1.2.201&rdquo; 和 &ldquo;192.168.1.1&rdquo; 是 有效的 IP 地址，但是 &ldquo;0.011.255.245&rdquo;、&ldquo;192.168.1.312&rdquo; 和 &ldquo;<a href="mailto:192.168@1.1">192.168@1.1</a>&rdquo; 是 无效的 IP 地址。</p>]]></description>
-</item><item>
-    <title>0079：单词搜索（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0079/</link>
-    <pubDate>Fri, 20 Mar 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0079/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
-<p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
-<p>board 和 word 中只包含大写和小写英文字母。</p>]]></description>
-</item><item>
-    <title>0077：组合（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0077/</link>
-    <pubDate>Wed, 18 Mar 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0077/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>给定两个整数 n 和 k，返回 1 &hellip; n 中所有可能的 k 个数的组合。</p>]]></description>
 </item></channel>
 </rss>

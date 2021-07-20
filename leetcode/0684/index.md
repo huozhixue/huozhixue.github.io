@@ -42,22 +42,22 @@
 
 ```python
 def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-	def find(i):
-		if p[i] != i:
-			p[i] = find(p[i])
-		return p[i]
+    def find(x):
+        if f[x] != x:
+            f[x] = find(f[x])
+        return f[x]
 
-	def union(i, j):
-		p[find(i)] = find(j)
+    def union(x, y):
+        f[find(x)] = find(y)
 
-	p = list(range(len(edges)+1))
-	for u, v in edges:
-		if find(u) == find(v):
-			return [u, v]
-		union(u, v)
+    f = list(range(len(edges) + 1))
+    for u, v in edges:
+        if find(u) == find(v):
+            return [u, v]
+        union(u, v)
 ```
 
-60 ms
+40 ms
 
 ### #2
 

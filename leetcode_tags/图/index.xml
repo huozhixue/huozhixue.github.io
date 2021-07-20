@@ -153,31 +153,22 @@ wi 是一个信号从源节点传递到目标节点的时间。</p>
 <p>返回一条可以删去的边，使得结果图是一个有着N个节点的树。如果有多个答案，则返回二维数组中最后出现的边。
 答案边 [u, v] 应满足相同的格式 u &lt; v。</p>]]></description>
 </item><item>
-    <title>0399：除法求值（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0399/</link>
-    <pubDate>Sun, 11 Sep 2016 02:00:00 &#43;0800</pubDate>
+    <title>0332：重新安排行程（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0332/</link>
+    <pubDate>Sat, 28 Nov 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0399/</guid>
+    <guid>https://huozhixue.github.io/leetcode/0332/</guid>
     <description><![CDATA[<h2 id="题目">题目</h2>
-<p>给你一个变量对数组 equations 和一个实数值数组 values 作为已知条件，
-其中 equations[i] = [Ai, Bi] 和 values[i] 共同表示等式 Ai / Bi = values[i] 。
-每个 Ai 或 Bi 是一个表示单个变量的字符串。</p>
-<p>另有一些以数组 queries 表示的问题，其中 queries[j] = [Cj, Dj] 表示第 j 个问题，
-请你根据已知条件找出 Cj / Dj = ? 的结果作为答案。</p>
-<p>返回 所有问题的答案 。如果存在某个无法确定的答案，则用 -1.0 替代这个答案。
-如果问题中出现了给定的已知条件中没有出现的字符串，也需要用 -1.0 替代这个答案。</p>
-<p>注意：输入总是有效的。你可以假设除法运算中不会出现除数为 0 的情况，且不存在任何矛盾的结果。</p>
+<p>给定一个机票的字符串二维数组 [from, to]，子数组中的两个成员分别表示飞机出发和降落的机场地点，
+对该行程进行重新规划排序。所有这些机票都属于一个从 JFK（肯尼迪国际机场）出发的先生，
+所以该行程必须从 JFK 开始。</p>
 <p>提示：</p>
 <ul>
-<li>1 &lt;= equations.length &lt;= 20</li>
-<li>equations[i].length == 2</li>
-<li>1 &lt;= Ai.length, Bi.length &lt;= 5</li>
-<li>values.length == equations.length</li>
-<li>0.0 &lt; values[i] &lt;= 20.0</li>
-<li>1 &lt;= queries.length &lt;= 20</li>
-<li>queries[i].length == 2</li>
-<li>1 &lt;= Cj.length, Dj.length &lt;= 5</li>
-<li>Ai, Bi, Cj, Dj 由小写英文字母与数字组成</li>
+<li>如果存在多种有效的行程，请你按字符自然排序返回最小的行程组合。
+例如，行程 [&ldquo;JFK&rdquo;, &ldquo;LGA&rdquo;] 与 [&ldquo;JFK&rdquo;, &ldquo;LGB&rdquo;] 相比就更小，排序更靠前</li>
+<li>所有的机场都用三个大写字母表示（机场代码）。</li>
+<li>假定所有机票至少存在一种合理的行程。</li>
+<li>所有的机票必须都用一次 且 只能用一次。</li>
 </ul>]]></description>
 </item></channel>
 </rss>

@@ -32,7 +32,8 @@
  
 示例 1：
 
-    输入：equations = [["a","b"],["b","c"]], values = [2.0,3.0], queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
+    输入：equations = [["a","b"],["b","c"]], values = [2.0,3.0], 
+    queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
     输出：[6.00000,0.50000,-1.00000,1.00000,-1.00000]
     解释：
     条件：a / b = 2.0, b / c = 3.0
@@ -41,12 +42,14 @@
 
 示例 2：
 
-    输入：equations = [["a","b"],["b","c"],["bc","cd"]], values = [1.5,2.5,5.0], queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
+    输入：equations = [["a","b"],["b","c"],["bc","cd"]], values = [1.5,2.5,5.0], 
+    queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
     输出：[3.75000,0.40000,5.00000,0.20000]
 
 示例 3：
     
-    输入：equations = [["a","b"]], values = [0.5], queries = [["a","b"],["b","a"],["a","c"],["x","y"]]
+    输入：equations = [["a","b"]], values = [0.5], 
+    queries = [["a","b"],["b","a"],["a","c"],["x","y"]]
     输出：[0.50000,2.00000,-1.00000,-1.00000]
  
 
@@ -64,21 +67,21 @@
 ```python
 def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
     def bfs(c, d):
-        queue, vis = deque([(c, 1.0)]), {c}
+        queue, vis = deque([(c, 1.0)]), set()
         while queue:
             u, w = queue.popleft()
-            for v in nxt[u]:
-                if v == d:
-                    return w*nxt[u][v]
+            for v, w2 in nxt[u]:
                 if v not in vis:
+                    if v == d:
+                        return w * w2
                     vis.add(v)
-                    queue.append((v, w*nxt[u][v]))
+                    queue.append((v, w * w2))
         return -1
 
-    nxt = defaultdict(lambda: defaultdict(float))
+    nxt = defaultdict(list)
     for (a, b), value in zip(equations, values):
-        nxt[a][b] = value
-        nxt[b][a] = 1 / value
+        nxt[a].append((b, value))
+        nxt[b].append((a, 1/value))
     return [bfs(c, d) for c, d in queries]
 ```
 36 ms
@@ -93,24 +96,24 @@ def calcEquation(self, equations: List[List[str]], values: List[float], queries:
 
 ```python
 def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-    def find(i):
-        if p.setdefault(i, i) != i:
-            root = find(p[i])
-            w[i] *= w[p[i]]
-            p[i] = root
-        return p[i]
+    def find(x):
+        if f.setdefault(x, x) != x:
+            root = find(f[x])
+            w[x] *= w[f[x]]
+            f[x] = root
+        return f[x]
 
-    def union(i, j, val):
-        root = find(i)
-        p[root] = find(j)
-        w[root] = w[j] * val / w[i]
+    def union(x, y, val):
+        root = find(x)
+        f[root] = find(y)
+        w[root] = w[y] * val / w[x]
 
-    p, w = {}, defaultdict(lambda: 1.0)
+    f, w = {}, defaultdict(lambda: 1.0)
     for (a, b), val in zip(equations, values):
         union(a, b, val)
-    return [w[c]/w[d] if c in p and d in p and find(c)==find(d) else -1 for c, d in queries]
+    return [w[c]/w[d] if c in f and d in f and find(c)==find(d) else -1 for c, d in queries]
 ```
 
-40 ms
+28 ms
 
 
