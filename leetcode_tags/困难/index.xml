@@ -3,7 +3,32 @@
         <title>困难 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/</link>
         <description>困难 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>1938：查询最大基因差（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1938/</link>
+    <pubDate>Sun, 18 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1938/</guid>
+    <description><![CDATA[<p>第 250 场周赛第 4 题</p>
+<h2 id="题目">题目</h2>
+<p>给你一棵 n 个节点的有根树，节点编号从 0 到 n - 1 。
+每个节点的编号表示这个节点的 独一无二的基因值 （也就是说节点 x 的基因值为 x）。
+两个基因值的 基因差 是两者的 异或和 。给你整数数组 parents ，其中 parents[i] 是节点 i 的父节点。
+如果节点 x 是树的 根 ，那么 parents[x] == -1 。</p>
+<p>给你查询数组 queries ，其中 queries[i] = [nodei, vali] 。
+对于查询 i ，请你找到 vali 和 pi 的 最大基因差 ，其中 pi 是节点 nodei 到根之间的任意节点（包含 nodei 和根节点）。
+更正式的，你想要最大化 vali XOR pi 。</p>
+<p>请你返回数组 ans ，其中 ans[i] 是第 i 个查询的答案。</p>
+<p>提示：</p>
+<ul>
+<li>2 &lt;= parents.length &lt;= 105</li>
+<li>对于每个 不是 根节点的 i ，有 0 &lt;= parents[i] &lt;= parents.length - 1 。</li>
+<li>parents[root] == -1</li>
+<li>1 &lt;= queries.length &lt;= 3 * 104</li>
+<li>0 &lt;= nodei &lt;= parents.length - 1</li>
+<li>0 &lt;= vali &lt;= 2 * 105</li>
+</ul>]]></description>
+</item><item>
     <title>1825：求出 MK 平均值(★★★)</title>
     <link>https://huozhixue.github.io/leetcode/1825/</link>
     <pubDate>Wed, 14 Apr 2021 00:00:00 &#43;0800</pubDate>
@@ -47,6 +72,24 @@
 </ul>
 <p>处于开机状态的计算机可同时处理任意多个任务，请返回电脑最少开机多久，可处理完所有任务。</p>
 <p>2 &lt;= tasks.length &lt;= 10^5。</p>]]></description>
+</item><item>
+    <title>1707：与数组中元素的最大异或值（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1707/</link>
+    <pubDate>Tue, 12 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1707/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个由非负整数组成的数组 nums 。另有一个查询数组 queries ，其中 queries[i] = [xi, mi] 。</p>
+<p>第 i 个查询的答案是 xi 和任何 nums 数组中不超过 mi 的元素按位异或（XOR）得到的最大值。
+换句话说，答案是 max(nums[j] XOR xi) ，其中所有 j 均满足 nums[j] &lt;= mi 。
+如果 nums 中的所有元素都大于 mi，最终答案就是 -1 。</p>
+<p>返回一个整数数组 answer 作为查询的答案，其中 answer.length == queries.length 且 answer[i] 是第 i 个查询的答案。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length, queries.length &lt;= 10^5</li>
+<li>queries[i].length == 2</li>
+<li>0 &lt;= nums[j], xi, mi &lt;= 10^9</li>
+</ul>]]></description>
 </item><item>
     <title>1627：带阈值的图连通性（★★★）</title>
     <link>https://huozhixue.github.io/leetcode/1627/</link>
@@ -140,36 +183,5 @@
 <p>Alice 和 Bob 轮流取石子，Alice 总是先开始。在每个玩家的回合中，该玩家可以拿走剩下石子中的的前 1、2 或 3 堆石子 。比赛一直持续到所有石头都被拿走。</p>
 <p>每个玩家的最终得分为他所拿到的每堆石子的对应得分之和。每个玩家的初始分数都是 0 。比赛的目标是决出最高分，得分最高的选手将会赢得比赛，比赛也可能会出现平局。</p>
 <p>假设 Alice 和 Bob 都采取 最优策略 。如果 Alice 赢了就返回 &ldquo;Alice&rdquo; ，Bob 赢了就返回 &ldquo;Bob&rdquo;，平局（分数相同）返回 &ldquo;Tie&rdquo; 。</p>]]></description>
-</item><item>
-    <title>1278：分割回文串III（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1278/</link>
-    <pubDate>Sun, 01 Dec 2019 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1278/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>给你一个由小写字母组成的字符串 s，和一个整数 k。 1 &lt;= k &lt;= s.length &lt;= 100</p>
-<p>请你按下面的要求分割字符串：</p>
-<ul>
-<li>首先，你可以将 s 中的部分字符修改为其他的小写英文字母。</li>
-<li>接着，你需要把 s 分割成 k 个非空且不相交的子串，并且每个子串都是回文串。</li>
-</ul>
-<p>请返回以这种方式分割字符串所需修改的最少字符数。</p>]]></description>
-</item><item>
-    <title>1178：猜字谜（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1178/</link>
-    <pubDate>Tue, 27 Aug 2019 02:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1178/</guid>
-    <description><![CDATA[<h2 id="题目">题目</h2>
-<p>外国友人仿照中国字谜设计了一个英文版猜字谜小游戏，请你来猜猜看吧。</p>
-<p>字谜的迷面 puzzle 按字符串形式给出，如果一个单词 word 符合下面两个条件，那么它就可以算作谜底：</p>
-<ul>
-<li>单词 word 中包含谜面 puzzle 的第一个字母。</li>
-<li>单词 word 中的每一个字母都可以在谜面 puzzle 中找到。</li>
-</ul>
-<p>例如，如果字谜的谜面是 &ldquo;abcdefg&rdquo;，那么可以作为谜底的单词有 &ldquo;faced&rdquo;, &ldquo;cabbage&rdquo;, 和 &ldquo;baggage&rdquo;；而 &ldquo;beefed&rdquo;（不含字母 &ldquo;a&rdquo;）以及 &ldquo;based&rdquo;（其中的 &ldquo;s&rdquo; 没有出现在谜面中）。</p>
-<p>返回一个答案数组 answer，数组中的每个元素 answer[i] 是在给出的单词列表 words 中可以作为字谜迷面 puzzles[i] 所对应的谜底的单词数目。</p>
-<p>words[i][j], puzzles[i][j] 都是小写英文字母。</p>
-<p>puzzles[i].length == 7。每个 puzzles[i] 所包含的字符都不重复。</p>]]></description>
 </item></channel>
 </rss>

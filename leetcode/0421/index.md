@@ -46,40 +46,37 @@
 
 ## 分析
 
-### #1
-
 结果的二进制表示最多 31 位。为了使结果最大，应该尽可能让二进制的高位取 1。
 
-第 31 位能否取 1 很好判断，只要存在两个数的第 31 位分别为 0 和 1 即可。
-如果第 31 位能取 1，也就是 $\overline{1...}$能取到，接着要判断 $\overline{11...}$ 能否取到。
+假如结果的最大 k 位前缀为 x，那么最大的 k+1 位前缀应该尽量取 (x<<1)+1，如果取不到，那么就是 x<<1。
 
-遍历每一对数来判断太费时间。有个巧妙的想法是利用异或的一个重要性质：如果 x^y=z，那么 x^z=y。
+如果存在两个数的 k 位前缀 y、z，使得 y^z=x，那么 k 位前缀 x 就能取到。
+但这样太耗时，有个巧妙的方法是利用异或的重要性质：如果 y^z=x，那么 y^x=z。
 
-将每个数的后面 29 位都置 0 保存在哈希表 vis 中。
-如果 vis 中的某个值和 $\overline{110...0}$ 的异或在 vis 中，说明能取到，否则将第 30 位置 0。
+将每个数的 k 位前缀保存在哈希表 vis 中。遍历 vis 中的 y，如果 y^x 也在 vis 中，
+即代表 k 位前缀 x 能取到。
 
-后面的依此类推，每一轮可以在 O(N) 时间内判断，因此最后是 O(31*N)=O(N)。
+于是从 k=0 递推到 k=31 的最大 k 位前缀，每轮 O(N) 时间，最终是 O(31*N)=O(N) 时间。
+
+## 解答
 
 ```python
 def findMaximumXOR(self, nums: List[int]) -> int:
     res = 0
     for i in range(30, -1, -1):
-        tmp, vis = res | (1 << i), {num >> i << i for num in nums}
-        res = tmp if any(val ^ tmp in vis for val in vis) else res
+        res, vis = res << 1, {num >> i for num in nums}
+        res += int(any((res+1) ^ val in vis for val in vis))
     return res
 ```
 
-668 ms
+480 ms
 
-### #2
+## *附加
 
 有个更通用的字典树解法。
 
 遍历每个数 nums[j], 将 31 位二进制表示当作字符串，添加到字典树中。
 然后可以根据当前的字典树在 31 步内找到 max(nums[j]^nums[i] for i in range(j+1))。
-
-
-## 解答
 
 ```python
 def findMaximumXOR(self, nums: List[int]) -> int:
@@ -96,7 +93,6 @@ def findMaximumXOR(self, nums: List[int]) -> int:
         res = max(res, int(tmp, 2))
     return res
 ```
-
 4244 ms
 
 

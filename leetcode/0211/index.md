@@ -60,7 +60,7 @@ class WordDictionary:
 
     def addWord(self, word: str) -> None:
         reduce(dict.__getitem__, word, self.trie)['#'] = {}
-156564\597
+
     def search(self, word: str) -> bool:
         return self.startsWith(self.trie, word + '#')
 

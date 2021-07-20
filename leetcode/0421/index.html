@@ -46,7 +46,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0421\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  647 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  630 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0421\/","datePublished": "2016-09-28T00:00:00+08:00","dateModified": "2016-09-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -126,7 +126,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0421：数组中两个数的最大异或值（★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-09-28">2016-09-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 647 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-09-28">2016-09-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 630 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0421/" class="leancloud_visitors" data-flag-title="0421：数组中两个数的最大异或值（★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -138,13 +138,9 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
+    <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
@@ -178,14 +174,14 @@
 输出：127
 </code></pre>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
 <p>结果的二进制表示最多 31 位。为了使结果最大，应该尽可能让二进制的高位取 1。</p>
-<p>第 31 位能否取 1 很好判断，只要存在两个数的第 31 位分别为 0 和 1 即可。
-如果第 31 位能取 1，也就是 $\overline{1&hellip;}$能取到，接着要判断 $\overline{11&hellip;}$ 能否取到。</p>
-<p>遍历每一对数来判断太费时间。有个巧妙的想法是利用异或的一个重要性质：如果 x^y=z，那么 x^z=y。</p>
-<p>将每个数的后面 29 位都置 0 保存在哈希表 vis 中。
-如果 vis 中的某个值和 $\overline{110&hellip;0}$ 的异或在 vis 中，说明能取到，否则将第 30 位置 0。</p>
-<p>后面的依此类推，每一轮可以在 O(N) 时间内判断，因此最后是 O(31*N)=O(N)。</p>
+<p>假如结果的最大 k 位前缀为 x，那么最大的 k+1 位前缀应该尽量取 (x&laquo;1)+1，如果取不到，那么就是 x&laquo;1。</p>
+<p>如果存在两个数的 k 位前缀 y、z，使得 y^z=x，那么 k 位前缀 x 就能取到。
+但这样太耗时，有个巧妙的方法是利用异或的重要性质：如果 y^z=x，那么 y^x=z。</p>
+<p>将每个数的 k 位前缀保存在哈希表 vis 中。遍历 vis 中的 y，如果 y^x 也在 vis 中，
+即代表 k 位前缀 x 能取到。</p>
+<p>于是从 k=0 递推到 k=31 的最大 k 位前缀，每轮 O(N) 时间，最终是 O(31*N)=O(N) 时间。</p>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -199,17 +195,16 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">findMaximumXOR</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">tmp</span><span class="p">,</span> <span class="n">vis</span> <span class="o">=</span> <span class="n">res</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">),</span> <span class="p">{</span><span class="n">num</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">}</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">tmp</span> <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">val</span> <span class="o">^</span> <span class="n">tmp</span> <span class="ow">in</span> <span class="n">vis</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">)</span> <span class="k">else</span> <span class="n">res</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">vis</span> <span class="o">=</span> <span class="n">res</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="n">num</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">}</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">any</span><span class="p">((</span><span class="n">res</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">^</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vis</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">res</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>668 ms</p>
-<h3 id="2">#2</h3>
+</div><p>480 ms</p>
+<h2 id="附加">*附加</h2>
 <p>有个更通用的字典树解法。</p>
 <p>遍历每个数 nums[j], 将 31 位二进制表示当作字符串，添加到字典树中。
 然后可以根据当前的字典树在 31 步内找到 max(nums[j]^nums[i] for i in range(j+1))。</p>
-<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -259,7 +254,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

@@ -3,7 +3,50 @@
         <title>字典树 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/</link>
         <description>字典树 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 14 Sep 2017 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/" rel="self" type="application/rss+xml" /><item>
+    <title>1938：查询最大基因差（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1938/</link>
+    <pubDate>Sun, 18 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1938/</guid>
+    <description><![CDATA[<p>第 250 场周赛第 4 题</p>
+<h2 id="题目">题目</h2>
+<p>给你一棵 n 个节点的有根树，节点编号从 0 到 n - 1 。
+每个节点的编号表示这个节点的 独一无二的基因值 （也就是说节点 x 的基因值为 x）。
+两个基因值的 基因差 是两者的 异或和 。给你整数数组 parents ，其中 parents[i] 是节点 i 的父节点。
+如果节点 x 是树的 根 ，那么 parents[x] == -1 。</p>
+<p>给你查询数组 queries ，其中 queries[i] = [nodei, vali] 。
+对于查询 i ，请你找到 vali 和 pi 的 最大基因差 ，其中 pi 是节点 nodei 到根之间的任意节点（包含 nodei 和根节点）。
+更正式的，你想要最大化 vali XOR pi 。</p>
+<p>请你返回数组 ans ，其中 ans[i] 是第 i 个查询的答案。</p>
+<p>提示：</p>
+<ul>
+<li>2 &lt;= parents.length &lt;= 105</li>
+<li>对于每个 不是 根节点的 i ，有 0 &lt;= parents[i] &lt;= parents.length - 1 。</li>
+<li>parents[root] == -1</li>
+<li>1 &lt;= queries.length &lt;= 3 * 104</li>
+<li>0 &lt;= nodei &lt;= parents.length - 1</li>
+<li>0 &lt;= vali &lt;= 2 * 105</li>
+</ul>]]></description>
+</item><item>
+    <title>1707：与数组中元素的最大异或值（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1707/</link>
+    <pubDate>Tue, 12 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1707/</guid>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>给你一个由非负整数组成的数组 nums 。另有一个查询数组 queries ，其中 queries[i] = [xi, mi] 。</p>
+<p>第 i 个查询的答案是 xi 和任何 nums 数组中不超过 mi 的元素按位异或（XOR）得到的最大值。
+换句话说，答案是 max(nums[j] XOR xi) ，其中所有 j 均满足 nums[j] &lt;= mi 。
+如果 nums 中的所有元素都大于 mi，最终答案就是 -1 。</p>
+<p>返回一个整数数组 answer 作为查询的答案，其中 answer.length == queries.length 且 answer[i] 是第 i 个查询的答案。</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length, queries.length &lt;= 10^5</li>
+<li>queries[i].length == 2</li>
+<li>0 &lt;= nums[j], xi, mi &lt;= 10^9</li>
+</ul>]]></description>
+</item><item>
     <title>0677：键值映射（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0677/</link>
     <pubDate>Thu, 14 Sep 2017 00:00:00 &#43;0800</pubDate>
