@@ -1,4 +1,4 @@
-# 0013：罗马数字转整数
+# 0013：罗马数字转整数（★）
 
 
 ## 题目
@@ -23,6 +23,17 @@
 - C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
 
 给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。
+
+提示：
+
+- 1 <= s.length <= 15
+- s 仅含字符 ('I', 'V', 'X', 'L', 'C', 'D', 'M')
+- 题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内
+- 题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。
+- IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
+- 关于罗马数字的详尽书写规则，可以参考 
+[罗马数字 - Mathematics](https://b2b.partcommunity.com/community/knowledge/zh_CN/detail/10753/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97#knowledge_article) 。
+
 
 <!--more--> 
 
@@ -62,15 +73,8 @@
 
 ```python
 def romanToInt(self, s: str) -> int:
-	d = dict(zip('IVXLCDM', [1, 5, 10, 50, 100, 500, 1000]))
-	res, pre = 0, float('inf')
-	for char in s:
-		cur = d[char]
-		if pre < cur:
-			res -= pre * 2
-		res += cur
-		pre = cur
-	return res
+    d = dict(zip('IVXLCDM', [1, 5, 10, 50, 100, 500, 1000]))
+    A = list(map(d.get, s))
+    return sum(-A[i] if A[i]<A[i+1] else A[i] for i in range(len(A)-1)) + A[-1]
 ```
-
-52 ms
+32 ms

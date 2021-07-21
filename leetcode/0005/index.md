@@ -3,23 +3,39 @@
 
 ## 题目
 
-给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+给你一个字符串 s，找到 s 中最长的回文子串。
+
+提示：
+
+- 1 <= s.length <= 1000
+- s 仅由数字和英文字母（大写和/或小写）组成
+
 
 <!--more--> 
 
 示例 1：
+    
+    输入：s = "babad"
+    输出："bab"
+    解释："aba" 同样是符合题意的答案。
 
-	输入: "babad"
-	输出: "bab"
-	注意: "aba" 也是一个有效答案。
-	
 示例 2：
+    
+    输入：s = "cbbd"
+    输出："bb"
 
-	输入: "cbbd"
-	输出: "bb"
+示例 3：
+    
+    输入：s = "a"
+    输出："a"
+
+示例 4：
+    
+    输入：s = "ac"
+    输出："a"
+ 
 
 
-	
 ## 分析
 
 ### #1
@@ -34,20 +50,20 @@ s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。
 
 ```python
 def longestPalindrome(self, s: str) -> str:
-    def expand(i, j):
-        while i and j < n-1 and s[i-1]==s[j+1]:
-            i -= 1
-            j += 1
-        return i, j
-    
-    pair, n = (0, 0), len(s)
-    for k in range(n):
-        for i, j in [expand(k, k), expand(k, k-1)]:
-            if j-i > pair[1]-pair[0]:
-                pair = (i, j)
+    def expand(l, r):
+        while l and r < len(s) - 1 and s[l-1] == s[r+1]:
+            l -= 1
+            r += 1
+        return l, r
+
+    pair = (0, 0)
+    for i in range(len(s)):
+        for l, r in [expand(i, i), expand(i, i - 1)]:
+            if r - l > pair[1] - pair[0]:
+                pair = (l, r)
     return s[pair[0]:pair[1]+1]
 ```
-时间复杂度 $O(N^2)$，1076 ms
+时间复杂度 $O(N^2)$，940 ms
 
 ### #2
 
@@ -62,13 +78,12 @@ def longestPalindrome(self, s: str) -> str:
 
 ```python
 def longestPalindrome(self, s: str) -> str:
-    res, n = '', len(s)
+    res, maxL, n = '', 0, len(s)
     for j in range(n):
-        maxL = len(res)
-        for i in [j-maxL, max(0, j-maxL-1)]:
-            tmp = s[i:j+1]
+        for L in [maxL+1, min(maxL+2, j+1)]:
+            tmp = s[j+1-L:j+1]
             if tmp == tmp[::-1]:
-                res = tmp
+                res, maxL = tmp, L
     return res
 ```
 
@@ -76,41 +91,33 @@ def longestPalindrome(self, s: str) -> str:
 
 ## *附加
 
-此题还有一个经典的的 Manacher 算法：
-{{< link "力扣官方题解" "https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution/" >}}
+此题还有一个经典的的 
+[Manacher算法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution)
+。
 
 它在 O(N) 时间内不仅能找到最长回文子串，而且能得到所有中心子串的扩展距离。
 因此在与回文相关的问题中，都可以试试能否用 Manacher 算法解决。
 
 ```python
 def longestPalindrome(self, s: str) -> str:
-	def expand(s, l, r):
-		while l > 0 and r < len(s)-1 and s[l-1] == s[r+1]:
-			l -= 1
-			r += 1
-		if r - l > self.r - self.l:
-			self.l, self.r = l, r
-		return (r - l) // 2
-		
-	def manacher(s):
-		s = '#' + '#'.join(list(s)) + '#'
-		arm_len, center, right = [], 0, 0
-		for i in range(len(s)):
-			if right > i:
-				i_sym = 2 * center - i
-				min_arm_len = min(arm_len[i_sym], right - i)
-				cur_arm_len = expand(s, i - min_arm_len, i + min_arm_len)
-			else:
-				cur_arm_len = expand(s, i, i)
-			arm_len.append(cur_arm_len)
-			if i + cur_arm_len > right:
-				center, right = i, i + cur_arm_len
+    def expand(l, r):
+        while l > 0 and r < len(ss) - 1 and ss[l - 1] == ss[r + 1]:
+            l -= 1
+            r += 1
+        return (r - l) // 2
 
-	self.l, self.r = 0, 0
-	manacher(s)
-	return s[self.l//2:self.r//2]
+    pair, ss = (0, 0), '#' + '#'.join(s) + '#'
+    arm_len, center, right = [], 0, 0
+    for i in range(len(ss)):
+        min_arm_len = min(arm_len[2*center-i], right-i) if right > i else 0
+        cur_arm_len = expand(i - min_arm_len, i + min_arm_len)
+        arm_len.append(cur_arm_len)
+        if i + cur_arm_len > right:
+            center, right = i, i + cur_arm_len
+        if 2*cur_arm_len > pair[1]-pair[0]:
+            pair = (i-cur_arm_len, i+cur_arm_len)
+    return ss[pair[0]+1:pair[1]:2]
 ```
-
-时间复杂度 O(N)，168 ms
+时间复杂度 O(N)，124 ms
 
 

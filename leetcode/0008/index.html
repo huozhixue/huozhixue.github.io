@@ -7,23 +7,34 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0008：字符串转换整数 (atoi) - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0008：字符串转换整数 (atoi)" />
+        <title>0008：字符串转换整数 (atoi)（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0008：字符串转换整数 (atoi)（★）" />
 <meta property="og:description" content="题目
-请你来实现一个 atoi 函数，使其能将字符串转换成整数。
-首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：
+请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数
+（类似 C/C&#43;&#43; 中的 atoi 函数）。
+函数 myAtoi(string s) 的算法如下：
 
-如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。
-假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。
-该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。
+读入字符串并丢弃无用的前导空格
+检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字符（如果有）。 
+确定最终结果是负数还是正数。 如果两者都不存在，则假定结果为正。
+读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。字符串的其余部分将被忽略。
+将前面步骤读入的这些数字转换为整数（即，&ldquo;123&rdquo; -&gt; 123， &ldquo;0032&rdquo; -&gt; 32）。
+如果没有读入数字，则整数为 0 。必要时更改符号（从步骤 2 开始）。
+如果整数数超过 32 位有符号整数范围 [−2^31,  2^31 − 1] ，需要截断这个整数，
+使其保持在这个范围内。具体来说，小于 −2^31 的整数应该被固定为 −2^31 ，大于 2^31 − 1 
+的整数应该被固定为 2^31 − 1 。
+返回整数作为最终结果。
 
-假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。
-在任何情况下，若函数不能进行有效的转换时，请返回 0 。
 注意：
 
 本题中的空白字符只包括空格字符 &#39; &#39; 。
-假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 $[−2^{31},  2^{31} − 1]$。如果数值超过这个范围，请返回  $2^{31} − 1 或 −2^{31}$ 。
- 
-" />
+除前导空格或数字后的其余字符串外，请勿忽略 任何其他字符。
+
+提示：
+
+0 &lt;= s.length &lt;= 200
+s 由英文字母（大写和小写）、数字（0-9）、&#39; &lsquo;、&#39;&#43;&#39;、&#39;-&rsquo; 和 &lsquo;.&rsquo; 组成
+
+ " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0008/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-01-08T00:00:00+08:00" />
@@ -32,35 +43,46 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0008：字符串转换整数 (atoi)"/>
+<meta name="twitter:title" content="0008：字符串转换整数 (atoi)（★）"/>
 <meta name="twitter:description" content="题目
-请你来实现一个 atoi 函数，使其能将字符串转换成整数。
-首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：
+请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数
+（类似 C/C&#43;&#43; 中的 atoi 函数）。
+函数 myAtoi(string s) 的算法如下：
 
-如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。
-假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。
-该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。
+读入字符串并丢弃无用的前导空格
+检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字符（如果有）。 
+确定最终结果是负数还是正数。 如果两者都不存在，则假定结果为正。
+读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。字符串的其余部分将被忽略。
+将前面步骤读入的这些数字转换为整数（即，&ldquo;123&rdquo; -&gt; 123， &ldquo;0032&rdquo; -&gt; 32）。
+如果没有读入数字，则整数为 0 。必要时更改符号（从步骤 2 开始）。
+如果整数数超过 32 位有符号整数范围 [−2^31,  2^31 − 1] ，需要截断这个整数，
+使其保持在这个范围内。具体来说，小于 −2^31 的整数应该被固定为 −2^31 ，大于 2^31 − 1 
+的整数应该被固定为 2^31 − 1 。
+返回整数作为最终结果。
 
-假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。
-在任何情况下，若函数不能进行有效的转换时，请返回 0 。
 注意：
 
 本题中的空白字符只包括空格字符 &#39; &#39; 。
-假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 $[−2^{31},  2^{31} − 1]$。如果数值超过这个范围，请返回  $2^{31} − 1 或 −2^{31}$ 。
- 
-"/>
+除前导空格或数字后的其余字符串外，请勿忽略 任何其他字符。
+
+提示：
+
+0 &lt;= s.length &lt;= 200
+s 由英文字母（大写和小写）、数字（0-9）、&#39; &lsquo;、&#39;&#43;&#39;、&#39;-&rsquo; 和 &lsquo;.&rsquo; 组成
+
+ "/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0008/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0007/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0009/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "0008：字符串转换整数 (atoi)",
+        "headline": "0008：字符串转换整数 (atoi)（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0008\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  741 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1580 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0008\/","datePublished": "2015-01-08T00:00:00+08:00","dateModified": "2015-01-08T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -138,10 +160,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0008：字符串转换整数 (atoi)</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0008：字符串转换整数 (atoi)（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-08">2015-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 741 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0008/" class="leancloud_visitors" data-flag-title="0008：字符串转换整数 (atoi)">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-08">2015-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1580 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/leetcode/0008/" class="leancloud_visitors" data-flag-title="0008：字符串转换整数 (atoi)（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -162,47 +184,96 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>请你来实现一个 atoi 函数，使其能将字符串转换成整数。</p>
-<p>首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：</p>
+<p>请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数
+（类似 C/C++ 中的 atoi 函数）。</p>
+<p>函数 myAtoi(string s) 的算法如下：</p>
 <ul>
-<li>如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。</li>
-<li>假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。</li>
-<li>该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。</li>
+<li>读入字符串并丢弃无用的前导空格</li>
+<li>检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字符（如果有）。 
+确定最终结果是负数还是正数。 如果两者都不存在，则假定结果为正。</li>
+<li>读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。字符串的其余部分将被忽略。</li>
+<li>将前面步骤读入的这些数字转换为整数（即，&ldquo;123&rdquo; -&gt; 123， &ldquo;0032&rdquo; -&gt; 32）。
+如果没有读入数字，则整数为 0 。必要时更改符号（从步骤 2 开始）。</li>
+<li>如果整数数超过 32 位有符号整数范围 [−2^31,  2^31 − 1] ，需要截断这个整数，
+使其保持在这个范围内。具体来说，小于 −2^31 的整数应该被固定为 −2^31 ，大于 2^31 − 1 
+的整数应该被固定为 2^31 − 1 。</li>
+<li>返回整数作为最终结果。</li>
 </ul>
-<p>假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。</p>
-<p>在任何情况下，若函数不能进行有效的转换时，请返回 0 。</p>
 <p>注意：</p>
 <ul>
 <li>本题中的空白字符只包括空格字符 ' ' 。</li>
-<li>假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 $[−2^{31},  2^{31} − 1]$。如果数值超过这个范围，请返回  $2^{31} − 1 或 −2^{31}$ 。
- </li>
+<li>除前导空格或数字后的其余字符串外，请勿忽略 任何其他字符。</li>
 </ul>
-<p>示例 1:</p>
-<pre><code>输入: &quot;42&quot;
-输出: 42
+<p>提示：</p>
+<ul>
+<li>0 &lt;= s.length &lt;= 200</li>
+<li>s 由英文字母（大写和小写）、数字（0-9）、' &lsquo;、'+'、'-&rsquo; 和 &lsquo;.&rsquo; 组成</li>
+</ul>
+<p> </p>
+<p>示例 1：</p>
+<pre><code>输入：s = &quot;42&quot;
+输出：42
+解释：加粗的字符串为已经读入的字符，插入符号是当前读取的字符。
+第 1 步：&quot;42&quot;（当前没有读入字符，因为没有前导空格）
+         ^
+第 2 步：&quot;42&quot;（当前没有读入字符，因为这里不存在 '-' 或者 '+'）
+         ^
+第 3 步：&quot;42&quot;（读入 &quot;42&quot;）
+           ^
+解析得到整数 42 。
+由于 &quot;42&quot; 在范围 [-231, 231 - 1] 内，最终结果为 42 。
 </code></pre>
-<p>示例 2:</p>
-<pre><code>输入: &quot;   -42&quot;
-输出: -42
-解释: 第一个非空白字符为 '-', 它是一个负号。
-     我们尽可能将负号与后面所有连续出现的数字组合起来，最后得到 -42 。
+<p>示例 2：</p>
+<pre><code>输入：s = &quot;   -42&quot;
+输出：-42
+解释：
+第 1 步：&quot;   -42&quot;（读入前导空格，但忽视掉）
+            ^
+第 2 步：&quot;   -42&quot;（读入 '-' 字符，所以结果应该是负数）
+             ^
+第 3 步：&quot;   -42&quot;（读入 &quot;42&quot;）
+               ^
+解析得到整数 -42 。
+由于 &quot;-42&quot; 在范围 [-231, 231 - 1] 内，最终结果为 -42 。
 </code></pre>
-<p>示例 3:</p>
-<pre><code>输入: &quot;4193 with words&quot;
-输出: 4193
-解释: 转换截止于数字 '3' ，因为它的下一个字符不为数字。
+<p>示例 3：</p>
+<pre><code>输入：s = &quot;4193 with words&quot;
+输出：4193
+解释：
+第 1 步：&quot;4193 with words&quot;（当前没有读入字符，因为没有前导空格）
+         ^
+第 2 步：&quot;4193 with words&quot;（当前没有读入字符，因为这里不存在 '-' 或者 '+'）
+         ^
+第 3 步：&quot;4193 with words&quot;（读入 &quot;4193&quot;；由于下一个字符不是一个数字，所以读入停止）
+             ^
+解析得到整数 4193 。
+由于 &quot;4193&quot; 在范围 [-231, 231 - 1] 内，最终结果为 4193 。
 </code></pre>
-<p>示例 4:</p>
-<pre><code>输入: &quot;words and 987&quot;
-输出: 0
-解释: 第一个非空字符是 'w', 但它不是数字或正、负号。
-     因此无法执行有效的转换。
+<p>示例 4：</p>
+<pre><code>输入：s = &quot;words and 987&quot;
+输出：0
+解释：
+第 1 步：&quot;words and 987&quot;（当前没有读入字符，因为没有前导空格）
+         ^
+第 2 步：&quot;words and 987&quot;（当前没有读入字符，因为这里不存在 '-' 或者 '+'）
+         ^
+第 3 步：&quot;words and 987&quot;（由于当前字符 'w' 不是一个数字，所以读入停止）
+         ^
+解析得到整数 0 ，因为没有读入任何数字。
+由于 0 在范围 [-231, 231 - 1] 内，最终结果为 0 。
 </code></pre>
-<p>示例 5:</p>
-<pre><code>输入: &quot;-91283472332&quot;
-输出: -2147483648
-解释: 数字 &quot;-91283472332&quot; 超过 32 位有符号整数范围。 
-     因此返回 INT_MIN -2^31 。
+<p>示例 5：</p>
+<pre><code>输入：s = &quot;-91283472332&quot;
+输出：-2147483648
+解释：
+第 1 步：&quot;-91283472332&quot;（当前没有读入字符，因为没有前导空格）
+         ^
+第 2 步：&quot;-91283472332&quot;（读入 '-' 字符，所以结果应该是负数）
+          ^
+第 3 步：&quot;-91283472332&quot;（读入 &quot;91283472332&quot;）
+                     ^
+解析得到整数 -91283472332 。
+由于 -91283472332 小于范围 [-231, 231 - 1] 的下界，最终结果被截断为 -231 = -2147483648 。
 </code></pre>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -238,18 +309,18 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">myAtoi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-	<span class="n">tmp</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-	<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()):</span>
-		<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">char</span> <span class="ow">in</span> <span class="s1">&#39;+-&#39;</span><span class="p">:</span>
-			<span class="n">flag</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span> <span class="k">else</span> <span class="mi">1</span>
-		<span class="k">elif</span> <span class="n">char</span> <span class="ow">in</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">:</span>
-			<span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-		<span class="k">else</span><span class="p">:</span>
-			<span class="k">break</span>
-	<span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">tmp</span><span class="o">*</span><span class="n">flag</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">31</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="mi">2</span><span class="o">**</span><span class="mi">31</span><span class="p">)</span>    
+    <span class="n">x</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">char</span> <span class="ow">in</span> <span class="s1">&#39;+-&#39;</span><span class="p">:</span>
+            <span class="n">flag</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span> <span class="k">else</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">char</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">flag</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">31</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">31</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>40 ms</p></div><div class="post-footer" id="post-footer">
+</div><p>28 ms</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -266,7 +337,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

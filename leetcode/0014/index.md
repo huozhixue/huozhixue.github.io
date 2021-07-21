@@ -39,5 +39,4 @@ def longestCommonPrefix(self, strs: List[str]) -> str:
 		res += col[0]
 	return res
 ```
-
 36 ms
