@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>链表 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/</link>
+        <description>链表 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 24 Sep 2019 02:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>1206：设计跳表（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1206/</link>
+    <pubDate>Tue, 24 Sep 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1206/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 不使用任何库函数，设计一个跳表。 跳表是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当]]></description>
+</item><item>
+    <title>1171：从链表中删去总和值为零的连续节点（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1171/</link>
+    <pubDate>Mon, 26 Aug 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1171/</guid>
+    <description><![CDATA[第 151 场周赛第 3 题 题目 给你一个链表的头节点 head，请你编写代码，反复删去链表中由 总和 值为 0 的连续节点组成的序列， 直到不存在这样的序列为止。 删]]></description>
+</item><item>
+    <title>0876：链表的中间结点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0876/</link>
+    <pubDate>Thu, 21 Jun 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0876/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 给定一个头结点为 head 的非空单链表，返回链表的中间结点。 如果有两个中间结点，则返回第二个中间结点。 提示：给定链表的结点数介于 1 和]]></description>
+</item><item>
+    <title>0725：分隔链表（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0725/</link>
+    <pubDate>Wed, 01 Nov 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0725/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等: 任意两部分的长度差距不能超]]></description>
+</item><item>
+    <title>0707：设计链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0707/</link>
+    <pubDate>Sat, 14 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0707/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val 和 next。 val 是当前节点的值，next 是]]></description>
+</item><item>
+    <title>0432：全 O(1) 的数据结构（★★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0432/</link>
+    <pubDate>Sun, 09 Oct 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0432/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 请你设计一个用于存储字符串计数的数据结构，并能够返回计数最小和最大的字符串。 实现 AllOne 类： AllOne() 初始化数据结构的对象。 inc(String key) 字符串 key 的]]></description>
+</item><item>
+    <title>0430：扁平化多级双向链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0430/</link>
+    <pubDate>Fri, 07 Oct 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0430/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 多级双向链表中，除了指向下一个节点和前一个节点指针之外，它还有一个子链表指针，可能指向单独的双向链表。 这些子列表也可能会有一]]></description>
+</item><item>
+    <title>0328：奇偶链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0328/</link>
+    <pubDate>Tue, 24 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0328/</guid>
+    <description><![CDATA[题目 给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。 第一个节点的索引被认为是 奇数 ， 第二]]></description>
+</item><item>
+    <title>0237：删除链表中的节点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0237/</link>
+    <pubDate>Tue, 25 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0237/</guid>
+    <description><![CDATA[题目 请编写一个函数，用于 删除单链表中某个特定节点 。在设计函数时需要注意， 你无法访问链表的头节点 head ，只能直接访问 要被删除的节点 。 题目数据保证需]]></description>
+</item><item>
+    <title>0234：回文链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0234/</link>
+    <pubDate>Sat, 22 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0234/</guid>
+    <description><![CDATA[题目 给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。 如果是，返回 true ；否则，返回 false 。 示例 1： 输入：head = [1,2,2,1] 输出：true 示例 2： 输]]></description>
+</item></channel>
+</rss>

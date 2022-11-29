@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>并查集 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+        <description>并查集 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Sep 2021 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+    <title>1998：数组的最大公因数排序（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1998/</link>
+    <pubDate>Sun, 05 Sep 2021 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1998/</guid>
+    <description><![CDATA[第 257 场周赛第 4 题 题目 给你一个整数数组 nums ，你可以在 nums 上执行下述操作 任意次 ： 如果 gcd(nums[i], nums[j]) &gt; 1 ，交换 nums[i] 和 nums[j] 的位置。 其中 gcd(nums[i], nums[j]) 是 nums[i] 和 nums[j] 的最大公因数。 如果能]]></description>
+</item><item>
+    <title>1632：矩阵转换后的秩（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1632/</link>
+    <pubDate>Thu, 29 Oct 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1632/</guid>
+    <description><![CDATA[题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的大小关系，它按照如下]]></description>
+</item><item>
+    <title>1584：连接所有点的最小费用（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1584/</link>
+    <pubDate>Sun, 23 Aug 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1584/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 给你一个points 数组，表示 2D 平面上的一些点，其中 points[i] = [xi, yi] 。 连接点 [xi, yi] 和点 [xj, yj] 的费用为它们之间的 曼哈顿距离 ：|xi - xj| + |yi]]></description>
+</item><item>
+    <title>1568：使陆地分离的最少天数（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1568/</link>
+    <pubDate>Fri, 07 Aug 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1568/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 给你一个由若干 0 和 1 组成的二维网格 grid ，其中 0 表示水，而 1 表示陆地。 岛屿由水平方向或竖直方向上相邻的 1 （陆地）连接形成。 如果 恰]]></description>
+</item><item>
+    <title>1489：找到最小生成树里的关键边和伪关键边（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1489/</link>
+    <pubDate>Sat, 06 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1489/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges ，其中 edges[i] = [fromi, toi, weighti] 表示在 fromi 和 toi 节点之间有一条带权无向边。 最]]></description>
+</item><item>
+    <title>0990：等式方程的可满足性（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0990/</link>
+    <pubDate>Tue, 29 Jan 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0990/</guid>
+    <description><![CDATA[题目 给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4， 并采用两种不同的形式之一：&ldquo;a==b&rdqu]]></description>
+</item><item>
+    <title>0959：由斜杠划分区域（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0959/</link>
+    <pubDate>Sat, 29 Dec 2018 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0959/</guid>
+    <description><![CDATA[题目 在由 1 x 1 方格组成的 n x n 网格 grid 中，每个 1 x 1 方块由 &lsquo;/&rsquo;、&rsquo;' 或空格构成。 这些字符会将方块划分为一]]></description>
+</item><item>
+    <title>0839：相似字符串组（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0839/</link>
+    <pubDate>Tue, 15 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0839/</guid>
+    <description><![CDATA[题目 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。 如果这两个字符串本身是相等的，那它们也是相似的]]></description>
+</item><item>
+    <title>0721：账户合并（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0721/</link>
+    <pubDate>Sat, 28 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0721/</guid>
+    <description><![CDATA[题目 给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)， 其余元素是 emails 表示该账户的邮箱地址。 现在，我]]></description>
+</item><item>
+    <title>0695：岛屿的最大面积（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0695/</link>
+    <pubDate>Mon, 02 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0695/</guid>
+    <description><![CDATA[题目 给定一个包含了一些 0 和 1 的非空二维数组 grid 。 一个 岛屿 是由一些相邻的 1 (代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在水平或者竖直方向]]></description>
+</item></channel>
+</rss>

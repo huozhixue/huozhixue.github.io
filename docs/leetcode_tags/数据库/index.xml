@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数据库 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+        <description>数据库 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Sep 2015 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
+    <title>0262：行程和用户（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0262/</link>
+    <pubDate>Sat, 19 Sep 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0262/</guid>
+    <description><![CDATA[题目 SQL架构 表：Trips +-------------+----------+ | Column Name | Type | +-------------+----------+ | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | +-------------+----------+ id 是这张表的主键。 这张表中存所有出]]></description>
+</item><item>
+    <title>0197：上升的温度（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0197/</link>
+    <pubDate>Thu, 16 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0197/</guid>
+    <description><![CDATA[题目 SQL架构 表： Weather +---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | recordDate | date | | temperature | int | +---------------+---------+ id 是这个表的主键 该表包含特定日期的温度信息 编写一个 SQL 查询，来查找与之前（]]></description>
+</item><item>
+    <title>0196：删除重复的电子邮箱（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0196/</link>
+    <pubDate>Wed, 15 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0196/</guid>
+    <description><![CDATA[题目 SQL架构 表: Person +-------------+---------+ | Column Name | Type | +-------------+---------+ | id | int | | email | varchar | +-------------+---------+ id是该表的主键列。 该表的每一行包含一封电子邮件。电子邮件将不包含大写字母。 编写一]]></description>
+</item><item>
+    <title>0185：部门工资前三高的所有员工（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0185/</link>
+    <pubDate>Sat, 04 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0185/</guid>
+    <description><![CDATA[题目 SQL架构 表: Employee +--------------+---------+ | Column Name | Type | +--------------+---------+ | id | int | | name | varchar | | salary | int | | departmentId | int | +--------------+---------+ Id是该表的主键列。 departmentId是Departme]]></description>
+</item><item>
+    <title>0184：部门工资最高的员工（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0184/</link>
+    <pubDate>Fri, 03 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0184/</guid>
+    <description><![CDATA[题目 SQL架构 表： Employee +--------------+---------+ | 列名 | 类型 | +--------------+---------+ | id | int | | name | varchar | | salary | int | | departmentId | int | +--------------+---------+ id是此表的主键列。 departmentId是Departm]]></description>
+</item><item>
+    <title>0183：从不订购的客户（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0183/</link>
+    <pubDate>Thu, 02 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0183/</guid>
+    <description><![CDATA[题目 SQL架构 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。 Customers 表： +----+-------+ | Id | Name | +----+-------+ | 1 | Joe | |]]></description>
+</item><item>
+    <title>0182：查找重复的电子邮箱（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0182/</link>
+    <pubDate>Wed, 01 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0182/</guid>
+    <description><![CDATA[题目 SQL架构 编写一个 SQL 查询，查找 Person 表中所有重复的电子邮箱。 示例： +----+---------+ | Id | Email | +----+---------+ | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | +----+---------+ 根据以上输入，你的查询应返回]]></description>
+</item><item>
+    <title>0181：超过经理收入的员工（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0181/</link>
+    <pubDate>Tue, 30 Jun 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0181/</guid>
+    <description><![CDATA[题目 SQL架构 表：Employee +-------------+---------+ | Column Name | Type | +-------------+---------+ | id | int | | name | varchar | | salary | int | | managerId | int | +-------------+---------+ Id是该表的主键。 该表的每一行都表示雇员的ID、]]></description>
+</item><item>
+    <title>0180：连续出现的数字（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0180/</link>
+    <pubDate>Mon, 29 Jun 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0180/</guid>
+    <description><![CDATA[题目 SQL架构 表：Logs +-------------+---------+ | Column Name | Type | +-------------+---------+ | id | int | | num | varchar | +-------------+---------+ id 是这个表的主键。 编写一个 SQL 查询，查找所有至少连续出现三次的数字。 返回的结果]]></description>
+</item><item>
+    <title>0178：分数排名（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0178/</link>
+    <pubDate>Sat, 27 Jun 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0178/</guid>
+    <description><![CDATA[题目 SQL架构 表: Scores +-------------+---------+ | Column Name | Type | +-------------+---------+ | id | int | | score | decimal | +-------------+---------+ Id是该表的主键。 该表的每一行都包含了一场比赛的分数。Score是一个有两位小数点]]></description>
+</item></channel>
+</rss>

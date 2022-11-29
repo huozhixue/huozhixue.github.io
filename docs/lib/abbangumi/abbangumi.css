@@ -1,0 +1,194 @@
+/* css */
+#ab_bangumi_content{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #fea3b2; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+.ab_bangumiItem{
+    position: relative;
+    width: 100%;
+    max-width: 135px;
+    height: 180px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: aliceblue;
+    box-shadow:0 1px 3px rgba(0,0,0,0.5);
+    font-family: 'Noto Serif SC','Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei',Georgia,serif;
+
+}
+.ab_bangumiCover{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-attachment: local;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-color:var(--zm_bangumi_color);
+
+}
+
+.ab_bangumiCoverImg{
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border: none !important;
+  max-width: 100% !important;
+  max-height: 100%;
+  border-radius: 0 !important;
+}
+.ab_bangumiScore{
+    position: absolute;
+    top: 0;
+	right: 0;
+	font-size: 18px;
+	font-weight: bold;
+    color: white;
+	background-color: rgba(255,140,131,0.85);
+	padding: 0 0 0 8px;
+    border-radius: 0 0 0 16px;
+}
+.ab_bangumiProgress{
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0 0 2px 2px;
+    background-color: rgba(60, 60, 60, 0.23);
+}
+.ab_bangumiProgress .ab_realPr{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,140,131,0.76);
+    border-radius: 0 0 2px 2px;
+}
+.ab_textContainer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    white-space: nowrap;
+    line-height: 10px;
+}
+.ab_textContainer>.ab_ProgressText{
+    white-space: nowrap;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+	font-weight: bold;
+    line-height: 25px;
+    color: white;
+    vertical-align: top;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 10px;
+    /* display: inline-block; */
+}
+@keyframes marquee{
+    /* from {
+        transform:translate(0,0);
+       }
+       to {
+        transform:translate(-100%,0);
+       } */
+       0%{
+        transform:translate(0,0);
+       }
+       15%{
+        transform:translate(0,0);
+       }
+       100%{
+        transform:translate(-100%,0);
+
+       }
+}
+.ab_bangumiDestription{
+    position: absolute;
+    left: 0;
+    top:50%;
+    width: 100%;
+    display: flex;
+    transform: translateY(50%);
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    color: #353535;
+    visibility: hidden;
+    opacity:0;
+    transition:all 0.3s ease;
+}
+.ab_bangumiItem:hover .ab_bangumiDestription{
+    top: 0;
+    transform: translateY(0);
+    visibility: visible;
+    opacity:1;
+}
+
+.ab_desTitle{
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: block;
+    max-width: 100%;
+    max-height: 20%;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.ab_desText{
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: block;
+    width: 100%;
+    max-height: 55%;
+    overflow-y: auto;
+    cursor: unset;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: justify;
+    user-select: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+.ab_bangumiGo{
+    width: 60%;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 0px rgba(60, 60, 60, 0.23);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: bold;
+    background: #fa8072;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    user-select: none;
+}
+.ab_bangumiGo:hover{
+    background: #ff675b;
+}
+/* @media only screen and (max-width: 390px){
+    .bangumiItem{
+        background-size: auto 100%;
+    }
+} */

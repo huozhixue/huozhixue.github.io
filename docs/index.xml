@@ -1,0 +1,149 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>个人博客</title>
+        <link>https://huozhixue.github.io/</link>
+        <description>Ian 的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 09 Apr 2022 00:00:00 &#43;0800</lastBuildDate>
+            <atom:link href="https://huozhixue.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>力扣总结 数据结构进阶（六）：线段树</title>
+    <link>https://huozhixue.github.io/algorithm-segment_tree/</link>
+    <pubDate>Wed, 21 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-segment_tree/</guid>
+    <description><![CDATA[线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。 相比于 前缀和 和 树状数组， 线段树更复杂，也更通用。 线段树可以区间修改、]]></description>
+</item><item>
+    <title>力扣总结 数据结构进阶（五）：树状数组</title>
+    <link>https://huozhixue.github.io/algorithm-binary_indexed_tree/</link>
+    <pubDate>Sun, 11 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-binary_indexed_tree/</guid>
+    <description><![CDATA[树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。 是一种解决动态数组区间查询问题的算法。 最简单的树状数组支持两种操作，]]></description>
+</item><item>
+    <title>力扣总结 数据结构进阶（四）：字典树</title>
+    <link>https://huozhixue.github.io/algorithm-trie/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-trie/</guid>
+    <description><![CDATA[字典树，又叫前缀树，是一种 N 叉树，用于高效地存储、查找字符串前缀。 python 中可以用 defaultdict 来实现。 1 基础 0208 实现 Trie (前缀树) 0648 单词替换 2 进阶 0211 添加与搜索单]]></description>
+</item><item>
+    <title>力扣总结 数据结构进阶（三）：并查集</title>
+    <link>https://huozhixue.github.io/algorithm-union_find/</link>
+    <pubDate>Mon, 21 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-union_find/</guid>
+    <description><![CDATA[并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构， 专门用于 动态处理 不相交集合的「查询」与「合并]]></description>
+</item><item>
+    <title>力扣总结 数据结构进阶（二）：有序集合</title>
+    <link>https://huozhixue.github.io/algorithm-ordered_set/</link>
+    <pubDate>Fri, 11 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-ordered_set/</guid>
+    <description><![CDATA[很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N)]]></description>
+</item><item>
+    <title>力扣总结 数据结构进阶（一）：单调栈和单调队列</title>
+    <link>https://huozhixue.github.io/algorithm-monotonic_stack/</link>
+    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-monotonic_stack/</guid>
+    <description><![CDATA[1 基础 0496 下一个更大元素 I 0739 每日温度 0901 股票价格跨度 2 进阶 0084 柱状图中最大的矩形 0085 最大矩形 0907 子数组的最小值之和 3 挑战 0456 132 模式 0962 最大宽度坡 0975 奇偶跳 1124]]></description>
+</item><item>
+    <title>力扣总结 算法进阶（四）：几何</title>
+    <link>https://huozhixue.github.io/algorithm-math_geometry/</link>
+    <pubDate>Sun, 11 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-math_geometry/</guid>
+    <description><![CDATA[一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。 相关的算法有 扫描线算法 等。 1 基础 0223 矩形面积 2 进阶 0149 直线上最多的点数 3 挑战 0335 路径交叉 *4 扫]]></description>
+</item><item>
+    <title>力扣总结 算法进阶（三）：代数</title>
+    <link>https://huozhixue.github.io/algorithm-math_algebra/</link>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-math_algebra/</guid>
+    <description><![CDATA[一些问题涉及到数学的代数知识： 基础的四则运算、平方开根、进制转换等 排列组合、概率统计 数论知识，包括质数、同余、因式分解、乘法逆元等 1 运算 1.1 基]]></description>
+</item><item>
+    <title>力扣总结 算法进阶（二）：滚动哈希</title>
+    <link>https://huozhixue.github.io/algorithm-rolling_hash/</link>
+    <pubDate>Thu, 11 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-rolling_hash/</guid>
+    <description><![CDATA[滚动哈希是一种针对固定长度的滑动窗口的哈希方法。 朴素的哈希需要对所有窗口单独求哈希值，时间复杂度和空间复杂度都和窗口长度相关。 用滚动哈希则可]]></description>
+</item><item>
+    <title>力扣总结 算法进阶（一）：前缀和</title>
+    <link>https://huozhixue.github.io/algorithm-prefix_sum/</link>
+    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-prefix_sum/</guid>
+    <description><![CDATA[前缀和是一种常用的解决区间查询问题的算法。 当数组固定时，根据前缀和即可在 O(1) 时间查询任意区间的和。 当数组动态变化时，则考虑用 树状数组、 线段树 等]]></description>
+</item><item>
+    <title>力扣总结 常见算法（八）：贪心</title>
+    <link>https://huozhixue.github.io/algorithm-greedy/</link>
+    <pubDate>Thu, 11 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-greedy/</guid>
+    <description><![CDATA[贪心算法是一种高效的搜索方法。在每一步，都选择当前最好的分支，最终即能得到最优解。 能用贪心算法解决的问题，对于贪心正确性的证明往往更加复杂。]]></description>
+</item><item>
+    <title>力扣总结 常见算法（七）：动态规划</title>
+    <link>https://huozhixue.github.io/algorithm-dp/</link>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-dp/</guid>
+    <description><![CDATA[动态规划是一种特殊的递归，适用于有重叠子问题的场景。 存在大量重叠的子问题时，普通的递归写法会重复计算这些子问题，浪费大量时间。 动态规划会保存]]></description>
+</item><item>
+    <title>力扣总结 常见算法（六）：dfs 和 bfs</title>
+    <link>https://huozhixue.github.io/algorithm-dfs_bfs/</link>
+    <pubDate>Thu, 21 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-dfs_bfs/</guid>
+    <description><![CDATA[dfs（深度优先搜索算法）和 bfs（广度优先搜索算法）都是图形搜索方法， 不同的在于 dfs 先尽可能深的搜索一个分支，再尝试别的路径，而 bfs 按离起点的]]></description>
+</item><item>
+    <title>力扣总结 常见算法（五）：二分查找</title>
+    <link>https://huozhixue.github.io/algorithm-binary_search/</link>
+    <pubDate>Mon, 11 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-binary_search/</guid>
+    <description><![CDATA[二分查找是一种针对有序集合的高效查找算法，时间复杂度为 O(logN)。 二分查找每一轮通过检查中间元素，将查找范围缩小一半，本质上是一种分治。]]></description>
+</item><item>
+    <title>力扣总结 常见算法（四）：双指针和滑动窗口</title>
+    <link>https://huozhixue.github.io/algorithm-two_pointers/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-two_pointers/</guid>
+    <description><![CDATA[双指针算法一般指两个指针在数组上相向移动来解决问题的算法。 双指针算法常应用在具有某种有序性质的问题上，本质上是一种减少了搜索范围的递归。 广义]]></description>
+</item><item>
+    <title>力扣总结 常见算法（三）：递归和分治</title>
+    <link>https://huozhixue.github.io/algorithm-recursion/</link>
+    <pubDate>Mon, 21 Dec 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-recursion/</guid>
+    <description><![CDATA[递归是指函数自己调用自己的语法现象。 一般递归用于将问题不断转化为规模更小的子问题，直到变为可以直接求解的最简单子问题。 这也就是分治法的思想。]]></description>
+</item><item>
+    <title>力扣总结 常见算法（二）：位运算和状态压缩</title>
+    <link>https://huozhixue.github.io/algorithm-bit/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-bit/</guid>
+    <description><![CDATA[位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。 很多位运算的问题]]></description>
+</item><item>
+    <title>力扣总结 常见算法（一）：排序</title>
+    <link>https://huozhixue.github.io/algorithm-sort/</link>
+    <pubDate>Tue, 01 Dec 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-sort/</guid>
+    <description><![CDATA[排序算法是非常经典的一类算法，常作为算法教程的第一章。 最常用的是快速排序、归并排序、堆排序，其思想也不仅应用在排序中。 特别的，当数据范围相对]]></description>
+</item><item>
+    <title>力扣总结 数据结构（八）：图</title>
+    <link>https://huozhixue.github.io/algorithm-graph/</link>
+    <pubDate>Wed, 11 Nov 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-graph/</guid>
+    <description><![CDATA[图是一种比树形结构更复杂的非线性数据结构。 树形结构中的结点是一对多的关系，且有明显的层次关系。 图中的顶点是多对多的关系，无明显的层次关系。 按]]></description>
+</item><item>
+    <title>力扣总结 数据结构（七）：堆</title>
+    <link>https://huozhixue.github.io/algorithm-heap/</link>
+    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-heap/</guid>
+    <description><![CDATA[堆 是一种特别的完全二叉树，每一个节点的值都大于等于或小于等于其孩子节点的值。 堆可以在 O(logN) 时间内插入元素、删除根节点，在 O(1) 时间获得最大值或最小值]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,63 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>滚动哈希 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/</link>
+        <description>滚动哈希 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 27 Jan 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/" rel="self" type="application/rss+xml" /><item>
+    <title>2156：查找给定哈希值的子串（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2156/</link>
+    <pubDate>Thu, 27 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2156/</guid>
+    <description><![CDATA[第 场周赛第 题 题目 给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算： hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + &hellip; + val(s[k-1]) * pk-1) mod m. 其中 val(s[i]) 表]]></description>
+</item><item>
+    <title>1923：最长公共子路径（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1923/</link>
+    <pubDate>Sat, 03 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1923/</guid>
+    <description><![CDATA[题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的朋友想在这个国家旅游]]></description>
+</item><item>
+    <title>1461：检查一个字符串是否包含所有长度为 K 的二进制子串（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1461/</link>
+    <pubDate>Sat, 09 May 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1461/</guid>
+    <description><![CDATA[题目 给你一个二进制字符串 s 和一个整数 k 。如果所有长度为 k 的二进制字符串都是 s 的子串， 请返回 true ，否则请返回 false 。 示例 1： 输入：s = &quot;00110110&quot;, k = 2 输出：]]></description>
+</item><item>
+    <title>1392：最长快乐前缀（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1392/</link>
+    <pubDate>Tue, 03 Mar 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1392/</guid>
+    <description><![CDATA[题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐前缀。如果不存在满足]]></description>
+</item><item>
+    <title>1316：不同的循环子字符串（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1316/</link>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1316/</guid>
+    <description><![CDATA[题目 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目： 可以写成某个字符串与其自身相连接的形式（即，可以写为 a + a，其中 a 是某个]]></description>
+</item><item>
+    <title>1044：最长重复子串（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1044/</link>
+    <pubDate>Mon, 15 Apr 2019 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1044/</guid>
+    <description><![CDATA[题目 给你一个字符串 s ，考虑其所有 重复子串 ：即 s 的（连续）子串，在 s 中出现 2 次或更多次。这些出现之间可能存在重叠。 返回 任意一个 可能具有最长长度]]></description>
+</item><item>
+    <title>0718：最长重复子数组（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0718/</link>
+    <pubDate>Wed, 25 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0718/</guid>
+    <description><![CDATA[题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释：长度最长的公共子数组]]></description>
+</item><item>
+    <title>0187：重复的DNA序列（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0187/</link>
+    <pubDate>Mon, 06 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0187/</guid>
+    <description><![CDATA[题目 DNA序列 由一系列核苷酸组成，缩写为 &lsquo;A&rsquo;, &lsquo;C&rsquo;, &lsquo;G&rsquo; 和 &lsquo;T&rsquo;.。 例如，&ldquo;ACGAATTCCG&rdquo; 是一]]></description>
+</item></channel>
+</rss>

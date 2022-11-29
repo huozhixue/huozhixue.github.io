@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>位运算 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+        <description>位运算 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="self" type="application/rss+xml" /><item>
+    <title>1938：查询最大基因差（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1938/</link>
+    <pubDate>Sun, 18 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1938/</guid>
+    <description><![CDATA[第 250 场周赛第 4 题 题目 给你一棵 n 个节点的有根树，节点编号从 0 到 n - 1 。 每个节点的编号表示这个节点的 独一无二的基因值 （也就是说节点 x 的基因值为 x]]></description>
+</item><item>
+    <title>1707：与数组中元素的最大异或值（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1707/</link>
+    <pubDate>Tue, 12 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1707/</guid>
+    <description><![CDATA[题目 给你一个由非负整数组成的数组 nums 。另有一个查询数组 queries ，其中 queries[i] = [xi, mi] 。 第 i 个查询的答案是 xi 和任何 nums 数组中不超过 mi 的元素按位异或（XOR）得到]]></description>
+</item><item>
+    <title>0421：数组中两个数的最大异或值（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0421/</link>
+    <pubDate>Wed, 28 Sep 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0421/</guid>
+    <description><![CDATA[题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果， 其中 0 ≤ i ≤ j &lt; n 。 你能在O(n)的时间解决这个问题吗？ 提示： 1 &lt;= nums.length &lt;= 2 * 10^4 0 &lt;= nums[i] &lt;= 2^31 - 1]]></description>
+</item><item>
+    <title>0401：二进制手表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0401/</link>
+    <pubDate>Sun, 18 Sep 2016 01:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0401/</guid>
+    <description><![CDATA[第 5 场周赛第 2 题 题目 二进制手表顶部有 4 个 LED 代表 小时（0-11），底部的 6 个 LED 代表 分钟（0-59）。 每个 LED 代表一个 0 或 1，最低位在右侧。 例如，]]></description>
+</item><item>
+    <title>0371：两整数之和（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0371/</link>
+    <pubDate>Wed, 06 Jan 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0371/</guid>
+    <description><![CDATA[题目 给你两个整数 a 和 b ，不使用 运算符 + 和 - ，计算并返回两整数之和。 示例 1： 输入：a = 1, b = 2 输出：3 示例 2： 输入：a = 2, b = 3 输出：5 提示：]]></description>
+</item><item>
+    <title>0342：4的幂（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0342/</link>
+    <pubDate>Tue, 08 Dec 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0342/</guid>
+    <description><![CDATA[题目 给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 true ；否则，返回 false 。 整数 n 是 4 的幂次方需满足：存在整数 x 使得 n == 4^x 示例 1： 输]]></description>
+</item><item>
+    <title>0338：比特位计数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0338/</link>
+    <pubDate>Fri, 04 Dec 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0338/</guid>
+    <description><![CDATA[题目 给你一个整数 n ，对于 0 &lt;= i &lt;= n 中的每个 i ，计算其二进制表示中 1 的个数 ， 返回一个长度为 n + 1 的数组 ans 作为答案。 示例 1： 输入：n = 2 输出：[]]></description>
+</item><item>
+    <title>0260：只出现一次的数字 III（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0260/</link>
+    <pubDate>Thu, 17 Sep 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0260/</guid>
+    <description><![CDATA[题目 给定一个整数数组 nums，其中恰好有两个元素只出现一次，其余所有元素均出现两次。 找出只出现一次的那两个元素。你可以按 任意顺序 返回答案。 示]]></description>
+</item><item>
+    <title>0231：2 的幂（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0231/</link>
+    <pubDate>Wed, 19 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0231/</guid>
+    <description><![CDATA[题目 给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。 如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次方。 示例 1]]></description>
+</item><item>
+    <title>0201：数字范围按位与（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0201/</link>
+    <pubDate>Mon, 20 Jul 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0201/</guid>
+    <description><![CDATA[题目 给你两个整数 left 和 right ，表示区间 [left, right] ， 返回此区间内所有数字 按位与 的结果（包含 left 、right 端点）。 示例 1： 输入：left = 5, right = 7 输出：4 示]]></description>
+</item></channel>
+</rss>

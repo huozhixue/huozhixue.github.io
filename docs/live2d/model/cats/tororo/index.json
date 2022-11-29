@@ -1,0 +1,40 @@
+{
+    "type":"Live2D Model Setting",
+    "name":"tororo-3695903",
+    "label":"tororo",
+    "model":"model.moc",
+    "textures":[
+        "textures/default.png"
+    ],
+    "layout":{
+        "center_x": 0,
+        "center_y": -0.1,
+        "width": 1.8,
+        "height": 1.8
+    },
+	"hit_areas_custom":{
+		"head_x":[-0.4, 0.4],
+		"head_y":[0.5,  0.2],
+		"body_x":[-0.5, 0.5],
+		"body_y":[0.2, -0.9]
+	},
+    "motions":{
+        "idle":[
+            {"file":"motions/00_idle.mtn","fade_in":2000,"fade_out":2000},
+            {"file":"motions/01.mtn","fade_in":2000,"fade_out":2000},
+            {"file":"motions/02.mtn","fade_in":2000,"fade_out":2000},
+			{"file":"motions/03.mtn","fade_in":2000,"fade_out":2000},
+			{"file":"motions/07.mtn","fade_in":2000,"fade_out":2000},
+			{"file":"motions/08.mtn","fade_in":2000,"fade_out":2000}
+        ],
+        "flick_head":[
+            {"file":"motions/06.mtn","fade_in":150,"fade_out":100}
+        ],
+        "tap_body":[
+            {"file":"motions/04.mtn","fade_in":150,"fade_out":100}
+        ],
+        "thanking":[
+            {"file":"motions/05.mtn","fade_in":2000,"fade_out":2000}
+        ]
+    }
+}

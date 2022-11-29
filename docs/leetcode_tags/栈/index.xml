@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>栈 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E6%A0%88/</link>
+        <description>栈 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Mar 2022 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%A0%88/" rel="self" type="application/rss+xml" /><item>
+    <title>2197：替换数组中的非互质数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2197/</link>
+    <pubDate>Sun, 06 Mar 2022 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2197/</guid>
+    <description><![CDATA[第 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则，删除]]></description>
+</item><item>
+    <title>0770：基本计算器 IV（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0770/</link>
+    <pubDate>Sat, 16 Dec 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0770/</guid>
+    <description><![CDATA[题目 给定一个表达式 expression 如 expression = &ldquo;e + 8 - a + 5&rdquo; 和一个求值映射， 如 {&ldquo;e&rdquo;: 1}（给定的形式为 evalvars = [&ldquo;e&rdquo;] 和 evalints = [1]）， 返回表示简化表达式的标记列表，例如 [&quot;-1 * a&quot;,&ldquo;14&rdquo;]]]></description>
+</item><item>
+    <title>0678：有效的括号字符串（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0678/</link>
+    <pubDate>Fri, 15 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0678/</guid>
+    <description><![CDATA[题目 给定一个只包含三种字符的字符串：（ ，） 和 *，写一个函数来检验这个字符串是否为有效字符串。有效字符串具有如下规则： 任何左括号 ( 必须有相应的]]></description>
+</item><item>
+    <title>0394：字符串解码（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0394/</link>
+    <pubDate>Sun, 04 Sep 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0394/</guid>
+    <description><![CDATA[第 3 场周赛第 3 题 题目 给定一个经过编码的字符串，返回它解码后的字符串。 编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正]]></description>
+</item><item>
+    <title>0385：迷你语法分析器（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0385/</link>
+    <pubDate>Wed, 20 Jan 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0385/</guid>
+    <description><![CDATA[题目 给定一个字符串 s 表示一个整数嵌套列表，实现一个解析它的语法分析器并返回解析的结果 NestedInteger 。 列表中的每个元素只可能是整数或整数嵌套列表 示例 1： 输]]></description>
+</item><item>
+    <title>0331：验证二叉树的前序序列化（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0331/</link>
+    <pubDate>Fri, 27 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0331/</guid>
+    <description><![CDATA[题目 序列化二叉树的一种方法是使用 前序遍历 。当我们遇到一个非空节点时，我们可以记录下这个节点的值。 如果它是一个空节点，我们可以使用一个标记值记]]></description>
+</item><item>
+    <title>0301：删除无效的括号（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0301/</link>
+    <pubDate>Wed, 28 Oct 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0301/</guid>
+    <description><![CDATA[题目 给你一个由若干括号和字母组成的字符串 s ，删除最小数量的无效括号，使得输入的字符串有效。 返回所有可能的结果。答案可以按 任意顺序 返回。 示例 1]]></description>
+</item><item>
+    <title>0232：用栈实现队列（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0232/</link>
+    <pubDate>Thu, 20 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0232/</guid>
+    <description><![CDATA[题目 请你仅使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（push、pop、peek、empty）： 实现 MyQueue 类： void push(int x) 将元素 x]]></description>
+</item><item>
+    <title>0227：基本计算器 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0227/</link>
+    <pubDate>Sat, 15 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0227/</guid>
+    <description><![CDATA[题目 给你一个字符串表达式 s ，请你实现一个基本计算器来计算并返回它的值。 整数除法仅保留整数部分。 你可以假设给定的表达式总是有效的。所有中间结果]]></description>
+</item><item>
+    <title>0225：用队列实现栈</title>
+    <link>https://huozhixue.github.io/leetcode/0225/</link>
+    <pubDate>Thu, 13 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0225/</guid>
+    <description><![CDATA[题目 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通队列的全部四种操作（push、top、pop 和 empty）。 实现 MyStack 类： void push(int]]></description>
+</item></channel>
+</rss>

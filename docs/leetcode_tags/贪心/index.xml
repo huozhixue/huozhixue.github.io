@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>贪心 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E8%B4%AA%E5%BF%83/</link>
+        <description>贪心 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 Mar 2022 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E8%B4%AA%E5%BF%83/" rel="self" type="application/rss+xml" /><item>
+    <title>2203：得到要求路径的最小带权子图（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2203/</link>
+    <pubDate>Sat, 12 Mar 2022 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2203/</guid>
+    <description><![CDATA[第 场周赛第 4 题 题目 给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。 同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示从 fromi 到]]></description>
+</item><item>
+    <title>2197：替换数组中的非互质数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2197/</link>
+    <pubDate>Sun, 06 Mar 2022 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2197/</guid>
+    <description><![CDATA[第 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则，删除]]></description>
+</item><item>
+    <title>1632：矩阵转换后的秩（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1632/</link>
+    <pubDate>Thu, 29 Oct 2020 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1632/</guid>
+    <description><![CDATA[题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的大小关系，它按照如下]]></description>
+</item><item>
+    <title>0843：猜猜这个单词（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0843/</link>
+    <pubDate>Sat, 19 May 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0843/</guid>
+    <description><![CDATA[题目 这是一个 交互式问题 。 我们给出了一个由一些 不同的 单词组成的列表 wordlist ，对于每个 wordlist[i] 长度均为 6 ， 这个列表中的一个单词将被选作 secret 。 你可以调用 Master.guess(word) 来猜单]]></description>
+</item><item>
+    <title>0646：最长数对链（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0646/</link>
+    <pubDate>Sat, 22 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0646/</guid>
+    <description><![CDATA[题目 给出 n 个数对。 在每一个数对中，第一个数字总是比第二个数字小。 现在，我们定义一种跟随关系，当且仅当 b &lt; c 时，数对(c, d) 才可以跟在 (a, b) 后面]]></description>
+</item><item>
+    <title>0435：无重叠区间（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0435/</link>
+    <pubDate>Wed, 12 Oct 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0435/</guid>
+    <description><![CDATA[题目 给定一个区间的集合 intervals ，其中 intervals[i] = [starti, endi] 。 返回 需要移除区间的最小数量，使剩余区间互不重叠 。 示例 1: 输入: intervals = [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，剩下的区间]]></description>
+</item><item>
+    <title>0406：根据身高重建队列（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0406/</link>
+    <pubDate>Sun, 25 Sep 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0406/</guid>
+    <description><![CDATA[第 6 场周赛第 3 题 题目 假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。 每个 people[i] = [hi, ki] 表示第 i 个人的身高为 hi ，前]]></description>
+</item><item>
+    <title>0402：移掉K位数字（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0402/</link>
+    <pubDate>Sun, 18 Sep 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0402/</guid>
+    <description><![CDATA[第 5 场周赛第 3 题 题目 给你一个以字符串表示的非负整数 num 和一个整数 k ，移除这个数中的 k 位数字，使得剩下的数字最小。 请你以字符串形式返回这个最小的]]></description>
+</item><item>
+    <title>0376：摆动序列（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0376/</link>
+    <pubDate>Mon, 11 Jan 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0376/</guid>
+    <description><![CDATA[题目 如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。 第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个]]></description>
+</item><item>
+    <title>0330：按要求补齐数组（★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0330/</link>
+    <pubDate>Thu, 26 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0330/</guid>
+    <description><![CDATA[题目 给定一个已排序的正整数数组 nums ，和一个正整数 n 。从 [1, n] 区间内选取任意个数字补充到 nums 中， 使得 [1, n] 区间内的任何数字都可以用 nums 中某几个数字的和来]]></description>
+</item></channel>
+</rss>
