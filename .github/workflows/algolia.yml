@@ -1,0 +1,21 @@
+
+name: algolia
+
+on:
+    push:
+    workflow_dispatch:
+
+jobs:
+
+    upload_algolia_index:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                fetch-depth: 0
+            - uses: wangchucheng/algolia-uploader@master
+              with:
+                app_id: ${{secrets.ALGOLIA_APP_ID}}
+                admin_key: ${{secrets.ALGOLIA_ADMIN_KEY}}
+                index_name: ${{secrets.ALGOLIA_INDEX_NAME}}
+                index_file_path: ${{secrets.ALGOLIA_INDEX_FILE}}
