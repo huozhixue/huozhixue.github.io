@@ -3,8 +3,7 @@
 
 ## 简介
 
-《Fate/stay night》是TYPE-MOON开发并最早于2004年1月30日在PC平台上发售的文字冒险游戏，
-也是TYPE-MOON公司商业化后初次亮相的作品，是Fate的系列作品之一。
+《Fate/stay night》是TYPE-MOON开发并最早于2004年1月30日在PC平台上发售的文字冒险游戏，也是TYPE-MOON公司商业化后初次亮相的作品，是Fate的系列作品之一。
 
 **制作人员：**
 - 开发：型月
