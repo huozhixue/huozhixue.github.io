@@ -42,6 +42,6 @@
 
 ## MAD
 
-{{< media  "BV1Xx411D7Ns-BV1rx411473A-BV1ax411k7RH" 
-"心随兽娘舞动,KemoFrontier（兽娘前线） 战斗教程风,兽娘动物园中的friends对应在现实中的习性考据【第一季】" >}}
+{{< media  "BV1Xx411D7Ns-BV1Kx411s7Qb-BV1rx411473A-BV1ax411k7RH" 
+"心随兽娘舞动,【手书】兽娘动物园12.22话「在世界中心呼唤爱」,KemoFrontier（兽娘前线） 战斗教程风,兽娘动物园中的friends对应在现实中的习性考据【第一季】" >}}
 

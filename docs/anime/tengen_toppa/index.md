@@ -37,6 +37,6 @@
 
 ## MAD
 
-{{< media  "BV1Sx411F7oC-BV1As411D73f-BV1ix411c7Kr" 
-"【天元突破】Decade 【尼娅QAQ】,【天元突破】星之容具（西蒙+群像）,MAD 天元突破「WELCOME TO THE BLACK PARADE」"  >}}
+{{< media  "BV19T4y197XK-BV1Sx411F7oC-BV1As411D73f-BV1ix411c7Kr" 
+"即使宇宙毁灭，我也绝对不会忘记你的！,【天元突破】Decade 【尼娅QAQ】,【天元突破】星之容具（西蒙+群像）,MAD 天元突破「WELCOME TO THE BLACK PARADE」"  >}}
 
