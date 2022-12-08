@@ -45,4 +45,6 @@
 | 1   | 魔女之旅 | 2020-10-02 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep341208/) |
 
 
+## MAD
 
+{{< media "BV1kX4y1u7Qh" "【魔女之旅 完结纪念】这么可爱的屑魔女谁不爱呢？灰之魔女伊蕾娜的魔女之旅" >}}
