@@ -1,7 +1,7 @@
 # 关于
 
 
-Ian 的个人博客，专注于 [动画](/anime/)、[游戏](/game/)、 [力扣](/leetcode/)。
+Ian 的个人博客，专注于 [MAD](/anime_tags/mad/)、[动画](/anime/)、[游戏](/game/)、 [力扣](/leetcode/)。
 
 ### 今日歌单
 
