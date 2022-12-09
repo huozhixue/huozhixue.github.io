@@ -45,4 +45,4 @@
 
 ## MAD
 
-{{< media "BV15x411F7Ze-BV1Gs411D7iW" "「Fate/Zero 完结纪念」你将化作光芒,【FATE姬骑误解向】时之彼岸" >}}
+{{< media "BV1sx411F7BF-BV15x411F7Ze-BV1Gs411D7iW" "【FZ】这才是老虚想要的ED/mad【爱与希望】,「Fate/Zero 完结纪念」你将化作光芒,【FATE姬骑误解向】时之彼岸" >}}
