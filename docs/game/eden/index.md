@@ -43,3 +43,6 @@
 {{< music auto="https://y.qq.com/n/yqq/album/004GOSHd2OJv00.html" >}}
 
 
+## MAD
+
+{{< media "BV1Jx411w7H1" "【地球最后的恋物语eden*】「この星の空に、最後の軌跡を――」" >}}
