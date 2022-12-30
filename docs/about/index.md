@@ -1,7 +1,7 @@
 # 关于
 
 
-Ian 的个人博客，专注于 [MAD](/anime_tags/mad/)、[动画](/anime/)、[游戏](/game/)、 [力扣](/leetcode/)。
+Ian 的个人博客（[github](https://huozhixue.github.io/about) | [netlify](https://huozhixue.netlify.app/anime/)），专注于 [MAD](/anime_tags/mad/)、[动画](/anime/)、[游戏](/game/)、 [力扣](/leetcode/)。
 
 ### 今日歌单
 
@@ -10,6 +10,7 @@ Ian 的个人博客，专注于 [MAD](/anime_tags/mad/)、[动画](/anime/)、[�
 ### 今日MAD
 
 {{< media auto="mad/00" random=1 >}}
+
 
 
 
