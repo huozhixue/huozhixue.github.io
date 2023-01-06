@@ -35,4 +35,4 @@
 
 ## MAD
 
-{{< media auto="mad/bocchi_the_rock" >}}
+{{< media auto="mad/bocchi_rock" >}}
