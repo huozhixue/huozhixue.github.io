@@ -36,4 +36,7 @@
 | 1 | 圣枪修女 | 2003-11-24 | 24 | [樱花](https://www.cykz.net/vodplay/shengqiangxiunv-1-1/)  |
 
 
+## MAD
 
+{{< media  "ac3440712-BV1qx411c7Km" 
+"圣枪修女MAD【迟来的幸福】,【AMV】圣枪修女 The Last Chapter"  >}}
