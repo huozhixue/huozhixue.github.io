@@ -22,7 +22,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 莫莫 | 0000-00-00 | 52 | [bilibili](https://www.bilibili.com/video/BV1aW411q7wu)  |
+| 1 | 莫莫 | 2009-09-01 | 52 | [bilibili](https://www.bilibili.com/video/BV1aW411q7wu)  |
 
 
 

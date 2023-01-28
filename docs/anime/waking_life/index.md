@@ -14,7 +14,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 半梦半醒的人生 | 0000-00-00 | 1 | [bilibili](https://www.bilibili.com/video/BV13W4y1v7Jm)  |
+| 1 | 半梦半醒的人生 | 2001-01-01 | 1 | [bilibili](https://www.bilibili.com/video/BV13W4y1v7Jm)  |
 
 
 
