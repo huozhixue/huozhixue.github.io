@@ -33,4 +33,7 @@
 | 1 | 神的记事本 | 2011-07-02 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep16231)  |
 
 
+## MAD
 
+{{< media  "BV1ps411Z78V"
+"【MAD】生者的慰藉 死者的话语——神的记事本"  >}}

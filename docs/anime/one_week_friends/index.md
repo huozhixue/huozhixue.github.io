@@ -33,4 +33,7 @@
 | 1 | 一周的朋友。 | 2014-04-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep4142)  |
 
 
+## MAD
 
+{{< media  "BV1Yx411T75z"
+"【一周的朋友】围绕你我的小小恋曲"  >}}

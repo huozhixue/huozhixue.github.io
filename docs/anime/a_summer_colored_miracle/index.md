@@ -36,4 +36,7 @@
 | 1 | 夏色奇迹 | 2012-04-05 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep14073)  |
 
 
+## MAD
 
+{{< media  "BV1ds411o763"
+"【MAD】那些年，陪伴我们走过的疯狂岁月的朋友们"  >}}
