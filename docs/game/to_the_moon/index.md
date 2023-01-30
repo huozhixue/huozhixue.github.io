@@ -37,3 +37,7 @@ RPGMAKER引擎制作的角色扮演游戏。这虽然是个像素画微型游戏
 
 {{< music auto="https://y.qq.com/n/yqq/album/002mxQM03GgdSN.html" >}}
 
+
+## MAD
+
+{{< media "BV1VN4y1u7Rw" "一个游戏而已，你怎么哭成这样？" >}}

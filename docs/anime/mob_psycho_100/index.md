@@ -39,6 +39,5 @@
 
 ## MAD
 
-{{< media  "BV1Vs41147qK-BV1kE411d7gS-BV1ub41137pN-BV1gb411K7Lo" 
-"【MAD】WILD CHALLENGER【灵能百分百】,【灵能百分百】活着是一场噩梦 你想不想醒来,【灵能百分百完结纪念/1080p/燃向混剪】This is my only way 巅峰作画极致震撼全程高燃视觉盛宴MAD之我有一百种方法让你们的格力空调不制冷,【脑洞乱入#12】龙套与齐木楠雄的相遇"  >}}
+{{< media  auto="mad/mob_psycho_100"  >}}
 

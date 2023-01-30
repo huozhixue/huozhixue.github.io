@@ -30,7 +30,7 @@
 ## 分析
 
 令 dp[i] 代表以 i 结尾的子数组个数，那么：
-- 假如 nums[i]-nums[i-1]==nums[i-1]-nums[i-2]，dp[i]=dp[i-1]+1
+- 假如 nums[i]-nums[i-1] == nums[i-1]-nums[i-2]，则 dp[i]=dp[i-1]+1
 - 否则，dp[i]=0
 
 最后 sum(dp) 即为所求。

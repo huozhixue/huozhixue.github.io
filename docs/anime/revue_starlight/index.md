@@ -42,7 +42,6 @@
 
 ## MAD
 
-{{< media  "BV1eP4y1M7Wz-BV1CW411U7oi-BV1hW411X7zM"
-"# 【TOS2021】重生之赞歌【少女歌剧MAD】,【AMV/少女歌剧/燃向/Star Divine】让荣光落于刀锋之上,第6话片段 石动双叶vs花柳香子 约定のRevue"  >}}
+{{< media  auto="mad/revue_starlight" >}}
 
         
