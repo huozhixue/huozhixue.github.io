@@ -8,16 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>1786：从第一个节点出发到最后一个节点的受限路径数（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1786：从第一个节点出发到最后一个节点的受限路径数（★★★）" />
-<meta property="og:description" content="题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ， 其中每个 edges[i] = [ui, vi, weighti] 表示存在一条位" />
+<meta property="og:description" content="第 231 场周赛第 3 题 题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ， 其中每个 edges[i] = [ui, vi," />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/1786/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2021-03-09T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-03-09T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-03-07T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-03-07T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="1786：从第一个节点出发到最后一个节点的受限路径数（★★★）"/>
-<meta name="twitter:description" content="题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ， 其中每个 edges[i] = [ui, vi, weighti] 表示存在一条位"/>
+<meta name="twitter:description" content="第 231 场周赛第 3 题 题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ， 其中每个 edges[i] = [ui, vi,"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/1786/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1764/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1819/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1786\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  681 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/1786\/","datePublished": "2021-03-09T00:00:00+08:00","dateModified": "2021-03-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  689 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1786\/","datePublished": "2021-03-07T00:00:00+08:00","dateModified": "2021-03-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1786：从第一个节点出发到最后一个节点的受限路径数（★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-09">2021-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 681 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-07">2021-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 689 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1786/" class="leancloud_visitors" data-flag-title="1786：从第一个节点出发到最后一个节点的受限路径数（★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,7 +125,10 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+            </div><div class="content" id="content"><blockquote>
+<p><strong>第 231 场周赛第 3 题</strong></p>
+</blockquote>
+<h2 id="题目">题目</h2>
 <p>现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ，
 其中每个 edges[i] = [ui, vi, weighti] 表示存在一条位于节点 ui 和 vi 之间的边，这条边的权重为 weighti 。</p>
 <p>从节点 start 出发到节点 end 的路径是一个形如 [z0, z1, z2, &hellip;, zk] 的节点序列，满足 z0 = start 、zk = end
@@ -232,7 +235,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-03-09</span>
+                <span>更新于 2021-03-07</span>
             </div>
             <div class="post-info-license"></div>
         </div>

@@ -3,20 +3,20 @@
         <title>中等 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E4%B8%AD%E7%AD%89/</link>
         <description>中等 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 27 Jan 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%B8%AD%E7%AD%89/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 30 Jan 2022 02:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%B8%AD%E7%AD%89/" rel="self" type="application/rss+xml" /><item>
     <title>2156：查找给定哈希值的子串（★★）</title>
     <link>https://huozhixue.github.io/leetcode/2156/</link>
-    <pubDate>Thu, 27 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 30 Jan 2022 02:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2156/</guid>
-    <description><![CDATA[第 场周赛第 题 题目 给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算： hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + &hellip; + val(s[k-1]) * pk-1) mod m. 其中 val(s[i]) 表]]></description>
+    <description><![CDATA[第 278 场周赛第 3 题 题目 给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算： hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + &hellip; + val(s[k-1]) * pk-1) mod m. 其中]]></description>
 </item><item>
     <title>2115：从给定原材料中找到所有可以做出的菜（★★）</title>
     <link>https://huozhixue.github.io/leetcode/2115/</link>
-    <pubDate>Thu, 30 Dec 2021 03:00:00 &#43;0800</pubDate>
+    <pubDate>Sat, 25 Dec 2021 01:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2115/</guid>
-    <description><![CDATA[第 场周赛第 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ， 如果你有它 所有 的原材料 ingredients[i] ，那么你可以 做]]></description>
+    <description><![CDATA[第 68 场双周赛第 3 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ， 如果你有它 所有 的原材料 ingredients[i] ，那么你]]></description>
 </item><item>
     <title>2002：两个回文子序列长度的最大乘积（★★）</title>
     <link>https://huozhixue.github.io/leetcode/2002/</link>
@@ -62,16 +62,16 @@
 </item><item>
     <title>1976：到达目的地的方案数（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1976/</link>
-    <pubDate>Thu, 19 Aug 2021 00:00:00 &#43;0800</pubDate>
+    <pubDate>Sat, 21 Aug 2021 02:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1976/</guid>
-    <description><![CDATA[第 场双周赛第 题 题目 你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。 输入保证你可以从任意路口出发到达其他任意]]></description>
+    <description><![CDATA[第 59 场双周赛第 3 题 题目 你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。 输入保证你可以从任意路口出发到达其他]]></description>
 </item><item>
     <title>1786：从第一个节点出发到最后一个节点的受限路径数（★★★）</title>
     <link>https://huozhixue.github.io/leetcode/1786/</link>
-    <pubDate>Tue, 09 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 07 Mar 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1786/</guid>
-    <description><![CDATA[题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ， 其中每个 edges[i] = [ui, vi, weighti] 表示存在一条位]]></description>
+    <description><![CDATA[第 231 场周赛第 3 题 题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ， 其中每个 edges[i] = [ui, vi,]]></description>
 </item></channel>
 </rss>

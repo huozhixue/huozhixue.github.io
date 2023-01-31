@@ -8,16 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>LCP35：电动车游城市(★★★) - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="LCP35：电动车游城市(★★★)" />
-<meta property="og:description" content="题目 小明的电动车电量充满时可行驶距离为 cnt，每行驶 1 单位距离消耗 1 单位电量，且花费 1 单位时间。 小明想选择电动车作为代步工具。地图上共有 N 个" />
+<meta property="og:description" content="力扣杯 2021 春季战队赛第 5 题 题目 小明的电动车电量充满时可行驶距离为 cnt，每行驶 1 单位距离消耗 1 单位电量，且花费 1 单位时间。 小明想选择电动车作为" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/lcp35/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2021-04-09T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-04-09T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-04-10T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-04-10T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="LCP35：电动车游城市(★★★)"/>
-<meta name="twitter:description" content="题目 小明的电动车电量充满时可行驶距离为 cnt，每行驶 1 单位距离消耗 1 单位电量，且花费 1 单位时间。 小明想选择电动车作为代步工具。地图上共有 N 个"/>
+<meta name="twitter:description" content="力扣杯 2021 春季战队赛第 5 题 题目 小明的电动车电量充满时可行驶距离为 cnt，每行驶 1 单位距离消耗 1 单位电量，且花费 1 单位时间。 小明想选择电动车作为"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/lcp35/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1819/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1851/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/lcp35\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  755 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/lcp35\/","datePublished": "2021-04-09T00:00:00+08:00","dateModified": "2021-04-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  767 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/lcp35\/","datePublished": "2021-04-10T00:00:00+08:00","dateModified": "2021-04-10T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">LCP35：电动车游城市(★★★)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-09">2021-04-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 755 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-10">2021-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 767 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/lcp35/" class="leancloud_visitors" data-flag-title="LCP35：电动车游城市(★★★)">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,7 +125,10 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+            </div><div class="content" id="content"><blockquote>
+<p><strong>力扣杯 2021 春季战队赛第 5 题</strong></p>
+</blockquote>
+<h2 id="题目">题目</h2>
 <p>小明的电动车电量充满时可行驶距离为 cnt，每行驶 1 单位距离消耗 1 单位电量，且花费 1 单位时间。</p>
 <p>小明想选择电动车作为代步工具。地图上共有 N 个景点，景点编号为 0 ~ N-1。
 他将地图信息以 [城市 A 编号,城市 B 编号,两城市间距离] 格式整理在在二维数组 paths，表示城市 A、B 间存在双向通路。</p>
@@ -221,7 +224,7 @@ start = 0, end = 2, charge = [4,1,1,3,2]</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-04-09</span>
+                <span>更新于 2021-04-10</span>
             </div>
             <div class="post-info-license"></div>
         </div>

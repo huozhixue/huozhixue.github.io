@@ -8,16 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>1923：最长公共子路径（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1923：最长公共子路径（★★★）" />
-<meta property="og:description" content="题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的朋友想在这个国家旅游" />
+<meta property="og:description" content="第 248 场周赛第 4 题 题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的朋友" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/1923/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2021-07-03T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-07-03T00:00:00+08:00" />
+<meta property="article:published_time" content="2021-07-04T03:00:00+08:00" />
+<meta property="article:modified_time" content="2021-07-04T03:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="1923：最长公共子路径（★★★）"/>
-<meta name="twitter:description" content="题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的朋友想在这个国家旅游"/>
+<meta name="twitter:description" content="第 248 场周赛第 4 题 题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的朋友"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/1923/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1916/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1938/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1923\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1049 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/1923\/","datePublished": "2021-07-03T00:00:00+08:00","dateModified": "2021-07-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1057 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1923\/","datePublished": "2021-07-04T03:00:00+08:00","dateModified": "2021-07-04T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1923：最长公共子路径（★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-03">2021-07-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1049 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-04">2021-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1057 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/1923/" class="leancloud_visitors" data-flag-title="1923：最长公共子路径（★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,7 +126,10 @@
     <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+            </div><div class="content" id="content"><blockquote>
+<p><strong>第 248 场周赛第 4 题</strong></p>
+</blockquote>
+<h2 id="题目">题目</h2>
 <p>一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。</p>
 <p>总共有 m 个编号为 0 到 m - 1 的朋友想在这个国家旅游。他们每一个人的路径都会包含一些城市。
 每条路径都由一个整数数组表示，每个整数数组表示一个朋友按顺序访问过的城市序列。
@@ -374,7 +377,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-07-03</span>
+                <span>更新于 2021-07-04</span>
             </div>
             <div class="post-info-license"></div>
         </div>

@@ -8,19 +8,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>1489：找到最小生成树里的关键边和伪关键边（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1489：找到最小生成树里的关键边和伪关键边（★★★）" />
-<meta property="og:description" content="第 场周赛第 题 题目 给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges ，其中 edges[i] = [fromi, toi, weighti] 表示在 fromi 和 toi 节点之间有一条带权无向边。 最" />
+<meta property="og:description" content="第 194 场周赛第 4 题 题目 给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges ，其中 edges[i] = [fromi, toi, weighti] 表示在 fromi 和 toi 节点之间有一条带权无向边" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/1489/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2020-06-06T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-06-06T00:00:00+08:00" />
+<meta property="article:published_time" content="2020-06-21T03:00:00+08:00" />
+<meta property="article:modified_time" content="2020-06-21T03:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="1489：找到最小生成树里的关键边和伪关键边（★★★）"/>
-<meta name="twitter:description" content="第 场周赛第 题 题目 给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges ，其中 edges[i] = [fromi, toi, weighti] 表示在 fromi 和 toi 节点之间有一条带权无向边。 最"/>
+<meta name="twitter:description" content="第 194 场周赛第 4 题 题目 给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges ，其中 edges[i] = [fromi, toi, weighti] 表示在 fromi 和 toi 节点之间有一条带权无向边"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1489/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1462/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1514/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1489/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1461/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1499/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1489\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1285 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/1489\/","datePublished": "2020-06-06T00:00:00+08:00","dateModified": "2020-06-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1287 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1489\/","datePublished": "2020-06-21T03:00:00+08:00","dateModified": "2020-06-21T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1489：找到最小生成树里的关键边和伪关键边（★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-06">2020-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1285 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-21">2020-06-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1287 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/1489/" class="leancloud_visitors" data-flag-title="1489：找到最小生成树里的关键边和伪关键边（★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -127,7 +127,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第  场周赛第  题</strong></p>
+<p><strong>第 194 场周赛第 4 题</strong></p>
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges 
@@ -355,7 +355,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-06-06</span>
+                <span>更新于 2020-06-21</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -376,8 +376,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1514/" class="prev" rel="prev" title="1514：概率最大的路径（★★）"><i class="fas fa-angle-left fa-fw"></i>1514：概率最大的路径（★★）</a>
-            <a href="/leetcode/1462/" class="next" rel="next" title="1462：课程表 IV（★★）">1462：课程表 IV（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1499/" class="prev" rel="prev" title="1499：满足不等式的最大值（★★★）"><i class="fas fa-angle-left fa-fw"></i>1499：满足不等式的最大值（★★★）</a>
+            <a href="/leetcode/1461/" class="next" rel="next" title="1461：检查一个字符串是否包含所有长度为 K 的二进制子串（★★）">1461：检查一个字符串是否包含所有长度为 K 的二进制子串（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
