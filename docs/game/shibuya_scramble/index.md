@@ -37,4 +37,4 @@
 | 1 | 428 ～被封锁的涩谷～ | 2008-12-04 |
 
 
-
+{{< music auto="https://y.qq.com/n/yqq/album/002Xn8Lg1ZenhB.html" >}}

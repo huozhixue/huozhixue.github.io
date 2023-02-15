@@ -30,4 +30,4 @@ NDS推理AVG游戏《幽灵欺诈》是由《逆转裁判》系列的制作者�
 | 1 | 幽灵诡计 | 2010-06-24 |
 
 
-
+{{< music auto="https://y.qq.com/n/yqq/album/003lIV3s0Z16Ab.html" >}}

@@ -39,6 +39,9 @@
 |:---   |:------  |:----      |
 | 1 | G线上的魔王 | 2008-05-29 |
 
+## 配乐
+
+{{< music auto="https://y.qq.com/n/yqq/album/001lOkV31EBRBD.html" >}}
 
 ## MAD
 

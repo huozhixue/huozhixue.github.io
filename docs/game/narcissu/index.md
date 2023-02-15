@@ -37,4 +37,7 @@
 | 2 | 水仙2 | 2007-05-16 |
 
 
+## 配乐
+
+{{< music auto="https://y.qq.com/n/yqq/album/002aUoom0UgOh5.html" >}}
 

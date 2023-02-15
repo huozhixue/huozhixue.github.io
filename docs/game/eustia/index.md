@@ -35,4 +35,6 @@
 | 1 | 秽翼的尤斯蒂娅 | 2011-04-28 |
 
 
+## 配乐
 
+{{< music auto="https://y.qq.com/n/yqq/album/000rECTG3cSjPp.html" >}}
