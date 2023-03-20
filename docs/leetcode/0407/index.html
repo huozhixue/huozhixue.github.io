@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0407\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1148 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1150 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0407\/","datePublished": "2016-09-25T03:00:00+08:00","dateModified": "2016-09-25T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0407：接雨水 II（★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-09-25">2016-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1148 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-09-25">2016-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1150 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0407/" class="leancloud_visitors" data-flag-title="0407：接雨水 II（★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -165,16 +165,22 @@
 <li>0 &lt;= heightMap[i][j] &lt;= 2 * 10^4</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>对于每个位置，如果有一外圈的柱子都更高，那么该位置就能接到雨水，并且至少接到
-（该外圈的最矮柱子高度 H - 当前高度 h）的雨水。
-找到使 H 最大的外圈，就得到该位置总共能接到的雨水 maxH - h。</p>
-<p>显然遍历所有外圈太耗时了，有个巧妙的想法是从最外圈开始，假设最矮柱子 A 高度 H，
-那么相邻内侧位置 B 能接到的雨水就是 max(0, H - B的高度)。
-然后可以将位置 A 替换成位置 B，并更新 B 的高度为 max(H, h)，得到一个缩小一格的新外圈，
-显然不影响里面位置的结果。</p>
-<p>这样遍历逐步缩小的外圈即可得到所有位置能接到的雨水。</p>
-<p>具体实现可以用小顶堆维护外圈的高度集合，每轮弹出堆顶即为最矮柱子的高度。
-另外，为了方便遍历，可以把经过的柱子高度都置 -1。</p>
+<p>对于每个位置：</p>
+<ul>
+<li>如果有一外圈的柱子都更高，那么该位置就能接到雨水，并且至少接到（该外圈的最矮柱子高度 H - 当前高度 h）的雨水。</li>
+<li>找到使 H 最大的外圈，就得到该位置总共能接到的雨水 maxH - h。</li>
+</ul>
+<p>显然遍历所有外圈太耗时了，有个巧妙的想法是从最外圈开始：</p>
+<ul>
+<li>假设最矮柱子 A 高度 H，那么相邻内侧位置 B 能接到的雨水就是 max(0, H - B的高度)。</li>
+<li>然后可以将位置 A 替换成位置 B，并更新 B 的高度为 max(H, h)，得到一个缩小一格的新外圈，显然不影响里面位置的结果。</li>
+<li>这样遍历逐步缩小的外圈即可得到所有位置能接到的雨水。</li>
+</ul>
+<p>具体实现时：</p>
+<ul>
+<li>可以用小顶堆维护外圈的高度集合，每轮弹出堆顶即为最矮柱子的高度。</li>
+<li>另外，为了方便遍历，可以把经过的柱子高度都置 -1。</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -217,16 +223,24 @@
 </div><p>268 ms</p>
 <h2 id="附加">*附加</h2>
 <p>还有个巧妙的并查集做法。</p>
-<p>先考虑简化问题：有哪些格子能接到高度为 1 的雨水？
-将高度小于 1 的格子标记为 &lsquo;O&rsquo;，其它格子都看作 &lsquo;X&rsquo;，显然只有被 &lsquo;X&rsquo; 围绕的 &lsquo;O&rsquo; 才能接到高度 1 的雨水。</p>
-<p>这类似于问题 <a href="/leetcode/0130" title="0130" rel="noopener noreferrer">0130</a>，可以用并查集解决。将边界上的 &lsquo;O&rsquo; 都与一个哑节点 dummy 连通，
-再将所有相邻的 &lsquo;O&rsquo; 连通。最终所有与 dummy 连通的即是不被围绕的 &lsquo;O&rsquo;。</p>
-<p>同理，对于高度 2，将高度小于 2 的格子标记为 &lsquo;O&rsquo;，即可求出哪些格子能接到高度为 2 的雨水。
-注意到前一步被标记为 &lsquo;O&rsquo; 的格子无需改变，只需要将高度为 1 的格子标记为 &lsquo;O&rsquo; 即可。</p>
-<p>因此遍历高度 h，每轮将高度为 h-1 的格子标记为 &lsquo;O&rsquo;，并与相邻的 &lsquo;O&rsquo; 连通，边界上的 &lsquo;O&rsquo; 与 dummy 连通。
-依然被围绕的 &lsquo;O&rsquo; 个数即是高度为 h 的雨水数量。所有高度的雨水总和即为所求。</p>
-<p>而计算被围绕的 &lsquo;O&rsquo; 个数可以由 &lsquo;O&rsquo; 总数减去与 dummy 连通的 &lsquo;O&rsquo; 个数得到。
-因此再用 sz 维护并查集每个连通块的大小即可。</p>
+<p>先考虑简化问题：有哪些格子能接到高度为 1 的雨水？</p>
+<ul>
+<li>将高度小于 1 的格子标记为 &lsquo;O&rsquo;，其它格子都看作 &lsquo;X&rsquo;，显然只有被 &lsquo;X&rsquo; 围绕的 &lsquo;O&rsquo; 才能接到高度 1 的雨水。</li>
+<li>这类似于问题 <a href="/leetcode/0130" title="0130" rel="noopener noreferrer">0130</a>，可以用并查集解决。</li>
+<li>将边界上的 &lsquo;O&rsquo; 都与一个哑节点 dummy 连通，再将所有相邻的 &lsquo;O&rsquo; 连通。最终所有与 dummy 连通的即是不被围绕的 &lsquo;O&rsquo;。</li>
+</ul>
+<p>同理，对于高度 2：</p>
+<ul>
+<li>将高度小于 2 的格子标记为 &lsquo;O&rsquo;，即可求出哪些格子能接到高度为 2 的雨水。</li>
+<li>注意到前一步被标记为 &lsquo;O&rsquo; 的格子无需改变，只需要将高度为 1 的格子标记为 &lsquo;O&rsquo; 即可。</li>
+</ul>
+<p>因此遍历高度 h：</p>
+<ul>
+<li>每轮将高度为 h-1 的格子标记为 &lsquo;O&rsquo;，并与相邻的 &lsquo;O&rsquo; 连通，边界上的 &lsquo;O&rsquo; 与 dummy 连通。</li>
+<li>依然被围绕的 &lsquo;O&rsquo; 个数即是高度为 h 的雨水数量。所有高度的雨水总和即为所求。</li>
+<li>而计算被围绕的 &lsquo;O&rsquo; 个数可以由 &lsquo;O&rsquo; 总数减去与 dummy 连通的 &lsquo;O&rsquo; 个数得到。</li>
+<li>因此再用 sz 维护并查集每个连通块的大小即可。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
