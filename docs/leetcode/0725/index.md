@@ -1,42 +1,49 @@
 # 0725：分隔链表（★）
 
 
-> **第 58 场双周赛第 2 题**
+> <u>**[力扣第 58 场双周赛第 2 题](https://leetcode.cn/problems/split-linked-list-in-parts/)**</u>
 
 ## 题目
 
-给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。
+<p>给你一个头结点为 <code>head</code> 的单链表和一个整数 <code>k</code> ，请你设计一个算法将链表分隔为 <code>k</code> 个连续的部分。</p>
 
-每部分的长度应该尽可能的相等: 任意两部分的长度差距不能超过 1，也就是说可能有些部分为 null。
+<p>每部分的长度应该尽可能的相等：任意两部分的长度差距不能超过 1 。这可能会导致有些部分为 null 。</p>
 
-这k个部分应该按照在链表中出现的顺序进行输出，并且排在前面的部分的长度应该大于或等于后面的长度。
+<p>这 <code>k</code> 个部分应该按照在链表中出现的顺序排列，并且排在前面的部分的长度应该大于或等于排在后面的长度。</p>
 
-返回一个符合上述规则的链表的列表。
+<p>返回一个由上述 <code>k</code> 部分组成的数组。</p>
 
-提示:
-- root 的长度范围： [0, 1000].
-- 输入的每个节点的大小范围：[0, 999].
-- k 的取值范围： [1, 50].
- 
-示例 1：
 
-	输入: 
-	root = [1, 2, 3], k = 5
-	输出: [[1],[2],[3],[],[]]
-	解释:
-	输入输出各部分都应该是链表，而不是数组。
-	例如, 输入的结点 root 的 val= 1, root.next.val = 2, \root.next.next.val = 3, 且 root.next.next.next = null。
-	第一个输出 output[0] 是 output[0].val = 1, output[0].next = null。
-	最后一个元素 output[4] 为 null, 它代表了最后一个部分为空链表。
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/13/split1-lc.jpg" style="width: 400px; height: 134px;" />
+<pre>
+<strong>输入：</strong>head = [1,2,3], k = 5
+<strong>输出：</strong>[[1],[2],[3],[],[]]
+<strong>解释：</strong>
+第一个元素 output[0] 为 output[0].val = 1 ，output[0].next = null 。
+最后一个元素 output[4] 为 null ，但它作为 ListNode 的字符串表示是 [] 。
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/13/split2-lc.jpg" style="width: 600px; height: 60px;" />
+<pre>
+<strong>输入：</strong>head = [1,2,3,4,5,6,7,8,9,10], k = 3
+<strong>输出：</strong>[[1,2,3,4],[5,6,7],[8,9,10]]
+<strong>解释：</strong>
+输入被分成了几个连续的部分，并且每部分的长度相差不超过 1 。前面部分的长度大于等于后面部分的长度。
+</pre>
 
-	输入: 
-	root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
-	输出: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
-	解释:
-	输入被分成了几个连续的部分，并且每部分的长度相差不超过1.前面部分的长度大于等于后面部分的长度。
- 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>链表中节点的数目在范围 <code>[0, 1000]</code></li>
+<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
+<li><code>1 &lt;= k &lt;= 50</code></li>
+</ul>
+
+
 ## 分析
 
 先得到链表长度 n，应该平均分为 n // k 长度，但可能有余数 extra。根据题目要求，应该将前 extra 个链表的长度再分别加 1。

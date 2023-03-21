@@ -1,35 +1,45 @@
 # 0199：二叉树的右视图（★）
 
 
+> <u>**[力扣第 199 题](https://leetcode.cn/problems/binary-tree-right-side-view/)**</u>
+
 ## 题目
 
-给定一个二叉树的 根节点 root，想象自己站在它的右侧，按照从顶部到底部的顺序，
-返回从右侧所能看到的节点值。
+<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>
 
- 
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2021/02/14/tree.jpg)
+<p><strong>示例 1:</strong></p>
 
-	输入: [1,2,3,null,5,null,4]
-	输出: [1,3,4]
+<p><img src="https://assets.leetcode.com/uploads/2021/02/14/tree.jpg" style="width: 270px; " /></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> [1,2,3,null,5,null,4]
+<strong>输出:</strong> [1,3,4]
+</pre>
 
-	输入: [1,null,3]
-	输出: [1,3]
+<p><strong>示例 2:</strong></p>
 
-示例 3:
+<pre>
+<strong>输入:</strong> [1,null,3]
+<strong>输出:</strong> [1,3]
+</pre>
 
-	输入: []
-	输出: []
- 
+<p><strong>示例 3:</strong></p>
 
-提示:
-- 二叉树的节点个数的范围是 [0,100]
-- -100 <= Node.val <= 100 
+<pre>
+<strong>输入:</strong> []
+<strong>输出:</strong> []
+</pre>
 
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li>二叉树的节点个数的范围是 <code>[0,100]</code></li>
+<li><meta charset="UTF-8" /><code>-100 <= Node.val <= 100</code> </li>
+</ul>
 
 
 ## 分析

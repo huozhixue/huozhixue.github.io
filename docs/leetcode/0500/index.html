@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0500：键盘行（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0500：键盘行（★）" />
-<meta property="og:description" content="第 场周赛第 题 题目 给你一个字符串数组 words ，只返回可以使用在 美式键盘 同一行的字母打印出来的单词。键盘如下图所示。 美式键盘 中： 第一行由字符 &ldquo;qwertyuiop&rdquo; 组成。 第" />
+        <title>0500：键盘行 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0500：键盘行" />
+<meta property="og:description" content="力扣第 场周赛第 题 题目 给你一个字符串数组 words ，只返回可以使用在 美式键盘 同一行的字母打印出来的单词。键盘如下图所示。 美式键盘 中： 第一行由字符 &#34;qwertyuiop&#34; 组成" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0500/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-12-25T02:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0500：键盘行（★）"/>
-<meta name="twitter:description" content="第 场周赛第 题 题目 给你一个字符串数组 words ，只返回可以使用在 美式键盘 同一行的字母打印出来的单词。键盘如下图所示。 美式键盘 中： 第一行由字符 &ldquo;qwertyuiop&rdquo; 组成。 第"/>
+<meta name="twitter:title" content="0500：键盘行"/>
+<meta name="twitter:description" content="力扣第 场周赛第 题 题目 给你一个字符串数组 words ，只返回可以使用在 美式键盘 同一行的字母打印出来的单词。键盘如下图所示。 美式键盘 中： 第一行由字符 &#34;qwertyuiop&#34; 组成"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0500/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0497/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0514/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0500/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0498/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0501/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0500：键盘行（★）",
+        "headline": "0500：键盘行",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0500\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  316 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  278 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0500\/","datePublished": "2016-12-25T02:00:00+08:00","dateModified": "2016-12-25T02:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0500：键盘行（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0500：键盘行</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-25">2016-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 316 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0500/" class="leancloud_visitors" data-flag-title="0500：键盘行（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-25">2016-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 278 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0500/" class="leancloud_visitors" data-flag-title="0500：键盘行">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,42 +126,38 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第  场周赛第  题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/keyboard-row/" target="_blank" rel="noopener noreffer">力扣第  场周赛第  题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个字符串数组 words ，只返回可以使用在 美式键盘 同一行的字母打印出来的单词。键盘如下图所示。</p>
-<p>美式键盘 中：</p>
+<p>给你一个字符串数组 <code>words</code> ，只返回可以使用在 <strong>美式键盘</strong> 同一行的字母打印出来的单词。键盘如下图所示。</p>
+<p><strong>美式键盘</strong> 中：</p>
 <ul>
-<li>第一行由字符 &ldquo;qwertyuiop&rdquo; 组成。</li>
-<li>第二行由字符 &ldquo;asdfghjkl&rdquo; 组成。</li>
-<li>第三行由字符 &ldquo;zxcvbnm&rdquo; 组成。</li>
+<li>第一行由字符 <code>"qwertyuiop"</code> 组成。</li>
+<li>第二行由字符 <code>"asdfghjkl"</code> 组成。</li>
+<li>第三行由字符 <code>"zxcvbnm"</code> 组成。</li>
 </ul>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png"
-        title="img" /></p>
-<p>提示：</p>
+<p><img alt="American keyboard" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png" style="width: 100%; max-width: 600px" /></p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>words = ["Hello","Alaska","Dad","Peace"]
+<strong>输出：</strong>["Alaska","Dad"]
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>words = ["omk"]
+<strong>输出：</strong>[]
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>words = ["adsdf","sfd"]
+<strong>输出：</strong>["adsdf","sfd"]
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= words.length &lt;= 20</li>
-<li>1 &lt;= words[i].length &lt;= 100</li>
-<li>words[i] 由英文字母（小写和大写字母）组成</li>
+<li><code>1 <= words.length <= 20</code></li>
+<li><code>1 <= words[i].length <= 100</code></li>
+<li><code>words[i]</code> 由英文字母（小写和大写字母）组成</li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入：words = [&quot;Hello&quot;,&quot;Alaska&quot;,&quot;Dad&quot;,&quot;Peace&quot;]
-输出：[&quot;Alaska&quot;,&quot;Dad&quot;]
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：words = [&quot;omk&quot;]
-输出：[]
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：words = [&quot;adsdf&quot;,&quot;sfd&quot;]
-输出：[&quot;adsdf&quot;,&quot;sfd&quot;]
-</code></pre>
 <h2 id="分析">分析</h2>
 <p>遍历判断每个单词的字符集合是否是某一行的子集即可。</p>
 <p>注意单词可能有大写，要先全转为小写。</p>
@@ -196,14 +192,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0514/" class="prev" rel="prev" title="0514：自由之路（★★）"><i class="fas fa-angle-left fa-fw"></i>0514：自由之路（★★）</a>
-            <a href="/leetcode/0497/" class="next" rel="next" title="0497：非重叠矩形中的随机点（★★）">0497：非重叠矩形中的随机点（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0501/" class="prev" rel="prev" title="0501：二叉搜索树中的众数"><i class="fas fa-angle-left fa-fw"></i>0501：二叉搜索树中的众数</a>
+            <a href="/leetcode/0498/" class="next" rel="next" title="0498：对角线遍历（★）">0498：对角线遍历（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

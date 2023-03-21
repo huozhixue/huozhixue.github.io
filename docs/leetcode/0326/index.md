@@ -1,34 +1,56 @@
-# 0326：3的幂（★）
+# 0326：3 的幂
 
+
+> <u>**[力扣第 326 题](https://leetcode.cn/problems/power-of-three/)**</u>
 
 ## 题目
 
-给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 true ；否则，返回 false 。
+<p>给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-整数 n 是 3 的幂次方需满足：存在整数 x 使得 n == 3^x
- 
+<p>整数 <code>n</code> 是 3 的幂次方需满足：存在整数 <code>x</code> 使得 <code>n == 3<sup>x</sup></code></p>
 
-示例 1：
 
-    输入：n = 27
-    输出：true
 
-示例 2：
-    
-    输入：n = 0
-    输出：false
+<p><strong>示例 1：</strong></p>
 
-示例 3：
-    
-    输入：n = 9
-    输出：true
+<pre>
+<strong>输入：</strong>n = 27
+<strong>输出：</strong>true
+</pre>
 
-示例 4：
+<p><strong>示例 2：</strong></p>
 
-    输入：n = 45
-    输出：false
-  
-提示：-2^31 <= n <= 2^31 - 1
+<pre>
+<strong>输入：</strong>n = 0
+<strong>输出：</strong>false
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 9
+<strong>输出：</strong>true
+</pre>
+
+<p><strong>示例 4：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 45
+<strong>输出：</strong>false
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>你能不使用循环或者递归来完成本题吗？</p>
+
 
 ## 分析
 

@@ -1,27 +1,39 @@
-# 0005：最长回文子串（★★★）
+# 0005：最长回文子串（★）
 
+
+> <u>**[力扣第 5 题](https://leetcode.cn/problems/longest-palindromic-substring/)**</u>
 
 ## 题目
 
-给你一个字符串 s，找到 s 中最长的回文子串。
+<p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串。</p>
 
-示例 1：
+<p>如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。</p>
 
-	输入：s = "babad"
-	输出："bab"
-	解释："aba" 同样是符合题意的答案。
 
-示例 2：
 
-	输入：s = "cbbd"
-	输出："bb"
-	 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= s.length <= 1000
-- s 仅由数字和英文字母组成
+<pre>
+<strong>输入：</strong>s = "babad"
+<strong>输出：</strong>"bab"
+<strong>解释：</strong>"aba" 同样是符合题意的答案。
+</pre>
 
- 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "cbbd"
+<strong>输出：</strong>"bb"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 1000</code></li>
+<li><code>s</code> 仅由数字和英文字母组成</li>
+</ul>
 
 
 ## 分析

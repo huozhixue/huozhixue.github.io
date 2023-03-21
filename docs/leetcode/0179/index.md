@@ -1,26 +1,37 @@
-# 0179：最大数（★★★）
+# 0179：最大数（★）
 
+
+> <u>**[力扣第 179 题](https://leetcode.cn/problems/largest-number/)**</u>
 
 ## 题目
 
-给定一组非负整数 nums，重新排列它们每个数字的顺序（每个数字不可拆分）使之组成一个最大的整数。
+<p>给定一组非负整数 <code>nums</code>，重新排列每个数的顺序（每个数不可拆分）使之组成一个最大的整数。</p>
 
-注意：输出结果可能非常大，所以你需要返回一个字符串而不是整数。
+<p><strong>注意：</strong>输出结果可能非常大，所以你需要返回一个字符串而不是整数。</p>
 
 
-示例 1：
 
-	输入：nums = [10,2]
-	输出："210"
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入<code>：</code></strong><code>nums = [10,2]</code>
+<strong>输出：</strong><code>"210"</code></pre>
 
-	输入：nums = [3,30,34,5,9]
-	输出："9534330"
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= nums.length <= 100
-- 0 <= nums[i] <= 10^9
+<pre>
+<strong>输入<code>：</code></strong><code>nums = [3,30,34,5,9]</code>
+<strong>输出：</strong><code>"9534330"</code>
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 100</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
 
 
 ## 分析

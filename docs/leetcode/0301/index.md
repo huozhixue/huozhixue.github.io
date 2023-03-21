@@ -1,33 +1,47 @@
 # 0301：删除无效的括号（★★）
 
 
+> <u>**[力扣第 301 题](https://leetcode.cn/problems/remove-invalid-parentheses/)**</u>
+
 ## 题目
 
-给你一个由若干括号和字母组成的字符串 s ，删除最小数量的无效括号，使得输入的字符串有效。
+<p>给你一个由若干括号和字母组成的字符串 <code>s</code> ，删除最小数量的无效括号，使得输入的字符串有效。</p>
 
-返回所有可能的结果。答案可以按 任意顺序 返回。
+<p>返回所有可能的结果。答案可以按 <strong>任意顺序</strong> 返回。</p>
 
 
 
-示例 1：
-    
-    输入：s = "()())()"
-    输出：["(())()","()()()"]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
-    
-    输入：s = "(a)())()"
-    输出：["(a())()","(a)()()"]
+<pre>
+<strong>输入：</strong>s = "()())()"
+<strong>输出：</strong>["(())()","()()()"]
+</pre>
 
-示例 3：
-    
-    输入：s = ")("
-    输出：[""]
- 
- 提示：
-- 1 <= s.length <= 25
-- s 由小写英文字母以及括号 '(' 和 ')' 组成
-- s 中至多含 20 个括号
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "(a)())()"
+<strong>输出：</strong>["(a())()","(a)()()"]
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = ")("
+<strong>输出：</strong>[""]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= s.length <= 25</code></li>
+<li><code>s</code> 由小写英文字母以及括号 <code>'('</code> 和 <code>')'</code> 组成</li>
+<li><code>s</code> 中至多含 <code>20</code> 个括号</li>
+</ul>
+
 
 ## 分析
 

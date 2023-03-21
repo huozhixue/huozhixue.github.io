@@ -1,28 +1,42 @@
-# 0516：最长回文子序列（★★）
+# 0516：最长回文子序列（★）
 
+
+> <u>**[力扣第 516 题](https://leetcode.cn/problems/longest-palindromic-subsequence/)**</u>
 
 ## 题目
 
-给你一个字符串 s ，找出其中最长的回文子序列，并返回该序列的长度。
+<p>给你一个字符串 <code>s</code> ，找出其中最长的回文子序列，并返回该序列的长度。</p>
 
-子序列定义为：不改变剩余字符顺序的情况下，删除某些字符或者不删除任何字符形成的一个序列。
+<p>子序列定义为：不改变剩余字符顺序的情况下，删除某些字符或者不删除任何字符形成的一个序列。</p>
 
-示例 1：
 
-    输入：s = "bbbab"
-    输出：4
-    解释：一个可能的最长回文子序列为 "bbbb" 。
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：s = "cbbd"
-    输出：2
-    解释：一个可能的最长回文子序列为 "bb" 。
-    
-提示：
-- 1 <= s.length <= 1000
-- s 仅由小写英文字母组成
-	
+<pre>
+<strong>输入：</strong>s = "bbbab"
+<strong>输出：</strong>4
+<strong>解释：</strong>一个可能的最长回文子序列为 "bbbb" 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "cbbd"
+<strong>输出：</strong>2
+<strong>解释：</strong>一个可能的最长回文子序列为 "bb" 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= s.length <= 1000</code></li>
+<li><code>s</code> 仅由小写英文字母组成</li>
+</ul>
+
+
 ## 分析
 
 显然当 s[0]==s[-1] 时，可以转为子问题。当 s[0]!=s[-1] 时，发现也可以转为两个子问题。

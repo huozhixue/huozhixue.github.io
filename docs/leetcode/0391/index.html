@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0391：完美矩形（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0391：完美矩形（★★★）" />
-<meta property="og:description" content="第 2 场周赛第 3 题 题目 我们有 N 个与坐标轴对齐的矩形, 其中 N &gt; 0, 判断它们是否能精确地覆盖一个矩形区域。 每个矩形用左下角的点和右上角的点的坐标来表" />
+        <title>0391：完美矩形（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0391：完美矩形（★★）" />
+<meta property="og:description" content="力扣第 2 场周赛第 3 题 题目 给你一个数组 rectangles ，其中 rectangles[i] = [xi, yi, ai, bi] 表示一个坐标轴平行的矩形。这个矩形的左下顶点是 (xi, yi) ，右上顶点是 (ai, bi) 。 如果所有矩形一起" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0391/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-08-28T02:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0391：完美矩形（★★★）"/>
-<meta name="twitter:description" content="第 2 场周赛第 3 题 题目 我们有 N 个与坐标轴对齐的矩形, 其中 N &gt; 0, 判断它们是否能精确地覆盖一个矩形区域。 每个矩形用左下角的点和右上角的点的坐标来表"/>
+<meta name="twitter:title" content="0391：完美矩形（★★）"/>
+<meta name="twitter:description" content="力扣第 2 场周赛第 3 题 题目 给你一个数组 rectangles ，其中 rectangles[i] = [xi, yi, ai, bi] 表示一个坐标轴平行的矩形。这个矩形的左下顶点是 (xi, yi) ，右上顶点是 (ai, bi) 。 如果所有矩形一起"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0391/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0390/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0392/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0391：完美矩形（★★★）",
+        "headline": "0391：完美矩形（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0391\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  601 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  586 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0391\/","datePublished": "2016-08-28T02:00:00+08:00","dateModified": "2016-08-28T02:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0391：完美矩形（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0391：完美矩形（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-08-28">2016-08-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 601 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0391/" class="leancloud_visitors" data-flag-title="0391：完美矩形（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-08-28">2016-08-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 586 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0391/" class="leancloud_visitors" data-flag-title="0391：完美矩形（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,85 +126,36 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 2 场周赛第 3 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/perfect-rectangle/" target="_blank" rel="noopener noreffer">力扣第 2 场周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>我们有 N 个与坐标轴对齐的矩形, 其中 N &gt; 0, 判断它们是否能精确地覆盖一个矩形区域。</p>
-<p>每个矩形用左下角的点和右上角的点的坐标来表示。例如， 一个单位正方形可以表示为 [1,1,2,2]。
-( 左下角的点的坐标为 (1, 1) 以及右上角的点的坐标为 (2, 2) )。</p>
-<p>示例 1:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_perfect.gif"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_perfect.gif, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_perfect.gif 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_perfect.gif 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_perfect.gif"
-        title="img" /></p>
-<pre><code>rectangles = [
-  [1,1,3,3],
-  [3,1,4,2],
-  [3,2,4,4],
-  [1,3,2,4],
-  [2,3,3,4]
-]
-
-返回 true。5个矩形一起可以精确地覆盖一个矩形区域。
-</code></pre>
-<p>示例 2:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_separated.gif"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_separated.gif, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_separated.gif 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_separated.gif 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_separated.gif"
-        title="img" /></p>
-<pre><code>rectangles = [
-  [1,1,2,3],
-  [1,3,2,4],
-  [3,1,4,2],
-  [3,2,4,4]
-]
-
-返回 false。两个矩形之间有间隔，无法覆盖成一个矩形。
-</code></pre>
-<p>示例 3:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_hole.gif"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_hole.gif, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_hole.gif 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_hole.gif 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_hole.gif"
-        title="img" /></p>
-<pre><code>rectangles = [
-  [1,1,3,3],
-  [3,1,4,2],
-  [1,3,2,4],
-  [3,2,4,4]
-]
-
-返回 false。图形顶端留有间隔，无法覆盖成一个矩形。
-</code></pre>
-<p>示例 4:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_intersect.gif"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_intersect.gif, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_intersect.gif 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_intersect.gif 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rectangle_intersect.gif"
-        title="img" /></p>
-<pre><code>rectangles = [
-  [1,1,3,3],
-  [3,1,4,2],
-  [1,3,2,4],
-  [2,2,4,4]
-]
-
-返回 false。因为中间有相交区域，虽然形成了矩形，但不是精确覆盖。
-</code></pre>
+<p>给你一个数组 <code>rectangles</code> ，其中 <code>rectangles[i] = [x<sub>i</sub>, y<sub>i</sub>, a<sub>i</sub>, b<sub>i</sub>]</code> 表示一个坐标轴平行的矩形。这个矩形的左下顶点是 <code>(x<sub>i</sub>, y<sub>i</sub>)</code> ，右上顶点是 <code>(a<sub>i</sub>, b<sub>i</sub>)</code> 。</p>
+<p>如果所有矩形一起精确覆盖了某个矩形区域，则返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/27/perectrec1-plane.jpg" style="height: 294px; width: 300px;" />
+<pre>
+<strong>输入：</strong>rectangles = [[1,1,3,3],[3,1,4,2],[3,2,4,4],[1,3,2,4],[2,3,3,4]]
+<strong>输出：</strong>true
+<strong>解释：</strong>5 个矩形一起可以精确地覆盖一个矩形区域。
+</pre>
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/27/perfectrec2-plane.jpg" style="height: 294px; width: 300px;" />
+<pre>
+<strong>输入：</strong>rectangles = [[1,1,2,3],[1,3,2,4],[3,1,4,2],[3,2,4,4]]
+<strong>输出：</strong>false
+<strong>解释：</strong>两个矩形之间有间隔，无法覆盖成一个矩形。</pre>
+<p><strong>示例 3：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/27/perfecrrec4-plane.jpg" style="height: 294px; width: 300px;" />
+<pre>
+<strong>输入：</strong>rectangles = [[1,1,3,3],[3,1,4,2],[1,3,2,4],[2,2,4,4]]
+<strong>输出：</strong>false
+<strong>解释：</strong>因为中间有相交区域，虽然形成了矩形，但不是精确覆盖。</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= rectangles.length &lt;= 2 * 10<sup>4</sup></code></li>
+<li><code>rectangles[i].length == 4</code></li>
+<li><code>-10<sup>5</sup> &lt;= x<sub>i</sub>, y<sub>i</sub>, a<sub>i</sub>, b<sub>i</sub> &lt;= 10<sup>5</sup></code></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>精确覆盖即代表没有重叠、没有间隙。考虑根据轮廓线来判断，类似 <a href="/leetcode/0218" title="0218" rel="noopener noreferrer">0218</a></p>
 <p>遍历所有边缘坐标 x，维护还没掠过的高度区间集合，如果该集合精确覆盖一个区间且一直不变，即说明是完美矩形。</p>
@@ -293,14 +244,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%87%A0%E4%BD%95/">几何</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0392/" class="prev" rel="prev" title="0392：判断子序列（★）"><i class="fas fa-angle-left fa-fw"></i>0392：判断子序列（★）</a>
-            <a href="/leetcode/0390/" class="next" rel="next" title="0390：消除游戏（★★）">0390：消除游戏（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0392/" class="prev" rel="prev" title="0392：判断子序列"><i class="fas fa-angle-left fa-fw"></i>0392：判断子序列</a>
+            <a href="/leetcode/0390/" class="next" rel="next" title="0390：消除游戏（★）">0390：消除游戏（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

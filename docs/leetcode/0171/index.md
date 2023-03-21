@@ -1,42 +1,55 @@
-# 0171：Excel表列序号
+# 0171：Excel 表列序号
 
+
+> <u>**[力扣第 171 题](https://leetcode.cn/problems/excel-sheet-column-number/)**</u>
 
 ## 题目
 
-给你一个字符串 columnTitle ，表示 Excel 表格中的列名称。返回 该列名称对应的列序号 。
+<p>给你一个字符串 <code>columnTitle</code> ，表示 Excel 表格中的列名称。返回 <em>该列名称对应的列序号</em> 。</p>
 
-例如：
+<p>例如：</p>
 
-	A -> 1
-	B -> 2
-	C -> 3
-	...
-	Z -> 26
-	AA -> 27
-	AB -> 28 
-	...
-	 
+<pre>
+A -&gt; 1
+B -&gt; 2
+C -&gt; 3
+...
+Z -&gt; 26
+AA -&gt; 27
+AB -&gt; 28
+...</pre>
 
-示例 1:
 
-	输入: columnTitle = "A"
-	输出: 1
 
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入: columnTitle = "AB"
-	输出: 28
+<pre>
+<strong>输入:</strong> columnTitle = "A"
+<strong>输出:</strong> 1
+</pre>
 
-示例 3:
+<p><strong>示例 2:</strong></p>
 
-	输入: columnTitle = "ZY"
-	输出: 701
- 
+<pre>
+<strong>输入: </strong>columnTitle = "AB"
+<strong>输出:</strong> 28
+</pre>
 
-提示：
-- 1 <= columnTitle.length <= 7
-- columnTitle 仅由大写英文组成
-- columnTitle 在范围 ["A", "FXSHRXW"] 内
+<p><strong>示例 3:</strong></p>
+
+<pre>
+<strong>输入: </strong>columnTitle = "ZY"
+<strong>输出:</strong> 701</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= columnTitle.length &lt;= 7</code></li>
+<li><code>columnTitle</code> 仅由大写英文组成</li>
+<li><code>columnTitle</code> 在范围 <code>["A", "FXSHRXW"]</code> 内</li>
+</ul>
 
 
 ## 分析

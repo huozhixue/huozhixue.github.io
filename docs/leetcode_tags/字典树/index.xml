@@ -4,60 +4,74 @@
         <link>https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/</link>
         <description>字典树 - 力扣标签 - 个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Jul 2021 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/" rel="self" type="application/rss+xml" /><item>
-    <title>1938：查询最大基因差（★★★）</title>
+    <title>1938：查询最大基因差（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1938/</link>
     <pubDate>Sun, 18 Jul 2021 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1938/</guid>
-    <description><![CDATA[第 250 场周赛第 4 题 题目 给你一棵 n 个节点的有根树，节点编号从 0 到 n - 1 。 每个节点的编号表示这个节点的 独一无二的基因值 （也就是说节点 x 的基因值为 x]]></description>
+    <description><![CDATA[力扣第 250 场周赛第 4 题 题目 给你一棵 n 个节点的有根树，节点编号从 0 到 n - 1 。每个节点的编号表示这个节点的 独一无二的基因值 （也就是说节点 x 的基因值]]></description>
 </item><item>
-    <title>1707：与数组中元素的最大异或值（★★★）</title>
+    <title>1707：与数组中元素的最大异或值（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1707/</link>
     <pubDate>Sun, 27 Dec 2020 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1707/</guid>
-    <description><![CDATA[第 221 场周赛第 4 题 题目 给你一个由非负整数组成的数组 nums 。另有一个查询数组 queries ，其中 queries[i] = [xi, mi] 。 第 i 个查询的答案是 xi 和任何 nums 数组中不超过 mi 的元素按位异]]></description>
+    <description><![CDATA[力扣第 221 场周赛第 4 题 题目 给你一个由非负整数组成的数组 nums 。另有一个查询数组 queries ，其中 queries[i] = [xi, mi] 。 第 i 个查询的答案是 xi 和任何 nums 数组中不超过 mi 的元素按]]></description>
 </item><item>
-    <title>0677：键值映射（★★）</title>
+    <title>1316：不同的循环子字符串（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1316/</link>
+    <pubDate>Sat, 11 Jan 2020 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1316/</guid>
+    <description><![CDATA[力扣第 17 场双周赛第 4 题 题目 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目： 可以写成某个字符串与其自身相连接的形式（即，可以写]]></description>
+</item><item>
+    <title>1178：猜字谜（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1178/</link>
+    <pubDate>Sun, 01 Sep 2019 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1178/</guid>
+    <description><![CDATA[力扣第 152 场周赛第 4 题 题目 外国友人仿照中国字谜设计了一个英文版猜字谜小游戏，请你来猜猜看吧。 字谜的迷面 puzzle 按字符串形式给出，如果一个单词 word 符合下]]></description>
+</item><item>
+    <title>1023：驼峰式匹配（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1023/</link>
+    <pubDate>Sun, 07 Apr 2019 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1023/</guid>
+    <description><![CDATA[力扣第 131 场周赛第 3 题 题目 如果我们可以将小写字母插入模式串 pattern 得到待查询项 query，那么待查询项与给定模式串匹配。（我们可以在任何位置插入每个]]></description>
+</item><item>
+    <title>0720：词典中最长的单词（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0720/</link>
+    <pubDate>Sun, 05 Nov 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0720/</guid>
+    <description><![CDATA[力扣第 57 场双周赛第 1 题 题目 给出一个字符串数组 words 组成的一本英语词典。返回 words 中最长的一个单词，该单词是由 words 词典中其他单词逐步添加一个字母组成。 若]]></description>
+</item><item>
+    <title>0692：前K个高频单词（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0692/</link>
+    <pubDate>Wed, 04 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0692/</guid>
+    <description><![CDATA[力扣第 692 题 题目 给定一个单词列表 words 和一个整数 k ，返回前 k 个出现次数最多的单词。 返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出]]></description>
+</item><item>
+    <title>0677：键值映射（★）</title>
     <link>https://huozhixue.github.io/leetcode/0677/</link>
     <pubDate>Sun, 17 Sep 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0677/</guid>
-    <description><![CDATA[第 50 场双周赛第 2 题 题目 实现一个 MapSum 类，支持两个方法，insert 和 sum： MapSum() 初始化 MapSum 对象 void insert(String key, int val) 插入 key-val 键值对，字符串表示键 key ，整数表示值 val 。]]></description>
+    <description><![CDATA[力扣第 50 场双周赛第 2 题 题目 设计一个 map ，满足以下几点: 字符串表示键，整数表示值 返回具有前缀等于给定字符串的键的值的总和 实现一个 MapSum 类： MapSum() 初始化 MapSum]]></description>
 </item><item>
-    <title>0648：单词替换（★★）</title>
+    <title>0676：实现一个魔法字典（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0676/</link>
+    <pubDate>Sun, 10 Sep 2017 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0676/</guid>
+    <description><![CDATA[力扣第 49 场双周赛第 2 题 题目 设计一个使用单词列表进行初始化的数据结构，单词列表中的单词 互不相同 。 如果给出一个单词，请判定能否只将这个单词中一个]]></description>
+</item><item>
+    <title>0648：单词替换（★）</title>
     <link>https://huozhixue.github.io/leetcode/0648/</link>
     <pubDate>Sun, 23 Jul 2017 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0648/</guid>
-    <description><![CDATA[第 42 场双周赛第 4 题 题目 在英语中，我们有一个叫做 词根(root)的概念，它可以跟着其他一些词组成另一个较长的单词——我们称这个词为 继承词(su]]></description>
-</item><item>
-    <title>0421：数组中两个数的最大异或值（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0421/</link>
-    <pubDate>Wed, 12 Oct 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0421/</guid>
-    <description><![CDATA[题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果， 其中 0 ≤ i ≤ j &lt; n 。 你能在O(n)的时间解决这个问题吗？ 提示： 1 &lt;= nums.length &lt;= 2 * 10^4 0 &lt;= nums[i] &lt;= 2^31 - 1]]></description>
-</item><item>
-    <title>0211：添加与搜索单词 - 数据结构设计（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0211/</link>
-    <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0211/</guid>
-    <description><![CDATA[题目 请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。 实现词典类 WordDictionary ： WordDictionary() 初始化词典对象 void addWord(word) 将 word 添加到数据结构中，]]></description>
-</item><item>
-    <title>0212：单词搜索 II（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0212/</link>
-    <pubDate>Thu, 30 Jul 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0212/</guid>
-    <description><![CDATA[题目 给定一个 m x n 二维字符网格 board 和一个单词（字符串）列表 words， 找出所有同时在二维网格和字典中出现的单词。 单词必须按照字母顺序，通过 相邻]]></description>
-</item><item>
-    <title>0208：实现 Trie (前缀树)（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0208/</link>
-    <pubDate>Mon, 27 Jul 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0208/</guid>
-    <description><![CDATA[题目 实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。 Trie（发音类似 &ldquo;try&rdquo;）或者说 前缀树 是一种树形数据结构，用于]]></description>
+    <description><![CDATA[力扣第 42 场双周赛第 4 题 题目 在英语中，我们有一个叫做 词根(root) 的概念，可以词根后面添加其他一些词组成另一个较长的单词——我们称这个词为 继]]></description>
 </item></channel>
 </rss>

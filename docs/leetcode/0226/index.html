@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0226：翻转二叉树（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0226：翻转二叉树（★）" />
-<meta property="og:description" content="题目 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。 示例 1： 输入：root = [4,2,7,1,3,6,9] 输出：[4,7,2,9,6,3,1] 示例 2： 输入：r" />
+        <title>0226：翻转二叉树 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0226：翻转二叉树" />
+<meta property="og:description" content="力扣第 226 题 题目 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。 示例 1： 输入：root = [4,2,7,1,3,6,9] 输出：[4,7,2,9,6,3,1] 示例 2" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0226/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-08-14T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0226：翻转二叉树（★）"/>
-<meta name="twitter:description" content="题目 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。 示例 1： 输入：root = [4,2,7,1,3,6,9] 输出：[4,7,2,9,6,3,1] 示例 2： 输入：r"/>
+<meta name="twitter:title" content="0226：翻转二叉树"/>
+<meta name="twitter:description" content="力扣第 226 题 题目 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。 示例 1： 输入：root = [4,2,7,1,3,6,9] 输出：[4,7,2,9,6,3,1] 示例 2"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0226/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0225/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0227/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0226：翻转二叉树（★）",
+        "headline": "0226：翻转二叉树",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0226\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  159 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  164 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0226\/","datePublished": "2015-08-14T00:00:00+08:00","dateModified": "2015-08-14T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0226：翻转二叉树（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0226：翻转二叉树</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-14">2015-08-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 159 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0226/" class="leancloud_visitors" data-flag-title="0226：翻转二叉树（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-14">2015-08-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 164 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0226/" class="leancloud_visitors" data-flag-title="0226：翻转二叉树">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,42 +125,32 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。</p>
-<p> </p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg, https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg"
-        title="img" /></p>
-<pre><code>输入：root = [4,2,7,1,3,6,9]
-输出：[4,7,2,9,6,3,1]
-</code></pre>
-<p>示例 2：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg, https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg"
-        title="img" /></p>
-<pre><code>输入：root = [2,1,3]
-输出：[2,3,1]
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：root = []
-输出：[]
- 
-</code></pre>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/invert-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 226 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵二叉树的根节点 <code>root</code> ，翻转这棵二叉树，并返回其根节点。</p>
+<p><strong>示例 1：</strong></p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg" style="height: 165px; width: 500px;" /></p>
+<pre>
+<strong>输入：</strong>root = [4,2,7,1,3,6,9]
+<strong>输出：</strong>[4,7,2,9,6,3,1]
+</pre>
+<p><strong>示例 2：</strong></p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg" style="width: 500px; height: 120px;" /></p>
+<pre>
+<strong>输入：</strong>root = [2,1,3]
+<strong>输出：</strong>[2,3,1]
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>root = []
+<strong>输出：</strong>[]
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>树中节点数目范围在 [0, 100] 内</li>
-<li>-100 &lt;= Node.val &lt;= 100</li>
+<li>树中节点数目范围在 <code>[0, 100]</code> 内</li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>递归翻转即可。</p>
@@ -201,13 +191,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0227/" class="prev" rel="prev" title="0227：基本计算器 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0227：基本计算器 II（★★）</a>
+    <div class="post-nav"><a href="/leetcode/0227/" class="prev" rel="prev" title="0227：基本计算器 II（★）"><i class="fas fa-angle-left fa-fw"></i>0227：基本计算器 II（★）</a>
             <a href="/leetcode/0225/" class="next" rel="next" title="0225：用队列实现栈">0225：用队列实现栈<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

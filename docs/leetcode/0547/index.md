@@ -1,33 +1,52 @@
 # 0547：省份数量（★）
 
 
+> <u>**[力扣第 547 题](https://leetcode.cn/problems/number-of-provinces/)**</u>
+
 ## 题目
 
-有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，
-且城市 b 与城市 c 直接相连，那么城市 a 与城市 c 间接相连。
+<div class="original__bRMd">
+<div>
+<p>有 <code>n</code> 个城市，其中一些彼此相连，另一些没有相连。如果城市 <code>a</code> 与城市 <code>b</code> 直接相连，且城市 <code>b</code> 与城市 <code>c</code> 直接相连，那么城市 <code>a</code> 与城市 <code>c</code> 间接相连。</p>
 
-省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。
+<p><strong>省份</strong> 是一组直接或间接相连的城市，组内不含其他没有相连的城市。</p>
 
-给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] = 1 表示
-第 i 个城市和第 j 个城市直接相连，而 isConnected[i][j] = 0 表示二者不直接相连。
+<p>给你一个 <code>n x n</code> 的矩阵 <code>isConnected</code> ，其中 <code>isConnected[i][j] = 1</code> 表示第 <code>i</code> 个城市和第 <code>j</code> 个城市直接相连，而 <code>isConnected[i][j] = 0</code> 表示二者不直接相连。</p>
 
-返回矩阵中 省份 的数量。
- 
-示例 1：
+<p>返回矩阵中 <strong>省份</strong> 的数量。</p>
 
-![img](https://assets.leetcode.com/uploads/2020/12/24/graph1.jpg)
 
-	输入：isConnected = [[1,1,0],[1,1,0],[0,0,1]]
-	输出：2
 
-示例 2：
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/24/graph1.jpg" style="width: 222px; height: 142px;" />
+<pre>
+<strong>输入：</strong>isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+<strong>输出：</strong>2
+</pre>
 
-![img](https://assets.leetcode.com/uploads/2020/12/24/graph2.jpg)
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/24/graph2.jpg" style="width: 222px; height: 142px;" />
+<pre>
+<strong>输入：</strong>isConnected = [[1,0,0],[0,1,0],[0,0,1]]
+<strong>输出：</strong>3
+</pre>
 
-	输入：isConnected = [[1,0,0],[0,1,0],[0,0,1]]
-	输出：3
 
-	
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= n <= 200</code></li>
+<li><code>n == isConnected.length</code></li>
+<li><code>n == isConnected[i].length</code></li>
+<li><code>isConnected[i][j]</code> 为 <code>1</code> 或 <code>0</code></li>
+<li><code>isConnected[i][i] == 1</code></li>
+<li><code>isConnected[i][j] == isConnected[j][i]</code></li>
+</ul>
+</div>
+</div>
+
+
 ## 分析
 
 即是求无向图的连通分量数，可以通过遍历求解，bfs 和 dfs 都可以。

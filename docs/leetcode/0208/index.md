@@ -1,43 +1,52 @@
-# 0208：实现 Trie (前缀树)（★★）
+# 0208：实现 Trie (前缀树)（★）
 
+
+> <u>**[力扣第 208 题](https://leetcode.cn/problems/implement-trie-prefix-tree/)**</u>
 
 ## 题目
 
-实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。
-Trie（发音类似 "try"）或者说 前缀树 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。
-这一数据结构有相当多的应用情景，例如自动补完和拼写检查。
+<p><strong><a href="https://baike.baidu.com/item/字典树/9825209?fr=aladdin" target="_blank">Trie</a></strong>（发音类似 "try"）或者说 <strong>前缀树</strong> 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例如自动补完和拼写检查。</p>
 
-请你实现 Trie 类：
+<p>请你实现 Trie 类：</p>
 
-- Trie() 初始化前缀树对象。
-- void insert(String word) 向前缀树中插入字符串 word 。
-- boolean search(String word) 如果字符串 word 在前缀树中，返回 true（即，在检索之前已经插入）；
-否则，返回 false 。
-- boolean startsWith(String prefix) 如果之前已经插入的字符串 word 的前缀之一为 prefix ，
-返回 true ；否则，返回 false 。
+<ul>
+<li><code>Trie()</code> 初始化前缀树对象。</li>
+<li><code>void insert(String word)</code> 向前缀树中插入字符串 <code>word</code> 。</li>
+<li><code>boolean search(String word)</code> 如果字符串 <code>word</code> 在前缀树中，返回 <code>true</code>（即，在检索之前已经插入）；否则，返回 <code>false</code> 。</li>
+<li><code>boolean startsWith(String prefix)</code> 如果之前已经插入的字符串 <code>word</code> 的前缀之一为 <code>prefix</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
+</ul>
 
 
-示例：
 
-    输入
-    ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
-    [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
-    输出
-    [null, null, true, false, true, null, true]
-    
-    解释
-    Trie trie = new Trie();
-    trie.insert("apple");
-    trie.search("apple");   // 返回 True
-    trie.search("app");     // 返回 False
-    trie.startsWith("app"); // 返回 True
-    trie.insert("app");
-    trie.search("app");     // 返回 True
- 
-提示：
-- 1 <= word.length, prefix.length <= 2000
-- word 和 prefix 仅由小写英文字母组成
-- insert、search 和 startsWith 调用次数 总计 不超过 3 * 10^4 次
+<p><strong>示例：</strong></p>
+
+<pre>
+<strong>输入</strong>
+["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+<strong>输出</strong>
+[null, null, true, false, true, null, true]
+
+<strong>解释</strong>
+Trie trie = new Trie();
+trie.insert("apple");
+trie.search("apple");   // 返回 True
+trie.search("app");     // 返回 False
+trie.startsWith("app"); // 返回 True
+trie.insert("app");
+trie.search("app");     // 返回 True
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= word.length, prefix.length <= 2000</code></li>
+<li><code>word</code> 和 <code>prefix</code> 仅由小写英文字母组成</li>
+<li><code>insert</code>、<code>search</code> 和 <code>startsWith</code> 调用次数 <strong>总计</strong> 不超过 <code>3 * 10<sup>4</sup></code> 次</li>
+</ul>
+
 
 ## 分析
 

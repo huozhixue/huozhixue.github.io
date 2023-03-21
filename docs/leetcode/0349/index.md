@@ -1,27 +1,38 @@
 # 0349：两个数组的交集
 
 
+> <u>**[力扣第 349 题](https://leetcode.cn/problems/intersection-of-two-arrays/)**</u>
+
 ## 题目
 
-给定两个数组 nums1 和 nums2 ，返回 它们的交集 。输出结果中的每个元素一定是 唯一 的。
-我们可以 不考虑输出结果的顺序 。
+<p>给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。</p>
 
 
-示例 1：
 
-	输入：nums1 = [1,2,2,1], nums2 = [2,2]
-	输出：[2]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums1 = [1,2,2,1], nums2 = [2,2]
+<strong>输出：</strong>[2]
+</pre>
 
-	输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-	输出：[9,4]
-	解释：[4,9] 也是可通过的
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= nums1.length, nums2.length <= 1000
-- 0 <= nums1[i], nums2[i] <= 1000
+<pre>
+<strong>输入：</strong>nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+<strong>输出：</strong>[9,4]
+<strong>解释：</strong>[4,9] 也是可通过的
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
+<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
+</ul>
+
 
 ## 分析
 

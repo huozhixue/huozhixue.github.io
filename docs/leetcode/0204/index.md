@@ -1,32 +1,44 @@
-# 0204：计数质数（★★★★★）
+# 0204：计数质数（★）
 
+
+> <u>**[力扣第 204 题](https://leetcode.cn/problems/count-primes/)**</u>
 
 ## 题目
 
-给定整数 n ，返回 所有小于非负整数 n 的质数的数量 。
+<p>给定整数 <code>n</code> ，返回 <em>所有小于非负整数 <code>n</code> 的质数的数量</em> 。</p>
 
 
-示例 1：
 
-	输入：n = 10
-	输出：4
-	解释：小于 10 的质数一共有 4 个, 它们是 2, 3, 5, 7 。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 10
+<strong>输出：</strong>4
+<strong>解释：</strong>小于 10 的质数一共有 4 个, 它们是 2, 3, 5, 7 。
+</pre>
 
-	输入：n = 0
-	输出：0
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>n = 0
+<strong>输出：</strong>0
+</pre>
 
-	输入：n = 1
-	输出：0
-	 
+<p><strong>示例 3：</strong></p>
 
-提示：
-- 0 <= n <= 5 * 10^6
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出</strong>：0
+</pre>
 
- 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= n &lt;= 5 * 10<sup>6</sup></code></li>
+</ul>
+
 
 ## 分析
 

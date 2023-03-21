@@ -1,39 +1,53 @@
-# 1995：统计特殊四元组（★）
+# 1995：统计特殊四元组
 
 
-> **第 257 场周赛第 1 题**
+> <u>**[力扣第 257 场周赛第 1 题](https://leetcode.cn/problems/count-special-quadruplets/)**</u>
 
 ## 题目
 
-给你一个 下标从 0 开始 的整数数组 nums ，返回满足下述条件的 不同 四元组 (a, b, c, d) 的 数目 ：
-- nums[a] + nums[b] + nums[c] == nums[d] ，且
-- a < b < c < d
+<p>给你一个 <strong>下标从 0 开始</strong> 的整数数组 <code>nums</code> ，返回满足下述条件的 <strong>不同</strong> 四元组 <code>(a, b, c, d)</code> 的 <strong>数目</strong> ：</p>
 
-提示：
-- 4 <= nums.length <= 50
-- 1 <= nums[i] <= 100
+<ul>
+<li><code>nums[a] + nums[b] + nums[c] == nums[d]</code> ，且</li>
+<li><code>a &lt; b &lt; c &lt; d</code></li>
+</ul>
 
-示例 1：
 
-    输入：nums = [1,2,3,6]
-    输出：1
-    解释：满足要求的唯一一个四元组是 (0, 1, 2, 3) 因为 1 + 2 + 3 == 6 。
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：nums = [3,3,6,4,5]
-    输出：0
-    解释：[3,3,6,4,5] 中不存在满足要求的四元组。
+<pre><strong>输入：</strong>nums = [1,2,3,6]
+<strong>输出：</strong>1
+<strong>解释：</strong>满足要求的唯一一个四元组是 (0, 1, 2, 3) 因为 1 + 2 + 3 == 6 。
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-    输入：nums = [1,1,1,3,5]
-    输出：4
-    解释：满足要求的 4 个四元组如下：
-    - (0, 1, 2, 3): 1 + 1 + 1 == 3
-    - (0, 1, 3, 4): 1 + 1 + 3 == 5
-    - (0, 2, 3, 4): 1 + 1 + 3 == 5
-    - (1, 2, 3, 4): 1 + 1 + 3 == 5
+<pre><strong>输入：</strong>nums = [3,3,6,4,5]
+<strong>输出：</strong>0
+<strong>解释：</strong>[3,3,6,4,5] 中不存在满足要求的四元组。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre><strong>输入：</strong>nums = [1,1,1,3,5]
+<strong>输出：</strong>4
+<strong>解释：</strong>满足要求的 4 个四元组如下：
+- (0, 1, 2, 3): 1 + 1 + 1 == 3
+- (0, 1, 3, 4): 1 + 1 + 3 == 5
+- (0, 2, 3, 4): 1 + 1 + 3 == 5
+- (1, 2, 3, 4): 1 + 1 + 3 == 5
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>4 &lt;= nums.length &lt;= 50</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
+</ul>
+
 
 ## 分析
 

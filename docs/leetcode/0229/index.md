@@ -1,31 +1,46 @@
-# 0229：求众数 II（★★）
+# 0229：多数元素 II（★）
 
+
+> <u>**[力扣第 229 题](https://leetcode.cn/problems/majority-element-ii/)**</u>
 
 ## 题目
 
-给定一个大小为 n 的整数数组，找出其中所有出现超过 ⌊ n/3 ⌋ 次的元素。
+<p>给定一个大小为 <em>n </em>的整数数组，找出其中所有出现超过 <code>⌊ n/3 ⌋</code> 次的元素。</p>
 
-示例 1：
-    
-    输入：[3,2,3]
-    输出：[3]
 
-示例 2：
 
-    输入：nums = [1]
-    输出：[1]
+<p><strong>示例 1：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>nums = [3,2,3]
+<strong>输出：</strong>[3]</pre>
 
-    输入：[1,1,1,3,3,2,2,2]
-    输出：[1,2]
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= nums.length <= 5 * 10^4
-- -10^9 <= nums[i] <= 10^9
+<pre>
+<strong>输入：</strong>nums = [1]
+<strong>输出：</strong>[1]
+</pre>
 
-进阶：尝试设计时间复杂度为 O(n)、空间复杂度为 O(1)的算法解决此问题。
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>nums = [1,2]
+<strong>输出：</strong>[1,2]</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 5 * 10<sup>4</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>尝试设计时间复杂度为 O(n)、空间复杂度为 O(1)的算法解决此问题。</p>
+
 
 ## 分析
 

@@ -1,32 +1,45 @@
-# 0018：四数之和（★★）
+# 0018：四数之和（★）
 
+
+> <u>**[力扣第 18 题](https://leetcode.cn/problems/4sum/)**</u>
 
 ## 题目
 
-你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组
- [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
-- 0 <= a, b, c, d < n
-- a、b、c 和 d 互不相同
-- nums[a] + nums[b] + nums[c] + nums[d] == target
+<p>给你一个由 <code>n</code> 个整数组成的数组 <code>nums</code> ，和一个目标值 <code>target</code> 。请你找出并返回满足下述全部条件且<strong>不重复</strong>的四元组 <code>[nums[a], nums[b], nums[c], nums[d]]</code> （若两个四元组元素一一对应，则认为两个四元组重复）：</p>
 
-你可以按 任意顺序 返回答案 。
+<ul>
+<li><code>0 &lt;= a, b, c, d &lt; n</code></li>
+<li><code>a</code>、<code>b</code>、<code>c</code> 和 <code>d</code> <strong>互不相同</strong></li>
+<li><code>nums[a] + nums[b] + nums[c] + nums[d] == target</code></li>
+</ul>
+
+<p>你可以按 <strong>任意顺序</strong> 返回答案 。</p>
 
 
-示例 1：
 
-	输入：nums = [1,0,-1,0,-2,2], target = 0
-	输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums = [1,0,-1,0,-2,2], target = 0
+<strong>输出：</strong>[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+</pre>
 
-	输入：nums = [2,2,2,2,2], target = 8
-	输出：[[2,2,2,2]]
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= nums.length <= 200
-- -10^9 <= nums[i] <= 10^9
-- -10^9 <= target <= 10^9
+<pre>
+<strong>输入：</strong>nums = [2,2,2,2,2], target = 8
+<strong>输出：</strong>[[2,2,2,2]]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 200</code></li>
+<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>
+</ul>
 
 
 ## 分析

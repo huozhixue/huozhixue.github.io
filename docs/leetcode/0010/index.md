@@ -1,41 +1,55 @@
 # 0010：正则表达式匹配（★★）
 
 
+> <u>**[力扣第 10 题](https://leetcode.cn/problems/regular-expression-matching/)**</u>
+
 ## 题目
 
-给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
-- '.' 匹配任意单个字符
-- '*' 匹配零个或多个前面的那一个元素
+<p>给你一个字符串 <code>s</code> 和一个字符规律 <code>p</code>，请你来实现一个支持 <code>'.'</code> 和 <code>'*'</code> 的正则表达式匹配。</p>
 
-所谓匹配，是要涵盖 整个 字符串 s 的，而不是部分字符串。
+<ul>
+<li><code>'.'</code> 匹配任意单个字符</li>
+<li><code>'*'</code> 匹配零个或多个前面的那一个元素</li>
+</ul>
 
- 
-示例 1：
+<p>所谓匹配，是要涵盖 <strong>整个 </strong>字符串 <code>s</code>的，而不是部分字符串。</p>
 
-	输入：s = "aa", p = "a"
-	输出：false
-	解释："a" 无法匹配 "aa" 整个字符串。
 
-示例 2:
+<p><strong>示例 1：</strong></p>
 
-	输入：s = "aa", p = "a*"
-	输出：true
-	解释：因为 '*' 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 'a'。
-	因此，字符串 "aa" 可被视为 'a' 重复了一次。
+<pre>
+<strong>输入：</strong>s = "aa", p = "a"
+<strong>输出：</strong>false
+<strong>解释：</strong>"a" 无法匹配 "aa" 整个字符串。
+</pre>
 
-示例 3：
+<p><strong>示例 2:</strong></p>
 
-	输入：s = "ab", p = ".*"
-	输出：true
-	解释：".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。
- 
+<pre>
+<strong>输入：</strong>s = "aa", p = "a*"
+<strong>输出：</strong>true
+<strong>解释：</strong>因为 '*' 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 'a'。因此，字符串 "aa" 可被视为 'a' 重复了一次。
+</pre>
 
-提示：
-- 1 <= s.length <= 20
-- 1 <= p.length <= 30
-- s 只包含从 a-z 的小写字母。
-- p 只包含从 a-z 的小写字母，以及字符 . 和 *。
-- 保证每次出现字符 * 时，前面都匹配到有效的字符
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "ab", p = ".*"
+<strong>输出：</strong>true
+<strong>解释：</strong>".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 20</code></li>
+<li><code>1 &lt;= p.length &lt;= 20</code></li>
+<li><code>s</code> 只包含从 <code>a-z</code> 的小写字母。</li>
+<li><code>p</code> 只包含从 <code>a-z</code> 的小写字母，以及字符 <code>.</code> 和 <code>*</code>。</li>
+<li>保证每次出现字符 <code>*</code> 时，前面都匹配到有效的字符</li>
+</ul>
 
 
 ## 分析

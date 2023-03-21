@@ -1,31 +1,44 @@
-# 1012：至少有 1 位重复的数字（★★★）
+# 1012：至少有 1 位重复的数字（★★）
 
 
-> **第 128 场周赛第 4 题**
+> <u>**[力扣第 128 场周赛第 4 题](https://leetcode.cn/problems/numbers-with-repeated-digits/)**</u>
 
 ## 题目
 
-给定正整数 n，返回在 [1, n] 范围内具有 至少 1 位 重复数字的正整数的个数。
+<p>给定正整数 <code>n</code>，返回在<em> </em><code>[1, n]</code><em> </em>范围内具有 <strong>至少 1 位</strong> 重复数字的正整数的个数。</p>
 
-示例 1：
 
-    输入：n = 20
-    输出：1
-    解释：具有至少 1 位重复数字的正数（<= 20）只有 11 。
-示例 2：
 
-    输入：n = 100
-    输出：10
-    解释：具有至少 1 位重复数字的正数（<= 100）有 11，22，33，44，55，66，77，88，99 和 100 。
-示例 3：
+<p><strong>示例 1：</strong></p>
 
-    输入：n = 1000
-    输出：262
- 
+<pre>
+<strong>输入：</strong>n = 20
+<strong>输出：</strong>1
+<strong>解释：</strong>具有至少 1 位重复数字的正数（&lt;= 20）只有 11 。
+</pre>
 
-提示：
-- 1 <= n <= 10^9
+<p><strong>示例 2：</strong></p>
 
+<pre>
+<strong>输入：</strong>n = 100
+<strong>输出：</strong>10
+<strong>解释：</strong>具有至少 1 位重复数字的正数（&lt;= 100）有 11，22，33，44，55，66，77，88，99 和 100 。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1000
+<strong>输出：</strong>262
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>
+</ul>
 
 
 ## 分析

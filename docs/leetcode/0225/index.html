@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0225：用队列实现栈 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0225：用队列实现栈" />
-<meta property="og:description" content="题目 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通队列的全部四种操作（push、top、pop 和 empty）。 实现 MyStack 类： void push(int" />
+<meta property="og:description" content="力扣第 225 题 题目 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）。 实现 MyStack" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0225/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-08-13T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0225：用队列实现栈"/>
-<meta name="twitter:description" content="题目 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通队列的全部四种操作（push、top、pop 和 empty）。 实现 MyStack 类： void push(int"/>
+<meta name="twitter:description" content="力扣第 225 题 题目 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）。 实现 MyStack"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0225/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0224/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0226/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0225\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  486 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  507 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0225\/","datePublished": "2015-08-13T00:00:00+08:00","dateModified": "2015-08-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0225：用队列实现栈</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-13">2015-08-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 486 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0225/" class="leancloud_visitors" data-flag-title="0225：用队列实现栈">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-13">2015-08-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 507 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0225/" class="leancloud_visitors" data-flag-title="0225：用队列实现栈">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,42 +130,46 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通队列的全部四种操作（push、top、pop 和 empty）。</p>
-<p>实现 MyStack 类：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/implement-stack-using-queues/" target="_blank" rel="noopener noreffer">力扣第 225 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（<code>push</code>、<code>top</code>、<code>pop</code> 和 <code>empty</code>）。</p>
+<p>实现 <code>MyStack</code> 类：</p>
 <ul>
-<li>void push(int x) 将元素 x 压入栈顶。</li>
-<li>int pop() 移除并返回栈顶元素。</li>
-<li>int top() 返回栈顶元素。</li>
-<li>boolean empty() 如果栈是空的，返回 true ；否则，返回 false 。</li>
+<li><code>void push(int x)</code> 将元素 x 压入栈顶。</li>
+<li><code>int pop()</code> 移除并返回栈顶元素。</li>
+<li><code>int top()</code> 返回栈顶元素。</li>
+<li><code>boolean empty()</code> 如果栈是空的，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 </ul>
-<p>注意：</p>
+<p><strong>注意：</strong></p>
 <ul>
-<li>你只能使用队列的基本操作 —— 也就是 push to back、peek/pop from front、size 和 is empty 这些操作。</li>
-<li>你所使用的语言也许不支持队列。 你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列 ,
-只要是标准的队列操作即可。</li>
+<li>你只能使用队列的基本操作 —— 也就是 <code>push to back</code>、<code>peek/pop from front</code>、<code>size</code> 和 <code>is empty</code> 这些操作。</li>
+<li>你所使用的语言也许不支持队列。 你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。</li>
 </ul>
-<p>示例：</p>
-<pre><code>输入：
-[&quot;MyStack&quot;, &quot;push&quot;, &quot;push&quot;, &quot;top&quot;, &quot;pop&quot;, &quot;empty&quot;]
+<p><strong>示例：</strong></p>
+<pre>
+<strong>输入：</strong>
+["MyStack", "push", "push", "top", "pop", "empty"]
 [[], [1], [2], [], [], []]
-输出：
+<strong>输出：</strong>
 [null, null, null, 2, 2, false]
 
-解释：
+<strong>解释：</strong>
 MyStack myStack = new MyStack();
 myStack.push(1);
 myStack.push(2);
 myStack.top(); // 返回 2
 myStack.pop(); // 返回 2
 myStack.empty(); // 返回 False
-</code></pre>
-<p>提示：</p>
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= x &lt;= 9</li>
-<li>最多调用100 次 push、pop、top 和 empty</li>
-<li>每次调用 pop 和 top 都保证栈不为空</li>
+<li><code>1 &lt;= x &lt;= 9</code></li>
+<li>最多调用<code>100</code> 次 <code>push</code>、<code>pop</code>、<code>top</code> 和 <code>empty</code></li>
+<li>每次调用 <code>pop</code> 和 <code>top</code> 都保证栈不为空</li>
 </ul>
+<p><strong>进阶：</strong>你能否仅用一个队列来实现栈。</p>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
 <p>python 一般直接用 list 作为栈。</p>
@@ -273,14 +277,14 @@ myStack.empty(); // 返回 False
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%88/">栈</a>,&nbsp;<a href="/leetcode_tags/%E9%98%9F%E5%88%97/">队列</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%88/">栈</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E9%98%9F%E5%88%97/">队列</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0226/" class="prev" rel="prev" title="0226：翻转二叉树（★）"><i class="fas fa-angle-left fa-fw"></i>0226：翻转二叉树（★）</a>
-            <a href="/leetcode/0224/" class="next" rel="next" title="0224：基本计算器（★★★）">0224：基本计算器（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0226/" class="prev" rel="prev" title="0226：翻转二叉树"><i class="fas fa-angle-left fa-fw"></i>0226：翻转二叉树</a>
+            <a href="/leetcode/0224/" class="next" rel="next" title="0224：基本计算器（★★）">0224：基本计算器（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

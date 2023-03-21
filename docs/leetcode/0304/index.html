@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0304：二维区域和检索 - 矩阵不可变（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0304：二维区域和检索 - 矩阵不可变（★★）" />
-<meta property="og:description" content="题目 给定一个二维矩阵 matrix，以下类型的多个请求： 计算其子矩形范围内元素的总和，该子矩阵的左上角为 (row1, col1) ，右下角为 (row2, col2) 。 实现 NumMatrix 类： NumMatrix(int[][] matrix) 给定" />
+        <title>0304：二维区域和检索 - 矩阵不可变（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0304：二维区域和检索 - 矩阵不可变（★）" />
+<meta property="og:description" content="力扣第 304 题 题目 给定一个二维矩阵 matrix，以下类型的多个请求： 计算其子矩形范围内元素的总和，该子矩阵的 左上角 为 (row1, col1) ，右下角 为 (row2, col2) 。 实现 NumMatrix 类" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0304/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-10-31T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0304：二维区域和检索 - 矩阵不可变（★★）"/>
-<meta name="twitter:description" content="题目 给定一个二维矩阵 matrix，以下类型的多个请求： 计算其子矩形范围内元素的总和，该子矩阵的左上角为 (row1, col1) ，右下角为 (row2, col2) 。 实现 NumMatrix 类： NumMatrix(int[][] matrix) 给定"/>
+<meta name="twitter:title" content="0304：二维区域和检索 - 矩阵不可变（★）"/>
+<meta name="twitter:description" content="力扣第 304 题 题目 给定一个二维矩阵 matrix，以下类型的多个请求： 计算其子矩形范围内元素的总和，该子矩阵的 左上角 为 (row1, col1) ，右下角 为 (row2, col2) 。 实现 NumMatrix 类"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0304/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0303/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0305/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0304：二维区域和检索 - 矩阵不可变（★★）",
+        "headline": "0304：二维区域和检索 - 矩阵不可变（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0304\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  330 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  338 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0304\/","datePublished": "2015-10-31T00:00:00+08:00","dateModified": "2015-10-31T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0304：二维区域和检索 - 矩阵不可变（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0304：二维区域和检索 - 矩阵不可变（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-31">2015-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 330 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0304/" class="leancloud_visitors" data-flag-title="0304：二维区域和检索 - 矩阵不可变（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-31">2015-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 338 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0304/" class="leancloud_visitors" data-flag-title="0304：二维区域和检索 - 矩阵不可变（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,47 +125,43 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个二维矩阵 matrix，以下类型的多个请求：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/range-sum-query-2d-immutable/" target="_blank" rel="noopener noreffer">力扣第 304 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><big><small>给定一个二维矩阵 <code>matrix</code>，</small></big>以下类型的多个请求：</p>
 <ul>
-<li>计算其子矩形范围内元素的总和，该子矩阵的左上角为 (row1, col1) ，右下角为 (row2, col2) 。</li>
+<li><big><small>计算其子矩形范围内元素的总和，该子矩阵的 <strong>左上角</strong> 为 <code>(row1, col1)</code> ，<strong>右下角</strong> 为 <code>(row2, col2)</code> 。</small></big></li>
 </ul>
-<p>实现 NumMatrix 类：</p>
+<p>实现 <code>NumMatrix</code> 类：</p>
 <ul>
-<li>NumMatrix(int[][] matrix) 给定整数矩阵 matrix 进行初始化</li>
-<li>int sumRegion(int row1, int col1, int row2, int col2) 返回
-左上角 (row1, col1) 、右下角 (row2, col2) 的子矩阵的元素总和。</li>
+<li><code>NumMatrix(int[][] matrix)</code> 给定整数矩阵 <code>matrix</code> 进行初始化</li>
+<li><code>int sumRegion(int row1, int col1, int row2, int col2)</code> 返回<big><small> <strong>左上角</strong></small></big><big><small> <code>(row1, col1)</code> 、<strong>右下角</strong> <code>(row2, col2)</code></small></big> 所描述的子矩阵的元素 <strong>总和</strong> 。</li>
 </ul>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://pic.leetcode-cn.com/1626332422-wUpUHT-image.png"
-        data-srcset="https://pic.leetcode-cn.com/1626332422-wUpUHT-image.png, https://pic.leetcode-cn.com/1626332422-wUpUHT-image.png 1.5x, https://pic.leetcode-cn.com/1626332422-wUpUHT-image.png 2x"
-        data-sizes="auto"
-        alt="https://pic.leetcode-cn.com/1626332422-wUpUHT-image.png"
-        title="img" /></p>
-<pre><code>输入: 
-[&quot;NumMatrix&quot;,&quot;sumRegion&quot;,&quot;sumRegion&quot;,&quot;sumRegion&quot;]
+<p><strong>示例 1：</strong></p>
+<p><img src="https://pic.leetcode-cn.com/1626332422-wUpUHT-image.png" style="width: 200px;" /></p>
+<pre>
+<strong>输入:</strong>
+["NumMatrix","sumRegion","sumRegion","sumRegion"]
 [[[[3,0,1,4,2],[5,6,3,2,1],[1,2,0,1,5],[4,1,0,1,7],[1,0,3,0,5]]],[2,1,4,3],[1,1,2,2],[1,2,2,4]]
-输出: 
+<strong>输出:</strong>
 [null, 8, 11, 12]
 
-解释:
-NumMatrix numMatrix = new NumMatrix([[3,0,1,4,2],[5,6,3,2,1],[1,2,0,1,5],[4,1,0,1,7],[1,0,3,0,5]]]);
+<strong>解释:</strong>
+NumMatrix numMatrix = new NumMatrix([[3,0,1,4,2],[5,6,3,2,1],[1,2,0,1,5],[4,1,0,1,7],[1,0,3,0,5]]);
 numMatrix.sumRegion(2, 1, 4, 3); // return 8 (红色矩形框的元素总和)
 numMatrix.sumRegion(1, 1, 2, 2); // return 11 (绿色矩形框的元素总和)
 numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
-</code></pre>
-<p>提示：</p>
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>m == matrix.length</li>
-<li>n == matrix[i].length</li>
-<li>1 &lt;= m, n &lt;= 200</li>
-<li>-10^5 &lt;= matrix[i][j] &lt;= 10^5</li>
-<li>0 &lt;= row1 &lt;= row2 &lt; m</li>
-<li>0 &lt;= col1 &lt;= col2 &lt; n</li>
-<li>最多调用 10^4 次 sumRegion 方法</li>
+<li><code>m == matrix.length</code></li>
+<li><code>n == matrix[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 200</code><meta charset="UTF-8" /></li>
+<li><code>-10<sup>5</sup> &lt;= matrix[i][j] &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= row1 &lt;= row2 &lt; m</code></li>
+<li><code>0 &lt;= col1 &lt;= col2 &lt; n</code></li>
+<li><meta charset="UTF-8" />最多调用 <code>10<sup>4</sup></code> 次 <code>sumRegion</code> 方法</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0303" title="0303" rel="noopener noreferrer">0303</a> 的升级版，需要用二维前缀和。</p>
@@ -215,14 +211,14 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a>,&nbsp;<a href="/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/leetcode/0305/" class="prev" rel="prev" title="0305：岛屿数量 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0305：岛屿数量 II（★★）</a>
-            <a href="/leetcode/0303/" class="next" rel="next" title="0303：区域和检索 - 数组不可变（★）">0303：区域和检索 - 数组不可变（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0303/" class="next" rel="next" title="0303：区域和检索 - 数组不可变">0303：区域和检索 - 数组不可变<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

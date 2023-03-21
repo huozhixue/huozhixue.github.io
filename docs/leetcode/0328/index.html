@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0328：奇偶链表（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0328：奇偶链表（★★）" />
-<meta property="og:description" content="题目 给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。 第一个节点的索引被认为是 奇数 ， 第二" />
+        <title>0328：奇偶链表（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0328：奇偶链表（★）" />
+<meta property="og:description" content="力扣第 328 题 题目 给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。 第一个节点的索引被认为是" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0328/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-11-24T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0328：奇偶链表（★★）"/>
-<meta name="twitter:description" content="题目 给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。 第一个节点的索引被认为是 奇数 ， 第二"/>
+<meta name="twitter:title" content="0328：奇偶链表（★）"/>
+<meta name="twitter:description" content="力扣第 328 题 题目 给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。 第一个节点的索引被认为是"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0328/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0327/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0329/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0328：奇偶链表（★★）",
+        "headline": "0328：奇偶链表（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0328\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  277 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  282 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0328\/","datePublished": "2015-11-24T00:00:00+08:00","dateModified": "2015-11-24T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0328：奇偶链表（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0328：奇偶链表（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-24">2015-11-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 277 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0328/" class="leancloud_visitors" data-flag-title="0328：奇偶链表（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-24">2015-11-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 282 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0328/" class="leancloud_visitors" data-flag-title="0328：奇偶链表（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,42 +125,29 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。</p>
-<p>第一个节点的索引被认为是 奇数 ， 第二个节点的索引为 偶数 ，以此类推。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/odd-even-linked-list/" target="_blank" rel="noopener noreffer">力扣第 328 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定单链表的头节点 <code>head</code> ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。</p>
+<p><strong>第一个</strong>节点的索引被认为是 <strong>奇数</strong> ， <strong>第二个</strong>节点的索引为 <strong>偶数</strong> ，以此类推。</p>
 <p>请注意，偶数组和奇数组内部的相对顺序应该与输入时保持一致。</p>
-<p>你必须在 O(1) 的额外空间复杂度和 O(n) 的时间复杂度下解决这个问题。</p>
-<p> </p>
-<p>示例 1:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg, https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg"
-        title="img" /></p>
-<pre><code>输入: head = [1,2,3,4,5]
-输出: [1,3,5,2,4]
-</code></pre>
-<p>示例 2:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg, https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg"
-        title="img" /></p>
-<pre><code>输入: head = [2,1,3,5,6,4,7]
-输出: [2,3,6,7,1,5,4]
- 
-</code></pre>
-<p>提示:</p>
+<p>你必须在 <code>O(1)</code> 的额外空间复杂度和 <code>O(n)</code> 的时间复杂度下解决这个问题。</p>
+<p><strong>示例 1:</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg" style="height: 123px; width: 300px;" /></p>
+<pre>
+<strong>输入: </strong>head = [1,2,3,4,5]
+<strong>输出:</strong> [1,3,5,2,4]</pre>
+<p><strong>示例 2:</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg" style="height: 142px; width: 500px;" /></p>
+<pre>
+<strong>输入:</strong> head = [2,1,3,5,6,4,7]
+<strong>输出:</strong> [2,3,6,7,1,5,4]</pre>
+<p><strong>提示:</strong></p>
 <ul>
-<li>n ==  链表中的节点数</li>
-<li>0 &lt;= n &lt;= 10^4</li>
-<li>-10^6 &lt;= Node.val &lt;= 10^6</li>
+<li><code>n == </code> 链表中的节点数</li>
+<li><code>0 &lt;= n &lt;= 10<sup>4</sup></code></li>
+<li><code>-10<sup>6</sup> &lt;= Node.val &lt;= 10<sup>6</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>类似于 <a href="/leetcode/0086" title="0086" rel="noopener noreferrer">0086</a> ，将奇数节点先提出来，按顺序链接，末尾再链接到原链表即可。</p>
@@ -218,7 +205,7 @@
     </div>
 
     <div class="post-nav"><a href="/leetcode/0329/" class="prev" rel="prev" title="0329：矩阵中的最长递增路径（★★）"><i class="fas fa-angle-left fa-fw"></i>0329：矩阵中的最长递增路径（★★）</a>
-            <a href="/leetcode/0327/" class="next" rel="next" title="0327：区间和的个数（★★★）">0327：区间和的个数（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0327/" class="next" rel="next" title="0327：区间和的个数（★★）">0327：区间和的个数（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

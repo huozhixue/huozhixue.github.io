@@ -1,32 +1,39 @@
 # 0386：字典序排数（★）
 
 
-> **第 1 场周赛第 1 题**
+> <u>**[力扣第 386 题](https://leetcode.cn/problems/lexicographical-numbers/)**</u>
 
 ## 题目
 
-给你一个整数 n ，按字典序返回范围 [1, n] 内所有整数。
+<p>给你一个整数 <code>n</code> ，按字典序返回范围 <code>[1, n]</code> 内所有整数。</p>
 
-你必须设计一个时间复杂度为 O(n) 且使用 O(1) 额外空间的算法。
-
- 
-
-示例 1：
-
-	输入：n = 13
-	输出：[1,10,11,12,13,2,3,4,5,6,7,8,9]
-
-示例 2：
-
-	输入：n = 2
-	输出：[1,2]
- 
-
-提示：
-- 1 <= n <= 5 * 10^4
+<p>你必须设计一个时间复杂度为 <code>O(n)</code> 且使用 <code>O(1)</code> 额外空间的算法。</p>
 
 
- 
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 13
+<strong>输出：</strong>[1,10,11,12,13,2,3,4,5,6,7,8,9]
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 2
+<strong>输出：</strong>[1,2]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 5 * 10<sup>4</sup></code></li>
+</ul>
+
+
 ## 分析
 
 ### #1

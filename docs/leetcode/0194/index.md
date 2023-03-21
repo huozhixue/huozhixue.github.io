@@ -1,24 +1,33 @@
-# 0194：转置文件（★★）
+# 0194：转置文件（★）
 
+
+> <u>**[力扣第 194 题](https://leetcode.cn/problems/transpose-file/)**</u>
 
 ## 题目
 
-给定一个文件 file.txt，转置它的内容。
+<p>给定一个文件 <code>file.txt</code>，转置它的内容。</p>
 
-你可以假设每行列数相同，并且每个字段由 ' ' 分隔。
+<p>你可以假设每行列数相同，并且每个字段由 <code>' '</code> 分隔。</p>
 
-示例：
 
-假设 file.txt 文件内容如下：
 
-    name age
-    alice 21
-    ryan 30
+<p><strong>示例：</strong></p>
 
-应当输出：
+<p>假设 <code>file.txt</code> 文件内容如下：</p>
 
-    name alice ryan
-    age 21 30
+<pre>
+name age
+alice 21
+ryan 30
+</pre>
+
+<p>应当输出：</p>
+
+<pre>
+name alice ryan
+age 21 30
+</pre>
+
 
 ## 分析
 

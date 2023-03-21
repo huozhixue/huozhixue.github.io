@@ -1,30 +1,45 @@
-# 0187：重复的DNA序列（★★）
+# 0187：重复的DNA序列（★）
 
+
+> <u>**[力扣第 187 题](https://leetcode.cn/problems/repeated-dna-sequences/)**</u>
 
 ## 题目
 
-DNA序列 由一系列核苷酸组成，缩写为 'A', 'C', 'G' 和 'T'.。
-- 例如，"ACGAATTCCG" 是一个 DNA序列 。
+<p><strong>DNA序列</strong> 由一系列核苷酸组成，缩写为<meta charset="UTF-8" /> <code>'A'</code>, <code>'C'</code>, <code>'G'</code> 和<meta charset="UTF-8" /> <code>'T'</code>.。</p>
 
-在研究 DNA 时，识别 DNA 中的重复序列非常有用。
+<ul>
+<li>例如，<meta charset="UTF-8" /><code>"ACGAATTCCG"</code> 是一个 <strong>DNA序列</strong> 。</li>
+</ul>
 
-给定一个表示 DNA序列 的字符串 s ，返回所有在 DNA 分子中出现不止一次的 长度为 10 的序列(子字符串)。
-你可以按 任意顺序 返回答案。
+<p>在研究 <strong>DNA</strong> 时，识别 DNA 中的重复序列非常有用。</p>
+
+<p>给定一个表示 <strong>DNA序列</strong> 的字符串 <code>s</code> ，返回所有在 DNA 分子中出现不止一次的 <strong>长度为 <code>10</code></strong> 的序列(子字符串)。你可以按 <strong>任意顺序</strong> 返回答案。</p>
 
 
-示例 1：
 
-    输入：s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
-    输出：["AAAAACCCCC","CCCCCAAAAA"]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+<strong>输出：</strong>["AAAAACCCCC","CCCCCAAAAA"]
+</pre>
 
-    输入：s = "AAAAAAAAAAAAA"
-    输出：["AAAAAAAAAA"]
-     
-提示：
-- 0 <= s.length <= 10^5
-- s[i]=='A'、'C'、'G' or 'T'
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "AAAAAAAAAAAAA"
+<strong>输出：</strong>["AAAAAAAAAA"]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+<li><code>s[i]</code><code>==</code><code>'A'</code>、<code>'C'</code>、<code>'G'</code> or <code>'T'</code></li>
+</ul>
+
 
 ## 分析
 

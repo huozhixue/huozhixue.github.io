@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1392：最长快乐前缀（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1392：最长快乐前缀（★★★）" />
-<meta property="og:description" content="第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐前缀" />
+        <title>1392：最长快乐前缀（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1392：最长快乐前缀（★★）" />
+<meta property="og:description" content="力扣第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/1392/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2020-03-22T03:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="1392：最长快乐前缀（★★★）"/>
-<meta name="twitter:description" content="第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐前缀"/>
+<meta name="twitter:title" content="1392：最长快乐前缀（★★）"/>
+<meta name="twitter:description" content="力扣第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1392/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1368/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1408/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1392/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1381/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1406/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1392：最长快乐前缀（★★★）",
+        "headline": "1392：最长快乐前缀（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1392\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  552 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  484 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1392\/","datePublished": "2020-03-22T03:00:00+08:00","dateModified": "2020-03-22T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1392：最长快乐前缀（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1392：最长快乐前缀（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-22">2020-03-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 552 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1392/" class="leancloud_visitors" data-flag-title="1392：最长快乐前缀（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-22">2020-03-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 484 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1392/" class="leancloud_visitors" data-flag-title="1392：最长快乐前缀（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -131,28 +131,27 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 181 场周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-happy-prefix/" target="_blank" rel="noopener noreffer">力扣第 181 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。</p>
-<p>给你一个字符串 s，请你返回它的 最长快乐前缀。如果不存在满足题意的前缀，则返回一个空字符串 &quot;&quot; 。</p>
-<p> </p>
-<p>示例 1：</p>
-<pre><code>输入：s = &quot;level&quot;
-输出：&quot;l&quot;
-解释：不包括 s 自己，一共有 4 个前缀（&quot;l&quot;, &quot;le&quot;, &quot;lev&quot;, &quot;leve&quot;）和 4 个后缀（&quot;l&quot;, &quot;el&quot;, &quot;vel&quot;, &quot;evel&quot;）。
-最长的既是前缀也是后缀的字符串是 &quot;l&quot; 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：s = &quot;ababab&quot;
-输出：&quot;abab&quot;
-解释：&quot;abab&quot; 是最长的既是前缀也是后缀的字符串。题目允许前后缀在原字符串中重叠。
-</code></pre>
-<p> </p>
-<p>提示：</p>
+<p><strong>「快乐前缀」</strong> 是在原字符串中既是 <strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
+<p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串<meta charset="UTF-8" /> <code>""</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>s = "level"
+<strong>输出：</strong>"l"
+<strong>解释：</strong>不包括 s 自己，一共有 4 个前缀（"l", "le", "lev", "leve"）和 4 个后缀（"l", "el", "vel", "evel"）。最长的既是前缀也是后缀的字符串是 "l" 。
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>s = "ababab"
+<strong>输出：</strong>"abab"
+<strong>解释：</strong>"abab" 是最长的既是前缀也是后缀的字符串。题目允许前后缀在原字符串中重叠。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= s.length &lt;= 10^5</li>
-<li>s 只含有小写英文字母</li>
+<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+<li><code>s</code> 只含有小写英文字母</li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -235,14 +234,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/">字符串匹配</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/">字符串匹配</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1408/" class="prev" rel="prev" title="1406：数组中的字符串匹配（★）"><i class="fas fa-angle-left fa-fw"></i>1406：数组中的字符串匹配（★）</a>
-            <a href="/leetcode/1368/" class="next" rel="next" title="1368：使网格图至少有一条有效路径的最小代价（★★）">1368：使网格图至少有一条有效路径的最小代价（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1406/" class="prev" rel="prev" title="1406：石子游戏 III（★★）"><i class="fas fa-angle-left fa-fw"></i>1406：石子游戏 III（★★）</a>
+            <a href="/leetcode/1381/" class="next" rel="next" title="1381：设计一个支持增量操作的栈（★）">1381：设计一个支持增量操作的栈（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

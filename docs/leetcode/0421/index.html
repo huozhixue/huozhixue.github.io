@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0421：数组中两个数的最大异或值（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0421：数组中两个数的最大异或值（★★★）" />
-<meta property="og:description" content="题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果， 其中 0 ≤ i ≤ j &lt; n 。 你能在O(n)的时间解决这个问题吗？ 提示： 1 &lt;= nums.length &lt;= 2 * 10^4 0 &lt;= nums[i] &lt;= 2^31 - 1" />
+        <title>0421：数组中两个数的最大异或值（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0421：数组中两个数的最大异或值（★）" />
+<meta property="og:description" content="力扣第 421 题 题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，其中 0 ≤ i ≤ j &lt; n 。 示例 1： 输入：nums = [3,10,5,25,2,8] 输出：28 解释：最大运算结果是 5 XOR" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0421/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-10-12T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0421：数组中两个数的最大异或值（★★★）"/>
-<meta name="twitter:description" content="题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果， 其中 0 ≤ i ≤ j &lt; n 。 你能在O(n)的时间解决这个问题吗？ 提示： 1 &lt;= nums.length &lt;= 2 * 10^4 0 &lt;= nums[i] &lt;= 2^31 - 1"/>
+<meta name="twitter:title" content="0421：数组中两个数的最大异或值（★）"/>
+<meta name="twitter:description" content="力扣第 421 题 题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，其中 0 ≤ i ≤ j &lt; n 。 示例 1： 输入：nums = [3,10,5,25,2,8] 输出：28 解释：最大运算结果是 5 XOR"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0421/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0416/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0430/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0421/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0416/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0424/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0421：数组中两个数的最大异或值（★★★）",
+        "headline": "0421：数组中两个数的最大异或值（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0421\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  630 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  565 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0421\/","datePublished": "2016-10-12T00:00:00+08:00","dateModified": "2016-10-12T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0421：数组中两个数的最大异或值（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0421：数组中两个数的最大异或值（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-12">2016-10-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 630 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0421/" class="leancloud_visitors" data-flag-title="0421：数组中两个数的最大异或值（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-12">2016-10-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 565 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0421/" class="leancloud_visitors" data-flag-title="0421：数组中两个数的最大异或值（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,36 +126,30 @@
     <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，
-其中 0 ≤ i ≤ j &lt; n 。</p>
-<p>你能在O(n)的时间解决这个问题吗？</p>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank" rel="noopener noreffer">力扣第 421 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> ，返回<em> </em><code>nums[i] XOR nums[j]</code> 的最大运算结果，其中 <code>0 ≤ i ≤ j &lt; n</code> 。</p>
+<div class="original__bRMd">
+<div>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [3,10,5,25,2,8]
+<strong>输出：</strong>28
+<strong>解释：</strong>最大运算结果是 5 XOR 25 = 28.</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [14,70,53,83,49,91,36,80,92,51,66,70]
+<strong>输出：</strong>127
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 2 * 10^4</li>
-<li>0 &lt;= nums[i] &lt;= 2^31 - 1</li>
+<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>5</sup></code></li>
+<li><code>0 &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入：nums = [3,10,5,25,2,8]
-输出：28
-解释：最大运算结果是 5 XOR 25 = 28.
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums = [0]
-输出：0
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：nums = [2,4]
-输出：6
-</code></pre>
-<p>示例 4：</p>
-<pre><code>输入：nums = [8,10,2]
-输出：10
-</code></pre>
-<p>示例 5：</p>
-<pre><code>输入：nums = [14,70,53,83,49,91,36,80,92,51,66,70]
-输出：127
-</code></pre>
+</div>
+</div>
 <h2 id="分析">分析</h2>
 <p>结果的二进制表示最多 31 位。为了使结果最大，应该尽可能让二进制的高位取 1。</p>
 <p>假如结果的最大 k 位前缀为 x，那么最大的 k+1 位前缀应该尽量取 (x&laquo;1)+1，如果取不到，那么就是 x&laquo;1。</p>
@@ -240,14 +234,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0430/" class="prev" rel="prev" title="0430：扁平化多级双向链表（★★）"><i class="fas fa-angle-left fa-fw"></i>0430：扁平化多级双向链表（★★）</a>
-            <a href="/leetcode/0416/" class="next" rel="next" title="0416：分割等和子集（★★）">0416：分割等和子集（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0424/" class="prev" rel="prev" title="0424：替换后的最长重复字符（★）"><i class="fas fa-angle-left fa-fw"></i>0424：替换后的最长重复字符（★）</a>
+            <a href="/leetcode/0416/" class="next" rel="next" title="0416：分割等和子集（★）">0416：分割等和子集（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

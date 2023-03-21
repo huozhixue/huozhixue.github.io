@@ -1,38 +1,51 @@
-# 0730：统计不同回文子序列（★★★）
+# 0730：统计不同回文子序列（★★）
 
 
-> **第 59 场双周赛第 3 题**
+> <u>**[力扣第 59 场双周赛第 3 题](https://leetcode.cn/problems/count-different-palindromic-subsequences/)**</u>
 
 ## 题目
 
-给定一个字符串 s，返回 s 中不同的非空「回文子序列」个数 。
+<p>给定一个字符串 s，返回 <em><code>s</code> 中不同的非空「回文子序列」个数 。</em></p>
 
-通过从 s 中删除 0 个或多个字符来获得子序列。
+<p>通过从 s 中删除 0 个或多个字符来获得子序列。</p>
 
-如果一个字符序列与它反转后的字符序列一致，那么它是「回文字符序列」。
+<p>如果一个字符序列与它反转后的字符序列一致，那么它是「回文字符序列」。</p>
 
-如果有某个 i , 满足 ai != bi ，则两个序列 a1, a2, ... 和 b1, b2, ... 不同。
+<p>如果有某个 <code>i</code> , 满足 <code>a<sub>i</sub> != b<sub>i</sub></code><sub> </sub>，则两个序列 <code>a<sub>1</sub>, a<sub>2</sub>, ...</code> 和 <code>b<sub>1</sub>, b<sub>2</sub>, ...</code> 不同。</p>
 
-注意：
-- 结果可能很大，你需要对 10^9 + 7 取模 。
- 
+<p><strong>注意：</strong></p>
 
-示例 1：
+<ul>
+<li>结果可能很大，你需要对 <code>10<sup>9</sup> + 7</code> 取模 。</li>
+</ul>
 
-    输入：s = 'bccb'
-    输出：6
-    解释：6 个不同的非空回文子字符序列分别为：'b', 'c', 'bb', 'cc', 'bcb', 'bccb'。
-    注意：'bcb' 虽然出现两次但仅计数一次。
-示例 2：
 
-    输入：s = 'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
-    输出：104860361
-    解释：共有 3104860382 个不同的非空回文子序列，104860361 对 10^9 + 7 取模后的值。
- 
 
-提示：
-- 1 <= s.length <= 1000
-- s[i] 仅包含 'a', 'b', 'c' 或 'd' 
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = 'bccb'
+<strong>输出：</strong>6
+<strong>解释：</strong>6 个不同的非空回文子字符序列分别为：'b', 'c', 'bb', 'cc', 'bcb', 'bccb'。
+注意：'bcb' 虽然出现两次但仅计数一次。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = 'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
+<strong>输出：</strong>104860361
+<strong>解释：</strong>共有 3104860382 个不同的非空回文子序列，104860361 对 10<sup>9</sup> + 7 取模后的值。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 1000</code></li>
+<li><code>s[i]</code> 仅包含 <code>'a'</code>, <code>'b'</code>, <code>'c'</code> 或 <code>'d'</code> </li>
+</ul>
 
 
 ## 分析

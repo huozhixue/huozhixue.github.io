@@ -1,36 +1,40 @@
-# 1392：最长快乐前缀（★★★）
+# 1392：最长快乐前缀（★★）
 
 
-> **第 181 场周赛第 4 题**
-
+> <u>**[力扣第 181 场周赛第 4 题](https://leetcode.cn/problems/longest-happy-prefix/)**</u>
 
 ## 题目
 
-「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。
+<p><strong>「快乐前缀」</strong> 是在原字符串中既是 <strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
 
-给你一个字符串 s，请你返回它的 最长快乐前缀。如果不存在满足题意的前缀，则返回一个空字符串 "" 。
-
- 
-
-示例 1：
-
-    输入：s = "level"
-    输出："l"
-    解释：不包括 s 自己，一共有 4 个前缀（"l", "le", "lev", "leve"）和 4 个后缀（"l", "el", "vel", "evel"）。
-    最长的既是前缀也是后缀的字符串是 "l" 。
-示例 2：
-
-    输入：s = "ababab"
-    输出："abab"
-    解释："abab" 是最长的既是前缀也是后缀的字符串。题目允许前后缀在原字符串中重叠。
- 
-
-提示：
-- 1 <= s.length <= 10^5
-- s 只含有小写英文字母
+<p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串<meta charset="UTF-8" /> <code>""</code> 。</p>
 
 
 
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "level"
+<strong>输出：</strong>"l"
+<strong>解释：</strong>不包括 s 自己，一共有 4 个前缀（"l", "le", "lev", "leve"）和 4 个后缀（"l", "el", "vel", "evel"）。最长的既是前缀也是后缀的字符串是 "l" 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "ababab"
+<strong>输出：</strong>"abab"
+<strong>解释：</strong>"abab" 是最长的既是前缀也是后缀的字符串。题目允许前后缀在原字符串中重叠。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+<li><code>s</code> 只含有小写英文字母</li>
+</ul>
 
 
 ## 分析

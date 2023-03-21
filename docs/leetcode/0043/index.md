@@ -1,28 +1,37 @@
-# 0043：字符串相乘（★★）
+# 0043：字符串相乘（★）
 
+
+> <u>**[力扣第 43 题](https://leetcode.cn/problems/multiply-strings/)**</u>
 
 ## 题目
 
-给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+<p>给定两个以字符串形式表示的非负整数 <code>num1</code> 和 <code>num2</code>，返回 <code>num1</code> 和 <code>num2</code> 的乘积，它们的乘积也表示为字符串形式。</p>
 
-注意：不能使用任何内置的 BigInteger 库或直接将输入转换为整数。
+<p><strong>注意：</strong>不能使用任何内置的 BigInteger 库或直接将输入转换为整数。</p>
 
 
-示例 1:
 
-	输入: num1 = "2", num2 = "3"
-	输出: "6"
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> num1 = "2", num2 = "3"
+<strong>输出:</strong> "6"</pre>
 
-	输入: num1 = "123", num2 = "456"
-	输出: "56088"
- 
+<p><strong>示例 2:</strong></p>
 
-提示：
-- 1 <= num1.length, num2.length <= 200
-- num1 和 num2 只能由数字组成。
-- num1 和 num2 都不包含任何前导零，除了数字0本身。
+<pre>
+<strong>输入:</strong> num1 = "123", num2 = "456"
+<strong>输出:</strong> "56088"</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= num1.length, num2.length &lt;= 200</code></li>
+<li><code>num1</code> 和 <code>num2</code> 只能由数字组成。</li>
+<li><code>num1</code> 和 <code>num2</code> 都不包含任何前导零，除了数字0本身。</li>
+</ul>
 
 
 ## 分析 

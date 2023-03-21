@@ -1,41 +1,65 @@
-# 0231：2 的幂（★）
+# 0231：2 的幂
 
+
+> <u>**[力扣第 231 题](https://leetcode.cn/problems/power-of-two/)**</u>
 
 ## 题目
 
-给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。
+<p>给你一个整数 <code>n</code>，请你判断该整数是否是 2 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次方。
+<p>如果存在一个整数 <code>x</code> 使得 <code>n == 2<sup>x</sup></code> ，则认为 <code>n</code> 是 2 的幂次方。</p>
 
 
-示例 1：
 
-    输入：n = 1
-    输出：true
-    解释：20 = 1
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>true
+<strong>解释：</strong>2<sup>0</sup> = 1
+</pre>
 
-    输入：n = 16
-    输出：true
-    解释：24 = 16
+<p><strong>示例 2：</strong></p>
 
-示例 3：
-    
-    输入：n = 3
-    输出：false
+<pre>
+<strong>输入：</strong>n = 16
+<strong>输出：</strong>true
+<strong>解释：</strong>2<sup>4</sup> = 16
+</pre>
 
-示例 4：
+<p><strong>示例 3：</strong></p>
 
-    输入：n = 4
-    输出：true
+<pre>
+<strong>输入：</strong>n = 3
+<strong>输出：</strong>false
+</pre>
 
-示例 5：
+<p><strong>示例 4：</strong></p>
 
-    输入：n = 5
-    输出：false
- 
-提示： -2^31 <= n <= 2^31 - 1 
+<pre>
+<strong>输入：</strong>n = 4
+<strong>输出：</strong>true
+</pre>
+
+<p><strong>示例 5：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 5
+<strong>输出：</strong>false
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> <= n <= 2<sup>31</sup> - 1</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>你能够不使用循环/递归解决此问题吗？</p>
+
 
 ## 分析
 

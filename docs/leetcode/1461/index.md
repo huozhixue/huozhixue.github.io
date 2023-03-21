@@ -1,37 +1,47 @@
-# 1461：检查一个字符串是否包含所有长度为 K 的二进制子串（★★）
+# 1461：检查一个字符串是否包含所有长度为 K 的二进制子串（★）
 
 
-> **第 27 场双周赛第 2 题**
+> <u>**[力扣第 27 场双周赛第 2 题](https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)**</u>
 
 ## 题目
 
-给你一个二进制字符串 s 和一个整数 k 。如果所有长度为 k 的二进制字符串都是 s 的子串，
-请返回 true ，否则请返回 false 。
+<p>给你一个二进制字符串 <code>s</code> 和一个整数 <code>k</code> 。如果所有长度为 <code>k</code> 的二进制字符串都是 <code>s</code> 的子串，请返回 <code>true</code> ，否则请返回 <code>false</code> 。</p>
 
- 
 
-示例 1：
 
-    输入：s = "00110110", k = 2
-    输出：true
-    解释：长度为 2 的二进制串包括 "00"，"01"，"10" 和 "11"。
-    它们分别是 s 中下标为 0，1，3，2 开始的长度为 2 的子串。
-示例 2：
-    
-    输入：s = "0110", k = 1
-    输出：true
-    解释：长度为 1 的二进制串包括 "0" 和 "1"，显然它们都是 s 的子串。
-示例 3：
+<p><strong>示例 1：</strong></p>
 
-    输入：s = "0110", k = 2
-    输出：false
-    解释：长度为 2 的二进制串 "00" 没有出现在 s 中。
- 
+<pre>
+<strong>输入：</strong>s = "00110110", k = 2
+<strong>输出：</strong>true
+<strong>解释：</strong>长度为 2 的二进制串包括 "00"，"01"，"10" 和 "11"。它们分别是 s 中下标为 0，1，3，2 开始的长度为 2 的子串。
+</pre>
 
-提示：
-- 1 <= s.length <= 5 * 10^5
-- s[i] 不是'0' 就是 '1'
-- 1 <= k <= 20
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "0110", k = 1
+<strong>输出：</strong>true
+<strong>解释：</strong>长度为 1 的二进制串包括 "0" 和 "1"，显然它们都是 s 的子串。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "0110", k = 2
+<strong>输出：</strong>false
+<strong>解释：</strong>长度为 2 的二进制串 "00" 没有出现在 s 中。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 5 * 10<sup>5</sup></code></li>
+<li><code>s[i]</code> 不是<code>'0'</code> 就是 <code>'1'</code></li>
+<li><code>1 &lt;= k &lt;= 20</code></li>
+</ul>
 
 
 ## 分析

@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0435：无重叠区间（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0435：无重叠区间（★★）" />
-<meta property="og:description" content="题目 给定一个区间的集合 intervals ，其中 intervals[i] = [starti, endi] 。 返回 需要移除区间的最小数量，使剩余区间互不重叠 。 示例 1: 输入: intervals = [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，剩下的区间" />
+        <title>0435：无重叠区间（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0435：无重叠区间（★）" />
+<meta property="og:description" content="力扣第 435 题 题目 给定一个区间的集合 intervals ，其中 intervals[i] = [starti, endi] 。返回 需要移除区间的最小数量，使剩余区间互不重叠 。 示例 1: 输入: intervals = [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0435/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-10-26T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0435：无重叠区间（★★）"/>
-<meta name="twitter:description" content="题目 给定一个区间的集合 intervals ，其中 intervals[i] = [starti, endi] 。 返回 需要移除区间的最小数量，使剩余区间互不重叠 。 示例 1: 输入: intervals = [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，剩下的区间"/>
+<meta name="twitter:title" content="0435：无重叠区间（★）"/>
+<meta name="twitter:description" content="力扣第 435 题 题目 给定一个区间的集合 intervals ，其中 intervals[i] = [starti, endi] 。返回 需要移除区间的最小数量，使剩余区间互不重叠 。 示例 1: 输入: intervals = [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0435/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0446/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0435/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0437/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0435：无重叠区间（★★）",
+        "headline": "0435：无重叠区间（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0435\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  567 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  572 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0435\/","datePublished": "2016-10-26T00:00:00+08:00","dateModified": "2016-10-26T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0435：无重叠区间（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0435：无重叠区间（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-26">2016-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 567 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0435/" class="leancloud_visitors" data-flag-title="0435：无重叠区间（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-26">2016-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 572 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0435/" class="leancloud_visitors" data-flag-title="0435：无重叠区间（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,31 +130,34 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个区间的集合 intervals ，其中 intervals[i] = [starti, endi] 。
-返回 需要移除区间的最小数量，使剩余区间互不重叠 。</p>
-<p> </p>
-<p>示例 1:</p>
-<pre><code>输入: intervals = [[1,2],[2,3],[3,4],[1,3]]
-输出: 1
-解释: 移除 [1,3] 后，剩下的区间没有重叠。
-</code></pre>
-<p>示例 2:</p>
-<pre><code>输入: intervals = [ [1,2], [1,2], [1,2] ]
-输出: 2
-解释: 你需要移除两个 [1,2] 来使剩下的区间没有重叠。
-</code></pre>
-<p>示例 3:</p>
-<pre><code>输入: intervals = [ [1,2], [2,3] ]
-输出: 0
-解释: 你不需要移除任何区间，因为它们已经是无重叠的了。
-</code></pre>
-<p> </p>
-<p>提示:</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/non-overlapping-intervals/" target="_blank" rel="noopener noreffer">力扣第 435 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个区间的集合 <code>intervals</code> ，其中 <code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 。返回 <em>需要移除区间的最小数量，使剩余区间互不重叠 </em>。</p>
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入:</strong> intervals = [[1,2],[2,3],[3,4],[1,3]]
+<strong>输出:</strong> 1
+<strong>解释:</strong> 移除 [1,3] 后，剩下的区间没有重叠。
+</pre>
+<p><strong>示例 2:</strong></p>
+<pre>
+<strong>输入:</strong> intervals = [ [1,2], [1,2], [1,2] ]
+<strong>输出:</strong> 2
+<strong>解释:</strong> 你需要移除两个 [1,2] 来使剩下的区间没有重叠。
+</pre>
+<p><strong>示例 3:</strong></p>
+<pre>
+<strong>输入:</strong> intervals = [ [1,2], [2,3] ]
+<strong>输出:</strong> 0
+<strong>解释:</strong> 你不需要移除任何区间，因为它们已经是无重叠的了。
+</pre>
+<p><strong>提示:</strong></p>
 <ul>
-<li>1 &lt;= intervals.length &lt;= 10^5</li>
-<li>intervals[i].length == 2</li>
-<li>-5 * 10^4 &lt;= starti &lt; endi &lt;= 5 * 10^4</li>
+<li><code>1 &lt;= intervals.length &lt;= 10<sup>5</sup></code></li>
+<li><code>intervals[i].length == 2</code></li>
+<li><code>-5 * 10<sup>4</sup> &lt;= start<sub>i</sub> &lt; end<sub>i</sub> &lt;= 5 * 10<sup>4</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -237,14 +240,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0446/" class="prev" rel="prev" title="0446：等差数列划分 II - 子序列（★★）"><i class="fas fa-angle-left fa-fw"></i>0446：等差数列划分 II - 子序列（★★）</a>
-            <a href="/leetcode/0432/" class="next" rel="next" title="0432：全 O(1) 的数据结构（★★★★）">0432：全 O(1) 的数据结构（★★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0437/" class="prev" rel="prev" title="0437：路径总和 III（★）"><i class="fas fa-angle-left fa-fw"></i>0437：路径总和 III（★）</a>
+            <a href="/leetcode/0432/" class="next" rel="next" title="0432：全 O(1) 的数据结构（★★）">0432：全 O(1) 的数据结构（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

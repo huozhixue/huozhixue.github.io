@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0718：最长重复子数组（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0718：最长重复子数组（★★）" />
-<meta property="og:description" content="第 56 场双周赛第 3 题 题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释：长" />
+        <title>0718：最长重复子数组（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0718：最长重复子数组（★）" />
+<meta property="og:description" content="力扣第 56 场双周赛第 3 题 题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0718/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2017-10-29T01:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0718：最长重复子数组（★★）"/>
-<meta name="twitter:description" content="第 56 场双周赛第 3 题 题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释：长"/>
+<meta name="twitter:title" content="0718：最长重复子数组（★）"/>
+<meta name="twitter:description" content="力扣第 56 场双周赛第 3 题 题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0718/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0712/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0721/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0718/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0714/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0720/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0718：最长重复子数组（★★）",
+        "headline": "0718：最长重复子数组（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0718\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  544 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  546 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0718\/","datePublished": "2017-10-29T01:00:00+08:00","dateModified": "2017-10-29T01:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0718：最长重复子数组（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0718：最长重复子数组（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-10-29">2017-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 544 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0718/" class="leancloud_visitors" data-flag-title="0718：最长重复子数组（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-10-29">2017-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 546 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0718/" class="leancloud_visitors" data-flag-title="0718：最长重复子数组（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -131,24 +131,25 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 56 场双周赛第 3 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/" target="_blank" rel="noopener noreffer">力扣第 56 场双周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。</p>
-<p>示例 1：</p>
-<pre><code>输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
-输出：3
-解释：长度最长的公共子数组是 [3,2,1] 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]
-输出：5
- 
-</code></pre>
-<p>提示：</p>
+<p>给两个整数数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>两个数组中 <strong>公共的</strong> 、长度最长的子数组的长度 </em>。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+<strong>输出：</strong>3
+<strong>解释：</strong>长度最长的公共子数组是 [3,2,1] 。
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]
+<strong>输出：</strong>5
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums1.length, nums2.length &lt;= 1000</li>
-<li>0 &lt;= nums1[i], nums2[i] &lt;= 100</li>
+<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
+<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 100</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -239,14 +240,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">滑动窗口</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0721/" class="prev" rel="prev" title="0721：账户合并（★★）"><i class="fas fa-angle-left fa-fw"></i>0721：账户合并（★★）</a>
-            <a href="/leetcode/0712/" class="next" rel="next" title="0712： 两个字符串的最小ASCII删除和（★★）">0712： 两个字符串的最小ASCII删除和（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0720/" class="prev" rel="prev" title="0720：词典中最长的单词（★）"><i class="fas fa-angle-left fa-fw"></i>0720：词典中最长的单词（★）</a>
+            <a href="/leetcode/0714/" class="next" rel="next" title="0714：买卖股票的最佳时机含手续费（★）">0714：买卖股票的最佳时机含手续费（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

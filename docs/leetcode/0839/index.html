@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0839：相似字符串组（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0839：相似字符串组（★★）" />
-<meta property="og:description" content="第 85 场周赛第 4 题 题目 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。 如果这两个字符串本身是相等的，" />
+<meta property="og:description" content="力扣第 85 场周赛第 4 题 题目 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。如果这两个字符串本身是相等" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0839/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2018-05-20T03:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0839：相似字符串组（★★）"/>
-<meta name="twitter:description" content="第 85 场周赛第 4 题 题目 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。 如果这两个字符串本身是相等的，"/>
+<meta name="twitter:description" content="力扣第 85 场周赛第 4 题 题目 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。如果这两个字符串本身是相等"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0839/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0835/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0841/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0839\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  597 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  527 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0839\/","datePublished": "2018-05-20T03:00:00+08:00","dateModified": "2018-05-20T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0839：相似字符串组（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-20">2018-05-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 597 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-20">2018-05-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 527 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0839/" class="leancloud_visitors" data-flag-title="0839：相似字符串组（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,33 +126,30 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 85 场周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/similar-string-groups/" target="_blank" rel="noopener noreffer">力扣第 85 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。
-如果这两个字符串本身是相等的，那它们也是相似的。</p>
-<p>例如，&ldquo;tars&rdquo; 和 &ldquo;rats&rdquo; 是相似的 (交换 0 与 2 的位置)； &ldquo;rats&rdquo; 和 &ldquo;arts&rdquo; 也是相似的，
-但是 &ldquo;star&rdquo; 不与 &ldquo;tars&rdquo;，&ldquo;rats&rdquo;，或 &ldquo;arts&rdquo; 相似。</p>
-<p>总之，它们通过相似性形成了两个关联组：{&ldquo;tars&rdquo;, &ldquo;rats&rdquo;, &ldquo;arts&rdquo;} 和 {&ldquo;star&rdquo;}。
-注意，&ldquo;tars&rdquo; 和 &ldquo;arts&rdquo; 是在同一组中，即使它们并不相似。形式上，对每个组而言，
-要确定一个单词在组中，只需要这个词和该组中至少一个单词相似。</p>
-<p>给你一个字符串列表 strs。列表中的每个字符串都是 strs 中其它所有字符串的一个字母异位词。
-请问 strs 中有多少个相似字符串组？</p>
-<p>提示：</p>
+<p>如果交换字符串 <code>X</code> 中的两个不同位置的字母，使得它和字符串 <code>Y</code> 相等，那么称 <code>X</code> 和 <code>Y</code> 两个字符串相似。如果这两个字符串本身是相等的，那它们也是相似的。</p>
+<p>例如，<code>"tars"</code> 和 <code>"rats"</code> 是相似的 (交换 <code>0</code> 与 <code>2</code> 的位置)； <code>"rats"</code> 和 <code>"arts"</code> 也是相似的，但是 <code>"star"</code> 不与 <code>"tars"</code>，<code>"rats"</code>，或 <code>"arts"</code> 相似。</p>
+<p>总之，它们通过相似性形成了两个关联组：<code>{"tars", "rats", "arts"}</code> 和 <code>{"star"}</code>。注意，<code>"tars"</code> 和 <code>"arts"</code> 是在同一组中，即使它们并不相似。形式上，对每个组而言，要确定一个单词在组中，只需要这个词和该组中至少一个单词相似。</p>
+<p>给你一个字符串列表 <code>strs</code>。列表中的每个字符串都是 <code>strs</code> 中其它所有字符串的一个字母异位词。请问 <code>strs</code> 中有多少个相似字符串组？</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>strs = ["tars","rats","arts","star"]
+<strong>输出：</strong>2
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>strs = ["omv","ovm"]
+<strong>输出：</strong>1
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= strs.length &lt;= 300</li>
-<li>1 &lt;= strs[i].length &lt;= 300</li>
-<li>strs[i] 只包含小写字母。</li>
-<li>strs 中的所有单词都具有相同的长度，且是彼此的字母异位词。</li>
+<li><code>1 &lt;= strs.length &lt;= 300</code></li>
+<li><code>1 &lt;= strs[i].length &lt;= 300</code></li>
+<li><code>strs[i]</code> 只包含小写字母。</li>
+<li><code>strs</code> 中的所有单词都具有相同的长度，且是彼此的字母异位词。</li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入：strs = [&quot;tars&quot;,&quot;rats&quot;,&quot;arts&quot;,&quot;star&quot;]
-输出：2
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：strs = [&quot;omv&quot;,&quot;ovm&quot;]
-输出：1
-</code></pre>
 <h2 id="分析">分析</h2>
 <p>典型的并查集应用。将相似的字符串连通，分到一组，最后统计有多少组即可。</p>
 <h2 id="解答">解答</h2>
@@ -230,14 +227,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/leetcode/0841/" class="prev" rel="prev" title="0841：钥匙和房间（★）"><i class="fas fa-angle-left fa-fw"></i>0841：钥匙和房间（★）</a>
-            <a href="/leetcode/0835/" class="next" rel="next" title="0835：图像重叠（★★）">0835：图像重叠（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0835/" class="next" rel="next" title="0835：图像重叠（★）">0835：图像重叠（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

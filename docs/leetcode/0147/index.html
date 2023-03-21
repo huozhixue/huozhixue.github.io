@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0147：对链表进行插入排序（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0147：对链表进行插入排序（★★）" />
-<meta property="og:description" content="题目 给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。 插入排序 算法的步骤: 插入排序是迭代的，每次只移动一个元素，直到所有" />
+        <title>0147：对链表进行插入排序（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0147：对链表进行插入排序（★）" />
+<meta property="og:description" content="力扣第 147 题 题目 给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。 插入排序 算法的步骤: 插入排序是迭代的，每次只移动一个元素" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0147/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-05-27T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0147：对链表进行插入排序（★★）"/>
-<meta name="twitter:description" content="题目 给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。 插入排序 算法的步骤: 插入排序是迭代的，每次只移动一个元素，直到所有"/>
+<meta name="twitter:title" content="0147：对链表进行插入排序（★）"/>
+<meta name="twitter:description" content="力扣第 147 题 题目 给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。 插入排序 算法的步骤: 插入排序是迭代的，每次只移动一个元素"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0147/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0146/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0148/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0147：对链表进行插入排序（★★）",
+        "headline": "0147：对链表进行插入排序（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0147\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  439 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  444 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0147\/","datePublished": "2015-05-27T00:00:00+08:00","dateModified": "2015-05-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0147：对链表进行插入排序（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0147：对链表进行插入排序（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-27">2015-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 439 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0147/" class="leancloud_visitors" data-flag-title="0147：对链表进行插入排序（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-27">2015-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 444 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0147/" class="leancloud_visitors" data-flag-title="0147：对链表进行插入排序（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,54 +125,35 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。</p>
-<p>插入排序 算法的步骤:</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/insertion-sort-list/" target="_blank" rel="noopener noreffer">力扣第 147 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定单个链表的头<meta charset="UTF-8" /> <code>head</code> ，使用 <strong>插入排序</strong> 对链表进行排序，并返回 <em>排序后链表的头</em> 。</p>
+<p><strong>插入排序</strong> 算法的步骤:</p>
 <ol>
 <li>插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。</li>
 <li>每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。</li>
 <li>重复直到所有输入数据插入完为止。</li>
 </ol>
-<p>下面是插入排序算法的一个图形示例。部分排序的列表(黑色)最初只包含列表中的第一个元素。
-每次迭代时，从输入数据中删除一个元素(红色)，并就地插入已排序的列表中。</p>
+<p>下面是插入排序算法的一个图形示例。部分排序的列表(黑色)最初只包含列表中的第一个元素。每次迭代时，从输入数据中删除一个元素(红色)，并就地插入已排序的列表中。</p>
 <p>对链表进行插入排序。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif"
-        data-srcset="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif, https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif 1.5x, https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif 2x"
-        data-sizes="auto"
-        alt="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif"
-        title="img" /></p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/04/sort1linked-list.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/04/sort1linked-list.jpg, https://assets.leetcode.com/uploads/2021/03/04/sort1linked-list.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/04/sort1linked-list.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/04/sort1linked-list.jpg"
-        title="img" /></p>
-<pre><code>输入: head = [4,2,1,3]
-输出: [1,2,3,4]
-</code></pre>
-<p>示例 2：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/04/sort2linked-list.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/04/sort2linked-list.jpg, https://assets.leetcode.com/uploads/2021/03/04/sort2linked-list.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/04/sort2linked-list.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/04/sort2linked-list.jpg"
-        title="img" /></p>
-<pre><code>输入: head = [-1,5,3,4,0]
-输出: [-1,0,3,4,5]
-</code></pre>
-<p> </p>
-<p>提示：</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" /></p>
+<p><strong>示例 1：</strong></p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/03/04/sort1linked-list.jpg" /></p>
+<pre>
+<strong>输入:</strong> head = [4,2,1,3]
+<strong>输出:</strong> [1,2,3,4]</pre>
+<p><strong>示例 2：</strong></p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/03/04/sort2linked-list.jpg" /></p>
+<pre>
+<strong>输入:</strong> head = [-1,5,3,4,0]
+<strong>输出:</strong> [-1,0,3,4,5]</pre>
+<p><strong>提示：</strong></p>
+<p><meta charset="UTF-8" /></p>
 <ul>
-<li>列表中的节点数在 [1, 5000]范围内</li>
-<li>-5000 &lt;= Node.val &lt;= 5000</li>
+<li>列表中的节点数在 <code>[1, 5000]</code>范围内</li>
+<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>维护两个指针 tail，cur 分别指向 已排序的结尾节点 和 当前要排序的节点。</p>
@@ -240,8 +221,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0148/" class="prev" rel="prev" title="0148：排序链表（★★）"><i class="fas fa-angle-left fa-fw"></i>0148：排序链表（★★）</a>
-            <a href="/leetcode/0146/" class="next" rel="next" title="0146：LRU 缓存机制（★★）">0146：LRU 缓存机制（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0148/" class="prev" rel="prev" title="0148：排序链表（★）"><i class="fas fa-angle-left fa-fw"></i>0148：排序链表（★）</a>
+            <a href="/leetcode/0146/" class="next" rel="next" title="0146：LRU 缓存（★）">0146：LRU 缓存（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

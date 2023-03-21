@@ -1,29 +1,41 @@
 # 0109：有序链表转换二叉搜索树（★）
 
 
+> <u>**[力扣第 109 题](https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/)**</u>
+
 ## 题目
 
-给定一个单链表的头节点  head ，其中的元素 按升序排序 ，将其转换为高度平衡的二叉搜索树。
+<p>给定一个单链表的头节点  <code>head</code> ，其中的元素 <strong>按升序排序</strong> ，将其转换为高度平衡的二叉搜索树。</p>
 
-本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差不超过 1。
+<p>本题中，一个高度平衡二叉树是指一个二叉树<em>每个节点 </em>的左右两个子树的高度差不超过 1。</p>
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2020/08/17/linked.jpg)
 
-	输入: head = [-10,-3,0,5,9]
-	输出: [0,-3,9,-10,null,5]
-	解释: 一个可能的答案是[0，-3,9，-10,null,5]，它表示所示的高度平衡的二叉搜索树。
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<p><img src="https://assets.leetcode.com/uploads/2020/08/17/linked.jpg" style="height: 388px; width: 500px;" /></p>
 
-	输入: head = []
-	输出: []
-	 
+<pre>
+<strong>输入:</strong> head = [-10,-3,0,5,9]
+<strong>输出:</strong> [0,-3,9,-10,null,5]
+<strong>解释:</strong> 一个可能的答案是[0，-3,9，-10,null,5]，它表示所示的高度平衡的二叉搜索树。
+</pre>
 
-提示:
-- head 中的节点数在[0, 2 * 10^4] 范围内
-- -10^5 <= Node.val <= 10^5
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> head = []
+<strong>输出:</strong> []
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>head</code> 中的节点数在<code>[0, 2 * 10<sup>4</sup>]</code> 范围内</li>
+<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
+</ul>
 
 
 ## 分析

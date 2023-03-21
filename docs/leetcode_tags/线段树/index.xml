@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>线段树 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+        <description>线段树 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Feb 2022 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="self" type="application/rss+xml" /><item>
+    <title>2179：统计数组中好三元组数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2179/</link>
+    <pubDate>Sat, 19 Feb 2022 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2179/</guid>
+    <description><![CDATA[力扣第 72 场双周赛第 4 题 题目 给你两个下标从 0 开始且长度为 n 的整数数组 nums1 和 nums2 ，两者都是 [0, 1, ..., n - 1] 的 排列 。 好三元组 指的是 3 个 互不相同 的值，且它们]]></description>
+</item><item>
+    <title>1649：通过指令创建有序数组（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1649/</link>
+    <pubDate>Sun, 08 Nov 2020 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1649/</guid>
+    <description><![CDATA[力扣第 214 场周赛第 4 题 题目 给你一个整数数组 instructions ，你需要根据 instructions 中的元素创建一个有序数组。一开始你有一个空的数组 nums ，你需要 从左到右 遍历 instructions 中的元素，将]]></description>
+</item><item>
+    <title>0850：矩形面积 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0850/</link>
+    <pubDate>Sun, 10 Jun 2018 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0850/</guid>
+    <description><![CDATA[力扣第 88 场周赛第 4 题 题目 我们给出了一个（轴对齐的）二维矩形列表 rectangles 。 对于 rectangle[i] = [xi1, yi1, xi2, yi2]，表示第 i 个矩形的坐标， (xi1, yi1) 是该矩形 左下角 的坐标， (xi2,]]></description>
+</item><item>
+    <title>0673：最长递增子序列的个数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0673/</link>
+    <pubDate>Sun, 10 Sep 2017 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0673/</guid>
+    <description><![CDATA[力扣第 49 场双周赛第 4 题 题目 给定一个未排序的整数数组 nums ， 返回最长递增子序列的个数 。 注意 这个数列必须是 严格 递增的。 示例 1: 输入: [1,3,5,4,7] 输出: 2 解释: 有]]></description>
+</item><item>
+    <title>0493：翻转对（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0493/</link>
+    <pubDate>Sun, 18 Dec 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0493/</guid>
+    <description><![CDATA[力扣第 493 题 题目 给定一个数组 nums ，如果 i &lt; j 且 nums[i] &gt; 2*nums[j] 我们就将 (i, j) 称作一个重要翻转对。 你需要返回给定数组中的重要翻转对的数量。 示例 1: 输入: [1,3,2,3,1] 输出:]]></description>
+</item><item>
+    <title>0406：根据身高重建队列（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0406/</link>
+    <pubDate>Sun, 25 Sep 2016 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0406/</guid>
+    <description><![CDATA[力扣第 6 场周赛第 3 题 题目 假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] = [hi, ki] 表示第 i 个人的身高为 hi]]></description>
+</item><item>
+    <title>0327：区间和的个数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0327/</link>
+    <pubDate>Mon, 23 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0327/</guid>
+    <description><![CDATA[力扣第 327 题 题目 给你一个整数数组 nums 以及两个整数 lower 和 upper 。求数组中，值位于范围 [lower, upper] （包含 lower 和 upper）之内的 区间和的个数 。 区间和 S(i, j) 表示在 nums 中，]]></description>
+</item><item>
+    <title>0315：计算右侧小于当前元素的个数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0315/</link>
+    <pubDate>Wed, 11 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0315/</guid>
+    <description><![CDATA[力扣第 315 题 题目 给你一个整数数组 nums ，按要求返回一个新数组 counts 。数组 counts 有该性质： counts[i] 的值是 nums[i] 右侧小于 nums[i] 的元素的数量。 示例 1： 输入：nums = [5,2,6,1] 输出：]]></description>
+</item><item>
+    <title>0307：区域和检索 - 数组可修改（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0307/</link>
+    <pubDate>Tue, 03 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0307/</guid>
+    <description><![CDATA[力扣第 307 题 题目 给你一个数组 nums ，请你完成两类查询。 其中一类查询要求 更新 数组 nums 下标对应的值 另一类查询要求返回数组 nums 中索引 left 和索引 right 之间（ 包含 ）的]]></description>
+</item><item>
+    <title>0218：天际线问题（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0218/</link>
+    <pubDate>Thu, 06 Aug 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0218/</guid>
+    <description><![CDATA[力扣第 218 题 题目 城市的 天际线 是从远处观看该城市中所有建筑物形成的轮廓的外部轮廓。给你所有建筑物的位置和高度，请返回 由这些建筑物形成的 天际线 。 每]]></description>
+</item></channel>
+</rss>

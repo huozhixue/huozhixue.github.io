@@ -1,26 +1,42 @@
 # 0242：有效的字母异位词
 
 
+> <u>**[力扣第 242 题](https://leetcode.cn/problems/valid-anagram/)**</u>
+
 ## 题目
 
-给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+<p>给定两个字符串 <code><em>s</em></code> 和 <code><em>t</em></code> ，编写一个函数来判断 <code><em>t</em></code> 是否是 <code><em>s</em></code> 的字母异位词。</p>
 
-注意：若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。
+<p><strong>注意：</strong>若 <code><em>s</em></code> 和 <code><em>t</em></code><em> </em>中每个字符出现的次数都相同，则称 <code><em>s</em></code> 和 <code><em>t</em></code><em> </em>互为字母异位词。</p>
 
 
-示例 1:
 
-	输入: s = "anagram", t = "nagaram"
-	输出: true
-	
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入: s = "rat", t = "car"
-	输出: false
+<pre>
+<strong>输入:</strong> <em>s</em> = "anagram", <em>t</em> = "nagaram"
+<strong>输出:</strong> true
+</pre>
 
-提示:
-- 1 <= s.length, t.length <= 5 * 10^4
-- s 和 t 仅包含小写字母
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> <em>s</em> = "rat", <em>t</em> = "car"
+<strong>输出: </strong>false</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 <= s.length, t.length <= 5 * 10<sup>4</sup></code></li>
+<li><code>s</code> 和 <code>t</code> 仅包含小写字母</li>
+</ul>
+
+
+
+<p><strong>进阶: </strong>如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？</p>
+
 
 ## 分析
 

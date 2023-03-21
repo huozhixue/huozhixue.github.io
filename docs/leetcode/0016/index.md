@@ -1,33 +1,44 @@
-# 0016：最接近的三数之和（★★）
+# 0016：最接近的三数之和（★）
 
+
+> <u>**[力扣第 16 题](https://leetcode.cn/problems/3sum-closest/)**</u>
 
 ## 题目
 
-给你一个长度为 n 的整数数组 nums 和 一个目标值 target。请你从 nums 中选出三个整数，使它们的和与 target 最接近。
+<p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code><em> </em>和 一个目标值 <code>target</code>。请你从 <code>nums</code><em> </em>中选出三个整数，使它们的和与 <code>target</code> 最接近。</p>
 
-返回这三个数的和。
+<p>返回这三个数的和。</p>
 
-假定每组输入只存在恰好一个解。
+<p>假定每组输入只存在恰好一个解。</p>
 
 
-示例 1：
 
-	输入：nums = [-1,2,1,-4], target = 1
-	输出：2
-	解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums = [-1,2,1,-4], target = 1
+<strong>输出：</strong>2
+<strong>解释：</strong>与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
+</pre>
 
-	输入：nums = [0,0,0], target = 1
-	输出：0
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 3 <= nums.length <= 1000
-- -1000 <= nums[i] <= 1000
-- -10^4 <= target <= 10^4
+<pre>
+<strong>输入：</strong>nums = [0,0,0], target = 1
+<strong>输出：</strong>0
+</pre>
 
-     
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>3 &lt;= nums.length &lt;= 1000</code></li>
+<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
+<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+
 ## 分析
 
 ### #1

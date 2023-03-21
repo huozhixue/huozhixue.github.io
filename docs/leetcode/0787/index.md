@@ -1,49 +1,58 @@
-# 0787：K 站中转内最便宜的航班（★★）
+# 0787：K 站中转内最便宜的航班（★）
 
 
-> **第 72 场双周赛第 3 题**
+> <u>**[力扣第 72 场双周赛第 3 题](https://leetcode.cn/problems/cheapest-flights-within-k-stops/)**</u>
 
 ## 题目
 
-有 n 个城市通过 m 个航班连接。每个航班都从城市 u 开始，以价格 w 抵达 v。
+<p>有 <code>n</code> 个城市通过一些航班连接。给你一个数组 <code>flights</code> ，其中 <code>flights[i] = [from<sub>i</sub>, to<sub>i</sub>, price<sub>i</sub>]</code> ，表示该航班都从城市 <code>from<sub>i</sub></code> 开始，以价格 <code>price<sub>i</sub></code> 抵达 <code>to<sub>i</sub></code>。</p>
 
-现在给定所有的城市和航班，以及出发城市 src 和目的地 dst，你的任务是找到从 src 到 dst 最多经过 k 站中转的最便宜的价格。 
-如果没有这样的路线，则输出 -1。
+<p>现在给定所有的城市和航班，以及出发城市 <code>src</code> 和目的地 <code>dst</code>，你的任务是找到出一条最多经过 <code>k</code> 站中转的路线，使得从 <code>src</code> 到 <code>dst</code> 的 <strong>价格最便宜</strong> ，并返回该价格。 如果不存在这样的路线，则输出 <code>-1</code>。</p>
 
- 
-示例 1：
 
-	输入: 
-	n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
-	src = 0, dst = 2, k = 1
-	输出: 200
-	解释: 
-	城市航班图如下
 
-![img](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png)
+<p><strong>示例 1：</strong></p>
 
-	从城市 0 到城市 2 在 1 站中转以内的最便宜价格是 200，如图中红色所示。
+<pre>
+<strong>输入:</strong>
+n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
+src = 0, dst = 2, k = 1
+<strong>输出:</strong> 200
+<strong>解释:</strong>
+城市航班图如下
+<img alt="" src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png" style="height: 180px; width: 246px;" />
 
-示例 2：
+从城市 0 到城市 2 在 1 站中转以内的最便宜价格是 200，如图中红色所示。</pre>
 
-	输入: 
-	n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
-	src = 0, dst = 2, k = 0
-	输出: 500
-	解释: 
-	城市航班图如下
+<p><strong>示例 2：</strong></p>
 
-![img](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png)
+<pre>
+<strong>输入:</strong>
+n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
+src = 0, dst = 2, k = 0
+<strong>输出:</strong> 500
+<strong>解释:</strong>
+城市航班图如下
+<img alt="" src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png" style="height: 180px; width: 246px;" />
 
-	从城市 0 到城市 2 在 0 站中转以内的最便宜价格是 500，如图中蓝色所示。
+从城市 0 到城市 2 在 0 站中转以内的最便宜价格是 500，如图中蓝色所示。</pre>
 
-提示：
-- n 范围是 [1, 100]，城市标签从 0 到 n - 1
-- 航班数量范围是 [0, n * (n - 1) / 2]
-- 每个航班的格式 (src, dst, price)
-- 每个航班的价格范围是 [1, 10000]
-- k 范围是 [0, n - 1]
-- 航班没有重复，且不存在自环
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 100</code></li>
+<li><code>0 &lt;= flights.length &lt;= (n * (n - 1) / 2)</code></li>
+<li><code>flights[i].length == 3</code></li>
+<li><code>0 &lt;= from<sub>i</sub>, to<sub>i</sub> &lt; n</code></li>
+<li><code>from<sub>i</sub> != to<sub>i</sub></code></li>
+<li><code>1 &lt;= price<sub>i</sub> &lt;= 10<sup>4</sup></code></li>
+<li>航班没有重复，且不存在自环</li>
+<li><code>0 &lt;= src, dst, k &lt; n</code></li>
+<li><code>src != dst</code></li>
+</ul>
+
 
 ## 分析
 

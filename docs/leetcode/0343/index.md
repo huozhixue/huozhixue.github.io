@@ -1,27 +1,38 @@
-# 0343：整数拆分（★★）
+# 0343：整数拆分（★）
 
+
+> <u>**[力扣第 343 题](https://leetcode.cn/problems/integer-break/)**</u>
 
 ## 题目
 
-给定一个正整数 n，将其拆分为至少两个正整数的和，并使这些整数的乘积最大化。 
+<p>给定一个正整数 <code>n</code> ，将其拆分为 <code>k</code> 个 <strong>正整数</strong> 的和（ <code>k &gt;= 2</code> ），并使这些整数的乘积最大化。</p>
 
-返回你可以获得的最大乘积。
+<p>返回 <em>你可以获得的最大乘积</em> 。</p>
 
 
-示例 1:
 
-    输入: 2
-    输出: 1
-    解释: 2 = 1 + 1, 1 × 1 = 1。
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入: </strong>n = 2
+<strong>输出: </strong>1
+<strong>解释: </strong>2 = 1 + 1, 1 × 1 = 1。</pre>
 
-    输入: 10
-    输出: 36
-    解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36。
-	
-提示:
-- 2 <= n <= 58
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入: </strong>n = 10
+<strong>输出: </strong>36
+<strong>解释: </strong>10 = 3 + 3 + 4, 3 × 3 × 4 = 36。</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>2 &lt;= n &lt;= 58</code></li>
+</ul>
+
 
 ## 分析
 

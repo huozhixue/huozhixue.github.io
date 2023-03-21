@@ -1,44 +1,53 @@
 # 0039：组合总和（★）
 
 
+> <u>**[力扣第 39 题](https://leetcode.cn/problems/combination-sum/)**</u>
+
 ## 题目
 
+<p>给你一个 <strong>无重复元素</strong> 的整数数组 <code>candidates</code> 和一个目标整数 <code>target</code> ，找出 <code>candidates</code> 中可以使数字和为目标数 <code>target</code> 的 所有<em> </em><strong>不同组合</strong> ，并以列表形式返回。你可以按 <strong>任意顺序</strong> 返回这些组合。</p>
 
-给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 
-中可以使数字和为目标数 target 的 所有 不同组合 ，并以列表形式返回。你可以按 任意顺序 返回这些组合。
+<p><code>candidates</code> 中的 <strong>同一个</strong> 数字可以 <strong>无限制重复被选取</strong> 。如果至少一个数字的被选数量不同，则两种组合是不同的。 </p>
 
-candidates 中的 同一个 数字可以 无限制重复被选取 。如果至少一个数字的被选数量不同，则两种组合是不同的。 
-
-对于给定的输入，保证和为 target 的不同组合数少于 150 个。
+<p>对于给定的输入，保证和为 <code>target</code> 的不同组合数少于 <code>150</code> 个。</p>
 
 
-示例 1：
 
-	输入：candidates = [2,3,6,7], target = 7
-	输出：[[2,2,3],[7]]
-	解释：
-	2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。
-	7 也是一个候选， 7 = 7 。
-	仅有这两种组合。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>candidates = <code>[2,3,6,7], </code>target = <code>7</code>
+<strong>输出：</strong>[[2,2,3],[7]]
+<strong>解释：</strong>
+2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。
+7 也是一个候选， 7 = 7 。
+仅有这两种组合。</pre>
 
-	输入: candidates = [2,3,5], target = 8
-	输出: [[2,2,2,2],[2,3,3],[3,5]]
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入: </strong>candidates = [2,3,5]<code>, </code>target = 8
+<strong>输出: </strong>[[2,2,2,2],[2,3,3],[3,5]]</pre>
 
-	输入: candidates = [2], target = 1
-	输出: []
- 
+<p><strong>示例 3：</strong></p>
 
-提示：
-- 1 <= candidates.length <= 30
-- 1 <= candidates[i] <= 200
-- candidate 中的每个元素都 互不相同
-- 1 <= target <= 500
+<pre>
+<strong>输入: </strong>candidates = <code>[2], </code>target = 1
+<strong>输出: </strong>[]
+</pre>
 
- 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= candidates.length &lt;= 30</code></li>
+<li><code>2 &lt;= candidates[i] &lt;= 40</code></li>
+<li><code>candidates</code> 的所有元素 <strong>互不相同</strong></li>
+<li><code>1 &lt;= target &lt;= 40</code></li>
+</ul>
+
+
 ## 分析 
 
 {{< lc "0078" >}} 升级版，添加了和的限制。

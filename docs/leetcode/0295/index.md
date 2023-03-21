@@ -1,31 +1,55 @@
 # 0295：数据流的中位数（★★）
 
 
+> <u>**[力扣第 295 题](https://leetcode.cn/problems/find-median-from-data-stream/)**</u>
+
 ## 题目
 
-中位数是有序列表中间的数。如果列表长度是偶数，中位数则是中间两个数的平均值。
+<p><strong>中位数</strong>是有序整数列表中的中间值。如果列表的大小是偶数，则没有中间值，中位数是两个中间值的平均值。</p>
 
-例如，
+<ul>
+<li>例如 <code>arr = [2,3,4]</code> 的中位数是 <code>3</code> 。</li>
+<li>例如 <code>arr = [2,3]</code> 的中位数是 <code>(2 + 3) / 2 = 2.5</code> 。</li>
+</ul>
 
-[2,3,4] 的中位数是 3
+<p>实现 MedianFinder 类:</p>
 
-[2,3] 的中位数是 (2 + 3) / 2 = 2.5
+<ul>
+<li>
+<p><code>MedianFinder() </code>初始化 <code>MedianFinder</code> 对象。</p>
+</li>
+<li>
+<p><code>void addNum(int num)</code> 将数据流中的整数 <code>num</code> 添加到数据结构中。</p>
+</li>
+<li>
+<p><code>double findMedian()</code> 返回到目前为止所有元素的中位数。与实际答案相差 <code>10<sup>-5</sup></code> 以内的答案将被接受。</p>
+</li>
+</ul>
 
-设计一个支持以下两种操作的数据结构：
-- void addNum(int num) - 从数据流中添加一个整数到数据结构中。
-- double findMedian() - 返回目前所有元素的中位数。
+<p><strong>示例 1：</strong></p>
 
-示例：
+<pre>
+<strong>输入</strong>
+["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]
+[[], [1], [2], [], [3], []]
+<strong>输出</strong>
+[null, null, null, 1.5, null, 2.0]
 
-	addNum(1)
-	addNum(2)
-	findMedian() -> 1.5
-	addNum(3) 
-	findMedian() -> 2
+<strong>解释</strong>
+MedianFinder medianFinder = new MedianFinder();
+medianFinder.addNum(1);    // arr = [1]
+medianFinder.addNum(2);    // arr = [1, 2]
+medianFinder.findMedian(); // 返回 1.5 ((1 + 2) / 2)
+medianFinder.addNum(3);    // arr[1, 2, 3]
+medianFinder.findMedian(); // return 2.0</pre>
 
-进阶:
-- 如果数据流中所有整数都在 0 到 100 范围内，你将如何优化你的算法？
-- 如果数据流中 99% 的整数都在 0 到 100 范围内，你将如何优化你的算法？
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>-10<sup>5</sup> &lt;= num &lt;= 10<sup>5</sup></code></li>
+<li>在调用 <code>findMedian</code> 之前，数据结构中至少有一个元素</li>
+<li>最多 <code>5 * 10<sup>4</sup></code> 次调用 <code>addNum</code> 和 <code>findMedian</code></li>
+</ul>
 
 
 ## 分析

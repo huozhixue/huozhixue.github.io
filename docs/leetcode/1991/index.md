@@ -1,55 +1,72 @@
 # 1991：找到数组的中间位置
 
 
-> **第 60 场双周赛第 1 题**
+> <u>**[力扣第 60 场双周赛第 1 题](https://leetcode.cn/problems/find-the-middle-index-in-array/)**</u>
 
 ## 题目
 
-给你一个下标从 0 开始的整数数组 nums ，请你找到 最左边 的中间位置 middleIndex 
-（也就是所有可能中间位置下标最小的一个）。
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，请你找到 <strong>最左边</strong> 的中间位置 <code>middleIndex</code> （也就是所有可能中间位置下标最小的一个）。</p>
 
-中间位置 middleIndex 是满足 nums[0] + nums[1] + ... + nums[middleIndex-1] == 
-nums[middleIndex+1] + nums[middleIndex+2] + ... + nums[nums.length-1] 的数组下标。
+<p>中间位置 <code>middleIndex</code> 是满足 <code>nums[0] + nums[1] + ... + nums[middleIndex-1] == nums[middleIndex+1] + nums[middleIndex+2] + ... + nums[nums.length-1]</code> 的数组下标。</p>
 
-如果 middleIndex == 0 ，左边部分的和定义为 0 。类似的，如果 middleIndex == nums.length - 1 ，
-右边部分的和定义为 0 。
+<p>如果 <code>middleIndex == 0</code> ，左边部分的和定义为 <code>0</code> 。类似的，如果 <code>middleIndex == nums.length - 1</code> ，右边部分的和定义为 <code>0</code> 。</p>
 
-请你返回满足上述条件 最左边 的 middleIndex ，如果不存在这样的中间位置，请你返回 -1 。
+<p>请你返回满足上述条件 <strong>最左边</strong> 的<em> </em><code>middleIndex</code> ，如果不存在这样的中间位置，请你返回 <code>-1</code> 。</p>
 
-提示：
-- 1 <= nums.length <= 100
-- -1000 <= nums[i] <= 1000
 
-示例 1：
 
-    输入：nums = [2,3,-1,8,4]
-    输出：3
-    解释：
-    下标 3 之前的数字和为：2 + 3 + -1 = 4
-    下标 3 之后的数字和为：4 = 4
+<p><strong>示例 1：</strong></p>
 
-示例 2：
-    
-    输入：nums = [1,-1,4]
-    输出：2
-    解释：
-    下标 2 之前的数字和为：1 + -1 = 0
-    下标 2 之后的数字和为：0
+<pre>
+<b>输入：</b>nums = [2,3,-1,<em><strong>8</strong></em>,4]
+<b>输出：</b>3
+<strong>解释：</strong>
+下标 3 之前的数字和为：2 + 3 + -1 = 4
+下标 3 之后的数字和为：4 = 4
+</pre>
 
-示例 3：
-    
-    输入：nums = [2,5]
-    输出：-1
-    解释：
-    不存在符合要求的 middleIndex 。
-示例 4：
+<p><strong>示例 2：</strong></p>
 
-    输入：nums = [1]
-    输出：0
-    解释：
-    下标 0 之前的数字和为：0
-    下标 0 之后的数字和为：0
- 
+<pre>
+<b>输入：</b>nums = [1,-1,<em><strong>4</strong></em>]
+<b>输出：</b>2
+<strong>解释：</strong>
+下标 2 之前的数字和为：1 + -1 = 0
+下标 2 之后的数字和为：0
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<b>输入：</b>nums = [2,5]
+<b>输出：</b>-1
+<b>解释：</b>
+不存在符合要求的 middleIndex 。
+</pre>
+
+<p><strong>示例 4：</strong></p>
+
+<pre>
+<b>输入：</b>nums = [<em><strong>1</strong></em>]
+<b>输出：</b>0
+<strong>解释：</strong>
+下标 0 之前的数字和为：0
+下标 0 之后的数字和为：0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 100</code></li>
+<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
+</ul>
+
+
+
+<p><strong>注意：</strong>本题与主站 724 题相同：<a href="https://leetcode-cn.com/problems/find-pivot-index/" target="_blank">https://leetcode-cn.com/problems/find-pivot-index/</a></p>
+
 
 ## 分析
 

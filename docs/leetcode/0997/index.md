@@ -1,54 +1,58 @@
-# 0997：找到小镇的法官（★）
+# 0997：找到小镇的法官
 
 
-> **第 125 场周赛第 1 题**
+> <u>**[力扣第 125 场周赛第 1 题](https://leetcode.cn/problems/find-the-town-judge/)**</u>
 
 ## 题目
 
-在一个小镇里，按从 1 到 N 标记了 N 个人。传言称，这些人中有一个是小镇上的秘密法官。
+<p>小镇里有 <code>n</code> 个人，按从 <code>1</code> 到 <code>n</code> 的顺序编号。传言称，这些人中有一个暗地里是小镇法官。</p>
 
-如果小镇的法官真的存在，那么：
+<p>如果小镇法官真的存在，那么：</p>
 
-- 小镇的法官不相信任何人。
-- 每个人（除了小镇法官外）都信任小镇的法官。
-- 只有一个人同时满足属性 1 和属性 2 。
+<ol>
+<li>小镇法官不会信任任何人。</li>
+<li>每个人（除了小镇法官）都信任这位小镇法官。</li>
+<li>只有一个人同时满足属性 <strong>1</strong> 和属性 <strong>2</strong> 。</li>
+</ol>
 
-给定数组 trust，该数组由信任对 trust[i] = [a, b] 组成，表示标记为 a 的人信任标记为 b 的人。
+<p>给你一个数组 <code>trust</code> ，其中 <code>trust[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示编号为 <code>a<sub>i</sub></code> 的人信任编号为 <code>b<sub>i</sub></code> 的人。</p>
 
-如果小镇存在秘密法官并且可以确定他的身份，请返回该法官的标记。否则，返回 -1。
-
-提示：
-- 1 <= N <= 1000
-- trust.length <= 10000
-- trust[i] 是完全不同的
-- trust[i][0] != trust[i][1]
-- 1 <= trust[i][0], trust[i][1] <= N
+<p>如果小镇法官存在并且可以确定他的身份，请返回该法官的编号；否则，返回 <code>-1</code> 。</p>
 
 
-示例 1：
 
-	输入：N = 2, trust = [[1,2]]
-	输出：2
-	
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：N = 3, trust = [[1,3],[2,3]]
-	输出：3
-	
-示例 3：
+<pre>
+<strong>输入：</strong>n = 2, trust = [[1,2]]
+<strong>输出：</strong>2
+</pre>
 
-	输入：N = 3, trust = [[1,3],[2,3],[3,1]]
-	输出：-1
-	
-示例 4：
+<p><strong>示例 2：</strong></p>
 
-	输入：N = 3, trust = [[1,2],[2,3]]
-	输出：-1
-	
-示例 5：
+<pre>
+<strong>输入：</strong>n = 3, trust = [[1,3],[2,3]]
+<strong>输出：</strong>3
+</pre>
 
-	输入：N = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
-	输出：3
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 3, trust = [[1,3],[2,3],[3,1]]
+<strong>输出：</strong>-1
+</pre>
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 1000</code></li>
+<li><code>0 &lt;= trust.length &lt;= 10<sup>4</sup></code></li>
+<li><code>trust[i].length == 2</code></li>
+<li><code>trust</code> 中的所有<code>trust[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> <strong>互不相同</strong></li>
+<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
+<li><code>1 &lt;= a<sub>i</sub>, b<sub>i</sub> &lt;= n</code></li>
+</ul>
 
 
 ## 分析

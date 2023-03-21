@@ -1,34 +1,53 @@
 # 0114：二叉树展开为链表（★）
 
 
+> <u>**[力扣第 114 题](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)**</u>
+
 ## 题目
 
-给你二叉树的根结点 root ，请你将它展开为一个单链表：
-- 展开后的单链表应该同样使用 TreeNode ，其中 right 子指针指向链表中下一个结点，
-而左子指针始终为 null 。
-- 展开后的单链表应该与二叉树 先序遍历 顺序相同。
- 
- 
-示例 1：
+<p>给你二叉树的根结点 <code>root</code> ，请你将它展开为一个单链表：</p>
 
-![img](https://assets.leetcode.com/uploads/2021/01/14/flaten.jpg)
+<ul>
+<li>展开后的单链表应该同样使用 <code>TreeNode</code> ，其中 <code>right</code> 子指针指向链表中下一个结点，而左子指针始终为 <code>null</code> 。</li>
+<li>展开后的单链表应该与二叉树 <a href="https://baike.baidu.com/item/%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86/6442839?fr=aladdin" target="_blank"><strong>先序遍历</strong></a> 顺序相同。</li>
+</ul>
 
-	输入：root = [1,2,5,3,4,null,6]
-	输出：[1,null,2,null,3,null,4,null,5,null,6]
 
-示例 2：
 
-	输入：root = []
-	输出：[]
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/01/14/flaten.jpg" style="width: 500px; height: 226px;" />
+<pre>
+<strong>输入：</strong>root = [1,2,5,3,4,null,6]
+<strong>输出：</strong>[1,null,2,null,3,null,4,null,5,null,6]
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：root = [0]
-	输出：[0]
-	 
-提示：
-- 树中结点数在范围 [0, 2000] 内
-- -100 <= Node.val <= 100
+<pre>
+<strong>输入：</strong>root = []
+<strong>输出：</strong>[]
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>root = [0]
+<strong>输出：</strong>[0]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>树中结点数在范围 <code>[0, 2000]</code> 内</li>
+<li><code>-100 <= Node.val <= 100</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>你可以使用原地算法（<code>O(1)</code> 额外空间）展开这棵树吗？</p>
+
 
 ## 分析
 

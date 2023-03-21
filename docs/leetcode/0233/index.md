@@ -1,21 +1,36 @@
-# 0233：数字 1 的个数（★★★）
+# 0233：数字 1 的个数（★★）
 
+
+> <u>**[力扣第 233 题](https://leetcode.cn/problems/number-of-digit-one/)**</u>
 
 ## 题目
 
-给定一个整数 n，计算所有小于等于 n 的非负整数中数字 1 出现的个数。
+<p>给定一个整数 <code>n</code>，计算所有小于等于 <code>n</code> 的非负整数中数字 <code>1</code> 出现的个数。</p>
 
-示例 1：
 
-    输入：n = 13
-    输出：6
 
-示例 2：
-    
-    输入：n = 0
-    输出：0
+<p><strong>示例 1：</strong></p>
 
-提示：0 <= n <= 10^9 
+<pre>
+<strong>输入：</strong>n = 13
+<strong>输出：</strong>6
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 0
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= n &lt;= 10<sup>9</sup></code></li>
+</ul>
+
 
 ## 分析
 

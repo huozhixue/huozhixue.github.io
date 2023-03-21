@@ -1,34 +1,47 @@
-# 0474：一和零（★★）
+# 0474：一和零（★）
 
+
+> <u>**[力扣第 474 题](https://leetcode.cn/problems/ones-and-zeroes/)**</u>
 
 ## 题目
 
-给你一个二进制字符串数组 strs 和两个整数 m 和 n 。
+<p>给你一个二进制字符串数组 <code>strs</code> 和两个整数 <code>m</code> 和 <code>n</code> 。</p>
 
-请你找出并返回 strs 的最大子集的长度，该子集中 最多 有 m 个 0 和 n 个 1 。
+<div class="MachineTrans-Lines">
+<p class="MachineTrans-lang-zh-CN">请你找出并返回 <code>strs</code> 的最大子集的长度，该子集中 <strong>最多</strong> 有 <code>m</code> 个 <code>0</code> 和 <code>n</code> 个 <code>1</code> 。</p>
 
-如果 x 的所有元素也是 y 的元素，集合 x 是集合 y 的 子集 。
+<p class="MachineTrans-lang-zh-CN">如果 <code>x</code> 的所有元素也是 <code>y</code> 的元素，集合 <code>x</code> 是集合 <code>y</code> 的 <strong>子集</strong> 。</p>
+</div>
 
- 
-示例 1：
 
-    输入：strs = ["10", "0001", "111001", "1", "0"], m = 5, n = 3
-    输出：4
-    解释：最多有 5 个 0 和 3 个 1 的最大子集是 {"10","0001","1","0"} ，因此答案是 4 。
-    其他满足题意但较小的子集包括 {"0001","1"} 和 {"10","1","0"} 。{"111001"} 不满足题意，
-    因为它含 4 个 1 ，大于 n 的值 3 。
-示例 2：
 
-    输入：strs = ["10", "0", "1"], m = 1, n = 1
-    输出：2
-    解释：最大的子集是 {"0", "1"} ，所以答案是 2 。
- 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= strs.length <= 600
-- 1 <= strs[i].length <= 100
-- strs[i] 仅由 '0' 和 '1' 组成
-- 1 <= m, n <= 100
+<pre>
+<strong>输入：</strong>strs = ["10", "0001", "111001", "1", "0"], m = 5, n = 3
+<strong>输出：</strong>4
+<strong>解释：</strong>最多有 5 个 0 和 3 个 1 的最大子集是 {"10","0001","1","0"} ，因此答案是 4 。
+其他满足题意但较小的子集包括 {"0001","1"} 和 {"10","1","0"} 。{"111001"} 不满足题意，因为它含 4 个 1 ，大于 n 的值 3 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>strs = ["10", "0", "1"], m = 1, n = 1
+<strong>输出：</strong>2
+<strong>解释：</strong>最大的子集是 {"0", "1"} ，所以答案是 2 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= strs.length &lt;= 600</code></li>
+<li><code>1 &lt;= strs[i].length &lt;= 100</code></li>
+<li><code>strs[i]</code> 仅由 <code>'0'</code> 和 <code>'1'</code> 组成</li>
+<li><code>1 &lt;= m, n &lt;= 100</code></li>
+</ul>
 
 
 ## 分析

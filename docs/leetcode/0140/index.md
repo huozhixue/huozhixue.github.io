@@ -1,38 +1,51 @@
 # 0140：单词拆分 II（★★）
 
 
+> <u>**[力扣第 140 题](https://leetcode.cn/problems/word-break-ii/)**</u>
+
 ## 题目
 
-给定一个字符串 s 和一个字符串字典 wordDict ，在字符串 s 中增加空格来构建一个句子，
-使得句子中所有的单词都在词典中。以任意顺序 返回所有这些可能的句子。
+<p>给定一个字符串 <code>s</code> 和一个字符串字典<meta charset="UTF-8" /> <code>wordDict</code> ，在字符串<meta charset="UTF-8" /> <code>s</code> 中增加空格来构建一个句子，使得句子中所有的单词都在词典中。<strong>以任意顺序</strong> 返回所有这些可能的句子。</p>
 
-注意：词典中的同一个单词可能在分段中被重复使用多次。
-
-
-示例 1：
-
-	输入:s = "catsanddog", wordDict = ["cat","cats","and","sand","dog"]
-	输出:["cats and dog","cat sand dog"]
-
-示例 2：
-
-	输入:s = "pineapplepenapple", wordDict = ["apple","pen","applepen","pine","pineapple"]
-	输出:["pine apple pen apple","pineapple pen apple","pine applepen apple"]
-	解释: 注意你可以重复使用字典中的单词。
+<p><strong>注意：</strong>词典中的同一个单词可能在分段中被重复使用多次。</p>
 
 
-示例 3：
 
-	输入:s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
-	输出:[]
- 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= s.length <= 20
-- 1 <= wordDict.length <= 1000
-- 1 <= wordDict[i].length <= 10
-- s 和 wordDict[i] 仅有小写英文字母组成
-- wordDict 中所有字符串都 不同
+<pre>
+<strong>输入:</strong>s = "<code>catsanddog</code>", wordDict = <code>["cat","cats","and","sand","dog"]</code>
+<strong>输出:</strong><code>["cats and dog","cat sand dog"]</code>
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入:</strong>s = "pineapplepenapple", wordDict = ["apple","pen","applepen","pine","pineapple"]
+<strong>输出:</strong>["pine apple pen apple","pineapple pen apple","pine applepen apple"]
+<strong>解释:</strong> 注意你可以重复使用字典中的单词。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入:</strong>s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
+<strong>输出:</strong>[]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<p><meta charset="UTF-8" /></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 20</code></li>
+<li><code>1 &lt;= wordDict.length &lt;= 1000</code></li>
+<li><code>1 &lt;= wordDict[i].length &lt;= 10</code></li>
+<li><code>s</code> 和 <code>wordDict[i]</code> 仅有小写英文字母组成</li>
+<li><code>wordDict</code> 中所有字符串都 <strong>不同</strong></li>
+</ul>
 
 
 ## 分析

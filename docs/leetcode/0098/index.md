@@ -1,33 +1,45 @@
 # 0098：验证二叉搜索树（★）
 
 
+> <u>**[力扣第 98 题](https://leetcode.cn/problems/validate-binary-search-tree/)**</u>
+
 ## 题目
 
-给你一个二叉树的根节点 root ，判断其是否是一个有效的二叉搜索树。
+<p>给你一个二叉树的根节点 <code>root</code> ，判断其是否是一个有效的二叉搜索树。</p>
 
-有效 二叉搜索树定义如下：
-- 节点的左子树只包含 小于 当前节点的数。
-- 节点的右子树只包含 大于 当前节点的数。
-- 所有左子树和右子树自身必须也是二叉搜索树。
+<p><strong>有效</strong> 二叉搜索树定义如下：</p>
 
-示例 1：
+<ul>
+<li>节点的左子树只包含<strong> 小于 </strong>当前节点的数。</li>
+<li>节点的右子树只包含 <strong>大于</strong> 当前节点的数。</li>
+<li>所有左子树和右子树自身必须也是二叉搜索树。</li>
+</ul>
 
-![img](https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg)
 
-	输入：root = [2,1,3]
-	输出：true
-	
-示例 2：
 
-![img](https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg" style="width: 302px; height: 182px;" />
+<pre>
+<strong>输入：</strong>root = [2,1,3]
+<strong>输出：</strong>true
+</pre>
 
-	输入：root = [5,1,4,null,null,3,6]
-	输出：false
-	解释：根节点的值是 5 ，但是右子节点的值是 4 。
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg" style="width: 422px; height: 292px;" />
+<pre>
+<strong>输入：</strong>root = [5,1,4,null,null,3,6]
+<strong>输出：</strong>false
+<strong>解释：</strong>根节点的值是 5 ，但是右子节点的值是 4 。
+</pre>
 
-提示：
-- 树中节点数目范围在[1, 10^4] 内
-- -2^31 <= Node.val <= 2^31 - 1
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>树中节点数目范围在<code>[1, 10<sup>4</sup>]</code> 内</li>
+<li><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
 
 
 ## 分析

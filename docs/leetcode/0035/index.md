@@ -1,35 +1,48 @@
 # 0035：搜索插入位置
 
 
+> <u>**[力扣第 35 题](https://leetcode.cn/problems/search-insert-position/)**</u>
+
 ## 题目
 
-给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+<p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
 
-请必须使用时间复杂度为 O(log n) 的算法。
+<p>请必须使用时间复杂度为 <code>O(log n)</code> 的算法。</p>
 
 
-示例 1:
 
-	输入: nums = [1,3,5,6], target = 5
-	输出: 2
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> nums = [1,3,5,6], target = 5
+<strong>输出:</strong> 2
+</pre>
 
-	输入: nums = [1,3,5,6], target = 2
-	输出: 1
+<p><strong>示例 2:</strong></p>
 
-示例 3:
+<pre>
+<strong>输入:</strong> nums = [1,3,5,6], target = 2
+<strong>输出:</strong> 1
+</pre>
 
-	输入: nums = [1,3,5,6], target = 7
-	输出: 4
- 
+<p><strong>示例 3:</strong></p>
 
-提示:
-- 1 <= nums.length <= 10^4
-- -10^4 <= nums[i] <= 10^4
-- nums 为 无重复元素 的 升序 排列数组
-- -10^4 <= target <= 10^4
- 
+<pre>
+<strong>输入:</strong> nums = [1,3,5,6], target = 7
+<strong>输出:</strong> 4
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+<li><code>nums</code> 为 <strong>无重复元素 </strong>的 <strong>升序 </strong>排列数组</li>
+<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
+</ul>
+
 
 ## 分析 
 

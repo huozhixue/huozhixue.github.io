@@ -1,29 +1,40 @@
 # 0014：最长公共前缀
 
 
+> <u>**[力扣第 14 题](https://leetcode.cn/problems/longest-common-prefix/)**</u>
+
 ## 题目
 
-编写一个函数来查找字符串数组中的最长公共前缀。
+<p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
 
-如果不存在公共前缀，返回空字符串 ""。
+<p>如果不存在公共前缀，返回空字符串 <code>""</code>。</p>
 
 
-示例 1：
 
-    输入：strs = ["flower","flow","flight"]
-    输出："fl"
+<p><strong>示例 1：</strong></p>
 
-示例 2：
-    
-    输入：strs = ["dog","racecar","car"]
-    输出：""
-    解释：输入不存在公共前缀。
+<pre>
+<strong>输入：</strong>strs = ["flower","flow","flight"]
+<strong>输出：</strong>"fl"
+</pre>
 
-提示：
-- 0 <= strs.length <= 200
-- 0 <= strs[i].length <= 200
-- strs[i] 仅由小写英文字母组成
-     
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>strs = ["dog","racecar","car"]
+<strong>输出：</strong>""
+<strong>解释：</strong>输入不存在公共前缀。</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= strs.length &lt;= 200</code></li>
+<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>
+<li><code>strs[i]</code> 仅由小写英文字母组成</li>
+</ul>
+
 
 ## 分析
 

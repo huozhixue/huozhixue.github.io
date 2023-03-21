@@ -1,31 +1,44 @@
-# 0309：最佳买卖股票时机含冷冻期（★★）
+# 0309：最佳买卖股票时机含冷冻期（★）
 
+
+> <u>**[力扣第 309 题](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/)**</u>
 
 ## 题目
 
-给定一个整数数组prices，其中第  prices[i] 表示第 i 天的股票价格 。​
+<p>给定一个整数数组<meta charset="UTF-8" /><code>prices</code>，其中第 <em> </em><code>prices[i]</code> 表示第 <code><em>i</em></code> 天的股票价格 。​</p>
 
-设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:
-- 卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
+<p>设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:</p>
 
-注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+<ul>
+<li>卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。</li>
+</ul>
+
+<p><strong>注意：</strong>你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
 
 
-示例 1:
 
-	输入: prices = [1,2,3,0,2]
-	输出: 3 
-	解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> prices = [1,2,3,0,2]
+<strong>输出: </strong>3
+<strong>解释:</strong> 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]</pre>
 
-	输入: prices = [1]
-	输出: 0
- 
+<p><strong>示例 2:</strong></p>
 
-提示：
-- 1 <= prices.length <= 5000
-- 0 <= prices[i] <= 1000
+<pre>
+<strong>输入:</strong> prices = [1]
+<strong>输出:</strong> 0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= prices.length &lt;= 5000</code></li>
+<li><code>0 &lt;= prices[i] &lt;= 1000</code></li>
+</ul>
 
 
 ## 分析

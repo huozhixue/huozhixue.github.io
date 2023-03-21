@@ -1,30 +1,44 @@
-# 0646：最长数对链（★★）
+# 0646：最长数对链（★）
 
 
-> **第 42 场双周赛第 2 题**
+> <u>**[力扣第 42 场双周赛第 2 题](https://leetcode.cn/problems/maximum-length-of-pair-chain/)**</u>
 
 ## 题目
 
-给出 n 个数对。 在每一个数对中，第一个数字总是比第二个数字小。
+<p>给你一个由 <code>n</code> 个数对组成的数对数组 <code>pairs</code> ，其中 <code>pairs[i] = [left<sub>i</sub>, right<sub>i</sub>]</code> 且 <code>left<sub>i</sub> &lt; right<sub>i</sub></code><sub> 。</sub></p>
 
-现在，我们定义一种跟随关系，当且仅当 b < c 时，数对(c, d) 才可以跟在 (a, b) 后面。
-我们用这种形式来构造一个数对链。
+<p>现在，我们定义一种 <strong>跟随</strong> 关系，当且仅当 <code>b &lt; c</code> 时，数对 <code>p2 = [c, d]</code> 才可以跟在 <code>p1 = [a, b]</code> 后面。我们用这种形式来构造 <strong>数对链</strong> 。</p>
 
-给定一个数对集合，找出能够形成的最长数对链的长度。你不需要用到所有的数对，
-你可以以任何顺序选择其中的一些数对来构造。
+<p>找出并返回能够形成的 <strong>最长数对链的长度</strong> 。</p>
+
+<p>你不需要用到所有的数对，你可以以任何顺序选择其中的一些数对来构造。</p>
 
 
 
-示例：
-    
-    输入：[[1,2], [2,3], [3,4]]
-    输出：2
-    解释：最长的数对链是 [1,2] -> [3,4]
- 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 给出数对的个数在 [1, 1000] 范围内。
+<pre>
+<strong>输入：</strong>pairs = [[1,2], [2,3], [3,4]]
+<strong>输出：</strong>2
+<strong>解释：</strong>最长的数对链是 [1,2] -&gt; [3,4] 。
+</pre>
 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<b>输入：</b>pairs = [[1,2],[7,8],[4,5]]
+<b>输出：</b>3
+<b>解释：</b>最长的数对链是 [1,2] -&gt; [4,5] -&gt; [7,8] 。</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>n == pairs.length</code></li>
+<li><code>1 &lt;= n &lt;= 1000</code></li>
+<li><code>-1000 &lt;= left<sub>i</sub> &lt; right<sub>i</sub> &lt;= 1000</code></li>
+</ul>
 
 
 ## 分析

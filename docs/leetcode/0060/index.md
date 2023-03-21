@@ -1,40 +1,57 @@
 # 0060：排列序列（★★）
 
 
+> <u>**[力扣第 60 题](https://leetcode.cn/problems/permutation-sequence/)**</u>
+
 ## 题目
 
-给出集合 [1,2,3,...,n]，其所有元素共有 n! 种排列。
+<p>给出集合 <code>[1,2,3,...,n]</code>，其所有元素共有 <code>n!</code> 种排列。</p>
 
-按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：
-    
-    "123"
-    "132"
-    "213"
-    "231"
-    "312"
-    "321"
+<p>按大小顺序列出所有排列情况，并一一标记，当 <code>n = 3</code> 时, 所有排列如下：</p>
 
-给定 n 和 k，返回第 k 个排列。
+<ol>
+<li><code>"123"</code></li>
+<li><code>"132"</code></li>
+<li><code>"213"</code></li>
+<li><code>"231"</code></li>
+<li><code>"312"</code></li>
+<li><code>"321"</code></li>
+</ol>
+
+<p>给定 <code>n</code> 和 <code>k</code>，返回第 <code>k</code> 个排列。</p>
 
 
-示例 1：
 
-    输入：n = 3, k = 3
-    输出："213"
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 3, k = 3
+<strong>输出：</strong>"213"
+</pre>
 
-    输入：n = 4, k = 9
-    输出："2314"
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>n = 4, k = 9
+<strong>输出：</strong>"2314"
+</pre>
 
-    输入：n = 3, k = 1
-    输出："123"
+<p><strong>示例 3：</strong></p>
 
-提示：
-- 1 <= n <= 9
-- 1 <= k <= n!
+<pre>
+<strong>输入：</strong>n = 3, k = 1
+<strong>输出：</strong>"123"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= n <= 9</code></li>
+<li><code>1 <= k <= n!</code></li>
+</ul>
+
 
 ## 分析 
 

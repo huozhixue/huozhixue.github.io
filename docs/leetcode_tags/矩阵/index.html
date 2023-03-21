@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta name="referrer" content="no-referrer" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>矩阵 - 力扣标签 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="矩阵" />
+<meta property="og:description" content="Ian 的博客" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode_tags/%E7%9F%A9%E9%98%B5/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+
+<meta name="twitter:title" content="矩阵"/>
+<meta name="twitter:description" content="Ian 的博客"/>
+<meta name="application-name" content="个人博客">
+<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/leetcode_tags/%E7%9F%A9%E9%98%B5/" /><link rel="alternate" href="/leetcode_tags/%E7%9F%A9%E9%98%B5/index.xml" type="application/rss+xml" title="个人博客">
+    <link rel="feed" href="/leetcode_tags/%E7%9F%A9%E9%98%B5/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/anime/" title="">动画</a><a class="menu-item" href="/game/" title="">游戏</a><a class="menu-item" href="/leetcode/" title="">力扣</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
+            <meting-js auto="https://y.qq.com/n/yqq/playlist/679142093.html" fixed="true" order="random" ></meting-js>
+            <main class="main">
+                <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster"><i class="fas fa-tag fa-fw"></i>&nbsp;矩阵</h2><div class="tag-cloud-tags"><a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等 <sup>429</sup></a><a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组 <sup>318</sup></a><a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串 <sup>171</sup></a><a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单 <sup>169</sup></a><a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难 <sup>164</sup></a><a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划 <sup>150</sup></a><a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表 <sup>133</sup></a><a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学 <sup>121</sup></a><a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索 <sup>101</sup></a><a href="/leetcode_tags/%E6%A0%91/">树 <sup>91</sup></a><a href="/leetcode_tags/%E6%A0%88/">栈 <sup>74</sup></a><a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树 <sup>72</sup></a><a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索 <sup>69</sup></a><a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员 <sup>65</sup></a><a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序 <sup>64</sup></a><a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找 <sup>52</sup></a><a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针 <sup>49</sup></a><a href="/leetcode_tags/%E5%A0%86%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">堆（优先队列） <sup>49</sup></a><a href="/leetcode_tags/%E5%9B%BE/">图 <sup>47</sup></a><a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心 <sup>46</sup></a><a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算 <sup>45</sup></a><a href="/leetcode_tags/%E9%93%BE%E8%A1%A8/">链表 <sup>45</sup></a><a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵 <sup>40</sup></a><a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计 <sup>39</sup></a><a href="/leetcode_tags/%E5%9B%9E%E6%BA%AF/">回溯 <sup>37</sup></a><a href="/leetcode_tags/%E9%80%92%E5%BD%92/">递归 <sup>33</sup></a><a href="/leetcode_tags/%E5%88%86%E6%B2%BB/">分治 <sup>28</sup></a><a href="/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">滑动窗口 <sup>28</sup></a><a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈 <sup>23</sup></a><a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集 <sup>23</sup></a><a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">二叉搜索树 <sup>21</sup></a><a href="/leetcode_tags/%E6%A8%A1%E6%8B%9F/">模拟 <sup>20</sup></a><a href="/leetcode_tags/%E9%98%9F%E5%88%97/">队列 <sup>20</sup></a><a href="/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和 <sup>19</sup></a><a href="/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树 <sup>19</sup></a><a href="/leetcode_tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序 <sup>18</sup></a><a href="/leetcode_tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">有序集合 <sup>16</sup></a><a href="/leetcode_tags/%E5%8D%9A%E5%BC%88/">博弈 <sup>15</sup></a><a href="/leetcode_tags/%E8%AE%A1%E6%95%B0/">计数 <sup>15</sup></a><a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数 <sup>13</sup></a><a href="/leetcode_tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库 <sup>13</sup></a><a href="/leetcode_tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩 <sup>13</sup></a><a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/">字符串匹配 <sup>12</sup></a><a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路 <sup>12</sup></a><a href="/leetcode_tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">记忆化搜索 <sup>12</sup></a><a href="/leetcode_tags/%E6%95%B0%E8%AE%BA/">数论 <sup>11</sup></a><a href="/leetcode_tags/%E9%9A%8F%E6%9C%BA%E5%8C%96/">随机化 <sup>11</sup></a><a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组 <sup>10</sup></a><a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树 <sup>10</sup></a><a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希 <sup>9</sup></a><a href="/leetcode_tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">归并排序 <sup>8</sup></a><a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/">单调队列 <sup>7</sup></a><a href="/leetcode_tags/%E5%87%A0%E4%BD%95/">几何 <sup>6</sup></a><a href="/leetcode_tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程 <sup>6</sup></a><a href="/leetcode_tags/%E6%A1%B6%E6%8E%92%E5%BA%8F/">桶排序 <sup>6</sup></a><a href="/leetcode_tags/%E6%95%B0%E6%8D%AE%E6%B5%81/">数据流 <sup>5</sup></a><a href="/leetcode_tags/shell/">shell <sup>4</sup></a><a href="/leetcode_tags/%E4%BA%A4%E4%BA%92/">交互 <sup>4</sup></a><a href="/leetcode_tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">双向链表 <sup>4</sup></a><a href="/leetcode_tags/%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9/">快速选择 <sup>4</sup></a><a href="/leetcode_tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线 <sup>4</sup></a><a href="/leetcode_tags/%E6%B0%B4%E5%A1%98%E6%8A%BD%E6%A0%B7/">水塘抽样 <sup>4</sup></a><a href="/leetcode_tags/%E8%84%91%E7%AD%8B%E6%80%A5%E8%BD%AC%E5%BC%AF/">脑筋急转弯 <sup>4</sup></a><a href="/leetcode_tags/%E6%9E%9A%E4%B8%BE/">枚举 <sup>3</sup></a><a href="/leetcode_tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/">欧拉回路 <sup>3</sup></a><a href="/leetcode_tags/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/">计数排序 <sup>3</sup></a><a href="/leetcode_tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/">迭代器 <sup>3</sup></a><a href="/leetcode_tags/bfs/">bfs <sup>2</sup></a><a href="/leetcode_tags/%E5%8A%9B%E6%89%A3%E6%9D%AF/">力扣杯 <sup>2</sup></a><a href="/leetcode_tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/">后缀数组 <sup>2</sup></a><a href="/leetcode_tags/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">基数排序 <sup>2</sup></a><a href="/leetcode_tags/%E5%A0%86/">堆 <sup>2</sup></a><a href="/leetcode_tags/%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">强连通分量 <sup>2</sup></a><a href="/leetcode_tags/%E6%8B%92%E7%BB%9D%E9%87%87%E6%A0%B7/">拒绝采样 <sup>2</sup></a><a href="/leetcode_tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树 <sup>2</sup></a><a href="/leetcode_tags/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/">概率与统计 <sup>2</sup></a><a href="/leetcode_tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学 <sup>2</sup></a><a href="/leetcode_tags/dfs/">dfs <sup>1</sup></a><a href="/leetcode_tags/%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">双连通分量 <sup>1</sup></a><a href="/leetcode_tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/">排列组合 <sup>1</sup></a></div><h3 class="group-title">2021年9月</h3><article class="archive-item">
+                            <a href="/leetcode/1992/" class="archive-item-link" title="[中等 深度优先搜索 广度优先搜索 数组 矩阵]">1992：找到所有的农场组（★）</a>
+                            <span class="archive-item-date">09-04</span>
+                        </article><h3 class="group-title">2020年10月</h3><article class="archive-item">
+                            <a href="/leetcode/1632/" class="archive-item-link" title="[困难 贪心 并查集 图 拓扑排序 数组 矩阵]">1632：矩阵转换后的秩（★★）</a>
+                            <span class="archive-item-date">10-25</span>
+                        </article><h3 class="group-title">2020年9月</h3><article class="archive-item">
+                            <a href="/leetcode/1591/" class="archive-item-link" title="[困难 图 拓扑排序 数组 矩阵]">1591：奇怪的打印机 II（★★）</a>
+                            <span class="archive-item-date">09-19</span>
+                        </article><h3 class="group-title">2020年8月</h3><article class="archive-item">
+                            <a href="/leetcode/1568/" class="archive-item-link" title="[困难 深度优先搜索 广度优先搜索 数组 矩阵 强连通分量]">1568：使陆地分离的最少天数（★★）</a>
+                            <span class="archive-item-date">08-30</span>
+                        </article><h3 class="group-title">2020年5月</h3><article class="archive-item">
+                            <a href="/leetcode/1439/" class="archive-item-link" title="[困难 数组 二分查找 矩阵 堆（优先队列）]">1439：有序矩阵中的第 k 个最小数组和（★★）</a>
+                            <span class="archive-item-date">05-03</span>
+                        </article><h3 class="group-title">2020年3月</h3><article class="archive-item">
+                            <a href="/leetcode/1368/" class="archive-item-link" title="[困难 广度优先搜索 图 数组 矩阵 最短路 堆（优先队列）]">1368：使网格图至少有一条有效路径的最小代价（★★）</a>
+                            <span class="archive-item-date">03-01</span>
+                        </article><h3 class="group-title">2019年4月</h3><article class="archive-item">
+                            <a href="/leetcode/1030/" class="archive-item-link" title="[简单 几何 数组 数学 矩阵 排序]">1030：距离顺序排列矩阵单元格</a>
+                            <span class="archive-item-date">04-21</span>
+                        </article><h3 class="group-title">2019年2月</h3><article class="archive-item">
+                            <a href="/leetcode/0994/" class="archive-item-link" title="[中等 广度优先搜索 数组 矩阵]">0994：腐烂的橘子（★）</a>
+                            <span class="archive-item-date">02-17</span>
+                        </article><h3 class="group-title">2019年1月</h3><article class="archive-item">
+                            <a href="/leetcode/0980/" class="archive-item-link" title="[困难 位运算 数组 回溯 矩阵]">0980：不同路径 III（★★）</a>
+                            <span class="archive-item-date">01-20</span>
+                        </article><h3 class="group-title">2018年5月</h3><article class="archive-item">
+                            <a href="/leetcode/0835/" class="archive-item-link" title="[中等 数组 矩阵]">0835：图像重叠（★）</a>
+                            <span class="archive-item-date">05-13</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0832/" class="archive-item-link" title="[简单 数组 双指针 矩阵 模拟]">0832：翻转图像</a>
+                            <span class="archive-item-date">05-13</span>
+                        </article><h3 class="group-title">2018年3月</h3><article class="archive-item">
+                            <a href="/leetcode/0803/" class="archive-item-link" title="[困难 并查集 数组 矩阵]">0803：打砖块（★★）</a>
+                            <span class="archive-item-date">03-18</span>
+                        </article><h3 class="group-title">2017年12月</h3><article class="archive-item">
+                            <a href="/leetcode/0741/" class="archive-item-link" title="[困难 数组 动态规划 矩阵]">0741：摘樱桃（★★）</a>
+                            <span class="archive-item-date">12-03</span>
+                        </article><h3 class="group-title">2017年10月</h3><article class="archive-item">
+                            <a href="/leetcode/0695/" class="archive-item-link" title="[中等 深度优先搜索 广度优先搜索 并查集 数组 矩阵]">0695：岛屿的最大面积（★）</a>
+                            <span class="archive-item-date">10-08</span>
+                        </article><h3 class="group-title">2017年1月</h3><article class="archive-item">
+                            <a href="/leetcode/0529/" class="archive-item-link" title="[中等 深度优先搜索 广度优先搜索 数组 矩阵]">0529：扫雷游戏（★）</a>
+                            <span class="archive-item-date">01-29</span>
+                        </article><h3 class="group-title">2016年12月</h3><article class="archive-item">
+                            <a href="/leetcode/0498/" class="archive-item-link" title="[中等 数组 矩阵 模拟]">0498：对角线遍历（★）</a>
+                            <span class="archive-item-date">12-23</span>
+                        </article><h3 class="group-title">2016年11月</h3><article class="archive-item">
+                            <a href="/leetcode/0463/" class="archive-item-link" title="[简单 深度优先搜索 广度优先搜索 数组 矩阵]">0463：岛屿的周长</a>
+                            <span class="archive-item-date">11-20</span>
+                        </article><h3 class="group-title">2016年9月</h3><article class="archive-item">
+                            <a href="/leetcode/0407/" class="archive-item-link" title="[困难 广度优先搜索 数组 矩阵 堆（优先队列）]">0407：接雨水 II（★★）</a>
+                            <span class="archive-item-date">09-25</span>
+                        </article><h3 class="group-title">2016年1月</h3><article class="archive-item">
+                            <a href="/leetcode/0378/" class="archive-item-link" title="[中等 数组 二分查找 矩阵 排序 堆（优先队列）]">0378：有序矩阵中第 K 小的元素（★）</a>
+                            <span class="archive-item-date">01-13</span>
+                        </article><h3 class="group-title">2015年12月</h3><article class="archive-item">
+                            <a href="/leetcode/0363/" class="archive-item-link" title="[困难 数组 二分查找 矩阵 有序集合 前缀和]">0363：矩形区域不超过 K 的最大数值和（★★）</a>
+                            <span class="archive-item-date">12-29</span>
+                        </article><h3 class="group-title">2015年11月</h3><article class="archive-item">
+                            <a href="/leetcode/0329/" class="archive-item-link" title="[困难 深度优先搜索 广度优先搜索 图 拓扑排序 记忆化搜索 数组 动态规划 矩阵]">0329：矩阵中的最长递增路径（★★）</a>
+                            <span class="archive-item-date">11-25</span>
+                        </article><h3 class="group-title">2015年10月</h3><article class="archive-item">
+                            <a href="/leetcode/0304/" class="archive-item-link" title="[中等 设计 数组 矩阵 前缀和]">0304：二维区域和检索 - 矩阵不可变（★）</a>
+                            <span class="archive-item-date">10-31</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0289/" class="archive-item-link" title="[中等 数组 矩阵 模拟]">0289：生命游戏（★）</a>
+                            <span class="archive-item-date">10-16</span>
+                        </article><h3 class="group-title">2015年8月</h3><article class="archive-item">
+                            <a href="/leetcode/0240/" class="archive-item-link" title="[中等 数组 二分查找 分治 矩阵]">0240：搜索二维矩阵 II（★）</a>
+                            <span class="archive-item-date">08-28</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0221/" class="archive-item-link" title="[中等 数组 动态规划 矩阵]">0221：最大正方形（★）</a>
+                            <span class="archive-item-date">08-09</span>
+                        </article><h3 class="group-title">2015年7月</h3><article class="archive-item">
+                            <a href="/leetcode/0212/" class="archive-item-link" title="[困难 字典树 数组 字符串 回溯 矩阵]">0212：单词搜索 II（★★）</a>
+                            <span class="archive-item-date">07-30</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0200/" class="archive-item-link" title="[中等 深度优先搜索 广度优先搜索 并查集 数组 矩阵]">0200：岛屿数量（★）</a>
+                            <span class="archive-item-date">07-19</span>
+                        </article><h3 class="group-title">2015年6月</h3><article class="archive-item">
+                            <a href="/leetcode/0174/" class="archive-item-link" title="[困难 数组 动态规划 矩阵]">0174：地下城游戏（★★）</a>
+                            <span class="archive-item-date">06-23</span>
+                        </article><h3 class="group-title">2015年5月</h3><article class="archive-item">
+                            <a href="/leetcode/0130/" class="archive-item-link" title="[中等 深度优先搜索 广度优先搜索 并查集 数组 矩阵]">0130：被围绕的区域（★）</a>
+                            <span class="archive-item-date">05-10</span>
+                        </article><h3 class="group-title">2015年3月</h3><article class="archive-item">
+                            <a href="/leetcode/0085/" class="archive-item-link" title="[困难 栈 数组 动态规划 矩阵 单调栈]">0085：最大矩形（★★）</a>
+                            <span class="archive-item-date">03-26</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0079/" class="archive-item-link" title="[中等 数组 回溯 矩阵]">0079：单词搜索（★）</a>
+                            <span class="archive-item-date">03-20</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0074/" class="archive-item-link" title="[中等 数组 二分查找 矩阵]">0074：搜索二维矩阵（★）</a>
+                            <span class="archive-item-date">03-15</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0073/" class="archive-item-link" title="[中等 数组 哈希表 矩阵]">0073：矩阵置零（★）</a>
+                            <span class="archive-item-date">03-14</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0064/" class="archive-item-link" title="[中等 数组 动态规划 矩阵]">0064：最小路径和（★）</a>
+                            <span class="archive-item-date">03-05</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0063/" class="archive-item-link" title="[中等 数组 动态规划 矩阵]">0063：不同路径 II（★）</a>
+                            <span class="archive-item-date">03-04</span>
+                        </article><h3 class="group-title">2015年2月</h3><article class="archive-item">
+                            <a href="/leetcode/0059/" class="archive-item-link" title="[中等 数组 矩阵 模拟]">0059：螺旋矩阵 II（★）</a>
+                            <span class="archive-item-date">02-28</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0054/" class="archive-item-link" title="[中等 数组 矩阵 模拟]">0054：螺旋矩阵（★）</a>
+                            <span class="archive-item-date">02-23</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0048/" class="archive-item-link" title="[中等 数组 数学 矩阵]">0048：旋转图像（★）</a>
+                            <span class="archive-item-date">02-17</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0037/" class="archive-item-link" title="[困难 数组 哈希表 回溯 矩阵]">0037：解数独（★★）</a>
+                            <span class="archive-item-date">02-06</span>
+                        </article><article class="archive-item">
+                            <a href="/leetcode/0036/" class="archive-item-link" title="[中等 数组 哈希表 矩阵]">0036：有效的数独（★）</a>
+                            <span class="archive-item-date">02-05</span>
+                        </article></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/mapbox-gl/mapbox-gl.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/abbangumi/abbangumi.css"><link rel="stylesheet" href="/lib/flexslider/flexslider.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/echarts/echarts.min.js"></script><script type="text/javascript" src="/lib/echarts/macarons.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl-language.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/flexslider/jquery.flexslider.js"></script><script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"mapbox":{"RTLTextPlugin":"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js","accessToken":"pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"BIVL1KQ1TO","algoliaIndex":"blog","algoliaSearchKey":"a5d7cf15569774aba3caed2ef6c2aa75","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
+<script src="/js/jquery.pjax.min.js"></script>
+<script src="/js/autoload.js"></script>
+<script src="/js/theme.js"></script></body>
+</html>

@@ -3,75 +3,75 @@
         <title>拓扑排序 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
         <description>拓扑排序 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Dec 2021 01:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" rel="self" type="application/rss+xml" /><item>
-    <title>2115：从给定原材料中找到所有可以做出的菜（★★）</title>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 05 Mar 2022 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>2192：有向无环图中一个节点的所有祖先（★）</title>
+    <link>https://huozhixue.github.io/leetcode/2192/</link>
+    <pubDate>Sat, 05 Mar 2022 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2192/</guid>
+    <description><![CDATA[力扣第 73 场双周赛第 3 题 题目 给你一个正整数 n ，它表示一个 有向无环图 中节点的数目，节点编号为 0 到 n - 1 （包括两者）。 给你一个二维整数数组 edges ，其中]]></description>
+</item><item>
+    <title>2115：从给定原材料中找到所有可以做出的菜（★）</title>
     <link>https://huozhixue.github.io/leetcode/2115/</link>
     <pubDate>Sat, 25 Dec 2021 01:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2115/</guid>
-    <description><![CDATA[第 68 场双周赛第 3 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ， 如果你有它 所有 的原材料 ingredients[i] ，那么你]]></description>
+    <description><![CDATA[力扣第 68 场双周赛第 3 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ，如果你有它 所有 的原材料 ingredients[i] ，那]]></description>
 </item><item>
-    <title>1857：有向图中最大颜色值（★★★）</title>
+    <title>2050：并行课程 III（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2050/</link>
+    <pubDate>Sun, 24 Oct 2021 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2050/</guid>
+    <description><![CDATA[力扣第 264 场周赛第 4 题 题目 给你一个整数 n ，表示有 n 节课，课程编号从 1 到 n 。同时给你一个二维整数数组 relations ，其中 relations[j] = [prevCoursej, nextCoursej] ，表示课程 prevCoursej 必须在课程 nextCoursej 之前]]></description>
+</item><item>
+    <title>1976：到达目的地的方案数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1976/</link>
+    <pubDate>Sat, 21 Aug 2021 02:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1976/</guid>
+    <description><![CDATA[力扣第 59 场双周赛第 3 题 题目 你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。输入保证你可以从任意路口出发到达]]></description>
+</item><item>
+    <title>1916：统计为蚁群构筑房间的不同顺序（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1916/</link>
+    <pubDate>Sun, 27 Jun 2021 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1916/</guid>
+    <description><![CDATA[力扣第 247 场周赛第 4 题 题目 你是一只蚂蚁，负责为蚁群构筑 n 间编号从 0 到 n-1 的新房间。给你一个 下标从 0 开始 且长度为 n 的整数数组 prevRoom 作为扩建计划。其中，]]></description>
+</item><item>
+    <title>1857：有向图中最大颜色值（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1857/</link>
     <pubDate>Sun, 09 May 2021 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1857/</guid>
-    <description><![CDATA[第 240 场周赛第 4 题 题目 给你一个 有向图 ，它含有 n 个节点和 m 条边。节点编号从 0 到 n - 1 。 给你一个字符串 colors ，其中 colors[i] 是小写英文字母，表示图中第 i 个节点]]></description>
+    <description><![CDATA[力扣第 240 场周赛第 4 题 题目 给你一个 有向图 ，它含有 n 个节点和 m 条边。节点编号从 0 到 n - 1 。 给你一个字符串 colors ，其中 colors[i] 是小写英文字母，表示图中第 i 个]]></description>
 </item><item>
-    <title>1591：奇怪的打印机 II（★★★）</title>
+    <title>1786：从第一个节点出发到最后一个节点的受限路径数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1786/</link>
+    <pubDate>Sun, 07 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1786/</guid>
+    <description><![CDATA[力扣第 231 场周赛第 3 题 题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ，其中每个 edges[i] =]]></description>
+</item><item>
+    <title>1632：矩阵转换后的秩（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1632/</link>
+    <pubDate>Sun, 25 Oct 2020 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1632/</guid>
+    <description><![CDATA[力扣第 212 场周赛第 4 题 题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的]]></description>
+</item><item>
+    <title>1591：奇怪的打印机 II（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1591/</link>
     <pubDate>Sat, 19 Sep 2020 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1591/</guid>
-    <description><![CDATA[第 35 场双周赛第 4 题 题目 给你一个奇怪的打印机，它有如下两个特殊的打印规则： 每一次操作时，打印机会用同一种颜色打印一个矩形的形状，每次打印会覆盖]]></description>
+    <description><![CDATA[力扣第 35 场双周赛第 4 题 题目 给你一个奇怪的打印机，它有如下两个特殊的打印规则： 每一次操作时，打印机会用同一种颜色打印一个矩形的形状，每次打印会]]></description>
 </item><item>
-    <title>1203：项目管理（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1203/</link>
-    <pubDate>Sun, 22 Sep 2019 03:00:00 &#43;0800</pubDate>
+    <title>1462：课程表 IV（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1462/</link>
+    <pubDate>Wed, 20 May 2020 02:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1203/</guid>
-    <description><![CDATA[第 155 场周赛第 4 题 题目 有 n 个项目，每个项目或者不属于任何小组，或者属于 m 个小组之一。group[i] 表示第 i 个项目所属的小组， 如果第 i 个项目不]]></description>
-</item><item>
-    <title>0802：找到最终的安全状态（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0802/</link>
-    <pubDate>Sun, 18 Mar 2018 02:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0802/</guid>
-    <description><![CDATA[第 76 场周赛第 3 题 题目 在有向图中，从某个节点和每个转向处开始出发，沿着图的有向边走。 如果到达的节点是终点（即它没有连出的有向边），则停止。 如果]]></description>
-</item><item>
-    <title>0684：冗余连接（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0684/</link>
-    <pubDate>Sun, 24 Sep 2017 03:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0684/</guid>
-    <description><![CDATA[第 51 场双周赛第 3 题 题目 在本问题中, 树指的是一个连通且无环的无向图。 输入一个图，该图由一个有着N个节点 (节点值不重复1, 2, &hellip;, N) 的树及一条附加的]]></description>
-</item><item>
-    <title>0310：最小高度树（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0310/</link>
-    <pubDate>Fri, 06 Nov 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0310/</guid>
-    <description><![CDATA[题目 树是一个无向图，其中任何两个顶点只通过一条路径连接。 换句话说，一个任何没有简单环路的连通图都是一棵树。 给你一棵包含 n 个节点的树，标记为 0]]></description>
-</item><item>
-    <title>0269：火星词典（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0269/</link>
-    <pubDate>Sat, 26 Sep 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0269/</guid>
-    <description><![CDATA[题目 现有一种使用英语字母的火星语言，这门语言的字母顺序与英语顺序不同。 给你一个字符串列表 words ，作为这门语言的词典，words 中的字符串已经 按这]]></description>
-</item><item>
-    <title>0210：课程表 II（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0210/</link>
-    <pubDate>Wed, 29 Jul 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0210/</guid>
-    <description><![CDATA[题目 现在你总共有 numCourses 门课需要选，记为 0 到 numCourses - 1。给你一个数组 prerequisites ， 其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi 。 例如，想要学习课程 0 ，你需要先完]]></description>
-</item><item>
-    <title>0207：课程表（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0207/</link>
-    <pubDate>Sun, 26 Jul 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0207/</guid>
-    <description><![CDATA[题目 你这个学期必须选修 numCourses 门课程，记为 0 到 numCourses - 1 。 在选修某些课程之前需要一些先修课程。 先修课程按数组 prerequisites 给出， 其中 prerequisites[i] = [ai, bi] ，表示如果要学习课程 ai]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1462/</guid>
+    <description><![CDATA[力扣第 27 场双周赛第 3 题 题目 你总共需要上 numCourses 门课，课程编号依次为 0 到 numCourses-1 。你会得到一个数组 prerequisite ，其中 prerequisites[i] = [ai, bi] 表示如果你想选 bi 课程，你 必须 先选 ai 课程。]]></description>
 </item></channel>
 </rss>

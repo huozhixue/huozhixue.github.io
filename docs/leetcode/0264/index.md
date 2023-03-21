@@ -1,26 +1,41 @@
-# 0264：丑数 II（★★★）
+# 0264：丑数 II（★）
 
+
+> <u>**[力扣第 264 题](https://leetcode.cn/problems/ugly-number-ii/)**</u>
 
 ## 题目
 
-给你一个整数 n ，请你找出并返回第 n 个 丑数 。
+<p>给你一个整数 <code>n</code> ，请你找出并返回第 <code>n</code> 个 <strong>丑数</strong> 。</p>
 
-丑数 就是只包含质因数 2、3 和/或 5 的正整数。
- 
-示例 1：
+<p><strong>丑数 </strong>就是只包含质因数 <code>2</code>、<code>3</code> 和/或 <code>5</code> 的正整数。</p>
 
-    输入：n = 10
-    输出：12
-    解释：[1, 2, 3, 4, 5, 6, 8, 9, 10, 12] 是由前 10 个丑数组成的序列。
 
-示例 2：
 
-    输入：n = 1
-    输出：1
-    解释：1 通常被视为丑数。
-	
-提示：1 <= n <= 1690
-     
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 10
+<strong>输出：</strong>12
+<strong>解释：</strong>[1, 2, 3, 4, 5, 6, 8, 9, 10, 12] 是由前 10 个丑数组成的序列。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>1
+<strong>解释：</strong>1 通常被视为丑数。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= n <= 1690</code></li>
+</ul>
+
+
 ## 分析
 
 {{< lc "0263" >}} 升级版，有个巧妙的 dp 方法。

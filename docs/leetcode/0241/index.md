@@ -1,37 +1,48 @@
 # 0241：为运算表达式设计优先级（★）
 
 
+> <u>**[力扣第 241 题](https://leetcode.cn/problems/different-ways-to-add-parentheses/)**</u>
+
 ## 题目
 
-给你一个由数字和运算符组成的字符串 expression ，按不同优先级组合数字和运算符，
-计算并返回所有可能组合的结果。你可以 按任意顺序 返回答案。
+<p>给你一个由数字和运算符组成的字符串 <code>expression</code> ，按不同优先级组合数字和运算符，计算并返回所有可能组合的结果。你可以 <strong>按任意顺序</strong> 返回答案。</p>
 
- 
-示例 1：
+<p>生成的测试用例满足其对应输出值符合 32 位整数范围，不同结果的数量不超过 <code>10<sup>4</sup></code> 。</p>
 
-	输入：expression = "2-1-1"
-	输出：[0,2]
-	解释：
-	((2-1)-1) = 0 
-	(2-(1-1)) = 2
 
-示例 2：
 
-	输入：expression = "2*3-4*5"
-	输出：[-34,-14,-10,-10,10]
-	解释：
-	(2*(3-(4*5))) = -34 
-	((2*3)-(4*5)) = -14 
-	((2*(3-4))*5) = -10 
-	(2*((3-4)*5)) = -10 
-	(((2*3)-4)*5) = 10
-	 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= expression.length <= 20
-- expression 由数字和算符 '+'、'-' 和 '*' 组成。
-- 输入表达式中的所有整数值在范围 [0, 99] 
+<pre>
+<strong>输入：</strong>expression = "2-1-1"
+<strong>输出：</strong>[0,2]
+<strong>解释：</strong>
+((2-1)-1) = 0
+(2-(1-1)) = 2
+</pre>
 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>expression = "2*3-4*5"
+<strong>输出：</strong>[-34,-14,-10,-10,10]
+<strong>解释：</strong>
+(2*(3-(4*5))) = -34
+((2*3)-(4*5)) = -14
+((2*(3-4))*5) = -10
+(2*((3-4)*5)) = -10
+(((2*3)-4)*5) = 10
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= expression.length &lt;= 20</code></li>
+<li><code>expression</code> 由数字和算符 <code>'+'</code>、<code>'-'</code> 和 <code>'*'</code> 组成。</li>
+<li>输入表达式中的所有整数值在范围 <code>[0, 99]</code> </li>
+</ul>
 
 
 ## 分析

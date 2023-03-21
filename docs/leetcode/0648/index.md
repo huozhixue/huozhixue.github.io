@@ -1,58 +1,51 @@
-# 0648：单词替换（★★）
+# 0648：单词替换（★）
 
 
-> **第 42 场双周赛第 4 题**
+> <u>**[力扣第 42 场双周赛第 4 题](https://leetcode.cn/problems/replace-words/)**</u>
 
 ## 题目
 
-在英语中，我们有一个叫做 词根(root)的概念，它可以跟着其他一些词组成另一个较长的单词——我们称这个词为 
-继承词(successor)。例如，词根an，跟随着单词 other(其他)，可以形成新的单词 another(另一个)。
+<p>在英语中，我们有一个叫做 <code>词根</code>(root) 的概念，可以词根<strong>后面</strong>添加其他一些词组成另一个较长的单词——我们称这个词为 <code>继承词</code>(successor)。例如，词根<code>an</code>，跟随着单词 <code>other</code>(其他)，可以形成新的单词 <code>another</code>(另一个)。</p>
 
-现在，给定一个由许多词根组成的词典和一个句子。你需要将句子中的所有继承词用词根替换掉。
-如果继承词有许多可以形成它的词根，则用最短的词根替换它。
+<p>现在，给定一个由许多<strong>词根</strong>组成的词典 <code>dictionary</code> 和一个用空格分隔单词形成的句子 <code>sentence</code>。你需要将句子中的所有<strong>继承词</strong>用<strong>词根</strong>替换掉。如果<strong>继承词</strong>有许多可以形成它的<strong>词根</strong>，则用<strong>最短</strong>的词根替换它。</p>
 
-你需要输出替换之后的句子。
+<p>你需要输出替换之后的句子。</p>
 
 
-提示：
 
-- 1 <= dictionary.length <= 1000
-- 1 <= dictionary[i].length <= 100
-- dictionary[i] 仅由小写字母组成。
-- 1 <= sentence.length <= 10^6
-- sentence 仅由小写字母和空格组成。
-- sentence 中单词的总量在范围 [1, 1000] 内。
-- sentence 中每个单词的长度在范围 [1, 1000] 内。
-- sentence 中单词之间由一个空格隔开。
-- sentence 没有前导或尾随空格。
+<p><strong>示例 1：</strong></p>
 
- 
-示例 1：
-    
-    输入：dictionary = ["cat","bat","rat"], sentence = "the cattle was rattled by the battery"
-    输出："the cat was rat by the bat"
+<pre>
+<strong>输入：</strong>dictionary = ["cat","bat","rat"], sentence = "the cattle was rattled by the battery"
+<strong>输出：</strong>"the cat was rat by the bat"
+</pre>
 
-示例 2：
-    
-    输入：dictionary = ["a","b","c"], sentence = "aadsfasf absbs bbab cadsfafs"
-    输出："a a b c"
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>dictionary = ["a","b","c"], sentence = "aadsfasf absbs bbab cadsfafs"
+<strong>输出：</strong>"a a b c"
+</pre>
 
-    输入：dictionary = ["a", "aa", "aaa", "aaaa"], sentence = "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"
-    输出："a a a a a a a a bbb baba a"
 
-示例 4：
 
-    输入：dictionary = ["catt","cat","bat","rat"], sentence = "the cattle was rattled by the battery"
-    输出："the cat was rat by the bat"
+<p><strong>提示：</strong></p>
 
-示例 5：
+<ul>
+<li><code>1 &lt;= dictionary.length &lt;= 1000</code></li>
+<li><code>1 &lt;= dictionary[i].length &lt;= 100</code></li>
+<li><code>dictionary[i]</code> 仅由小写字母组成。</li>
+<li><code>1 &lt;= sentence.length &lt;= 10^6</code></li>
+<li><code>sentence</code> 仅由小写字母和空格组成。</li>
+<li><code>sentence</code> 中单词的总量在范围 <code>[1, 1000]</code> 内。</li>
+<li><code>sentence</code> 中每个单词的长度在范围 <code>[1, 1000]</code> 内。</li>
+<li><code>sentence</code> 中单词之间由一个空格隔开。</li>
+<li><code>sentence</code> 没有前导或尾随空格。</li>
+</ul>
 
-    输入：dictionary = ["ac","ab"], sentence = "it is abnormal that this solution is accepted"
-    输出："it is ab that this solution is ac"
 
- 
+
+
 ## 分析
 
 容易想到用前缀树，先将词根插入，并在末尾用 '#' 标记。

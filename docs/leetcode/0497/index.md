@@ -1,51 +1,61 @@
-# 0497：非重叠矩形中的随机点（★★）
+# 0497：非重叠矩形中的随机点（★）
 
 
-
+> <u>**[力扣第 497 题](https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/)**</u>
 
 ## 题目
 
-给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 
-是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角角点。
-设计一个算法来挑选一个随机整数点内的空间所覆盖的一个给定的矩形。矩形周长上的一个点包含在矩形覆盖的空间中。
+<p>给定一个由非重叠的轴对齐矩形的数组 <code>rects</code> ，其中 <code>rects[i] = [ai, bi, xi, yi]</code> 表示 <code>(ai, bi)</code> 是第 <code>i</code> 个矩形的左下角点，<code>(xi, yi)</code> 是第 <code>i</code> 个矩形的右上角点。设计一个算法来随机挑选一个被某一矩形覆盖的整数点。矩形周长上的点也算做是被矩形覆盖。所有满足要求的点必须等概率被返回。</p>
 
-在一个给定的矩形覆盖的空间内任何整数点都有可能被返回。
+<p>在给定的矩形覆盖的空间内的任何整数点都有可能被返回。</p>
 
-请注意 ，整数点是具有整数坐标的点。
+<p><strong>请注意 </strong>，整数点是具有整数坐标的点。</p>
 
-实现 Solution 类:
-- Solution(int[][] rects) 用给定的矩形数组 rects 初始化对象。
-- int[] pick() 返回一个随机的整数点 [u, v] 在给定的矩形所覆盖的空间内。
- 
+<p>实现 <code>Solution</code> 类:</p>
 
-示例 1：
+<ul>
+<li><code>Solution(int[][] rects)</code> 用给定的矩形数组 <code>rects</code> 初始化对象。</li>
+<li><code>int[] pick()</code> 返回一个随机的整数点 <code>[u, v]</code> 在给定的矩形所覆盖的空间内。</li>
+</ul>
 
-![img](https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg)
+<ol>
+</ol>
 
-    输入: 
-    ["Solution","pick","pick","pick","pick","pick"]
-    [[[[-2,-2,-1,-1],[1,0,3,0]]],[],[],[],[],[]]
-    输出: 
-    [null,[-1,-2],[2,0],[-2,-1],[3,0],[-2,-2]
-    
-    解释：
-    Solution solution = new Solution([[-2, -2, 1, 1], [2, 2, 4, 6]]);
-    solution.pick(); // 返回 [1, -2]
-    solution.pick(); // 返回 [1, -1]
-    solution.pick(); // 返回 [-1, -2]
-    solution.pick(); // 返回 [-2, -2]
-    solution.pick(); // 返回 [0, 0]
- 
 
-提示：
-- 1 <= rects.length <= 100
-- rects[i].length == 4
-- -10^9 <= ai < xi <= 10^9
-- -10^9 <= bi < yi <= 10^9
-- xi - ai <= 2000
-- yi - bi <= 2000
-- 所有的矩形不重叠。
-- pick 最多被调用 10^4 次。
+
+<p><strong>示例 1：</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg" style="height: 539px; width: 419px;" /></p>
+
+<pre>
+<strong>输入:
+</strong>["Solution", "pick", "pick", "pick", "pick", "pick"]
+[[[[-2, -2, 1, 1], [2, 2, 4, 6]]], [], [], [], [], []]
+<strong>输出:
+</strong>[null, [1, -2], [1, -1], [-1, -2], [-2, -2], [0, 0]]
+
+<strong>解释：</strong>
+Solution solution = new Solution([[-2, -2, 1, 1], [2, 2, 4, 6]]);
+solution.pick(); // 返回 [1, -2]
+solution.pick(); // 返回 [1, -1]
+solution.pick(); // 返回 [-1, -2]
+solution.pick(); // 返回 [-2, -2]
+solution.pick(); // 返回 [0, 0]</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= rects.length &lt;= 100</code></li>
+<li><code>rects[i].length == 4</code></li>
+<li><code>-10<sup>9</sup> &lt;= a<sub>i</sub> &lt; x<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= b<sub>i</sub> &lt; y<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
+<li><code>x<sub>i</sub> - a<sub>i</sub> &lt;= 2000</code></li>
+<li><code>y<sub>i</sub> - b<sub>i</sub> &lt;= 2000</code></li>
+<li>所有的矩形不重叠。</li>
+<li><code>pick</code> 最多被调用 <code>10<sup>4</sup></code> 次。</li>
+</ul>
 
 
 ## 分析

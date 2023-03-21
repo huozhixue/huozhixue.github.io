@@ -1,44 +1,61 @@
-# 0151：翻转字符串里的单词
+# 0151：反转字符串中的单词（★）
 
+
+> <u>**[力扣第 151 题](https://leetcode.cn/problems/reverse-words-in-a-string/)**</u>
 
 ## 题目
 
-给你一个字符串 s ，颠倒字符串中 单词 的顺序。
+<p>给你一个字符串 <code>s</code> ，请你反转字符串中 <strong>单词</strong> 的顺序。</p>
 
-单词 是由非空格字符组成的字符串。s 中使用至少一个空格将字符串中的 单词 分隔开。
+<p><strong>单词</strong> 是由非空格字符组成的字符串。<code>s</code> 中使用至少一个空格将字符串中的 <strong>单词</strong> 分隔开。</p>
 
-返回 单词 顺序颠倒且 单词 之间用单个空格连接的结果字符串。
+<p>返回 <strong>单词</strong> 顺序颠倒且 <strong>单词</strong> 之间用单个空格连接的结果字符串。</p>
 
-注意：输入字符串 s中可能会存在前导空格、尾随空格或者单词间的多个空格。
-返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。
+<p><strong>注意：</strong>输入字符串 <code>s</code>中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。</p>
 
- 
 
-示例 1：
 
-	输入：s = "the sky is blue"
-	输出："blue is sky the"
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>s = "<code>the sky is blue</code>"
+<strong>输出：</strong>"<code>blue is sky the</code>"
+</pre>
 
-	输入：s = "  hello world  "
-	输出："world hello"
-	解释：颠倒后的字符串中不能存在前导空格和尾随空格。
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>s = "  hello world  "
+<strong>输出：</strong>"world hello"
+<strong>解释：</strong>反转后的字符串中不能存在前导空格和尾随空格。
+</pre>
 
-	输入：s = "a good   example"
-	输出："example good a"
-	解释：如果两个单词间有多余的空格，颠倒后的字符串需要将单词间的空格减少到仅有一个。
- 
+<p><strong>示例 3：</strong></p>
 
-提示：
-- 1 <= s.length <= 10^4
-- s 包含英文大小写字母、数字和空格 ' '
-- s 中 至少存在一个 单词
- 
+<pre>
+<strong>输入：</strong>s = "a good   example"
+<strong>输出：</strong>"example good a"
+<strong>解释：</strong>如果两个单词间有多余的空格，反转后的字符串需要将单词间的空格减少到仅有一个。
+</pre>
 
-     
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
+<li><code>s</code> 包含英文大小写字母、数字和空格 <code>' '</code></li>
+<li><code>s</code> 中 <strong>至少存在一个</strong> 单词</li>
+</ul>
+
+<ul>
+</ul>
+
+
+
+<p><strong>进阶：</strong>如果字符串在你使用的编程语言中是一种可变数据类型，请尝试使用 <code>O(1)</code> 额外空间复杂度的 <strong>原地</strong> 解法。</p>
+
+
 ## 分析
 
 按空格分割得到单词列表，将列表反转后再用空格拼接起来即可。

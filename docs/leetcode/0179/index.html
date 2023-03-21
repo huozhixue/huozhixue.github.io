@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0179：最大数（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0179：最大数（★★★）" />
-<meta property="og:description" content="题目 给定一组非负整数 nums，重新排列它们每个数字的顺序（每个数字不可拆分）使之组成一个最大的整数。 注意：输出结果可能非常大，所以你需要返回" />
+        <title>0179：最大数（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0179：最大数（★）" />
+<meta property="og:description" content="力扣第 179 题 题目 给定一组非负整数 nums，重新排列每个数的顺序（每个数不可拆分）使之组成一个最大的整数。 注意：输出结果可能非常大，所以你需要返" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0179/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-06-28T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0179：最大数（★★★）"/>
-<meta name="twitter:description" content="题目 给定一组非负整数 nums，重新排列它们每个数字的顺序（每个数字不可拆分）使之组成一个最大的整数。 注意：输出结果可能非常大，所以你需要返回"/>
+<meta name="twitter:title" content="0179：最大数（★）"/>
+<meta name="twitter:description" content="力扣第 179 题 题目 给定一组非负整数 nums，重新排列每个数的顺序（每个数不可拆分）使之组成一个最大的整数。 注意：输出结果可能非常大，所以你需要返"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0179/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0178/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0180/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0179：最大数（★★★）",
+        "headline": "0179：最大数（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0179\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  711 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  692 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0179\/","datePublished": "2015-06-28T00:00:00+08:00","dateModified": "2015-06-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0179：最大数（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0179：最大数（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-28">2015-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 711 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0179/" class="leancloud_visitors" data-flag-title="0179：最大数（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-28">2015-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 692 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0179/" class="leancloud_visitors" data-flag-title="0179：最大数（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,21 +125,25 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一组非负整数 nums，重新排列它们每个数字的顺序（每个数字不可拆分）使之组成一个最大的整数。</p>
-<p>注意：输出结果可能非常大，所以你需要返回一个字符串而不是整数。</p>
-<p>示例 1：</p>
-<pre><code>输入：nums = [10,2]
-输出：&quot;210&quot;
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums = [3,30,34,5,9]
-输出：&quot;9534330&quot;
-</code></pre>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/largest-number/" target="_blank" rel="noopener noreffer">力扣第 179 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一组非负整数 <code>nums</code>，重新排列每个数的顺序（每个数不可拆分）使之组成一个最大的整数。</p>
+<p><strong>注意：</strong>输出结果可能非常大，所以你需要返回一个字符串而不是整数。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入<code>：</code></strong><code>nums = [10,2]</code>
+<strong>输出：</strong><code>"210"</code></pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入<code>：</code></strong><code>nums = [3,30,34,5,9]</code>
+<strong>输出：</strong><code>"9534330"</code>
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 100</li>
-<li>0 &lt;= nums[i] &lt;= 10^9</li>
+<li><code>1 &lt;= nums.length &lt;= 100</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>首先想到按字典序降序拼接，但是某些情况并不适用。</p>
@@ -201,14 +205,14 @@ $$ \overline{BA} \geq \overline{AB} $$</li>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0180/" class="prev" rel="prev" title="0180：连续出现的数字（★★）"><i class="fas fa-angle-left fa-fw"></i>0180：连续出现的数字（★★）</a>
-            <a href="/leetcode/0178/" class="next" rel="next" title="0178：分数排名（★★）">0178：分数排名（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0180/" class="prev" rel="prev" title="0180：连续出现的数字（★）"><i class="fas fa-angle-left fa-fw"></i>0180：连续出现的数字（★）</a>
+            <a href="/leetcode/0178/" class="next" rel="next" title="0178：分数排名（★）">0178：分数排名（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

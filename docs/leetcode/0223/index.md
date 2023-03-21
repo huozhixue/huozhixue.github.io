@@ -1,30 +1,45 @@
-# 0223：矩形面积（★★）
+# 0223：矩形面积（★）
 
+
+> <u>**[力扣第 223 题](https://leetcode.cn/problems/rectangle-area/)**</u>
 
 ## 题目
 
-给你 二维 平面上两个 由直线构成的 矩形，请你计算并返回两个矩形覆盖的总面积。
+<p>给你 <strong>二维</strong> 平面上两个 <strong>由直线构成且边与坐标轴平行/垂直</strong> 的矩形，请你计算并返回两个矩形覆盖的总面积。</p>
 
-每个矩形由其 左下 顶点和 右上 顶点坐标表示：
-- 第一个矩形由其左下顶点 (ax1, ay1) 和右上顶点 (ax2, ay2) 定义。
-- 第二个矩形由其左下顶点 (bx1, by1) 和右上顶点 (bx2, by2) 定义。
+<p>每个矩形由其 <strong>左下</strong> 顶点和 <strong>右上</strong> 顶点坐标表示：</p>
+
+<div class="MachineTrans-Lines">
+<ul>
+<li class="MachineTrans-lang-zh-CN">第一个矩形由其左下顶点 <code>(ax1, ay1)</code> 和右上顶点 <code>(ax2, ay2)</code> 定义。</li>
+<li class="MachineTrans-lang-zh-CN">第二个矩形由其左下顶点 <code>(bx1, by1)</code> 和右上顶点 <code>(bx2, by2)</code> 定义。</li>
+</ul>
+</div>
 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/05/08/rectangle-plane.png)
+<p><strong>示例 1：</strong></p>
+<img alt="Rectangle Area" src="https://assets.leetcode.com/uploads/2021/05/08/rectangle-plane.png" style="width: 700px; height: 365px;" />
+<pre>
+<strong>输入：</strong>ax1 = -3, ay1 = 0, ax2 = 3, ay2 = 4, bx1 = 0, by1 = -1, bx2 = 9, by2 = 2
+<strong>输出：</strong>45
+</pre>
 
-    Rectangle Area
-    输入：ax1 = -3, ay1 = 0, ax2 = 3, ay2 = 4, bx1 = 0, by1 = -1, bx2 = 9, by2 = 2
-    输出：45
+<p><strong>示例 2：</strong></p>
 
-示例 2：
-    
-    输入：ax1 = -2, ay1 = -2, ax2 = 2, ay2 = 2, bx1 = -2, by1 = -2, bx2 = 2, by2 = 2
-    输出：16
- 
-提示：
-- -10^4 <= ax1, ay1, ax2, ay2, bx1, by1, bx2, by2 <= 10^4
+<pre>
+<strong>输入：</strong>ax1 = -2, ay1 = -2, ax2 = 2, ay2 = 2, bx1 = -2, by1 = -2, bx2 = 2, by2 = 2
+<strong>输出：</strong>16
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-10<sup>4</sup> &lt;= ax1, ay1, ax2, ay2, bx1, by1, bx2, by2 &lt;= 10<sup>4</sup></code></li>
+</ul>
+
 
 ## 分析
 

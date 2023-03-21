@@ -1,5 +1,7 @@
-# 0001：两数之和（★）
+# 0001：两数之和
 
+
+> <u>**[力扣第 1 题](https://leetcode.cn/problems/two-sum/)**</u>
 
 ## 题目
 
@@ -47,8 +49,6 @@
 
 
 <p><strong>进阶：</strong>你可以想出一个时间复杂度小于 <code>O(n<sup>2</sup>)</code> 的算法吗？</p>
-
-
 
 
 ## 分析

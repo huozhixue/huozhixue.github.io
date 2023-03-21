@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0080：删除排序数组中的重复项 II（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0080：删除排序数组中的重复项 II（★）" />
-<meta property="og:description" content="题目 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 最多出现两次 ，返回删除后数组的新长度。 不要使用额外的数组空间，你必须在 原地 修改" />
+        <title>0080：删除有序数组中的重复项 II（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0080：删除有序数组中的重复项 II（★）" />
+<meta property="og:description" content="力扣第 80 题 题目 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使得出现次数超过两次的元素只出现两次 ，返回删除后数组的新长度。 不要使用额外的数" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0080/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-03-21T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0080：删除排序数组中的重复项 II（★）"/>
-<meta name="twitter:description" content="题目 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 最多出现两次 ，返回删除后数组的新长度。 不要使用额外的数组空间，你必须在 原地 修改"/>
+<meta name="twitter:title" content="0080：删除有序数组中的重复项 II（★）"/>
+<meta name="twitter:description" content="力扣第 80 题 题目 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使得出现次数超过两次的元素只出现两次 ，返回删除后数组的新长度。 不要使用额外的数"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0080/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0079/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0081/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0080：删除排序数组中的重复项 II（★）",
+        "headline": "0080：删除有序数组中的重复项 II（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0080\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  331 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  522 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0080\/","datePublished": "2015-03-21T00:00:00+08:00","dateModified": "2015-03-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0080：删除排序数组中的重复项 II（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0080：删除有序数组中的重复项 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-21">2015-03-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 331 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0080/" class="leancloud_visitors" data-flag-title="0080：删除排序数组中的重复项 II（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-21">2015-03-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 522 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0080/" class="leancloud_visitors" data-flag-title="0080：删除有序数组中的重复项 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,26 +125,43 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 最多出现两次 ，返回删除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
-<p>示例 1：</p>
-<pre><code>输入：nums = [1,1,1,2,2,3]
-输出：5, nums = [1,1,2,2,3]
-解释：函数应返回新长度 length = 5, 并且原数组的前五个元素被修改为 1, 1, 2, 2, 3 。 
-不需要考虑数组中超出新长度后面的元素。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums = [0,0,1,1,1,1,2,3,3]
-输出：7, nums = [0,0,1,1,2,3,3]
-解释：函数应返回新长度 length = 7, 并且原数组的前五个元素被修改为 0, 0, 1, 1, 2, 3, 3 。 
-不需要考虑数组中超出新长度后面的元素。
-</code></pre>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/" target="_blank" rel="noopener noreffer">力扣第 80 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个有序数组 <code>nums</code> ，请你<strong><a href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank"> 原地</a></strong> 删除重复出现的元素，使得出现次数超过两次的元素<strong>只出现两次</strong> ，返回删除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank">原地 </a>修改输入数组 </strong>并在使用 O(1) 额外空间的条件下完成。</p>
+<p><strong>说明：</strong></p>
+<p>为什么返回数值是整数，但输出的答案是数组呢？</p>
+<p>请注意，输入数组是以<strong>「引用」</strong>方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<pre>
+// <strong>nums</strong> 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中<strong> 该长度范围内</strong> 的所有元素。
+for (int i = 0; i &lt; len; i++) {
+print(nums[i]);
+}
+</pre>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [1,1,1,2,2,3]
+<strong>输出：</strong>5, nums = [1,1,2,2,3]
+<strong>解释：</strong>函数应返回新长度 length = <strong><code>5</code></strong>, 并且原数组的前五个元素被修改为 <strong><code>1, 1, 2, 2,</code></strong> <strong>3 </strong>。 不需要考虑数组中超出新长度后面的元素。
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [0,0,1,1,1,1,2,3,3]
+<strong>输出：</strong>7, nums = [0,0,1,1,2,3,3]
+<strong>解释：</strong>函数应返回新长度 length = <strong><code>7</code></strong>, 并且原数组的前五个元素被修改为 <strong><code>0</code></strong>, <strong>0</strong>, <strong>1</strong>, <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>3 。</strong> 不需要考虑数组中超出新长度后面的元素。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 3 * 10^4</li>
-<li>-10^4 &lt;= nums[i] &lt;= 10^4</li>
-<li>nums 已按升序排列</li>
+<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
+<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+<li><code>nums</code> 已按升序排列</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>类似 <a href="/leetcode/0026" title="0026" rel="noopener noreferrer">0026</a>，只是元素最多出现次数从一次变成两次。</p>
@@ -189,14 +206,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0081/" class="prev" rel="prev" title="0081：搜索旋转排序数组 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0081：搜索旋转排序数组 II（★★）</a>
-            <a href="/leetcode/0079/" class="next" rel="next" title="0079：单词搜索（★★）">0079：单词搜索（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0081/" class="prev" rel="prev" title="0081：搜索旋转排序数组 II（★）"><i class="fas fa-angle-left fa-fw"></i>0081：搜索旋转排序数组 II（★）</a>
+            <a href="/leetcode/0079/" class="next" rel="next" title="0079：单词搜索（★）">0079：单词搜索（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

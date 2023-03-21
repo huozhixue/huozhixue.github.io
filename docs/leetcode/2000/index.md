@@ -1,47 +1,54 @@
-# 2000：反转单词前缀（★）
+# 2000：反转单词前缀
 
 
-> **第 258 场周赛第 1 题**
+> <u>**[力扣第 258 场周赛第 1 题](https://leetcode.cn/problems/reverse-prefix-of-word/)**</u>
 
 ## 题目
 
-给你一个下标从 0 开始的字符串 word 和一个字符 ch 。找出 ch 第一次出现的下标 i ，
-反转 word 中从下标 0 开始、直到下标 i 结束（含下标 i ）的那段字符。
-如果 word 中不存在字符 ch ，则无需进行任何操作。
+<p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>word</code> 和一个字符 <code>ch</code> 。找出 <code>ch</code> 第一次出现的下标 <code>i</code> ，<strong>反转 </strong><code>word</code> 中从下标 <code>0</code> 开始、直到下标 <code>i</code> 结束（含下标 <code>i</code> ）的那段字符。如果 <code>word</code> 中不存在字符 <code>ch</code> ，则无需进行任何操作。</p>
 
-例如，如果 word = "abcdefd" 且 ch = "d" ，那么你应该 反转 从下标 0 开始、直到下标 3 结束（含下标 3 ）。
-结果字符串将会是 "dcbaefd" 。
+<ul>
+<li>例如，如果 <code>word = "abcdefd"</code> 且 <code>ch = "d"</code> ，那么你应该 <strong>反转</strong> 从下标 0 开始、直到下标 <code>3</code> 结束（含下标 <code>3</code> ）。结果字符串将会是 <code>"<em><strong>dcba</strong></em>efd"</code> 。</li>
+</ul>
 
-返回 结果字符串 。
+<p>返回 <strong>结果字符串</strong> 。</p>
 
-提示：
-- 1 <= word.length <= 250
-- word 由小写英文字母组成
-- ch 是一个小写英文字母 
 
-示例 1：
 
-    输入：word = "abcdefd", ch = "d"
-    输出："dcbaefd"
-    解释："d" 第一次出现在下标 3 。 
-    反转从下标 0 到下标 3（含下标 3）的这段字符，结果字符串是 "dcbaefd" 。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre><strong>输入：</strong>word = "<em><strong>abcd</strong></em>efd", ch = "d"
+<strong>输出：</strong>"<em><strong>dcba</strong></em>efd"
+<strong>解释：</strong>"d" 第一次出现在下标 3 。
+反转从下标 0 到下标 3（含下标 3）的这段字符，结果字符串是 "dcbaefd" 。
+</pre>
 
-    输入：word = "xyxzxe", ch = "z"
-    输出："zxyxxe"
-    解释："z" 第一次也是唯一一次出现是在下标 3 。
-    反转从下标 0 到下标 3（含下标 3）的这段字符，结果字符串是 "zxyxxe" 。
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre><strong>输入：</strong>word = "<em><strong>xyxz</strong></em>xe", ch = "z"
+<strong>输出：</strong>"<em><strong>zxyx</strong></em>xe"
+<strong>解释：</strong>"z" 第一次也是唯一一次出现是在下标 3 。
+反转从下标 0 到下标 3（含下标 3）的这段字符，结果字符串是 "zxyxxe" 。
+</pre>
 
-    输入：word = "abcd", ch = "z"
-    输出："abcd"
-    解释："z" 不存在于 word 中。
-    无需执行反转操作，结果字符串是 "abcd" 。
- 
+<p><strong>示例 3：</strong></p>
 
- 
+<pre><strong>输入：</strong>word = "abcd", ch = "z"
+<strong>输出：</strong>"abcd"
+<strong>解释：</strong>"z" 不存在于 word 中。
+无需执行反转操作，结果字符串是 "abcd" 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= word.length &lt;= 250</code></li>
+<li><code>word</code> 由小写英文字母组成</li>
+<li><code>ch</code> 是一个小写英文字母</li>
+</ul>
+
 
 ## 分析
 

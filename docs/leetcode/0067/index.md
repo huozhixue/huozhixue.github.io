@@ -1,27 +1,36 @@
 # 0067：二进制求和
 
 
+> <u>**[力扣第 67 题](https://leetcode.cn/problems/add-binary/)**</u>
+
 ## 题目
 
-给你两个二进制字符串，返回它们的和（用二进制表示）。
-
-输入为 非空 字符串且只包含数字 1 和 0。
+<p>给你两个二进制字符串 <code>a</code> 和 <code>b</code> ，以二进制字符串的形式返回它们的和。</p>
 
 
-示例 1:
 
-	输入: a = "11", b = "1"
-	输出: "100"
-	
-示例 2:
+<p><strong>示例 1：</strong></p>
 
-	输入: a = "1010", b = "1011"
-	输出: "10101"
+<pre>
+<strong>输入:</strong>a = "11", b = "1"
+<strong>输出：</strong>"100"</pre>
 
-提示：
-- 每个字符串仅由字符 '0' 或 '1' 组成。
-- 1 <= a.length, b.length <= 10^4
-- 字符串如果不是 "0" ，就都不含前导零。
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>a = "1010", b = "1011"
+<strong>输出：</strong>"10101"</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= a.length, b.length &lt;= 10<sup>4</sup></code></li>
+<li><code>a</code> 和 <code>b</code> 仅由字符 <code>'0'</code> 或 <code>'1'</code> 组成</li>
+<li>字符串如果不是 <code>"0"</code> ，就不含前导零</li>
+</ul>
+
 
 ## 分析
 

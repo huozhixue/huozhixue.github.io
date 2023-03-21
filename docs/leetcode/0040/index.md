@@ -1,42 +1,49 @@
-# 0040：组合总和 II（★★）
+# 0040：组合总和 II（★）
 
+
+> <u>**[力扣第 40 题](https://leetcode.cn/problems/combination-sum-ii/)**</u>
 
 ## 题目
 
-给定一个数组 candidates 和一个目标数 target ，
-找出 candidates 中所有可以使数字和为 target 的组合。
+<p>给定一个候选人编号的集合 <code>candidates</code> 和一个目标数 <code>target</code> ，找出 <code>candidates</code> 中所有可以使数字和为 <code>target</code> 的组合。</p>
 
-candidates 中的每个数字在每个组合中只能使用一次。
+<p><code>candidates</code> 中的每个数字在每个组合中只能使用 <strong>一次</strong> 。</p>
 
-注意：解集不能包含重复的组合。 
-
- 
-
-示例 1:
-
-    输入: candidates = [10,1,2,7,6,1,5], target = 8,
-    输出:
-    [
-    [1,1,6],
-    [1,2,5],
-    [1,7],
-    [2,6]
-    ]
-
-示例 2:
-
-    输入: candidates = [2,5,2,1,2], target = 5,
-    输出:
-    [
-    [1,2,2],
-    [5]
-    ]
+<p><strong>注意：</strong>解集不能包含重复的组合。 </p>
 
 
-提示:
-- 1 <= candidates.length <= 100
-- 1 <= candidates[i] <= 50
-- 1 <= target <= 30
+
+<p><strong>示例 1:</strong></p>
+
+<pre>
+<strong>输入:</strong> candidates = <code>[10,1,2,7,6,1,5]</code>, target = <code>8</code>,
+<strong>输出:</strong>
+[
+[1,1,6],
+[1,2,5],
+[1,7],
+[2,6]
+]</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> candidates = [2,5,2,1,2], target = 5,
+<strong>输出:</strong>
+[
+[1,2,2],
+[5]
+]</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= candidates.length &lt;= 100</code></li>
+<li><code>1 &lt;= candidates[i] &lt;= 50</code></li>
+<li><code>1 &lt;= target &lt;= 30</code></li>
+</ul>
 
 
 ## 分析 

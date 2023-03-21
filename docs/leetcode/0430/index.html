@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0430：扁平化多级双向链表（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0430：扁平化多级双向链表（★★）" />
-<meta property="og:description" content="题目 多级双向链表中，除了指向下一个节点和前一个节点指针之外，它还有一个子链表指针，可能指向单独的双向链表。 这些子列表也可能会有一个或多个自己" />
+        <title>0430：扁平化多级双向链表（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0430：扁平化多级双向链表（★）" />
+<meta property="og:description" content="力扣第 430 题 题目 你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 子指针 。这个子指针可能指向一个单独的双向链表，也" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0430/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-10-21T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0430：扁平化多级双向链表（★★）"/>
-<meta name="twitter:description" content="题目 多级双向链表中，除了指向下一个节点和前一个节点指针之外，它还有一个子链表指针，可能指向单独的双向链表。 这些子列表也可能会有一个或多个自己"/>
+<meta name="twitter:title" content="0430：扁平化多级双向链表（★）"/>
+<meta name="twitter:description" content="力扣第 430 题 题目 你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 子指针 。这个子指针可能指向一个单独的双向链表，也"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0430/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0421/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0430/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0429/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0430：扁平化多级双向链表（★★）",
+        "headline": "0430：扁平化多级双向链表（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0430\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  503 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  749 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0430\/","datePublished": "2016-10-21T00:00:00+08:00","dateModified": "2016-10-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0430：扁平化多级双向链表（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0430：扁平化多级双向链表（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-21">2016-10-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 503 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0430/" class="leancloud_visitors" data-flag-title="0430：扁平化多级双向链表（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-21">2016-10-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 749 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0430/" class="leancloud_visitors" data-flag-title="0430：扁平化多级双向链表（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,50 +130,68 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>多级双向链表中，除了指向下一个节点和前一个节点指针之外，它还有一个子链表指针，可能指向单独的双向链表。
-这些子列表也可能会有一个或多个自己的子项，依此类推，生成多级数据结构，如下面的示例所示。</p>
-<p>给你位于列表第一级的头节点，请你扁平化列表，使所有结点出现在单级双链表中。</p>
-<p>示例 1：</p>
-<pre><code>输入：head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
-输出：[1,2,3,7,8,11,12,9,10,4,5,6]
-解释：
-
-输入的多级列表如下图所示：
-</code></pre>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlist.png"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlist.png, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlist.png 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlist.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlist.png"
-        title="img" /></p>
-<pre><code>扁平化后的链表如下图：
-</code></pre>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlistflattened.png"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlistflattened.png, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlistflattened.png 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlistflattened.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/multilevellinkedlistflattened.png"
-        title="img" /></p>
-<p>示例 2：</p>
-<pre><code>输入：head = [1,2,null,3]
-输出：[1,3,2]
-解释：
-
-输入的多级列表如下图所示：
-
-  1---2---NULL
-  |
-  3---NULL
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：head = []
-输出：[]
-</code></pre>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/" target="_blank" rel="noopener noreffer">力扣第 430 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 <strong>子指针</strong> 。这个子指针可能指向一个单独的双向链表，也包含这些特殊的节点。这些子列表可以有一个或多个自己的子列表，以此类推，以生成如下面的示例所示的 <strong>多层数据结构</strong> 。</p>
+<p>给定链表的头节点 <font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">head</span></span></font></font> ，将链表 <strong>扁平化</strong> ，以便所有节点都出现在单层双链表中。让 <code>curr</code> 是一个带有子列表的节点。子列表中的节点应该出现在<strong>扁平化列表</strong>中的 <code>curr</code> <strong>之后</strong> 和 <code>curr.next</code> <strong>之前</strong> 。</p>
+<p>返回 <em>扁平列表的 <code>head</code> 。列表中的节点必须将其 <strong>所有</strong> 子指针设置为 <code>null</code> 。</em></p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/11/09/flatten11.jpg" style="height:339px; width:700px" /></p>
+<pre>
+<strong>输入：</strong>head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
+<strong>输出：</strong>[1,2,3,7,8,11,12,9,10,4,5,6]
+<strong>解释：</strong>输入的多级列表如上图所示。
+扁平化后的链表如下图：
+<img src="https://assets.leetcode.com/uploads/2021/11/09/flatten12.jpg" style="height:69px; width:1000px" />
+</pre>
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/11/09/flatten2.1jpg" style="height:200px; width:200px" /></p>
+<pre>
+<strong>输入：</strong>head = [1,2,null,3]
+<strong>输出：</strong>[1,3,2]
+<strong>解释：</strong>输入的多级列表如上图所示。
+扁平化后的链表如下图：
+<img src="https://assets.leetcode.com/uploads/2021/11/24/list.jpg" style="height:87px; width:300px" />
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>head = []
+<strong>输出：</strong>[]
+<strong>说明：</strong>输入中可能存在空列表。
+</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li>节点数目不超过 <code>1000</code></li>
+<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
+</ul>
+<p><strong>如何表示测试用例中的多级链表？</strong></p>
+<p>以 <strong>示例 1</strong> 为例：</p>
+<pre>
+1---2---3---4---5---6--NULL
+|
+7---8---9---10--NULL
+|
+11--12--NULL</pre>
+<p>序列化其中的每一级之后：</p>
+<pre>
+[1,2,3,4,5,6,null]
+[7,8,9,10,null]
+[11,12,null]
+</pre>
+<p>为了将每一级都序列化到一起，我们需要每一级中添加值为 null 的元素，以表示没有节点连接到上一级的上级节点。</p>
+<pre>
+[1,2,3,4,5,6,null]
+[null,null,7,8,9,10,null]
+[null,11,12,null]
+</pre>
+<p>合并所有序列化结果，并去除末尾的 null 。</p>
+<pre>
+[1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
+</pre>
+<ul>
+</ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
 <p>先考虑递归。有子链表时，调用递归程序将子链表扁平化，然后改变当前节点、子链表头尾节点、下一个节点的指针即可。</p>
@@ -272,14 +290,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E9%93%BE%E8%A1%A8/">链表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E9%93%BE%E8%A1%A8/">链表</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">双向链表</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0432/" class="prev" rel="prev" title="0432：全 O(1) 的数据结构（★★★★）"><i class="fas fa-angle-left fa-fw"></i>0432：全 O(1) 的数据结构（★★★★）</a>
-            <a href="/leetcode/0421/" class="next" rel="next" title="0421：数组中两个数的最大异或值（★★★）">0421：数组中两个数的最大异或值（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0432/" class="prev" rel="prev" title="0432：全 O(1) 的数据结构（★★）"><i class="fas fa-angle-left fa-fw"></i>0432：全 O(1) 的数据结构（★★）</a>
+            <a href="/leetcode/0429/" class="next" rel="next" title="0429：N 叉树的层序遍历（★）">0429：N 叉树的层序遍历（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

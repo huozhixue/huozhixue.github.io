@@ -1,46 +1,61 @@
-# 0085：最大矩形（★★★）
+# 0085：最大矩形（★★）
 
+
+> <u>**[力扣第 85 题](https://leetcode.cn/problems/maximal-rectangle/)**</u>
 
 ## 题目
 
-给定一个仅包含 0 和 1 、大小为 rows x cols 的二维二进制矩阵，找出只包含 1 的最大矩形，
-并返回其面积。
+<p>给定一个仅包含 <code>0</code> 和 <code>1</code> 、大小为 <code>rows x cols</code> 的二维二进制矩阵，找出只包含 <code>1</code> 的最大矩形，并返回其面积。</p>
 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2020/09/14/maximal.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/14/maximal.jpg" style="width: 402px; height: 322px;" />
+<pre>
+<strong>输入：</strong>matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+<strong>输出：</strong>6
+<strong>解释：</strong>最大矩形如上图所示。
+</pre>
 
-    输入：matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],
-    ["1","0","0","1","0"]]
-    输出：6
-    解释：最大矩形如上图所示。
+<p><strong>示例 2：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>matrix = []
+<strong>输出：</strong>0
+</pre>
 
-    输入：matrix = []
-    输出：0
+<p><strong>示例 3：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>matrix = [["0"]]
+<strong>输出：</strong>0
+</pre>
 
-    输入：matrix = [["0"]]
-    输出：0
+<p><strong>示例 4：</strong></p>
 
-示例 4：
+<pre>
+<strong>输入：</strong>matrix = [["1"]]
+<strong>输出：</strong>1
+</pre>
 
-    输入：matrix = [["1"]]
-    输出：1
+<p><strong>示例 5：</strong></p>
 
-示例 5：
+<pre>
+<strong>输入：</strong>matrix = [["0","0"]]
+<strong>输出：</strong>0
+</pre>
 
-    输入：matrix = [["0","0"]]
-    输出：0
 
-提示：
-- rows == matrix.length
-- cols == matrix[0].length
-- 0 <= row, cols <= 200
-- matrix[i][j] 为 '0' 或 '1'
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>rows == matrix.length</code></li>
+<li><code>cols == matrix[0].length</code></li>
+<li><code>1 &lt;= row, cols &lt;= 200</code></li>
+<li><code>matrix[i][j]</code> 为 <code>'0'</code> 或 <code>'1'</code></li>
+</ul>
+
 
 ## 分析
 

@@ -1,41 +1,54 @@
 # 0801：使序列递增的最小交换次数（★★）
 
 
-> **第 76 场周赛第 2 题**
+> <u>**[力扣第 76 场周赛第 2 题](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)**</u>
 
 ## 题目
 
-我们有两个长度相等且不为空的整型数组 nums1 和 nums2 。在一次操作中，
-我们可以交换 nums1[i] 和 nums2[i]的元素。
-- 例如，如果 nums1 = [1,2,3,8] ， nums2 =[5,6,7,4] ，你可以交换 i = 3 处的元素，
-得到 nums1 =[1,2,3,4] 和 nums2 =[5,6,7,8] 。
+<p>我们有两个长度相等且不为空的整型数组 <code>nums1</code> 和 <code>nums2</code> 。在一次操作中，我们可以交换 <code>nums1[i]</code> 和 <code>nums2[i]</code>的元素。</p>
 
-返回 使 nums1 和 nums2 严格递增 所需操作的最小次数 。
+<ul>
+<li>例如，如果 <code>nums1 = [1,2,3,<u>8</u>]</code> ， <code>nums2 =[5,6,7,<u>4</u>]</code> ，你可以交换 <code>i = 3</code> 处的元素，得到 <code>nums1 =[1,2,3,4]</code> 和 <code>nums2 =[5,6,7,8]</code> 。</li>
+</ul>
 
-数组 arr 严格递增 且  arr[0] < arr[1] < arr[2] < ... < arr[arr.length - 1] 。
+<p>返回 <em>使 <code>nums1</code> 和 <code>nums2</code> <strong>严格递增 </strong>所需操作的最小次数</em> 。</p>
 
-注意：用例保证可以实现操作。
- 
+<p>数组 <code>arr</code> <strong>严格递增</strong> 且  <code>arr[0] &lt; arr[1] &lt; arr[2] &lt; ... &lt; arr[arr.length - 1]</code> 。</p>
 
-示例 1:
+<p><b>注意：</b></p>
 
-    输入: nums1 = [1,3,5,4], nums2 = [1,2,3,7]
-    输出: 1
-    解释: 
-    交换 A[3] 和 B[3] 后，两个数组如下:
-    A = [1, 3, 5, 7] ， B = [1, 2, 3, 4]
-    两个数组均为严格递增的。
-示例 2:
+<ul>
+<li>用例保证可以实现操作。</li>
+</ul>
 
-    输入: nums1 = [0,3,5,8,9], nums2 = [2,1,4,6,9]
-    输出: 1
-     
 
-提示:
-- 2 <= nums1.length <= 10^5
-- nums2.length == nums1.length
-- 0 <= nums1[i], nums2[i] <= 2 * 10^5
 
+<p><strong>示例 1:</strong></p>
+
+<pre>
+<strong>输入:</strong> nums1 = [1,3,5,4], nums2 = [1,2,3,7]
+<strong>输出:</strong> 1
+<strong>解释: </strong>
+交换 A[3] 和 B[3] 后，两个数组如下:
+A = [1, 3, 5, 7] ， B = [1, 2, 3, 4]
+两个数组均为严格递增的。</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> nums1 = [0,3,5,8,9], nums2 = [2,1,4,6,9]
+<strong>输出:</strong> 1
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>2 &lt;= nums1.length &lt;= 10<sup>5</sup></code></li>
+<li><code>nums2.length == nums1.length</code></li>
+<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 2 * 10<sup>5</sup></code></li>
+</ul>
 
 
 ## 分析

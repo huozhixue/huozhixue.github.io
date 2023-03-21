@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0210：课程表 II（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0210：课程表 II（★★）" />
-<meta property="og:description" content="题目 现在你总共有 numCourses 门课需要选，记为 0 到 numCourses - 1。给你一个数组 prerequisites ， 其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi 。 例如，想要学习课程 0 ，你需要先完" />
+        <title>0210：课程表 II（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0210：课程表 II（★）" />
+<meta property="og:description" content="力扣第 210 题 题目 现在你总共有 numCourses 门课需要选，记为 0 到 numCourses - 1。给你一个数组 prerequisites ，其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi 。 例如，想要学习课程 0 ，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0210/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-07-29T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0210：课程表 II（★★）"/>
-<meta name="twitter:description" content="题目 现在你总共有 numCourses 门课需要选，记为 0 到 numCourses - 1。给你一个数组 prerequisites ， 其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi 。 例如，想要学习课程 0 ，你需要先完"/>
+<meta name="twitter:title" content="0210：课程表 II（★）"/>
+<meta name="twitter:description" content="力扣第 210 题 题目 现在你总共有 numCourses 门课需要选，记为 0 到 numCourses - 1。给你一个数组 prerequisites ，其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi 。 例如，想要学习课程 0 ，"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0210/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0209/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0212/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0210：课程表 II（★★）",
+        "headline": "0210：课程表 II（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0210\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  506 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  511 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0210\/","datePublished": "2015-07-29T00:00:00+08:00","dateModified": "2015-07-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0210：课程表 II（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0210：课程表 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-29">2015-07-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 506 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0210/" class="leancloud_visitors" data-flag-title="0210：课程表 II（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-29">2015-07-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 511 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0210/" class="leancloud_visitors" data-flag-title="0210：课程表 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,39 +125,40 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>现在你总共有 numCourses 门课需要选，记为 0 到 numCourses - 1。给你一个数组 prerequisites ，
-其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修 bi 。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/course-schedule-ii/" target="_blank" rel="noopener noreffer">力扣第 210 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>现在你总共有 <code>numCourses</code> 门课需要选，记为 <code>0</code> 到 <code>numCourses - 1</code>。给你一个数组 <code>prerequisites</code> ，其中 <code>prerequisites[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> ，表示在选修课程 <code>a<sub>i</sub></code> 前 <strong>必须</strong> 先选修 <code>b<sub>i</sub></code> 。</p>
 <ul>
-<li>例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示：[0,1] 。</li>
+<li>例如，想要学习课程 <code>0</code> ，你需要先完成课程 <code>1</code> ，我们用一个匹配来表示：<code>[0,1]</code> 。</li>
 </ul>
-<p>返回你为了学完所有课程所安排的学习顺序。可能会有多个正确的顺序，你只要返回 任意一种 就可以了。
-如果不可能完成所有课程，返回 一个空数组 。</p>
-<p> </p>
-<p>示例 1：</p>
-<pre><code>输入：numCourses = 2, prerequisites = [[1,0]]
-输出：[0,1]
-解释：总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
-输出：[0,2,1,3]
-解释：总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。
-因此，一个正确的课程顺序是 [0,1,2,3] 。另一个正确的排序是 [0,2,1,3] 。
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：numCourses = 1, prerequisites = []
-输出：[0]
- 
-</code></pre>
-<p>提示：</p>
+<p>返回你为了学完所有课程所安排的学习顺序。可能会有多个正确的顺序，你只要返回 <strong>任意一种</strong> 就可以了。如果不可能完成所有课程，返回 <strong>一个空数组</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>numCourses = 2, prerequisites = [[1,0]]
+<strong>输出：</strong>[0,1]
+<strong>解释：</strong>总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 <code>[0,1] 。</code>
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
+<strong>输出：</strong>[0,2,1,3]
+<strong>解释：</strong>总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。
+因此，一个正确的课程顺序是 <code>[0,1,2,3]</code> 。另一个正确的排序是 <code>[0,2,1,3]</code> 。</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>numCourses = 1, prerequisites = []
+<strong>输出：</strong>[0]
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= numCourses &lt;= 2000</li>
-<li>0 &lt;= prerequisites.length &lt;= numCourses * (numCourses - 1)</li>
-<li>prerequisites[i].length == 2</li>
-<li>0 &lt;= ai, bi &lt; numCourses</li>
-<li>ai != bi</li>
-<li>所有[ai, bi] 互不相同</li>
+<li><code>1 &lt;= numCourses &lt;= 2000</code></li>
+<li><code>0 &lt;= prerequisites.length &lt;= numCourses * (numCourses - 1)</code></li>
+<li><code>prerequisites[i].length == 2</code></li>
+<li><code>0 &lt;= a<sub>i</sub>, b<sub>i</sub> &lt; numCourses</code></li>
+<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
+<li>所有<code>[a<sub>i</sub>, b<sub>i</sub>]</code> <strong>互不相同</strong></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>类似 <a href="/leetcode/0207" title="0207" rel="noopener noreferrer">0207</a>，保存出队节点即可。</p>
@@ -218,13 +219,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0212/" class="prev" rel="prev" title="0212：单词搜索 II（★★★）"><i class="fas fa-angle-left fa-fw"></i>0212：单词搜索 II（★★★）</a>
+    <div class="post-nav"><a href="/leetcode/0212/" class="prev" rel="prev" title="0212：单词搜索 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0212：单词搜索 II（★★）</a>
             <a href="/leetcode/0209/" class="next" rel="next" title="0209：长度最小的子数组（★）">0209：长度最小的子数组（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

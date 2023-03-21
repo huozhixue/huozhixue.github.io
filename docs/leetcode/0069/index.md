@@ -1,30 +1,40 @@
-# 0069：x 的平方根（★）
+# 0069：x 的平方根 
 
+
+> <u>**[力扣第 69 题](https://leetcode.cn/problems/sqrtx/)**</u>
 
 ## 题目
 
-给你一个非负整数 x ，计算并返回 x 的 算术平方根 。
+<p>给你一个非负整数 <code>x</code> ，计算并返回 <code>x</code> 的 <strong>算术平方根</strong> 。</p>
 
-由于返回类型是整数，结果只保留 整数部分 ，小数部分将被 舍去 。
+<p>由于返回类型是整数，结果只保留 <strong>整数部分 </strong>，小数部分将被 <strong>舍去 。</strong></p>
 
-注意：不允许使用任何内置指数函数和算符，例如 pow(x, 0.5) 或者 x ** 0.5 。
+<p><strong>注意：</strong>不允许使用任何内置指数函数和算符，例如 <code>pow(x, 0.5)</code> 或者 <code>x ** 0.5</code> 。</p>
 
 
-示例 1：
 
-	输入：x = 4
-	输出：2
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>x = 4
+<strong>输出：</strong>2
+</pre>
 
-	输入：x = 8
-	输出：2
-	解释：8 的算术平方根是 2.82842..., 由于返回类型是整数，小数部分将被舍去。
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 0 <= x <= 2^31 - 1
+<pre>
+<strong>输入：</strong>x = 8
+<strong>输出：</strong>2
+<strong>解释：</strong>8 的算术平方根是 2.82842..., 由于返回类型是整数，小数部分将被舍去。
+</pre>
 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
 
 
 ## 分析

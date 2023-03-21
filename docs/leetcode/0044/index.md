@@ -1,58 +1,68 @@
-# 0044：通配符匹配（★★★）
+# 0044：通配符匹配（★★）
 
+
+> <u>**[力扣第 44 题](https://leetcode.cn/problems/wildcard-matching/)**</u>
 
 ## 题目
 
-给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 '?' 和 '*' 的通配符匹配。
-- '?' 可以匹配任何单个字符。
-- '*' 可以匹配任意字符串（包括空字符串）。
+<p>给定一个字符串 (<code>s</code>) 和一个字符模式 (<code>p</code>) ，实现一个支持 <code>&#39;?&#39;</code> 和 <code>&#39;*&#39;</code> 的通配符匹配。</p>
 
-两个字符串完全匹配才算匹配成功。
+<pre>&#39;?&#39; 可以匹配任何单个字符。
+&#39;*&#39; 可以匹配任意字符串（包括空字符串）。
+</pre>
 
-说明:
-- s 可能为空，且只包含从 a-z 的小写字母。
-- p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
+<p>两个字符串<strong>完全匹配</strong>才算匹配成功。</p>
 
-示例 1:
+<p><strong>说明:</strong></p>
 
-	输入:
-	s = "aa"
-	p = "a"
-	输出: false
-	解释: "a" 无法匹配 "aa" 整个字符串。
+<ul>
+<li><code>s</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母。</li>
+<li><code>p</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母，以及字符 <code>?</code> 和 <code>*</code>。</li>
+</ul>
 
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入:
-	s = "aa"
-	p = "*"
-	输出: true
-	解释: '*' 可以匹配任意字符串。
+<pre><strong>输入:</strong>
+s = &quot;aa&quot;
+p = &quot;a&quot;
+<strong>输出:</strong> false
+<strong>解释:</strong> &quot;a&quot; 无法匹配 &quot;aa&quot; 整个字符串。</pre>
 
-示例 3:
+<p><strong>示例 2:</strong></p>
 
-	输入:
-	s = "cb"
-	p = "?a"
-	输出: false
-	解释: '?' 可以匹配 'c', 但第二个 'a' 无法匹配 'b'。
+<pre><strong>输入:</strong>
+s = &quot;aa&quot;
+p = &quot;*&quot;
+<strong>输出:</strong> true
+<strong>解释:</strong> &#39;*&#39; 可以匹配任意字符串。
+</pre>
 
-示例 4:
+<p><strong>示例 3:</strong></p>
 
-	输入:
-	s = "adceb"
-	p = "*a*b"
-	输出: true
-	解释: 第一个 '*' 可以匹配空字符串, 第二个 '*' 可以匹配字符串 "dce".
+<pre><strong>输入:</strong>
+s = &quot;cb&quot;
+p = &quot;?a&quot;
+<strong>输出:</strong> false
+<strong>解释:</strong> &#39;?&#39; 可以匹配 &#39;c&#39;, 但第二个 &#39;a&#39; 无法匹配 &#39;b&#39;。
+</pre>
 
-示例 5:
+<p><strong>示例 4:</strong></p>
 
-	输入:
-	s = "acdcb"
-	p = "a*c?b"
-	输出: false
+<pre><strong>输入:</strong>
+s = &quot;adceb&quot;
+p = &quot;*a*b&quot;
+<strong>输出:</strong> true
+<strong>解释:</strong> 第一个 &#39;*&#39; 可以匹配空字符串, 第二个 &#39;*&#39; 可以匹配字符串 &quot;dce&quot;.
+</pre>
 
-	
+<p><strong>示例 5:</strong></p>
+
+<pre><strong>输入:</strong>
+s = &quot;acdcb&quot;
+p = &quot;a*c?b&quot;
+<strong>输出:</strong> false</pre>
+
+
 ## 分析
 
 类似 {{< lc "0010" >}}，区别在于星号和前一个字符无关了。

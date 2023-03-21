@@ -1,27 +1,39 @@
-# 0131：分割回文串（★★）
+# 0131：分割回文串（★）
 
+
+> <u>**[力扣第 131 题](https://leetcode.cn/problems/palindrome-partitioning/)**</u>
 
 ## 题目
 
-给你一个字符串 s，请你将 s 分割成一些子串，使每个子串都是 回文串 。
-返回 s 所有可能的分割方案。
+<p>给你一个字符串 <code>s</code>，请你将<em> </em><code>s</code><em> </em>分割成一些子串，使每个子串都是 <strong>回文串</strong> 。返回 <code>s</code> 所有可能的分割方案。</p>
 
-回文串 是正着读和反着读都一样的字符串。
+<p><strong>回文串</strong> 是正着读和反着读都一样的字符串。</p>
 
 
-示例 1：
 
-    输入：s = "aab"
-    输出：[["a","a","b"],["aa","b"]]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>s = "aab"
+<strong>输出：</strong>[["a","a","b"],["aa","b"]]
+</pre>
 
-    输入：s = "a"
-    输出：[["a"]]
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= s.length <= 16
-- s 仅由小写英文字母组成
+<pre>
+<strong>输入：</strong>s = "a"
+<strong>输出：</strong>[["a"]]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= s.length <= 16</code></li>
+<li><code>s</code> 仅由小写英文字母组成</li>
+</ul>
+
 
 ## 分析
 

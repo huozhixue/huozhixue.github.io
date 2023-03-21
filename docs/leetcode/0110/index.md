@@ -1,35 +1,50 @@
-# 0110：平衡二叉树（★）
+# 0110：平衡二叉树
 
+
+> <u>**[力扣第 110 题](https://leetcode.cn/problems/balanced-binary-tree/)**</u>
 
 ## 题目
 
-给定一个二叉树，判断它是否是高度平衡的二叉树。
+<p>给定一个二叉树，判断它是否是高度平衡的二叉树。</p>
 
-本题中，一棵高度平衡二叉树定义为：
-> 一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1 。
+<p>本题中，一棵高度平衡二叉树定义为：</p>
+
+<blockquote>
+<p>一个二叉树<em>每个节点 </em>的左右两个子树的高度差的绝对值不超过 1 。</p>
+</blockquote>
 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2020/10/06/balance_1.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/06/balance_1.jpg" style="width: 342px; height: 221px;" />
+<pre>
+<strong>输入：</strong>root = [3,9,20,null,null,15,7]
+<strong>输出：</strong>true
+</pre>
 
-	输入：root = [3,9,20,null,null,15,7]
-	输出：true
-示例 2：
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/06/balance_2.jpg" style="width: 452px; height: 301px;" />
+<pre>
+<strong>输入：</strong>root = [1,2,2,3,3,null,null,4,4]
+<strong>输出：</strong>false
+</pre>
 
-![img](https://assets.leetcode.com/uploads/2020/10/06/balance_2.jpg)
+<p><strong>示例 3：</strong></p>
 
-	输入：root = [1,2,2,3,3,null,null,4,4]
-	输出：false
+<pre>
+<strong>输入：</strong>root = []
+<strong>输出：</strong>true
+</pre>
 
-示例 3：
 
-	输入：root = []
-	输出：true
 
-提示：
-- 树中的节点数在范围 [0, 5000] 内
-- -10^4 <= Node.val <= 10^4
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>树中的节点数在范围 <code>[0, 5000]</code> 内</li>
+<li><code>-10<sup>4</sup> <= Node.val <= 10<sup>4</sup></code></li>
+</ul>
+
 
 ## 分析
 

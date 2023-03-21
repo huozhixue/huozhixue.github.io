@@ -1,32 +1,42 @@
-# 0106：从中序与后序遍历序列构造二叉树（★★）
+# 0106：从中序与后序遍历序列构造二叉树（★）
 
+
+> <u>**[力扣第 106 题](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)**</u>
 
 ## 题目
 
-给定两个整数数组 inorder 和 postorder ，其中 inorder 是二叉树的中序遍历，
- postorder 是同一棵树的后序遍历，请你构造并返回这颗 二叉树 。
+<p>给定两个整数数组 <code>inorder</code> 和 <code>postorder</code> ，其中 <code>inorder</code> 是二叉树的中序遍历， <code>postorder</code> 是同一棵树的后序遍历，请你构造并返回这颗 <em>二叉树</em> 。</p>
 
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2021/02/19/tree.jpg)
+<p><strong>示例 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/tree.jpg" />
+<pre>
+<b>输入：</b>inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
+<b>输出：</b>[3,9,20,null,null,15,7]
+</pre>
 
-	输入：inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
-	输出：[3,9,20,null,null,15,7]
+<p><strong>示例 2:</strong></p>
 
-示例 2:
+<pre>
+<b>输入：</b>inorder = [-1], postorder = [-1]
+<b>输出：</b>[-1]
+</pre>
 
-	输入：inorder = [-1], postorder = [-1]
-	输出：[-1]
-	
-提示:
-- 1 <= inorder.length <= 3000
-- postorder.length == inorder.length
-- -3000 <= inorder[i], postorder[i] <= 3000
-- inorder 和 postorder 都由 不同 的值组成
-- postorder 中每一个值都在 inorder 中
-- inorder 保证是树的中序遍历
-- postorder 保证是树的后序遍历
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= inorder.length &lt;= 3000</code></li>
+<li><code>postorder.length == inorder.length</code></li>
+<li><code>-3000 &lt;= inorder[i], postorder[i] &lt;= 3000</code></li>
+<li><code>inorder</code> 和 <code>postorder</code> 都由 <strong>不同</strong> 的值组成</li>
+<li><code>postorder</code> 中每一个值都在 <code>inorder</code> 中</li>
+<li><code>inorder</code> <strong>保证</strong>是树的中序遍历</li>
+<li><code>postorder</code> <strong>保证</strong>是树的后序遍历</li>
+</ul>
+
 
 ## 分析
 

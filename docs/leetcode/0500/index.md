@@ -1,40 +1,54 @@
-# 0500：键盘行（★）
+# 0500：键盘行
 
 
-> **第  场周赛第  题**
+> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/keyboard-row/)**</u>
 
 ## 题目
 
-给你一个字符串数组 words ，只返回可以使用在 美式键盘 同一行的字母打印出来的单词。键盘如下图所示。
+<p>给你一个字符串数组 <code>words</code> ，只返回可以使用在 <strong>美式键盘</strong> 同一行的字母打印出来的单词。键盘如下图所示。</p>
 
-美式键盘 中：
+<p><strong>美式键盘</strong> 中：</p>
 
-- 第一行由字符 "qwertyuiop" 组成。
-- 第二行由字符 "asdfghjkl" 组成。
-- 第三行由字符 "zxcvbnm" 组成。
+<ul>
+<li>第一行由字符 <code>"qwertyuiop"</code> 组成。</li>
+<li>第二行由字符 <code>"asdfghjkl"</code> 组成。</li>
+<li>第三行由字符 <code>"zxcvbnm"</code> 组成。</li>
+</ul>
 
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png)
+<p><img alt="American keyboard" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/keyboard.png" style="width: 100%; max-width: 600px" /></p>
 
-提示：
-- 1 <= words.length <= 20
-- 1 <= words[i].length <= 100
-- words[i] 由英文字母（小写和大写字母）组成
- 
-示例 1：
 
-	输入：words = ["Hello","Alaska","Dad","Peace"]
-	输出：["Alaska","Dad"]
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：words = ["omk"]
-	输出：[]
+<pre>
+<strong>输入：</strong>words = ["Hello","Alaska","Dad","Peace"]
+<strong>输出：</strong>["Alaska","Dad"]
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：words = ["adsdf","sfd"]
-	输出：["adsdf","sfd"]
+<pre>
+<strong>输入：</strong>words = ["omk"]
+<strong>输出：</strong>[]
+</pre>
 
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>words = ["adsdf","sfd"]
+<strong>输出：</strong>["adsdf","sfd"]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= words.length <= 20</code></li>
+<li><code>1 <= words[i].length <= 100</code></li>
+<li><code>words[i]</code> 由英文字母（小写和大写字母）组成</li>
+</ul>
 
 
 ## 分析

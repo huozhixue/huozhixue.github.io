@@ -1,33 +1,58 @@
 # 0470：用 Rand7() 实现 Rand10()（★）
 
 
+> <u>**[力扣第 470 题](https://leetcode.cn/problems/implement-rand10-using-rand7/)**</u>
+
 ## 题目
 
-给定方法 rand7 可生成 [1,7] 范围内的均匀随机整数，试写一个方法 rand10 生成 [1,10] 范围内的均匀随机整数。
+<p>给定方法 <code>rand7</code> 可生成 <code>[1,7]</code> 范围内的均匀随机整数，试写一个方法 <code>rand10</code> 生成 <code>[1,10]</code> 范围内的均匀随机整数。</p>
 
-你只能调用 rand7() 且不能调用其他方法。请不要使用系统的 Math.random() 方法。
+<p>你只能调用 <code>rand7()</code> 且不能调用其他方法。请不要使用系统的 <code>Math.random()</code> 方法。</p>
 
-每个测试用例将有一个内部参数 n，即你实现的函数 rand10() 在测试时将被调用的次数。请注意，这不是传递给 rand10() 的参数。
+<ol>
+</ol>
 
-示例 1:
-    
-    输入: 1
-    输出: [2]
+<p>每个测试用例将有一个内部参数 <code>n</code>，即你实现的函数 <code>rand10()</code> 在测试时将被调用的次数。请注意，这不是传递给 <code>rand10()</code> 的参数。</p>
 
-示例 2:
 
-    输入: 2
-    输出: [2,8]
 
-示例 3:
+<p><strong>示例 1:</strong></p>
 
-    输入: 3
-    输出: [3,8,10]
-     
+<pre>
+<strong>输入: </strong>1
+<strong>输出: </strong>[2]
+</pre>
 
-提示:
-- 1 <= n <= 10^5
- 
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入: </strong>2
+<strong>输出: </strong>[2,8]
+</pre>
+
+<p><strong>示例 3:</strong></p>
+
+<pre>
+<strong>输入: </strong>3
+<strong>输出: </strong>[3,8,10]
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+</ul>
+
+
+
+<p><strong>进阶:</strong></p>
+
+<ul>
+<li><code>rand7()</code>调用次数的 <a href="https://en.wikipedia.org/wiki/Expected_value" target="_blank">期望值</a> 是多少 ?</li>
+<li>你能否尽量少调用 <code>rand7()</code> ?</li>
+</ul>
 
 
 ## 分析

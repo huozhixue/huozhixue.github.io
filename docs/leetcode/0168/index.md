@@ -1,46 +1,62 @@
-# 0168：Excel表列名称（★）
+# 0168：Excel表列名称
 
+
+> <u>**[力扣第 168 题](https://leetcode.cn/problems/excel-sheet-column-title/)**</u>
 
 ## 题目
 
-给你一个整数 columnNumber ，返回它在 Excel 表中相对应的列名称。
+<p>给你一个整数 <code>columnNumber</code> ，返回它在 Excel 表中相对应的列名称。</p>
 
-例如：
+<p>例如：</p>
 
-	A -> 1
-	B -> 2
-	C -> 3
-	...
-	Z -> 26
-	AA -> 27
-	AB -> 28 
-	...
-	 
+<pre>
+A -> 1
+B -> 2
+C -> 3
+...
+Z -> 26
+AA -> 27
+AB -> 28
+...
+</pre>
 
-示例 1：
 
-	输入：columnNumber = 1
-	输出："A"
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：columnNumber = 28
-	输出："AB"
+<pre>
+<strong>输入：</strong>columnNumber = 1
+<strong>输出：</strong>"A"
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：columnNumber = 701
-	输出："ZY"
+<pre>
+<strong>输入：</strong>columnNumber = 28
+<strong>输出：</strong>"AB"
+</pre>
 
-示例 4：
+<p><strong>示例 3：</strong></p>
 
-	输入：columnNumber = 2147483647
-	输出："FXSHRXW"
- 
+<pre>
+<strong>输入：</strong>columnNumber = 701
+<strong>输出：</strong>"ZY"
+</pre>
 
-提示：
-- 1 <= columnNumber <= 2^31 - 1
+<p><strong>示例 4：</strong></p>
 
+<pre>
+<strong>输入：</strong>columnNumber = 2147483647
+<strong>输出：</strong>"FXSHRXW"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= columnNumber <= 2<sup>31</sup> - 1</code></li>
+</ul>
 
 
 ## 分析

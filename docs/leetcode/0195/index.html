@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0195：第十行（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0195：第十行（★）" />
-<meta property="og:description" content="题目 给定一个文本文件 file.txt，请只打印这个文件中的第十行。 示例: 假设 file.txt 有如下内容： Line 1 Line 2 Line 3 Line 4 Line 5 Line 6 Line 7 Line 8 Line 9 Line 10 你的脚本应" />
+        <title>0195：第十行 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0195：第十行" />
+<meta property="og:description" content="力扣第 195 题 题目 给定一个文本文件 file.txt，请只打印这个文件中的第十行。 示例: 假设 file.txt 有如下内容： Line 1 Line 2 Line 3 Line 4 Line 5 Line 6 Line 7 Line 8 Line 9 Line 10" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0195/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-07-14T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0195：第十行（★）"/>
-<meta name="twitter:description" content="题目 给定一个文本文件 file.txt，请只打印这个文件中的第十行。 示例: 假设 file.txt 有如下内容： Line 1 Line 2 Line 3 Line 4 Line 5 Line 6 Line 7 Line 8 Line 9 Line 10 你的脚本应"/>
+<meta name="twitter:title" content="0195：第十行"/>
+<meta name="twitter:description" content="力扣第 195 题 题目 给定一个文本文件 file.txt，请只打印这个文件中的第十行。 示例: 假设 file.txt 有如下内容： Line 1 Line 2 Line 3 Line 4 Line 5 Line 6 Line 7 Line 8 Line 9 Line 10"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0195/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0194/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0196/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0195：第十行（★）",
+        "headline": "0195：第十行",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0195\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  159 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  166 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0195\/","datePublished": "2015-07-14T00:00:00+08:00","dateModified": "2015-07-14T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0195：第十行（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0195：第十行</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-14">2015-07-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 159 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0195/" class="leancloud_visitors" data-flag-title="0195：第十行（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-14">2015-07-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 166 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0195/" class="leancloud_visitors" data-flag-title="0195：第十行">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,11 +125,14 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个文本文件 file.txt，请只打印这个文件中的第十行。</p>
-<p>示例:</p>
-<p>假设 file.txt 有如下内容：</p>
-<pre><code>Line 1
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/tenth-line/" target="_blank" rel="noopener noreffer">力扣第 195 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个文本文件 <code>file.txt</code>，请只打印这个文件中的第十行。</p>
+<p><strong>示例:</strong></p>
+<p>假设 <code>file.txt</code> 有如下内容：</p>
+<pre>Line 1
 Line 2
 Line 3
 Line 4
@@ -139,15 +142,13 @@ Line 7
 Line 8
 Line 9
 Line 10
-</code></pre>
+</pre>
 <p>你的脚本应当显示第十行：</p>
-<pre><code>Line 10
-</code></pre>
-<p>说明:</p>
-<ol>
-<li>如果文件少于十行，你应当输出什么？</li>
-<li>至少有三种不同的解法，请尝试尽可能多的方法来解题。</li>
-</ol>
+<pre>Line 10
+</pre>
+<p><strong>说明:</strong><br>
+1. 如果文件少于十行，你应当输出什么？<br>
+2. 至少有三种不同的解法，请尝试尽可能多的方法来解题。</p>
 <h2 id="分析">分析</h2>
 <p>需要用到的操作：</p>
 <pre><code>sed -n '1p'         -n 定位到第 1 行，然后 p 打印
@@ -187,8 +188,8 @@ Line 10
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0196/" class="prev" rel="prev" title="0196：删除重复的电子邮箱（★）"><i class="fas fa-angle-left fa-fw"></i>0196：删除重复的电子邮箱（★）</a>
-            <a href="/leetcode/0194/" class="next" rel="next" title="0194：转置文件（★★）">0194：转置文件（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0196/" class="prev" rel="prev" title="0196：删除重复的电子邮箱"><i class="fas fa-angle-left fa-fw"></i>0196：删除重复的电子邮箱</a>
+            <a href="/leetcode/0194/" class="next" rel="next" title="0194：转置文件（★）">0194：转置文件（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

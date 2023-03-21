@@ -1,37 +1,52 @@
-# 0467：环绕字符串中唯一的子字符串（★★）
+# 0467：环绕字符串中唯一的子字符串（★）
 
 
-
+> <u>**[力扣第 467 题](https://leetcode.cn/problems/unique-substrings-in-wraparound-string/)**</u>
 
 ## 题目
 
-把字符串 s 看作是 “abcdefghijklmnopqrstuvwxyz” 的无限环绕字符串，所以 s 看起来是这样的：
+<p>定义字符串 <code>base</code> 为一个 <code>"abcdefghijklmnopqrstuvwxyz"</code> 无限环绕的字符串，所以 <code>base</code> 看起来是这样的：</p>
 
-"...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd...." . 
-现在给定另一个字符串 p 。返回 s 中 唯一 的 p 的 非空子串 的数量 。 
+<ul>
+<li><code>"...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd...."</code>.</li>
+</ul>
 
- 
+<p>给你一个字符串 <code>s</code> ，请你统计并返回 <code>s</code> 中有多少 <strong>不同</strong><strong>非空子串</strong> 也在 <code>base</code> 中出现。</p>
 
-示例 1:
 
-    输入: p = "a"
-    输出: 1
-    解释: 字符串 s 中只有一个"a"子字符。
-示例 2:
 
-    输入: p = "cac"
-    输出: 2
-    解释: 字符串 s 中的字符串“cac”只有两个子串“a”、“c”。.
-示例 3:
+<p><strong>示例 1：</strong></p>
 
-    输入: p = "zab"
-    输出: 6
-    解释: 在字符串 s 中有六个子串“z”、“a”、“b”、“za”、“ab”、“zab”。
- 
+<pre>
+<strong>输入：</strong>s = "a"
+<strong>输出：</strong>1
+<strong>解释：</strong>字符串 s 的子字符串 "a" 在 base 中出现。
+</pre>
 
-提示:
-- 1 <= p.length <= 10^5
-- p 由小写英文字母构成
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "cac"
+<strong>输出：</strong>2
+<strong>解释：</strong>字符串 s 有两个子字符串 ("a", "c") 在 base 中出现。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "zab"
+<strong>输出：</strong>6
+<strong>解释：</strong>字符串 s 有六个子字符串 ("z", "a", "b", "za", "ab", and "zab") 在 base 中出现。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+<li><font color="#c7254e" face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size: 12.6px; background-color: rgb(249, 242, 244);">s</span></font> 由小写英文字母组成</li>
+</ul>
 
 
 ## 分析

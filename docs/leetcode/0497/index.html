@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0497：非重叠矩形中的随机点（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0497：非重叠矩形中的随机点（★★）" />
-<meta property="og:description" content="题目 给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角角点。 设计一个算法来" />
+        <title>0497：非重叠矩形中的随机点（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0497：非重叠矩形中的随机点（★）" />
+<meta property="og:description" content="力扣第 497 题 题目 给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角点。设计一" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0497/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-12-22T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0497：非重叠矩形中的随机点（★★）"/>
-<meta name="twitter:description" content="题目 给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角角点。 设计一个算法来"/>
+<meta name="twitter:title" content="0497：非重叠矩形中的随机点（★）"/>
+<meta name="twitter:description" content="力扣第 497 题 题目 给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角点。设计一"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0497/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0494/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0500/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0497/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0496/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0498/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0497：非重叠矩形中的随机点（★★）",
+        "headline": "0497：非重叠矩形中的随机点（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0497\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  461 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  497 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0497\/","datePublished": "2016-12-22T00:00:00+08:00","dateModified": "2016-12-22T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0497：非重叠矩形中的随机点（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0497：非重叠矩形中的随机点（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-22">2016-12-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 461 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0497/" class="leancloud_visitors" data-flag-title="0497：非重叠矩形中的随机点（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-22">2016-12-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 497 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0497/" class="leancloud_visitors" data-flag-title="0497：非重叠矩形中的随机点（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,52 +125,46 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi)
-是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角角点。
-设计一个算法来挑选一个随机整数点内的空间所覆盖的一个给定的矩形。矩形周长上的一个点包含在矩形覆盖的空间中。</p>
-<p>在一个给定的矩形覆盖的空间内任何整数点都有可能被返回。</p>
-<p>请注意 ，整数点是具有整数坐标的点。</p>
-<p>实现 Solution 类:</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/" target="_blank" rel="noopener noreffer">力扣第 497 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个由非重叠的轴对齐矩形的数组 <code>rects</code> ，其中 <code>rects[i] = [ai, bi, xi, yi]</code> 表示 <code>(ai, bi)</code> 是第 <code>i</code> 个矩形的左下角点，<code>(xi, yi)</code> 是第 <code>i</code> 个矩形的右上角点。设计一个算法来随机挑选一个被某一矩形覆盖的整数点。矩形周长上的点也算做是被矩形覆盖。所有满足要求的点必须等概率被返回。</p>
+<p>在给定的矩形覆盖的空间内的任何整数点都有可能被返回。</p>
+<p><strong>请注意 </strong>，整数点是具有整数坐标的点。</p>
+<p>实现 <code>Solution</code> 类:</p>
 <ul>
-<li>Solution(int[][] rects) 用给定的矩形数组 rects 初始化对象。</li>
-<li>int[] pick() 返回一个随机的整数点 [u, v] 在给定的矩形所覆盖的空间内。
- </li>
+<li><code>Solution(int[][] rects)</code> 用给定的矩形数组 <code>rects</code> 初始化对象。</li>
+<li><code>int[] pick()</code> 返回一个随机的整数点 <code>[u, v]</code> 在给定的矩形所覆盖的空间内。</li>
 </ul>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg, https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg 1.5x, https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg"
-        title="img" /></p>
-<pre><code>输入: 
-[&quot;Solution&quot;,&quot;pick&quot;,&quot;pick&quot;,&quot;pick&quot;,&quot;pick&quot;,&quot;pick&quot;]
-[[[[-2,-2,-1,-1],[1,0,3,0]]],[],[],[],[],[]]
-输出: 
-[null,[-1,-2],[2,0],[-2,-1],[3,0],[-2,-2]
+<ol>
+</ol>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/07/24/lc-pickrandomrec.jpg" style="height: 539px; width: 419px;" /></p>
+<pre>
+<strong>输入:
+</strong>["Solution", "pick", "pick", "pick", "pick", "pick"]
+[[[[-2, -2, 1, 1], [2, 2, 4, 6]]], [], [], [], [], []]
+<strong>输出:
+</strong>[null, [1, -2], [1, -1], [-1, -2], [-2, -2], [0, 0]]
 
-解释：
+<strong>解释：</strong>
 Solution solution = new Solution([[-2, -2, 1, 1], [2, 2, 4, 6]]);
 solution.pick(); // 返回 [1, -2]
 solution.pick(); // 返回 [1, -1]
 solution.pick(); // 返回 [-1, -2]
 solution.pick(); // 返回 [-2, -2]
-solution.pick(); // 返回 [0, 0]
-</code></pre>
-<p> </p>
-<p>提示：</p>
+solution.pick(); // 返回 [0, 0]</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= rects.length &lt;= 100</li>
-<li>rects[i].length == 4</li>
-<li>-10^9 &lt;= ai &lt; xi &lt;= 10^9</li>
-<li>-10^9 &lt;= bi &lt; yi &lt;= 10^9</li>
-<li>xi - ai &lt;= 2000</li>
-<li>yi - bi &lt;= 2000</li>
+<li><code>1 &lt;= rects.length &lt;= 100</code></li>
+<li><code>rects[i].length == 4</code></li>
+<li><code>-10<sup>9</sup> &lt;= a<sub>i</sub> &lt; x<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= b<sub>i</sub> &lt; y<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
+<li><code>x<sub>i</sub> - a<sub>i</sub> &lt;= 2000</code></li>
+<li><code>y<sub>i</sub> - b<sub>i</sub> &lt;= 2000</code></li>
 <li>所有的矩形不重叠。</li>
-<li>pick 最多被调用 10^4 次。</li>
+<li><code>pick</code> 最多被调用 <code>10<sup>4</sup></code> 次。</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>类似 <a href="/leetcode/0528" title="0528" rel="noopener noreferrer">0528</a> ，不过变成了二维。
@@ -227,14 +221,14 @@ solution.pick(); // 返回 [0, 0]
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%B0%B4%E5%A1%98%E6%8A%BD%E6%A0%B7/">水塘抽样</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">有序集合</a>,&nbsp;<a href="/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a>,&nbsp;<a href="/leetcode_tags/%E9%9A%8F%E6%9C%BA%E5%8C%96/">随机化</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0500/" class="prev" rel="prev" title="0500：键盘行（★）"><i class="fas fa-angle-left fa-fw"></i>0500：键盘行（★）</a>
-            <a href="/leetcode/0494/" class="next" rel="next" title="0494：目标和（★★）">0494：目标和（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0498/" class="prev" rel="prev" title="0498：对角线遍历（★）"><i class="fas fa-angle-left fa-fw"></i>0498：对角线遍历（★）</a>
+            <a href="/leetcode/0496/" class="next" rel="next" title="0496：下一个更大元素 I">0496：下一个更大元素 I<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

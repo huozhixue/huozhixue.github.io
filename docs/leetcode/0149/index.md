@@ -1,32 +1,40 @@
 # 0149：直线上最多的点数（★★）
 
 
+> <u>**[力扣第 149 题](https://leetcode.cn/problems/max-points-on-a-line/)**</u>
+
 ## 题目
 
-给你一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点。
-求最多有多少个点在同一条直线上。
+<p>给你一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示 <strong>X-Y</strong> 平面上的一个点。求最多有多少个点在同一条直线上。</p>
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/02/25/plane1.jpg)
 
-    输入：points = [[1,1],[2,2],[3,3]]
-    输出：3
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/25/plane1.jpg" style="width: 300px; height: 294px;" />
+<pre>
+<strong>输入：</strong>points = [[1,1],[2,2],[3,3]]
+<strong>输出：</strong>3
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/25/plane2.jpg" style="width: 300px; height: 294px;" />
+<pre>
+<strong>输入：</strong>points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
+<strong>输出：</strong>4
+</pre>
 
-![img](https://assets.leetcode.com/uploads/2021/02/25/plane2.jpg)   
-    
-    输入：points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
-    输出：4
 
-提示：
-- 1 <= points.length <= 300
-- points[i].length == 2
-- -10^4 <= xi, yi <= 10^4
-- points 中的所有点 互不相同
-     
-	 
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= points.length <= 300</code></li>
+<li><code>points[i].length == 2</code></li>
+<li><code>-10<sup>4</sup> <= x<sub>i</sub>, y<sub>i</sub> <= 10<sup>4</sup></code></li>
+<li><code>points</code> 中的所有点 <strong>互不相同</strong></li>
+</ul>
+
+
 ## 分析
 
 本题可能有重复点，因此不能按直线遍历，考虑按点来遍历：

@@ -1,38 +1,46 @@
-# 0402：移掉K位数字（★★）
+# 0402：移掉 K 位数字（★）
 
 
-> **第 5 场周赛第 3 题**
+> <u>**[力扣第 5 场周赛第 3 题](https://leetcode.cn/problems/remove-k-digits/)**</u>
 
 ## 题目
 
-给你一个以字符串表示的非负整数 num 和一个整数 k ，移除这个数中的 k 位数字，使得剩下的数字最小。
-请你以字符串形式返回这个最小的数字。
+<p>给你一个以字符串表示的非负整数 <code>num</code> 和一个整数 <code>k</code> ，移除这个数中的 <code>k</code><em> </em>位数字，使得剩下的数字最小。请你以字符串形式返回这个最小的数字。</p>
 
- 
-示例 1 ：
-    
-    输入：num = "1432219", k = 3
-    输出："1219"
-    解释：移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219 。
 
-示例 2 ：
-    
-    输入：num = "10200", k = 1
-    输出："200"
-    解释：移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前导零。
+<p><strong>示例 1 ：</strong></p>
 
-示例 3 ：
+<pre>
+<strong>输入：</strong>num = "1432219", k = 3
+<strong>输出：</strong>"1219"
+<strong>解释：</strong>移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219 。
+</pre>
 
-    输入：num = "10", k = 2
-    输出："0"
-    解释：从原数字移除所有的数字，剩余为空就是 0 。
- 
+<p><strong>示例 2 ：</strong></p>
 
-提示：
-- 1 <= k <= num.length <= 10^5
-- num 仅由若干位数字（0 - 9）组成
-- 除了 0 本身之外，num 不含任何前导零
+<pre>
+<strong>输入：</strong>num = "10200", k = 1
+<strong>输出：</strong>"200"
+<strong>解释：</strong>移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前导零。
+</pre>
 
+<p><strong>示例 3 ：</strong></p>
+
+<pre>
+<strong>输入：</strong>num = "10", k = 2
+<strong>输出：</strong>"0"
+<strong>解释：</strong>从原数字移除所有的数字，剩余为空就是 0 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= k <= num.length <= 10<sup>5</sup></code></li>
+<li><code>num</code> 仅由若干位数字（0 - 9）组成</li>
+<li>除了 <strong>0</strong> 本身之外，<code>num</code> 不含任何前导零</li>
+</ul>
 
 
 ## 分析

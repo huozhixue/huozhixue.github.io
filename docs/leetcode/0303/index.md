@@ -1,39 +1,52 @@
-# 0303：区域和检索 - 数组不可变（★）
+# 0303：区域和检索 - 数组不可变
 
+
+> <u>**[力扣第 303 题](https://leetcode.cn/problems/range-sum-query-immutable/)**</u>
 
 ## 题目
 
-给定一个整数数组  nums，处理以下类型的多个查询:
-- 计算索引 left 和 right （包含 left 和 right）之间的 nums 元素的 和 ，其中 left <= right
+<p>给定一个整数数组  <code>nums</code>，处理以下类型的多个查询:</p>
 
-实现 NumArray 类：
-- NumArray(int[] nums) 使用数组 nums 初始化对象
-- int sumRange(int i, int j) 返回数组 nums 中索引 left 和 right 之间的元素的 总和 ，
-包含 left 和 right 两点（也就是 nums[left] + nums[left + 1] + ... + nums[right] )
- 
+<ol>
+<li>计算索引 <code>left</code> 和 <code>right</code> （包含 <code>left</code> 和 <code>right</code>）之间的 <code>nums</code> 元素的 <strong>和</strong> ，其中 <code>left &lt;= right</code></li>
+</ol>
 
-示例 1：
+<p>实现 <code>NumArray</code> 类：</p>
 
-	输入：
-	["NumArray", "sumRange", "sumRange", "sumRange"]
-	[[[-2, 0, 3, -5, 2, -1]], [0, 2], [2, 5], [0, 5]]
-	输出：
-	[null, 1, -1, -3]
+<ul>
+<li><code>NumArray(int[] nums)</code> 使用数组 <code>nums</code> 初始化对象</li>
+<li><code>int sumRange(int i, int j)</code> 返回数组 <code>nums</code> 中索引 <code>left</code> 和 <code>right</code> 之间的元素的 <strong>总和</strong> ，包含 <code>left</code> 和 <code>right</code> 两点（也就是 <code>nums[left] + nums[left + 1] + ... + nums[right]</code> )</li>
+</ul>
 
-	解释：
-	NumArray numArray = new NumArray([-2, 0, 3, -5, 2, -1]);
-	numArray.sumRange(0, 2); // return 1 ((-2) + 0 + 3)
-	numArray.sumRange(2, 5); // return -1 (3 + (-5) + 2 + (-1)) 
-	numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))
- 
 
-提示：
-- 1 <= nums.length <= 10^4
-- -10^5 <= nums[i] <= 10^5
-- 0 <= i <= j < nums.length
-- 最多调用 10^4 次 sumRange 方法
 
-     
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>
+["NumArray", "sumRange", "sumRange", "sumRange"]
+[[[-2, 0, 3, -5, 2, -1]], [0, 2], [2, 5], [0, 5]]
+<strong>输出：
+</strong>[null, 1, -1, -3]
+
+<strong>解释：</strong>
+NumArray numArray = new NumArray([-2, 0, 3, -5, 2, -1]);
+numArray.sumRange(0, 2); // return 1 ((-2) + 0 + 3)
+numArray.sumRange(2, 5); // return -1 (3 + (-5) + 2 + (-1))
+numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= i &lt;= j &lt; nums.length</code></li>
+<li>最多调用 <code>10<sup>4</sup></code> 次 <code>sumRange</code><strong> </strong>方法</li>
+</ul>
+
 
 ## 分析
 

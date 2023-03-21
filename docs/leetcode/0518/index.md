@@ -1,46 +1,62 @@
-# 0518：零钱兑换 II（★★）
+# 0518：零钱兑换 II（★）
 
+
+> <u>**[力扣第 518 题](https://leetcode.cn/problems/coin-change-ii/)**</u>
 
 ## 题目
 
-给你一个整数数组 coins 表示不同面额的硬币，另给一个整数 amount 表示总金额。
+<p>给你一个整数数组 <code>coins</code> 表示不同面额的硬币，另给一个整数 <code>amount</code> 表示总金额。</p>
 
-请你计算并返回可以凑成总金额的硬币组合数。如果任何硬币组合都无法凑出总金额，返回 0 。
+<p>请你计算并返回可以凑成总金额的硬币组合数。如果任何硬币组合都无法凑出总金额，返回 <code>0</code> 。</p>
 
-假设每一种面额的硬币有无限个。 
+<p>假设每一种面额的硬币有无限个。 </p>
 
-题目数据保证结果符合 32 位带符号整数。
-
- 
-
-示例 1：
-
-    输入：amount = 5, coins = [1, 2, 5]
-    输出：4
-    解释：有四种方式可以凑成总金额：
-    5=5
-    5=2+2+1
-    5=2+1+1+1
-    5=1+1+1+1+1
-示例 2：
-
-    输入：amount = 3, coins = [2]
-    输出：0
-    解释：只用面额 2 的硬币不能凑成总金额 3 。
-示例 3：
-
-    输入：amount = 10, coins = [10] 
-    输出：1
- 
-
-提示：
-- 1 <= coins.length <= 300
-- 1 <= coins[i] <= 5000
-- coins 中的所有值 互不相同
-- 0 <= amount <= 5000
+<p>题目数据保证结果符合 32 位带符号整数。</p>
 
 
-	
+
+<ul>
+</ul>
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>amount = 5, coins = [1, 2, 5]
+<strong>输出：</strong>4
+<strong>解释：</strong>有四种方式可以凑成总金额：
+5=5
+5=2+2+1
+5=2+1+1+1
+5=1+1+1+1+1
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>amount = 3, coins = [2]
+<strong>输出：</strong>0
+<strong>解释：</strong>只用面额 2 的硬币不能凑成总金额 3 。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>amount = 10, coins = [10]
+<strong>输出：</strong>1
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= coins.length <= 300</code></li>
+<li><code>1 <= coins[i] <= 5000</code></li>
+<li><code>coins</code> 中的所有值 <strong>互不相同</strong></li>
+<li><code>0 <= amount <= 5000</code></li>
+</ul>
+
+
 ## 分析
 
 ### #1

@@ -1,46 +1,55 @@
 # 2156：查找给定哈希值的子串（★★）
 
 
-> **第 278 场周赛第 3 题**
+> <u>**[力扣第 278 场周赛第 3 题](https://leetcode.cn/problems/find-substring-with-given-hash-value/)**</u>
 
 ## 题目
 
-给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算：
+<p>给定整数 <code>p</code> 和 <code>m</code> ，一个长度为 <code>k</code> 且下标从 <strong>0</strong> 开始的字符串 <code>s</code> 的哈希值按照如下函数计算：</p>
 
-hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + ... + val(s[k-1]) * pk-1) mod m.
-其中 val(s[i]) 表示 s[i] 在字母表中的下标，从 val('a') = 1 到 val('z') = 26 。
+<ul>
+<li><code>hash(s, p, m) = (val(s[0]) * p<sup>0</sup> + val(s[1]) * p<sup>1</sup> + ... + val(s[k-1]) * p<sup>k-1</sup>) mod m</code>.</li>
+</ul>
 
-给你一个字符串 s 和整数 power，modulo，k 和 hashValue 。请你返回 s 中 第一个 长度为 k 的 子串 sub ，
-满足 hash(sub, power, modulo) == hashValue 。
+<p>其中 <code>val(s[i])</code> 表示 <code>s[i]</code> 在字母表中的下标，从 <code>val('a') = 1</code> 到 <code>val('z') = 26</code> 。</p>
 
-测试数据保证一定 存在 至少一个这样的子串。
+<p>给你一个字符串 <code>s</code> 和整数 <code>power</code>，<code>modulo</code>，<code>k</code> 和 <code>hashValue</code> 。请你返回 <code>s</code> 中 <strong>第一个</strong> 长度为 <code>k</code> 的 <strong>子串</strong> <code>sub</code> ，满足<em> </em><code>hash(sub, power, modulo) == hashValue</code> 。</p>
 
-子串 定义为一个字符串中连续非空字符组成的序列。
+<p>测试数据保证一定 <strong>存在</strong> 至少一个这样的子串。</p>
 
- 
+<p><strong>子串</strong> 定义为一个字符串中连续非空字符组成的序列。</p>
 
-示例 1：
 
-    输入：s = "leetcode", power = 7, modulo = 20, k = 2, hashValue = 0
-    输出："ee"
-    解释："ee" 的哈希值为 hash("ee", 7, 20) = (5 * 1 + 5 * 7) mod 20 = 40 mod 20 = 0 。
-    "ee" 是长度为 2 的第一个哈希值为 0 的子串，所以我们返回 "ee" 。
-示例 2：
 
-    输入：s = "fbxzaad", power = 31, modulo = 100, k = 3, hashValue = 32
-    输出："fbx"
-    解释："fbx" 的哈希值为 hash("fbx", 31, 100) = (6 * 1 + 2 * 31 + 24 * 312) mod 100 = 23132 mod 100 = 32 。
-    "bxz" 的哈希值为 hash("bxz", 31, 100) = (2 * 1 + 24 * 31 + 26 * 312) mod 100 = 25732 mod 100 = 32 。
-    "fbx" 是长度为 3 的第一个哈希值为 32 的子串，所以我们返回 "fbx" 。
-    注意，"bxz" 的哈希值也为 32 ，但是它在字符串中比 "fbx" 更晚出现。
-     
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= k <= s.length <= 2 * 10^4
-- 1 <= power, modulo <= 10^9
-- 0 <= hashValue < modulo
-- s 只包含小写英文字母。
-- 测试数据保证一定 存在 满足条件的子串。
+<pre><b>输入：</b>s = "leetcode", power = 7, modulo = 20, k = 2, hashValue = 0
+<strong>输出：</strong>"ee"
+<strong>解释：</strong>"ee" 的哈希值为 hash("ee", 7, 20) = (5 * 1 + 5 * 7) mod 20 = 40 mod 20 = 0 。
+"ee" 是长度为 2 的第一个哈希值为 0 的子串，所以我们返回 "ee" 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre><b>输入：</b>s = "fbxzaad", power = 31, modulo = 100, k = 3, hashValue = 32
+<b>输出：</b>"fbx"
+<b>解释：</b>"fbx" 的哈希值为 hash("fbx", 31, 100) = (6 * 1 + 2 * 31 + 24 * 31<sup>2</sup>) mod 100 = 23132 mod 100 = 32 。
+"bxz" 的哈希值为 hash("bxz", 31, 100) = (2 * 1 + 24 * 31 + 26 * 31<sup>2</sup>) mod 100 = 25732 mod 100 = 32 。
+"fbx" 是长度为 3 的第一个哈希值为 32 的子串，所以我们返回 "fbx" 。
+注意，"bxz" 的哈希值也为 32 ，但是它在字符串中比 "fbx" 更晚出现。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= k &lt;= s.length &lt;= 2 * 10<sup>4</sup></code></li>
+<li><code>1 &lt;= power, modulo &lt;= 10<sup>9</sup></code></li>
+<li><code>0 &lt;= hashValue &lt; modulo</code></li>
+<li><code>s</code> 只包含小写英文字母。</li>
+<li>测试数据保证一定 <strong>存在</strong> 满足条件的子串。</li>
+</ul>
 
 
 ## 分析

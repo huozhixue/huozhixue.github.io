@@ -1,44 +1,49 @@
-# 0797：所有可能的路径（★★）
+# 0797：所有可能的路径（★）
 
 
-> **第 75 场双周赛第 2 题**
+> <u>**[力扣第 75 场双周赛第 2 题](https://leetcode.cn/problems/all-paths-from-source-to-target/)**</u>
 
 ## 题目
 
-给一个有 n 个结点的有向无环图，找到所有从 0 到 n-1 的路径并输出（不要求按顺序）
+<p>给你一个有 <code>n</code> 个节点的 <strong>有向无环图（DAG）</strong>，请你找出所有从节点 <code>0</code> 到节点 <code>n-1</code> 的路径并输出（<strong>不要求按特定顺序</strong>）</p>
 
-二维数组的第 i 个数组中的单元都表示有向图中 i 号结点所能到达的下一些结点
-（译者注：有向图是有方向的，即规定了 a→b 你就不能从 b→a ）空就是没有下一个结点了。
- 
-示例 1：
+<p><meta charset="UTF-8" /> <code>graph[i]</code> 是一个从节点 <code>i</code> 可以访问的所有节点的列表（即从节点 <code>i</code> 到节点 <code>graph[i][j]</code>存在一条有向边）。</p>
 
-![img](https://assets.leetcode.com/uploads/2020/09/28/all_1.jpg)
 
-	输入：graph = [[1,2],[3],[3],[]]
-	输出：[[0,1,3],[0,2,3]]
-	解释：有两条路径 0 -> 1 -> 3 和 0 -> 2 -> 3
-	
-示例 2：
 
-![img](https://assets.leetcode.com/uploads/2020/09/28/all_2.jpg)
+<p><strong>示例 1：</strong></p>
 
-	输入：graph = [[4,3,1],[3,2,4],[3],[4],[]]
-	输出：[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]
+<p><img alt="" src="https://assets.leetcode.com/uploads/2020/09/28/all_1.jpg" /></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>graph = [[1,2],[3],[3],[]]
+<strong>输出：</strong>[[0,1,3],[0,2,3]]
+<strong>解释：</strong>有两条路径 0 -&gt; 1 -&gt; 3 和 0 -&gt; 2 -&gt; 3
+</pre>
 
-	输入：graph = [[1],[]]
-	输出：[[0,1]]
+<p><strong>示例 2：</strong></p>
 
-示例 4：
+<p><img alt="" src="https://assets.leetcode.com/uploads/2020/09/28/all_2.jpg" /></p>
 
-	输入：graph = [[1,2,3],[2],[3],[]]
-	输出：[[0,1,2,3],[0,2,3],[0,3]]
-	
-示例 5：
+<pre>
+<strong>输入：</strong>graph = [[4,3,1],[3,2,4],[3],[4],[]]
+<strong>输出：</strong>[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]
+</pre>
 
-	输入：graph = [[1,3],[2],[3],[]]
-	输出：[[0,1,2,3],[0,3]]
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>n == graph.length</code></li>
+<li><code>2 &lt;= n &lt;= 15</code></li>
+<li><code>0 &lt;= graph[i][j] &lt; n</code></li>
+<li><code>graph[i][j] != i</code>（即不存在自环）</li>
+<li><code>graph[i]</code> 中的所有元素 <strong>互不相同</strong></li>
+<li>保证输入为 <strong>有向无环图（DAG）</strong></li>
+</ul>
+
+
 
 
 ## 分析

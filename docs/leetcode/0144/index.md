@@ -1,45 +1,62 @@
-# 0144：二叉树的前序遍历（★）
+# 0144：二叉树的前序遍历
 
+
+> <u>**[力扣第 144 题](https://leetcode.cn/problems/binary-tree-preorder-traversal/)**</u>
 
 ## 题目
 
-给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
+<p>给你二叉树的根节点 <code>root</code> ，返回它节点值的 <strong>前序</strong><em> </em>遍历。</p>
 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg" style="width: 202px; height: 324px;" />
+<pre>
+<strong>输入：</strong>root = [1,null,2,3]
+<strong>输出：</strong>[1,2,3]
+</pre>
 
-	输入：root = [1,null,2,3]
-	输出：[1,2,3]
-	
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-	输入：root = []
-	输出：[]
-	
-示例 3：
+<pre>
+<strong>输入：</strong>root = []
+<strong>输出：</strong>[]
+</pre>
 
-	输入：root = [1]
-	输出：[1]
-	
-示例 4：
+<p><strong>示例 3：</strong></p>
 
-![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_5.jpg)
+<pre>
+<strong>输入：</strong>root = [1]
+<strong>输出：</strong>[1]
+</pre>
 
-	输入：root = [1,2]
-	输出：[1,2]
-	
-示例 5：
+<p><strong>示例 4：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_5.jpg" style="width: 202px; height: 202px;" />
+<pre>
+<strong>输入：</strong>root = [1,2]
+<strong>输出：</strong>[1,2]
+</pre>
 
-![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg)
+<p><strong>示例 5：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg" style="width: 202px; height: 202px;" />
+<pre>
+<strong>输入：</strong>root = [1,null,2]
+<strong>输出：</strong>[1,2]
+</pre>
 
-	输入：root = [1,null,2]
-	输出：[1,2]
 
-提示：
-- 树中节点数目在范围 [0, 100] 内
-- -100 <= Node.val <= 100
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>树中节点数目在范围 <code>[0, 100]</code> 内</li>
+<li><code>-100 <= Node.val <= 100</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>递归算法很简单，你可以通过迭代算法完成吗？</p>
+
 
 ## 分析
 

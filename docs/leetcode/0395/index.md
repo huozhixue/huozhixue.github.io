@@ -1,31 +1,39 @@
-# 0395：至少有K个重复字符的最长子串（★★）
+# 0395：至少有 K 个重复字符的最长子串（★）
 
 
-> **第 3 场周赛第 4 题**
+> <u>**[力扣第 3 场周赛第 4 题](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/)**</u>
 
 ## 题目
 
-给你一个字符串 s 和一个整数 k ，请你找出 s 中的最长子串， 
-要求该子串中的每一字符出现次数都不少于 k 。返回这一子串的长度。
+<p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> ，请你找出 <code>s</code> 中的最长子串， 要求该子串中的每一字符出现次数都不少于 <code>k</code> 。返回这一子串的长度。</p>
 
-提示：
 
-- 1 <= s.length <= 10^4
-- s 仅由小写英文字母组成
-- 1 <= k <= 10^5
- 
-示例 1：
-    
-    输入：s = "aaabb", k = 3
-    输出：3
-    解释：最长子串为 "aaa" ，其中 'a' 重复了 3 次。
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：s = "ababbc", k = 2
-    输出：5
-    解释：最长子串为 "ababb" ，其中 'a' 重复了 2 次， 'b' 重复了 3 次。
- 
+<pre>
+<strong>输入：</strong>s = "aaabb", k = 3
+<strong>输出：</strong>3
+<strong>解释：</strong>最长子串为 "aaa" ，其中 'a' 重复了 3 次。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "ababbc", k = 2
+<strong>输出：</strong>5
+<strong>解释：</strong>最长子串为 "ababb" ，其中 'a' 重复了 2 次， 'b' 重复了 3 次。</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= s.length <= 10<sup>4</sup></code></li>
+<li><code>s</code> 仅由小写英文字母组成</li>
+<li><code>1 <= k <= 10<sup>5</sup></code></li>
+</ul>
+
 
 ## 分析
 

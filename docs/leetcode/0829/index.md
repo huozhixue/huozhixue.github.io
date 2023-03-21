@@ -1,31 +1,42 @@
 # 0829：连续整数求和（★★）
 
 
-> **第 83 场周赛第 3 题**
+> <u>**[力扣第 83 场周赛第 3 题](https://leetcode.cn/problems/consecutive-numbers-sum/)**</u>
 
 ## 题目
 
-定一个正整数 N，试求有多少组连续正整数满足所有数字之和为 N?
+<p>给定一个正整数 <code>n</code>，返回 <em>连续正整数满足所有数字之和为 <code>n</code> 的组数</em> 。 </p>
 
-说明: 1 <= N <= 10 ^ 9
 
-示例 1:
 
-    输入: 5
-    输出: 2
-    解释: 5 = 5 = 2 + 3，共有两组连续整数([5],[2,3])求和后为 5。
+<p><strong>示</strong><strong>例 1:</strong></p>
 
-示例 2:
-    
-    输入: 9
-    输出: 3
-    解释: 9 = 9 = 4 + 5 = 2 + 3 + 4
+<pre>
+<strong>输入: </strong>n = 5
+<strong>输出: </strong>2
+<strong>解释: </strong>5 = 2 + 3，共有两组连续整数([5],[2,3])求和后为 5。</pre>
 
-示例 3:
-    
-    输入: 15
-    输出: 4
-    解释: 15 = 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入: </strong>n = 9
+<strong>输出: </strong>3
+<strong>解释: </strong>9 = 4 + 5 = 2 + 3 + 4</pre>
+
+<p><strong>示例 3:</strong></p>
+
+<pre>
+<strong>输入: </strong>n = 15
+<strong>输出: </strong>4
+<strong>解释: </strong>15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code>​​​​​​​</li>
+</ul>
 
 
 ## 分析

@@ -1,35 +1,45 @@
 # 1447：最简分数（★）
 
 
-> **第 26 场双周赛第 2 题**
+> <u>**[力扣第 26 场双周赛第 2 题](https://leetcode.cn/problems/simplified-fractions/)**</u>
 
 ## 题目
 
-给你一个整数 n ，请你返回所有 0 到 1 之间（不包括 0 和 1）满足分母小于等于  n 的 最简 分数。
-分数可以以 任意 顺序返回。
+<p>给你一个整数 <code>n</code> ，请你返回所有 0 到 1 之间（不包括 0 和 1）满足分母小于等于  <code>n</code> 的 <strong>最简 </strong>分数 。分数可以以 <strong>任意 </strong>顺序返回。</p>
 
 
-示例 1：
 
-    输入：n = 2
-    输出：["1/2"]
-    解释："1/2" 是唯一一个分母小于等于 2 的最简分数。
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：n = 3
-    输出：["1/2","1/3","2/3"]
-示例 3：
+<pre><strong>输入：</strong>n = 2
+<strong>输出：</strong>[&quot;1/2&quot;]
+<strong>解释：</strong>&quot;1/2&quot; 是唯一一个分母小于等于 2 的最简分数。</pre>
 
-    输入：n = 4
-    输出：["1/2","1/3","1/4","2/3","3/4"]
-    解释："2/4" 不是最简分数，因为它可以化简为 "1/2" 。
-示例 4：
+<p><strong>示例 2：</strong></p>
 
-    输入：n = 1
-    输出：[]
-     
-提示：
-- 1 <= n <= 100
+<pre><strong>输入：</strong>n = 3
+<strong>输出：</strong>[&quot;1/2&quot;,&quot;1/3&quot;,&quot;2/3&quot;]
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre><strong>输入：</strong>n = 4
+<strong>输出：</strong>[&quot;1/2&quot;,&quot;1/3&quot;,&quot;1/4&quot;,&quot;2/3&quot;,&quot;3/4&quot;]
+<strong>解释：</strong>&quot;2/4&quot; 不是最简分数，因为它可以化简为 &quot;1/2&quot; 。</pre>
+
+<p><strong>示例 4：</strong></p>
+
+<pre><strong>输入：</strong>n = 1
+<strong>输出：</strong>[]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 100</code></li>
+</ul>
 
 
 ## 分析

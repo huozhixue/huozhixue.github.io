@@ -1,31 +1,43 @@
-# 0219：存在重复元素 II（★）
+# 0219：存在重复元素 II
 
+
+> <u>**[力扣第 219 题](https://leetcode.cn/problems/contains-duplicate-ii/)**</u>
 
 ## 题目
 
-给你一个整数数组 nums 和一个整数 k ，判断数组中是否存在两个 不同的索引 i 和 j ，
-满足 nums[i] == nums[j] 且 abs(i - j) <= k 。如果存在，返回 true ；否则，返回 false 。
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，判断数组中是否存在两个 <strong>不同的索引</strong><em> </em><code>i</code> 和<em> </em><code>j</code> ，满足 <code>nums[i] == nums[j]</code> 且 <code>abs(i - j) &lt;= k</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-示例 1：
 
-	输入：nums = [1,2,3,1], k = 3
-	输出：true
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：nums = [1,0,1,1], k = 1
-	输出：true
+<pre>
+<strong>输入：</strong>nums = [1,2,3,1], k<em> </em>= 3
+<strong>输出：</strong>true</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：nums = [1,2,3,1,2,3], k = 2
-	输出：false
+<pre>
+<strong>输入：</strong>nums = [1,0,1,1], k<em> </em>=<em> </em>1
+<strong>输出：</strong>true</pre>
 
-提示：
+<p><strong>示例 3：</strong></p>
 
-- 1 <= nums.length <= 10^5
-- -10^9 <= nums[i] <= 10^9
-- 0 <= k <= 10^5
+<pre>
+<strong>输入：</strong>nums = [1,2,3,1,2,3], k<em> </em>=<em> </em>2
+<strong>输出：</strong>false</pre>
+
+
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>
+</ul>
 
 
 ## 分析

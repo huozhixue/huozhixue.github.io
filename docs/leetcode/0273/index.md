@@ -1,27 +1,43 @@
-# 0273：整数转换英文表示（★★★）
+# 0273：整数转换英文表示（★★）
 
+
+> <u>**[力扣第 273 题](https://leetcode.cn/problems/integer-to-english-words/)**</u>
 
 ## 题目
 
-将非负整数 num 转换为其对应的英文表示。
+<p>将非负整数 <code>num</code> 转换为其对应的英文表示。</p>
 
-示例 1：
 
-    输入：num = 123
-    输出："One Hundred Twenty Three"
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：num = 12345
-    输出："Twelve Thousand Three Hundred Forty Five"
+<pre>
+<strong>输入：</strong>num = 123
+<strong>输出：</strong>"One Hundred Twenty Three"
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-    输入：num = 1234567
-    输出："One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+<pre>
+<strong>输入：</strong>num = 12345
+<strong>输出：</strong>"Twelve Thousand Three Hundred Forty Five"
+</pre>
 
-提示：
-- 0 <= num <= 2^31 - 1
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>num = 1234567
+<strong>输出：</strong>"One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
 
 ## 分析
 

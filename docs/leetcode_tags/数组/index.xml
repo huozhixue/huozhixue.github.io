@@ -3,75 +3,75 @@
         <title>数组 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/</link>
         <description>数组 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Sep 2021 01:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
-    <title>1992：找到所有的农场组（★）</title>
-    <link>https://huozhixue.github.io/leetcode/1992/</link>
-    <pubDate>Sat, 04 Sep 2021 01:00:00 &#43;0800</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Mar 2022 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+    <title>2197：替换数组中的非互质数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2197/</link>
+    <pubDate>Sun, 06 Mar 2022 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1992/</guid>
-    <description><![CDATA[第 60 场双周赛第 2 题 题目 给你一个下标从 0 开始，大小为 m x n 的二进制矩阵 land ，其中 0 表示一单位的森林土地， 1 表示一单位的农场土地。 为了让农场保持有]]></description>
+    <guid>https://huozhixue.github.io/leetcode/2197/</guid>
+    <description><![CDATA[力扣第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则]]></description>
 </item><item>
-    <title>1991：找到数组的中间位置</title>
-    <link>https://huozhixue.github.io/leetcode/1991/</link>
-    <pubDate>Sat, 04 Sep 2021 00:00:00 &#43;0800</pubDate>
+    <title>2183：统计可以被 K 整除的下标对数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2183/</link>
+    <pubDate>Sun, 20 Feb 2022 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1991/</guid>
-    <description><![CDATA[第 60 场双周赛第 1 题 题目 给你一个下标从 0 开始的整数数组 nums ，请你找到 最左边 的中间位置 middleIndex （也就是所有可能中间位置下标最小的一个）。 中间位置 middleIndex 是满足]]></description>
+    <guid>https://huozhixue.github.io/leetcode/2183/</guid>
+    <description><![CDATA[力扣第 281 场周赛第 4 题 题目 给你一个下标从 0 开始、长度为 n 的整数数组 nums 和一个整数 k ，返回满足下述条件的下标对 (i, j) 的数目： 0 &lt;= i &lt; j &lt;= n - 1 且 nums[i] *]]></description>
 </item><item>
-    <title>0835：图像重叠（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0835/</link>
-    <pubDate>Sun, 13 May 2018 03:00:00 &#43;0800</pubDate>
+    <title>2179：统计数组中好三元组数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2179/</link>
+    <pubDate>Sat, 19 Feb 2022 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0835/</guid>
-    <description><![CDATA[第 84 场周赛第 3 题 题目 给你两个图像 img1 和 img2 ，两个图像的大小都是 n x n ，用大小相同的二维正方形矩阵表示。 （并且为二进制矩阵，只包含若干 0 和若干 1 ）]]></description>
+    <guid>https://huozhixue.github.io/leetcode/2179/</guid>
+    <description><![CDATA[力扣第 72 场双周赛第 4 题 题目 给你两个下标从 0 开始且长度为 n 的整数数组 nums1 和 nums2 ，两者都是 [0, 1, ..., n - 1] 的 排列 。 好三元组 指的是 3 个 互不相同 的值，且它们]]></description>
 </item><item>
-    <title>0832：翻转图像（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0832/</link>
-    <pubDate>Sun, 13 May 2018 00:00:00 &#43;0800</pubDate>
+    <title>2115：从给定原材料中找到所有可以做出的菜（★）</title>
+    <link>https://huozhixue.github.io/leetcode/2115/</link>
+    <pubDate>Sat, 25 Dec 2021 01:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0832/</guid>
-    <description><![CDATA[第 84 场周赛第 1 题 题目 给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。 水平翻转图片就是将图片的每一行都进行翻转，即逆序。 例]]></description>
+    <guid>https://huozhixue.github.io/leetcode/2115/</guid>
+    <description><![CDATA[力扣第 68 场双周赛第 3 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ，如果你有它 所有 的原材料 ingredients[i] ，那]]></description>
 </item><item>
-    <title>0830：较大分组的位置（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0830/</link>
-    <pubDate>Sun, 06 May 2018 02:00:00 &#43;0800</pubDate>
+    <title>2001：可互换矩形的组数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/2001/</link>
+    <pubDate>Sun, 12 Sep 2021 01:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0830/</guid>
-    <description><![CDATA[第 83 场周赛第 1 题 题目 在一个由小写字母构成的字符串 s 中，包含由一些连续的相同字符所构成的分组。 例如，在字符串 s = &ldquo;abbxxxxzyy&rdquo; 中，就含有 &ldquo;a&rdquo;, &ldquo;bb&rdquo;, &ldquo;xxxx&rdquo;, &ldquo;z&rdquo; 和 &ldquo;yy&rdquo; 这样的]]></description>
+    <guid>https://huozhixue.github.io/leetcode/2001/</guid>
+    <description><![CDATA[力扣第 258 场周赛第 2 题 题目 用一个下标从 0 开始的二维整数数组 rectangles 来表示 n 个矩形，其中 rectangles[i] = [widthi, heighti] 表示第 i 个矩形的宽度和高度。 如果两个矩形 i 和 j（i &lt; j]]></description>
 </item><item>
-    <title>0724：寻找数组的中心索引（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0724/</link>
-    <pubDate>Sun, 12 Nov 2017 00:00:00 &#43;0800</pubDate>
+    <title>1998：数组的最大公因数排序（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1998/</link>
+    <pubDate>Sun, 05 Sep 2021 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0724/</guid>
-    <description><![CDATA[第 58 场双周赛第 1 题 题目 给你一个整数数组 nums，请编写一个能够返回数组 “中心索引” 的方法。 数组 中心索引 是数组的一个索引，其左侧所有元素相加的]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1998/</guid>
+    <description><![CDATA[力扣第 257 场周赛第 4 题 题目 给你一个整数数组 nums ，你可以在 nums 上执行下述操作 任意次 ： 如果 gcd(nums[i], nums[j]) &gt; 1 ，交换 nums[i] 和 nums[j] 的位置。其中 gcd(nums[i], nums[j]) 是 nums[i] 和 nums[j] 的最大公因数。 如]]></description>
 </item><item>
-    <title>0485：最大连续 1 的个数</title>
-    <link>https://huozhixue.github.io/leetcode/0485/</link>
-    <pubDate>Sat, 10 Dec 2016 02:00:00 &#43;0800</pubDate>
+    <title>1997：访问完所有房间的第一天（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1997/</link>
+    <pubDate>Sun, 05 Sep 2021 02:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0485/</guid>
-    <description><![CDATA[题目 给定一个二进制数组，计算其中最大连续 1 的个数。 提示： 输入的数组只包含 0 和 1 。 输入数组的长度是正整数，且不超过 10,000。 示例： 输入：[]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1997/</guid>
+    <description><![CDATA[力扣第 257 场周赛第 3 题 题目 你需要访问 n 个房间，房间从 0 到 n - 1 编号。同时，每一天都有一个日期编号，从 0 开始，依天数递增。你每天都会访问一个房间]]></description>
 </item><item>
-    <title>0463：岛屿的周长（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0463/</link>
-    <pubDate>Sun, 20 Nov 2016 00:00:00 &#43;0800</pubDate>
+    <title>1996：游戏中弱角色的数量（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1996/</link>
+    <pubDate>Sun, 05 Sep 2021 01:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0463/</guid>
-    <description><![CDATA[第 10 场周赛第 1 题 题目 给定一个 row x col 的二维网格地图 grid ，其中：grid[i][j] = 1 表示陆地， grid[i][j] = 0 表示水域。 网格中的格子 水平和垂直 方向相连（]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1996/</guid>
+    <description><![CDATA[力扣第 257 场周赛第 2 题 题目 你正在参加一个多角色游戏，每个角色都有两个主要属性：攻击 和 防御 。给你一个二维整数数组 properties ，其中 properties[i] = [attacki, defensei] 表示游戏中第 i 个]]></description>
 </item><item>
-    <title>0448：找到所有数组中消失的数字（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0448/</link>
-    <pubDate>Tue, 08 Nov 2016 00:00:00 &#43;0800</pubDate>
+    <title>1995：统计特殊四元组</title>
+    <link>https://huozhixue.github.io/leetcode/1995/</link>
+    <pubDate>Sun, 05 Sep 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0448/</guid>
-    <description><![CDATA[题目 给你一个含 n 个整数的数组 nums ，其中 nums[i] 在区间 [1, n] 内。 请你找出所有在 [1, n] 范围内但没有出现在 nums 中的数字，并以数组的形式返回结果。 提示： n == nums.length 1 &lt;=]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1995/</guid>
+    <description><![CDATA[力扣第 257 场周赛第 1 题 题目 给你一个 下标从 0 开始 的整数数组 nums ，返回满足下述条件的 不同 四元组 (a, b, c, d) 的 数目 ： nums[a] + nums[b] + nums[c] == nums[d] ，且 a &lt; b &lt; c &lt; d 示例 1]]></description>
 </item><item>
-    <title>0396：旋转函数（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0396/</link>
-    <pubDate>Sun, 11 Sep 2016 00:00:00 &#43;0800</pubDate>
+    <title>1994：好子集的数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1994/</link>
+    <pubDate>Sat, 04 Sep 2021 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0396/</guid>
-    <description><![CDATA[第 4 场周赛第 1 题 题目 给定一个长度为 n 的整数数组 A 。 假设 Bk 是数组 A 顺时针旋转 k 个位置后的数组，我们定义 A 的“旋转函数” F 为： F(k) = 0 * Bk[0] + 1 * Bk[1]]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1994/</guid>
+    <description><![CDATA[力扣第 60 场双周赛第 4 题 题目 给你一个整数数组 nums 。如果 nums 的一个子集中，所有元素的乘积可以表示为一个或多个 互不相同的质数 的乘积，那么我们称它为 好子]]></description>
 </item></channel>
 </rss>

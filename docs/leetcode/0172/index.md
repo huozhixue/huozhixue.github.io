@@ -1,35 +1,50 @@
 # 0172：阶乘后的零（★）
 
 
+> <u>**[力扣第 172 题](https://leetcode.cn/problems/factorial-trailing-zeroes/)**</u>
+
 ## 题目
 
-给定一个整数 n ，返回 n! 结果中尾随零的数量。
+<p>给定一个整数 <code>n</code> ，返回 <code>n!</code> 结果中尾随零的数量。</p>
 
-提示 n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1
+<p>提示 <code>n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1</code></p>
 
-示例 1：
 
-	输入：n = 3
-	输出：0
-	解释：3! = 6 ，不含尾随 0
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：n = 5
-	输出：1
-	解释：5! = 120 ，有一个尾随 0
+<pre>
+<strong>输入：</strong>n = 3
+<strong>输出：</strong>0
+<strong>解释：</strong>3! = 6 ，不含尾随 0
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：n = 0
-	输出：0
-	 
+<pre>
+<strong>输入：</strong>n = 5
+<strong>输出：</strong>1
+<strong>解释：</strong>5! = 120 ，有一个尾随 0
+</pre>
 
-提示：
-- 0 <= n <= 10^4
- 
+<p><strong>示例 3：</strong></p>
 
-进阶：你可以设计并实现对数时间复杂度的算法来解决此问题吗？
+<pre>
+<strong>输入：</strong>n = 0
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= n &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+
+
+<p><b>进阶：</b>你可以设计并实现对数时间复杂度的算法来解决此问题吗？</p>
 
 
 ## 分析

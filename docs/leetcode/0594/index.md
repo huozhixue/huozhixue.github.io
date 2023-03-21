@@ -1,37 +1,49 @@
-# 0594：最长和谐子序列（★）
+# 0594：最长和谐子序列
 
 
-> **第  场周赛第  题**
+> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/longest-harmonious-subsequence/)**</u>
 
 ## 题目
 
-和谐数组是指一个数组里元素的最大值和最小值之间的差别 正好是 1 。
+<p>和谐数组是指一个数组里元素的最大值和最小值之间的差别 <strong>正好是 <code>1</code></strong> 。</p>
 
-现在，给你一个整数数组 nums ，请你在所有可能的子序列中找到最长的和谐子序列的长度。
+<p>现在，给你一个整数数组 <code>nums</code> ，请你在所有可能的子序列中找到最长的和谐子序列的长度。</p>
 
-数组的子序列是一个由数组派生出来的序列，它可以通过删除一些元素或不删除元素、且不改变其余元素的顺序而得到。
+<p>数组的子序列是一个由数组派生出来的序列，它可以通过删除一些元素或不删除元素、且不改变其余元素的顺序而得到。</p>
 
-提示：
 
-- 1 <= nums.length <= 2 * 104
-- -10^9 <= nums[i] <= 10^9
 
-示例 1：
+<p><strong>示例 1：</strong></p>
 
-	输入：nums = [1,3,2,2,5,2,3,7]
-	输出：5
-	解释：最长的和谐子序列是 [3,2,2,2,3]
+<pre>
+<strong>输入：</strong>nums = [1,3,2,2,5,2,3,7]
+<strong>输出：</strong>5
+<strong>解释：</strong>最长的和谐子序列是 [3,2,2,2,3]
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-	输入：nums = [1,2,3,4]
-	输出：2
+<pre>
+<strong>输入：</strong>nums = [1,2,3,4]
+<strong>输出：</strong>2
+</pre>
 
-示例 3：
+<p><strong>示例 3：</strong></p>
 
-	输入：nums = [1,1,1,1]
-	输出：0
-	 
+<pre>
+<strong>输入：</strong>nums = [1,1,1,1]
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= nums.length <= 2 * 10<sup>4</sup></code></li>
+<li><code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code></li>
+</ul>
+
 
 ## 分析
 

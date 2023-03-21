@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0129：求根节点到叶节点数字之和（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0129：求根节点到叶节点数字之和（★）" />
-<meta property="og:description" content="题目 给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。 每条从根节点到叶节点的路径都代表一个数字： 例如，从根节点到叶节点的路" />
+<meta property="og:description" content="力扣第 129 题 题目 给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。 每条从根节点到叶节点的路径都代表一个数字： 例如，从根节点到" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0129/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-05-09T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0129：求根节点到叶节点数字之和（★）"/>
-<meta name="twitter:description" content="题目 给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。 每条从根节点到叶节点的路径都代表一个数字： 例如，从根节点到叶节点的路"/>
+<meta name="twitter:description" content="力扣第 129 题 题目 给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。 每条从根节点到叶节点的路径都代表一个数字： 例如，从根节点到"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0129/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0128/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0130/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0129\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  384 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  389 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0129\/","datePublished": "2015-05-09T00:00:00+08:00","dateModified": "2015-05-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0129：求根节点到叶节点数字之和（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-09">2015-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 384 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-09">2015-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 389 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0129/" class="leancloud_visitors" data-flag-title="0129：求根节点到叶节点数字之和（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,53 +125,47 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。
-每条从根节点到叶节点的路径都代表一个数字：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/sum-root-to-leaf-numbers/" target="_blank" rel="noopener noreffer">力扣第 129 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个二叉树的根节点 <code>root</code> ，树中每个节点都存放有一个 <code>0</code> 到 <code>9</code> 之间的数字。</p>
+<div class="original__bRMd">
+<div>
+<p>每条从根节点到叶节点的路径都代表一个数字：</p>
 <ul>
-<li>例如，从根节点到叶节点的路径 1 -&gt; 2 -&gt; 3 表示数字 123 。</li>
+<li>例如，从根节点到叶节点的路径 <code>1 -> 2 -> 3</code> 表示数字 <code>123</code> 。</li>
 </ul>
-<p>计算从根节点到叶节点生成的 所有数字之和 。</p>
-<p>叶节点 是指没有子节点的节点。</p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg, https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg 1.5x, https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg"
-        title="img" /></p>
-<pre><code>输入：root = [1,2,3]
-输出：25
-解释：
-从根到叶子节点路径 1-&gt;2 代表数字 12
-从根到叶子节点路径 1-&gt;3 代表数字 13
-因此，数字总和 = 12 + 13 = 25
-</code></pre>
-<p>示例 2：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg, https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg 1.5x, https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg"
-        title="img" /></p>
-<pre><code>输入：root = [4,9,0,5,1]
-输出：1026
-解释：
-从根到叶子节点路径 4-&gt;9-&gt;5 代表数字 495
-从根到叶子节点路径 4-&gt;9-&gt;1 代表数字 491
-从根到叶子节点路径 4-&gt;0 代表数字 40
-因此，数字总和 = 495 + 491 + 40 = 1026
-</code></pre>
-<p>提示：</p>
+<p>计算从根节点到叶节点生成的 <strong>所有数字之和</strong> 。</p>
+<p><strong>叶节点</strong> 是指没有子节点的节点。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg" style="width: 212px; height: 182px;" />
+<pre>
+<strong>输入：</strong>root = [1,2,3]
+<strong>输出：</strong>25
+<strong>解释：</strong>
+从根到叶子节点路径 <code>1->2</code> 代表数字 <code>12</code>
+从根到叶子节点路径 <code>1->3</code> 代表数字 <code>13</code>
+因此，数字总和 = 12 + 13 = <code>25</code></pre>
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg" style="width: 292px; height: 302px;" />
+<pre>
+<strong>输入：</strong>root = [4,9,0,5,1]
+<strong>输出：</strong>1026
+<strong>解释：</strong>
+从根到叶子节点路径 <code>4->9->5</code> 代表数字 495
+从根到叶子节点路径 <code>4->9->1</code> 代表数字 491
+从根到叶子节点路径 <code>4->0</code> 代表数字 40
+因此，数字总和 = 495 + 491 + 40 = <code>1026</code>
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>树中节点的数目在范围 [1, 1000] 内</li>
-<li>0 &lt;= Node.val &lt;= 9</li>
-<li>树的深度不超过 10</li>
+<li>树中节点的数目在范围 <code>[1, 1000]</code> 内</li>
+<li><code>0 <= Node.val <= 9</code></li>
+<li>树的深度不超过 <code>10</code></li>
 </ul>
+</div>
+</div>
 <h2 id="分析">分析</h2>
 <p>遍历时维护根节点到当前节点的路径数字，遇到叶子节点就加到结果中即可。</p>
 <h2 id="解答">解答</h2>
@@ -221,14 +215,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/leetcode/0130/" class="prev" rel="prev" title="0130：被围绕的区域（★）"><i class="fas fa-angle-left fa-fw"></i>0130：被围绕的区域（★）</a>
-            <a href="/leetcode/0128/" class="next" rel="next" title="0128：最长连续序列(★★)">0128：最长连续序列(★★)<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0128/" class="next" rel="next" title="0128：最长连续序列（★）">0128：最长连续序列（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

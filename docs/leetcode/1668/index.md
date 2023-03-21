@@ -1,39 +1,49 @@
-# 1668：最大重复子字符串（★）
+# 1668：最大重复子字符串
 
 
-> **第 40 场双周赛第 1 题**
+> <u>**[力扣第 40 场双周赛第 1 题](https://leetcode.cn/problems/maximum-repeating-substring/)**</u>
 
 ## 题目
 
-给你一个字符串 sequence ，如果字符串 word 连续重复 k 次形成的字符串是 sequence 的一个子字符串，
-那么单词 word 的 重复值为 k 。单词 word 的 最大重复值 是单词 word 在 sequence 中最大的重复值。
-如果 word 不是 sequence 的子串，那么重复值 k 为 0 。
+<p>给你一个字符串 <code>sequence</code> ，如果字符串 <code>word</code> 连续重复 <code>k</code> 次形成的字符串是 <code>sequence</code> 的一个子字符串，那么单词 <code>word</code> 的 <strong>重复值为 <code>k</code></strong><strong> </strong>。单词 <code>word</code> 的 <strong>最</strong><strong>大重复值</strong> 是单词 <code>word</code> 在 <code>sequence</code> 中最大的重复值。如果 <code>word</code> 不是 <code>sequence</code> 的子串，那么重复值 <code>k</code> 为 <code>0</code> 。</p>
 
-给你一个字符串 sequence 和 word ，请你返回 最大重复值 k 。
+<p>给你一个字符串 <code>sequence</code> 和 <code>word</code> ，请你返回 <strong>最大重复值 <code>k</code> </strong>。</p>
 
- 
 
-示例 1：
-    
-    输入：sequence = "ababc", word = "ab"
-    输出：2
-    解释："abab" 是 "ababc" 的子字符串。
-示例 2：
-    
-    输入：sequence = "ababc", word = "ba"
-    输出：1
-    解释："ba" 是 "ababc" 的子字符串，但 "baba" 不是 "ababc" 的子字符串。
-示例 3：
 
-    输入：sequence = "ababc", word = "ac"
-    输出：0
-    解释："ac" 不是 "ababc" 的子字符串。
- 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= sequence.length <= 100
-- 1 <= word.length <= 100
-- sequence 和 word 都只包含小写英文字母。
+<pre>
+<b>输入：</b>sequence = "ababc", word = "ab"
+<b>输出：</b>2
+<strong>解释：</strong>"abab" 是 "<strong>abab</strong>c" 的子字符串。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<b>输入：</b>sequence = "ababc", word = "ba"
+<b>输出：</b>1
+<strong>解释：</strong>"ba" 是 "a<strong>ba</strong>bc" 的子字符串，但 "baba" 不是 "ababc" 的子字符串。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<b>输入：</b>sequence = "ababc", word = "ac"
+<b>输出：</b>0
+<strong>解释：</strong>"ac" 不是 "ababc" 的子字符串。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= sequence.length <= 100</code></li>
+<li><code>1 <= word.length <= 100</code></li>
+<li><code>sequence</code> 和 <code>word</code> 都只包含小写英文字母。</li>
+</ul>
 
 
 ## 分析

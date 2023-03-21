@@ -1,43 +1,51 @@
-# 0918：环形子数组的最大和（★★）
+# 0918：环形子数组的最大和（★）
 
 
-> **第 105 场周赛第 2 题**
-
+> <u>**[力扣第 105 场周赛第 2 题](https://leetcode.cn/problems/maximum-sum-circular-subarray/)**</u>
 
 ## 题目
 
-给定一个长度为 n 的环形整数数组 nums ，返回 nums 的非空 子数组 的最大可能和 。
+<p>给定一个长度为 <code>n</code> 的<strong>环形整数数组</strong> <code>nums</code> ，返回<em> <code>nums</code> 的非空 <strong>子数组</strong> 的最大可能和 </em>。</p>
 
-环形数组 意味着数组的末端将会与开头相连呈环状。形式上， nums[i] 的下一个元素是 nums[(i + 1) % n] ， 
-nums[i] 的前一个元素是 nums[(i - 1 + n) % n] 。
+<p><strong>环形数组</strong><em> </em>意味着数组的末端将会与开头相连呈环状。形式上， <code>nums[i]</code> 的下一个元素是 <code>nums[(i + 1) % n]</code> ， <code>nums[i]</code> 的前一个元素是 <code>nums[(i - 1 + n) % n]</code> 。</p>
 
-子数组 最多只能包含固定缓冲区 nums 中的每个元素一次。形式上，对于子数组 nums[i], nums[i + 1], ..., nums[j] ，
-不存在 i <= k1, k2 <= j 其中 k1 % n == k2 % n 。
+<p><strong>子数组</strong> 最多只能包含固定缓冲区 <code>nums</code> 中的每个元素一次。形式上，对于子数组 <code>nums[i], nums[i + 1], ..., nums[j]</code> ，不存在 <code>i &lt;= k1, k2 &lt;= j</code> 其中 <code>k1 % n == k2 % n</code> 。</p>
 
 
-示例 1：
 
-    输入：nums = [1,-2,3,-2]
-    输出：3
-    解释：从子数组 [3] 得到最大和 3
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums = [1,-2,3,-2]
+<strong>输出：</strong>3
+<strong>解释：</strong>从子数组 [3] 得到最大和 3
+</pre>
 
-    输入：nums = [5,-3,5]
-    输出：10
-    解释：从子数组 [5,5] 得到最大和 5 + 5 = 10
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>nums = [5,-3,5]
+<strong>输出：</strong>10
+<strong>解释：</strong>从子数组 [5,5] 得到最大和 5 + 5 = 10
+</pre>
 
-    输入：nums = [3,-2,2,-3]
-    输出：3
-    解释：从子数组 [3] 和 [3,-2,2] 都可以得到最大和 3
-     
+<p><strong>示例 3：</strong></p>
 
-提示：
-- n == nums.length
-- 1 <= n <= 3 * 10^4
-- -3 * 10^4 <= nums[i] <= 3 * 10^4
+<pre>
+<strong>输入：</strong>nums = [3,-2,2,-3]
+<strong>输出：</strong>3
+<strong>解释：</strong>从子数组 [3] 和 [3,-2,2] 都可以得到最大和 3
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= n &lt;= 3 * 10<sup>4</sup></code></li>
+<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code>​​​​​​​</li>
+</ul>
 
 
 ## 分析

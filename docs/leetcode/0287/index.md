@@ -1,43 +1,52 @@
-# 0287：寻找重复数（★★★）
+# 0287：寻找重复数（★）
 
+
+> <u>**[力扣第 287 题](https://leetcode.cn/problems/find-the-duplicate-number/)**</u>
 
 ## 题目
 
-给定一个包含 n + 1 个整数的数组 nums ，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。
+<p>给定一个包含 <code>n + 1</code> 个整数的数组 <code>nums</code> ，其数字都在 <code>[1, n]</code> 范围内（包括 <code>1</code> 和 <code>n</code>），可知至少存在一个重复的整数。</p>
 
-假设 nums 只有 一个重复的整数 ，找出 这个重复的数 。
+<p>假设 <code>nums</code> 只有 <strong>一个重复的整数</strong> ，返回 <strong>这个重复的数</strong> 。</p>
 
-你设计的解决方案必须不修改数组 nums 且只用常量级 O(1) 的额外空间。
+<p>你设计的解决方案必须 <strong>不修改</strong> 数组 <code>nums</code> 且只用常量级 <code>O(1)</code> 的额外空间。</p>
 
-示例 1：
 
-	输入：nums = [1,3,4,2,2]
-	输出：2
-	
-示例 2：
 
-	输入：nums = [3,1,3,4,2]
-	输出：3
-	
-示例 3：
+<p><strong>示例 1：</strong></p>
 
-	输入：nums = [1,1]
-	输出：1
-	
-示例 4：
+<pre>
+<strong>输入：</strong>nums = [1,3,4,2,2]
+<strong>输出：</strong>2
+</pre>
 
-	输入：nums = [1,1,2]
-	输出：1
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= n <= 10^5
-- nums.length == n + 1
-- 1 <= nums[i] <= n
-- nums 中 只有一个整数 出现 两次或多次 ，其余整数均只出现 一次
+<pre>
+<strong>输入：</strong>nums = [3,1,3,4,2]
+<strong>输出：</strong>3
+</pre>
 
-进阶：
-- 如何证明 nums 中至少存在一个重复的数字?
-- 你可以设计一个线性级时间复杂度 O(n) 的解决方案吗？
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+<li><code>nums.length == n + 1</code></li>
+<li><code>1 &lt;= nums[i] &lt;= n</code></li>
+<li><code>nums</code> 中 <strong>只有一个整数</strong> 出现 <strong>两次或多次</strong> ，其余整数均只出现 <strong>一次</strong></li>
+</ul>
+
+
+
+<p><b>进阶：</b></p>
+
+<ul>
+<li>如何证明 <code>nums</code> 中至少存在一个重复的数字?</li>
+<li>你可以设计一个线性级时间复杂度 <code>O(n)</code> 的解决方案吗？</li>
+</ul>
+
 
 ## 分析
 

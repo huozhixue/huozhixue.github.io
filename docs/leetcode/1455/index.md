@@ -1,44 +1,52 @@
-# 1455：检查单词是否为句中其他单词的前缀（★）
+# 1455：检查单词是否为句中其他单词的前缀
 
 
-> **第 190 场周赛第 1 题**
+> <u>**[力扣第 190 场周赛第 1 题](https://leetcode.cn/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/)**</u>
 
 ## 题目
 
-给你一个字符串 sentence 作为句子并指定检索词为 searchWord ，其中句子由若干用 单个空格 分隔的单词组成。
-请你检查检索词 searchWord 是否为句子 sentence 中任意单词的前缀。
+<p>给你一个字符串 <code>sentence</code> 作为句子并指定检索词为 <code>searchWord</code> ，其中句子由若干用 <strong>单个空格</strong> 分隔的单词组成。请你检查检索词 <code>searchWord</code> 是否为句子 <code>sentence</code> 中任意单词的前缀。</p>
 
-如果 searchWord 是某一个单词的前缀，则返回句子 sentence 中该单词所对应的下标（下标从 1 开始）。
-如果 searchWord 是多个单词的前缀，则返回匹配的第一个单词的下标（最小下标）。
-如果 searchWord 不是任何单词的前缀，则返回 -1 。
+<p>如果 <code>searchWord</code> 是某一个单词的前缀，则返回句子 <code>sentence</code> 中该单词所对应的下标（<strong>下标从 1 开始</strong>）。如果 <code>searchWord</code> 是多个单词的前缀，则返回匹配的第一个单词的下标（<strong>最小下标</strong>）。如果 <code>searchWord</code> 不是任何单词的前缀，则返回 <code>-1</code><strong> </strong>。</p>
 
-字符串 s 的 前缀 是 s 的任何前导连续子字符串。
-
- 
-
-示例 1：
-    
-    输入：sentence = "i love eating burger", searchWord = "burg"
-    输出：4
-    解释："burg" 是 "burger" 的前缀，而 "burger" 是句子中第 4 个单词。
-示例 2：
-
-    输入：sentence = "this problem is an easy problem", searchWord = "pro"
-    输出：2
-    解释："pro" 是 "problem" 的前缀，而 "problem" 是句子中第 2 个也是第 6 个单词，但是应该返回最小下标 2 。
-示例 3：
-
-    输入：sentence = "i am tired", searchWord = "you"
-    输出：-1
-    解释："you" 不是句子中任何单词的前缀。
+<p>字符串 <code>s</code> 的 <strong>前缀</strong> 是 <code>s</code> 的任何前导连续子字符串。</p>
 
 
-提示：
-- 1 <= sentence.length <= 100
-- 1 <= searchWord.length <= 10
-- sentence 由小写英文字母和空格组成。
-- searchWord 由小写英文字母组成。
 
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>sentence = "i love eating burger", searchWord = "burg"
+<strong>输出：</strong>4
+<strong>解释：</strong>"burg" 是 "burger" 的前缀，而 "burger" 是句子中第 4 个单词。</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>sentence = "this problem is an easy problem", searchWord = "pro"
+<strong>输出：</strong>2
+<strong>解释：</strong>"pro" 是 "problem" 的前缀，而 "problem" 是句子中第 2 个也是第 6 个单词，但是应该返回最小下标 2 。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>sentence = "i am tired", searchWord = "you"
+<strong>输出：</strong>-1
+<strong>解释：</strong>"you" 不是句子中任何单词的前缀。
+
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= sentence.length &lt;= 100</code></li>
+<li><code>1 &lt;= searchWord.length &lt;= 10</code></li>
+<li><code>sentence</code> 由小写英文字母和空格组成。</li>
+<li><code>searchWord</code> 由小写英文字母组成。</li>
+</ul>
 
 
 ## 分析

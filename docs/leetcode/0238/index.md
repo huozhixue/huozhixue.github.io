@@ -1,35 +1,45 @@
 # 0238：除自身以外数组的乘积（★）
 
 
+> <u>**[力扣第 238 题](https://leetcode.cn/problems/product-of-array-except-self/)**</u>
+
 ## 题目
 
-给你一个整数数组 nums，返回 数组 answer ，其中 answer[i] 等于 nums 中除 
-nums[i] 之外其余各元素的乘积 。
+<p>给你一个整数数组 <code>nums</code>，返回 <em>数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积</em> 。</p>
 
-题目数据 保证 数组 nums之中任意元素的全部前缀元素和后缀的乘积都在  32 位 整数范围内。
+<p>题目数据 <strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在  <strong>32 位</strong> 整数范围内。</p>
 
-请不要使用除法，且在 O(n) 时间复杂度内完成此题。
+<p>请<strong>不要使用除法，</strong>且在 <code>O(<em>n</em>)</code> 时间复杂度内完成此题。</p>
 
 
-示例 1:
 
-	输入: nums = [1,2,3,4]
-	输出: [24,12,8,6]
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> nums = <code>[1,2,3,4]</code>
+<strong>输出:</strong> <code>[24,12,8,6]</code>
+</pre>
 
-	输入: nums = [-1,1,0,-3,3]
-	输出: [0,0,9,0,0]
-	 
+<p><strong>示例 2:</strong></p>
 
-提示：
-- 2 <= nums.length <= 10^5
-- -30 <= nums[i] <= 30
-- 保证 数组 nums之中任意元素的全部前缀元素和后缀的乘积都在  32 位 整数范围内
- 
-进阶：你可以在 O(1) 的额外空间复杂度内完成这个题目吗？（ 
-出于对空间复杂度分析的目的，输出数组不被视为额外空间。）
+<pre>
+<strong>输入:</strong> nums = [-1,1,0,-3,3]
+<strong>输出:</strong> [0,0,9,0,0]
+</pre>
 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>-30 &lt;= nums[i] &lt;= 30</code></li>
+<li><strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在  <strong>32 位</strong> 整数范围内</li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>你可以在 <code>O(1)</code> 的额外空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组<strong>不被视为</strong>额外空间。）</p>
 
 
 ## 分析

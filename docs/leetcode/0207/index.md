@@ -1,36 +1,47 @@
-# 0207：课程表（★★）
+# 0207：课程表（★）
 
+
+> <u>**[力扣第 207 题](https://leetcode.cn/problems/course-schedule/)**</u>
 
 ## 题目
 
-你这个学期必须选修 numCourses 门课程，记为 0 到 numCourses - 1 。
+<p>你这个学期必须选修 <code>numCourses</code> 门课程，记为 <code>0</code> 到 <code>numCourses - 1</code> 。</p>
 
-在选修某些课程之前需要一些先修课程。 先修课程按数组 prerequisites 给出，
-其中 prerequisites[i] = [ai, bi] ，表示如果要学习课程 ai 则 必须 先学习课程  bi 。
-- 例如，先修课程对 [0, 1] 表示：想要学习课程 0 ，你需要先完成课程 1 。
+<p>在选修某些课程之前需要一些先修课程。 先修课程按数组 <code>prerequisites</code> 给出，其中 <code>prerequisites[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> ，表示如果要学习课程 <code>a<sub>i</sub></code> 则 <strong>必须</strong> 先学习课程  <code>b<sub>i</sub></code><sub> </sub>。</p>
 
-请你判断是否可能完成所有课程的学习？如果可以，返回 true ；否则，返回 false 。
+<ul>
+<li>例如，先修课程对 <code>[0, 1]</code> 表示：想要学习课程 <code>0</code> ，你需要先完成课程 <code>1</code> 。</li>
+</ul>
 
- 
-
-示例 1：
-    
-    输入：numCourses = 2, prerequisites = [[1,0]]
-    输出：true
-    解释：总共有 2 门课程。学习课程 1 之前，你需要完成课程 0 。这是可能的。
-示例 2：
-
-    输入：numCourses = 2, prerequisites = [[1,0],[0,1]]
-    输出：false
-    解释：总共有 2 门课程。学习课程 1 之前，你需要先完成​课程 0 ；并且学习课程 0 之前，你还应先完成课程 1 。这是不可能的。
+<p>请你判断是否可能完成所有课程的学习？如果可以，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
 
-提示：
-- 1 <= numCourses <= 10^5
-- 0 <= prerequisites.length <= 5000
-- prerequisites[i].length == 2
-- 0 <= ai, bi < numCourses
-- prerequisites[i] 中的所有课程对 互不相同
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>numCourses = 2, prerequisites = [[1,0]]
+<strong>输出：</strong>true
+<strong>解释：</strong>总共有 2 门课程。学习课程 1 之前，你需要完成课程 0 。这是可能的。</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>numCourses = 2, prerequisites = [[1,0],[0,1]]
+<strong>输出：</strong>false
+<strong>解释：</strong>总共有 2 门课程。学习课程 1 之前，你需要先完成​课程 0 ；并且学习课程 0 之前，你还应先完成课程 1 。这是不可能的。</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= numCourses <= 10<sup>5</sup></code></li>
+<li><code>0 <= prerequisites.length <= 5000</code></li>
+<li><code>prerequisites[i].length == 2</code></li>
+<li><code>0 <= a<sub>i</sub>, b<sub>i</sub> < numCourses</code></li>
+<li><code>prerequisites[i]</code> 中的所有课程对 <strong>互不相同</strong></li>
+</ul>
 
 
 ## 分析

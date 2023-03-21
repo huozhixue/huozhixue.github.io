@@ -1,30 +1,42 @@
-# 0796：旋转字符串（★★）
+# 0796：旋转字符串
 
 
-> **第 75 场双周赛第 1 题****
+> <u>**[力扣第 75 场双周赛第 1 题](https://leetcode.cn/problems/rotate-string/)**</u>
 
 ## 题目
 
-给定两个字符串, s 和 goal。如果在若干次旋转操作之后，s 能变成 goal ，那么返回 true 。
+<p>给定两个字符串, <code>s</code> 和 <code>goal</code>。如果在若干次旋转操作之后，<code>s</code> 能变成 <code>goal</code> ，那么返回 <code>true</code> 。</p>
 
-s 的 旋转操作 就是将 s 最左边的字符移动到最右边。 
+<p><code>s</code> 的 <strong>旋转操作</strong> 就是将 <code>s</code> 最左边的字符移动到最右边。 </p>
 
-例如, 若 s = 'abcde'，在旋转一次之后结果就是'bcdea' 。
- 
+<ul>
+<li>例如, 若 <code>s = 'abcde'</code>，在旋转一次之后结果就是<code>'bcdea'</code> 。</li>
+</ul>
 
-示例 1:
 
-    输入: s = "abcde", goal = "cdeab"
-    输出: true
-示例 2:
-    
-    输入: s = "abcde", goal = "abced"
-    输出: false
- 
 
-提示:
-- 1 <= s.length, goal.length <= 100
-- s 和 goal 由小写英文字母组成
+<p><strong>示例 1:</strong></p>
+
+<pre>
+<strong>输入:</strong> s = "abcde", goal = "cdeab"
+<strong>输出:</strong> true
+</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> s = "abcde", goal = "abced"
+<strong>输出:</strong> false
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length, goal.length &lt;= 100</code></li>
+<li><code>s</code> 和 <code>goal</code> 由小写英文字母组成</li>
+</ul>
 
 
 ## 分析

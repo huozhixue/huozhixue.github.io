@@ -1,34 +1,46 @@
 # 0077：组合（★）
 
 
+> <u>**[力扣第 77 题](https://leetcode.cn/problems/combinations/)**</u>
+
 ## 题目
 
-给定两个整数 n 和 k，返回范围 [1, n] 中所有可能的 k 个数的组合。
+<p>给定两个整数 <code>n</code> 和 <code>k</code>，返回范围 <code>[1, n]</code> 中所有可能的 <code>k</code> 个数的组合。</p>
 
-你可以按 任何顺序 返回答案。
+<p>你可以按 <strong>任何顺序</strong> 返回答案。</p>
 
-示例 1：
 
-    输入：n = 4, k = 2
-    输出：
-    [
-      [2,4],
-      [3,4],
-      [2,3],
-      [1,2],
-      [1,3],
-      [1,4],
-    ]
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：n = 1, k = 1
-    输出：[[1]]
-	
-提示：
-- 1 <= n <= 20
-- 1 <= k <= n
-     
+<pre>
+<strong>输入：</strong>n = 4, k = 2
+<strong>输出：</strong>
+[
+[2,4],
+[3,4],
+[2,3],
+[1,2],
+[1,3],
+[1,4],
+]</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1, k = 1
+<strong>输出：</strong>[[1]]</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= n <= 20</code></li>
+<li><code>1 <= k <= n</code></li>
+</ul>
+
+
 ## 分析
 
 ### #1

@@ -1,44 +1,43 @@
-# 0321：拼接最大数（★★★）
+# 0321：拼接最大数（★★）
 
+
+> <u>**[力扣第 321 题](https://leetcode.cn/problems/create-maximum-number/)**</u>
 
 ## 题目
 
-给定长度分别为 m 和 n 的两个数组，其元素由 0-9 构成，表示两个自然数各位上的数字。
-现在从这两个数组中选出 k (k <= m + n) 个数字拼接成一个新的数，
-要求从同一个数组中取出的数字保持其在原数组中的相对顺序。
+<p>给定长度分别为 <code>m</code> 和 <code>n</code> 的两个数组，其元素由 <code>0-9</code> 构成，表示两个自然数各位上的数字。现在从这两个数组中选出 <code>k (k &lt;= m + n)</code> 个数字拼接成一个新的数，要求从同一个数组中取出的数字保持其在原数组中的相对顺序。</p>
 
-求满足该条件的最大数。结果返回一个表示该最大数的长度为 k 的数组。
+<p>求满足该条件的最大数。结果返回一个表示该最大数的长度为 <code>k</code> 的数组。</p>
 
-说明: 请尽可能地优化你算法的时间和空间复杂度。
+<p><strong>说明: </strong>请尽可能地优化你算法的时间和空间复杂度。</p>
 
-示例 1:
-    
-    输入:
-    nums1 = [3, 4, 6, 5]
-    nums2 = [9, 1, 2, 5, 8, 3]
-    k = 5
-    输出:
-    [9, 8, 6, 5, 3]
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre><strong>输入:</strong>
+nums1 = <code>[3, 4, 6, 5]</code>
+nums2 = <code>[9, 1, 2, 5, 8, 3]</code>
+k = <code>5</code>
+<strong>输出:</strong>
+<code>[9, 8, 6, 5, 3]</code></pre>
 
-    输入:
-    nums1 = [6, 7]
-    nums2 = [6, 0, 4]
-    k = 5
-    输出:
-    [6, 7, 6, 0, 4]
+<p><strong>示例 2:</strong></p>
 
-示例 3:
+<pre><strong>输入:</strong>
+nums1 = <code>[6, 7]</code>
+nums2 = <code>[6, 0, 4]</code>
+k = <code>5</code>
+<strong>输出:</strong>
+<code>[6, 7, 6, 0, 4]</code></pre>
 
-    输入:
-    nums1 = [3, 9]
-    nums2 = [8, 9]
-    k = 3
-    输出:
-    [9, 8, 9]
+<p><strong>示例 3:</strong></p>
 
- 
+<pre><strong>输入:</strong>
+nums1 = <code>[3, 9]</code>
+nums2 = <code>[8, 9]</code>
+k = <code>3</code>
+<strong>输出:</strong>
+<code>[9, 8, 9]</code></pre>
+
 
 ## 分析
 

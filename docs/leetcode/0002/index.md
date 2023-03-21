@@ -3,7 +3,7 @@
 
 > <u>**[力扣第 2 题](https://leetcode.cn/problems/add-two-numbers/)**</u>
 
-## 题目 
+## 题目
 
 <p>给你两个 <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照 <strong>逆序</strong> 的方式存储的，并且每个节点只能存储 <strong>一位</strong> 数字。</p>
 
@@ -46,7 +46,6 @@
 </ul>
 
 
-
 ## 分析
 
 链表是逆序存储，所以取到的数字依次是个十百千位。很自然的想到普通人算加法的方式，先算低位，再结合进位算高位。
@@ -57,20 +56,22 @@
 
 ```python
 def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-    dummy = p = ListNode()
-    carry = 0
-    while l1 or l2:
-        a = l1.val if l1 else 0
-        b = l2.val if l2 else 0
-        s = a + b + carry
-        p.next = ListNode(s % 10)
-        carry = s // 10
-        p = p.next
-        l1 = l1.next if l1 else l1
-        l2 = l2.next if l2 else l2
-    p.next = ListNode(carry) if carry else None
-    return dummy.next
+	dummy = p = ListNode()
+	carry = 0
+	while l1 or l2:
+		a = l1.val if l1 else 0
+		b = l2.val if l2 else 0
+		s = a + b + carry
+		p.next = ListNode(s % 10)
+		carry = s // 10
+		p = p.next
+		l1 = l1.next if l1 else l1
+		l2 = l2.next if l2 else l2
+	p.next = ListNode(carry) if carry else None
+	return dummy.next
 ```
 72 ms
+
+
 
 

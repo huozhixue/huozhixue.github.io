@@ -1,35 +1,42 @@
 # 0152：乘积最大子数组（★）
 
 
+> <u>**[力扣第 152 题](https://leetcode.cn/problems/maximum-product-subarray/)**</u>
+
 ## 题目
 
-给你一个整数数组 nums ，请你找出数组中乘积最大的非空连续子数组（该子数组中至少包含一个数字），
-并返回该子数组所对应的乘积。
+<p>给你一个整数数组 <code>nums</code> ，请你找出数组中乘积最大的非空连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。</p>
 
-测试用例的答案是一个 32-位 整数。
+<p>测试用例的答案是一个 <strong>32-位</strong> 整数。</p>
 
-子数组 是数组的连续子序列。
+<p><strong>子数组</strong> 是数组的连续子序列。</p>
 
- 
 
-示例 1:
 
-	输入: nums = [2,3,-2,4]
-	输出: 6
-	解释: 子数组 [2,3] 有最大乘积 6。
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> nums = [2,3,-2,4]
+<strong>输出:</strong> <code>6</code>
+<strong>解释:</strong> 子数组 [2,3] 有最大乘积 6。
+</pre>
 
-	输入: nums = [-2,0,-1]
-	输出: 0
-	解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
- 
+<p><strong>示例 2:</strong></p>
 
-提示:
-- 1 <= nums.length <= 2 * 10^4
-- -10 <= nums[i] <= 10
-- nums 的任何前缀或后缀的乘积都 保证 是一个 32-位 整数
+<pre>
+<strong>输入:</strong> nums = [-2,0,-1]
+<strong>输出:</strong> 0
+<strong>解释:</strong> 结果不能为 2, 因为 [-2,-1] 不是子数组。</pre>
 
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>
+<li><code>-10 &lt;= nums[i] &lt;= 10</code></li>
+<li><code>nums</code> 的任何前缀或后缀的乘积都 <strong>保证</strong> 是一个 <strong>32-位</strong> 整数</li>
+</ul>
 
 
 ## 分析

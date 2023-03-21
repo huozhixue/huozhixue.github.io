@@ -1,26 +1,38 @@
-# 0214：最短回文串（★★★）
+# 0214：最短回文串（★★）
 
+
+> <u>**[力扣第 214 题](https://leetcode.cn/problems/shortest-palindrome/)**</u>
 
 ## 题目
 
-给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。
-找到并返回可以用这种方式转换的最短回文串。
+<p>给定一个字符串 <em><strong>s</strong></em>，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可以用这种方式转换的最短回文串。</p>
 
-示例 1：
 
-    输入：s = "aacecaaa"
-    输出："aaacecaaa"
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：s = "abcd"
-    输出："dcbabcd"
-    
-提示：
-- 0 <= s.length <= 5 * 10^4
-- s 仅由小写英文字母组成
+<pre>
+<strong>输入：</strong>s = "aacecaaa"
+<strong>输出：</strong>"aaacecaaa"
+</pre>
 
- 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "abcd"
+<strong>输出：</strong>"dcbabcd"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 <= s.length <= 5 * 10<sup>4</sup></code></li>
+<li><code>s</code> 仅由小写英文字母组成</li>
+</ul>
+
+
 ## 分析
 
 观察可知问题等价于找到 s 最长的前缀回文子串 s[:i]，然后在前面添加 s[i:][::-1] 即可。

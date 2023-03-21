@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0185：部门工资前三高的所有员工（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0185：部门工资前三高的所有员工（★★）" />
-<meta property="og:description" content="题目 SQL架构 表: Employee &#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; Id是该表的主键列。 departmentId是Departme" />
+<meta property="og:description" content="力扣第 185 题 题目 表: Employee &#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; Id是该表的主键列。 departmentId是Departme" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0185/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-07-04T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0185：部门工资前三高的所有员工（★★）"/>
-<meta name="twitter:description" content="题目 SQL架构 表: Employee &#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; Id是该表的主键列。 departmentId是Departme"/>
+<meta name="twitter:description" content="力扣第 185 题 题目 表: Employee &#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; Id是该表的主键列。 departmentId是Departme"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0185/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0184/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0186/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -125,10 +125,13 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>SQL架构</p>
-<p>表: Employee</p>
-<pre><code>+--------------+---------+
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/department-top-three-salaries/" target="_blank" rel="noopener noreffer">力扣第 185 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>表: <code>Employee</code></p>
+<pre>
++--------------+---------+
 | Column Name  | Type    |
 +--------------+---------+
 | id           | int     |
@@ -139,9 +142,10 @@
 Id是该表的主键列。
 departmentId是Department表中ID的外键。
 该表的每一行都表示员工的ID、姓名和工资。它还包含了他们部门的ID。
-</code></pre>
-<p>表: Department</p>
-<pre><code>+-------------+---------+
+</pre>
+<p>表: <code>Department</code></p>
+<pre>
++-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
 | id          | int     |
@@ -149,14 +153,14 @@ departmentId是Department表中ID的外键。
 +-------------+---------+
 Id是该表的主键列。
 该表的每一行表示部门ID和部门名。
-</code></pre>
-<p>公司的主管们感兴趣的是公司每个部门中谁赚的钱最多。一个部门的 高收入者
-是指一个员工的工资在该部门的 不同 工资中 排名前三 。</p>
-<p>编写一个SQL查询，找出每个部门中 收入高的员工 。</p>
-<p>以 任意顺序 返回结果表。</p>
+</pre>
+<p>公司的主管们感兴趣的是公司每个部门中谁赚的钱最多。一个部门的 <strong>高收入者</strong> 是指一个员工的工资在该部门的 <strong>不同</strong> 工资中 <strong>排名前三</strong> 。</p>
+<p>编写一个SQL查询，找出每个部门中 <strong>收入高的员工</strong> 。</p>
+<p>以 <strong>任意顺序</strong> 返回结果表。</p>
 <p>查询结果格式如下所示。</p>
-<p>示例 1:</p>
-<pre><code>输入: 
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入:</strong>
 Employee 表:
 +----+-------+--------+--------------+
 | id | name  | salary | departmentId |
@@ -176,7 +180,7 @@ Department  表:
 | 1  | IT    |
 | 2  | Sales |
 +----+-------+
-输出: 
+<strong>输出:</strong>
 +------------+----------+--------+
 | Department | Employee | Salary |
 +------------+----------+--------+
@@ -187,8 +191,8 @@ Department  表:
 | Sales      | Henry    | 80000  |
 | Sales      | Sam      | 60000  |
 +------------+----------+--------+
-解释:
-在IT部门:
+<strong>解释:
+</strong>在IT部门:
 - Max的工资最高
 - 兰迪和乔都赚取第二高的独特的薪水
 - 威尔的薪水是第三高的
@@ -196,8 +200,7 @@ Department  表:
 在销售部:
 - 亨利的工资最高
 - 山姆的薪水第二高
-- 没有第三高的工资，因为只有两名员工
-</code></pre>
+- 没有第三高的工资，因为只有两名员工</pre>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0184" title="0184" rel="noopener noreferrer">0184</a> 升级版。</p>
 <p>可以将每个员工和比自己工资高的连接，将连接数小于 3 的员工返回即可。</p>
@@ -253,7 +256,7 @@ Department  表:
     </div>
 
     <div class="post-nav"><a href="/leetcode/0186/" class="prev" rel="prev" title="0186：翻转字符串里的单词 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0186：翻转字符串里的单词 II（★★）</a>
-            <a href="/leetcode/0184/" class="next" rel="next" title="0184：部门工资最高的员工（★★）">0184：部门工资最高的员工（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0184/" class="next" rel="next" title="0184：部门工资最高的员工（★）">0184：部门工资最高的员工（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,35 +1,42 @@
-# 0169：多数元素（★）
+# 0169：多数元素
 
+
+> <u>**[力扣第 169 题](https://leetcode.cn/problems/majority-element/)**</u>
 
 ## 题目
 
+<p>给定一个大小为 <code>n</code><em> </em>的数组 <code>nums</code> ，返回其中的多数元素。多数元素是指在数组中出现次数 <strong>大于</strong> <code>⌊ n/2 ⌋</code> 的元素。</p>
 
-给定一个大小为 n 的数组 nums ，返回其中的多数元素。
-多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
+<p>你可以假设数组是非空的，并且给定的数组总是存在多数元素。</p>
 
-你可以假设数组是非空的，并且给定的数组总是存在多数元素。
 
- 
 
-示例 1：
+<p><strong>示例 1：</strong></p>
 
-	输入：nums = [3,2,3]
-	输出：3
+<pre>
+<strong>输入：</strong>nums = [3,2,3]
+<strong>输出：</strong>3</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-	输入：nums = [2,2,1,1,1,2,2]
-	输出：2
- 
+<pre>
+<strong>输入：</strong>nums = [2,2,1,1,1,2,2]
+<strong>输出：</strong>2
+</pre>
 
-提示：
-- n == nums.length
-- 1 <= n <= 5 * 104
-- -10^9 <= nums[i] <= 10^9
- 
 
-进阶：尝试设计时间复杂度为 O(n)、空间复杂度为 O(1) 的算法解决此问题。
-    
+<strong>提示：</strong>
+
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= n &lt;= 5 * 10<sup>4</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>尝试设计时间复杂度为 O(n)、空间复杂度为 O(1) 的算法解决此问题。</p>
+
 
 ## 分析
 

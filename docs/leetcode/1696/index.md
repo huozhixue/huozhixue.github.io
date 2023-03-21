@@ -1,40 +1,51 @@
-# 1696：跳跃游戏 VI（★★）
+# 1696：跳跃游戏 VI（★）
 
 
-> **第 220 场周赛第 3 题**
+> <u>**[力扣第 220 场周赛第 3 题](https://leetcode.cn/problems/jump-game-vi/)**</u>
 
 ## 题目
 
-给你一个下标从 0 开始的整数数组 nums 和一个整数 k 。
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
 
-一开始你在下标 0 处。每一步，你最多可以往前跳 k 步，但你不能跳出数组的边界。
-也就是说，你可以从下标 i 跳到 [i + 1， min(n - 1, i + k)] 包含 两个端点的任意位置。
+<p>一开始你在下标 <code>0</code> 处。每一步，你最多可以往前跳 <code>k</code> 步，但你不能跳出数组的边界。也就是说，你可以从下标 <code>i</code> 跳到 <code>[i + 1， min(n - 1, i + k)]</code> <strong>包含</strong> 两个端点的任意位置。</p>
 
-你的目标是到达数组最后一个位置（下标为 n - 1 ），你的 得分 为经过的所有数字之和。
+<p>你的目标是到达数组最后一个位置（下标为 <code>n - 1</code> ），你的 <strong>得分</strong> 为经过的所有数字之和。</p>
 
-请你返回你能得到的 最大得分 。
+<p>请你返回你能得到的 <strong>最大得分</strong> 。</p>
 
-示例 1：
-    
-    输入：nums = [1,-1,-2,4,-7,3], k = 2
-    输出：7
-    解释：你可以选择子序列 [1,-1,4,3] （上面加粗的数字），和为 7 。
 
-示例 2：
-    
-    输入：nums = [10,-5,-2,4,0,3], k = 3
-    输出：17
-    解释：你可以选择子序列 [10,4,3] （上面加粗数字），和为 17 。
 
-示例 3：
-    
-    输入：nums = [1,-5,-20,4,-1,3,-6,-3], k = 2
-    输出：0
- 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1 <= nums.length, k <= 10^5
-- -10^4 <= nums[i] <= 10^4
+<pre>
+<b>输入：</b>nums = [<strong>1</strong>,<strong>-1</strong>,-2,<strong>4</strong>,-7,<strong>3</strong>], k = 2
+<b>输出：</b>7
+<b>解释：</b>你可以选择子序列 [1,-1,4,3] （上面加粗的数字），和为 7 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>nums = [<strong>10</strong>,-5,-2,<strong>4</strong>,0,<strong>3</strong>], k = 3
+<b>输出：</b>17
+<b>解释：</b>你可以选择子序列 [10,4,3] （上面加粗数字），和为 17 。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<b>输入：</b>nums = [1,-5,-20,4,-1,3,-6,-3], k = 2
+<b>输出：</b>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li> <code>1 <= nums.length, k <= 10<sup>5</sup></code></li>
+<li><code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code></li>
+</ul>
 
 
 ## 分析

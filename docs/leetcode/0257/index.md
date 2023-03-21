@@ -1,29 +1,37 @@
-# 0257：二叉树的所有路径（★）
+# 0257：二叉树的所有路径
 
+
+> <u>**[力扣第 257 题](https://leetcode.cn/problems/binary-tree-paths/)**</u>
 
 ## 题目
 
-给你一个二叉树的根节点 root ，按 任意顺序 ，返回所有从根节点到叶子节点的路径。
+<p>给你一个二叉树的根节点 <code>root</code> ，按 <strong>任意顺序</strong> ，返回所有从根节点到叶子节点的路径。</p>
 
-叶子节点 是指没有子节点的节点。
+<p><strong>叶子节点</strong> 是指没有子节点的节点。</p>
 
- 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/03/12/paths-tree.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/12/paths-tree.jpg" style="width: 207px; height: 293px;" />
+<pre>
+<strong>输入：</strong>root = [1,2,3,null,5]
+<strong>输出：</strong>["1-&gt;2-&gt;5","1-&gt;3"]
+</pre>
 
-	输入：root = [1,2,3,null,5]
-	输出：["1->2->5","1->3"]
+<p><strong>示例 2：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>root = [1]
+<strong>输出：</strong>["1"]
+</pre>
 
-	输入：root = [1]
-	输出：["1"]
- 
 
-提示：
-- 树中节点的数目在范围 [1, 100] 内
-- -100 <= Node.val <= 100
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>树中节点的数目在范围 <code>[1, 100]</code> 内</li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
 
 
 ## 分析

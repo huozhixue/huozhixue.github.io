@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0228：汇总区间（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0228：汇总区间（★）" />
-<meta property="og:description" content="题目 给定一个无重复元素的有序整数数组 nums 。 返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表。也就是说， nums 的每个元素都恰好被某个区间范围所覆盖，" />
+        <title>0228：汇总区间 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0228：汇总区间" />
+<meta property="og:description" content="力扣第 228 题 题目 给定一个 无重复元素 的 有序 整数数组 nums 。 返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表 。也就是说，nums 的每个元素都恰好被某个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0228/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-08-16T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0228：汇总区间（★）"/>
-<meta name="twitter:description" content="题目 给定一个无重复元素的有序整数数组 nums 。 返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表。也就是说， nums 的每个元素都恰好被某个区间范围所覆盖，"/>
+<meta name="twitter:title" content="0228：汇总区间"/>
+<meta name="twitter:description" content="力扣第 228 题 题目 给定一个 无重复元素 的 有序 整数数组 nums 。 返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表 。也就是说，nums 的每个元素都恰好被某个"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0228/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0227/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0229/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0228：汇总区间（★）",
+        "headline": "0228：汇总区间",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0228\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  418 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  356 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0228\/","datePublished": "2015-08-16T00:00:00+08:00","dateModified": "2015-08-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0228：汇总区间（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0228：汇总区间</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-16">2015-08-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 418 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0228/" class="leancloud_visitors" data-flag-title="0228：汇总区间（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-16">2015-08-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 356 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0228/" class="leancloud_visitors" data-flag-title="0228：汇总区间">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,39 +125,42 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个无重复元素的有序整数数组 nums 。</p>
-<p>返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表。也就是说，
-nums 的每个元素都恰好被某个区间范围所覆盖，
-并且不存在属于某个范围但不属于 nums 的数字 x 。</p>
-<p>列表中的每个区间范围 [a,b] 应该按如下格式输出：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/summary-ranges/" target="_blank" rel="noopener noreffer">力扣第 228 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个  <strong>无重复元素</strong> 的 <strong>有序</strong> 整数数组 <code>nums</code> 。</p>
+<p>返回 <em><strong>恰好覆盖数组中所有数字</strong> 的 <strong>最小有序</strong> 区间范围列表 </em>。也就是说，<code>nums</code> 的每个元素都恰好被某个区间范围所覆盖，并且不存在属于某个范围但不属于 <code>nums</code> 的数字 <code>x</code> 。</p>
+<p>列表中的每个区间范围 <code>[a,b]</code> 应该按如下格式输出：</p>
 <ul>
-<li>&ldquo;a-&gt;b&rdquo; ，如果 a != b</li>
-<li>&ldquo;a&rdquo; ，如果 a == b</li>
+<li><code>"a-&gt;b"</code> ，如果 <code>a != b</code></li>
+<li><code>"a"</code> ，如果 <code>a == b</code></li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入：nums = [0,1,2,4,5,7]
-输出：[&quot;0-&gt;2&quot;,&quot;4-&gt;5&quot;,&quot;7&quot;]
-解释：区间范围是：
-[0,2] --&gt; &quot;0-&gt;2&quot;
-[4,5] --&gt; &quot;4-&gt;5&quot;
-[7,7] --&gt; &quot;7&quot;
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums = [0,2,3,4,6,8,9]
-输出：[&quot;0&quot;,&quot;2-&gt;4&quot;,&quot;6&quot;,&quot;8-&gt;9&quot;]
-解释：区间范围是：
-[0,0] --&gt; &quot;0&quot;
-[2,4] --&gt; &quot;2-&gt;4&quot;
-[6,6] --&gt; &quot;6&quot;
-[8,9] --&gt; &quot;8-&gt;9&quot;
-</code></pre>
-<p>提示：</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [0,1,2,4,5,7]
+<strong>输出：</strong>["0-&gt;2","4-&gt;5","7"]
+<strong>解释：</strong>区间范围是：
+[0,2] --&gt; "0-&gt;2"
+[4,5] --&gt; "4-&gt;5"
+[7,7] --&gt; "7"
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [0,2,3,4,6,8,9]
+<strong>输出：</strong>["0","2-&gt;4","6","8-&gt;9"]
+<strong>解释：</strong>区间范围是：
+[0,0] --&gt; "0"
+[2,4] --&gt; "2-&gt;4"
+[6,6] --&gt; "6"
+[8,9] --&gt; "8-&gt;9"
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>0 &lt;= nums.length &lt;= 20</li>
-<li>-2^31 &lt;= nums[i] &lt;= 2^31 - 1</li>
-<li>nums 中的所有值都 互不相同</li>
-<li>nums 按升序排列</li>
+<li><code>0 &lt;= nums.length &lt;= 20</code></li>
+<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
+<li><code>nums</code> 中的所有值都 <strong>互不相同</strong></li>
+<li><code>nums</code> 按升序排列</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>遍历数组，记录连续区间的首尾即可。</p>
@@ -208,8 +211,8 @@ nums 的每个元素都恰好被某个区间范围所覆盖，
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0229/" class="prev" rel="prev" title="0229：求众数 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0229：求众数 II（★★）</a>
-            <a href="/leetcode/0227/" class="next" rel="next" title="0227：基本计算器 II（★★）">0227：基本计算器 II（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0229/" class="prev" rel="prev" title="0229：多数元素 II（★）"><i class="fas fa-angle-left fa-fw"></i>0229：多数元素 II（★）</a>
+            <a href="/leetcode/0227/" class="next" rel="next" title="0227：基本计算器 II（★）">0227：基本计算器 II（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

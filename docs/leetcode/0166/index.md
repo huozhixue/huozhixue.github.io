@@ -1,35 +1,49 @@
-# 0166：分数到小数（★★）
+# 0166：分数到小数（★）
 
+
+> <u>**[力扣第 166 题](https://leetcode.cn/problems/fraction-to-recurring-decimal/)**</u>
 
 ## 题目
 
-给定两个整数，分别表示分数的分子 numerator 和分母 denominator，以 字符串形式返回小数 。
+<p>给定两个整数，分别表示分数的分子 <code>numerator</code> 和分母 <code>denominator</code>，以 <strong>字符串形式返回小数</strong> 。</p>
 
-如果小数部分为循环小数，则将循环的部分括在括号内。
+<p>如果小数部分为循环小数，则将循环的部分括在括号内。</p>
 
-如果存在多个答案，只需返回 任意一个。
+<p>如果存在多个答案，只需返回 <strong>任意一个</strong> 。</p>
 
-对于所有给定的输入，保证 答案字符串的长度小于 10^4。
+<p>对于所有给定的输入，<strong>保证</strong> 答案字符串的长度小于 <code>10<sup>4</sup></code> 。</p>
 
-示例 1：
 
-	输入：numerator = 1, denominator = 2
-	输出："0.5"
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：numerator = 2, denominator = 1
-	输出："2"
+<pre>
+<strong>输入：</strong>numerator = 1, denominator = 2
+<strong>输出：</strong>"0.5"
+</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：numerator = 4, denominator = 333
-	输出："0.(012)"
+<pre>
+<strong>输入：</strong>numerator = 2, denominator = 1
+<strong>输出：</strong>"2"
+</pre>
 
-提示：
-- -2^31 <= numerator, denominator <= 2^31 - 1
-- denominator != 0
+<p><strong>示例 3：</strong></p>
 
+<pre>
+<strong>输入：</strong>numerator = 4, denominator = 333
+<strong>输出：</strong>"0.(012)"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> &lt;= numerator, denominator &lt;= 2<sup>31</sup> - 1</code></li>
+<li><code>denominator != 0</code></li>
+</ul>
 
 
 ## 分析

@@ -1,41 +1,46 @@
 # 0839：相似字符串组（★★）
 
 
-> **第 85 场周赛第 4 题**
+> <u>**[力扣第 85 场周赛第 4 题](https://leetcode.cn/problems/similar-string-groups/)**</u>
 
 ## 题目
 
-如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。
-如果这两个字符串本身是相等的，那它们也是相似的。
+<p>如果交换字符串 <code>X</code> 中的两个不同位置的字母，使得它和字符串 <code>Y</code> 相等，那么称 <code>X</code> 和 <code>Y</code> 两个字符串相似。如果这两个字符串本身是相等的，那它们也是相似的。</p>
 
-例如，"tars" 和 "rats" 是相似的 (交换 0 与 2 的位置)； "rats" 和 "arts" 也是相似的，
-但是 "star" 不与 "tars"，"rats"，或 "arts" 相似。
+<p>例如，<code>"tars"</code> 和 <code>"rats"</code> 是相似的 (交换 <code>0</code> 与 <code>2</code> 的位置)； <code>"rats"</code> 和 <code>"arts"</code> 也是相似的，但是 <code>"star"</code> 不与 <code>"tars"</code>，<code>"rats"</code>，或 <code>"arts"</code> 相似。</p>
 
-总之，它们通过相似性形成了两个关联组：{"tars", "rats", "arts"} 和 {"star"}。
-注意，"tars" 和 "arts" 是在同一组中，即使它们并不相似。形式上，对每个组而言，
-要确定一个单词在组中，只需要这个词和该组中至少一个单词相似。
+<p>总之，它们通过相似性形成了两个关联组：<code>{"tars", "rats", "arts"}</code> 和 <code>{"star"}</code>。注意，<code>"tars"</code> 和 <code>"arts"</code> 是在同一组中，即使它们并不相似。形式上，对每个组而言，要确定一个单词在组中，只需要这个词和该组中至少一个单词相似。</p>
 
-给你一个字符串列表 strs。列表中的每个字符串都是 strs 中其它所有字符串的一个字母异位词。
-请问 strs 中有多少个相似字符串组？
+<p>给你一个字符串列表 <code>strs</code>。列表中的每个字符串都是 <code>strs</code> 中其它所有字符串的一个字母异位词。请问 <code>strs</code> 中有多少个相似字符串组？</p>
 
-提示：
 
-- 1 <= strs.length <= 300
-- 1 <= strs[i].length <= 300
-- strs[i] 只包含小写字母。
-- strs 中的所有单词都具有相同的长度，且是彼此的字母异位词。
- 
-示例 1：
 
-    输入：strs = ["tars","rats","arts","star"]
-    输出：2
+<p><strong>示例 1：</strong></p>
 
-示例 2：
-    
-    输入：strs = ["omv","ovm"]
-    输出：1
-     
- 
+<pre>
+<strong>输入：</strong>strs = ["tars","rats","arts","star"]
+<strong>输出：</strong>2
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>strs = ["omv","ovm"]
+<strong>输出：</strong>1
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= strs.length &lt;= 300</code></li>
+<li><code>1 &lt;= strs[i].length &lt;= 300</code></li>
+<li><code>strs[i]</code> 只包含小写字母。</li>
+<li><code>strs</code> 中的所有单词都具有相同的长度，且是彼此的字母异位词。</li>
+</ul>
+
+
 ## 分析
 
 典型的并查集应用。将相似的字符串连通，分到一组，最后统计有多少组即可。

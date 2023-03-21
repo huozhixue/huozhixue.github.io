@@ -1,37 +1,46 @@
-# 0328：奇偶链表（★★）
+# 0328：奇偶链表（★）
 
+
+> <u>**[力扣第 328 题](https://leetcode.cn/problems/odd-even-linked-list/)**</u>
 
 ## 题目
 
-给定单链表的头节点 head ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。
+<p>给定单链表的头节点 <code>head</code> ，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。</p>
 
-第一个节点的索引被认为是 奇数 ， 第二个节点的索引为 偶数 ，以此类推。
+<p><strong>第一个</strong>节点的索引被认为是 <strong>奇数</strong> ， <strong>第二个</strong>节点的索引为 <strong>偶数</strong> ，以此类推。</p>
 
-请注意，偶数组和奇数组内部的相对顺序应该与输入时保持一致。
+<p>请注意，偶数组和奇数组内部的相对顺序应该与输入时保持一致。</p>
 
-你必须在 O(1) 的额外空间复杂度和 O(n) 的时间复杂度下解决这个问题。
+<p>你必须在 <code>O(1)</code> 的额外空间复杂度和 <code>O(n)</code> 的时间复杂度下解决这个问题。</p>
 
- 
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg)
+<p><strong>示例 1:</strong></p>
 
-	输入: head = [1,2,3,4,5]
-	输出: [1,3,5,2,4]
+<p><img src="https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg" style="height: 123px; width: 300px;" /></p>
 
-示例 2:
+<pre>
+<strong>输入: </strong>head = [1,2,3,4,5]
+<strong>输出:</strong> [1,3,5,2,4]</pre>
 
-![img](https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg)
+<p><strong>示例 2:</strong></p>
 
-	输入: head = [2,1,3,5,6,4,7]
-	输出: [2,3,6,7,1,5,4]
-	 
+<p><img src="https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg" style="height: 142px; width: 500px;" /></p>
 
-提示:
-- n ==  链表中的节点数
-- 0 <= n <= 10^4
-- -10^6 <= Node.val <= 10^6
+<pre>
+<strong>输入:</strong> head = [2,1,3,5,6,4,7]
+<strong>输出:</strong> [2,3,6,7,1,5,4]</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>n == </code> 链表中的节点数</li>
+<li><code>0 &lt;= n &lt;= 10<sup>4</sup></code></li>
+<li><code>-10<sup>6</sup> &lt;= Node.val &lt;= 10<sup>6</sup></code></li>
+</ul>
+
 
 ## 分析
 

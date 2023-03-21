@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0564：寻找最近的回文数（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0564：寻找最近的回文数（★★★）" />
-<meta property="og:description" content="题目 给定一个整数 n ，你需要找到与它最近的回文数（不包括自身）。 “最近的”定义为两个整数差的绝对值最小。如果有多个结果，返回最小的那个。 示例 1:" />
+        <title>0564：寻找最近的回文数（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0564：寻找最近的回文数（★★）" />
+<meta property="og:description" content="力扣第 564 题 题目 给定一个表示整数的字符串 n ，返回与它最近的回文整数（不包括自身）。如果不止一个，返回较小的那个。 “最近的”定义为两个整数差的绝" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0564/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2017-03-05T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0564：寻找最近的回文数（★★★）"/>
-<meta name="twitter:description" content="题目 给定一个整数 n ，你需要找到与它最近的回文数（不包括自身）。 “最近的”定义为两个整数差的绝对值最小。如果有多个结果，返回最小的那个。 示例 1:"/>
+<meta name="twitter:title" content="0564：寻找最近的回文数（★★）"/>
+<meta name="twitter:description" content="力扣第 564 题 题目 给定一个表示整数的字符串 n ，返回与它最近的回文整数（不包括自身）。如果不止一个，返回较小的那个。 “最近的”定义为两个整数差的绝"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0564/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0554/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0575/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0564/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0563/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0567/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0564：寻找最近的回文数（★★★）",
+        "headline": "0564：寻找最近的回文数（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0564\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  554 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  639 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0564\/","datePublished": "2017-03-05T00:00:00+08:00","dateModified": "2017-03-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0564：寻找最近的回文数（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0564：寻找最近的回文数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-05">2017-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 554 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0564/" class="leancloud_visitors" data-flag-title="0564：寻找最近的回文数（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-05">2017-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 639 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0564/" class="leancloud_visitors" data-flag-title="0564：寻找最近的回文数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,13 +125,30 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个整数 n ，你需要找到与它最近的回文数（不包括自身）。</p>
-<p>“最近的”定义为两个整数差的绝对值最小。如果有多个结果，返回最小的那个。</p>
-<p>示例 1:</p>
-<pre><code>输入: &quot;123&quot;
-输出: &quot;121&quot;
-</code></pre>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-the-closest-palindrome/" target="_blank" rel="noopener noreffer">力扣第 564 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个表示整数的字符串 <code>n</code> ，返回与它最近的回文整数（不包括自身）。如果不止一个，返回较小的那个。</p>
+<p>“最近的”定义为两个整数<strong>差的绝对值</strong>最小。</p>
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入:</strong> n = "123"
+<strong>输出:</strong> "121"
+</pre>
+<p><strong>示例 2:</strong></p>
+<pre>
+<strong>输入:</strong> n = "1"
+<strong>输出:</strong> "0"
+<strong>解释:</strong> 0 和 2是最近的回文，但我们返回最小的，也就是 0。
+</pre>
+<p><strong>提示:</strong></p>
+<ul>
+<li><code>1 &lt;= n.length &lt;= 18</code></li>
+<li><code>n</code> 只由数字组成</li>
+<li><code>n</code> 不含前导 0</li>
+<li><code>n</code> 代表在 <code>[1, 10<sup>18</sup> - 1]</code> 范围内的整数</li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>显然用暴力法太耗时了，考虑直接构造的方法。</p>
 <p>尝试几次发现可以用固定前半并镜像的方法得到一个相近的回文数。
@@ -191,14 +208,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0575/" class="prev" rel="prev" title="0575：分糖果"><i class="fas fa-angle-left fa-fw"></i>0575：分糖果</a>
-            <a href="/leetcode/0554/" class="next" rel="next" title="0554：砖墙（★★）">0554：砖墙（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0567/" class="prev" rel="prev" title="0567：字符串的排列（★）"><i class="fas fa-angle-left fa-fw"></i>0567：字符串的排列（★）</a>
+            <a href="/leetcode/0563/" class="next" rel="next" title="0563：二叉树的坡度">0563：二叉树的坡度<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

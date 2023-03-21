@@ -1,31 +1,38 @@
-# 0698：划分为k个相等的子集（★★★）
+# 0698：划分为k个相等的子集（★）
 
 
-> **第 54 场双周赛第 3 题**
+> <u>**[力扣第 54 场双周赛第 3 题](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/)**</u>
 
 ## 题目
 
-给定一个整数数组  nums 和一个正整数 k，找出是否有可能把这个数组分成 k 个非空子集，其总和都相等。
-
- 
-示例 1：
-
-    输入： nums = [4, 3, 2, 3, 5, 2, 1], k = 4
-    输出： True
-    说明： 有可能将其分成 4 个子集（5），（1,4），（2,3），（2,3）等于总和。
-示例 2:
-
-    输入: nums = [1,2,3,4], k = 3
-    输出: false
- 
-
-提示：
-- 1 <= k <= len(nums) <= 16
-- 0 < nums[i] < 10000
-- 每个元素的频率在 [1,4] 范围内
+<p>给定一个整数数组  <code>nums</code> 和一个正整数 <code>k</code>，找出是否有可能把这个数组分成 <code>k</code> 个非空子集，其总和都相等。</p>
 
 
- 
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong> nums = [4, 3, 2, 3, 5, 2, 1], k = 4
+<strong>输出：</strong> True
+<strong>说明：</strong> 有可能将其分成 4 个子集（5），（1,4），（2,3），（2,3）等于总和。</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> nums = [1,2,3,4], k = 3
+<strong>输出:</strong> false</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= k &lt;= len(nums) &lt;= 16</code></li>
+<li><code>0 &lt; nums[i] &lt; 10000</code></li>
+<li>每个元素的频率在 <code>[1,4]</code> 范围内</li>
+</ul>
+
+
 ## 分析
 
 {{< lc "0473" >}} 升级版，将 4 改为 k 即可。

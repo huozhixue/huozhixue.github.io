@@ -1,56 +1,68 @@
-# 1584：连接所有点的最小费用（★★）
+# 1584：连接所有点的最小费用（★）
 
 
-> **第 206 场周赛第 3 题**
-
+> <u>**[力扣第 206 场周赛第 3 题](https://leetcode.cn/problems/min-cost-to-connect-all-points/)**</u>
 
 ## 题目
 
-给你一个points 数组，表示 2D 平面上的一些点，其中 points[i] = [xi, yi] 。
+<p>给你一个<code>points</code> 数组，表示 2D 平面上的一些点，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 。</p>
 
-连接点 [xi, yi] 和点 [xj, yj] 的费用为它们之间的 曼哈顿距离 ：|xi - xj| + |yi - yj| ，其中 |val| 表示 val 的绝对值。
+<p>连接点 <code>[x<sub>i</sub>, y<sub>i</sub>]</code> 和点 <code>[x<sub>j</sub>, y<sub>j</sub>]</code> 的费用为它们之间的 <strong>曼哈顿距离</strong> ：<code>|x<sub>i</sub> - x<sub>j</sub>| + |y<sub>i</sub> - y<sub>j</sub>|</code> ，其中 <code>|val|</code> 表示 <code>val</code> 的绝对值。</p>
 
-请你返回将所有点连接的最小总费用。只有任意两点之间 有且仅有 一条简单路径时，才认为所有点都已连接。
+<p>请你返回将所有点连接的最小总费用。只有任意两点之间 <strong>有且仅有</strong> 一条简单路径时，才认为所有点都已连接。</p>
 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2020/08/26/d.png)
+<p><strong>示例 1：</strong></p>
 
-    输入：points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
-    输出：20
-    解释：
-   
-![img](https://assets.leetcode.com/uploads/2020/08/26/c.png)
+<p><img alt="" src="https://assets.leetcode.com/uploads/2020/08/26/d.png" style="height:268px; width:214px; background:#e5e5e5" /></p>
 
-    我们可以按照上图所示连接所有点得到最小总费用，总费用为 20 。
-    注意到任意两个点之间只有唯一一条路径互相到达。
+<pre>
+<strong>输入：</strong>points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+<strong>输出：</strong>20
+<strong>解释：
+</strong><img alt="" src="https://assets.leetcode.com/uploads/2020/08/26/c.png" style="height:268px; width:214px; background:#e5e5e5" />
+我们可以按照上图所示连接所有点得到最小总费用，总费用为 20 。
+注意到任意两个点之间只有唯一一条路径互相到达。
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-    输入：points = [[3,12],[-2,5],[-4,1]]
-    输出：18
+<pre>
+<strong>输入：</strong>points = [[3,12],[-2,5],[-4,1]]
+<strong>输出：</strong>18
+</pre>
 
-示例 3：
+<p><strong>示例 3：</strong></p>
 
-    输入：points = [[0,0],[1,1],[1,0],[-1,1]]
-    输出：4
+<pre>
+<strong>输入：</strong>points = [[0,0],[1,1],[1,0],[-1,1]]
+<strong>输出：</strong>4
+</pre>
 
-示例 4：
+<p><strong>示例 4：</strong></p>
 
-    输入：points = [[-1000000,-1000000],[1000000,1000000]]
-    输出：4000000
+<pre>
+<strong>输入：</strong>points = [[-1000000,-1000000],[1000000,1000000]]
+<strong>输出：</strong>4000000
+</pre>
 
-示例 5：
+<p><strong>示例 5：</strong></p>
 
-    输入：points = [[0,0]]
-    输出：0
+<pre>
+<strong>输入：</strong>points = [[0,0]]
+<strong>输出：</strong>0
+</pre>
 
-提示：
-- 1 <= points.length <= 1000
-- -10^6 <= xi, yi <= 10^6
-- 所有点 (xi, yi) 两两不同。
 
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= points.length &lt;= 1000</code></li>
+<li><code>-10<sup>6</sup> &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 10<sup>6</sup></code></li>
+<li>所有点 <code>(x<sub>i</sub>, y<sub>i</sub>)</code> 两两不同。</li>
+</ul>
 
 
 ## 分析

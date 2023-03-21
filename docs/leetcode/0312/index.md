@@ -1,33 +1,42 @@
-# 0312：戳气球（★★★）
+# 0312：戳气球（★★）
 
+
+> <u>**[力扣第 312 题](https://leetcode.cn/problems/burst-balloons/)**</u>
 
 ## 题目
 
-有 n 个气球，编号为0 到 n - 1，每个气球上都标有一个数字，这些数字存在数组 nums 中。
+<p>有 <code>n</code> 个气球，编号为<code>0</code> 到 <code>n - 1</code>，每个气球上都标有一个数字，这些数字存在数组 <code>nums</code> 中。</p>
 
-现在要求你戳破所有的气球。戳破第 i 个气球，你可以获得 nums[i - 1] * nums[i] * nums[i + 1] 枚硬币。 
-这里的 i - 1 和 i + 1 代表和 i 相邻的两个气球的序号。如果 i - 1或 i + 1 超出了数组的边界，
-那么就当它是一个数字为 1 的气球。
+<p>现在要求你戳破所有的气球。戳破第 <code>i</code> 个气球，你可以获得 <code>nums[i - 1] * nums[i] * nums[i + 1]</code> 枚硬币。 这里的 <code>i - 1</code> 和 <code>i + 1</code> 代表和 <code>i</code> 相邻的两个气球的序号。如果 <code>i - 1</code>或 <code>i + 1</code> 超出了数组的边界，那么就当它是一个数字为 <code>1</code> 的气球。</p>
 
-求所能获得硬币的最大数量。
+<p>求所能获得硬币的最大数量。</p>
 
-示例 1：
 
-    输入：nums = [3,1,5,8]
-    输出：167
-    解释：
-    nums = [3,1,5,8] --> [3,5,8] --> [3,8] --> [8] --> []
-    coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167
+<strong>示例 1：</strong>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums = [3,1,5,8]
+<strong>输出：</strong>167
+<strong>解释：</strong>
+nums = [3,1,5,8] --&gt; [3,5,8] --&gt; [3,8] --&gt; [8] --&gt; []
+coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167</pre>
 
-    输入：nums = [1,5]
-    输出：10
-	
-提示：
-- n == nums.length
-- 1 <= n <= 500
-- 0 <= nums[i] <= 100
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>nums = [1,5]
+<strong>输出：</strong>10
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= n &lt;= 300</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
+</ul>
 
 
 ## 分析

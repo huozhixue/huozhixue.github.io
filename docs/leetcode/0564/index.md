@@ -1,18 +1,43 @@
-# 0564：寻找最近的回文数（★★★）
+# 0564：寻找最近的回文数（★★）
 
 
+> <u>**[力扣第 564 题](https://leetcode.cn/problems/find-the-closest-palindrome/)**</u>
 
 ## 题目
 
-给定一个整数 n ，你需要找到与它最近的回文数（不包括自身）。
+<p>给定一个表示整数的字符串 <code>n</code> ，返回与它最近的回文整数（不包括自身）。如果不止一个，返回较小的那个。</p>
 
-“最近的”定义为两个整数差的绝对值最小。如果有多个结果，返回最小的那个。
- 
-示例 1:
+<p>“最近的”定义为两个整数<strong>差的绝对值</strong>最小。</p>
 
-	输入: "123"
-	输出: "121"
-	
+
+
+<p><strong>示例 1:</strong></p>
+
+<pre>
+<strong>输入:</strong> n = "123"
+<strong>输出:</strong> "121"
+</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> n = "1"
+<strong>输出:</strong> "0"
+<strong>解释:</strong> 0 和 2是最近的回文，但我们返回最小的，也就是 0。
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= n.length &lt;= 18</code></li>
+<li><code>n</code> 只由数字组成</li>
+<li><code>n</code> 不含前导 0</li>
+<li><code>n</code> 代表在 <code>[1, 10<sup>18</sup> - 1]</code> 范围内的整数</li>
+</ul>
+
+
 ## 分析
 
 显然用暴力法太耗时了，考虑直接构造的方法。

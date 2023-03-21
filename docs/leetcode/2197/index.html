@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>2197：替换数组中的非互质数（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="2197：替换数组中的非互质数（★★）" />
-<meta property="og:description" content="第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则，删" />
+<meta property="og:description" content="力扣第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/2197/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-03-06T03:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="2197：替换数组中的非互质数（★★）"/>
-<meta name="twitter:description" content="第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则，删"/>
+<meta name="twitter:description" content="力扣第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/2197/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/2192/" /><link rel="next" href="https://huozhixue.github.io/leetcode/2203/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/2197\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  714 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  716 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/2197\/","datePublished": "2022-03-06T03:00:00+08:00","dateModified": "2022-03-06T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">2197：替换数组中的非互质数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-06">2022-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 714 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-06">2022-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 716 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2197/" class="leancloud_visitors" data-flag-title="2197：替换数组中的非互质数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,49 +126,49 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 283 场周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/replace-non-coprime-numbers-in-array/" target="_blank" rel="noopener noreffer">力扣第 283 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个整数数组 nums 。请你对数组执行下述操作：</p>
-<ul>
-<li>从 nums 中找出 任意 两个 相邻 的 非互质 数。</li>
-<li>如果不存在这样的数，终止 这一过程。</li>
-<li>否则，删除这两个数，并 替换 为它们的 最小公倍数（Least Common Multiple，LCM）。</li>
-<li>只要还能找出两个相邻的非互质数就继续 重复 这一过程。</li>
-</ul>
-<p>返回修改后得到的 最终 数组。可以证明的是，以 任意 顺序替换相邻的非互质数都可以得到相同的结果。</p>
-<p>生成的测试用例可以保证最终数组中的值 小于或者等于 10^8 。</p>
-<p>两个数字 x 和 y 满足 非互质数 的条件是：GCD(x, y) &gt; 1 ，其中 GCD(x, y) 是 x 和 y 的 最大公约数 。</p>
-<p> </p>
-<p>示例 1 ：</p>
-<pre><code>输入：nums = [6,4,3,2,7,6,2]
-输出：[12,7,6]
-解释：
-- (6, 4) 是一组非互质数，且 LCM(6, 4) = 12 。得到 nums = [12,3,2,7,6,2] 。
-- (12, 3) 是一组非互质数，且 LCM(12, 3) = 12 。得到 nums = [12,2,7,6,2] 。
-- (12, 2) 是一组非互质数，且 LCM(12, 2) = 12 。得到 nums = [12,7,6,2] 。
-- (6, 2) 是一组非互质数，且 LCM(6, 2) = 6 。得到 nums = [12,7,6] 。
+<p>给你一个整数数组 <code>nums</code> 。请你对数组执行下述操作：</p>
+<ol>
+<li>从 <code>nums</code> 中找出 <strong>任意</strong> 两个 <strong>相邻</strong> 的 <strong>非互质</strong> 数。</li>
+<li>如果不存在这样的数，<strong>终止</strong> 这一过程。</li>
+<li>否则，删除这两个数，并 <strong>替换</strong> 为它们的 <strong>最小公倍数</strong>（Least Common Multiple，LCM）。</li>
+<li>只要还能找出两个相邻的非互质数就继续 <strong>重复</strong> 这一过程。</li>
+</ol>
+<p>返回修改后得到的 <strong>最终</strong> 数组。可以证明的是，以 <strong>任意</strong> 顺序替换相邻的非互质数都可以得到相同的结果。</p>
+<p>生成的测试用例可以保证最终数组中的值 <strong>小于或者等于</strong> <code>10<sup>8</sup></code> 。</p>
+<p>两个数字 <code>x</code> 和 <code>y</code> 满足 <strong>非互质数</strong> 的条件是：<code>GCD(x, y) &gt; 1</code> ，其中 <code>GCD(x, y)</code> 是 <code>x</code> 和 <code>y</code> 的 <strong>最大公约数</strong> 。</p>
+<p><strong>示例 1 ：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [6,4,3,2,7,6,2]
+<strong>输出：</strong>[12,7,6]
+<strong>解释：</strong>
+- (6, 4) 是一组非互质数，且 LCM(6, 4) = 12 。得到 nums = [<em><strong>12</strong></em>,3,2,7,6,2] 。
+- (12, 3) 是一组非互质数，且 LCM(12, 3) = 12 。得到 nums = [<em><strong>12</strong></em>,2,7,6,2] 。
+- (12, 2) 是一组非互质数，且 LCM(12, 2) = 12 。得到 nums = [<em><strong>12</strong></em>,7,6,2] 。
+- (6, 2) 是一组非互质数，且 LCM(6, 2) = 6 。得到 nums = [12,7,<em><strong>6</strong></em>] 。
 现在，nums 中不存在相邻的非互质数。
 因此，修改后得到的最终数组是 [12,7,6] 。
 注意，存在其他方法可以获得相同的最终数组。
-</code></pre>
-<p>示例 2 ：</p>
-<pre><code>输入：nums = [2,2,1,1,3,3,3]
-输出：[2,1,1,3]
-解释：
-- (3, 3) 是一组非互质数，且 LCM(3, 3) = 3 。得到 nums = [2,2,1,1,3,3] 。
-- (3, 3) 是一组非互质数，且 LCM(3, 3) = 3 。得到 nums = [2,2,1,1,3] 。
-- (2, 2) 是一组非互质数，且 LCM(2, 2) = 2 。得到 nums = [2,1,1,3] 。
-现在，nums 中不存在相邻的非互质数。 
-因此，修改后得到的最终数组是 [2,1,1,3] 。 
+</pre>
+<p><strong>示例 2 ：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [2,2,1,1,3,3,3]
+<strong>输出：</strong>[2,1,1,3]
+<strong>解释：</strong>
+- (3, 3) 是一组非互质数，且 LCM(3, 3) = 3 。得到 nums = [2,2,1,1,<em><strong>3</strong></em>,3] 。
+- (3, 3) 是一组非互质数，且 LCM(3, 3) = 3 。得到 nums = [2,2,1,1,<em><strong>3</strong></em>] 。
+- (2, 2) 是一组非互质数，且 LCM(2, 2) = 2 。得到 nums = [<em><strong>2</strong></em>,1,1,3] 。
+现在，nums 中不存在相邻的非互质数。
+因此，修改后得到的最终数组是 [2,1,1,3] 。
 注意，存在其他方法可以获得相同的最终数组。
- 
-</code></pre>
-<p>提示：</p>
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 10^5</li>
-<li>1 &lt;= nums[i] &lt;= 10^5</li>
-<li>生成的测试用例可以保证最终数组中的值 小于或者等于 10^8 。</li>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
+<li>生成的测试用例可以保证最终数组中的值 <strong>小于或者等于</strong> <code>10<sup>8</sup></code> 。</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>因为顺序不影响，所以可以贪心操作。</p>
@@ -214,14 +214,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%88/">栈</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%88/">栈</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E8%AE%BA/">数论</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/2203/" class="prev" rel="prev" title="2203：得到要求路径的最小带权子图（★★★）"><i class="fas fa-angle-left fa-fw"></i>2203：得到要求路径的最小带权子图（★★★）</a>
-            <a href="/leetcode/2192/" class="next" rel="next" title="2192：有向无环图中一个节点的所有祖先（★★）">2192：有向无环图中一个节点的所有祖先（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/2203/" class="prev" rel="prev" title="2203：得到要求路径的最小带权子图（★★）"><i class="fas fa-angle-left fa-fw"></i>2203：得到要求路径的最小带权子图（★★）</a>
+            <a href="/leetcode/2192/" class="next" rel="next" title="2192：有向无环图中一个节点的所有祖先（★）">2192：有向无环图中一个节点的所有祖先（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

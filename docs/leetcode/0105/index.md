@@ -1,33 +1,42 @@
-# 0105：从前序与中序遍历序列构造二叉树（★★）
+# 0105：从前序与中序遍历序列构造二叉树（★）
 
+
+> <u>**[力扣第 105 题](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)**</u>
 
 ## 题目
 
-给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， 
-inorder 是同一棵树的中序遍历，请构造二叉树并返回其根节点。
+<p>给定两个整数数组 <code>preorder</code> 和 <code>inorder</code> ，其中 <code>preorder</code> 是二叉树的<strong>先序遍历</strong>， <code>inorder</code> 是同一棵树的<strong>中序遍历</strong>，请构造二叉树并返回其根节点。</p>
 
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2021/02/19/tree.jpg)
+<p><strong>示例 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/tree.jpg" style="height: 302px; width: 277px;" />
+<pre>
+<strong>输入</strong><strong>:</strong> preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+<strong>输出:</strong> [3,9,20,null,null,15,7]
+</pre>
 
-    Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
-    Output: [3,9,20,null,null,15,7]
+<p><strong>示例 2:</strong></p>
 
-示例 2:
-    
-    Input: preorder = [-1], inorder = [-1]
-    Output: [-1]
-	
-提示:
-- 1 <= preorder.length <= 3000
-- inorder.length == preorder.length
-- -3000 <= preorder[i], inorder[i] <= 3000
-- preorder 和 inorder 均无重复元素
-- inorder 均出现在 preorder
-- preorder 保证为二叉树的前序遍历序列
-- inorder 保证为二叉树的中序遍历序列
- 
+<pre>
+<strong>输入:</strong> preorder = [-1], inorder = [-1]
+<strong>输出:</strong> [-1]
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= preorder.length &lt;= 3000</code></li>
+<li><code>inorder.length == preorder.length</code></li>
+<li><code>-3000 &lt;= preorder[i], inorder[i] &lt;= 3000</code></li>
+<li><code>preorder</code> 和 <code>inorder</code> 均 <strong>无重复</strong> 元素</li>
+<li><code>inorder</code> 均出现在 <code>preorder</code></li>
+<li><code>preorder</code> <strong>保证</strong> 为二叉树的前序遍历序列</li>
+<li><code>inorder</code> <strong>保证</strong> 为二叉树的中序遍历序列</li>
+</ul>
+
 
 ## 分析
 

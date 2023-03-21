@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0902：最大为 N 的数字组合（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0902：最大为 N 的数字组合（★★★）" />
-<meta property="og:description" content="第 101 场周赛第 3 题 题目 给定一个按 非递减顺序 排列的数字数组 digits 。你可以用任意次数 digits[i] 来写的数字。 例如，如果 digits = [&lsquo;1&rsquo;,&l" />
+        <title>0902：最大为 N 的数字组合（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0902：最大为 N 的数字组合（★★）" />
+<meta property="og:description" content="力扣第 101 场周赛第 3 题 题目 给定一个按 非递减顺序 排列的数字数组 digits 。你可以用任意次数 digits[i] 来写的数字。例如，如果 digits = [&#39;1&#39;,&#39;3&#39;,&#39;5&#39;]，我们可" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0902/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2018-09-09T02:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0902：最大为 N 的数字组合（★★★）"/>
-<meta name="twitter:description" content="第 101 场周赛第 3 题 题目 给定一个按 非递减顺序 排列的数字数组 digits 。你可以用任意次数 digits[i] 来写的数字。 例如，如果 digits = [&lsquo;1&rsquo;,&l"/>
+<meta name="twitter:title" content="0902：最大为 N 的数字组合（★★）"/>
+<meta name="twitter:description" content="力扣第 101 场周赛第 3 题 题目 给定一个按 非递减顺序 排列的数字数组 digits 。你可以用任意次数 digits[i] 来写的数字。例如，如果 digits = [&#39;1&#39;,&#39;3&#39;,&#39;5&#39;]，我们可"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0902/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0882/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0914/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0902/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0901/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0907/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0902：最大为 N 的数字组合（★★★）",
+        "headline": "0902：最大为 N 的数字组合（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0902\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  895 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  849 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0902\/","datePublished": "2018-09-09T02:00:00+08:00","dateModified": "2018-09-09T02:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0902：最大为 N 的数字组合（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0902：最大为 N 的数字组合（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-09-09">2018-09-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 895 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0902/" class="leancloud_visitors" data-flag-title="0902：最大为 N 的数字组合（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-09-09">2018-09-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 849 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0902/" class="leancloud_visitors" data-flag-title="0902：最大为 N 的数字组合（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -131,42 +131,42 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 101 场周赛第 3 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/" target="_blank" rel="noopener noreffer">力扣第 101 场周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个按 非递减顺序 排列的数字数组 digits 。你可以用任意次数 digits[i] 来写的数字。
-例如，如果 digits = [&lsquo;1&rsquo;,&lsquo;3&rsquo;,&lsquo;5&rsquo;]，我们可以写数字，如 &lsquo;13&rsquo;, &lsquo;551&rsquo;, 和 &lsquo;1351315&rsquo;。</p>
-<p>返回 可以生成的小于或等于给定整数 n 的正整数的个数 。</p>
-<p> </p>
-<p>示例 1：</p>
-<pre><code>输入：digits = [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;,&quot;7&quot;], n = 100
-输出：20
-解释：
+<p>给定一个按 <strong>非递减顺序</strong> 排列的数字数组<meta charset="UTF-8" /> <code>digits</code> 。你可以用任意次数 <code>digits[i]</code> 来写的数字。例如，如果<meta charset="UTF-8" /> <code>digits = ['1','3','5']</code>，我们可以写数字，如<meta charset="UTF-8" /> <code>'13'</code>, <code>'551'</code>, 和 <code>'1351315'</code>。</p>
+<p>返回 <em>可以生成的小于或等于给定整数 <code>n</code> 的正整数的个数</em> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>digits = ["1","3","5","7"], n = 100
+<strong>输出：</strong>20
+<strong>解释：</strong>
 可写出的 20 个数字是：
 1, 3, 5, 7, 11, 13, 15, 17, 31, 33, 35, 37, 51, 53, 55, 57, 71, 73, 75, 77.
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：digits = [&quot;1&quot;,&quot;4&quot;,&quot;9&quot;], n = 1000000000
-输出：29523
-解释：
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>digits = ["1","4","9"], n = 1000000000
+<strong>输出：</strong>29523
+<strong>解释：</strong>
 我们可以写 3 个一位数字，9 个两位数字，27 个三位数字，
 81 个四位数字，243 个五位数字，729 个六位数字，
 2187 个七位数字，6561 个八位数字和 19683 个九位数字。
-总共，可以使用D中的数字写出 29523 个整数。
-</code></pre>
-<p>示例 3:</p>
-<pre><code>输入：digits = [&quot;7&quot;], n = 8
-输出：1
-</code></pre>
-<p> </p>
-<p>提示：</p>
+总共，可以使用D中的数字写出 29523 个整数。</pre>
+<p><strong>示例 3:</strong></p>
+<pre>
+<strong>输入：</strong>digits = ["7"], n = 8
+<strong>输出：</strong>1
+</pre>
+<p><strong>提示：</strong></p>
+<meta charset="UTF-8" />
 <ul>
-<li>1 &lt;= digits.length &lt;= 9</li>
-<li>digits[i].length == 1</li>
-<li>digits[i] 是从 &lsquo;1&rsquo; 到 &lsquo;9&rsquo; 的数</li>
-<li>digits 中的所有值都 不同 </li>
-<li>digits 按 非递减顺序 排列</li>
-<li>1 &lt;= n &lt;= 10^9</li>
+<li><code>1 &lt;= digits.length &lt;= 9</code></li>
+<li><code>digits[i].length == 1</code></li>
+<li><code>digits[i]</code> 是从 <code>'1'</code> 到 <code>'9'</code> 的数</li>
+<li><code>digits</code> 中的所有值都 <strong>不同</strong> </li>
+<li><code>digits</code> 按 <strong>非递减顺序</strong> 排列</li>
+<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -280,14 +280,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/">排列组合</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0914/" class="prev" rel="prev" title="0914：卡牌分组（★）"><i class="fas fa-angle-left fa-fw"></i>0914：卡牌分组（★）</a>
-            <a href="/leetcode/0882/" class="next" rel="next" title="0882：细分图中的可到达结点（★★★）">0882：细分图中的可到达结点（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0907/" class="prev" rel="prev" title="0907：子数组的最小值之和（★）"><i class="fas fa-angle-left fa-fw"></i>0907：子数组的最小值之和（★）</a>
+            <a href="/leetcode/0901/" class="next" rel="next" title="0901：股票价格跨度（★）">0901：股票价格跨度（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

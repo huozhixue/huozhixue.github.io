@@ -1,39 +1,47 @@
-# 0337：打家劫舍 III（★★）
+# 0337：打家劫舍 III（★）
 
+
+> <u>**[力扣第 337 题](https://leetcode.cn/problems/house-robber-iii/)**</u>
 
 ## 题目
 
-小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为 root 。
+<p>小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为<meta charset="UTF-8" /> <code>root</code> 。</p>
 
-除了 root 之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，
-聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 
-如果 两个直接相连的房子在同一天晚上被打劫 ，房屋将自动报警。
+<p>除了<meta charset="UTF-8" /> <code>root</code> 之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果 <strong>两个直接相连的房子在同一天晚上被打劫</strong> ，房屋将自动报警。</p>
 
-给定二叉树的 root 。返回 在不触动警报的情况下 ，小偷能够盗取的最高金额 。
+<p>给定二叉树的 <code>root</code> 。返回 <em><strong>在不触动警报的情况下</strong> ，小偷能够盗取的最高金额</em> 。</p>
 
- 
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2021/03/10/rob1-tree.jpg)
+<p><strong>示例 1:</strong></p>
 
-	输入: root = [3,2,3,null,3,null,1]
-	输出: 7 
-	解释: 小偷一晚能够盗取的最高金额 3 + 3 + 1 = 7
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/03/10/rob1-tree.jpg" /></p>
 
-示例 2:
+<pre>
+<strong>输入: </strong>root = [3,2,3,null,3,null,1]
+<strong>输出:</strong> 7
+<strong>解释:</strong> 小偷一晚能够盗取的最高金额 3 + 3 + 1 = 7</pre>
 
-![img](https://assets.leetcode.com/uploads/2021/03/10/rob2-tree.jpg)
+<p><strong>示例 2:</strong></p>
 
-	输入: root = [3,4,5,1,3,null,1]
-	输出: 9
-	解释: 小偷一晚能够盗取的最高金额 4 + 5 = 9
- 
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/03/10/rob2-tree.jpg" /></p>
 
-提示：
-- 树的节点数在 [1, 10^4] 范围内
-- 0 <= Node.val <= 10^4
+<pre>
+<strong>输入: </strong>root = [3,4,5,1,3,null,1]
+<strong>输出:</strong> 9
+<strong>解释:</strong> 小偷一晚能够盗取的最高金额 4 + 5 = 9
+</pre>
 
+
+
+<p><strong>提示：</strong></p>
+
+<p><meta charset="UTF-8" /></p>
+
+<ul>
+<li>树的节点数在 <code>[1, 10<sup>4</sup>]</code> 范围内</li>
+<li><code>0 &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
+</ul>
 
 
 ## 分析

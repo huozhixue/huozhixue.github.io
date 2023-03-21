@@ -1,42 +1,52 @@
-# 0686：重复叠加字符串匹配（★★）
+# 0686：重复叠加字符串匹配（★）
 
 
-> **第 52 场双周赛第 1 题**
+> <u>**[力扣第 52 场双周赛第 1 题](https://leetcode.cn/problems/repeated-string-match/)**</u>
 
 ## 题目
 
-给定两个字符串 a 和 b，寻找重复叠加字符串 a 的最小次数，使得字符串 b 成为叠加后的字符串 a 的子串，如果不存在则返回 -1。
+<p>给定两个字符串 <code>a</code> 和 <code>b</code>，寻找重复叠加字符串 <code>a</code> 的最小次数，使得字符串 <code>b</code> 成为叠加后的字符串 <code>a</code> 的子串，如果不存在则返回 <code>-1</code>。</p>
 
-注意：字符串 "abc" 重复叠加 0 次是 ""，重复叠加 1 次是 "abc"，重复叠加 2 次是 "abcabc"。
+<p><strong>注意：</strong>字符串 <code>&quot;abc&quot;</code> 重复叠加 0 次是 <code>&quot;&quot;</code>，重复叠加 1 次是 <code>&quot;abc&quot;</code>，重复叠加 2 次是 <code>&quot;abcabc&quot;</code>。</p>
 
- 
 
-示例 1：
 
-    输入：a = "abcd", b = "cdabcdab"
-    输出：3
-    解释：a 重复叠加三遍后为 "abcdabcdabcd", 此时 b 是其子串。
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：a = "a", b = "aa"
-    输出：2
-示例 3：
+<pre><strong>输入：</strong>a = &quot;abcd&quot;, b = &quot;cdabcdab&quot;
+<strong>输出：</strong>3
+<strong>解释：</strong>a 重复叠加三遍后为 &quot;ab<strong>cdabcdab</strong>cd&quot;, 此时 b 是其子串。
+</pre>
 
-    输入：a = "a", b = "a"
-    输出：1
-示例 4：
+<p><strong>示例 2：</strong></p>
 
-    输入：a = "abc", b = "wxyz"
-    输出：-1
- 
+<pre><strong>输入：</strong>a = &quot;a&quot;, b = &quot;aa&quot;
+<strong>输出：</strong>2
+</pre>
 
-提示：
-- 1 <= a.length <= 104
-- 1 <= b.length <= 104
-- a 和 b 由小写英文字母组成
+<p><strong>示例 3：</strong></p>
 
-	 
- 
+<pre><strong>输入：</strong>a = &quot;a&quot;, b = &quot;a&quot;
+<strong>输出：</strong>1
+</pre>
+
+<p><strong>示例 4：</strong></p>
+
+<pre><strong>输入：</strong>a = &quot;abc&quot;, b = &quot;wxyz&quot;
+<strong>输出：</strong>-1
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= a.length &lt;= 10<sup>4</sup></code></li>
+<li><code>1 &lt;= b.length &lt;= 10<sup>4</sup></code></li>
+<li><code>a</code> 和 <code>b</code> 由小写英文字母组成</li>
+</ul>
+
+
 ## 分析
 
 假设 b 是叠加 a 的子串，且 b[0] 匹配 a[i]，

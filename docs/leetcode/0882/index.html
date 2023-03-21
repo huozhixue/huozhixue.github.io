@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0882：细分图中的可到达结点（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0882：细分图中的可到达结点（★★★）" />
-<meta property="og:description" content="第 96 场周赛第 4 题 题目 给你一个无向图（原始图），图中有 n 个节点，编号从 0 到 n - 1 。你决定将图中的每条边 细分 为一条节点链， 每条边之间的新节点数各" />
+        <title>0882：细分图中的可到达节点（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0882：细分图中的可到达节点（★★）" />
+<meta property="og:description" content="力扣第 96 场周赛第 4 题 题目 给你一个无向图（原始图），图中有 n 个节点，编号从 0 到 n - 1 。你决定将图中的每条边 细分 为一条节点链，每条边之间的新节点" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0882/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2018-08-05T02:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0882：细分图中的可到达结点（★★★）"/>
-<meta name="twitter:description" content="第 96 场周赛第 4 题 题目 给你一个无向图（原始图），图中有 n 个节点，编号从 0 到 n - 1 。你决定将图中的每条边 细分 为一条节点链， 每条边之间的新节点数各"/>
+<meta name="twitter:title" content="0882：细分图中的可到达节点（★★）"/>
+<meta name="twitter:description" content="力扣第 96 场周赛第 4 题 题目 给你一个无向图（原始图），图中有 n 个节点，编号从 0 到 n - 1 。你决定将图中的每条边 细分 为一条节点链，每条边之间的新节点"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0882/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0876/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0902/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0882/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0880/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0889/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0882：细分图中的可到达结点（★★★）",
+        "headline": "0882：细分图中的可到达节点（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0882\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  637 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  642 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0882\/","datePublished": "2018-08-05T02:00:00+08:00","dateModified": "2018-08-05T02:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0882：细分图中的可到达结点（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0882：细分图中的可到达节点（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-08-05">2018-08-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 637 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0882/" class="leancloud_visitors" data-flag-title="0882：细分图中的可到达结点（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-08-05">2018-08-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 642 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0882/" class="leancloud_visitors" data-flag-title="0882：细分图中的可到达节点（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,51 +126,42 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 96 场周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/" target="_blank" rel="noopener noreffer">力扣第 96 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个无向图（原始图），图中有 n 个节点，编号从 0 到 n - 1 。你决定将图中的每条边 细分 为一条节点链，
-每条边之间的新节点数各不相同。</p>
-<p>图用由边组成的二维数组 edges 表示，其中 edges[i] = [ui, vi, cnti] 表示原始图中节点 ui 和 vi 之间存在一条边，
-cnti 是将边 细分 后的新节点总数。注意，cnti == 0 表示边不可细分。</p>
-<p>要 细分 边 [ui, vi] ，需要将其替换为 (cnti + 1) 条新边，和 cnti 个新节点。新节点为 x1, x2, &hellip;, xcnti ，
-新边为 [ui, x1], [x1, x2], [x2, x3], &hellip;, [xcnti+1, xcnti], [xcnti, vi] 。</p>
-<p>现在得到一个 新的细分图 ，请你计算从节点 0 出发，可以到达多少个节点？如果节点间距离是 maxMoves 或更少，则视为 可以到达 。</p>
-<p>给你原始图和 maxMoves ，返回 新的细分图中从节点 0 出发 可到达的节点数 。</p>
-<p> 
-示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/01/origfinal.png"
-        data-srcset="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/01/origfinal.png, https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/01/origfinal.png 1.5x, https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/01/origfinal.png 2x"
-        data-sizes="auto"
-        alt="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/01/origfinal.png"
-        title="img" /></p>
-<pre><code>输入：edges = [[0,1,10],[0,2,1],[1,2,2]], maxMoves = 6, n = 3
-输出：13
-解释：边的细分情况如上图所示。
+<p>给你一个无向图（<strong>原始图</strong>），图中有 <code>n</code> 个节点，编号从 <code>0</code> 到 <code>n - 1</code> 。你决定将图中的每条边 <strong>细分</strong> 为一条节点链，每条边之间的新节点数各不相同。</p>
+<p>图用由边组成的二维数组 <code>edges</code> 表示，其中 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>, cnt<sub>i</sub>]</code> 表示原始图中节点 <code>u<sub>i</sub></code> 和 <code>v<sub>i</sub></code> 之间存在一条边，<code>cnt<sub>i</sub></code> 是将边 <strong>细分</strong> 后的新节点总数。注意，<code>cnt<sub>i</sub> == 0</code> 表示边不可细分。</p>
+<p>要 <strong>细分</strong> 边 <code>[ui, vi]</code> ，需要将其替换为 <code>(cnt<sub>i</sub> + 1)</code> 条新边，和 <code>cnt<sub>i</sub></code> 个新节点。新节点为 <code>x<sub>1</sub></code>, <code>x<sub>2</sub></code>, ..., <code>x<sub>cnt<sub>i</sub></sub></code> ，新边为 <code>[u<sub>i</sub>, x<sub>1</sub>]</code>, <code>[x<sub>1</sub>, x<sub>2</sub>]</code>, <code>[x<sub>2</sub>, x<sub>3</sub>]</code>, ..., <code>[x<sub>cnt<sub>i</sub>-1</sub>, x<sub>cnt<sub>i</sub></sub>]</code>, <code>[x<sub>cnt<sub>i</sub></sub>, v<sub>i</sub>]</code> 。</p>
+<p>现在得到一个 <strong>新的细分图</strong> ，请你计算从节点 <code>0</code> 出发，可以到达多少个节点？如果节点间距离是 <code>maxMoves</code> 或更少，则视为 <strong>可以到达</strong> 。</p>
+<p>给你原始图和 <code>maxMoves</code> ，返回 <em>新的细分图中从节点 <code>0</code> 出发</em><strong><em> 可到达的节点数</em></strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/01/origfinal.png" style="height: 247px; width: 600px;" />
+<pre>
+<strong>输入：</strong>edges = [[0,1,10],[0,2,1],[1,2,2]], maxMoves = 6, n = 3
+<strong>输出：</strong>13
+<strong>解释：</strong>边的细分情况如上图所示。
 可以到达的节点已经用黄色标注出来。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：edges = [[0,1,4],[1,2,6],[0,2,8],[1,3,1]], maxMoves = 10, n = 4
-输出：23
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：edges = [[1,2,4],[1,4,5],[1,3,1],[2,3,4],[3,4,5]], maxMoves = 17, n = 5
-输出：1
-解释：节点 0 与图的其余部分没有连通，所以只有节点 0 可以到达。
- 
-</code></pre>
-<p>提示：</p>
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>edges = [[0,1,4],[1,2,6],[0,2,8],[1,3,1]], maxMoves = 10, n = 4
+<strong>输出：</strong>23
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>edges = [[1,2,4],[1,4,5],[1,3,1],[2,3,4],[3,4,5]], maxMoves = 17, n = 5
+<strong>输出：</strong>1
+<strong>解释：</strong>节点 0 与图的其余部分没有连通，所以只有节点 0 可以到达。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>0 &lt;= edges.length &lt;= min(n * (n - 1) / 2, 10^4)</li>
-<li>edges[i].length == 3</li>
-<li>0 &lt;= ui &lt; vi &lt; n</li>
-<li>图中 不存在平行边</li>
-<li>0 &lt;= cnti &lt;= 10^4</li>
-<li>0 &lt;= maxMoves &lt;= 10^9</li>
-<li>1 &lt;= n &lt;= 3000</li>
+<li><code>0 &lt;= edges.length &lt;= min(n * (n - 1) / 2, 10<sup>4</sup>)</code></li>
+<li><code>edges[i].length == 3</code></li>
+<li><code>0 &lt;= u<sub>i</sub> &lt; v<sub>i</sub> &lt; n</code></li>
+<li>图中 <strong>不存在平行边</strong></li>
+<li><code>0 &lt;= cnt<sub>i</sub> &lt;= 10<sup>4</sup></code></li>
+<li><code>0 &lt;= maxMoves &lt;= 10<sup>9</sup></code></li>
+<li><code>1 &lt;= n &lt;= 3000</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>将 cnt+1 条新边看作是原边的权重，那么可以用 dijkstra 计算出每个原节点到 0 的距离。</p>
@@ -238,14 +229,14 @@ cnti 是将边 细分 后的新节点总数。注意，cnti == 0 表示边不可
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>,&nbsp;<a href="/leetcode_tags/%E5%A0%86%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">堆（优先队列）</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0902/" class="prev" rel="prev" title="0902：最大为 N 的数字组合（★★★）"><i class="fas fa-angle-left fa-fw"></i>0902：最大为 N 的数字组合（★★★）</a>
-            <a href="/leetcode/0876/" class="next" rel="next" title="0876：链表的中间结点（★）">0876：链表的中间结点（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0889/" class="prev" rel="prev" title="0889：根据前序和后序遍历构造二叉树（★）"><i class="fas fa-angle-left fa-fw"></i>0889：根据前序和后序遍历构造二叉树（★）</a>
+            <a href="/leetcode/0880/" class="next" rel="next" title="0880：索引处的解码字符串（★）">0880：索引处的解码字符串（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

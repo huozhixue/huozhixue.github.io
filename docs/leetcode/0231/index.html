@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0231：2 的幂（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0231：2 的幂（★）" />
-<meta property="og:description" content="题目 给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。 如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次方。 示例 1" />
+        <title>0231：2 的幂 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0231：2 的幂" />
+<meta property="og:description" content="力扣第 231 题 题目 给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。 如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0231/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-08-19T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0231：2 的幂（★）"/>
-<meta name="twitter:description" content="题目 给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。 如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次方。 示例 1"/>
+<meta name="twitter:title" content="0231：2 的幂"/>
+<meta name="twitter:description" content="力扣第 231 题 题目 给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。 如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0231/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0230/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0232/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0231：2 的幂（★）",
+        "headline": "0231：2 的幂",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0231\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  308 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  334 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0231\/","datePublished": "2015-08-19T00:00:00+08:00","dateModified": "2015-08-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0231：2 的幂（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0231：2 的幂</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-19">2015-08-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 308 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0231/" class="leancloud_visitors" data-flag-title="0231：2 的幂（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-19">2015-08-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 334 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0231/" class="leancloud_visitors" data-flag-title="0231：2 的幂">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,32 +126,44 @@
     <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。</p>
-<p>如果存在一个整数 x 使得 n == 2x ，则认为 n 是 2 的幂次方。</p>
-<p>示例 1：</p>
-<pre><code>输入：n = 1
-输出：true
-解释：20 = 1
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：n = 16
-输出：true
-解释：24 = 16
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：n = 3
-输出：false
-</code></pre>
-<p>示例 4：</p>
-<pre><code>输入：n = 4
-输出：true
-</code></pre>
-<p>示例 5：</p>
-<pre><code>输入：n = 5
-输出：false
-</code></pre>
-<p>提示： -2^31 &lt;= n &lt;= 2^31 - 1</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/power-of-two/" target="_blank" rel="noopener noreffer">力扣第 231 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>n</code>，请你判断该整数是否是 2 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p>如果存在一个整数 <code>x</code> 使得 <code>n == 2<sup>x</sup></code> ，则认为 <code>n</code> 是 2 的幂次方。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>true
+<strong>解释：</strong>2<sup>0</sup> = 1
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>n = 16
+<strong>输出：</strong>true
+<strong>解释：</strong>2<sup>4</sup> = 16
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>n = 3
+<strong>输出：</strong>false
+</pre>
+<p><strong>示例 4：</strong></p>
+<pre>
+<strong>输入：</strong>n = 4
+<strong>输出：</strong>true
+</pre>
+<p><strong>示例 5：</strong></p>
+<pre>
+<strong>输入：</strong>n = 5
+<strong>输出：</strong>false
+</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>-2<sup>31</sup> <= n <= 2<sup>31</sup> - 1</code></li>
+</ul>
+<p><strong>进阶：</strong>你能够不使用循环/递归解决此问题吗？</p>
 <h2 id="分析">分析</h2>
 <p>n 是 2 的幂等价于 n 是正整数且 n 的二进制中只有一个 1。</p>
 <p>那么用 n&amp;(n-1) 移除最后一个 1 即变为 0。或者用 n&amp;(-n) 提取出最后一个 1 后面的部分，应该等于 n。</p>
@@ -199,13 +211,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E8%AE%BA/">数论</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E9%80%92%E5%BD%92/">递归</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0232/" class="prev" rel="prev" title="0232：用栈实现队列（★）"><i class="fas fa-angle-left fa-fw"></i>0232：用栈实现队列（★）</a>
+    <div class="post-nav"><a href="/leetcode/0232/" class="prev" rel="prev" title="0232：用栈实现队列"><i class="fas fa-angle-left fa-fw"></i>0232：用栈实现队列</a>
             <a href="/leetcode/0230/" class="next" rel="next" title="0230：二叉搜索树中第K小的元素（★）">0230：二叉搜索树中第K小的元素（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

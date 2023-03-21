@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0075：颜色分类（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0075：颜色分类（★★）" />
-<meta property="og:description" content="题目 给定一个包含红色、白色和蓝色、共 n 个元素的数组 nums ，原地对它们进行排序， 使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。 我们使用整" />
+        <title>0075：颜色分类（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0075：颜色分类（★）" />
+<meta property="og:description" content="力扣第 75 题 题目 给定一个包含红色、白色和蓝色、共 n 个元素的数组 nums ，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0075/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-03-16T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0075：颜色分类（★★）"/>
-<meta name="twitter:description" content="题目 给定一个包含红色、白色和蓝色、共 n 个元素的数组 nums ，原地对它们进行排序， 使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。 我们使用整"/>
+<meta name="twitter:title" content="0075：颜色分类（★）"/>
+<meta name="twitter:description" content="力扣第 75 题 题目 给定一个包含红色、白色和蓝色、共 n 个元素的数组 nums ，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0075/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0074/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0076/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0075：颜色分类（★★）",
+        "headline": "0075：颜色分类（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0075\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  399 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  428 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0075\/","datePublished": "2015-03-16T00:00:00+08:00","dateModified": "2015-03-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0075：颜色分类（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0075：颜色分类（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-16">2015-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 399 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0075/" class="leancloud_visitors" data-flag-title="0075：颜色分类（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-16">2015-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 428 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0075/" class="leancloud_visitors" data-flag-title="0075：颜色分类（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,27 +130,34 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个包含红色、白色和蓝色、共 n 个元素的数组 nums ，原地对它们进行排序，
-使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
-<p>我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。</p>
-<p>必须在不使用库的sort函数的情况下解决这个问题。
- 
-示例 1：</p>
-<pre><code>输入：nums = [2,0,2,1,1,0]
-输出：[0,0,1,1,2,2]
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums = [2,0,1]
-输出：[0,1,2]
- 
-</code></pre>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/sort-colors/" target="_blank" rel="noopener noreffer">力扣第 75 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个包含红色、白色和蓝色、共 <code>n</code><em> </em>个元素的数组<meta charset="UTF-8" /> <code>nums</code> ，<strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank">原地</a></strong>对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
+<p>我们使用整数 <code>0</code>、 <code>1</code> 和 <code>2</code> 分别表示红色、白色和蓝色。</p>
 <ul>
-<li>n == nums.length</li>
-<li>1 &lt;= n &lt;= 300</li>
-<li>nums[i] 为 0、1 或 2
- </li>
+</ul>
+<p>必须在不使用库内置的 sort 函数的情况下解决这个问题。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [2,0,2,1,1,0]
+<strong>输出：</strong>[0,0,1,1,2,2]
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [2,0,1]
+<strong>输出：</strong>[0,1,2]
+</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= n &lt;= 300</code></li>
+<li><code>nums[i]</code> 为 <code>0</code>、<code>1</code> 或 <code>2</code></li>
+</ul>
+<p><strong>进阶：</strong></p>
+<ul>
+<li>你能想出一个仅使用常数空间的一趟扫描算法吗？</li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -222,13 +229,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0076/" class="prev" rel="prev" title="0076：最小覆盖子串（★★★）"><i class="fas fa-angle-left fa-fw"></i>0076：最小覆盖子串（★★★）</a>
+    <div class="post-nav"><a href="/leetcode/0076/" class="prev" rel="prev" title="0076：最小覆盖子串（★★）"><i class="fas fa-angle-left fa-fw"></i>0076：最小覆盖子串（★★）</a>
             <a href="/leetcode/0074/" class="next" rel="next" title="0074：搜索二维矩阵（★）">0074：搜索二维矩阵（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

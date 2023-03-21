@@ -1,24 +1,36 @@
-# 0096：不同的二叉搜索树（★★）
+# 0096：不同的二叉搜索树（★）
 
+
+> <u>**[力扣第 96 题](https://leetcode.cn/problems/unique-binary-search-trees/)**</u>
 
 ## 题目
 
-给你一个整数 n ，求恰由 n 个节点组成且节点值从 1 到 n 互不相同的 二叉搜索树 有多少种？
-返回满足题意的二叉搜索树的种数。
+<p>给你一个整数 <code>n</code> ，求恰由 <code>n</code> 个节点组成且节点值从 <code>1</code> 到 <code>n</code> 互不相同的 <strong>二叉搜索树</strong> 有多少种？返回满足题意的二叉搜索树的种数。</p>
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/01/18/uniquebstn3.jpg)
 
-    输入：n = 3
-    输出：5
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/01/18/uniquebstn3.jpg" style="width: 600px; height: 148px;" />
+<pre>
+<strong>输入：</strong>n = 3
+<strong>输出：</strong>5
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-    输入：n = 1
-    输出：1
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>1
+</pre>
 
-提示： 1 <= n <= 19
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= n <= 19</code></li>
+</ul>
+
 
 ## 分析
 

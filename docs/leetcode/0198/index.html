@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0198：打家劫舍（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0198：打家劫舍（★）" />
-<meta property="og:description" content="题目 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金， 影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统， 如果两间" />
+<meta property="og:description" content="力扣第 198 题 题目 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0198/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-07-17T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0198：打家劫舍（★）"/>
-<meta name="twitter:description" content="题目 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金， 影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统， 如果两间"/>
+<meta name="twitter:description" content="力扣第 198 题 题目 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0198/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0197/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0199/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0198\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  385 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  390 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0198\/","datePublished": "2015-07-17T00:00:00+08:00","dateModified": "2015-07-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0198：打家劫舍（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-17">2015-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 385 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-17">2015-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 390 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0198/" class="leancloud_visitors" data-flag-title="0198：打家劫舍（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,28 +125,29 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，
-影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，
-如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p>
-<p>给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，
-一夜之内能够偷窃到的最高金额。</p>
-<p>示例 1：</p>
-<pre><code>输入：[1,2,3,1]
-输出：4
-解释：偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
-     偷窃到的最高金额 = 1 + 3 = 4 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：[2,7,9,3,1]
-输出：12
-解释：偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
-     偷窃到的最高金额 = 2 + 9 + 1 = 12 。
-</code></pre>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/house-robber/" target="_blank" rel="noopener noreffer">力扣第 198 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，<strong>如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警</strong>。</p>
+<p>给定一个代表每个房屋存放金额的非负整数数组，计算你<strong> 不触动警报装置的情况下 </strong>，一夜之内能够偷窃到的最高金额。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>[1,2,3,1]
+<strong>输出：</strong>4
+<strong>解释：</strong>偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
+偷窃到的最高金额 = 1 + 3 = 4 。</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>[2,7,9,3,1]
+<strong>输出：</strong>12
+<strong>解释：</strong>偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
+偷窃到的最高金额 = 2 + 9 + 1 = 12 。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 100</li>
-<li>0 &lt;= nums[i] &lt;= 400</li>
+<li><code>1 <= nums.length <= 100</code></li>
+<li><code>0 <= nums[i] <= 400</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>典型的线性 dp，按偷不偷最后一家即可递归。</p>
@@ -188,14 +189,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/leetcode/0199/" class="prev" rel="prev" title="0199：二叉树的右视图（★）"><i class="fas fa-angle-left fa-fw"></i>0199：二叉树的右视图（★）</a>
-            <a href="/leetcode/0197/" class="next" rel="next" title="0197：上升的温度（★）">0197：上升的温度（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0197/" class="next" rel="next" title="0197：上升的温度">0197：上升的温度<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

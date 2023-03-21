@@ -1,37 +1,49 @@
-# 0650：只有两个键的键盘（★★）
+# 0650：只有两个键的键盘（★）
 
 
-> **第 43 场双周赛第 2 题**
+> <u>**[力扣第 43 场双周赛第 2 题](https://leetcode.cn/problems/2-keys-keyboard/)**</u>
 
 ## 题目
 
-最初记事本上只有一个字符 'A' 。你每次可以对这个记事本进行两种操作：
-- Copy All（复制全部）：复制这个记事本中的所有字符（不允许仅复制部分字符）。
-- Paste（粘贴）：粘贴 上一次 复制的字符。
+<p>最初记事本上只有一个字符 <code>'A'</code> 。你每次可以对这个记事本进行两种操作：</p>
 
-给你一个数字 n ，你需要使用最少的操作次数，在记事本上输出 恰好 n 个 'A' 。
-返回能够打印出 n 个 'A' 的最少操作次数。
+<ul>
+<li><code>Copy All</code>（复制全部）：复制这个记事本中的所有字符（不允许仅复制部分字符）。</li>
+<li><code>Paste</code>（粘贴）：粘贴<strong> 上一次 </strong>复制的字符。</li>
+</ul>
+
+<p>给你一个数字 <code>n</code> ，你需要使用最少的操作次数，在记事本上输出 <strong>恰好</strong> <code>n</code> 个 <code>'A'</code> 。返回能够打印出 <code>n</code> 个 <code>'A'</code> 的最少操作次数。</p>
 
 
-示例 1：
 
-    输入：3
-    输出：3
-    解释：
-    最初, 只有一个字符 'A'。
-    第 1 步, 使用 Copy All 操作。
-    第 2 步, 使用 Paste 操作来获得 'AA'。
-    第 3 步, 使用 Paste 操作来获得 'AAA'。
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：n = 1
-    输出：0
-     
+<pre>
+<strong>输入：</strong>3
+<strong>输出：</strong>3
+<strong>解释：</strong>
+最初, 只有一个字符 'A'。
+第 1 步, 使用 <strong>Copy All</strong> 操作。
+第 2 步, 使用 <strong>Paste </strong>操作来获得 'AA'。
+第 3 步, 使用 <strong>Paste</strong> 操作来获得 'AAA'。
+</pre>
 
-提示：
-- 1 <= n <= 1000
+<p><strong>示例 2：</strong></p>
 
- 
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 1000</code></li>
+</ul>
+
+
 ## 分析
 
 操作必然是先复制再粘贴 k 次的形式。而这等价于将个数乘以 k+1。

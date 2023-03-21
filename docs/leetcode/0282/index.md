@@ -1,37 +1,50 @@
 # 0282：给表达式添加运算符（★★）
 
 
+> <u>**[力扣第 282 题](https://leetcode.cn/problems/expression-add-operators/)**</u>
+
 ## 题目
 
-给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，
-在 num 的数字之间添加 二元 运算符（不是一元）+、- 或 * ，返回 所有 能够得到 target 的表达式。
+<p>给定一个仅包含数字 <code>0-9</code> 的字符串 <code>num</code> 和一个目标值整数 <code>target</code> ，在 <code>num</code> 的数字之间添加 <strong>二元 </strong>运算符（不是一元）<code>+</code>、<code>-</code> 或 <code>*</code> ，返回 <strong>所有</strong> 能够得到 <code>target </code>的表达式。</p>
 
-注意，返回表达式中的操作数 不应该 包含前导零。
+<p>注意，返回表达式中的操作数 <strong>不应该</strong> 包含前导零。</p>
 
-示例 1:
 
-	输入: num = "123", target = 6
-	输出: ["1+2+3", "1*2*3"] 
-	解释: “1*2*3” 和 “1+2+3” 的值都是6。
 
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入: num = "232", target = 8
-	输出: ["2*3+2", "2+3*2"]
-	解释: “2*3+2” 和 “2+3*2” 的值都是8。
+<pre>
+<strong>输入:</strong> <code>num = </code>"123", target = 6
+<strong>输出: </strong>["1+2+3", "1*2*3"]
+<strong>解释: </strong>“1*2*3” 和 “1+2+3” 的值都是6。
+</pre>
 
-示例 3:
+<p><strong>示例 2:</strong></p>
 
-	输入: num = "3456237490", target = 9191
-	输出: []
-	解释: 表达式 “3456237490” 无法得到 9191 。
- 
+<pre>
+<strong>输入:</strong> <code>num = </code>"232", target = 8
+<strong>输出: </strong>["2*3+2", "2+3*2"]
+<strong>解释:</strong> “2*3+2” 和 “2+3*2” 的值都是8。
+</pre>
 
-提示：
-- 1 <= num.length <= 10
-- num 仅含数字
-- -2^31 <= target <= 2^31 - 1
-     
+<p><strong>示例 3:</strong></p>
+
+<pre>
+<strong>输入:</strong> <code>num = </code>"3456237490", target = 9191
+<strong>输出: </strong>[]
+<strong>解释: </strong>表达式 “3456237490” 无法得到 9191 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= num.length &lt;= 10</code></li>
+<li><code>num</code> 仅含数字</li>
+<li><code>-2<sup>31</sup> &lt;= target &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
 
 ## 分析
 

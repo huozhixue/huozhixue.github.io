@@ -1,33 +1,51 @@
-# 0202：快乐数（★）
+# 0202：快乐数
 
+
+> <u>**[力扣第 202 题](https://leetcode.cn/problems/happy-number/)**</u>
 
 ## 题目
 
-编写一个算法来判断一个数 n 是不是快乐数。
+<p>编写一个算法来判断一个数 <code>n</code> 是不是快乐数。</p>
 
-「快乐数」定义为：
-- 对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。
-- 然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。
-- 如果 可以变为  1，那么这个数就是快乐数。
+<p><strong>「快乐数」</strong> 定义为：</p>
 
-如果 n 是快乐数就返回 true ；不是，则返回 false 。
+<ul>
+<li>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。</li>
+<li>然后重复这个过程直到这个数变为 1，也可能是 <strong>无限循环</strong> 但始终变不到 1。</li>
+<li>如果这个过程 <strong>结果为</strong> 1，那么这个数就是快乐数。</li>
+</ul>
 
-示例 1：
+<p>如果 <code>n</code> 是 <em>快乐数</em> 就返回 <code>true</code> ；不是，则返回 <code>false</code> 。</p>
 
-    输入：19
-    输出：true
-    解释：
-    12 + 92 = 82
-    82 + 22 = 68
-    62 + 82 = 100
-    12 + 02 + 02 = 1
 
-示例 2：
 
-    输入：n = 2
-    输出：false
+<p><strong>示例 1：</strong></p>
 
-提示：1 <= n <= 2^31 - 1 
+<pre>
+<strong>输入：</strong>n = 19
+<strong>输出：</strong>true
+<strong>解释：
+</strong>1<sup>2</sup> + 9<sup>2</sup> = 82
+8<sup>2</sup> + 2<sup>2</sup> = 68
+6<sup>2</sup> + 8<sup>2</sup> = 100
+1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 2
+<strong>输出：</strong>false
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
 
 ## 分析
 

@@ -1,34 +1,44 @@
 # 0220：存在重复元素 III（★★）
 
 
+> <u>**[力扣第 220 题](https://leetcode.cn/problems/contains-duplicate-iii/)**</u>
+
 ## 题目
 
-给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，
-使得 abs(nums[i] - nums[j]) <= t ，同时又满足 abs(i - j) <= k 。
+<p>给你一个整数数组 <code>nums</code> 和两个整数 <code>k</code> 和 <code>t</code> 。请你判断是否存在 <b>两个不同下标</b> <code>i</code> 和 <code>j</code>，使得 <code>abs(nums[i] - nums[j]) <= t</code> ，同时又满足 <code>abs(i - j) <= k</code><em> </em>。</p>
 
-如果存在则返回 true，不存在返回 false。
+<p>如果存在则返回 <code>true</code>，不存在返回 <code>false</code>。</p>
 
-示例 1：
-    
-    输入：nums = [1,2,3,1], k = 3, t = 0
-    输出：true
 
-示例 2：
-    
-    输入：nums = [1,0,1,1], k = 1, t = 2
-    输出：true
 
-示例 3：
+<p><strong>示例 1：</strong></p>
 
-    输入：nums = [1,5,9,1,5,9], k = 2, t = 3
-    输出：false
+<pre>
+<strong>输入：</strong>nums = [1,2,3,1], k<em> </em>= 3, t = 0
+<strong>输出：</strong>true</pre>
 
-提示：
-- 0 <= nums.length <= 2 * 10^4
-- -2^31 <= nums[i] <= 2^31 - 1
-- 0 <= k <= 10^4
-- 0 <= t <= 2^31 - 1
+<p><strong>示例 2：</strong></p>
 
+<pre>
+<strong>输入：</strong>nums = [1,0,1,1], k<em> </em>=<em> </em>1, t = 2
+<strong>输出：</strong>true</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>nums = [1,5,9,1,5,9], k = 2, t = 3
+<strong>输出：</strong>false</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 <= nums.length <= 2 * 10<sup>4</sup></code></li>
+<li><code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code></li>
+<li><code>0 <= k <= 10<sup>4</sup></code></li>
+<li><code>0 <= t <= 2<sup>31</sup> - 1</code></li>
+</ul>
 
 
 ## 分析

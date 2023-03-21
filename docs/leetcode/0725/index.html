@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0725：分隔链表（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0725：分隔链表（★）" />
-<meta property="og:description" content="第 58 场双周赛第 2 题 题目 给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等: 任意两部分的长度差距" />
+<meta property="og:description" content="力扣第 58 场双周赛第 2 题 题目 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0725/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2017-11-12T01:00:00+08:00" />
@@ -17,10 +17,10 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0725：分隔链表（★）"/>
-<meta name="twitter:description" content="第 58 场双周赛第 2 题 题目 给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等: 任意两部分的长度差距"/>
+<meta name="twitter:description" content="力扣第 58 场双周赛第 2 题 题目 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等："/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0725/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0724/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0730/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0725/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0724/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0726/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0725\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  544 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  534 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0725\/","datePublished": "2017-11-12T01:00:00+08:00","dateModified": "2017-11-12T01:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0725：分隔链表（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-11-12">2017-11-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 544 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-11-12">2017-11-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 534 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0725/" class="leancloud_visitors" data-flag-title="0725：分隔链表（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,36 +126,36 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 58 场双周赛第 2 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/split-linked-list-in-parts/" target="_blank" rel="noopener noreffer">力扣第 58 场双周赛第 2 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。</p>
-<p>每部分的长度应该尽可能的相等: 任意两部分的长度差距不能超过 1，也就是说可能有些部分为 null。</p>
-<p>这k个部分应该按照在链表中出现的顺序进行输出，并且排在前面的部分的长度应该大于或等于后面的长度。</p>
-<p>返回一个符合上述规则的链表的列表。</p>
-<p>提示:</p>
+<p>给你一个头结点为 <code>head</code> 的单链表和一个整数 <code>k</code> ，请你设计一个算法将链表分隔为 <code>k</code> 个连续的部分。</p>
+<p>每部分的长度应该尽可能的相等：任意两部分的长度差距不能超过 1 。这可能会导致有些部分为 null 。</p>
+<p>这 <code>k</code> 个部分应该按照在链表中出现的顺序排列，并且排在前面的部分的长度应该大于或等于排在后面的长度。</p>
+<p>返回一个由上述 <code>k</code> 部分组成的数组。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/13/split1-lc.jpg" style="width: 400px; height: 134px;" />
+<pre>
+<strong>输入：</strong>head = [1,2,3], k = 5
+<strong>输出：</strong>[[1],[2],[3],[],[]]
+<strong>解释：</strong>
+第一个元素 output[0] 为 output[0].val = 1 ，output[0].next = null 。
+最后一个元素 output[4] 为 null ，但它作为 ListNode 的字符串表示是 [] 。
+</pre>
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/13/split2-lc.jpg" style="width: 600px; height: 60px;" />
+<pre>
+<strong>输入：</strong>head = [1,2,3,4,5,6,7,8,9,10], k = 3
+<strong>输出：</strong>[[1,2,3,4],[5,6,7],[8,9,10]]
+<strong>解释：</strong>
+输入被分成了几个连续的部分，并且每部分的长度相差不超过 1 。前面部分的长度大于等于后面部分的长度。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>root 的长度范围： [0, 1000].</li>
-<li>输入的每个节点的大小范围：[0, 999].</li>
-<li>k 的取值范围： [1, 50].</li>
+<li>链表中节点的数目在范围 <code>[0, 1000]</code></li>
+<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
+<li><code>1 &lt;= k &lt;= 50</code></li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入: 
-root = [1, 2, 3], k = 5
-输出: [[1],[2],[3],[],[]]
-解释:
-输入输出各部分都应该是链表，而不是数组。
-例如, 输入的结点 root 的 val= 1, root.next.val = 2, \root.next.next.val = 3, 且 root.next.next.next = null。
-第一个输出 output[0] 是 output[0].val = 1, output[0].next = null。
-最后一个元素 output[4] 为 null, 它代表了最后一个部分为空链表。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入: 
-root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
-输出: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
-解释:
-输入被分成了几个连续的部分，并且每部分的长度相差不超过1.前面部分的长度大于等于后面部分的长度。
-</code></pre>
 <h2 id="分析">分析</h2>
 <p>先得到链表长度 n，应该平均分为 n // k 长度，但可能有余数 extra。根据题目要求，应该将前 extra 个链表的长度再分别加 1。</p>
 <p>注意可能分为空链表，所以每轮从哑结点开始，防止越界。</p>
@@ -220,8 +220,8 @@ root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0730/" class="prev" rel="prev" title="0730：统计不同回文子序列（★★★）"><i class="fas fa-angle-left fa-fw"></i>0730：统计不同回文子序列（★★★）</a>
-            <a href="/leetcode/0724/" class="next" rel="next" title="0724：寻找数组的中心索引（★）">0724：寻找数组的中心索引（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0726/" class="prev" rel="prev" title="0726：原子的数量（★★）"><i class="fas fa-angle-left fa-fw"></i>0726：原子的数量（★★）</a>
+            <a href="/leetcode/0724/" class="next" rel="next" title="0724：寻找数组的中心下标">0724：寻找数组的中心下标<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,49 +1,62 @@
-# 1115：交替打印 FooBar（★★）
+# 1115：交替打印 FooBar（★）
 
 
-
+> <u>**[力扣第 1115 题](https://leetcode.cn/problems/print-foobar-alternately/)**</u>
 
 ## 题目
 
-给你一个类：
+<p>给你一个类：</p>
 
-    class FooBar {
-      public void foo() {
-        for (int i = 0; i < n; i++) {
-          print("foo");
-        }
-      }
-    
-      public void bar() {
-        for (int i = 0; i < n; i++) {
-          print("bar");
-        }
-      }
-    }
+<pre>
+class FooBar {
+public void foo() {
+for (int i = 0; i &lt; n; i++) {
+print("foo");
+}
+}
 
-两个不同的线程将会共用一个 FooBar 实例：
-- 线程 A 将会调用 foo() 方法，而
-- 线程 B 将会调用 bar() 方法
+public void bar() {
+for (int i = 0; i &lt; n; i++) {
+print("bar");
+}
+}
+}
+</pre>
 
-请设计修改程序，以确保 "foobar" 被输出 n 次。
+<p>两个不同的线程将会共用一个 <code>FooBar</code> 实例：</p>
 
-示例 1：
-    
-    输入：n = 1
-    输出："foobar"
-    解释：这里有两个线程被异步启动。其中一个调用 foo() 方法, 
-    另一个调用 bar() 方法，"foobar" 将被输出一次。
+<ul>
+<li>线程 A 将会调用 <code>foo()</code> 方法，而</li>
+<li>线程 B 将会调用 <code>bar()</code> 方法</li>
+</ul>
 
-示例 2：
+<p>请设计修改程序，以确保 <code>"foobar"</code> 被输出 <code>n</code> 次。</p>
 
-    输入：n = 2
-    输出："foobarfoobar"
-    解释："foobar" 将被输出两次。
-     
 
-提示：
-- 1 <= n <= 1000
 
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>"foobar"
+<strong>解释：</strong>这里有两个线程被异步启动。其中一个调用 foo() 方法, 另一个调用 bar() 方法，"foobar" 将被输出一次。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 2
+<strong>输出：</strong>"foobarfoobar"
+<strong>解释：</strong>"foobar" 将被输出两次。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 1000</code></li>
+</ul>
 
 
 ## 分析

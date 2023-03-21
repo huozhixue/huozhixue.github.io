@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0705：设计哈希集合（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0705：设计哈希集合（★）" />
-<meta property="og:description" content="题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个值 key 。 void remove(key)" />
+        <title>0705：设计哈希集合 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0705：设计哈希集合" />
+<meta property="og:description" content="力扣第 705 题 题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0705/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2017-10-20T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0705：设计哈希集合（★）"/>
-<meta name="twitter:description" content="题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个值 key 。 void remove(key)"/>
+<meta name="twitter:title" content="0705：设计哈希集合"/>
+<meta name="twitter:description" content="力扣第 705 题 题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0705/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0698/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0706/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0705/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0703/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0706/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0705：设计哈希集合（★）",
+        "headline": "0705：设计哈希集合",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0705\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  424 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  407 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0705\/","datePublished": "2017-10-20T00:00:00+08:00","dateModified": "2017-10-20T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0705：设计哈希集合（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0705：设计哈希集合</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-10-20">2017-10-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 424 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0705/" class="leancloud_visitors" data-flag-title="0705：设计哈希集合（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-10-20">2017-10-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 407 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0705/" class="leancloud_visitors" data-flag-title="0705：设计哈希集合">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,28 +130,26 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-hashset/" target="_blank" rel="noopener noreffer">力扣第 705 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
 <p>不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
-<p>实现 MyHashSet 类：</p>
+<p>实现 <code>MyHashSet</code> 类：</p>
 <ul>
-<li>void add(key) 向哈希集合中插入值 key 。</li>
-<li>bool contains(key) 返回哈希集合中是否存在这个值 key 。</li>
-<li>void remove(key) 将给定值 key 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。</li>
+<li><code>void add(key)</code> 向哈希集合中插入值 <code>key</code> 。</li>
+<li><code>bool contains(key)</code> 返回哈希集合中是否存在这个值 <code>key</code> 。</li>
+<li><code>void remove(key)</code> 将给定值 <code>key</code> 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。</li>
 </ul>
-<p>你可以不使用内建的哈希集合库解决此问题吗？</p>
-<p>提示：</p>
-<ul>
-<li>0 &lt;= key &lt;= 10^6</li>
-<li>最多调用 10^4 次 add、remove 和 contains 。</li>
-</ul>
-<p>示例：</p>
-<pre><code>输入：
-[&quot;MyHashSet&quot;, &quot;add&quot;, &quot;add&quot;, &quot;contains&quot;, &quot;contains&quot;, &quot;add&quot;, &quot;contains&quot;, &quot;remove&quot;, &quot;contains&quot;]
+<p><strong>示例：</strong></p>
+<pre>
+<strong>输入：</strong>
+["MyHashSet", "add", "add", "contains", "contains", "add", "contains", "remove", "contains"]
 [[], [1], [2], [1], [3], [2], [2], [2], [2]]
-输出：
+<strong>输出：</strong>
 [null, null, null, true, false, null, true, null, false]
 
-解释：
+<strong>解释：</strong>
 MyHashSet myHashSet = new MyHashSet();
 myHashSet.add(1);      // set = [1]
 myHashSet.add(2);      // set = [1, 2]
@@ -160,8 +158,12 @@ myHashSet.contains(3); // 返回 False ，（未找到）
 myHashSet.add(2);      // set = [1, 2]
 myHashSet.contains(2); // 返回 True
 myHashSet.remove(2);   // set = [1]
-myHashSet.contains(2); // 返回 False ，（已移除）
-</code></pre>
+myHashSet.contains(2); // 返回 False ，（已移除）</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= key &lt;= 10<sup>6</sup></code></li>
+<li>最多调用 <code>10<sup>4</sup></code> 次 <code>add</code>、<code>remove</code> 和 <code>contains</code></li>
+</ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
 <p>key 的范围较小，可以直接用一个数组一一对应。</p>
@@ -259,14 +261,14 @@ myHashSet.contains(2); // 返回 False ，（已移除）
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>,&nbsp;<a href="/leetcode_tags/%E9%93%BE%E8%A1%A8/">链表</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0706/" class="prev" rel="prev" title="0706：设计哈希映射（★）"><i class="fas fa-angle-left fa-fw"></i>0706：设计哈希映射（★）</a>
-            <a href="/leetcode/0698/" class="next" rel="next" title="0698：划分为k个相等的子集（★★★）">0698：划分为k个相等的子集（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0706/" class="prev" rel="prev" title="0706：设计哈希映射"><i class="fas fa-angle-left fa-fw"></i>0706：设计哈希映射</a>
+            <a href="/leetcode/0703/" class="next" rel="next" title="0703：数据流中的第 K 大元素">0703：数据流中的第 K 大元素<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

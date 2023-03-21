@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0447：回旋镖的数量（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0447：回旋镖的数量（★）" />
-<meta property="og:description" content="题目 给定平面上 n 对 互不相同 的点 points ，其中 points[i] = [xi, yi] 。 回旋镖 是由点 (i, j, k) 表示的元组 ，其中 i 和 j 之间的距离和 i 和 k 之间的距离相等（需要考虑元组的顺序" />
+<meta property="og:description" content="力扣第 447 题 题目 给定平面上 n 对 互不相同 的点 points ，其中 points[i] = [xi, yi] 。回旋镖 是由点 (i, j, k) 表示的元组 ，其中 i 和 j 之间的距离和 i 和 k 之间的欧式距离相等（需要" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0447/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2016-11-07T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0447：回旋镖的数量（★）"/>
-<meta name="twitter:description" content="题目 给定平面上 n 对 互不相同 的点 points ，其中 points[i] = [xi, yi] 。 回旋镖 是由点 (i, j, k) 表示的元组 ，其中 i 和 j 之间的距离和 i 和 k 之间的距离相等（需要考虑元组的顺序"/>
+<meta name="twitter:description" content="力扣第 447 题 题目 给定平面上 n 对 互不相同 的点 points ，其中 points[i] = [xi, yi] 。回旋镖 是由点 (i, j, k) 表示的元组 ，其中 i 和 j 之间的距离和 i 和 k 之间的欧式距离相等（需要"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0447/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0446/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0448/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0447\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  318 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  325 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0447\/","datePublished": "2016-11-07T00:00:00+08:00","dateModified": "2016-11-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0447：回旋镖的数量（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-07">2016-11-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 318 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-07">2016-11-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 325 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0447/" class="leancloud_visitors" data-flag-title="0447：回旋镖的数量（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,32 +125,36 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定平面上 n 对 互不相同 的点 points ，其中 points[i] = [xi, yi] 。
-回旋镖 是由点 (i, j, k) 表示的元组 ，其中 i 和 j 之间的距离和 i 和 k 之间的距离相等（需要考虑元组的顺序）。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-boomerangs/" target="_blank" rel="noopener noreffer">力扣第 447 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定平面上<em> </em><code>n</code><em> </em>对 <strong>互不相同</strong> 的点 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 。<strong>回旋镖</strong> 是由点 <code>(i, j, k)</code> 表示的元组 ，其中 <code>i</code> 和 <code>j</code> 之间的距离和 <code>i</code> 和 <code>k</code> 之间的欧式距离相等（<strong>需要考虑元组的顺序</strong>）。</p>
 <p>返回平面上所有回旋镖的数量。</p>
-<p>提示：</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>points = [[0,0],[1,0],[2,0]]
+<strong>输出：</strong>2
+<strong>解释：</strong>两个回旋镖为 <strong>[[1,0],[0,0],[2,0]]</strong> 和 <strong>[[1,0],[2,0],[0,0]]</strong>
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>points = [[1,1],[2,2],[3,3]]
+<strong>输出：</strong>2
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>points = [[1,1]]
+<strong>输出：</strong>0
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>n == points.length</li>
-<li>1 &lt;= n &lt;= 500</li>
-<li>points[i].length == 2</li>
-<li>-10^4 &lt;= xi, yi &lt;= 10^4</li>
-<li>所有点都 互不相同</li>
+<li><code>n == points.length</code></li>
+<li><code>1 &lt;= n &lt;= 500</code></li>
+<li><code>points[i].length == 2</code></li>
+<li><code>-10<sup>4</sup> &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 10<sup>4</sup></code></li>
+<li>所有点都 <strong>互不相同</strong></li>
 </ul>
-<p> 
-示例 1：</p>
-<pre><code>输入：points = [[0,0],[1,0],[2,0]]
-输出：2
-解释：两个回旋镖为 [[1,0],[0,0],[2,0]] 和 [[1,0],[2,0],[0,0]]
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：points = [[1,1],[2,2],[3,3]]
-输出：2
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：points = [[1,1]]
-输出：0
-</code></pre>
 <h2 id="分析">分析</h2>
 <p>n 个点各不相同，因此可以遍历 n 个点，作为回旋镖的中心，计算能构成多少回旋镖。</p>
 <p>具体的，可以统计每个点到该点的距离。假设有 v 个点到该点的距离都为 dis，那么对应的回旋镖数量即为 v*(v-1)。</p>
@@ -193,13 +197,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0448/" class="prev" rel="prev" title="0448：找到所有数组中消失的数字（★）"><i class="fas fa-angle-left fa-fw"></i>0448：找到所有数组中消失的数字（★）</a>
+    <div class="post-nav"><a href="/leetcode/0448/" class="prev" rel="prev" title="0448：找到所有数组中消失的数字"><i class="fas fa-angle-left fa-fw"></i>0448：找到所有数组中消失的数字</a>
             <a href="/leetcode/0446/" class="next" rel="next" title="0446：等差数列划分 II - 子序列（★★）">0446：等差数列划分 II - 子序列（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

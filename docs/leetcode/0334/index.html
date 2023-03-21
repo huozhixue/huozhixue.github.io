@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0334：递增的三元子序列（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0334：递增的三元子序列（★★）" />
-<meta property="og:description" content="题目 给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。 如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ， 使得 nums[i] &lt; nums[j] &lt; nums[k] ，返回 true ；" />
+        <title>0334：递增的三元子序列（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0334：递增的三元子序列（★）" />
+<meta property="og:description" content="力扣第 334 题 题目 给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。 如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ，使得 nums[i] &lt; nums[j] &lt; nums[k]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0334/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-11-30T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0334：递增的三元子序列（★★）"/>
-<meta name="twitter:description" content="题目 给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。 如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ， 使得 nums[i] &lt; nums[j] &lt; nums[k] ，返回 true ；"/>
+<meta name="twitter:title" content="0334：递增的三元子序列（★）"/>
+<meta name="twitter:description" content="力扣第 334 题 题目 给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。 如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ，使得 nums[i] &lt; nums[j] &lt; nums[k]"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0334/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0333/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0335/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0334：递增的三元子序列（★★）",
+        "headline": "0334：递增的三元子序列（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0334\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  316 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  323 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0334\/","datePublished": "2015-11-30T00:00:00+08:00","dateModified": "2015-11-30T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0334：递增的三元子序列（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0334：递增的三元子序列（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-30">2015-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 316 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0334/" class="leancloud_visitors" data-flag-title="0334：递增的三元子序列（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-30">2015-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 323 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0334/" class="leancloud_visitors" data-flag-title="0334：递增的三元子序列（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,32 +125,35 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。</p>
-<p>如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ，
-使得 nums[i] &lt; nums[j] &lt; nums[k] ，返回 true ；否则，返回 false 。</p>
-<p>示例 1：</p>
-<pre><code>输入：nums = [1,2,3,4,5]
-输出：true
-解释：任何 i &lt; j &lt; k 的三元组都满足题意
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：nums = [5,4,3,2,1]
-输出：false
-解释：不存在满足题意的三元组
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：nums = [2,1,5,0,4,6]
-输出：true
-解释：三元组 (3, 4, 5) 满足题意，因为 
-nums[3] == 0 &lt; nums[4] == 4 &lt; nums[5] == 6
-</code></pre>
-<p>提示：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/increasing-triplet-subsequence/" target="_blank" rel="noopener noreffer">力扣第 334 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> ，判断这个数组中是否存在长度为 <code>3</code> 的递增子序列。</p>
+<p>如果存在这样的三元组下标 <code>(i, j, k)</code> 且满足 <code>i &lt; j &lt; k</code> ，使得 <code>nums[i] &lt; nums[j] &lt; nums[k]</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [1,2,3,4,5]
+<strong>输出：</strong>true
+<strong>解释：</strong>任何 i &lt; j &lt; k 的三元组都满足题意
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [5,4,3,2,1]
+<strong>输出：</strong>false
+<strong>解释：</strong>不存在满足题意的三元组</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [2,1,5,0,4,6]
+<strong>输出：</strong>true
+<strong>解释：</strong>三元组 (3, 4, 5) 满足题意，因为 nums[3] == 0 &lt; nums[4] == 4 &lt; nums[5] == 6
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 10^5</li>
-<li>-2^31 &lt;= nums[i] &lt;= 2^31 - 1</li>
+<li><code>1 &lt;= nums.length &lt;= 5 * 10<sup>5</sup></code></li>
+<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
-<p>进阶：你能实现时间复杂度为 O(n) ，空间复杂度为 O(1) 的解决方案吗？</p>
+<p><strong>进阶：</strong>你能实现时间复杂度为 <code>O(n)</code> ，空间复杂度为 <code>O(1)</code> 的解决方案吗？</p>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0300" title="0300" rel="noopener noreferrer">0300</a> 简化版，当最长递增子序列的长度大于 2 时，即可返回 True。</p>
 <h2 id="解答">解答</h2>
@@ -196,13 +199,13 @@ nums[3] == 0 &lt; nums[4] == 4 &lt; nums[5] == 6
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0335/" class="prev" rel="prev" title="0335：路径交叉（★★★）"><i class="fas fa-angle-left fa-fw"></i>0335：路径交叉（★★★）</a>
+    <div class="post-nav"><a href="/leetcode/0335/" class="prev" rel="prev" title="0335：路径交叉（★★）"><i class="fas fa-angle-left fa-fw"></i>0335：路径交叉（★★）</a>
             <a href="/leetcode/0333/" class="next" rel="next" title="0333：最大 BST 子树（★★）">0333：最大 BST 子树（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

@@ -1,32 +1,48 @@
 # 0050：Pow(x, n)（★）
 
 
+> <u>**[力扣第 50 题](https://leetcode.cn/problems/powx-n/)**</u>
+
 ## 题目
 
-实现 pow(x, n) ，即计算 x 的 n 次幂函数（即，xn）。
+<p>实现 <a href="https://www.cplusplus.com/reference/valarray/pow/" target="_blank">pow(<em>x</em>, <em>n</em>)</a> ，即计算 <code>x</code> 的整数 <code>n</code> 次幂函数（即，<code>x<sup>n</sup></code><sup><span style="font-size:10.8333px"> </span></sup>）。</p>
 
 
-示例 1：
 
-    输入：x = 2.00000, n = 10
-    输出：1024.00000
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>x = 2.00000, n = 10
+<strong>输出：</strong>1024.00000
+</pre>
 
-    输入：x = 2.10000, n = 3
-    输出：9.26100
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>x = 2.10000, n = 3
+<strong>输出：</strong>9.26100
+</pre>
 
-    输入：x = 2.00000, n = -2
-    输出：0.25000
-    解释：2-2 = 1/22 = 1/4 = 0.25
-	
-提示：
-- -100.0 < x < 100.0
-- -2^31 <= n <= 2^31-1
-- -10^4 <= xn <= 10^4
- 
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>x = 2.00000, n = -2
+<strong>输出：</strong>0.25000
+<strong>解释：</strong>2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-100.0 &lt; x &lt; 100.0</code></li>
+<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup>-1</code></li>
+<li><code>n</code> 是一个整数</li>
+<li><code>-10<sup>4</sup> &lt;= x<sup>n</sup> &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+
 ## 分析 
 
 ### #1

@@ -1,32 +1,51 @@
-# 0132：分割回文串II（★★）
+# 0132：分割回文串 II（★★）
 
+
+> <u>**[力扣第 132 题](https://leetcode.cn/problems/palindrome-partitioning-ii/)**</u>
 
 ## 题目
 
-给你一个字符串 s，请你将 s 分割成一些子串，使每个子串都是回文。
+<p>给你一个字符串 <code>s</code>，请你将 <code>s</code> 分割成一些子串，使每个子串都是回文。</p>
 
-返回符合要求的 最少分割次数 。
+<p>返回符合要求的 <strong>最少分割次数</strong> 。</p>
+
+<div class="original__bRMd">
+<div>
 
 
-示例 1：
-    
-    输入：s = "aab"
-    输出：1
-    解释：只需一次分割就可将 s 分割成 ["aa","b"] 这样两个回文子串。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>s = "aab"
+<strong>输出：</strong>1
+<strong>解释：</strong>只需一次分割就可将 <em>s </em>分割成 ["aa","b"] 这样两个回文子串。
+</pre>
 
-    输入：s = "a"
-    输出：0
+<p><strong>示例 2：</strong></p>
 
-示例 3：
-    
-    输入：s = "ab"
-    输出：1
+<pre>
+<strong>输入：</strong>s = "a"
+<strong>输出：</strong>0
+</pre>
 
-提示：
-- 1 <= s.length <= 2000
-- s 仅由小写英文字母组成
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "ab"
+<strong>输出：</strong>1
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= s.length <= 2000</code></li>
+<li><code>s</code> 仅由小写英文字母组成</li>
+</ul>
+</div>
+</div>
+
 
 ## 分析
 

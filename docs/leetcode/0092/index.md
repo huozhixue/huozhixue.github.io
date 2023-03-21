@@ -1,29 +1,42 @@
-# 0092：反转链表 II（★★）
+# 0092：反转链表 II（★）
 
+
+> <u>**[力扣第 92 题](https://leetcode.cn/problems/reverse-linked-list-ii/)**</u>
 
 ## 题目
 
-给你单链表的头指针 head 和两个整数 left 和 right ，其中 left <= right 。
-请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表 。
+给你单链表的头指针 <code>head</code> 和两个整数 <code>left</code> 和 <code>right</code> ，其中 <code>left <= right</code> 。请你反转从位置 <code>left</code> 到位置 <code>right</code> 的链表节点，返回 <strong>反转后的链表</strong> 。
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/02/19/rev2ex2.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/rev2ex2.jpg" style="width: 542px; height: 222px;" />
+<pre>
+<strong>输入：</strong>head = [1,2,3,4,5], left = 2, right = 4
+<strong>输出：</strong>[1,4,3,2,5]
+</pre>
 
-    输入：head = [1,2,3,4,5], left = 2, right = 4
-    输出：[1,4,3,2,5]
+<p><strong>示例 2：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>head = [5], left = 1, right = 1
+<strong>输出：</strong>[5]
+</pre>
 
-    输入：head = [5], left = 1, right = 1
-    输出：[5]
 
-提示：
-- 链表中节点数目为 n
-- 1 <= n <= 500
-- -500 <= Node.val <= 500
-- 1 <= left <= right <= n
-  
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>链表中节点数目为 <code>n</code></li>
+<li><code>1 <= n <= 500</code></li>
+<li><code>-500 <= Node.val <= 500</code></li>
+<li><code>1 <= left <= right <= n</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong> 你可以使用一趟扫描完成反转吗？</p>
+
 
 ## 分析
 

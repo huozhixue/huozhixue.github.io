@@ -1,24 +1,35 @@
-# 0371：两整数之和（★★）
+# 0371：两整数之和（★）
 
 
+> <u>**[力扣第 371 题](https://leetcode.cn/problems/sum-of-two-integers/)**</u>
 
 ## 题目
 
-给你两个整数 a 和 b ，不使用 运算符 + 和 - ，计算并返回两整数之和。
+<p>给你两个整数 <code>a</code> 和 <code>b</code> ，<strong>不使用 </strong>运算符 <code>+</code> 和 <code>-</code> ​​​​​​​，计算并返回两整数之和。</p>
 
-示例 1：
-    
-    输入：a = 1, b = 2
-    输出：3
 
-示例 2：
 
-    输入：a = 2, b = 3
-    输出：5
- 
+<p><strong>示例 1：</strong></p>
 
-提示：
-- 1000 <= a, b <= 1000
+<pre>
+<strong>输入：</strong>a = 1, b = 2
+<strong>输出：</strong>3
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>a = 2, b = 3
+<strong>输出：</strong>5
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-1000 &lt;= a, b &lt;= 1000</code></li>
+</ul>
 
 
 ## 分析

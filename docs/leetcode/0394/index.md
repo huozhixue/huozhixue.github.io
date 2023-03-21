@@ -1,38 +1,58 @@
-# 0394：字符串解码（★★）
+# 0394：字符串解码（★）
 
 
-> **第 3 场周赛第 3 题**
+> <u>**[力扣第 3 场周赛第 3 题](https://leetcode.cn/problems/decode-string/)**</u>
 
 ## 题目
 
-给定一个经过编码的字符串，返回它解码后的字符串。
+<p>给定一个经过编码的字符串，返回它解码后的字符串。</p>
 
-编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复 k 次。
-注意 k 保证为正整数。
+<p>编码规则为: <code>k[encoded_string]</code>，表示其中方括号内部的 <code>encoded_string</code> 正好重复 <code>k</code> 次。注意 <code>k</code> 保证为正整数。</p>
 
-你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。
+<p>你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。</p>
 
-此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 k ，例如不会出现像 3a 或 2[4] 的输入。
+<p>此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 <code>k</code> ，例如不会出现像 <code>3a</code> 或 <code>2[4]</code> 的输入。</p>
 
-示例 1：
 
-    输入：s = "3[a]2[bc]"
-    输出："aaabcbc"
 
-示例 2：
-    
-    输入：s = "3[a2[c]]"
-    输出："accaccacc"
+<p><strong>示例 1：</strong></p>
 
-示例 3：
-    
-    输入：s = "2[abc]3[cd]ef"
-    输出："abcabccdcdcdef"
+<pre>
+<strong>输入：</strong>s = "3[a]2[bc]"
+<strong>输出：</strong>"aaabcbc"
+</pre>
 
-示例 4：
-    
-    输入：s = "abc3[cd]xyz"
-    输出："abccdcdcdxyz"
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "3[a2[c]]"
+<strong>输出：</strong>"accaccacc"
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "2[abc]3[cd]ef"
+<strong>输出：</strong>"abcabccdcdcdef"
+</pre>
+
+<p><strong>示例 4：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "abc3[cd]xyz"
+<strong>输出：</strong>"abccdcdcdxyz"
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 30</code></li>
+<li><meta charset="UTF-8" /><code>s</code> 由小写英文字母、数字和方括号<meta charset="UTF-8" /> <code>'[]'</code> 组成</li>
+<li><code>s</code> 保证是一个 <strong>有效</strong> 的输入。</li>
+<li><code>s</code> 中所有整数的取值范围为<meta charset="UTF-8" /> <code>[1, 300]</code> </li>
+</ul>
 
 
 ## 分析

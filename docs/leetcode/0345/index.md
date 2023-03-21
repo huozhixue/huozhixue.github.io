@@ -1,25 +1,38 @@
-# 0345：反转字符串中的元音字母（★）
+# 0345：反转字符串中的元音字母
 
+
+> <u>**[力扣第 345 题](https://leetcode.cn/problems/reverse-vowels-of-a-string/)**</u>
 
 ## 题目
 
-给你一个字符串 s ，仅反转字符串中的所有元音字母，并返回结果字符串。
+<p>给你一个字符串 <code>s</code> ，仅反转字符串中的所有元音字母，并返回结果字符串。</p>
 
-元音字母包括 'a'、'e'、'i'、'o'、'u'，且可能以大小写两种形式出现。
+<p>元音字母包括 <code>'a'</code>、<code>'e'</code>、<code>'i'</code>、<code>'o'</code>、<code>'u'</code>，且可能以大小写两种形式出现不止一次。</p>
 
-示例 1：
 
-    输入：s = "hello"
-    输出："holle"
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-    输入：s = "leetcode"
-    输出："leotcede"
-	
-提示：
-- 1 <= s.length <= 3 * 10^5
-- s 由 可打印的 ASCII 字符组成
+<pre>
+<strong>输入：</strong>s = "hello"
+<strong>输出：</strong>"holle"
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "leetcode"
+<strong>输出：</strong>"leotcede"</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 3 * 10<sup>5</sup></code></li>
+<li><code>s</code> 由 <strong>可打印的 ASCII</strong> 字符组成</li>
+</ul>
+
 
 ## 分析
 

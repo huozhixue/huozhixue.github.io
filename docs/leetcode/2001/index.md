@@ -1,43 +1,52 @@
 # 2001：可互换矩形的组数（★）
 
 
-> **第 258 场周赛第 2 题**
+> <u>**[力扣第 258 场周赛第 2 题](https://leetcode.cn/problems/number-of-pairs-of-interchangeable-rectangles/)**</u>
 
 ## 题目
 
-用一个下标从 0 开始的二维整数数组 rectangles 来表示 n 个矩形，其中
- rectangles[i] = [widthi, heighti] 表示第 i 个矩形的宽度和高度。
+<p>用一个下标从 <strong>0</strong> 开始的二维整数数组 <code>rectangles</code> 来表示 <code>n</code> 个矩形，其中 <code>rectangles[i] = [width<sub>i</sub>, height<sub>i</sub>]</code> 表示第 <code>i</code> 个矩形的宽度和高度。</p>
 
-如果两个矩形 i 和 j（i < j）的宽高比相同，则认为这两个矩形 可互换 。
-更规范的说法是，两个矩形满足 widthi/heighti == widthj/heightj（使用实数除法而非整数除法）
-，则认为这两个矩形 可互换 。
+<p>如果两个矩形 <code>i</code> 和 <code>j</code>（<code>i &lt; j</code>）的宽高比相同，则认为这两个矩形 <strong>可互换</strong> 。更规范的说法是，两个矩形满足 <code>width<sub>i</sub>/height<sub>i</sub> == width<sub>j</sub>/height<sub>j</sub></code>（使用实数除法而非整数除法），则认为这两个矩形 <strong>可互换</strong> 。</p>
 
-计算并返回 rectangles 中有多少对 可互换 矩形。
+<p>计算并返回 <code>rectangles</code> 中有多少对 <strong>可互换 </strong>矩形。</p>
 
-提示：
-- n == rectangles.length
-- 1 <= n <= 10^5
-- rectangles[i].length == 2
-- 1 <= widthi, heighti <= 10^5
 
-示例 1：
 
-    输入：rectangles = [[4,8],[3,6],[10,20],[15,30]]
-    输出：6
-    解释：下面按下标（从 0 开始）列出可互换矩形的配对情况：
-    - 矩形 0 和矩形 1 ：4/8 == 3/6
-    - 矩形 0 和矩形 2 ：4/8 == 10/20
-    - 矩形 0 和矩形 3 ：4/8 == 15/30
-    - 矩形 1 和矩形 2 ：3/6 == 10/20
-    - 矩形 1 和矩形 3 ：3/6 == 15/30
-    - 矩形 2 和矩形 3 ：10/20 == 15/30
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>rectangles = [[4,8],[3,6],[10,20],[15,30]]
+<strong>输出：</strong>6
+<strong>解释：</strong>下面按下标（从 0 开始）列出可互换矩形的配对情况：
+- 矩形 0 和矩形 1 ：4/8 == 3/6
+- 矩形 0 和矩形 2 ：4/8 == 10/20
+- 矩形 0 和矩形 3 ：4/8 == 15/30
+- 矩形 1 和矩形 2 ：3/6 == 10/20
+- 矩形 1 和矩形 3 ：3/6 == 15/30
+- 矩形 2 和矩形 3 ：10/20 == 15/30
+</pre>
 
-    输入：rectangles = [[4,5],[7,8]]
-    输出：0
-    解释：不存在成对的可互换矩形。
- 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>rectangles = [[4,5],[7,8]]
+<strong>输出：</strong>0
+<strong>解释：</strong>不存在成对的可互换矩形。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>n == rectangles.length</code></li>
+<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+<li><code>rectangles[i].length == 2</code></li>
+<li><code>1 &lt;= width<sub>i</sub>, height<sub>i</sub> &lt;= 10<sup>5</sup></code></li>
+</ul>
+
+
 ## 分析
 
 统计每个宽高比对应的矩形个数 x，其中任意两个矩形可互换，即有 x*(x-1)//2 对。

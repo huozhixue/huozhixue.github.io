@@ -1,56 +1,62 @@
-# 2203：得到要求路径的最小带权子图（★★★）
+# 2203：得到要求路径的最小带权子图（★★）
 
 
-> **第 283 场周赛第 4 题**
+> <u>**[力扣第 283 场周赛第 4 题](https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/)**</u>
 
 ## 题目
 
-给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。
+<p>给你一个整数 <code>n</code> ，它表示一个 <strong>带权有向</strong> 图的节点数，节点编号为 <code>0</code> 到 <code>n - 1</code> 。</p>
 
-同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示从 fromi 到 toi 有一条边权为
- weighti 的 有向 边。
+<p>同时给你一个二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> ，表示从 <code>from<sub>i</sub></code> 到 <code>to<sub>i</sub></code> 有一条边权为 <code>weight<sub>i</sub></code> 的 <strong>有向</strong> 边。</p>
 
-最后，给你三个 互不相同 的整数 src1 ，src2 和 dest ，表示图中三个不同的点。
+<p>最后，给你三个 <strong>互不相同</strong> 的整数 <code>src1</code> ，<code>src2</code> 和 <code>dest</code> ，表示图中三个不同的点。</p>
 
-请你从图中选出一个 边权和最小 的子图，使得从 src1 和 src2 出发，在这个子图中，都 可以 到达 dest 。
-如果这样的子图不存在，请返回 -1 。
+<p>请你从图中选出一个 <b>边权和最小</b> 的子图，使得从 <code>src1</code> 和 <code>src2</code> 出发，在这个子图中，都 <strong>可以</strong> 到达 <code>dest</code> 。如果这样的子图不存在，请返回 <code>-1</code> 。</p>
 
-子图 中的点和边都应该属于原图的一部分。子图的边权和定义为它所包含的所有边的权值之和。
+<p><strong>子图</strong> 中的点和边都应该属于原图的一部分。子图的边权和定义为它所包含的所有边的权值之和。</p>
 
- 
 
-示例 1：
 
-    ![img](https://assets.leetcode.com/uploads/2022/02/17/example1drawio.png)
-    
-    输入：n = 6, edges = [[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]], 
-    src1 = 0, src2 = 1, dest = 5
-    输出：9
-    解释：
-    上图为输入的图。
-    蓝色边为最优子图之一。
-    注意，子图 [[1,0,3],[0,5,6]] 也能得到最优解，但无法在满足所有限制的前提下，得到更优解。
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-![img](https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png)
-    
-    输入：n = 3, edges = [[0,1,1],[2,1,1]], src1 = 0, src2 = 1, dest = 2
-    输出：-1
-    解释：
-    上图为输入的图。
-    可以看到，不存在从节点 1 到节点 2 的路径，所以不存在任何子图满足所有限制。
- 
+<p><img alt="" src="https://assets.leetcode.com/uploads/2022/02/17/example1drawio.png" style="width: 263px; height: 250px;" /></p>
 
-提示：
-- 3 <= n <= 10^5
-- 0 <= edges.length <= 10^5
-- edges[i].length == 3
-- 0 <= fromi, toi, src1, src2, dest <= n - 1
-- fromi != toi
-- src1 ，src2 和 dest 两两不同。
-- 1 <= weight[i] <= 10^5
+<pre>
+<b>输入：</b>n = 6, edges = [[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]], src1 = 0, src2 = 1, dest = 5
+<b>输出：</b>9
+<strong>解释：</strong>
+上图为输入的图。
+蓝色边为最优子图之一。
+注意，子图 [[1,0,3],[0,5,6]] 也能得到最优解，但无法在满足所有限制的前提下，得到更优解。
+</pre>
 
- 
+<p><strong>示例 2：</strong></p>
+
+<p><img alt="" src="https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png" style="width: 350px; height: 51px;" /></p>
+
+<pre>
+<b>输入：</b>n = 3, edges = [[0,1,1],[2,1,1]], src1 = 0, src2 = 1, dest = 2
+<b>输出：</b>-1
+<strong>解释：</strong>
+上图为输入的图。
+可以看到，不存在从节点 1 到节点 2 的路径，所以不存在任何子图满足所有限制。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>3 &lt;= n &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= edges.length &lt;= 10<sup>5</sup></code></li>
+<li><code>edges[i].length == 3</code></li>
+<li><code>0 &lt;= from<sub>i</sub>, to<sub>i</sub>, src1, src2, dest &lt;= n - 1</code></li>
+<li><code>from<sub>i</sub> != to<sub>i</sub></code></li>
+<li><code>src1</code> ，<code>src2</code> 和 <code>dest</code> 两两不同。</li>
+<li><code>1 &lt;= weight[i] &lt;= 10<sup>5</sup></code></li>
+</ul>
+
+
 ## 分析
 
 最终的子图一定是三岔路的形式（可以反证），而且由三条最短路组成。

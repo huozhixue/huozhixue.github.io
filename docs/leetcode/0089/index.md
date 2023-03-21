@@ -1,45 +1,57 @@
-# 0089：格雷编码（★★）
+# 0089：格雷编码（★）
 
+
+> <u>**[力扣第 89 题](https://leetcode.cn/problems/gray-code/)**</u>
 
 ## 题目
 
-n 位格雷码序列 是一个由 2n 个整数组成的序列，其中：
-- 每个整数都在范围 [0, 2n - 1] 内（含 0 和 2n - 1）
-- 第一个整数是 0
-- 一个整数在序列中出现 不超过一次
-- 每对 相邻 整数的二进制表示 恰好一位不同 ，且
-- 第一个 和 最后一个 整数的二进制表示 恰好一位不同
+<strong>n 位格雷码序列</strong> 是一个由 <code>2<sup>n</sup></code> 个整数组成的序列，其中：
+<ul>
+<li>每个整数都在范围 <code>[0, 2<sup>n</sup> - 1]</code> 内（含 <code>0</code> 和 <code>2<sup>n</sup> - 1</code>）</li>
+<li>第一个整数是 <code>0</code></li>
+<li>一个整数在序列中出现 <strong>不超过一次</strong></li>
+<li>每对 <strong>相邻</strong> 整数的二进制表示 <strong>恰好一位不同</strong> ，且</li>
+<li><strong>第一个</strong> 和 <strong>最后一个</strong> 整数的二进制表示 <strong>恰好一位不同</strong></li>
+</ul>
 
-给你一个整数 n ，返回任一有效的 n 位格雷码序列 。
+<p>给你一个整数 <code>n</code> ，返回任一有效的 <strong>n 位格雷码序列</strong> 。</p>
 
- 
 
-示例 1：
 
-	输入：n = 2
-	输出：[0,1,3,2]
-	解释：
-	[0,1,3,2] 的二进制表示是 [00,01,11,10] 。
-	- 00 和 01 有一位不同
-	- 01 和 11 有一位不同
-	- 11 和 10 有一位不同
-	- 10 和 00 有一位不同
-	[0,2,3,1] 也是一个有效的格雷码序列，其二进制表示是 [00,10,11,01] 。
-	- 00 和 10 有一位不同
-	- 10 和 11 有一位不同
-	- 11 和 01 有一位不同
-	- 01 和 00 有一位不同
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 2
+<strong>输出：</strong>[0,1,3,2]
+<strong>解释：</strong>
+[0,1,3,2] 的二进制表示是 [00,01,11,10] 。
+- 0<strong><em>0</em></strong> 和 0<em><strong>1</strong></em> 有一位不同
+- <em><strong>0</strong></em>1 和 <em><strong>1</strong></em>1 有一位不同
+- 1<em><strong>1</strong></em> 和 1<em><strong>0</strong></em> 有一位不同
+- <em><strong>1</strong></em>0 和 <em><strong>0</strong></em>0 有一位不同
+[0,2,3,1] 也是一个有效的格雷码序列，其二进制表示是 [00,10,11,01] 。
+- <em><strong>0</strong></em>0 和 <em><strong>1</strong></em>0 有一位不同
+- 1<em><strong>0</strong></em> 和 1<em><strong>1</strong></em> 有一位不同
+- <em><strong>1</strong></em>1 和 <em><strong>0</strong></em>1 有一位不同
+- 0<em><strong>1</strong></em> 和 0<em><strong>0</strong></em> 有一位不同
+</pre>
 
-	输入：n = 1
-	输出：[0,1]
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= n <= 16
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>[0,1]
+</pre>
 
-	 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 16</code></li>
+</ul>
+
+
 ## 分析
 
 考虑能否递推。发现先排 0 加 n-1 位的格雷编码，再排 1 加 n-1 位的格雷编码反序即可。

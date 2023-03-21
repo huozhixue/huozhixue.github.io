@@ -1,36 +1,43 @@
-# 0805：数组的均值分割（★★★）
+# 0805：数组的均值分割（★★）
 
 
-> **第 77 场周赛第 4 题**
+> <u>**[力扣第 77 场周赛第 4 题](https://leetcode.cn/problems/split-array-with-same-average/)**</u>
 
 ## 题目
 
-给定你一个整数数组 nums
+<p>给定你一个整数数组<meta charset="UTF-8" /> <code>nums</code></p>
 
-我们要将 nums 数组中的每个元素移动到 A 数组 或者 B 数组中，使得 A 数组和 B 数组不为空，
-并且 average(A) == average(B) 。
+<p>我们要将<meta charset="UTF-8" /> <code>nums</code> 数组中的每个元素移动到 <code>A</code> 数组 或者 <code>B</code> 数组中，使得 <code>A</code> 数组和<meta charset="UTF-8" /> <code>B</code> 数组不为空，并且<meta charset="UTF-8" /> <code>average(A) == average(B)</code> 。</p>
 
-如果可以完成则返回true ， 否则返回 false  。
+<p>如果可以完成则返回<code>true</code> ， 否则返回 <code>false</code>  。</p>
 
-注意：对于数组 arr ,  average(arr) 是 arr 的所有元素除以 arr 长度的和。
-
- 
-示例 1:
-
-    输入: nums = [1,2,3,4,5,6,7,8]
-    输出: true
-    解释: 我们可以将数组分割为 [1,4,5,8] 和 [2,3,6,7], 他们的平均值都是4.5。
-示例 2:
-
-    输入: nums = [3,1]
-    输出: false
- 
-
-提示:
-- 1 <= nums.length <= 30
-- 0 <= nums[i] <= 10^4
+<p><strong>注意：</strong>对于数组<meta charset="UTF-8" /> <code>arr</code> , <meta charset="UTF-8" /> <code>average(arr)</code> 是<meta charset="UTF-8" /> <code>arr</code> 的所有元素的和除以<meta charset="UTF-8" /> <code>arr</code> 长度。</p>
 
 
+
+<p><strong>示例 1:</strong></p>
+
+<pre>
+<strong>输入:</strong> nums = [1,2,3,4,5,6,7,8]
+<strong>输出:</strong> true
+<strong>解释: </strong>我们可以将数组分割为 [1,4,5,8] 和 [2,3,6,7], 他们的平均值都是4.5。
+</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> nums = [3,1]
+<strong>输出:</strong> false
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 30</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+</ul>
 
 
 ## 分析

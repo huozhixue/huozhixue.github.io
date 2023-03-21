@@ -1,35 +1,39 @@
 # 0217：存在重复元素
 
 
+> <u>**[力扣第 217 题](https://leetcode.cn/problems/contains-duplicate/)**</u>
+
 ## 题目
 
-给你一个整数数组 nums 。如果任一值在数组中出现 至少两次 ，返回 true ；
-如果数组中每个元素互不相同，返回 false 。
- 
+给你一个整数数组 <code>nums</code> 。如果任一值在数组中出现 <strong>至少两次</strong> ，返回 <code>true</code> ；如果数组中每个元素互不相同，返回 <code>false</code> 。
 
-示例 1：
 
-	输入：nums = [1,2,3,1]
-	输出：true
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums = [1,2,3,1]
+<strong>输出：</strong>true</pre>
 
-	输入：nums = [1,2,3,4]
-	输出：false
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>nums = [1,2,3,4]
+<strong>输出：</strong>false</pre>
 
-	输入：nums = [1,1,1,3,3,4,3,2,4,2]
-	输出：true
- 
+<p><strong>示例 3：</strong></p>
 
-提示：
-- 1 <= nums.length <= 10^5
-- -10^9 <= nums[i] <= 10^9
+<pre>
+<strong>输入：</strong>nums = [1,1,1,3,3,4,3,2,4,2]
+<strong>输出：</strong>true</pre>
 
-来源：力扣（LeetCode）
-链接：https://leetcode.cn/problems/contains-duplicate
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
 
 
 ## 分析

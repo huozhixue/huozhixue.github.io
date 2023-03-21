@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0297：二叉树的序列化与反序列化（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0297：二叉树的序列化与反序列化（★★★）" />
-<meta property="og:description" content="题目 序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中， 同时也可以通过网络传输到另一个计" />
+        <title>0297：二叉树的序列化与反序列化（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0297：二叉树的序列化与反序列化（★★）" />
+<meta property="og:description" content="力扣第 297 题 题目 序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0297/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-10-24T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0297：二叉树的序列化与反序列化（★★★）"/>
-<meta name="twitter:description" content="题目 序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中， 同时也可以通过网络传输到另一个计"/>
+<meta name="twitter:title" content="0297：二叉树的序列化与反序列化（★★）"/>
+<meta name="twitter:description" content="力扣第 297 题 题目 序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0297/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0296/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0298/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0297：二叉树的序列化与反序列化（★★★）",
+        "headline": "0297：二叉树的序列化与反序列化（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0297\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  609 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  614 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0297\/","datePublished": "2015-10-24T00:00:00+08:00","dateModified": "2015-10-24T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0297：二叉树的序列化与反序列化（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0297：二叉树的序列化与反序列化（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-24">2015-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 609 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0297/" class="leancloud_visitors" data-flag-title="0297：二叉树的序列化与反序列化（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-24">2015-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 614 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0297/" class="leancloud_visitors" data-flag-title="0297：二叉树的序列化与反序列化（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,41 +130,38 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，
-同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 297 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。</p>
 <p>请设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。</p>
-<p>提示: 输入输出格式与 LeetCode 目前使用的方式一致，详情请参阅 LeetCode 序列化二叉树的格式。你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。</p>
-<p> </p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg, https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg 1.5x, https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg"
-        title="img" /></p>
-<pre><code>输入：root = [1,2,3,null,null,4,5]
-输出：[1,2,3,null,null,4,5]
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：root = []
-输出：[]
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：root = [1]
-输出：[1]
-</code></pre>
-<p>示例 4：</p>
-<pre><code>输入：root = [1,2]
-输出：[1,2]
-</code></pre>
-<p> </p>
-<p>提示：</p>
+<p><strong>提示: </strong>输入输出格式与 LeetCode 目前使用的方式一致，详情请参阅 <a href="/faq/#binary-tree">LeetCode 序列化二叉树的格式</a>。你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg" style="width: 442px; height: 324px;" />
+<pre>
+<strong>输入：</strong>root = [1,2,3,null,null,4,5]
+<strong>输出：</strong>[1,2,3,null,null,4,5]
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>root = []
+<strong>输出：</strong>[]
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>root = [1]
+<strong>输出：</strong>[1]
+</pre>
+<p><strong>示例 4：</strong></p>
+<pre>
+<strong>输入：</strong>root = [1,2]
+<strong>输出：</strong>[1,2]
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>树中结点数在范围 [0, 10^4] 内</li>
-<li>-1000 &lt;= Node.val &lt;= 1000</li>
+<li>树中结点数在范围 <code>[0, 10<sup>4</sup>]</code> 内</li>
+<li><code>-1000 <= Node.val <= 1000</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -274,7 +271,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E9%80%92%E5%BD%92/">递归</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

@@ -1,30 +1,47 @@
-# 0094：二叉树的中序遍历（★）
+# 0094：二叉树的中序遍历
 
+
+> <u>**[力扣第 94 题](https://leetcode.cn/problems/binary-tree-inorder-traversal/)**</u>
 
 ## 题目
 
-给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+<p>给定一个二叉树的根节点 <code>root</code> ，返回 <em>它的 <strong>中序</strong> 遍历</em> 。</p>
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg)
 
-	输入：root = [1,null,2,3]
-	输出：[1,3,2]
-	
-示例 2：
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg" style="height: 200px; width: 125px;" />
+<pre>
+<strong>输入：</strong>root = [1,null,2,3]
+<strong>输出：</strong>[1,3,2]
+</pre>
 
-	输入：root = []
-	输出：[]
-	
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：root = [1]
-	输出：[1]
-	
-提示：
-- 树中节点数目在范围 [0, 100] 内
-- -100 <= Node.val <= 100
+<pre>
+<strong>输入：</strong>root = []
+<strong>输出：</strong>[]
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>root = [1]
+<strong>输出：</strong>[1]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>树中节点数目在范围 <code>[0, 100]</code> 内</li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
+
+
+
+<p><strong>进阶:</strong> 递归算法很简单，你可以通过迭代算法完成吗？</p>
 
 
 ## 分析

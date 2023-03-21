@@ -1,20 +1,38 @@
 # 0485：最大连续 1 的个数
 
 
+> <u>**[力扣第 485 题](https://leetcode.cn/problems/max-consecutive-ones/)**</u>
 
 ## 题目
 
-给定一个二进制数组，计算其中最大连续 1 的个数。
+<p>给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p>
 
-提示：
-- 输入的数组只包含 0 和 1 。
-- 输入数组的长度是正整数，且不超过 10,000。
- 
-示例：
 
-	输入：[1,1,0,1,1,1]
-	输出：3
-	解释：开头的两位和最后的三位都是连续 1 ，所以最大连续 1 的个数是 3.
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>nums = [1,1,0,1,1,1]
+<strong>输出：</strong>3
+<strong>解释：</strong>开头的两位和最后的三位都是连续 1 ，所以最大连续 1 的个数是 3.
+</pre>
+
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<b>输入：</b>nums = [1,0,1,1,0,1]
+<b>输出：</b>2
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code>.</li>
+</ul>
+
 
 ## 分析
 

@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>2002：两个回文子序列长度的最大乘积（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="2002：两个回文子序列长度的最大乘积（★★）" />
-<meta property="og:description" content="第 258 场周赛第 3 题 题目 给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。 两个子序列在原字符串中如果没有任何相同下标的" />
+        <title>2002：两个回文子序列长度的最大乘积（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="2002：两个回文子序列长度的最大乘积（★）" />
+<meta property="og:description" content="力扣第 258 场周赛第 3 题 题目 给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。两个子序列在原字符串中如果没有任何相同下" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/2002/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2021-09-12T02:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="2002：两个回文子序列长度的最大乘积（★★）"/>
-<meta name="twitter:description" content="第 258 场周赛第 3 题 题目 给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。 两个子序列在原字符串中如果没有任何相同下标的"/>
+<meta name="twitter:title" content="2002：两个回文子序列长度的最大乘积（★）"/>
+<meta name="twitter:description" content="力扣第 258 场周赛第 3 题 题目 给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。两个子序列在原字符串中如果没有任何相同下"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/2002/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/2001/" /><link rel="next" href="https://huozhixue.github.io/leetcode/2003/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "2002：两个回文子序列长度的最大乘积（★★）",
+        "headline": "2002：两个回文子序列长度的最大乘积（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/2002\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  690 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  662 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/2002\/","datePublished": "2021-09-12T02:00:00+08:00","dateModified": "2021-09-12T02:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">2002：两个回文子序列长度的最大乘积（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">2002：两个回文子序列长度的最大乘积（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-12">2021-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 690 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2002/" class="leancloud_visitors" data-flag-title="2002：两个回文子序列长度的最大乘积（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-12">2021-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 662 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2002/" class="leancloud_visitors" data-flag-title="2002：两个回文子序列长度的最大乘积（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,45 +126,36 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 258 场周赛第 3 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。
-两个子序列在原字符串中如果没有任何相同下标的字符，则它们是 不相交 的。</p>
-<p>请你返回两个回文子序列长度可以达到的 最大乘积 。</p>
-<p>子序列 指的是从原字符串中删除若干个字符（可以一个也不删除）后，剩余字符不改变顺序而得到的结果。
-如果一个字符串从前往后读和从后往前读一模一样，那么这个字符串是一个 回文字符串 。</p>
-<p>提示：</p>
-<ul>
-<li>2 &lt;= s.length &lt;= 12</li>
-<li>s 只含有小写英文字母。</li>
-</ul>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/08/24/two-palindromic-subsequences.png"
-        data-srcset="https://assets.leetcode.com/uploads/2021/08/24/two-palindromic-subsequences.png, https://assets.leetcode.com/uploads/2021/08/24/two-palindromic-subsequences.png 1.5x, https://assets.leetcode.com/uploads/2021/08/24/two-palindromic-subsequences.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/08/24/two-palindromic-subsequences.png"
-        title="img" /></p>
-<pre><code>输入：s = &quot;leetcodecom&quot;
-输出：9
-解释：最优方案是选择 &quot;ete&quot; 作为第一个子序列，&quot;cdc&quot; 作为第二个子序列。
+<p>给你一个字符串 <code>s</code> ，请你找到 <code>s</code> 中两个 <strong>不相交回文子序列</strong> ，使得它们长度的 <strong>乘积最大</strong> 。两个子序列在原字符串中如果没有任何相同下标的字符，则它们是 <strong>不相交</strong> 的。</p>
+<p>请你返回两个回文子序列长度可以达到的<strong> 最大乘积</strong> 。</p>
+<p><strong>子序列</strong> 指的是从原字符串中删除若干个字符（可以一个也不删除）后，剩余字符不改变顺序而得到的结果。如果一个字符串从前往后读和从后往前读一模一样，那么这个字符串是一个 <strong>回文字符串</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<p><img alt="example-1" src="https://assets.leetcode.com/uploads/2021/08/24/two-palindromic-subsequences.png" style="width: 550px; height: 124px;"></p>
+<pre><b>输入：</b>s = "leetcodecom"
+<b>输出：</b>9
+<b>解释：</b>最优方案是选择 "ete" 作为第一个子序列，"cdc" 作为第二个子序列。
 它们的乘积为 3 * 3 = 9 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：s = &quot;bb&quot;
-输出：1
-解释：最优方案为选择 &quot;b&quot; （第一个字符）作为第一个子序列，&quot;b&quot; （第二个字符）作为第二个子序列。
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre><b>输入：</b>s = "bb"
+<b>输出：</b>1
+<b>解释：</b>最优方案为选择 "b" （第一个字符）作为第一个子序列，"b" （第二个字符）作为第二个子序列。
 它们的乘积为 1 * 1 = 1 。
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：s = &quot;accbcaxxcxx&quot;
-输出：25
-解释：最优方案为选择 &quot;accca&quot; 作为第一个子序列，&quot;xxcxx&quot; 作为第二个子序列。
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre><b>输入：</b>s = "accbcaxxcxx"
+<b>输出：</b>25
+<b>解释：</b>最优方案为选择 "accca" 作为第一个子序列，"xxcxx" 作为第二个子序列。
 它们的乘积为 5 * 5 = 25 。
-</code></pre>
+</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>2 &lt;= s.length &lt;= 12</code></li>
+<li><code>s</code> 只含有小写英文字母。</li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>数据规模很小，考虑暴力。</p>
 <p>遍历所有子序列，如果是回文序列，那么将剩下的位置拼接为 s2，在 s2 中找最长的回文子序列即可。
@@ -237,13 +228,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%9E%E6%BA%AF/">回溯</a>,&nbsp;<a href="/leetcode_tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/2003/" class="prev" rel="prev" title="2003：每棵子树内缺失的最小基因值（★★★）"><i class="fas fa-angle-left fa-fw"></i>2003：每棵子树内缺失的最小基因值（★★★）</a>
+    <div class="post-nav"><a href="/leetcode/2003/" class="prev" rel="prev" title="2003：每棵子树内缺失的最小基因值（★★）"><i class="fas fa-angle-left fa-fw"></i>2003：每棵子树内缺失的最小基因值（★★）</a>
             <a href="/leetcode/2001/" class="next" rel="next" title="2001：可互换矩形的组数（★）">2001：可互换矩形的组数（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>2203：得到要求路径的最小带权子图（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="2203：得到要求路径的最小带权子图（★★★）" />
-<meta property="og:description" content="第 283 场周赛第 4 题 题目 给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。 同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示从 fromi" />
+        <title>2203：得到要求路径的最小带权子图（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="2203：得到要求路径的最小带权子图（★★）" />
+<meta property="og:description" content="力扣第 283 场周赛第 4 题 题目 给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。 同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/2203/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-03-13T03:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="2203：得到要求路径的最小带权子图（★★★）"/>
-<meta name="twitter:description" content="第 283 场周赛第 4 题 题目 给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。 同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示从 fromi"/>
+<meta name="twitter:title" content="2203：得到要求路径的最小带权子图（★★）"/>
+<meta name="twitter:description" content="力扣第 283 场周赛第 4 题 题目 给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。 同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/2203/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/2197/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "2203：得到要求路径的最小带权子图（★★★）",
+        "headline": "2203：得到要求路径的最小带权子图（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/2203\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  662 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  663 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/2203\/","datePublished": "2022-03-13T03:00:00+08:00","dateModified": "2022-03-13T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">2203：得到要求路径的最小带权子图（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">2203：得到要求路径的最小带权子图（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-13">2022-03-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 662 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2203/" class="leancloud_visitors" data-flag-title="2203：得到要求路径的最小带权子图（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-13">2022-03-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 663 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2203/" class="leancloud_visitors" data-flag-title="2203：得到要求路径的最小带权子图（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,53 +126,42 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 283 场周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/" target="_blank" rel="noopener noreffer">力扣第 283 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。</p>
-<p>同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示从 fromi 到 toi 有一条边权为
- weighti 的 有向 边。</p>
-<p>最后，给你三个 互不相同 的整数 src1 ，src2 和 dest ，表示图中三个不同的点。</p>
-<p>请你从图中选出一个 边权和最小 的子图，使得从 src1 和 src2 出发，在这个子图中，都 可以 到达 dest 。
-如果这样的子图不存在，请返回 -1 。</p>
-<p>子图 中的点和边都应该属于原图的一部分。子图的边权和定义为它所包含的所有边的权值之和。</p>
-<p> </p>
-<p>示例 1：</p>
-<pre><code>![img](https://assets.leetcode.com/uploads/2022/02/17/example1drawio.png)
-
-输入：n = 6, edges = [[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]], 
-src1 = 0, src2 = 1, dest = 5
-输出：9
-解释：
+<p>给你一个整数 <code>n</code> ，它表示一个 <strong>带权有向</strong> 图的节点数，节点编号为 <code>0</code> 到 <code>n - 1</code> 。</p>
+<p>同时给你一个二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> ，表示从 <code>from<sub>i</sub></code> 到 <code>to<sub>i</sub></code> 有一条边权为 <code>weight<sub>i</sub></code> 的 <strong>有向</strong> 边。</p>
+<p>最后，给你三个 <strong>互不相同</strong> 的整数 <code>src1</code> ，<code>src2</code> 和 <code>dest</code> ，表示图中三个不同的点。</p>
+<p>请你从图中选出一个 <b>边权和最小</b> 的子图，使得从 <code>src1</code> 和 <code>src2</code> 出发，在这个子图中，都 <strong>可以</strong> 到达 <code>dest</code> 。如果这样的子图不存在，请返回 <code>-1</code> 。</p>
+<p><strong>子图</strong> 中的点和边都应该属于原图的一部分。子图的边权和定义为它所包含的所有边的权值之和。</p>
+<p><strong>示例 1：</strong></p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2022/02/17/example1drawio.png" style="width: 263px; height: 250px;" /></p>
+<pre>
+<b>输入：</b>n = 6, edges = [[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]], src1 = 0, src2 = 1, dest = 5
+<b>输出：</b>9
+<strong>解释：</strong>
 上图为输入的图。
 蓝色边为最优子图之一。
 注意，子图 [[1,0,3],[0,5,6]] 也能得到最优解，但无法在满足所有限制的前提下，得到更优解。
-</code></pre>
-<p>示例 2：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png"
-        data-srcset="https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png, https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png 1.5x, https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png"
-        title="img" /></p>
-<pre><code>输入：n = 3, edges = [[0,1,1],[2,1,1]], src1 = 0, src2 = 1, dest = 2
-输出：-1
-解释：
+</pre>
+<p><strong>示例 2：</strong></p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png" style="width: 350px; height: 51px;" /></p>
+<pre>
+<b>输入：</b>n = 3, edges = [[0,1,1],[2,1,1]], src1 = 0, src2 = 1, dest = 2
+<b>输出：</b>-1
+<strong>解释：</strong>
 上图为输入的图。
 可以看到，不存在从节点 1 到节点 2 的路径，所以不存在任何子图满足所有限制。
-</code></pre>
-<p> </p>
-<p>提示：</p>
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>3 &lt;= n &lt;= 10^5</li>
-<li>0 &lt;= edges.length &lt;= 10^5</li>
-<li>edges[i].length == 3</li>
-<li>0 &lt;= fromi, toi, src1, src2, dest &lt;= n - 1</li>
-<li>fromi != toi</li>
-<li>src1 ，src2 和 dest 两两不同。</li>
-<li>1 &lt;= weight[i] &lt;= 10^5</li>
+<li><code>3 &lt;= n &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= edges.length &lt;= 10<sup>5</sup></code></li>
+<li><code>edges[i].length == 3</code></li>
+<li><code>0 &lt;= from<sub>i</sub>, to<sub>i</sub>, src1, src2, dest &lt;= n - 1</code></li>
+<li><code>from<sub>i</sub> != to<sub>i</sub></code></li>
+<li><code>src1</code> ，<code>src2</code> 和 <code>dest</code> 两两不同。</li>
+<li><code>1 &lt;= weight[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>最终的子图一定是三岔路的形式（可以反证），而且由三条最短路组成。</p>
@@ -252,7 +241,7 @@ src1 = 0, src2 = 1, dest = 5
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

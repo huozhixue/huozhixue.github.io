@@ -1,26 +1,39 @@
-# 0357：计算各个位数不同的数字个数（★★）
+# 0357：统计各位数字都不同的数字个数（★）
 
+
+> <u>**[力扣第 357 题](https://leetcode.cn/problems/count-numbers-with-unique-digits/)**</u>
 
 ## 题目
 
-给你一个整数 n ，统计并返回各位数字都不同的数字 x 的个数，其中 0 <= x < 10^n 。
- 
+给你一个整数 <code>n</code> ，统计并返回各位数字都不同的数字 <code>x</code> 的个数，其中 <code>0 &lt;= x &lt; 10<sup>n</sup></code><sup> </sup>。
+<div class="original__bRMd">
+<div>
 
-示例 1：
 
-	输入：n = 2
-	输出：91
-	解释：答案应为除去 11、22、33、44、55、66、77、88、99 外，在 0 ≤ x < 100 范围内的所有数字。 
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 2
+<strong>输出：</strong>91
+<strong>解释：</strong>答案应为除去 <code>11、22、33、44、55、66、77、88、99 </code>外，在 0 ≤ x &lt; 100 范围内的所有数字。
+</pre>
 
-	输入：n = 0
-	输出：1
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 0 <= n <= 8
+<pre>
+<strong>输入：</strong>n = 0
+<strong>输出：</strong>1
+</pre>
+</div>
+</div>
 
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 &lt;= n &lt;= 8</code></li>
+</ul>
 
 
 ## 分析

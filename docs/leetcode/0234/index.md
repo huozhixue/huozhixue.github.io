@@ -1,31 +1,41 @@
-# 0234：回文链表（★★）
+# 0234：回文链表
 
+
+> <u>**[力扣第 234 题](https://leetcode.cn/problems/palindrome-linked-list/)**</u>
 
 ## 题目
 
-给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。
-如果是，返回 true ；否则，返回 false 。
-
-示例 1：
-
-![img](https://assets.leetcode.com/uploads/2021/03/03/pal1linked-list.jpg)
-
-    输入：head = [1,2,2,1]
-    输出：true
-
-示例 2：
-
-![img](https://assets.leetcode.com/uploads/2021/03/03/pal2linked-list.jpg)
-    
-    输入：head = [1,2]
-    输出：false
+<p>给你一个单链表的头节点 <code>head</code> ，请你判断该链表是否为回文链表。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
 
-提示：
-- 链表中节点数目在范围[1, 10^5] 内
-- 0 <= Node.val <= 9
 
-进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/03/pal1linked-list.jpg" style="width: 422px; height: 62px;" />
+<pre>
+<strong>输入：</strong>head = [1,2,2,1]
+<strong>输出：</strong>true
+</pre>
+
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/03/pal2linked-list.jpg" style="width: 182px; height: 62px;" />
+<pre>
+<strong>输入：</strong>head = [1,2]
+<strong>输出：</strong>false
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li>链表中节点数目在范围<code>[1, 10<sup>5</sup>]</code> 内</li>
+<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>你能否用 <code>O(n)</code> 时间复杂度和 <code>O(1)</code> 空间复杂度解决此题？</p>
+
 
 ## 分析
 

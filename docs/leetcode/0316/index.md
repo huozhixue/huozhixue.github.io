@@ -1,26 +1,40 @@
-# 0316：去除重复字母（★★★）
+# 0316：去除重复字母（★）
 
+
+> <u>**[力扣第 316 题](https://leetcode.cn/problems/remove-duplicate-letters/)**</u>
 
 ## 题目
 
-给你一个字符串 s ，请你去除字符串中重复的字母，使得每个字母只出现一次。
-需保证 返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
+<p>给你一个字符串 <code>s</code> ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证 <strong>返回结果的字典序最小</strong>（要求不能打乱其他字符的相对位置）。</p>
 
 
-示例 1：
 
-    输入：s = "bcabc"
-    输出："abc"
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong><code>s = "bcabc"</code>
+<strong>输出<code>：</code></strong><code>"abc"</code>
+</pre>
 
-    输入：s = "cbacdcbc"
-    输出："acdb"
-	
-提示：
-- 1 <= s.length <= 10^4
-- s 由小写英文字母组成
- 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong><code>s = "cbacdcbc"</code>
+<strong>输出：</strong><code>"acdb"</code></pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
+<li><code>s</code> 由小写英文字母组成</li>
+</ul>
+
+
+
+<p><strong>注意：</strong>该题与 1081 <a href="https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters">https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters</a> 相同</p>
+
 
 ## 分析
 

@@ -1,24 +1,40 @@
-# 0095：不同的二叉搜索树 II（★★）
+# 0095：不同的二叉搜索树 II（★）
 
+
+> <u>**[力扣第 95 题](https://leetcode.cn/problems/unique-binary-search-trees-ii/)**</u>
 
 ## 题目
 
-给你一个整数 n ，请你生成并返回所有由 n 个节点组成且节点值从 1 到 n 互不相同的不同 二叉搜索树 。
-可以按 任意顺序 返回答案。
+<p>给你一个整数 <code>n</code> ，请你生成并返回所有由 <code>n</code> 个节点组成且节点值从 <code>1</code> 到 <code>n</code> 互不相同的不同 <strong>二叉搜索树</strong><em> </em>。可以按 <strong>任意顺序</strong> 返回答案。</p>
 
 
-示例 1：
+
+<div class="original__bRMd">
+<div>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/01/18/uniquebstn3.jpg" style="width: 600px; height: 148px;" />
+<pre>
+<strong>输入：</strong>n = 3
+<strong>输出：</strong>[[1,null,2,null,3],[1,null,3,2],[2,1,3],[3,1,null,null,2],[3,2,null,1]]
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>[[1]]
+</pre>
 
 
-    输入：n = 3
-    输出：[[1,null,2,null,3],[1,null,3,2],[2,1,3],[3,1,null,null,2],[3,2,null,1]]
 
-示例 2：
+<p><strong>提示：</strong></p>
 
-    输入：n = 1
-    输出：[[1]]
+<ul>
+<li><code>1 <= n <= 8</code></li>
+</ul>
+</div>
+</div>
 
-提示： 1 <= n <= 8
 
 ## 分析
 

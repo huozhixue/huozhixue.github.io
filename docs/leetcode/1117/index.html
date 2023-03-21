@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1117：H2O 生成（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1117：H2O 生成（★★）" />
-<meta property="og:description" content="题目 现在有两种线程，氧 oxygen 和氢 hydrogen，你的目标是组织这两种线程来产生水分子。 存在一个屏障（barrier）使得每个线程必须等候直到一" />
+        <title>1117：H2O 生成（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1117：H2O 生成（★）" />
+<meta property="og:description" content="力扣第 1117 题 题目 现在有两种线程，氧 oxygen 和氢 hydrogen，你的目标是组织这两种线程来产生水分子。 存在一个屏障（barrier）使得每个线程必须" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/1117/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2019-07-11T01:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="1117：H2O 生成（★★）"/>
-<meta name="twitter:description" content="题目 现在有两种线程，氧 oxygen 和氢 hydrogen，你的目标是组织这两种线程来产生水分子。 存在一个屏障（barrier）使得每个线程必须等候直到一"/>
+<meta name="twitter:title" content="1117：H2O 生成（★）"/>
+<meta name="twitter:description" content="力扣第 1117 题 题目 现在有两种线程，氧 oxygen 和氢 hydrogen，你的目标是组织这两种线程来产生水分子。 存在一个屏障（barrier）使得每个线程必须"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1117/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1116/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1169/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1117/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1116/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1124/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1117：H2O 生成（★★）",
+        "headline": "1117：H2O 生成（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1117\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  494 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  499 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1117\/","datePublished": "2019-07-11T01:00:00+08:00","dateModified": "2019-07-11T01:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1117：H2O 生成（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1117：H2O 生成（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-07-11">2019-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 494 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1117/" class="leancloud_visitors" data-flag-title="1117：H2O 生成（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-07-11">2019-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 499 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1117/" class="leancloud_visitors" data-flag-title="1117：H2O 生成（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,10 +125,13 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>现在有两种线程，氧 oxygen 和氢 hydrogen，你的目标是组织这两种线程来产生水分子。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/building-h2o/" target="_blank" rel="noopener noreffer">力扣第 1117 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>现在有两种线程，氧 <code>oxygen</code> 和氢 <code>hydrogen</code>，你的目标是组织这两种线程来产生水分子。</p>
 <p>存在一个屏障（barrier）使得每个线程必须等候直到一个完整水分子能够被产生出来。</p>
-<p>氢和氧线程会被分别给予 releaseHydrogen 和 releaseOxygen 方法来允许它们突破屏障。</p>
+<p>氢和氧线程会被分别给予 <code>releaseHydrogen</code> 和 <code>releaseOxygen</code> 方法来允许它们突破屏障。</p>
 <p>这些线程应该三三成组突破屏障并能立即组合产生一个水分子。</p>
 <p>你必须保证产生一个水分子所需线程的结合必须发生在下一个水分子产生之前。</p>
 <p>换句话说:</p>
@@ -137,26 +140,25 @@
 <li>如果一个氢线程到达屏障时没有其它线程到达，它必须等候直到一个氧线程和另一个氢线程到达。</li>
 </ul>
 <p>书写满足这些限制条件的氢、氧线程同步代码。</p>
-<p> </p>
-<p>示例 1:</p>
-<pre><code>输入: water = &quot;HOH&quot;
-输出: &quot;HHO&quot;
-解释: &quot;HOH&quot; 和 &quot;OHH&quot; 依然都是有效解。
-</code></pre>
-<p>示例 2:</p>
-<pre><code>输入: water = &quot;OOHHHH&quot;
-输出: &quot;HHOHHO&quot;
-解释: &quot;HOHHHO&quot;, &quot;OHHHHO&quot;, &quot;HHOHOH&quot;, &quot;HOHHOH&quot;, &quot;OHHHOH&quot;, &quot;HHOOHH&quot;, 
-&quot;HOHOHH&quot; 和 &quot;OHHOHH&quot; 依然都是有效解。
-</code></pre>
-<p> </p>
-<p>提示：</p>
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入: </strong>water = "HOH"
+<strong>输出: </strong>"HHO"
+<strong>解释:</strong> "HOH" 和 "OHH" 依然都是有效解。
+</pre>
+<p><strong>示例 2:</strong></p>
+<pre>
+<strong>输入: </strong>water = "OOHHHH"
+<strong>输出: </strong>"HHOHHO"
+<strong>解释:</strong> "HOHHHO", "OHHHHO", "HHOHOH", "HOHHOH", "OHHHOH", "HHOOHH", "HOHOHH" 和 "OHHOHH" 依然都是有效解。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>3 * n == water.length</li>
-<li>1 &lt;= n &lt;= 20</li>
-<li>water[i] == &lsquo;O&rsquo; or &lsquo;H&rsquo;</li>
-<li>输入字符串 water 中的 &lsquo;H&rsquo; 总数将会是 2 * n 。</li>
-<li>输入字符串 water 中的 &lsquo;O&rsquo; 总数将会是 n 。</li>
+<li><code>3 * n == water.length</code></li>
+<li><code>1 &lt;= n &lt;= 20</code></li>
+<li><code>water[i] == 'O' or 'H'</code></li>
+<li>输入字符串 <code>water</code> 中的 <font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">'H'</span></span></font></font> 总数将会是 <code>2 * n</code> 。</li>
+<li>输入字符串 <code>water</code> 中的 <font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">'O'</span></span></font></font> 总数将会是 <code>n</code> 。</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>典型的并发问题，可以用信号量控制数量。</p>
@@ -231,8 +233,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1169/" class="prev" rel="prev" title="1169：查询无效交易（★）"><i class="fas fa-angle-left fa-fw"></i>1169：查询无效交易（★）</a>
-            <a href="/leetcode/1116/" class="next" rel="next" title="1116：打印零与奇偶数（★★）">1116：打印零与奇偶数（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1124/" class="prev" rel="prev" title="1124：表现良好的最长时间段（★）"><i class="fas fa-angle-left fa-fw"></i>1124：表现良好的最长时间段（★）</a>
+            <a href="/leetcode/1116/" class="next" rel="next" title="1116：打印零与奇偶数（★）">1116：打印零与奇偶数（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

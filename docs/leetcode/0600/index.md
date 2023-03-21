@@ -1,40 +1,50 @@
 # 0600：不含连续1的非负整数（★★）
 
 
-> **第  场周赛第  题**
+> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/)**</u>
 
 ## 题目
 
-给定一个正整数 n ，返回范围在 [0, n] 都非负整数中，其二进制表示不包含 连续的 1 的个数。
+<p>给定一个正整数 <code>n</code> ，请你统计在 <code>[0, n]</code> 范围的非负整数中，有多少个整数的二进制表示中不存在 <strong>连续的 1 </strong>。</p>
 
- 
 
-示例 1:
 
-    输入: n = 5
-    输出: 5
-    解释: 
-    下面是带有相应二进制表示的非负整数<= 5：
-    0 : 0
-    1 : 1
-    2 : 10
-    3 : 11
-    4 : 100
-    5 : 101
-    其中，只有整数3违反规则（有两个连续的1），其他5个满足规则。
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-    输入: n = 1
-    输出: 2
-示例 3:
-    
-    输入: n = 2
-    输出: 3
-     
+<pre>
+<strong>输入:</strong> n = 5
+<strong>输出:</strong> 5
+<strong>解释:</strong>
+下面列出范围在 [0, 5] 的非负整数与其对应的二进制表示：
+0 : 0
+1 : 1
+2 : 10
+3 : 11
+4 : 100
+5 : 101
+其中，只有整数 3 违反规则（有两个连续的 1 ），其他 5 个满足规则。</pre>
 
-提示:
-- 1 <= n <= 10^9
+<p><strong>示例 2:</strong></p>
 
+<pre>
+<strong>输入:</strong> n = 1
+<strong>输出:</strong> 2
+</pre>
+
+<p><strong>示例 3:</strong></p>
+
+<pre>
+<strong>输入:</strong> n = 2
+<strong>输出:</strong> 3
+</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>
+</ul>
 
 
 ## 分析

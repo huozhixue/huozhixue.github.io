@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0639：解码方法 II（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0639：解码方法 II（★★）" />
-<meta property="og:description" content="第 40 场双周赛第 4 题 题目 一条包含字母 A-Z 的消息通过以下的方式进行了 编码 ： &#39;A&#39; -&gt; &quot;1&quot; &#39;B&#39; -&gt; &quot;2&quot; ... &#39;Z&#39; -&gt; &quot;26&quot; 要 解码 一条已编码的消息，所有的数字都必须分组，然后按" />
+<meta property="og:description" content="力扣第 40 场双周赛第 4 题 题目 一条包含字母 A-Z 的消息通过以下的方式进行了 编码 ： &#39;A&#39; -&gt; &#34;1&#34; &#39;B&#39; -&gt; &#34;2&#34; ... &#39;Z&#39; -&gt; &#34;26&#34; 要 解码 一条已编码的消息，所有的数字都必须分组，然" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0639/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2017-07-09T02:00:00+08:00" />
@@ -17,10 +17,10 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0639：解码方法 II（★★）"/>
-<meta name="twitter:description" content="第 40 场双周赛第 4 题 题目 一条包含字母 A-Z 的消息通过以下的方式进行了 编码 ： &#39;A&#39; -&gt; &quot;1&quot; &#39;B&#39; -&gt; &quot;2&quot; ... &#39;Z&#39; -&gt; &quot;26&quot; 要 解码 一条已编码的消息，所有的数字都必须分组，然后按"/>
+<meta name="twitter:description" content="力扣第 40 场双周赛第 4 题 题目 一条包含字母 A-Z 的消息通过以下的方式进行了 编码 ： &#39;A&#39; -&gt; &#34;1&#34; &#39;B&#39; -&gt; &#34;2&#34; ... &#39;Z&#39; -&gt; &#34;26&#34; 要 解码 一条已编码的消息，所有的数字都必须分组，然"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0639/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0638/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0646/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0639/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0638/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0641/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0639\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1520 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  962 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0639\/","datePublished": "2017-07-09T02:00:00+08:00","dateModified": "2017-07-09T02:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0639：解码方法 II（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-07-09">2017-07-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1520 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/leetcode/0639/" class="leancloud_visitors" data-flag-title="0639：解码方法 II（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-07-09">2017-07-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 962 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0639/" class="leancloud_visitors" data-flag-title="0639：解码方法 II（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,54 +126,52 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 40 场双周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/decode-ways-ii/" target="_blank" rel="noopener noreffer">力扣第 40 场双周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>一条包含字母 A-Z 的消息通过以下的方式进行了 编码 ：</p>
-<pre><code>'A' -&gt; &quot;1&quot;
-'B' -&gt; &quot;2&quot;
+<p>一条包含字母 <code>A-Z</code> 的消息通过以下的方式进行了 <strong>编码</strong> ：</p>
+<pre>
+'A' -&gt; "1"
+'B' -&gt; "2"
 ...
-'Z' -&gt; &quot;26&quot;
-</code></pre>
-<p>要 解码 一条已编码的消息，所有的数字都必须分组，然后按原来的编码方案反向映射回字母（可能存在多种方式）。
-例如，&ldquo;11106&rdquo; 可以映射为：</p>
+'Z' -&gt; "26"</pre>
+<p>要 <strong>解码</strong> 一条已编码的消息，所有的数字都必须分组，然后按原来的编码方案反向映射回字母（可能存在多种方式）。例如，<code>"11106"</code> 可以映射为：</p>
 <ul>
-<li>&ldquo;AAJF&rdquo; 对应分组 (1 1 10 6)</li>
-<li>&ldquo;KJF&rdquo; 对应分组 (11 10 6)</li>
+<li><code>"AAJF"</code> 对应分组 <code>(1 1 10 6)</code></li>
+<li><code>"KJF"</code> 对应分组 <code>(11 10 6)</code></li>
 </ul>
-<p>注意，像 (1 11 06) 这样的分组是无效的，因为 &ldquo;06&rdquo; 不可以映射为 &lsquo;F&rsquo; ，因为 &ldquo;6&rdquo; 与 &ldquo;06&rdquo; 不同。</p>
-<p>除了 上面描述的数字字母映射方案，编码消息中可能包含 &lsquo;<em>&rsquo; 字符，可以表示从 &lsquo;1&rsquo; 到 &lsquo;9&rsquo; 的任一数字
-（不包括 &lsquo;0&rsquo;）。例如，编码字符串 &ldquo;1</em>&rdquo; 可以表示 &ldquo;11&rdquo;、&ldquo;12&rdquo;、&ldquo;13&rdquo;、&ldquo;14&rdquo;、&ldquo;15&rdquo;、&ldquo;16&rdquo;、&ldquo;17&rdquo;、&ldquo;18&rdquo;
-或 &ldquo;19&rdquo; 中的任意一条消息。对 &ldquo;1*&rdquo; 进行解码，相当于解码该字符串可以表示的任何编码消息。</p>
-<p>给你一个字符串 s ，由数字和 &lsquo;*&rsquo; 字符组成，返回 解码 该字符串的方法 数目 。</p>
-<p>由于答案数目可能非常大，返回 10^9 + 7 的 模 。
- </p>
-<p>示例 1：</p>
-<pre><code>输入：s = &quot;*&quot;
-输出：9
-解释：这一条编码消息可以表示 &quot;1&quot;、&quot;2&quot;、&quot;3&quot;、&quot;4&quot;、&quot;5&quot;、&quot;6&quot;、&quot;7&quot;、&quot;8&quot; 或 &quot;9&quot; 中的任意一条。
-可以分别解码成字符串 &quot;A&quot;、&quot;B&quot;、&quot;C&quot;、&quot;D&quot;、&quot;E&quot;、&quot;F&quot;、&quot;G&quot;、&quot;H&quot; 和 &quot;I&quot; 。
-因此，&quot;*&quot; 总共有 9 种解码方法。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：s = &quot;1*&quot;
-输出：18
-解释：这一条编码消息可以表示 &quot;11&quot;、&quot;12&quot;、&quot;13&quot;、&quot;14&quot;、&quot;15&quot;、&quot;16&quot;、&quot;17&quot;、&quot;18&quot; 或 &quot;19&quot; 中的任意一条。
-每种消息都可以由 2 种方法解码（例如，&quot;11&quot; 可以解码成 &quot;AA&quot; 或 &quot;K&quot;）。
-因此，&quot;1*&quot; 共有 9 * 2 = 18 种解码方法。
-</code></pre>
-<p>示例 3：</p>
-<pre><code>输入：s = &quot;2*&quot;
-输出：15
-解释：这一条编码消息可以表示 &quot;21&quot;、&quot;22&quot;、&quot;23&quot;、&quot;24&quot;、&quot;25&quot;、&quot;26&quot;、&quot;27&quot;、&quot;28&quot; 或 &quot;29&quot; 中的任意一条。
-&quot;21&quot;、&quot;22&quot;、&quot;23&quot;、&quot;24&quot;、&quot;25&quot; 和 &quot;26&quot; 由 2 种解码方法，但 &quot;27&quot;、&quot;28&quot; 和 &quot;29&quot; 仅有 1 种解码方法。
-因此，&quot;2*&quot; 共有 (6 * 2) + (3 * 1) = 12 + 3 = 15 种解码方法。
- 
-</code></pre>
-<p>提示：</p>
+<p>注意，像 <code>(1 11 06)</code> 这样的分组是无效的，因为 <code>"06"</code> 不可以映射为 <code>'F'</code> ，因为 <code>"6"</code> 与 <code>"06"</code> 不同。</p>
+<p><strong>除了</strong> 上面描述的数字字母映射方案，编码消息中可能包含 <code>'*'</code> 字符，可以表示从 <code>'1'</code> 到 <code>'9'</code> 的任一数字（不包括 <code>'0'</code>）。例如，编码字符串 <code>"1*"</code> 可以表示 <code>"11"</code>、<code>"12"</code>、<code>"13"</code>、<code>"14"</code>、<code>"15"</code>、<code>"16"</code>、<code>"17"</code>、<code>"18"</code> 或 <code>"19"</code> 中的任意一条消息。对 <code>"1*"</code> 进行解码，相当于解码该字符串可以表示的任何编码消息。</p>
+<p>给你一个字符串 <code>s</code> ，由数字和 <code>'*'</code> 字符组成，返回 <strong>解码</strong> 该字符串的方法 <strong>数目</strong> 。</p>
+<p>由于答案数目可能非常大，返回 <code>10<sup>9</sup> + 7</code> 的 <b>模</b> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>s = "*"
+<strong>输出：</strong>9
+<strong>解释：</strong>这一条编码消息可以表示 "1"、"2"、"3"、"4"、"5"、"6"、"7"、"8" 或 "9" 中的任意一条。
+可以分别解码成字符串 "A"、"B"、"C"、"D"、"E"、"F"、"G"、"H" 和 "I" 。
+因此，"*" 总共有 9 种解码方法。
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>s = "1*"
+<strong>输出：</strong>18
+<strong>解释：</strong>这一条编码消息可以表示 "11"、"12"、"13"、"14"、"15"、"16"、"17"、"18" 或 "19" 中的任意一条。
+每种消息都可以由 2 种方法解码（例如，"11" 可以解码成 "AA" 或 "K"）。
+因此，"1*" 共有 9 * 2 = 18 种解码方法。
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>s = "2*"
+<strong>输出：</strong>15
+<strong>解释：</strong>这一条编码消息可以表示 "21"、"22"、"23"、"24"、"25"、"26"、"27"、"28" 或 "29" 中的任意一条。
+"21"、"22"、"23"、"24"、"25" 和 "26" 由 2 种解码方法，但 "27"、"28" 和 "29" 仅有 1 种解码方法。
+因此，"2*" 共有 (6 * 2) + (3 * 1) = 12 + 3 = 15 种解码方法。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= s.length &lt;= 10^5</li>
-<li>s[i] 是 0 - 9 中的一位数字或字符 &lsquo;*&rsquo;</li>
+<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+<li><code>s[i]</code> 是 <code>0 - 9</code> 中的一位数字或字符 <code>'*'</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>和 <a href="/leetcode/0091" title="0091" rel="noopener noreferrer">0091</a> 的区别在于存在 &lsquo;*&rsquo; 字符，递推式的系数会不同。</p>
@@ -228,14 +226,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0646/" class="prev" rel="prev" title="0646：最长数对链（★★）"><i class="fas fa-angle-left fa-fw"></i>0646：最长数对链（★★）</a>
-            <a href="/leetcode/0638/" class="next" rel="next" title="0638：大礼包（★★）">0638：大礼包（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0641/" class="prev" rel="prev" title="0641：设计循环双端队列（★）"><i class="fas fa-angle-left fa-fw"></i>0641：设计循环双端队列（★）</a>
+            <a href="/leetcode/0638/" class="next" rel="next" title="0638：大礼包（★）">0638：大礼包（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

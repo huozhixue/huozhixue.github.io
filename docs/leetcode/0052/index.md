@@ -1,29 +1,44 @@
 # 0052：N 皇后 II（★★）
 
 
+> <u>**[力扣第 52 题](https://leetcode.cn/problems/n-queens-ii/)**</u>
+
 ## 题目
 
-n 皇后问题 研究的是如何将 n 个皇后放置在 n × n 的棋盘上，并且使皇后彼此之间不能相互攻击。
+<p><strong>n 皇后问题</strong> 研究的是如何将 <code>n</code> 个皇后放置在 <code>n × n</code> 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
 
-给你一个整数 n ，返回 n 皇后问题 不同的解决方案的数量。
+<p>给你一个整数 <code>n</code> ，返回 <strong>n 皇后问题</strong> 不同的解决方案的数量。</p>
 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2020/11/13/queens.jpg)
 
-	输入：n = 4
-	输出：2
-	解释：如上图所示，4 皇后问题存在两个不同的解法。
+<div class="original__bRMd">
+<div>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/queens.jpg" style="width: 600px; height: 268px;" />
+<pre>
+<strong>输入：</strong>n = 4
+<strong>输出：</strong>2
+<strong>解释：</strong>如上图所示，4 皇后问题存在两个不同的解法。
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-    输入：n = 1
-    输出：1
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>1
+</pre>
 
-提示：
-- 1 <= n <= 9
 
-	
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 9</code></li>
+</ul>
+</div>
+</div>
+
+
 ## 分析
 
 类似 {{< lc "0051" >}} ，还更简单一点。

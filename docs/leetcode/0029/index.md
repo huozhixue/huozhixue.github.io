@@ -1,32 +1,43 @@
-# 0029：两数相除（★★）
+# 0029：两数相除（★）
 
+
+> <u>**[力扣第 29 题](https://leetcode.cn/problems/divide-two-integers/)**</u>
 
 ## 题目
 
-给定两个整数，被除数 dividend 和除数 divisor。将两数相除，要求不使用乘法、除法和 mod 运算符。
+<p>给你两个整数，被除数 <code>dividend</code> 和除数 <code>divisor</code>。将两数相除，要求 <strong>不使用</strong> 乘法、除法和取余运算。</p>
 
-返回被除数 dividend 除以除数 divisor 得到的商。
+<p>整数除法应该向零截断，也就是截去（<code>truncate</code>）其小数部分。例如，<code>8.345</code> 将被截断为 <code>8</code> ，<code>-2.7335</code> 将被截断至 <code>-2</code> 。</p>
 
-整数除法的结果应当截去（truncate）其小数部分，例如：truncate(8.345) = 8 以及 truncate(-2.7335) = -2
+<p>返回被除数 <code>dividend</code> 除以除数 <code>divisor</code> 得到的 <strong>商</strong> 。</p>
+
+<p><strong>注意：</strong>假设我们的环境只能存储 <strong>32 位</strong> 有符号整数，其数值范围是 <code>[−2<sup>31</sup>,  2<sup>31 </sup>− 1]</code> 。本题中，如果商 <strong>严格大于</strong> <code>2<sup>31 </sup>− 1</code> ，则返回 <code>2<sup>31 </sup>− 1</code> ；如果商 <strong>严格小于</strong> <code>-2<sup>31</sup></code> ，则返回 <code>-2<sup>31</sup></code><sup> </sup>。</p>
 
 
-示例 1:
 
-	输入: dividend = 10, divisor = 3
-	输出: 3
-	解释: 10/3 = truncate(3.33333..) = truncate(3) = 3
-	
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入: dividend = 7, divisor = -3
-	输出: -2
-	解释: 7/-3 = truncate(-2.33333..) = -2
+<pre>
+<strong>输入:</strong> dividend = 10, divisor = 3
+<strong>输出:</strong> 3
+<strong>解释: </strong>10/3 = 3.33333.. ，向零截断后得到 3 。</pre>
 
-提示：
-- 被除数和除数均为 32 位有符号整数。
-- 除数不为 0。
-- 假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−2^31,  2^31 − 1]。
-本题中，如果除法结果溢出，则返回 2^31 − 1。 
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> dividend = 7, divisor = -3
+<strong>输出:</strong> -2
+<strong>解释:</strong> 7/-3 = -2.33333.. ，向零截断后得到 -2 。</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> &lt;= dividend, divisor &lt;= 2<sup>31</sup> - 1</code></li>
+<li><code>divisor != 0</code></li>
+</ul>
+
 
 ## 分析
 

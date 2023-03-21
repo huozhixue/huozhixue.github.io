@@ -1,31 +1,51 @@
-# 0032：最长有效括号（★★★）
+# 0032：最长有效括号（★★）
 
+
+> <u>**[力扣第 32 题](https://leetcode.cn/problems/longest-valid-parentheses/)**</u>
 
 ## 题目
 
-给你一个只包含 '(' 和 ')' 的字符串，找出最长有效（格式正确且连续）括号子串的长度。
+<p>给你一个只包含 <code>'('</code> 和 <code>')'</code> 的字符串，找出最长有效（格式正确且连续）括号子串的长度。</p>
 
-示例 1：
 
-	输入：s = "(()"
-	输出：2
-	解释：最长有效括号子串是 "()"
-	
-示例 2：
 
-	输入：s = ")()())"
-	输出：4
-	解释：最长有效括号子串是 "()()"
+<div class="original__bRMd">
+<div>
+<p><strong>示例 1：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>s = "(()"
+<strong>输出：</strong>2
+<strong>解释：</strong>最长有效括号子串是 "()"
+</pre>
 
-	输入：s = ""
-	输出：0
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 0 <= s.length <= 3 * 10^4
-- s[i] 为 '(' 或 ')'
- 
+<pre>
+<strong>输入：</strong>s = ")()())"
+<strong>输出：</strong>4
+<strong>解释：</strong>最长有效括号子串是 "()()"
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = ""
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 <= s.length <= 3 * 10<sup>4</sup></code></li>
+<li><code>s[i]</code> 为 <code>'('</code> 或 <code>')'</code></li>
+</ul>
+</div>
+</div>
+
+
 ## 分析 
 
 ### #1

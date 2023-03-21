@@ -1,31 +1,41 @@
-# 0327：区间和的个数（★★★）
+# 0327：区间和的个数（★★）
 
+
+> <u>**[力扣第 327 题](https://leetcode.cn/problems/count-of-range-sum/)**</u>
 
 ## 题目
 
-给你一个整数数组 nums 以及两个整数 lower 和 upper 。求数组中，值位于范围 [lower, upper] 
-（包含 lower 和 upper）之内的 区间和的个数 。
+<p>给你一个整数数组 <code>nums</code> 以及两个整数 <code>lower</code> 和 <code>upper</code> 。求数组中，值位于范围 <code>[lower, upper]</code> （包含 <code>lower</code> 和 <code>upper</code>）之内的 <strong>区间和的个数</strong> 。</p>
 
-区间和 S(i, j) 表示在 nums 中，位置从 i 到 j 的元素之和，包含 i 和 j (i ≤ j)。
+<p><strong>区间和</strong> <code>S(i, j)</code> 表示在 <code>nums</code> 中，位置从 <code>i</code> 到 <code>j</code> 的元素之和，包含 <code>i</code> 和 <code>j</code> (<code>i</code> ≤ <code>j</code>)。</p>
 
 
-示例 1：
+<strong>示例 1：</strong>
 
-    输入：nums = [-2,5,-1], lower = -2, upper = 2
-    输出：3
-    解释：存在三个区间：[0,0]、[2,2] 和 [0,2] ，对应的区间和分别是：-2 、-1 、2 。
+<pre>
+<strong>输入：</strong>nums = [-2,5,-1], lower = -2, upper = 2
+<strong>输出：</strong>3
+<strong>解释：</strong>存在三个区间：[0,0]、[2,2] 和 [0,2] ，对应的区间和分别是：-2 、-1 、2 。
+</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-    输入：nums = [0], lower = 0, upper = 0
-    输出：1
-	
-提示：
-- 1 <= nums.length <= 10^5
-- -2^31 <= nums[i] <= 2^31 - 1
-- -10^5 <= lower <= upper <= 10^5
-- 题目数据保证答案是一个 32 位 的整数
-     
+<pre>
+<strong>输入：</strong>nums = [0], lower = 0, upper = 0
+<strong>输出：</strong>1
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= nums.length <= 10<sup>5</sup></code></li>
+<li><code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code></li>
+<li><code>-10<sup>5</sup> <= lower <= upper <= 10<sup>5</sup></code></li>
+<li>题目数据保证答案是一个 <strong>32 位</strong> 的整数</li>
+</ul>
+
 
 ## 分析
 

@@ -1,34 +1,45 @@
-# 0263：丑数（★★）
+# 0263：丑数
 
+
+> <u>**[力扣第 263 题](https://leetcode.cn/problems/ugly-number/)**</u>
 
 ## 题目
 
-丑数 就是只包含质因数 2、3 和 5 的正整数。
+<p><strong>丑数 </strong>就是只包含质因数 <code>2</code>、<code>3</code> 和 <code>5</code> 的正整数。</p>
 
-给你一个整数 n ，请你判断 n 是否为 丑数 。如果是，返回 true ；否则，返回 false 。
+<p>给你一个整数 <code>n</code> ，请你判断 <code>n</code> 是否为 <strong>丑数</strong> 。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
 
-示例 1：
 
-	输入：n = 6
-	输出：true
-	解释：6 = 2 × 3
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 6
+<strong>输出：</strong>true
+<strong>解释：</strong>6 = 2 × 3</pre>
 
-	输入：n = 1
-	输出：true
-	解释：1 没有质因数，因此它的全部质因数是 {2, 3, 5} 的空集。习惯上将其视作第一个丑数。
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>true
+<strong>解释：</strong>1 没有质因数，因此它的全部质因数是 {2, 3, 5} 的空集。习惯上将其视作第一个丑数。</pre>
 
-	输入：n = 14
-	输出：false
-	解释：14 不是丑数，因为它包含了另外一个质因数 7 。
- 
+<p><strong>示例 3：</strong></p>
 
-提示：
-- -2^31 <= n <= 2^31-1
+<pre>
+<strong>输入：</strong>n = 14
+<strong>输出：</strong>false
+<strong>解释：</strong>14 不是丑数，因为它包含了另外一个质因数 <code>7 </code>。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
 
 
 ## 分析

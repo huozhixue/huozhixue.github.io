@@ -1,26 +1,46 @@
-# 0409：最长回文串（★）
+# 0409：最长回文串
 
 
-> **第 7  场周赛第 2  题**
+> <u>**[力扣第 7  场周赛第 2  题](https://leetcode.cn/problems/longest-palindrome/)**</u>
 
 ## 题目
 
-给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。
+<p>给定一个包含大写字母和小写字母的字符串<meta charset="UTF-8" /> <code>s</code> ，返回 <em>通过这些字母构造成的 <strong>最长的回文串</strong></em> 。</p>
 
-在构造过程中，请注意区分大小写。比如 "Aa" 不能当做一个回文字符串。
+<p>在构造过程中，请注意 <strong>区分大小写</strong> 。比如 <code>"Aa"</code> 不能当做一个回文字符串。</p>
 
-注意: 假设字符串的长度不会超过 1010。
 
-示例 1:
 
-	输入:
-	"abccccdd"
+<p><strong>示例 1: </strong></p>
 
-	输出:
-	7
+<pre>
+<strong>输入:</strong>s = "abccccdd"
+<strong>输出:</strong>7
+<strong>解释:</strong>
+我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
+</pre>
 
-	解释:
-	我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong>s = "a"
+<strong>输出:</strong>1
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入:</strong>s = "aaaaaccc"
+<strong>输出:</strong>7</pre>
+
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 2000</code></li>
+<li><code>s</code> 只由小写 <strong>和/或</strong> 大写英文字母组成</li>
+</ul>
 
 
 ## 分析

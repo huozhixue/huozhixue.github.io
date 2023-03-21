@@ -1,47 +1,56 @@
-# 1998：数组的最大公因数排序（★★★）
+# 1998：数组的最大公因数排序（★★）
 
 
-> **第 257 场周赛第 4 题**
+> <u>**[力扣第 257 场周赛第 4 题](https://leetcode.cn/problems/gcd-sort-of-an-array/)**</u>
 
 ## 题目
 
-给你一个整数数组 nums ，你可以在 nums 上执行下述操作 任意次 ：
+<p>给你一个整数数组 <code>nums</code> ，你可以在 <code>nums</code> 上执行下述操作 <strong>任意次</strong> ：</p>
 
-如果 gcd(nums[i], nums[j]) > 1 ，交换 nums[i] 和 nums[j] 的位置。
-其中 gcd(nums[i], nums[j]) 是 nums[i] 和 nums[j] 的最大公因数。
+<ul>
+<li>如果 <code>gcd(nums[i], nums[j]) &gt; 1</code> ，交换 <code>nums[i]</code> 和 <code>nums[j]</code> 的位置。其中 <code>gcd(nums[i], nums[j])</code> 是 <code>nums[i]</code> 和 <code>nums[j]</code> 的最大公因数。</li>
+</ul>
 
-如果能使用上述交换方式将 nums 按 非递减顺序 排列，返回 true ；否则，返回 false 。
-
-
-提示：
-- 1 <= nums.length <= 3 * 10^4
-- 2 <= nums[i] <= 10^5
+<p>如果能使用上述交换方式将 <code>nums</code> 按 <strong>非递减顺序</strong> 排列，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
 
-示例 1：
 
-    输入：nums = [7,21,3]
-    输出：true
-    解释：可以执行下述操作完成对 [7,21,3] 的排序：
-    - 交换 7 和 21 因为 gcd(7,21) = 7 。nums = [21,7,3]
-    - 交换 21 和 3 因为 gcd(21,3) = 3 。nums = [3,7,21]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre><strong>输入：</strong>nums = [7,21,3]
+<strong>输出：</strong>true
+<strong>解释：</strong>可以执行下述操作完成对 [7,21,3] 的排序：
+- 交换 7 和 21 因为 gcd(7,21) = 7 。nums = [<em><strong>21</strong></em>,<em><strong>7</strong></em>,3]
+- 交换 21 和 3 因为 gcd(21,3) = 3 。nums = [<em><strong>3</strong></em>,7,<em><strong>21</strong></em>]
+</pre>
 
-    输入：nums = [5,2,6,2]
-    输出：false
-    解释：无法完成排序，因为 5 不能与其他元素交换。
+<p><strong>示例 2：</strong></p>
 
-示例 3：
-    
-    输入：nums = [10,5,9,3,15]
-    输出：true
-    解释：
-    可以执行下述操作完成对 [10,5,9,3,15] 的排序：
-    - 交换 10 和 15 因为 gcd(10,15) = 5 。nums = [15,5,9,3,10]
-    - 交换 15 和 3 因为 gcd(15,3) = 3 。nums = [3,5,9,15,10]
-    - 交换 10 和 15 因为 gcd(10,15) = 5 。nums = [3,5,9,10,15]
- 
+<pre><strong>输入：</strong>nums = [5,2,6,2]
+<strong>输出：</strong>false
+<strong>解释：</strong>无法完成排序，因为 5 不能与其他元素交换。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre><strong>输入：</strong>nums = [10,5,9,3,15]
+<strong>输出：</strong>true
+<strong>解释：</strong>
+可以执行下述操作完成对 [10,5,9,3,15] 的排序：
+- 交换 10 和 15 因为 gcd(10,15) = 5 。nums = [<em><strong>15</strong></em>,5,9,3,<em><strong>10</strong></em>]
+- 交换 15 和 3 因为 gcd(15,3) = 3 。nums = [<em><strong>3</strong></em>,5,9,<em><strong>15</strong></em>,10]
+- 交换 10 和 15 因为 gcd(10,15) = 5 。nums = [3,5,9,<em><strong>10</strong></em>,<em><strong>15</strong></em>]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
+<li><code>2 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
+</ul>
+
 
 ## 分析
 

@@ -1,0 +1,63 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>归并排序 - 力扣标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/leetcode_tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
+        <description>归并排序 - 力扣标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Feb 2022 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>2179：统计数组中好三元组数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2179/</link>
+    <pubDate>Sat, 19 Feb 2022 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2179/</guid>
+    <description><![CDATA[力扣第 72 场双周赛第 4 题 题目 给你两个下标从 0 开始且长度为 n 的整数数组 nums1 和 nums2 ，两者都是 [0, 1, ..., n - 1] 的 排列 。 好三元组 指的是 3 个 互不相同 的值，且它们]]></description>
+</item><item>
+    <title>1649：通过指令创建有序数组（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1649/</link>
+    <pubDate>Sun, 08 Nov 2020 03:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1649/</guid>
+    <description><![CDATA[力扣第 214 场周赛第 4 题 题目 给你一个整数数组 instructions ，你需要根据 instructions 中的元素创建一个有序数组。一开始你有一个空的数组 nums ，你需要 从左到右 遍历 instructions 中的元素，将]]></description>
+</item><item>
+    <title>0912：排序数组（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0912/</link>
+    <pubDate>Wed, 26 Sep 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0912/</guid>
+    <description><![CDATA[力扣第 912 题 题目 给你一个整数数组 nums，请你将该数组升序排列。 示例 1： 输入：nums = [5,2,3,1] 输出：[1,2,3,5] 示例 2： 输入：nums = [5,1,1,2,0,0] 输]]></description>
+</item><item>
+    <title>0493：翻转对（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0493/</link>
+    <pubDate>Sun, 18 Dec 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0493/</guid>
+    <description><![CDATA[力扣第 493 题 题目 给定一个数组 nums ，如果 i &lt; j 且 nums[i] &gt; 2*nums[j] 我们就将 (i, j) 称作一个重要翻转对。 你需要返回给定数组中的重要翻转对的数量。 示例 1: 输入: [1,3,2,3,1] 输出:]]></description>
+</item><item>
+    <title>0327：区间和的个数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0327/</link>
+    <pubDate>Mon, 23 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0327/</guid>
+    <description><![CDATA[力扣第 327 题 题目 给你一个整数数组 nums 以及两个整数 lower 和 upper 。求数组中，值位于范围 [lower, upper] （包含 lower 和 upper）之内的 区间和的个数 。 区间和 S(i, j) 表示在 nums 中，]]></description>
+</item><item>
+    <title>0315：计算右侧小于当前元素的个数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0315/</link>
+    <pubDate>Wed, 11 Nov 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0315/</guid>
+    <description><![CDATA[力扣第 315 题 题目 给你一个整数数组 nums ，按要求返回一个新数组 counts 。数组 counts 有该性质： counts[i] 的值是 nums[i] 右侧小于 nums[i] 的元素的数量。 示例 1： 输入：nums = [5,2,6,1] 输出：]]></description>
+</item><item>
+    <title>0148：排序链表（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0148/</link>
+    <pubDate>Thu, 28 May 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0148/</guid>
+    <description><![CDATA[力扣第 148 题 题目 给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。 示例 1： 输入：head = [4,2,1,3] 输出：[1,2,3,4] 示例 2： 输入：hea]]></description>
+</item><item>
+    <title>0023：合并 K 个升序链表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0023/</link>
+    <pubDate>Fri, 23 Jan 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0023/</guid>
+    <description><![CDATA[力扣第 23 题 题目 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链表中，返回合并后的链表。 示例 1： 输入：lists = [[1,4,5],[1,3,4],[2,6]]]]></description>
+</item></channel>
+</rss>

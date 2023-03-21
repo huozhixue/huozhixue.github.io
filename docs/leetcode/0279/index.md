@@ -1,29 +1,37 @@
 # 0279：完全平方数（★）
 
 
+> <u>**[力扣第 279 题](https://leetcode.cn/problems/perfect-squares/)**</u>
+
 ## 题目
 
-你给定正整数 n，找到若干个完全平方数（比如 1, 4, 9, 16, ...）使得它们的和等于 n。
-你需要让组成和的完全平方数的个数最少。
+<p>给你一个整数 <code>n</code> ，返回 <em>和为 <code>n</code> 的完全平方数的最少数量</em> 。</p>
 
-给你一个整数 n ，返回和为 n 的完全平方数的 最少数量 。
+<p><strong>完全平方数</strong> 是一个整数，其值等于另一个整数的平方；换句话说，其值等于一个整数自乘的积。例如，<code>1</code>、<code>4</code>、<code>9</code> 和 <code>16</code> 都是完全平方数，而 <code>3</code> 和 <code>11</code> 不是。</p>
 
-完全平方数 是一个整数，其值等于另一个整数的平方；换句话说，其值等于一个整数自乘的积。
-例如，1、4、9 和 16 都是完全平方数，而 3 和 11 不是。
 
-示例 1：
 
-    输入：n = 12
-    输出：3 
-    解释：12 = 4 + 4 + 4
+<p><strong>示例 1：</strong></p>
 
-示例 2：
-    
-    输入：n = 13
-    输出：2
-    解释：13 = 4 + 9
+<pre>
+<strong>输入：</strong>n = <code>12</code>
+<strong>输出：</strong>3
+<strong>解释：</strong><code>12 = 4 + 4 + 4</code></pre>
 
-提示：1 <= n <= 10^4
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = <code>13</code>
+<strong>输出：</strong>2
+<strong>解释：</strong><code>13 = 4 + 9</code></pre>
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>
+</ul>
+
 
 ## 分析
 

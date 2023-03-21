@@ -1,37 +1,54 @@
 # 0154：寻找旋转排序数组中的最小值 II（★★）
 
 
+> <u>**[力扣第 154 题](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/)**</u>
+
 ## 题目
 
-已知一个长度为 n 的数组，预先按照升序排列，经由 1 到 n 次 旋转 后，得到输入数组。
-例如，原数组 nums = [0,1,4,4,5,6,7] 在变化后可能得到：
+已知一个长度为 <code>n</code> 的数组，预先按照升序排列，经由 <code>1</code> 到 <code>n</code> 次 <strong>旋转</strong> 后，得到输入数组。例如，原数组 <code>nums = [0,1,4,4,5,6,7]</code> 在变化后可能得到：
+<ul>
+<li>若旋转 <code>4</code> 次，则可以得到 <code>[4,5,6,7,0,1,4]</code></li>
+<li>若旋转 <code>7</code> 次，则可以得到 <code>[0,1,4,4,5,6,7]</code></li>
+</ul>
 
-- 若旋转 4 次，则可以得到 [4,5,6,7,0,1,4]
-- 若旋转 7 次，则可以得到 [0,1,4,4,5,6,7]
+<p>注意，数组 <code>[a[0], a[1], a[2], ..., a[n-1]]</code> <strong>旋转一次</strong> 的结果为数组 <code>[a[n-1], a[0], a[1], a[2], ..., a[n-2]]</code> 。</p>
 
-注意，数组 [a[0], a[1], a[2], ..., a[n-1]] 旋转一次 的结果为数组
- [a[n-1], a[0], a[1], a[2], ..., a[n-2]] 。
+<p>给你一个可能存在 <strong>重复</strong> 元素值的数组 <code>nums</code> ，它原来是一个升序排列的数组，并按上述情形进行了多次旋转。请你找出并返回数组中的 <strong>最小元素</strong> 。</p>
 
-给你一个可能存在 重复 元素值的数组 nums ，它原来是一个升序排列的数组，并按上述情形进行了多次旋转。
-请你找出并返回数组中的 最小元素 。
+<p>你必须尽可能减少整个过程的操作步骤。</p>
 
 
-示例 1：
 
-    输入：nums = [1,3,5]
-    输出：1
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>nums = [1,3,5]
+<strong>输出：</strong>1
+</pre>
 
-    输入：nums = [2,2,2,0,1]
-    输出：0
-	
-提示：
-- n == nums.length
-- 1 <= n <= 5000
-- -5000 <= nums[i] <= 5000
-- nums 原来是一个升序排序的数组，并进行了 1 至 n 次旋转
- 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>nums = [2,2,2,0,1]
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= n &lt;= 5000</code></li>
+<li><code>-5000 &lt;= nums[i] &lt;= 5000</code></li>
+<li><code>nums</code> 原来是一个升序排序的数组，并进行了 <code>1</code> 至 <code>n</code> 次旋转</li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>这道题与 <a href="https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/description/">寻找旋转排序数组中的最小值</a> 类似，但 <code>nums</code> 可能包含重复元素。允许重复会影响算法的时间复杂度吗？会如何影响，为什么？</p>
+
+
 ## 分析
 
 直接调用 {{< lc "0153" >}} 的方法会出错，

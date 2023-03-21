@@ -3,54 +3,47 @@
         <title>几何 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%87%A0%E4%BD%95/</link>
         <description>几何 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 02 May 2021 03:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
-    <title>1851：包含每个查询的最小区间（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1851/</link>
-    <pubDate>Sun, 02 May 2021 03:00:00 &#43;0800</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 21 Apr 2019 01:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>1030：距离顺序排列矩阵单元格</title>
+    <link>https://huozhixue.github.io/leetcode/1030/</link>
+    <pubDate>Sun, 21 Apr 2019 01:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1851/</guid>
-    <description><![CDATA[第 239 场周赛第 4 题 题目 给你一个二维整数数组 intervals ，其中 intervals[i] = [lefti, righti] 表示第 i 个区间 开始于 lefti 、结束于 righti（包含两侧取值，闭区间）。区间的 长度 定义为]]></description>
+    <guid>https://huozhixue.github.io/leetcode/1030/</guid>
+    <description><![CDATA[力扣第 133 场周赛第 2 题 题目 给定四个整数 rows , cols , rCenter 和 cCenter 。有一个 rows x cols 的矩阵，你在单元格上的坐标是 (rCenter, cCenter) 。 返回矩阵中的所有单元格的坐标，并按与 (rCenter, cCenter) 的]]></description>
 </item><item>
-    <title>0850：矩形面积 II（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0850/</link>
-    <pubDate>Sun, 10 Jun 2018 02:00:00 &#43;0800</pubDate>
+    <title>0973：最接近原点的 K 个点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0973/</link>
+    <pubDate>Sun, 13 Jan 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0850/</guid>
-    <description><![CDATA[第 88 场周赛第 4 题 题目 我们给出了一个（轴对齐的）二维矩形列表 rectangles 。 对于 rectangle[i] = [x1, y1, x2, y2]， 其中（x1，y1）是矩形 i 左下角的坐标， (xi1, yi1) 是该矩形 左下]]></description>
+    <guid>https://huozhixue.github.io/leetcode/0973/</guid>
+    <description><![CDATA[力扣第 119 场周赛第 1 题 题目 给定一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点，并且是一个整数 k ，返回离原点 (0,0) 最近的 k 个点。 这里，平面上两点之间的]]></description>
 </item><item>
-    <title>0391：完美矩形（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0391/</link>
-    <pubDate>Sun, 28 Aug 2016 02:00:00 &#43;0800</pubDate>
+    <title>0478：在圆内随机生成点（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0478/</link>
+    <pubDate>Sat, 03 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0391/</guid>
-    <description><![CDATA[第 2 场周赛第 3 题 题目 我们有 N 个与坐标轴对齐的矩形, 其中 N &gt; 0, 判断它们是否能精确地覆盖一个矩形区域。 每个矩形用左下角的点和右上角的点的坐标来表]]></description>
+    <guid>https://huozhixue.github.io/leetcode/0478/</guid>
+    <description><![CDATA[力扣第 478 题 题目 给定圆的半径和圆心的位置，实现函数 randPoint ，在圆中产生均匀随机点。 实现 Solution 类: Solution(double radius, double x_center, double y_center) 用圆的半径 radius 和圆心的位置 (x_center, y_center) 初始化对象 randPoint() 返回]]></description>
 </item><item>
-    <title>0335：路径交叉（★★★）</title>
+    <title>0335：路径交叉（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0335/</link>
     <pubDate>Tue, 01 Dec 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0335/</guid>
-    <description><![CDATA[题目 给你一个整数数组 distance 。 从 X-Y 平面上的点 (0,0) 开始，先向北移动 distance[0] 米，然后向西移动 distance[1] 米， 向南移动 distance[2] 米，向东移动 distance[3] 米，持续移动。也就是说，每次移动后你]]></description>
+    <description><![CDATA[力扣第 335 题 题目 给你一个整数数组 distance 。 从 X-Y 平面上的点 (0,0) 开始，先向北移动 distance[0] 米，然后向西移动 distance[1] 米，向南移动 distance[2] 米，向东移动 distance[3] 米，持续移动。也就是说，每]]></description>
 </item><item>
-    <title>0223：矩形面积（★★）</title>
+    <title>0223：矩形面积（★）</title>
     <link>https://huozhixue.github.io/leetcode/0223/</link>
     <pubDate>Tue, 11 Aug 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0223/</guid>
-    <description><![CDATA[题目 给你 二维 平面上两个 由直线构成的 矩形，请你计算并返回两个矩形覆盖的总面积。 每个矩形由其 左下 顶点和 右上 顶点坐标表示： 第一个矩形由其左下顶点 (ax1,]]></description>
-</item><item>
-    <title>0218：天际线问题（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0218/</link>
-    <pubDate>Thu, 06 Aug 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0218/</guid>
-    <description><![CDATA[题目 城市的 天际线 是从远处观看该城市中所有建筑物形成的轮廓的外部轮廓。 给你所有建筑物的位置和高度，请返回 由这些建筑物形成的 天际线 。 每个建筑物的]]></description>
+    <description><![CDATA[力扣第 223 题 题目 给你 二维 平面上两个 由直线构成且边与坐标轴平行/垂直 的矩形，请你计算并返回两个矩形覆盖的总面积。 每个矩形由其 左下 顶点和 右上 顶点坐]]></description>
 </item><item>
     <title>0149：直线上最多的点数（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0149/</link>
     <pubDate>Fri, 29 May 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0149/</guid>
-    <description><![CDATA[题目 给你一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点。 求最多有多少个点在同一条直线上。 示例 1： 输入：points = [[1,1],[2,2],[3,3]] 输出：3 示例 2： 输入：p]]></description>
+    <description><![CDATA[力扣第 149 题 题目 给你一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点。求最多有多少个点在同一条直线上。 示例 1： 输入：points = [[1,1],[2,2],[3,3]] 输出：3 示例 2]]></description>
 </item></channel>
 </rss>

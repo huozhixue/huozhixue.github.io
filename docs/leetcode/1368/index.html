@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>1368：使网格图至少有一条有效路径的最小代价（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1368：使网格图至少有一条有效路径的最小代价（★★）" />
-<meta property="og:description" content="第 178 场周赛第 4 题 题目 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况： 1 ，" />
+<meta property="og:description" content="力扣第 178 场周赛第 4 题 题目 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/1368/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2020-03-01T03:00:00+08:00" />
@@ -17,10 +17,10 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="1368：使网格图至少有一条有效路径的最小代价（★★）"/>
-<meta name="twitter:description" content="第 178 场周赛第 4 题 题目 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况： 1 ，"/>
+<meta name="twitter:description" content="力扣第 178 场周赛第 4 题 题目 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况："/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1368/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1334/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1392/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1368/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1334/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1381/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1368\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  705 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  707 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1368\/","datePublished": "2020-03-01T03:00:00+08:00","dateModified": "2020-03-01T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1368：使网格图至少有一条有效路径的最小代价（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-01">2020-03-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 705 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-01">2020-03-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 707 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1368/" class="leancloud_visitors" data-flag-title="1368：使网格图至少有一条有效路径的最小代价（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,79 +126,52 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><strong>第 178 场周赛第 4 题</strong></p>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 178 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 
-grid[i][j] 中的数字可能为以下几种情况：</p>
+<p>给你一个 m x n 的网格图 <code>grid</code> 。 <code>grid</code> 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 <code>grid[i][j]</code> 中的数字可能为以下几种情况：</p>
 <ul>
-<li>1 ，下一步往右走，也就是你会从 grid[i][j] 走到 grid[i][j + 1]</li>
-<li>2 ，下一步往左走，也就是你会从 grid[i][j] 走到 grid[i][j - 1]</li>
-<li>3 ，下一步往下走，也就是你会从 grid[i][j] 走到 grid[i + 1][j]</li>
-<li>4 ，下一步往上走，也就是你会从 grid[i][j] 走到 grid[i - 1][j]</li>
+<li><strong>1</strong> ，下一步往右走，也就是你会从 <code>grid[i][j]</code> 走到 <code>grid[i][j + 1]</code></li>
+<li><strong>2</strong> ，下一步往左走，也就是你会从 <code>grid[i][j]</code> 走到 <code>grid[i][j - 1]</code></li>
+<li><strong>3</strong> ，下一步往下走，也就是你会从 <code>grid[i][j]</code> 走到 <code>grid[i + 1][j]</code></li>
+<li><strong>4</strong> ，下一步往上走，也就是你会从 <code>grid[i][j]</code> 走到 <code>grid[i - 1][j]</code></li>
 </ul>
-<p>注意网格图中可能会有 无效数字 ，因为它们可能指向 grid 以外的区域。</p>
-<p>一开始，你会从最左上角的格子 (0,0) 出发。我们定义一条 有效路径 为从格子 (0,0) 出发，每一步都顺着数字对应方向走，
-最终在最右下角的格子 (m - 1, n - 1) 结束的路径。有效路径 不需要是最短路径 。</p>
-<p>你可以花费 cost = 1 的代价修改一个格子中的数字，但每个格子中的数字 只能修改一次 。</p>
+<p>注意网格图中可能会有 <strong>无效数字</strong> ，因为它们可能指向 <code>grid</code> 以外的区域。</p>
+<p>一开始，你会从最左上角的格子 <code>(0,0)</code> 出发。我们定义一条 <strong>有效路径</strong> 为从格子 <code>(0,0)</code> 出发，每一步都顺着数字对应方向走，最终在最右下角的格子 <code>(m - 1, n - 1)</code> 结束的路径。有效路径 <strong>不需要是最短路径</strong> 。</p>
+<p>你可以花费 <code>cost = 1</code> 的代价修改一个格子中的数字，但每个格子中的数字 <strong>只能修改一次</strong> 。</p>
 <p>请你返回让网格图至少有一条有效路径的最小代价。</p>
-<p> </p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid1.png"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid1.png, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid1.png 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid1.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid1.png"
-        title="img" /></p>
-<pre><code>输入：grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]
-输出：3
-解释：你将从点 (0, 0) 出发。
-到达 (3, 3) 的路径为： (0, 0) --&gt; (0, 1) --&gt; (0, 2) --&gt; (0, 3) 花费代价 cost = 1 
-使方向向下 --&gt; (1, 3) --&gt; (1, 2) --&gt; (1, 1) --&gt; (1, 0) 花费代价 cost = 1 使方向向下
- --&gt; (2, 0) --&gt; (2, 1) --&gt; (2, 2) --&gt; (2, 3) 花费代价 cost = 1 使方向向下 --&gt; (3, 3)
+<p><strong>示例 1：</strong></p>
+<p><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid1.png" style="height: 528px; width: 542px;"></p>
+<pre><strong>输入：</strong>grid = [[1,1,1,1],[2,2,2,2],[1,1,1,1],[2,2,2,2]]
+<strong>输出：</strong>3
+<strong>解释：</strong>你将从点 (0, 0) 出发。
+到达 (3, 3) 的路径为： (0, 0) --&gt; (0, 1) --&gt; (0, 2) --&gt; (0, 3) 花费代价 cost = 1 使方向向下 --&gt; (1, 3) --&gt; (1, 2) --&gt; (1, 1) --&gt; (1, 0) 花费代价 cost = 1 使方向向下 --&gt; (2, 0) --&gt; (2, 1) --&gt; (2, 2) --&gt; (2, 3) 花费代价 cost = 1 使方向向下 --&gt; (3, 3)
 总花费为 cost = 3.
-</code></pre>
-<p>示例 2：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid2.png"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid2.png, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid2.png 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid2.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid2.png"
-        title="img" /></p>
-<pre><code>输入：grid = [[1,1,3],[3,2,2],[1,1,4]]
-输出：0
-解释：不修改任何数字你就可以从 (0, 0) 到达 (2, 2) 。
-</code></pre>
-<p>示例 3：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid3.png"
-        data-srcset="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid3.png, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid3.png 1.5x, https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid3.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid3.png"
-        title="img" /></p>
-<pre><code>输入：grid = [[1,2],[4,3]]
-输出：1
-</code></pre>
-<p>示例 4：</p>
-<pre><code>输入：grid = [[2,2,2],[2,2,2]]
-输出：3
-</code></pre>
-<p>示例 5：</p>
-<pre><code>输入：grid = [[4]]
-输出：0
-</code></pre>
-<p> </p>
-<p>提示：</p>
+</pre>
+<p><strong>示例 2：</strong></p>
+<p><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid2.png" style="height: 408px; width: 419px;"></p>
+<pre><strong>输入：</strong>grid = [[1,1,3],[3,2,2],[1,1,4]]
+<strong>输出：</strong>0
+<strong>解释：</strong>不修改任何数字你就可以从 (0, 0) 到达 (2, 2) 。
+</pre>
+<p><strong>示例 3：</strong></p>
+<p><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/02/29/grid3.png" style="height: 302px; width: 314px;"></p>
+<pre><strong>输入：</strong>grid = [[1,2],[4,3]]
+<strong>输出：</strong>1
+</pre>
+<p><strong>示例 4：</strong></p>
+<pre><strong>输入：</strong>grid = [[2,2,2],[2,2,2]]
+<strong>输出：</strong>3
+</pre>
+<p><strong>示例 5：</strong></p>
+<pre><strong>输入：</strong>grid = [[4]]
+<strong>输出：</strong>0
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>m == grid.length</li>
-<li>n == grid[i].length</li>
-<li>1 &lt;= m, n &lt;= 100</li>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 100</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>将每个格子看作顶点，相邻格子的路径看作边，如果边的方向顺着数字，看作权重 0，否则权重 1。</p>
@@ -256,14 +229,14 @@ grid[i][j] 中的数字可能为以下几种情况：</p>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>,&nbsp;<a href="/leetcode_tags/%E5%A0%86%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">堆（优先队列）</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1392/" class="prev" rel="prev" title="1392：最长快乐前缀（★★★）"><i class="fas fa-angle-left fa-fw"></i>1392：最长快乐前缀（★★★）</a>
-            <a href="/leetcode/1334/" class="next" rel="next" title="1334：阈值距离内邻居最少的城市（★★）">1334：阈值距离内邻居最少的城市（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1381/" class="prev" rel="prev" title="1381：设计一个支持增量操作的栈（★）"><i class="fas fa-angle-left fa-fw"></i>1381：设计一个支持增量操作的栈（★）</a>
+            <a href="/leetcode/1334/" class="next" rel="next" title="1334：阈值距离内邻居最少的城市（★）">1334：阈值距离内邻居最少的城市（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

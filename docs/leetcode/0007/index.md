@@ -1,37 +1,53 @@
-# 0007：整数反转
+# 0007：整数反转（★）
 
+
+> <u>**[力扣第 7 题](https://leetcode.cn/problems/reverse-integer/)**</u>
 
 ## 题目
 
-给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。
+<p>给你一个 32 位的有符号整数 <code>x</code> ，返回将 <code>x</code> 中的数字部分反转后的结果。</p>
 
-如果反转后整数超过 32 位的有符号整数的范围 [−2^31,  2^31 − 1] ，就返回 0。
-
-假设环境不允许存储 64 位整数（有符号或无符号）。
-
-
-示例 1：
-
-    输入：x = 123
-    输出：321
-
-示例 2：
-
-    输入：x = -123
-    输出：-321
-
-示例 3：
-
-    输入：x = 120
-    输出：21
-
-示例 4：
-
-    输入：x = 0
-    输出：0
+<p>如果反转后整数超过 32 位的有符号整数的范围 <code>[−2<sup>31</sup>,  2<sup>31 </sup>− 1]</code> ，就返回 0。</p>
+<strong>假设环境不允许存储 64 位整数（有符号或无符号）。</strong>
 
 
-提示： -2^31 <= x <= 2^31 - 1
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>x = 123
+<strong>输出：</strong>321
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>x = -123
+<strong>输出：</strong>-321
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>x = 120
+<strong>输出：</strong>21
+</pre>
+
+<p><strong>示例 4：</strong></p>
+
+<pre>
+<strong>输入：</strong>x = 0
+<strong>输出：</strong>0
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> <= x <= 2<sup>31</sup> - 1</code></li>
+</ul>
+
 
 ## 分析
 

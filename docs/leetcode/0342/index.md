@@ -1,30 +1,50 @@
-# 0342：4的幂（★）
+# 0342：4的幂
 
+
+> <u>**[力扣第 342 题](https://leetcode.cn/problems/power-of-four/)**</u>
 
 ## 题目
 
-给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 true ；否则，返回 false 。
+<p>给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-整数 n 是 4 的幂次方需满足：存在整数 x 使得 n == 4^x
+<p>整数 <code>n</code> 是 4 的幂次方需满足：存在整数 <code>x</code> 使得 <code>n == 4<sup>x</sup></code></p>
 
 
-示例 1：
 
-    输入：n = 16
-    输出：true
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 16
+<strong>输出：</strong>true
+</pre>
 
-    输入：n = 5
-    输出：false
+<p><strong>示例 2：</strong></p>
 
-示例 3：
+<pre>
+<strong>输入：</strong>n = 5
+<strong>输出：</strong>false
+</pre>
 
-    输入：n = 1
-    输出：true
-	
-提示：-2^31 <= n <= 2^31 - 1
- 
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>true
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>你能不使用循环或者递归来完成本题吗？</p>
+
+
 ## 分析
 
 {{< lc "0231" >}} 升级版。n 是 4 的幂等价于 n 是 2 的幂且 n 的二进制中的 1 在偶数位上。

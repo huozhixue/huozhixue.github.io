@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0183：从不订购的客户（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0183：从不订购的客户（★）" />
-<meta property="og:description" content="题目 SQL架构 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。 Customers 表： &#43;----&#43;-------&#43; | Id | Name | &#43;----&#43;-------&#43; | 1 | Joe | |" />
+        <title>0183：从不订购的客户 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0183：从不订购的客户" />
+<meta property="og:description" content="力扣第 183 题 题目 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。 Customers 表： &#43;----&#43;-------&#43; | Id | Name | &#43;----&#43;-------&#43; | 1 | Joe | |" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0183/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-07-02T00:00:00+08:00" />
@@ -16,15 +16,15 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0183：从不订购的客户（★）"/>
-<meta name="twitter:description" content="题目 SQL架构 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。 Customers 表： &#43;----&#43;-------&#43; | Id | Name | &#43;----&#43;-------&#43; | 1 | Joe | |"/>
+<meta name="twitter:title" content="0183：从不订购的客户"/>
+<meta name="twitter:description" content="力扣第 183 题 题目 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。 Customers 表： &#43;----&#43;-------&#43; | Id | Name | &#43;----&#43;-------&#43; | 1 | Joe | |"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0183/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0182/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0184/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0183：从不订购的客户（★）",
+        "headline": "0183：从不订购的客户",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0183：从不订购的客户（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0183：从不订购的客户</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-02">2015-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 177 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0183/" class="leancloud_visitors" data-flag-title="0183：从不订购的客户（★）">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0183/" class="leancloud_visitors" data-flag-title="0183：从不订购的客户">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,11 +125,13 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>SQL架构</p>
-<p>某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>
-<p>Customers 表：</p>
-<pre><code>+----+-------+
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/customers-who-never-order/" target="_blank" rel="noopener noreffer">力扣第 183 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>某网站包含两个表，<code>Customers</code> 表和 <code>Orders</code> 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>
+<p><code>Customers</code> 表：</p>
+<pre>+----+-------+
 | Id | Name  |
 +----+-------+
 | 1  | Joe   |
@@ -137,23 +139,23 @@
 | 3  | Sam   |
 | 4  | Max   |
 +----+-------+
-</code></pre>
-<p>Orders 表：</p>
-<pre><code>+----+------------+
+</pre>
+<p><code>Orders</code> 表：</p>
+<pre>+----+------------+
 | Id | CustomerId |
 +----+------------+
 | 1  | 3          |
 | 2  | 1          |
 +----+------------+
-</code></pre>
+</pre>
 <p>例如给定上述表格，你的查询应返回：</p>
-<pre><code>+-----------+
+<pre>+-----------+
 | Customers |
 +-----------+
 | Henry     |
 | Max       |
 +-----------+
-</code></pre>
+</pre>
 <h2 id="分析">分析</h2>
 <p>返回左连接没成功的即可。</p>
 <h2 id="解答">解答</h2>
@@ -199,8 +201,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0184/" class="prev" rel="prev" title="0184：部门工资最高的员工（★★）"><i class="fas fa-angle-left fa-fw"></i>0184：部门工资最高的员工（★★）</a>
-            <a href="/leetcode/0182/" class="next" rel="next" title="0182：查找重复的电子邮箱（★）">0182：查找重复的电子邮箱（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0184/" class="prev" rel="prev" title="0184：部门工资最高的员工（★）"><i class="fas fa-angle-left fa-fw"></i>0184：部门工资最高的员工（★）</a>
+            <a href="/leetcode/0182/" class="next" rel="next" title="0182：查找重复的电子邮箱">0182：查找重复的电子邮箱<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

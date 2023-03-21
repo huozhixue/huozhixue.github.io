@@ -1,35 +1,50 @@
-# 0313：超级丑数（★★★）
+# 0313：超级丑数（★）
 
+
+> <u>**[力扣第 313 题](https://leetcode.cn/problems/super-ugly-number/)**</u>
 
 ## 题目
 
-超级丑数 是一个正整数，并满足其所有质因数都出现在质数数组 primes 中。
+<p><strong>超级丑数</strong> 是一个正整数，并满足其所有质因数都出现在质数数组 <code>primes</code> 中。</p>
 
-给你一个整数 n 和一个整数数组 primes ，返回第 n 个 超级丑数 。
+<p>给你一个整数 <code>n</code> 和一个整数数组 <code>primes</code> ，返回第 <code>n</code> 个 <strong>超级丑数</strong> 。</p>
 
-题目数据保证第 n 个 超级丑数 在 32-bit 带符号整数范围内。
+<p>题目数据保证第 <code>n</code> 个 <strong>超级丑数</strong> 在 <strong>32-bit</strong> 带符号整数范围内。</p>
 
- 
 
-示例 1：
 
-    输入：n = 12, primes = [2,7,13,19]
-    输出：32 
-    解释：给定长度为 4 的质数数组 primes = [2,7,13,19]，前 12 个超级丑数序列为：
-    [1,2,4,7,8,13,14,16,19,26,28,32] 。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>n = 12, <code>primes</code> = <code>[2,7,13,19]</code>
+<strong>输出：</strong>32
+<strong>解释：</strong>给定长度为 4 的质数数组 primes = [2,7,13,19]，前 12 个超级丑数序列为：[1,2,4,7,8,13,14,16,19,26,28,32] 。</pre>
 
-    输入：n = 1, primes = [2,3,5]
-    输出：1
-    解释：1 不含质因数，因此它的所有质因数都在质数数组 primes = [2,3,5] 中。
- 
-提示：
-- 1 <= n <= 10^6
-- 1 <= primes.length <= 100
-- 2 <= primes[i] <= 1000
-- 题目数据 保证 primes[i] 是一个质数
-- primes 中的所有值都 互不相同 ，且按 递增顺序 排列 
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 1, primes = [2,3,5]
+<strong>输出：</strong>1
+<strong>解释：</strong>1 不含质因数，因此它的所有质因数都在质数数组 primes = [2,3,5] 中。
+</pre>
+
+
+<div class="top-view__1vxA">
+<div class="original__bRMd">
+<div>
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+<li><code>1 &lt;= primes.length &lt;= 100</code></li>
+<li><code>2 &lt;= primes[i] &lt;= 1000</code></li>
+<li>题目数据<strong> 保证</strong> <code>primes[i]</code> 是一个质数</li>
+<li><code>primes</code> 中的所有值都 <strong>互不相同</strong> ，且按 <strong>递增顺序</strong> 排列</li>
+</ul>
+</div>
+</div>
+</div>
+
 
 ## 分析
 
