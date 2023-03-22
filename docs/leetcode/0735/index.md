@@ -1,7 +1,7 @@
 # 0735：行星碰撞（★）
 
 
-> <u>**[力扣第 60 场双周赛第 3 题](https://leetcode.cn/problems/asteroid-collision/)**</u>
+> <u>**[力扣第 735 题](https://leetcode.cn/problems/asteroid-collision/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0664：奇怪的打印机（★★）
 
 
-> <u>**[力扣第 46 场双周赛第 4 题](https://leetcode.cn/problems/strange-printer/)**</u>
+> <u>**[力扣第 664 题](https://leetcode.cn/problems/strange-printer/)**</u>
 
 ## 题目
 

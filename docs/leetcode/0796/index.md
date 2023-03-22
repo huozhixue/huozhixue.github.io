@@ -1,7 +1,7 @@
 # 0796：旋转字符串
 
 
-> <u>**[力扣第 75 场双周赛第 1 题](https://leetcode.cn/problems/rotate-string/)**</u>
+> <u>**[力扣第 796 题](https://leetcode.cn/problems/rotate-string/)**</u>
 
 ## 题目
 

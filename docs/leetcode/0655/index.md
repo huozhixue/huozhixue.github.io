@@ -1,7 +1,7 @@
 # 0655：输出二叉树（★）
 
 
-> <u>**[力扣第 44 场双周赛第 3 题](https://leetcode.cn/problems/print-binary-tree/)**</u>
+> <u>**[力扣第 655 题](https://leetcode.cn/problems/print-binary-tree/)**</u>
 
 ## 题目
 

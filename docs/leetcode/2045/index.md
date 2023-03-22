@@ -1,4 +1,4 @@
-# 2045：到达目的地的第二短时间（★★）
+# 2045：到达目的地的第二短时间（★★★）
 
 
 > <u>**[力扣第 263 场周赛第 4 题](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/)**</u>

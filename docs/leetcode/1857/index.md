@@ -1,4 +1,4 @@
-# 1857：有向图中最大颜色值（★★）
+# 1857：有向图中最大颜色值（★★★）
 
 
 > <u>**[力扣第 240 场周赛第 4 题](https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/)**</u>

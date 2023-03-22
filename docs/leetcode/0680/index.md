@@ -1,7 +1,7 @@
 # 0680：验证回文串 II
 
 
-> <u>**[力扣第 50 场双周赛第 1 题](https://leetcode.cn/problems/valid-palindrome-ii/)**</u>
+> <u>**[力扣第 680 题](https://leetcode.cn/problems/valid-palindrome-ii/)**</u>
 
 ## 题目
 

@@ -1,4 +1,4 @@
-# 0847：访问所有节点的最短路径（★★）
+# 0847：访问所有节点的最短路径（★★★）
 
 
 > <u>**[力扣第 87 场周赛第 4 题](https://leetcode.cn/problems/shortest-path-visiting-all-nodes/)**</u>

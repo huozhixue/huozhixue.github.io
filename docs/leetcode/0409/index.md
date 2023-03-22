@@ -1,7 +1,7 @@
 # 0409：最长回文串
 
 
-> <u>**[力扣第 7  场周赛第 2  题](https://leetcode.cn/problems/longest-palindrome/)**</u>
+> <u>**[力扣第 409 题](https://leetcode.cn/problems/longest-palindrome/)**</u>
 
 ## 题目
 

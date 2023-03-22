@@ -1,7 +1,7 @@
 # 0394：字符串解码（★）
 
 
-> <u>**[力扣第 3 场周赛第 3 题](https://leetcode.cn/problems/decode-string/)**</u>
+> <u>**[力扣第 394 题](https://leetcode.cn/problems/decode-string/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
-# 0797：所有可能的路径（★）
+# 0797：所有可能的路径
 
 
-> <u>**[力扣第 75 场双周赛第 2 题](https://leetcode.cn/problems/all-paths-from-source-to-target/)**</u>
+> <u>**[力扣第 797 题](https://leetcode.cn/problems/all-paths-from-source-to-target/)**</u>
 
 ## 题目
 

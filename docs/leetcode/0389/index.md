@@ -1,7 +1,7 @@
 # 0389：找不同
 
 
-> <u>**[力扣第 2 场周赛第 1 题](https://leetcode.cn/problems/find-the-difference/)**</u>
+> <u>**[力扣第 389 题](https://leetcode.cn/problems/find-the-difference/)**</u>
 
 ## 题目
 

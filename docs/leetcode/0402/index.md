@@ -1,7 +1,7 @@
 # 0402：移掉 K 位数字（★）
 
 
-> <u>**[力扣第 5 场周赛第 3 题](https://leetcode.cn/problems/remove-k-digits/)**</u>
+> <u>**[力扣第 402 题](https://leetcode.cn/problems/remove-k-digits/)**</u>
 
 ## 题目
 

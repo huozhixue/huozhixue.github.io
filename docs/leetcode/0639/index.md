@@ -1,7 +1,7 @@
 # 0639：解码方法 II（★★）
 
 
-> <u>**[力扣第 40 场双周赛第 4 题](https://leetcode.cn/problems/decode-ways-ii/)**</u>
+> <u>**[力扣第 639 题](https://leetcode.cn/problems/decode-ways-ii/)**</u>
 
 ## 题目
 

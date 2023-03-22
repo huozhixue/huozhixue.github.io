@@ -1,7 +1,7 @@
 # 0678：有效的括号字符串（★）
 
 
-> <u>**[力扣第 50 场双周赛第 3 题](https://leetcode.cn/problems/valid-parenthesis-string/)**</u>
+> <u>**[力扣第 678 题](https://leetcode.cn/problems/valid-parenthesis-string/)**</u>
 
 ## 题目
 

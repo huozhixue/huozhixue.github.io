@@ -1,4 +1,4 @@
-# 1462：课程表 IV（★）
+# 1462：课程表 IV（★★）
 
 
 > <u>**[力扣第 27 场双周赛第 3 题](https://leetcode.cn/problems/course-schedule-iv/)**</u>

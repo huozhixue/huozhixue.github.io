@@ -1,7 +1,7 @@
 # 0397：整数替换（★）
 
 
-> <u>**[力扣第 4 场周赛第 2 题](https://leetcode.cn/problems/integer-replacement/)**</u>
+> <u>**[力扣第 397 题](https://leetcode.cn/problems/integer-replacement/)**</u>
 
 ## 题目
 

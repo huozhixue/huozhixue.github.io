@@ -1,7 +1,7 @@
-# 0799：香槟塔（★）
+# 0799：香槟塔（★★）
 
 
-> <u>**[力扣第 75 场双周赛第 3 题](https://leetcode.cn/problems/champagne-tower/)**</u>
+> <u>**[力扣第 799 题](https://leetcode.cn/problems/champagne-tower/)**</u>
 
 ## 题目
 

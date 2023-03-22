@@ -1,7 +1,7 @@
 # 0406：根据身高重建队列（★）
 
 
-> <u>**[力扣第 6 场周赛第 3 题](https://leetcode.cn/problems/queue-reconstruction-by-height/)**</u>
+> <u>**[力扣第 406 题](https://leetcode.cn/problems/queue-reconstruction-by-height/)**</u>
 
 ## 题目
 

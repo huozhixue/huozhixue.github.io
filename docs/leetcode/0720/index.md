@@ -1,7 +1,7 @@
 # 0720：词典中最长的单词（★）
 
 
-> <u>**[力扣第 57 场双周赛第 1 题](https://leetcode.cn/problems/longest-word-in-dictionary/)**</u>
+> <u>**[力扣第 720 题](https://leetcode.cn/problems/longest-word-in-dictionary/)**</u>
 
 ## 题目
 

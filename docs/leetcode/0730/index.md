@@ -1,7 +1,7 @@
 # 0730：统计不同回文子序列（★★）
 
 
-> <u>**[力扣第 59 场双周赛第 3 题](https://leetcode.cn/problems/count-different-palindromic-subsequences/)**</u>
+> <u>**[力扣第 730 题](https://leetcode.cn/problems/count-different-palindromic-subsequences/)**</u>
 
 ## 题目
 

@@ -1,4 +1,4 @@
-# 1993：树上的操作（★）
+# 1993：树上的操作（★★）
 
 
 > <u>**[力扣第 60 场双周赛第 3 题](https://leetcode.cn/problems/operations-on-tree/)**</u>

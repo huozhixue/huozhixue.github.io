@@ -1,7 +1,7 @@
 # 0637：二叉树的层平均值
 
 
-> <u>**[力扣第 40 场双周赛第 1 题](https://leetcode.cn/problems/average-of-levels-in-binary-tree/)**</u>
+> <u>**[力扣第 637 题](https://leetcode.cn/problems/average-of-levels-in-binary-tree/)**</u>
 
 ## 题目
 

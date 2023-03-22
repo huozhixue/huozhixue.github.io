@@ -1,4 +1,4 @@
-# 1124：表现良好的最长时间段（★）
+# 1124：表现良好的最长时间段（★★）
 
 
 > <u>**[力扣第 145 场周赛第 3 题](https://leetcode.cn/problems/longest-well-performing-interval/)**</u>

@@ -1,7 +1,7 @@
 # 0743：网络延迟时间（★）
 
 
-> <u>**[力扣第 62 场双周赛第 2 题](https://leetcode.cn/problems/network-delay-time/)**</u>
+> <u>**[力扣第 743 题](https://leetcode.cn/problems/network-delay-time/)**</u>
 
 ## 题目
 

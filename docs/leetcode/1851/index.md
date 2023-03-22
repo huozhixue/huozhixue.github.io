@@ -1,4 +1,4 @@
-# 1851：包含每个查询的最小区间（★★）
+# 1851：包含每个查询的最小区间（★★★）
 
 
 > <u>**[力扣第 239 场周赛第 4 题](https://leetcode.cn/problems/minimum-interval-to-include-each-query/)**</u>

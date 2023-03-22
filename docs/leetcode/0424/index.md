@@ -1,7 +1,7 @@
 # 0424：替换后的最长重复字符（★）
 
 
-> <u>**[力扣第 9  场周赛第 3  题](https://leetcode.cn/problems/longest-repeating-character-replacement/)**</u>
+> <u>**[力扣第 424 题](https://leetcode.cn/problems/longest-repeating-character-replacement/)**</u>
 
 ## 题目
 

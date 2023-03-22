@@ -1,7 +1,7 @@
 # 0713：乘积小于 K 的子数组（★）
 
 
-> <u>**[力扣第 55 场双周赛第 3 题](https://leetcode.cn/problems/subarray-product-less-than-k/)**</u>
+> <u>**[力扣第 713 题](https://leetcode.cn/problems/subarray-product-less-than-k/)**</u>
 
 ## 题目
 

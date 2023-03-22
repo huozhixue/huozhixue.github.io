@@ -1,7 +1,7 @@
 # 0646：最长数对链（★）
 
 
-> <u>**[力扣第 42 场双周赛第 2 题](https://leetcode.cn/problems/maximum-length-of-pair-chain/)**</u>
+> <u>**[力扣第 646 题](https://leetcode.cn/problems/maximum-length-of-pair-chain/)**</u>
 
 ## 题目
 

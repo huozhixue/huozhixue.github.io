@@ -1,7 +1,7 @@
-# 0810：黑板异或游戏（★★）
+# 0810：黑板异或游戏（★★★）
 
 
-> <u>**[力扣第 78 场周赛第 4 题](https://leetcode.cn/problems/chalkboard-xor-game/)**</u>
+> <u>**[力扣第 810 题](https://leetcode.cn/problems/chalkboard-xor-game/)**</u>
 
 ## 题目
 

@@ -1,4 +1,4 @@
-# 0866：回文素数（★）
+# 0866：回文素数（★★）
 
 
 > <u>**[力扣第 92 场周赛第 3 题](https://leetcode.cn/problems/prime-palindrome/)**</u>

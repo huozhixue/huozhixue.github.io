@@ -1,7 +1,7 @@
 # 0393：UTF-8 编码验证（★）
 
 
-> <u>**[力扣第 3 场周赛第 2 题](https://leetcode.cn/problems/utf-8-validation/)**</u>
+> <u>**[力扣第 393 题](https://leetcode.cn/problems/utf-8-validation/)**</u>
 
 ## 题目
 

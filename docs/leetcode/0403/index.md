@@ -1,7 +1,7 @@
 # 0403：青蛙过河（★★）
 
 
-> <u>**[力扣第 5 场周赛第 4 题](https://leetcode.cn/problems/frog-jump/)**</u>
+> <u>**[力扣第 403 题](https://leetcode.cn/problems/frog-jump/)**</u>
 
 ## 题目
 

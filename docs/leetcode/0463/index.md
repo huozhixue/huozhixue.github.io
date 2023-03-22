@@ -1,7 +1,7 @@
 # 0463：岛屿的周长
 
 
-> <u>**[力扣第 10  场周赛第 1 题](https://leetcode.cn/problems/island-perimeter/)**</u>
+> <u>**[力扣第 463 题](https://leetcode.cn/problems/island-perimeter/)**</u>
 
 ## 题目
 

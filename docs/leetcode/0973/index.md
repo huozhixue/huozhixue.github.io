@@ -1,4 +1,4 @@
-# 0973：最接近原点的 K 个点（★）
+# 0973：最接近原点的 K 个点
 
 
 > <u>**[力扣第 119 场周赛第 1 题](https://leetcode.cn/problems/k-closest-points-to-origin/)**</u>

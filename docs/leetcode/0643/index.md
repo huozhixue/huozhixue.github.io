@@ -1,7 +1,7 @@
 # 0643：子数组最大平均数 I
 
 
-> <u>**[力扣第 41 场双周赛第 1 题](https://leetcode.cn/problems/maximum-average-subarray-i/)**</u>
+> <u>**[力扣第 643 题](https://leetcode.cn/problems/maximum-average-subarray-i/)**</u>
 
 ## 题目
 

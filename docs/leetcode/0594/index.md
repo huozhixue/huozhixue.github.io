@@ -1,7 +1,7 @@
 # 0594：最长和谐子序列
 
 
-> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/longest-harmonious-subsequence/)**</u>
+> <u>**[力扣第 594 题](https://leetcode.cn/problems/longest-harmonious-subsequence/)**</u>
 
 ## 题目
 

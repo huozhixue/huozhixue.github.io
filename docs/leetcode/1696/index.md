@@ -1,4 +1,4 @@
-# 1696：跳跃游戏 VI（★）
+# 1696：跳跃游戏 VI（★★）
 
 
 > <u>**[力扣第 220 场周赛第 3 题](https://leetcode.cn/problems/jump-game-vi/)**</u>

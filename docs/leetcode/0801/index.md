@@ -1,7 +1,7 @@
 # 0801：使序列递增的最小交换次数（★★）
 
 
-> <u>**[力扣第 76 场周赛第 2 题](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)**</u>
+> <u>**[力扣第 801 题](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)**</u>
 
 ## 题目
 

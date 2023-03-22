@@ -1,7 +1,7 @@
-# 0790：多米诺和托米诺平铺（★）
+# 0790：多米诺和托米诺平铺（★★）
 
 
-> <u>**[力扣第 73 场双周赛第 4 题](https://leetcode.cn/problems/domino-and-tromino-tiling/)**</u>
+> <u>**[力扣第 790 题](https://leetcode.cn/problems/domino-and-tromino-tiling/)**</u>
 
 ## 题目
 

@@ -1,4 +1,4 @@
-# 2097：合法重新排列数对（★★）
+# 2097：合法重新排列数对（★★★★）
 
 
 > <u>**[力扣第 270 场周赛第 4 题](https://leetcode.cn/problems/valid-arrangement-of-pairs/)**</u>

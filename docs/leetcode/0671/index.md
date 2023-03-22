@@ -1,7 +1,7 @@
 # 0671：二叉树中第二小的节点
 
 
-> <u>**[力扣第 48 场双周赛第 1 题](https://leetcode.cn/problems/second-minimum-node-in-a-binary-tree/)**</u>
+> <u>**[力扣第 671 题](https://leetcode.cn/problems/second-minimum-node-in-a-binary-tree/)**</u>
 
 ## 题目
 

@@ -1,4 +1,4 @@
-# 0857：雇佣 K 名工人的最低成本（★★）
+# 0857：雇佣 K 名工人的最低成本（★★★）
 
 
 > <u>**[力扣第 90 场周赛第 4 题](https://leetcode.cn/problems/minimum-cost-to-hire-k-workers/)**</u>

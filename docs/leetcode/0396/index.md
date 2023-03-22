@@ -1,7 +1,7 @@
 # 0396：旋转函数（★）
 
 
-> <u>**[力扣第 4 场周赛第 1 题](https://leetcode.cn/problems/rotate-function/)**</u>
+> <u>**[力扣第 396 题](https://leetcode.cn/problems/rotate-function/)**</u>
 
 ## 题目
 

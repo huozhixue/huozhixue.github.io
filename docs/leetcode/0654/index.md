@@ -1,7 +1,7 @@
 # 0654：最大二叉树（★）
 
 
-> <u>**[力扣第 44 场双周赛第 2 题](https://leetcode.cn/problems/maximum-binary-tree/)**</u>
+> <u>**[力扣第 654 题](https://leetcode.cn/problems/maximum-binary-tree/)**</u>
 
 ## 题目
 

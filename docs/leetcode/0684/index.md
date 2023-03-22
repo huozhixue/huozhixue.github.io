@@ -1,7 +1,7 @@
 # 0684：冗余连接（★）
 
 
-> <u>**[力扣第 51 场双周赛第 3 题](https://leetcode.cn/problems/redundant-connection/)**</u>
+> <u>**[力扣第 684 题](https://leetcode.cn/problems/redundant-connection/)**</u>
 
 ## 题目
 

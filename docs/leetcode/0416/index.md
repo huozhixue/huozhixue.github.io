@@ -1,7 +1,7 @@
 # 0416：分割等和子集（★）
 
 
-> <u>**[力扣第 8  场周赛第 2  题](https://leetcode.cn/problems/partition-equal-subset-sum/)**</u>
+> <u>**[力扣第 416 题](https://leetcode.cn/problems/partition-equal-subset-sum/)**</u>
 
 ## 题目
 

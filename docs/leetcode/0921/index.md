@@ -1,4 +1,4 @@
-# 0921：使括号有效的最少添加（★）
+# 0921：使括号有效的最少添加
 
 
 > <u>**[力扣第 106 场周赛第 2 题](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/)**</u>

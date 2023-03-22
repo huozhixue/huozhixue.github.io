@@ -1,7 +1,7 @@
 # 0647：回文子串（★）
 
 
-> <u>**[力扣第 42 场双周赛第 3 题](https://leetcode.cn/problems/palindromic-substrings/)**</u>
+> <u>**[力扣第 647 题](https://leetcode.cn/problems/palindromic-substrings/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0390：消除游戏（★）
 
 
-> <u>**[力扣第 2 场周赛第 2 题](https://leetcode.cn/problems/elimination-game/)**</u>
+> <u>**[力扣第 390 题](https://leetcode.cn/problems/elimination-game/)**</u>
 
 ## 题目
 

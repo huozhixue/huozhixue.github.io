@@ -1,7 +1,7 @@
 # 0687：最长同值路径（★）
 
 
-> <u>**[力扣第 52 场双周赛第 2 题](https://leetcode.cn/problems/longest-univalue-path/)**</u>
+> <u>**[力扣第 687 题](https://leetcode.cn/problems/longest-univalue-path/)**</u>
 
 ## 题目
 

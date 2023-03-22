@@ -1,4 +1,4 @@
-# 1054：距离相等的条形码（★）
+# 1054：距离相等的条形码（★★）
 
 
 > <u>**[力扣第 138 场周赛第 4 题](https://leetcode.cn/problems/distant-barcodes/)**</u>

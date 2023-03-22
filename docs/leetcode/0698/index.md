@@ -1,7 +1,7 @@
 # 0698：划分为k个相等的子集（★）
 
 
-> <u>**[力扣第 54 场双周赛第 3 题](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/)**</u>
+> <u>**[力扣第 698 题](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/)**</u>
 
 ## 题目
 

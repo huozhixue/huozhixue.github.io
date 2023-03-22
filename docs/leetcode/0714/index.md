@@ -1,7 +1,7 @@
 # 0714：买卖股票的最佳时机含手续费（★）
 
 
-> <u>**[力扣第 55 场双周赛第 1 题](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)**</u>
+> <u>**[力扣第 714 题](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)**</u>
 
 ## 题目
 

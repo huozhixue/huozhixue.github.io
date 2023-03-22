@@ -1,4 +1,4 @@
-# 0850：矩形面积 II（★★）
+# 0850：矩形面积 II（★★★）
 
 
 > <u>**[力扣第 88 场周赛第 4 题](https://leetcode.cn/problems/rectangle-area-ii/)**</u>

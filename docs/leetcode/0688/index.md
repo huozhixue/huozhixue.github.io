@@ -1,7 +1,7 @@
 # 0688：骑士在棋盘上的概率（★）
 
 
-> <u>**[力扣第 52 场双周赛第 3 题](https://leetcode.cn/problems/knight-probability-in-chessboard/)**</u>
+> <u>**[力扣第 688 题](https://leetcode.cn/problems/knight-probability-in-chessboard/)**</u>
 
 ## 题目
 

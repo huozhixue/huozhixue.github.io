@@ -1,4 +1,4 @@
-# 1642：可以到达的最远建筑（★）
+# 1642：可以到达的最远建筑（★★）
 
 
 > <u>**[力扣第 213 场周赛第 3 题](https://leetcode.cn/problems/furthest-building-you-can-reach/)**</u>

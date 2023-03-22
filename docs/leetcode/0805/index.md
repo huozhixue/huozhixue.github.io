@@ -1,7 +1,7 @@
 # 0805：数组的均值分割（★★）
 
 
-> <u>**[力扣第 77 场周赛第 4 题](https://leetcode.cn/problems/split-array-with-same-average/)**</u>
+> <u>**[力扣第 805 题](https://leetcode.cn/problems/split-array-with-same-average/)**</u>
 
 ## 题目
 

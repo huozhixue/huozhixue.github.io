@@ -1,7 +1,7 @@
 # 0401：二进制手表
 
 
-> <u>**[力扣第 5 场周赛第 2 题](https://leetcode.cn/problems/binary-watch/)**</u>
+> <u>**[力扣第 401 题](https://leetcode.cn/problems/binary-watch/)**</u>
 
 ## 题目
 

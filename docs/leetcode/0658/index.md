@@ -1,7 +1,7 @@
 # 0658：找到 K 个最接近的元素（★）
 
 
-> <u>**[力扣第 45 场双周赛第 2 题](https://leetcode.cn/problems/find-k-closest-elements/)**</u>
+> <u>**[力扣第 658 题](https://leetcode.cn/problems/find-k-closest-elements/)**</u>
 
 ## 题目
 

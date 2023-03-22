@@ -1,4 +1,4 @@
-# 2156：查找给定哈希值的子串（★★）
+# 2156：查找给定哈希值的子串（★★★）
 
 
 > <u>**[力扣第 278 场周赛第 3 题](https://leetcode.cn/problems/find-substring-with-given-hash-value/)**</u>

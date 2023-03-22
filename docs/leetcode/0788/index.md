@@ -1,7 +1,7 @@
-# 0788：旋转数字（★）
+# 0788：旋转数字
 
 
-> <u>**[力扣第 73 场双周赛第 1 题](https://leetcode.cn/problems/rotated-digits/)**</u>
+> <u>**[力扣第 788 题](https://leetcode.cn/problems/rotated-digits/)**</u>
 
 ## 题目
 

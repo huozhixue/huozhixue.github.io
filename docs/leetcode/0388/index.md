@@ -1,7 +1,7 @@
 # 0388：文件的最长绝对路径（★）
 
 
-> <u>**[力扣第 1 场周赛第 3 题](https://leetcode.cn/problems/longest-absolute-file-path/)**</u>
+> <u>**[力扣第 388 题](https://leetcode.cn/problems/longest-absolute-file-path/)**</u>
 
 ## 题目
 

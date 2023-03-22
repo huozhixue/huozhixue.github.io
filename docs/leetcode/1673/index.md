@@ -1,4 +1,4 @@
-# 1673：找出最具竞争力的子序列（★）
+# 1673：找出最具竞争力的子序列（★★）
 
 
 > <u>**[力扣第 217 场周赛第 2 题](https://leetcode.cn/problems/find-the-most-competitive-subsequence/)**</u>

@@ -1,7 +1,7 @@
 # 0464：我能赢吗（★）
 
 
-> <u>**[力扣第 10  场周赛第 2 题](https://leetcode.cn/problems/can-i-win/)**</u>
+> <u>**[力扣第 464 题](https://leetcode.cn/problems/can-i-win/)**</u>
 
 ## 题目
 

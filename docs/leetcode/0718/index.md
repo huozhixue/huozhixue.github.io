@@ -1,7 +1,7 @@
 # 0718：最长重复子数组（★）
 
 
-> <u>**[力扣第 56 场双周赛第 3 题](https://leetcode.cn/problems/maximum-length-of-repeated-subarray/)**</u>
+> <u>**[力扣第 718 题](https://leetcode.cn/problems/maximum-length-of-repeated-subarray/)**</u>
 
 ## 题目
 

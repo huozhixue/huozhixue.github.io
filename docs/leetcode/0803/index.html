@@ -7,30 +7,30 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0803：打砖块（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0803：打砖块（★★）" />
-<meta property="og:description" content="力扣第 76 场周赛第 4 题 题目 有一个 m x n 的二元网格 grid ，其中 1 表示砖块，0 表示空白。砖块 稳定（不会掉落）的前提是： 一块砖直接连接到网格的顶部，或者" />
+        <title>0803：打砖块（★★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0803：打砖块（★★★★）" />
+<meta property="og:description" content="力扣第 803 题 题目 有一个 m x n 的二元网格 grid ，其中 1 表示砖块，0 表示空白。砖块 稳定（不会掉落）的前提是： 一块砖直接连接到网格的顶部，或者 至少有一块" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0803/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2018-03-18T03:00:00+08:00" />
-<meta property="article:modified_time" content="2018-03-18T03:00:00+08:00" />
+<meta property="article:published_time" content="2017-03-13T00:00:00+08:00" />
+<meta property="article:modified_time" content="2017-03-13T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0803：打砖块（★★）"/>
-<meta name="twitter:description" content="力扣第 76 场周赛第 4 题 题目 有一个 m x n 的二元网格 grid ，其中 1 表示砖块，0 表示空白。砖块 稳定（不会掉落）的前提是： 一块砖直接连接到网格的顶部，或者"/>
+<meta name="twitter:title" content="0803：打砖块（★★★★）"/>
+<meta name="twitter:description" content="力扣第 803 题 题目 有一个 m x n 的二元网格 grid ，其中 1 表示砖块，0 表示空白。砖块 稳定（不会掉落）的前提是： 一块砖直接连接到网格的顶部，或者 至少有一块"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0803/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0802/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0805/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0803：打砖块（★★）",
+        "headline": "0803：打砖块（★★★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0803\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  575 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0803\/","datePublished": "2018-03-18T03:00:00+08:00","dateModified": "2018-03-18T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  570 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0803\/","datePublished": "2017-03-13T00:00:00+08:00","dateModified": "2017-03-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0803：打砖块（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0803：打砖块（★★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-03-18">2018-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 575 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0803/" class="leancloud_visitors" data-flag-title="0803：打砖块（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-13">2017-03-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 570 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0803/" class="leancloud_visitors" data-flag-title="0803：打砖块（★★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,7 +126,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/bricks-falling-when-hit/" target="_blank" rel="noopener noreffer">力扣第 76 场周赛第 4 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/bricks-falling-when-hit/" target="_blank" rel="noopener noreffer">力扣第 803 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>有一个 <code>m x n</code> 的二元网格<meta charset="UTF-8" /> <code>grid</code> ，其中 <code>1</code> 表示砖块，<code>0</code> 表示空白。砖块 <strong>稳定</strong>（不会掉落）的前提是：</p>
@@ -194,7 +194,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2018-03-18</span>
+                <span>更新于 2017-03-13</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -216,7 +216,7 @@
     </div>
 
     <div class="post-nav"><a href="/leetcode/0805/" class="prev" rel="prev" title="0805：数组的均值分割（★★）"><i class="fas fa-angle-left fa-fw"></i>0805：数组的均值分割（★★）</a>
-            <a href="/leetcode/0802/" class="next" rel="next" title="0802：找到最终的安全状态（★）">0802：找到最终的安全状态（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0802/" class="next" rel="next" title="0802：找到最终的安全状态（★★）">0802：找到最终的安全状态（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,7 +1,7 @@
 # 0764：最大加号标志（★）
 
 
-> <u>**[力扣第 67 场双周赛第 3 题](https://leetcode.cn/problems/largest-plus-sign/)**</u>
+> <u>**[力扣第 764 题](https://leetcode.cn/problems/largest-plus-sign/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0500：键盘行
 
 
-> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/keyboard-row/)**</u>
+> <u>**[力扣第 500 题](https://leetcode.cn/problems/keyboard-row/)**</u>
 
 ## 题目
 

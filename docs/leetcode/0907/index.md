@@ -1,4 +1,4 @@
-# 0907：子数组的最小值之和（★）
+# 0907：子数组的最小值之和（★★）
 
 
 > <u>**[力扣第 102 场周赛第 3 题](https://leetcode.cn/problems/sum-of-subarray-minimums/)**</u>

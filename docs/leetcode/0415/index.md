@@ -1,7 +1,7 @@
 # 0415：字符串相加
 
 
-> <u>**[力扣第 8  场周赛第 1  题](https://leetcode.cn/problems/add-strings/)**</u>
+> <u>**[力扣第 415 题](https://leetcode.cn/problems/add-strings/)**</u>
 
 ## 题目
 

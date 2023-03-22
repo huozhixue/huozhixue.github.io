@@ -1,7 +1,7 @@
 # 0822：翻转卡片游戏（★）
 
 
-> <u>**[力扣第 81 场周赛第 2 题](https://leetcode.cn/problems/card-flipping-game/)**</u>
+> <u>**[力扣第 822 题](https://leetcode.cn/problems/card-flipping-game/)**</u>
 
 ## 题目
 

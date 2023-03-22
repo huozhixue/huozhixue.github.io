@@ -1,7 +1,7 @@
 # 0599：两个列表的最小索引总和
 
 
-> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/minimum-index-sum-of-two-lists/)**</u>
+> <u>**[力扣第 599 题](https://leetcode.cn/problems/minimum-index-sum-of-two-lists/)**</u>
 
 ## 题目
 

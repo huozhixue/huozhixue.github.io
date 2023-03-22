@@ -1,4 +1,4 @@
-# 1368：使网格图至少有一条有效路径的最小代价（★★）
+# 1368：使网格图至少有一条有效路径的最小代价（★★★）
 
 
 > <u>**[力扣第 178 场周赛第 4 题](https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)**</u>

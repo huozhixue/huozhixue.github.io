@@ -1,7 +1,7 @@
 # 0629：K个逆序对数组（★★）
 
 
-> <u>**[力扣第 38 场双周赛第 2 题](https://leetcode.cn/problems/k-inverse-pairs-array/)**</u>
+> <u>**[力扣第 629 题](https://leetcode.cn/problems/k-inverse-pairs-array/)**</u>
 
 ## 题目
 

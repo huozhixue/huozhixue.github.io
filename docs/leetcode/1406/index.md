@@ -1,4 +1,4 @@
-# 1406：石子游戏 III（★★）
+# 1406：石子游戏 III（★★★）
 
 
 > <u>**[力扣第 183 场周赛第 4 题](https://leetcode.cn/problems/stone-game-iii/)**</u>

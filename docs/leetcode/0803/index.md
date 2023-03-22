@@ -1,7 +1,7 @@
-# 0803：打砖块（★★）
+# 0803：打砖块（★★★★）
 
 
-> <u>**[力扣第 76 场周赛第 4 题](https://leetcode.cn/problems/bricks-falling-when-hit/)**</u>
+> <u>**[力扣第 803 题](https://leetcode.cn/problems/bricks-falling-when-hit/)**</u>
 
 ## 题目
 

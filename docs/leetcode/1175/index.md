@@ -1,4 +1,4 @@
-# 1175：质数排列
+# 1175：质数排列（★）
 
 
 > <u>**[力扣第 152 场周赛第 1 题](https://leetcode.cn/problems/prime-arrangements/)**</u>

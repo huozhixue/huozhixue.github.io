@@ -1,4 +1,4 @@
-# 1081：不同字符的最小子序列（★）
+# 1081：不同字符的最小子序列（★★★）
 
 
 > <u>**[力扣第 140 场周赛第 4 题](https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/)**</u>

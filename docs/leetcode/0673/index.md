@@ -1,7 +1,7 @@
 # 0673：最长递增子序列的个数（★）
 
 
-> <u>**[力扣第 49 场双周赛第 4 题](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/)**</u>
+> <u>**[力扣第 673 题](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/)**</u>
 
 ## 题目
 

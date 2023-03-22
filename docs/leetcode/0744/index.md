@@ -1,7 +1,7 @@
 # 0744：寻找比目标字母大的最小字母
 
 
-> <u>**[力扣第 62 场双周赛第 1 题](https://leetcode.cn/problems/find-smallest-letter-greater-than-target/)**</u>
+> <u>**[力扣第 744 题](https://leetcode.cn/problems/find-smallest-letter-greater-than-target/)**</u>
 
 ## 题目
 

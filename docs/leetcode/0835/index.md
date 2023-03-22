@@ -1,4 +1,4 @@
-# 0835：图像重叠（★）
+# 0835：图像重叠（★★）
 
 
 > <u>**[力扣第 84 场周赛第 3 题](https://leetcode.cn/problems/image-overlap/)**</u>

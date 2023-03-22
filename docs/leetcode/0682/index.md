@@ -1,7 +1,7 @@
 # 0682：棒球比赛
 
 
-> <u>**[力扣第 51 场双周赛第 1 题](https://leetcode.cn/problems/baseball-game/)**</u>
+> <u>**[力扣第 682 题](https://leetcode.cn/problems/baseball-game/)**</u>
 
 ## 题目
 

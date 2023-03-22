@@ -8,16 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0415：字符串相加 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0415：字符串相加" />
-<meta property="og:description" content="力扣第 8 场周赛第 1 题 题目 给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和并同样以字符串形式返回。 你不能使用任何內建的用于处理大整数的库" />
+<meta property="og:description" content="力扣第 415 题 题目 给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和并同样以字符串形式返回。 你不能使用任何內建的用于处理大整数的库（比如 Bi" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0415/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-10-09T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-10-09T00:00:00+08:00" />
+<meta property="article:published_time" content="2016-02-19T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-02-19T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0415：字符串相加"/>
-<meta name="twitter:description" content="力扣第 8 场周赛第 1 题 题目 给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和并同样以字符串形式返回。 你不能使用任何內建的用于处理大整数的库"/>
+<meta name="twitter:description" content="力扣第 415 题 题目 给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和并同样以字符串形式返回。 你不能使用任何內建的用于处理大整数的库（比如 Bi"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0415/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0413/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0416/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0415\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  297 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0415\/","datePublished": "2016-10-09T00:00:00+08:00","dateModified": "2016-10-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  292 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0415\/","datePublished": "2016-02-19T00:00:00+08:00","dateModified": "2016-02-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0415：字符串相加</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-09">2016-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 297 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-19">2016-02-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 292 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0415/" class="leancloud_visitors" data-flag-title="0415：字符串相加">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,7 +126,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/add-strings/" target="_blank" rel="noopener noreffer">力扣第 8  场周赛第 1  题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/add-strings/" target="_blank" rel="noopener noreffer">力扣第 415 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>给定两个字符串形式的非负整数 <code>num1</code> 和<code>num2</code> ，计算它们的和并同样以字符串形式返回。</p>
@@ -188,7 +188,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-10-09</span>
+                <span>更新于 2016-02-19</span>
             </div>
             <div class="post-info-license"></div>
         </div>

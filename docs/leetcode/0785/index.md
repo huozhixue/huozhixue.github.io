@@ -1,7 +1,7 @@
 # 0785：判断二分图（★）
 
 
-> <u>**[力扣第 72 场双周赛第 2 题](https://leetcode.cn/problems/is-graph-bipartite/)**</u>
+> <u>**[力扣第 785 题](https://leetcode.cn/problems/is-graph-bipartite/)**</u>
 
 ## 题目
 

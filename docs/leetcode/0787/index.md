@@ -1,7 +1,7 @@
 # 0787：K 站中转内最便宜的航班（★）
 
 
-> <u>**[力扣第 72 场双周赛第 3 题](https://leetcode.cn/problems/cheapest-flights-within-k-stops/)**</u>
+> <u>**[力扣第 787 题](https://leetcode.cn/problems/cheapest-flights-within-k-stops/)**</u>
 
 ## 题目
 

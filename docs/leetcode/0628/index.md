@@ -1,7 +1,7 @@
 # 0628：三个数的最大乘积
 
 
-> <u>**[力扣第 38 场双周赛第 1 题](https://leetcode.cn/problems/maximum-product-of-three-numbers/)**</u>
+> <u>**[力扣第 628 题](https://leetcode.cn/problems/maximum-product-of-three-numbers/)**</u>
 
 ## 题目
 

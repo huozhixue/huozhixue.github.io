@@ -1,7 +1,7 @@
 # 0725：分隔链表（★）
 
 
-> <u>**[力扣第 58 场双周赛第 2 题](https://leetcode.cn/problems/split-linked-list-in-parts/)**</u>
+> <u>**[力扣第 725 题](https://leetcode.cn/problems/split-linked-list-in-parts/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0767：重构字符串（★）
 
 
-> <u>**[力扣第 68 场双周赛第 2 题](https://leetcode.cn/problems/reorganize-string/)**</u>
+> <u>**[力扣第 767 题](https://leetcode.cn/problems/reorganize-string/)**</u>
 
 ## 题目
 

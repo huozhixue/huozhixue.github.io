@@ -1,4 +1,4 @@
-# 1334：阈值距离内邻居最少的城市（★）
+# 1334：阈值距离内邻居最少的城市（★★）
 
 
 > <u>**[力扣第 173 场周赛第 3 题](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)**</u>

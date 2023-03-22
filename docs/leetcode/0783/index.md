@@ -1,7 +1,7 @@
 # 0783：二叉搜索树节点最小距离
 
 
-> <u>**[力扣第 71 场双周赛第 1 题](https://leetcode.cn/problems/minimum-distance-between-bst-nodes/)**</u>
+> <u>**[力扣第 783 题](https://leetcode.cn/problems/minimum-distance-between-bst-nodes/)**</u>
 
 ## 题目
 

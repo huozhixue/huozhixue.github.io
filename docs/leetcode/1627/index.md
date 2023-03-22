@@ -1,4 +1,4 @@
-# 1627：带阈值的图连通性（★★）
+# 1627：带阈值的图连通性（★★★）
 
 
 > <u>**[力扣第 211 场周赛第 4 题](https://leetcode.cn/problems/graph-connectivity-with-threshold/)**</u>

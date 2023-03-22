@@ -1,4 +1,4 @@
-# 1584：连接所有点的最小费用（★）
+# 1584：连接所有点的最小费用（★★）
 
 
 > <u>**[力扣第 206 场周赛第 3 题](https://leetcode.cn/problems/min-cost-to-connect-all-points/)**</u>

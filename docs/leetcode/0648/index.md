@@ -1,7 +1,7 @@
 # 0648：单词替换（★）
 
 
-> <u>**[力扣第 42 场双周赛第 4 题](https://leetcode.cn/problems/replace-words/)**</u>
+> <u>**[力扣第 648 题](https://leetcode.cn/problems/replace-words/)**</u>
 
 ## 题目
 

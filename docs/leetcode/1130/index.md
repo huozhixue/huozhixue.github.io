@@ -1,4 +1,4 @@
-# 1130：叶值的最小代价生成树（★）
+# 1130：叶值的最小代价生成树（★★）
 
 
 > <u>**[力扣第 146 场周赛第 3 题](https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/)**</u>

@@ -1,4 +1,4 @@
-# 0882：细分图中的可到达节点（★★）
+# 0882：细分图中的可到达节点（★★★）
 
 
 > <u>**[力扣第 96 场周赛第 4 题](https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/)**</u>

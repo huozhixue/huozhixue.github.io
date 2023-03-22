@@ -1,4 +1,4 @@
-# 1438：绝对差不超过限制的最长连续子数组（★）
+# 1438：绝对差不超过限制的最长连续子数组（★★）
 
 
 > <u>**[力扣第 187 场周赛第 3 题](https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)**</u>

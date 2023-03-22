@@ -1,4 +1,4 @@
-# 1201：丑数 III（★）
+# 1201：丑数 III（★★★）
 
 
 > <u>**[力扣第 155 场周赛第 2 题](https://leetcode.cn/problems/ugly-number-iii/)**</u>

@@ -1,4 +1,4 @@
-# 0829：连续整数求和（★★）
+# 0829：连续整数求和（★）
 
 
 > <u>**[力扣第 83 场周赛第 3 题](https://leetcode.cn/problems/consecutive-numbers-sum/)**</u>

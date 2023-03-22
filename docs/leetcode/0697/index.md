@@ -1,7 +1,7 @@
 # 0697：数组的度
 
 
-> <u>**[力扣第 54 场双周赛第 1 题](https://leetcode.cn/problems/degree-of-an-array/)**</u>
+> <u>**[力扣第 697 题](https://leetcode.cn/problems/degree-of-an-array/)**</u>
 
 ## 题目
 

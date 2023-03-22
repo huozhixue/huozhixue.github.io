@@ -1,7 +1,7 @@
 # 0399：除法求值（★）
 
 
-> <u>**[力扣第 4 场周赛第 4 题](https://leetcode.cn/problems/evaluate-division/)**</u>
+> <u>**[力扣第 399 题](https://leetcode.cn/problems/evaluate-division/)**</u>
 
 ## 题目
 

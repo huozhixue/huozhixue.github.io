@@ -1,7 +1,7 @@
 # 0404：左叶子之和
 
 
-> <u>**[力扣第 6 场周赛第 1 题](https://leetcode.cn/problems/sum-of-left-leaves/)**</u>
+> <u>**[力扣第 404 题](https://leetcode.cn/problems/sum-of-left-leaves/)**</u>
 
 ## 题目
 

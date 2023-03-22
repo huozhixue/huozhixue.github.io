@@ -1,7 +1,7 @@
 # 0398：随机数索引（★）
 
 
-> <u>**[力扣第 4 场周赛第 3 题](https://leetcode.cn/problems/random-pick-index/)**</u>
+> <u>**[力扣第 398 题](https://leetcode.cn/problems/random-pick-index/)**</u>
 
 ## 题目
 

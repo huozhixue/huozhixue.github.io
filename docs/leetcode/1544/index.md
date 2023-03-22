@@ -1,4 +1,4 @@
-# 1544：整理字符串
+# 1544：整理字符串（★）
 
 
 > <u>**[力扣第 201 场周赛第 1 题](https://leetcode.cn/problems/make-the-string-great/)**</u>

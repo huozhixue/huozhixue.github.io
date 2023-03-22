@@ -1,4 +1,4 @@
-# 1424：对角线遍历 II（★）
+# 1424：对角线遍历 II（★★）
 
 
 > <u>**[力扣第 186 场周赛第 3 题](https://leetcode.cn/problems/diagonal-traverse-ii/)**</u>

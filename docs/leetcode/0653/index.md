@@ -1,7 +1,7 @@
 # 0653：两数之和 IV - 输入二叉搜索树
 
 
-> <u>**[力扣第 44 场双周赛第 1 题](https://leetcode.cn/problems/two-sum-iv-input-is-a-bst/)**</u>
+> <u>**[力扣第 653 题](https://leetcode.cn/problems/two-sum-iv-input-is-a-bst/)**</u>
 
 ## 题目
 

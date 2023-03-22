@@ -1,4 +1,4 @@
-# 1025：除数博弈
+# 1025：除数博弈（★）
 
 
 > <u>**[力扣第 132 场周赛第 1 题](https://leetcode.cn/problems/divisor-game/)**</u>

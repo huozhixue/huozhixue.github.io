@@ -1,7 +1,7 @@
 # 0721：账户合并（★）
 
 
-> <u>**[力扣第 57 场双周赛第 2 题](https://leetcode.cn/problems/accounts-merge/)**</u>
+> <u>**[力扣第 721 题](https://leetcode.cn/problems/accounts-merge/)**</u>
 
 ## 题目
 

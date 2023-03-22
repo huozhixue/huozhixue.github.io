@@ -1,7 +1,7 @@
 # 0726：原子的数量（★★）
 
 
-> <u>**[力扣第 58 场双周赛第 3 题](https://leetcode.cn/problems/number-of-atoms/)**</u>
+> <u>**[力扣第 726 题](https://leetcode.cn/problems/number-of-atoms/)**</u>
 
 ## 题目
 

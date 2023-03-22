@@ -1,7 +1,7 @@
 # 0724：寻找数组的中心下标
 
 
-> <u>**[力扣第 58 场双周赛第 1 题](https://leetcode.cn/problems/find-pivot-index/)**</u>
+> <u>**[力扣第 724 题](https://leetcode.cn/problems/find-pivot-index/)**</u>
 
 ## 题目
 

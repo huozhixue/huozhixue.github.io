@@ -1,7 +1,7 @@
-# 0823：带因子的二叉树（★）
+# 0823：带因子的二叉树（★★）
 
 
-> <u>**[力扣第 81 场周赛第 4 题](https://leetcode.cn/problems/binary-trees-with-factors/)**</u>
+> <u>**[力扣第 823 题](https://leetcode.cn/problems/binary-trees-with-factors/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0686：重复叠加字符串匹配（★）
 
 
-> <u>**[力扣第 52 场双周赛第 1 题](https://leetcode.cn/problems/repeated-string-match/)**</u>
+> <u>**[力扣第 686 题](https://leetcode.cn/problems/repeated-string-match/)**</u>
 
 ## 题目
 

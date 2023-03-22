@@ -1,7 +1,7 @@
 # 0672：灯泡开关 Ⅱ（★）
 
 
-> <u>**[力扣第 48 场双周赛第 4 题](https://leetcode.cn/problems/bulb-switcher-ii/)**</u>
+> <u>**[力扣第 672 题](https://leetcode.cn/problems/bulb-switcher-ii/)**</u>
 
 ## 题目
 

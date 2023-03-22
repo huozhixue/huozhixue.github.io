@@ -8,16 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0684：冗余连接（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0684：冗余连接（★）" />
-<meta property="og:description" content="力扣第 51 场双周赛第 3 题 题目 树可以看成是一个连通且 无环 的 无向 图。 给定往一棵 n 个节点 (节点值 1～n) 的树中添加一条边后的图。添加的边的两个顶点包" />
+<meta property="og:description" content="力扣第 684 题 题目 树可以看成是一个连通且 无环 的 无向 图。 给定往一棵 n 个节点 (节点值 1～n) 的树中添加一条边后的图。添加的边的两个顶点包含在 1 到 n 中" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0684/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2017-09-24T03:00:00+08:00" />
-<meta property="article:modified_time" content="2017-09-24T03:00:00+08:00" />
+<meta property="article:published_time" content="2016-11-14T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-11-14T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0684：冗余连接（★）"/>
-<meta name="twitter:description" content="力扣第 51 场双周赛第 3 题 题目 树可以看成是一个连通且 无环 的 无向 图。 给定往一棵 n 个节点 (节点值 1～n) 的树中添加一条边后的图。添加的边的两个顶点包"/>
+<meta name="twitter:description" content="力扣第 684 题 题目 树可以看成是一个连通且 无环 的 无向 图。 给定往一棵 n 个节点 (节点值 1～n) 的树中添加一条边后的图。添加的边的两个顶点包含在 1 到 n 中"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0684/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0682/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0685/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0684\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  558 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0684\/","datePublished": "2017-09-24T03:00:00+08:00","dateModified": "2017-09-24T03:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  552 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0684\/","datePublished": "2016-11-14T00:00:00+08:00","dateModified": "2016-11-14T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0684：冗余连接（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-09-24">2017-09-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 558 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-14">2016-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 552 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0684/" class="leancloud_visitors" data-flag-title="0684：冗余连接（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -131,7 +131,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/redundant-connection/" target="_blank" rel="noopener noreffer">力扣第 51 场双周赛第 3 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/redundant-connection/" target="_blank" rel="noopener noreffer">力扣第 684 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>树可以看成是一个连通且 <strong>无环 </strong>的 <strong>无向 </strong>图。</p>
@@ -249,7 +249,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2017-09-24</span>
+                <span>更新于 2016-11-14</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -264,7 +264,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

@@ -1,7 +1,7 @@
 # 0387：字符串中的第一个唯一字符
 
 
-> <u>**[力扣第 1 场周赛第 2 题](https://leetcode.cn/problems/first-unique-character-in-a-string/)**</u>
+> <u>**[力扣第 387 题](https://leetcode.cn/problems/first-unique-character-in-a-string/)**</u>
 
 ## 题目
 

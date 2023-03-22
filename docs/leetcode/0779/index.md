@@ -1,7 +1,7 @@
 # 0779：第K个语法符号（★）
 
 
-> <u>**[力扣第 70 场双周赛第 1 题](https://leetcode.cn/problems/k-th-symbol-in-grammar/)**</u>
+> <u>**[力扣第 779 题](https://leetcode.cn/problems/k-th-symbol-in-grammar/)**</u>
 
 ## 题目
 

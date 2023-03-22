@@ -1,4 +1,4 @@
-# 1649：通过指令创建有序数组（★★）
+# 1649：通过指令创建有序数组（★★★）
 
 
 > <u>**[力扣第 214 场周赛第 4 题](https://leetcode.cn/problems/create-sorted-array-through-instructions/)**</u>

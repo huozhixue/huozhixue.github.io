@@ -1,7 +1,7 @@
 # 0662：二叉树最大宽度（★）
 
 
-> <u>**[力扣第 46 场双周赛第 2 题](https://leetcode.cn/problems/maximum-width-of-binary-tree/)**</u>
+> <u>**[力扣第 662 题](https://leetcode.cn/problems/maximum-width-of-binary-tree/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0712：两个字符串的最小ASCII删除和（★）
 
 
-> <u>**[力扣第 55 场双周赛第 2 题](https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/)**</u>
+> <u>**[力扣第 712 题](https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/)**</u>
 
 ## 题目
 

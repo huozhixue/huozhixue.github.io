@@ -1,7 +1,7 @@
 # 0781：森林中的兔子（★）
 
 
-> <u>**[力扣第 71 场双周赛第 2 题](https://leetcode.cn/problems/rabbits-in-forest/)**</u>
+> <u>**[力扣第 781 题](https://leetcode.cn/problems/rabbits-in-forest/)**</u>
 
 ## 题目
 

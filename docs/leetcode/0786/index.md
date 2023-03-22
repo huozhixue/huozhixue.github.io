@@ -1,7 +1,7 @@
-# 0786：第 K 个最小的素数分数（★）
+# 0786：第 K 个最小的素数分数（★★）
 
 
-> <u>**[力扣第 72 场双周赛第 4 题](https://leetcode.cn/problems/k-th-smallest-prime-fraction/)**</u>
+> <u>**[力扣第 786 题](https://leetcode.cn/problems/k-th-smallest-prime-fraction/)**</u>
 
 ## 题目
 

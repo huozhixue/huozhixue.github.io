@@ -1,7 +1,7 @@
 # 0677：键值映射（★）
 
 
-> <u>**[力扣第 50 场双周赛第 2 题](https://leetcode.cn/problems/map-sum-pairs/)**</u>
+> <u>**[力扣第 677 题](https://leetcode.cn/problems/map-sum-pairs/)**</u>
 
 ## 题目
 

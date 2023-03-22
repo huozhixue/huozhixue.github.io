@@ -1,7 +1,7 @@
-# 0770：基本计算器 IV（★★）
+# 0770：基本计算器 IV（★★★★）
 
 
-> <u>**[力扣第 68 场双周赛第 5 题](https://leetcode.cn/problems/basic-calculator-iv/)**</u>
+> <u>**[力扣第 770 题](https://leetcode.cn/problems/basic-calculator-iv/)**</u>
 
 ## 题目
 

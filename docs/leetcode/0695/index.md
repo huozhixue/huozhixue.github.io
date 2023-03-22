@@ -1,7 +1,7 @@
 # 0695：岛屿的最大面积（★）
 
 
-> <u>**[力扣第 53 场双周赛第 2 题](https://leetcode.cn/problems/max-area-of-island/)**</u>
+> <u>**[力扣第 695 题](https://leetcode.cn/problems/max-area-of-island/)**</u>
 
 ## 题目
 

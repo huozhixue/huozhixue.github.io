@@ -1,7 +1,7 @@
 # 0391：完美矩形（★★）
 
 
-> <u>**[力扣第 2 场周赛第 3 题](https://leetcode.cn/problems/perfect-rectangle/)**</u>
+> <u>**[力扣第 391 题](https://leetcode.cn/problems/perfect-rectangle/)**</u>
 
 ## 题目
 

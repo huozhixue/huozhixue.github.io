@@ -1,7 +1,7 @@
 # 0817：链表组件（★）
 
 
-> <u>**[力扣第 80 场周赛第 2 题](https://leetcode.cn/problems/linked-list-components/)**</u>
+> <u>**[力扣第 817 题](https://leetcode.cn/problems/linked-list-components/)**</u>
 
 ## 题目
 

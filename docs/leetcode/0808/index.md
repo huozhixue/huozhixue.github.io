@@ -1,7 +1,7 @@
-# 0808：分汤（★）
+# 0808：分汤（★★★）
 
 
-> <u>**[力扣第 78 场周赛第 3 题](https://leetcode.cn/problems/soup-servings/)**</u>
+> <u>**[力扣第 808 题](https://leetcode.cn/problems/soup-servings/)**</u>
 
 ## 题目
 

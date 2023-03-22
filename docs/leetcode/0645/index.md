@@ -1,7 +1,7 @@
 # 0645：错误的集合
 
 
-> <u>**[力扣第 42 场双周赛第 1 题](https://leetcode.cn/problems/set-mismatch/)**</u>
+> <u>**[力扣第 645 题](https://leetcode.cn/problems/set-mismatch/)**</u>
 
 ## 题目
 

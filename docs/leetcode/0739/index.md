@@ -1,7 +1,7 @@
 # 0739：每日温度（★）
 
 
-> <u>**[力扣第 61 场双周赛第 1 题](https://leetcode.cn/problems/daily-temperatures/)**</u>
+> <u>**[力扣第 739 题](https://leetcode.cn/problems/daily-temperatures/)**</u>
 
 ## 题目
 

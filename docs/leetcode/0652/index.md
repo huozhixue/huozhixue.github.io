@@ -1,7 +1,7 @@
 # 0652：寻找重复的子树（★）
 
 
-> <u>**[力扣第 43 场双周赛第 1 题](https://leetcode.cn/problems/find-duplicate-subtrees/)**</u>
+> <u>**[力扣第 652 题](https://leetcode.cn/problems/find-duplicate-subtrees/)**</u>
 
 ## 题目
 

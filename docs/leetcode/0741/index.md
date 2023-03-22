@@ -1,7 +1,7 @@
 # 0741：摘樱桃（★★）
 
 
-> <u>**[力扣第 61 场双周赛第 3 题](https://leetcode.cn/problems/cherry-pickup/)**</u>
+> <u>**[力扣第 741 题](https://leetcode.cn/problems/cherry-pickup/)**</u>
 
 ## 题目
 

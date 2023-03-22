@@ -1,7 +1,7 @@
 # 0669：修剪二叉搜索树（★）
 
 
-> <u>**[力扣第 48 场双周赛第 2 题](https://leetcode.cn/problems/trim-a-binary-search-tree/)**</u>
+> <u>**[力扣第 669 题](https://leetcode.cn/problems/trim-a-binary-search-tree/)**</u>
 
 ## 题目
 

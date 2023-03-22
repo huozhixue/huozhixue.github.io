@@ -1,7 +1,7 @@
 # 0400：第 N 位数字（★）
 
 
-> <u>**[力扣第 5 场周赛第 1 题](https://leetcode.cn/problems/nth-digit/)**</u>
+> <u>**[力扣第 400 题](https://leetcode.cn/problems/nth-digit/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0405：数字转换为十六进制数
 
 
-> <u>**[力扣第 6 场周赛第 2 题](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/)**</u>
+> <u>**[力扣第 405 题](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/)**</u>
 
 ## 题目
 

@@ -1,7 +1,7 @@
 # 0392：判断子序列
 
 
-> <u>**[力扣第 3 场周赛第 1 题](https://leetcode.cn/problems/is-subsequence/)**</u>
+> <u>**[力扣第 392 题](https://leetcode.cn/problems/is-subsequence/)**</u>
 
 ## 题目
 

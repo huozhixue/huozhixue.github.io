@@ -1,4 +1,4 @@
-# 0880：索引处的解码字符串（★）
+# 0880：索引处的解码字符串（★★）
 
 
 > <u>**[力扣第 96 场周赛第 3 题](https://leetcode.cn/problems/decoded-string-at-index/)**</u>

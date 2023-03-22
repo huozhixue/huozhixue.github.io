@@ -1,7 +1,7 @@
 # 0395：至少有 K 个重复字符的最长子串（★）
 
 
-> <u>**[力扣第 3 场周赛第 4 题](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/)**</u>
+> <u>**[力扣第 395 题](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/)**</u>
 
 ## 题目
 

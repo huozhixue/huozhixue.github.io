@@ -1,7 +1,7 @@
 # 0638：大礼包（★）
 
 
-> <u>**[力扣第 40 场双周赛第 3 题](https://leetcode.cn/problems/shopping-offers/)**</u>
+> <u>**[力扣第 638 题](https://leetcode.cn/problems/shopping-offers/)**</u>
 
 ## 题目
 

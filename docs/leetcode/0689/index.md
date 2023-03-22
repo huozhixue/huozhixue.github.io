@@ -1,7 +1,7 @@
 # 0689：三个无重叠子数组的最大和（★★）
 
 
-> <u>**[力扣第 52 场双周赛第 4 题](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/)**</u>
+> <u>**[力扣第 689 题](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/)**</u>
 
 ## 题目
 

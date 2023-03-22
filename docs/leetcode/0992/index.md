@@ -1,4 +1,4 @@
-# 0992：K 个不同整数的子数组（★★）
+# 0992：K 个不同整数的子数组（★★★）
 
 
 > <u>**[力扣第 123 场周赛第 4 题](https://leetcode.cn/problems/subarrays-with-k-different-integers/)**</u>

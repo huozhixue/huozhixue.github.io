@@ -1,7 +1,7 @@
-# 0813：最大平均值和的分组（★）
+# 0813：最大平均值和的分组（★★）
 
 
-> <u>**[力扣第 79 场周赛第 3 题](https://leetcode.cn/problems/largest-sum-of-averages/)**</u>
+> <u>**[力扣第 813 题](https://leetcode.cn/problems/largest-sum-of-averages/)**</u>
 
 ## 题目
 

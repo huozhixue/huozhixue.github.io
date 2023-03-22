@@ -1,7 +1,7 @@
 # 0600：不含连续1的非负整数（★★）
 
 
-> <u>**[力扣第  场周赛第  题](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/)**</u>
+> <u>**[力扣第 600 题](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/)**</u>
 
 ## 题目
 

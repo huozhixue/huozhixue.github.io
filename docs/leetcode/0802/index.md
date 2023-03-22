@@ -1,7 +1,7 @@
-# 0802：找到最终的安全状态（★）
+# 0802：找到最终的安全状态（★★）
 
 
-> <u>**[力扣第 76 场周赛第 3 题](https://leetcode.cn/problems/find-eventual-safe-states/)**</u>
+> <u>**[力扣第 802 题](https://leetcode.cn/problems/find-eventual-safe-states/)**</u>
 
 ## 题目
 

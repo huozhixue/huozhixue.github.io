@@ -1,7 +1,7 @@
 # 0740：删除并获得点数（★）
 
 
-> <u>**[力扣第 61 场双周赛第 2 题](https://leetcode.cn/problems/delete-and-earn/)**</u>
+> <u>**[力扣第 740 题](https://leetcode.cn/problems/delete-and-earn/)**</u>
 
 ## 题目
 

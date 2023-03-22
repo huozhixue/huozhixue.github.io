@@ -1,7 +1,7 @@
 # 0762：二进制表示中质数个计算置位
 
 
-> <u>**[力扣第 67 场双周赛第 1 题](https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation/)**</u>
+> <u>**[力扣第 762 题](https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation/)**</u>
 
 ## 题目
 

@@ -1,4 +1,4 @@
-# 1111：有效括号的嵌套深度（★）
+# 1111：有效括号的嵌套深度（★★）
 
 
 > <u>**[力扣第 144 场周赛第 4 题](https://leetcode.cn/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/)**</u>

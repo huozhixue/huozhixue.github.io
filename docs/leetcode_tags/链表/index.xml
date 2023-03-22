@@ -3,73 +3,73 @@
         <title>链表 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/</link>
         <description>链表 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 27 Sep 2019 02:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
-    <title>1206：设计跳表（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1206/</link>
-    <pubDate>Fri, 27 Sep 2019 02:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1206/</guid>
-    <description><![CDATA[力扣第 1206 题 题目 不使用任何库函数，设计一个 跳表 。 跳表 是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，]]></description>
-</item><item>
-    <title>1171：从链表中删去总和值为零的连续节点（★）</title>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Aug 2019 10:50:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>1171：从链表中删去总和值为零的连续节点（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1171/</link>
-    <pubDate>Sun, 25 Aug 2019 02:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 25 Aug 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1171/</guid>
     <description><![CDATA[力扣第 151 场周赛第 3 题 题目 给你一个链表的头节点 head，请你编写代码，反复删去链表中由 总和 值为 0 的连续节点组成的序列，直到不存在这样的序列为止]]></description>
 </item><item>
     <title>1019：链表中的下一个更大节点（★）</title>
     <link>https://huozhixue.github.io/leetcode/1019/</link>
-    <pubDate>Sun, 31 Mar 2019 02:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 31 Mar 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1019/</guid>
     <description><![CDATA[力扣第 130 场周赛第 3 题 题目 给定一个长度为 n 的链表 head 对于列表中的每个节点，查找下一个 更大节点 的值。也就是说，对于每个节点，找到它旁边的第一个节点]]></description>
 </item><item>
     <title>0876：链表的中间结点</title>
     <link>https://huozhixue.github.io/leetcode/0876/</link>
-    <pubDate>Sun, 29 Jul 2018 00:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 29 Jul 2018 09:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0876/</guid>
     <description><![CDATA[力扣第 95 场周赛第 1 题 题目 给你单链表的头结点 head ，请你找出并返回链表的中间结点。 如果有两个中间结点，则返回第二个中间结点。 示例 1： 输入：head]]></description>
 </item><item>
+    <title>1206：设计跳表（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/1206/</link>
+    <pubDate>Fri, 20 Apr 2018 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1206/</guid>
+    <description><![CDATA[力扣第 1206 题 题目 不使用任何库函数，设计一个 跳表 。 跳表 是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，]]></description>
+</item><item>
     <title>0817：链表组件（★）</title>
     <link>https://huozhixue.github.io/leetcode/0817/</link>
-    <pubDate>Sun, 15 Apr 2018 01:00:00 &#43;0800</pubDate>
+    <pubDate>Mon, 27 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0817/</guid>
-    <description><![CDATA[力扣第 80 场周赛第 2 题 题目 给定链表头结点 head，该链表上的每个结点都有一个 唯一的整型值 。同时给定列表 nums，该列表是上述链表中整型值的一个]]></description>
+    <description><![CDATA[力扣第 817 题 题目 给定链表头结点 head，该链表上的每个结点都有一个 唯一的整型值 。同时给定列表 nums，该列表是上述链表中整型值的一个子集。 返回]]></description>
 </item><item>
     <title>0725：分隔链表（★）</title>
     <link>https://huozhixue.github.io/leetcode/0725/</link>
-    <pubDate>Sun, 12 Nov 2017 01:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 25 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0725/</guid>
-    <description><![CDATA[力扣第 58 场双周赛第 2 题 题目 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等：]]></description>
+    <description><![CDATA[力扣第 725 题 题目 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等：任意两部分的]]></description>
 </item><item>
     <title>0707：设计链表（★）</title>
     <link>https://huozhixue.github.io/leetcode/0707/</link>
-    <pubDate>Fri, 20 Oct 2017 02:00:00 &#43;0800</pubDate>
+    <pubDate>Wed, 07 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0707/</guid>
     <description><![CDATA[力扣第 707 题 题目 你可以选择使用单链表或者双链表，设计并实现自己的链表。 单链表中的节点应该具备两个属性：val 和 next 。val 是当前节点的值，nex]]></description>
 </item><item>
     <title>0706：设计哈希映射</title>
     <link>https://huozhixue.github.io/leetcode/0706/</link>
-    <pubDate>Fri, 20 Oct 2017 01:00:00 &#43;0800</pubDate>
+    <pubDate>Tue, 06 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0706/</guid>
     <description><![CDATA[力扣第 706 题 题目 不使用任何内建的哈希表库设计一个哈希映射（HashMap）。 实现 MyHashMap 类： MyHashMap() 用空映射初始化对象 void put(int key, int value) 向 HashMap 插入一个键值对 (key, value) 。如]]></description>
 </item><item>
     <title>0705：设计哈希集合</title>
     <link>https://huozhixue.github.io/leetcode/0705/</link>
-    <pubDate>Fri, 20 Oct 2017 00:00:00 &#43;0800</pubDate>
+    <pubDate>Mon, 05 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0705/</guid>
     <description><![CDATA[力扣第 705 题 题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个]]></description>
 </item><item>
     <title>0641：设计循环双端队列（★）</title>
     <link>https://huozhixue.github.io/leetcode/0641/</link>
-    <pubDate>Wed, 12 Jul 2017 00:00:00 &#43;0800</pubDate>
+    <pubDate>Sun, 02 Oct 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0641/</guid>
     <description><![CDATA[力扣第 641 题 题目 设计实现双端队列。 实现 MyCircularDeque 类: MyCircularDeque(int k) ：构造函数,双端队列最大为 k 。 boolean insertFront()：将一个元素添加到双端队列头部。 如果]]></description>
