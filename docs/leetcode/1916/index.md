@@ -1,4 +1,4 @@
-# 1916：统计为蚁群构筑房间的不同顺序（★★★★）
+# 1916：统计为蚁群构筑房间的不同顺序（★★★）
 
 
 > <u>**[力扣第 247 场周赛第 4 题](https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/)**</u>

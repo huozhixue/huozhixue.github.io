@@ -1,4 +1,4 @@
-# 2192：有向无环图中一个节点的所有祖先（★★）
+# 2192：有向无环图中一个节点的所有祖先（★）
 
 
 > <u>**[力扣第 73 场双周赛第 3 题](https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/)**</u>

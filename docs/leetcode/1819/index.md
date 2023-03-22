@@ -1,4 +1,4 @@
-# 1819：序列中不同最大公约数的数目（★★★★）
+# 1819：序列中不同最大公约数的数目（★★★）
 
 
 > <u>**[力扣第 235 场周赛第 4 题](https://leetcode.cn/problems/number-of-different-subsequences-gcds/)**</u>

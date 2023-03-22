@@ -1,4 +1,4 @@
-# 1614：括号的最大嵌套深度（★）
+# 1614：括号的最大嵌套深度
 
 
 > <u>**[力扣第 210 场周赛第 1 题](https://leetcode.cn/problems/maximum-nesting-depth-of-the-parentheses/)**</u>

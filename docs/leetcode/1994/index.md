@@ -1,4 +1,4 @@
-# 1994：好子集的数目（★★★★）
+# 1994：好子集的数目（★★★）
 
 
 > <u>**[力扣第 60 场双周赛第 4 题](https://leetcode.cn/problems/the-number-of-good-subsets/)**</u>

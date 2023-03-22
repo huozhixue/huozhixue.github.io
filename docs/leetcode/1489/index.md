@@ -1,4 +1,4 @@
-# 1489：找到最小生成树里的关键边和伪关键边（★★★★）
+# 1489：找到最小生成树里的关键边和伪关键边（★★★）
 
 
 > <u>**[力扣第 194 场周赛第 4 题](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)**</u>

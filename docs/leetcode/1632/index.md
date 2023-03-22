@@ -1,4 +1,4 @@
-# 1632：矩阵转换后的秩（★★★★）
+# 1632：矩阵转换后的秩（★★★）
 
 
 > <u>**[力扣第 212 场周赛第 4 题](https://leetcode.cn/problems/rank-transform-of-a-matrix/)**</u>

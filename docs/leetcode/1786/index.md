@@ -1,4 +1,4 @@
-# 1786：从第一个节点出发到最后一个节点的受限路径数（★★★）
+# 1786：从第一个节点出发到最后一个节点的受限路径数（★★）
 
 
 > <u>**[力扣第 231 场周赛第 3 题](https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/)**</u>

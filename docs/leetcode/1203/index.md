@@ -1,4 +1,4 @@
-# 1203：项目管理（★★★★）
+# 1203：项目管理（★★★）
 
 
 > <u>**[力扣第 155 场周赛第 4 题](https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/)**</u>

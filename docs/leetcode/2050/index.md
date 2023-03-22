@@ -1,4 +1,4 @@
-# 2050：并行课程 III（★★★）
+# 2050：并行课程 III（★★）
 
 
 > <u>**[力扣第 264 场周赛第 4 题](https://leetcode.cn/problems/parallel-courses-iii/)**</u>

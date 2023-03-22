@@ -1,4 +1,4 @@
-# 1408：数组中的字符串匹配（★）
+# 1408：数组中的字符串匹配
 
 
 > <u>**[力扣第 184 场周赛第 1 题](https://leetcode.cn/problems/string-matching-in-an-array/)**</u>

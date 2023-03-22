@@ -1,4 +1,4 @@
-# 1171：从链表中删去总和值为零的连续节点（★★）
+# 1171：从链表中删去总和值为零的连续节点（★）
 
 
 > <u>**[力扣第 151 场周赛第 3 题](https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list/)**</u>

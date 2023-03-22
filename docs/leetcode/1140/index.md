@@ -1,4 +1,4 @@
-# 1140：石子游戏 II（★★★）
+# 1140：石子游戏 II（★★）
 
 
 > <u>**[力扣第 147 场周赛第 4 题](https://leetcode.cn/problems/stone-game-ii/)**</u>

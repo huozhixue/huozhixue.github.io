@@ -1,4 +1,4 @@
-# 1834：单线程 CPU（★★）
+# 1834：单线程 CPU（★）
 
 
 > <u>**[力扣第 237 场周赛第 3 题](https://leetcode.cn/problems/single-threaded-cpu/)**</u>

@@ -1,4 +1,4 @@
-# 1541：平衡括号字符串的最少插入次数（★★）
+# 1541：平衡括号字符串的最少插入次数（★）
 
 
 > <u>**[力扣第 32 场双周赛第 3 题](https://leetcode.cn/problems/minimum-insertions-to-balance-a-parentheses-string/)**</u>
