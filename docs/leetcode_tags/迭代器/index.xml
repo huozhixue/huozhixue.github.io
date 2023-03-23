@@ -18,6 +18,20 @@
     <guid>https://huozhixue.github.io/leetcode/0284/</guid>
     <description><![CDATA[力扣第 284 题 题目 请你在设计一个迭代器，在集成现有迭代器拥有的 hasNext 和 next 操作的基础上，还额外支持 peek 操作。 实现 PeekingIterator 类： PeekingIterator(Iterator&lt;int&gt; nums) 使用指定整数迭代器 nums 初始化迭代]]></description>
 </item><item>
+    <title>0281：锯齿迭代器（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0281/</link>
+    <pubDate>Thu, 08 Oct 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0281/</guid>
+    <description><![CDATA[力扣第 281 题 题目 给出两个一维的向量，请你实现一个迭代器，交替返回它们中间的元素。 示例: 输入: v1 = [1,2] v2 = [3,4,5,6] 输出: [1,3,2,4,5,6] 解析: 通过连续调用 next 函数直到 hasNext]]></description>
+</item><item>
+    <title>0251：展开二维向量（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0251/</link>
+    <pubDate>Tue, 08 Sep 2015 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0251/</guid>
+    <description><![CDATA[力扣第 251 题 题目 请设计并实现一个能够展开二维向量的迭代器。该迭代器需要支持 next 和 hasNext 两种操作。 示例： Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // 返回 1 iterator.next(); // 返回 2 iterator.next(); // 返回 3 iterator.hasNext(); // 返]]></description>
+</item><item>
     <title>0173：二叉搜索树迭代器（★）</title>
     <link>https://huozhixue.github.io/leetcode/0173/</link>
     <pubDate>Mon, 22 Jun 2015 00:00:00 &#43;0800</pubDate>

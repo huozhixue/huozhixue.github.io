@@ -1,27 +1,37 @@
-# 0252：会议室（★）
+# 0252：会议室
 
+
+> <u>**[力扣第 252 题](https://leetcode.cn/problems/meeting-rooms/)**</u>
 
 ## 题目
 
-给定一个会议时间安排的数组 intervals ，每个会议时间都会包括开始和结束的时间
- intervals[i] = [starti, endi] ，请你判断一个人是否能够参加这里面的全部会议。
+<p>给定一个会议时间安排的数组 <code>intervals</code> ，每个会议时间都会包括开始和结束的时间 <code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> ，请你判断一个人是否能够参加这里面的全部会议。</p>
 
- 
 
-示例 1：
 
-	输入：intervals = [[0,30],[5,10],[15,20]]
-	输出：false
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>intervals = [[0,30],[5,10],[15,20]]
+<strong>输出</strong>：false
+</pre>
 
-	输入：intervals = [[7,10],[2,4]]
-	输出：true
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 0 <= intervals.length <= 10^4
-- intervals[i].length == 2
-- 0 <= starti < endi <= 10^6
+<pre>
+<strong>输入：</strong>intervals = [[7,10],[2,4]]
+<strong>输出</strong>：true
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>0 <= intervals.length <= 10<sup>4</sup></code></li>
+<li><code>intervals[i].length == 2</code></li>
+<li><code>0 <= start<sub>i</sub> < end<sub>i</sub> <= 10<sup>6</sup></code></li>
+</ul>
 
 
 ## 分析

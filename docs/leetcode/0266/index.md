@@ -1,24 +1,26 @@
-# 0266：回文排列（★）
+# 0266：回文排列
 
+
+> <u>**[力扣第 266 题](https://leetcode.cn/problems/palindrome-permutation/)**</u>
 
 ## 题目
 
-给定一个字符串，判断该字符串中是否可以通过重新排列组合，形成一个回文字符串。
+<p>给定一个字符串，判断该字符串中是否可以通过重新排列组合，形成一个回文字符串。</p>
 
-示例 1：
+<p><strong>示例 1：</strong></p>
 
-	输入: "code"
-	输出: false
+<pre><strong>输入:</strong> <code>&quot;code&quot;</code>
+<strong>输出:</strong> false</pre>
 
-示例 2：
+<p><strong>示例 2：</strong></p>
 
-	输入: "aab"
-	输出: true
+<pre><strong>输入:</strong> <code>&quot;aab&quot;</code>
+<strong>输出:</strong> true</pre>
 
-示例 3：
+<p><strong>示例 3：</strong></p>
 
-	输入: "carerac"
-	输出: true
+<pre><strong>输入:</strong> <code>&quot;carerac&quot;</code>
+<strong>输出:</strong> true</pre>
 
 
 ## 分析

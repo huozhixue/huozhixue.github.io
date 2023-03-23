@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0158：用 Read4 读取 N 个字符 II（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0158：用 Read4 读取 N 个字符 II（★★）" />
-<meta property="og:description" content="题目 给你一个文件 file ，并且该文件只能通过给定的 read4 方法来读取， 请实现一个方法使其能够使 read 读取 n 个字符。注意：你的 read 方法可能会被调用多次。 read4 的定义" />
+<meta property="og:description" content="力扣第 158 题 题目 给你一个文件 file ，并且该文件只能通过给定的 read4 方法来读取，请实现一个方法使其能够使 read 读取 n 个字符。注意：你的 read 方法可能会被调用多次" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0158/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-06-07T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0158：用 Read4 读取 N 个字符 II（★★）"/>
-<meta name="twitter:description" content="题目 给你一个文件 file ，并且该文件只能通过给定的 read4 方法来读取， 请实现一个方法使其能够使 read 读取 n 个字符。注意：你的 read 方法可能会被调用多次。 read4 的定义"/>
+<meta name="twitter:description" content="力扣第 158 题 题目 给你一个文件 file ，并且该文件只能通过给定的 read4 方法来读取，请实现一个方法使其能够使 read 读取 n 个字符。注意：你的 read 方法可能会被调用多次"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0158/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0157/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0159/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0158\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1134 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1069 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0158\/","datePublished": "2015-06-07T00:00:00+08:00","dateModified": "2015-06-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0158：用 Read4 读取 N 个字符 II（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-07">2015-06-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1134 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-07">2015-06-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1069 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0158/" class="leancloud_visitors" data-flag-title="0158：用 Read4 读取 N 个字符 II（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,84 +125,76 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个文件 file ，并且该文件只能通过给定的 read4 方法来读取，
-请实现一个方法使其能够使 read 读取 n 个字符。注意：你的 read 方法可能会被调用多次。</p>
-<p>read4 的定义：</p>
-<pre><code>read4 API 从文件中读取 4 个连续的字符，然后将这些字符写入缓冲区数组 buf4 。
-</code></pre>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/read-n-characters-given-read4-ii-call-multiple-times/" target="_blank" rel="noopener noreffer">力扣第 158 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个文件<meta charset="UTF-8" /> <code>file</code> ，并且该文件只能通过给定的 <code>read4</code> 方法来读取，请实现一个方法使其能够使 <code>read</code> 读取 <code>n</code> 个字符。<strong>注意：你的</strong> <strong><code>read</code> 方法可能会被调用多次。</strong></p>
+<p><strong>read4 的定义：</strong></p>
+<p><code>read4</code> API 从文件中读取<strong> 4 个连续的字符</strong>，然后将这些字符写入缓冲区数组 <code>buf4</code> 。</p>
 <p>返回值是读取的实际字符数。</p>
-<p>请注意，read4() 有其自己的文件指针，类似于 C 中的 FILE * fp 。</p>
-<pre><code>	参数类型: char[] buf4
-	返回类型: int
+<p>请注意，<code>read4()</code> 有其自己的文件指针，类似于 C 中的 <code>FILE * fp</code> 。</p>
+<pre>
+参数类型: char[] buf4
+返回类型: int
 
 注意: buf4[] 是目标缓存区不是源缓存区，read4 的返回结果将会复制到 buf4[] 当中。
-</code></pre>
-<p>下列是一些使用 read4 的例子：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2020/07/01/157_example.png"
-        data-srcset="https://assets.leetcode.com/uploads/2020/07/01/157_example.png, https://assets.leetcode.com/uploads/2020/07/01/157_example.png 1.5x, https://assets.leetcode.com/uploads/2020/07/01/157_example.png 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2020/07/01/157_example.png"
-        title="img" /></p>
-<pre><code>File file(&quot;abcde&quot;); // 文件名为 &quot;abcde&quot;， 初始文件指针 (fp) 指向 'a' 
+</pre>
+<p>下列是一些使用 <code>read4</code> 的例子：</p>
+<p><img alt="" src="https://assets.leetcode.com/uploads/2020/07/01/157_example.png" style="height: 403px; width: 600px;" /></p>
+<pre>
+<code>File file("abcde"); // 文件名为 "abcde"， 初始文件指针 (fp) 指向 'a'
 char[] buf4 = new char[4]; // 创建一个缓存区使其能容纳足够的字符
-read4(buf4); // read4 返回 4。现在 buf4 = &quot;abcd&quot;，fp 指向 'e'
-read4(buf4); // read4 返回 1。现在 buf4 = &quot;e&quot;，fp 指向文件末尾
-read4(buf4); // read4 返回 0。现在 buf4 = &quot;&quot;，fp 指向文件末尾
-</code></pre>
-<p> </p>
-<p>read 方法：</p>
-<p>通过使用 read4 方法，实现 read 方法。该方法可以从文件中读取 n 个字符并将其存储到
-缓存数组 buf 中。您 不能 直接操作 file 。</p>
+read4(buf4); // read4 返回 4。现在 buf4 = "abcd"，fp 指向 'e'
+read4(buf4); // read4 返回 1。现在 buf4 = "e"，fp 指向文件末尾
+read4(buf4); // read4 返回 0。现在 buf4 = ""，fp 指向文件末尾</code></pre>
+<p><strong>read 方法：</strong></p>
+<p>通过使用 <code>read4</code> 方法，实现 <code>read</code> 方法。该方法可以从文件中读取 <code>n</code> 个字符并将其存储到缓存数组 <code>buf</code> 中。您 <strong>不能 </strong>直接操作 <code>file</code> 。</p>
 <p>返回值为实际读取的字符。</p>
-<p>read 的定义：</p>
-<pre><code>	参数类型:  char[] buf, int n
-	返回类型:  int
+<p><strong>read 的定义：</strong></p>
+<pre>
+参数类型:  char[] buf, int n
+返回类型:  int
 
 注意: buf[] 是目标缓存区不是源缓存区，你需要将结果写入 buf[] 中。
-</code></pre>
-<p>注意：</p>
+</pre>
+<p><strong>注意：</strong></p>
 <ul>
-<li>你 不能 直接操作该文件，文件只能通过 read4 获取而 不能 通过 read。</li>
-<li>read  函数可以被调用 多次。</li>
-<li>请记得 重置 在 Solution 中声明的类变量（静态变量），因为类变量会 
-在多个测试用例中保持不变，影响判题准确。请 查阅 这里。</li>
-<li>你可以假定目标缓存数组 buf 保证有足够的空间存下 n 个字符。 </li>
-<li>保证在一个给定测试用例中，read 函数使用的是同一个 buf。
- </li>
+<li>你 <strong>不能</strong> 直接操作该文件，文件只能通过 <code>read4</code> 获取而 <strong>不能</strong> 通过 <code>read</code>。</li>
+<li><code>read</code>  函数可以被调用 <strong>多次</strong>。</li>
+<li>请记得 <strong>重置 </strong>在 Solution 中声明的类变量（静态变量），因为类变量会 <strong>在多个测试用例中保持不变</strong>，影响判题准确。请 <a href="https://support.leetcode-cn.com/hc/kb/section/1071534/" target="_blank">查阅</a> 这里。</li>
+<li>你可以假定目标缓存数组 <code>buf</code> 保证有足够的空间存下 n 个字符。 </li>
+<li>保证在一个给定测试用例中，<code>read</code> 函数使用的是同一个 <code>buf</code>。</li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入： file = &quot;abc&quot;， queries = [1,2,1]
-输出：[1,2,0]
-解释：测试用例表示以下场景:
-File file(&quot;abc&quot;);
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong> file = "abc"， queries = [1,2,1]
+<strong>输出：</strong>[1,2,0]
+<strong>解释：</strong>测试用例表示以下场景:
+File file("abc");
 Solution sol;
-sol.read (buf, 1); // 调用 read 方法后，buf 应该包含 “a”。
-我们从文件中总共读取了 1 个字符，所以返回 1。
-sol.read (buf, 2); // 现在 buf 应该包含 &quot;bc&quot;。我们从文件中总共读取了 2 个字符，所以返回 2。
+sol.read (buf, 1); // 调用 read 方法后，buf 应该包含 “a”。我们从文件中总共读取了 1 个字符，所以返回 1。
+sol.read (buf, 2); // 现在 buf 应该包含 "bc"。我们从文件中总共读取了 2 个字符，所以返回 2。
 sol.read (buf, 1); // 我们已经到达文件的末尾，不能读取更多的字符。所以返回 0。
 假设已经分配了 buf ，并保证有足够的空间存储文件中的所有字符。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：file = &quot;abc&quot;， queries = [4,1]
-输出：[3,0]
-解释：测试用例表示以下场景:
-File file(&quot;abc&quot;);
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>file = "abc"， queries = [4,1]
+<strong>输出：</strong>[3,0]
+<strong>解释：</strong>测试用例表示以下场景:
+File file("abc");
 Solution sol;
-sol.read (buf, 4); // 调用 read 方法后，buf 应该包含 “abc”。
-我们从文件中总共读取了 3 个字符，所以返回 3。
+sol.read (buf, 4); // 调用 read 方法后，buf 应该包含 “abc”。我们从文件中总共读取了 3 个字符，所以返回 3。
 sol.read (buf, 1); // 我们已经到达文件的末尾，不能读取更多的字符。所以返回 0。
-</code></pre>
-<p> </p>
-<p>提示：</p>
+</pre>
+<p><strong>提示：</strong></p>
+<p><meta charset="UTF-8" /></p>
 <ul>
-<li>1 &lt;= file.length &lt;= 500</li>
-<li>file 由英语字母和数字组成</li>
-<li>1 &lt;= queries.length &lt;= 10</li>
-<li>1 &lt;= queries[i] &lt;= 500</li>
+<li><code>1 &lt;= file.length &lt;= 500</code></li>
+<li><code>file</code> 由英语字母和数字组成</li>
+<li><code>1 &lt;= queries.length &lt;= 10</code></li>
+<li><code>1 &lt;= queries[i] &lt;= 500</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0157" title="0157" rel="noopener noreferrer">0157</a> 升级版，需要连续多次读取：</p>
@@ -267,14 +259,14 @@ sol.read (buf, 1); // 我们已经到达文件的末尾，不能读取更多的�
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%A4%E4%BA%92/">交互</a>,&nbsp;<a href="/leetcode_tags/%E6%A8%A1%E6%8B%9F/">模拟</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0159/" class="prev" rel="prev" title="0159：至多包含两个不同字符的最长子串（★★）"><i class="fas fa-angle-left fa-fw"></i>0159：至多包含两个不同字符的最长子串（★★）</a>
-            <a href="/leetcode/0157/" class="next" rel="next" title="0157： 用 Read4 读取 N 个字符（★）">0157： 用 Read4 读取 N 个字符（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0159/" class="prev" rel="prev" title="0159：至多包含两个不同字符的最长子串（★）"><i class="fas fa-angle-left fa-fw"></i>0159：至多包含两个不同字符的最长子串（★）</a>
+            <a href="/leetcode/0157/" class="next" rel="next" title="0157：用 Read4 读取 N 个字符">0157：用 Read4 读取 N 个字符<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

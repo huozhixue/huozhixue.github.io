@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0302：包含全部黑色像素的最小矩形（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0302：包含全部黑色像素的最小矩形（★★）" />
-<meta property="og:description" content="题目 图片在计算机处理中往往是使用二维矩阵来表示的。 给你一个大小为 m x n 的二进制矩阵 image 表示一张黑白图片，0 代表白色像素，1 代表黑色像素。 黑色像" />
+<meta property="og:description" content="力扣第 302 题 题目 图片在计算机处理中往往是使用二维矩阵来表示的。 给你一个大小为 m x n 的二进制矩阵 image 表示一张黑白图片，0 代表白色像素，1 代表黑色像" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0302/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-10-29T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0302：包含全部黑色像素的最小矩形（★★）"/>
-<meta name="twitter:description" content="题目 图片在计算机处理中往往是使用二维矩阵来表示的。 给你一个大小为 m x n 的二进制矩阵 image 表示一张黑白图片，0 代表白色像素，1 代表黑色像素。 黑色像"/>
+<meta name="twitter:description" content="力扣第 302 题 题目 图片在计算机处理中往往是使用二维矩阵来表示的。 给你一个大小为 m x n 的二进制矩阵 image 表示一张黑白图片，0 代表白色像素，1 代表黑色像"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0302/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0301/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0303/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0302\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  520 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  524 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0302\/","datePublished": "2015-10-29T00:00:00+08:00","dateModified": "2015-10-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0302：包含全部黑色像素的最小矩形（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-29">2015-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 520 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-29">2015-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 524 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0302/" class="leancloud_visitors" data-flag-title="0302：包含全部黑色像素的最小矩形（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,41 +125,36 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/smallest-rectangle-enclosing-black-pixels/" target="_blank" rel="noopener noreffer">力扣第 302 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
 <p>图片在计算机处理中往往是使用二维矩阵来表示的。</p>
-<p>给你一个大小为 m x n 的二进制矩阵 image 表示一张黑白图片，0 代表白色像素，1 代表黑色像素。</p>
+<p>给你一个大小为 <code>m x n</code> 的二进制矩阵 <code>image</code> 表示一张黑白图片，<code>0</code> 代表白色像素，<code>1</code> 代表黑色像素。</p>
 <p>黑色像素相互连接，也就是说，图片中只会有一片连在一块儿的黑色像素。像素点是水平或竖直方向连接的。</p>
-<p>给你两个整数 x 和 y 表示某一个黑色像素的位置，请你找出包含全部黑色像素的最小矩形（与坐标轴对齐），
-并返回该矩形的面积。</p>
-<p>你必须设计并实现一个时间复杂度低于 O(mn) 的算法来解决此问题。</p>
-<p> </p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/14/pixel-grid.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/14/pixel-grid.jpg, https://assets.leetcode.com/uploads/2021/03/14/pixel-grid.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/14/pixel-grid.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/14/pixel-grid.jpg"
-        title="img" /></p>
-<pre><code>输入：image = [[&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;],[&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;],[&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;]], x = 0, y = 2
-输出：6
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：image = [[&quot;1&quot;]], x = 0, y = 0
-输出：1
- 
-</code></pre>
-<p>提示：</p>
+<p>给你两个整数 <code>x</code> 和 <code>y</code> 表示某一个黑色像素的位置，请你找出包含全部黑色像素的最小矩形（与坐标轴对齐），并返回该矩形的面积。</p>
+<p>你必须设计并实现一个时间复杂度低于 <code>O(mn)</code> 的算法来解决此问题。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/14/pixel-grid.jpg" style="width: 333px; height: 253px;" />
+<pre>
+<strong>输入：</strong>image = [["0","0","1","0"],["0","1","1","0"],["0","1","0","0"]], x = 0, y = 2
+<strong>输出：</strong>6
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>image = [["1"]], x = 0, y = 0
+<strong>输出：</strong>1
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>m == image.length</li>
-<li>n == image[i].length</li>
-<li>1 &lt;= m, n &lt;= 100</li>
-<li>image[i][j] 为 &lsquo;0&rsquo; 或 &lsquo;1&rsquo;</li>
-<li>1 &lt;= x &lt; m</li>
-<li>1 &lt;= y &lt; n</li>
-<li>image<i class="far fa-check-square fa-fw"></i> [y] == &lsquo;1&rsquo;</li>
-<li>image 中的黑色像素仅形成一个 组件</li>
+<li><code>m == image.length</code></li>
+<li><code>n == image[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 100</code></li>
+<li><code>image[i][j]</code> 为 <code>'0'</code> 或 <code>'1'</code></li>
+<li><code>1 &lt;= x &lt; m</code></li>
+<li><code>1 &lt;= y &lt; n</code></li>
+<li><code>image[x][y] == '1'</code></li>
+<li><code>image</code> 中的黑色像素仅形成一个 <strong>组件</strong></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>要求时间复杂度低于 O(mn)，也就是不能遍历完矩阵。于是考虑二分查找：</p>
@@ -215,7 +210,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

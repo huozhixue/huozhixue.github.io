@@ -1,30 +1,42 @@
 # 0248：中心对称数 III（★★）
 
 
+> <u>**[力扣第 248 题](https://leetcode.cn/problems/strobogrammatic-number-iii/)**</u>
+
 ## 题目
 
-给定两个字符串 low 和 high 表示两个整数 low 和 high ，其中 low <= high ，
-返回 范围 [low, high] 内的 「中心对称数」总数  。
+<p>给定两个字符串 low 和 high 表示两个整数 <code>low</code> 和 <code>high</code> ，其中 <code>low &lt;= high</code> ，返回 范围 <code>[low, high]</code> 内的 <strong>「中心对称数」</strong>总数  。</p>
 
-中心对称数 是一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。
+<p><strong>中心对称数 </strong>是一个数字在旋转了 <code>180</code> 度之后看起来依旧相同的数字（或者上下颠倒地看）。</p>
 
 
-示例 1:
 
-	输入: low = "50", high = "100"
-	输出: 3 
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<pre>
+<strong>输入:</strong> low = "50", high = "100"
+<strong>输出:</strong> 3
+</pre>
 
-	输入: low = "0", high = "0"
-	输出: 1
- 
+<p><strong>示例 2:</strong></p>
 
-提示:
-- 1 <= low.length, high.length <= 15
-- low 和 high 只包含数字
-- low <= high
-- low and high 不包含任何前导零，除了零本身。
+<pre>
+<strong>输入:</strong> low = "0", high = "0"
+<strong>输出:</strong> 1
+</pre>
+
+
+
+<p><strong>提示:</strong><meta charset="UTF-8" /></p>
+
+<p><meta charset="UTF-8" /></p>
+
+<ul>
+<li><code>1 &lt;= low.length, high.length &lt;= 15</code></li>
+<li><code>low</code> 和 <code>high</code> 只包含数字</li>
+<li><code>low &lt;= high</code></li>
+<li><code>low</code> and <code>high</code> 不包含任何前导零，除了零本身。</li>
+</ul>
 
 
 ## 分析

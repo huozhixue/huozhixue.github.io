@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0317：离建筑物最近的距离（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0317：离建筑物最近的距离（★★）" />
-<meta property="og:description" content="题目 给你一个 m × n 的网格，值为 0 、 1 或 2 ，其中: 每一个 0 代表一块你可以自由通过的 空地 每一个 1 代表一个你不能通过的 建筑 每个 2 标记一个你不能通过" />
+<meta property="og:description" content="力扣第 317 题 题目 给你一个 m × n 的网格，值为 0 、 1 或 2 ，其中: 每一个 0 代表一块你可以自由通过的 空地 每一个 1 代表一个你不能通过的 建筑 每个 2 标记一个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0317/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-11-13T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0317：离建筑物最近的距离（★★）"/>
-<meta name="twitter:description" content="题目 给你一个 m × n 的网格，值为 0 、 1 或 2 ，其中: 每一个 0 代表一块你可以自由通过的 空地 每一个 1 代表一个你不能通过的 建筑 每个 2 标记一个你不能通过"/>
+<meta name="twitter:description" content="力扣第 317 题 题目 给你一个 m × n 的网格，值为 0 、 1 或 2 ，其中: 每一个 0 代表一块你可以自由通过的 空地 每一个 1 代表一个你不能通过的 建筑 每个 2 标记一个"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0317/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0316/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0318/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0317\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  596 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  601 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0317\/","datePublished": "2015-11-13T00:00:00+08:00","dateModified": "2015-11-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0317：离建筑物最近的距离（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-13">2015-11-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 596 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-13">2015-11-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 601 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0317/" class="leancloud_visitors" data-flag-title="0317：离建筑物最近的距离（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,48 +125,46 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个 m × n 的网格，值为 0 、 1 或 2 ，其中:</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/shortest-distance-from-all-buildings/" target="_blank" rel="noopener noreffer">力扣第 317 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>m × n</code> 的网格，值为 <code>0</code> 、 <code>1</code> 或 <code>2</code> ，其中:</p>
 <ul>
-<li>每一个 0 代表一块你可以自由通过的 空地 </li>
-<li>每一个 1 代表一个你不能通过的 建筑</li>
-<li>每个 2 标记一个你不能通过的 障碍 </li>
+<li>每一个 <code>0</code> 代表一块你可以自由通过的 <strong>空地</strong> </li>
+<li>每一个 <code>1</code> 代表一个你不能通过的 <strong>建筑</strong></li>
+<li>每个 <code>2</code> 标记一个你不能通过的 <strong>障碍</strong> </li>
 </ul>
-<p>你想要在一块空地上建造一所房子，在 最短的总旅行距离 内到达所有的建筑。你只能上下左右移动。</p>
-<p>返回到该房子的 最短旅行距离 。如果根据上述规则无法建造这样的房子，则返回 -1 。</p>
-<p>总旅行距离 是朋友们家到聚会地点的距离之和。</p>
-<p>使用 曼哈顿距离 计算距离，其中距离 (p1, p2) = |p2.x - p1.x | + | p2.y - p1.y | 。</p>
-<p>示例  1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg, https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg"
-        title="img" /></p>
-<pre><code>输入：grid = [[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]
-输出：7 
-解析：给定三个建筑物 (0,0)、(0,4) 和 (2,2) 以及一个位于 (0,2) 的障碍物。
-由于总距离之和 3+3+1=7 最优，所以位置 (1,2) 是符合要求的最优地点。
+<p>你想要在一块空地上建造一所房子，在 <strong>最短的总旅行距离</strong> 内到达所有的建筑。你只能上下左右移动。</p>
+<p>返回到该房子的 <strong>最短旅行距离</strong> 。如果根据上述规则无法建造这样的房子，则返回 <code>-1</code> 。</p>
+<p><strong>总旅行距离 </strong>是朋友们家到聚会地点的距离之和。</p>
+<p>使用 <strong>曼哈顿距离</strong> 计算距离，其中距离 <code>(p1, p2) = |p2.x - p1.x | + | p2.y - p1.y |</code> 。</p>
+<p><strong>示例  1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg" /></p>
+<pre>
+<strong>输入：</strong>grid = [[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]
+<strong>输出：</strong>7
+<strong>解析：</strong>给定<code>三个建筑物 (0,0)、</code><code>(0,4) 和</code> <code>(2,2) 以及一个</code>位于 <code>(0,2) 的障碍物。
+由于总距离之和 3+3+1=7 最优，所以位置</code> <code>(1,2)</code> 是符合要求的最优地点。
 故返回7。
-</code></pre>
-<p>示例 2:</p>
-<pre><code>输入: grid = [[1,0]]
-输出: 1
-</code></pre>
-<p>示例 3:</p>
-<pre><code>输入: grid = [[1]]
-输出: -1
-</code></pre>
-<p> </p>
-<p>提示:</p>
+</pre>
+<p><strong>示例 2:</strong></p>
+<pre>
+<strong>输入:</strong> grid = [[1,0]]
+<strong>输出:</strong> 1
+</pre>
+<p><strong>示例 3:</strong></p>
+<pre>
+<strong>输入:</strong> grid = [[1]]
+<strong>输出:</strong> -1
+</pre>
+<p><strong>提示:</strong></p>
 <ul>
-<li>m == grid.length</li>
-<li>n == grid[i].length</li>
-<li>1 &lt;= m, n &lt;= 50</li>
-<li>grid[i][j] 是 0, 1 或 2</li>
-<li>grid 中 至少 有 一幢 建筑</li>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 50</code></li>
+<li><code>grid[i][j]</code> 是 <code>0</code>, <code>1</code> 或 <code>2</code></li>
+<li><code>grid</code> 中 <strong>至少</strong> 有 <strong>一幢</strong> 建筑</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>典型的 bfs。从每个建筑开始遍历，求得空地到每个建筑的距离，总和最小的空地即为所求。</p>
@@ -242,7 +240,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

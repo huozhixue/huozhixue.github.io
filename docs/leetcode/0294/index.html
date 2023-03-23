@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0294：翻转游戏 II（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0294：翻转游戏 II（★★★）" />
-<meta property="og:description" content="题目 你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下： 给你一个字符串 currentState ，其中只含 &lsquo;&#43;&rsquo; 和 &lsquo;-&rsquo; 。你和朋友轮流将 连续 的两个 &ldquo;&#43;&#43;&rdquo; 反转成 &ldquo;&ndash;&rdquo; 。当一方无法进行" />
+        <title>0294：翻转游戏 II（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0294：翻转游戏 II（★）" />
+<meta property="og:description" content="力扣第 294 题 题目 你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下： 给你一个字符串 currentState ，其中只含 &#39;&#43;&#39; 和 &#39;-&#39; 。你和朋友轮流将 连续 的两个 &#34;&#43;&#43;&#34; 反转成 &#34;--&#34; 。当一" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0294/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-10-21T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0294：翻转游戏 II（★★★）"/>
-<meta name="twitter:description" content="题目 你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下： 给你一个字符串 currentState ，其中只含 &lsquo;&#43;&rsquo; 和 &lsquo;-&rsquo; 。你和朋友轮流将 连续 的两个 &ldquo;&#43;&#43;&rdquo; 反转成 &ldquo;&ndash;&rdquo; 。当一方无法进行"/>
+<meta name="twitter:title" content="0294：翻转游戏 II（★）"/>
+<meta name="twitter:description" content="力扣第 294 题 题目 你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下： 给你一个字符串 currentState ，其中只含 &#39;&#43;&#39; 和 &#39;-&#39; 。你和朋友轮流将 连续 的两个 &#34;&#43;&#43;&#34; 反转成 &#34;--&#34; 。当一"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0294/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0293/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0295/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0294：翻转游戏 II（★★★）",
+        "headline": "0294：翻转游戏 II（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0294\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  463 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  468 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0294\/","datePublished": "2015-10-21T00:00:00+08:00","dateModified": "2015-10-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0294：翻转游戏 II（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0294：翻转游戏 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-21">2015-10-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 463 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0294/" class="leancloud_visitors" data-flag-title="0294：翻转游戏 II（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-21">2015-10-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 468 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0294/" class="leancloud_visitors" data-flag-title="0294：翻转游戏 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,29 +130,29 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/flip-game-ii/" target="_blank" rel="noopener noreffer">力扣第 294 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
 <p>你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下：</p>
-<p>给你一个字符串 currentState ，其中只含 &lsquo;+&rsquo; 和 &lsquo;-&rsquo; 。你和朋友轮流将 连续 的两个 &ldquo;++&rdquo; 
-反转成 &ldquo;&ndash;&rdquo; 。当一方无法进行有效的翻转时便意味着游戏结束，则另一方获胜。默认每个人都会采取最优策略。</p>
-<p>请你写出一个函数来判定起始玩家 是否存在必胜的方案 ：如果存在，返回 true ；否则，返回 false 。
- 
-示例 1：</p>
-<pre><code>输入：currentState = &quot;++++&quot;
-输出：true
-解释：起始玩家可将中间的 &quot;++&quot; 翻转变为 &quot;+--+&quot; 从而得胜。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：currentState = &quot;+&quot;
-输出：false
- 
-</code></pre>
-<p>提示：</p>
+<p>给你一个字符串 <code>currentState</code> ，其中只含 <code>'+'</code> 和 <code>'-'</code> 。你和朋友轮流将 <strong>连续 </strong>的两个 <code>"++"</code> 反转成 <code>"--"</code> 。当一方无法进行有效的翻转时便意味着游戏结束，则另一方获胜。默认每个人都会采取最优策略。</p>
+<p>请你写出一个函数来判定起始玩家 <strong>是否存在必胜的方案</strong> ：如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>currentState = "++++"
+<strong>输出：</strong>true
+<strong>解释：</strong>起始玩家可将中间的 <code>"++"</code> 翻转变为 <code>"+--+" 从而得胜。</code></pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>currentState = "+"
+<strong>输出：</strong>false
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= currentState.length &lt;= 60</li>
-<li>currentState[i] 不是 &lsquo;+&rsquo; 就是 &lsquo;-&rsquo;
- </li>
+<li><code>1 &lt;= currentState.length &lt;= 60</code></li>
+<li><code>currentState[i]</code> 不是 <code>'+'</code> 就是 <code>'-'</code></li>
 </ul>
-<p>进阶：请推导你算法的时间复杂度。</p>
+<p><strong>进阶：</strong>请推导你算法的时间复杂度。</p>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
 <p>典型的博弈问题，考虑用 dp，遍历每种操作并递归即可。</p>
@@ -237,14 +237,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%9A%E5%BC%88/">博弈</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">记忆化搜索</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%9E%E6%BA%AF/">回溯</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%9A%E5%BC%88/">博弈</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/leetcode/0295/" class="prev" rel="prev" title="0295：数据流的中位数（★★）"><i class="fas fa-angle-left fa-fw"></i>0295：数据流的中位数（★★）</a>
-            <a href="/leetcode/0293/" class="next" rel="next" title="0293：翻转游戏（★）">0293：翻转游戏（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0293/" class="next" rel="next" title="0293：翻转游戏">0293：翻转游戏<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,39 +1,49 @@
-# 0291：单词规律 II（★★）
+# 0291：单词规律 II（★）
 
+
+> <u>**[力扣第 291 题](https://leetcode.cn/problems/word-pattern-ii/)**</u>
 
 ## 题目
 
-给你一种规律 pattern 和一个字符串 s，请你判断 s 是否和 pattern 的规律相匹配。
+<p>给你一种规律 <code>pattern</code> 和一个字符串 <code>s</code>，请你判断 <code>s</code> 是否和<em> </em><code>pattern</code> 的规律<strong>相匹配</strong>。</p>
 
-如果存在单个字符到字符串的 双射映射 ，那么字符串 s 匹配 pattern ，即：
-如果pattern 中的每个字符都被它映射到的字符串替换，那么最终的字符串则为 s 。
-双射 意味着映射双方一一对应，不会存在两个字符映射到同一个字符串，
-也不会存在一个字符分别映射到两个不同的字符串。
+<p>如果存在单个字符到字符串的 <strong>双射映射</strong> ，那么字符串<meta charset="UTF-8" /> <code>s</code> 匹配<meta charset="UTF-8" /> <code>pattern</code> ，即：如果<meta charset="UTF-8" /><code>pattern</code> 中的每个字符都被它映射到的字符串替换，那么最终的字符串则为 <code>s</code> 。<strong>双射</strong> 意味着映射双方一一对应，不会存在两个字符映射到同一个字符串，也不会存在一个字符分别映射到两个不同的字符串。</p>
 
-示例 1：
 
-	输入：pattern = "abab", s = "redblueredblue"
-	输出：true
-	解释：一种可能的映射如下：
-	'a' -> "red"
-	'b' -> "blue"
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：pattern = "aaaa", s = "asdasdasdasd"
-	输出：true
-	解释：一种可能的映射如下：
-	'a' -> "asd"
+<pre>
+<strong>输入：</strong>pattern = "abab", s = "redblueredblue"
+<strong>输出：</strong>true
+<strong>解释：</strong>一种可能的映射如下：
+'a' -&gt; "red"
+'b' -&gt; "blue"</pre>
 
-示例 3：
+<p><strong>示例 2：</strong></p>
 
-	输入：pattern = "aabb", s = "xyzabcxzyabc"
-	输出：false
- 
+<pre>
+<strong>输入：</strong>pattern = "aaaa", s = "asdasdasdasd"
+<strong>输出：</strong>true
+<strong>解释：</strong>一种可能的映射如下：
+'a' -&gt; "asd"
+</pre>
 
-提示：
-- 1 <= pattern.length, s.length <= 20
-- pattern 和 s 由小写英文字母组成
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>pattern = "aabb", s = "xyzabcxzyabc"
+<strong>输出：</strong>false
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= pattern.length, s.length &lt;= 20</code></li>
+<li><code>pattern</code> 和 <code>s</code> 由小写英文字母组成</li>
+</ul>
 
 
 ## 分析

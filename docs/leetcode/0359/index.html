@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0359：日志速率限制器（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0359：日志速率限制器（★）" />
-<meta property="og:description" content="题目 请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 不重复 的消息最多只能每 10 秒打印一次。 也就是说，如果在时间戳 t 打印某条消息，那么" />
+        <title>0359：日志速率限制器 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0359：日志速率限制器" />
+<meta property="og:description" content="力扣第 359 题 题目 请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 不重复 的消息最多只能每 10 秒打印一次。也就是说，如果在时间戳 t 打印某条" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0359/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-12-25T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0359：日志速率限制器（★）"/>
-<meta name="twitter:description" content="题目 请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 不重复 的消息最多只能每 10 秒打印一次。 也就是说，如果在时间戳 t 打印某条消息，那么"/>
+<meta name="twitter:title" content="0359：日志速率限制器"/>
+<meta name="twitter:description" content="力扣第 359 题 题目 请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 不重复 的消息最多只能每 10 秒打印一次。也就是说，如果在时间戳 t 打印某条"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0359/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0358/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0360/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0359：日志速率限制器（★）",
+        "headline": "0359：日志速率限制器",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0359\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  425 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  430 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0359\/","datePublished": "2015-12-25T00:00:00+08:00","dateModified": "2015-12-25T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0359：日志速率限制器（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0359：日志速率限制器</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-25">2015-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 425 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0359/" class="leancloud_visitors" data-flag-title="0359：日志速率限制器（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-25">2015-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 430 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0359/" class="leancloud_visitors" data-flag-title="0359：日志速率限制器">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,41 +125,40 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 不重复 的消息最多只能每 10 秒打印一次。
-也就是说，如果在时间戳 t 打印某条消息，那么相同内容的消息直到时间戳变为 t + 10 之前都不会被打印。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/logger-rate-limiter/" target="_blank" rel="noopener noreffer">力扣第 359 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 <strong>不重复</strong> 的消息最多只能每 10 秒打印一次。也就是说，如果在时间戳 <code>t</code> 打印某条消息，那么相同内容的消息直到时间戳变为 <code>t + 10</code> 之前都不会被打印。</p>
 <p>所有消息都按时间顺序发送。多条消息可能到达同一时间戳。</p>
-<p>实现 Logger 类：</p>
+<p>实现 <code>Logger</code> 类：</p>
 <ul>
-<li>Logger() 初始化 logger 对象</li>
-<li>bool shouldPrintMessage(int timestamp, string message) 如果这条消息 message
-在给定的时间戳 timestamp 应该被打印出来，则返回 true ，否则请返回 false 。
- </li>
+<li><code>Logger()</code> 初始化 <code>logger</code> 对象</li>
+<li><code>bool shouldPrintMessage(int timestamp, string message)</code> 如果这条消息 <code>message</code> 在给定的时间戳 <code>timestamp</code> 应该被打印出来，则返回 <code>true</code> ，否则请返回 <code>false</code> 。</li>
 </ul>
-<p>示例：</p>
-<pre><code>输入：
-[&quot;Logger&quot;, &quot;shouldPrintMessage&quot;, &quot;shouldPrintMessage&quot;, &quot;shouldPrintMessage&quot;, &quot;shouldPrintMessage&quot;, 
-&quot;shouldPrintMessage&quot;, &quot;shouldPrintMessage&quot;]
-[[], [1, &quot;foo&quot;], [2, &quot;bar&quot;], [3, &quot;foo&quot;], [8, &quot;bar&quot;], [10, &quot;foo&quot;], [11, &quot;foo&quot;]]
-输出：
+<p><strong>示例：</strong></p>
+<pre>
+<strong>输入：</strong>
+["Logger", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage", "shouldPrintMessage"]
+[[], [1, "foo"], [2, "bar"], [3, "foo"], [8, "bar"], [10, "foo"], [11, "foo"]]
+<strong>输出：</strong>
 [null, true, true, false, false, false, true]
 
-解释：
+<strong>解释：</strong>
 Logger logger = new Logger();
-logger.shouldPrintMessage(1, &quot;foo&quot;);  // 返回 true ，下一次 &quot;foo&quot; 可以打印的时间戳是 1 + 10 = 11
-logger.shouldPrintMessage(2, &quot;bar&quot;);  // 返回 true ，下一次 &quot;bar&quot; 可以打印的时间戳是 2 + 10 = 12
-logger.shouldPrintMessage(3, &quot;foo&quot;);  // 3 &lt; 11 ，返回 false
-logger.shouldPrintMessage(8, &quot;bar&quot;);  // 8 &lt; 12 ，返回 false
-logger.shouldPrintMessage(10, &quot;foo&quot;); // 10 &lt; 11 ，返回 false
-logger.shouldPrintMessage(11, &quot;foo&quot;); // 11 &gt;= 11 ，返回 true ，下一次 &quot;foo&quot; 可以打印的时间戳是 11 + 10 = 21
-</code></pre>
-<p> </p>
-<p>提示：</p>
+logger.shouldPrintMessage(1, "foo");  // 返回 true ，下一次 "foo" 可以打印的时间戳是 1 + 10 = 11
+logger.shouldPrintMessage(2, "bar");  // 返回 true ，下一次 "bar" 可以打印的时间戳是 2 + 10 = 12
+logger.shouldPrintMessage(3, "foo");  // 3 < 11 ，返回 false
+logger.shouldPrintMessage(8, "bar");  // 8 < 12 ，返回 false
+logger.shouldPrintMessage(10, "foo"); // 10 < 11 ，返回 false
+logger.shouldPrintMessage(11, "foo"); // 11 >= 11 ，返回 true ，下一次 "foo" 可以打印的时间戳是 11 + 10 = 21
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>0 &lt;= timestamp &lt;= 10^9</li>
-<li>每个 timestamp 都将按非递减顺序（时间顺序）传递</li>
-<li>1 &lt;= message.length &lt;= 30</li>
-<li>最多调用 10^4 次 shouldPrintMessage 方法</li>
+<li><code>0 <= timestamp <= 10<sup>9</sup></code></li>
+<li>每个 <code>timestamp</code> 都将按非递减顺序（时间顺序）传递</li>
+<li><code>1 <= message.length <= 30</code></li>
+<li>最多调用 <code>10<sup>4</sup></code> 次 <code>shouldPrintMessage</code> 方法</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>维护每条消息的上一时间戳即可。</p>
@@ -210,14 +209,14 @@ logger.shouldPrintMessage(11, &quot;foo&quot;); // 11 &gt;= 11 ，返回 true �
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0360/" class="prev" rel="prev" title="0360：有序转化数组（★★）"><i class="fas fa-angle-left fa-fw"></i>0360：有序转化数组（★★）</a>
-            <a href="/leetcode/0358/" class="next" rel="next" title="0358：K 距离间隔重排字符串（★★★）">0358：K 距离间隔重排字符串（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0360/" class="prev" rel="prev" title="0360：有序转化数组（★）"><i class="fas fa-angle-left fa-fw"></i>0360：有序转化数组（★）</a>
+            <a href="/leetcode/0358/" class="next" rel="next" title="0358：K 距离间隔重排字符串（★★）">0358：K 距离间隔重排字符串（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0353：贪吃蛇（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0353：贪吃蛇（★★）" />
-<meta property="og:description" content="题目 请你设计一个 贪吃蛇游戏，该游戏将会在一个 屏幕尺寸 = 宽度 x 高度 的屏幕上运行。 起初时，蛇在左上角的 (0, 0) 位置，身体长度为 1 个单位。 你将会被给出" />
+        <title>0353：贪吃蛇（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0353：贪吃蛇（★）" />
+<meta property="og:description" content="力扣第 353 题 题目 请你设计一个 贪吃蛇游戏，该游戏将会在一个 屏幕尺寸 = 宽度 x 高度 的屏幕上运行。如果你不熟悉这个游戏，可以 点击这里 在线试玩。 起初时，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0353/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-12-19T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0353：贪吃蛇（★★）"/>
-<meta name="twitter:description" content="题目 请你设计一个 贪吃蛇游戏，该游戏将会在一个 屏幕尺寸 = 宽度 x 高度 的屏幕上运行。 起初时，蛇在左上角的 (0, 0) 位置，身体长度为 1 个单位。 你将会被给出"/>
+<meta name="twitter:title" content="0353：贪吃蛇（★）"/>
+<meta name="twitter:description" content="力扣第 353 题 题目 请你设计一个 贪吃蛇游戏，该游戏将会在一个 屏幕尺寸 = 宽度 x 高度 的屏幕上运行。如果你不熟悉这个游戏，可以 点击这里 在线试玩。 起初时，"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0353/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0352/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0354/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0353：贪吃蛇（★★）",
+        "headline": "0353：贪吃蛇（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0353\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  636 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  663 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0353\/","datePublished": "2015-12-19T00:00:00+08:00","dateModified": "2015-12-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0353：贪吃蛇（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0353：贪吃蛇（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-19">2015-12-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 636 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0353/" class="leancloud_visitors" data-flag-title="0353：贪吃蛇（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-19">2015-12-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 663 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0353/" class="leancloud_visitors" data-flag-title="0353：贪吃蛇（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,56 +125,48 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>请你设计一个 贪吃蛇游戏，该游戏将会在一个 屏幕尺寸 = 宽度 x 高度 的屏幕上运行。</p>
-<p>起初时，蛇在左上角的 (0, 0) 位置，身体长度为 1 个单位。</p>
-<p>你将会被给出一个数组形式的食物位置序列 food ，其中 food[i] = (ri, ci) 。
-当蛇吃到食物时，身子的长度会增加 1 个单位，得分也会 +1 。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-snake-game/" target="_blank" rel="noopener noreffer">力扣第 353 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>请你设计一个 <a href="https://baike.baidu.com/item/%E8%B4%AA%E5%90%83%E8%9B%87/9510203?fr=aladdin" target="_blank">贪吃蛇游戏</a>，该游戏将会在一个 <strong>屏幕尺寸 = 宽度 x 高度 </strong>的屏幕上运行。如果你不熟悉这个游戏，可以 <a href="http://patorjk.com/games/snake/">点击这里</a> 在线试玩。</p>
+<p>起初时，蛇在左上角的 <code>(0, 0)</code><strong> </strong>位置，身体长度为 <code>1</code> 个单位。</p>
+<p>你将会被给出一个数组形式的食物位置序列 <code>food</code> ，其中 <code>food[i] = (r<sub>i</sub>, c<sub>i</sub>)</code> 。当蛇吃到食物时，身子的长度会增加 <code>1</code> 个单位，得分也会 <code>+1</code> 。</p>
 <p>食物不会同时出现，会按列表的顺序逐一显示在屏幕上。比方讲，第一个食物被蛇吃掉后，第二个食物才会出现。</p>
-<p>当一个食物在屏幕上出现时，保证 不会 出现在被蛇身体占据的格子里。</p>
-<p>如果蛇越界（与边界相撞）或者头与 移动后 的身体相撞（即，身长为 4 的蛇无法与自己相撞），游戏结束。</p>
-<p>实现 SnakeGame 类：</p>
+<p>当一个食物在屏幕上出现时，保证 <strong>不会</strong> 出现在被蛇身体占据的格子里。</p>
+<p class="MachineTrans-lang-zh-CN">如果蛇越界（与边界相撞）或者头与 <strong>移动后</strong> 的身体相撞（即，身长为 <code>4</code> 的蛇无法与自己相撞），游戏结束。</p>
+<p>实现 <code>SnakeGame</code> 类：</p>
 <ul>
-<li>SnakeGame(int width, int height, int[][] food) 初始化对象，屏幕大小为 height x width ，
-食物位置序列为 food</li>
-<li>int move(String direction) 返回蛇在方向 direction 上移动后的得分。如果游戏结束，返回 -1 。
- 
-示例 1：</li>
+<li><code>SnakeGame(int width, int height, int[][] food)</code> 初始化对象，屏幕大小为 <code>height x width</code> ，食物位置序列为 <code>food</code></li>
+<li><code>int move(String direction)</code> 返回蛇在方向 <code>direction</code> 上移动后的得分。如果游戏结束，返回 <code>-1</code> 。</li>
 </ul>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/01/13/snake.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/01/13/snake.jpg, https://assets.leetcode.com/uploads/2021/01/13/snake.jpg 1.5x, https://assets.leetcode.com/uploads/2021/01/13/snake.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/01/13/snake.jpg"
-        title="img" /></p>
-<pre><code>输入：
-[&quot;SnakeGame&quot;, &quot;move&quot;, &quot;move&quot;, &quot;move&quot;, &quot;move&quot;, &quot;move&quot;, &quot;move&quot;]
-[[3, 2, [[1, 2], [0, 1]]], [&quot;R&quot;], [&quot;D&quot;], [&quot;R&quot;], [&quot;U&quot;], [&quot;L&quot;], [&quot;U&quot;]]
-输出：
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/01/13/snake.jpg" style="width: 800px; height: 302px;" />
+<pre>
+<strong>输入：</strong>
+["SnakeGame", "move", "move", "move", "move", "move", "move"]
+[[3, 2, [[1, 2], [0, 1]]], ["R"], ["D"], ["R"], ["U"], ["L"], ["U"]]
+<strong>输出：</strong>
 [null, 0, 0, 1, 1, 2, -1]
-
-解释：
+<p><strong>解释：</strong>
 SnakeGame snakeGame = new SnakeGame(3, 2, [[1, 2], [0, 1]]);
-snakeGame.move(&quot;R&quot;); // 返回 0
-snakeGame.move(&quot;D&quot;); // 返回 0
-snakeGame.move(&quot;R&quot;); // 返回 1 ，蛇吃掉了第一个食物，同时第二个食物出现在 (0, 1)
-snakeGame.move(&quot;U&quot;); // 返回 1
-snakeGame.move(&quot;L&quot;); // 返回 2 ，蛇吃掉了第二个食物，没有出现更多食物
-snakeGame.move(&quot;U&quot;); // 返回 -1 ，蛇与边界相撞，游戏结束
-</code></pre>
-<p> </p>
-<p>提示：</p>
+snakeGame.move(&ldquo;R&rdquo;); // 返回 0
+snakeGame.move(&ldquo;D&rdquo;); // 返回 0
+snakeGame.move(&ldquo;R&rdquo;); // 返回 1 ，蛇吃掉了第一个食物，同时第二个食物出现在 (0, 1)
+snakeGame.move(&ldquo;U&rdquo;); // 返回 1
+snakeGame.move(&ldquo;L&rdquo;); // 返回 2 ，蛇吃掉了第二个食物，没有出现更多食物
+snakeGame.move(&ldquo;U&rdquo;); // 返回 -1 ，蛇与边界相撞，游戏结束
+</pre></p>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= width, height &lt;= 10^4</li>
-<li>1 &lt;= food.length &lt;= 50</li>
-<li>food[i].length == 2</li>
-<li>0 &lt;= ri &lt; height</li>
-<li>0 &lt;= ci &lt; width</li>
-<li>direction.length == 1</li>
-<li>direction is &lsquo;U&rsquo;, &lsquo;D&rsquo;, &lsquo;L&rsquo;, or &lsquo;R&rsquo;.</li>
-<li>最多调用 10^4 次 move 方法</li>
+<li><code>1 <= width, height <= 10<sup>4</sup></code></li>
+<li><code>1 <= food.length <= 50</code></li>
+<li><code>food[i].length == 2</code></li>
+<li><code>0 <= r<sub>i</sub> < height</code></li>
+<li><code>0 <= c<sub>i</sub> < width</code></li>
+<li><code>direction.length == 1</code></li>
+<li><code>direction</code> is <code>'U'</code>, <code>'D'</code>, <code>'L'</code>, or <code>'R'</code>.</li>
+<li>最多调用 <code>10<sup>4</sup></code> 次 <code>move</code> 方法</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>用队列维护蛇身即可。</p>
@@ -252,7 +244,7 @@ snakeGame.move(&quot;U&quot;); // 返回 -1 ，蛇与边界相撞，游戏结束
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E9%98%9F%E5%88%97/">队列</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E9%98%9F%E5%88%97/">队列</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

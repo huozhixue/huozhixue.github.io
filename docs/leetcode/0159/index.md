@@ -1,21 +1,37 @@
-# 0159：至多包含两个不同字符的最长子串（★★）
+# 0159：至多包含两个不同字符的最长子串（★）
 
+
+> <u>**[力扣第 159 题](https://leetcode.cn/problems/longest-substring-with-at-most-two-distinct-characters/)**</u>
 
 ## 题目
 
-给定一个字符串 s ，找出 至多 包含两个不同字符的最长子串 t ，并返回该子串的长度。
+给你一个字符串 <code>s</code> ，请你找出 <strong>至多 </strong>包含 <strong>两个不同字符</strong> 的最长子串，并返回该子串的长度。
 
-示例 1:
 
-	输入: "eceba"
-	输出: 3
-	解释: t 是 "ece"，长度为3。
+<p><strong>示例 1：</strong></p>
 
-示例 2:
+<pre>
+<strong>输入：</strong>s = "eceba"
+<strong>输出：</strong>3
+<strong>解释：</strong>满足题目要求的子串是 "ece" ，长度为 3 。
+</pre>
 
-	输入: "ccaabbb"
-	输出: 5
-	解释: t 是 "aabbb"，长度为5。
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>s = "ccaabbb"
+<strong>输出：</strong>5
+<strong>解释：</strong>满足题目要求的子串是 "aabbb" ，长度为 5 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+<li><code>s</code> 由英文字母组成</li>
+</ul>
 
 
 ## 分析

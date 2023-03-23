@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0296：最佳的碰头地点（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0296：最佳的碰头地点（★★）" />
-<meta property="og:description" content="题目 给你一个 m x n 的二进制网格 grid ，其中 1 表示某个朋友的家所处的位置。返回 最小的 总行走距离 。 总行走距离 是朋友们家到碰头地点的距离之和。 我们将使" />
+<meta property="og:description" content="力扣第 296 题 题目 给你一个 m x n 的二进制网格 grid ，其中 1 表示某个朋友的家所处的位置。返回 最小的 总行走距离 。 总行走距离 是朋友们家到碰头地点的距离之和" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0296/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-10-23T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0296：最佳的碰头地点（★★）"/>
-<meta name="twitter:description" content="题目 给你一个 m x n 的二进制网格 grid ，其中 1 表示某个朋友的家所处的位置。返回 最小的 总行走距离 。 总行走距离 是朋友们家到碰头地点的距离之和。 我们将使"/>
+<meta name="twitter:description" content="力扣第 296 题 题目 给你一个 m x n 的二进制网格 grid ，其中 1 表示某个朋友的家所处的位置。返回 最小的 总行走距离 。 总行走距离 是朋友们家到碰头地点的距离之和"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0296/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0295/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0297/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0296\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  288 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  293 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0296\/","datePublished": "2015-10-23T00:00:00+08:00","dateModified": "2015-10-23T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0296：最佳的碰头地点（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-23">2015-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 288 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-23">2015-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 293 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0296/" class="leancloud_visitors" data-flag-title="0296：最佳的碰头地点（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,37 +125,31 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给你一个 m x n  的二进制网格 grid ，其中 1 表示某个朋友的家所处的位置。返回 最小的 总行走距离 。</p>
-<p>总行走距离 是朋友们家到碰头地点的距离之和。</p>
-<p>我们将使用 曼哈顿距离 来计算，其中 distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y| 。</p>
-<p> </p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2021/03/14/meetingpoint-grid.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2021/03/14/meetingpoint-grid.jpg, https://assets.leetcode.com/uploads/2021/03/14/meetingpoint-grid.jpg 1.5x, https://assets.leetcode.com/uploads/2021/03/14/meetingpoint-grid.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2021/03/14/meetingpoint-grid.jpg"
-        title="img" /></p>
-<pre><code>输入: grid = [[1,0,0,0,1],[0,0,0,0,0],[0,0,1,0,0]]
-输出: 6 
-解释: 给定的三个人分别住在(0,0)，(0,4) 和 (2,2):
-     (0,2) 是一个最佳的碰面点，其总行走距离为 2 + 2 + 2 = 6，最小，因此返回 6。
-</code></pre>
-<p>示例 2:</p>
-<pre><code>输入: grid = [[1,1]]
-输出: 1
-</code></pre>
-<p> </p>
-<p>提示:</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/best-meeting-point/" target="_blank" rel="noopener noreffer">力扣第 296 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>m x n</code>  的二进制网格 <code>grid</code> ，其中 <code>1</code> 表示某个朋友的家所处的位置。返回 <em>最小的 <strong>总行走距离</strong></em> 。</p>
+<p><strong>总行走距离</strong> 是朋友们家到碰头地点的距离之和。</p>
+<p>我们将使用 <a href="https://baike.baidu.com/item/%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB" target="_blank">曼哈顿距离</a> 来计算，其中 <code>distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/14/meetingpoint-grid.jpg" /></p>
+<pre>
+<strong>输入:</strong> grid = [[1,0,0,0,1],[0,0,0,0,0],[0,0,1,0,0]]
+<strong>输出: </strong>6 <strong>
+解释: </strong>给定的三个人分别住在<code>(0,0)，</code><code>(0,4) </code>和 <code>(2,2)</code>:
+<code>(0,2)</code> 是一个最佳的碰面点，其总行走距离为 2 + 2 + 2 = 6，最小，因此返回 6。</pre>
+<p><strong>示例 2:</strong></p>
+<pre>
+<strong>输入:</strong> grid = [[1,1]]
+<strong>输出:</strong> 1</pre>
+<p><strong>提示:</strong></p>
 <ul>
-<li>m == grid.length</li>
-<li>n == grid[i].length</li>
-<li>1 &lt;= m, n &lt;= 200</li>
-<li>grid[i][j] == 0 or 1.</li>
-<li>grid 中 至少 有两个朋友</li>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 200</code></li>
+<li><code>grid[i][j] ==</code> <code>0</code> or <code>1</code>.</li>
+<li><code>grid</code> 中 <strong>至少</strong> 有两个朋友</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>用 A 保存所有位置的 x 坐标，A 的中位数即是最佳位置的 x 坐标。y 坐标同理。</p>
@@ -198,7 +192,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

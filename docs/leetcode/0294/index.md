@@ -1,33 +1,43 @@
-# 0294：翻转游戏 II（★★★）
+# 0294：翻转游戏 II（★）
 
+
+> <u>**[力扣第 294 题](https://leetcode.cn/problems/flip-game-ii/)**</u>
 
 ## 题目
 
-你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下：
+<p>你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下：</p>
 
-给你一个字符串 currentState ，其中只含 '+' 和 '-' 。你和朋友轮流将 连续 的两个 "++" 
-反转成 "--" 。当一方无法进行有效的翻转时便意味着游戏结束，则另一方获胜。默认每个人都会采取最优策略。
+<p>给你一个字符串 <code>currentState</code> ，其中只含 <code>'+'</code> 和 <code>'-'</code> 。你和朋友轮流将 <strong>连续 </strong>的两个 <code>"++"</code> 反转成 <code>"--"</code> 。当一方无法进行有效的翻转时便意味着游戏结束，则另一方获胜。默认每个人都会采取最优策略。</p>
 
-请你写出一个函数来判定起始玩家 是否存在必胜的方案 ：如果存在，返回 true ；否则，返回 false 。
- 
-示例 1：
+<p>请你写出一个函数来判定起始玩家 <strong>是否存在必胜的方案</strong> ：如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-	输入：currentState = "++++"
-	输出：true
-	解释：起始玩家可将中间的 "++" 翻转变为 "+--+" 从而得胜。
 
-示例 2：
+<p><strong>示例 1：</strong></p>
 
-	输入：currentState = "+"
-	输出：false
-	 
+<pre>
+<strong>输入：</strong>currentState = "++++"
+<strong>输出：</strong>true
+<strong>解释：</strong>起始玩家可将中间的 <code>"++"</code> 翻转变为 <code>"+--+" 从而得胜。</code></pre>
 
-提示：
-- 1 <= currentState.length <= 60
-- currentState[i] 不是 '+' 就是 '-'
- 
+<p><strong>示例 2：</strong></p>
 
-进阶：请推导你算法的时间复杂度。
+<pre>
+<strong>输入：</strong>currentState = "+"
+<strong>输出：</strong>false
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= currentState.length &lt;= 60</code></li>
+<li><code>currentState[i]</code> 不是 <code>'+'</code> 就是 <code>'-'</code></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>请推导你算法的时间复杂度。</p>
 
 
 ## 分析

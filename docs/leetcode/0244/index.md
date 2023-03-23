@@ -1,37 +1,47 @@
 # 0244：最短单词距离 II（★）
 
 
+> <u>**[力扣第 244 题](https://leetcode.cn/problems/shortest-word-distance-ii/)**</u>
+
 ## 题目
 
-请设计一个类，使该类的构造函数能够接收一个字符串数组。然后再实现一个方法，
-该方法能够分别接收两个单词，并返回列表中这两个单词之间的最短距离。
+<p>请设计一个类，使该类的构造函数能够接收一个字符串数组。然后再实现一个方法，该方法能够分别接收两个单词<em>，</em>并返回列表中这两个单词之间的最短距离。</p>
 
-实现 WordDistanc 类:
-- WordDistance(String[] wordsDict) 用字符串数组 wordsDict 初始化对象。
-- int shortest(String word1, String word2) 返回数组 worddict 中 word1 和 word2 之间的最短距离。
+<p>实现 <code>WordDistanc</code> 类:</p>
 
-示例 1:
+<ul>
+<li><code>WordDistance(String[] wordsDict)</code> 用字符串数组 <code>wordsDict</code> 初始化对象。</li>
+<li><code>int shortest(String word1, String word2)</code> 返回数组 <code>worddict</code> 中 <code>word1</code> 和 <code>word2</code> 之间的最短距离。</li>
+</ul>
 
-	输入: 
-	["WordDistance", "shortest", "shortest"]
-	[[["practice", "makes", "perfect", "coding", "makes"]], ["coding", "practice"], ["makes", "coding"]]
-	输出:
-	[null, 3, 1]
 
-	解释：
-	WordDistance wordDistance = new WordDistance(["practice", "makes", "perfect", "coding", "makes"]);
-	wordDistance.shortest("coding", "practice"); // 返回 3
-	wordDistance.shortest("makes", "coding");    // 返回 1
- 
 
-注意:
-- 1 <= wordsDict.length <= 3 * 104
-- 1 <= wordsDict[i].length <= 10
-- wordsDict[i] 由小写英文字母组成
-- word1 和 word2 在数组 wordsDict 中
-- word1 != word2
-- shortest 操作次数不大于 5000 
+<p><strong>示例 1:</strong></p>
 
+<pre>
+<strong>输入:</strong>
+["WordDistance", "shortest", "shortest"]
+[[["practice", "makes", "perfect", "coding", "makes"]], ["coding", "practice"], ["makes", "coding"]]
+<strong>输出:</strong>
+[null, 3, 1]
+
+<b>解释：</b>
+WordDistance wordDistance = new WordDistance(["practice", "makes", "perfect", "coding", "makes"]);
+wordDistance.shortest("coding", "practice"); // 返回 3
+wordDistance.shortest("makes", "coding");    // 返回 1</pre>
+
+
+
+<p><strong>注意:</strong><meta charset="UTF-8" /></p>
+
+<ul>
+<li><code>1 &lt;= wordsDict.length &lt;= 3 * 10<sup>4</sup></code></li>
+<li><code>1 &lt;= wordsDict[i].length &lt;= 10</code></li>
+<li><code>wordsDict[i]</code> 由小写英文字母组成</li>
+<li><code>word1</code> 和 <code>word2</code> 在数组 <code>wordsDict</code> 中</li>
+<li><code>word1 != word2</code></li>
+<li> <code>shortest</code> 操作次数不大于 <code>5000</code> </li>
+</ul>
 
 
 ## 分析

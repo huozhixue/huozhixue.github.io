@@ -1,30 +1,38 @@
 # 0243：最短单词距离
 
 
+> <u>**[力扣第 243 题](https://leetcode.cn/problems/shortest-word-distance/)**</u>
+
 ## 题目
 
-给定一个字符串数组 wordDict 和两个已经存在于该数组中的不同的字符串 word1 和 word2 。
-返回列表中这两个单词之间的最短距离。
+<p>给定一个字符串数组 <code>wordDict</code> 和两个已经存在于该数组中的不同的字符串 <code>word1</code> 和 <code>word2</code> 。返回列表中这两个单词之间的最短距离。</p>
 
-示例 1:
 
-	输入: wordsDict = ["practice", "makes", "perfect", "coding", "makes"], 
-	word1 = "coding", word2 = "practice"
-	输出: 3
 
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入: wordsDict = ["practice", "makes", "perfect", "coding", "makes"], 
-	word1 = "makes", word2 = "coding"
-	输出: 1
- 
+<pre>
+<strong>输入:</strong> wordsDict = ["practice", "makes", "perfect", "coding", "makes"], word1 = "coding", word2 = "practice"
+<strong>输出:</strong> 3
+</pre>
 
-提示:
-- 1 <= wordsDict.length <= 3 * 10^4
-- 1 <= wordsDict[i].length <= 10
-- wordsDict[i] 由小写英文字母组成
-- word1 和 word2 在 wordsDict 中
-- word1 != word2
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入:</strong> wordsDict = ["practice", "makes", "perfect", "coding", "makes"], word1 = "makes", word2 = "coding"
+<strong>输出:</strong> 1</pre>
+
+
+
+<p><strong>提示:</strong><meta charset="UTF-8" /></p>
+
+<ul>
+<li><code>1 &lt;= wordsDict.length &lt;= 3 * 10<sup>4</sup></code></li>
+<li><code>1 &lt;= wordsDict[i].length &lt;= 10</code></li>
+<li><code>wordsDict[i]</code> 由小写英文字母组成</li>
+<li><code>word1</code> 和 <code>word2</code> 在 <code>wordsDict</code> 中</li>
+<li><code>word1 != word2</code></li>
+</ul>
 
 
 ## 分析

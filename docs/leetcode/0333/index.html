@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0333：最大 BST 子树（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0333：最大 BST 子树（★★）" />
-<meta property="og:description" content="题目 给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。 其中，最大指的是子树节点数最多的。 二叉搜索树（BST）中的所" />
+        <title>0333：最大 BST 子树（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0333：最大 BST 子树（★）" />
+<meta property="og:description" content="力扣第 333 题 题目 给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。其中，最大指的是子树节点数最多的。 二叉搜索树（BS" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0333/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-11-29T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0333：最大 BST 子树（★★）"/>
-<meta name="twitter:description" content="题目 给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。 其中，最大指的是子树节点数最多的。 二叉搜索树（BST）中的所"/>
+<meta name="twitter:title" content="0333：最大 BST 子树（★）"/>
+<meta name="twitter:description" content="力扣第 333 题 题目 给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。其中，最大指的是子树节点数最多的。 二叉搜索树（BS"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0333/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0332/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0334/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0333：最大 BST 子树（★★）",
+        "headline": "0333：最大 BST 子树（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0333\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  368 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  373 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0333\/","datePublished": "2015-11-29T00:00:00+08:00","dateModified": "2015-11-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0333：最大 BST 子树（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0333：最大 BST 子树（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-29">2015-11-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 368 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0333/" class="leancloud_visitors" data-flag-title="0333：最大 BST 子树（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-29">2015-11-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 373 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0333/" class="leancloud_visitors" data-flag-title="0333：最大 BST 子树（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,39 +125,38 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。
-其中，最大指的是子树节点数最多的。</p>
-<p>二叉搜索树（BST）中的所有节点都具备以下属性：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/largest-bst-subtree/" target="_blank" rel="noopener noreffer">力扣第 333 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。其中，最大指的是子树节点数最多的。</p>
+<p><strong>二叉搜索树（BST）</strong>中的所有节点都具备以下属性：</p>
 <ul>
-<li>左子树的值小于其父（根）节点的值。</li>
-<li>右子树的值大于其父（根）节点的值。</li>
+<li>
+<p>左子树的值小于其父（根）节点的值。</p>
+</li>
+<li>
+<p>右子树的值大于其父（根）节点的值。</p>
+</li>
 </ul>
-<p>注意：子树必须包含其所有后代。</p>
-<p>示例 1：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://assets.leetcode.com/uploads/2020/10/17/tmp.jpg"
-        data-srcset="https://assets.leetcode.com/uploads/2020/10/17/tmp.jpg, https://assets.leetcode.com/uploads/2020/10/17/tmp.jpg 1.5x, https://assets.leetcode.com/uploads/2020/10/17/tmp.jpg 2x"
-        data-sizes="auto"
-        alt="https://assets.leetcode.com/uploads/2020/10/17/tmp.jpg"
-        title="img" /></p>
-<pre><code>输入：root = [10,5,15,1,8,null,7]
-输出：3
-解释：本例中最大的 BST 子树是高亮显示的子树。返回值是子树的大小，即 3 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：root = [4,2,7,2,3,5,null,2,null,null,null,null,null,1]
-输出：2
- 
-</code></pre>
-<p>提示：</p>
+<p><strong>注意：</strong>子树必须包含其所有后代。</p>
+<p><strong>示例 1：</strong></p>
+<p><strong><img alt="" src="https://assets.leetcode.com/uploads/2020/10/17/tmp.jpg" /></strong></p>
+<pre>
+<strong>输入：</strong>root = [10,5,15,1,8,null,7]
+<strong>输出：</strong>3
+<strong>解释：</strong>本例中最大的 BST 子树是高亮显示的子树。返回值是子树的大小，即 3 。</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>root = [4,2,7,2,3,5,null,2,null,null,null,null,null,1]
+<strong>输出：</strong>2
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>树上节点数目的范围是 [0, 10^4]</li>
-<li>-10^4 &lt;= Node.val &lt;= 10^4</li>
+<li>树上节点数目的范围是 <code>[0, 10<sup>4</sup>]</code></li>
+<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 </ul>
-<p>进阶:  你能想出 O(n) 时间复杂度的解法吗？</p>
+<p><strong>进阶:</strong>  你能想出 O(n) 时间复杂度的解法吗？</p>
 <h2 id="分析">分析</h2>
 <p>递归返回其子树是否为 BST、最小/大值、节点数，即可判断是否为 BST，并更新最大节点数。</p>
 <p>为了方便，当不为 BST 时，可以返回最小值为 -inf，最大值为 inf。</p>
@@ -208,7 +207,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/%E9%80%92%E5%BD%92/">递归</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">二叉搜索树</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

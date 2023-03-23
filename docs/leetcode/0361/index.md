@@ -1,39 +1,48 @@
-# 0361：轰炸敌人（★★）
+# 0361：轰炸敌人（★）
 
+
+> <u>**[力扣第 361 题](https://leetcode.cn/problems/bomb-enemy/)**</u>
 
 ## 题目
 
-给你一个大小为 m x n 的矩阵 grid ，其中每个单元格都放置有一个字符：
-- 'W' 表示一堵墙
-- 'E' 表示一个敌人
-- '0'（数字 0）表示一个空位
+<p>给你一个大小为 <code>m x n</code> 的矩阵 <code>grid</code> ，其中每个单元格都放置有一个字符：</p>
 
-返回你使用 一颗炸弹 可以击杀的最大敌人数目。你只能把炸弹放在一个空位里。
+<ul>
+<li><code>'W'</code> 表示一堵墙</li>
+<li><code>'E'</code> 表示一个敌人</li>
+<li><code>'0'</code>（数字 0）表示一个空位</li>
+</ul>
 
-由于炸弹的威力不足以穿透墙体，炸弹只能击杀同一行和同一列没被墙体挡住的敌人。
+<p>返回你使用 <strong>一颗炸弹</strong> 可以击杀的最大敌人数目。你只能把炸弹放在一个空位里。</p>
+
+<p>由于炸弹的威力不足以穿透墙体，炸弹只能击杀同一行和同一列没被墙体挡住的敌人。</p>
 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/03/27/bomb1-grid.jpg)
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/27/bomb1-grid.jpg" style="width: 600px; height: 187px;" />
+<pre>
+<strong>输入：</strong>grid = [["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
+<strong>输出：</strong>3
+</pre>
 
-	输入：grid = [["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
-	输出：3
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/27/bomb2-grid.jpg" style="width: 500px; height: 194px;" />
+<pre>
+<strong>输入：</strong>grid = [["W","W","W"],["0","0","0"],["E","E","E"]]
+<strong>输出：</strong>1
+</pre>
 
-示例 2：
 
-![img](https://assets.leetcode.com/uploads/2021/03/27/bomb2-grid.jpg)
 
-	输入：grid = [["W","W","W"],["0","0","0"],["E","E","E"]]
-	输出：1
-	 
+<p><strong>提示：</strong></p>
 
-提示：
-- m == grid.length
-- n == grid[i].length
-- 1 <= m, n <= 500
-- grid[i][j] 可以是 'W'、'E' 或 '0'
-
+<ul>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 500</code></li>
+<li><code>grid[i][j]</code> 可以是 <code>'W'</code>、<code>'E'</code> 或 <code>'0'</code></li>
+</ul>
 
 
 ## 分析

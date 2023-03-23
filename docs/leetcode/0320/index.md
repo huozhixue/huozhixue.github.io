@@ -1,38 +1,56 @@
-# 0320：列举单词的全部缩写（★★）
+# 0320：列举单词的全部缩写（★）
 
+
+> <u>**[力扣第 320 题](https://leetcode.cn/problems/generalized-abbreviation/)**</u>
 
 ## 题目
 
-单词的 广义缩写词 可以通过下述步骤构造：先取任意数量的 不重叠、不相邻 的子字符串，
-再用它们各自的长度进行替换。
+<p>单词的 <strong>广义缩写词</strong> 可以通过下述步骤构造：先取任意数量的 <strong>不重叠、不相邻</strong> 的子字符串，再用它们各自的长度进行替换。</p>
 
-- 例如，"abcde" 可以缩写为：
-	- "a3e"（"bcd" 变为 "3" ）
-	- "1bcd1"（"a" 和 "e" 都变为 "1"）
-	- "5" ("abcde" 变为 "5")
-	-"abcde" (没有子字符串被代替)
-- 然而，这些缩写是 无效的 ：
-	-"23"（"ab" 变为 "2" ，"cde" 变为 "3" ）是无效的，因为被选择的字符串是相邻的
-	- "22de" ("ab" 变为 "2" ， "bc" 变为 "2")  是无效的，因为被选择的字符串是重叠的
+<ul>
+<li>例如，<code>"abcde"</code> 可以缩写为：
 
-给你一个字符串 word ，返回 一个由 word 的所有可能 广义缩写词 组成的列表 。按 任意顺序 返回答案。
+<ul>
+<li><code>"a3e"</code>（<code>"bcd"</code> 变为 <code>"3"</code> ）</li>
+<li><code>"1bcd1"</code>（<code>"a"</code> 和 <code>"e"</code> 都变为 <code>"1"</code>）<meta charset="UTF-8" /></li>
+<li><code>"5"</code> (<code>"abcde"</code> 变为 <code>"5"</code>)</li>
+<li><code>"abcde"</code> (没有子字符串被代替)</li>
+</ul>
+</li>
+<li>然而，这些缩写是 <strong>无效的</strong> ：
+<ul>
+<li><code>"23"</code>（<code>"ab"</code> 变为 <code>"2"</code> ，<code>"cde"</code> 变为 <code>"3"</code> ）是无效的，因为被选择的字符串是相邻的</li>
+<li><meta charset="UTF-8" /><code>"22de"</code> (<code>"ab"</code> 变为 <code>"2"</code> ， <code>"bc"</code> 变为 <code>"2"</code>)  是无效的，因为被选择的字符串是重叠的</li>
+</ul>
+</li>
+</ul>
+
+<p>给你一个字符串 <code>word</code> ，返回 <em>一个由</em> <code>word</code> 的<em>所有可能 <strong>广义缩写词</strong> 组成的列表</em> 。按 <strong>任意顺序</strong> 返回答案。</p>
 
 
-示例 1：
 
-	输入：word = "word"
-	输出：["4","3d","2r1","2rd","1o2","1o1d","1or1","1ord","w3","w2d","w1r1","w1rd",
-	"wo2","wo1d","wor1","word"]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>word = "word"
+<strong>输出：</strong>["4","3d","2r1","2rd","1o2","1o1d","1or1","1ord","w3","w2d","w1r1","w1rd","wo2","wo1d","wor1","word"]
+</pre>
 
-	输入：word = "a"
-	输出：["1","a"]
- 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= word.length <= 15
-- word 仅由小写英文字母组成
+<pre>
+<strong>输入：</strong>word = "a"
+<strong>输出：</strong>["1","a"]
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= word.length &lt;= 15</code></li>
+<li><code>word</code> 仅由小写英文字母组成</li>
+</ul>
 
 
 ## 分析

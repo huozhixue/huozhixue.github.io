@@ -1,32 +1,41 @@
-# 0255：验证前序遍历序列二叉搜索树（★★★）
+# 0255：验证前序遍历序列二叉搜索树（★）
 
+
+> <u>**[力扣第 255 题](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/)**</u>
 
 ## 题目
 
-给定一个 无重复元素 的整数数组 preorder ， 如果它是以二叉搜索树的先序遍历排列 ，返回 true。
+<p>给定一个 <b>无重复元素</b> 的整数数组 <code>preorder</code> ， <em>如果它是以二叉搜索树的<strong>先序遍历</strong>排列</em><em> </em>，返回 <code>true</code> 。</p>
 
- 
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/03/12/preorder-tree.jpg)
+<p><strong>示例 1：</strong></p>
 
-	输入: preorder = [5,2,1,3,6]
-	输出: true
+<p><img src="https://assets.leetcode.com/uploads/2021/03/12/preorder-tree.jpg" /></p>
 
-示例 2：
+<pre>
+<strong>输入: </strong>preorder = [5,2,1,3,6]
+<strong>输出: </strong>true</pre>
 
-	输入: preorder = [5,2,6,1,3]
-	输出: false
-	 
+<p><strong>示例 2：</strong></p>
 
-提示:
-- 1 <= preorder.length <= 10^4
-- 1 <= preorder[i] <= 10^4
-- preorder 中 无重复元素
- 
+<pre>
+<strong>输入: </strong>preorder = [5,2,6,1,3]
+<strong>输出: </strong>false</pre>
 
-进阶：您能否使用恒定的空间复杂度来完成此题？
+
+
+<p><strong>提示:</strong></p>
+
+<ul>
+<li><code>1 &lt;= preorder.length &lt;= 10<sup>4</sup></code></li>
+<li><code>1 &lt;= preorder[i] &lt;= 10<sup>4</sup></code></li>
+<li><code>preorder</code> 中 <strong>无重复元素</strong></li>
+</ul>
+
+
+
+<p><strong>进阶：</strong>您能否使用恒定的空间复杂度来完成此题？</p>
 
 
 ## 分析

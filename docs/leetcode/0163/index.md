@@ -1,15 +1,17 @@
-# 0163：缺失的区间（★）
+# 0163：缺失的区间
 
+
+> <u>**[力扣第 163 题](https://leetcode.cn/problems/missing-ranges/)**</u>
 
 ## 题目
 
-给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中，
-返回不包含在数组中的缺失区间。
+<p>给定一个排序的整数数组 <em><strong>nums </strong></em>，其中元素的范围在 <strong>闭区间</strong> <strong>[<em>lower, upper</em>]</strong> 当中，返回不包含在数组中的缺失区间。</p>
 
-示例：
-- 输入: nums = [0, 1, 3, 50, 75], lower = 0 和 upper = 99,
-- 输出: ["2", "4->49", "51->74", "76->99"]
+<p><strong>示例：</strong></p>
 
+<pre><strong>输入: </strong><strong><em>nums</em></strong> = <code>[0, 1, 3, 50, 75]</code>, <strong><em>lower</em></strong> = 0 和 <strong><em>upper</em></strong> = 99,
+<strong>输出: </strong><code>[&quot;2&quot;, &quot;4-&gt;49&quot;, &quot;51-&gt;74&quot;, &quot;76-&gt;99&quot;]</code>
+</pre>
 
 
 ## 分析

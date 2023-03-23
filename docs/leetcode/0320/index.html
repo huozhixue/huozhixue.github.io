@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0320：列举单词的全部缩写（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0320：列举单词的全部缩写（★★）" />
-<meta property="og:description" content="题目 单词的 广义缩写词 可以通过下述步骤构造：先取任意数量的 不重叠、不相邻 的子字符串， 再用它们各自的长度进行替换。 例如，&ldquo;abcde" />
+        <title>0320：列举单词的全部缩写（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0320：列举单词的全部缩写（★）" />
+<meta property="og:description" content="力扣第 320 题 题目 单词的 广义缩写词 可以通过下述步骤构造：先取任意数量的 不重叠、不相邻 的子字符串，再用它们各自的长度进行替换。 例如，&#34;abcde&#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0320/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-11-16T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0320：列举单词的全部缩写（★★）"/>
-<meta name="twitter:description" content="题目 单词的 广义缩写词 可以通过下述步骤构造：先取任意数量的 不重叠、不相邻 的子字符串， 再用它们各自的长度进行替换。 例如，&ldquo;abcde"/>
+<meta name="twitter:title" content="0320：列举单词的全部缩写（★）"/>
+<meta name="twitter:description" content="力扣第 320 题 题目 单词的 广义缩写词 可以通过下述步骤构造：先取任意数量的 不重叠、不相邻 的子字符串，再用它们各自的长度进行替换。 例如，&#34;abcde&#34;"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0320/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0319/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0321/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0320：列举单词的全部缩写（★★）",
+        "headline": "0320：列举单词的全部缩写（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0320\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  746 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  528 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0320\/","datePublished": "2015-11-16T00:00:00+08:00","dateModified": "2015-11-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0320：列举单词的全部缩写（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0320：列举单词的全部缩写（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-16">2015-11-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 746 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0320/" class="leancloud_visitors" data-flag-title="0320：列举单词的全部缩写（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-16">2015-11-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 528 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0320/" class="leancloud_visitors" data-flag-title="0320：列举单词的全部缩写（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,40 +125,42 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>单词的 广义缩写词 可以通过下述步骤构造：先取任意数量的 不重叠、不相邻 的子字符串，
-再用它们各自的长度进行替换。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/generalized-abbreviation/" target="_blank" rel="noopener noreffer">力扣第 320 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>单词的 <strong>广义缩写词</strong> 可以通过下述步骤构造：先取任意数量的 <strong>不重叠、不相邻</strong> 的子字符串，再用它们各自的长度进行替换。</p>
 <ul>
-<li>例如，&ldquo;abcde&rdquo; 可以缩写为：
+<li>例如，<code>"abcde"</code> 可以缩写为：
 <ul>
-<li>&ldquo;a3e&rdquo;（&ldquo;bcd&rdquo; 变为 &ldquo;3&rdquo; ）</li>
-<li>&ldquo;1bcd1&rdquo;（&ldquo;a&rdquo; 和 &ldquo;e&rdquo; 都变为 &ldquo;1&rdquo;）</li>
-<li>&ldquo;5&rdquo; (&ldquo;abcde&rdquo; 变为 &ldquo;5&rdquo;)
--&ldquo;abcde&rdquo; (没有子字符串被代替)</li>
+<li><code>"a3e"</code>（<code>"bcd"</code> 变为 <code>"3"</code> ）</li>
+<li><code>"1bcd1"</code>（<code>"a"</code> 和 <code>"e"</code> 都变为 <code>"1"</code>）<meta charset="UTF-8" /></li>
+<li><code>"5"</code> (<code>"abcde"</code> 变为 <code>"5"</code>)</li>
+<li><code>"abcde"</code> (没有子字符串被代替)</li>
 </ul>
 </li>
-<li>然而，这些缩写是 无效的 ：
--&ldquo;23&rdquo;（&ldquo;ab&rdquo; 变为 &ldquo;2&rdquo; ，&ldquo;cde&rdquo; 变为 &ldquo;3&rdquo; ）是无效的，因为被选择的字符串是相邻的
+<li>然而，这些缩写是 <strong>无效的</strong> ：
 <ul>
-<li>&ldquo;22de&rdquo; (&ldquo;ab&rdquo; 变为 &ldquo;2&rdquo; ， &ldquo;bc&rdquo; 变为 &ldquo;2&rdquo;)  是无效的，因为被选择的字符串是重叠的</li>
+<li><code>"23"</code>（<code>"ab"</code> 变为 <code>"2"</code> ，<code>"cde"</code> 变为 <code>"3"</code> ）是无效的，因为被选择的字符串是相邻的</li>
+<li><meta charset="UTF-8" /><code>"22de"</code> (<code>"ab"</code> 变为 <code>"2"</code> ， <code>"bc"</code> 变为 <code>"2"</code>)  是无效的，因为被选择的字符串是重叠的</li>
 </ul>
 </li>
 </ul>
-<p>给你一个字符串 word ，返回 一个由 word 的所有可能 广义缩写词 组成的列表 。按 任意顺序 返回答案。</p>
-<p>示例 1：</p>
-<pre><code>输入：word = &quot;word&quot;
-输出：[&quot;4&quot;,&quot;3d&quot;,&quot;2r1&quot;,&quot;2rd&quot;,&quot;1o2&quot;,&quot;1o1d&quot;,&quot;1or1&quot;,&quot;1ord&quot;,&quot;w3&quot;,&quot;w2d&quot;,&quot;w1r1&quot;,&quot;w1rd&quot;,
-&quot;wo2&quot;,&quot;wo1d&quot;,&quot;wor1&quot;,&quot;word&quot;]
-</code></pre>
-<p>示例 2：</p>
-<pre><code>输入：word = &quot;a&quot;
-输出：[&quot;1&quot;,&quot;a&quot;]
-</code></pre>
-<p> </p>
-<p>提示：</p>
+<p>给你一个字符串 <code>word</code> ，返回 <em>一个由</em> <code>word</code> 的<em>所有可能 <strong>广义缩写词</strong> 组成的列表</em> 。按 <strong>任意顺序</strong> 返回答案。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>word = "word"
+<strong>输出：</strong>["4","3d","2r1","2rd","1o2","1o1d","1or1","1ord","w3","w2d","w1r1","w1rd","wo2","wo1d","wor1","word"]
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre>
+<strong>输入：</strong>word = "a"
+<strong>输出：</strong>["1","a"]
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= word.length &lt;= 15</li>
-<li>word 仅由小写英文字母组成</li>
+<li><code>1 &lt;= word.length &lt;= 15</code></li>
+<li><code>word</code> 仅由小写英文字母组成</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>每个广义缩写词即对应一种缩写位置的集合，因此遍历 word 的子集并缩写即可。</p>
@@ -216,7 +218,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%9E%E6%BA%AF/">回溯</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

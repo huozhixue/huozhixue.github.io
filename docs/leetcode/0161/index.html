@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0161：相隔为 1 的编辑距离（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0161：相隔为 1 的编辑距离（★）" />
-<meta property="og:description" content="题目 给定两个字符串 s 和 t ，如果它们的编辑距离为 1 ，则返回 true ，否则返回 false 。 字符串 s 和字符串 t 之间满足编辑距离等于 1 有三种可能的情形： 往 s 中插入" />
+<meta property="og:description" content="力扣第 161 题 题目 给定两个字符串 s 和 t ，如果它们的编辑距离为 1 ，则返回 true ，否则返回 false 。 字符串 s 和字符串 t 之间满足编辑距离等于 1 有三种可能的情形：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0161/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-06-10T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0161：相隔为 1 的编辑距离（★）"/>
-<meta name="twitter:description" content="题目 给定两个字符串 s 和 t ，如果它们的编辑距离为 1 ，则返回 true ，否则返回 false 。 字符串 s 和字符串 t 之间满足编辑距离等于 1 有三种可能的情形： 往 s 中插入"/>
+<meta name="twitter:description" content="力扣第 161 题 题目 给定两个字符串 s 和 t ，如果它们的编辑距离为 1 ，则返回 true ，否则返回 false 。 字符串 s 和字符串 t 之间满足编辑距离等于 1 有三种可能的情形："/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0161/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0160/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0162/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0161\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  339 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  344 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0161\/","datePublished": "2015-06-10T00:00:00+08:00","dateModified": "2015-06-10T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0161：相隔为 1 的编辑距离（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-10">2015-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 339 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-10">2015-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 344 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0161/" class="leancloud_visitors" data-flag-title="0161：相隔为 1 的编辑距离（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,30 +125,32 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定两个字符串 s 和 t ，如果它们的编辑距离为 1 ，则返回 true ，否则返回 false 。</p>
-<p>字符串 s 和字符串 t 之间满足编辑距离等于 1 有三种可能的情形：</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/one-edit-distance/" target="_blank" rel="noopener noreffer">力扣第 161 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定两个字符串 <code>s</code> 和 <code>t</code> ，如果它们的编辑距离为 <code>1</code> ，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
+<p>字符串 <code>s</code> 和字符串 <code>t</code> 之间满足编辑距离等于 1 有三种可能的情形：</p>
 <ul>
-<li>往 s 中插入 恰好一个 字符得到 t</li>
-<li>从 s 中删除 恰好一个 字符得到 t</li>
-<li>在 s 中用 一个不同的字符 替换 恰好一个 字符得到 t
- </li>
+<li>往 <code>s</code> 中插入 <strong>恰好一个</strong> 字符得到 <code>t</code></li>
+<li>从 <code>s</code> 中删除 <strong>恰好一个</strong> 字符得到 <code>t</code></li>
+<li>在 <code>s</code> 中用 <strong>一个不同的字符</strong> 替换 <strong>恰好一个</strong> 字符得到 <code>t</code></li>
 </ul>
-<p>示例 1：</p>
-<pre><code>输入: s = &quot;ab&quot;, t = &quot;acb&quot;
-输出: true
-解释: 可以将 'c' 插入字符串 s 来得到 t。
-</code></pre>
-<p>示例 2:</p>
-<pre><code>输入: s = &quot;cab&quot;, t = &quot;ad&quot;
-输出: false
-解释: 无法通过 1 步操作使 s 变为 t。
- 
-</code></pre>
-<p>提示:</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入: </strong><strong><em>s</em></strong> = "ab", <strong><em>t</em></strong> = "acb"
+<strong>输出: </strong>true
+<strong>解释: </strong>可以将 'c' 插入字符串 <strong><em>s</em></strong> 来得到 <em><strong>t</strong></em>。
+</pre>
+<p><strong>示例 2:</strong></p>
+<pre>
+<strong>输入: </strong><strong><em>s</em></strong> = "cab", <strong><em>t</em></strong> = "ad"
+<strong>输出: </strong>false
+<strong>解释: </strong>无法通过 1 步操作使 <em><strong>s</strong></em> 变为 <em><strong>t</strong></em>。</pre>
+<p><strong>提示:</strong></p>
 <ul>
-<li>0 &lt;= s.length, t.length &lt;= 10^4</li>
-<li>s 和 t 由小写字母，大写字母和数字组成</li>
+<li><code>0 &lt;= s.length, t.length &lt;= 10<sup>4</sup></code></li>
+<li><code>s</code> 和 <code>t</code> 由小写字母，大写字母和数字组成</li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>分类讨论，设 s/t 长度分别为 m/n：</p>
@@ -203,7 +205,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

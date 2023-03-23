@@ -1,35 +1,44 @@
-# 0261：以图判树（★★）
+# 0261：以图判树（★）
 
+
+> <u>**[力扣第 261 题](https://leetcode.cn/problems/graph-valid-tree/)**</u>
 
 ## 题目
 
-给定编号从 0 到 n - 1 的 n 个结点。给定一个整数 n 和一个 edges 列表，
-其中 edges[i] = [ai, bi] 表示图中节点 ai 和 bi 之间存在一条无向边。
+<p>给定编号从 <code>0</code> 到 <code>n - 1</code> 的 <code>n</code> 个结点。给定一个整数 <code>n</code> 和一个 <code>edges</code> 列表，其中 <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示图中节点 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间存在一条无向边。</p>
 
-如果这些边能够形成一个合法有效的树结构，则返回 true ，否则返回 false 。
+<p>如果这些边能够形成一个合法有效的树结构，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/03/12/tree1-graph.jpg)
 
-	输入: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
-	输出: true
+<p><strong>示例 1：</strong></p>
 
-示例 2:
+<p><img src="https://assets.leetcode.com/uploads/2021/03/12/tree1-graph.jpg" /></p>
 
-![img](https://assets.leetcode.com/uploads/2021/03/12/tree2-graph.jpg)
+<pre>
+<strong>输入:</strong> <code>n = 5</code>, edges<code> = [[0,1],[0,2],[0,3],[1,4]]</code>
+<strong>输出:</strong> true</pre>
 
-	输入: n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]
-	输出: false
- 
+<p><strong>示例 2:</strong></p>
 
-提示：
-- 1 <= n <= 2000
-- 0 <= edges.length <= 5000
-- edges[i].length == 2
-- 0 <= ai, bi < n
-- ai != bi
-- 不存在自循环或重复的边
+<p><img src="https://assets.leetcode.com/uploads/2021/03/12/tree2-graph.jpg" /></p>
+
+<pre>
+<strong>输入:</strong> <code>n = 5, </code>edges<code> = [[0,1],[1,2],[2,3],[1,3],[1,4]]</code>
+<strong>输出:</strong> false</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 2000</code></li>
+<li><code>0 &lt;= edges.length &lt;= 5000</code></li>
+<li><code>edges[i].length == 2</code></li>
+<li><code>0 &lt;= a<sub>i</sub>, b<sub>i</sub> &lt; n</code></li>
+<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
+<li>不存在自循环或重复的边</li>
+</ul>
 
 
 ## 分析

@@ -1,28 +1,38 @@
-# 0325：和等于 k 的最长子数组长度（★★）
+# 0325：和等于 k 的最长子数组长度（★）
 
+
+> <u>**[力扣第 325 题](https://leetcode.cn/problems/maximum-size-subarray-sum-equals-k/)**</u>
 
 ## 题目
 
-给定一个数组 nums 和一个目标值 k，找到和等于 k 的最长连续子数组长度。
-如果不存在任意一个符合要求的子数组，则返回 0。
+<p>给定一个数组 <code><em>nums</em></code> 和一个目标值 <code><em>k</em></code>，找到和等于<em> <code>k</code> </em>的最长连续子数组长度。如果不存在任意一个符合要求的子数组，则返回 <code>0</code>。</p>
 
- 
-示例 1:
 
-	输入: nums = [1,-1,5,-2,3], k = 3
-	输出: 4 
-	解释: 子数组 [1, -1, 5, -2] 和等于 3，且长度最长。
 
-示例 2:
+<p><strong>示例 1:</strong></p>
 
-	输入: nums = [-2,-1,2,1], k = 1
-	输出: 2 
-	解释: 子数组 [-1, 2] 和等于 1，且长度最长。
+<pre>
+<strong>输入: </strong><em>nums</em> = <code>[1,-1,5,-2,3]</code>, <em>k</em> = <code>3</code>
+<strong>输出: </strong>4
+<strong>解释: </strong>子数组 <code>[1, -1, 5, -2]</code> 和等于 3，且长度最长。
+</pre>
 
-提示：
-- 1 <= nums.length <= 2 * 10^5
-- -10^4 <= nums[i] <= 10^4
-- -10^9 <= k <= 10^9
+<p><strong>示例 2:</strong></p>
+
+<pre>
+<strong>输入: </strong><em>nums</em> = <code>[-2,-1,2,1]</code>, <em>k</em> = <code>1</code>
+<strong>输出: </strong>2 <strong>
+解释: </strong>子数组<code> [-1, 2]</code> 和等于 1，且长度最长。</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>5</sup></code></li>
+<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+<li><code>-10<sup>9</sup> &lt;= k &lt;= 10<sup>9</sup></code></li>
+</ul>
 
 
 ## 分析

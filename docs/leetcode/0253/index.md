@@ -1,27 +1,37 @@
-# 0253：会议室 II（★★）
+# 0253：会议室 II（★）
 
+
+> <u>**[力扣第 253 题](https://leetcode.cn/problems/meeting-rooms-ii/)**</u>
 
 ## 题目
 
-给你一个会议时间安排的数组 intervals ，每个会议时间都会包括开始和结束的时间 
-intervals[i] = [starti, endi] ，返回 所需会议室的最小数量 。
+<p>给你一个会议时间安排的数组 <code>intervals</code> ，每个会议时间都会包括开始和结束的时间 <code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> ，返回 <em>所需会议室的最小数量</em> 。</p>
 
- 
 
-示例 1：
 
-	输入：intervals = [[0,30],[5,10],[15,20]]
-	输出：2
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入：</strong>intervals = [[0,30],[5,10],[15,20]]
+<strong>输出：</strong>2
+</pre>
 
-	输入：intervals = [[7,10],[2,4]]
-	输出：1
-	 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= intervals.length <= 10^4
-- 0 <= starti < endi <= 10^6
+<pre>
+<strong>输入：</strong>intervals = [[7,10],[2,4]]
+<strong>输出：</strong>1
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= intervals.length &lt;= 10<sup>4</sup></code></li>
+<li><code>0 &lt;= start<sub>i</sub> &lt; end<sub>i</sub> &lt;= 10<sup>6</sup></code></li>
+</ul>
+
 
 ## 分析
 

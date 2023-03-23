@@ -1,27 +1,37 @@
-# 0340：至多包含 K 个不同字符的最长子串（★★）
+# 0340：至多包含 K 个不同字符的最长子串（★）
 
+
+> <u>**[力扣第 340 题](https://leetcode.cn/problems/longest-substring-with-at-most-k-distinct-characters/)**</u>
 
 ## 题目
 
-给定一个字符串 s ，找出 至多 包含 k 个不同字符的最长子串 T。
+<p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> ，请你找出 <strong>至多 </strong>包含<em> <code>k</code></em> 个 <strong>不同</strong> 字符的最长子串，并返回该子串的长度。</p>
 
-示例 1:
 
-	输入: s = "eceba", k = 2
-	输出: 3
-	解释: 则 T 为 "ece"，所以长度为 3。
 
-示例 2:
+<p><strong>示例 1：</strong></p>
 
-	输入: s = "aa", k = 1
-	输出: 2
-	解释: 则 T 为 "aa"，所以长度为 2。
-	 
+<pre>
+<strong>输入：</strong>s = "eceba", k = 2
+<strong>输出：</strong>3
+<strong>解释：</strong>满足题目要求的子串是 "ece" ，长度为 3 。</pre>
 
-提示：
-- 1 <= s.length <= 5 * 10^4
-- 0 <= k <= 50
+<p><strong>示例 2：</strong></p>
 
+<pre>
+<strong>输入：</strong>s = "aa", k = 1
+<strong>输出：</strong>2
+<strong>解释：</strong>满足题目要求的子串是 "aa" ，长度为 2 。
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>
+<li><code>0 &lt;= k &lt;= 50</code></li>
+</ul>
 
 
 ## 分析

@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0246：中心对称数 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0246：中心对称数" />
-<meta property="og:description" content="题目 中心对称数是指一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。 请写一个函数来判断该数字是否是中心对称数，其输入将会以一" />
+<meta property="og:description" content="力扣第 246 题 题目 中心对称数是指一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。 请写一个函数来判断该数字是否是中心对称数，其输" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0246/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-09-03T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0246：中心对称数"/>
-<meta name="twitter:description" content="题目 中心对称数是指一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。 请写一个函数来判断该数字是否是中心对称数，其输入将会以一"/>
+<meta name="twitter:description" content="力扣第 246 题 题目 中心对称数是指一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。 请写一个函数来判断该数字是否是中心对称数，其输"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0246/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0245/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0247/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0246\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  192 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  197 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0246\/","datePublished": "2015-09-03T00:00:00+08:00","dateModified": "2015-09-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0246：中心对称数</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-03">2015-09-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 192 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-03">2015-09-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 197 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0246/" class="leancloud_visitors" data-flag-title="0246：中心对称数">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,25 +125,26 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>中心对称数是指一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/strobogrammatic-number/" target="_blank" rel="noopener noreffer">力扣第 246 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>中心对称数是指一个数字在旋转了 180 度之后看起来依旧相同的数字（或者上下颠倒地看）。</p>
 <p>请写一个函数来判断该数字是否是中心对称数，其输入将会以一个字符串的形式来表达数字。</p>
-<p>示例 1:</p>
-<pre><code>输入: num = &quot;69&quot;
-输出: true
-</code></pre>
-<p>示例 2:</p>
-<pre><code>输入: num = &quot;88&quot;
-输出: true
-</code></pre>
-<p>示例 3:</p>
-<pre><code>输入: num = &quot;962&quot;
-输出: false
-</code></pre>
-<p>示例 4：</p>
-<pre><code>输入：num = &quot;1&quot;
-输出：true
-</code></pre>
+<p><strong>示例 1:</strong></p>
+<pre><strong>输入:</strong> num = &quot;69&quot;
+<strong>输出:</strong> true
+</pre>
+<p><strong>示例 2:</strong></p>
+<pre><strong>输入:</strong> num = &quot;88&quot;
+<strong>输出:</strong> true</pre>
+<p><strong>示例 3:</strong></p>
+<pre><strong>输入:</strong> num = &quot;962&quot;
+<strong>输出:</strong> false</pre>
+<p><strong>示例 4：</strong></p>
+<pre><strong>输入：</strong>num = &quot;1&quot;
+<strong>输出：</strong>true
+</pre>
 <h2 id="分析">分析</h2>
 <p>只有 &lsquo;01689&rsquo; 才能旋转，可以得到旋转的对应关系，模拟即可。</p>
 <h2 id="解答">解答</h2>
@@ -179,13 +180,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0247/" class="prev" rel="prev" title="0247：中心对称数 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0247：中心对称数 II（★★）</a>
+    <div class="post-nav"><a href="/leetcode/0247/" class="prev" rel="prev" title="0247：中心对称数 II（★）"><i class="fas fa-angle-left fa-fw"></i>0247：中心对称数 II（★）</a>
             <a href="/leetcode/0245/" class="next" rel="next" title="0245：最短单词距离 III（★）">0245：最短单词距离 III（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

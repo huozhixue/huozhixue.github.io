@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0163：缺失的区间（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0163：缺失的区间（★）" />
-<meta property="og:description" content="题目 给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中， 返回不包含在数组中的缺失区间。 示例： 输入: nums = [0, 1, 3, 50, 75], lower = 0 和 upper = 99, 输出: [&ldquo;2&rdquo;," />
+        <title>0163：缺失的区间 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0163：缺失的区间" />
+<meta property="og:description" content="力扣第 163 题 题目 给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中，返回不包含在数组中的缺失区间。 示例： 输入: nums = [0, 1, 3, 50, 75], lower = 0 和 upper =" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0163/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-06-12T00:00:00+08:00" />
@@ -16,20 +16,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0163：缺失的区间（★）"/>
-<meta name="twitter:description" content="题目 给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中， 返回不包含在数组中的缺失区间。 示例： 输入: nums = [0, 1, 3, 50, 75], lower = 0 和 upper = 99, 输出: [&ldquo;2&rdquo;,"/>
+<meta name="twitter:title" content="0163：缺失的区间"/>
+<meta name="twitter:description" content="力扣第 163 题 题目 给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中，返回不包含在数组中的缺失区间。 示例： 输入: nums = [0, 1, 3, 50, 75], lower = 0 和 upper ="/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0163/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0162/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0164/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0163：缺失的区间（★）",
+        "headline": "0163：缺失的区间",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0163\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  171 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  176 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0163\/","datePublished": "2015-06-12T00:00:00+08:00","dateModified": "2015-06-12T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0163：缺失的区间（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0163：缺失的区间</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-12">2015-06-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 171 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0163/" class="leancloud_visitors" data-flag-title="0163：缺失的区间（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-12">2015-06-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 176 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0163/" class="leancloud_visitors" data-flag-title="0163：缺失的区间">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,14 +125,15 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中，
-返回不包含在数组中的缺失区间。</p>
-<p>示例：</p>
-<ul>
-<li>输入: nums = [0, 1, 3, 50, 75], lower = 0 和 upper = 99,</li>
-<li>输出: [&ldquo;2&rdquo;, &ldquo;4-&gt;49&rdquo;, &ldquo;51-&gt;74&rdquo;, &ldquo;76-&gt;99&rdquo;]</li>
-</ul>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/missing-ranges/" target="_blank" rel="noopener noreffer">力扣第 163 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个排序的整数数组 <em><strong>nums </strong></em>，其中元素的范围在 <strong>闭区间</strong> <strong>[<em>lower, upper</em>]</strong> 当中，返回不包含在数组中的缺失区间。</p>
+<p><strong>示例：</strong></p>
+<pre><strong>输入: </strong><strong><em>nums</em></strong> = <code>[0, 1, 3, 50, 75]</code>, <strong><em>lower</em></strong> = 0 和 <strong><em>upper</em></strong> = 99,
+<strong>输出: </strong><code>[&quot;2&quot;, &quot;4-&gt;49&quot;, &quot;51-&gt;74&quot;, &quot;76-&gt;99&quot;]</code>
+</pre>
 <h2 id="分析">分析</h2>
 <p>遍历 nums 的间隔并分类按格式添加即可。</p>
 <p>为了方便，可以将 lower-1、upper+1 也添加到 nums 中，一次遍历即可。</p>
@@ -177,7 +178,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

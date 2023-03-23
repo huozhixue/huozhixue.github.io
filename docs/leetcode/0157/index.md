@@ -1,80 +1,90 @@
-# 0157： 用 Read4 读取 N 个字符（★）
+# 0157：用 Read4 读取 N 个字符
 
+
+> <u>**[力扣第 157 题](https://leetcode.cn/problems/read-n-characters-given-read4/)**</u>
 
 ## 题目
 
-给你一个文件，并且该文件只能通过给定的 read4 方法来读取，请实现一个方法使其能够读取 n 个字符。
+<p>给你一个文件，并且该文件只能通过给定的 <code>read4</code> 方法来读取，请实现一个方法使其能够读取 n 个字符。</p>
 
-read4 方法：
+<p><strong>read4 方法：</strong></p>
 
-	API read4 可以从文件中读取 4 个连续的字符，并且将它们写入缓存数组 buf 中。
+<p>API <code>read4</code> 可以从文件中读取 4 个连续的字符，并且将它们写入缓存数组 <code>buf</code> 中。</p>
 
-返回值为实际读取的字符个数。
+<p>返回值为实际读取的字符个数。</p>
 
-注意 read4() 自身拥有文件指针，很类似于 C 语言中的 FILE *fp 。
+<p>注意 <code>read4()</code> 自身拥有文件指针，很类似于 C 语言中的 <code>FILE *fp</code> 。</p>
 
-read4 的定义：
+<p><strong>read4 的定义：</strong></p>
 
-	参数类型: char[] buf4
-	返回类型: int
+<pre>参数类型: char[] buf4
+返回类型: int
 
-	注意: buf4[] 是目标缓存区不是源缓存区，read4 的返回结果将会复制到 buf4[] 当中。
+注意: buf4[] 是目标缓存区不是源缓存区，read4 的返回结果将会复制到 buf4[] 当中。
+</pre>
 
-下列是一些使用 read4 的例子：
+<p>下列是一些使用 <code>read4</code> 的例子：</p>
+
+<p><img style="width: 600px;"></p>
+
+<pre><code>File file(&quot;abcde&quot;); // 文件名为 &quot;abcde&quot;， 初始文件指针 (fp) 指向 &#39;a&#39;
+char[] buf4 = new char[4]; // 创建一个缓存区使其能容纳足够的字符
+read4(buf4); // read4 返回 4。现在 buf4 = &quot;abcd&quot;，fp 指向 &#39;e&#39;
+read4(buf4); // read4 返回 1。现在 buf4 = &quot;e&quot;，fp 指向文件末尾
+read4(buf4); // read4 返回 0。现在 buf = &quot;&quot;，fp 指向文件末尾</code></pre>
+
+<p><strong>read 方法：</strong></p>
+
+<p>通过使用 <code>read4</code> 方法，实现 <code>read</code> 方法。该方法可以从文件中读取 n 个字符并将其存储到缓存数组 <code>buf</code> 中。您 <strong>不能 </strong>直接操作文件。</p>
+
+<p>返回值为实际读取的字符。</p>
+
+<p><strong>read 的定义：</strong></p>
+
+<pre>参数类型:   char[] buf, int n
+返回类型:   int
+
+注意: buf[] 是目标缓存区不是源缓存区，你需要将结果写入 buf[] 中。
+</pre>
 
 
 
-	File file("abcde"); // 文件名为 "abcde"， 初始文件指针 (fp) 指向 'a' 
-	char[] buf4 = new char[4]; // 创建一个缓存区使其能容纳足够的字符
-	read4(buf4); // read4 返回 4。现在 buf4 = "abcd"，fp 指向 'e'
-	read4(buf4); // read4 返回 1。现在 buf4 = "e"，fp 指向文件末尾
-	read4(buf4); // read4 返回 0。现在 buf = ""，fp 指向文件末尾
+<p><strong>示例 1：</strong></p>
 
-read 方法：
+<pre><strong>输入： </strong>file = &quot;abc&quot;, n = 4
+<strong>输出： </strong>3
+<strong>解释：</strong> 当执行你的 read 方法后，buf 需要包含 &quot;abc&quot;。 文件一共 3 个字符，因此返回 3。 注意 &quot;abc&quot; 是文件的内容，不是 buf 的内容，buf 是你需要写入结果的目标缓存区。 </pre>
 
-通过使用 read4 方法，实现 read 方法。该方法可以从文件中读取 n 个字符并将其存储到
-缓存数组 buf 中。您 不能 直接操作文件。
+<p><strong>示例 2：</strong></p>
 
-返回值为实际读取的字符。
+<pre><strong>输入： </strong>file = &quot;abcde&quot;, n = 5
+<strong>输出： </strong>5
+<strong>解释： </strong>当执行你的 read 方法后，buf 需要包含 &quot;abcde&quot;。文件共 5 个字符，因此返回 5。
+</pre>
 
-read 的定义：
+<p><strong>示例 3:</strong></p>
 
-	参数类型:   char[] buf, int n
-	返回类型:   int
+<pre><strong>输入： </strong>file = &quot;abcdABCD1234&quot;, n = 12
+<strong>输出： </strong>12
+<strong>解释： </strong>当执行你的 read 方法后，buf 需要包含 &quot;abcdABCD1234&quot;。文件一共 12 个字符，因此返回 12。
+</pre>
 
-	注意: buf[] 是目标缓存区不是源缓存区，你需要将结果写入 buf[] 中。
- 
+<p><strong>示例 4:</strong></p>
 
-示例 1：
+<pre><strong>输入： </strong>file = &quot;leetcode&quot;, n = 5
+<strong>输出： </strong>5
+<strong>解释：</strong> 当执行你的 read 方法后，buf 需要包含 &quot;leetc&quot;。文件中一共 5 个字符，因此返回 5。
+</pre>
 
-	输入： file = "abc", n = 4
-	输出： 3
-	解释： 当执行你的 read 方法后，buf 需要包含 "abc"。 文件一共 3 个字符，因此返回 3。 
-	注意 "abc" 是文件的内容，不是 buf 的内容，buf 是你需要写入结果的目标缓存区。 
 
-示例 2：
 
-	输入： file = "abcde", n = 5
-	输出： 5
-	解释： 当执行你的 read 方法后，buf 需要包含 "abcde"。文件共 5 个字符，因此返回 5。
+<p><strong>提示：</strong></p>
 
-示例 3:
-
-	输入： file = "abcdABCD1234", n = 12
-	输出： 12
-	解释： 当执行你的 read 方法后，buf 需要包含 "abcdABCD1234"。文件一共 12 个字符，因此返回 12。
-
-示例 4:
-
-	输入： file = "leetcode", n = 5
-	输出： 5
-	解释： 当执行你的 read 方法后，buf 需要包含 "leetc"。文件中一共 5 个字符，因此返回 5。
- 
-
-提示：
-- 你 不能 直接操作该文件，文件只能通过 read4 获取而 不能 通过 read。
-- read  函数只在每个测试用例调用一次。
-- 你可以假定目标缓存数组 buf 保证有足够的空间存下 n 个字符。 
+<ul>
+<li>你 <strong>不能</strong> 直接操作该文件，文件只能通过 <code>read4</code> 获取而 <strong>不能</strong> 通过 <code>read</code>。</li>
+<li><code>read</code>  函数只在每个测试用例调用一次。</li>
+<li>你可以假定目标缓存数组 <code>buf</code> 保证有足够的空间存下 n 个字符。 </li>
+</ul>
 
 
 ## 分析

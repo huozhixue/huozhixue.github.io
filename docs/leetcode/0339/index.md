@@ -1,43 +1,50 @@
-# 0339：嵌套列表权重和（★★）
+# 0339：嵌套列表权重和（★）
 
+
+> <u>**[力扣第 339 题](https://leetcode.cn/problems/nested-list-weight-sum/)**</u>
 
 ## 题目
 
-给定一个嵌套的整数列表 nestedList ，每个元素要么是整数，要么是列表。同时，
-列表中元素同样也可以是整数或者是另一个列表。
+<p>给定一个嵌套的整数列表 <code>nestedList</code> ，每个元素要么是整数，要么是列表。同时，列表中元素同样也可以是整数或者是另一个列表。</p>
 
-整数的 深度 是其在列表内部的嵌套层数。例如，嵌套列表 [1,[2,2],[[3],2],1] 中每个整数的值就是其深度。
+<p>整数的 <strong>深度</strong> 是其在列表内部的嵌套层数。例如，嵌套列表 <code>[1,[2,2],[[3],2],1]</code> 中每个整数的值就是其深度。</p>
 
-请返回该列表按深度加权后所有整数的总和。
+<p>请返回该列表按深度加权后所有整数的总和。</p>
 
- 
-示例 1：
 
-![img](https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex1.png)
 
-	输入：nestedList = [[1,1],2,[1,1]]
-	输出：10 
-	解释：因为列表中有四个深度为 2 的 1 ，和一个深度为 1 的 2。
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<p><img alt="" src="https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex1.png" style="width: 405px; height: 99px;" /></p>
 
-![img](https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex2.png)
+<pre>
+<strong>输入：</strong>nestedList = [[1,1],2,[1,1]]
+<strong>输出：</strong>10
+<strong>解释：</strong>因为列表中有四个深度为 2 的 1 ，和一个深度为 1 的 2。</pre>
 
-	输入：nestedList = [1,[4,[6]]]
-	输出：27 
-	解释：一个深度为 1 的 1，一个深度为 2 的 4，一个深度为 3 的 6。所以，1 + 4*2 + 6*3 = 27。
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex2.png" style="width: 315px; height: 106px;" />
+<pre>
+<strong>输入：</strong>nestedList = [1,[4,[6]]]
+<strong>输出：</strong>27
+<strong>解释：</strong>一个深度为 1 的 1，一个深度为 2 的 4，一个深度为 3 的 6。所以，1 + 4*2 + 6*3 = 27。</pre>
 
-示例 3：
+<p><strong>示例 3：</strong></p>
 
-	输入：nestedList = [0]
-	输出：0
- 
+<pre>
+<strong>输入：</strong>nestedList = [0]
+<strong>输出：</strong>0
+</pre>
 
-提示：
-- 1 <= nestedList.length <= 50
-- 嵌套列表中整数的值在范围 [-100, 100] 内
-- 任何整数的最大 深度 都小于或等于 50
 
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= nestedList.length <= 50</code></li>
+<li>嵌套列表中整数的值在范围 <code>[-100, 100]</code> 内</li>
+<li>任何整数的最大 <strong>深度</strong> 都小于或等于 <code>50</code></li>
+</ul>
 
 
 ## 分析

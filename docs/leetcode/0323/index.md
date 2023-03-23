@@ -1,36 +1,45 @@
 # 0323：无向图中连通分量的数目（★）
 
 
+> <u>**[力扣第 323 题](https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/)**</u>
+
 ## 题目
 
-你有一个包含 n 个节点的图。给定一个整数 n 和一个数组 edges ，其中 edges[i] = [ai, bi] 
-表示图中 ai 和 bi 之间有一条边。
+<p>你有一个包含 <code>n</code> 个节点的图。给定一个整数 <code>n</code> 和一个数组 <code>edges</code> ，其中 <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示图中 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间有一条边。</p>
 
-返回 图中已连接分量的数目 。
+<p>返回 <em>图中已连接分量的数目</em> 。</p>
 
- 
-示例 1:
 
-![img](https://assets.leetcode.com/uploads/2021/03/14/conn1-graph.jpg)
 
-	输入: n = 5, edges = [[0, 1], [1, 2], [3, 4]]
-	输出: 2
+<p><strong>示例 1:</strong></p>
 
-示例 2:
+<p><img src="https://assets.leetcode.com/uploads/2021/03/14/conn1-graph.jpg" /></p>
 
-![img](https://assets.leetcode.com/uploads/2021/03/14/conn2-graph.jpg)
+<pre>
+<strong>输入: </strong><code>n = 5</code>, <code>edges = [[0, 1], [1, 2], [3, 4]]</code>
+<strong>输出: </strong>2
+</pre>
 
-	输入: n = 5, edges = [[0,1], [1,2], [2,3], [3,4]]
-	输出:  1
- 
+<p><strong>示例 2:</strong></p>
 
-提示：
-- 1 <= n <= 2000
-- 1 <= edges.length <= 5000
-- edges[i].length == 2
-- 0 <= ai <= bi < n
-- ai != bi
-- edges 中不会出现重复的边
+<p><img src="https://assets.leetcode.com/uploads/2021/03/14/conn2-graph.jpg" /></p>
+
+<pre>
+<strong>输入: </strong><code>n = 5,</code> <code>edges = [[0,1], [1,2], [2,3], [3,4]]</code>
+<strong>输出:  </strong>1</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 2000</code></li>
+<li><code>1 &lt;= edges.length &lt;= 5000</code></li>
+<li><code>edges[i].length == 2</code></li>
+<li><code>0 &lt;= a<sub>i</sub> &lt;= b<sub>i</sub> &lt; n</code></li>
+<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
+<li><code>edges</code> 中不会出现重复的边</li>
+</ul>
 
 
 ## 分析

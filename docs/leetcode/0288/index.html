@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>0288：单词的唯一缩写（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0288：单词的唯一缩写（★）" />
-<meta property="og:description" content="题目 单词的 缩写 需要遵循 &lt;起始字母&gt;&lt;中间字母数&gt;&lt;结尾字母&gt; 这样的格式。 如果单词只有两个字符，那么它就是" />
+<meta property="og:description" content="力扣第 288 题 题目 单词的 缩写 需要遵循 &lt;起始字母&gt;&lt;中间字母数&gt;&lt;结尾字母&gt; 这样的格式。如果单词只有两个字符，那么它就是它自身的 缩写 。 以下是一些单" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0288/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2015-10-15T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="0288：单词的唯一缩写（★）"/>
-<meta name="twitter:description" content="题目 单词的 缩写 需要遵循 &lt;起始字母&gt;&lt;中间字母数&gt;&lt;结尾字母&gt; 这样的格式。 如果单词只有两个字符，那么它就是"/>
+<meta name="twitter:description" content="力扣第 288 题 题目 单词的 缩写 需要遵循 &lt;起始字母&gt;&lt;中间字母数&gt;&lt;结尾字母&gt; 这样的格式。如果单词只有两个字符，那么它就是它自身的 缩写 。 以下是一些单"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0288/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0287/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0289/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0288\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  627 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  594 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0288\/","datePublished": "2015-10-15T00:00:00+08:00","dateModified": "2015-10-15T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0288：单词的唯一缩写（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-15">2015-10-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 627 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-15">2015-10-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 594 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0288/" class="leancloud_visitors" data-flag-title="0288：单词的唯一缩写（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,51 +125,51 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>单词的 缩写 需要遵循 &lt;起始字母&gt;&lt;中间字母数&gt;&lt;结尾字母&gt; 这样的格式。
-如果单词只有两个字符，那么它就是它自身的 缩写 。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/unique-word-abbreviation/" target="_blank" rel="noopener noreffer">力扣第 288 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>单词的 <strong>缩写</strong> 需要遵循 <起始字母><中间字母数><结尾字母> 这样的格式。如果单词只有两个字符，那么它就是它自身的 <strong>缩写</strong> 。</p>
 <p>以下是一些单词缩写的范例：</p>
 <ul>
-<li>dog &ndash;&gt; d1g 因为第一个字母 &rsquo;d&rsquo; 和最后一个字母 &lsquo;g&rsquo; 之间有 1 个字母</li>
-<li>internationalization &ndash;&gt; i18n 因为第一个字母 &lsquo;i&rsquo; 和最后一个字母 &rsquo;n&rsquo; 之间有 18 个字母</li>
-<li>it &ndash;&gt; it 单词只有两个字符，它就是它自身的 缩写
- 
-实现 ValidWordAbbr 类：</li>
-<li>ValidWordAbbr(String[] dictionary) 使用单词字典 dictionary 初始化对象</li>
-<li>boolean isUnique(string word) 如果满足下述任意一个条件，返回 true ；否则，返回 false ：
+<li><code>dog --> d1g</code> 因为第一个字母 <code>'d'</code> 和最后一个字母 <code>'g'</code> 之间有 <code>1</code> 个字母</li>
+<li><code>internationalization --> i18n</code> 因为第一个字母 <code>'i'</code> 和最后一个字母 <code>'n'</code> 之间有 <code>18</code> 个字母</li>
+<li><code>it --> it</code> 单词只有两个字符，它就是它自身的 <strong>缩写</strong></li>
+</ul>
+<p>实现 <code>ValidWordAbbr</code> 类：</p>
 <ul>
-<li>字典 dictionary 中没有任何其他单词的 缩写 与该单词 word 的 缩写 相同。</li>
-<li>字典 dictionary 中的所有 缩写 与该单词 word 的 缩写 相同的单词都与 word 相同 。</li>
+<li><code>ValidWordAbbr(String[] dictionary)</code> 使用单词字典 <code>dictionary</code> 初始化对象</li>
+<li><code>boolean isUnique(string word)</code> 如果满足下述任意一个条件，返回 <code>true</code> ；否则，返回 <code>false</code> ：
+<ul>
+<li>字典 <code>dictionary</code> 中没有任何其他单词的 <strong>缩写</strong> 与该单词 <code>word</code> 的 <strong>缩写</strong> 相同。</li>
+<li>字典 <code>dictionary</code> 中的所有 <strong>缩写</strong> 与该单词 <code>word</code> 的 <strong>缩写</strong> 相同的单词都与 <code>word</code> <strong>相同</strong> 。</li>
 </ul>
 </li>
 </ul>
-<p>示例：</p>
-<pre><code>输入
-[&quot;ValidWordAbbr&quot;, &quot;isUnique&quot;, &quot;isUnique&quot;, &quot;isUnique&quot;, &quot;isUnique&quot;, &quot;isUnique&quot;]
-[[[&quot;deer&quot;, &quot;door&quot;, &quot;cake&quot;, &quot;card&quot;]], [&quot;dear&quot;], [&quot;cart&quot;], [&quot;cane&quot;], [&quot;make&quot;], [&quot;cake&quot;]]
-输出
-[null, false, true, false, true, true]
+<p><strong>示例：</strong></p>
+<pre>
+<strong>输入</strong>
+["ValidWordAbbr", "isUnique", "isUnique", "isUnique", "isUnique", "isUnique"]
+[[["deer", "door", "cake", "card"]], ["dear"], ["cart"], ["cane"], ["make"], ["cake"]]
+<strong>输出
+</strong>[null, false, true, false, true, true]
 
-解释
-ValidWordAbbr validWordAbbr = new ValidWordAbbr([&quot;deer&quot;, &quot;door&quot;, &quot;cake&quot;, &quot;card&quot;]);
-validWordAbbr.isUnique(&quot;dear&quot;); // 返回 false，字典中的 &quot;deer&quot; 与输入 &quot;dear&quot; 的缩写都是 
-&quot;d2r&quot;，但这两个单词不相同
-validWordAbbr.isUnique(&quot;cart&quot;); // 返回 true，字典中不存在缩写为 &quot;c2t&quot; 的单词
-validWordAbbr.isUnique(&quot;cane&quot;); // 返回 false，字典中的 &quot;cake&quot; 与输入 &quot;cane&quot; 的缩写都是 
-&quot;c2e&quot;，但这两个单词不相同
-validWordAbbr.isUnique(&quot;make&quot;); // 返回 true，字典中不存在缩写为 &quot;m2e&quot; 的单词
-validWordAbbr.isUnique(&quot;cake&quot;); // 返回 true，因为 &quot;cake&quot; 已经存在于字典中，并且字典中
-没有其他缩写为 &quot;c2e&quot; 的单词
- 
-</code></pre>
-<p>提示：</p>
+<strong>解释</strong>
+ValidWordAbbr validWordAbbr = new ValidWordAbbr(["deer", "door", "cake", "card"]);
+validWordAbbr.isUnique("dear"); // 返回 false，字典中的 "deer" 与输入 "dear" 的缩写都是 "d2r"，但这两个单词不相同
+validWordAbbr.isUnique("cart"); // 返回 true，字典中不存在缩写为 "c2t" 的单词
+validWordAbbr.isUnique("cane"); // 返回 false，字典中的 "cake" 与输入 "cane" 的缩写都是 "c2e"，但这两个单词不相同
+validWordAbbr.isUnique("make"); // 返回 true，字典中不存在缩写为 "m2e" 的单词
+validWordAbbr.isUnique("cake"); // 返回 true，因为 "cake" 已经存在于字典中，并且字典中没有其他缩写为 "c2e" 的单词
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= dictionary.length &lt;= 3 * 10^4</li>
-<li>1 &lt;= dictionary[i].length &lt;= 20</li>
-<li>dictionary[i] 由小写英文字母组成</li>
-<li>1 &lt;= word &lt;= 20</li>
-<li>word 由小写英文字母组成</li>
-<li>最多调用 5000 次 isUnique</li>
+<li><code>1 <= dictionary.length <= 3 * 10<sup>4</sup></code></li>
+<li><code>1 <= dictionary[i].length <= 20</code></li>
+<li><code>dictionary[i]</code> 由小写英文字母组成</li>
+<li><code>1 <= word <= 20</code></li>
+<li><code>word</code> 由小写英文字母组成</li>
+<li>最多调用 <code>5000</code> 次 <code>isUnique</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>典型的哈希表，按缩写分组。</p>
@@ -223,7 +223,7 @@ validWordAbbr.isUnique(&quot;cake&quot;); // 返回 true，因为 &quot;cake&quo
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

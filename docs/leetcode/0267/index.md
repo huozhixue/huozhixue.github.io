@@ -1,28 +1,40 @@
-# 0267：回文排列 II（★★★）
+# 0267：回文排列 II（★）
 
+
+> <u>**[力扣第 267 题](https://leetcode.cn/problems/palindrome-permutation-ii/)**</u>
 
 ## 题目
 
-给定一个字符串 s ，返回 其重新排列组合后可能构成的所有回文字符串，并去除重复的组合 。
+<p>给定一个字符串 <code>s</code> ，返回 <em>其重新排列组合后可能构成的所有回文字符串，并去除重复的组合</em> 。</p>
 
-你可以按 任意顺序 返回答案。如果 s 不能形成任何回文排列时，则返回一个空列表。
+<p>你可以按 <strong>任意顺序</strong> 返回答案。如果 <code>s</code> 不能形成任何回文排列时，则返回一个空列表。</p>
 
- 
 
-示例 1：
 
-	输入: s = "aabb"
-	输出: ["abba", "baab"]
+<p><strong>示例 1：</strong></p>
 
-示例 2：
+<pre>
+<strong>输入: </strong>s = <code>"aabb"</code>
+<strong>输出: </strong><code>["abba", "baab"]</code></pre>
 
-	输入: s = "abc"
-	输出: []
-	 
+<p><strong>示例 2：</strong></p>
 
-提示：
-- 1 <= s.length <= 16
-- s 仅由小写英文字母组成
+<pre>
+<strong>输入: </strong>s = <code>"abc"</code>
+<strong>输出: </strong><code>[]</code>
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<p><meta charset="UTF-8" /></p>
+
+<ul>
+<li><code>1 &lt;= s.length &lt;= 16</code></li>
+<li><code>s</code> 仅由小写英文字母组成</li>
+</ul>
+
 
 ## 分析
 
