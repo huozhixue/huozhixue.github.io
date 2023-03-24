@@ -40,21 +40,21 @@
 
 ### #1
 
-暴力法是直接遍历所有子串，判断是否是回文。
-- 显然有很多不必要的判断，观察发现回文子串是可以递推的。
-s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。
+暴力法是直接遍历所有子串，判断是否是回文。显然有很多不必要的判断，观察发现回文子串是可以递推的。
+- s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。
 - 因此考虑从短到长递推判断所有子串，取最长的即可。
 - 注意到递推中很多子串是重复使用的，因此可以保存中间结果，避免重复递推。
 
 > 这种递推方式被称为区间 dp。
 
-具体实现时，令 dp[i][j] 代表 s[i:j+1] 是否回文，递推式为：
+具体实现时：
+- 令 dp[i][j] 代表 s[i:j+1] 是否回文，递推式为：
 
-	dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
+		dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
 
-dp[i][j] 依赖 dp[i+1][j-1]，要特别注意遍历顺序：
-- 可以先遍历 j，再遍历 i
-- 也可以反向遍历 i，再遍历 j
+- dp[i][j] 依赖 dp[i+1][j-1]，要特别注意遍历顺序：
+	- 可以先遍历 j，再遍历 i
+	- 也可以反向遍历 i，再遍历 j
 
 
 ```python
@@ -68,7 +68,7 @@ def longestPalindrome(self, s: str) -> str:
                 res = (i, j)
     return s[res[0]:res[1]+1]
 ```
-时间复杂度 $O(N^2)$，5925 ms
+时间 $O(N^2)$，5925 ms
 
 ### #2
 
@@ -96,7 +96,7 @@ def longestPalindrome(self, s: str) -> str:
                 res = (l, r)
     return s[res[0]:res[1]+1]
 ```
-时间复杂度 $O(N^2)$，840 ms
+时间 $O(N^2)$，840 ms
 
 ### #3
 
@@ -105,11 +105,11 @@ def longestPalindrome(self, s: str) -> str:
 令 dp[j] 代表 s[:j] 的最长回文子串长度。那么:
 - s[:j] 的回文子串要么是 s[:j-1] 的回文子串，要么是某个 s[i:j]
 - 如果 s[i:j] 是回文子串，其长度是 s[i+1:j-1] 的长度加 2
-
-因此 dp[j] 不可能超过 dp[j-1]+2，也就是说 dp[j] 只有 3 种可能值，分别判断即可。
+- 因此 dp[j] 不可能超过 dp[j-1]+2，也就是说 dp[j] 只有 3 种可能值，分别判断即可
 
 > 这种递推方式则被称为线性 dp。
-> 特别的，因为 dp[j] 只依赖 dp[j-1]，所以可以只用一个变量。
+
+特别的，因为 dp[j] 只依赖 dp[j-1]，所以可以只用一个变量。
 
 ## 解答
 
@@ -123,13 +123,11 @@ def longestPalindrome(self, s: str) -> str:
                 res, dp = tmp, L
     return res
 ```
-时间复杂度 $O(N^2)$，104 ms
+时间 $O(N^2)$，104 ms
 
 ## *附加
 
-此题还有一个经典的的 
-[Manacher算法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution)
-。
+此题还有一个经典的的 [Manacher算法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution)。
 
 它在 O(N) 时间内不仅能找到最长回文子串，而且能得到所有中心子串的扩展距离。
 因此在与回文相关的问题中，都可以试试能否用 Manacher 算法解决。
@@ -154,6 +152,6 @@ def longestPalindrome(self, s: str) -> str:
             pair = (i-cur_arm, i+cur_arm)
     return ss[pair[0]+1:pair[1]:2]
 ```
-时间复杂度 O(N)，148 ms
+时间 O(N)，148 ms
 
 

@@ -78,4 +78,4 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
                 res.append([nums[i], nums[j], nums[k]])
     return res
 ```
-时间复杂度 O(N^2)，852 ms
+时间 O(N^2)，852 ms

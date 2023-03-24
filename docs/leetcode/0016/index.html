@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0016\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  637 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  631 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0016\/","datePublished": "2015-01-16T00:00:00+08:00","dateModified": "2015-01-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0016：最接近的三数之和（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-16">2015-01-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 637 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-16">2015-01-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 631 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0016/" class="leancloud_visitors" data-flag-title="0016：最接近的三数之和（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -187,14 +187,13 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 $O(N^2 logN)$，944 ms</p>
+</div><p>时间 $O(N^2 logN)$，944 ms</p>
 <h3 id="2">#2</h3>
 <p>还有个更巧妙的双指针解法。</p>
-<p>排序后先固定数 nums[i]，然后寻找 nums[j]、nums[k] 使得两数之和最接近 target-nums[i]。</p>
 <ul>
+<li>排序后先固定数 nums[i]，然后寻找 nums[j]、nums[k] 使得两数之和最接近 target-nums[i]。</li>
 <li>初始指针 j、k 分别指向 i+1, n-1。</li>
-<li>如果 nums[j]+nums[k]&lt;target-nums[i]，则 nums[j] 与任意 [j+1,k-1] 内的数相加都更小，离 target 更远，
-故可以不再考虑 nums[j]，缩小查找范围为 [j+1,k]</li>
+<li>如果 nums[j]+nums[k]&lt;target-nums[i]，则 nums[j] 与任意 [j+1,k-1] 内的数相加都更小，离 target 更远，故可以不再考虑 nums[j]，缩小查找范围为 [j+1,k]</li>
 <li>同理，如果 nums[j]+nums[k]&lt;target-nums[i]，可以缩小查找范围为 [j, k-1]</li>
 <li>循环操作直到 j、k 相遇，取过程中最接近的和即可</li>
 </ul>
@@ -233,7 +232,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 $O(N^2)$，368 ms</p>
+</div><p>时间 $O(N^2)$，368 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -253,7 +252,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

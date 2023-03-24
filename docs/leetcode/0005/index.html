@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0005\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1040 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1027 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0005\/","datePublished": "2015-01-05T00:00:00+08:00","dateModified": "2015-01-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0005：最长回文子串（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-05">2015-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1040 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-05">2015-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1027 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0005/" class="leancloud_visitors" data-flag-title="0005：最长回文子串（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -156,23 +156,29 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>暴力法是直接遍历所有子串，判断是否是回文。</p>
+<p>暴力法是直接遍历所有子串，判断是否是回文。显然有很多不必要的判断，观察发现回文子串是可以递推的。</p>
 <ul>
-<li>显然有很多不必要的判断，观察发现回文子串是可以递推的。
-s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。</li>
+<li>s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。</li>
 <li>因此考虑从短到长递推判断所有子串，取最长的即可。</li>
 <li>注意到递推中很多子串是重复使用的，因此可以保存中间结果，避免重复递推。</li>
 </ul>
 <blockquote>
 <p>这种递推方式被称为区间 dp。</p>
 </blockquote>
-<p>具体实现时，令 dp[i][j] 代表 s[i:j+1] 是否回文，递推式为：</p>
-<pre><code>dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
+<p>具体实现时：</p>
+<ul>
+<li>
+<p>令 dp[i][j] 代表 s[i:j+1] 是否回文，递推式为：</p>
+<pre><code>  dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
 </code></pre>
+</li>
+<li>
 <p>dp[i][j] 依赖 dp[i+1][j-1]，要特别注意遍历顺序：</p>
 <ul>
 <li>可以先遍历 j，再遍历 i</li>
 <li>也可以反向遍历 i，再遍历 j</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -198,7 +204,7 @@ s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。</li>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 $O(N^2)$，5925 ms</p>
+</div><p>时间 $O(N^2)$，5925 ms</p>
 <h3 id="2">#2</h3>
 <p>注意到递推过程中假如 dp[i+1][j-1] 非真，那么就没必要递推 dp[i][j] 了。</p>
 <p>因此考虑从初始的 dp[i][i-1] 或 dp[i][i] 往两边递推，一旦非真，就无需考虑了。</p>
@@ -240,19 +246,19 @@ s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。</li>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 $O(N^2)$，840 ms</p>
+</div><p>时间 $O(N^2)$，840 ms</p>
 <h3 id="3">#3</h3>
 <p>还有个更巧妙的想法。</p>
 <p>令 dp[j] 代表 s[:j] 的最长回文子串长度。那么:</p>
 <ul>
 <li>s[:j] 的回文子串要么是 s[:j-1] 的回文子串，要么是某个 s[i:j]</li>
 <li>如果 s[i:j] 是回文子串，其长度是 s[i+1:j-1] 的长度加 2</li>
+<li>因此 dp[j] 不可能超过 dp[j-1]+2，也就是说 dp[j] 只有 3 种可能值，分别判断即可</li>
 </ul>
-<p>因此 dp[j] 不可能超过 dp[j-1]+2，也就是说 dp[j] 只有 3 种可能值，分别判断即可。</p>
 <blockquote>
-<p>这种递推方式则被称为线性 dp。
-特别的，因为 dp[j] 只依赖 dp[j-1]，所以可以只用一个变量。</p>
+<p>这种递推方式则被称为线性 dp。</p>
 </blockquote>
+<p>特别的，因为 dp[j] 只依赖 dp[j-1]，所以可以只用一个变量。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -276,11 +282,9 @@ s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。</li>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 $O(N^2)$，104 ms</p>
+</div><p>时间 $O(N^2)$，104 ms</p>
 <h2 id="附加">*附加</h2>
-<p>此题还有一个经典的的
-<a href="https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution" target="_blank" rel="noopener noreffer">Manacher算法</a>
-。</p>
+<p>此题还有一个经典的的 <a href="https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution" target="_blank" rel="noopener noreffer">Manacher算法</a>。</p>
 <p>它在 O(N) 时间内不仅能找到最长回文子串，而且能得到所有中心子串的扩展距离。
 因此在与回文相关的问题中，都可以试试能否用 Manacher 算法解决。</p>
 <div class="highlight"><div class="chroma">
@@ -325,7 +329,7 @@ s[i:j+1] 是回文等价于 s[i-1:j] 是回文且 s[i]==s[j]。</li>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span><span class="mi">2</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N)，148 ms</p>
+</div><p>时间 O(N)，148 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

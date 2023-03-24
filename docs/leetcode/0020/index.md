@@ -64,4 +64,4 @@ def isValid(self, s: str) -> bool:
             return False
     return not stack
 ```
-时间复杂度 O(N)，32 ms
+时间 O(N)，32 ms

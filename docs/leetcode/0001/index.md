@@ -65,7 +65,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 				return [i, j]
 ```
 
-时间复杂度 O(N^2)，2860 ms
+时间 O(N^2)，2860 ms
 
 ### #2
 
@@ -83,4 +83,4 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
             return [d[target-num], j]
         d[num] = j
 ```
-时间复杂度 O(N)，28 ms
+时间 O(N)，28 ms

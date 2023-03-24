@@ -53,4 +53,4 @@ def generateParenthesis(self, n: int) -> List[str]:
     dfs(0, 0, '')
     return res
 ```
-时间复杂度 O(N)，36 ms
+时间 O(N)，36 ms

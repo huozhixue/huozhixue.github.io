@@ -66,25 +66,27 @@ def isMatch(self, s: str, p: str) -> bool:
 
 ### #2
 
-尝试自己实现。因为 '*' 与前一个字符相关，所以考虑从后往前看。
+尝试自己实现：
+- 因为 '*' 与前一个字符相关，所以考虑从后往前看。
 - 如果 p[-1] == '*'，那么 p 匹配 s 必然是两种情况之一：
 	- '*' 代表零个，p[:-2] 匹配 s
 	- '*' 代表多个，p[-2] 匹配 s[-1] 且 p 匹配 s[:-1]
 - 如果 p[-1] != '*'，那么 p 匹配 s 必然是 p[-1] 匹配 s[-1] 且 p[:-1] 匹配 s[:-1]。
-
-都能转成递归子问题。注意到有重复子问题，所以用记忆化递归。
+- 都能转成递归子问题。注意到有重复子问题，所以用记忆化递归。
 
 ## 解答
 
 ```python
 def isMatch(self, s: str, p: str) -> bool:
-    @lru_cache(None)
-    def dfs(s, p):
-        if not p:
-            return not s
-        if p[-1] == '*':
-            return dfs(s, p[:-2]) or (bool(s) and p[-2] in [s[-1],'.'] and dfs(s[:-1], p))
-        return bool(s) and p[-1] in [s[-1],'.'] and dfs(s[:-1], p[:-1])
-    return dfs(s, p)
+	@cache
+	def dfs(s, p):
+		if not p:
+			return not s
+		if p[-1] == '*':
+			return dfs(s, p[:-2]) or (bool(s) and p[-2] in [s[-1],'.'] and dfs(s[:-1], p))
+		return bool(s) and p[-1] in [s[-1],'.'] and dfs(s[:-1], p[:-1])
+	return dfs(s, p)
 ```
 40 ms
+
+

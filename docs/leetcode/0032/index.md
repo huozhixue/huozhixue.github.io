@@ -65,17 +65,15 @@ def longestValidParentheses(self, s: str) -> int:
     invalid = [-1] + invalid + stack + [len(s)]
     return max(invalid[i + 1] - invalid[i] - 1 for i in range(len(invalid) - 1))
 ```
-时间复杂度 O(N)，32 ms
+时间 O(N)，32 ms
 
 ### #2
 
-也可以用动态规划解决。
-
-令 dp[r] 代表右括号 r 结尾的最长有效子串长度，并假设 r 所对应的是左括号 l：
+也可以用动态规划解决：
+- 令 dp[r] 代表右括号 r 结尾的最长有效子串长度，并假设 r 所对应的是左括号 l
 - 如果 l-1 是左括号， dp[r] = r-l+1
 - 如果 l-1 是右括号， dp[r] = r-l+1+dp[l-1]
-
-max(dp) 即为所求。
+- max(dp) 即为所求。
 
 ## 解答
 
@@ -90,4 +88,4 @@ def longestValidParentheses(self, s: str) -> int:
             dp[j] = j - i + 1 + dp.get(i-1, 0)
     return max(dp.values(), default=0)
 ```
-时间复杂度 O(N)，28 ms
+时间 O(N)，28 ms

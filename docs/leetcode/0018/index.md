@@ -67,7 +67,7 @@ def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
                     res.append([nums[i], nums[j], nums[k], nums[kk]])
     return res
 ```
-时间复杂度 O(N^3)，1132 ms
+时间 O(N^3)，1132 ms
 
 ### #2
 
@@ -102,4 +102,4 @@ def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
                     res.append([nums[i], nums[j], nums[k], nums[kk]])
     return res
 ```
-48 ms
+时间 O(N^3)，48 ms

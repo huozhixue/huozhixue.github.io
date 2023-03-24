@@ -65,29 +65,6 @@
 - 从后往前，找到第一个能增大的后缀 nums[i:]，问题转为求 nums[i:] 的下一个排列
 - 要让 nums[i] 增加得最小，应该从 nums[i+1:] 中找到比 nums[i] 大的最小数 nums[j]，替换到 nums[i]
 - 然后重新排列 nums[i+1:] 使其最小即可
-
-```python
-def nextPermutation(self, nums: List[int]) -> None:
-    n = len(nums)
-    i = n-2
-    while i >= 0 and nums[i] >= nums[i+1]:
-        i -= 1
-    if i >= 0:
-        j = min((nums[j]-nums[i], j) for j in range(i+1, n) if nums[j]>nums[i])[1]
-        nums[i], nums[j] = nums[j], nums[i]
-    nums[i+1:] = sorted(nums[i+1:])
-```
-时间复杂度 O(N*logN)，36 ms
-
-### #2
-
-观察发现：
-- nums[i+1:] 不能增大，故 nums[i+1:] 单调递减
-- 因此从后往前遍历，找到第一个满足 nums[j]>nums[i] 的 j 即可
-- 替换后 nums[i+1:] 依然单调递减，因此反转即可
-
-## 解答
-
 ```python
 def nextPermutation(self, nums: List[int]) -> None:
 	n = len(nums)
@@ -99,10 +76,29 @@ def nextPermutation(self, nums: List[int]) -> None:
 		while nums[j] <= nums[i]:
 			j -= 1
 		nums[i], nums[j] = nums[j], nums[i]
-	l, r = i+1, n-1
-	while l < r:
-		nums[l], nums[r] = nums[r], nums[l]
-		l += 1
-		r -= 1
+	nums[i+1:] = sorted(nums[i+1:])
 ```
-时间复杂度 O(N)，24 ms
+时间 O(N*logN)，36 ms
+
+### #2
+
+观察发现：
+- nums[i+1:] 不能增大，故 nums[i+1:] 单调递减
+- 因此从后往前遍历，找到第一个满足 nums[j]>nums[i] 的 j 即可
+- 替换后 nums[i+1:] 依然单调递减，因此反转即可
+
+## 解答
+```python
+def nextPermutation(self, nums: List[int]) -> None:
+	n = len(nums)
+	i = n-2
+	while i >= 0 and nums[i] >= nums[i+1]:
+		i -= 1
+	if i >= 0:
+		j = n-1
+		while nums[j] <= nums[i]:
+			j -= 1
+		nums[i], nums[j] = nums[j], nums[i]
+	nums[i+1:] = nums[i+1:][::-1]
+```
+时间 O(N)，24 ms

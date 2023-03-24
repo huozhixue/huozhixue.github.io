@@ -175,18 +175,21 @@
 <li><code>s</code> 仅含英文字母（大写和小写），数字（<code>0-9</code>），加号 <code>'+'</code> ，减号 <code>'-'</code> ，或者点 <code>'.'</code> 。</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>首先想到用正则：</p>
-<pre><code>有效整数很简单:									&quot;[+-]?\d+&quot;
-
+<p>首先想到用正则。</p>
+<pre><code>有效整数很简单:	                     
+			&quot;[+-]?\d+&quot;	
 有效小数基于有效整数，考虑两种格式:
-'.' 之前至少一位数字 							&quot;[+-]?\d+\.\d*&quot;
-'.' 之前没有数字，之后至少一位 					&quot;[+-]?\.\d+&quot;
-
-有效整数或小数整合为：							&quot;[+-]?(\d+(\.\d*)?|\.\d+)&quot;
-
+	'.' 之前至少一位数字 	             
+			&quot;[+-]?\d+\.\d*&quot;
+	'.' 之前没有数字，之后至少一位       
+			&quot;[+-]?\.\d+&quot;
+有效整数或小数整合为：	             
+			&quot;[+-]?(\d+(\.\d*)?|\.\d+)&quot;
 有效数字基于有效整数和小数，考虑两种格式:
-不存在 &quot;eE&quot;, 就是一个整数或小数					&quot;[+-]?(\d+(\.\d*)?|\.\d+)&quot;
-存在一个 &quot;eE&quot;, 前面是整数或小数, 后面是整数		&quot;[+-]?(\d+(\.\d*)?|\.\d+)[eE][+-]?\d+&quot;
+	不存在 &quot;eE&quot;, 就是一个整数或小数			
+			&quot;[+-]?(\d+(\.\d*)?|\.\d+)&quot;
+	存在一个 &quot;eE&quot;, 前面是整数或小数, 后面是整数 
+			&quot;[+-]?(\d+(\.\d*)?|\.\d+)[eE][+-]?\d+&quot;
 </code></pre>
 <p>整合一下即得最终表达式。</p>
 <h2 id="解答">解答</h2>
@@ -273,7 +276,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E6%AD%A3%E5%88%99/">正则</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

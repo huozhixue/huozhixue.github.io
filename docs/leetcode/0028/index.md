@@ -63,7 +63,7 @@ def strStr(self, haystack: str, needle: str) -> int:
 	return -1
 ```
 
-时间复杂度O(M*N), 40 ms
+时间 O(M*N), 40 ms
 
 ## *附加
 

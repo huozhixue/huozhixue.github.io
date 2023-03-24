@@ -67,4 +67,4 @@ def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
 	slow.next = slow.next.next
 	return dummy.next
 ```
-时间复杂度 O(N)，36 ms
+时间 O(N)，36 ms

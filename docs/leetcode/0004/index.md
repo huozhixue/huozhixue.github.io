@@ -54,7 +54,7 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
 	nums, m, n = sorted(nums1+nums2), len(nums1), len(nums2)
 	return (nums[(m+n-1)//2] + nums[(m+n)//2]) / 2
 ```
-时间复杂度 $O((M+N)*log(M+N))$，44 ms
+时间 $O((M+N)*log(M+N))$，44 ms
 
 ### #2
 
@@ -62,8 +62,7 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
 - 假设 nums1[i-1]<=nums2[j] 且 nums2[j-1]<=nums1[i]，nums1[:i] 和 nums2[:j] 就是最小的 i+j 个数
 - 当 i+j==(m+n)//2 时，即找到了最小的一半数，即可求出中位数
 - 因此遍历和为 (m+n)//2 的  <i, j> 对，找到满足 nums1[i-1]<=nums2[j] 且 nums2[j-1]<=nums1[i] 的即可
-
-注意 i 递增时，nums1[i-1]、nums1[i] 递增，nums2[j]、nums2[j-1] 递减，因此遍历找到第一个满足 nums2[j-1]<=nums1[i] 的即可。
+- 注意 i 递增时，nums1[i-1]、nums1[i] 递增，nums2[j]、nums2[j-1] 递减，因此遍历找到第一个满足 nums2[j-1]<=nums1[i] 的即可。
 
 为了方便，当 m>n 时，可以交换 nums1、nums2 使得 m<=n，排除边界情况。
 
@@ -81,7 +80,7 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
     right = min(nums1[i] if i<m else float('inf'), nums2[j]if j<n else float('inf'))
     return right if (m + n) % 2 else (left+right) / 2
 ```
-时间复杂度 $O(min(M,N))$，40 ms
+时间 $O(min(M,N))$，40 ms
 
 ### #3
 
@@ -101,5 +100,5 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
     right = min(nums1[i] if i < m else float('inf'), nums2[j] if j < n else float('inf'))
     return right if (m + n) % 2 else (left + right) / 2
 ```
-时间复杂度 $O(log \ min(M,N))$，28 ms
+时间 $O(log \ min(M,N))$，28 ms
 

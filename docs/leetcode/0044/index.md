@@ -72,7 +72,7 @@ p = &quot;a*c?b&quot;
 
 ```python
 def isMatch(self, s: str, p: str) -> bool:
-    @lru_cache(None)
+    @cache
     def dfs(s, p):
         if not p:
             return not s

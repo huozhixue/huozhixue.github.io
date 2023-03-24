@@ -86,8 +86,8 @@ M             1000</pre>
 
 ```python
 def romanToInt(self, s: str) -> int:
-    d = dict(zip('IVXLCDM', [1, 5, 10, 50, 100, 500, 1000]))
-    A = list(map(d.get, s))
-    return sum(-A[i] if A[i]<A[i+1] else A[i] for i in range(len(A)-1)) + A[-1]
+	d = dict(zip('IVXLCDM', [1, 5, 10, 50, 100, 500, 1000]))
+	A = [d[c] for c in s]
+	return sum(-a if a<b else a for a,b in pairwise(A)) + A[-1]
 ```
-32 ms
+40 ms

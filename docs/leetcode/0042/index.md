@@ -52,7 +52,7 @@ def trap(self, height: List[int]) -> int:
     right = list(accumulate(height[::-1], max))[::-1]
     return sum(min(l, r)-h for h,l,r in zip(height, left, right))
 ```
-时间复杂度 O(N)，64 ms
+时间 O(N)，64 ms
 
 ### #2
 
@@ -78,4 +78,4 @@ def trap(self, height: List[int]) -> int:
             j -= 1
     return res
 ```
-时间复杂度 O(N)，64 ms
+时间 O(N)，64 ms
