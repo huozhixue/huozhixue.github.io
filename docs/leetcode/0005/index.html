@@ -167,13 +167,11 @@
 </blockquote>
 <p>具体实现时：</p>
 <ul>
-<li>
-<p>令 dp[i][j] 代表 s[i:j+1] 是否回文，递推式为：</p>
-<pre><code>  dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
-</code></pre>
-</li>
-<li>
-<p>dp[i][j] 依赖 dp[i+1][j-1]，要特别注意遍历顺序：</p>
+<li>令 dp[i][j] 代表 s[i:j+1] 是否回文，递推式为：</li>
+</ul>
+<p>$$dp[i][j] = dp[i+1][j-1] and s[i]==s[j]$$</p>
+<ul>
+<li>dp[i][j] 依赖 dp[i+1][j-1]，要特别注意遍历顺序：
 <ul>
 <li>可以先遍历 j，再遍历 i</li>
 <li>也可以反向遍历 i，再遍历 j</li>
