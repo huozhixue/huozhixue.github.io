@@ -65,10 +65,9 @@ def isValidBST(self, root: TreeNode) -> bool:
 
 ## *附加
 
-也可以用递归。
-- 如果 node 的左子树和右子树都是二叉搜索树，且左子树的数都小于 node.val，右子树的数都大于 node.val，
-node 即为二叉搜索树
-- 令 dfs(node, low, high) 代表 node 子树是否为 [low, high] 范围内的二叉搜索树，即可递归
+也可以用递归：
+- 如果 node 的左子树和右子树都是二叉搜索树，且左子树的数都小于node.val，右子树的数都大于 node.val，node 即为二叉搜索树
+- 于是令 dfs(node, low, high) 代表 node 子树是否为 [low, high] 范围内的二叉搜索树，即可递归
 - 初始无限制，所以 low/high 设为极小/大值
 
 ```python

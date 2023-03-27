@@ -64,7 +64,7 @@
 
 ## 分析
 
-假设 s2 是 s1 的扰乱字符串，对应的 s1 的第一个分割点在位置 i，那么有两种情况：
+假设 s2 是 s1 的扰乱字符串，且对应的 s1 的第一个分割点在位置 i，那么有两种情况：
 - 分割的两部分没有交换：s2[:i] 是 s1[:i] 的扰乱字符串，s2[i:] 是 s1[i:] 的扰乱字符串
 - 分割开的两部分交换了：s2[-i:] 是 s1[:i] 的扰乱字符串，s2[:-i] 是 s1[i:] 的扰乱字符串
 
@@ -74,7 +74,7 @@
 
 ```python
 def isScramble(self, s1: str, s2: str) -> bool:
-    @lru_cache(None)
+    @cache
     def dfs(s1, s2):
         if s1 == s2:
             return True

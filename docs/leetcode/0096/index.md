@@ -53,7 +53,9 @@ def numTrees(self, n: int) -> int:
 
 这个递推式得到的 dp[n] 在数学上被称为卡塔兰数，有个更简单的表达式：
 
-    dp[n] = (2n)!/(n!*(n+1)!)
+$$dp[n] = {(2n)! \over (n!*(n+1)!)} $$
+
+
 
 ```python
 def numTrees(self, n: int) -> int:

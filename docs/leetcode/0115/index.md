@@ -56,7 +56,7 @@
 
 ```python
 def numDistinct(self, s: str, t: str) -> int:
-    @lru_cache(None)
+    @cache
     def dfs(s, t):
         if len(s) < len(t):
             return 0

@@ -51,7 +51,7 @@
 
 令 dp[j] 表示以位置 j 结尾的最大和，则
 
-	dp[j] = max(0, dp[j-1]) + nums[j]。
+$$dp[j] = max(0, dp[j-1]) + nums[j]$$
 
 最后 max(dp) 即为所求。还可以优化为一个参数。
 

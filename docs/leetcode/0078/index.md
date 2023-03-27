@@ -63,7 +63,7 @@ def subsets(self, nums: List[int]) -> List[List[int]]:
 
 令 dp[i] 代表 nums[:i] 的所有子集，则：
 
-	dp[i] = dp[i-1]+[sub+[nums[i]] for sub in dp[i-1]]
+$$dp[i] = dp[i-1]+[sub+[nums[i]] \ for\ sub\ in\ dp[i-1]]$$
 	
 ## 解答
 
