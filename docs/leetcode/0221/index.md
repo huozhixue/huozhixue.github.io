@@ -78,12 +78,12 @@ def maximalSquare(self, matrix: List[List[str]]) -> int:
 
 令 dp[i][j] 代表以 (i,j) 为右下顶点的最大正方形的边长，当 matrix[i][j] == '1' 时：
 	
-	dp[i][j] = 1 + min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1])
-	
+$$dp[i][j] = 1 + min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1])$$
+
 证明：
 - 该值显然是成立的
-- 假设 dp[i][j]=x，则 dp[i-][j-1] 必然 >=x-1，故 x <= 1+dp[i-1][j-1]
-- 同理可得 dp[i][j] <= 1 + min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1])
+- 假设 dp[i][j]=x，则必然有 dp[i][j-1] >=x-1，即 x <= 1+dp[i][j-1]
+- 同理可得 x <= 1 + dp[i-1][j-1]; x<=1+dp[i-1][j]
 - 故 dp[i][j] 等于该值
 
 可以用滚动数组优化空间。

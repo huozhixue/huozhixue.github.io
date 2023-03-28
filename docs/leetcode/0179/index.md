@@ -55,13 +55,18 @@ $$\Rarr \begin{cases}
 B * 10^z + C \geq C * 10^y + B \\\
 C * 10^x + A \geq A * 10^z + C 
 \end{cases} $$
+
 $$ \Rarr \begin{cases}
 B * (10^z-1) \geq C * (10^y-1) \\\
 C * (10^x-1) \geq A * (10^z-1) 
 \end{cases}$$
+
 $$ \Rarr B * C * (10^z-1) * (10^x-1) \geq C * A * (10^y-1) * (10^z-1) $$
+
 $$ \Rarr B * (10^x-1) \geq A * (10^y-1) $$
+
 $$ \Rarr B * 10^x + A \geq A * 10^y + B $$
+
 $$ \Rarr \overline{BA} \geq \overline{AB}  ，矛盾。 $$
 
 故对于任意 $\overline{AB}>\overline{BA}$，应该将 A 排在 B 的前面。

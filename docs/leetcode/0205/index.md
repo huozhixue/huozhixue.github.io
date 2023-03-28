@@ -1,4 +1,4 @@
-# 0205：同构字符串
+# 0205：同构字符串（★）
 
 
 > <u>**[力扣第 205 题](https://leetcode.cn/problems/isomorphic-strings/)**</u>
