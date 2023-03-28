@@ -55,8 +55,7 @@
 
 数组有序，也可以用双指针来解决：
 - 初始指针 i、j 分别指向 numbers 的首尾。
-- 如果 numbers[i]+numbers[j]<target，则 numbers[i] 与任意 [i+1,j-1] 内的数相加更小，
-故可以不再考虑 numbers[i]，缩小查找范围为 [i+1,j]。
+- 如果 numbers[i]+numbers[j]<target，则 numbers[i] 与任意 [i+1,j-1] 内的数相加更小，故可以不再考虑 numbers[i]，缩小查找范围为 [i+1,j]。
 - 同理，如果 numbers[i]+numbers[j]>target，可以缩小查找范围为 [i, j-1]。
 - 循环操作直到找到结果即可
  

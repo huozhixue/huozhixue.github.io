@@ -56,7 +56,7 @@
 
 ```python
 def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-    @lru_cache(None)
+    @cache
     def dfs(s):
         if not s:
             return [[]]

@@ -50,9 +50,11 @@
 
 那么令 dp[i][0]、dp[i][1] 分别代表 prices[:i] 手里有/无股票的最大利润，即可递推：
 
-    dp[i][0] = max(dp[i-1][0], -prices[i-1])
-	dp[i][1] = max(dp[i-1][1], dp[i-1][0]+prices[i-1])
-   
+$$ \begin{cases} 
+dp[i][0] = max(dp[i-1][0], -prices[i-1]) \\\ 
+dp[i][1] = max(dp[i-1][1], dp[i-1][0]+prices[i-1])
+\end{cases} $$
+
 还可以优化为两个参数。
 
 ## 解答

@@ -167,7 +167,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@cache</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">[[]]</span>

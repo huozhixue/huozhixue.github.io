@@ -57,7 +57,7 @@
 
 ```python
 def minCut(self, s: str) -> int:
-    @lru_cache(None)
+    @cache
     def dfs(i):
         if s[i:] == s[i:][::-1]:
             return 0

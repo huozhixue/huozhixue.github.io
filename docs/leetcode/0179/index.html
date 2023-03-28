@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0179\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  692 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  691 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0179\/","datePublished": "2015-06-28T00:00:00+08:00","dateModified": "2015-06-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0179：最大数（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-28">2015-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 692 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-28">2015-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 691 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0179/" class="leancloud_visitors" data-flag-title="0179：最大数（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -147,28 +147,29 @@
 </ul>
 <h2 id="分析">分析</h2>
 <p>首先想到按字典序降序拼接，但是某些情况并不适用。</p>
-<ul>
-<li>例如 [3,30,34,5,9] 的字典序降序为 [9,5,34,30,3]，但正确的顺序应该是 [9,5,34,3,30]。</li>
-</ul>
-<p>因此需要重新定义优先顺序。这里有个巧妙的想法，只要 $\overline{AB}&gt;\overline{BA}$，
-就认为 A 的优先级更高，应该排在前面。直觉告诉我们这样很可能是正确的，不过需要证明一下。</p>
+<p>例如 [3,30,34,5,9] 的字典序降序为 [9,5,34,30,3]，但正确的顺序应该是 [9,5,34,3,30]。</p>
+<p>因此需要重新定义优先顺序。这里有个巧妙的想法，只要 $\overline{AB}&gt;\overline{BA}$，就认为 A 的优先级更高，应该排在前面。直觉告诉我们这样很可能是正确的，不过需要证明一下。</p>
 <p>采用反证法：</p>
 <ul>
 <li>假设最大结果 res 中存在 $\overline{AB}&gt;\overline{BA}$ 但 B 排在 A 的前面。</li>
-<li>显然 B 和 A 不可能是相邻的，否则直接交换就得到更大的结果了。
-故res 是 $\overline{&hellip;BCA&hellip;}$ 的形式。</li>
-<li>同理，应该有 $\overline{BC} \geq \overline{CB}，\overline{CA} \geq \overline{AC}$。
-否则交换下就得到更大的结果。</li>
-<li>设 A、B、C 对应的字符串长度分别为 x、y、z，那么由 $\overline{BC} \geq \overline{CB}，
-\overline{CA} \geq \overline{AC}$ 可以推得：
-$$ B * 10^z + C \geq C * 10^y + B \quad ; \quad C * 10^x + A \geq A * 10^z + C $$
-$$ B * (10^z-1) \geq C * (10^y-1) \quad ; \quad C * (10^x-1) \geq A * (10^z-1) $$
-$$ B * C * (10^z-1) * (10^x-1) \geq C * A * (10^y-1) * (10^z-1) $$
-$$ B * (10^x-1) \geq A * (10^y-1) $$
-$$ B * 10^x + A \geq A * 10^y + B $$
-$$ \overline{BA} \geq \overline{AB} $$</li>
+<li>显然 B 和 A 不可能是相邻的，否则直接交换就得到更大的结果了。故res 是 $\overline{&hellip;BCA&hellip;}$ 的形式。</li>
+<li>同理，应该有 $\overline{BC} \geq \overline{CB}，\overline{CA} \geq \overline{AC}$。否则交换下就得到更大的结果。</li>
+<li>设 A、B、C 对应的字符串长度分别为 x、y、z，那么：</li>
 </ul>
-<p>矛盾。</p>
+<p>$$\overline{BC} \geq \overline{CB}，
+\overline{CA} \geq \overline{AC}$$</p>
+<p>$$\Rarr \begin{cases}
+B * 10^z + C \geq C * 10^y + B \\
+C * 10^x + A \geq A * 10^z + C
+\end{cases} $$
+$$ \Rarr \begin{cases}
+B * (10^z-1) \geq C * (10^y-1) \\
+C * (10^x-1) \geq A * (10^z-1)
+\end{cases}$$
+$$ \Rarr B * C * (10^z-1) * (10^x-1) \geq C * A * (10^y-1) * (10^z-1) $$
+$$ \Rarr B * (10^x-1) \geq A * (10^y-1) $$
+$$ \Rarr B * 10^x + A \geq A * 10^y + B $$
+$$ \Rarr \overline{BA} \geq \overline{AB}  ，矛盾。 $$</p>
 <p>故对于任意 $\overline{AB}&gt;\overline{BA}$，应该将 A 排在 B 的前面。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -185,7 +186,7 @@ $$ \overline{BA} \geq \overline{AB} $$</li>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;0&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 $O(N*log_N)$，44 ms</p>
+</div><p>时间复杂度 $O(N*logN)$，44 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

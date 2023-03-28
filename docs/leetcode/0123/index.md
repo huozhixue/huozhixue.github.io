@@ -63,8 +63,10 @@
 
 令 dp[i][j][0]、dp[i][j][1] 分别代表 prices[:i] 最多买过 j 支股票且手里有/无股票的最大利润，即可递推：
 
-	dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j-1][1]-prices[i-1])
-    dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j][0]+prices[i-1])
+$$\begin{cases}
+dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j-1][1]-prices[i-1]) \\\ 
+dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j][0]+prices[i-1])
+\end{cases}$$
  
 ```python
 def maxProfit(self, prices: List[int]) -> int:

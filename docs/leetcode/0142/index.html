@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0142\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  594 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  602 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0142\/","datePublished": "2015-05-22T00:00:00+08:00","dateModified": "2015-05-22T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0142：环形链表 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-22">2015-05-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 594 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-22">2015-05-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 602 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0142/" class="leancloud_visitors" data-flag-title="0142：环形链表 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -166,11 +166,19 @@
 <p><a href="/leetcode/0141" title="0141" rel="noopener noreferrer">0141</a> 升级版，依然可以用快慢指针解决：</p>
 <ul>
 <li>假如环的周长为 L，入环位置为 x</li>
-<li>当慢节点达到 x 时，快节点走了 2*x 步，也就是说在环上走了 x 步</li>
+<li>当慢节点达到 x 时：
+<ul>
+<li>快节点走了 2*x 步，也就是说在环上走了 x 步</li>
 <li>此时快节点距离慢节点 L-x%L，再经过 L-x%L 轮相遇</li>
-<li>相遇时慢节点在环上走了 L-x%L 步</li>
-<li>若慢节点再在换上走 x 步，即到达位置 x</li>
-<li>于是有个巧妙的想法，令另一个慢节点从起点开始同步走，两个慢节点相遇位置即为位置 x</li>
+</ul>
+</li>
+<li>当快慢节点相遇时：
+<ul>
+<li>慢节点在环上走了 L-x%L 步</li>
+<li>若慢节点再在环上走 x 步，即到达位置 x</li>
+</ul>
+</li>
+<li>于是有个巧妙的想法，此时令另一个慢节点从起点开始同步走，两个慢节点相遇位置即为位置 x</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">

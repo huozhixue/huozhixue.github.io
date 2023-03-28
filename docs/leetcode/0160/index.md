@@ -114,7 +114,7 @@ def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
 
 要求 O(1) 空间，有个巧妙的方法。
 - 初始指针 p、q 分别指向 A、B 链表开头
-- 每轮同时移动一步 p、q
+- 每轮 p、q 同时移动一步 
 - p 到达 A 末尾时重定向到 B 开头，q 到达 B 末尾时重定向到 A 开头。
 - 经过 (A长度+B长度-相交部分长度) 轮后 p、q 相遇在相交节点（或者是空节点）
  

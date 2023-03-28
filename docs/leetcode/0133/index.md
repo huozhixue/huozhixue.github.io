@@ -83,10 +83,9 @@ public List&lt;Node&gt; neighbors;
 - 若 u 不在 d 中，只克隆值得到节点 u'，保存映射 <u,u'> 到 d
 - 当 u 的邻居 v 遍历完后，将 v 的克隆 v' 添加到 u' 的邻居列表中即可
 
-遍历可以用 bfs，也可以用 dfs。用 bfs 时注意入队前就应克隆，防止重复入队。
-
-> 用 dfs 时注意不能用 d.get(v, dfs(v)) 来简化。
-即使元素在 dict 中，dict.get 的 default 也会执行，只不过不返回该值。
+遍历可以用 bfs，也可以用 dfs：
+- > 用 bfs 时注意入队前就应克隆，防止重复入队。
+- > 用 dfs 时注意不能用 d.get(v, dfs(v)) 来简化。即使元素在 dict 中，dict.get 的 default 也会执行，只不过不返回该值。
 
 ## 解答
 

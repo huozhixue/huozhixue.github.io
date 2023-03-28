@@ -73,7 +73,7 @@ width: 70px;
 
 ```python
 def calculateMinimumHP(self, dungeon: List[List[int]]) -> int:
-    @lru_cache(None)
+    @cache
     def dfs(i, j):
         if (i, j) == (m-1, n-1):
             return max(1, 1-dungeon[i][j])

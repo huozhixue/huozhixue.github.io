@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0134\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  974 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  958 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0134\/","datePublished": "2015-05-14T00:00:00+08:00","dateModified": "2015-05-14T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0134：加油站（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-14">2015-05-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 974 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-14">2015-05-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 958 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0134/" class="leancloud_visitors" data-flag-title="0134：加油站（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -171,10 +171,14 @@
 <li>初始起点 i=0，从 i 开始遍历 j</li>
 <li>遇到第一个 j 使得 sum(B[i:j])&lt;0 时：
 <ul>
-<li>对任意 (i,j) 范围内的 k，sum(B[i:k])&gt;=0</li>
-<li>故 sum(B[k:j])=sum(B[i:j])-sum(B[i:k])&lt;0</li>
-<li>k 不能作为起点</li>
-<li>所以重置起点 i=j，开始遍历</li>
+<li>对任意 (i,j) 范围内的 k：
+<ul>
+<li>sum(B[i:k])&gt;=0</li>
+<li>sum(B[k:j])=sum(B[i:j])-sum(B[i:k])&lt;0</li>
+<li>故 k 不能作为起点</li>
+</ul>
+</li>
+<li>所以重置起点 i=j，重置遍历</li>
 </ul>
 </li>
 <li>否则，当 j-i==len(A) 时，即符合要求</li>

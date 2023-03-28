@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0123\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  650 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  653 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0123\/","datePublished": "2015-05-03T00:00:00+08:00","dateModified": "2015-05-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0123：买卖股票的最佳时机 III（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-03">2015-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 650 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-03">2015-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 653 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0123/" class="leancloud_visitors" data-flag-title="0123：买卖股票的最佳时机 III（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -170,9 +170,10 @@
 <h3 id="1">#1</h3>
 <p><a href="/leetcode/0121" title="0121" rel="noopener noreferrer">0121</a> 升级版，添加了次数限制，所以考虑加一个状态参数。</p>
 <p>令 dp[i][j][0]、dp[i][j][1] 分别代表 prices[:i] 最多买过 j 支股票且手里有/无股票的最大利润，即可递推：</p>
-<pre><code>dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j-1][1]-prices[i-1])
+<p>$$\begin{cases}
+dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j-1][1]-prices[i-1]) \\
 dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j][0]+prices[i-1])
-</code></pre>
+\end{cases}$$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

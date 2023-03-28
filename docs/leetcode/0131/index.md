@@ -43,7 +43,7 @@
 
 ```python
 def partition(self, s: str) -> List[List[str]]:
-    @lru_cache(None)
+    @cache
     def dfs(i):
         if i==len(s):
             return [[]]

@@ -56,7 +56,7 @@
 
 ```python
 def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-    @lru_cache(None)
+    @cache
     def dfs(s):
         return not s or any(s[:i+1] in W and dfs(s[i+1:]) for i in range(len(s)))
 
