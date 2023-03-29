@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0265\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  538 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  521 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0265\/","datePublished": "2015-09-22T00:00:00+08:00","dateModified": "2015-09-22T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0265：粉刷房子 II（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-22">2015-09-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 538 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-22">2015-09-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 521 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0265/" class="leancloud_visitors" data-flag-title="0265：粉刷房子 II（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -158,11 +158,9 @@
 <p><strong>进阶：</strong>您能否在 <code>O(nk)</code> 的时间复杂度下解决此问题？</p>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0256" title="0256" rel="noopener noreferrer">0256</a> 升级版。同样令 dp[i][j] 代表第 i 个房子刷成 j 颜色时，前 i 个房子所需的最低成本，即可递推。</p>
-<pre><code>dp[i][j] = costs[i][j]+min(dp[i-1][:j]+dp[i-1][j+1:])
-</code></pre>
-<p>注意令 left[j] 代表 min(dp[i-1][:j])，right[j] 代表 min(dp[i-1][j+1:])，
-那么 left，right 数组可以一趟得到，即可优化时间为 O(N*K)。</p>
-<p>因为 dp[i] 只依赖于 dp[i-1]，所以可以优化为一维数组。</p>
+<p>$$dp[i][j] = costs[i][j]+min(dp[i-1][:j]+dp[i-1][j+1:])$$</p>
+<p>令 left[j] 代表 min(dp[i-1][:j])，right[j] 代表 min(dp[i-1][j+1:])，left，right 数组可以一趟得到。</p>
+<p>因为 dp[i] 只依赖于 dp[i-1]，所以还可以优化为一维数组。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

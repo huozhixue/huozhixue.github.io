@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0300\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  567 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  563 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0300\/","datePublished": "2015-10-27T00:00:00+08:00","dateModified": "2015-10-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0300：最长递增子序列（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-27">2015-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 567 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-27">2015-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 563 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0300/" class="leancloud_visitors" data-flag-title="0300：最长递增子序列（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -165,8 +165,9 @@
 <h3 id="1">#1</h3>
 <p>子序列/子数组相关的问题容易想到遍历结尾位置 j，分别找最值。</p>
 <p>令 dp[j] 代表结尾位置 j 的最长递增子序列长度。那么：</p>
-<pre><code>dp[j] = 1 + max(dp[i] for i in range(j) if nums[i]&lt;nums[j])
-</code></pre>
+<p>$$dp[j] = 1 + max(dp[i])_{\begin{subarray}{l}
+i \ in \ range(j) \\ if \ nums[i]&lt;nums[j]
+\end{subarray}}$$</p>
 <p>递推即可。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -186,18 +187,20 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N^2)，1824 ms</p>
+</div><p>时间 $O(N^2)$，1824 ms</p>
 <h3 id="2">#2</h3>
 <p>本题还有个很经典的优化解法：</p>
 <ul>
 <li>假如 dp[i1]==dp[i2] 且 nums[i1]&lt;nums[i2]，那么在递推式中只需要考虑 i1 而不用考虑 i2</li>
-<li>那么令 A[y] 代表使 dp[i]==y 的最小 nums[i]，问题转为求 max(y for y in range(j) if A[y]&lt;nums[j])</li>
-<li>注意到 A 必然是严格递增的，因此可以二分查找最大的 x</li>
-<li>而得到 dp[j] 后，只需要更新 A[y+1] = nums[j] 即可维护 A</li>
-<li>因此每轮递推只需 O(logN)，总的时间复杂度 O(N*logN)</li>
+<li>令 A[k] 代表使 dp[i]==k 的最小 nums[i]，递推式即转为：
+$$dp[j] = 1 + max(k)_{\begin{subarray}{l}
+k \ in \ range(j) \\ if \ A[k]&lt;nums[j]
+\end{subarray}}$$</li>
+<li>注意到 A 是严格递增的数组，因此可以二分查找最大的 k</li>
+<li>得到 dp[j] 后，只需要更新 A[k+1] = nums[j] 即可维护 A</li>
 </ul>
 <blockquote>
-<p>额外的，令 A 初始为空数组并动态维护，那么最终 len(A) 即为所求，就可以去掉 dp 数组。</p>
+<p>额外的，令 A 初始为空数组并动态维护，最终 len(A) 即为所求，无需 dp 数组。</p>
 </blockquote>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -218,7 +221,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>40 ms</p>
+</div><p>时间 $O(N*logN)$，40 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

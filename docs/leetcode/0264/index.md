@@ -38,19 +38,22 @@
 
 ## 分析
 
-{{< lc "0263" >}} 升级版，有个巧妙的 dp 方法。
+{{< lc "0263" >}} 升级版，有个巧妙的 dp 方法：
+- 令 dp[n] 代表第 n 个丑数
+- 显然后面的丑数必然是前面的某个丑数乘 2或3或5 得到：
 
-显然后面的丑数必然是前面的某个丑数乘 2/3/5 得到。令 dp[n] 代表第 n 个丑数，那么：
+$$ dp[n]=min(dp[j]*p)_{ 
+\begin{subarray}{l}\ j \ in \ range(n); \\\
+p \ in [2,3,5]; \\\
+if \ dp[j]*p>dp[n-1] 
+\end{subarray}}$$
+- 观察发现，p 固定时，只需要考虑第一个使得 dp[j]*p>dp[n-1] 的 j
+- 令 A[p] 代表第一个使得 dp[j]*p>dp[n-1] 的 j，递推式转为：
 
-    dp[n]=min(dp[j]*p for j in range(n) for p in [2,3,5] if dp[j]*p>dp[n-1])
-    
-> 观察发现，对于 p=2/3/5，只需要考虑第一个使得 dp[j]*p>dp[n-1] 的 j。
+$$dp[n]=min(dp[A[p]]*p)_{p \ in [2,3,5]} $$
+- 维护 A[p] 很简单，当 dp[A[p]]*p==dp[n] 时，将 A[p] 增 1 即可。
 
-于是用 A[p] 维护第一个使得 dp[j]*p>dp[n-1] 的 j，递推式转为：
 
-    dp[n]=min(dp[A[p]]*p for p in [2,3,5])
-    
-维护 A[p] 很简单，当 dp[A[p]]*p==dp[n] 时，将 A[p] 增 1 即可。
 
 ## 解答
 

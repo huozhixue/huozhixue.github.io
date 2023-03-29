@@ -50,9 +50,7 @@ def numSquares(self, n: int) -> int:
 
 ## *附加
 
-根据数学上的 
-[四平方和定理](https://baike.baidu.com/item/%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86)
-，每个正整数均可表示为4个整数的平方和。
+根据数学上的 [四平方和定理](https://baike.baidu.com/item/%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86)，每个正整数均可表示为4个整数的平方和。
 
 因此只需逐层遍历 i 个正整数平方的和，找到 n 即可。
 

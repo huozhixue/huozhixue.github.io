@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0277\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  706 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  704 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0277\/","datePublished": "2015-10-04T00:00:00+08:00","dateModified": "2015-10-04T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0277：搜寻名人（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-04">2015-10-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 706 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-04">2015-10-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 704 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0277/" class="leancloud_visitors" data-flag-title="0277：搜寻名人（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -169,9 +169,12 @@
 <h2 id="分析">分析</h2>
 <p>可以用猜想加验证的方式：</p>
 <ul>
-<li>先猜 0 是名人，考察 0 和其它人的关系</li>
+<li>先猜 0 是名人，考察 0 和 1 的关系
+<ul>
 <li>假如 0 认识 1，0 不可能是名人了，换为猜 1 是名人</li>
 <li>假如 0 不认识 1，1 不可能是名人了</li>
+</ul>
+</li>
 <li>从 2 开始继续考察</li>
 <li>考察完一遍，即可排除 n-1 个人</li>
 <li>验证剩下的那个人是否是名人即可</li>

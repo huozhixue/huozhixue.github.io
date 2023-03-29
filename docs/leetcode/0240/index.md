@@ -53,7 +53,7 @@
 def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
     return any(target <= row[-1] and row[bisect_left(row, target)]==target for row in matrix)
 ```
-时间复杂度 O(M*logN)，156ms
+时间 $O(M*logN)$，156ms
 
 ### #2
 
@@ -82,7 +82,7 @@ def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
     m, n = len(matrix), len(matrix[0])
     return help(0, 0, m-1, n-1)
 ```
-时间复杂度 O(log M*N)，176 ms
+时间 $O(log(M*N))$，176 ms
 
 ## *附加
 
@@ -103,5 +103,5 @@ def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
             return True
     return False
 ```
-时间复杂度 O(M+N)，152 ms
+时间 $O(M+N)$，152 ms
 

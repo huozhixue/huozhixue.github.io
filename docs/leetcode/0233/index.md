@@ -47,7 +47,7 @@
 
 ```python
 def countDigitOne(self, n: int) -> int:
-    @lru_cache(None)
+    @cache
     def dfs(pos, st, bound):
         if pos == len(s):
             return st

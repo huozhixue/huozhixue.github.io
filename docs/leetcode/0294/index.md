@@ -1,4 +1,4 @@
-# 0294：翻转游戏 II（★）
+# 0294：翻转游戏 II（★★★）
 
 
 > <u>**[力扣第 294 题](https://leetcode.cn/problems/flip-game-ii/)**</u>
@@ -42,13 +42,14 @@
 
 ## 分析
 
-### #1
 
 典型的博弈问题，考虑用 dp，遍历每种操作并递归即可。
 
+## 解答
+
 ```python
 def canWin(self, currentState: str) -> bool:
-    @lru_cache(None)
+    @cache
     def dfs(s):
         for i in range(len(s)):
             if s[i:i+2]=='++' and not dfs(s[:i]+'--'+s[i+2:]):
@@ -59,13 +60,12 @@ def canWin(self, currentState: str) -> bool:
 ```
 60 ms
 
-### #2
+## *附加
 
 上面 dp 的时间复杂度其实很高，是 $O(N*2^{N/2})$，能通过是因为数据太弱。
 
 更优的是利用 [Sprague-Grundy 定理](https://zhuanlan.zhihu.com/p/20611132)， 时间复杂度 $O(N^2)$。
 
-## 解答
 
 ```python
 def canWin(self, currentState: str) -> bool:

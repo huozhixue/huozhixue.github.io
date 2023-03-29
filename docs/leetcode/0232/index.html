@@ -172,8 +172,7 @@ myQueue.empty(); // return false
 </ul>
 <h2 id="分析">分析</h2>
 <p>python 一般直接用 deque 作为队列。本题要求用栈实现，pop 时只能先把后面所有元素都出栈。</p>
-<p>这里有个巧妙的想法，将出栈的元素依次保存到另一个栈 stack2 中，相当于反序保存了，
-后面要 pop 时若 stack2 还有元素，直接弹出即可。</p>
+<p>这里有个巧妙的想法，将出栈的元素依次保存到另一个栈 stack2 中，相当于反序保存了，后面要 pop 时若 stack2 还有元素，直接弹出即可。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

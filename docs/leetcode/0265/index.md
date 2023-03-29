@@ -54,12 +54,11 @@
 
 {{< lc "0256" >}} 升级版。同样令 dp[i][j] 代表第 i 个房子刷成 j 颜色时，前 i 个房子所需的最低成本，即可递推。
 
-	dp[i][j] = costs[i][j]+min(dp[i-1][:j]+dp[i-1][j+1:])
-	
-注意令 left[j] 代表 min(dp[i-1][:j])，right[j] 代表 min(dp[i-1][j+1:])，
-那么 left，right 数组可以一趟得到，即可优化时间为 O(N*K)。
+$$dp[i][j] = costs[i][j]+min(dp[i-1][:j]+dp[i-1][j+1:])$$
 
-因为 dp[i] 只依赖于 dp[i-1]，所以可以优化为一维数组。
+令 left[j] 代表 min(dp[i-1][:j])，right[j] 代表 min(dp[i-1][j+1:])，left，right 数组可以一趟得到。
+
+因为 dp[i] 只依赖于 dp[i-1]，所以还可以优化为一维数组。
 
 ## 解答
 

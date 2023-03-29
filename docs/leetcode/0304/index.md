@@ -57,9 +57,11 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
 
 {{< lc "0303" >}} 的升级版，需要用二维前缀和。
 
-令 pre[i][j] 代表 sum(matrix[r][c] for r in range(i) for c in range(j))，那么：
+令 
+$$ pre[i][j]  = \sum_{\begin{subarray}{l}0 \le r<i  \\\ 0 \le c<j \end{subarray}}matrix[r][c] $$那么：
 
-    sumRegion(r1, c1, r2, c2) = pre[r2+1][c2+1]-pre[r1][c2+1]-pre[r2+1][c1]+pre[r1][c1]
+$$sumRegion(r1, c1, r2, c2) = pre[r2+1][c2+1] \\\ 
+-pre[r1][c2+1]-pre[r2+1][c1]+pre[r1][c1]$$
 
 ## 解答
 

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0264\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  324 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  323 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0264\/","datePublished": "2015-09-21T00:00:00+08:00","dateModified": "2015-09-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0264：丑数 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-21">2015-09-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 324 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-21">2015-09-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 323 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0264/" class="leancloud_visitors" data-flag-title="0264：丑数 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -148,17 +148,24 @@
 <li><code>1 <= n <= 1690</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p><a href="/leetcode/0263" title="0263" rel="noopener noreferrer">0263</a> 升级版，有个巧妙的 dp 方法。</p>
-<p>显然后面的丑数必然是前面的某个丑数乘 2/3/5 得到。令 dp[n] 代表第 n 个丑数，那么：</p>
-<pre><code>dp[n]=min(dp[j]*p for j in range(n) for p in [2,3,5] if dp[j]*p&gt;dp[n-1])
-</code></pre>
-<blockquote>
-<p>观察发现，对于 p=2/3/5，只需要考虑第一个使得 dp[j]*p&gt;dp[n-1] 的 j。</p>
-</blockquote>
-<p>于是用 A[p] 维护第一个使得 dp[j]*p&gt;dp[n-1] 的 j，递推式转为：</p>
-<pre><code>dp[n]=min(dp[A[p]]*p for p in [2,3,5])
-</code></pre>
-<p>维护 A[p] 很简单，当 dp[A[p]]*p==dp[n] 时，将 A[p] 增 1 即可。</p>
+<p><a href="/leetcode/0263" title="0263" rel="noopener noreferrer">0263</a> 升级版，有个巧妙的 dp 方法：</p>
+<ul>
+<li>令 dp[n] 代表第 n 个丑数</li>
+<li>显然后面的丑数必然是前面的某个丑数乘 2或3或5 得到：</li>
+</ul>
+<p>$$ dp[n]=min(dp[j]*p)_{
+\begin{subarray}{l}\ j \ in \ range(n); \\
+p \ in [2,3,5]; \\
+if \ dp[j]*p&gt;dp[n-1]
+\end{subarray}}$$</p>
+<ul>
+<li>观察发现，p 固定时，只需要考虑第一个使得 dp[j]*p&gt;dp[n-1] 的 j</li>
+<li>令 A[p] 代表第一个使得 dp[j]*p&gt;dp[n-1] 的 j，递推式转为：</li>
+</ul>
+<p>$$dp[n]=min(dp[A[p]]*p)_{p \ in [2,3,5]} $$</p>
+<ul>
+<li>维护 A[p] 很简单，当 dp[A[p]]*p==dp[n] 时，将 A[p] 增 1 即可。</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

@@ -53,7 +53,7 @@
 
 ```python
 def diffWaysToCompute(self, expression: str) -> List[int]:
-    @lru_cache(None)
+    @cache
     def dfs(s):
         res = []
         for i, c in enumerate(s):
