@@ -53,7 +53,7 @@
 
 ```python
 def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
-    @lru_cache(None)
+    @cache
     def dfs(i, j):
         res = 1
         for x, y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:

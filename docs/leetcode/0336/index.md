@@ -50,8 +50,7 @@
 - len(w1) < len(w2), w2 可拆分为 pre、suf，pre==pre[::-1]，suf==w1[::-1]
 - len(w1) > len(w2), w1 可拆分为 pre、suf，pre==w2[::-1]，suf==suf[::-1]
 
-因此，遍历单词 x 的所有拆分方式，假如能拆分为一个回文串和另一个单词 y 的反序，
-那么 x+y 或者 y+x 就是回文串。
+因此，遍历单词 x 的所有拆分方式，假如能拆分为一个回文串和另一个单词 y 的反序，那么 x+y 或者 y+x 就是回文串。
 
 > 特别注意空单词的情况，空单词+回文单词或者回文单词+空单词的组合都是可行的。
 
@@ -73,6 +72,6 @@ def palindromePairs(self, words: List[str]) -> List[List[int]]:
                 res.append([d[suf[::-1]], i])
     return res
 ```
-时间复杂度 O(N*M^2)，2256 ms
+时间 $O(N*M^2)$，2256 ms
 
 

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0307\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  767 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  748 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0307\/","datePublished": "2015-11-03T00:00:00+08:00","dateModified": "2015-11-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0307：区域和检索 - 数组可修改（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-03">2015-11-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 767 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-03">2015-11-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 748 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0307/" class="leancloud_visitors" data-flag-title="0307：区域和检索 - 数组可修改（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -225,8 +225,7 @@ numArray.sumRange(0, 2); // 返回 1 + 2 + 5 = 8
 </div>
 </div><p>792 ms</p>
 <h2 id="附加">*附加</h2>
-<p>还有个更巧妙的方法来维护一些区间和，即树状数组。</p>
-<p>树状数组专门针对 单点更新+区间查询 的情况，实现时间复杂度 O(logN)。</p>
+<p>还有个专门针对 单点更新+区间查询 的算法——树状数组。更新和查询时间 O(logN)。</p>
 <blockquote>
 <p>为了方便，用 tree[i] 维护数组 <strong>[0]+nums</strong> 的区间 (i-lowbit(i), i] 的和</p>
 </blockquote>
@@ -314,7 +313,7 @@ numArray.sumRange(0, 2); // 返回 1 + 2 + 5 = 8
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>,&nbsp;<a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>,&nbsp;<a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%9D%97%E7%8A%B6%E6%95%B0%E7%BB%84/">块状数组</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

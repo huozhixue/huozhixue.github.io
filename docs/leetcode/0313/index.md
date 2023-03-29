@@ -1,4 +1,4 @@
-# 0313：超级丑数（★）
+# 0313：超级丑数（★★★）
 
 
 > <u>**[力扣第 313 题](https://leetcode.cn/problems/super-ugly-number/)**</u>
@@ -63,7 +63,7 @@ def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
     return dp[-1]
 ```
 
-时间复杂度 O(N*M)，超时了
+时间 $O(N*M)$，超时了
 
 ### #2
 
@@ -82,5 +82,5 @@ def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
             heappush(pq, (dp[idx+1] * p, idx+1, p))
     return dp[-1]
 ```
-时间复杂度 O(N*logM)，2548 ms
+时间 $O(N*logM)$，2548 ms
 

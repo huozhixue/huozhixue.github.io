@@ -193,10 +193,11 @@ $$p \ 筛不到数，dp[p][v] = dp[p-1][v]$$</li>
 <li>如果 p*p &lt;= v 且 p 是质数:
 <ul>
 <li>$$p 能筛掉合数 C=p*x，当且仅当 f(x)&gt;=p$$</li>
-<li>$$ p 能筛掉的合数个数 \\
-= 满足 p*x \le v 且 f(x) \ge p 的 x 的个数 \\
-= 遍历到 p-1 时 [p, v//p] 内还未标记的个数 \\
-= dp[p-1][v//p] - dp[p-1][p-1]$$</li>
+<li>$$\begin{aligned} p 能筛掉的合数个数
+&amp;= 满足 p*x \le v 且 f(x) \ge p 的 x 的个数 \\
+&amp;= 遍历到 p-1 时 [p, v//p] 内还未标记的个数 \\
+&amp;= dp[p-1][v//p] - dp[p-1][p-1]
+\end{aligned}$$</li>
 <li>$$dp[p][v] = dp[p-1][v] - (dp[p-1][v//p] - dp[p-1][p-1])$$</li>
 </ul>
 </li>

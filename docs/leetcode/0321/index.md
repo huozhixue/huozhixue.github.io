@@ -1,4 +1,4 @@
-# 0321：拼接最大数（★★）
+# 0321：拼接最大数（★★★）
 
 
 > <u>**[力扣第 321 题](https://leetcode.cn/problems/create-maximum-number/)**</u>

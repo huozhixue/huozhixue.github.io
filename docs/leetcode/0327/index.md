@@ -58,5 +58,5 @@ def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
         sl.add(x)
     return res
 ```
-时间复杂度 O(N*logN)，1492 ms
+时间 $O(N*logN)$，1492 ms
 

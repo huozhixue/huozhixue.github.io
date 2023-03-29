@@ -58,4 +58,4 @@ def coinChange(self, coins: List[int], amount: int) -> int:
         dp[i] = 1 + min(dp[i-coin] if coin<=i else float('inf') for coin in coins)
     return dp[-1] if dp[-1]<float('inf') else -1
 ```
-时间复杂度 O(N*S)，848 ms
+时间复杂度 $O(N*S)$，848 ms

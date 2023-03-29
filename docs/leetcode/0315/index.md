@@ -63,5 +63,5 @@ def countSmaller(self, nums: List[int]) -> List[int]:
         sl.add(nums[i])
     return res
 ```
-时间复杂度 O(N*logN)，1088 ms
+时间 $O(N*logN)$，1088 ms
 

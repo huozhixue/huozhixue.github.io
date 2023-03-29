@@ -1,4 +1,4 @@
-# 0316：去除重复字母（★）
+# 0316：去除重复字母（★★）
 
 
 > <u>**[力扣第 316 题](https://leetcode.cn/problems/remove-duplicate-letters/)**</u>

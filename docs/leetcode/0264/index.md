@@ -42,15 +42,13 @@
 - 令 dp[n] 代表第 n 个丑数
 - 显然后面的丑数必然是前面的某个丑数乘 2或3或5 得到：
 
-$$ dp[n]=min(dp[j]*p)_{ 
-\begin{subarray}{l}\ j \ in \ range(n); \\\
-p \ in [2,3,5]; \\\
-if \ dp[j]*p>dp[n-1] 
-\end{subarray}}$$
+$$ dp[n]=min(dp[j]*p)_{ \substack{
+0\le j<n;\ p\in\ [2,3,5] \\\
+if\ dp[j]*p>dp[n-1]}}$$
 - 观察发现，p 固定时，只需要考虑第一个使得 dp[j]*p>dp[n-1] 的 j
 - 令 A[p] 代表第一个使得 dp[j]*p>dp[n-1] 的 j，递推式转为：
 
-$$dp[n]=min(dp[A[p]]*p)_{p \ in [2,3,5]} $$
+$$dp[n]=min(dp[A[p]]*p)_{p\in\ [2,3,5]} $$
 - 维护 A[p] 很简单，当 dp[A[p]]*p==dp[n] 时，将 A[p] 增 1 即可。
 
 

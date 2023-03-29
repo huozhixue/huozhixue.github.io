@@ -68,5 +68,5 @@ def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:
                 sl.add(x)
     return res
 ```
-时间复杂度 $O(N^2MlogM)$，4684 ms
+时间复杂度 $O(N^2*M*logM)$，4684 ms
 

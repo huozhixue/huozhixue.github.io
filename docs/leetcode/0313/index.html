@@ -7,7 +7,7 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0313：超级丑数（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0313：超级丑数（★）" />
+        <title>0313：超级丑数（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0313：超级丑数（★★★）" />
 <meta property="og:description" content="力扣第 313 题 题目 超级丑数 是一个正整数，并满足其所有质因数都出现在质数数组 primes 中。 给你一个整数 n 和一个整数数组 primes ，返回第 n 个 超级丑数 。 题目数据保证" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/leetcode/0313/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0313：超级丑数（★）"/>
+<meta name="twitter:title" content="0313：超级丑数（★★★）"/>
 <meta name="twitter:description" content="力扣第 313 题 题目 超级丑数 是一个正整数，并满足其所有质因数都出现在质数数组 primes 中。 给你一个整数 n 和一个整数数组 primes ，返回第 n 个 超级丑数 。 题目数据保证"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -24,12 +24,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0313：超级丑数（★）",
+        "headline": "0313：超级丑数（★★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0313\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  492 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  490 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0313\/","datePublished": "2015-11-09T00:00:00+08:00","dateModified": "2015-11-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0313：超级丑数（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0313：超级丑数（★★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-09">2015-11-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 492 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0313/" class="leancloud_visitors" data-flag-title="0313：超级丑数（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-09">2015-11-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 490 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0313/" class="leancloud_visitors" data-flag-title="0313：超级丑数（★★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -187,7 +187,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N*M)，超时了</p>
+</div><p>时间 $O(N*M)$，超时了</p>
 <h3 id="2">#2</h3>
 <p>注意到每次是取最小的 dp[A[p]]*p，想到可以用堆来维护 &lt;dp[A[p]]*p, A[p], p&gt; 三元组，可以快速获得最小值。</p>
 <h2 id="解答">解答</h2>
@@ -215,7 +215,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N*logM)，2548 ms</p>
+</div><p>时间 $O(N*logM)$，2548 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -235,7 +235,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E5%A0%86/">堆</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

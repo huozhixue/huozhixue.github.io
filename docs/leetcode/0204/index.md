@@ -69,10 +69,11 @@ def countPrimes(self, n: int) -> int:
 $$p \ 筛不到数，dp[p][v] = dp[p-1][v]$$
 - 如果 p*p <= v 且 p 是质数:	
 	- $$p 能筛掉合数 C=p*x，当且仅当 f(x)>=p$$
-	- $$ p 能筛掉的合数个数 \\\
-		= 满足 p*x \le v 且 f(x) \ge p 的 x 的个数 \\\
-		= 遍历到 p-1 时 [p, v//p] 内还未标记的个数 \\\
-		= dp[p-1][v//p] - dp[p-1][p-1]$$
+	- $$\begin{aligned} p 能筛掉的合数个数 
+	    &= 满足 p*x \le v 且 f(x) \ge p 的 x 的个数 \\\
+		&= 遍历到 p-1 时 [p, v//p] 内还未标记的个数 \\\
+		&= dp[p-1][v//p] - dp[p-1][p-1]
+	\end{aligned}$$
     - $$dp[p][v] = dp[p-1][v] - (dp[p-1][v//p] - dp[p-1][p-1])$$
 - p 是质数就不会被标记，所以可以用 $dp[p-1][p]>dp[p-1][p-1]$ 判断
 - 要求的即是 $dp[\lfloor \sqrt n \rfloor][n-1]$

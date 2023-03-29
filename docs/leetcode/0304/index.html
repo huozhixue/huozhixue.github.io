@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0304\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  332 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  334 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0304\/","datePublished": "2015-10-31T00:00:00+08:00","dateModified": "2015-10-31T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0304：二维区域和检索 - 矩阵不可变（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-31">2015-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 332 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-31">2015-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 334 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0304/" class="leancloud_visitors" data-flag-title="0304：二维区域和检索 - 矩阵不可变（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -166,7 +166,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0303" title="0303" rel="noopener noreferrer">0303</a> 的升级版，需要用二维前缀和。</p>
 <p>令
-$$ pre[i][j]  = \sum_{\begin{subarray}{l}0 \le r&lt;i  \\ 0 \le c&lt;j \end{subarray}}matrix[r][c] $$那么：</p>
+$$ pre[i][j]  = \sum_{\substack {0 \le r&lt;i  \\ 0 \le c&lt;j }} matrix[r][c] $$那么：</p>
 <p>$$sumRegion(r1, c1, r2, c2) = pre[r2+1][c2+1] \\
 -pre[r1][c2+1]-pre[r2+1][c1]+pre[r1][c1]$$</p>
 <h2 id="解答">解答</h2>

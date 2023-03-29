@@ -48,8 +48,7 @@
 
 ## 分析
 
-本题是经典的欧拉图问题，可以用精妙的
- [Hierholzer 算法](https://zhuanlan.zhihu.com/p/108411618) 。
+本题是经典的欧拉图问题，可以用精妙的 [Hierholzer 算法](https://zhuanlan.zhihu.com/p/108411618) 。
 
 ## 解答
 
