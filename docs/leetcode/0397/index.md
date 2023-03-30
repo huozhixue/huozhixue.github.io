@@ -57,7 +57,7 @@
 
 ```python
 def integerReplacement(self, n: int) -> int:
-    @lru_cache(None)
+    @cache
     def dfs(n):
         if n == 1:
             return 0

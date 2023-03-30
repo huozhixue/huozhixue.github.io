@@ -1,4 +1,4 @@
-# 0392：判断子序列
+# 0392：判断子序列（★）
 
 
 > <u>**[力扣第 392 题](https://leetcode.cn/problems/is-subsequence/)**</u>

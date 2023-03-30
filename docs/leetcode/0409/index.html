@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0409\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  318 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  319 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0409\/","datePublished": "2016-02-13T00:00:00+08:00","dateModified": "2016-02-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0409：最长回文串</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-13">2016-02-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 318 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-13">2016-02-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 319 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0409/" class="leancloud_visitors" data-flag-title="0409：最长回文串">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -153,9 +153,13 @@
 <li><code>s</code> 只由小写 <strong>和/或</strong> 大写英文字母组成</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>显然如果字符的出现次数是偶数，都能用上。如果次数是奇数，多余的那个只能作为回文串中心。</p>
-<p>如果多个字符的出现次数都是奇数，只能选一个多余的作为回文串中心，剩下的都是真正多余的。</p>
-<p>因此统计出现次数为奇数的字符个数 n，多余的个数即为 max(0, n-1)。</p>
+<p>分情况讨论：</p>
+<ul>
+<li>如果字符的出现次数是偶数，都能用上</li>
+<li>如果次数是奇数，多余的那个只能作为回文串中心</li>
+<li>如果多个字符的出现次数都是奇数，只能选一个多余的作为回文串中心，剩下的都是真正多余的</li>
+</ul>
+<p>因此统计出现次数为奇数的字符个数 k，多余的个数即为 max(0, k-1)。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

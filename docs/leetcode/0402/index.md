@@ -1,4 +1,4 @@
-# 0402：移掉 K 位数字（★）
+# 0402：移掉 K 位数字（★★）
 
 
 > <u>**[力扣第 402 题](https://leetcode.cn/problems/remove-k-digits/)**</u>

@@ -1,4 +1,4 @@
-# 0401：二进制手表
+# 0401：二进制手表（★）
 
 
 > <u>**[力扣第 401 题](https://leetcode.cn/problems/binary-watch/)**</u>

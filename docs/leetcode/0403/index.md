@@ -49,7 +49,7 @@
 
 ```python
 def canCross(self, stones: List[int]) -> bool:
-    @lru_cache(None)
+    @cache
     def dfs(i, k):
         if i == last:
             return True
