@@ -74,8 +74,7 @@ def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
 - 以最终答案 x 为界
 	- 若 y<x，那么矩阵中小于等于 y 的元素小于 k个
 	- 若 y>=x，矩阵中小于等于 y 的元素大于等于 k个
-- 令 check(x) 代表矩阵中小于等于 x 的元素是否大于等于 k 个，
-二分查找第一个满足 check(x) 为真的 x 即可
+- 令 check(x) 代表矩阵中小于等于 x 的元素是否大于等于 k 个，二分查找第一个满足 check(x) 为真的 x 即可
 - 具体求 check(x)，每一行二分查找 x 的位置即可
 
 ## 解答

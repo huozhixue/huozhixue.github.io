@@ -40,18 +40,20 @@
 
 ## 分析
 
+可以类似 {{< lc "0066" >}}，先转为数组，模拟进位加分后再转为链表。也可以用递归，直接修改节点值。
+
 ## 解答
 
 ```python
 def plusOne(self, head: ListNode) -> ListNode:
-	def help(node):
+	def dfs(node):
 		if not node:
 			return 1
-		s = node.val + help(node.next)
+		s = node.val + dfs(node.next)
 		node.val = s % 10
 		return s // 10
 	
-	carry = help(head)
+	carry = dfs(head)
 	return ListNode(1, next=head) if carry else head
 ```
 28 ms

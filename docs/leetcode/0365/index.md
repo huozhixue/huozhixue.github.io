@@ -54,8 +54,7 @@
 注意到有效的操作对应的容量变化只能是 ±x、±y、0：
 - 有效的 z 必然能表示为 ax+by（a、b为整数）
 - 反过来，若 z 能表示为 ax+by（a、b为整数），且 z<=x+y，可以构造出方案得到 z
-- 根据 [裴蜀定理](//oi-wiki.org/math/number-theory/bezouts/)，z 能表示为 ax+by（a、b为整数）
-等价于 z 是 a、b 的最大公约数的倍数
+- 根据 [裴蜀定理](//oi-wiki.org/math/number-theory/bezouts/)，z 能表示为 ax+by（a、b为整数）等价于 z 是 a、b 的最大公约数的倍数
 - 因此满足 z<=x+y 且 z%gcd(x,y)==0 即可
 
 ## 解答

@@ -1,4 +1,4 @@
-# 0379：电话目录管理系统（★）
+# 0379：电话目录管理系统
 
 
 > <u>**[力扣第 379 题](https://leetcode.cn/problems/design-phone-directory/)**</u>
@@ -54,6 +54,8 @@ directory.check(2);
 
 
 ## 分析
+
+维护一个哈希表即可。
 
 ## 解答
 

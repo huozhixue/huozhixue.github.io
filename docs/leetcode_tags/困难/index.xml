@@ -3,7 +3,14 @@
         <title>困难 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/</link>
         <description>困难 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 13 Mar 2022 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>2302：统计得分小于 K 的子数组数目（★）</title>
+    <link>https://huozhixue.github.io/leetcode/2302/</link>
+    <pubDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2302/</guid>
+    <description><![CDATA[力扣第 80 场双周赛第 4 题 题目 一个数组的 分数 定义为数组之和 乘以 数组的长度。 比方说，[1, 2, 3, 4, 5] 的分数为 (1 + 2 + 3 + 4 + 5) * 5 = 75 。 给你一个正整]]></description>
+</item><item>
     <title>2203：得到要求路径的最小带权子图（★★★）</title>
     <link>https://huozhixue.github.io/leetcode/2203/</link>
     <pubDate>Sun, 13 Mar 2022 11:00:00 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2003/</guid>
     <description><![CDATA[力扣第 258 场周赛第 4 题 题目 有一棵根节点为 0 的 家族树 ，总共包含 n 个节点，节点编号为 0 到 n - 1 。给你一个下标从 0 开始的整数数组 parents ，其中 parents[i] 是节点 i 的]]></description>
-</item><item>
-    <title>1998：数组的最大公因数排序（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1998/</link>
-    <pubDate>Sun, 05 Sep 2021 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1998/</guid>
-    <description><![CDATA[力扣第 257 场周赛第 4 题 题目 给你一个整数数组 nums ，你可以在 nums 上执行下述操作 任意次 ： 如果 gcd(nums[i], nums[j]) &gt; 1 ，交换 nums[i] 和 nums[j] 的位置。其中 gcd(nums[i], nums[j]) 是 nums[i] 和 nums[j] 的最大公因数。 如]]></description>
 </item></channel>
 </rss>
