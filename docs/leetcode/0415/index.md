@@ -47,7 +47,7 @@
 
 ## 分析
 
-和 0067 类似，将除数换成 10 即可。
+和 {{< lc "0067">}} 类似，将除数换成 10 即可。
 
 
 ## 解答
@@ -58,9 +58,8 @@ def addStrings(self, num1: str, num2: str) -> str:
 	while i>=0 or j>=0 or carry:
 		x = int(num1[i]) if i>=0 else 0
 		y = int(num2[j]) if j>=0 else 0
-		s = x+y+carry
-		res += str(s%10)
-		carry = s//10
+		carry, r = divmod(x+y+carry, 10)
+		res += str(r)
 		i -= 1
 		j -= 1
 	return res[::-1]

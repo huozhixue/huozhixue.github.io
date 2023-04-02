@@ -38,13 +38,16 @@
 
 ### #1
 
-令 s=sum(nums)，s 为奇数时显然无解。s 为偶数时，问题等价于找子集使得和为 s//2。
+令 s=sum(nums)。
+- s 为奇数时显然无解
+- s 为偶数时，问题等价于分割成子集和为 s//2
 
 注意到 s//2 最大为 10^4，于是考虑递推 nums[:i] 能得到的所有子集和。
 
-令 dp[i] 代表nums[:i] 能得到的所有小于等于 s//2 的子集和，那么
+令 dp[i] 代表nums[:i] 能得到的所有 <=s//2 的子集和，那么
 
-    dp[i] = dp[i-1] | {x+nums[i-1] for x in dp[i-1] if x+nums[i-1]<=s//2}
+$$dp[i] = dp[i-1] \ | \ \\{x+nums[i-1] \\}_
+{\substack{x \in dp[i-1] \\\ if \ x+nums[i-1]<=s//2} }$$
     
 只要递推过程中找到 s//2 即为真。
 
@@ -66,7 +69,7 @@ def canPartition(self, nums: List[int]) -> bool:
 
 ### #2
 
-还有个巧妙的想法，可以将集合状态压缩为一个数 state，然后集合内所有数加上 num 得到的集合即是 state<<num。
+还有个巧妙的想法，可以将集合状态压缩为一个数 st，然后集合内所有数加上 num 得到的集合即是 st<<num。
 
 这样显著优化了递推的时间。
 
@@ -74,15 +77,15 @@ def canPartition(self, nums: List[int]) -> bool:
 
 ```python
 def canPartition(self, nums: List[int]) -> bool:
-    s = sum(nums)
-    if s % 2:
-        return False
-    state = 1
-    for num in nums:
-        state |= state << num
-        if state & (1 << (s//2)):
-            return True
-    return False
+	s = sum(nums)
+	if s % 2:
+		return False
+	st = 1
+	for num in nums:
+		st |= st << num
+		if st & (1 << (s//2)):
+			return True
+	return False
 ```
-32 ms
+24 ms
 

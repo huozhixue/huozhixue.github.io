@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0416\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  456 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  446 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0416\/","datePublished": "2016-02-20T00:00:00+08:00","dateModified": "2016-02-20T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0416：分割等和子集（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-20">2016-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 456 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-20">2016-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 446 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0416/" class="leancloud_visitors" data-flag-title="0416：分割等和子集（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -153,11 +153,15 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>令 s=sum(nums)，s 为奇数时显然无解。s 为偶数时，问题等价于找子集使得和为 s//2。</p>
+<p>令 s=sum(nums)。</p>
+<ul>
+<li>s 为奇数时显然无解</li>
+<li>s 为偶数时，问题等价于分割成子集和为 s//2</li>
+</ul>
 <p>注意到 s//2 最大为 10^4，于是考虑递推 nums[:i] 能得到的所有子集和。</p>
-<p>令 dp[i] 代表nums[:i] 能得到的所有小于等于 s//2 的子集和，那么</p>
-<pre><code>dp[i] = dp[i-1] | {x+nums[i-1] for x in dp[i-1] if x+nums[i-1]&lt;=s//2}
-</code></pre>
+<p>令 dp[i] 代表nums[:i] 能得到的所有 &lt;=s//2 的子集和，那么</p>
+<p>$$dp[i] = dp[i-1] \ | \ \{x+nums[i-1] \}_
+{\substack{x \in dp[i-1] \\ if \ x+nums[i-1]&lt;=s//2} }$$</p>
 <p>只要递推过程中找到 s//2 即为真。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -191,7 +195,7 @@
 </div>
 </div><p>380 ms</p>
 <h3 id="2">#2</h3>
-<p>还有个巧妙的想法，可以将集合状态压缩为一个数 state，然后集合内所有数加上 num 得到的集合即是 state&laquo;num。</p>
+<p>还有个巧妙的想法，可以将集合状态压缩为一个数 st，然后集合内所有数加上 num 得到的集合即是 st&laquo;num。</p>
 <p>这样显著优化了递推的时间。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -209,18 +213,18 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">canPartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">    <span class="n">state</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">state</span> <span class="o">|=</span> <span class="n">state</span> <span class="o">&lt;&lt;</span> <span class="n">num</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">state</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">s</span><span class="o">//</span><span class="mi">2</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">	<span class="n">st</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">st</span> <span class="o">|=</span> <span class="n">st</span> <span class="o">&lt;&lt;</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">st</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">s</span><span class="o">//</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">False</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>32 ms</p>
+</div><p>24 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -240,7 +244,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

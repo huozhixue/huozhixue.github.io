@@ -47,16 +47,14 @@ def addBinary(self, a: str, b: str) -> str:
 ### #2
 
 也可以模拟进位加法，将除数换成 2 即可。
-
 ```python
 def addBinary(self, a: str, b: str) -> str:
 	res, carry, i, j = '', 0, len(a)-1, len(b)-1
 	while i>=0 or j>=0 or carry:
 		x = int(a[i]) if i>=0 else 0
 		y = int(b[j]) if j>=0 else 0
-		s = x+y+carry
-		res += str(s%2)
-		carry = s//2
+		carry, r = divmod(x+y+carry, 2)
+		res += str(r)
 		i -= 1
 		j -= 1
 	return res[::-1]
