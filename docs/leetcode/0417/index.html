@@ -7,30 +7,30 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0430：扁平化多级双向链表（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0430：扁平化多级双向链表（★）" />
-<meta property="og:description" content="力扣第 430 题 题目 你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 子指针 。这个子指针可能指向一个单独的双向链表，也" />
+        <title>0417：太平洋大西洋水流问题（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0417：太平洋大西洋水流问题（★★）" />
+<meta property="og:description" content="力扣第 417 题 题目 有一个 m × n 的矩形岛屿，与 太平洋 和 大西洋 相邻。 “太平洋” 处于大陆的左边界和上边界，而 “大西洋” 处于大陆的右边界和下边界。 这个岛" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0430/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-03-05T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-03-05T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/0417/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2016-02-21T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-02-21T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0430：扁平化多级双向链表（★）"/>
-<meta name="twitter:description" content="力扣第 430 题 题目 你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 子指针 。这个子指针可能指向一个单独的双向链表，也"/>
+<meta name="twitter:title" content="0417：太平洋大西洋水流问题（★★）"/>
+<meta name="twitter:description" content="力扣第 417 题 题目 有一个 m × n 的矩形岛屿，与 太平洋 和 大西洋 相邻。 “太平洋” 处于大陆的左边界和上边界，而 “大西洋” 处于大陆的右边界和下边界。 这个岛"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0430/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0429/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0417/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0416/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0419/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0430：扁平化多级双向链表（★）",
+        "headline": "0417：太平洋大西洋水流问题（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0430\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  749 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0430\/","datePublished": "2016-03-05T00:00:00+08:00","dateModified": "2016-03-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0417\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  452 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0417\/","datePublished": "2016-02-21T00:00:00+08:00","dateModified": "2016-02-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0430：扁平化多级双向链表（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0417：太平洋大西洋水流问题（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-05">2016-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 749 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0430/" class="leancloud_visitors" data-flag-title="0430：扁平化多级双向链表（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-21">2016-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 452 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0417/" class="leancloud_visitors" data-flag-title="0417：太平洋大西洋水流问题（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,81 +121,39 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/" target="_blank" rel="noopener noreffer">力扣第 430 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/pacific-atlantic-water-flow/" target="_blank" rel="noopener noreffer">力扣第 417 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 <strong>子指针</strong> 。这个子指针可能指向一个单独的双向链表，也包含这些特殊的节点。这些子列表可以有一个或多个自己的子列表，以此类推，以生成如下面的示例所示的 <strong>多层数据结构</strong> 。</p>
-<p>给定链表的头节点 <font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">head</span></span></font></font> ，将链表 <strong>扁平化</strong> ，以便所有节点都出现在单层双链表中。让 <code>curr</code> 是一个带有子列表的节点。子列表中的节点应该出现在<strong>扁平化列表</strong>中的 <code>curr</code> <strong>之后</strong> 和 <code>curr.next</code> <strong>之前</strong> 。</p>
-<p>返回 <em>扁平列表的 <code>head</code> 。列表中的节点必须将其 <strong>所有</strong> 子指针设置为 <code>null</code> 。</em></p>
+<p>有一个 <code>m × n</code> 的矩形岛屿，与 <strong>太平洋</strong> 和 <strong>大西洋</strong> 相邻。 <strong>“太平洋” </strong>处于大陆的左边界和上边界，而 <strong>“大西洋”</strong> 处于大陆的右边界和下边界。</p>
+<p>这个岛被分割成一个由若干方形单元格组成的网格。给定一个 <code>m x n</code> 的整数矩阵 <code>heights</code> ， <code>heights[r][c]</code> 表示坐标 <code>(r, c)</code> 上单元格 <strong>高于海平面的高度</strong> 。</p>
+<p>岛上雨水较多，如果相邻单元格的高度 <strong>小于或等于</strong> 当前单元格的高度，雨水可以直接向北、南、东、西流向相邻单元格。水可以从海洋附近的任何单元格流入海洋。</p>
+<p>返回网格坐标 <code>result</code> 的 <strong>2D 列表</strong> ，其中 <code>result[i] = [r<sub>i</sub>, c<sub>i</sub>]</code> 表示雨水从单元格 <code>(ri, ci)</code> 流动 <strong>既可流向太平洋也可流向大西洋</strong> 。</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/11/09/flatten11.jpg" style="height:339px; width:700px" /></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/06/08/waterflow-grid.jpg" /></p>
 <pre>
-<strong>输入：</strong>head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
-<strong>输出：</strong>[1,2,3,7,8,11,12,9,10,4,5,6]
-<strong>解释：</strong>输入的多级列表如上图所示。
-扁平化后的链表如下图：
-<img src="https://assets.leetcode.com/uploads/2021/11/09/flatten12.jpg" style="height:69px; width:1000px" />
+<strong>输入:</strong> heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
+<strong>输出:</strong> [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
 </pre>
 <p><strong>示例 2：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/11/09/flatten2.1jpg" style="height:200px; width:200px" /></p>
 <pre>
-<strong>输入：</strong>head = [1,2,null,3]
-<strong>输出：</strong>[1,3,2]
-<strong>解释：</strong>输入的多级列表如上图所示。
-扁平化后的链表如下图：
-<img src="https://assets.leetcode.com/uploads/2021/11/24/list.jpg" style="height:87px; width:300px" />
-</pre>
-<p><strong>示例 3：</strong></p>
-<pre>
-<strong>输入：</strong>head = []
-<strong>输出：</strong>[]
-<strong>说明：</strong>输入中可能存在空列表。
+<strong>输入:</strong> heights = [[2,1],[1,2]]
+<strong>输出:</strong> [[0,0],[0,1],[1,0],[1,1]]
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li>节点数目不超过 <code>1000</code></li>
-<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
-</ul>
-<p><strong>如何表示测试用例中的多级链表？</strong></p>
-<p>以 <strong>示例 1</strong> 为例：</p>
-<pre>
-1---2---3---4---5---6--NULL
-|
-7---8---9---10--NULL
-|
-11--12--NULL</pre>
-<p>序列化其中的每一级之后：</p>
-<pre>
-[1,2,3,4,5,6,null]
-[7,8,9,10,null]
-[11,12,null]
-</pre>
-<p>为了将每一级都序列化到一起，我们需要每一级中添加值为 null 的元素，以表示没有节点连接到上一级的上级节点。</p>
-<pre>
-[1,2,3,4,5,6,null]
-[null,null,7,8,9,10,null]
-[null,11,12,null]
-</pre>
-<p>合并所有序列化结果，并去除末尾的 null 。</p>
-<pre>
-[1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
-</pre>
-<ul>
+<li><code>m == heights.length</code></li>
+<li><code>n == heights[r].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 200</code></li>
+<li><code>0 &lt;= heights[r][c] &lt;= 10<sup>5</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>先考虑递归。有子链表时，调用递归程序将子链表扁平化，然后改变当前节点、子链表头尾节点、下一个节点的指针即可。</p>
-<p>递归程序应该返回扁平化后的尾节点。</p>
+<p>从每个单元格开始遍历，显然会有很多重复。因此考虑反过来，从边界往里面遍历。多源 dfs/bfs 分别求出太平洋/大西洋对应的格子列表，求交集即可。</p>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -213,75 +171,37 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="s1">&#39;Node&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Node&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">p</span> <span class="ow">and</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">next</span> <span class="ow">or</span> <span class="n">p</span><span class="o">.</span><span class="n">child</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">child</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">t</span> <span class="o">=</span> <span class="n">help</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">child</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">				<span class="n">t</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">					<span class="n">t</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">t</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">child</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">p</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span> <span class="o">=</span> <span class="n">t</span>
-</span></span><span class="line"><span class="cl">			<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">p</span>
-</span></span><span class="line"><span class="cl">	<span class="n">help</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">head</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pacificAtlantic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">heights</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Q</span><span class="p">,</span> <span class="n">vis</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">r</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">c</span><span class="p">),(</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">c</span><span class="p">),(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="o">-</span><span class="mi">1</span><span class="p">),(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">)]:</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">y</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">heights</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">heights</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">					<span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">					<span class="n">vis</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">vis</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">heights</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">heights</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pa</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ao</span> <span class="o">=</span> <span class="p">[(</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">pa</span><span class="p">)</span><span class="o">&amp;</span><span class="n">bfs</span><span class="p">(</span><span class="n">ao</span><span class="p">))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>44 ms</p>
-<h3 id="2">#2</h3>
-<p>也可以用迭代的方法。按 [p.next, p.child] 的顺序将节点入栈，每次出栈时改变当前节点和上一个节点的指针即可。</p>
-<h2 id="解答">解答</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="s1">&#39;Node&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Node&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">stack</span><span class="p">,</span> <span class="n">prev</span> <span class="o">=</span> <span class="p">[</span><span class="n">head</span><span class="p">],</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">node</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">node</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">prev</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">prev</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span>
-</span></span><span class="line"><span class="cl">			<span class="n">node</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">prev</span>
-</span></span><span class="line"><span class="cl">			<span class="n">stack</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">,</span><span class="n">node</span><span class="o">.</span><span class="n">child</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">			<span class="n">node</span><span class="o">.</span><span class="n">child</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">			<span class="n">prev</span> <span class="o">=</span> <span class="n">node</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">head</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>48 ms</p>
+</div><p>84 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-03-05</span>
+                <span>更新于 2016-02-21</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0430/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0417/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -290,14 +210,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/%E9%93%BE%E8%A1%A8/">链表</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">双向链表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0432/" class="prev" rel="prev" title="0432：全 O(1) 的数据结构（★★）"><i class="fas fa-angle-left fa-fw"></i>0432：全 O(1) 的数据结构（★★）</a>
-            <a href="/leetcode/0429/" class="next" rel="next" title="0429：N 叉树的层序遍历（★）">0429：N 叉树的层序遍历（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0419/" class="prev" rel="prev" title="0419：甲板上的战舰（★）"><i class="fas fa-angle-left fa-fw"></i>0419：甲板上的战舰（★）</a>
+            <a href="/leetcode/0416/" class="next" rel="next" title="0416：分割等和子集（★）">0416：分割等和子集（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

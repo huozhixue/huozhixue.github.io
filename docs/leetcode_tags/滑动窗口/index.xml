@@ -3,7 +3,14 @@
         <title>滑动窗口 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
         <description>滑动窗口 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>2398：预算内的最多机器人数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2398/</link>
+    <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2398/</guid>
+    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
+</item><item>
     <title>2302：统计得分小于 K 的子数组数目（★）</title>
     <link>https://huozhixue.github.io/leetcode/2302/</link>
     <pubDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</pubDate>
@@ -46,6 +53,13 @@
     <guid>https://huozhixue.github.io/leetcode/1425/</guid>
     <description><![CDATA[力扣第 186 场周赛第 4 题 题目 给你一个整数数组 nums 和一个整数 k ，请你返回 非空 子序列元素和的最大值，子序列需要满足：子序列中每两个 相邻 的整数 nums[i] 和 nums[j] ，它]]></description>
 </item><item>
+    <title>1423：可获得的最大点数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1423/</link>
+    <pubDate>Sun, 26 Apr 2020 10:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1423/</guid>
+    <description><![CDATA[力扣第 186 场周赛第 2 题 题目 几张卡牌 排成一行，每张卡牌都有一个对应的点数。点数由整数数组 cardPoints 给出。 每次行动，你可以从行的开头或者末尾拿一张卡牌，最]]></description>
+</item><item>
     <title>1208：尽可能使字符串相等（★）</title>
     <link>https://huozhixue.github.io/leetcode/1208/</link>
     <pubDate>Sun, 29 Sep 2019 10:40:00 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1052/</guid>
     <description><![CDATA[力扣第 138 场周赛第 2 题 题目 有一个书店老板，他的书店开了 n 分钟。每分钟都有一些顾客进入这家商店。给定一个长度为 n 的整数数组 customers ，其中 customers[i] 是在第 i 分钟]]></description>
-</item><item>
-    <title>1044：最长重复子串（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1044/</link>
-    <pubDate>Sun, 12 May 2019 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1044/</guid>
-    <description><![CDATA[力扣第 136 场周赛第 4 题 题目 给你一个字符串 s ，考虑其所有 重复子串 ：即 s 的（连续）子串，在 s 中出现 2 次或更多次。这些出现之间可能存在重叠。 返回 任意]]></description>
-</item><item>
-    <title>1004：最大连续1的个数 III（★）</title>
-    <link>https://huozhixue.github.io/leetcode/1004/</link>
-    <pubDate>Sun, 03 Mar 2019 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1004/</guid>
-    <description><![CDATA[力扣第 126 场周赛第 3 题 题目 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1 的最大个数 。 示例 1： 输入：nums = [1,1,1,0,0,0,1,1,1,1,0], K]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,14 @@
         <title>前缀和 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/</link>
         <description>前缀和 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%89%8D%E7%BC%80%E5%92%8C/" rel="self" type="application/rss+xml" /><item>
+    <title>2398：预算内的最多机器人数目（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2398/</link>
+    <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2398/</guid>
+    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
+</item><item>
     <title>2302：统计得分小于 K 的子数组数目（★）</title>
     <link>https://huozhixue.github.io/leetcode/2302/</link>
     <pubDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</pubDate>
@@ -17,6 +24,13 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1991/</guid>
     <description><![CDATA[力扣第 60 场双周赛第 1 题 题目 给你一个下标从 0 开始的整数数组 nums ，请你找到 最左边 的中间位置 middleIndex （也就是所有可能中间位置下标最小的一个）。 中间位置 middleIndex 是]]></description>
+</item><item>
+    <title>1423：可获得的最大点数（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1423/</link>
+    <pubDate>Sun, 26 Apr 2020 10:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1423/</guid>
+    <description><![CDATA[力扣第 186 场周赛第 2 题 题目 几张卡牌 排成一行，每张卡牌都有一个对应的点数。点数由整数数组 cardPoints 给出。 每次行动，你可以从行的开头或者末尾拿一张卡牌，最]]></description>
 </item><item>
     <title>1208：尽可能使字符串相等（★）</title>
     <link>https://huozhixue.github.io/leetcode/1208/</link>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0813/</guid>
     <description><![CDATA[力扣第 813 题 题目 给定数组 nums 和一个整数 k 。我们将给定的数组 nums 分成 最多 k 个相邻的非空子数组 。 分数 由每个子数组内的平均值的总和构成。 注意我们必须使用]]></description>
-</item><item>
-    <title>0724：寻找数组的中心下标</title>
-    <link>https://huozhixue.github.io/leetcode/0724/</link>
-    <pubDate>Sat, 24 Dec 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0724/</guid>
-    <description><![CDATA[力扣第 724 题 题目 给你一个整数数组 nums ，请计算数组的 中心下标 。 数组 中心下标 是数组的一个下标，其左侧所有元素相加的和等于右侧所有元素相加的和。 如果中]]></description>
-</item><item>
-    <title>0560：和为 K 的子数组（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0560/</link>
-    <pubDate>Wed, 13 Jul 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0560/</guid>
-    <description><![CDATA[力扣第 560 题 题目 给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的连续子数组的个数 。 示例 1： 输入：nums = [1,1,1], k = 2 输出：2 示例 2]]></description>
 </item></channel>
 </rss>

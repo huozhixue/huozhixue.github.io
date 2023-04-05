@@ -49,10 +49,10 @@
 def levelOrder(self, root: 'Node') -> List[List[int]]:
 	if not root:
 		return []
-	res, level = [], [root]
+	res, Q = [], [root]
 	while level:
-		res.append([node.val for node in level])
-		level = [child for node in level for child in node.children]
+		res.append([node.val for node in Q])
+		Q = [child for node in Q for child in node.children]
 	return res
 ```
 
