@@ -79,25 +79,28 @@
 
 将每个格子看作顶点，相邻格子的路径看作边，如果边的方向顺着数字，看作权重 0，否则权重 1。
 
-那么就是典型的最短路问题，用 dijkstra 即可。
+那么就是典型的最短路问题，用 dijkstra 或者 01bfs 即可。
 
 ## 解答
 
 ```python
 def minCost(self, grid: List[List[int]]) -> int:
-    m, n = len(grid), len(grid[0])
-    d, pq = {}, [(0, 0, 0)]
-    while pq:
-        w, i, j = heappop(pq)
-        if i==m-1 and j==n-1:
-            return w
-        if (i, j) in d:
-            continue
-        d[(i, j)] = w
-        for x, y, k in [(i, j+1, 1), (i, j-1, 2), (i+1, j, 3), (i-1, j, 4)]:
-            if 0<=x<m and 0<=y<n and (x, y) not in d:
-                heappush(pq, (w+(grid[i][j]!=k), x, y))
+	m, n = len(grid), len(grid[0])
+	Q, d = deque([(0, 0, 0)]), {}
+	while Q:
+		i, j, w = Q.popleft()
+		if (i,j)==(m-1,n-1):
+			return w
+		if (i, j) in d:
+			continue
+		d[(i,j)] = w
+		for x, y, k in [(i, j+1, 1), (i, j-1, 2), (i+1, j, 3), (i-1, j, 4)]:
+			if 0<=x<m and 0<=y<n and (x, y) not in d:
+				if grid[i][j]==k:
+					Q.appendleft((x,y,w))
+				else:
+					Q.append((x,y,w+1))
 ```
-256 ms
+180 ms
 
 
