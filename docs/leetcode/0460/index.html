@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0460\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  947 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  922 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0460\/","datePublished": "2016-04-04T00:00:00+08:00","dateModified": "2016-04-04T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0460：LFU 缓存（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-04">2016-04-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 947 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-04">2016-04-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 922 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0460/" class="leancloud_visitors" data-flag-title="0460：LFU 缓存（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -175,12 +175,14 @@ lfu.get(4);      // 返回 4
 <li>最多调用 <code>2 * 10<sup>5</sup></code> 次 <code>get</code> 和 <code>put</code> 方法</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p><a href="/leetcode/0146" title="0146" rel="noopener noreferrer">0146</a> 的升级版。需要先找到最小使用次数的键集合，再找到最久未使用的键。
-因此考虑用哈希表存 key 的使用次数 freq。而对于相同 freq 的键, 用 OrderedDict 维护顺序。</p>
-<p>get 和 put 时先得到 key 的使用次数 freq，从 freq 对应的字典中弹出 key，并添加到 freq+1 对应的字典中。
-如果是 put 新的 key 且容量达到上限，则找到最小使用次数 minFreq，从 minFreq 对应的 OrderedDict 中弹出首位元素。</p>
-<p>注意到当 get 或 put 已有 key 时，minFreq 只可能不变或加 1，而 put 新的 key 时，minFreq 变为 1。
-因此可以实现 O(1) 时间维护 minFreq。</p>
+<p><a href="/leetcode/0146" title="0146" rel="noopener noreferrer">0146</a> 的升级版。</p>
+<ul>
+<li>需要先找到最小使用次数的键集合，再找到最久未使用的键</li>
+<li>因此考虑用哈希表存 key 的使用次数 freq。对于相同 freq 的键, 用 OrderedDict 维护顺序</li>
+<li>get 和 put 时先得到 key 的使用次数 freq，从 freq 对应的字典中弹出 key，并添加到 freq+1 对应的字典中</li>
+<li>如果是 put 新的 key 且容量达到上限，则找到最小使用次数 minFreq，从 minFreq 对应的 OrderedDict 中弹出首位元素</li>
+<li>注意到当 get 或 put 已有 key 时，minFreq 只可能不变或加 1，而 put 新的 key 时，minFreq 变为 1</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -289,7 +291,7 @@ lfu.get(4);      // 返回 4
     </div>
 
     <div class="post-nav"><a href="/leetcode/0463/" class="prev" rel="prev" title="0463：岛屿的周长"><i class="fas fa-angle-left fa-fw"></i>0463：岛屿的周长</a>
-            <a href="/leetcode/0459/" class="next" rel="next" title="0459：重复的子字符串">0459：重复的子字符串<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0459/" class="next" rel="next" title="0459：重复的子字符串（★）">0459：重复的子字符串（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

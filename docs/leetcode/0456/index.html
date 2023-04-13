@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="力扣第 456 题 题目 给你一个整数数组 nums ，数组中共有 n 个整数。132 模式的子序列 由三个整数 nums[i]、nums[j] 和 nums[k] 组成，并同时满足：i &lt; j"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0456/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0454/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0459/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0456/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0455/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0457/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0456\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  670 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  545 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0456\/","datePublished": "2016-03-31T00:00:00+08:00","dateModified": "2016-03-31T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0456：132 模式（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-31">2016-03-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 670 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-31">2016-03-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 545 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0456/" class="leancloud_visitors" data-flag-title="0456：132 模式（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -162,8 +162,12 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>遍历 b=nums[j]，那么 a 取 min(nums[:j])，在 nums[j+1:] 中找 c 使得 a &lt; c &lt; b 即可。</p>
-<p>min(nums[:j]) 可以递推得到。而 nums[j+1:] 可以维护一个排序的子数组，然后二分查找。</p>
+<p>考虑遍历中间的 nums[j]</p>
+<ul>
+<li>往 j 左侧找到最小的数 nums[i]，然后在 j 右侧找介于两者之间的数 nums[k] 即可</li>
+<li>左侧最小值在遍历中即可维护</li>
+<li>右侧需要维护一个有序集合，然后二分查找。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -176,31 +180,30 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find132pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">a</span><span class="p">,</span> <span class="n">tmp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="kn">from</span> <span class="nn">sortedcontainers</span> <span class="kn">import</span> <span class="n">SortedList</span>
+</span></span><span class="line"><span class="cl">	<span class="n">a</span><span class="p">,</span> <span class="n">sl</span> <span class="o">=</span> <span class="n">inf</span><span class="p">,</span> <span class="n">SortedList</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">tmp</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="n">sl</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">k</span> <span class="o">=</span> <span class="n">bisect_right</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span> <span class="ow">and</span> <span class="n">tmp</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">pos</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_right</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">sl</span><span class="p">)</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">				<span class="k">return</span> <span class="kc">True</span>
 </span></span><span class="line"><span class="cl">		<span class="n">a</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">False</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N*log N)，76 ms</p>
+</div><p>时间 $O(N \ log N)$，772 ms</p>
 <h3 id="2">#2</h3>
-<p>还有个巧妙的单调栈解法。从右往左遍历，维护一个 max_c 代表满足 32 模式的最大的 2 ，维护一个 stack 保存比 max_c 大的所有数。
-遍历到 num 时：</p>
-<pre><code>如果 num &lt; max_c					显然 num 可以作为 132 模式的 1，返回 True
-如果 num == max_c					不影响，可以直接跳过
-如果 max_c &lt; num &lt; min(stack)		将 num 添加到 stack 中
-如果 num == min(stack)				不影响，可以直接跳过
-如果 num &gt; min(stack)				min(stack) 可以作为新的 max_c，将其删除。循环操作直到转为其它情况。
-</code></pre>
-<p>注意到添加 num 时会将 stack 中小于 num 的值删除，因此 stack 是单调递减的，每次删除操作在结尾。所以 stack 是一个单调栈。</p>
+<p>还可以考虑遍历右边的 nums[k]：</p>
+<ul>
+<li>往 k 左侧找到第一个更大的数 nums[j]，然后在 j 左侧找最小的数 nums[i] 即可</li>
+<li>前缀最小值可以在遍历时维护</li>
+<li>找上一个最大元素即是典型的单调栈问题</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -217,18 +220,18 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find132pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">stack</span><span class="p">,</span> <span class="n">max_c</span> <span class="o">=</span> <span class="p">[],</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="n">max_c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dp</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">inf</span><span class="p">],</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">dp</span><span class="p">[</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span><span class="o">&lt;</span><span class="n">c</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">max_c</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="n">max_c</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="n">dp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">False</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N)，44 ms</p>
+</div><p>时间 $O(N)$，216 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -254,8 +257,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0459/" class="prev" rel="prev" title="0459：重复的子字符串"><i class="fas fa-angle-left fa-fw"></i>0459：重复的子字符串</a>
-            <a href="/leetcode/0454/" class="next" rel="next" title="0454：四数相加 II（★）">0454：四数相加 II（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0457/" class="prev" rel="prev" title="0457：环形数组是否存在循环（★）"><i class="fas fa-angle-left fa-fw"></i>0457：环形数组是否存在循环（★）</a>
+            <a href="/leetcode/0455/" class="next" rel="next" title="0455：分发饼干">0455：分发饼干<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,4 +1,4 @@
-# 0459：重复的子字符串
+# 0459：重复的子字符串（★）
 
 
 > <u>**[力扣第 459 题](https://leetcode.cn/problems/repeated-substring-pattern/)**</u>
@@ -48,9 +48,9 @@
 
 ### #1
 
-假如长为 n 的 s 能由长 m 的子串 ss 组成，那么显然 n 是 m 的倍数。
+假如长为 n 的 s 能由长 m 的子串 sub 组成，显然 n 是 m 的倍数。
 
-因此考虑遍历所有 n 的因数（不包括 n）m，判断 s 是否由 s[:m] 重复构成即可。
+因此考虑遍历 n 的因数 m，判断 s 是否由 s[:m] 重复构成即可。
 
 ```python
 def repeatedSubstringPattern(self, s: str) -> bool:
@@ -66,9 +66,8 @@ def repeatedSubstringPattern(self, s: str) -> bool:
 
 ### #2
 
-还有个巧妙的方法，s 由子串 ss 重复组成等价于 ss 是 s[1:]+s[:-1] 的子串。
+还有个经典的 [方法](https://leetcode-cn.com/problems/repeated-substring-pattern/solution/zhong-fu-de-zi-zi-fu-chuan-by-leetcode-solution/)，s 由子串 sub 重复组成等价于 s 是 s[1:]+s[:-1] 的子串。
 
-这也是一个经典的方法：[证明](https://leetcode-cn.com/problems/repeated-substring-pattern/solution/zhong-fu-de-zi-zi-fu-chuan-by-leetcode-solution/)
 
 ## 解答
 

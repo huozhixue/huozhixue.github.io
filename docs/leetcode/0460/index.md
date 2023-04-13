@@ -67,14 +67,12 @@ lfu.get(4);      // 返回 4
 
 ## 分析
 
-{{< lc "0146" >}} 的升级版。需要先找到最小使用次数的键集合，再找到最久未使用的键。
-因此考虑用哈希表存 key 的使用次数 freq。而对于相同 freq 的键, 用 OrderedDict 维护顺序。
-
-get 和 put 时先得到 key 的使用次数 freq，从 freq 对应的字典中弹出 key，并添加到 freq+1 对应的字典中。
-如果是 put 新的 key 且容量达到上限，则找到最小使用次数 minFreq，从 minFreq 对应的 OrderedDict 中弹出首位元素。
-
-注意到当 get 或 put 已有 key 时，minFreq 只可能不变或加 1，而 put 新的 key 时，minFreq 变为 1。
-因此可以实现 O(1) 时间维护 minFreq。
+{{< lc "0146" >}} 的升级版。
+- 需要先找到最小使用次数的键集合，再找到最久未使用的键
+- 因此考虑用哈希表存 key 的使用次数 freq。对于相同 freq 的键, 用 OrderedDict 维护顺序
+- get 和 put 时先得到 key 的使用次数 freq，从 freq 对应的字典中弹出 key，并添加到 freq+1 对应的字典中
+- 如果是 put 新的 key 且容量达到上限，则找到最小使用次数 minFreq，从 minFreq 对应的 OrderedDict 中弹出首位元素
+- 注意到当 get 或 put 已有 key 时，minFreq 只可能不变或加 1，而 put 新的 key 时，minFreq 变为 1
 
 ## 解答
 
