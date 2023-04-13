@@ -42,13 +42,35 @@
 
 ### #1
 
-二叉搜索树根据前序遍历即可重构。
-
-反序列化可以用 dfs 模拟序列化的过程。从遍历列表 queue 中弹出第一个元素作为 root，
-然后进入下一层的左右子树，元素大于限定值时就返回上一层，即可重构出二叉树。
+类似 {{< lc "0428" >}}，最简单粗暴的是用 json。
 
 ```python
+class Codec:
 
+    def serialize(self, root):
+        def dfs(node):
+            if not node:
+                return 'None'
+            return {'val': node.val, 'left':dfs(node.left), 'right':dfs(node.right) }
+        return json.dumps(dfs(root))
+
+    def deserialize(self, data): 
+        def dfs(data):
+            if data=='None':
+                return None
+            return TreeNode(data['val'], dfs(data['left']), dfs(data['right']))
+        return dfs(json.loads(data))
+```
+84 ms
+
+### #2
+
+还可以根据前序遍历重构：
+- 反序列化可以用 dfs 模拟序列化的过程
+- 从遍历列表 Q 中弹出第一个元素作为 root
+- 进入下一层的左右子树，元素大于限定值时就返回上一层
+
+```python
 class Codec:
 
     def serialize(self, root):
@@ -56,26 +78,25 @@ class Codec:
             filter(None, [str(root.val), self.serialize(root.left), self.serialize(root.right)]))
 
     def deserialize(self, data):
-        def help(stop):
-            if not queue or queue[0] > stop:
+        def dfs(ma):
+            if not Q or Q[0] > ma:
                 return None
-            val = queue.popleft()
-            return TreeNode(val, help(val), help(stop))
+            x = Q.popleft()
+            return TreeNode(x, dfs(x), dfs(ma))
 
-        queue = deque(int(val) for val in data.split(',') if val)
-        return help(float('inf'))
+        Q = deque(int(x) for x in data.split(',') if x)
+        return dfs(inf)
 ```
 
-100 ms
+72 ms
 
-### #2
+### #3
 
-如果每个节点的值用固定长度来表示，那么分割符也可以去掉了。因为数值范围为 0-10^4，所以用两个字节就可以表示了。
+如果每个节点的值用固定长度来表示，那么分割符也可以去掉了。因为数值范围为 10^4，所以用两个字节就可以表示了。
 
 ## 解答
 
 ```python
-
 class Codec:
 
     def int2str(self, val):
@@ -88,16 +109,15 @@ class Codec:
         return '' if not root else self.int2str(root.val) + self.serialize(root.left) + self.serialize(root.right)
 
     def deserialize(self, data):
-        def help(stop):
-            if not queue or queue[0] > stop:
+        def dfs(ma):
+            if not Q or Q[0] > ma:
                 return None
-            val = queue.popleft()
-            return TreeNode(val, help(val), help(stop))
+            x = Q.popleft()
+            return TreeNode(x, dfs(x), dfs(ma))
 
-        queue = deque(self.str2int(data[i:i+2]) for i in range(0, len(data), 2))
-        return help(float('inf'))
+        Q = deque(self.str2int(data[i:i+2]) for i in range(0, len(data), 2))
+        return dfs(inf)
 ```
-
-84 ms
+72 ms
 
 

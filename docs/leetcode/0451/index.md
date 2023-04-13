@@ -50,15 +50,14 @@
 
 ## 分析
 
-Counter 然后用 sort 或 Counter().most_common() 或 heapq.nlargest 即可。
+计数即可。
 
 ## 解答
 
 ```python
 def frequencySort(self, s: str) -> str:
-	return ''.join(char*freq for char, freq in Counter(s).most_common())
+	return ''.join(c*w for c, w in Counter(s).most_common())
 ```
-
 48 ms
 
 
