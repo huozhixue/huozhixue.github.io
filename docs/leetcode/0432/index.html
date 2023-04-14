@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="力扣第 432 题 题目 请你设计一个用于存储字符串计数的数据结构，并能够返回计数最小和最大的字符串。 实现 AllOne 类： AllOne() 初始化数据结构的对象。 inc(String key) 字符串 key 的计"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0429/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0433/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0432/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0431/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0433/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0432\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  956 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  950 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0432\/","datePublished": "2016-03-07T00:00:00+08:00","dateModified": "2016-03-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0432：全 O(1) 的数据结构（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-07">2016-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 956 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-07">2016-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 950 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0432/" class="leancloud_visitors" data-flag-title="0432：全 O(1) 的数据结构（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -232,7 +232,7 @@ allOne.getMinKey(); // 返回 "leet"
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>单次操作时间复杂度 O(log N)，188 ms</p>
+</div><p>单次操作时间 $O(log N)$，188 ms</p>
 <h3 id="2">#2</h3>
 <p>要求全部单次操作 O(1)，考虑用 双向链表+哈希表 来维护 &lt;计数，key&gt; 的有序集合 。</p>
 <p>具体来说：</p>
@@ -244,7 +244,13 @@ allOne.getMinKey(); // 返回 "leet"
 <li>哈希表保存 key 对应的节点</li>
 </ul>
 </li>
-<li>Inc/Dec 时，将 key 从对应的节点 x 弹出，加入到节点 x+1/x-1 中。若没有对应的节点，就新建一个。若节点 x 的 key 集合为空了，就去掉该节点。</li>
+<li>Inc/Dec 时
+<ul>
+<li>将 key 从对应的节点 x 弹出，加入到节点 x+1/x-1 中</li>
+<li>若没有对应的节点，就新建一个</li>
+<li>若节点 x 的 key 集合为空了，就去掉该节点</li>
+</ul>
+</li>
 <li>GetMaxKey 和 GetMinKey 时，取首/尾节点（排除哑结点）的任意一个 key 返回即可</li>
 </ul>
 <h2 id="解答">解答</h2>
@@ -383,7 +389,7 @@ allOne.getMinKey(); // 返回 "leet"
     </div>
 
     <div class="post-nav"><a href="/leetcode/0433/" class="prev" rel="prev" title="0433：最小基因变化（★）"><i class="fas fa-angle-left fa-fw"></i>0433：最小基因变化（★）</a>
-            <a href="/leetcode/0429/" class="next" rel="next" title="0429：N 叉树的层序遍历（★）">0429：N 叉树的层序遍历（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0431/" class="next" rel="next" title="0431：将 N 叉树编码为二叉树（★★）">0431：将 N 叉树编码为二叉树（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0464\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  736 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  697 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0464\/","datePublished": "2016-04-08T00:00:00+08:00","dateModified": "2016-04-08T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0464：我能赢吗（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-08">2016-04-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 736 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-08">2016-04-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 697 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0464/" class="leancloud_visitors" data-flag-title="0464：我能赢吗（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -159,14 +159,14 @@
 <li><code>0 &lt;= desiredTotal &lt;= 300</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>为了方便，令 M=maxChoosableInteger，T=desiredTotal。</p>
-<p>假如 M*(M+1)//2&lt;T，显然没有人能赢。否则：</p>
+<p>典型的博弈问题：</p>
 <ul>
-<li>如果第一个玩家选了 x 后第二个玩家要输，则第一个玩家必赢</li>
-<li>第一个玩家选了 x 后，第二个玩家面临的情况等价于可选集合为 {原集合去掉 x}、目标为 T-x 的子问题</li>
+<li>为了方便，令 M=maxChoosableInteger，T=desiredTotal</li>
+<li>先排除特殊情况 M*(M+1)//2&lt;T，此时没有人达到 T，返回 False</li>
+<li>否则，令 dfs(A, T) 代表可选集合为 A、 目标 T 的情况下第一个玩家是否必胜</li>
+<li>第一个玩家选了 x 后，即转为递归子问题 dfs(A-{x},T-x)</li>
 </ul>
-<p>因此令 dfs(A, T) 代表可选集合为 A、 目标 T 的情况下第一个玩家是否稳赢，即可递归。</p>
-<p>为了方便表示集合，可以用状态压缩。</p>
+<p>可以将集合状态压缩为一个数，即可用记忆化递归。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -185,18 +185,18 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">canIWin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxChoosableInteger</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">desiredTotal</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="ow">not</span> <span class="n">state</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">T</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">dfs</span><span class="p">(</span><span class="n">state</span><span class="o">|</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="p">),</span> <span class="n">T</span><span class="o">-</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">	<span class="nd">@cache</span>
+</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="ow">not</span> <span class="n">st</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">T</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">dfs</span><span class="p">(</span><span class="n">st</span><span class="o">|</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="p">),</span> <span class="n">T</span><span class="o">-</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">					<span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">False</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">,</span> <span class="n">T</span> <span class="o">=</span> <span class="n">maxChoosableInteger</span><span class="p">,</span> <span class="n">desiredTotal</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">M</span><span class="o">*</span><span class="p">(</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">T</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">M</span><span class="p">,</span> <span class="n">T</span> <span class="o">=</span> <span class="n">maxChoosableInteger</span><span class="p">,</span> <span class="n">desiredTotal</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">M</span><span class="o">*</span><span class="p">(</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">T</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>2680 ms</p>

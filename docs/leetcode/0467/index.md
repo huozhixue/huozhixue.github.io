@@ -51,21 +51,19 @@
 
 ## 分析
 
-容易想到用 dp[i] 代表以 p[i] 结尾的在 s 中的子串数量，即可递推。
-
-但这样存在重复计算的问题，比如 'cac' 中 'c' 会被计算两次。
-一个巧妙的想法是只需要找到以 'c' 结尾的最长的在 s 中的子串，只统计这一个 'c' 即可。
-
-因此令 dp[x] 代表以 x 结尾的在 s 中的最长子串长度，最后 sum(dp[x]) 即为所求。
+- 容易想到用 dp[i] 代表以 s[i] 结尾的符合的最长子串，即可递推
+- 但这样存在重复计算的问题，比如 'cac' 中 'c' 会被计算两次
+- 因此考虑针对字符值而不是下标递推
+- 令 dp[c] 代表以字符 c 结尾的符合的最长子串，递推即可
 
 ```python
-def findSubstringInWraproundString(self, p: str) -> int:
-    dp, cnt = defaultdict(int), 0
-    for i, x in enumerate(p):
-        cnt = cnt+1 if i and (ord(x)-ord(p[i-1]))%26==1 else 1
-        dp[x] = max(dp[x], cnt)
-    return sum(dp.values())
+def findSubstringInWraproundString(self, s: str) -> int:
+	dp, cnt = defaultdict(int), 0
+	for i, c in enumerate(s):
+		cnt = cnt+1 if i and (ord(c)-ord(s[i-1]))%26==1 else 1
+		dp[c] = max(dp[c], cnt)
+	return sum(dp.values())
 ```
-84 ms
+100 ms
 
 
