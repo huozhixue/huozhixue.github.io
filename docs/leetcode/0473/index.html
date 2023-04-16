@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="力扣第 473 题 题目 你将得到一个整数数组 matchsticks ，其中 matchsticks[i] 是第 i 个火柴棒的长度。你要用 所有的火柴棍 拼成一个正方形。你 不能折断 任何一根火柴棒，但你可以把它们"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0473/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0470/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0474/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0473/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0471/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0474/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0473\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  495 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  478 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0473\/","datePublished": "2016-04-17T00:00:00+08:00","dateModified": "2016-04-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0473：火柴拼正方形（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-17">2016-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 495 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-17">2016-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 478 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0473/" class="leancloud_visitors" data-flag-title="0473：火柴拼正方形（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -151,15 +151,14 @@
 </ul>
 <h2 id="分析">分析</h2>
 <p>为了方便，令 A=matchsticks，s=sum(A)。</p>
-<p>显然当 s%4!=0 时非真。否则，要将 A 划分为四个和为 t=s//4 的子集。</p>
 <ul>
-<li>暴力法就是遍历 A 的所有排列，判断是否能分割成功</li>
-<li>假如排列的最后一个数是 x，那么只要 A-{x} 能组成 3 个和 t 的子集，即可成功</li>
-<li>一般性地，令 dfs(B) 代表集合 B 能否组成 sum(B)//t 个和 t 的子集，尝试递推</li>
-<li>从 B 中任选一个数 x，集合 C=B-x，只要 dfs(C) 为真且 x+sum(C)%t&lt;=t，dfs(B) 即为真</li>
+<li>显然当 s%4!=0 时非真。否则，要将 A 划分为四个和为 q=s//4 的子集</li>
+<li>假如排列的最后一个数是 x，那么只要 A-{x} 能组成 3 个和 q 的子集，即可成功</li>
+<li>一般性地，令 dfs(B) 代表集合 B 能否组成 sum(B)//q 个和 t 的子集，尝试递推</li>
+<li>从 B 中任选一个数 x，集合 C=B-x，只要 dfs(C) 为真且 x+sum(C)%q&lt;=q，dfs(B) 即为真</li>
+<li>为了方便，可以令 dfs(B) 返回 sum(B)%q，若集合 B 非真，则返回 -1</li>
 </ul>
-<p>为了方便，可以令 dfs(B) 返回 sum(B)%t，若集合 B 非真，则返回 -1。</p>
-<p>同时，可以将集合状态压缩为一个数，方便递归。</p>
+<p>将集合状态压缩为一个数，即可使用记忆化递归。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -175,23 +174,33 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">makesquare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matchsticks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">matchsticks</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="mi">4</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">matchsticks</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matchsticks</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="ow">not</span> <span class="n">st</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">)</span> <span class="ow">and</span> <span class="n">dp</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">s</span><span class="o">//</span><span class="mi">4</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">dp</span><span class="p">[</span><span class="n">st</span><span class="o">|</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">%</span><span class="p">(</span><span class="n">s</span><span class="o">//</span><span class="mi">4</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">	<span class="nd">@cache</span>
+</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">st</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">st</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">st</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">				<span class="n">x</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">st</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="n">x</span><span class="o">!=-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">					<span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">%</span><span class="n">q</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">matchsticks</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">matchsticks</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matchsticks</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">dfs</span><span class="p">((</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>2652 ms</p>
+</div><p>1528 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -218,7 +227,7 @@
     </div>
 
     <div class="post-nav"><a href="/leetcode/0474/" class="prev" rel="prev" title="0474：一和零（★）"><i class="fas fa-angle-left fa-fw"></i>0474：一和零（★）</a>
-            <a href="/leetcode/0470/" class="next" rel="next" title="0470：用 Rand7() 实现 Rand10()（★）">0470：用 Rand7() 实现 Rand10()（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0471/" class="next" rel="next" title="0471：编码最短长度的字符串（★★）">0471：编码最短长度的字符串（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

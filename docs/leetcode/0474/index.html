@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0474\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  542 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  485 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0474\/","datePublished": "2016-04-18T00:00:00+08:00","dateModified": "2016-04-18T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0474：一和零（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-18">2016-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 542 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0474/" class="leancloud_visitors" data-flag-title="0474：一和零（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-18">2016-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 485 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0474/" class="leancloud_visitors" data-flag-title="0474：一和零（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -161,11 +161,10 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>显然按是否选 strs[0]，可以转为递归子问题。</p>
-<p>令 dfs(i, j, k) 代表 strs[i:] 中最多 j 个 0、k 个 1 的最大子集长度，即可递归。</p>
-<p>注意每个字符串有用的信息只有 0 和 1 的个数，可以提前求出保存，节省时间。</p>
+<p>显然按是否选最后一个字符串，可以转为递归子问题。</p>
+<p>可以提前保存每个字符串的 01 个数，节省时间。</p>
 <blockquote>
-<p>这本质上是个 01 背包问题，m、n 是限制条件，字符串的 0/1 个数是代价，求最多能选多少个。</p>
+<p>这本质上是个 01 背包问题，m、n 是限制条件，求最多能选多少个。</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -183,21 +182,21 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findMaxForm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">k</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">),</span> <span class="mi">1</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">k</span><span class="o">-</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nd">@cache</span>
+</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">w0</span><span class="p">,</span> <span class="n">w1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">w0</span><span class="p">,</span><span class="n">w1</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="o">-</span><span class="n">inf</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">w0</span><span class="p">,</span><span class="n">w1</span><span class="p">),</span> <span class="mi">1</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">w0</span><span class="o">-</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">w1</span><span class="o">-</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">),</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>1644 ms</p>
 <h3 id="2">#2</h3>
-<p>可以改写成非递归形式，并且倒序遍历 j、k，将 dp 优化为二维数组。</p>
+<p>可以改写成非递归形式，并且倒序遍历 w0、w1，将 dp 优化为二维数组。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -212,16 +211,16 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findMaxForm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">cnt0</span><span class="p">,</span> <span class="n">cnt1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">cnt0</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cnt1</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">],</span> <span class="mi">1</span><span class="o">+</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">cnt0</span><span class="p">][</span><span class="n">k</span><span class="o">-</span><span class="n">cnt1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cnt0</span><span class="p">,</span> <span class="n">cnt1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">w0</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">cnt0</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="n">w1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cnt1</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">				<span class="n">dp</span><span class="p">[</span><span class="n">w0</span><span class="p">][</span><span class="n">w1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">w0</span><span class="p">][</span><span class="n">w1</span><span class="p">],</span> <span class="mi">1</span><span class="o">+</span><span class="n">dp</span><span class="p">[</span><span class="n">w0</span><span class="o">-</span><span class="n">cnt0</span><span class="p">][</span><span class="n">w1</span><span class="o">-</span><span class="n">cnt1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>2652 ms</p>
+</div><p>2392 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

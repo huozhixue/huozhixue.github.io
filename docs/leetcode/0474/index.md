@@ -48,45 +48,44 @@
 
 ### #1
 
-显然按是否选 strs[0]，可以转为递归子问题。
+显然按是否选最后一个字符串，可以转为递归子问题。
 
-令 dfs(i, j, k) 代表 strs[i:] 中最多 j 个 0、k 个 1 的最大子集长度，即可递归。
+可以提前保存每个字符串的 01 个数，节省时间。
 
-注意每个字符串有用的信息只有 0 和 1 的个数，可以提前求出保存，节省时间。
+>这本质上是个 01 背包问题，m、n 是限制条件，求最多能选多少个。
 
->这本质上是个 01 背包问题，m、n 是限制条件，字符串的 0/1 个数是代价，求最多能选多少个。
 
 ```python
 def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-    @lru_cache(None)
-    def dfs(i, j, k):
-        if j<0 or k<0:
-            return float('-inf')
-        if i == len(A):
-            return 0
-        return max(dfs(i+1, j, k), 1+dfs(i+1, j-A[i][0], k-A[i][1]))
-    
-    A = [(s.count('0'), s.count('1')) for s in strs]
-    return dfs(0, m, n)
+	@cache
+	def dfs(i, w0, w1):
+		if min(w0,w1)<0:
+			return -inf
+		if i == 0:
+			return 0
+		return max(dfs(i-1,w0,w1), 1+dfs(i-1, w0-A[i-1][0], w1-A[i-1][1]))
+	
+	A = [(s.count('0'), s.count('1')) for s in strs]
+	return dfs(len(strs), m, n)
 ```
 1644 ms
 
 ### #2
 
-可以改写成非递归形式，并且倒序遍历 j、k，将 dp 优化为二维数组。
+可以改写成非递归形式，并且倒序遍历 w0、w1，将 dp 优化为二维数组。
 
 ## 解答
 
 ```python
 def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-    dp = [[0]*(n+1) for _ in range(m+1)]
-    for s in strs:
-        cnt0, cnt1 = s.count('0'), s.count('1')
-        for j in range(m, cnt0-1, -1):
-            for k in range(n, cnt1-1, -1):
-                dp[j][k] = max(dp[j][k], 1+dp[j-cnt0][k-cnt1])
-    return dp[-1][-1]
+	dp = [[0]*(n+1) for _ in range(m+1)]
+	for s in strs:
+		cnt0, cnt1 = s.count('0'), s.count('1')
+		for w0 in range(m, cnt0-1, -1):
+			for w1 in range(n, cnt1-1, -1):
+				dp[w0][w1] = max(dp[w0][w1], 1+dp[w0-cnt0][w1-cnt1])
+	return dp[-1][-1]
 ```
-2652 ms
+2392 ms
 
 

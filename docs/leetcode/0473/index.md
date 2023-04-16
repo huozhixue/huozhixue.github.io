@@ -42,34 +42,36 @@
 ## 分析
 
 为了方便，令 A=matchsticks，s=sum(A)。
+- 显然当 s%4!=0 时非真。否则，要将 A 划分为四个和为 q=s//4 的子集
+- 假如排列的最后一个数是 x，那么只要 A-{x} 能组成 3 个和 q 的子集，即可成功
+- 一般性地，令 dfs(B) 代表集合 B 能否组成 sum(B)//q 个和 t 的子集，尝试递推
+- 从 B 中任选一个数 x，集合 C=B-x，只要 dfs(C) 为真且 x+sum(C)%q<=q，dfs(B) 即为真
+- 为了方便，可以令 dfs(B) 返回 sum(B)%q，若集合 B 非真，则返回 -1
 
-显然当 s%4!=0 时非真。否则，要将 A 划分为四个和为 t=s//4 的子集。
-- 暴力法就是遍历 A 的所有排列，判断是否能分割成功
-- 假如排列的最后一个数是 x，那么只要 A-{x} 能组成 3 个和 t 的子集，即可成功
-- 一般性地，令 dfs(B) 代表集合 B 能否组成 sum(B)//t 个和 t 的子集，尝试递推
-- 从 B 中任选一个数 x，集合 C=B-x，只要 dfs(C) 为真且 x+sum(C)%t<=t，dfs(B) 即为真
-
-为了方便，可以令 dfs(B) 返回 sum(B)%t，若集合 B 非真，则返回 -1。
-
-同时，可以将集合状态压缩为一个数，方便递归。
+将集合状态压缩为一个数，即可使用记忆化递归。
 
 
 ## 解答
 
 ```python
 def makesquare(self, matchsticks: List[int]) -> bool:
-    s = sum(matchsticks)
-    if s%4:
-        return False
-    A, n = matchsticks, len(matchsticks)
-    dp = [0]+[-1]*((1<<n)-1)
-    for st in range(1<<n):
-        if dp[st]>=0:
-            for i in range(n):
-                if not st&(1<<i) and dp[st]+A[i]<=s//4:
-                    dp[st|(1<<i)] = (dp[st]+A[i])%(s//4)
-    return dp[-1]==0
+	@cache
+	def dfs(st):
+		if st==0:
+			return 0
+		for i in range(n):
+			if st&(1<<i):
+				x = dfs(st^(1<<i))
+				if x!=-1 and x+A[i]<=q:
+					return (x+A[i])%q
+		return -1
+
+	q, r = divmod(sum(matchsticks),4)
+	if r:
+		return False
+	A, n = matchsticks, len(matchsticks)
+	return dfs((1<<n)-1)==0
 ```
-2652 ms
+1528 ms
 
 
