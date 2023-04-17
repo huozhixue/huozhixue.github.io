@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0866\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  905 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  665 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0866\/","datePublished": "2018-07-08T09:50:00+08:00","dateModified": "2018-07-08T09:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0866：回文素数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-07-08">2018-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 905 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-07-08">2018-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 665 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0866/" class="leancloud_visitors" data-flag-title="0866：回文素数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -157,17 +157,7 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>有点类似 <a href="/leetcode/0564" title="0564" rel="noopener noreferrer">0564</a>  ，可以基于某数并镜像的方法得到回文数，例如 10 镜像后得到两个回文数 101、1001。
-而长度为 L 的回文数也必然可以基于前 (L+1)//2 个数字镜像得到，把它称作 L 的回文根。</p>
-<p>因此，只要遍历回文根从 1 到 $10^5$，就可以得到所有从 1 到 $10^9$ 的回文数。</p>
-<p>注意遍历顺序和两种镜像方式的顺序，即可从小到大得到回文数。具体为：</p>
-<pre><code>先从 1 位回文根通过两种镜像方式依次得到 1 位、2 位回文数
-
-再从 2 位回文根通过两种镜像方式依次得到 3 位、4 位回文数
-
-依此类推
-</code></pre>
-<p>再判断是否 &gt;= N 且是质数即可。</p>
+<p>类似 <a href="/leetcode/0479" title="0479" rel="noopener noreferrer">0479</a>  ，可以直接从小到大构造回文数，再判断是否符合即可。注意遍历顺序。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -197,17 +187,28 @@
 </div><p>200 ms</p>
 <h3 id="2">#2</h3>
 <p>还有个巧妙的优化。可以证明偶数位回文数必然是 11 的倍数。</p>
-<p>首先证明 一个数是 11 的倍数 等价于 奇位数字之和与偶位数字之和的差是 11 的倍数。</p>
-<p>设一个数 x 表示为 $\overline{&hellip;a_5 a_4 a_3 a_2 a_1}$，那么：</p>
+<ul>
+<li>设一个数 x 表示为 $\overline{&hellip;a_5 a_4 a_3 a_2 a_1}$，那么：</li>
+</ul>
 <p>$$x =  a_1 + 10 * a_2 + 100 * a_3 + 1000 * a_4 + 10000 * a_5 + &hellip; $$
 $$x =  a_1 + (11-1) * a_2 + (99+1) * a_3 + (1001-1) * a_4 + (9999+1) * a_5 + &hellip; $$
 $$x =  (a_1 - a_2 + a_3 - a_4 + a_5 - &hellip;) + 11 * a_2 + 99 * a_3 + 1001 * a_4 + 9999 * a_5 + &hellip;$$</p>
+<ul>
+<li>
 <p>偶数位的 $\overline{9&hellip;9}$ 显然是 11 的倍数。</p>
+</li>
+<li>
 <p>偶数位(设为 2 * k 位)的 $\overline{10&hellip;01}$ 等于 2 * k 位的 $\overline{11&hellip;11}$ 减去 10 乘以 2 * (k-1) 位的 $\overline{11&hellip;11}$，显然也是 11 的倍数。</p>
-<p>所以得证：</p>
+</li>
+<li>
+<p>所以：</p>
 <p>$$x \ mod \ 11 = (a_1 - a_2 + a_3 - a_4 + a_5 - &hellip;) \ mod \ 11 $$</p>
-<p>而偶数位回文数的 奇位数字之和与偶位数字之和的差 为 0，故偶数位回文数必然是 11 的倍数。</p>
-<p>所以先排除 11 的情况，然后只需要考虑一种镜像方式，直接从小到大遍历回文根即可。</p>
+</li>
+<li>
+<p>偶数位回文数的 奇位数字之和与偶位数字之和的差 为 0，故偶数位回文数必然是 11 的倍数</p>
+</li>
+</ul>
+<p>所以先排除 11 的情况，然后只需要考虑一种镜像方式即可。</p>
 <p>还可以优化为从 N 的回文根开始遍历。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">

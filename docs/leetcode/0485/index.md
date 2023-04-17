@@ -36,16 +36,12 @@
 
 ## 分析
 
-遍历计数，遇到 0 重新开始计数即可。
+遍历即可。
 
 ## 解答
 
 ```python
 def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-    res, cnt = 0, 0
-    for num in nums:
-        cnt = cnt + 1 if num else 0
-        res = max(res, cnt)
-    return res
+	return max(len(list(g)) if x==1 else 0 for x,g in groupby(nums))
 ```
-104 ms
+64 ms

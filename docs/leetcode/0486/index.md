@@ -43,16 +43,14 @@
 
 ## 分析
 
-博弈问题容易想到用递归。
-
-考虑令 dfs(i, j) 表示用 nums[i:j+1] 玩游戏得到的玩家 1 和 2 的分数差，即可递归。 
+典型的博弈问题，令 dfs(i, j) 表示用 nums[i:j+1] 玩游戏得到的玩家 1 和 2 的分数差，即可递归。 
 
 
 ## 解答
 
 ```python
 def PredictTheWinner(self, nums: List[int]) -> bool:
-    @lru_cache(None)
+    @cache
     def dfs(i, j):
         if i>j:
             return 0
