@@ -7,30 +7,30 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0544：输出比赛匹配对（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0544：输出比赛匹配对（★）" />
-<meta property="og:description" content="力扣第 544 题 题目 在 NBA 季后赛中，我们总是安排较强的队伍对战较弱的队伍，例如用排名第 1 的队伍和第 n 的队伍对决，这是一个可以让比赛更加有趣的好策略。" />
+        <title>0545：二叉树的边界（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0545：二叉树的边界（★）" />
+<meta property="og:description" content="力扣第 545 题 题目 二叉树的 边界 是由 根节点 、左边界 、按从左到右顺序的 叶节点 和 逆序的右边界 ，按顺序依次连接组成。 左边界 是满足下述定义的节点集合： 根节" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0544/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-06-27T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-06-27T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/0545/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2016-06-28T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-06-28T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0544：输出比赛匹配对（★）"/>
-<meta name="twitter:description" content="力扣第 544 题 题目 在 NBA 季后赛中，我们总是安排较强的队伍对战较弱的队伍，例如用排名第 1 的队伍和第 n 的队伍对决，这是一个可以让比赛更加有趣的好策略。"/>
+<meta name="twitter:title" content="0545：二叉树的边界（★）"/>
+<meta name="twitter:description" content="力扣第 545 题 题目 二叉树的 边界 是由 根节点 、左边界 、按从左到右顺序的 叶节点 和 逆序的右边界 ，按顺序依次连接组成。 左边界 是满足下述定义的节点集合： 根节"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0544/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0543/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0545/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0545/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0544/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0546/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0544：输出比赛匹配对（★）",
+        "headline": "0545：二叉树的边界（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0544\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  691 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0544\/","datePublished": "2016-06-27T00:00:00+08:00","dateModified": "2016-06-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0545\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  748 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0545\/","datePublished": "2016-06-28T00:00:00+08:00","dateModified": "2016-06-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0544：输出比赛匹配对（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0545：二叉树的边界（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-06-27">2016-06-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 691 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0544/" class="leancloud_visitors" data-flag-title="0544：输出比赛匹配对（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-06-28">2016-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 748 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0545/" class="leancloud_visitors" data-flag-title="0545：二叉树的边界（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,72 +126,102 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/output-contest-matches/" target="_blank" rel="noopener noreffer">力扣第 544 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/boundary-of-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 545 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>在 NBA 季后赛中，我们总是安排较强的队伍对战较弱的队伍，例如用排名第 1 的队伍和第 n 的队伍对决，这是一个可以让比赛更加有趣的好策略。现在，给你 <strong>n </strong>支队伍，你需要以字符串格式输出它们的 <strong>最终 </strong>比赛配对。</p>
-<p><strong>n </strong>支队伍按从 1 到 n 的正整数格式给出，分别代表它们的初始排名（排名 1 最强，排名 n 最弱）。我们用括号（&#39;(&#39;, &#39;)&#39;）和逗号（&#39;,&#39;）来表示匹配对&mdash;&mdash;括号（&#39;(&#39;, &#39;)&#39;）表示匹配，逗号（&#39;,&#39;）来用于分割。 在每一轮的匹配过程中，你都需要遵循将强队与弱队配对的原则。</p>
+<p>二叉树的 <strong>边界</strong> 是由 <strong>根节点 </strong>、<strong>左边界</strong> 、按从左到右顺序的<strong> 叶节点</strong> 和 <strong>逆序的右边界</strong> ，按顺序依次连接组成。</p>
+<p><strong>左边界 </strong>是满足下述定义的节点集合：</p>
+<ul>
+<li>根节点的左子节点在左边界中。如果根节点不含左子节点，那么左边界就为 <strong>空</strong> 。</li>
+<li>如果一个节点在左边界中，并且该节点有左子节点，那么它的左子节点也在左边界中。</li>
+<li>如果一个节点在左边界中，并且该节点 <strong>不含</strong> 左子节点，那么它的右子节点就在左边界中。</li>
+<li>最左侧的叶节点 <strong>不在</strong> 左边界中。</li>
+</ul>
+<p><strong>右边界</strong> 定义方式与 <strong>左边界</strong> 相同，只是将左替换成右。即，右边界是根节点右子树的右侧部分；叶节点 <strong>不是</strong> 右边界的组成部分；如果根节点不含右子节点，那么右边界为 <strong>空</strong> 。</p>
+<p><strong>叶节点</strong> 是没有任何子节点的节点。对于此问题，根节点 <strong>不是</strong> 叶节点。</p>
+<p>给你一棵二叉树的根节点 <code>root</code> ，按顺序返回组成二叉树 <strong>边界</strong> 的这些值。</p>
 <p><strong>示例 1：</strong></p>
-<pre><strong>输入:</strong> 2
-<strong>输出:</strong> (1,2)
-<strong>解析:</strong>
-初始地，我们有队1和队2两支队伍，按照1，2排列。
-因此 用 &#39;(&#39;, &#39;)&#39; 和 &#39;,&#39;来将队1和队2进行配对，得到最终答案。
-</pre>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/11/11/boundary1.jpg" style="width: 299px; height: 290px;" />
+<pre>
+<strong>输入：</strong>root = [1,null,2,3,4]
+<strong>输出：</strong>[1,3,4,2]
+<b>解释：</b>
+- 左边界为空，因为二叉树不含左子节点。
+- 右边界是 [2] 。从根节点的右子节点开始的路径为 2 -> 4 ，但 4 是叶节点，所以右边界只有 2 。
+- 叶节点从左到右是 [3,4] 。
+按题目要求依序连接得到结果 [1] + [] + [3,4] + [2] = [1,3,4,2] 。</pre>
 <p><strong>示例 2：</strong></p>
-<pre><strong>输入:</strong> 4
-<strong>输出:</strong> ((1,4),(2,3))
-<strong>解析:</strong>
-在第一轮，我们将队伍1和4配对，2和3配对，以满足将强队和弱队搭配的效果。得到(1,4),(2,3).
-在第二轮，(1,4) 和 (2,3) 的赢家需要进行比赛以确定最终赢家，因此需要再在外面加一层括号。
-于是最终答案是((1,4),(2,3))。
-</pre>
-<p><strong>示例 3：</strong></p>
-<pre><strong>输入:</strong> 8
-<strong>输出:</strong> (((1,8),(4,5)),((2,7),(3,6)))
-<strong>解析:</strong>
-第一轮: (1,8),(2,7),(3,6),(4,5)
-第二轮: ((1,8),(4,5)),((2,7),(3,6))
-第三轮 (((1,8),(4,5)),((2,7),(3,6)))
-由于第三轮会决出最终胜者，故输出答案为(((1,8),(4,5)),((2,7),(3,6)))。
-</pre>
-<p><strong>注意:</strong></p>
-<ol>
-<li><strong>n </strong>的范围是 [2, 2<sup>12</sup>].</li>
-<li>保证 n 可以写成 2<sup>k</sup> 的形式，其中 k 是正整数。</li>
-</ol>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/11/11/boundary2.jpg" style="width: 599px; height: 411px;" />
+<pre>
+<strong>输入：</strong>root = [1,2,3,4,5,6,null,null,null,7,8,9,10]
+<strong>输出：</strong>[1,2,4,7,8,9,10,6,3]
+<b>解释：</b>
+- 左边界为 [2] 。从根节点的左子节点开始的路径为 2 -> 4 ，但 4 是叶节点，所以左边界只有 2 。
+- 右边界是 [3,6] ，逆序为 [6,3] 。从根节点的右子节点开始的路径为 3 -> 6 -> 10 ，但 10 是叶节点。
+- 叶节点从左到右是 [4,7,8,9,10]
+按题目要求依序连接得到结果 [1] + [2] + [4,7,8,9,10] + [6,3] = [1,2,4,7,8,9,10,6,3] 。</pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li>树中节点的数目在范围 <code>[1, 10<sup>4</sup>]</code> 内</li>
+<li><code>-1000 <= Node.val <= 1000</code></li>
+</ul>
 <h2 id="分析">分析</h2>
-<p>先按顺序两两配对，配对完后将两个队看作一个整体，即转为递归子问题。</p>
-<p>因此迭代至只剩下一个整体即可。</p>
+<p>模拟分别遍历得到左边界、右边界、顺序的叶子节点即可。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findContestMatch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;(</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">A</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">boundaryOfBinaryTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">left</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">left</span> <span class="ow">or</span> <span class="n">p</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">left</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">left</span> <span class="ow">or</span> <span class="n">p</span><span class="o">.</span><span class="n">right</span>
+</span></span><span class="line"><span class="cl">	<span class="n">right</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">left</span> <span class="ow">or</span> <span class="n">p</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">right</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">right</span> <span class="ow">or</span> <span class="n">p</span><span class="o">.</span><span class="n">left</span>
+</span></span><span class="line"><span class="cl">	<span class="n">leaf</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[</span><span class="n">root</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">node</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">!=</span> <span class="n">root</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">leaf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">chi</span> <span class="k">for</span> <span class="n">chi</span> <span class="ow">in</span> <span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">]</span> <span class="k">if</span> <span class="n">chi</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">[</span><span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">]</span><span class="o">+</span><span class="n">left</span><span class="o">+</span><span class="n">leaf</span><span class="o">+</span><span class="n">right</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>28 ms</p>
+</div><p>48 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-06-27</span>
+                <span>更新于 2016-06-28</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0544/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0545/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -200,14 +230,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E9%80%92%E5%BD%92/">递归</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E6%A8%A1%E6%8B%9F/">模拟</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0545/" class="prev" rel="prev" title="0545：二叉树的边界（★）"><i class="fas fa-angle-left fa-fw"></i>0545：二叉树的边界（★）</a>
-            <a href="/leetcode/0543/" class="next" rel="next" title="0543：二叉树的直径">0543：二叉树的直径<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0546/" class="prev" rel="prev" title="0546：移除盒子（★★）"><i class="fas fa-angle-left fa-fw"></i>0546：移除盒子（★★）</a>
+            <a href="/leetcode/0544/" class="next" rel="next" title="0544：输出比赛匹配对（★）">0544：输出比赛匹配对（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
