@@ -51,21 +51,19 @@
 
 ## 分析
   
-注意到 sum(nums)<=1000，因此考虑直接递推表达式的和与对应的个数。
-
-令 dp[i] 代表 nums[:i] 得到的计数器，key 为表达式的和，即可递推。
+注意到 sum(nums)<=1000，考虑直接递推表达式的和与对应个数即可。
 
 ## 解答
 
 ```python
 def findTargetSumWays(self, nums: List[int], target: int) -> int:
-    ct = Counter({0: 1})
-    for num in nums:
-        ct2 = Counter()
-        for k in ct:
-            ct2[k+num] += ct[k]
-            ct2[k-num] += ct[k]
-        ct = ct2
-    return ct[target]
+	ct = Counter({0: 1})
+	for num in nums:
+		ct2 = Counter()
+		for k in ct:
+			ct2[k+num] += ct[k]
+			ct2[k-num] += ct[k]
+		ct = ct2
+	return ct[target]
 ```
-260 ms
+224 ms

@@ -7,30 +7,30 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0503：下一个更大元素 II（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0503：下一个更大元素 II（★）" />
-<meta property="og:description" content="力扣第 503 题 题目 给定一个循环数组 nums （ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。 数字 x 的 下一个更大的元素 是按数组遍历顺序，这个" />
+        <title>0492：构造矩形 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0492：构造矩形" />
+<meta property="og:description" content="力扣第 492 题 题目 作为一位web开发者， 懂得怎样去规划一个页面的尺寸是很重要的。 所以，现给定一个具体的矩形页面面积，你的任务是设计一个长度为 L 和" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0503/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-05-17T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-05-17T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/0492/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2016-05-06T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-05-06T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0503：下一个更大元素 II（★）"/>
-<meta name="twitter:description" content="力扣第 503 题 题目 给定一个循环数组 nums （ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。 数字 x 的 下一个更大的元素 是按数组遍历顺序，这个"/>
+<meta name="twitter:title" content="0492：构造矩形"/>
+<meta name="twitter:description" content="力扣第 492 题 题目 作为一位web开发者， 懂得怎样去规划一个页面的尺寸是很重要的。 所以，现给定一个具体的矩形页面面积，你的任务是设计一个长度为 L 和"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0503/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0502/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0505/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0492/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0491/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0493/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0503：下一个更大元素 II（★）",
+        "headline": "0492：构造矩形",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0503\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  357 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0503\/","datePublished": "2016-05-17T00:00:00+08:00","dateModified": "2016-05-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0492\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  351 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0492\/","datePublished": "2016-05-06T00:00:00+08:00","dateModified": "2016-05-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0503：下一个更大元素 II（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0492：构造矩形</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-17">2016-05-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 357 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0503/" class="leancloud_visitors" data-flag-title="0503：下一个更大元素 II（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-06">2016-05-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 351 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0492/" class="leancloud_visitors" data-flag-title="0492：构造矩形">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,75 +121,45 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/next-greater-element-ii/" target="_blank" rel="noopener noreffer">力扣第 503 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/construct-the-rectangle/" target="_blank" rel="noopener noreffer">力扣第 492 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个循环数组 <code>nums</code> （ <code>nums[nums.length - 1]</code> 的下一个元素是 <code>nums[0]</code> ），返回 <em><code>nums</code> 中每个元素的 <strong>下一个更大元素</strong></em> 。</p>
-<p>数字 <code>x</code> 的 <strong>下一个更大的元素</strong> 是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出 <code>-1</code> 。</p>
-<p><strong>示例 1:</strong></p>
+<p>作为一位web开发者， 懂得怎样去规划一个页面的尺寸是很重要的。 所以，现给定一个具体的矩形页面面积，你的任务是设计一个长度为 L 和宽度为 W 且满足以下要求的矩形的页面。要求：</p>
+<ol>
+<li>你设计的矩形页面必须等于给定的目标面积。</li>
+<li>宽度 <code>W</code> 不应大于长度 <code>L</code> ，换言之，要求 <code>L &gt;= W </code>。</li>
+<li>长度 <code>L</code> 和宽度 <code>W</code> 之间的差距应当尽可能小。</li>
+</ol>
+<p>返回一个 <em>数组</em> <code>[L, W]</code>，其中 <em><code>L</code> 和 <code>W</code> 是你按照顺序设计的网页的长度和宽度</em>。<br />
+</p>
+<p><strong>示例1：</strong></p>
 <pre>
-<strong>输入:</strong> nums = [1,2,1]
-<strong>输出:</strong> [2,-1,2]
-<strong>解释:</strong> 第一个 1 的下一个更大的数是 2；
-数字 2 找不到下一个更大的数；
-第二个 1 的下一个最大的数需要循环搜索，结果也是 2。
+<strong>输入:</strong> 4
+<strong>输出:</strong> [2, 2]
+<strong>解释:</strong> 目标面积是 4， 所有可能的构造方案有 [1,4], [2,2], [4,1]。
+但是根据要求2，[1,4] 不符合要求; 根据要求3，[2,2] 比 [4,1] 更能符合要求. 所以输出长度 L 为 2， 宽度 W 为 2。
 </pre>
 <p><strong>示例 2:</strong></p>
 <pre>
-<strong>输入:</strong> nums = [1,2,3,4,3]
-<strong>输出:</strong> [2,3,4,-1,4]
+<strong>输入:</strong> area = 37
+<strong>输出:</strong> [37,1]
+</pre>
+<p><strong>示例 3:</strong></p>
+<pre>
+<strong>输入:</strong> area = 122122
+<strong>输出:</strong> [427,286]
 </pre>
 <p><strong>提示:</strong></p>
 <ul>
-<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+<li><code>1 &lt;= area &lt;= 10<sup>7</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>类似 0739 ，只不过可以循环搜索了。因此要遍历两趟。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nextGreaterElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">res</span><span class="p">[</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">res</span><span class="p">[</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>212 ms</p>
-<h3 id="2">#2</h3>
-<p>可以利用模运算简化代码。</p>
+<p>找最接近 $\sqrt{area}$ 的因数即可。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -197,36 +167,26 @@
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nextGreaterElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">i</span> <span class="o">%=</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">res</span><span class="p">[</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">constructRectangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">isqrt</span><span class="p">(</span><span class="n">area</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">area</span><span class="o">%</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="p">[</span><span class="n">area</span><span class="o">//</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>220 ms</p>
+</div><p>40 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-05-17</span>
+                <span>更新于 2016-05-06</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0503/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0492/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -235,14 +195,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%88/">栈</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0505/" class="prev" rel="prev" title="0505：迷宫 II（★）"><i class="fas fa-angle-left fa-fw"></i>0505：迷宫 II（★）</a>
-            <a href="/leetcode/0502/" class="next" rel="next" title="0502：IPO（★★）">0502：IPO（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0493/" class="prev" rel="prev" title="0493：翻转对（★★）"><i class="fas fa-angle-left fa-fw"></i>0493：翻转对（★★）</a>
+            <a href="/leetcode/0491/" class="next" rel="next" title="0491：递增子序列（★）">0491：递增子序列（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

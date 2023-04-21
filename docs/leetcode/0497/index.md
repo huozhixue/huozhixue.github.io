@@ -60,8 +60,7 @@ solution.pick(); // 返回 [0, 0]</pre>
 
 ## 分析
   
-类似 {{< lc "0528" >}} ，不过变成了二维。
-矩阵内点的个数即是矩阵权重。
+类似 {{< lc "0528" >}} ，不过变成了二维。矩阵内点的个数即是矩阵权重。
 
 随机取到一个点后，先找出属于哪一个矩形，还可以得到在该矩形中排第几位，再按预定映射得到该矩形中的某一点。
 
@@ -72,13 +71,13 @@ class Solution:
 
     def __init__(self, rects: List[List[int]]):
         self.rects = rects
-        self.pre = list(accumulate((x2-x1+1)*(y2-y1+1) for x1,y1,x2,y2 in rects))
+        self.pre = [0]+list(accumulate((x2-x1+1)*(y2-y1+1) for x1,y1,x2,y2 in rects))
 
     def pick(self) -> List[int]:
-        rank = random.randint(1, self.pre[-1])
-        i = bisect_left(self.pre, rank)
-        rank -= self.pre[i-1] if i else 0
-        x1, y1, x2, _ = self.rects[i]
-        return [x1+(rank-1)%(x2-x1+1), y1+(rank-1)//(x2-x1+1)]
+        k = randrange(self.pre[-1])
+        pos = bisect_right(self.pre, k)-1
+        x1, y1, x2, y2 = self.rects[pos]
+        dx, dy = divmod(k-self.pre[pos],y2-y1+1)
+        return [x1+dx, y1+dy]
 ```
-168 ms
+92 ms

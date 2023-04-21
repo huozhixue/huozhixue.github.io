@@ -50,18 +50,15 @@
 
 ## 分析
   
-为了方便，用 T 代表 timeSeries。遍历位置 i，如果 T[i+1] - T[i] >= duration，那么 T[i] 时的攻击造成了 duration 秒的中毒状态。
-否则，到 T[i+1] 时，状态重置，所以 T[i] 时的攻击只造成了 T[i+1] - T[i] 秒的中毒状态。
-
-再注意下边界条件即可。
-
+为了方便，用 T 代表 timeSeries，遍历位置 i：
+- 如果 T[i+1] - T[i] >= duration，那么 T[i] 时的攻击造成了 duration 秒的中毒状态
+- 否则， T[i] 时的攻击只造成了 T[i+1] - T[i] 秒的中毒状态
 
 ## 解答
 
 ```python
 def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
-	T, n = timeSeries, len(timeSeries)
-	return sum(min(T[i+1]-T[i], duration) for i in range(n-1)) + duration if T else 0
+	return sum(min(duration,b-a) for a,b in pairwise(timeSeries))+duration
 ```
 
-264 ms
+60 ms

@@ -40,24 +40,22 @@
   
 ### #1
 
-最简单的就是先保存每一条对角线的列表，然后再拼接，注意第偶数条对角线反转即可。
+最简单的就是遍历矩阵，将元素添加到对应对角线的列表中。最后再将第偶数条对角线反转即可。
 
-每条对角线中的元素行列坐标之和相等，因此遍历时将 (i, j) 位置的元素添加到 i+j 对应的对角线即可。
 
 ```python
-def findDiagonalOrder(self, matrix: List[List[int]]) -> List[int]:
-	m, n = len(matrix), len(matrix) and len(matrix[0])
-	tmp = [[] for _ in range(m+n-1)]
-	for i in range(m):
-		for j in range(n):
-			tmp[i+j].append(matrix[i][j])
+def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+	m, n = len(mat), len(mat[0]) 
+	A = [[] for _ in range(m+n-1)]
+	for i,j in product(range(m), range(n)):
+		A[i+j].append(mat[i][j])
 	res = []
-	for i, diag in enumerate(tmp):
-		res.extend(diag if i%2 else diag[::-1])
+	for i, sub in enumerate(A):
+		res.extend(sub if i%2 else sub[::-1])
 	return res
 ```
 
-196 ms
+56 ms
 
 ### #2
 
@@ -66,13 +64,13 @@ def findDiagonalOrder(self, matrix: List[List[int]]) -> List[int]:
 ## 解答
 
 ```python
-def findDiagonalOrder(self, matrix: List[List[int]]) -> List[int]:
-	res, m, n = [], len(matrix), len(matrix) and len(matrix[0])
+def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+	res, m, n = [], len(mat), len(mat[0])
 	for k in range(m+n-1):
-		start, end = max(0, k-n+1), min(k, m-1)
-		span = range(start, end+1) if k%2 else range(end, start-1, -1)
-		res.extend(matrix[i][k-i] for i in span)
+		l, r = max(0, k-n+1), min(k, m-1)
+		span = range(l, r+1) if k%2 else range(r, l-1, -1)
+		res.extend(mat[i][k-i] for i in span)
 	return res
 ```
 
-220 ms
+72 ms

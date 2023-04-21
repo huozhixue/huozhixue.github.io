@@ -53,19 +53,17 @@
 
 ## 分析
   
-类似 0739 ，采用单调栈即可得到 nums2 中每个元素的下一个更大元素，保存在哈希表中。
-然后 nums1 的每个元素直接调用哈希表即可。
+典型的单调栈应用，求出 nums2 中每个元素的下一个更大元素，并保存在哈希表。遍历 nums1 调用哈希表即可。
 
 ## 解答
 
 ```python
 def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-	nxt, stack = {}, []
-	for num in nums2:
-		while stack and stack[-1] < num:
-			nxt[stack.pop()] = num
-		stack.append(num)
-	return [nxt.get(num, -1) for num in nums1]
+	stack, d = [], {}
+	for x in nums2:
+		while stack and stack[-1]<x:
+			d[stack.pop()] = x
+		stack.append(x)
+	return [d.get(x,-1) for x in nums1]
 ```
-
-32 ms
+36 ms

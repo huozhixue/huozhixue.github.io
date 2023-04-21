@@ -61,6 +61,6 @@
 
 ```python
 def findWords(self, words: List[str]) -> List[str]:
-	return [word for word in words if any(set(word.lower()) <= set(s) for s in ["qwertyuiop", "asdfghjkl", "zxcvbnm"])]
+	return [w for w in words if any(set(w.lower())<=set(s) for s in ["qwertyuiop", "asdfghjkl", "zxcvbnm"])]
 ```
 32 ms
