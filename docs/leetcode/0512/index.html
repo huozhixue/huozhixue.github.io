@@ -7,30 +7,30 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0513：找树左下角的值（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0513：找树左下角的值（★）" />
-<meta property="og:description" content="力扣第 513 题 题目 给定一个二叉树的 根节点 root，请找出该二叉树的 最底层 最左边 节点的值。 假设二叉树中至少有一个节点。 示例 1: 输入: root = [2,1,3] 输出: 1 示" />
+        <title>0512：游戏玩法分析 II - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0512：游戏玩法分析 II" />
+<meta property="og:description" content="力扣第 512 题 题目 Table: Activity &#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | player_id | int | | device_id | int | | event_date | date | | games_played | int | &#43;--------------&#43;---------&#43; (player_id, event_date) 是这个表的两个主键 这个表显示的是某些游戏玩家的游戏活动情况 每" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0513/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-05-27T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-05-27T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/0512/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2016-05-26T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-05-26T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0513：找树左下角的值（★）"/>
-<meta name="twitter:description" content="力扣第 513 题 题目 给定一个二叉树的 根节点 root，请找出该二叉树的 最底层 最左边 节点的值。 假设二叉树中至少有一个节点。 示例 1: 输入: root = [2,1,3] 输出: 1 示"/>
+<meta name="twitter:title" content="0512：游戏玩法分析 II"/>
+<meta name="twitter:description" content="力扣第 512 题 题目 Table: Activity &#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | player_id | int | | device_id | int | | event_date | date | | games_played | int | &#43;--------------&#43;---------&#43; (player_id, event_date) 是这个表的两个主键 这个表显示的是某些游戏玩家的游戏活动情况 每"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0513/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0512/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0514/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0512/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0510/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0513/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0513：找树左下角的值（★）",
+        "headline": "0512：游戏玩法分析 II",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0513\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  162 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0513\/","datePublished": "2016-05-27T00:00:00+08:00","dateModified": "2016-05-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0512\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  265 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0512\/","datePublished": "2016-05-26T00:00:00+08:00","dateModified": "2016-05-26T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0513：找树左下角的值（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0512：游戏玩法分析 II</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-27">2016-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 162 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0513/" class="leancloud_visitors" data-flag-title="0513：找树左下角的值（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-26">2016-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 265 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0512/" class="leancloud_visitors" data-flag-title="0512：游戏玩法分析 II">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,30 +126,47 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-bottom-left-tree-value/" target="_blank" rel="noopener noreffer">力扣第 513 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/game-play-analysis-ii/" target="_blank" rel="noopener noreffer">力扣第 512 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，请找出该二叉树的 <strong>最底层 最左边 </strong>节点的值。</p>
-<p>假设二叉树中至少有一个节点。</p>
-<p><strong>示例 1:</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2020/12/14/tree1.jpg" style="width: 182px; " /></p>
+<p>Table: <code>Activity</code></p>
 <pre>
-<strong>输入: </strong>root = [2,1,3]
-<strong>输出: </strong>1
++--------------+---------+
+| Column Name  | Type    |
++--------------+---------+
+| player_id    | int     |
+| device_id    | int     |
+| event_date   | date    |
+| games_played | int     |
++--------------+---------+
+(player_id, event_date) 是这个表的两个主键
+这个表显示的是某些游戏玩家的游戏活动情况
+每一行是在某天使用某个设备登出之前登录并玩多个游戏（可能为0）的玩家的记录
 </pre>
-<p><strong>示例 2:</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2020/12/14/tree2.jpg" style="width: 242px; " /><strong> </strong></p>
+<p>请编写一个 SQL 查询，描述每一个玩家首次登陆的设备名称</p>
+<p>查询结果格式在以下示例中：</p>
 <pre>
-<strong>输入: </strong>[1,2,3,4,null,5,6,null,null,7]
-<strong>输出: </strong>7
-</pre>
-<p><strong>提示:</strong></p>
-<ul>
-<li>二叉树的节点个数的范围是 <code>[1,10<sup>4</sup>]</code></li>
-<li><meta charset="UTF-8" /><code>-2<sup>31</sup> <= Node.val <= 2<sup>31</sup> - 1</code> </li>
-</ul>
+Activity table:
++-----------+-----------+------------+--------------+
+| player_id | device_id | event_date | games_played |
++-----------+-----------+------------+--------------+
+| 1         | 2         | 2016-03-01 | 5            |
+| 1         | 2         | 2016-05-02 | 6            |
+| 2         | 3         | 2017-06-25 | 1            |
+| 3         | 1         | 2016-03-02 | 0            |
+| 3         | 4         | 2018-07-03 | 5            |
++-----------+-----------+------------+--------------+
+
+Result table:
++-----------+-----------+
+| player_id | device_id |
++-----------+-----------+
+| 1         | 2         |
+| 2         | 3         |
+| 3         | 1         |
++-----------+-----------+</pre>
 <h2 id="分析">分析</h2>
-<p>层序遍历并维护最左边的数即可。</p>
+<p>使用 where in 子查询。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -161,26 +178,26 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findBottomLeftValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">level</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="p">[</span><span class="n">root</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">level</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">level</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">val</span>
-</span></span><span class="line"><span class="cl">        <span class="n">level</span> <span class="o">=</span> <span class="p">[</span><span class="n">child</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">level</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">]</span> <span class="k">if</span> <span class="n">child</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">player_id</span><span class="p">,</span><span class="w"> </span><span class="n">device_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">activity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">player_id</span><span class="p">,</span><span class="w"> </span><span class="n">event_date</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">player_id</span><span class="p">,</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">event_date</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">activity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">player_id</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>44 ms</p>
+</div><p>346 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-05-27</span>
+                <span>更新于 2016-05-26</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0513/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0512/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -189,14 +206,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/dfs/">dfs</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0514/" class="prev" rel="prev" title="0514：自由之路（★★）"><i class="fas fa-angle-left fa-fw"></i>0514：自由之路（★★）</a>
-            <a href="/leetcode/0512/" class="next" rel="next" title="0512：游戏玩法分析 II">0512：游戏玩法分析 II<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0513/" class="prev" rel="prev" title="0513：找树左下角的值（★）"><i class="fas fa-angle-left fa-fw"></i>0513：找树左下角的值（★）</a>
+            <a href="/leetcode/0510/" class="next" rel="next" title="0510：二叉搜索树中的中序后继 II（★）">0510：二叉搜索树中的中序后继 II（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

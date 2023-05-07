@@ -57,13 +57,13 @@
 
 
 ```python
-    def findBlackPixel(self, picture: List[List[str]], target: int) -> int:
-        res, m, n = 0, len(picture), len(picture[0])
-        rows = [''.join(row) for row in picture]
-        for j in range(n):
-            A = [rows[i] for i in range(m) if picture[i][j]=='B']
-            if len(A)==target==A[0].count('B') and len(set(A))==1: 
-                res += target
-        return res
+def findBlackPixel(self, picture: List[List[str]], target: int) -> int:
+	res, m, n = 0, len(picture), len(picture[0])
+	rows = [''.join(row) for row in picture]
+	for j in range(n):
+		A = [rows[i] for i in range(m) if picture[i][j]=='B']
+		if len(A)==target==A[0].count('B') and len(set(A))==1: 
+			res += target
+	return res
 ```
 60 ms
