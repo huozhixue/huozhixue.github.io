@@ -25,6 +25,27 @@
     <guid>https://huozhixue.github.io/leetcode/0663/</guid>
     <description><![CDATA[力扣第 663 题 题目 给定一棵有 n 个结点的二叉树，你的任务是检查是否可以通过去掉树上的一条边将树分成两棵，且这两棵树结点之和相等。 样例 1: 输入: 5 / \]]></description>
 </item><item>
+    <title>0614：二级关注者（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0614/</link>
+    <pubDate>Mon, 05 Sep 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0614/</guid>
+    <description><![CDATA[力扣第 614 题 题目 在 facebook 中，表 follow 会有 2 个字段： followee, follower ，分别表示被关注者和关注者。 请写一个 sql 查询语句，对每一个关注者，查询关注他的关注者的数目。 比方说]]></description>
+</item><item>
+    <title>0613：直线上的最近距离</title>
+    <link>https://huozhixue.github.io/leetcode/0613/</link>
+    <pubDate>Sun, 04 Sep 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0613/</guid>
+    <description><![CDATA[力扣第 613 题 题目 表 point 保存了一些点在 x 轴上的坐标，这些坐标都是整数。 写一个查询语句，找到这些点中最近两个点之间的距离。 | x | |-----| | -1 | | 0 | | 2 |]]></description>
+</item><item>
+    <title>0612：平面上的最近距离（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0612/</link>
+    <pubDate>Sat, 03 Sep 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0612/</guid>
+    <description><![CDATA[力扣第 612 题 题目 Point2D 表： +-------------+------+ | Column Name | Type | +-------------+------+ | x | int | | y | int | +-------------+------+ (x, y) 是这张表的主键 这张表的每一行表示 X-Y 平面上一个点的位置 p1(x1, y1) 和 p2(x2, y2) 这两点之间的距离]]></description>
+</item><item>
     <title>0604：迭代压缩字符串</title>
     <link>https://huozhixue.github.io/leetcode/0604/</link>
     <pubDate>Fri, 26 Aug 2016 00:00:00 &#43;0800</pubDate>
@@ -32,46 +53,25 @@
     <guid>https://huozhixue.github.io/leetcode/0604/</guid>
     <description><![CDATA[力扣第 604 题 题目 设计并实现一个迭代压缩字符串的数据结构。给定的压缩字符串的形式是，每个字母后面紧跟一个正整数，表示该字母在原始未压缩字符串中出]]></description>
 </item><item>
-    <title>0545：二叉树的边界（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0545/</link>
-    <pubDate>Tue, 28 Jun 2016 00:00:00 &#43;0800</pubDate>
+    <title>0603：连续空余座位</title>
+    <link>https://huozhixue.github.io/leetcode/0603/</link>
+    <pubDate>Thu, 25 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0545/</guid>
-    <description><![CDATA[力扣第 545 题 题目 二叉树的 边界 是由 根节点 、左边界 、按从左到右顺序的 叶节点 和 逆序的右边界 ，按顺序依次连接组成。 左边界 是满足下述定义的节点集合： 根节]]></description>
+    <guid>https://huozhixue.github.io/leetcode/0603/</guid>
+    <description><![CDATA[力扣第 603 题 题目 表: Cinema +-------------+------+ | Column Name | Type | +-------------+------+ | seat_id | int | | free | bool | +-------------+------+ Seat_id是该表的自动递增主键列。 该表的每一行表示第i个座位是否空闲。1表示空]]></description>
 </item><item>
-    <title>0544：输出比赛匹配对（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0544/</link>
-    <pubDate>Mon, 27 Jun 2016 00:00:00 &#43;0800</pubDate>
+    <title>0597：好友申请 I：总体通过率</title>
+    <link>https://huozhixue.github.io/leetcode/0597/</link>
+    <pubDate>Fri, 19 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0544/</guid>
-    <description><![CDATA[力扣第 544 题 题目 在 NBA 季后赛中，我们总是安排较强的队伍对战较弱的队伍，例如用排名第 1 的队伍和第 n 的队伍对决，这是一个可以让比赛更加有趣的好策略。]]></description>
+    <guid>https://huozhixue.github.io/leetcode/0597/</guid>
+    <description><![CDATA[力扣第 597 题 题目 表：FriendRequest +----------------+---------+ | Column Name | Type | +----------------+---------+ | sender_id | int | | send_to_id | int | | request_date | date | +----------------+---------+ 此表没有主键，它可能包含重复项。 该表包含发送请求]]></description>
 </item><item>
-    <title>0536：从字符串生成二叉树（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0536/</link>
-    <pubDate>Sun, 19 Jun 2016 00:00:00 &#43;0800</pubDate>
+    <title>0588：设计内存文件系统（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0588/</link>
+    <pubDate>Wed, 10 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0536/</guid>
-    <description><![CDATA[力扣第 536 题 题目 你需要用一个包括括号和整数的字符串构建一棵二叉树。 输入的字符串代表一棵二叉树。它包括整数和随后的 0 、1 或 2 对括号。整数代表根的]]></description>
-</item><item>
-    <title>0534：游戏玩法分析 III（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0534/</link>
-    <pubDate>Fri, 17 Jun 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0534/</guid>
-    <description><![CDATA[力扣第 534 题 题目 Table: Activity +--------------+---------+ | Column Name | Type | +--------------+---------+ | player_id | int | | device_id | int | | event_date | date | | games_played | int | +--------------+---------+ （player_id，event_date）是此表的主键。 这张表]]></description>
-</item><item>
-    <title>0533：孤独像素 II（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0533/</link>
-    <pubDate>Thu, 16 Jun 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0533/</guid>
-    <description><![CDATA[力扣第 533 题 题目 给你一个大小为 m x n 的二维字符数组 picture ，表示一张黑白图像，数组中的 'B' 表示黑色像素，'W' 表示白色像素。另给你一个整数 target ，请你找出]]></description>
-</item><item>
-    <title>0531：孤独像素 I（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0531/</link>
-    <pubDate>Tue, 14 Jun 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0531/</guid>
-    <description><![CDATA[力扣第 531 题 题目 给你一个大小为 m x n 的图像 picture ，图像由黑白像素组成，'B' 表示黑色像素，'W' 表示白色像素，请你统计并返回图像中 黑色 孤独像素的数]]></description>
+    <guid>https://huozhixue.github.io/leetcode/0588/</guid>
+    <description><![CDATA[力扣第 588 题 题目 设计一个内存文件系统，模拟以下功能： 实现文件系统类: FileSystem() 初始化系统对象 List&lt;String&gt; ls(String path) 如果 path 是一个文件路径，则返回一个仅包含该文件名称的列]]></description>
 </item></channel>
 </rss>

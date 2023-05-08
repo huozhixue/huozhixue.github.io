@@ -73,4 +73,4 @@ class StringIterator:
         return bool(self.Q)
 ```
 
-44 ms
+48 ms
