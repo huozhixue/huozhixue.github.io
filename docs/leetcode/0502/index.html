@@ -7,30 +7,30 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0516：最长回文子序列（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0516：最长回文子序列（★）" />
-<meta property="og:description" content="力扣第 516 题 题目 给你一个字符串 s ，找出其中最长的回文子序列，并返回该序列的长度。 子序列定义为：不改变剩余字符顺序的情况下，删除某些字符或者不删" />
+        <title>0502：IPO（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0502：IPO（★★）" />
+<meta property="og:description" content="力扣第 502 题 题目 假设 力扣（LeetCode）即将开始 IPO 。为了以更高的价格将股票卖给风险投资公司，力扣 希望在 IPO 之前开展一些项目以增加其资本。 由于" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0516/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-05-30T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-05-30T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/0502/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2016-05-16T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-05-16T00:00:00+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0516：最长回文子序列（★）"/>
-<meta name="twitter:description" content="力扣第 516 题 题目 给你一个字符串 s ，找出其中最长的回文子序列，并返回该序列的长度。 子序列定义为：不改变剩余字符顺序的情况下，删除某些字符或者不删"/>
+<meta name="twitter:title" content="0502：IPO（★★）"/>
+<meta name="twitter:description" content="力扣第 502 题 题目 假设 力扣（LeetCode）即将开始 IPO 。为了以更高的价格将股票卖给风险投资公司，力扣 希望在 IPO 之前开展一些项目以增加其资本。 由于"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0516/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0515/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0518/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0502/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0501/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0505/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0516：最长回文子序列（★）",
+        "headline": "0502：IPO（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0516\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  289 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0516\/","datePublished": "2016-05-30T00:00:00+08:00","dateModified": "2016-05-30T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0502\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  562 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0502\/","datePublished": "2016-05-16T00:00:00+08:00","dateModified": "2016-05-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0516：最长回文子序列（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0502：IPO（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-30">2016-05-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 289 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0516/" class="leancloud_visitors" data-flag-title="0516：最长回文子序列（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-16">2016-05-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 562 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0502/" class="leancloud_visitors" data-flag-title="0502：IPO（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,73 +126,79 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-palindromic-subsequence/" target="_blank" rel="noopener noreffer">力扣第 516 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/ipo/" target="_blank" rel="noopener noreffer">力扣第 502 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> ，找出其中最长的回文子序列，并返回该序列的长度。</p>
-<p>子序列定义为：不改变剩余字符顺序的情况下，删除某些字符或者不删除任何字符形成的一个序列。</p>
+<p>假设 力扣（LeetCode）即将开始 <strong>IPO</strong> 。为了以更高的价格将股票卖给风险投资公司，力扣 希望在 IPO 之前开展一些项目以增加其资本。 由于资源有限，它只能在 IPO 之前完成最多 <code>k</code> 个不同的项目。帮助 力扣 设计完成最多 <code>k</code> 个不同项目后得到最大总资本的方式。</p>
+<p>给你 <code>n</code> 个项目。对于每个项目 <code>i</code><strong> </strong>，它都有一个纯利润 <code>profits[i]</code> ，和启动该项目需要的最小资本 <code>capital[i]</code> 。</p>
+<p>最初，你的资本为 <code>w</code> 。当你完成一个项目时，你将获得纯利润，且利润将被添加到你的总资本中。</p>
+<p>总而言之，从给定项目中选择 <strong>最多</strong> <code>k</code> 个不同项目的列表，以 <strong>最大化最终资本</strong> ，并输出最终可获得的最多资本。</p>
+<p>答案保证在 32 位有符号整数范围内。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
-<strong>输入：</strong>s = "bbbab"
+<strong>输入：</strong>k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
 <strong>输出：</strong>4
-<strong>解释：</strong>一个可能的最长回文子序列为 "bbbb" 。
+<strong>解释：
+</strong>由于你的初始资本为 0，你仅可以从 0 号项目开始。
+在完成后，你将获得 1 的利润，你的总资本将变为 1。
+此时你可以选择开始 1 号或 2 号项目。
+由于你最多可以选择两个项目，所以你需要完成 2 号项目以获得最大的资本。
+因此，输出最后最大化的资本，为 0 + 1 + 3 = 4。
 </pre>
 <p><strong>示例 2：</strong></p>
 <pre>
-<strong>输入：</strong>s = "cbbd"
-<strong>输出：</strong>2
-<strong>解释：</strong>一个可能的最长回文子序列为 "bb" 。
+<strong>输入：</strong>k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]
+<strong>输出：</strong>6
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 <= s.length <= 1000</code></li>
-<li><code>s</code> 仅由小写英文字母组成</li>
+<li><code>1 &lt;= k &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= w &lt;= 10<sup>9</sup></code></li>
+<li><code>n == profits.length</code></li>
+<li><code>n == capital.length</code></li>
+<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= profits[i] &lt;= 10<sup>4</sup></code></li>
+<li><code>0 &lt;= capital[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>显然当 s[0]==s[-1] 时，可以转为子问题。当 s[0]!=s[-1] 时，发现也可以转为两个子问题。</p>
-<p>因此令 dfs(i, j) 代表 s[i:j+1] 的最长回文子序列的长度，即可递归。</p>
-<blockquote>
-<p>这是典型的区间 dp。</p>
-</blockquote>
+<p>典型的堆应用，维护能启动的项目，每轮选择其中利润最大的项目，更新资本即可。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">longestPalindromeSubseq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">&gt;=</span><span class="n">j</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">2</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findMaximizedCapital</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">w</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">profits</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">capital</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span><span class="n">profits</span><span class="p">),</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">pq</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">res</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="o">-</span><span class="n">A</span><span class="o">.</span><span class="n">pop</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">pq</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">res</span> <span class="o">-=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N^2)，852 ms</p>
+</div><p>288 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-05-30</span>
+                <span>更新于 2016-05-16</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0516/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0502/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -201,14 +207,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a>,&nbsp;<a href="/leetcode_tags/%E5%A0%86/">堆</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0518/" class="prev" rel="prev" title="0518：零钱兑换 II（★）"><i class="fas fa-angle-left fa-fw"></i>0518：零钱兑换 II（★）</a>
-            <a href="/leetcode/0515/" class="next" rel="next" title="0515：在每个树行中找最大值（★）">0515：在每个树行中找最大值（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0505/" class="prev" rel="prev" title="0505：迷宫 II（★）"><i class="fas fa-angle-left fa-fw"></i>0505：迷宫 II（★）</a>
+            <a href="/leetcode/0501/" class="next" rel="next" title="0501：二叉搜索树中的众数">0501：二叉搜索树中的众数<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
