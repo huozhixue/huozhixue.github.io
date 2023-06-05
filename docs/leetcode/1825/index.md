@@ -65,52 +65,18 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
 
 ## 分析
 
-### #1
 
-考虑用数组 A 动态维护最后的 m 个元素并保持有序，MK 平均数即为 int(sum(A[k:-k])/(m-2*k))。
+考虑维护一个有序集合 sl，并动态维护 s=sum(sl[k:-k])。
 
-```python
-class MKAverage:
+弹出元素 x 时：
+- if x<sl[k]，弹出后 s[k] 补到前面， s -= sl[k] 
+- elif i>=sl[-k]，弹出后 s[-k-1] 补到后面，s -= sl[-k-1]
+- else， s -= x
 
-    def __init__(self, m: int, k: int):
-        self.m = m
-        self.k = k
-        self.queue = deque()
-        self.A = []
-        self.size = m - 2*k
-
-    def addElement(self, num: int) -> None:
-        self.queue.append(num)
-        if len(self.queue) == self.m:
-            self.A = sorted(self.queue)
-        if len(self.queue) > self.m:
-            i = bisect_left(self.A, self.queue.popleft())
-            self.A.pop(i)
-            insort_right(self.A, num)
-            
-    def calculateMKAverage(self) -> int:
-        if len(self.queue) < self.m:
-            return -1
-        return int(sum(self.A[self.k:-self.k]) / self.size)
-```
-
-9760 ms，勉强 AC
-
-### #2
-
-考虑能否动态维护 s=sum(A[k:-k])。弹出位置 i 的元素时，有：
-
-	if i < k					A[i] 属于最小的 k 个数，弹出后 s 中的最小数 A[k] 补上， s -= A[k] 
-	elif i >= len(A)-k			A[i] 属于最大的 k 个数，弹出后 s 中的最大数 A[-k-1] 补上，s -= A[-k-1]
-	else						A[i] 属于 s， s -= A[i]
-
-同理，在位置 i 插入元素 num 时：
-
-	if i < k					num 属于新的最小的 k 个数，原来的 A[k-1] 被挤出加入到 s，s += A[k-1]
-	elif i > len(A)-k			num 属于新的最大的 k 个数，原来的 A[-k] 被挤出加入到 s，s += A[-k]
-	else						num 属于 s，s += num
-
-注意 len(A) 是变化的。	
+插入 num 时类似讨论：
+- if num<sl[k]，sl[k-1] 补到中间，s += slk-1]
+- elif num>sl[-k]，sl[-k] 补到中间，s += sl[-k]
+- else，s += num
 
 ## 解答
 
@@ -118,48 +84,44 @@ class MKAverage:
 class MKAverage:
 
     def __init__(self, m: int, k: int):
+        from sortedcontainers import SortedList
+        self.sl = SortedList()
+        self.s = 0
+        self.Q = deque()
         self.m = m
         self.k = k
-        self.queue = deque()
-        self.A = []
-        self.size = m - 2 * k
-        self.s = 0
+        self.n = m-2*k
 
     def addElement(self, num: int) -> None:
-        self.queue.append(num)
-        if len(self.queue) == self.m:
-            self.A = sorted(self.queue)
-            self.s = sum(self.A[self.k:-self.k])
-        if len(self.queue) > self.m:
-            i = bisect_left(self.A, self.queue.popleft())
-            if i < self.k:
-                self.s -= self.A[self.k]
-            elif i >= len(self.A) - self.k:
-                self.s -= self.A[-self.k-1]
-            else:
-                self.s -= self.A[i]
-            self.A.pop(i)
-            j = bisect_left(self.A, num)
-            if j < self.k:
-                self.s += self.A[self.k-1]
-            elif j > len(self.A)-self.k:
-                self.s += self.A[-self.k]
-            else:
-                self.s += num
-            self.A.insert(j, num)
+        self.Q.append(num)
+        if len(self.Q)<=self.m:
+            self.sl.add(num)
+            if len(self.Q)==self.m:
+                self.s = sum(self.sl[self.k:-self.k])
+            return 
+        x = self.Q.popleft()
+        if x<=self.sl[self.k-1]:
+            self.s -= self.sl[self.k]
+        elif x>=self.sl[-self.k]:
+            self.s -= self.sl[-self.k-1]
+        else:
+            self.s -= x
+        self.sl.remove(x)
+        if num<self.sl[self.k-1]:
+            self.s += self.sl[self.k-1]
+        elif num>self.sl[-self.k]:
+            self.s += self.sl[-self.k]
+        else:
+            self.s += num
+        self.sl.add(num)
 
     def calculateMKAverage(self) -> int:
-        if len(self.queue) < self.m:
+        if len(self.Q)<self.m:
             return -1
-        return int(self.s / self.size)
+        return floor(self.s/self.n)
 ```
 
-1008 ms
+980 ms
 
-## *附加
-
-理论上来说，采用平衡有序二叉树来维护 A，能在 log N 时间内查找、插入、删除元素，可以降低时间复杂度。
-
-但是 python 的列表操作非常快，所以一般不用树结构。库函数 sortedcontainers.SortedList 也是用 list 实现的。
 
 

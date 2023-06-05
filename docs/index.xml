@@ -3,9 +3,16 @@
         <title>个人博客</title>
         <link>https://huozhixue.github.io/</link>
         <description>Ian 的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 10:50:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://huozhixue.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>力扣总结 算法模板</title>
+    <link>https://huozhixue.github.io/algorithm-template/</link>
+    <pubDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-template/</guid>
+    <description><![CDATA[字符串匹配 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j += 1 nxt.append(j) return nxt[1:] manacher 1 2 3 4 5 6 7 8 9 10 11 12 def manacher(s): s = &#39;#&#39; + &#39;#&#39;.join(s) + &#39;#&#39; A, n = [], len(s) mid,]]></description>
+</item><item>
     <title>力扣总结 数据结构进阶（六）：线段树</title>
     <link>https://huozhixue.github.io/algorithm-segment_tree/</link>
     <pubDate>Wed, 21 Jul 2021 00:00:00 &#43;0800</pubDate>
@@ -138,12 +145,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/algorithm-graph/</guid>
     <description><![CDATA[图是一种比树形结构更复杂的非线性数据结构。 树形结构中的结点是一对多的关系，且有明显的层次关系。 图中的顶点是多对多的关系，无明显的层次关系。 按]]></description>
-</item><item>
-    <title>力扣总结 数据结构（七）：堆</title>
-    <link>https://huozhixue.github.io/algorithm-heap/</link>
-    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-heap/</guid>
-    <description><![CDATA[堆 是一种特别的完全二叉树，每一个节点的值都大于等于或小于等于其孩子节点的值。 堆可以在 O(logN) 时间内插入元素、删除根节点，在 O(1) 时间获得最大值或最小值]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,14 @@
         <title>算法 - 标签 - 个人博客</title>
         <link>https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 21 Jul 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>力扣总结 算法模板</title>
+    <link>https://huozhixue.github.io/algorithm-template/</link>
+    <pubDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algorithm-template/</guid>
+    <description><![CDATA[字符串匹配 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j += 1 nxt.append(j) return nxt[1:] manacher 1 2 3 4 5 6 7 8 9 10 11 12 def manacher(s): s = &#39;#&#39; + &#39;#&#39;.join(s) + &#39;#&#39; A, n = [], len(s) mid,]]></description>
+</item><item>
     <title>力扣总结 数据结构进阶（六）：线段树</title>
     <link>https://huozhixue.github.io/algorithm-segment_tree/</link>
     <pubDate>Wed, 21 Jul 2021 00:00:00 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/algorithm-rolling_hash/</guid>
     <description><![CDATA[滚动哈希是一种针对固定长度的滑动窗口的哈希方法。 朴素的哈希需要对所有窗口单独求哈希值，时间复杂度和空间复杂度都和窗口长度相关。 用滚动哈希则可]]></description>
-</item><item>
-    <title>力扣总结 算法进阶（一）：前缀和</title>
-    <link>https://huozhixue.github.io/algorithm-prefix_sum/</link>
-    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-prefix_sum/</guid>
-    <description><![CDATA[前缀和是一种常用的解决区间查询问题的算法。 当数组固定时，根据前缀和即可在 O(1) 时间查询任意区间的和。 当数组动态变化时，则考虑用 树状数组、 线段树 等]]></description>
 </item></channel>
 </rss>

@@ -96,37 +96,36 @@ class NumArray:
 
 还有个专门针对 单点更新+区间查询 的算法——树状数组。更新和查询时间 O(logN)。
 
-> 为了方便，用 tree[i] 维护数组 **[0]+nums** 的区间 (i-lowbit(i), i] 的和
 
 ```python
-class NumArray:
+class Fwk:
+    def __init__(self, N):
+        self.tree = [0] * (N + 1)
 
-    def __init__(self, nums: List[int]):
-        self.nums = nums
-        self.tree = [0] * (len(nums)+1)
-        for i, num in enumerate(nums):
-            self.add(i+1, num)
-
-    def lowbit(self, x):
-        return x & -x
-
-    def add(self, i, x):
+    def update(self, i, x):
         while i < len(self.tree):
             self.tree[i] += x
-            i += self.lowbit(i)
+            i += i & (-i)
 
-    def query(self, i):
+    def get(self, i):
         res = 0
-        while i:
+        while i > 0:
             res += self.tree[i]
-            i -= self.lowbit(i)
+            i &= i-1
         return res
 
+class NumArray:
+    def __init__(self, nums: List[int]):
+        self.nums = nums
+        self.tree = Fwk(len(nums))
+        for i,x in enumerate(nums):
+            self.tree.update(i+1,x)
+
     def update(self, index: int, val: int) -> None:
-        self.add(index+1, val-self.nums[index])
+        self.tree.update(index+1, val-self.nums[index])
         self.nums[index] = val
 
     def sumRange(self, left: int, right: int) -> int:
-        return self.query(right+1) - self.query(left)
+        return self.tree.get(right+1)-self.tree.get(left)
 ```
 1116 ms 
