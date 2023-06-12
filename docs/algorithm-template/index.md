@@ -1,9 +1,9 @@
 # 力扣总结 算法模板
 
 
-## 字符串匹配
+## 1 字符串匹配
 
-### kmp
+### 1.1 kmp
 
 ```python
 def kmp(s):
@@ -16,7 +16,7 @@ def kmp(s):
 	return nxt     # nxt[i]:i-1结尾的最大真前缀长度
 ```
 
-### manacher
+### 1.2 manacher
 
 ```python
 def manacher(s):
@@ -34,7 +34,7 @@ def manacher(s):
 	return B       # B[i]:i结尾的最大回文子串长度
 ```
 
-### z 函数
+### 1.3 z 函数
 
 ```python
 def zfunc(s):
@@ -48,7 +48,7 @@ def zfunc(s):
 	return z      # i>0时，z[i]:lcp(后缀i,后缀0) 
 ```
 
-### 滚动哈希
+### 1.4 滚动哈希
 
 ```python
 ## 可以放在主函数外
@@ -62,7 +62,7 @@ def cal(pre,i,j):
     return (pre[j+1]-pre[i]*B[j-i+1])%mod
 ```
 
-### 后缀数组
+### 1.5 后缀数组
 
 ```python
 def SA(A):
@@ -127,9 +127,9 @@ def SA(A):
 	return sa,rk,height     # height[i]:lcp(sa[i],sa[i-1])
 ```
 
-## 贪心
+## 2 贪心
 
-### 下一个排列
+### 2.1 下一个排列
 
 ```python
 def nxt(A):
@@ -147,11 +147,11 @@ def nxt(A):
 	return A
 ```
 
-## 区间查询
+## 3 区间查询
 
-### 树状数组
+### 3.1 树状数组
 
-#### 前缀和
+#### 3.1.1 前缀和
 
 ```python []
 class Fwk:
@@ -171,7 +171,7 @@ class Fwk:
         return res
 ```
 
-#### 前缀最大值
+#### 3.1.2 前缀最大值
 
 ```python
 class Fwk:
@@ -191,7 +191,7 @@ class Fwk:
         return res
 ```
 
-### ST 表
+### 3.2 ST 表
 
 ```python
 class ST:
@@ -207,4 +207,59 @@ class ST:
     def query(self,l,r):
         j = (r-l+1).bit_length()-1
         return max(self.st[j][l],self.st[j][r-(1<<j)+1])
+```
+
+
+
+
+## 4 数学
+
+### 4.1 爬山法
+```python
+def climb(p,cal):
+	eps, step = 1e-7, 1
+	while step > eps:
+		for i,w in product(range(len(p)),[step,-step]):
+			p2 = [a+w*(j==i) for j,a in enumerate(p)]
+			if cal(p2)<cal(p):
+				p = p2
+				break
+		else:
+			step *= 0.5
+	return p
+```
+
+
+## 图
+
+### 拓扑排序
+
+#### 博弈反推
+
+```python
+Q = deque(res)                  # res[u]：终态 u 的胜负结果
+while Q:
+	u = Q.popleft()
+	if u==start:                # start：初始态
+		return res[u]
+	for v in nxt[u]:
+		if v in res:
+			continue
+		if v[-1]==res[u]:
+			res[v] = res[u]
+			Q.append(v)
+		else:
+			indeg[v]-=1
+			if indeg[v]==0:
+				res[v] = res[u]
+				Q.append(v)
+```
+
+### 欧拉图
+
+```python
+def dfs(u):
+	while nxt[u]:
+		dfs(nxt[u].pop())
+	res.append(u)
 ```

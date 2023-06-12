@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>力扣总结 算法模板 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="力扣总结 算法模板" />
-<meta property="og:description" content="字符串匹配 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j &#43;= 1 nxt.append(j) return nxt # nxt[i]:i-1结尾的最大真前缀长度 manacher 1 2 3 4 5 6" />
+<meta property="og:description" content="1 字符串匹配 1.1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j &#43;= 1 nxt.append(j) return nxt # nxt[i]:i-1结尾的最大真前缀长度 1.2 manacher 1 2 3" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algorithm-template/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-06-01T00:00:00+08:00" />
@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="力扣总结 算法模板"/>
-<meta name="twitter:description" content="字符串匹配 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j &#43;= 1 nxt.append(j) return nxt # nxt[i]:i-1结尾的最大真前缀长度 manacher 1 2 3 4 5 6"/>
+<meta name="twitter:description" content="1 字符串匹配 1.1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j &#43;= 1 nxt.append(j) return nxt # nxt[i]:i-1结尾的最大真前缀长度 1.2 manacher 1 2 3"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algorithm-template/" /><link rel="prev" href="https://huozhixue.github.io/algorithm-segment_tree/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algorithm-template\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  952 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  1116 ,
         "url": "https:\/\/huozhixue.github.io\/algorithm-template\/","datePublished": "2023-06-01T00:00:00+08:00","dateModified": "2023-06-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">力扣总结 算法模板</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-06-01">2023-06-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 952 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/algorithm-template/" class="leancloud_visitors" data-flag-title="力扣总结 算法模板">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-06-01">2023-06-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1116 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/algorithm-template/" class="leancloud_visitors" data-flag-title="力扣总结 算法模板">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -120,35 +120,50 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#字符串匹配">字符串匹配</a>
+    <li><a href="#1-字符串匹配">1 字符串匹配</a>
       <ul>
-        <li><a href="#kmp">kmp</a></li>
-        <li><a href="#manacher">manacher</a></li>
-        <li><a href="#z-函数">z 函数</a></li>
-        <li><a href="#滚动哈希">滚动哈希</a></li>
-        <li><a href="#后缀数组">后缀数组</a></li>
+        <li><a href="#11-kmp">1.1 kmp</a></li>
+        <li><a href="#12-manacher">1.2 manacher</a></li>
+        <li><a href="#13-z-函数">1.3 z 函数</a></li>
+        <li><a href="#14-滚动哈希">1.4 滚动哈希</a></li>
+        <li><a href="#15-后缀数组">1.5 后缀数组</a></li>
       </ul>
     </li>
-    <li><a href="#贪心">贪心</a>
+    <li><a href="#2-贪心">2 贪心</a>
       <ul>
-        <li><a href="#下一个排列">下一个排列</a></li>
+        <li><a href="#21-下一个排列">2.1 下一个排列</a></li>
       </ul>
     </li>
-    <li><a href="#区间查询">区间查询</a>
+    <li><a href="#3-区间查询">3 区间查询</a>
       <ul>
-        <li><a href="#树状数组">树状数组</a>
+        <li><a href="#31-树状数组">3.1 树状数组</a>
           <ul>
-            <li><a href="#前缀和">前缀和</a></li>
-            <li><a href="#前缀最大值">前缀最大值</a></li>
+            <li><a href="#311-前缀和">3.1.1 前缀和</a></li>
+            <li><a href="#312-前缀最大值">3.1.2 前缀最大值</a></li>
           </ul>
         </li>
-        <li><a href="#st-表">ST 表</a></li>
+        <li><a href="#32-st-表">3.2 ST 表</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-数学">4 数学</a>
+      <ul>
+        <li><a href="#41-爬山法">4.1 爬山法</a></li>
+      </ul>
+    </li>
+    <li><a href="#图">图</a>
+      <ul>
+        <li><a href="#拓扑排序">拓扑排序</a>
+          <ul>
+            <li><a href="#博弈反推">博弈反推</a></li>
+          </ul>
+        </li>
+        <li><a href="#欧拉图">欧拉图</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="字符串匹配">字符串匹配</h2>
-<h3 id="kmp">kmp</h3>
+            </div><div class="content" id="content"><h2 id="1-字符串匹配">1 字符串匹配</h2>
+<h3 id="11-kmp">1.1 kmp</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -171,7 +186,7 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">nxt</span>     <span class="c1"># nxt[i]:i-1结尾的最大真前缀长度</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="manacher">manacher</h3>
+</div><h3 id="12-manacher">1.2 manacher</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -204,7 +219,7 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">B</span>       <span class="c1"># B[i]:i结尾的最大回文子串长度</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="z-函数">z 函数</h3>
+</div><h3 id="13-z-函数">1.3 z 函数</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -229,7 +244,7 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">z</span>      <span class="c1"># i&gt;0时，z[i]:lcp(后缀i,后缀0) </span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="滚动哈希">滚动哈希</h3>
+</div><h3 id="14-滚动哈希">1.4 滚动哈希</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -254,7 +269,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">pre</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">%</span><span class="n">mod</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="后缀数组">后缀数组</h3>
+</div><h3 id="15-后缀数组">1.5 后缀数组</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -381,8 +396,8 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">sa</span><span class="p">,</span><span class="n">rk</span><span class="p">,</span><span class="n">height</span>     <span class="c1"># height[i]:lcp(sa[i],sa[i-1])</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="贪心">贪心</h2>
-<h3 id="下一个排列">下一个排列</h3>
+</div><h2 id="2-贪心">2 贪心</h2>
+<h3 id="21-下一个排列">2.1 下一个排列</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -415,9 +430,9 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">A</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="区间查询">区间查询</h2>
-<h3 id="树状数组">树状数组</h3>
-<h4 id="前缀和">前缀和</h4>
+</div><h2 id="3-区间查询">3 区间查询</h2>
+<h3 id="31-树状数组">3.1 树状数组</h3>
+<h4 id="311-前缀和">3.1.1 前缀和</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -454,7 +469,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="前缀最大值">前缀最大值</h4>
+</div><h4 id="312-前缀最大值">3.1.2 前缀最大值</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -491,7 +506,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="st-表">ST 表</h3>
+</div><h3 id="32-st-表">3.2 ST 表</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -522,6 +537,92 @@
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">l</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">r</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="4-数学">4 数学</h2>
+<h3 id="41-爬山法">4.1 爬山法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">climb</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">cal</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">eps</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">step</span> <span class="o">&gt;</span> <span class="n">eps</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)),[</span><span class="n">step</span><span class="p">,</span><span class="o">-</span><span class="n">step</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">			<span class="n">p2</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">+</span><span class="n">w</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">cal</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">cal</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">				<span class="n">p</span> <span class="o">=</span> <span class="n">p2</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">step</span> <span class="o">*=</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">p</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="图">图</h2>
+<h3 id="拓扑排序">拓扑排序</h3>
+<h4 id="博弈反推">博弈反推</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>                  <span class="c1"># res[u]：终态 u 的胜负结果</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">u</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">u</span><span class="o">==</span><span class="n">start</span><span class="p">:</span>                <span class="c1"># start：初始态</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">nxt</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">continue</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">res</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">indeg</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">-=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">indeg</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">				<span class="n">res</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">				<span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="欧拉图">欧拉图</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">nxt</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">dfs</span><span class="p">(</span><span class="n">nxt</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
