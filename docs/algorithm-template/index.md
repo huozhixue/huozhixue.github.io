@@ -214,7 +214,34 @@ class ST:
 
 ## 4 数学
 
-### 4.1 爬山法
+### 4.1 质因数分解
+
+```python
+ma = 10**5
+
+def get_primes(M):
+    f = [1]*M
+    for i in range(2,isqrt(M)+1):
+        if f[i]:
+            f[i*i:M:i] = [0] * ((M-1-i*i)//i+1)
+    return [i for i in range(2,M) if f[i]]
+
+primes = get_primes(isqrt(ma)+1)
+
+@cache
+def factor(x):
+    ct = Counter()
+    for p in primes:
+        while x%p==0:
+            x//=p
+            ct[p] += 1
+    if x>1:
+        ct[x] += 1
+    return ct
+```
+
+
+### 4.2 爬山法
 ```python
 def climb(p,cal):
 	eps, step = 1e-7, 1
@@ -230,11 +257,11 @@ def climb(p,cal):
 ```
 
 
-## 图
+## 5 图
 
-### 拓扑排序
+### 5.1 拓扑排序
 
-#### 博弈反推
+#### 5.1.1 博弈反推
 
 ```python
 Q = deque(res)                  # res[u]：终态 u 的胜负结果
@@ -255,7 +282,7 @@ while Q:
 				Q.append(v)
 ```
 
-### 欧拉图
+### 5.2 欧拉图
 
 ```python
 def dfs(u):
