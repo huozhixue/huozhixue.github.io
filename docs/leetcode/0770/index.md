@@ -147,32 +147,34 @@ def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List
 遍历到某个运算符时，将前面优先级更高的先运算了。
 	
 ```python
-def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
-    def mul(ct0, ct1):
-        tmp = ct0.copy()
-        ct0.clear()
-        for k0, k1 in product(tmp, ct1):
-            ct0[tuple(sorted(k0 + k1))] += tmp[k0] * ct1[k1]
+class Solution:
+    def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
+        def mul(ct0,ct1):
+            ct2 = ct0.copy()
+            ct0.clear()
+            for a,b in product(ct1,ct2):
+                ct0[tuple(sorted(a+b))] += ct1[a]*ct2[b]
 
-    func = {'+': Counter.update, '-': Counter.subtract, '*': mul}
-    d, pro = dict(zip(evalvars, evalints)), dict(zip('(+-*', [0, 1, 1, 2]))
-    stack, ops = [], []
-    for left, var, num, op, right in re.findall(r'(\()|([a-z]+)|(\d+)|([-+*])|(\))', expression + '+'):
-        if left:
-            ops.append(left)
-        elif var:
-            stack.append(Counter({(): d[var]} if var in d else {(var,): 1}))
-        elif num:
-            stack.append(Counter({(): int(num)}))
-        elif op:
-            while ops and pro[ops[-1]] >= pro[op]:
-                func[ops.pop()](stack[-2], stack.pop())
-            ops.append(op)
-        else:
-            while ops[-1] != '(':
-                func[ops.pop()](stack[-2], stack.pop())
-            ops.pop()
-    res = sorted(stack[0].items(), key=lambda x: (-len(x[0]), x[0]))
-    return ['*'.join((str(v),) + k) for k, v in res if v]
+        func = {'+': Counter.update, '-': Counter.subtract, '*': mul}
+        pro =  dict(zip('*+-(', '1223'))
+        d = dict(zip(evalvars,evalints))
+        sk, ops = [], []
+        for x,op in re.findall('([0-9a-z]+)|([-+*()])',expression+'+'):
+            if x.isdigit():
+                sk.append(Counter({():int(x)}))
+            elif x.isalpha():
+                sk.append(Counter({():d[x]} if x in d else {(x,):1}))
+            elif op == '(':
+                ops.append(op)
+            elif op == ')':
+                while ops[-1] != '(':
+                    func[ops.pop()](sk[-2],sk.pop())
+                ops.pop()
+            else:
+                while ops and pro[ops[-1]] <= pro[op]:
+                    func[ops.pop()](sk[-2],sk.pop())
+                ops.append(op)
+        res = sorted(sk[0].items(), key=lambda x: (-len(x[0]), x[0]))
+        return ['*'.join((str(v),)+k) for k,v in res if v]
 ```
-40 ms
+52 ms

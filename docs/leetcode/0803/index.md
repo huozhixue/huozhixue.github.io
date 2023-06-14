@@ -76,13 +76,59 @@
 
 ## 分析
 
+连通相关容易想到并查集，但本题中是要去掉元素。
 
+针对离线查询，可以考虑逆向遍历，依次添加砖块，并维护并查集大小，那么连到顶部的连通块增加的大小（除了当前添加的砖块外）即为所求。
+
+注意消除可能指向空白，所以先记录有效的消除下标。
 
 
 ## 解答
 
+
 ```python
-
+class Solution:
+    def hitBricks(self, grid: List[List[int]], hits: List[List[int]]) -> List[int]:
+        def find(x):
+            if f.setdefault(x,x)!=x:
+                f[x] = find(f[x])
+            return f[x]
+        
+        def union(x,y):
+            fx, fy = find(x),find(y)
+            if fx != fy:
+                if sz[fx]>sz[fy]:
+                    fx, fy = fy, fx
+                f[fx] = fy
+                sz[fy] += sz[fx]
+        
+        f, sz = {}, defaultdict(lambda: 1)
+        A = []
+        for i,(r,c) in enumerate(hits):
+            if grid[r][c]:
+                A.append((i,r,c))
+                grid[r][c] = 0
+        m, n = len(grid), len(grid[0])
+        dummy = (-1,-1)
+        for i,j in product(range(m),range(n)):
+            if grid[i][j]:
+                if i==0:
+                    union((i,j),dummy)
+                if i and grid[i-1][j]:
+                    union((i,j),(i-1,j))
+                if j and grid[i][j-1]:
+                    union((i,j),(i,j-1))
+        res = [0]*len(hits)
+        for i,r,c in A[::-1]:
+            tmp = sz[find(dummy)]
+            if r==0:
+                union((r,c),dummy)
+            for x,y in [(r+1,c),(r-1,c),(r,c+1),(r,c-1)]:
+                if 0<=x<m and 0<=y<n and grid[x][y]:
+                    union((r,c),(x,y))
+            grid[r][c] = 1
+            res[i] = max(0,sz[find(dummy)]-tmp-1)
+        return res
 ```
-
+752 ms
 

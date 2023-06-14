@@ -127,9 +127,14 @@ def SA(A):
 	return sa,rk,height     # height[i]:lcp(sa[i],sa[i-1])
 ```
 
-## 2 贪心
+## 2 计算器
 
-### 2.1 下一个排列
+
+
+
+## 3 贪心
+
+### 3.1 下一个排列
 
 ```python
 def nxt(A):
@@ -147,11 +152,11 @@ def nxt(A):
 	return A
 ```
 
-## 3 区间查询
+## 4 区间查询
 
-### 3.1 树状数组
+### 4.1 树状数组
 
-#### 3.1.1 前缀和
+#### 4.1.1 前缀和
 
 ```python []
 class Fwk:
@@ -171,7 +176,7 @@ class Fwk:
         return res
 ```
 
-#### 3.1.2 前缀最大值
+#### 4.1.2 前缀最大值
 
 ```python
 class Fwk:
@@ -191,7 +196,7 @@ class Fwk:
         return res
 ```
 
-### 3.2 ST 表
+### 4.2 ST 表
 
 ```python
 class ST:
@@ -212,9 +217,9 @@ class ST:
 
 
 
-## 4 数学
+## 5 数学
 
-### 4.1 质因数分解
+### 5.1 质因数分解
 
 ```python
 ma = 10**5
@@ -241,7 +246,7 @@ def factor(x):
 ```
 
 
-### 4.2 爬山法
+### 5.2 爬山法
 ```python
 def climb(p,cal):
 	eps, step = 1e-7, 1
@@ -256,12 +261,30 @@ def climb(p,cal):
 	return p
 ```
 
+## 6 并查集
 
-## 5 图
+```python
+def find(x):
+	if f.setdefault(x,x)!=x:
+		f[x] = find(f[x])
+	return f[x]
 
-### 5.1 拓扑排序
+def union(x,y):
+	fx, fy = find(x),find(y)
+	if fx != fy:
+		if sz[fx]>sz[fy]:
+			fx, fy = fy, fx
+		f[fx] = fy
+		sz[fy] += sz[fx]
 
-#### 5.1.1 博弈反推
+f, sz = {}, defaultdict(lambda: 1)
+```
+
+## 7 图
+
+### 7.1 拓扑排序
+
+#### 7.1.1 博弈反推
 
 ```python
 Q = deque(res)                  # res[u]：终态 u 的胜负结果
@@ -282,7 +305,7 @@ while Q:
 				Q.append(v)
 ```
 
-### 5.2 欧拉图
+### 7.2 欧拉图
 
 ```python
 def dfs(u):
