@@ -45,13 +45,13 @@ def zfunc(s):
 		while i+z[i]<n and s[z[i]]==s[i+z[i]]:
 			l, r = i, i+z[i]
 			z[i] += 1
-	return z      # i>0时，z[i]:lcp(后缀i,后缀0) 
+	return z      # z[i]:lcp(后缀i,后缀0) 
 ```
 
 ### 1.4 滚动哈希
 
 ```python
-## 可以放在主函数外
+## 滚动哈希
 base, mod = 29, 10**11+13
 B = [1]
 for _ in range(3*10**4):
@@ -222,7 +222,7 @@ class ST:
 ### 5.1 质因数分解
 
 ```python
-ma = 10**5
+ma = 
 
 def get_primes(M):
     f = [1]*M
@@ -245,8 +245,18 @@ def factor(x):
     return ct
 ```
 
+### 5.2 乘法逆元
 
-### 5.2 爬山法
+```python
+ma = 
+mod = 10**9+7
+fac, inv = [1]*ma, [1]*ma
+for i in range(1,ma):
+    fac[i] = fac[i-1]*i%mod
+    inv[i] = pow(fac[i],-1,mod)
+```
+
+### 5.3 爬山法
 ```python
 def climb(p,cal):
 	eps, step = 1e-7, 1

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algorithm-template\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  1260 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  1278 ,
         "url": "https:\/\/huozhixue.github.io\/algorithm-template\/","datePublished": "2023-06-01T00:00:00+08:00","dateModified": "2023-06-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">力扣总结 算法模板</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-06-01">2023-06-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1260 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-06-01">2023-06-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1278 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/algorithm-template/" class="leancloud_visitors" data-flag-title="力扣总结 算法模板">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -149,7 +149,8 @@
     <li><a href="#5-数学">5 数学</a>
       <ul>
         <li><a href="#51-质因数分解">5.1 质因数分解</a></li>
-        <li><a href="#52-爬山法">5.2 爬山法</a></li>
+        <li><a href="#52-乘法逆元">5.2 乘法逆元</a></li>
+        <li><a href="#53-爬山法">5.3 爬山法</a></li>
       </ul>
     </li>
     <li><a href="#6-并查集">6 并查集</a></li>
@@ -244,7 +245,7 @@
 </span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
 </span></span><span class="line"><span class="cl">			<span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">			<span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">z</span>      <span class="c1"># i&gt;0时，z[i]:lcp(后缀i,后缀0) </span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">z</span>      <span class="c1"># z[i]:lcp(后缀i,后缀0) </span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="14-滚动哈希">1.4 滚动哈希</h3>
@@ -261,7 +262,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## 可以放在主函数外</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## 滚动哈希</span>
 </span></span><span class="line"><span class="cl"><span class="n">base</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">11</span><span class="o">+</span><span class="mi">13</span>
 </span></span><span class="line"><span class="cl"><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">):</span>
@@ -570,7 +571,7 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ma</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ma</span> <span class="o">=</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_primes</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">M</span>
@@ -593,7 +594,26 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ct</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="52-爬山法">5.2 爬山法</h3>
+</div><h3 id="52-乘法逆元">5.2 乘法逆元</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ma</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
+</span></span><span class="line"><span class="cl"><span class="n">fac</span><span class="p">,</span> <span class="n">inv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ma</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ma</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">ma</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">i</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">mod</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="53-爬山法">5.3 爬山法</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
