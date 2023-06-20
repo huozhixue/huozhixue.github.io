@@ -152,74 +152,10 @@ def nxt(A):
 	return A
 ```
 
-## 4 区间查询
 
-### 4.1 树状数组
+## 4 数学
 
-#### 4.1.1 前缀和
-
-```python []
-class Fwk:
-    def __init__(self, N):
-        self.tree = [0] * (N + 1)
-
-    def update(self, i, x):          # 更新 i-1 位置的值
-        while i < len(self.tree):
-            self.tree[i] += x
-            i += i & (-i)
-
-    def get(self, i):                # 前缀 [0,i) 的和
-        res = 0
-        while i > 0:
-            res += self.tree[i]
-            i &= i-1
-        return res
-```
-
-#### 4.1.2 前缀最大值
-
-```python
-class Fwk:
-    def __init__(self, N):
-        self.tree = [-inf] * (N + 1)
-
-    def update(self, i, x):          # 更新 i-1 位置的值（只能变大）
-        while i < len(self.tree):
-            self.tree[i] = max(self.tree[i], x)
-            i += i & (-i)
-
-    def get(self, i):                # 前缀 [0,i) 的最大值
-        res = -inf
-        while i > 0:
-            res = max(res, self.tree[i])
-            i &= i-1
-        return res
-```
-
-### 4.2 ST 表
-
-```python
-class ST:
-    def __init__(self,A,func=max):
-        dp = A[:]
-        self.st = st = [dp]
-        j, N = 1, len(dp)
-        while 2*j<=N:
-            dp = [func(dp[i],dp[i+j]) for i in range(N-2*j+1)]
-            st.append(dp)
-            j <<= 1
-            
-    def query(self,l,r):
-        j = (r-l+1).bit_length()-1
-        return max(self.st[j][l],self.st[j][r-(1<<j)+1])
-```
-
-
-
-
-## 5 数学
-
-### 5.1 质因数分解
+### 4.1 质因数分解
 
 ```python
 ma = 
@@ -245,18 +181,18 @@ def factor(x):
     return ct
 ```
 
-### 5.2 乘法逆元
+### 4.2 乘法逆元
 
 ```python
 ma = 
 mod = 10**9+7
-fac, inv = [1]*ma, [1]*ma
-for i in range(1,ma):
+fac, inv = [1]*(ma+1), [1]*(ma+1)
+for i in range(1,ma+1):
     fac[i] = fac[i-1]*i%mod
     inv[i] = pow(fac[i],-1,mod)
 ```
 
-### 5.3 爬山法
+### 4.3 爬山法
 ```python
 def climb(p,cal):
 	eps, step = 1e-7, 1
@@ -271,7 +207,7 @@ def climb(p,cal):
 	return p
 ```
 
-## 6 并查集
+## 5 并查集
 
 ```python
 def find(x):
@@ -290,11 +226,11 @@ def union(x,y):
 f, sz = {}, defaultdict(lambda: 1)
 ```
 
-## 7 图
+## 6 图
 
-### 7.1 拓扑排序
+### 6.1 拓扑排序
 
-#### 7.1.1 博弈反推
+#### 6.1.1 博弈反推
 
 ```python
 Q = deque(res)                  # res[u]：终态 u 的胜负结果
@@ -315,11 +251,165 @@ while Q:
 				Q.append(v)
 ```
 
-### 7.2 欧拉图
+### 6.2 欧拉图
 
 ```python
 def dfs(u):
 	while nxt[u]:
 		dfs(nxt[u].pop())
 	res.append(u)
+```
+
+
+## 7 区间查询
+
+### 7.1 树状数组
+
+#### 7.1.1 动态区间和
+
+```python
+class BIT:
+    def __init__(self, A):
+        self.tree = [0]*(len(A)+1)
+        self.A = [0]*len(A)
+        for i,a in enumerate(A):
+            self.update(i,a)
+
+    def update(self, i, x):
+        add = x - self.A[i]
+        self.A[i] = x
+        i += 1
+        while i < len(self.tree):
+            self.tree[i] += add
+            i += i & (-i)
+
+    def get(self, i):
+        res, i = 0, i+1
+        while i > 0:
+            res += self.tree[i]
+            i &= i-1
+        return res
+    
+    def query(self,l,r):
+        return self.get(r)-self.get(l-1)
+```
+
+#### 7.1.2 动态区间最值
+
+```python
+class Fwk:
+    def __init__(self, A, func=max):
+        self.A = A
+        self.func = func
+        self.tree = [0]*(len(A)+1)
+        for i in range(1,len(A)+1):
+            self.tree[i] = self.cal(i)
+    
+    def cal(self, i):
+        res = self.A[i-1]
+        j = (i&(-i)).bit_length()-1
+        for k in range(j):
+            res = self.func(res, self.tree[i-(1<<k)])
+        return res
+
+    def update(self, i, x):
+        flag = self.A[i]==self.tree[i+1]==self.func(self.A[i],x)!=x
+        self.A[i] = x
+        i += 1
+        while i < len(self.tree):
+            self.tree[i] = self.cal(i) if flag else self.func(self.tree[i],x)
+            i += i & (-i)
+
+    def query(self, l, r):
+        res = self.A[r]
+        r += 1
+        while l < r:
+            if (r&(r-1))>=l:
+                res = self.func(res,self.tree[r])
+                r &= r-1
+            else:
+                r -= 1
+                res = self.func(res,self.A[r])
+        return res
+```
+
+### 7.2 ST 表（静态区间最值）
+
+```python
+class ST:
+    def __init__(self,A,func=max):
+        dp = A[:]
+        self.st = st = [dp]
+        j, N = 1, len(dp)
+        while 2*j<=N:
+            dp = [func(dp[i],dp[i+j]) for i in range(N-2*j+1)]
+            st.append(dp)
+            j <<= 1
+        self.func = func
+            
+    def query(self,l,r):
+        j = (r-l+1).bit_length()-1
+        return self.func(self.st[j][l],self.st[j][r-(1<<j)+1])
+```
+
+### 7.3 线段树
+
+```python
+class Seg:
+    def __init__(self, n, A=None):
+        self.n = n                     # 区间范围 [0,n-1]
+        self.t = defaultdict(int)      # 树节点
+        self.f = defaultdict(int)      # 懒标记
+        if A:                          # 初始数组
+            self.A = A
+            self.build()
+
+    def do(self,o,l,r,x):              # 节点 o 更新 x 的具体操作
+        self.t[o] += x
+        self.f[o] += x
+    
+    def up(self,a,b):                  # 区间归并函数
+        return a+b
+
+    def build(self,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if l==r:
+            self.t[o] = self.A[l]
+            return
+        m = (l+r)//2
+        self.build(o*2,l,m)
+        self.build(o*2+1,m+1,r)
+        self.t[o] = self.up(self.t[o*2],self.t[o*2+1])
+
+    def down(self,o,l,m,r):
+        if self.f[o] != self.f[0]:
+            self.do(o*2,l,m,self.f[o])
+            self.do(o*2+1,m+1,r,self.f[o])
+            self.f[o] = self.f[0]
+
+    def update(self,a,b,x,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if a<=l and r<=b:
+            self.do(o,l,r,x)
+            return
+        m = (l+r)//2
+        self.down(o,l,m,r)
+        if a<=m:
+            self.update(a,b,x,o*2,l,m)
+        if m<b:
+            self.update(a,b,x,o*2+1,m+1,r)
+        self.t[o] = self.up(self.t[o*2],self.t[o*2+1])
+
+    def query(self,a,b,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if a<=l and r<=b:
+            return self.t[o]
+        m = (l+r)//2
+        self.down(o,l,m,r)
+        res = 0
+        if a<=m:
+            res = self.up(res,self.query(a,b,o*2,l,m))
+        if m<b:
+            res = self.up(res,self.query(a,b,o*2+1,m+1,r))
+        return res
 ```
