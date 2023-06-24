@@ -357,19 +357,19 @@ class ST:
 ```python
 class Seg:
     def __init__(self, n, A=None):
-        self.n = n                     # 区间范围 [0,n-1]
-        self.t = defaultdict(int)      # 树节点
-        self.f = defaultdict(int)      # 懒标记
-        if A:                          # 初始数组
+        self.n = n                     
+        self.t = defaultdict(int)      # 树节点，维护区间信息
+        self.f = defaultdict(int)      # 懒标记，注意让初始值代表无标记
+        if A:                          
             self.A = A
             self.build()
 
-    def do(self,o,l,r,x):              # 节点 o 更新 x 的具体操作
-        self.t[o] += x
-        self.f[o] += x
-    
     def up(self,a,b):                  # 区间归并函数
         return a+b
+
+    def do(self,o,l,r,x):              # 收到更新信息 x 后，树节点和懒标记的具体操作
+        self.t[o] += x*(r-l+1)
+        self.f[o] += x
 
     def build(self,o=1,l=0,r=None):
         r = self.n-1 if r is None else r
@@ -406,7 +406,7 @@ class Seg:
             return self.t[o]
         m = (l+r)//2
         self.down(o,l,m,r)
-        res = 0
+        res = self.t[0]                      # 查询时的初值，可能要修改 
         if a<=m:
             res = self.up(res,self.query(a,b,o*2,l,m))
         if m<b:
