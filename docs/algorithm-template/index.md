@@ -260,12 +260,20 @@ def dfs(u):
 	res.append(u)
 ```
 
+## 7 字典树
 
-## 7 区间查询
+```python
+T = lambda: defaultdict(T)
+trie = T()
+for w in words:
+	reduce(dict.__getitem__, w, trie)['#'] = w
+```
 
-### 7.1 树状数组
+## 8 区间查询
 
-#### 7.1.1 动态区间和
+### 8.1 树状数组
+
+#### 8.1.1 动态区间和
 
 ```python
 class BIT:
@@ -294,7 +302,7 @@ class BIT:
         return self.get(r)-self.get(l-1)
 ```
 
-#### 7.1.2 动态区间最值
+#### 8.1.2 动态区间最值
 
 ```python
 class Fwk:
@@ -333,7 +341,7 @@ class Fwk:
         return res
 ```
 
-### 7.2 ST 表（静态区间最值）
+### 8.2 ST 表（静态区间最值）
 
 ```python
 class ST:
@@ -352,7 +360,7 @@ class ST:
         return self.func(self.st[j][l],self.st[j][r-(1<<j)+1])
 ```
 
-### 7.3 线段树
+### 8.3 线段树
 
 ```python
 class Seg:
