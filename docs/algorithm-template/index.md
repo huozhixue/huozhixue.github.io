@@ -269,6 +269,13 @@ for w in words:
 	reduce(dict.__getitem__, w, trie)['#'] = w
 ```
 
+```python
+y = 0
+for j in range(ma-1,-1,-1):
+	y *= 2
+	y += T[j][(y+1)^(x>>j)]>0
+```
+
 ## 8 区间查询
 
 ### 8.1 树状数组
