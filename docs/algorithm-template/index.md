@@ -276,6 +276,61 @@ for j in range(ma-1,-1,-1):
 	y += T[j][(y+1)^(x>>j)]>0
 ```
 
+```python []
+class Trie:
+    def __init__(self,n,L,k):
+        self.t = [[0]*k for _ in range(n*L+1)]
+        self.i = 0
+        self.f = [False]*(n*L+1)  
+        self.L = L
+
+    def insert(self, A):  
+        p = 0
+        for a in A:
+            if not self.t[p][a]:
+                self.i += 1
+                self.t[p][a] = self.i  
+            p = self.t[p][a]
+        self.f[p] = True
+
+    def find(self, A):  
+        p = 0
+        for a in A:
+            if not self.t[p][a]:
+                return False
+            p = self.t[p][a]
+        return self.f[p]
+```
+
+```python
+class BitTrie:
+    def __init__(self,n,L):
+        self.t = [[0]*(n*L+1) for _ in range(2)]
+        self.i = 0
+        self.L = L
+
+    def insert(self,x):  
+        p = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if not self.t[bit][p]:
+                self.i += 1
+                self.t[bit][p] = self.i  
+            p = self.t[bit][p]
+
+    def maxxor(self,x):
+        p = 0
+        res = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if self.t[bit^1][p]:
+                res |= 1 << j
+                bit ^= 1
+            p = self.t[bit][p]
+        return res
+```
+
+
 ## 8 区间查询
 
 ### 8.1 树状数组
