@@ -284,7 +284,7 @@ class Trie:
         self.f = [False]*(n*L+1)  
         self.L = L
 
-    def insert(self, A):  
+    def add(self, A):  
         p = 0
         for a in A:
             if not self.t[p][a]:
@@ -308,8 +308,9 @@ class BitTrie:
         self.t = [[0]*(n*L+1) for _ in range(2)]
         self.i = 0
         self.L = L
+        self.s = [0]*(n*L+1)
 
-    def insert(self,x):  
+    def add(self, x):
         p = 0
         for j in range(self.L-1, -1, -1):
             bit = (x>>j)&1
@@ -317,6 +318,27 @@ class BitTrie:
                 self.i += 1
                 self.t[bit][p] = self.i  
             p = self.t[bit][p]
+            self.s[p] += 1
+            
+    def remove(self,x):
+        p = 0
+        for j in range(self.L-1,-1,-1):
+            bit = (x>>j)&1
+            p = self.t[bit][p]
+            self.s[p]-=1
+        
+    def lowxor(self, x, high):
+        res = 0
+        p = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            h = (high>>j)&1
+            if h:
+                res += self.s[self.t[bit][p]]
+            if not self.t[bit^h][p]:
+                return res
+            p = self.t[bit^h][p]
+        return res
 
     def maxxor(self,x):
         p = 0
