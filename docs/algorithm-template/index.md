@@ -228,9 +228,41 @@ f, sz = {}, defaultdict(lambda: 1)
 
 ## 6 图
 
-### 6.1 拓扑排序
+### 6.1 最短路
 
-#### 6.1.1 博弈反推
+#### 6.1.1 dijkstra
+
+```python
+def dij(nxt,s):
+	pq, d = [(0,s)], defaultdict(lambda:inf)
+	d[s] = 0
+	while pq:
+		w,u = heappop(pq)
+		if w>d[u]:
+			continue
+		for v,w2 in nxt[u]:
+			nw = w+w2
+			if nw<d[v]:
+				d[v] = nw
+				heappush(pq, (nw,v))
+	return d
+```
+
+```python
+def dij(s):
+	Q, d = set(range(n)), [inf]*n
+	d[s] = 0
+	while Q:
+		u = min(Q, key=d.__getitem__)
+		Q.remove(u)
+		for v, w in nxt[u]:
+			if v in Q:
+				d[v] = min(d[v], d[u]+w)
+```
+
+### 6.2 拓扑排序
+
+#### 6.2.1 博弈反推
 
 ```python
 Q = deque(res)                  # res[u]：终态 u 的胜负结果
@@ -251,7 +283,7 @@ while Q:
 				Q.append(v)
 ```
 
-### 6.2 欧拉图
+### 6.3 欧拉图
 
 ```python
 def dfs(u):
