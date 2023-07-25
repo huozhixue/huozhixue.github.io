@@ -59,10 +59,11 @@
 最简单的就是直接调用正则。
 
 ```python
-def isMatch(self, s: str, p: str) -> bool:
-    return bool(re.match(p+'$', s))
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        return bool(re.match(p+'$', s))
 ```
-68 ms
+320 ms
 
 ### #2
 

@@ -89,16 +89,16 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
 ## 解答
 
 ```python
-def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-    m, n = len(nums1), len(nums2)
-    if m > n:
-        return self.findMedianSortedArrays(nums2, nums1)
-    self.__class__.__getitem__ = lambda self, i: i == m or nums1[i] >= nums2[(m+n)//2-i-1]
-    i = bisect_left(self, True, 0, m)
-    j = (m+n)//2-i
-    left = max(nums1[i-1] if i else -inf, nums2[j-1] if j else -inf)
-    right = min(nums1[i] if i<m else inf, nums2[j] if j<n else inf)
-    return right if (m+n)%2 else (left+right)/2
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        m, n = len(nums1), len(nums2)
+        if m > n:
+            return self.findMedianSortedArrays(nums2, nums1)
+        i = bisect_left(range(m), True, key=lambda i:nums1[i]>=nums2[(m+n)//2-i-1])
+        j = (m+n)//2-i
+        left = max(nums1[i-1] if i else -inf, nums2[j-1] if j else -inf)
+        right = min(nums1[i] if i<m else inf, nums2[j] if j<n else inf)
+        return right if (m+n)%2 else (left+right)/2
 ```
-时间 $O(log \ min(M,N))$，28 ms
+时间 $O(log \ min(M,N))$，48 ms
 
