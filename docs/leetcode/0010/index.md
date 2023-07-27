@@ -68,10 +68,10 @@ class Solution:
 ### #2
 
 尝试自己实现：
-- 因为 '*' 与前一个字符相关，所以考虑从后往前看。
-- 如果 p[-1] == '*'，那么 p 匹配 s 必然是两种情况之一：
-	- '*' 代表零个，p[:-2] 匹配 s
-	- '*' 代表多个，p[-2] 匹配 s[-1] 且 p 匹配 s[:-1]
+- 因为 ' * ' 与前一个字符相关，所以考虑从后往前看。
+- 如果 p[-1] == ' * '，那么 p 匹配 s 必然是两种情况之一：
+	- ' * ' 代表零个，p[:-2] 匹配 s
+	- ' * ' 代表多个，p[-2] 匹配 s[-1] 且 p 匹配 s[:-1]
 - 如果 p[-1] != '*'，那么 p 匹配 s 必然是 p[-1] 匹配 s[-1] 且 p[:-1] 匹配 s[:-1]。
 - 都能转成递归子问题。注意到有重复子问题，所以用记忆化递归。
 
@@ -90,4 +90,28 @@ def isMatch(self, s: str, p: str) -> bool:
 ```
 40 ms
 
+### *附加
 
+可以写成递推的形式，令 dp[i][j] 代表 s[:i] 和 p[:j] 是否匹配。
+
+还可以用滚动数组优化为一维 dp。
+
+```python
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        m, n = len(s), len(p)
+        dp = [1]+[0]*n
+        for j,b in enumerate(p,1):
+            if b=='*':
+                dp[j] = dp[j-2]
+        for a in s:
+            new = [0]*(n+1)
+            for j,b in enumerate(p,1):
+                if b=='*':
+                    new[j] = new[j-2] or (dp[j] and p[j-2] in '.'+a)
+                else:
+                    new[j] = dp[j-1] and b in '.'+a
+            dp = new
+        return bool(dp[-1])
+```
+52 ms

@@ -69,20 +69,26 @@ s 中没有子串长度为 16 并且等于 words 的任何顺序排列的连接�
 ## 解答
 
 ```python
-def findSubstring(self, s: str, words: List[str]) -> List[int]:
-    m, n, x = len(s), len(words), len(words[0])
-    res, ct0 = [], Counter(words)
-    for start in range(x):
-        ct = Counter()
-        for j in range(start+x, m+1, x):
-            ct[s[j-x:j]] += 1
-            if j > start + n*x:
-                old = s[j-(n+1)*x:j-n*x]
-                ct[old] -= 1
-                if ct[old] == 0:
-                    del ct[old]
-            if j >= start+n*x and ct == ct0:
-                res.append(j-n*x)
-    return res
+class Solution:
+    def findSubstring(self, s: str, words: List[str]) -> List[int]:
+        m, n = len(words), len(words[0])
+        res = []
+        ct0 = Counter(words)
+        for i in range(n):
+            ct = Counter()
+            valid = 0
+            for j in range(i,len(s),n):
+                new = s[j:j+n]
+                ct[new]+=1
+                if ct[new]==ct0[new]:
+                    valid += 1
+                if j>=i+m*n:
+                    old = s[j-m*n:j-m*n+n]
+                    if ct[old]==ct0[old]:
+                        valid -= 1
+                    ct[old] -= 1
+                if valid == len(ct0):
+                    res.append(j-m*n+n)
+        return res
 ```
 104 ms

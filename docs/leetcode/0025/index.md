@@ -58,20 +58,43 @@
 ## 解答
 
 ```python
-def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-    dummy = p = ListNode(next=head)
-    while True:
-        fast = p
-        for _ in range(k):
-            fast = fast.next
-            if not fast:
-                return dummy.next
-        tail = p.next
-        for _ in range(k - 1):
-            tmp = tail.next
-            tail.next = tmp.next
-            tmp.next = p.next
-            p.next = tmp
-        p = tail
+class Solution:
+    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        dummy = p = ListNode(next=head)
+        while True:
+            fast = p
+            for _ in range(k):
+                fast = fast.next
+                if not fast:
+                    return dummy.next
+            tail = p.next
+            for _ in range(k-1):
+                tmp = tail.next
+                tail.next = tmp.next
+                tmp.next = p.next
+                p.next = tmp
+            p = tail
 ```
-44 ms
+64 ms
+
+## *附加
+
+链表题最简单粗暴的做法是转为数组，处理后再转回来。
+
+```python
+class Solution:
+    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        A = []
+        while head:
+            A.append(head.val)
+            head = head.next
+        n = len(A)
+        for i in range(k,n+1,k):
+            A[i-k:i] = A[i-k:i][::-1]
+        dummy = p = ListNode()
+        for a in A:
+            p.next = ListNode(a)
+            p = p.next
+        return dummy.next
+```
+56 ms

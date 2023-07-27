@@ -82,23 +82,46 @@ def mergeKLists(self, lists: List[ListNode]) -> ListNode:
 
 ### #2
 
-也可以维护一个堆，初始将每个链表的头节点的值入堆，然后每轮弹出最小数，
-将对应的链表前进一步，并将新的值入堆。
+也可以采用多路归并的方法：
+- 维护一个堆，初始将每个链表的头节点的值入堆
+- 然后每轮弹出最小数，将对应的链表前进一步，并将新的值入堆
 
 ## 解答
 
 ```python
-def mergeKLists(self, lists: List[ListNode]) -> ListNode:
-	pq = [(node.val, i) for i, node in enumerate(lists) if node]
-	heapify(pq)
-	dummy = p = ListNode(next=None)
-	while pq:
-		val, i = heappop(pq)
-		p.next = ListNode(val)
-		p = p.next
-		if lists[i].next:
-			lists[i] = lists[i].next
-			heappush(pq, (lists[i].val, i))
-	return dummy.next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        A = lists
+        dummy = p = ListNode()
+        pq = sorted((node.val,i) for i,node in enumerate(A) if node)
+        while pq:
+            _,i = heappop(pq)
+            p.next = A[i]
+            p = p.next
+            A[i] = A[i].next
+            if A[i]:
+                heappush(pq,(A[i].val,i))
+        return dummy.next
 ```
 84 ms
+
+## *附加
+
+链表题最简单粗暴的做法是转为数组，处理后再转回来。
+
+```python
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        A = []
+        for node in lists:
+            while node:
+                A.append(node.val)
+                node = node.next
+        A.sort()
+        dummy=p=ListNode()
+        for a in A:
+            p.next = ListNode(a)
+            p = p.next
+        return dummy.next
+```
+72 ms
