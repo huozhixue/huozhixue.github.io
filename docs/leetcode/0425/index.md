@@ -58,25 +58,24 @@
 ## 解答
 
 ```python
-def wordSquares(self, words: List[str]) -> List[List[str]]:
-	d = defaultdict(list)
-	for w in words:
-		for pre in accumulate(w):
-			d[pre].append(w)
-	
-	def dfs(path):
-		i = len(path)
-		if i == n:
-			res.append(path)
-			return
-		pre = ''.join(w[i] for w in path)
-		for w in d[pre]:
-			dfs(path+[w])
-	
-	res, n = [], len(words[0])
-	for word in words:
-		dfs([word])
-	return res
+class Solution:
+    def wordSquares(self, words: List[str]) -> List[List[str]]:
+        d = defaultdict(list)
+        for w in words:
+            for i in range(len(w)):
+                d[w[:i]].append(w)
+        res, path = [], []
+        def dfs(i):
+            if i==len(words[0]):
+                res.append(path[:])
+                return
+            pre = ''.join(a[i] for a in path)
+            for w in d[pre]:
+                path.append(w)
+                dfs(i+1)
+                path.pop()
+        dfs(0)
+        return res
 ```
 
-288 ms
+268 ms

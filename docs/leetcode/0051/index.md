@@ -45,27 +45,27 @@
 
 ## 分析
 
-回溯法的典型应用。每一行只能有一个棋子，所以可以直接按行放，节省时间。
+{{< lc "0052" >}} 升级版，回溯时再维护放置情况即可。
 
 ## 解答
 
 ```python
-def solveNQueens(self, n: int) -> List[List[str]]:
-    def dfs(i):
-        if i == n:
-            res.append(['.'*j+'Q'+'.'*(n-j-1) for j in path])
-            return
-        for j in range(n):
-            if col[j] == dia1[i+j] == dia2[i-j] == 0:
-                col[j] = dia1[i+j] = dia2[i-j] = 1
-                path.append(j)
-                dfs(i + 1)
-                path.pop()
-                col[j] = dia1[i+j] = dia2[i-j] = 0
-
-    res, path = [], []
-    col, dia1, dia2 = (defaultdict(int) for _ in range(3))
-    dfs(0)
-    return res
+class Solution:
+    def solveNQueens(self, n: int) -> List[List[str]]:
+        def dfs(i):
+            if i==n:
+                self.res.append(path[:])
+                return
+            for j in range(n):
+                if C[j]==D1[i+j]==D2[i-j]==0:
+                    C[j]=D1[i+j]=D2[i-j]=1
+                    path.append('.'*j+'Q'+'.'*(n-j-1))
+                    dfs(i+1)
+                    C[j]=D1[i+j]=D2[i-j]=0
+                    path.pop()
+        C,D1,D2 = [defaultdict(int) for _ in range(3)]
+        self.res, path = [], []
+        dfs(0)
+        return self.res
 ```
-44 ms
+60 ms

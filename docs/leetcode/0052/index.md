@@ -41,24 +41,27 @@
 
 ## 分析
 
-类似 {{< lc "0051" >}} ，还更简单一点。
+类似 {{< lc "0037" >}} ，回溯法的典型应用。
+
+每一行只能有一个棋子，所以可以直接按行放，节省时间。
 
 ## 解答
 
 ```python
-def totalNQueens(self, n: int) -> int:
-    def dfs(i):
-        if i == n:
-            return 1
-        res = 0
-        for j in range(n):
-            if col[j] == dia1[i + j] == dia2[i - j] == 0:
-                col[j] = dia1[i + j] = dia2[i - j] = 1
-                res += dfs(i + 1)
-                col[j] = dia1[i + j] = dia2[i - j] = 0
-        return res
-
-    col, dia1, dia2 = (defaultdict(int) for _ in range(3))
-    return dfs(0)
+class Solution:
+    def totalNQueens(self, n: int) -> int:
+        def dfs(i):
+            if i==n:
+                self.res += 1
+                return
+            for j in range(n):
+                if C[j]==D1[i+j]==D2[i-j]==0:
+                    C[j]=D1[i+j]=D2[i-j]=1
+                    dfs(i+1)
+                    C[j]=D1[i+j]=D2[i-j]=0
+        C,D1,D2 = [defaultdict(int) for _ in range(3)]
+        self.res = 0
+        dfs(0)
+        return self.res
 ```
-44 ms
+56 ms

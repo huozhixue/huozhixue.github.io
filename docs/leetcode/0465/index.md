@@ -49,36 +49,32 @@
 
 ## 分析
 
-- 先计算出每人的总债务，该收钱的即为正，该换钱的即为负
+先计算出每人的总债务，该收钱的即为正，该换钱的即为负
 - 假如 k 个人的债务和为 0，那么 k-1 次交易即可将这 k 个清零，节省一次交易
 - 因此找到一种划分，使得和为 0 的子集数最多， 即得到最小交易数
-
-集合划分容易想到状压 dp，令 dp[st] 表示集合 st 能划分的最多和为 0 的子集数，即可递推。
-
-还可以提前存储所有和为 0 的子集，优化递推时间。
+- 集合划分容易想到状压 dp，令 dp[st] 表示集合 st 最多能划分的和为 0 的子集数，即可递推
+- 还可以提前存储集合 st 的和，优化递推时间
 
 ## 解答
 
 
 ```python
-def minTransfers(self, transactions: List[List[int]]) -> int:
-	d = defaultdict(int)
-	for x, y, z in transactions:
-		d[x] -= z
-		d[y] += z
-	A = [x for x in d.values() if x]
-	n = len(A)
-	tmp, vis = [0]*(1<<n), set()
-	for st in range(1, 1<<n):
-		i = st.bit_length()-1
-		tmp[st] = A[i]+tmp[st^(1<<i)]
-		if tmp[st]==0:
-			vis.add(st)
-	dp = [0] * (1<<n)
-	for st in range(1, 1<<n):
-		if st in vis:
-			dp[st] = 1+max(dp[st^st2] for st2 in vis if st|st2==st)
-	return n-dp[-1]
+class Solution:
+    def minTransfers(self, transactions: List[List[int]]) -> int:
+        ct = defaultdict(int)
+        for a,b,w in transactions:
+            ct[a] -= w
+            ct[b] += w
+        A = [a for a in ct.values() if a]
+        m = len(A)
+        d = defaultdict(int)
+        for st in range(1,1<<m):
+            x = st.bit_length()-1
+            d[st] = d[st^1<<x]+A[x]
+        dp = [0]*(1<<m)
+        for st in range(1,1<<m):
+            dp[st] = (d[st]==0)+max(dp[st^1<<j] for j in range(m) if st&1<<j)
+        return m-dp[-1]
 ```
 
-36 ms
+60 ms

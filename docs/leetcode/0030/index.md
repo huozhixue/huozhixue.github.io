@@ -77,18 +77,18 @@ class Solution:
         for i in range(n):
             ct = Counter()
             valid = 0
-            for j in range(i,len(s),n):
-                new = s[j:j+n]
+            for j in range(i+n,len(s)+1,n):
+                new = s[j-n:j]
                 ct[new]+=1
                 if ct[new]==ct0[new]:
                     valid += 1
-                if j>=i+m*n:
-                    old = s[j-m*n:j-m*n+n]
+                if j>=(m+1)*n:
+                    old = s[j-(m+1)*n:j-m*n]
                     if ct[old]==ct0[old]:
                         valid -= 1
                     ct[old] -= 1
                 if valid == len(ct0):
-                    res.append(j-m*n+n)
+                    res.append(j-m*n)
         return res
 ```
 104 ms

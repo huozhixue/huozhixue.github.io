@@ -54,20 +54,21 @@
 ## 解答
 
 ```python
-def rearrangeString(self, s: str, k: int) -> str:
-    pq = [(-freq, c) for c,freq in Counter(s).items()]
-    heapify(pq)
-    res, busy = '', deque()
-    for i in range(len(s)):
-        if busy and busy[0][2]<=i-k:
-            heappush(pq, busy.popleft()[:2])
-        if not pq:
-            return ''
-        freq, c = heappop(pq)
-        res += c
-        if freq<-1:
-            busy.append((freq+1, c, i))
-    return res
+class Solution:
+    def rearrangeString(self, s: str, k: int) -> str:
+        n = len(s)
+        free = sorted((-w,c) for c,w in Counter(s).items())
+        res, busy = [], deque()
+        for i in range(n):
+            while busy and busy[0][0]<=i:
+                heappush(free,busy.popleft()[1:])
+            if not free:
+                return ''
+            w,c = heappop(free)
+            res.append(c)
+            if -w-1>0:
+                busy.append((i+k,w+1,c))
+        return ''.join(res)
 ```
-124 ms
+100 ms
 

@@ -66,32 +66,31 @@
 
 典型的 bfs。从每个建筑开始遍历，求得空地到每个建筑的距离，总和最小的空地即为所求。
 
-细节上的优化：
-- 遍历时，记录空地能到达的建筑个数，若空地不能到达某个已遍历建筑，则该空地可以视为障碍
-	- 为了与障碍的 2 区分，可以记录为负数
-- 用 dis 数组维护空地到已遍历建筑的距离之和，节省时间和空间
+遍历时，注意记录空地能到达的建筑个数，若小于总建筑个数，则不符合要求
+- 可以直接用grid 记录，为了与障碍区分，可以记录为负数
 
 ## 解答
 
 ```python
-def shortestDistance(self, grid: List[List[int]]) -> int:
-    def bfs(i, j, k):
-        Q = deque([(i, j, 0)])
-        while Q:
-            i, j, w = Q.popleft()
-            for x, y in [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
-                if 0<=x<m and 0<=y<n and grid[x][y]==-k:
-                    Q.append((x, y, w+1))
-                    dis[x][y] += w+1
-                    grid[x][y] -= 1
+class Solution:
+    def shortestDistance(self, grid: List[List[int]]) -> int:
+        def bfs(i,j,k):
+            Q, vis = deque([(0,i,j)]), {(i,j)}
+            while Q:
+                w,i,j = Q.popleft()
+                for x,y in [(i+1,j),(i-1,j),(i,j+1),(i,j-1)]:
+                    if 0<=x<m and 0<=y<n and grid[x][y]==-k:
+                        Q.append((w+1,x,y))
+                        grid[x][y]-=1
+                        dis[(x,y)] += w+1
 
-    m, n = len(grid), len(grid[0])
-    dis, k = [[0]*n for _ in range(m)], 0
-    for i, j in product(range(m), range(n)):
-        if grid[i][j] == 1:
-            bfs(i, j, k)
-            k += 1
-    return min([dis[i][j] for i in range(m) for j in range(n) if grid[i][j]==-k], default=-1)
+        m, n = len(grid), len(grid[0])
+        dis, k = defaultdict(int), 0
+        for i,j in product(range(m),range(n)):
+            if grid[i][j]==1:
+                bfs(i,j,k)
+                k += 1
+        return min([w for (x,y),w in dis.items() if grid[x][y]==-k],default=-1)
 ```
 2640  ms
 

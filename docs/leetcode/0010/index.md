@@ -94,7 +94,7 @@ def isMatch(self, s: str, p: str) -> bool:
 
 可以写成递推的形式，令 dp[i][j] 代表 s[:i] 和 p[:j] 是否匹配。
 
-还可以用滚动数组优化为一维 dp。
+还可以用滚动数组优化为一维 dp 数组。
 
 ```python
 class Solution:

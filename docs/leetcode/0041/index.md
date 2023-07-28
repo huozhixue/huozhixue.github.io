@@ -43,20 +43,22 @@
 
 ## 分析 
 
-### #1
+### #1 枚举
 
-最简单地，遍历 1 到 max(nums)+1，没出现就返回。
+最简单的，从小到大枚举正数，没出现就返回。
 
 ```python
-def firstMissingPositive(self, nums: List[int]) -> int:
-    nums = set(nums)
-    for x in range(1, max(0, max(nums, default=0))+2):
-        if x not in nums:
-            return x
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        vis = set(nums)
+        x = 1
+        while x in vis:
+            x += 1
+        return x
 ```
 84 ms
 
-### #2
+### #2 重排
 
 不过题目要求 O(1) 空间，那么只能考虑交换或赋值了。
 - 有个巧妙的想法是把正数都放在对应的位置上，比如 1 放在第 1 位，3 放在第 3 位，

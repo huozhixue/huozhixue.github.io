@@ -67,9 +67,7 @@ p = &quot;a*c?b&quot;
 
 类似 {{< lc "0010" >}}，区别在于星号和前一个字符无关了。
 
-    
-## 解答
-
+### #1 记忆化递归
 ```python
 def isMatch(self, s: str, p: str) -> bool:
     @cache
@@ -83,6 +81,31 @@ def isMatch(self, s: str, p: str) -> bool:
 ```
 1032 ms
 
+### #2 dp
+
+同样的，可以用递推形式，并优化为一维 dp 数组。
+    
+## 解答
+
+```python
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        m, n = len(s), len(p)
+        dp = [1]+[0]*n
+        for j,b in enumerate(p,1):
+            if b=='*':
+                dp[j] = dp[j-1]
+        for a in s:
+            new = [0]*(n+1)
+            for j,b in enumerate(p,1):
+                if b=='*':
+                    new[j] = dp[j] or new[j-1]
+                else:
+                    new[j] = dp[j-1] and b in '?'+a
+            dp = new
+        return bool(dp[-1])
+```
+408 ms
 
 ## *附加
 
@@ -93,13 +116,15 @@ def isMatch(self, s: str, p: str) -> bool:
 注意第一个子串要和 s 开头匹配，最后一个子串要和 s 末尾匹配。
 
 ```python
-def isMatch(self, s: str, p: str) -> bool:
-    subs, pos = re.split(r'\*+', p.replace('?', '.')), 0
-    for i, sub in enumerate(subs):
-        tmp = re.compile('^'*(i==0)+sub+'$'*(i==len(subs)-1)).search(s, pos)
-        if not tmp:
-            return False
-        pos = tmp.end()
-    return True
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        A = re.split(r'\*+', p.replace('?', '.'))
+        pos = 0
+        for i, sub in enumerate(A):
+            tmp = re.compile('^'*(i==0)+sub+'$'*(i==len(A)-1)).search(s, pos)
+            if not tmp:
+                return False
+            pos = tmp.end()
+        return True
 ```
-44 ms
+68 ms

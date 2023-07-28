@@ -64,35 +64,65 @@
 
 ## 分析
 
+### #1 状压
+
 {{< lc  "0408" >}} 进阶版。
-- 每一种缩写状态都可以压缩为一个数 st，二进制的 1/0 代表该位置替换/不替换
-- 遍历缩写状态 st，判断该状态下 dictionary 中是否存在单词 W 和 target 的形式相同
-	-  W 和 target 什么情况下的缩写形式会相同：当字符不同的位置都被替换时
-	- 因此，用 diff 代表 W 和 target 不同的位置，如果 st 没有覆盖完 diff，缩写形式不同
-	- 提前存储好 diff，遍历时即可快速判断
+- 每一种缩写状态都可以压缩为一个数 st，二进制的 1/0 代表该位置是否保留
+- 遍历缩写状态 st，判断该状态是否有效（字典单词都和 target 的缩写不同）
+
+```python
+class Solution:
+    def minAbbreviation(self, target: str, dictionary: List[str]) -> str:
+        def gen(w,st):
+            res, cnt = '', 0
+            for i in range(m):
+                if st&(1<<i):
+                    res += str(cnt or '')+w[i]
+                    cnt = 0
+                else:
+                    cnt += 1
+            return res+str(cnt or '')
+
+        m = len(target)
+        A = [w for w in dictionary if len(w)==m]
+        if not A:
+            return str(m)
+        res = target
+        for st in range(1<<m):
+            x = gen(target,st)
+            if len(x)<len(res) and all(gen(w,st)!=x for w in A):
+                res = x
+        return res
+```
+520 ms
+
+### #2 状压+预处理
+
+还有种巧妙的方法判断某种缩写状态 st 是否有效：
+- 想想两个单词什么情况下的缩写形式会相同，保留的位置上的字符都相同
+- 那么提前计算单词和 target 相同位置的状态表示 st2，如果 st 不是 st2 的子集，即代表缩写形式不同
 
 ## 解答
 
 ```python
-def minAbbreviation(self, target: str, dictionary: List[str]) -> str:
-	def gen(st):
-		ans, cnt = '', 0
-		for i in range(n):
-			if st & (1<<(n-1-i)):
-				ans += str(cnt or '') + target[i]
-				cnt = 0
-			else:
-				cnt += 1
-		return ans + str(cnt or '')
-	
-	def mask(w1, w2):
-		return int(''.join('1' if a==b else '0' for a, b in zip(w1, w2)), 2)
+class Solution:
+    def minAbbreviation(self, target: str, dictionary: List[str]) -> str:
+        def gen(st):
+            res, cnt = '', 0
+            for i in range(m):
+                if st&(1<<i):
+                    res += str(cnt or '')+target[i]
+                    cnt = 0
+                else:
+                    cnt += 1
+            return res+str(cnt or '')
 
-	n = len(target)
-	diffs = {mask(target, w) for w in dictionary if len(w)==n}
-	if not diffs:
-		return str(n)
-	return min([gen(st) for st in range(1<<n) if all(df|st!=df for df in diffs)], key=len)
+        m = len(target)
+        same = lambda w1,w2: sum(1<<i for i,(a,b) in enumerate(zip(w1,w2)) if a==b)
+        A = {same(target,w) for w in dictionary if len(w)==m}
+        if not A:
+            return str(m)
+        return min([gen(st) for st in range(1<<m) if all(st|st2!=st2 for st2 in A)],key=len)
 ```
 
-时间 $O((N+M)*2^M)$，80 ms
+$O((N+M)*2^M)$，72 ms

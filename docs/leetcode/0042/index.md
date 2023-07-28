@@ -39,7 +39,7 @@
 
 ## 分析 
 
-### #1
+### #1 前后缀分解
 
 观察发现：
 - 对于任一柱子，如果左右都有更高的柱子，那么该位置就能接到雨水。
@@ -47,14 +47,15 @@
 - 每根柱子对应的 L 和 R 可以一趟递推得到，优化为线性时间复杂度。
 
 ```python
-def trap(self, height: List[int]) -> int:
-    left = list(accumulate(height, max))
-    right = list(accumulate(height[::-1], max))[::-1]
-    return sum(min(l, r)-h for h,l,r in zip(height, left, right))
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        L = accumulate(height,max)
+        R = list(accumulate(height[::-1],max))[::-1]
+        return sum(min(l,r)-h for h,l,r in zip(height,L,R))
 ```
 时间 O(N)，64 ms
 
-### #2
+### #2 双指针
 
 还有个巧妙的双指针方法可以一趟解决。
 - 初始 i、j 分别指向数组首尾
@@ -79,3 +80,23 @@ def trap(self, height: List[int]) -> int:
     return res
 ```
 时间 O(N)，64 ms
+
+## *附加
+
+也可以用单调栈
+
+```python
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        res = 0
+        sk = []
+        for i,x in enumerate(height):
+            while sk and sk[-1][1]<=x:
+                _,y = sk.pop()
+                if sk:
+                    j,z = sk[-1]
+                    res += (min(x,z)-y)*(i-j-1)
+            sk.append((i,x))
+        return res
+```
+52 ms

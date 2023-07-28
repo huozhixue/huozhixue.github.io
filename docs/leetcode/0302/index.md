@@ -61,13 +61,14 @@
 ## 解答
 
 ```python
-def minArea(self, image: List[List[str]], x: int, y: int) -> int:
-    m, n, A = len(image), len(image[0]), image
-    x1 = bisect_left(range(x), True, key=lambda i: '1' in A[i])
-    x2 = bisect_left(range(m), True, x, m, key=lambda i: '1' not in A[i])
-    y1 = bisect_left(range(y), True, key=lambda j: any(A[i][j]=='1' for i in range(m)))
-    y2 = bisect_left(range(n), True, y, n, key=lambda j: all(A[i][j]!='1' for i in range(m)))
-    return (x2-x1)*(y2-y1)
+class Solution:
+    def minArea(self, image: List[List[str]], x: int, y: int) -> int:
+        m, n, A = len(image), len(image[0]), image
+        x1 = bisect_left(range(x), True, key=lambda i: '1' in A[i])
+        x2 = bisect_left(range(m), True, x, m, key=lambda i: '1' not in A[i])
+        y1 = bisect_left(range(y), True, key=lambda j: any(row[j]=='1' for row in A))
+        y2 = bisect_left(range(n), True, y, n, key=lambda j: all(row[j]=='0' for row in A))
+        return (x2-x1)*(y2-y1)
 ```
 48 ms
 

@@ -48,26 +48,27 @@
 
 ## 分析 
 
-### #1
+### #1 栈
 
 基于 {{< lc "1249" >}} ，可以得到不属于有效子串的括号的位置，找出最大的间隔即可。
 
 ```python
-def longestValidParentheses(self, s: str) -> int:
-    stack, invalid = [], []
-    for i, char in enumerate(s):
-        if char == '(':
-            stack.append(i)
-        elif stack:
-            stack.pop()
-        else:
-            invalid.append(i)
-    invalid = [-1] + invalid + stack + [len(s)]
-    return max(invalid[i + 1] - invalid[i] - 1 for i in range(len(invalid) - 1))
+class Solution:
+    def longestValidParentheses(self, s: str) -> int:
+        sk, A = [], []
+        for i, c in enumerate(s):
+            if c == '(':
+                sk.append(i)
+            elif sk:
+                sk.pop()
+            else:
+                A.append(i)
+        A = [-1] + A + sk + [len(s)]
+        return max(b-a-1 for a,b in pairwise(A))
 ```
-时间 O(N)，32 ms
+时间 O(N)，48 ms
 
-### #2
+### #2 栈+dp
 
 也可以用动态规划解决：
 - 令 dp[r] 代表右括号 r 结尾的最长有效子串长度，并假设 r 所对应的是左括号 l
@@ -78,14 +79,17 @@ def longestValidParentheses(self, s: str) -> int:
 ## 解答
 
 ```python
-def longestValidParentheses(self, s: str) -> int:
-    stack, dp = [], {}
-    for j, char in enumerate(s):
-        if char == '(':
-            stack.append(j)
-        elif stack:
-            i = stack.pop()
-            dp[j] = j - i + 1 + dp.get(i-1, 0)
-    return max(dp.values(), default=0)
+class Solution:
+    def longestValidParentheses(self, s: str) -> int:
+        sk, d = [], {}
+        res = 0
+        for j,c in enumerate(s):
+            if c=='(':
+                sk.append(j)
+            elif sk:
+                i = sk.pop()
+                d[j] = d.get(i-1,i)
+                res = max(res,j-d[j]+1)
+        return res
 ```
-时间 O(N)，28 ms
+时间 O(N)，48 ms

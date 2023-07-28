@@ -54,29 +54,30 @@
 ## 解答
 
 ```python
-def solveSudoku(self, board: List[List[str]]) -> None:
-    def dfs(cnt):
-        if cnt == len(A):
-            return True
-        i, j = A[cnt]
-        k = i//3*3+j//3
-        for x in range(1, 10):
-            if row[i][x] == col[j][x] == box[k][x] == 0:
-                board[i][j] = str(x)
-                row[i][x] = col[j][x] = box[k][x] = 1
-                if dfs(cnt + 1):
-                    return True
-                row[i][x] = col[j][x] = box[k][x] = 0
-        return False
-
-    A, (row, col, box) = [], ([[0]*10 for _ in range(9)] for _ in range(3))
-    for i, j in product(range(9), range(9)):
-        x, k = board[i][j], i//3*3+j//3
-        if x == '.':
-            A.append((i, j))
-        else:
-            x = int(x)
-            row[i][x] = col[j][x] = box[k][x] = 1
-    dfs(0)
+class Solution:
+    def solveSudoku(self, board: List[List[str]]) -> None:
+        A = []
+        R,C,B = [[[0]*9 for _ in range(9)] for _ in range(3)]
+        for i,j in product(range(9),range(9)):
+            x, k = board[i][j], i//3*3+j//3
+            if x=='.':
+                A.append((i,j))
+            else:
+                x = int(x)-1
+                R[i][x] = C[j][x] = B[k][x] = 1
+        def dfs(cnt):
+            if cnt==len(A):
+                return True
+            i,j = A[cnt]
+            k = i//3*3+j//3
+            for x in range(9):
+                if R[i][x]==C[j][x]==B[k][x]==0:
+                    board[i][j] = str(x+1)
+                    R[i][x] = C[j][x] = B[k][x] = 1
+                    if dfs(cnt+1):
+                        return True
+                    R[i][x] = C[j][x] = B[k][x] = 0
+            return False
+        dfs(0)
 ```
 92 ms
