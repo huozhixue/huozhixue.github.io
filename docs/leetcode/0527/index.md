@@ -45,57 +45,88 @@
 
 ## 分析
 
-### #1
-- 先模拟得到所有单词的初始缩写，并将相同缩写的分为一组
-- 对于某个单词，需要找到一组中的最长相同前缀长度 L，前 L+1 个字母保留即可保证缩写唯一
+### #1 哈希
+
+最简单的就是统计每种缩写的个数，然后遍历找唯一即可。
 
 ```python
-def wordsAbbreviation(self, words: List[str]) -> List[str]:
-	def cal(w1, w2):
-		for i, (a, b) in enumerate(zip(w1, w2)):
-			if a != b:
-				return i
-	
-	d = defaultdict(list)
-	for w in words:
-		key = w[0]+str(len(w)-2)+w[-1] if len(w)>3 else w
-		d[key].append(w)
-	res = {}
-	for g in d.values():
-		for w in g:
-			L = max(cal(w,w2) if w2!=w else 0 for w2 in g)
-			res[w] = w[:L+1]+str(len(w)-L-2)+w[-1] if len(w)>L+3 else w
-	return [res[w] for w in words]
+class Solution:
+    def wordsAbbreviation(self, words: List[str]) -> List[str]:
+        d = defaultdict(int)
+        for w in words:
+            for i in range(len(w)-1):
+                key = w[:i]+str(len(w)-i-1)+w[-1]
+                d[key] += 1
+        res = []
+        for w in words:
+            for i in range(1,len(w)-2):
+                key = w[:i]+str(len(w)-i-1)+w[-1]
+                if d[key]==1:
+                    res.append(key)
+                    break
+            else:
+                res.append(w)
+        return res
 ```
-136 ms
+512  ms
 
-### #2
+### #2 排序+lcp
 
-相同前缀越长，两个单词的字典序越接近。因此考虑将同一组的先排序，那么与相邻单词的比较即可得到 L。
+一个字符串常用的性质是：相同前缀越长，两个单词的字典序越接近。
+
+因此考虑先将单词按初始缩写分组，然后同一组的排序，与相邻单词比较即可。
 
 ## 解答
 
 ```python
-def wordsAbbreviation(self, words: List[str]) -> List[str]:
-	def cal(w1, w2):
-		for i, (a, b) in enumerate(zip(w1, w2)):
-			if a != b:
-				return i
-	
-	d = defaultdict(list)
-	for w in words:
-		key = w[0]+str(len(w)-2)+w[-1] if len(w)>3 else w
-		d[key].append(w)
-	res = {}
-	for g in d.values():
-		g.sort()
-		for i,w in enumerate(g):
-			L = max(cal(w,g[i-1]) if i else 0, cal(w,g[i+1]) if i+1<len(g) else 0)
-			res[w] = w[:L+1]+str(len(w)-L-2)+w[-1] if len(w)>L+3 else w
-	return [res[w] for w in words]
+class Solution:
+    def wordsAbbreviation(self, words: List[str]) -> List[str]:
+        def cal(w1,w2):
+            for i, (a, b) in enumerate(zip(w1, w2)):
+                if a != b:
+                    return i
+
+        d = defaultdict(list)
+        for w in words:
+            key = w[0]+str(len(w)-2)+w[-1] if len(w)>3 else w
+            d[key].append(w)
+        res = {}
+        for A in d.values():
+            A.sort()
+            for i,w in enumerate(A):
+                L = max([cal(w,A[j]) for j in [i-1,i+1] if 0<=j<len(A)],default=0)
+                res[w] = w[:L+1]+str(len(w)-L-2)+w[-1] if len(w)>L+3 else w
+        return [res[w] for w in words]
 ```
-60 ms
+68 ms
 
 ## *附加
 
 还可以用 trie 树来找最长相同前缀 L。先将同组的单词都加入 trie 树，并保存前缀的个数。然后搜索单词时，找到第一个计数为 1 的前缀即可。
+
+```python
+class Solution:
+    def wordsAbbreviation(self, words: List[str]) -> List[str]:
+        d = defaultdict(list)
+        for w in words:
+            key = w[0]+str(len(w)-2)+w[-1] if len(w)>3 else w
+            d[key].append(w)
+        T = lambda: defaultdict(T)
+        res = {}
+        for A in d.values():
+            trie = T()
+            for w in A:
+                p = trie
+                for c in w:
+                    p = p[c]
+                    p['#'] = p.get('#',0)+1
+            for w in A:
+                p = trie
+                for i,c in enumerate(w):
+                    p = p[c]
+                    if p['#']==1:
+                        res[w] = w[:i+1]+str(len(w)-i-2)+w[-1] if len(w)>i+3 else w
+                        break
+        return [res[w] for w in words]
+```
+352 ms
