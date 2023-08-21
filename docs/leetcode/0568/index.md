@@ -78,19 +78,42 @@ Ans = 7 + 7 + 7 = 21
 
 ## 分析
 
+### #1 记忆化递归
+
 按第一周在哪个城市休假，即可转为子问题。递归即可。
+
+```python
+class Solution:
+    def maxVacationDays(self, flights: List[List[int]], days: List[List[int]]) -> int:
+        @cache
+        def dfs(k,i):
+            if k==len(days[0]):
+                return 0
+            return max(days[j][k]+dfs(k+1,j) for j in range(n) if j==i or flights[i][j])
+
+        n = len(days)
+        return dfs(0,0)
+```
+1176 ms
+
+### #2 dp
+
+也可以写成递推形式，并用滚动数组优化。
 
 ## 解答
 
 ```python
-def maxVacationDays(self, flights: List[List[int]], days: List[List[int]]) -> int:
-	@cache
-	def dfs(i,x):
-		if x==k:
-			return 0
-		return max(days[j][x]+dfs(j,x+1) for j in range(n) if j==i or flights[i][j])
-
-	n, k = len(flights), len(days[0])
-	return dfs(0,0)
+class Solution:
+    def maxVacationDays(self, flights: List[List[int]], days: List[List[int]]) -> int:
+        n = len(days)
+        dp = [0]+[-inf]*(n-1)
+        for k in range(len(days[0])):
+            new = [-inf]*n
+            for i in range(n):
+                for j in range(n):
+                    if i==j or flights[i][j]:
+                        new[j] = max(new[j],dp[i]+days[j][k])
+            dp = new
+        return max(dp)
 ```
-1204 ms
+1460 ms
