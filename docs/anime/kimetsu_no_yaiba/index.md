@@ -38,6 +38,7 @@
 | 2   | 剧场版 鬼灭之刃 无限列车篇 | 2020-10-16 | 1     | [樱花](http://www.yinghuacd.com/v/4722-1.html)               |
 | 3   | 鬼灭之刃 无限列车篇     | 2021-10-10 | 7     | [bilibili](https://www.bilibili.com/bangumi/play/ss39444)  |
 | 4   | 鬼灭之刃 游郭篇       | 2021-12-05 | 11    | [bilibili](https://www.bilibili.com/bangumi/play/ss39433)  |
+| 5 | 鬼灭之刃 刀匠村篇 | 2023-04-09 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ep752432)  |
 
 
 ## MAD
