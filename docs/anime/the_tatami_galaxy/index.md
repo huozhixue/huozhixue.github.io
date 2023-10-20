@@ -35,5 +35,5 @@
 
 ## MAD
 
-{{< media  "BV1yx411c7Qr-BV1Us411f73w" 
-"【MAD/AMV】某No Logic的四畳半神话大系,【冷番向】我的人生每天都是修罗期【四畳半神话大系】"  >}}
+{{< media  "BV1rE411Z7QW-BV1yx411c7Qr-BV1Us411f73w" 
+"【霜月祭冠军】【四叠半mad】非典型宅男的普通死亡,【MAD/AMV】某No Logic的四畳半神话大系,【冷番向】我的人生每天都是修罗期【四畳半神话大系】"  >}}
