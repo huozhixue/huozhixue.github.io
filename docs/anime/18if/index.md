@@ -25,7 +25,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 18if | 2017-07-07 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep113365)  |
+| 1 | 18if | 2017-07-07 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep113371)  |
 
 
 

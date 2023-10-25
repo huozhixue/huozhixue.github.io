@@ -30,9 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 亚人 | 2016-01-15 | 13 | [樱花](https://www.yhdmp.live/vp/16096-1-0.html)  |
-| 2 | 亚人 OAD | 2016-05-06 | 3 | [樱花](https://www.yhdmp.live/vp/16098-2-0.html)  |
-| 3 | 亚人 第二季 | 2016-10-07 | 13 | [樱花](https://www.yhdmp.live/vp/16097-1-0.html)  |
-
-
+| 1 | 亚人 | 2016-01-15 | 13 | [bljiex](https://svip.bljiex.cc/?wd=亚人)  |
+| 2 | 亚人 OAD | 2016-05-06 | 3 | [bljiex](https://svip.bljiex.cc/?wd=亚人)  |
+| 3 | 亚人 第二季 | 2016-10-07 | 13 | [bljiex](https://svip.bljiex.cc/?wd=亚人)  |
 
