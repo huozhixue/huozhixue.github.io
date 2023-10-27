@@ -30,9 +30,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 苍蓝钢铁的琶音 | 2013-10-07 | 12 | [樱花](https://www.yhdmp.live/vp/13133-2-0.html)  |
-| 2 | 苍蓝钢铁的琶音 DC | 2015-01-31 | 1 | [樱花](https://www.cykz.net/vodplay/canglangangtiedepayinjuchangban-1-1/)  |
-| 3 | 苍蓝钢铁的琶音 Cadenza | 2015-10-03 | 1 | [樱花](https://www.cykz.net/vodplay/canglangangtiedepayinjuchangbanCadenza-1-1/)  |
+| 1 | 苍蓝钢铁的琶音 | 2013-10-07 | 12 | [bljiex](https://svip.bljiex.cc/?wd=苍蓝钢铁的琶音)   |
+| 2 | 苍蓝钢铁的琶音 DC | 2015-01-31 | 1 | [bilibili](https://www.bilibili.com/video/BV1Ps41197Qr/)  |
+| 3 | 苍蓝钢铁的琶音 Cadenza | 2015-10-03 | 1 |[bljiex](https://svip.bljiex.cc/?wd=苍蓝钢铁的琶音) |
 
 
 

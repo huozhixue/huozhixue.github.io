@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | Another | 2012-01-09 | 12 | [樱花](https://www.yhdmp.live/vp/12099-2-1.html)  |
+| 1 | Another | 2012-01-09 | 12 | [bljiex](https://svip.bljiex.cc/?wd=Another)   |
 | 2 | Another 第0话 | 2012-05-25 | 1 | [bilibili](https://www.bilibili.com/video/BV1ks41157c9/)  |
 
 
