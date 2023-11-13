@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 棺姬嘉依卡 | 2014-04-09 | 12 | [樱花](https://www.yhdmp.live/vp/14153-2-0.html)  |
-| 2 | 棺姬嘉依卡 AVENGING BATTLE | 2014-10-08 | 10 | [樱花](https://www.yhdmp.live/vp/14154-1-0.html)  |
+| 1 | 棺姬嘉依卡 | 2014-04-09 | 12 | [bljiex](https://svip.bljiex.cc/so.php?wd=棺姬嘉依卡)  |
+| 2 | 棺姬嘉依卡 AVENGING BATTLE | 2014-10-08 | 10 | [bljiex](https://svip.bljiex.cc/so.php?wd=%E6%A3%BA%E5%A7%AC%E5%98%89%E4%BE%9D%E5%8D%A1) |
 
 
 

@@ -36,7 +36,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | C3 -魔方少女- | 2011-10-01 | 12 | [樱花](https://www.cykz.net/vodplay/C3mohuansancifang-1-1/)  |
+| 1 | C3 -魔方少女- | 2011-10-01 | 12 | [bljiex](https://svip.bljiex.cc/so.php?wd=C3)  |
 
 
 

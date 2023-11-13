@@ -34,7 +34,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 天空之城 | 1986-08-02 | 124m | [樱花](https://www.cykz.net/vodplay/tiankongzhichengriben-2-1/)  |
+| 1 | 天空之城 | 1986-08-02 | 124m | [bljiex](https://svip.bljiex.cc/so.php?wd=天空之城)  |
 
 
 

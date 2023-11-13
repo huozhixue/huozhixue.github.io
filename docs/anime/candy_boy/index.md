@@ -28,7 +28,7 @@ Candy☆Boy的续集“Candy boy”由2008年5月2日开始在NICONICO动画频�
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 糖果男孩 | 2008-05-02 | 9 | [樱花](https://www.yhdmp.live/vp/8141-2-0.html)  |
+| 1 | 糖果男孩 | 2008-05-02 | 9 | [bljiex](https://svip.bljiex.cc/so.php?wd=糖果男孩)  |
 
 
 

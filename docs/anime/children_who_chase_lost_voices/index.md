@@ -25,7 +25,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 追逐繁星的孩子 | 2011-05-07 | 1 | [樱花](https://www.cykz.net/vodplay/zhuizhufanxingdehaizi-1-1/)  |
+| 1 | 追逐繁星的孩子 | 2011-05-07 | 1 | [bilibili](https://www.bilibili.com/video/BV1M84y1G7xL)  |
 
 
 
