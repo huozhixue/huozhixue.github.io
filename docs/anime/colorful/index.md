@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 意外的幸运签 | 2010-08-21 | 1 | [樱花](https://www.cykz.net/vodplay/yiwaidexingyunqian2010-1-1/)  |
+| 1 | 意外的幸运签 | 2010-08-21 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/FwZ7777Z/1/1/)  |
 
 
 

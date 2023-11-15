@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | Code Geass 反叛的鲁路修 | 2006-10-05 | 25 | [樱花](https://www.yhdmp.live/vp/6089-1-0.html)  |
-| 2 | Code Geass 反叛的鲁路修R2 | 2008-04-06 | 25 | [樱花](https://www.yhdmp.live/vp/8104-1-0.html)  |
+| 1 | Code Geass 反叛的鲁路修 | 2006-10-05 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/sq77777Z/2/1/)  |
+| 2 | Code Geass 反叛的鲁路修R2 | 2008-04-06 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/dq77777Z/2/1/)  |
 
 
 ## MAD

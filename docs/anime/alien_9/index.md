@@ -33,5 +33,5 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 校园外星人 | 2001-06-25 | 4 | [9anime](https://9anime.to/watch/alien-9.9zkq)  |
+| 1 | 校园外星人 | 2001-06-25 | 4 | [silisilifun](https://www.silisilifun.com/vodplay/HnZ7777Z/1/1/)  |
 

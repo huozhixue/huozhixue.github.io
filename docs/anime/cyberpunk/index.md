@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 赛博浪客 | 2022-09-13 | 10 | [bljiex](https://svip.bljiex.cc/?wd=赛博浪客)  |
+| 1 | 赛博浪客 | 2022-09-13 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/xv77777Z/1/1/)  |
 
 
 ##  MAD

@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | B型H系 | 2010-04-01 | 12 | [樱花](https://www.yhdmp.live/vp/10087-2-0.html)  |
+| 1 | B型H系 | 2010-04-01 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/bo77777Z/1/1/)  |
 
 
 

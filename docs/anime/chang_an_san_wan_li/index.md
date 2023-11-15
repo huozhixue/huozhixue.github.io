@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 长安三万里 | 2023-07-08 | 1 | [bljiex](https://svip.bljiex.cc/so.php?wd=长安三万里)  |
+| 1 | 长安三万里 | 2023-07-08 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/UUj7777Z/1/1/)  |
 
 
 

@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 大剑 | 2007-04-03 | 26 | [樱花](https://www.yhdmp.live/vp/7098-1-0.html)  |
+| 1 | 大剑 | 2007-04-03 | 26 | [silisilifun](https://www.silisilifun.com/vodplay/FN77777Z/2/1/)  |
 
 
 ## MAD

@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 圣枪修女 | 2003-11-24 | 24 | [樱花](https://www.cykz.net/vodplay/shengqiangxiunv-1-1/)  |
+| 1 | 圣枪修女 | 2003-11-24 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/QnZ7777Z/1/1/)  |
 
 
 ## MAD

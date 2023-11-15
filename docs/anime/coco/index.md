@@ -21,7 +21,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 寻梦环游记 | 2017-11-22 | 1 | [樱花](https://www.cykz.net/vodplay/xunmenghuanyouji-4-1/)  |
+| 1 | 寻梦环游记 | 2017-11-22 | 1 | [bljiex](https://svip.bljiex.cc/so.php?wd=寻梦环游记)  |
 
 
 
