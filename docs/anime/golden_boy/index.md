@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 黄金宝贝 | 1995-10-27 | 6 | [樱花](https://www.cykz.net/vodplay/huangjinxiaozi1995-1-1/)  |
+| 1 | 黄金宝贝 | 1995-10-27 | 6 | [bilibili](https://www.bilibili.com/video/BV1gb411v7Sq)  |
 
 
 

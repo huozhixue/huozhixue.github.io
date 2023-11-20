@@ -26,7 +26,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 乐园追放 -Expelled From Paradise- | 2014-11-15 | 01:43:38 | [樱花](https://www.yhdmp.live/vp/14199-2-0.html)  |
+| 1 | 乐园追放 -Expelled From Paradise- | 2014-11-15 | 01:43:38 | [silisilifun](https://www.silisilifun.com/vodplay/pPZ7777Z/1/1/)  |
 
 
 

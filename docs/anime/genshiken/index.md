@@ -33,7 +33,7 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 | 现视研 | 2004-10-10 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss517)  |
-| 2 | 现视研2 | 2007-10-09 | 12 | [樱花](https://www.cykz.net/vodplay/xianshiyan2-1-1/)  |
+| 2 | 现视研2 | 2007-10-09 | 12 | [agedm](http://www.agedm.org/play/20070072/1/1)  |
 
 
 

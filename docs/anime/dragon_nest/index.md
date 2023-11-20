@@ -24,7 +24,7 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 | 龙之谷：破晓奇兵 | 2014-07-31 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep387214)  |
-| 2 | 精灵王座 | 2016-08-19 | 1 | [樱花](https://www.cykz.net/vodplay/longzhigujinglingwangzuo-1-1/)  |
+| 2 | 精灵王座 | 2016-08-19 | 1 | [bilibili](https://www.bilibili.com/video/BV1VW4y1x7ky)  |
 
 
 ## MAD

@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 食灵-零- | 2008-10-05 | 12 | [樱花](https://www.cykz.net/vodplay/shilingling-1-1/)  |
+| 1 | 食灵-零- | 2008-10-05 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/ttZ7777Z/1/1/)  |
 
 
 ## MAD

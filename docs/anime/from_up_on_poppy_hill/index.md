@@ -23,7 +23,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 来自虞美人之坡 | 2011-07-16 | 1:30:51 | [樱花](https://www.cykz.net/vodplay/yumeirenshengkaideshanpo-1-1/)  |
+| 1 | 来自虞美人之坡 | 2011-07-16 | 1:30:51 | [silisilifun](https://www.silisilifun.com/vodplay/bmj7777Z/1/1/)  |
 
 
 

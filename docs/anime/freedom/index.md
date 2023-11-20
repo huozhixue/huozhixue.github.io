@@ -31,7 +31,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | FREEDOM | 2006-11-24 | 7 | [樱花](https://www.cykz.net/vodplay/ziyou-1-1/)  |
+| 1 | FREEDOM | 2006-11-24 | 7 | [aniwave](https://aniwave.to/watch/freedom.m45z)  |
 
 
 

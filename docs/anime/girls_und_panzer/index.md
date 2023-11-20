@@ -30,12 +30,12 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 少女与战车 | 2012-10-08 | 12 | [樱花](https://www.yhdmp.live/vp/12117-1-0.html)  |
+| 1 | 少女与战车 | 2012-10-08 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/Od77777Z/2/1/)  |
 | 2 | 少女与战车 这次是真正的安齐奥战！ | 2014-07-05 | 1 | [bilibili](https://www.bilibili.com/video/BV1Qx411b7YG)  |
-| 3 | 少女与战车 剧场版 | 2015-11-21 | 1 | [樱花](https://www.cykz.net/vodplay/shaonvyuzhanchejuchangban-1-1/)  |
+| 3 | 少女与战车 剧场版 | 2015-11-21 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/EtZ7777Z/1/1/)  |
 | 4 | 少女与战车 最终章 第1话 | 2017-12-09 | 1 | [bilibili](https://www.bilibili.com/video/BV1sW411g72B)  |
-| 5 | 少女与战车 最终章 第2话 | 2019-06-15 | 1 | [樱花](https://www.yhdmp.live/vp/17324-1-1.html)  |
-| 6 | 少女与战车 最终章 第3话 | 2021-03-26 | 1 | [樱花](https://www.yhdmp.live/vp/17324-1-3.html)  |
+| 5 | 少女与战车 最终章 第2话 | 2019-06-15 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/7CZ7777Z/1/1/)  |
+| 6 | 少女与战车 最终章 第3话 | 2021-03-26 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/dwZ7777Z/1/1/)  |
 
 
 

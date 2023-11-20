@@ -31,10 +31,10 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 钢之炼金术师 | 2003-10-04 | 51 | [樱花](https://www.yhdmp.live/vp/3089-1-0.html)  |
-| 2 | 钢之炼金术师 香巴拉的征服者 | 2005-07-23 | 1 | [樱花](https://www.cykz.net/vodplay/gangzhilianjinshushixiangbaladezhengfuzhe-2-1/)  |
-| 3 | 钢之炼金术师 FULLMETAL ALCHEMIST | 2009-04-05 | 64 | [樱花](https://www.yhdmp.live/vp/9129-1-0.html)  |
-| 4 | 钢之炼金术师 叹息之丘的圣星 | 2011-07-02 | 1 | [樱花](https://www.cykz.net/vodplay/gangzhilianjinshushitanxizhiqiudeshengxing-3-1/)  |
+| 1 | 钢之炼金术师 | 2003-10-04 | 51 | [silisilifun](https://www.silisilifun.com/vodplay/Y277777Z/1/1/)  |
+| 2 | 钢之炼金术师 香巴拉的征服者 | 2005-07-23 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/p0Z7777Z/2/1/)  |
+| 3 | 钢之炼金术师 FULLMETAL ALCHEMIST | 2009-04-05 | 64 | [silisilifun](https://www.silisilifun.com/vodplay/h277777Z/2/1/)  |
+| 4 | 钢之炼金术师 叹息之丘的圣星 | 2011-07-02 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/50Z7777Z/2/1/)  |
 
 
 ## MAD

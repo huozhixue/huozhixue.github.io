@@ -31,8 +31,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 冰雪奇缘 | 2013-11-27 | 1 | [樱花](https://www.cykz.net/vodplay/bingxueqiyuanyuanshengban-1-1/)  |
-| 2 | 冰雪奇缘2 | 2019-11-22 | 1 | [樱花](https://www.cykz.net/vodplay/bingxueqiyuan2-1-1/)  |
+| 1 | 冰雪奇缘 | 2013-11-27 | 1 | [bljiex](https://svip.bljiex.cc/?wd=冰雪奇缘)  |
+| 2 | 冰雪奇缘2 | 2019-11-22 | 1 | [bljiex](https://svip.bljiex.cc/?wd=冰雪奇缘) |
 
 
 ## MAD

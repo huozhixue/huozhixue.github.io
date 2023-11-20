@@ -30,10 +30,12 @@
 
 ## 系列
 
+
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 哥布林杀手 | 2018-10-06 | 12 | [樱花](https://www.yhdmp.live/vp/18327-2-0.html)  |
-| 2 | 哥布林杀手：哥布林的王冠 | 2020-02-01 | 1 | [樱花](https://www.yhdmp.live/vp/19208-2-0.html)  |
+| 1 | 哥布林杀手 | 2018-10-06 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/oW77777Z/1/1/) |
+| 2 | 哥布林杀手：哥布林的王冠 | 2020-02-01 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/zfZ7777Z/1/1/)  |
+| 3 | 哥布林杀手 第二季 | 2023-10-06 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/bpp7777Z/2/1/) |
 
 
 

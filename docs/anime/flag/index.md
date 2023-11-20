@@ -34,7 +34,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | FLAG | 2006-06-16 | 13 | [9anime](https://9anime.to/watch/flag.zxow)  |
+| 1 | FLAG | 2006-06-16 | 13 | [aniwave](https://aniwave.to/watch/flag.zxow)  |
 | 2 | FLAG 一千万库夫拉的记录 | 2007-08-08 | 1 | [bilibili](https://www.bilibili.com/video/BV1Sb411S7Pc)  |
 
 

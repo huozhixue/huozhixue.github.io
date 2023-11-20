@@ -28,16 +28,17 @@
 
 |     | 系列名                             | 首播时间       | 话数/时长 | 观看地址                                                       |
 |:----|:--------------------------------|:-----------|:------|:-----------------------------------------------------------|
-| 1   | 龙珠                              | 1986-02-26 | 153   | [樱花](https://huada.biz/M-16838-1-1.html)                   |
-| 2   | 龙珠Z                             | 1989-04-26 | 291   | [樱花](https://huada.biz/M-3361-1-1.html)                    |
-| 3   | 龙珠GT                            | 1996-02-07 | 64    | [樱花](https://www.cykz.net/vodplay/longzhuGT-3-1/)          |
-| 4   | 龙珠改                             | 2009-04-05 | 98    | [樱花](https://huada.biz/M-20566-1-1.html)                   |
-| 5   | 龙珠改 魔人布欧篇                       | 2014-04-06 | 61    | [樱花](https://huada.biz/M-570-4-1.html)                     |
-| 6   | 龙珠超                             | 2015-07-05 | 131   | [樱花](https://huada.biz/M-2049-1-1.html)                    |
-| 7   | 龙珠Z 一夫当关的最后决战~挑战弗利萨的Z战士 孙悟空的父亲~ | 1990-10-17 | 1     | [优酷](https://v.youku.com/v_show/id_XNDg1NzM2OTgzNg==.html) |
-| 8   | 龙珠Z・绝望的反抗!!残留的超战士・悟饭和特兰克斯       | 1993-02-24 | 1     | [樱花](https://huada.biz/M-16507-1-1.html)                   |
-| 9   | 龙珠旧剧场版                          | 1986-12-20 | 17    | [樱花](https://huada.biz/M-3954-3-1.html)                    |
-| 10  | 龙珠超 布罗利                         | 2018-12-14 | 1     | [樱花](https://huada.biz/M-2645-4-1.html)                    |
+| 1   | 龙珠                              | 1986-02-26 | 153   | [silisilifun](https://www.silisilifun.com/vodplay/F977777Z/1/1/)                   |
+| 2   | 龙珠Z                             | 1989-04-26 | 291   | [silisilifun](https://www.silisilifun.com/vodplay/Ld77777Z/2/1/)                    |
+| 3   | 龙珠GT                            | 1996-02-07 | 64    | [silisilifun](https://www.silisilifun.com/vodplay/Hr77777Z/2/1/)          |
+| 4   | 龙珠改                             | 2009-04-05 | 98    | [silisilifun](https://www.silisilifun.com/vodplay/ZYZ7777Z/1/1/)                   |
+| 5   | 龙珠改 魔人布欧篇                       | 2014-04-06 | 61    | [silisilifun](https://www.silisilifun.com/vodplay/7YZ7777Z/1/1/)                     |
+| 6   | 龙珠超                             | 2015-07-05 | 131   | [silisilifun](https://www.silisilifun.com/vodplay/qr77777Z/2/1/)                    |
+| 7   | 龙珠Z 一夫当关的最后决战~挑战弗利萨的Z战士 孙悟空的父亲~ | 1990-10-17 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/r9j7777Z/1/1/) |
+| 8   | 龙珠Z・绝望的反抗!!残留的超战士・悟饭和特兰克斯       | 1993-02-24 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/6bZ7777Z/1/1/)                   |
+| 9   | 龙珠剧场版                          | 1986-12-20 | 4    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=%E9%BE%99%E7%8F%A0%E5%89%A7%E5%9C%BA%E7%89%88)                    |
+| 10   | 龙珠Z剧场版                          | 1989-07-15 | 17    | [silisilifun](https://www.silisilifun.com/vodsearch%E9%BE%99%E7%8F%A0Z%E5%89%A7%E5%9C%BA%E7%89%88/page/1/)                    |
+| 11  | 龙珠超 布罗利                         | 2018-12-14 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/OY77777Z/1/1/)                    |
 
 
 ## MAD

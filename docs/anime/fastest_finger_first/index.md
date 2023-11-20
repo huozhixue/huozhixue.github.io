@@ -36,7 +36,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 猜谜王 | 2017-07-04 | 12 | [樱花](https://www.cykz.net/vodplay/caimiwang-1-1/)  |
+| 1 | 猜谜王 | 2017-07-04 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/Jr77777Z/2/1/)  |
 
 
 

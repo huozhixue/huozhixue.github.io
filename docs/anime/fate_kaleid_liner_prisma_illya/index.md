@@ -30,15 +30,14 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | Fate/kaleid liner 魔法少女☆伊莉雅 | 2013-07-12 | 10 | [樱花](https://www.yhdmp.live/vp/13083-1-0.html)  |
+| 1 | Fate/kaleid liner 魔法少女☆伊莉雅 | 2013-07-12 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/GKZ7777Z/1/1/)  |
 | 2 | Fate/kaleid liner 魔法少女☆伊莉雅 OAD | 2014-03-07 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss3476)  |
 | 3 | Fate/kaleid liner 魔法少女☆伊莉雅 2wei! | 2014-07-09 | 10 | [bilibili](https://www.bilibili.com/bangumi/play/ss2574)  |
-| 4 | Fate/kaleid liner 魔法少女☆伊莉雅 2wei OAD | 2015-07-25 | 1 | [樱花](https://www.yhdmp.live/vp/14083-1-10.html)  |
-| 5 | Fate/kaleid liner 魔法少女☆伊莉雅 2wei Herz! | 2015-07-24 | 10 | [樱花](https://www.cykz.net/vodplay/mofashaonvyiliyadisanji-1-1/)  |
-| 6 | Fate/kaleid liner 魔法少女☆伊莉雅 3rei!! | 2016-07-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss5065)  |
-| 7 | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 雪下的誓言 | 2017-08-26 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss24856/)  |
-| 8 | Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm | 2019-06-14 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss28400)  |
-| 9 | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 Licht 无名的少女 | 2021-08-27 | 1 | [樱花](https://www.cykz.net/vodplay/mofashaonvyiliyawumingshaonv-1-1/)  |
+| 4 | Fate/kaleid liner 魔法少女☆伊莉雅 2wei Herz! | 2015-07-24 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/uKZ7777Z/1/1/)  |
+| 5 | Fate/kaleid liner 魔法少女☆伊莉雅 3rei!! | 2016-07-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss5065)  |
+| 6 | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 雪下的誓言 | 2017-08-26 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss24856/)  |
+| 7 | Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm | 2019-06-14 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss28400)  |
+| 8 | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 Licht 无名的少女 | 2021-08-27 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/6dZ7777Z/1/1/)  |
 
 
 ## MAD

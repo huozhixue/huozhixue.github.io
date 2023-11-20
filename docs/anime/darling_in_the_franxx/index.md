@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | DARLING in the FRANXX | 2018-01-13 | 24 | [樱花](https://www.yhdmp.live/vp/18126-1-0.html)  |
+| 1 | DARLING in the FRANXX | 2018-01-13 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/ko77777Z/2/1/)  |
 
 
 

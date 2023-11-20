@@ -30,10 +30,10 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                                    |
 |:----|:-----------------|:-----------|:------|:--------------------------------------------------------|
-| 1   | 数码宝贝大冒险          | 1999-03-07 | 54    | [樱花](https://huada.biz/M-2033-2-1.html)                 |
-| 2   | 数码宝贝大冒险02        | 2000-04-02 | 50    | [樱花](https://huada.biz/M-21761-1-1.html)                |
-| 3   | 数码宝贝驯兽师之王        | 2001-04-01 | 51    | [樱花](https://huada.biz/M-21775-1-1.html)                |
-| 4   | 数码宝贝无限地带         | 2002-04-07 | 50    | [樱花](https://huada.biz/M-29004-1-1.html)                |
+| 1   | 数码宝贝大冒险          | 1999-03-07 | 54    | [silisilifun](https://www.silisilifun.com/vodplay/KVZ7777Z/1/1/)                 |
+| 2   | 数码宝贝大冒险02        | 2000-04-02 | 50    | [silisilifun](https://www.silisilifun.com/vodplay/DGZ7777Z/1/1/)                |
+| 3   | 数码宝贝驯兽师之王        | 2001-04-01 | 51    | [silisilifun](https://www.silisilifun.com/vodplay/wFZ7777Z/1/1/)                |
+| 4   | 数码宝贝无限地带         | 2002-04-07 | 50    | [silisilifun](https://www.silisilifun.com/vodplay/aS77777Z/2/1/)                |
 | 5   | 数码宝贝大冒险 滚球兽的诞生   | 1999-03-06 | 1     | [bilibili](https://www.bilibili.com/video/BV1cs411b7mC) |
 | 6   | 数码宝贝大冒险 我们的战争游戏! | 2000-03-04 | 1     | [acfun](https://www.acfun.cn/v/ac4928038_2)             |
 | 7   | 数码宝贝X进化          | 2005-01-03 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ms411h7dD) |
