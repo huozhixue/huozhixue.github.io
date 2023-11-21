@@ -17,7 +17,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 海洋之歌 | 2014-09-06 | 1 | [樱花](https://www.cykz.net/vodplay/haiyangzhigeyuanshengban-1-1/)  |
+| 1 | 海洋之歌 | 2014-09-06 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=海洋之歌)、  |
 
 
 

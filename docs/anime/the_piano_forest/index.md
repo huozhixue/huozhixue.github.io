@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 钢琴之森 | 2007-07-21 | 1 | [樱花](https://www.cykz.net/vodplay/gangqinzhisen2007-1-1/)  |
+| 1 | 钢琴之森 | 2007-07-21 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=钢琴之森)、  |
 
 
 

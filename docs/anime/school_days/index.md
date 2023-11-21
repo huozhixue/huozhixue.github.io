@@ -34,7 +34,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 日在校园 | 2007-07-03 | 12 | [樱花](https://www.cykz.net/vodplay/rizaixiaoyuan-1-1/)  |
+| 1 | 日在校园 | 2007-07-03 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/0l77777Z/1/1/)  |
 
 
 

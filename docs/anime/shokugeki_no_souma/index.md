@@ -33,8 +33,8 @@
 | 1 | 食戟之灵 | 2015-04-03 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep28931)  |
 | 2 | 食戟之灵 贰之皿 | 2016-07-02 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep90818)  |
 | 3 | 食戟之灵 餐之皿 | 2017-10-03 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep342461)  |
-| 4 | 食戟之灵 神之皿 | 2019-10-11 | 12 | [樱花](https://www.yhdmp.live/vp/19248-1-0.html)  |
-| 5 | 食戟之灵 豪之皿 | 2020-04-10 | 13 | [樱花](https://www.yhdmp.live/vp/20225-1-0.html)  |
+| 4 | 食戟之灵 神之皿 | 2019-10-11 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=食戟之灵)、  |
+| 5 | 食戟之灵 豪之皿 | 2020-04-10 | 13 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=食戟之灵)、  |
 
 
 

@@ -34,7 +34,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 崖上的波妞 | 2008-07-19 | 1 | [樱花](https://www.cykz.net/vodplay/yashangdeboniu-1-1/)  |
+| 1 | 崖上的波妞 | 2008-07-19 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/aT77777Z/2/2/)  |
 
 
 

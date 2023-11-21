@@ -40,7 +40,7 @@
 | 6   | 魔法少女奈叶 The MOVIE 1st     | 2010-01-23 | 1     | [bilibili](https://www.bilibili.com/video/BV1Gx411w7h3)    |
 | 7   | 魔法少女奈叶 The MOVIE 2nd A’s | 2012-07-14 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3795)   |
 | 8   | 魔法少女奈叶 Reflection        | 2017-07-22 | 1     | [bilibili](https://www.bilibili.com/video/BV1AW411T7eP)    |
-| 9   | 魔法少女奈叶 Detonation        | 2018-10-19 | 1     | [优酷](https://v.youku.com/v_show/id_XNDI4NTgyMjAwMA==.html) |
+| 9   | 魔法少女奈叶 Detonation        | 2018-10-19 | 1     | [bilibili](https://www.bilibili.com/video/BV1Zy4y1b7r2?t=6057.0) |
 
 ## MAD
 

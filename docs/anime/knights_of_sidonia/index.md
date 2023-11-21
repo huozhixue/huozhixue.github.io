@@ -38,7 +38,7 @@
 |:----|:---------------|:-----------|:------|:----------------------------------------------------------|
 | 1   | 希德尼娅的骑士        | 2014-04-10 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep80171) |
 | 2   | 希德尼娅的骑士 第九惑星战役 | 2015-04-10 | 12    | [bilibili](https://www.bilibili.com/video/BV1Vs411D79y)   |
-| 3   | 希德尼娅的骑士 编织爱的行星 | 2021-06-04 | 1     | [樱花](https://www.yhdmp.live/vp/21142-1-0.html)            |
+| 3   | 希德尼娅的骑士 编织爱的行星 | 2021-06-04 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ep776258)            |
 
 
 ## MAD

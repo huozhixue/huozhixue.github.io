@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 红猪 | 1992-07-18 | 01:33:19 | [樱花](https://www.cykz.net/vodplay/hongzhu-1-1/)  |
+| 1 | 红猪 | 1992-07-18 | 01:33:19 | [silisilifun](https://www.silisilifun.com/vodplay/fS77777Z/3/1/) |
 
 
 

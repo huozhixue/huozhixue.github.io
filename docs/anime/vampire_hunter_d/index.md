@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 吸血鬼猎人D：妖杀行 | 2000-08-25 | 102m | [樱花](https://www.cykz.net/vodplay/xixueguilierenD-2-1/)  |
+| 1 | 吸血鬼猎人D：妖杀行 | 2000-08-25 | 102m | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=吸血鬼猎人D：妖杀行)、  |
 
 
 

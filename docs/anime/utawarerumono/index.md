@@ -35,7 +35,7 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 | 传颂之物 | 2006-04-03 | 26 | [bilibili](https://www.bilibili.com/bangumi/play/ss1388)  |
-| 2 | 传颂之物 虚伪的假面 | 2015-10-03 | 25 | [樱花](https://www.yhdmp.live/vp/15100-2-0.html)  |
+| 2 | 传颂之物 虚伪的假面 | 2015-10-03 | 25 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=传颂之物)、  |
 | 3 | 传颂之物 二人的白皇 | 2022-07-02 | 28 | [bilibili](https://www.bilibili.com/bangumi/play/ss42104)  |
 
 

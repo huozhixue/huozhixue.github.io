@@ -31,8 +31,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 一拳超人 | 2015-10-04 | 12 | [樱花](https://www.yhdmp.live/vp/15140-1-0.html)  |
-| 2 | 一拳超人 第二季 | 2019-04-02 | 12 | [樱花](https://www.yhdmp.live/vp/19168-1-0.html)  |
+| 1 | 一拳超人 | 2015-10-04 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/jW77777Z/1/1/)  |
+| 2 | 一拳超人 第二季 | 2019-04-02 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/EK77777Z/2/1/)  |
 
 
 ## MAD

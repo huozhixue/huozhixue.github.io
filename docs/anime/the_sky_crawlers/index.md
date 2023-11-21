@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 空中杀手 | 2008-08-02 | 122min | [樱花](https://www.cykz.net/vodplay/kongzhongshashou-1-1/)  |
+| 1 | 空中杀手 | 2008-08-02 | 122min | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=空中杀手)、  |
 
 
 

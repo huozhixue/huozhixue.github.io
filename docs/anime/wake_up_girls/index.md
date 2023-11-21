@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | Wake Up, Girls! | 2014-01-10 | 12 | [樱花](https://www.cykz.net/vodplay/WakeUpGirls-1-1/)  |
+| 1 | Wake Up, Girls! | 2014-01-10 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=Wake Up, Girls!)、  |
 | 2 | Wake Up, Girls! 七人的偶像 | 2014-01-10 | 1 | [西瓜](https://www.pcnow.com.cn/v/WakeUpGirlsjuchangbanqirendeouxiang-1-1.html)  |
 
 

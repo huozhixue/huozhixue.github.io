@@ -28,7 +28,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 猫的报恩 | 2002-07-20 | 1 | [樱花](https://www.cykz.net/vodplay/maodebaoen-1-1/)  |
+| 1 | 猫的报恩 | 2002-07-20 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=猫的报恩)、  |
 
 
 

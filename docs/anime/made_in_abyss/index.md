@@ -32,9 +32,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 来自深渊 | 2017-07-07 | 13 | [樱花](https://www.yhpdm.com/vp/17133-1-0.html)  |
+| 1 | 来自深渊 | 2017-07-07 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/KK77777Z/3/1/)  |
 | 2 | 来自深渊 深邃的魂之黎明 | 2020-01-17 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss34543)  |
-| 3 | 来自深渊 烈日的黄金乡 | 2022-07-06 | 12 | [樱花](https://www.yhpdm.com/vp/20181-1-0.html)  |
+| 3 | 来自深渊 烈日的黄金乡 | 2022-07-06 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/GR77777Z/2/1/)  |
 
 
 ## MAD

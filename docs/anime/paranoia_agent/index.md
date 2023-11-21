@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 妄想代理人 | 2004-02-02 | 13 | [樱花](https://www.cykz.net/vodplay/wangxiangdailiren-1-1/)  |
+| 1 | 妄想代理人 | 2004-02-02 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/Rg77777Z/2/1/)  |
 
 
 ## MAD

@@ -34,7 +34,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 迷茫管家与懦弱的我 | 2011-07-07 | 13 | [樱花](https://www.cykz.net/vodplay/mimangguanjiayunuoruodewo-1-1/)  |
+| 1 | 迷茫管家与懦弱的我 | 2011-07-07 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/F477777Z/2/1/)  |
 
 
 

@@ -31,7 +31,7 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 | 狮子王 | 1994-06-15 | 1 | [bilibili](https://www.bilibili.com/video/BV1Q84y147HR)  |
-| 2 | 狮子王 | 2019-07-12 | 1 | [樱花](https://www.cykz.net/vodplay/shiziwangzhenshiban-1-1/)  |
+| 2 | 狮子王 | 2019-07-12 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=狮子王)、  |
 
 
 

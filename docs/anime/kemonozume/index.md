@@ -21,7 +21,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 兽爪 | 2006-08-05 | 13 | [樱花](https://www.cykz.net/vodplay/shouzhua-1-1/)  |
+| 1 | 兽爪 | 2006-08-05 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/tSj7777Z/1/1/)  |
 
 
 

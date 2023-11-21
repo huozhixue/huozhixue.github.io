@@ -32,7 +32,7 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 | NO GAME NO LIFE 游戏人生 | 2014-04-09 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep4371)  |
-| 2 | NO GAME NO LIFE 游戏人生 ZERO | 2017-07-15 | 1 | [樱花](https://www.yhdmp.live/vp/17289-2-0.html)  |
+| 2 | NO GAME NO LIFE 游戏人生 ZERO | 2017-07-15 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/vbj7777Z/1/1/)  |
 
 
 MAD

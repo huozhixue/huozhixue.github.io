@@ -14,7 +14,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 极地特快 | 2004-11-10 | 1 | [樱花](https://www.cykz.net/vodplay/jiditekuai-1-1/)  |
+| 1 | 极地特快 | 2004-11-10 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=极地特快)、  |
 
 
 

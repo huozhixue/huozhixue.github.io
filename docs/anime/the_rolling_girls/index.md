@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 旋转少女 | 2015-01-10 | 12 | [樱花](https://www.cykz.net/vodplay/xuanzhuanshaonv-1-1/)  |
+| 1 | 旋转少女 | 2015-01-10 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=旋转少女)、  |
 
 
 

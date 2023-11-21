@@ -26,7 +26,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 飞屋环游记 | 2009-05-29 | 1 | [樱花](https://www.cykz.net/vodplay/feiwuhuanyoujiyingyuban-1-1/)  |
+| 1 | 飞屋环游记 | 2009-05-29 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=飞屋环游记)、  |
 
 
 

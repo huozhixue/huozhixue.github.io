@@ -30,9 +30,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 天才麻将少女 | 2009-04-05 | 25 | [樱花](https://www.yhdmp.live/vp/9098-1-0.html)  |
-| 2 | 天才麻将少女 阿知贺篇 | 2012-04-08 | 16 | [樱花](https://www.yhdmp.live/vp/12156-1-0.html)  |
-| 3 | 天才麻将少女 全国篇 | 2014-01-05 | 13 | [樱花](https://www.yhdmp.live/vp/14217-1-0.html)  |
+| 1 | 天才麻将少女 | 2009-04-05 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/ELZ7777Z/1/1/)  |
+| 2 | 天才麻将少女 阿知贺篇 | 2012-04-08 | 16 | [silisilifun](https://www.silisilifun.com/vodplay/ugZ7777Z/1/1/)  |
+| 3 | 天才麻将少女 全国篇 | 2014-01-05 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/ZDZ7777Z/1/1/)  |
 | 4 | 咲日和 OAD | 2015-07-25 | 1 | [bilibili](https://www.bilibili.com/video/BV1ws411m7H6)  |
 
 

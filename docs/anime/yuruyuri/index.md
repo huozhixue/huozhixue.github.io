@@ -31,12 +31,12 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 摇曳百合 | 2011-07-04 | 12 | [樱花](https://www.yhdmp.live/vp/11137-1-0.html)  |
-| 2 | 摇曳百合♪♪ | 2012-07-02 | 12 | [樱花](https://www.yhdmp.live/vp/12165-1-0.html)  |
+| 1 | 摇曳百合 | 2011-07-04 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=摇曳百合)、  |
+| 2 | 摇曳百合♪♪ | 2012-07-02 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=摇曳百合)、  |
 | 3 | 摇曳百合 夏日时光！ | 2015-02-18 | 1 | [bilibili](https://www.bilibili.com/video/BV1UW411c7d7?p=3)  |
 | 4 | 摇曳百合 夏日时光！+ | 2015-08-20 | 2 | [bilibili](https://www.bilibili.com/video/BV1UW411c7d7)  |
-| 5 | 摇曳百合 3☆High! | 2015-10-05 | 12 | [樱花](https://www.yhdmp.live/vp/15212-1-0.html)  |
-| 6 | 摇曳百合、 | 2019-11-13 | 1 | [樱花](https://www.yhdmp.live/vp/19403-1-0.html)  |
+| 5 | 摇曳百合 3☆High! | 2015-10-05 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=摇曳百合)、  |
+| 6 | 摇曳百合、 | 2019-11-13 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=摇曳百合)、  |
 
 
 

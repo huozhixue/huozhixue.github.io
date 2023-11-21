@@ -28,12 +28,14 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 瑞克和莫蒂 第一季 | 2013-12-02 | 11 | [樱花](https://www.cykz.net/vodplay/ruikehemodidiyijidianbochengyiban-1-1/)  |
-| 2 | 瑞克和莫蒂 第二季 | 2015-07-26 | 10 | [樱花](https://huada.biz/M-31066-1-1.html)  |
-| 3 | 瑞克和莫蒂 第三季 | 2017-04-01 | 10 | [acfun](https://www.acfun.cn/bangumi/aa5024876_36188_1723659)  |
-| 4 | 瑞克和莫蒂 第四季 | 2019-11-10 | 10 | [acfun](https://www.acfun.cn/bangumi/aa6000686_36188_1704061)  |
-| 5 | 瑞克和莫蒂 第五季 | 2021-06-20 | 10 | [樱花](https://www.yhdmp.live/vp/21323-2-0.html)  |
-| 6 | 瑞克和莫蒂 第六季 | 2022-09-04 | 10 | [樱花](https://www.yhdmp.live/vp/22520-1-0.html)  |
+| 1 | 瑞克和莫蒂 第一季 | 2013-12-02 | 11 | [silisilifun](https://www.silisilifun.com/vodplay/LX77777Z/1/1/)  |
+| 2 | 瑞克和莫蒂 第二季 | 2015-07-26 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/DX77777Z/1/1/)  |
+| 3 | 瑞克和莫蒂 第三季 | 2017-04-01 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/RX77777Z/1/1/)  |
+| 4 | 瑞克和莫蒂 第四季 | 2019-11-10 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/CX77777Z/1/1/)  |
+| 5 | 瑞克和莫蒂 第五季 | 2021-06-20 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/8X77777Z/1/1/)  |
+| 6 | 瑞克和莫蒂 第六季 | 2022-09-04 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/wh77777Z/1/1/)  |
+| 7 | 瑞克和莫蒂 第七季 | 2023-10-15 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/h0p7777Z/1/1/) |
+
 
 
 ## MAD

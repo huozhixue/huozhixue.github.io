@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 白色相簿2 | 2013-10-05 | 13 | [樱花](https://www.yhdmp.live/vp/13121-1-0.html)  |
+| 1 | 白色相簿2 | 2013-10-05 | 13 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=白色相簿2)、  |
 
 
 ## MAD

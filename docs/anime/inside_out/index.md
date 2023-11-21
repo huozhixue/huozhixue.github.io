@@ -16,7 +16,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 头脑特工队 | 2015-06-19 | 1 | [樱花](https://www.cykz.net/vodplay/tounaotegongduiyingyuban-1-1/)  |
+| 1 | 头脑特工队 | 2015-06-19 | 1 | [bljiex](https://svip.bljiex.cc/?wd=头脑特工队)    |
 
 
 

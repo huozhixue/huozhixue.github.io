@@ -36,8 +36,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 异世界四重奏 | 2019-04-09 | 12 | [樱花](https://www.yhdmp.live/vp/19152-1-0.html)  |
-| 2 | 异世界四重奏2 | 2020-01-14 | 12 | [樱花](https://www.yhdmp.live/vp/20115-2-0.html)  |
+| 1 | 异世界四重奏 | 2019-04-09 | 12 |[silisilifun](https://www.silisilifun.com/vodplay/IMZ7777Z/1/1/)  |
+| 2 | 异世界四重奏2 | 2020-01-14 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/u5j7777Z/1/1/)  |
 | 3 | 剧场版 异世界四重奏 ～Another World～ | 2022-06-10 | 1 | [bilibili](https://www.bilibili.com/video/BV1Xt4y1h7t6)  |
 
 

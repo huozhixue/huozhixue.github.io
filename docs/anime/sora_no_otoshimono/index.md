@@ -30,9 +30,9 @@
 
 |     | 系列名               | 首播时间       | 话数/时长 | 观看地址                                                      |
 |:----|:------------------|:-----------|:------|:----------------------------------------------------------|
-| 1   | 天降之物              | 2009-10-04 | 14    | [樱花](https://www.yhdmp.live/vp/9084-1-0.html)             |
-| 2   | 天降之物f             | 2010-10-01 | 12    | [樱花](https://www.yhdmp.live/vp/10084-1-0.html)            |
-| 3   | 天降之物 计时的悲伤女神      | 2011-06-25 | 1     | [樱花](https://www.yhdmp.live/vp/11085-1-0.html)            |
+| 1   | 天降之物              | 2009-10-04 | 14    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=天降之物)、             |
+| 2   | 天降之物f             | 2010-10-01 | 12    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=天降之物)、            |
+| 3   | 天降之物 计时的悲伤女神      | 2011-06-25 | 1     | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=天降之物)、            |
 | 4   | 天降之物Final 永远的我的鸟笼 | 2014-04-26 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ep17501) |
 
 

@@ -31,10 +31,10 @@
 
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                                                    |
 |:----|:-----------|:-----------|:------|:------------------------------------------------------------------------|
-| 1   | 妄想学生会      | 2010-07-03 | 21    | [樱花](https://www.yhdmp.live/vp/10097-1-0.html)                          |
-| 2   | 妄想学生会＊     | 2014-01-04 | 23    | [樱花](https://www.yhdmp.live/vp/14135-1-0.html)                          |
-| 3   | 剧场版 妄想学生会  | 2017-07-21 | 2     | [樱花](https://www.yhdmp.live/vp/14135-1-19.html)                         |
-| 4   | 剧场版 妄想学生会2 | 2021-01-01 | 1     | [樱花](https://www.cykz.net/vodplay/wangxiangxueshenghui2juchangban-2-1/) |
+| 1   | 妄想学生会      | 2010-07-03 | 21    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=妄想学生会)、                          |
+| 2   | 妄想学生会＊     | 2014-01-04 | 23    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=妄想学生会)、                          |
+| 3   | 剧场版 妄想学生会  | 2017-07-21 | 2     | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=妄想学生会)、                         |
+| 4   | 剧场版 妄想学生会2 | 2021-01-01 | 1     | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=妄想学生会)、 |
 
 ## MAD
 

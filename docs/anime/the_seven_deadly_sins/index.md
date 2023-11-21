@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 七大罪 | 2014-10-05 | 24 | [樱花](https://www.yhdmp.live/vp/14084-1-0.html)  |
+| 1 | 七大罪 | 2014-10-05 | 24 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=七大罪)、  |
 | 2 | 七大罪 戒律的复活 | 2018-01-06 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep173378)  |
 
 

@@ -13,7 +13,7 @@ CARTOON NETWORK出品 讲述了两兄弟在一片神秘的森林中迷失，并�
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 花园墙外 | 2014-11-03 | 10 | [樱花](https://www.cykz.net/vodplay/huayuanqiangwai-1-1/)  |
+| 1 | 花园墙外 | 2014-11-03 | 10 | [silisilifun](https://svip.bljiex.cc/?wd=花园墙外)  |
 
 
 

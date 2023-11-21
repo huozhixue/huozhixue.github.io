@@ -24,8 +24,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 快乐的大脚 | 2006-11-17 | 1 | [樱花](https://www.cykz.net/vodplay/kuailededajiao-1-1/)  |
-| 2 | 快乐的大脚2 | 0000-00-00 | 1 | [樱花](https://www.cykz.net/vodplay/kuailededajiao2-1-1/)  |
+| 1 | 快乐的大脚 | 2006-11-17 | 1 | [bljiex](https://svip.bljiex.cc/?wd=快乐的大脚) |
+| 2 | 快乐的大脚2 | 0000-00-00 | 1 | [bljiex](https://svip.bljiex.cc/?wd=快乐的大脚) |
 
 
 

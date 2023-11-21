@@ -31,7 +31,7 @@
 
 |     | 系列名           | 首播时间       | 话数/时长 | 观看地址                                                    |
 |:----|:--------------|:-----------|:------|:--------------------------------------------------------|
-| 1   | 棋魂            | 2001-10-10 | 75    | [樱花](https://www.cykz.net/vodplay/qihundiyiji-1-1/)     |
+| 1   | 棋魂            | 2001-10-10 | 75    | [silisilifun](https://www.silisilifun.com/vodplay/DMj7777Z/1/1/)     |
 | 2   | 棋魂特别篇 迈向北斗杯之路 | 2004-01-03 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ax41157HN) |
 
 

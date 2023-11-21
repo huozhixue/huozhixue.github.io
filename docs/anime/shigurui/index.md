@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 剑豪生死斗 | 2007-07-19 | 12 | [樱花](https://www.cykz.net/vodplay/jianhaoshengsidou-1-1/)  |
+| 1 | 剑豪生死斗 | 2007-07-19 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=剑豪生死斗)、  |
 
 
 

@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 昭和元禄落语心中 | 2016-01-08 | 13 | [樱花](https://www.cykz.net/vodplay/zhaoheyuanluluoyuxinzhong-1-1/)  |
-| 2 | 昭和元禄落语心中 -助六再临篇- | 2017-01-06 | 12 | [樱花](https://www.cykz.net/vodplay/zhaoheyuanluluoyuxinzhongdierji-1-1/)  |
+| 1 | 昭和元禄落语心中 | 2016-01-08 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/B377777Z/2/1/)  |
+| 2 | 昭和元禄落语心中 -助六再临篇- | 2017-01-06 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/U377777Z/2/1/)  |
 
 
 ## MAD

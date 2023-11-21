@@ -32,10 +32,9 @@
 |     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                      |
 |:----|:------------|:-----------|:------|:----------------------------------------------------------|
 | 1   | 虫师          | 2005-10-22 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ep30872) |
-| 2   | 虫师 特別篇 蚀日之翳 | 2014-01-04 | 1     | [樱花](https://www.yhdmp.live/vp/14193-1-0.html)            |
-| 3   | 虫师 续章       | 2014-04-04 | 11    | [樱花](https://www.yhdmp.live/vp/14192-1-0.html)            |
-| 4   | 虫师 续章 第2期   | 2014-10-18 | 10    | [樱花](https://www.yhdmp.live/vp/14192-1-10.html)           |
-| 5   | 虫师 特别篇 铃之雫  | 2015-05-16 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss2648)  |
+| 2   | 虫师 特別篇 蚀日之翳 | 2014-01-04 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/fwZ7777Z/1/1/)            |
+| 3   | 虫师 续章       | 2014-04-04 | 21    | [silisilifun](https://www.silisilifun.com/vodplay/gEj7777Z/1/1/)            |
+| 4   | 虫师 特别篇 铃之雫  | 2015-05-16 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss2648)  |
 
 ## MAD
 

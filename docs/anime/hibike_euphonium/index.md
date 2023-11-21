@@ -32,7 +32,7 @@
 |:----|:------------------|:-----------|:------|:----------------------------------------------------------|
 | 1   | 吹响！悠风号            | 2015-04-07 | 14    | [bilibili](https://www.bilibili.com/bangumi/play/ep28919) |
 | 2   | 吹响！悠风号 第二季        | 2016-10-05 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ss28937) |
-| 3   | 莉兹与青鸟             | 2018-04-21 | 1     | [樱花](https://www.yhdmp.live/vp/18375-2-0.html)            |
+| 3   | 莉兹与青鸟             | 2018-04-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1et411r7RT/)            |
 | 4   | 剧场版 吹响！悠风号～誓言的终章～ | 2019-04-19 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss28951) |
 
 

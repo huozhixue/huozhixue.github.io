@@ -23,7 +23,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 蜘蛛侠：平行宇宙 | 2018-12-14 | 01:45:24 | [樱花](https://www.cykz.net/vodplay/zhizhuxiapingxingyuzhou-3-1/)  |
+| 1 | 蜘蛛侠：平行宇宙 | 2018-12-14 | 01:45:24 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=蜘蛛侠：平行宇宙)、  |
 
 
 ## MAD

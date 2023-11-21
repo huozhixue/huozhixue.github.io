@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 纯洁的玛利亚 | 2015-01-11 | 12 | [樱花](https://www.cykz.net/vodplay/chunjiedemaliya-1-1/)  |
+| 1 | 纯洁的玛利亚 | 2015-01-11 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/Q877777Z/2/1/)  |
 
 
 

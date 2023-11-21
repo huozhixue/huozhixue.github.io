@@ -30,12 +30,12 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                           |
 |:----|:-----------------|:-----------|:------|:-----------------------------------------------|
-| 1   | 进击的巨人            | 2013-04-06 | 25    | [樱花](https://www.yhdmp.live/vp/13105-2-0.html) |
-| 2   | 进击的巨人 第二季        | 2017-04-01 | 12    | [樱花](https://www.yhdmp.live/vp/17099-1-0.html) |
-| 3   | 进击的巨人 第三季        | 2018-07-22 | 12    | [樱花](https://www.yhdmp.live/vp/18261-2-0.html) |
-| 4   | 进击的巨人 第三季 Part.2 | 2019-04-28 | 10    | [樱花](https://www.yhdmp.live/vp/19165-2-0.html) |
-| 5   | 进击的巨人 最终季        | 2020-12-06 | 16    | [樱花](https://www.yhdmp.live/vp/20086-2-0.html) |
-| 6   | 进击的巨人 最终季 Part.2 | 2022-01-09 | 12    | [樱花](https://www.yhdmp.live/vp/22144-1-0.html) |
+| 1   | 进击的巨人            | 2013-04-06 | 25    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=进击的巨人)、 |
+| 2   | 进击的巨人 第二季        | 2017-04-01 | 12    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=进击的巨人)、 |
+| 3   | 进击的巨人 第三季        | 2018-07-22 | 12    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=进击的巨人)、 |
+| 4   | 进击的巨人 第三季 Part.2 | 2019-04-28 | 10    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=进击的巨人)、 |
+| 5   | 进击的巨人 最终季        | 2020-12-06 | 16    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=进击的巨人)、 |
+| 6   | 进击的巨人 最终季 Part.2 | 2022-01-09 | 12    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=进击的巨人)、 |
 
 
 ## MAD

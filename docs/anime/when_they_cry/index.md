@@ -37,8 +37,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 寒蝉鸣泣之时 | 2006-04-04 | 26 | [樱花](https://www.yhdmp.live/vp/6099-2-0.html)  |
-| 2 | 寒蝉鸣泣之时 解 | 2007-07-05 | 24 | [樱花](https://www.yhdmp.live/vp/7106-2-0.html)  |
+| 1 | 寒蝉鸣泣之时 | 2006-04-04 | 26 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=寒蝉鸣泣之时)、  |
+| 2 | 寒蝉鸣泣之时 解 | 2007-07-05 | 24 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=寒蝉鸣泣之时)、  |
 
 
 ## MAD

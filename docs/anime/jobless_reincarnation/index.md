@@ -33,6 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 无职转生～到了异世界就拿出真本事～ | 2021-01-10 | 11 | [bljiex](https://svip.bljiex.cc/?wd=无职转生)  |
-| 2 | 无职转生～到了异世界就拿出真本事～ 第2部分 | 2021-10-03 | 12 | [bljiex](https://svip.bljiex.cc/?wd=无职转生)  |
+| 1 | 无职转生～到了异世界就拿出真本事～ | 2021-01-10 | 23 | [silisilifun](https://www.silisilifun.com/vodplay/h077777Z/2/1/)  |
+| 2 | 无职转生Ⅱ ～到了异世界就拿出真本事～ | 2023-07-02 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/96j7777Z/2/1/) |
+
 

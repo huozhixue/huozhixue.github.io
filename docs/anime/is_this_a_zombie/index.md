@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 这个是僵尸吗？ | 2011-01-10 | 12 | [樱花](https://www.yhdmp.live/vp/11089-2-0.html)  |
-| 2 | 这个是僵尸吗？OF THE DEAD | 2012-04-04 | 10 | [樱花](https://www.yhdmp.live/vp/12087-2-0.html)  |
+| 1 | 这个是僵尸吗？ | 2011-01-10 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/4s77777Z/2/1/)  |
+| 2 | 这个是僵尸吗？OF THE DEAD | 2012-04-04 | 10 |[silisilifun](https://www.silisilifun.com/vodplay/1Aj7777Z/1/1/)  |
 
 
 

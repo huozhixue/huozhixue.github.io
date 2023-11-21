@@ -30,9 +30,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 为美好的世界献上祝福！ | 2016-01-13 | 10 | [樱花](https://www.yhdmp.live/vp/16165-1-0.html)  |
-| 2 | 为美好的世界献上祝福！ 第二季 | 2017-01-11 | 10 | [樱花](https://www.yhdmp.live/vp/17086-1-0.html)  |
-| 3 | 电影 为美好的世界献上祝福！红传说 | 2019-08-30 | 1 | [樱花](https://www.yhdmp.live/vp/18269-1-0.html)  |
+| 1 | 为美好的世界献上祝福！ | 2016-01-13 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/B4Z7777Z/1/1/)  |
+| 2 | 为美好的世界献上祝福！ 第二季 | 2017-01-11 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/64Z7777Z/1/1/)|
+| 3 | 电影 为美好的世界献上祝福！红传说 | 2019-08-30 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/l677777Z/2/1/)  |
 
 
 

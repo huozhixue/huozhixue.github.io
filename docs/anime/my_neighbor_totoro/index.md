@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 龙猫 | 1988-04-16 | 88m | [樱花](https://www.cykz.net/vodplay/longmao-1-1/)  |
+| 1 | 龙猫 | 1988-04-16 | 88m | [silisilifun](https://www.silisilifun.com/vodplay/QS77777Z/3/1/)  |
 
 
 

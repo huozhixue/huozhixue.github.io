@@ -27,7 +27,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 辉夜姬物语 | 2013-11-23 | 137min | [樱花](https://www.cykz.net/vodplay/huiyejiwuyu-2-1/)  |
+| 1 | 辉夜姬物语 | 2013-11-23 | 137min | [silisilifun](https://www.silisilifun.com/vodplay/feZ7777Z/1/1/)  |
 
 
 

@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 尸鬼 | 2010-07-08 | 22 | [樱花](https://www.yhdmp.live/vp/10123-1-0.html)  |
+| 1 | 尸鬼 | 2010-07-08 | 22 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=尸鬼)、  |
 
 
 

@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 风之谷 | 1984-03-11 | 116m | [樱花](https://www.cykz.net/vodplay/fengzhigu-1-1/)  |
+| 1 | 风之谷 | 1984-03-11 | 116m | [silisilifun](https://www.silisilifun.com/vodplay/MT77777Z/2/1/)  |
 
 
 

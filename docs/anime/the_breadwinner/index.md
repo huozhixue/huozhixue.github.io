@@ -17,7 +17,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 养家之人 | 2017-09-08 | 01:32:55 | [樱花](https://www.cykz.net/vodplay/yangjiazhirenyuanshengban-1-1/)  |
+| 1 | 养家之人 | 2017-09-08 | 01:32:55 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=养家之人)、  |
 
 
 
