@@ -36,8 +36,9 @@
 
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                                       |
 |:----|:-----------|:-----------|:------|:-----------------------------------------------------------|
-| 1   | 间谍过家家      | 2022-04-09 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep508404) |
-| 2   | 间谍过家家 第二部分 | 2022-10-01 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep691612) |
+| 1   | 间谍过家家      | 2022-04-09 | 25    | [bilibili](https://www.bilibili.com/bangumi/play/ep508404) |
+| 2 | 间谍过家家 第二季 | 2023-10-07 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss46085)  |
+
 
 ## MAD
 

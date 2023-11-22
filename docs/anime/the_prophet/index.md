@@ -13,7 +13,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 先知 | 2014-05-17 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=先知)、  |
+| 1 | 先知 | 2014-05-17 | 1 | [bljiex](https://svip.bljiex.cc/?wd=先知)  |
 
 
 

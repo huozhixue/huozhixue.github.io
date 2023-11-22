@@ -27,7 +27,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 回忆中的玛妮 | 2014-07-19 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=回忆中的玛妮)、  |
+| 1 | 回忆中的玛妮 | 2014-07-19 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/9SZ7777Z/1/1/) |
 
 
 ## MAD

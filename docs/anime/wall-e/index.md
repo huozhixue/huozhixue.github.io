@@ -25,7 +25,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 机器人总动员 | 2008-06-27 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=机器人总动员)、  |
+| 1 | 机器人总动员 | 2008-06-27 | 1 | [bljiex](https://svip.bljiex.cc/?wd=机器人总动员) |
 
 
 

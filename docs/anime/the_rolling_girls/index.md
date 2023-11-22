@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 旋转少女 | 2015-01-10 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=旋转少女)、  |
+| 1 | 旋转少女 | 2015-01-10 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/LRZ7777Z/1/1/) |
 
 
 

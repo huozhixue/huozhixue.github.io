@@ -42,9 +42,9 @@
 | 8   | 历物语        | 2016-01-09 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep82995)     |
 | 9   | 终物语（下）     | 2017-08-12 | 7     | [bilibili](https://www.bilibili.com/bangumi/play/ss6345)      |
 | 10  | 续·终物语      | 2018-11-10 | 6     | [bilibili](https://www.bilibili.com/video/BV1e4411b7Nc)       |
-| 11  | 伤物语I 铁血篇   | 2016-01-08 | 1     | [bljiex](https://svip.bljiex.cc/?wd=伤物语)                |
-| 12  | 伤物语II 热血篇  | 2016-08-19 | 1     | [bljiex](https://svip.bljiex.cc/?wd=伤物语)               |
-| 13  | 伤物语III 冷血篇 | 2017-01-06 | 1     | [bljiex](https://svip.bljiex.cc/?wd=伤物语)               |
+| 11  | 伤物语I 铁血篇   | 2016-01-08 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/Tz77777Z/1/1/)                |
+| 12  | 伤物语II 热血篇  | 2016-08-19 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/Vz77777Z/2/1/)               |
+| 13  | 伤物语III 冷血篇 | 2017-01-06 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/Yz77777Z/2/1/)               |
 
 ## MAD
 

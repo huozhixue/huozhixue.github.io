@@ -33,8 +33,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 侵略！乌贼娘 | 2010-10-04 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=侵略！乌贼娘)、  |
-| 2 | 侵略！？乌贼娘 | 2011-09-27 | 12 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=侵略！乌贼娘)、  |
+| 1 | 侵略！乌贼娘 | 2010-10-04 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/5IZ7777Z/1/1/)  |
+| 2 | 侵略！？乌贼娘 | 2011-09-27 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/pIZ7777Z/1/1/)  |
 | 3 | 侵略！！乌贼娘 OAD | 2012-08-08 | 3 | [bilibili](https://www.bilibili.com/video/BV1iW411h7RB)  |
 
 

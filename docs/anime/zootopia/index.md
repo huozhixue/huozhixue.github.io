@@ -28,7 +28,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 疯狂动物城 | 2016-03-04 | 108分钟 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=疯狂动物城)、  |
+| 1 | 疯狂动物城 | 2016-03-04 | 108分钟 | [bljiex](hhttps://svip.bljiex.cc/?wd=)  |
 
 
 

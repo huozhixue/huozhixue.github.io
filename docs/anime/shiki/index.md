@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 尸鬼 | 2010-07-08 | 22 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=尸鬼)、  |
+| 1 | 尸鬼 | 2010-07-08 | 22 | [silisilifun](https://www.silisilifun.com/vodplay/1T77777Z/1/1/)  |
 
 
 

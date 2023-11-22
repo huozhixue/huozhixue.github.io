@@ -37,7 +37,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 千与千寻 | 2001-07-20 | 124m | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=千与千寻)、  |
+| 1 | 千与千寻 | 2001-07-20 | 124m | [silisilifun](https://www.silisilifun.com/vodplay/vS77777Z/1/1/)  |
 
 
 

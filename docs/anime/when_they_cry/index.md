@@ -28,17 +28,29 @@
 | 4 | 北条沙都子 | 北条 沙都子、ほうじょう さとこ、Houjou Satoko | 女 | かないみか |
 | 5 | 古手梨花 | 咪啪、ふるでりか、Furude Rika、魔法少女 御社神梨花 | 女 | 田村ゆかり |
 | 6 | 园崎诗音 | そのざき しおん、Sonozaki Shion | 女 | ゆきのさつき |
-| 7 | 龙宫礼子 | りゅうぐう れいこ | 女 | 須加みき |
-| 8 | 龙宫保典 | りゅうぐう やすのり | 男 | 仲野元 |
+| 7 | 大石藏人 | 大石 蔵人、おおいし くらうど、Ooishi Kuraudo | 男 | 茶風林 |
+| 8 | 富竹次郎 | 富竹 ジロウ、とみたけ ジロウ、Tomitake Jirou | 男 | 大川透 |
 
-{{< slide "3d/00/2820_crt_N8vMx,46/c8/3182_crt_inI0Y,4c/d6/2427_crt_Xap2T,6e/26/3188_crt_3vvIg,43/cb/3187_crt_STt12,9b/69/3186_crt_Le3aS,0d/0d/102566_crt_w5evZ,32/e7/102565_crt_KM2W2" >}}
+{{< slide "3d/00/2820_crt_N8vMx,46/c8/3182_crt_inI0Y,4c/d6/2427_crt_Xap2T,6e/26/3188_crt_3vvIg,43/cb/3187_crt_STt12,9b/69/3186_crt_Le3aS,f0/23/3191_crt_anidb,76/6e/3192_crt_anidb" >}}
+
+
 
 ## 系列
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 寒蝉鸣泣之时 | 2006-04-04 | 26 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=寒蝉鸣泣之时)、  |
-| 2 | 寒蝉鸣泣之时 解 | 2007-07-05 | 24 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=寒蝉鸣泣之时)、  |
+| 1 | 寒蝉鸣泣之时 | 2006-04-04 | 26 | [silisilifun](https://www.silisilifun.com/vodplay/II77777Z/2/1/)  |
+| 2 | 寒蝉鸣泣之时 解 | 2007-07-05 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/wuZ7777Z/1/1/)  |
+| 3 | 寒蝉鸣泣之时 业 | 2020-10-01 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/J377777Z/2/1/) |
+| 4 | 寒蝉鸣泣之时 卒 | 2021-07-01 | 15 | [silisilifun](https://www.silisilifun.com/vodplay/OuZ7777Z/1/1/) |
+
+<!--
+
+## 配乐
+
+{{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
+
+-->
 
 
 ## MAD

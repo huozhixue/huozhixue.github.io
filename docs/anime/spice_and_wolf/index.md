@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 狼与香辛料 | 2008-01-08 | 13 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=狼与香辛料)、  |
+| 1 | 狼与香辛料 | 2008-01-08 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/1K77777Z/1/1/)  |
 | 2 | 狼与香辛料 第二季 | 2009-07-08 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep34818)  |
 
 

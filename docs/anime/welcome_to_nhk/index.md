@@ -30,7 +30,7 @@
 
 |     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                          |
 |:----|:---------|:-----------|:------|:----------------------------------------------|
-| 1   | 欢迎加入NHK！ | 2006-07-09 | 24    | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=欢迎加入NHK！)、 |
+| 1   | 欢迎加入NHK！ | 2006-07-09 | 24    | [silisilifun](https://www.silisilifun.com/vodplay/cf77777Z/2/1/) |
 
 ## MAD
 

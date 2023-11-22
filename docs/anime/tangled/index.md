@@ -24,7 +24,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 魔发奇缘 | 2010-11-24 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=魔发奇缘)、  |
+| 1 | 魔发奇缘 | 2010-11-24 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/uAZ7777Z/1/1/)  |
 
 
 

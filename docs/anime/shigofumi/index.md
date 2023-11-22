@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 死后文 | 2008-01-05 | 13 | [下方](https://www.bilibili.com/bangumi/play/ss1262)  |
+| 1 | 死后文 | 2008-01-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss1262)  |
 
 
 

@@ -12,5 +12,6 @@
 
 |     | 系列名       | 首播时间       | 话数/时长 | 观看地址                                            |
 |:----|:----------|:-----------|:------|:------------------------------------------------|
-| 1   | 枕刀歌：千里不留行 | 2021-02-05 | 12    | [bljiex](https://svip.bljiex.cc/?index28585-2-1.htm)  |
-| 2   | 枕刀歌 特别篇   | 2021-09-30 | 2     | [bljiex](https://svip.bljiex.cc/?index28585-2-1.htm) |
+| 1   | 枕刀歌：千里不留行 | 2021-02-05 | 12+2    | [silisilifun](https://www.silisilifun.com/vodplay/TR77777Z/2/1/)  |
+| 2 | 枕刀歌之尘世行 | 2022-02-01 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/hqZ7777Z/1/1/) |
+

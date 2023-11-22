@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 百合熊风暴 | 2015-01-05 | 12 | [9anime](https://9anime.to/watch/yurikuma-arashi.4qzk/ep-1)  |
+| 1 | 百合熊风暴 | 2015-01-05 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/bs77777Z/3/1/)  |
 
 
 

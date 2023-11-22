@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 欢乐好声音 | 2016-12-21 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=欢乐好声音)、  |
+| 1 | 欢乐好声音 | 2016-12-21 | 1 | [bljiex](https://svip.bljiex.cc/?wd=欢乐好声音)  |
 
 
 

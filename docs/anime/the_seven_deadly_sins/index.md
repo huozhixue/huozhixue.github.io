@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 七大罪 | 2014-10-05 | 24 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=七大罪)、  |
+| 1 | 七大罪 | 2014-10-05 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/Eq77777Z/2/1/)  |
 | 2 | 七大罪 戒律的复活 | 2018-01-06 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep173378)  |
 
 

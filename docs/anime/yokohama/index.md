@@ -35,8 +35,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 横滨购物纪行 | 1998-05-21 | 2 | [下方](#id-1)  |
-| 2 | 横滨购物纪行 -Quiet Country Cafe- | 2002-12-18 | 2 | [下方](#id-1)  |
+| 1 | 横滨购物纪行 | 1998-05-21 | 2 | [bilibili](https://www.bilibili.com/video/BV1dx411U7xg)  |
+| 2 | 横滨购物纪行 -Quiet Country Cafe- | 2002-12-18 | 2 | [bilibili](https://www.bilibili.com/video/BV1dx411U7x3/)  |
 
 
 

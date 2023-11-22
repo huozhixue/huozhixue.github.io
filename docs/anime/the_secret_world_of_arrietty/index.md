@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 借东西的小人阿丽埃蒂 | 2010-07-17 | 1 | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=借东西的小人阿丽埃蒂)、  |
+| 1 | 借东西的小人阿丽埃蒂 | 2010-07-17 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/tiZ7777Z/1/1/)  |
 
 
 

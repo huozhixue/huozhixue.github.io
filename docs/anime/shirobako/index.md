@@ -31,7 +31,7 @@
 |     | 系列名    | 首播时间       | 话数/时长 | 观看地址                                           |
 |:----|:-------|:-----------|:------|:-----------------------------------------------|
 | 1   | 白箱     | 2014-10-09 | 24    | [acfun](https://www.acfun.cn/bangumi/aa6000984) |
-| 2   | 剧场版 白箱 | 2020-02-29 | 1     | [silisilifun](https://www.silisilifun.com/vodsearch/?wd=白箱)、 |
+| 2   | 剧场版 白箱 | 2020-02-29 | 1     | [bilibili](https://www.bilibili.com/video/BV1So4y1G74X?t=3876) |
 
 ## MAD
 
