@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 大闹天宫 | 1961-12-01 | 01:52:34 | [bilibili](https://www.bilibili.com/bangumi/play/ep319063)  |
+| 1 | 大闹天宫 | 1961-12-01 | 01:52:34 | [bilibili](https://www.bilibili.com/video/BV1UX4y1j7nb/)  |
 
 
 

@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 宝莲灯 | 1999-07-30 | 01:24:34 | [bilibili](https://www.bilibili.com/video/BV1EW4y1J7MB/)  |
+| 1 | 宝莲灯 | 1999-07-30 | 01:24:34 | [bilibili](https://www.bilibili.com/video/BV12p4y157XY/)  |
 
 
 

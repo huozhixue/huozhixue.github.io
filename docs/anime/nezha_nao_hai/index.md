@@ -26,7 +26,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 哪吒闹海 | 1979-05-19 | 58:29 | [bilibili](https://www.bilibili.com/bangumi/play/ss2533)  |
+| 1 | 哪吒闹海 | 1979-05-19 | 58:29 | [bilibili](https://www.bilibili.com/video/BV148411d7EK)  |
 
 
 
