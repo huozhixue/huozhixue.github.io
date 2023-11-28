@@ -234,18 +234,18 @@ f, sz = {}, defaultdict(lambda: 1)
 
 ```python
 def dij(nxt,s):
-	pq, d = [(0,s)], defaultdict(lambda:inf)
-	d[s] = 0
+	pq, D = [(0,s)], defaultdict(lambda:inf)
+	D[s] = 0
 	while pq:
 		w,u = heappop(pq)
-		if w>d[u]:
+		if w>D[u]:
 			continue
 		for v,w2 in nxt[u]:
 			nw = w+w2
-			if nw<d[v]:
-				d[v] = nw
+			if nw<D[v]:
+				D[v] = nw
 				heappush(pq, (nw,v))
-	return d
+	return D
 ```
 
 ```python

@@ -598,18 +598,18 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dij</span><span class="p">(</span><span class="n">nxt</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">pq</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">)],</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="n">inf</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pq</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">)],</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="n">inf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">D</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">pq</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">		<span class="n">w</span><span class="p">,</span><span class="n">u</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">w</span><span class="o">&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">w</span><span class="o">&gt;</span><span class="n">D</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">			<span class="k">continue</span>
 </span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">v</span><span class="p">,</span><span class="n">w2</span> <span class="ow">in</span> <span class="n">nxt</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">			<span class="n">nw</span> <span class="o">=</span> <span class="n">w</span><span class="o">+</span><span class="n">w2</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">nw</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">nw</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">nw</span><span class="o">&lt;</span><span class="n">D</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">				<span class="n">D</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">nw</span>
 </span></span><span class="line"><span class="cl">				<span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">d</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">D</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
