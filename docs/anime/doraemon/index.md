@@ -32,7 +32,7 @@
 |     | 系列名       | 首播时间       | 话数/时长 | 观看地址                                                      |
 |:----|:----------|:-----------|:------|:----------------------------------------------------------|
 | 1   | 哆啦A梦 大山版  | 1979-04-02 | 1787  | [bilibili](https://www.bilibili.com/video/BV1tx411D7Lp)   |
-| 2   | 哆啦A梦      | 2005-04-15 | *     | [bilibili](https://www.bilibili.com/video/BV18t411D7bs)   |
+| 2   | 哆啦A梦      | 2005-04-15 | 连载中     | [bilibili](https://www.bilibili.com/video/BV18t411D7bs)   |
 | 3   | 哆啦A梦新剧场版  | 2006-03-04 | 10    | [bilibili](https://www.bilibili.com/video/BV1Js411o78A)   |
 | 4   | 哆啦A梦：伴我同行 | 2014-08-08 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss41235) |
 

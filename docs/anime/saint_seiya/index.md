@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 圣斗士星矢 | 1986-10-11 | 114 | [silisilifun](https://www.silisilifun.com/vodplay/rn77777Z/1/1/) |
+| 1 | 圣斗士星矢 | 1986-10-11 | 114 | [silisilifun](https://www.silisilifun.com/vodplay/L2Z7777Z/1/1/) |
 | 2 | 圣斗士星矢 冥王十二宫编 | 2003-01-25 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/l2Z7777Z/1/1/) |
 | 3 | 圣斗士星矢 冥界篇 前章 | 2005-12-17 | 6 | [silisilifun](https://www.silisilifun.com/vodplay/6n77777Z/2/1/)|
 | 4 | 圣斗士星矢 冥界篇 后章 | 2006-12-15 | 6 | [silisilifun](https://www.silisilifun.com/vodplay/Bn77777Z/2/1/) |

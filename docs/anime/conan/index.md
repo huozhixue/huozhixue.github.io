@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 名侦探柯南 | 1996-01-08 |  | [bilibili](https://www.bilibili.com/bangumi/play/ss33378)  |
+| 1 | 名侦探柯南 | 1996-01-08 | 连载中 | [bilibili](https://www.bilibili.com/bangumi/play/ss33378)  |
 
 
 
