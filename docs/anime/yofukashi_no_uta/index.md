@@ -49,11 +49,11 @@
 
 {{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
 
-## MAD
-
-{{< media auto="mad/yofukashi_no_uta" >}}
-
 -->
 
+## MAD
+
+{{< media "BV1mU4y1e7gB" 
+"【Aegisub特效字幕】よふかしのうた 彻夜之歌 ED" >}}
 
 

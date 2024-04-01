@@ -41,4 +41,6 @@
 | 1 | BanG Dream! It's MyGO!!!!! | 2023-06-29 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/Xbj7777Z/3/1/)  |
 
 
+## MAD
 
+{{< media auto="mad/mygo" >}}

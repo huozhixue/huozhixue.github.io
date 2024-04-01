@@ -40,11 +40,11 @@
 
 {{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
 
-## MAD
-
-{{< media auto="mad/oshi_no_ko" >}}
-
 -->
 
+## MAD
+
+{{< media "BV1Ws4y1A7fS-BV1Fa4y1D7zC-BV1Xg4y157vV"
+"中文字幕】我推的孩子「アイドル」官方MV（4K 60帧/Hi-Res）,【我推的孩子】我 推 的 帽 子,全网最无违和感的アイドル/偶像中文翻填！简直就是原版（x）" >}}
 
 

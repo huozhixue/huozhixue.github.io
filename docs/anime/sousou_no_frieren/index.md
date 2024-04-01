@@ -42,11 +42,11 @@
 
 {{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
 
-## MAD
-
-{{< media auto="mad/sousou_no_frieren" >}}
-
 -->
 
+## MAD
+
+{{< media "BV1c3411K7Mt-BV14r421b7Q5" 
+"【芙莉莲/静止系MAD】想不想看花海盛开,【葬送的芙莉莲】旅途的终点亦是起点——山河万里曾有幸 与你并肩闯！！！" >}}
 
 

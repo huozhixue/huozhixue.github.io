@@ -41,11 +41,10 @@
 
 {{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
 
-## MAD
-
-{{< media auto="mad/boku_no_kokoro_no_yabai_yatsu" >}}
-
 -->
 
+## MAD
 
+{{< media "BV1Fm4y1h7S7-BV1XW421F7Hp" 
+"【中日字幕】ヨルシカ 新曲「斜陽」完整版【我心里危险的东西 OP片头曲】,Kohana Lam《恋してる自分すら愛せるんだ（甚至能喜欢上恋爱中的自己）》动画特别版" >}}
 
