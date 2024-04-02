@@ -31,10 +31,10 @@
 
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                                                    |
 |:----|:-----------|:-----------|:------|:------------------------------------------------------------------------|
-| 1   | 妄想学生会      | 2010-07-03 | 21    | [silisilifun](https://www.silisilifun.com/vodplay/1y77777Z/1/1/)                          |
-| 2   | 妄想学生会＊     | 2014-01-04 | 25    | [silisilifun](https://www.silisilifun.com/vodplay/KKZ7777Z/1/1/)                          |
+| 1   | 妄想学生会      | 2010-07-03 | 21    | [keke9](https://www.keke9.app/search?k=妄想学生会),silisili                          |
+| 2   | 妄想学生会＊     | 2014-01-04 | 25    | [keke9](https://www.keke9.app/search?k=妄想学生会)                          |
 | 3   | 剧场版 妄想学生会  | 2017-07-21 | 60m     | [bilibili](https://www.bilibili.com/video/BV14s4y1g7K8?t=3950)                         |
-| 4   | 剧场版 妄想学生会2 | 2021-01-01 | 80m     | [silisilifun](https://www.silisilifun.com/vodplay/83Z7777Z/1/1/) |
+| 4   | 剧场版 妄想学生会2 | 2021-01-01 | 80m     | [keke9](https://www.keke9.app/search?k=妄想学生会) |
 
 ## MAD
 

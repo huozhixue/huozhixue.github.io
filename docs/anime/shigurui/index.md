@@ -29,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 剑豪生死斗 | 2007-07-19 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/xQ77777Z/2/1/)  |
+| 1 | 剑豪生死斗 | 2007-07-19 | 12 | [keke9](https://www.keke9.app/search?k=剑豪生死斗),silisili  |
 
 
 

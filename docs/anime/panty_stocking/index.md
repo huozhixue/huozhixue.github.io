@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 吊带袜天使 | 2010-10-01 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/Rx77777Z/2/1/)  |
+| 1 | 吊带袜天使 | 2010-10-01 | 13 | [keke9](https://www.keke9.app/search?k=吊带袜天使),silisili  |
 
 
 

@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 银之匙 Silver Spoon | 2013-07-11 | 11 | [silisilifun](https://www.silisilifun.com/vodplay/ZL77777Z/2/1/)  |
-| 2 | 银之匙 Silver Spoon 第二季 | 2014-01-09 | 11 | [silisilifun](https://www.silisilifun.com/vodplay/jL77777Z/2/1/)  |
+| 1 | 银之匙 Silver Spoon | 2013-07-11 | 11 | [keke9](https://www.keke9.app/search?k=银之匙 Silver Spoon),silisili  |
+| 2 | 银之匙 Silver Spoon 第二季 | 2014-01-09 | 11 | [keke9](https://www.keke9.app/search?k=银之匙 Silver Spoon)  |
 
 ## MAD
 

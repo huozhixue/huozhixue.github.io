@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 星游记 | 2011-10-30 | 26 | [silisilifun](https://www.silisilifun.com/vodplay/lAZ7777Z/1/1/)  |
+| 1 | 星游记 | 2011-10-30 | 26 | [keke9](https://www.keke9.app/search?k=星游记),silisili  |
 
 
 MAD

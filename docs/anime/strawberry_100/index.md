@@ -34,7 +34,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 草莓100% | 2005-04-05 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/6v77777Z/2/1/)  |
+| 1 | 草莓100% | 2005-04-05 | 12 | [keke9](https://www.keke9.app/search?k=草莓100%),silisili  |
 
 
 

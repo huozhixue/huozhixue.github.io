@@ -28,16 +28,16 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | Fate/kaleid liner 魔法少女☆伊莉雅 | 2013-07-12 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/GKZ7777Z/1/1/)  |
-| 2 | Fate/kaleid liner 魔法少女☆伊莉雅 OAD | 2014-03-07 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss3476)  |
-| 3 | Fate/kaleid liner 魔法少女☆伊莉雅 2wei! | 2014-07-09 | 10 | [bilibili](https://www.bilibili.com/bangumi/play/ss2574)  |
-| 4 | Fate/kaleid liner 魔法少女☆伊莉雅 2wei Herz! | 2015-07-24 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/uKZ7777Z/1/1/)  |
-| 5 | Fate/kaleid liner 魔法少女☆伊莉雅 3rei!! | 2016-07-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss5065)  |
-| 6 | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 雪下的誓言 | 2017-08-26 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss24856/)  |
-| 7 | Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm | 2019-06-14 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss28400)  |
-| 8 | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 Licht 无名的少女 | 2021-08-27 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/6dZ7777Z/1/1/)  |
+|     | 系列名                                        | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :----------------------------------------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | Fate/kaleid liner 魔法少女☆伊莉雅                 | 2013-07-12 | 10    | [keke9](https://www.keke9.app/play/23117-4-178071.html)    |
+| 2   | Fate/kaleid liner 魔法少女☆伊莉雅 OAD             | 2014-03-07 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3476)   |
+| 3   | Fate/kaleid liner 魔法少女☆伊莉雅 2wei!           | 2014-07-09 | 10    | [bilibili](https://www.bilibili.com/bangumi/play/ss2574)   |
+| 4   | Fate/kaleid liner 魔法少女☆伊莉雅 2wei Herz!      | 2015-07-24 | 10    | [keke9](https://www.keke9.app/search?k=魔法少女☆伊莉雅)           |
+| 5   | Fate/kaleid liner 魔法少女☆伊莉雅 3rei!!          | 2016-07-06 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss5065)   |
+| 6   | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 雪下的誓言       | 2017-08-26 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss24856/) |
+| 7   | Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm | 2019-06-14 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss28400)  |
+| 8   | 剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 Licht 无名的少女 | 2021-08-27 | 1     | [keke9](https://www.keke9.app/play/179201-4-209569.html)   |
 
 
 ## MAD

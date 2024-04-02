@@ -33,14 +33,14 @@ Director's Cut版本的第21～24集由剧场版《Death》篇剪辑而成，收
 ## 系列
 
 |     | 系列名                 | 首播时间       | 话数/时长 | 观看地址                                                     |
-|:----|:--------------------|:-----------|:------|:---------------------------------------------------------|
+| :-- | :------------------ | :--------- | :---- | :------------------------------------------------------- |
 | 1   | 新世纪福音战士             | 1995-10-04 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss1635) |
 | 2   | 新世纪福音战士剧场版 死与新生     | 1997-03-15 | 2     | [bilibili](https://www.bilibili.com/bangumi/play/ss1637) |
 | 3   | 新世纪福音战士剧场版 Air/真心为你 | 1997-07-19 | 2     | [bilibili](https://www.bilibili.com/bangumi/play/ss1630) |
 | 4   | 福音战士新剧场版：序          | 2007-09-01 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1638) |
 | 5   | 福音战士新剧场版：破          | 2009-06-27 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1639) |
 | 6   | 福音战士新剧场版：Q          | 2012-11-17 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1640) |
-| 7   | 新・福音战士剧场版：终         | 2021-03-08 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/S277777Z/3/1/)      |
+| 7   | 新・福音战士剧场版：终         | 2021-03-08 | 1     | [keke9](https://www.keke9.app/play/179831-4-272154.html) |
 
 ## 配乐
 

@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 六花的勇者 | 2015-07-04 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/T477777Z/2/1/)  |
+| 1 | 六花的勇者 | 2015-07-04 | 12 | [keke9](https://www.keke9.app/search?k=六花的勇者),silisili  |
 
 
 

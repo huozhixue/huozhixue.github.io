@@ -33,8 +33,8 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                                       |
 |:----|:-----------------|:-----------|:------|:-----------------------------------------------------------|
-| 1   | 高分少女             | 2018-07-13 | 12    | [silisilifun](https://www.silisilifun.com/vodplay/jpj7777Z/1/1/)             |
-| 2   | 高分少女 EXTRA STAGE | 2019-03-20 | 3     | [silisilifun](https://www.silisilifun.com/vodplay/DtZ7777Z/1/1/)            |
+| 1   | 高分少女             | 2018-07-13 | 12    | [keke9](https://www.keke9.app/search?k=高分少女),silisili             |
+| 2   | 高分少女 EXTRA STAGE | 2019-03-20 | 3     | [keke9](https://www.keke9.app/search?k=高分少女)            |
 | 3   | 高分少女 第二季         | 2019-10-25 | 9     | [bilibili](https://www.bilibili.com/bangumi/play/ep288534) |
 
 ## MAD

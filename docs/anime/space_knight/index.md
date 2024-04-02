@@ -28,7 +28,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 宇宙骑士BLADE | 1992-02-18 | 49 | [bilibili](https://www.bilibili.com/video/BV1uW411j7su)、[silisilifun](https://www.silisilifun.com/vodplay/YAZ7777Z/1/1/)  |
+| 1 | 宇宙骑士BLADE | 1992-02-18 | 49 | [bilibili](https://www.bilibili.com/video/BV1uW411j7su)、[keke9](https://www.keke9.app/search?k=宇宙骑士BLADE),silisili  |
 
 <!--
 

@@ -35,8 +35,8 @@
 | 3   | 犬夜叉 穿越时空的思念 | 2001-12-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42652)              |
 | 4   | 犬夜叉 镜中的梦幻城  | 2002-12-21 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42653)              |
 | 5   | 犬夜叉 天下霸道之剑  | 2003-12-20 | 1     | [bilibili](https://www.bilibili.com/video/BV1vB4y1B7Pq)                |
-| 6   | 犬夜叉 红莲之蓬莱岛  | 2004-12-23 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/X3Z7777Z/1/1/) |
-| 7   | 犬夜叉 黑色铁碎牙   | 2008-07-30 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/jGj7777Z/2/1/)              |
+| 6   | 犬夜叉 红莲之蓬莱岛  | 2004-12-23 | 1     | [keke9](https://www.keke9.app/search?k=犬夜叉),silisili |
+| 7   | 犬夜叉 黑色铁碎牙   | 2008-07-30 | 1     | [keke9](https://www.keke9.app/search?k=犬夜叉)              |
 
 
 ## MAD

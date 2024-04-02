@@ -35,11 +35,11 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 美少女战士 | 1992-03-07 | 46 | [silisilifun](https://www.silisilifun.com/vodplay/MVZ7777Z/1/1/)  |
-| 2 | 美少女战士R | 1993-03-06 | 43 | [silisilifun](https://www.silisilifun.com/vodplay/HVZ7777Z/1/1/)  |
-| 3 | 美少女战士S | 1994-03-19 | 38 | [silisilifun](https://www.silisilifun.com/vodplay/9VZ7777Z/1/1/)  |
-| 4 | 美少女战士SuperS | 1995-03-04 | 39 | [silisilifun](https://www.silisilifun.com/vodplay/rVZ7777Z/1/1/)  |
-| 5 | 美少女战士Sailor Stars | 1996-03-09 | 34 | [silisilifun](https://www.silisilifun.com/vodplay/oVZ7777Z/1/1/)  |
+| 1 | 美少女战士 | 1992-03-07 | 46 | [keke9](https://www.keke9.app/search?k=美少女战士),silisili  |
+| 2 | 美少女战士R | 1993-03-06 | 43 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
+| 3 | 美少女战士S | 1994-03-19 | 38 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
+| 4 | 美少女战士SuperS | 1995-03-04 | 39 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
+| 5 | 美少女战士Sailor Stars | 1996-03-09 | 34 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
 
 <!--
 

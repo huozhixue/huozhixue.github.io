@@ -39,10 +39,10 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 寒蝉鸣泣之时 | 2006-04-04 | 26 | [silisilifun](https://www.silisilifun.com/vodplay/II77777Z/2/1/)  |
-| 2 | 寒蝉鸣泣之时 解 | 2007-07-05 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/wuZ7777Z/1/1/)  |
-| 3 | 寒蝉鸣泣之时 业 | 2020-10-01 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/J377777Z/2/1/) |
-| 4 | 寒蝉鸣泣之时 卒 | 2021-07-01 | 15 | [silisilifun](https://www.silisilifun.com/vodplay/OuZ7777Z/1/1/) |
+| 1 | 寒蝉鸣泣之时 | 2006-04-04 | 26 | [keke9](https://www.keke9.app/search?k=寒蝉鸣泣之时),silisili  |
+| 2 | 寒蝉鸣泣之时 解 | 2007-07-05 | 24 | [keke9](https://www.keke9.app/search?k=寒蝉鸣泣之时)  |
+| 3 | 寒蝉鸣泣之时 业 | 2020-10-01 | 24 | [keke9](https://www.keke9.app/search?k=寒蝉鸣泣之时) |
+| 4 | 寒蝉鸣泣之时 卒 | 2021-07-01 | 15 | [keke9](https://www.keke9.app/search?k=寒蝉鸣泣之时) |
 
 <!--
 

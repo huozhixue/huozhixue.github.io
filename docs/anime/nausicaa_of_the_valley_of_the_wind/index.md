@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 风之谷 | 1984-03-11 | 116m | [silisilifun](https://www.silisilifun.com/vodplay/MT77777Z/2/1/)  |
+| 1 | 风之谷 | 1984-03-11 | 116m | [keke9](https://www.keke9.app/search?k=风之谷),silisili  |
 
 
 

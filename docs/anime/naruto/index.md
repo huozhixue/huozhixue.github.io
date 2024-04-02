@@ -32,9 +32,9 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                                            |
 |:----|:-------------|:-----------|:------|:--------------------------------------------------------------------------------|
-| 1   | 火影忍者         | 2002-10-03 | 220   | [silisilifun](https://www.silisilifun.com/vodplay/YF77777Z/4/1/)                          |
-| 2   | 火影忍者疾风传      | 2007-02-15 | 500   | [silisilifun](https://www.silisilifun.com/vodplay/d5Z7777Z/1/1/)                             |
-| 3   | 火影忍者 剧场版 博人传 | 2015-08-07 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/A5Z7777Z/2/1/) |
+| 1   | 火影忍者         | 2002-10-03 | 220   | [keke9](https://www.keke9.app/search?k=火影忍者),silisili                          |
+| 2   | 火影忍者疾风传      | 2007-02-15 | 500   | [keke9](https://www.keke9.app/search?k=火影忍者)                             |
+| 3   | 火影忍者 剧场版 博人传 | 2015-08-07 | 1     | [keke9](https://www.keke9.app/search?k=火影忍者) |
 
 ## MAD
 

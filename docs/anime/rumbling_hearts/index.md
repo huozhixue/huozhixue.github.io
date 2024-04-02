@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 你所期望的永远 | 2003-10-04 | 14 | [silisilifun](https://www.silisilifun.com/vodplay/tnZ7777Z/1/1/)  |
+| 1 | 你所期望的永远 | 2003-10-04 | 14 | [keke9](https://www.keke9.app/search?k=你所期望的永远),silisili  |
 
 
 

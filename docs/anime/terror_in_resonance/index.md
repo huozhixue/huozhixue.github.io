@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 东京残响 | 2014-07-10 | 11 | [silisilifun](https://www.silisilifun.com/vodplay/eDZ7777Z/1/1/)  |
+| 1 | 东京残响 | 2014-07-10 | 11 | [keke9](https://www.keke9.app/search?k=东京残响),silisili  |
 
 
 

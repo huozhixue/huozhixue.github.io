@@ -31,12 +31,12 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 摇曳百合 | 2011-07-04 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/TA77777Z/2/1/)  |
-| 2 | 摇曳百合♪♪ | 2012-07-02 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/VA77777Z/2/1/)  |
+| 1 | 摇曳百合 | 2011-07-04 | 12 | [keke9](https://www.keke9.app/search?k=摇曳百合),silisili  |
+| 2 | 摇曳百合♪♪ | 2012-07-02 | 12 | [keke9](https://www.keke9.app/search?k=摇曳百合)  |
 | 3 | 摇曳百合 夏日时光！ | 2015-02-18 | 1 | [bilibili](https://www.bilibili.com/video/BV1UW411c7d7?p=3)  |
 | 4 | 摇曳百合 夏日时光！+ | 2015-08-20 | 2 | [bilibili](https://www.bilibili.com/video/BV1UW411c7d7)  |
-| 5 | 摇曳百合 3☆High! | 2015-10-05 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/SA77777Z/2/1/)  |
-| 6 | 摇曳百合、 | 2019-11-13 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/0rj7777Z/1/1/)  |
+| 5 | 摇曳百合 3☆High! | 2015-10-05 | 12 | [keke9](https://www.keke9.app/search?k=摇曳百合)  |
+| 6 | 摇曳百合、 | 2019-11-13 | 1 | [keke9](https://www.keke9.app/search?k=摇曳百合)  |
 
 
 

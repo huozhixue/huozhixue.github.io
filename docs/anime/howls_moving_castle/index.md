@@ -27,7 +27,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 哈尔的移动城堡 | 2004-11-20 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/rT77777Z/1/1/)  |
+| 1 | 哈尔的移动城堡 | 2004-11-20 | 1 | [keke9](https://www.keke9.app/search?k=哈尔的移动城堡),silisili  |
 
 
 

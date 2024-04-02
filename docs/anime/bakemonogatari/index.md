@@ -31,7 +31,7 @@
 ## 系列
 
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                                          |
-|:----|:-----------|:-----------|:------|:--------------------------------------------------------------|
+| :-- | :--------- | :--------- | :---- | :------------------------------------------------------------ |
 | 1   | 化物语        | 2009-07-03 | 15    | [acfun](https://www.acfun.cn/bangumi/aa6004317_36199_1754191) |
 | 2   | 伪物语        | 2012-01-07 | 11    | [acfun](https://www.acfun.cn/bangumi/aa6004318_36188_1754206) |
 | 3   | 猫物语（黑）     | 2012-12-31 | 4     | [acfun](https://www.acfun.cn/bangumi/aa6004319_36188_1754217) |
@@ -42,9 +42,9 @@
 | 8   | 历物语        | 2016-01-09 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep82995)     |
 | 9   | 终物语（下）     | 2017-08-12 | 7     | [bilibili](https://www.bilibili.com/bangumi/play/ss6345)      |
 | 10  | 续·终物语      | 2018-11-10 | 6     | [bilibili](https://www.bilibili.com/video/BV1e4411b7Nc)       |
-| 11  | 伤物语I 铁血篇   | 2016-01-08 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/Tz77777Z/1/1/)                |
-| 12  | 伤物语II 热血篇  | 2016-08-19 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/Vz77777Z/2/1/)               |
-| 13  | 伤物语III 冷血篇 | 2017-01-06 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/Yz77777Z/2/1/)               |
+| 11  | 伤物语I 铁血篇   | 2016-01-08 | 1     | [keke9](https://www.keke9.app/play/179534-4-233850.html)      |
+| 12  | 伤物语II 热血篇  | 2016-08-19 | 1     | [keke9](https://www.keke9.app/play/179533-4-233849.html)      |
+| 13  | 伤物语III 冷血篇 | 2017-01-06 | 1     | [keke9](https://www.keke9.app/play/27175-4-233848.html)       |
 
 ## MAD
 

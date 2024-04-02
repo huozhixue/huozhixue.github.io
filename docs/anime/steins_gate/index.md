@@ -29,9 +29,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 命运石之门 | 2011-04-06 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/j477777Z/2/1/) |
+| 1 | 命运石之门 | 2011-04-06 | 25 | [keke9](https://www.keke9.app/search?k=命运石之门),silisili |
 | 2 | 命运石之门 负荷领域的既视感 | 2013-04-20 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss3467)  |
-| 3 | 命运石之门 0 | 2018-04-11 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/Z477777Z/2/1/)  |
+| 3 | 命运石之门 0 | 2018-04-11 | 24 | [keke9](https://www.keke9.app/search?k=命运石之门)  |
 
 
 ## MAD

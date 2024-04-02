@@ -28,10 +28,10 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | Code Geass 反叛的鲁路修 | 2006-10-05 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/sq77777Z/2/1/)  |
-| 2 | Code Geass 反叛的鲁路修R2 | 2008-04-06 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/dq77777Z/2/1/)  |
+|     | 系列名                 | 首播时间       | 话数/时长 | 观看地址                                                    |
+| :-- | :------------------ | :--------- | :---- | :------------------------------------------------------ |
+| 1   | Code Geass 反叛的鲁路修   | 2006-10-05 | 25    | [keke9](https://www.keke9.app/play/22150-4-163634.html) |
+| 2   | Code Geass 反叛的鲁路修R2 | 2008-04-06 | 25    | [keke9](https://www.keke9.app/play/22149-4-163609.html) |
 
 
 ## MAD

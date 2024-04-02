@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | Heart Catch 光之美少女! | 2010-02-07 | 49 | [silisilifun](https://www.silisilifun.com/vodplay/2Uj7777Z/1/1/)  |
+| 1 | Heart Catch 光之美少女! | 2010-02-07 | 49 | [keke9](https://www.keke9.app/search?k=Heart Catch 光之美少女!),silisili  |
 
 
 

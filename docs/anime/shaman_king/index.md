@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 通灵王 | 2001-07-04 | 64 | [silisilifun](https://www.silisilifun.com/vodplay/MnZ7777Z/1/1/)  |
+| 1 | 通灵王 | 2001-07-04 | 64 | [keke9](https://www.keke9.app/search?k=通灵王),silisili  |
 
 <!--
 

@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 灌篮高手 | 1993-10-16 | 101 | [silisilifun](https://www.silisilifun.com/vodplay/Ae77777Z/4/1/)  |
+| 1 | 灌篮高手 | 1993-10-16 | 101 | [keke9](https://www.keke9.app/search?k=灌篮高手),silisili  |
 
 <!--
 

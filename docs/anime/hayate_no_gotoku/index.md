@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 旋风管家 | 2007-04-01 | 52 | [silisilifun](https://www.silisilifun.com/vodplay/reZ7777Z/1/1/)  |
-| 2 | 旋风管家 第二季 | 2009-04-03 | 25 | [silisilifun](https://www.silisilifun.com/vodplay/oeZ7777Z/1/1/)  |
+| 1 | 旋风管家 | 2007-04-01 | 52 | [keke9](https://www.keke9.app/search?k=旋风管家),silisili  |
+| 2 | 旋风管家 第二季 | 2009-04-03 | 25 | [keke9](https://www.keke9.app/search?k=旋风管家)  |
 | 3 | 旋风管家 HEAVEN IS A PLACE ON EARTH | 2011-08-27 | 1 | [bilibili](https://www.bilibili.com/video/BV1kb411k79z)  |
 | 4 | 旋风管家 CAN'T TAKE MY EYES OFF YOU | 2012-10-03 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss4341)  |
 | 5 | 旋风管家 Cuties | 2013-04-08 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss4435)  |

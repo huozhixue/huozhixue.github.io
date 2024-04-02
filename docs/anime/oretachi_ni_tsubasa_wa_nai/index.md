@@ -33,8 +33,8 @@
 
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                         |
 |:----|:-----------|:-----------|:------|:---------------------------------------------|
-| 1   | 我们没有翅膀     | 2011-04-03 | 12    | [silisilifun](https://www.silisilifun.com/vodplay/vg77777Z/2/1/) |
-| 2   | 我们没有翅膀 OVA | 2011-06-26 | 1     | [silisilifun](https://www.silisilifun.com/vodplay/vg77777Z/2/13/)                                             |
+| 1   | 我们没有翅膀     | 2011-04-03 | 12    | [keke9](https://www.keke9.app/search?k=我们没有翅膀),silisili |
+| 2   | 我们没有翅膀 OVA | 2011-06-26 | 1     | [keke9](https://www.keke9.app/search?k=我们没有翅膀)                                             |
 
 
 ## MAD

@@ -28,13 +28,13 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 瑞克和莫蒂 第一季 | 2013-12-02 | 11 | [silisilifun](https://www.silisilifun.com/vodplay/LX77777Z/1/1/)  |
-| 2 | 瑞克和莫蒂 第二季 | 2015-07-26 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/DX77777Z/1/1/)  |
-| 3 | 瑞克和莫蒂 第三季 | 2017-04-01 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/RX77777Z/1/1/)  |
-| 4 | 瑞克和莫蒂 第四季 | 2019-11-10 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/CX77777Z/1/1/)  |
-| 5 | 瑞克和莫蒂 第五季 | 2021-06-20 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/8X77777Z/1/1/)  |
-| 6 | 瑞克和莫蒂 第六季 | 2022-09-04 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/wh77777Z/1/1/)  |
-| 7 | 瑞克和莫蒂 第七季 | 2023-10-15 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/h0p7777Z/1/1/) |
+| 1 | 瑞克和莫蒂 第一季 | 2013-12-02 | 11 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂),silisili  |
+| 2 | 瑞克和莫蒂 第二季 | 2015-07-26 | 10 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂)  |
+| 3 | 瑞克和莫蒂 第三季 | 2017-04-01 | 10 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂)  |
+| 4 | 瑞克和莫蒂 第四季 | 2019-11-10 | 10 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂)  |
+| 5 | 瑞克和莫蒂 第五季 | 2021-06-20 | 10 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂)  |
+| 6 | 瑞克和莫蒂 第六季 | 2022-09-04 | 10 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂)  |
+| 7 | 瑞克和莫蒂 第七季 | 2023-10-15 | 10 | [keke9](https://www.keke9.app/search?k=瑞克和莫蒂) |
 
 
 

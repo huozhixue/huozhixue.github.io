@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 寄生兽 生命的准则 | 2014-10-08 | 24 | [silisilifun](https://www.silisilifun.com/vodplay/vz77777Z/1/1/) |
+| 1 | 寄生兽 生命的准则 | 2014-10-08 | 24 | [keke9](https://www.keke9.app/search?k=寄生兽 生命的准则),silisili |
 
 
 

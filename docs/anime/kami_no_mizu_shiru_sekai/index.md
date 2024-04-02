@@ -32,10 +32,10 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 只有神知道的世界 | 2010-10-06 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/ohZ7777Z/1/1/)  |
-| 2 | 只有神知道的世界II | 2011-04-11 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/fn77777Z/2/1/)  |
+| 1 | 只有神知道的世界 | 2010-10-06 | 12 | [keke9](https://www.keke9.app/search?k=只有神知道的世界),silisili  |
+| 2 | 只有神知道的世界II | 2011-04-11 | 12 | [keke9](https://www.keke9.app/search?k=只有神知道的世界)  |
 | 3 | 只有神知道的世界 天理篇 | 2012-10-18 | 2 | [bilibili](https://www.bilibili.com/video/BV12s41157JV)  |
-| 4 | 只有神知道的世界 女神篇 | 2013-07-08 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/ofZ7777Z/1/1/) |
+| 4 | 只有神知道的世界 女神篇 | 2013-07-08 | 12 | [keke9](https://www.keke9.app/search?k=只有神知道的世界) |
 
 ## MAD
 

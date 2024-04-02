@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 回转企鹅罐 | 2011-07-07 | 24 |[silisilifun](https://www.silisilifun.com/vodplay/lf77777Z/2/1/) |
+| 1 | 回转企鹅罐 | 2011-07-07 | 24 |[keke9](https://www.keke9.app/search?k=回转企鹅罐),silisili |
 | 2 | RE:cycle of the PENGUINDRUM [前篇] 你的列车是生存战略 | 2022-04-29 | 1 | [bilibili](https://www.bilibili.com/video/BV1Zh4y1R7X1/?t=1h10m32s) |
 | 3 | RE:cycle of the PENGUINDRUM [后篇] 我爱你 | 2022-07-22 | 1 | [bilibili](https://www.bilibili.com/video/BV15k4y1s7s6/?t=1h8m52s)  |
 

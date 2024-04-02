@@ -41,9 +41,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 灰色的果实 | 2014-10-05 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/Hf77777Z/1/1/)  |
-| 2 | 灰色的迷宫 | 2015-04-12 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/CuZ7777Z/1/1/)  |
-| 3 | 灰色的乐园 | 2015-04-19 | 10 | [silisilifun](https://www.silisilifun.com/vodplay/9f77777Z/1/1/)  |
+| 1 | 灰色的果实 | 2014-10-05 | 13 | [keke9](https://www.keke9.app/search?k=灰色三部曲),silisili  |
+| 2 | 灰色的迷宫 | 2015-04-12 | 1 | [keke9](https://www.keke9.app/search?k=灰色三部曲)  |
+| 3 | 灰色的乐园 | 2015-04-19 | 10 | [keke9](https://www.keke9.app/search?k=灰色三部曲)  |
 
 
 

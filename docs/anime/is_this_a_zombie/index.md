@@ -30,8 +30,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 这个是僵尸吗？ | 2011-01-10 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/4s77777Z/2/1/)  |
-| 2 | 这个是僵尸吗？OF THE DEAD | 2012-04-04 | 10 |[silisilifun](https://www.silisilifun.com/vodplay/1Aj7777Z/1/1/)  |
+| 1 | 这个是僵尸吗？ | 2011-01-10 | 12 | [keke9](https://www.keke9.app/search?k=这个是僵尸吗？),silisili  |
+| 2 | 这个是僵尸吗？OF THE DEAD | 2012-04-04 | 10 |[keke9](https://www.keke9.app/search?k=这个是僵尸吗？)  |
 
 
 

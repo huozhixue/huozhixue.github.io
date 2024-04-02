@@ -38,7 +38,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | BanG Dream! It's MyGO!!!!! | 2023-06-29 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/Xbj7777Z/3/1/)  |
+| 1 | BanG Dream! It's MyGO!!!!! | 2023-06-29 | 13 | [keke9](https://www.keke9.app/search?k=BanG Dream! It's MyGO!!!!!),silisili  |
 
 
 ## MAD

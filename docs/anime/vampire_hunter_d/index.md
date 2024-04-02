@@ -32,7 +32,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 吸血鬼猎人D：妖杀行 | 2000-08-25 | 102m | [silisilifun](https://www.silisilifun.com/vodplay/I3Z7777Z/1/1/)  |
+| 1 | 吸血鬼猎人D：妖杀行 | 2000-08-25 | 102m | [keke9](https://www.keke9.app/search?k=吸血鬼猎人D：妖杀行),silisili  |
 
 
 

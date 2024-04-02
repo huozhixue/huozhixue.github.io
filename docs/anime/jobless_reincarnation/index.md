@@ -33,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 无职转生～到了异世界就拿出真本事～ | 2021-01-10 | 23 | [silisilifun](https://www.silisilifun.com/vodplay/h077777Z/2/1/)  |
-| 2 | 无职转生Ⅱ ～到了异世界就拿出真本事～ | 2023-07-02 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/96j7777Z/2/1/) |
+| 1 | 无职转生～到了异世界就拿出真本事～ | 2021-01-10 | 23 | [keke9](https://www.keke9.app/search?k=无职转生 ～在异世界认真地活下去～),silisili  |
+| 2 | 无职转生Ⅱ ～到了异世界就拿出真本事～ | 2023-07-02 | 13 | [keke9](https://www.keke9.app/search?k=无职转生 ～在异世界认真地活下去～) |
 
 

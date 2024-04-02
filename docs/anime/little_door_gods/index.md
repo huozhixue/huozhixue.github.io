@@ -19,7 +19,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 小门神 | 2016-01-01 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/39Z7777Z/1/1/)  |
+| 1 | 小门神 | 2016-01-01 | 1 | [keke9](https://www.keke9.app/search?k=小门神),silisili  |
 
 
 

@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 谜样女友X | 2012-04-07 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/0477777Z/2/1/) |
+| 1 | 谜样女友X | 2012-04-07 | 13 | [keke9](https://www.keke9.app/search?k=谜样女友X),silisili |
 
 
 

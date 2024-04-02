@@ -30,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 白色相簿2 | 2013-10-05 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/kD77777Z/2/1/)  |
+| 1 | 白色相簿2 | 2013-10-05 | 13 | [keke9](https://www.keke9.app/search?k=白色相簿2),silisili  |
 
 
 ## MAD

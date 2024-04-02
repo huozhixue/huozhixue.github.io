@@ -28,7 +28,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 蓝色恐惧 | 1998-02-28 | 01:21:44 | [silisilifun](https://www.silisilifun.com/vodplay/x3Z7777Z/1/1/)  |
+| 1 | 蓝色恐惧 | 1998-02-28 | 01:21:44 | [keke9](https://www.keke9.app/search?k=蓝色恐惧),silisili  |
 
 
 ## MAD

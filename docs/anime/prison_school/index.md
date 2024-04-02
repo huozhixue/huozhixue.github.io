@@ -31,7 +31,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 监狱学园 | 2015-07-10 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/Uz77777Z/1/1/)  |
+| 1 | 监狱学园 | 2015-07-10 | 12 | [keke9](https://www.keke9.app/search?k=监狱学园),silisili  |
 
 
 

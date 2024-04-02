@@ -37,7 +37,7 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 | 少女☆歌剧 Revue Starlight | 2018-07-12 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep232367)  |
-| 2 | 剧场版 少女☆歌剧 Revue Starlight | 2021-06-04 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/B5p7777Z/1/1/)  |
+| 2 | 剧场版 少女☆歌剧 Revue Starlight | 2021-06-04 | 1 | [keke9](https://www.keke9.app/search?k=少女☆歌剧 Revue Starlight),silisili  |
 
 
 ## MAD

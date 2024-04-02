@@ -27,7 +27,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 辉夜姬物语 | 2013-11-23 | 137min | [silisilifun](https://www.silisilifun.com/vodplay/feZ7777Z/1/1/)  |
+| 1 | 辉夜姬物语 | 2013-11-23 | 137min | [keke9](https://www.keke9.app/search?k=辉夜姬物语),silisili  |
 
 
 

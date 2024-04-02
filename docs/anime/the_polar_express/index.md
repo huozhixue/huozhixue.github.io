@@ -14,7 +14,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 极地特快 | 2004-11-10 | 1 | [silisilifun](https://svip.bljiex.cc/?wd=极地特快)  |
+| 1 | 极地特快 | 2004-11-10 | 1 | [keke9](https://www.keke9.app/search?k=极地特快),silisili  |
 
 
 

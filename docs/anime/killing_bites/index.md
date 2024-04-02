@@ -37,7 +37,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 牙斗 | 2018-01-12 | 12 | [silisilifun](https://www.silisilifun.com/vodplay/GfZ7777Z/1/1/)  |
+| 1 | 牙斗 | 2018-01-12 | 12 | [keke9](https://www.keke9.app/search?k=牙斗),silisili  |
 
 
 

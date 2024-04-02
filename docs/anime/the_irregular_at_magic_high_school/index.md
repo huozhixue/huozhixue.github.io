@@ -33,9 +33,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 魔法科高校的劣等生 | 2014-04-05 | 26 | [silisilifun](https://www.silisilifun.com/vodplay/KO77777Z/2/1/)  |
-| 2 | 魔法科高校的劣等生 来访者篇 | 2020-10-03 | 13 | [silisilifun](https://www.silisilifun.com/vodplay/4O77777Z/2/1/)  |
-| 3 | 魔法科高校的劣等生 追忆篇 | 2021-12-31 | 1 | [silisilifun](https://www.silisilifun.com/vodplay/eAZ7777Z/1/1/)  |
+| 1 | 魔法科高校的劣等生 | 2014-04-05 | 26 | [keke9](https://www.keke9.app/search?k=魔法科高校的劣等生),silisili  |
+| 2 | 魔法科高校的劣等生 来访者篇 | 2020-10-03 | 13 | [keke9](https://www.keke9.app/search?k=魔法科高校的劣等生)  |
+| 3 | 魔法科高校的劣等生 追忆篇 | 2021-12-31 | 1 | [keke9](https://www.keke9.app/search?k=魔法科高校的劣等生)  |
 
 
 

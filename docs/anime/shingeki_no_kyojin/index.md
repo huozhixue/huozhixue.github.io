@@ -30,14 +30,14 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                           |
 |:----|:-----------------|:-----------|:------|:-----------------------------------------------|
-| 1   | 进击的巨人            | 2013-04-06 | 25    | [silisilifun](https://www.silisilifun.com/vodplay/7Fj7777Z/3/1/) |
-| 2   | 进击的巨人 第二季        | 2017-04-01 | 12    | [silisilifun](https://www.silisilifun.com/vodplay/y0j7777Z/2/1/) |
-| 3   | 进击的巨人 第三季        | 2018-07-22 | 12    | [silisilifun](https://www.silisilifun.com/vodplay/k0j7777Z/2/1/) |
-| 4   | 进击的巨人 第三季 Part.2 | 2019-04-28 | 10    | [silisilifun](https://www.silisilifun.com/vodplay/k0j7777Z/2/13/) |
-| 5   | 进击的巨人 最终季        | 2020-12-06 | 16    | [silisilifun](https://www.silisilifun.com/vodplay/h0j7777Z/2/1/) |
-| 6   | 进击的巨人 最终季 Part.2 | 2022-01-09 | 12    | [silisilifun](https://www.silisilifun.com/vodplay/gq77777Z/1/1/) |
-| 7 | 进击的巨人 最终季 完结篇 前篇 | 2023-03-03 | 61m | [silisilifun](https://www.silisilifun.com/vodplay/3sj7777Z/1/1/) |
-| 8 | 进击的巨人 最终季 完结篇 后篇 | 2023-11-04 | 85m | [silisilifun](https://www.silisilifun.com/vodplay/pjp7777Z/6/1/) |
+| 1   | 进击的巨人            | 2013-04-06 | 25    | [keke9](https://www.keke9.app/search?k=进击的巨人),silisili |
+| 2   | 进击的巨人 第二季        | 2017-04-01 | 12    | [keke9](https://www.keke9.app/search?k=进击的巨人) |
+| 3   | 进击的巨人 第三季        | 2018-07-22 | 12    | [keke9](https://www.keke9.app/search?k=进击的巨人) |
+| 4   | 进击的巨人 第三季 Part.2 | 2019-04-28 | 10    | [keke9](https://www.keke9.app/search?k=进击的巨人) |
+| 5   | 进击的巨人 最终季        | 2020-12-06 | 16    | [keke9](https://www.keke9.app/search?k=进击的巨人) |
+| 6   | 进击的巨人 最终季 Part.2 | 2022-01-09 | 12    | [keke9](https://www.keke9.app/search?k=进击的巨人) |
+| 7 | 进击的巨人 最终季 完结篇 前篇 | 2023-03-03 | 61m | [keke9](https://www.keke9.app/search?k=进击的巨人) |
+| 8 | 进击的巨人 最终季 完结篇 后篇 | 2023-11-04 | 85m | [keke9](https://www.keke9.app/search?k=进击的巨人) |
 
 
 ## MAD
