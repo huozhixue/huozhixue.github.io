@@ -28,14 +28,15 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 少女与战车 | 2012-10-08 | 12 | [keke9](https://www.keke9.app/search?k=少女与战车),silisili  |
-| 2 | 少女与战车 这次是真正的安齐奥战！ | 2014-07-05 | 1 | [bilibili](https://www.bilibili.com/video/BV1Qx411b7YG)  |
-| 3 | 少女与战车 剧场版 | 2015-11-21 | 1 | [keke9](https://www.keke9.app/search?k=少女与战车)  |
-| 4 | 少女与战车 最终章 第1话 | 2017-12-09 | 1 | [bilibili](https://www.bilibili.com/video/BV1sW411g72B)  |
-| 5 | 少女与战车 最终章 第2话 | 2019-06-15 | 1 | [keke9](https://www.keke9.app/search?k=少女与战车)  |
-| 6 | 少女与战车 最终章 第3话 | 2021-03-26 | 1 | [keke9](https://www.keke9.app/search?k=少女与战车)  |
+|     | 系列名               | 首播时间       | 话数/时长 | 观看地址                                                      |
+| :-- | :---------------- | :--------- | :---- | :-------------------------------------------------------- |
+| 1   | 少女与战车             | 2012-10-08 | 12    | [keke9](https://www.keke9.app/play/22299-4-167107.html)   |
+| 2   | 少女与战车 这次是真正的安齐奥战！ | 2014-07-05 | 1     | [bilibili](https://www.bilibili.com/video/BV1Qx411b7YG)   |
+| 3   | 少女与战车 剧场版         | 2015-11-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1MT4y1p7G9)   |
+| 4   | 少女与战车 最终章 第1话     | 2017-12-09 | 1     | [bilibili](https://www.bilibili.com/video/BV1sW411g72B)   |
+| 5   | 少女与战车 最终章 第2话     | 2019-06-15 | 1     | [keke9](https://www.keke9.app/play/21138-4-147234.html)   |
+| 6   | 少女与战车 最终章 第3话     | 2021-03-26 | 1     | [keke9](https://www.keke9.app/play/179138-4-202685.html)  |
+| 7   | 少女与战车 最终章 第4话     | 2023-10-06 | 1     | [keke9](https://www.keke9.app/play/228583-36-359737.html) |
 
 
 
