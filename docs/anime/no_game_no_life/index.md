@@ -29,10 +29,10 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | NO GAME NO LIFE 游戏人生 | 2014-04-09 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep4371)  |
-| 2 | NO GAME NO LIFE 游戏人生 ZERO | 2017-07-15 | 1 | [keke9](https://www.keke9.app/search?k=NO GAME NO LIFE 游戏人生),silisili  |
+|     | 系列名                       | 首播时间       | 话数/时长 | 观看地址                                                     |
+| :-- | :------------------------ | :--------- | :---- | :------------------------------------------------------- |
+| 1   | NO GAME NO LIFE 游戏人生      | 2014-04-09 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep4371) |
+| 2   | NO GAME NO LIFE 游戏人生 ZERO | 2017-07-15 | 1     | [keke9](https://www.keke9.app/play/8284-4-51045.html)    |
 
 
 MAD

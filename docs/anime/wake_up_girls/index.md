@@ -29,10 +29,10 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | Wake Up, Girls! | 2014-01-10 | 12 | [keke9](https://www.keke9.app/search?k=Wake Up, Girls!),silisili |
-| 2 | Wake Up, Girls! 七人的偶像 | 2014-01-10 | 1 | [keke9](https://www.keke9.app/search?k=Wake Up, Girls!) |
+|     | 系列名                   | 首播时间       | 话数/时长 | 观看地址                                                    |
+| :-- | :-------------------- | :--------- | :---- | :------------------------------------------------------ |
+| 1   | Wake Up, Girls!       | 2014-01-10 | 12    | [keke9](https://www.keke9.app/play/20513-4-139169.html) |
+| 2   | Wake Up, Girls! 七人的偶像 | 2014-01-10 | 1     | [keke9](https://www.keke9.app/play/30530-4-278242.html) |
 
 
 

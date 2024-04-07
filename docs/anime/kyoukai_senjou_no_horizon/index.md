@@ -28,11 +28,11 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 境界线上的地平线 | 2011-10-01 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep65607)  |
-| 2 | 境界线上的地平线 第二季 | 2012-07-07 | 13 | [keke9](https://www.keke9.app/search?k=境界线上的地平线),silisili  |
-| 3 | 境界线上的地平线 Blu-ray BOX 特典动画 | 2018-12-21 | 1 | [bilibili](https://www.bilibili.com/video/BV1ut411r7LE)  |
+|     | 系列名                       | 首播时间       | 话数/时长 | 观看地址                                                      |
+| :-- | :------------------------ | :--------- | :---- | :-------------------------------------------------------- |
+| 1   | 境界线上的地平线                  | 2011-10-01 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep65607) |
+| 2   | 境界线上的地平线 第二季              | 2012-07-07 | 13    | [keke9](https://www.keke9.app/play/29895-4-266446.html)   |
+| 3   | 境界线上的地平线 Blu-ray BOX 特典动画 | 2018-12-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1ut411r7LE)   |
 
 
 ## MAD

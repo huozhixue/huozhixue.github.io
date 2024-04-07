@@ -34,11 +34,11 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 异世界四重奏 | 2019-04-09 | 12 |[keke9](https://www.keke9.app/search?k=异世界四重奏),silisili  |
-| 2 | 异世界四重奏2 | 2020-01-14 | 12 | [keke9](https://www.keke9.app/search?k=异世界四重奏)  |
-| 3 | 剧场版 异世界四重奏 ～Another World～ | 2022-06-10 | 1 | [bilibili](https://www.bilibili.com/video/BV1Xt4y1h7t6)  |
+|     | 系列名                        | 首播时间       | 话数/时长 | 观看地址                                                    |
+| :-- | :------------------------- | :--------- | :---- | :------------------------------------------------------ |
+| 1   | 异世界四重奏                     | 2019-04-09 | 12    | [keke9](https://www.keke9.app/play/28264-4-248294.html) |
+| 2   | 异世界四重奏2                    | 2020-01-14 | 12    | [keke9](https://www.keke9.app/play/28263-4-248282.html) |
+| 3   | 剧场版 异世界四重奏 ～Another World～ | 2022-06-10 | 1     | [bilibili](https://www.bilibili.com/video/BV1Xt4y1h7t6) |
 
 
 

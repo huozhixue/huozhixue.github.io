@@ -29,11 +29,12 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 辉夜大小姐想让我告白～天才们的恋爱头脑战～ | 2019-01-12 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep259770)  |
-| 2 | 辉夜大小姐想让我告白？～天才们的恋爱头脑战～ | 2020-04-11 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss32982)  |
-| 3 | 辉夜大小姐想让我告白-超级浪漫- | 2022-04-08 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss41411)  |
+|     | 系列名                    | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :--------------------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | 辉夜大小姐想让我告白～天才们的恋爱头脑战～  | 2019-01-12 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep259770) |
+| 2   | 辉夜大小姐想让我告白？～天才们的恋爱头脑战～ | 2020-04-11 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss32982)  |
+| 3   | 辉夜大小姐想让我告白-超级浪漫-       | 2022-04-08 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ss41411)  |
+| 4   | 辉夜大小姐想让我告白-初吻不会结束-     | 2023-03-31 | 4     | [keke9](https://www.keke9.app/play/45180-4-410786.html)    |
 
 
 

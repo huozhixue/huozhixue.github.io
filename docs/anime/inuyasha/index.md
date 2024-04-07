@@ -28,15 +28,15 @@
 
 ## 系列
 
-|     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                                   |
-|:----|:------------|:-----------|:------|:-----------------------------------------------------------------------|
-| 1   | 犬夜叉         | 2000-10-16 | 167   | [bilibili](https://www.bilibili.com/bangumi/play/ep289986)             |
-| 2   | 犬夜叉 完结篇     | 2009-10-03 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss4687)               |
-| 3   | 犬夜叉 穿越时空的思念 | 2001-12-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42652)              |
-| 4   | 犬夜叉 镜中的梦幻城  | 2002-12-21 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42653)              |
-| 5   | 犬夜叉 天下霸道之剑  | 2003-12-20 | 1     | [bilibili](https://www.bilibili.com/video/BV1vB4y1B7Pq)                |
-| 6   | 犬夜叉 红莲之蓬莱岛  | 2004-12-23 | 1     | [keke9](https://www.keke9.app/search?k=犬夜叉),silisili |
-| 7   | 犬夜叉 黑色铁碎牙   | 2008-07-30 | 1     | [keke9](https://www.keke9.app/search?k=犬夜叉)              |
+|     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :---------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | 犬夜叉         | 2000-10-16 | 167   | [bilibili](https://www.bilibili.com/bangumi/play/ep289986) |
+| 2   | 犬夜叉 完结篇     | 2009-10-03 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss4687)   |
+| 3   | 犬夜叉 穿越时空的思念 | 2001-12-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42652)  |
+| 4   | 犬夜叉 镜中的梦幻城  | 2002-12-21 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42653)  |
+| 5   | 犬夜叉 天下霸道之剑  | 2003-12-20 | 1     | [bilibili](https://www.bilibili.com/video/BV1vB4y1B7Pq)    |
+| 6   | 犬夜叉 红莲之蓬莱岛  | 2004-12-23 | 1     | [keke9](https://www.keke9.app/play/179389-4-223382.html)   |
+| 7   | 犬夜叉 黑色铁碎牙   | 2008-07-30 | 1     | [keke9](https://www.keke9.app/play/181312-4-506925.html)   |
 
 
 ## MAD

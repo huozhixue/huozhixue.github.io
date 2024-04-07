@@ -28,15 +28,15 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 悠哉日常大王 | 2013-10-07 | 12 | [keke9](https://www.keke9.app/search?k=悠哉日常大王),silisili |
-| 2 | 悠哉日常大王 OAD | 2014-07-23 | 1 | [bilibili](https://www.bilibili.com/video/BV1VW411m73w)  |
-| 3 | 悠哉日常大王 Repeat | 2015-07-06 | 12 | [keke9](https://www.keke9.app/search?k=悠哉日常大王) |
-| 4 | 悠哉日常大王 Repeat OAD | 2016-09-23 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss5567)  |
-| 5 | 剧场版 悠哉日常大王 Vacation | 2018-08-25 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss26632)  |
-| 6 | 悠哉日常大王 Nonstop | 2021-01-10 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep374717)  |
-| 7 | 悠哉日常大王 Nonstop OAD | 2022-03-23 | 1 | [bilibili](https://www.bilibili.com/video/BV1xS4y117e2)  |
+|     | 系列名                 | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :------------------ | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | 悠哉日常大王              | 2013-10-07 | 12    | [keke9](https://www.keke9.app/play/23651-4-183885.html)    |
+| 2   | 悠哉日常大王 OAD          | 2014-07-23 | 1     | [bilibili](https://www.bilibili.com/video/BV1VW411m73w)    |
+| 3   | 悠哉日常大王 Repeat       | 2015-07-06 | 12    | [keke9](https://www.keke9.app/play/23650-4-183873.html)    |
+| 4   | 悠哉日常大王 Repeat OAD   | 2016-09-23 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss5567)   |
+| 5   | 剧场版 悠哉日常大王 Vacation | 2018-08-25 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss26632)  |
+| 6   | 悠哉日常大王 Nonstop      | 2021-01-10 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep374717) |
+| 7   | 悠哉日常大王 Nonstop OAD  | 2022-03-23 | 1     | [bilibili](https://www.bilibili.com/video/BV1xS4y117e2)    |
 
 
 ## MAD

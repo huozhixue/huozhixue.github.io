@@ -33,13 +33,13 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 美少女战士 | 1992-03-07 | 46 | [keke9](https://www.keke9.app/search?k=美少女战士),silisili  |
-| 2 | 美少女战士R | 1993-03-06 | 43 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
-| 3 | 美少女战士S | 1994-03-19 | 38 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
-| 4 | 美少女战士SuperS | 1995-03-04 | 39 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
-| 5 | 美少女战士Sailor Stars | 1996-03-09 | 34 | [keke9](https://www.keke9.app/search?k=美少女战士)  |
+|     | 系列名               | 首播时间       | 话数/时长 | 观看地址                                                     |
+| :-- | :---------------- | :--------- | :---- | :------------------------------------------------------- |
+| 1   | 美少女战士             | 1992-03-07 | 46    | [keke9](https://www.keke9.app/play/58692-31-68997.html)  |
+| 2   | 美少女战士R            | 1993-03-06 | 43    | [keke9](https://www.keke9.app/play/58710-31-137503.html) |
+| 3   | 美少女战士S            | 1994-03-19 | 38    | [keke9](https://www.keke9.app/play/58709-12-211626.html) |
+| 4   | 美少女战士SuperS       | 1995-03-04 | 39    | [keke9](https://www.keke9.app/play/58708-31-69043.html)  |
+| 5   | 美少女战士Sailor Stars | 1996-03-09 | 34    | [keke9](https://www.keke9.app/play/58707-31-137469.html) |
 
 <!--
 

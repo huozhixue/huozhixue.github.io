@@ -28,13 +28,13 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 食戟之灵 | 2015-04-03 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep28931)  |
-| 2 | 食戟之灵 贰之皿 | 2016-07-02 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep90818)  |
-| 3 | 食戟之灵 餐之皿 | 2017-10-03 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep342461)  |
-| 4 | 食戟之灵 神之皿 | 2019-10-11 | 12 | [keke9](https://www.keke9.app/search?k=食戟之灵),silisili  |
-| 5 | 食戟之灵 豪之皿 | 2020-04-10 | 13 | [keke9](https://www.keke9.app/search?k=食戟之灵)  |
+|     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | 食戟之灵     | 2015-04-03 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep28931)  |
+| 2   | 食戟之灵 贰之皿 | 2016-07-02 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep90818)  |
+| 3   | 食戟之灵 餐之皿 | 2017-10-03 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep342461) |
+| 4   | 食戟之灵 神之皿 | 2019-10-11 | 12    | [keke9](https://www.keke9.app/play/22883-4-176652.html)    |
+| 5   | 食戟之灵 豪之皿 | 2020-04-10 | 13    | [keke9](https://www.keke9.app/play/22882-4-176639.html)    |
 
 
 
