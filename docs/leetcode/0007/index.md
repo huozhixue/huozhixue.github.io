@@ -53,17 +53,16 @@
 
 ### #1
 
-最直接的就是转为字符串反转，再判断是否溢出。
-
-注意负数的负号。
+- 最直接的就是转为字符串反转，再判断是否溢出
+- 注意负数的负号
 
 ```python
-def reverse(self, x: int) -> int:
-    y = int('-'*(x < 0) + str(abs(x))[::-1])
-    return y if -2**31 <= y <2**31 else 0
+class Solution:
+    def reverse(self, x: int) -> int:
+        y = int('-'*(x<0)+str(abs(x))[::-1])
+        return y if -2**31<=y<2**31 else 0
 ```
-
-40 ms
+48 ms
 
 ### #2
 
@@ -72,15 +71,16 @@ def reverse(self, x: int) -> int:
 ## 解答
 
 ```python
-def reverse(self, x: int) -> int:
-    flag = -1 if x < 0 else 1
-    x, y = abs(x), 0
-    while x:
-        y = y * 10 + x % 10
-        x //= 10
-    return y*flag if -2**31 <= y*flag < 2**31 else 0
+class Solution:
+    def reverse(self, x: int) -> int:
+        flag = 1 if x>=0 else -1
+        res,x = 0,abs(x)
+        while x:
+            x,r = divmod(x,10)
+            res = res*10+r
+        res *= flag
+        return res if -2**31<=res<2**31 else 0
 ```
-
-28 ms
+43 ms
 
 

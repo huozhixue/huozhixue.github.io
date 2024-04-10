@@ -7,28 +7,28 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0006：N 字形变换（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0006：N 字形变换（★）" />
-<meta property="og:description" content="力扣第 6 题 题目 将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。 比如输入字符串为 &#34;PAYPALISHIRING&#34; 行数为 3 时，排列如下： P A H N A P L" />
+        <title>1702：修改后的最大二进制字符串（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1702：修改后的最大二进制字符串（★★）" />
+<meta property="og:description" content="力扣第 42 场双周赛第 3 题 题目 给你一个二进制字符串 binary ，它仅有 0 或者 1 组成。你可以使用下面的操作任意次对它进行修改： 操作 1 ：如果二进制串包含子字符" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0006/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2015-01-06T00:00:00+08:00" />
-<meta property="article:modified_time" content="2015-01-06T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/1702/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2020-12-26T22:50:00+08:00" />
+<meta property="article:modified_time" content="2020-12-26T22:50:00+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://huozhixue.github.io/logo.png" /><meta name="twitter:title" content="0006：N 字形变换（★）"/>
-<meta name="twitter:description" content="力扣第 6 题 题目 将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。 比如输入字符串为 &#34;PAYPALISHIRING&#34; 行数为 3 时，排列如下： P A H N A P L"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/logo.png" /><meta name="twitter:title" content="1702：修改后的最大二进制字符串（★★）"/>
+<meta name="twitter:description" content="力扣第 42 场双周赛第 3 题 题目 给你一个二进制字符串 binary ，它仅有 0 或者 1 组成。你可以使用下面的操作任意次对它进行修改： 操作 1 ：如果二进制串包含子字符"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0006/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0005/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0007/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1702/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1696/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1705/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0006：N 字形变换（★）",
+        "headline": "1702：修改后的最大二进制字符串（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0006\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  484 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0006\/","datePublished": "2015-01-06T00:00:00+08:00","dateModified": "2015-01-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1702\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  420 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1702\/","datePublished": "2020-12-26T22:50:00+08:00","dateModified": "2020-12-26T22:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -105,10 +105,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0006：N 字形变换（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1702：修改后的最大二进制字符串（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-06">2015-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 484 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0006/" class="leancloud_visitors" data-flag-title="0006：N 字形变换（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-26">2020-12-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 420 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1702/" class="leancloud_visitors" data-flag-title="1702：修改后的最大二进制字符串（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,96 +119,56 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/zigzag-conversion/" target="_blank" rel="noopener noreffer">力扣第 6 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-binary-string-after-change/" target="_blank" rel="noopener noreffer">力扣第 42 场双周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>将一个给定字符串 <code>s</code> 根据给定的行数 <code>numRows</code> ，以从上往下、从左到右进行 Z 字形排列。</p>
-<p>比如输入字符串为 <code>"PAYPALISHIRING"</code> 行数为 <code>3</code> 时，排列如下：</p>
-<pre>
-P   A   H   N
-A P L S I I G
-Y   I   R</pre>
-<p>之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：<code>"PAHNAPLSIIGYIR"</code>。</p>
-<p>请你实现这个将字符串进行指定行数变换的函数：</p>
-<pre>
-string convert(string s, int numRows);</pre>
+<p>给你一个二进制字符串 <code>binary</code> ，它仅有 <code>0</code> 或者 <code>1</code> 组成。你可以使用下面的操作任意次对它进行修改：</p>
+<ul>
+<li>操作 1 ：如果二进制串包含子字符串 <code>"00"</code> ，你可以用 <code>"10"</code> 将其替换。
+<ul>
+<li>比方说， <code>"<strong>00</strong>010" -> "<strong>10</strong>010"</code></li>
+</ul>
+</li>
+<li>操作 2 ：如果二进制串包含子字符串 <code>"10"</code> ，你可以用 <code>"01"</code> 将其替换。
+<ul>
+<li>比方说， <code>"000<strong>10</strong>" -> "000<strong>01</strong>"</code></li>
+</ul>
+</li>
+</ul>
+<p>请你返回执行上述操作任意次以后能得到的 <strong>最大二进制字符串</strong> 。如果二进制字符串 <code>x</code> 对应的十进制数字大于二进制字符串 <code>y</code> 对应的十进制数字，那么我们称二进制字符串<em> </em><code>x</code><em> </em>大于二进制字符串<em> </em><code>y</code><em> </em>。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
-<strong>输入：</strong>s = "PAYPALISHIRING", numRows = 3
-<strong>输出：</strong>"PAHNAPLSIIGYIR"
+<b>输入：</b>binary = "000110"
+<b>输出：</b>"111011"
+<b>解释：</b>一个可行的转换为：
+"0001<strong>10</strong>" -> "0001<strong>01</strong>"
+"<strong>00</strong>0101" -> "<strong>10</strong>0101"
+"1<strong>00</strong>101" -> "1<strong>10</strong>101"
+"110<strong>10</strong>1" -> "110<strong>01</strong>1"
+"11<strong>00</strong>11" -> "11<strong>10</strong>11"
 </pre>
 <p><strong>示例 2：</strong></p>
 <pre>
-<strong>输入：</strong>s = "PAYPALISHIRING", numRows = 4
-<strong>输出：</strong>"PINALSIGYAHRPI"
-<strong>解释：</strong>
-P     I    N
-A   L S  I G
-Y A   H R
-P     I
-</pre>
-<p><strong>示例 3：</strong></p>
-<pre>
-<strong>输入：</strong>s = "A", numRows = 1
-<strong>输出：</strong>"A"
+<b>输入：</b>binary = "01"
+<b>输出：</b>"01"
+<b>解释：</b>"01" 没办法进行任何转换。
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 <= s.length <= 1000</code></li>
-<li><code>s</code> 由英文字母（小写和大写）、<code>','</code> 和 <code>'.'</code> 组成</li>
-<li><code>1 <= numRows <= 1000</code></li>
+<li><code>1 <= binary.length <= 10<sup>5</sup></code></li>
+<li><code>binary</code> 仅包含 <code>'0'</code> 和 <code>'1'</code> 。</li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
 <ul>
-<li>最直接的就是模拟</li>
-<li>遍历 s，维护当前所属行和方向，注意方向在边界处掉转</li>
-<li>将每个字符添加到对应的行，最后再拼接</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">numRows</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">numRows</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">s</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">numRows</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">c</span>
-</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">+=</span> <span class="n">p</span>
-</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">numRows</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>52 ms</p>
-<h3 id="2">#2</h3>
-<ul>
-<li>还可以用数学方法直接求出下标对应的行</li>
-<li>变换周期 loop=max(1, 2*(numRows-1))</li>
-<li>一个周期中的第 i 个字符属于第 min(i, loop-i) 行</li>
+<li>观察操作二，可以将 0 往前移</li>
+<li>因此只要存在多个 0，就可以移到一起用操作一替换</li>
+<li>所以最终结果必然只有一个 0 或没有 0</li>
+<li>最终一个 0 的情况，计算其下标即可</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -222,27 +182,27 @@ P     I
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">numRows</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">loop</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">numRows</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">numRows</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">k</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="n">loop</span><span class="p">,</span> <span class="n">loop</span><span class="o">-</span><span class="n">i</span><span class="o">%</span><span class="n">loop</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">c</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maximumBinaryString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">binary</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">binary</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39;1&#39;</span><span class="o">*</span><span class="n">j</span><span class="o">+</span><span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="s1">&#39;1&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">j</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>55 ms</p>
+</div><p>65 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2015-01-06</span>
+                <span>更新于 2020-12-26</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0006/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/1702/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -251,14 +211,14 @@ P     I
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0007/" class="prev" rel="prev" title="0007：整数反转（★）"><i class="fas fa-angle-left fa-fw"></i>0007：整数反转（★）</a>
-            <a href="/leetcode/0005/" class="next" rel="next" title="0005：最长回文子串（★）">0005：最长回文子串（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1705/" class="prev" rel="prev" title="1705：吃苹果的最大数目（★★）"><i class="fas fa-angle-left fa-fw"></i>1705：吃苹果的最大数目（★★）</a>
+            <a href="/leetcode/1696/" class="next" rel="next" title="1696：跳跃游戏 VI（★★）">1696：跳跃游戏 VI（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

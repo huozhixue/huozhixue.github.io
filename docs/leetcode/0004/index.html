@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0004\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  709 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  442 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0004\/","datePublished": "2015-01-04T00:00:00+08:00","dateModified": "2015-01-04T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,8 +107,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0004：寻找两个正序数组的中位数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-04">2015-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 709 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0004/" class="leancloud_visitors" data-flag-title="0004：寻找两个正序数组的中位数（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-04">2015-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 442 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0004/" class="leancloud_visitors" data-flag-title="0004：寻找两个正序数组的中位数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,13 +119,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-        <li><a href="#3">#3</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -157,61 +151,35 @@
 <li><code>-10<sup>6</sup> &lt;= nums1[i], nums2[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>最直接的就是合并后排序得到中位数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findMedianSortedArrays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">nums</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums1</span><span class="o">+</span><span class="n">nums2</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">(</span><span class="n">nums</span><span class="p">[(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>时间 $O((M+N)*log(M+N))$，44 ms</p>
-<h3 id="2">#2</h3>
-<p>有个巧妙的想法:</p>
 <ul>
-<li>假设 nums1[i-1]&lt;=nums2[j] 且 nums2[j-1]&lt;=nums1[i]，nums1[:i] 和 nums2[:j] 就是最小的 i+j 个数</li>
-<li>当 i+j==(m+n)//2 时，即找到了最小的一半数，即可求出中位数</li>
-<li>因此遍历和为 (m+n)//2 的  &lt;i, j&gt; 对，找到满足 nums1[i-1]&lt;=nums2[j] 且 nums2[j-1]&lt;=nums1[i] 的即可</li>
-<li>注意 i 递增时，nums1[i-1]、nums1[i] 递增，nums2[j]、nums2[j-1] 递减，因此遍历找到第一个满足 nums2[j-1]&lt;=nums1[i] 的即可。</li>
+<li>假设中位数为 x，那么可以用 x 将 nums1 和 nums2 划分为两部分，满足
+<ul>
+<li>nums1[i-1]&lt;=x&lt;=nums1[i]</li>
+<li>nums2[j-1]&lt;=x&lt;=nums2[j]</li>
+<li>i+j=(m+n)//2</li>
 </ul>
-<p>为了方便，当 m&gt;n 时，可以交换 nums1、nums2 使得 m&lt;=n，排除边界情况。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findMedianSortedArrays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">findMedianSortedArrays</span><span class="p">(</span><span class="n">nums2</span><span class="p">,</span> <span class="n">nums1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="n">left</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="k">else</span> <span class="o">-</span><span class="n">inf</span><span class="p">,</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">j</span> <span class="k">else</span> <span class="o">-</span><span class="n">inf</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">right</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">m</span> <span class="k">else</span> <span class="n">inf</span><span class="p">,</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span> <span class="k">else</span> <span class="n">inf</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">right</span> <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="k">else</span> <span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>时间 $O(min(M,N))$，40 ms</p>
-<h3 id="3">#3</h3>
-<p>注意到如果 nums1[i] &gt;= nums2[j-1]，必然有 nums1[i+1] &gt;= nums2[j-2]，符合单调性，因此可以二分查找 i。</p>
+</li>
+<li>反过来，如果找到一组 (i,j)，满足
+<ul>
+<li>nums1[i-1]&lt;=nums2[j]</li>
+<li>num2[j-1]&lt;=nums1[i]</li>
+<li>i+j=(m+n)//2
+便定位了中位数</li>
+</ul>
+</li>
+<li>注意到 nums1 和 nums2 都递增，那么只需找到第一个 i 满足
+<ul>
+<li>nums2[(m+n)//2-i-1]&lt;=nums1[i]</li>
+</ul>
+</li>
+<li>即可用二分查找</li>
+</ul>
+<p>再考虑边界情况：</p>
+<ul>
+<li>为了方便，当 m&gt;n 时，交换 nums1、nums2，不需计算二分查找 i 的边界</li>
+<li>m+n 为偶数时，要找到两个中位数取平均</li>
+<li>注意 i 和 j 在数组最左/右的边界情况</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -229,14 +197,14 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findMedianSortedArrays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">findMedianSortedArrays</span><span class="p">(</span><span class="n">nums2</span><span class="p">,</span> <span class="n">nums1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="kc">True</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">nums2</span><span class="p">[(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span>
-</span></span><span class="line"><span class="cl">        <span class="n">left</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="k">else</span> <span class="o">-</span><span class="n">inf</span><span class="p">,</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">j</span> <span class="k">else</span> <span class="o">-</span><span class="n">inf</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">right</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">m</span> <span class="k">else</span> <span class="n">inf</span><span class="p">,</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span> <span class="k">else</span> <span class="n">inf</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">right</span> <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="k">else</span> <span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums1</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="o">&gt;</span><span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">findMedianSortedArrays</span><span class="p">(</span><span class="n">nums2</span><span class="p">,</span><span class="n">nums1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">nums2</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="k">else</span> <span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="n">nums2</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">k</span><span class="o">-</span><span class="n">i</span> <span class="k">else</span> <span class="o">-</span><span class="n">inf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">m</span> <span class="k">else</span> <span class="n">inf</span><span class="p">,</span> <span class="n">nums2</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">k</span><span class="o">-</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span> <span class="k">else</span> <span class="n">inf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">b</span> <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="k">else</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>时间 $O(log \ min(M,N))$，48 ms</p>

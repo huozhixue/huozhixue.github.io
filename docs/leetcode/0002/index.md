@@ -48,29 +48,28 @@
 
 ## 分析
 
-链表是逆序存储，所以取到的数字依次是个十百千位。很自然的想到普通人算加法的方式，先算低位，再结合进位算高位。
-
-要注意边界条件，两个链表长度可能不一样，结果可能比两个链表都长，需要再添加新节点。
+- 模拟加法，先算低位，再结合进位算高位。
+- 注意边界条件，两个链表长度可能不一样，最后还可能再进一位
 
 ## 解答
 
 ```python
-def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-	dummy = p = ListNode()
-	carry = 0
-	while l1 or l2:
-		a = l1.val if l1 else 0
-		b = l2.val if l2 else 0
-		s = a + b + carry
-		p.next = ListNode(s % 10)
-		carry = s // 10
-		p = p.next
-		l1 = l1.next if l1 else l1
-		l2 = l2.next if l2 else l2
-	p.next = ListNode(carry) if carry else None
-	return dummy.next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = p = ListNode()
+        c = 0
+        while l1 or l2:
+            a = l1.val if l1 else 0
+            b = l2.val if l2 else 0
+            c,s = divmod(a+b+c,10)
+            p.next = ListNode(s)
+            p = p.next
+            l1 = l1 and l1.next
+            l2 = l2 and l2.next
+        p.next = ListNode(c) if c else None
+        return dummy.next
 ```
-72 ms
+48 ms
 
 
 

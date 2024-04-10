@@ -31,7 +31,7 @@ def manacher(s):
 		A.append(a)
 		if i+a>r:
 			mid, r = i, i+a
-	return B       # B[i]:i结尾的最大回文子串长度
+	return B       # B[i]:i结尾的最大回文子串长度（奇数）
 ```
 
 ### 1.3 z 函数

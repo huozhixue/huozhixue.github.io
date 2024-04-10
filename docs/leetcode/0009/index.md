@@ -58,27 +58,28 @@
 最简单的就是转为字符串判断。
 
 ```python
-def isPalindrome(self, x: int) -> bool:
-	return str(x) == str(x)[::-1]
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        return str(x)==str(x)[::-1]
 ```
-80 ms
+42 ms
 
 ### #2
 
 也可以类似 {{< lc "0007" >}} 将整数反转，判断是否相等。
-注意负数必然不是回文数。
 
 ## 解答
 
 ```python
-def isPalindrome(self, x: int) -> bool:
-	if x < 0:
-		return False
-	y, tmp = 0, x
-	while tmp:
-		y = y * 10 + tmp % 10
-		tmp //= 10
-	return y == x
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        res, y = 0, x
+        while y:
+            y,r = divmod(y,10)
+            res = res*10+r
+        return res==x
 ```
-72 ms
+63 ms
 

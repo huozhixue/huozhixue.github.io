@@ -53,34 +53,17 @@
 
 ## 分析
 
-### #1
-
-最直接的就是是两次遍历，找出答案。
-
-```python
-def twoSum(self, nums: List[int], target: int) -> List[int]:
-	for i in range(len(nums)):
-		for j in range(i+1, len(nums)):
-			if nums[i] + nums[j] == target:
-				return [i, j]
-```
-
-时间 O(N^2)，2860 ms
-
-### #2
-
-注意到第二层遍历等价于查询一个数，所以可以用哈希表节省时间。
-
 边遍历边用哈希存储元素位置，每轮查询前面是否有对应的数即可。
  
 ## 解答
 
 ```python
-def twoSum(self, nums: List[int], target: int) -> List[int]:
-    d = {}
-    for j, num in enumerate(nums):
-        if target-num in d:
-            return [d[target-num], j]
-        d[num] = j
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for i,x in enumerate(nums):
+            if target-x in d:
+                return [d[target-x],i]
+            d[x] = i
 ```
-时间 O(N)，28 ms
+30 ms

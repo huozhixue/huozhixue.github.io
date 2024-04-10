@@ -93,11 +93,12 @@
 ## 解答
 
 ```python
-def myAtoi(self, s: str) -> int:
-	tmp = re.match('[+-]?\d+', s.strip())
-	return max(min(int(tmp.group()), 2**31-1), -2**31) if tmp else 0
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        tmp = re.match('[+-]?\d+', s.strip())
+        return max(min(int(tmp.group()), 2**31-1), -2**31) if tmp else 0
 ```
-36 ms
+45 ms
 
 
 

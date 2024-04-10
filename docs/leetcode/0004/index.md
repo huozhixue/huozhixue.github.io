@@ -45,60 +45,36 @@
 
 ## 分析
 
-### #1
+- 假设中位数为 x，那么可以用 x 将 nums1 和 nums2 划分为两部分，满足
+	- nums1[i-1]<=x<=nums1[i]
+	- nums2[j-1]<=x<=nums2[j]
+	- i+j=(m+n)//2
+- 反过来，如果找到一组 (i,j)，满足
+	- nums1[i-1]<=nums2[j]
+	- num2[j-1]<=nums1[i]
+	- i+j=(m+n)//2
+	便定位了中位数
+- 注意到 nums1 和 nums2 都递增，那么只需找到第一个 i 满足
+	- nums2[(m+n)//2-i-1]<=nums1[i]
+- 即可用二分查找
 
-最直接的就是合并后排序得到中位数。
-
-```python
-def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-	nums, m, n = sorted(nums1+nums2), len(nums1), len(nums2)
-	return (nums[(m+n-1)//2] + nums[(m+n)//2]) / 2
-```
-时间 $O((M+N)*log(M+N))$，44 ms
-
-### #2
-
-有个巧妙的想法:
-- 假设 nums1[i-1]<=nums2[j] 且 nums2[j-1]<=nums1[i]，nums1[:i] 和 nums2[:j] 就是最小的 i+j 个数
-- 当 i+j==(m+n)//2 时，即找到了最小的一半数，即可求出中位数
-- 因此遍历和为 (m+n)//2 的  <i, j> 对，找到满足 nums1[i-1]<=nums2[j] 且 nums2[j-1]<=nums1[i] 的即可
-- 注意 i 递增时，nums1[i-1]、nums1[i] 递增，nums2[j]、nums2[j-1] 递减，因此遍历找到第一个满足 nums2[j-1]<=nums1[i] 的即可。
-
-为了方便，当 m>n 时，可以交换 nums1、nums2 使得 m<=n，排除边界情况。
-
-
-```python
-def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-    m, n = len(nums1), len(nums2)
-    if m > n:
-        return self.findMedianSortedArrays(nums2, nums1)
-    i, j = 0, (m+n)//2
-    while i < m and nums1[i] < nums2[j-1]:
-        i += 1
-        j -= 1
-    left = max(nums1[i-1] if i else -inf, nums2[j-1] if j else -inf)
-    right = min(nums1[i] if i<m else inf, nums2[j] if j<n else inf)
-    return right if (m+n)%2 else (left+right)/2
-```
-时间 $O(min(M,N))$，40 ms
-
-### #3
-
-注意到如果 nums1[i] >= nums2[j-1]，必然有 nums1[i+1] >= nums2[j-2]，符合单调性，因此可以二分查找 i。
-
+再考虑边界情况：
+- 为了方便，当 m>n 时，交换 nums1、nums2，不需计算二分查找 i 的边界
+- m+n 为偶数时，要找到两个中位数取平均
+- 注意 i 和 j 在数组最左/右的边界情况
 ## 解答
 
 ```python
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        m, n = len(nums1), len(nums2)
-        if m > n:
-            return self.findMedianSortedArrays(nums2, nums1)
-        i = bisect_left(range(m), True, key=lambda i:nums1[i]>=nums2[(m+n)//2-i-1])
-        j = (m+n)//2-i
-        left = max(nums1[i-1] if i else -inf, nums2[j-1] if j else -inf)
-        right = min(nums1[i] if i<m else inf, nums2[j] if j<n else inf)
-        return right if (m+n)%2 else (left+right)/2
+        m, n = len(nums1),len(nums2)
+        if m>n:
+            return self.findMedianSortedArrays(nums2,nums1)
+        k = (m+n)//2
+        i = bisect_left(range(m),1,key=lambda i:nums1[i]>=nums2[k-i-1])
+        a = max(nums1[i-1] if i else -inf,nums2[k-i-1] if k-i else -inf)
+        b = min(nums1[i] if i<m else inf, nums2[k-i] if k-i<n else inf)
+        return b if (m+n)%2 else (a+b)/2
 ```
 时间 $O(log \ min(M,N))$，48 ms
 

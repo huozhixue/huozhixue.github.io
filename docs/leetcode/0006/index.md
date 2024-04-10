@@ -63,29 +63,29 @@ P     I
 
 ### #1
 
-最直接的就是模拟排列的过程。遍历 s，将每个字符添加到 Z 字形中对应的行，最后再拼接所有行即可。
-
-判断字符所属行时，可以用 flag 标志方向，遇到边界时调转方向。
-
+- 最直接的就是模拟
+- 遍历 s，维护当前所属行和方向，注意方向在边界处掉转
+- 将每个字符添加到对应的行，最后再拼接
 ```python
-def convert(self, s: str, numRows: int) -> str:
-    if numRows < 2:
-        return s
-    res = [''] * numRows
-    row, flag = 0, 1
-    for char in s:
-        res[row] += char
-        row += flag
-        flag *= -1 if row in [0, numRows-1] else 1
-    return ''.join(res)
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows < 2:
+            return s
+        A = [''] * numRows
+        i, p = 0, 1
+        for c in s:
+            A[i] += c
+            i += p
+            p *= -1 if i in [0, numRows-1] else 1
+        return ''.join(A)
 ```
-44 ms
+52 ms
 
 ### #2
 
-也可以用数学方法直接求出每个下标对应的行。
-
-显然变换周期为 loop=max(1, 2*(numRows-1))，一个周期中的第 k 个字符属于第 min(k, loop-k) 行。
+- 还可以用数学方法直接求出下标对应的行
+- 变换周期 loop=max(1, 2*(numRows-1))
+- 一个周期中的第 i 个字符属于第 min(i, loop-i) 行
 
 ## 解答
 
@@ -98,6 +98,6 @@ def convert(self, s: str, numRows: int) -> str:
         A[k] += c
     return ''.join(A)
 ```
-64 ms
+55 ms
 
 
