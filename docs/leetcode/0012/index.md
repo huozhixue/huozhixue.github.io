@@ -75,17 +75,17 @@ M             1000</pre>
 
 ## 分析
 
-从大到小放字符，如果数字大于 1000，就先放 M 直到剩余数小于 1000，如果还大于 900，就放 CM，依此类推。
+从大到小依此放字符即可。
 
 ## 解答
 
 ```python
-def intToRoman(self, num: int) -> str:
-	d = [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"), (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]
-	res = ''
-	for w, x in d:
-		res += x * (num // w)
-		num %= w
-	return res 
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        res = ''
+        for w,c in zip([1000,900,500,400,100,90,50,40,10,9,5,4,1],['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I']):
+            x,num = divmod(num,w)
+            res += c*x
+        return res
 ```
 48 ms

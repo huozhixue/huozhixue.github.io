@@ -42,22 +42,20 @@
 
 ## 分析
 
-- 新建一个链表前的哑节点，指针 p 初始指向哑节点
-- 当 p 后面存在至少两个节点时，改变 p 和两个节点的指向来交换节点
-- 再把 p 移动两步准备下一轮交换，如此循环即可
-
+头部新建哑节点，模拟即可。
 
 ## 解答
 
 ```python
-def swapPairs(self, head: ListNode) -> ListNode:
-    dummy = p = ListNode(next=head)
-    while p.next and p.next.next:
-        q = p.next
-        p.next = p.next.next
-        q.next = q.next.next
-        p.next.next = q
-        p = q
-    return dummy.next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dum=p=ListNode(next=head)
+        while p.next and p.next.next:
+            a,b = p.next,p.next.next
+            p.next = b
+            a.next = b.next
+            b.next = a
+            p = a
+        return dum.next
 ```
-28 ms
+37 ms

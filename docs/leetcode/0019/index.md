@@ -48,23 +48,24 @@
 
 ## 分析
 
-可以用经典的快慢指针解法：
-- 一开始快慢指针都指向哑结点
-- 快指针先走 n 步
-- 然后两个指针同时走直到快指针到尾部
-- 这时慢指针指向的就是倒数第 n+1 个结点
+- 可以直接遍历得到总结点数，再定位倒数第 `n` 个结点，删除即可
+- 要求一趟扫描，可以用经典的快慢指针解法：
+	- 一开始快慢指针都指向哑结点
+	- 快指针先走 n+1 步
+	- 两个指针同时走直到快指针到空
+	- 这时慢指针指向的就是倒数第 n+1 个结点
 
 ## 解答
 
 ```python
-def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-	dummy = slow = fast = ListNode(next=head)
-	for _ in range(n):
-		fast = fast.next
-	while fast.next:
-		slow = slow.next
-		fast = fast.next
-	slow.next = slow.next.next
-	return dummy.next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        dum=slow=fast=ListNode(next=head)
+        for _ in range(n+1):
+            fast = fast.next
+        while fast:
+            slow,fast = slow.next,fast.next
+        slow.next = slow.next.next
+        return dum.next
 ```
-时间 O(N)，36 ms
+时间 O(N)，42 ms

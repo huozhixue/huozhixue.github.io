@@ -44,23 +44,24 @@
 
 ## 分析
 
-本题是经典的双指针问题。
-- 初始指针 i、j 分别指向 height 的首尾，组成容器 C。
-- 如果 height[i]<=height[j]，则 i 与任意 [i+1,j-1] 内的线组成的容器都小于 C，故可以不再考虑 height[i]，缩小查找范围为 [i+1,j]
-- 同理，如果 height[i]>=height[j]，可以缩小查找范围为 [i, j-1]
-- 循环操作直到 i、j 相遇，取过程中的最大容器即可。
+本题是经典的双指针问题：
+- 初始指针 i、j 分别指向 height 的首尾，组成容器 C
+- 如果 height[i]<=height[j]，则 i 与任意 [i+1,j-1] 内的线组成的容器都小于 C，故可以不再考虑 height[i]，转为子问题 [i+1,j]
+- 同理，如果 height[i]>=height[j]，转为子问题 [i, j-1]
+- 循环操作直到 i、j 相遇，取过程中的最大容器即可
 
 ## 解答
 
 ```python
-def maxArea(self, height: List[int]) -> int:
-    res, i, j = 0, 0, len(height)-1
-    while i < j:
-        res = max(res, (j-i)*min(height[i], height[j]))
-        if height[i] <= height[j]:
-            i += 1
-        else:
-            j -= 1
-    return res
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        res,i,j = 0,0,len(height)-1
+        while i<j:
+            res = max(res,min(height[i],height[j])*(j-i))
+            if height[i]<height[j]:
+                i += 1
+            else:
+                j -= 1
+        return res
 ```
-时间 O(N)，236 ms
+时间 O(N)，149 ms

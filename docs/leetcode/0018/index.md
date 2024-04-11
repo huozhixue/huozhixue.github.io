@@ -44,62 +44,65 @@
 
 ## 分析
 
-### #1
 
 类似 {{< lc "0015" >}}，不过是多加了一重循环。
 
-```python
-def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-    nums.sort()
-    d = {x: i for i, x in enumerate(nums)}
-    res, n = [], len(nums)
-    for i in range(n-3):
-        if i and nums[i]==nums[i-1]:
-            continue
-        for j in range(i+1, n-2):
-            if j>i+1 and nums[j]==nums[j-1]:
-                continue
-            for k in range(j+1, n-1):
-                if k>j+1 and nums[k]==nums[k-1]:
-                    continue
-                kk = d.get(target-nums[i]-nums[j]-nums[k], -1)
-                if kk > k:
-                    res.append([nums[i], nums[j], nums[k], nums[kk]])
-    return res
-```
-时间 O(N^3)，1132 ms
+## 解答
 
-### #2
+```python
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        nums.sort()
+        n = len(nums)
+        d = {x:i for i,x in enumerate(nums)}
+        res = []
+        for i in range(n):
+            if i and nums[i]==nums[i-1]:
+                continue
+            for j in range(i+1,n):
+                if j>i+1 and nums[j]==nums[j-1]:
+                    continue
+                for k in range(j+1,n):
+                    if k>j+1 and nums[k]==nums[k-1]:
+                        continue
+                    t = target-nums[i]-nums[j]-nums[k]
+                    if d.get(t,-1)>k:
+                        res.append((nums[i],nums[j],nums[k],t))
+        return res
+```
+时间 O(N^3)，662 ms
+
+### *附加
 
 本题的循环轮数较多，可以加强限制，例如：
 - sum(nums[i:i+4])>target 时可以跳出循环
 - nums[i]+sum(nums[-3:])<target 时，可以跳过 i
 
-## 解答
 
 ```python
-def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-    nums.sort()
-    d = {x: i for i, x in enumerate(nums)}
-    res, n = [], len(nums)
-    for i in range(n-3):
-        if sum(nums[i:i+4])>target:
-            break
-        if (i and nums[i]==nums[i-1]) or nums[i]+sum(nums[-3:])<target:
-            continue
-        for j in range(i+1, n-2):
-            if nums[i]+sum(nums[j:j+3])>target:
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        nums.sort()
+        d = {x: i for i, x in enumerate(nums)}
+        res, n = [], len(nums)
+        for i in range(n-3):
+            if sum(nums[i:i+4])>target:
                 break
-            if (j>i+1 and nums[j]==nums[j-1]) or nums[i]+nums[j]+sum(nums[-2:])<target:
+            if (i and nums[i]==nums[i-1]) or nums[i]+sum(nums[-3:])<target:
                 continue
-            for k in range(j+1, n-1):
-                if nums[i]+nums[j]+sum(nums[k:k+2])>target:
+            for j in range(i+1, n-2):
+                if nums[i]+sum(nums[j:j+3])>target:
                     break
-                if k>j+1 and nums[k]==nums[k-1]:
+                if (j>i+1 and nums[j]==nums[j-1]) or nums[i]+nums[j]+sum(nums[-2:])<target:
                     continue
-                kk = d.get(target-nums[i]-nums[j]-nums[k], -1)
-                if kk > k:
-                    res.append([nums[i], nums[j], nums[k], nums[kk]])
-    return res
+                for k in range(j+1, n-1):
+                    if nums[i]+nums[j]+sum(nums[k:k+2])>target:
+                        break
+                    if k>j+1 and nums[k]==nums[k-1]:
+                        continue
+                    t = target-nums[i]-nums[j]-nums[k]
+                    if d.get(t,-1)>k:
+                        res.append([nums[i], nums[j], nums[k], t])
+        return res
 ```
-时间 O(N^3)，48 ms
+51 ms

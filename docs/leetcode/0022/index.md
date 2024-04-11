@@ -39,18 +39,18 @@
 ## 解答
 
 ```python
-def generateParenthesis(self, n: int) -> List[str]:
-    def dfs(l, r, tmp):
-        if l > n or r > l:
-            return
-        if r == n:
-            res.append(tmp)
-            return
-        dfs(l + 1, r, tmp + '(')
-        dfs(l, r + 1, tmp + ')')
-
-    res = []
-    dfs(0, 0, '')
-    return res
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        def dfs(l,r,s):
+            if r>l or l>n:
+                return
+            if r==n:
+                res.append(s)
+                return
+            dfs(l+1,r,s+'(')
+            dfs(l,r+1,s+')')
+        res = []
+        dfs(0,0,'')
+        return res
 ```
-时间 O(N)，36 ms
+时间 O(N)，41 ms

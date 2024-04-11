@@ -51,11 +51,12 @@
 ## 解答
 
 ```python
-def letterCombinations(self, digits: str) -> List[str]:
-    d = dict(zip('23456789', ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']))
-    res = []
-    for x in digits:
-        res = [sub+c for c in d[x] for sub in res or ['']]
-    return res
+class Solution:
+    def letterCombinations(self, digits: str) -> List[str]:
+        d = dict(zip('23456789',['abc','def','ghi','jkl','mno','pqrs','tuv','wxyz']))
+        res = []
+        for x in digits:
+            res = [sub+c for sub in res or [''] for c in d[x]] 
+        return res
 ```
-52 ms
+37 ms

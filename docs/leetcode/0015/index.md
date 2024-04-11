@@ -56,26 +56,27 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 
 ## 分析
 
-取不重复元组的问题，采用排序并跳过相同数字的通用方法即可。
-
-然后类似 {{< lc "0001" >}} ，可以用哈希表优化最后一层的查找。
+- 取不重复元组的问题，采用排序并跳过相同数字的通用方法即可
+- 类似 {{< lc "0001" >}} ，可以用哈希表优化最后一层的查找
 
 ## 解答
 
 ```python
-def threeSum(self, nums: List[int]) -> List[List[int]]:
-    nums.sort()
-    d = {num: i for i, num in enumerate(nums)}
-    res, n = [], len(nums)
-    for i in range(n - 2):
-        if i and nums[i] == nums[i - 1]:
-            continue
-        for j in range(i + 1, n - 1):
-            if j > i + 1 and nums[j] == nums[j - 1]:
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        n = len(nums)
+        d = {x:i for i,x in enumerate(nums)}
+        res = []
+        for i in range(n):
+            if i and nums[i]==nums[i-1]:
                 continue
-            k = d.get(-nums[i] - nums[j], -1)
-            if k > j:
-                res.append([nums[i], nums[j], nums[k]])
-    return res
+            for j in range(i+1,n):
+                if j>i+1 and nums[j]==nums[j-1]:
+                    continue
+                k = d.get(-nums[i]-nums[j],-1)
+                if k>j:
+                    res.append((nums[i],nums[j],nums[k]))
+        return res
 ```
-时间 O(N^2)，852 ms
+时间 O(N^2)，1076 ms

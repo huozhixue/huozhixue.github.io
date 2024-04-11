@@ -48,53 +48,31 @@
 
 ## 分析
 
-{{< lc "0024" >}} 的升级版。
-- 链表前新建一个哑节点，指针 p 初始指向哑节点
-- 当 p 后面存在 k 个节点时，将这一段翻转
-- 将 p 移动 k 步准备下一轮翻转，如此循环即可
-
-反转某段链表的方法可以参考 {{< lc "0092" >}}。
+{{< lc "0024" >}} 升级版
+- p 一开始指向哑节点
+- 先判断 p 后面是否存在 k 个节点，可以让快指针从 p 开始走 k 步来判断
+- 然后进行反转，可以参考 {{< lc "0092" >}}
+- 更新 p 的位置，继续循环直到快指针到空
 
 ## 解答
+
 
 ```python
 class Solution:
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
-        dummy = p = ListNode(next=head)
+        dum=p=ListNode(next=head)
         while True:
             fast = p
             for _ in range(k):
                 fast = fast.next
                 if not fast:
-                    return dummy.next
+                    return dum.next
             tail = p.next
             for _ in range(k-1):
-                tmp = tail.next
-                tail.next = tmp.next
-                tmp.next = p.next
-                p.next = tmp
+                head = tail.next
+                tail.next = head.next
+                head.next = p.next
+                p.next = head
             p = tail
 ```
-64 ms
-
-## *附加
-
-链表题最简单粗暴的做法是转为数组，处理后再转回来。
-
-```python
-class Solution:
-    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
-        A = []
-        while head:
-            A.append(head.val)
-            head = head.next
-        n = len(A)
-        for i in range(k,n+1,k):
-            A[i-k:i] = A[i-k:i][::-1]
-        dummy = p = ListNode()
-        for a in A:
-            p.next = ListNode(a)
-            p = p.next
-        return dummy.next
-```
-56 ms
+50 ms

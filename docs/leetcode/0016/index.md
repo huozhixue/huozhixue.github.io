@@ -43,52 +43,53 @@
 
 ### #1
 
-类似 {{< lc "0015" >}} ，可以先排序再取元组 <a, b, c>。
-
-但本题最后一个数 c 不能直接用哈希表获得。
-要查找一个最接近 target-a-b 的数，容易想到用二分查找。
+- 类似 {{< lc "0015" >}} ，可以先排序再取元组 <a, b, c>
+- 但本题最后一个数 c 不能直接用哈希表获得
+- 要查找一个最接近 target-a-b 的数，容易想到用二分查找
 
 ```python
-def threeSumClosest(self, nums: List[int], target: int) -> int:
-    nums.sort()
-    res, n = float('inf'), len(nums)
-    for i in range(n-2):
-        for j in range(i+1, n-1):
-            t0 = target-nums[i]-nums[j]
-            pos = bisect_left(nums, t0, j+1, n-1)
-            for k in [pos-1, pos]:
-                if k>j and abs(t0-nums[k])<abs(target-res):
-                    res = nums[i]+nums[j]+nums[k]
-    return res
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
+        nums.sort()
+        n = len(nums)
+        res = inf
+        for i in range(n-2):
+            for j in range(i+1, n-1):
+                t = target-nums[i]-nums[j]
+                pos = bisect_left(nums, t, j+1, n-1)
+                for k in [pos-1, pos]:
+                    if k>j and abs(t-nums[k])<abs(target-res):
+                        res = nums[i]+nums[j]+nums[k]
+        return res
 ```
-时间 $O(N^2 logN)$，944 ms
+时间 $O(N^2 logN)$，1179 ms
 
 ### #2
 
-还有个更巧妙的双指针解法。
-- 排序后先固定数 nums[i]，然后寻找 nums[j]、nums[k] 使得两数之和最接近 target-nums[i]。
-- 初始指针 j、k 分别指向 i+1, n-1。
-- 如果 nums[j]+nums[k]<target-nums[i]，则 nums[j] 与任意 [j+1,k-1] 内的数相加都更小，离 target 更远，故可以不再考虑 nums[j]，缩小查找范围为 [j+1,k]
-- 同理，如果 nums[j]+nums[k]<target-nums[i]，可以缩小查找范围为 [j, k-1]
+还有个更优的双指针解法
+- 排序后先固定 i，再寻找 j,k 使得三数之和最接近 target
+- 初始指针 j、k 分别指向 i+1, n-1
+	- 如果 nums[j]+nums[k]<target-nums[i]，则 nums[j] 与任意 [j+1,k-1] 内的数相加都更小，离 target 更远，故可以不再考虑 nums[j]，缩小查找范围为 [j+1,k]
+	- 同理，如果 nums[j]+nums[k]<target-nums[i]，缩小查找范围为 [j, k-1]
 - 循环操作直到 j、k 相遇，取过程中最接近的和即可
-
-
 ## 解答
 
 ```python
-def threeSumClosest(self, nums: List[int], target: int) -> int:
-    nums.sort()
-    res, n = float('inf'), len(nums)
-    for i in range(n - 2):
-        j, k = i + 1, n - 1
-        while j < k:
-            s = nums[i] + nums[j] + nums[k]
-            if abs(s - target) < abs(res - target):
-                res = s
-            if s < target:
-                j += 1
-            else:
-                k -= 1
-    return res
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
+        nums.sort()
+        n = len(nums)
+        res = inf
+        for i in range(n):
+            j,k = i+1,n-1
+            while j<k:
+                s = nums[i]+nums[j]+nums[k]
+                if s>target:
+                    k -= 1
+                else:
+                    j += 1
+                if abs(s-target)<abs(res-target):
+                    res = s
+        return res
 ```
-时间 $O(N^2)$，368 ms
+时间 $O(N^2)$，404 ms

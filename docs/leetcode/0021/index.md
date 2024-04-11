@@ -43,24 +43,24 @@
 
 ## 分析
 
-与归并两个有序数组的思路一样，用双指针即可。
-
-区别在于这里是拼接，所以不需要造一个新链表，只需要建一个哑结点即可。
+模拟归并排序即可。
 
 ## 解答
 
 ```python
-def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-    dummy = p = ListNode()
-    while list1 and list2:
-        if list1.val <= list2.val:
-            p.next = list1
-            list1 = list1.next
-        else:
-            p.next = list2
-            list2 = list2.next
-        p = p.next
-    p.next = list1 if list1 else list2
-    return dummy.next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dum = p = ListNode()
+        a, b = list1, list2
+        while a and b:
+            if a.val<=b.val:
+                p.next = a
+                a = a.next
+            else:
+                p.next = b
+                b = b.next
+            p = p.next
+        p.next = a or b
+        return dum.next
 ```
-36 ms
+35 ms

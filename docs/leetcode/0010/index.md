@@ -54,64 +54,30 @@
 
 ## 分析
 
-### #1
 
 最简单的就是直接调用正则。
 
-```python
-class Solution:
-    def isMatch(self, s: str, p: str) -> bool:
-        return bool(re.match(p+'$', s))
-```
-320 ms
-
-### #2
-
-尝试自己实现：
-- 因为 ' * ' 与前一个字符相关，所以考虑从后往前看。
-- 如果 p[-1] == ' * '，那么 p 匹配 s 必然是两种情况之一：
+字符串匹配问题还可以考虑 dp：
+- 如果 p[-1] == ' * '，p 匹配 s 必然是两种情况之一：
 	- ' * ' 代表零个，p[:-2] 匹配 s
 	- ' * ' 代表多个，p[-2] 匹配 s[-1] 且 p 匹配 s[:-1]
-- 如果 p[-1] != '*'，那么 p 匹配 s 必然是 p[-1] 匹配 s[-1] 且 p[:-1] 匹配 s[:-1]。
-- 都能转成递归子问题。注意到有重复子问题，所以用记忆化递归。
+- 否则， p 匹配 s 必然是：
+	- p[-1] 匹配 s[-1] 且 p[:-1] 匹配 s[:-1]
+- 再考虑 p 是空串的边界即可
 
 ## 解答
 
 ```python
-def isMatch(self, s: str, p: str) -> bool:
-	@cache
-	def dfs(s, p):
-		if not p:
-			return not s
-		if p[-1] == '*':
-			return dfs(s, p[:-2]) or (bool(s) and p[-2] in [s[-1],'.'] and dfs(s[:-1], p))
-		return bool(s) and p[-1] in [s[-1],'.'] and dfs(s[:-1], p[:-1])
-	return dfs(s, p)
-```
-40 ms
-
-### *附加
-
-可以写成递推的形式，令 dp[i][j] 代表 s[:i] 和 p[:j] 是否匹配。
-
-还可以用滚动数组优化为一维 dp 数组。
-
-```python
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-        m, n = len(s), len(p)
-        dp = [1]+[0]*n
-        for j,b in enumerate(p,1):
-            if b=='*':
-                dp[j] = dp[j-2]
-        for a in s:
-            new = [0]*(n+1)
-            for j,b in enumerate(p,1):
-                if b=='*':
-                    new[j] = new[j-2] or (dp[j] and p[j-2] in '.'+a)
+        m,n = len(p),len(s)
+        dp = [[1]+[0]*n for _ in range(m+1)]
+        for i in range(1,m+1):
+            for j in range(n+1):
+                if p[i-1]=='*':
+                    dp[i][j] = dp[i-2][j] or (j and p[i-2] in s[j-1]+'.' and dp[i][j-1])
                 else:
-                    new[j] = dp[j-1] and b in '.'+a
-            dp = new
-        return bool(dp[-1])
+                    dp[i][j] = j and p[i-1] in s[j-1]+'.' and dp[i-1][j-1]
+        return bool(dp[-1][-1])
 ```
-52 ms
+50 ms

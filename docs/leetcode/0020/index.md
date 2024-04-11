@@ -50,18 +50,21 @@
 
 ## 分析
 
-栈的典型应用，左括号入栈，右括号出栈栈顶。若栈顶不匹配或最终栈不空即返回 False。
+- 栈的典型应用，左括号入栈，右括号出栈
+- 若栈顶不匹配或最终栈不空即返回 False
 
 ## 解答
 
 ```python
-def isValid(self, s: str) -> bool:
-    stack, d = [], dict(zip(')]}', '([{'))
-    for char in s:
-        if char not in d:
-            stack.append(char)
-        elif not stack or stack.pop() != d[char]:
-            return False
-    return not stack
+class Solution:
+    def isValid(self, s: str) -> bool:
+        d = dict(zip(')}]','({['))
+        sk = []
+        for c in s:
+            if c not in d:
+                sk.append(c)
+            elif not sk or sk.pop()!=d[c]:
+                return False
+        return not sk
 ```
 时间 O(N)，32 ms

@@ -80,14 +80,14 @@ M             1000</pre>
 
 ## 分析
 
-观察发现，如果小数字放在大数字左边，则小数字代表负数。因此遍历判断即可。
+观察发现，如果小数字放在大数字左边，则小数字代表负数，遍历求和即可。
 
 ## 解答
 
 ```python
-def romanToInt(self, s: str) -> int:
-	d = dict(zip('IVXLCDM', [1, 5, 10, 50, 100, 500, 1000]))
-	A = [d[c] for c in s]
-	return sum(-a if a<b else a for a,b in pairwise(A)) + A[-1]
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        d = dict(zip('IVXLCDM',[1,5,10,50,100,500,1000]))
+        return sum(-d[a] if d[a]<d[b] else d[a] for a,b in pairwise(s+'I'))
 ```
-40 ms
+43 ms

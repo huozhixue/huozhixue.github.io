@@ -55,73 +55,48 @@
 
 ### #1
 
-本题类似于归并排序，可以用分治法。
+本题类似于归并排序，可以用分治法，归并过程即 {{< lc "0021" >}}
 
 ```python
-def mergeKLists(self, lists: List[ListNode]) -> ListNode:
-	def merge(l1, l2):
-		dummy = l3 = ListNode()
-		while l1 and l2:
-			if l1.val <= l2.val:
-				l3.next = l1
-				l1 = l1.next
-			else:
-				l3.next = l2
-				l2 = l2.next
-			l3 = l3.next
-		l3.next = l1 if l1 else l2
-		return dummy.next
-	n = len(lists)
-	if n < 2:
-		return lists[0] if n else None
-	left, right = self.mergeKLists(lists[:n//2]), self.mergeKLists(lists[n//2:])
-	return merge(left, right)
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        n = len(lists)
+        if n<2:
+            return lists[0] if lists else None
+        a, b = self.mergeKLists(lists[:n//2]), self.mergeKLists(lists[n//2:])
+        dum = p = ListNode()
+        while a and b:
+            if a.val<=b.val:
+                p.next = a
+                a = a.next
+            else:
+                p.next = b
+                b = b.next
+            p = p.next
+        p.next = a or b
+        return dum.next
 ```
 
-80 ms
+53 ms
 
 ### #2
 
-也可以采用多路归并的方法：
-- 维护一个堆，初始将每个链表的头节点的值入堆
-- 然后每轮弹出最小数，将对应的链表前进一步，并将新的值入堆
-
+还可以用堆进行多路归并，堆里维护每个链表的头节点值和链表下标即可。
 ## 解答
 
 ```python
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        A = lists
-        dummy = p = ListNode()
-        pq = sorted((node.val,i) for i,node in enumerate(A) if node)
+        pq = sorted((a.val,i) for i,a in enumerate(lists) if a)
+        dum = p = ListNode()
         while pq:
             _,i = heappop(pq)
-            p.next = A[i]
+            p.next = lists[i]
             p = p.next
-            A[i] = A[i].next
-            if A[i]:
-                heappush(pq,(A[i].val,i))
-        return dummy.next
+            lists[i] = lists[i].next
+            if lists[i] :
+                heappush(pq,(lists[i] .val,i))
+        return dum.next
 ```
-84 ms
+55 ms
 
-## *附加
-
-链表题最简单粗暴的做法是转为数组，处理后再转回来。
-
-```python
-class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        A = []
-        for node in lists:
-            while node:
-                A.append(node.val)
-                node = node.next
-        A.sort()
-        dummy=p=ListNode()
-        for a in A:
-            p.next = ListNode(a)
-            p = p.next
-        return dummy.next
-```
-72 ms

@@ -61,20 +61,18 @@ assert nums[i] == expectedNums[i];
 
 ## 分析
 
-先想想用额外数组怎么做，就是遍历到不重复的元素就添加到新数组。
-
-不用额外数组的话，就将原数组的相应位置赋值即可。
-
+遍历到不重复的数就赋值到前面即可。
 
 ## 解答
 
 ```python
-def removeDuplicates(self, nums: List[int]) -> int:
-    i = 0
-    for num in nums:
-        if i < 1 or num != nums[i-1]:
-            nums[i] = num
-            i += 1
-    return i
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i = 0
+        for x in nums:
+            if i==0 or x>nums[i-1]:
+                nums[i] = x
+                i += 1
+        return i
 ```
 32 ms

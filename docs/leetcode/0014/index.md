@@ -43,12 +43,13 @@
 ## 解答
 
 ```python
-def longestCommonPrefix(self, strs: List[str]) -> str:
-    res = ''
-    for row in zip(*strs):
-        if len(set(row)) != 1:
-            break
-        res += row[0]
-    return res
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        res = ''
+        for g in zip(*strs):
+            if len(set(g))>1:
+                break
+            res += g[0]
+        return res
 ```
-28 ms
+32 ms
