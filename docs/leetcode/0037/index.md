@@ -56,28 +56,32 @@
 ```python
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        R,C,B = ([[0]*10 for _ in range(9)] for _ in range(3))
         A = []
-        R,C,B = [[[0]*9 for _ in range(9)] for _ in range(3)]
-        for i,j in product(range(9),range(9)):
-            x, k = board[i][j], i//3*3+j//3
-            if x=='.':
-                A.append((i,j))
-            else:
-                x = int(x)-1
-                R[i][x] = C[j][x] = B[k][x] = 1
-        def dfs(cnt):
-            if cnt==len(A):
+        for i in range(9):
+            for j in range(9):
+                k = i//3*3+j//3
+                if board[i][j]=='.':
+                    A.append((i,j,k))
+                else:
+                    x = int(board[i][j])
+                    R[i][x]=C[j][x]=B[k][x]=1
+
+        def dfs(w):
+            if w==len(A):
                 return True
-            i,j = A[cnt]
-            k = i//3*3+j//3
-            for x in range(9):
+            i,j,k = A[w]
+            for x in range(1,10):
                 if R[i][x]==C[j][x]==B[k][x]==0:
-                    board[i][j] = str(x+1)
-                    R[i][x] = C[j][x] = B[k][x] = 1
-                    if dfs(cnt+1):
+                    board[i][j]=str(x)
+                    R[i][x]=C[j][x]=B[k][x]=1
+                    if dfs(w+1):
                         return True
-                    R[i][x] = C[j][x] = B[k][x] = 0
+                    R[i][x]=C[j][x]=B[k][x]=0
             return False
         dfs(0)
 ```
-92 ms
+77 ms

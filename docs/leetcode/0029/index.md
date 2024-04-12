@@ -41,46 +41,31 @@
 
 ## 分析
 
-### #1 
-
-最简单的想法就是把两个数都变成正的，然后被除数不断的减去除数直到小于除数为止，最后再加上正负号。
-
-溢出的唯一可能是 −2^31 除以 -1 等于 2^31。
-
-```python
-def divide(self, dividend: int, divisor: int) -> int:
-    res, flag = 0, int(dividend ^ divisor >= 0)
-    m, n = abs(dividend), abs(divisor)
-    while m >= n:
-        m -= n
-        res += 1
-    res = res if flag else -res
-    return min(res, 2147483647)
-```
-超时了
-
-### #2
-
-显然超时是因为两个数的逼近太慢。考虑将除数不断自加，相当于乘 2，就可以快速的逼近了。
-- 以求 divide(100, 3) 为例，将 3 不断自加直到 96 （3 的 32 倍），即转化为求 32+divide(4, 3)
-- 因此求 divide(m, n) 的过程就是每一轮求最接近 m 的 n*(2^k)，并更新 m -= n*(2^k), res+=2^k 
-- 进一步地，0<=k<=31。因此直接遍历 k 从 31 到 0，判断是否减去 n*(2^k) 即可。
+- 最简单的想法
+	- 先把两个数都变成正的
+	- 然后被除数不断的减去除数直到小于除数为止
+	- 最后再加上正负号
+	- 溢出的唯一可能是 −2^31 除以 -1 等于 2^31-
+- 加法太慢会超时， 考虑将除数不断自加，相当于乘 2，就可以快速的逼近了
+	- 以求 divide(100, 3) 为例
+	- 将 3 不断自加直到 96 （3 的 32 倍），即转化为求 32+divide(4, 3)
 
 ## 解答
 
 ```python
-def divide(self, dividend: int, divisor: int) -> int:
-    res, flag = 0, int(dividend ^ divisor >= 0)
-    m, n = abs(dividend), abs(divisor)
-    A = [(n, 1)]
-    for _ in range(31):
-        A.append((A[-1][0]+A[-1][0], A[-1][1]+A[-1][1]))
-    res = 0
-    for i in range(31, -1, -1):
-        if m >= A[i][0]:
-            m -= A[i][0]
-            res += A[i][1]
-    res = res if flag else -res
-    return min(res, 2147483647)
+class Solution:
+    def divide(self, dividend: int, divisor: int) -> int:
+        flag = dividend^divisor>=0
+        a,b = abs(dividend),abs(divisor)
+        A,w = [],1
+        while b<=a:
+            A.append((b,w))
+            b,w = b+b,w+w
+        res = 0
+        for b,w in A[::-1]:
+            if a >= b:
+                a -= b
+                res += w
+        return min(res if flag else -res, 2147483647)
 ```
-36 ms
+35 ms

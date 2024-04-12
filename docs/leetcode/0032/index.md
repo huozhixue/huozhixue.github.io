@@ -48,48 +48,45 @@
 
 ## 分析 
 
-### #1 栈
 
-基于 {{< lc "1249" >}} ，可以得到不属于有效子串的括号的位置，找出最大的间隔即可。
-
-```python
-class Solution:
-    def longestValidParentheses(self, s: str) -> int:
-        sk, A = [], []
-        for i, c in enumerate(s):
-            if c == '(':
-                sk.append(i)
-            elif sk:
-                sk.pop()
-            else:
-                A.append(i)
-        A = [-1] + A + sk + [len(s)]
-        return max(b-a-1 for a,b in pairwise(A))
-```
-时间 O(N)，48 ms
-
-### #2 栈+dp
-
-也可以用动态规划解决：
-- 令 dp[r] 代表右括号 r 结尾的最长有效子串长度，并假设 r 所对应的是左括号 l
-- 如果 l-1 是左括号， dp[r] = r-l+1
-- 如果 l-1 是右括号， dp[r] = r-l+1+dp[l-1]
-- max(dp) 即为所求。
+类似 {{< lc "1249" >}} ，可以先模拟匹配得到有效括号的位置，找出最长连续段即可。
 
 ## 解答
 
 ```python
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        sk, d = [], {}
-        res = 0
-        for j,c in enumerate(s):
+        A = [0]*len(s)
+        sk = []
+        for i,c in enumerate(s):
             if c=='(':
-                sk.append(j)
+                sk.append(i)
             elif sk:
-                i = sk.pop()
-                d[j] = d.get(i-1,i)
-                res = max(res,j-d[j]+1)
-        return res
+                A[i] = A[sk.pop()] = 1
+        return max([len(list(g)) for c,g in groupby(A) if c==1], default=0)
 ```
-时间 O(N)，48 ms
+30 ms
+
+### *附加
+
+还可以用 dp 解决：
+- 令 dp[i] 代表下标 i 结尾的最长有效长度，
+	- 假如 i 是右括号，对应的左括号下标为 j，dp[i]=j-i+1+dp[j-1]
+	- 其它情况下，dp[i]=0
+
+
+
+```python
+class Solution:
+    def longestValidParentheses(self, s: str) -> int:
+        dp = [0]*len(s)
+        sk = []
+        for i,c in enumerate(s):
+            if c=='(':
+                sk.append(i)
+            elif sk:
+                j = sk.pop()
+                dp[i] = i-j+1+(dp[j-1] if j else 0)
+        return max(dp,default=0)
+```
+48 ms

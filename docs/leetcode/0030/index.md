@@ -62,33 +62,31 @@ s 中没有子串长度为 16 并且等于 words 的任何顺序排列的连接�
 
 ## 分析
 
-{{< lc "0438" >}} 的升级版，遍历 sum(words) 长度的子串，用 Counter 判断是否符合即可。
-
-设每个单词的长度为 x， 则子串 [i,j] 的 Counter 可以由子串 [i-x, j-x] 的递推得到。
-
+- {{< lc "0438" >}} 的升级版
+- 遍历 words 总长度的子串，用 Counter 判断是否符合即可
+- 设每个单词的长度 n， 则子串 [i,j] 的 Counter 可以由子串 [i-n, j-n] 递推得到
 ## 解答
 
 ```python
 class Solution:
     def findSubstring(self, s: str, words: List[str]) -> List[int]:
-        m, n = len(words), len(words[0])
-        res = []
+        m,n = len(words),len(words[0])
         ct0 = Counter(words)
+        res = []
         for i in range(n):
-            ct = Counter()
-            valid = 0
-            for j in range(i+n,len(s)+1,n):
-                new = s[j-n:j]
-                ct[new]+=1
+            ct, valid = Counter(), 0
+            for j in range(i,len(s),n):
+                new = s[j:j+n]
+                ct[new] += 1
                 if ct[new]==ct0[new]:
                     valid += 1
-                if j>=(m+1)*n:
-                    old = s[j-(m+1)*n:j-m*n]
+                if j>=m*n:
+                    old = s[j-m*n:j-m*n+n]
                     if ct[old]==ct0[old]:
                         valid -= 1
                     ct[old] -= 1
-                if valid == len(ct0):
-                    res.append(j-m*n)
+                if valid==len(ct0):
+                    res.append(j-m*n+n)
         return res
 ```
-104 ms
+79 ms

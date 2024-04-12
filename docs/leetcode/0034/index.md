@@ -45,13 +45,15 @@
 
 ## 分析 
 
-二分查找的典型应用。分别对应 bisect_left 和 bisect_right。
+分别调用 bisect_left 和 bisect_right 即可。
 
 ## 解答
 
 ```python
-def searchRange(self, nums: List[int], target: int) -> List[int]:
-    i, j = bisect_left(nums, target), bisect_right(nums, target) - 1
-    return [i, j] if i <= j else [-1, -1]
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        i = bisect_left(nums,target)
+        j = bisect_right(nums,target)
+        return [i,j-1] if i<j else [-1,-1]
 ```
 24 ms

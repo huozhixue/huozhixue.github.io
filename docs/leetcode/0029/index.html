@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0029\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  634 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  474 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0029\/","datePublished": "2015-01-29T00:00:00+08:00","dateModified": "2015-01-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -107,8 +107,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0029：两数相除（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-29">2015-01-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 634 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0029/" class="leancloud_visitors" data-flag-title="0029：两数相除（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-29">2015-01-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 474 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0029/" class="leancloud_visitors" data-flag-title="0029：两数相除（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,12 +119,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -152,38 +147,21 @@
 <li><code>divisor != 0</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>最简单的想法就是把两个数都变成正的，然后被除数不断的减去除数直到小于除数为止，最后再加上正负号。</p>
-<p>溢出的唯一可能是 −2^31 除以 -1 等于 2^31。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dividend</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">divisor</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">dividend</span> <span class="o">^</span> <span class="n">divisor</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dividend</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">divisor</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">m</span> <span class="o">&gt;=</span> <span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">-=</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="k">if</span> <span class="n">flag</span> <span class="k">else</span> <span class="o">-</span><span class="n">res</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">2147483647</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>超时了</p>
-<h3 id="2">#2</h3>
-<p>显然超时是因为两个数的逼近太慢。考虑将除数不断自加，相当于乘 2，就可以快速的逼近了。</p>
 <ul>
-<li>以求 divide(100, 3) 为例，将 3 不断自加直到 96 （3 的 32 倍），即转化为求 32+divide(4, 3)</li>
-<li>因此求 divide(m, n) 的过程就是每一轮求最接近 m 的 n*(2^k)，并更新 m -= n*(2^k), res+=2^k</li>
-<li>进一步地，0&lt;=k&lt;=31。因此直接遍历 k 从 31 到 0，判断是否减去 n*(2^k) 即可。</li>
+<li>最简单的想法
+<ul>
+<li>先把两个数都变成正的</li>
+<li>然后被除数不断的减去除数直到小于除数为止</li>
+<li>最后再加上正负号</li>
+<li>溢出的唯一可能是 −2^31 除以 -1 等于 2^31-</li>
+</ul>
+</li>
+<li>加法太慢会超时， 考虑将除数不断自加，相当于乘 2，就可以快速的逼近了
+<ul>
+<li>以求 divide(100, 3) 为例</li>
+<li>将 3 不断自加直到 96 （3 的 32 倍），即转化为求 32+divide(4, 3)</li>
+</ul>
+</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -201,24 +179,26 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dividend</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">divisor</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">dividend</span> <span class="o">^</span> <span class="n">divisor</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dividend</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">divisor</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">m</span> <span class="o">-=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="k">if</span> <span class="n">flag</span> <span class="k">else</span> <span class="o">-</span><span class="n">res</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">2147483647</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dividend</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">divisor</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flag</span> <span class="o">=</span> <span class="n">dividend</span><span class="o">^</span><span class="n">divisor</span><span class="o">&gt;=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dividend</span><span class="p">),</span><span class="nb">abs</span><span class="p">(</span><span class="n">divisor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">,</span><span class="n">w</span> <span class="o">=</span> <span class="p">[],</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">b</span><span class="o">&lt;=</span><span class="n">a</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">b</span><span class="p">,</span><span class="n">w</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">b</span><span class="p">,</span><span class="n">w</span> <span class="o">=</span> <span class="n">b</span><span class="o">+</span><span class="n">b</span><span class="p">,</span><span class="n">w</span><span class="o">+</span><span class="n">w</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">b</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">a</span> <span class="o">-=</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span> <span class="k">if</span> <span class="n">flag</span> <span class="k">else</span> <span class="o">-</span><span class="n">res</span><span class="p">,</span> <span class="mi">2147483647</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>36 ms</p>
+</div><p>35 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

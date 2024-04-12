@@ -9,7 +9,7 @@
     <pubDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algorithm-template/</guid>
-    <description><![CDATA[1 字符串匹配 1.1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, j = [-1], -1 for i in range(len(s)): while j &gt;= 0 and s[i] != s[j]: j = nxt[j] j += 1 nxt.append(j) return nxt # nxt[i]:i-1结尾的最大真前缀长度 1.2 manacher 1 2 3]]></description>
+    <description><![CDATA[1 字符串匹配 1.1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, i = [-1], -1 for c in s: while i&gt;=0 and s[i]!=c: i = nxt[i] i += 1 nxt.append(i) return nxt # nxt[i]:i-1结尾的最大真前缀长度 1.2 manacher 1 2 3 4 5 6 7]]></description>
 </item><item>
     <title>力扣总结 数据结构进阶（六）：线段树</title>
     <link>https://huozhixue.github.io/algorithm-segment_tree/</link>

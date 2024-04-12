@@ -38,57 +38,23 @@
 
 ## 分析
 
-### #1
 
-实际应用中当然是直接调包。
-
-```python
-def strStr(self, haystack: str, needle: str) -> int:
-	return haystack.find(needle)
-```
-40 ms
-
-### #2
-
-自己写，最简单的就是遍历所有 len(needle) 长度的子串，判断是否等于 needle。
-
-## 解答
+可以直接调包 find。最优解是经典的 [KMP 算法](http://www.matrix67.com/blog/archives/115)，能在线性时间内完成。
 
 ```python
-def strStr(self, haystack: str, needle: str) -> int:
-	m, n = len(haystack), len(needle)
-	for i in range(m-n+1):
-		if haystack[i:i+n] == needle:
-			return i
-	return -1
-```
-
-时间 O(M*N), 40 ms
-
-## *附加
-
-本题有个经典的 [KMP 算法](http://www.matrix67.com/blog/archives/115)，
-能在 O(M) 时间内完成。
-
-```python
-def strStr(self, haystack: str, needle: str) -> int:
-    if not needle:
-        return 0
-    m, n = len(haystack), len(needle)
-    nxt, j = [-1], -1
-    for i in range(n):
-        while j >= 0 and needle[i] != needle[j]:
-            j = nxt[j]
-        j += 1
-        nxt.append(j)
-    j = 0
-    for i in range(m):
-        while j >= 0 and haystack[i] != needle[j]:
-            j = nxt[j]
-        j += 1
-        if j == n:
-            return i - j + 1
-    return -1
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        def kmp(s):
+            nxt, i = [-1], -1
+            for c in s:
+                while i>=0 and s[i]!=c:
+                    i = nxt[i]
+                i += 1
+                nxt.append(i)
+            return nxt   
+        nxt = kmp(needle+'#'+haystack)
+        n = len(needle)
+        return -1 if n not in nxt else nxt.index(n)-2*n-1
 ```
 48 ms
 

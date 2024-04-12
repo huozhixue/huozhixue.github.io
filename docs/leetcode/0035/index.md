@@ -46,13 +46,14 @@
 
 ## 分析 
 
-典型的二分查找。
+调用 bisect 即可。
 
 ## 解答
 
 ```python
-def searchInsert(self, nums: List[int], target: int) -> int:
-	return bisect_left(nums, target)
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        return bisect_left(nums,target)
 ```
-28 ms
+34 ms
 

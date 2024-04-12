@@ -55,19 +55,38 @@
 ## 解答
 
 ```python
-def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-    def dfs(i, s):
-        if s >= target:
-            if s == target:
-                res.append(path[:])
-            return
-        for j in range(i, n):
-            path.append(candidates[j])
-            dfs(j, s+candidates[j])
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        def dfs(i,s):
+            if i==len(candidates) or s>=target:
+                if s==target:
+                    res.append(path[:])
+                return 
+            dfs(i+1,s)
+            x = candidates[i]
+            path.append(x)
+            dfs(i,s+x)
             path.pop()
-
-    res, path, n = [], [], len(candidates)
-    dfs(0, 0)
-    return res
+        res, path = [], []
+        dfs(0,0)
+        return res
 ```
 60 ms
+
+
+## *附加
+
+还可以用 dp，典型的背包问题。
+
+```python
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        @cache
+        def dfs(i,s):
+            if i==len(candidates):
+                return [[]] if s==0 else []
+            x = candidates[i]
+            return dfs(i+1,s)+ ([[x]+sub for sub in dfs(i,s-x)] if x<=s else [])
+        return dfs(0,target)
+```
+48 ms

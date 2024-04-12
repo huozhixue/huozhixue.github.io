@@ -7,13 +7,13 @@
 
 ```python
 def kmp(s):
-	nxt, j = [-1], -1
-	for i in range(len(s)):
-		while j >= 0 and s[i] != s[j]:
-			j = nxt[j]
-		j += 1
-		nxt.append(j)
-	return nxt     # nxt[i]:i-1结尾的最大真前缀长度
+	nxt, i = [-1], -1
+	for c in s:
+		while i>=0 and s[i]!=c:
+			i = nxt[i]
+		i += 1
+		nxt.append(i)
+	return nxt      # nxt[i]:i-1结尾的最大真前缀长度
 ```
 
 ### 1.2 manacher

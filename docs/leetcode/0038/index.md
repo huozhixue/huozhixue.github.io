@@ -76,10 +76,11 @@ countAndSay(4) = 读 "21" = 一 个 2 + 一 个 1 = "12" + "11" = "1211"
 ## 解答
 
 ```python
-def countAndSay(self, n: int) -> str:
-    s = '1'
-    for _ in range(n-1):
-        s = ''.join(str(len(list(g)))+x for x,g in groupby(s))
-    return s
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        res = '1'
+        for _ in range(n-1):
+            res = ''.join(str(len(list(g)))+c for c,g in groupby(res))
+        return res
 ```
 48 ms

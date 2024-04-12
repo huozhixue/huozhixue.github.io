@@ -75,15 +75,16 @@
 ## 解答
 
 ```python
-def isValidSudoku(self, board: List[List[str]]) -> bool:
-    row, col, box = ([[0]*9 for _ in range(9)] for _ in range(3))
-    for i, j in product(range(9), range(9)):
-        x, k = board[i][j], i//3*3+j//3
-        if x != '.':
-            x = int(x)-1
-            if row[i][x] or col[j][x] or box[k][x]:
-                return False
-            row[i][x] = col[j][x] = box[k][x] = 1
-    return True
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        R,C,B = ([[0]*10 for _ in range(9)] for _ in range(3))
+        for i,row in enumerate(board):
+            for j,x in enumerate(row):
+                if x!='.':
+                    x,k = int(x),i//3*3+j//3
+                    if R[i][x] or C[j][x] or B[k][x]:
+                        return False
+                    R[i][x]=C[j][x]=B[k][x]=1
+        return True
 ```
-40 ms
+46 ms
