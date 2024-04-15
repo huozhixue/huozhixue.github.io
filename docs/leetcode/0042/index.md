@@ -41,47 +41,20 @@
 
 ### #1 前后缀分解
 
-观察发现：
-- 对于任一柱子，如果左右都有更高的柱子，那么该位置就能接到雨水。
-- 设左右最高的柱子分别为 L, R, 该位置能接到的雨水数量为 min(L, R) - 柱子高度。
-- 每根柱子对应的 L 和 R 可以一趟递推得到，优化为线性时间复杂度。
+- 对于任一柱子 h，如果左右都有更高的柱子，那么该位置就能接到雨水
+- 设左右最高的柱子分别为 l, r, 该位置能接到的雨水数量为 min(l, r)-h
+- 每根柱子对应的 l 和 r 可以一趟递推得到
 
 ```python
 class Solution:
     def trap(self, height: List[int]) -> int:
-        L = accumulate(height,max)
+        L = list(accumulate(height,max))
         R = list(accumulate(height[::-1],max))[::-1]
         return sum(min(l,r)-h for h,l,r in zip(height,L,R))
 ```
-时间 O(N)，64 ms
+62 ms
 
-### #2 双指针
-
-还有个巧妙的双指针方法可以一趟解决。
-- 初始 i、j 分别指向数组首尾
-- 若 max(height[:i+1]) <= max(height[j:])，可求得位置 i 处的雨水，然后移动 i
-- 若 max(height[:i+1]) >= max(height[j:])，可求得位置 j 处的雨水，然后移动 j
-- 循环操作直到 i、j 相遇，即可得到每个位置处的雨水
-
-## 解答
-
-```python
-def trap(self, height: List[int]) -> int:
-    res, L, R = 0, 0, 0
-    i, j = 0, len(height)-1
-    while i <= j:
-        L, R = max(L, height[i]), max(R, height[j])
-        if L <= R:
-            res += L - height[i]
-            i += 1
-        else:
-            res += R - height[j]
-            j -= 1
-    return res
-```
-时间 O(N)，64 ms
-
-## *附加
+### #2 单调栈
 
 也可以用单调栈
 
@@ -99,4 +72,33 @@ class Solution:
             sk.append((i,x))
         return res
 ```
-52 ms
+53 ms
+
+### #3 双指针
+
+还有个巧妙的双指针方法：
+- 初始 i、j 分别指向数组首尾
+- 若 max(height[:i+1]) <= max(height[j:])，可求得位置 i 处的雨水，然后移动 i
+- 若 max(height[:i+1]) >= max(height[j:])，可求得位置 j 处的雨水，然后移动 j
+- 循环操作直到 i、j 相遇，即可得到每个位置处的雨水
+
+## 解答
+
+```python
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        res,l,r = 0,0,0
+        i,j = 0,len(height)-1
+        while i<j:
+            l,r = max(l,height[i]),max(r,height[j])
+            if l<=r:
+                res += l-height[i]
+                i += 1
+            else:
+                res += r-height[j]
+                j -= 1
+        return res
+```
+54 ms
+
+

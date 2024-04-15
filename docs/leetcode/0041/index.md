@@ -43,42 +43,27 @@
 
 ## 分析 
 
-### #1 枚举
-
-最简单的，从小到大枚举正数，没出现就返回。
-
-```python
-class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
-        vis = set(nums)
-        x = 1
-        while x in vis:
-            x += 1
-        return x
-```
-84 ms
-
-### #2 重排
-
-不过题目要求 O(1) 空间，那么只能考虑交换或赋值了。
-- 有个巧妙的想法是把正数都放在对应的位置上，比如 1 放在第 1 位，3 放在第 3 位，
-那么再遍历就能发现缺的第一个正数了
-- 本题不能直接赋值，可能会覆盖掉有用信息，所以考虑交换
-- 如果交换过来还是范围内的正数，应该循环操作
-- 为了防止死循环，当要交换的两个数相等时就应跳出
+- 最简单的，从小到大枚举正数，没出现就返回
+- 不目要求 O(1) 空间，只能考虑交换或赋值
+	- 于是想到把正数都放在对应的位置上，比如 1 放在第 1 位，3 放在第 3 位，
+	那么再遍历就能发现缺的第一个正数了
+	- 本题不能直接赋值，可能会覆盖掉有用信息，所以考虑交换
+	- 如果交换过来还是范围内的正数，应该循环操作
+	- 为了防止死循环，当要交换的两个数相等时就应跳出
 
 ## 解答
 
 ```python
-def firstMissingPositive(self, nums: List[int]) -> int:
-    n = len(nums)
-    for i, x in enumerate(nums):
-        while 1 <= x <= n and x != nums[x-1]:
-            nums[i], nums[x-1] = nums[x-1], nums[i]
-            x = nums[i]
-    for i, x in enumerate(nums):
-        if x != i + 1:
-            return i + 1
-    return n + 1
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        n = len(nums)
+        for i,x in enumerate(nums):
+            while 1<=x<=n and x!=nums[x-1]:
+                nums[i],nums[x-1] = nums[x-1],nums[i]
+                x = nums[i]
+        for i,x in enumerate(nums):
+            if x!=i+1:
+                return i+1
+        return n+1
 ```
-228 ms
+84 ms

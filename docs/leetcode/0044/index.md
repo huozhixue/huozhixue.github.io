@@ -67,53 +67,29 @@ p = &quot;a*c?b&quot;
 
 类似 {{< lc "0010" >}}，区别在于星号和前一个字符无关了。
 
-### #1 记忆化递归
-```python
-def isMatch(self, s: str, p: str) -> bool:
-    @cache
-    def dfs(s, p):
-        if not p:
-            return not s
-        if p[-1] == '*':
-            return dfs(s, p[:-1]) or (bool(s) and dfs(s[:-1], p))
-        return bool(s) and p[-1] in [s[-1], '?'] and dfs(s[:-1], p[:-1])
-    return dfs(s, p)
-```
-1032 ms
-
-### #2 dp
-
-同样的，可以用递推形式，并优化为一维 dp 数组。
-    
 ## 解答
 
 ```python
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-        m, n = len(s), len(p)
-        dp = [1]+[0]*n
-        for j,b in enumerate(p,1):
-            if b=='*':
-                dp[j] = dp[j-1]
-        for a in s:
-            new = [0]*(n+1)
-            for j,b in enumerate(p,1):
-                if b=='*':
-                    new[j] = dp[j] or new[j-1]
+        m,n = len(p),len(s)
+        dp = [[1]+[0]*n for _ in range(m+1)]
+        for i in range(1,m+1):
+            for j in range(n+1):
+                if p[i-1]=='*':
+                    dp[i][j] = dp[i-1][j] or (j and dp[i][j-1])
                 else:
-                    new[j] = dp[j-1] and b in '?'+a
-            dp = new
-        return bool(dp[-1])
+                    dp[i][j] = j and p[i-1] in s[j-1]+'?' and dp[i-1][j-1]
+        return bool(dp[-1][-1])
 ```
-408 ms
+461 ms
+
 
 ## *附加
 
-本题也可以用正则解决。
-
-观察发现，将 p 按星号分割为一些子串，问题就等价于在 s 中依次搜索这些子串。
-
-注意第一个子串要和 s 开头匹配，最后一个子串要和 s 末尾匹配。
+本题也可以用正则解决：
+- 观察发现，将 p 按星号分割为一些子串，问题就等价于在 s 中依次搜索这些子串
+- 注意第一个子串要和 s 开头匹配，最后一个子串要和 s 末尾匹配。
 
 ```python
 class Solution:
@@ -127,4 +103,4 @@ class Solution:
             pos = tmp.end()
         return True
 ```
-68 ms
+60 ms

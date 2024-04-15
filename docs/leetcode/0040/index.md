@@ -53,22 +53,45 @@
 ## 解答
 
 ```python
-def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-    def dfs(i, s):
-        if s >= target:
-            if s == target:
-                res.append(path[:])
-            return
-        for j in range(i, n):
-            if j > i and candidates[j] == candidates[j - 1]:
-                continue
-            path.append(candidates[j])
-            dfs(j + 1, s + candidates[j])
-            path.pop()
-
-    res, path, n = [], [], len(candidates)
-    candidates.sort()
-    dfs(0, 0)
-    return res
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        def dfs(i,s):
+            if i==len(A) or s>=target:
+                if s==target:
+                    res.append(path[:])
+                return 
+            dfs(i+1,s)
+            k,v = A[i]
+            if v and s+k<=target:
+                path.append(k)
+                A[i][1] -= 1
+                dfs(i,s+k)
+                path.pop()
+                A[i][1] += 1
+        A = [[k,v] for k,v in Counter(candidates).items()]
+        res, path = [], []
+        dfs(0,0)
+        return res
 ```
-64 ms
+41 ms
+## *附加
+
+同样可以看作背包dp。
+
+```python
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        @cache
+        def dfs(i,s):
+            if i==len(A):
+                return [[]] if s==0 else []
+            k,v = A[i]
+            res = dfs(i+1,s)[:]
+            for x in range(1,v+1):
+                if x*k<=s:
+                    res.extend([k]*x+sub for sub in dfs(i+1,s-x*k))
+            return res
+        A = list(Counter(candidates).items())
+        return dfs(0,target)
+```
+47 ms

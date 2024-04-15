@@ -47,19 +47,19 @@
 
 ## 分析
 
-根据最少跳 k 步到达的位置可以递推出最少跳 k+1 步到达的位置。循环递推直到到达末尾即可。
-
-注意每轮能到达的位置必然是连续的，所以保存区间即可。为了方便，使用左闭右开的区间形式。
-
+- 先看第一步能跳到的区间是 [0,nums[0]]
+- 然后递推得到第二步能跳到的区间 [nums[0]+1,max(i+nums[i] for i in range(nums[0]+1))]
+- 循环递推直到到达末尾即可
 
 ## 解答
 
 ```python
-def jump(self, nums: List[int]) -> int:
-    res, s, e = 0, 0, 1
-    while e < len(nums):
-        s, e = e, max(i+nums[i] for i in range(s, e))+1
-        res += 1
-    return res
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        res=s=e=0
+        while e<len(nums)-1:
+            s,e = e+1,max(i+nums[i] for i in range(s,e+1))
+            res += 1
+        return res
 ```
-32 ms
+49 ms

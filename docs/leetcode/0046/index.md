@@ -48,33 +48,37 @@
 python 里可以直接调库。
 
 ```python
-def permute(self, nums: List[int]) -> List[List[int]]:
-	return list(permutations(nums))
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        return list(permutations(nums))
 ```
 
-40 ms
+37 ms
 
 ### #2
 
-自己实现可以用 dfs，依次选择数字即可。
-注意标记选过的数字。
+还可以用回溯法，依次选择数字，注意标记选过的数字。
 
 ## 解答
 
 ```python
-def permute(self, nums: List[int]) -> List[List[int]]:
-    def dfs(path):
-        if len(path) == len(nums):
-            res.append(path)
-        for i, num in enumerate(nums):
-            if i not in vis:
-                vis.add(i)
-                dfs(path+[num])
-                vis.remove(i)
-                
-    res, vis = [], set()
-    dfs([])
-    return res
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        def dfs():
+            if len(path) == len(nums):
+                res.append(path[:])
+                return
+            for i, x in enumerate(nums):
+                if x<inf:
+                    nums[i]=inf
+                    path.append(x)
+                    dfs()
+                    path.pop()
+                    nums[i]=x
+                    
+        res, path = [], []
+        dfs()
+        return res
 ```
-28 ms
+40 ms
 
