@@ -38,44 +38,30 @@
 
 ## 分析 
 
-### #1
-
-依然可以调库。
-
-```python
-def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-	return list(set(permutations(nums)))
-```
-64 ms
-
-### #2
-
-与 {{< lc "0046" >}} 的区别是有重复数字。
-所以把 nums 排序后再遍历。
-
-每个位置选数字时，在未标记集合中选重复数字最前面的，从而保证排列不重复。
+ {{< lc "0046" >}} 升级版，用计数器标记还未选的数即可。
 
 
 ## 解答
 
 ```python
-def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-    def dfs(path):
-        if len(path) == len(nums):
-            res.append(path)
-            return
-        for i, num in enumerate(nums):
-            if i and nums[i-1] == num and i-1 not in vis:
-                continue
-            if i not in vis:
-                vis.add(i)
-                dfs(path + [num])
-                vis.remove(i)
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        def dfs():
+            if len(path) == len(nums):
+                res.append(path[:])
+                return
+            for x in ct:
+                if ct[x]:
+                    ct[x]-=1
+                    path.append(x)
+                    dfs()
+                    path.pop()
+                    ct[x]+=1
 
-    res, vis = [], set()
-    nums.sort()
-    dfs([])
-    return res
+        ct = Counter(nums)  
+        res, path = [], []
+        dfs()
+        return res
 ```
-40 ms
+49 ms
 
