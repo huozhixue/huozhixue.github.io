@@ -62,39 +62,19 @@
 
 ## 分析
 
-### #1
-
-区间列表有序，因此与新区间重叠的必然是连续的。
-
-因此遍历找到第一个重叠的，开始合并，直到不重叠为止。所有重叠的一段合并为一个区间，而前后其它区间不变。
-
-```python
-def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-    i, (s, e) = 0, newInterval
-    while i < len(intervals) and intervals[i][1] < s:
-        i += 1
-    j = i
-    while j < len(intervals) and intervals[j][0] <= e:
-        s, e = min(s, intervals[j][0]), max(e, intervals[j][1])
-        j += 1
-    return intervals[:i] + [[s, e]] + intervals[j:]
-```
-40 ms
-
-### #2
-
-也可以直接二分查找与新区间重叠的下标范围，替换为合并后的区间。
+二分查找与新区间重叠的下标范围，合并区间即可。
 
 ## 解答
 
 ```python
-def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-    L, R = newInterval
-    i = bisect_left(intervals, L, key=lambda x: x[1])
-    j = bisect_right(intervals, R, key=lambda x: x[0])
-    if i<j:
-        L, R = min(L, intervals[i][0]), max(R, intervals[j-1][1])
-    intervals[i:j] = [[L, R]]
-    return intervals
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        a,b = newInterval
+        i = bisect_left(intervals, a, key=lambda x: x[1])
+        j = bisect_right(intervals, b, key=lambda x: x[0])
+        if i<j:
+            a,b = min(a, intervals[i][0]), max(b, intervals[j-1][1])
+        intervals[i:j] = [[a,b]]
+        return intervals
 ```
-36 ms
+35 ms

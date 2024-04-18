@@ -53,17 +53,18 @@
 
 $$dp[j] = max(0, dp[j-1]) + nums[j]$$
 
-最后 max(dp) 即为所求。还可以优化为一个参数。
+最后 max(dp) 即为所求。
 
 ## 解答
 
 ```python
-def maxSubArray(self, nums: List[int]) -> int:
-    res = dp = float('-inf')
-    for num in nums:
-        dp = max(0, dp) + num
-        res = max(res, dp)
-    return res
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        res,dp = -inf,-inf
+        for x in nums:
+            dp = max(0,dp)+x
+            res = max(res,dp)
+        return res
 ```
-140 ms
+142 ms
 

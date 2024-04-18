@@ -45,14 +45,18 @@
 观察可知，这个旋转操作等价于按主对角线翻转，再左右翻转。
 
 ```python
-def rotate(self, matrix: List[List[int]]) -> None:
-	for i in range(1, len(matrix)):
-		for j in range(i):
-			matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-	for row in matrix:
-		row.reverse()
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        for i in range(1, len(matrix)):
+            for j in range(i):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        for row in matrix:
+            row.reverse()
 ```
-32 ms
+40 ms
 
 ### #2
 
@@ -61,8 +65,12 @@ def rotate(self, matrix: List[List[int]]) -> None:
 ## 解答
 
 ```python
-def rotate(self, matrix: List[List[int]]) -> None:
-    matrix[:] = zip(*matrix[::-1])
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        matrix[:] = zip(*matrix[::-1])
 ```
 36 ms
 

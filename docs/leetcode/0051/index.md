@@ -45,7 +45,7 @@
 
 ## 分析
 
-{{< lc "0052" >}} 升级版，回溯时再维护放置情况即可。
+典型的回溯。
 
 ## 解答
 
@@ -54,18 +54,18 @@ class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         def dfs(i):
             if i==n:
-                self.res.append(path[:])
+                res.append(path[:])
                 return
             for j in range(n):
                 if C[j]==D1[i+j]==D2[i-j]==0:
                     C[j]=D1[i+j]=D2[i-j]=1
                     path.append('.'*j+'Q'+'.'*(n-j-1))
                     dfs(i+1)
-                    C[j]=D1[i+j]=D2[i-j]=0
                     path.pop()
+                    C[j]=D1[i+j]=D2[i-j]=0
         C,D1,D2 = [defaultdict(int) for _ in range(3)]
-        self.res, path = [], []
+        res,path = [],[]
         dfs(0)
-        return self.res
+        return res
 ```
-60 ms
+52 ms

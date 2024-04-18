@@ -37,21 +37,20 @@
 
 ## 分析
 
-显然能合并的区间范围必然相近，因此考虑先按起点排序，再遍历。
-
-遍历过程中，如果当前区间的起点小于等于上一区间的终点，那么就可以合并；否则，就添加新区间。
+排序后边遍历边维护即可。
 
 
 ## 解答
 
 ```python
-def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-    res = []
-    for s, e in sorted(intervals):
-        if res and s <= res[-1][1]:
-            res[-1][1] = max(res[-1][1], e)
-        else:
-            res.append([s, e])
-    return res
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        res = []
+        for a,b in sorted(intervals):
+            if not res or a>res[-1][1]:
+                res.append([a,b])
+            else:
+                res[-1][1] = max(res[-1][1],b)
+        return res
 ```
 56 ms

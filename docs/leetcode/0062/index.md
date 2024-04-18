@@ -58,18 +58,19 @@
 
 ### #1
 
-要到达位置 (i, j)，只能从 (i-1, j) 或 (i, j-1) 到达，可以转为递归子问题。
-
-显然有重复子问题，所以用动态规划。
+典型的二维 dp，为了方便，可以增加一行一列作为哨兵。
 
 ```python
-def uniquePaths(self, m: int, n: int) -> int:
-    dp = [[0]*n for _ in range(m)]
-    for i, j in product(range(m), range(n)):
-        dp[i][j] = 1 if i==0 or j==0 else dp[i-1][j] + dp[i][j-1]
-    return dp[-1][-1]
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = [[0]*(n+1) for _ in range(m+1)]
+        dp[0][1]=1
+        for i in range(1,m+1):
+            for j in range(1,n+1):
+                dp[i][j] = dp[i-1][j]+dp[i][j-1]
+        return dp[-1][-1]
 ```
-36 ms
+35 ms
 
 ### #2
 
@@ -78,13 +79,16 @@ dp[i][j] 只依赖于 dp[i-1][j] 和 dp[i][j-1]，可以优化为一维数组。
 ## 解答
 
 ```python
-def uniquePaths(self, m: int, n: int) -> int:
-    dp = [1] * n
-    for _, j in product(range(1, m), range(1, n)):
-        dp[j] += dp[j-1]
-    return dp[-1]
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = [0]*(n+1) 
+        dp[1]=1
+        for _ in range(1,m+1):
+            for j in range(1,n+1):
+                dp[j] += dp[j-1]
+        return dp[-1]
 ```
-32 ms
+41 ms
 
 ## *附加
 
@@ -94,7 +98,8 @@ def uniquePaths(self, m: int, n: int) -> int:
 - 路径数即为 m+n-2 中选 m-1 个的方案数
 
 ```python
-def uniquePaths(self, m: int, n: int) -> int:
-	return comb(m+n-2, n-1)
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        return comb(m+n-2,m-1)
 ```
-32 ms
+35 ms

@@ -36,32 +36,29 @@
 
 ## 分析 
 
-这个旋转操作其实相当于在某位置将链表断开，再将前半部分接到后半部分后面。
 - 先找到表尾 tail 并计算出链表长度 n
-- 若 k 是 n 的倍数直接返回，否则找到新表尾 newtail，是第 n - k % n 个元素
-- 新表头 newhead=newtail.next，断开新表尾，再将 head 接到 tail 后面即可
+- 找到新表尾 p，是第 n - k % n 个元素
+- 从 p 断开，将前面部分接到 tail 后面即可
 
 ## 解答
-
 ```python
-def rotateRight(self, head: ListNode, k: int) -> ListNode:
-	if not head:
-		return head
-	tail, n = head, 1
-	while tail.next:
-		tail = tail.next
-		n += 1
-	k %= n
-	if not k:
-		return head
-	newtail = head
-	for _ in range(n-k-1):
-		newtail = newtail.next
-	newhead = newtail.next
-	tail.next = head
-	newtail.next = None
-	return newhead
+class Solution:
+    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        if not head:
+            return None
+        dum = ListNode(next=head)
+        tail,n = dum,0
+        while tail.next:
+            tail = tail.next
+            n += 1
+        p = dum
+        for _ in range(n-k%n):
+            p = p.next
+        tail.next = dum.next
+        dum.next = p.next
+        p.next = None
+        return dum.next
 ```
 
-40 ms
+33 ms
 

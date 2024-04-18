@@ -55,36 +55,26 @@
 
 ## 分析 
 
-### #1
-
-可以直接调包得到所有排列，返回第 k 个排列。
-
-```python
-def getPermutation(self, n: int, k: int) -> str:
-	res = list(permutations(range(1, n+1)))[k-1]
-	return ''.join(map(str, res))
-```
-
-1908 ms
-
-### #2
-
-也可以递推：
-- 为了方便，令 k-=1 使得从 0 开始
-- 由排列组合知识可知，首位固定时有 (n-1)! 种情况
-- 那么第 k 个排列的首位即为第 k//(n-1)! 小的元素
-- 确定首位元素后，转为求剩下元素的第 k%(n-1)! 个排列，转为递归子问题
+- 为了方便，令 k 减 1 使得从 0 开始
+- 由排列组合知识可知：
+	- 首位固定时有 (n-1)! 种情况
+	- 第 k 个排列的首位即为第 k//(n-1)! 小的元素
+	- 确定首位后，转为求剩下元素的第 k%(n-1)! 个排列
 - 为了方便，维护一个有序数组 A，每次弹出确定的元素即可
  
 ## 解答
 
 ```python
-def getPermutation(self, n: int, k: int) -> str:
-	res, A, k = '', list(range(1, n+1)), k-1
-	for i in range(n):
-		q, k = divmod(k, factorial(n-1-i))
-		res += str(A.pop(q))
-	return res
+class Solution:
+    def getPermutation(self, n: int, k: int) -> str:
+        res = ''
+        A = list(range(1,n+1))
+        k,s = k-1,factorial(n)
+        for _ in range(n):
+            s //= len(A)
+            q,k = divmod(k,s)
+            res += str(A.pop(q))
+        return res
 ```
-32 ms
+34 ms
 

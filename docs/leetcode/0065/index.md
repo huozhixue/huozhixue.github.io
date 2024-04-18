@@ -73,60 +73,28 @@
 
 ## 分析
 
-首先想到用正则。
-
-	有效整数很简单:	                     
-				"[+-]?\d+"	
-	有效小数基于有效整数，考虑两种格式:
-		'.' 之前至少一位数字 	             
-				"[+-]?\d+\.\d*"
-		'.' 之前没有数字，之后至少一位       
-				"[+-]?\.\d+"
-	有效整数或小数整合为：	             
-				"[+-]?(\d+(\.\d*)?|\.\d+)"
-	有效数字基于有效整数和小数，考虑两种格式:
-		不存在 "eE", 就是一个整数或小数			
-				"[+-]?(\d+(\.\d*)?|\.\d+)"
-		存在一个 "eE", 前面是整数或小数, 后面是整数 
-				"[+-]?(\d+(\.\d*)?|\.\d+)[eE][+-]?\d+"
-
-整合一下即得最终表达式。
+正则：
+- 有效整数很简单:	 
+	"[+-]?\d+"	
+- 有效小数基于有效整数，考虑两种格式:
+	- '.' 之前至少一位数字 ：
+		"[+-]?\d+\.\d*"
+	- '.' 之前没有数字，之后至少一位 ：
+		"[+-]?\.\d+"
+- 有效整数或小数整合为：	   
+		"[+-]?(\d+\.?\d*|\.\d+)"
+- 有效数字基于有效整数和小数，考虑两种格式:
+	- 不存在 "eE", 就是一个整数或小数	
+	- 存在一个 "eE", 前面是整数或小数, 后面是整数 
+- 整合即得最终表达式
 
 
 ## 解答
 
 ```python
-def isNumber(self, s: str) -> bool:
-	return bool(re.match(r"[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?$", s))
+class Solution:
+    def isNumber(self, s: str) -> bool:
+        return bool(re.match('[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$',s))
 ```
-40 ms
+38 ms
 
-## *附加
-
-还有更加通用的 [DFA（确定有限状态自动机）](https://zhuanlan.zhihu.com/p/30009083)方法。
-
-```python
-def isNumber(self, s: str) -> bool:
-    st = ['0_initial', '1_sign', '2_int', '3_dot', '4_dot_without_int', '5_decimal', 
-          '6_e', '7_e_sign', '8_e_int']
-    act = ['0_sign', '1_int', '2_dot', '3_e']
-    shift = {st[0]: {act[0]: st[1], act[1]: st[2], act[2]: st[4]},
-             st[1]: {act[1]: st[2], act[2]: st[4]},
-             st[2]: {act[1]: st[2], act[2]: st[3], act[3]: st[6]},
-             st[3]: {act[1]: st[5], act[3]: st[6]},
-             st[4]: {act[1]: st[5]},
-             st[5]: {act[1]: st[5], act[3]: st[6]},
-             st[6]: {act[0]: st[7], act[1]: st[8]},
-             st[7]: {act[1]: st[8]},
-             st[8]: {act[1]: st[8]},
-             }
-    char2act = {'+': act[0], '-': act[0], '.': act[2], 'e': act[3], 'E': act[3]}
-    state = st[0]
-    for char in s:
-        action = act[1] if char.isdigit() else char2act.get(char)
-        if action not in shift[state]:
-            return False
-        state = shift[state][action]
-    return state in {st[2], st[3], st[5], st[8]}
-```
-28 ms

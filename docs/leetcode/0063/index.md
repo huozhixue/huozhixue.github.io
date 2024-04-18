@@ -47,19 +47,20 @@
 
 ## 分析
 
-{{< lc "0062">}} 进阶版，递推时注意障碍的特殊情况即可。
+{{< lc "0062">}} 进阶版，障碍处不计算即可。
 
 ## 解答
 
 ```python
-def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
-    m, n = len(obstacleGrid), len(obstacleGrid[0])
-    dp = [0] * (n+1)
-    for i, j in product(range(1, m+1), range(1, n+1)):
-        if obstacleGrid[i-1][j-1] == 1:
-            dp[j] = 0
-        else:
-            dp[j] = 1 if i == j == 1 else dp[j] + dp[j-1]
-    return dp[-1]
+class Solution:
+    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+        m,n = len(obstacleGrid),len(obstacleGrid[0])
+        dp = [[0]*(n+1) for _ in range(m+1)]
+        dp[0][1] = 1
+        for i in range(1,m+1):
+            for j in range(1,n+1):
+                if not obstacleGrid[i-1][j-1]:
+                    dp[i][j] = dp[i-1][j]+dp[i][j-1] 
+        return dp[-1][-1]
 ```
-24 ms
+33 ms

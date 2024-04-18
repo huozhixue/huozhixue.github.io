@@ -38,23 +38,25 @@
 ## 分析 
 
 考虑模拟过程:
-- 初始位置 <x=0,y=0>，初始方向 <dx=0,dy=1> 
-- 到达边界位置则改变方向为 <dy,-dx>
-- 为了方便，可以将走过的地方置 0 ，当 matrix[(x+dx)%m][(y+dy)%n]==0 即代表到达边界
+- 初始位置 <i,j>=(0,0)，初始方向 <di,dj>=(0,1) 
+- 到达边界位置则改变方向为 <dj,-di>
+- 为了方便，可以将走过的地方置 inf ，当 matrix[(i+di)%m][(j+dj)%n]==inf 即代表到达边界
 
 ## 解答
 
 ```python
-def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-    res, m, n = [], len(matrix), len(matrix[0])
-    x, y, dx, dy = 0, 0, 0, 1
-    for _ in range(m*n):
-        res.append(matrix[x][y])
-        matrix[x][y] = 0
-        if matrix[(x+dx)%m][(y+dy)%n] == 0:
-            dx, dy = dy, -dx
-        x, y = x+dx, y+dy
-    return res
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        m,n = len(matrix),len(matrix[0])
+        i,j,di,dj = 0,0,0,1
+        res = []
+        for _ in range(m*n):
+            res.append(matrix[i][j])
+            matrix[i][j] = inf
+            if matrix[(i+di)%m][(j+dj)%n]==inf:
+                di,dj = dj,-di
+            i,j = i+di,j+dj
+        return res
 ```
-28 ms
+32 ms
 

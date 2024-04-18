@@ -34,23 +34,21 @@
 
 ## 分析 
 
-与 {{< lc "0054" >}} 类似，模拟过程：
-- 初始位置 <x=0,y=0>，初始方向 <dx=0,dy=1> 
-- 到达边界位置则改变方向为 <dy,-dx>
-- 为了方便，初始 matrix 的值都为 0 ，当 matrix[(x+dx)%m][(y+dy)%n]!=0 即代表到达边界
+ 类似 {{< lc "0054" >}} ，模拟即可。
 
 ## 解答
 
 ```python
-def generateMatrix(self, n: int) -> List[List[int]]:
-    res = [[0]*n for _ in range(n)]
-    x, y, dx, dy = 0, 0, 0, 1
-    for i in range(n*n):
-        res[x][y] = i+1
-        if res[(x+dx)%n][(y+dy)%n]:
-            dx, dy = dy, -dx
-        x, y = x+dx, y+dy
-    return res
+class Solution:
+    def generateMatrix(self, n: int) -> List[List[int]]:
+        i,j,di,dj = 0,0,0,1
+        res = [[0]*n for _ in range(n)]
+        for x in range(1,n*n+1):
+            res[i][j] = x
+            if res[(i+di)%n][(j+dj)%n]:
+                di,dj = dj,-di
+            i,j = i+di,j+dj
+        return res
 ```
-28 ms
+43 ms
 

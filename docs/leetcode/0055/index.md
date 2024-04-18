@@ -41,15 +41,16 @@
 
 ## 分析
 
-和 {{< lc "0045" >}} 类似，考虑跳不了的特殊情况即可。
+类似 {{< lc "0045" >}} ，递推出最右边界即可。
 
 ## 解答
 
 ```python
-def canJump(self, nums: List[int]) -> bool:
-    s, e = 0, 1
-    while s < e < len(nums):
-        s, e = e, max(i + nums[i] for i in range(s, e)) + 1
-    return e >= len(nums)
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        s,e,n = 0,0,len(nums)
+        while s<=e<n:
+            s,e = e+1,max(i+nums[i] for i in range(s,e+1))
+        return e>=n-1
 ```
-92 ms
+81 ms

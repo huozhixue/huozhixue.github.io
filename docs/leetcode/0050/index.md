@@ -47,39 +47,35 @@
 
 ### #1
 
-递归的典型应用，特别注意下 n 为负数、x 为 0 的边界情况。
+递归即可，特别注意下 n 为零或负数的边界情况。
 
 ```python
-def myPow(self, x: float, n: int) -> float:
-    if n == 0:
-        return 1
-    if x == 0:
-        return 0
-    if n < 0:
-        x, n = 1 / x, -n
-    return self.myPow(x, n // 2) ** 2 * (x if n % 2 else 1)
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n==0:
+            return 1
+        if n<0:
+            x,n = 1/x,-n
+        return self.myPow(x,n//2)**2*(x if n%2 else 1)
 ```
-28 ms
+29 ms
 
 ### #2
 
-还可以写成非递归形式。假设 n 的二进制字符串为 s，可以递推求得 pow(x, s[:i]对应的数)。
-（也可以迭代 s 的后缀，递推求得 pow(x, int(s[i:], 2))）
+还可以写成非递归形式，根据 n 的二进制形式递推。
 
 ## 解答
 
 ```python
-def myPow(self, x: float, n: int) -> float:
-    if n == 0:
-        return 1
-    if x == 0:
-        return 0
-    if n < 0:
-        x, n = 1 / x, -n
-    res = 1
-    for bit in bin(n)[2:]:
-        res *= res
-        res *= x if bit == '1' else 1
-    return res
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n == 0:
+            return 1
+        if n < 0:
+            x, n = 1 / x, -n
+        res = 1
+        for bit in bin(n)[2:]:
+            res *= res*(x if bit=='1' else 1)
+        return res
 ```
-28 ms
+40 ms

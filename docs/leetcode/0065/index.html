@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0065\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  690 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  521 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0065\/","datePublished": "2015-03-06T00:00:00+08:00","dateModified": "2015-03-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,7 +111,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0065：有效数字（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-06">2015-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 690 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-06">2015-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 521 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0065/" class="leancloud_visitors" data-flag-title="0065：有效数字（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,7 +125,6 @@
     <li><a href="#题目">题目</a></li>
     <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
-    <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -177,88 +176,42 @@
 <li><code>s</code> 仅含英文字母（大写和小写），数字（<code>0-9</code>），加号 <code>'+'</code> ，减号 <code>'-'</code> ，或者点 <code>'.'</code> 。</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>首先想到用正则。</p>
-<pre><code>有效整数很简单:	                     
-			&quot;[+-]?\d+&quot;	
-有效小数基于有效整数，考虑两种格式:
-	'.' 之前至少一位数字 	             
-			&quot;[+-]?\d+\.\d*&quot;
-	'.' 之前没有数字，之后至少一位       
-			&quot;[+-]?\.\d+&quot;
-有效整数或小数整合为：	             
-			&quot;[+-]?(\d+(\.\d*)?|\.\d+)&quot;
-有效数字基于有效整数和小数，考虑两种格式:
-	不存在 &quot;eE&quot;, 就是一个整数或小数			
-			&quot;[+-]?(\d+(\.\d*)?|\.\d+)&quot;
-	存在一个 &quot;eE&quot;, 前面是整数或小数, 后面是整数 
-			&quot;[+-]?(\d+(\.\d*)?|\.\d+)[eE][+-]?\d+&quot;
-</code></pre>
-<p>整合一下即得最终表达式。</p>
+<p>正则：</p>
+<ul>
+<li>有效整数很简单:	
+&ldquo;[+-]?\d+&rdquo;</li>
+<li>有效小数基于有效整数，考虑两种格式:
+<ul>
+<li>&lsquo;.&rsquo; 之前至少一位数字 ：
+&ldquo;[+-]?\d+.\d*&rdquo;</li>
+<li>&lsquo;.&rsquo; 之前没有数字，之后至少一位 ：
+&ldquo;[+-]?.\d+&rdquo;</li>
+</ul>
+</li>
+<li>有效整数或小数整合为：	<br>
+&ldquo;[+-]?(\d+.?\d*|.\d+)&rdquo;</li>
+<li>有效数字基于有效整数和小数，考虑两种格式:
+<ul>
+<li>不存在 &ldquo;eE&rdquo;, 就是一个整数或小数</li>
+<li>存在一个 &ldquo;eE&rdquo;, 前面是整数或小数, 后面是整数</li>
+</ul>
+</li>
+<li>整合即得最终表达式</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">isNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?$&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">isNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="s1">&#39;[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$&#39;</span><span class="p">,</span><span class="n">s</span><span class="p">))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>40 ms</p>
-<h2 id="附加">*附加</h2>
-<p>还有更加通用的 <a href="https://zhuanlan.zhihu.com/p/30009083" target="_blank" rel="noopener noreffer">DFA（确定有限状态自动机）</a>方法。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">isNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">st</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0_initial&#39;</span><span class="p">,</span> <span class="s1">&#39;1_sign&#39;</span><span class="p">,</span> <span class="s1">&#39;2_int&#39;</span><span class="p">,</span> <span class="s1">&#39;3_dot&#39;</span><span class="p">,</span> <span class="s1">&#39;4_dot_without_int&#39;</span><span class="p">,</span> <span class="s1">&#39;5_decimal&#39;</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">          <span class="s1">&#39;6_e&#39;</span><span class="p">,</span> <span class="s1">&#39;7_e_sign&#39;</span><span class="p">,</span> <span class="s1">&#39;8_e_int&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">act</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0_sign&#39;</span><span class="p">,</span> <span class="s1">&#39;1_int&#39;</span><span class="p">,</span> <span class="s1">&#39;2_dot&#39;</span><span class="p">,</span> <span class="s1">&#39;3_e&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">shift</span> <span class="o">=</span> <span class="p">{</span><span class="n">st</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">4</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">4</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">6</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">6</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">5</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">6</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">8</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">8</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="n">st</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="p">{</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">st</span><span class="p">[</span><span class="mi">8</span><span class="p">]},</span>
-</span></span><span class="line"><span class="cl">             <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">char2act</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;+&#39;</span><span class="p">:</span> <span class="n">act</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span> <span class="n">act</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">]}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">state</span> <span class="o">=</span> <span class="n">st</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">action</span> <span class="o">=</span> <span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">else</span> <span class="n">char2act</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">action</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">shift</span><span class="p">[</span><span class="n">state</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">        <span class="n">state</span> <span class="o">=</span> <span class="n">shift</span><span class="p">[</span><span class="n">state</span><span class="p">][</span><span class="n">action</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">state</span> <span class="ow">in</span> <span class="p">{</span><span class="n">st</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">st</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">st</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">st</span><span class="p">[</span><span class="mi">8</span><span class="p">]}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>28 ms</p>
+</div><p>38 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
