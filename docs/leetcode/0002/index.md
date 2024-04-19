@@ -58,7 +58,7 @@ class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = p = ListNode()
         c = 0
-        while l1 or l2:
+        while l1 or l2 or c:
             a = l1.val if l1 else 0
             b = l2.val if l2 else 0
             c,s = divmod(a+b+c,10)
@@ -66,7 +66,6 @@ class Solution:
             p = p.next
             l1 = l1 and l1.next
             l2 = l2 and l2.next
-        p.next = ListNode(c) if c else None
         return dummy.next
 ```
 48 ms

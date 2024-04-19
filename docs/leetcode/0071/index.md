@@ -65,18 +65,20 @@
 
 ## 分析
 
-典型的栈应用。遍历 '/' 隔开的元素，遇到目录名入栈，遇到 '..' 出栈即可。
+遍历 '/' 隔开的元素，用栈模拟即可。
 
 ## 解答
 
 ```python
-def simplifyPath(self, path: str) -> str:
-	stack = []
-	for word in path.split('/'):
-		if word == '..' and stack:
-			stack.pop()
-		elif word not in ['..', '.', '']:
-			stack.append(word)
-	return '/' + '/'.join(stack)
+class Solution:
+    def simplifyPath(self, path: str) -> str:
+        sk = []
+        for p in path.split('/'):
+            if p=='..':
+                if sk:
+                    sk.pop()
+            elif p and p!='.':
+                sk.append(p)
+        return '/'+'/'.join(sk)
 ```
-28 ms
+37 ms

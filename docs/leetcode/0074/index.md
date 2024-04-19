@@ -42,28 +42,18 @@
 
 ## 分析
 
-### #1
 
-可以先二分查找定位是哪一行，再在该行中二分查找。
 
-```python
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    i = bisect_right(matrix, target, 1, key=lambda x: x[0])-1
-    j = bisect_right(matrix[i], target, 1)-1
-    return matrix[i][j]==target
-```
-时间复杂度 O(log(M*N))，40 ms
-
-### #2
-
-也可以将 matrix 看作一维升序数组，进行二分查找。注意下标的转换即可。
+先二分查找定位是哪一行，再在该行中二分查找即可。
 
 ## 解答
 
 ```python
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    m, n = len(matrix), len(matrix[0])
-    x = bisect_left(range(m*n-1), target, key=lambda x: matrix[x//n][x%n])
-    return matrix[x//n][x%n] == target
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        i = bisect_right(matrix,target,key=lambda x:x[0])-1
+        j = bisect_right(matrix[max(0,i)],target)-1
+        return matrix[max(0,i)][max(0,j)]==target
 ```
 时间复杂度 O(log(M*N))，40 ms
+

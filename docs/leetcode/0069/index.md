@@ -39,34 +39,33 @@
 
 ## 分析
 
-### #1
 
-就是求满足 y * y <= x 的最大整数 y 。y * y 单调递增，因此可以用二分查找。
-
-python 中借助 bisect 和魔法方法可以节省代码。
-
-```python
-def mySqrt(self, x: int) -> int:
-    self.__class__.__getitem__ = lambda self, i: i*i > x
-    return bisect_left(self, True, 0, x+1) - 1
-```
-
-36 ms
-
-### #2
-
-本题还可以用牛顿迭代法，对于初始较大的 n，迭代 $n=(n+x/n)/2$ 可以不断逼近 $\sqrt x$。
-
-注意若 $n > \sqrt x$，迭代后的 n 依然成立。所以对迭代后的 n 取整若得到 n'<=$\sqrt x$，n' 即是所求。
+- 就是求满足 y * y <= x 的最大整数 y 
+- y * y 单调递增，因此可以用二分查找
 
 ## 解答
 
 ```python
-def mySqrt(self, x: int) -> int:
-	n = x
-	while n * n > x:
-		n = (n + x // n) // 2
-	return n
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        return bisect_left(range(x+1),True,key=lambda y:y*y>x)-1
 ```
 
-44 ms
+39 ms
+
+## *附加
+
+- 还可以用牛顿迭代法
+- 每一步逼近的表达式为 x(n+1)=x(n)-f(x)/f'(x)
+- 对于本题，迭代 $y=(y+x/y)/2$ 即可不断逼近 $\sqrt x$
+- y 取整得到 y'，若 y‘<=$\sqrt x$，y‘ 即是所求
+
+```python
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        y = x
+        while y*y>x:
+            y = (y+x//y)//2
+        return y
+```
+48 ms

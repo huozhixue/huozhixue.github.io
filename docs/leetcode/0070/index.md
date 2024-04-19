@@ -42,32 +42,33 @@
 
 ## 分析
 
-### #1
-
-很经典的递归问题，最后必然爬 1 或 2 个台阶，转为递归子问题。
-
-显然有很多重复子问题，用动态规划。
-
-```python
-def climbStairs(self, n: int) -> int:
-    dp = [1]*(n+1)
-    for i in range(2, n+1):
-        dp[i] = dp[i-1]+dp[i-2]
-    return dp[-1]
-```
-40 ms
-
-### #2
-
-dp[i] 只依赖 dp[i-1] 和 dp[i-2] ，可以优化为两个变量。
+- 经典 dp，dp[i]=dp[i-1]+dp[i-2]
+- 还可以优化为两个变量
 
 ## 解答
 
 ```python
-def climbStairs(self, n: int) -> int:
-	a, b = 1, 1
-	for _ in range(n-1):
-		a, b = b, a+b
-	return b
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        a,b = 1,1
+        for _ in range(n-1):
+            a,b = b,a+b
+        return b
 ```
-32 ms
+41 ms
+
+
+## *附加
+
+这是固定的线性递推，可以用矩阵快速幂优化。
+
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        import numpy as np
+        dp = np.mat([[1],[1]])
+        A = np.mat([[0,1],[1,1]])
+        dp = pow(A,n-1)*dp
+        return int(dp[-1])
+```
+100 ms

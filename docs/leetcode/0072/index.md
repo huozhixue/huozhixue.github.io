@@ -55,23 +55,20 @@ exection -&gt; execution (插入 'u')
 
 ### #1
 
-典型的双串 dp，令 dp[i][j] 表示 word1[:i] 和 word2[:j] 的编辑距离，即可递推。
+典型的双串 dp，递推即可。
 
 ```python
-def minDistance(self, word1: str, word2: str) -> int:
-    m, n = len(word1), len(word2)
-    dp = [[0]*(n+1) for _ in range(m+1)]
-    for i in range(m+1):
-        for j in range(n+1):
-            if i==0 or j==0:
-                dp[i][j] = i+j
-            elif word1[i-1] == word2[j-1]:
-                dp[i][j] = dp[i-1][j-1]
-            else:
-                dp[i][j] = 1+ min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1])
-    return dp[-1][-1]
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        m,n = len(word1),len(word2)
+        dp = [list(range(n+1)) for _ in range(m+1)]
+        for i in range(1,m+1):
+            dp[i][0] = i
+            for j in range(1,n+1):
+                dp[i][j] = min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+(word1[i-1]!=word2[j-1]))
+        return dp[-1][-1]
 ```
-164 ms
+103 ms
 
 ### #2
 
@@ -80,17 +77,15 @@ def minDistance(self, word1: str, word2: str) -> int:
 ## 解答
 
 ```python
-def minDistance(self, word1: str, word2: str) -> int:
-    m, n = len(word1), len(word2)
-    dp = list(range(n+1))
-    for i in range(1, m+1):
-        prev = dp[:]
-        dp[0] = i
-        for j in range(1, n+1):
-            if word1[i-1] == word2[j-1]:
-                dp[j] = prev[j-1]
-            else:
-                dp[j] = 1+ min(dp[j-1], prev[j], prev[j-1])
-    return dp[-1]
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        m,n = len(word1),len(word2)
+        dp = list(range(n+1)) 
+        for i in range(1,m+1):
+            tmp = dp[:]
+            dp[0] = i
+            for j in range(1,n+1):
+                dp[j] = min(tmp[j]+1,dp[j-1]+1,tmp[j-1]+(word1[i-1]!=word2[j-1]))
+        return dp[-1]
 ```
-112 ms
+101 ms

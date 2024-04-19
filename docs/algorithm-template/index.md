@@ -192,6 +192,16 @@ for i in range(1,ma+1):
     inv[i] = pow(fac[i],-1,mod)
 ```
 
+### 4.3 矩阵幂
+
+```python
+def mpow(mat, n):
+	res = mat
+	for bit in bin(n)[3:]:
+		res = res*res*(mat if bit=='1' else 1)%mod
+	return res
+```
+
 ### 4.3 爬山法
 ```python
 def climb(p,cal):

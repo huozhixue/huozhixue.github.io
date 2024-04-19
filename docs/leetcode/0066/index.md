@@ -53,14 +53,14 @@
 ## 解答
 
 ```python
-def plusOne(self, digits: List[int]) -> List[int]:
-    res, carry = [], 1
-    for digit in digits[::-1]:
-        s = digit + carry
-        res.append(s % 10)
-        carry = s//10
-    if carry:
-        res.append(carry)
-    return res[::-1]
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        res,c = [],1
+        for x in digits[::-1]:
+            c,r = divmod(x+c,10)
+            res.append(r)
+        if c:
+            res.append(c)
+        return res[::-1]
 ```
-36 ms
+39 ms

@@ -34,29 +34,17 @@
 
 ## 分析
 
-### #1
-
-可以直接调库。
+模拟进位加法，除数换成 2 即可。
 
 ```python
-def addBinary(self, a: str, b: str) -> str:
-	return bin(int(a, 2)+int(b, 2))[2:]
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        res,c = [],0
+        for x,y in zip_longest(a[::-1],b[::-1],fillvalue=0):
+            c,r = divmod(int(x)+int(y)+c,2)
+            res.append(str(r))
+        if c:
+            res.append('1')
+        return ''.join(res[::-1])
 ```
 40 ms
-
-### #2
-
-也可以模拟进位加法，将除数换成 2 即可。
-```python
-def addBinary(self, a: str, b: str) -> str:
-	res, carry, i, j = '', 0, len(a)-1, len(b)-1
-	while i>=0 or j>=0 or carry:
-		x = int(a[i]) if i>=0 else 0
-		y = int(b[j]) if j>=0 else 0
-		carry, r = divmod(x+y+carry, 2)
-		res += str(r)
-		i -= 1
-		j -= 1
-	return res[::-1]
-```
-36 ms

@@ -80,32 +80,35 @@
 
 ## 分析
 
-遍历单词放到第一行中，放不下了就调整第一行的空格分配，然后放到下一行。
-
-具体分配空格时：
-- 先得到空格总数 total 和单词数 n
-- 求得平均空格数 q 和余数 r
-- 前 r 个间隔分 q+1 个空格，后面的分 q 个空格即可
-- 注意 n==1 和最后一行的特殊情况，在后面补空格即可
+模拟：
+- 遍历单词放到当前行，放不下了就调整空格分配输出当前行，从下一行重新开始
+- 分配空格：
+	- 先得到空格总数和单词数
+	- 求得平均空格数 q 和余数 r
+	- 前 r 个间隔分 q+1 个空格，后面的分 q 个空格即可
+- 注意一行只有一个单词和最后一行的特殊情况，补空格即可
 
 
 ## 解答
 
 ```python
-def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
-    res, row, s = [], [], 0
-    for word in words:
-        if s + len(row) + len(word) > maxWidth:
-            if len(row) == 1:
-                res.append(row[0].ljust(maxWidth))
+class Solution:
+    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
+        res,row,s = [],[],0
+        for w in words:
+            if s+len(row)+len(w)<=maxWidth:
+                row.append(w)
+                s += len(w)
             else:
-                q, r = divmod(maxWidth-s, len(row)-1)
-                res.append(''.join(row[i]+' '*(q+(i<r)) for i in range(len(row)-1)) + row[-1])
-            row, s = [word], len(word)
-        else:
-            row.append(word)
-            s += len(word)
-    res.append(' '.join(row).ljust(maxWidth))
-    return res
+                if len(row)==1:
+                    res.append(row[0].ljust(maxWidth))
+                else:
+                    q,r = divmod(maxWidth-s,len(row)-1)
+                    for i in range(len(row)-1):
+                        row[i] += ' '*(q+(i<r))
+                    res.append(''.join(row))
+                row,s = [w],len(w)
+        res.append(' '.join(row).ljust(maxWidth))
+        return res
 ```
 24 ms
