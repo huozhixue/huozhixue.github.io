@@ -56,49 +56,21 @@
 ## 解答
 
 ```python
-def exist(self, board: List[List[str]], word: str) -> bool:
-    def dfs(k, i, j):
-        if k==len(word):
-            return True
-        A = product(range(m),range(n)) if k==0 else [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]
-        for x, y in A:
-            if 0 <=x<m and 0<=y<n and board[x][y]==word[k]:
-                c = board[x][y]
-                board[x][y] = '0'
-                if dfs(k+1, x, y):
-                    return True
-                board[x][y] = c
-        return False
-
-    m, n = len(board), len(board[0])
-    return dfs(0, -1, -1)
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        def dfs(i,j,k):
+            if k==len(word):
+                return True
+            A = [(i+1,j),(i,j+1),(i-1,j),(i,j-1)] if k else product(range(m),range(n))
+            for x,y in A:
+                if 0<=x<m and 0<=y<n and board[x][y]==word[k]:
+                    board[x][y] = '*'
+                    if dfs(x,y,k+1):
+                        return True
+                    board[x][y]=word[k]
+            return False
+        m,n = len(board),len(board[0])
+        return dfs(0,0,0)
 ```
-3764 ms
+3186 ms
 
-## *附加
-
-针对本题有个优化：
-- 当 word 某个字符数大于 board，显然不可能，可以直接返回 False
-- 这种优化只适用于特定的测试用例，属于 trick，一般不需要
-
-```python
-def exist(self, board: List[List[str]], word: str) -> bool:
-    def dfs(k, i, j):
-        if k==len(word):
-            return True
-        A = product(range(m),range(n)) if k==0 else [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]
-        for x, y in A:
-            if 0 <=x<m and 0<=y<n and board[x][y]==word[k]:
-                c = board[x][y]
-                board[x][y] = '0'
-                if dfs(k+1, x, y):
-                    return True
-                board[x][y] = c
-        return False
-    
-    if Counter(word)-Counter(c for row in board for c in row):
-        return False
-    m, n = len(board), len(board[0])
-    return dfs(0, -1, -1)
-```
-872 ms

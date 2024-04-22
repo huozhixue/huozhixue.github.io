@@ -53,20 +53,21 @@
 
 ## 分析
 
-由 {{< lc "0154" >}} 可以找到分割位置 x，然后在 nums[:x]，nums[x:] 中分别
-二分查找 target 即可。
+-  {{< lc "0154" >}} 进阶
+- 先找到最小值位置 i
+- 然后在 nums[:i]，nums[i:] 中分别二分查找
 
 ## 解答
 
 ```python
-def search(self, nums: List[int], target: int) -> bool:
-    while len(nums) > 1 and nums[-1] == nums[0]:
-        nums.pop()
-    n = len(nums)
-    self.__class__.__getitem__ = lambda self, x: nums[x] <= nums[-1]
-    x = bisect_left(self, True, 0, n - 1)
-    i = bisect_left(nums, target, 0, x - 1) if x else 0
-    j = bisect_left(nums, target, x, n - 1)
-    return nums[i] == target or nums[j] == target
+class Solution:
+    def search(self, nums: List[int], target: int) -> bool:
+        while len(nums)>1 and nums[-1]==nums[0]:
+            nums.pop()
+        n = len(nums)
+        i = bisect_left(range(n),True,key=lambda i:nums[i]<nums[0])
+        j = bisect_left(nums,target,0,i-1)
+        k = bisect_left(nums,target,i,n-1) if i<n else 0
+        return target in [nums[j],nums[k]]
 ```
-36 ms
+38 ms

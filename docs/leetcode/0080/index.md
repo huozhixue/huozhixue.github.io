@@ -61,17 +61,18 @@ print(nums[i]);
 
 ## 分析
 
-类似 {{< lc "0026" >}}，只是元素最多出现次数从一次变成两次。
+ {{< lc "0026" >}} 升级版，元素最多出现次数从一次变成两次。
 
 ## 解答
 
 ```python
-def removeDuplicates(self, nums: List[int]) -> int:
-    i = 0
-    for num in nums:
-        if i < 2 or num != nums[i-2]:
-            nums[i] = num
-            i += 1
-    return i
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i = 0
+        for x in nums:
+            if not (i>=2 and nums[i-2]==x):
+                nums[i] = x
+                i += 1
+        return i
 ```
-40 ms
+37 ms

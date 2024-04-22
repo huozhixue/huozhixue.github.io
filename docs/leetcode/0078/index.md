@@ -40,38 +40,37 @@
 
 ### #1
 
-典型的回溯问题，遍历时有取或不取两种选择。
+可以用回溯。
 
 ```python
-def subsets(self, nums: List[int]) -> List[List[int]]:
-    def dfs(i):
-        res.append(path[:])
-        for j in range(i, n):
-            path.append(nums[j])
-            dfs(j+1)
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        def dfs(i):
+            if i==len(nums):
+                res.append(path[:])
+                return
+            dfs(i+1)
+            path.append(nums[i])
+            dfs(i+1)
             path.pop()
-
-    res, path, n = [], [], len(nums)
-    dfs(0)
-    return res
+        res,path = [],[]
+        dfs(0)
+        return res
 ```
-32 ms
+42 ms
 
 ### #2
 
-实际应用中常用递推式的写法。
+也可以直接递推。
 
-令 dp[i] 代表 nums[:i] 的所有子集，则：
-
-$$dp[i] = dp[i-1]+[sub+[nums[i]] \ for\ sub\ in\ dp[i-1]]$$
-	
 ## 解答
 
 ```python
-def subsets(self, nums: List[int]) -> List[List[int]]:
-    res = [[]]
-    for x in nums:
-        res += [sub+[x] for sub in res]
-    return res
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        res = [[]]
+        for x in nums:
+            res.extend([sub+[x] for sub in res])
+        return res
 ```
-40 ms
+41 ms

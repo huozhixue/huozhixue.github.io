@@ -43,38 +43,25 @@
 
 ## 分析
 
-### #1
 
-可以直接调库。
-
-```python
-def combine(self, n: int, k: int) -> List[List[int]]:
-	return list(combinations(range(1, n+1), k))
-```
-
-44 ms
-
-### #2
-
-{{< lc "0078" >}} 升级版，添加了个数的限制。
+除了直接调库，可以用回溯。
 
 ## 解答
 
 ```python
-def combine(self, n: int, k: int) -> List[List[int]]:
-    def dfs(i):
-        if n + 1 - i + len(path) < k:
-            return
-        if len(path) == k:
-            res.append(path[:])
-            return
-        for j in range(i, n + 1):
-            path.append(j)
-            dfs(j+1)
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        def dfs(i):
+            if i>n or len(path)==k:
+                if len(path)==k:
+                    res.append(path[:])
+                return
+            dfs(i+1)
+            path.append(i)
+            dfs(i+1)
             path.pop()
-
-    res, path = [], []
-    dfs(1)
-    return res
+        res,path = [],[]
+        dfs(1)
+        return res
 ```
-44 ms
+198 ms

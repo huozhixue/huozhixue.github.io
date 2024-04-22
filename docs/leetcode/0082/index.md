@@ -36,23 +36,21 @@
 
 ## 分析
 
-{{< lc "0083" >}}  进阶版，当后面两个节点的值相等时，跳过所有等于该值的节点即可。
-
-表头可能也要跳过，因此新建个哑结点。
+{{< lc "0083" >}}  进阶版，后面两个节点值相等时，跳过所有等于该值的节点即可。
 
 ## 解答
 
 ```python
-def deleteDuplicates(self, head: ListNode) -> ListNode:
-	dummy = p = ListNode(next=head)
-	while p.next and p.next.next:
-		if p.next.val == p.next.next.val:
-			val = p.next.val
-			p.next = p.next.next.next
-			while p.next and p.next.val == val:
-				p.next = p.next.next
-		else:
-			p = p.next
-	return dummy.next
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dum = p = ListNode(next=head)
+        while p.next and p.next.next:
+            if p.next.val==p.next.next.val:
+                x = p.next.val
+                while p.next and p.next.val==x:
+                    p.next = p.next.next
+            else:
+                p = p.next
+        return dum.next
 ```
 36 ms
