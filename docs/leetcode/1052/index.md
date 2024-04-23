@@ -45,26 +45,22 @@
 
 ## 分析
 
-不使用技巧的话，满意的客户数量是 sum(cus*(1-gru) for cus,gru in zip(customers, grumpy))。
-
-假设在区间 [i, i+X) 使用技巧，那么能增多的数量是 sum(customers[j]*grumpy[j] for j in range(i, i+X))。
-
-因此遍历区间找最大值即可。
-
+- 先计算不使用技巧的结果
+- 然后求使用技巧的变化
+	- 增加的是长度 minute 区间内的不满意数量
+	- 将不满意的单独提出来得到数组 A，增加的即等价于 A 的子数组和
+	- 于是求 A 的最大子数组和即可
 
 ## 解答
 
 ```python
-def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
-	res, tmp = 0, 0
-	for j, cus in enumerate(customers):
-		tmp += cus*grumpy[j]
-		if j >= X:
-			tmp -= customers[j-X]*grumpy[j-X]
-		res = max(res, tmp)
-	res += sum(cus*(1-gru) for cus,gru in zip(customers, grumpy))
-	return res
+class Solution:
+    def maxSatisfied(self, customers: List[int], grumpy: List[int], minutes: int) -> int:
+        res = sum(a*(1-b) for a,b in zip(customers,grumpy))
+        A = [a*b for a,b in zip(customers,grumpy)]
+        pre = list(accumulate([0]+A))
+        return max([pre[i+minutes]-pre[i] for i in range(len(pre)-minutes)])+res
 ```
 
-316 ms
+50 ms
 

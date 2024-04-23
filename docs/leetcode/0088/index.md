@@ -60,26 +60,27 @@
 
 ## 分析
 
-如果合并到新数组的话，遍历归并即可。
-
-但这里要求合并到 nums1 中，考虑赋值：
+- 要求合并到 nums1 中，考虑归并排序并赋值
 - 直接赋值可能会覆盖 nums1 的元素，丢失信息
 - 有个巧妙的想法是倒序遍历，从大到小归并，就不会覆盖了
 
 ## 解答
 
 ```python
-def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-	i, j, k = m-1, n-1, m+n-1
-	while j >= 0 and k >= 0:
-		if i < 0 or nums1[i] <= nums2[j]:
-			nums1[k] = nums2[j]
-			j -= 1
-		else:
-			nums1[k] = nums1[i]
-			i -= 1
-		k -= 1
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        i,j = m-1,n-1
+        for k in range(m+n-1,-1,-1):
+            if j<0 or (i>=0 and nums1[i]>nums2[j]):
+                nums1[k] = nums1[i]
+                i -= 1
+            else:
+                nums1[k] = nums2[j]
+                j -= 1
 ```
-32 ms
+35 ms
 
 

@@ -38,24 +38,26 @@
 
 ## 分析
 
-遇到大于等于 x 的节点就先提出来，并按顺序链接，最后再跟到原链表的末尾即可。
+分别提到两个链表中，最后再拼接即可。
 
 ## 解答
 
 ```python
-def partition(self, head: ListNode, x: int) -> ListNode:
-	dummy1 = p = ListNode(next=head)
-	dummy2 = q = ListNode()
-	while p.next:
-		if p.next.val >= x:
-			q.next = p.next
-			p.next = p.next.next
-			q = q.next
-		else:
-			p = p.next
-	q.next = None
-	p.next = dummy2.next
-	return dummy1.next
+class Solution:
+    def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
+        dum1,dum2 = ListNode(),ListNode()
+        p,q = dum1,dum2
+        while head:
+            if head.val<x:
+                p.next = head
+                p = p.next
+            else:
+                q.next = head
+                q = q.next
+            head = head.next
+        p.next = dum2.next
+        q.next = None
+        return dum1.next
 ```
 
-40 ms
+48 ms

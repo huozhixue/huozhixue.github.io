@@ -59,13 +59,14 @@
 ## 解答
 
 ```python
-def grayCode(self, n: int) -> List[int]:
-    res = [0]
-    for i in range(n):
-        res += [(1<<i)+x for x in res[::-1]]
-    return res
+class Solution:
+    def grayCode(self, n: int) -> List[int]:
+        res = [0]
+        for i in range(n):
+            res.extend(a+(1<<i) for a in res[::-1])
+        return res
 ```
-44 ms
+46 ms
 
 ## *附加
 

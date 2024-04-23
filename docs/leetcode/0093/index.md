@@ -48,26 +48,26 @@
 
 ## 分析
 
-典型的回溯问题，每步选择分割位置即可。
+典型的回溯问题，还可以用记忆化递归。
 
 ## 解答
 
 ```python
-def restoreIpAddresses(self, s: str) -> List[str]:
-    def dfs(s):
-        if len(path) == 4:
-            if not s:
-                res.append('.'.join(path))
-            return
-        for i in range(min(3, len(s))):
-            if 0 <= int(s[:i+1]) <= 255 and not (i and s[0] == '0'):
-                path.append(s[:i+1])
-                dfs(s[i+1:])
-                path.pop()
+class Solution:
+    def restoreIpAddresses(self, s: str) -> List[str]:
+        def check(i,j):
+            return j-3<=i<j and (j==i+1 or s[i]!='0') and 0<=int(s[i:j])<=255
 
-    res, path = [], []
-    dfs(s)
-    return res
+        @cache
+        def dfs(j,k):
+            if k==1:
+                return [s[:j]] if check(0,j) else []
+            res = []
+            for i in range(j):
+                if check(i,j):
+                    res.extend(sub+'.'+s[i:j] for sub in dfs(i,k-1))
+            return res
+        return dfs(len(s),4)
 ```
-32 ms
+29 ms
 

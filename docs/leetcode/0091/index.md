@@ -64,36 +64,20 @@
 
 ## 分析
 
-### #1
 
-典型的线性 dp 问题，令 dp[i] 代表 s[:i] 的解码总数，按 s[i-1] 和 s[i-2:i] 是否有效即可递推。
-
-```python
-def numDecodings(self, s: str) -> int:
-    n = len(s)
-    dp = [1]+[0]*n
-    for i in range(1, n+1):
-        if s[i-1]!='0':
-            dp[i] += dp[i-1]
-        if i>=2 and 10<=int(s[i-2:i])<=26:
-            dp[i] += dp[i-2]
-    return dp[-1]
-```
-40 ms
-
-### #2 
-
-递推过程只和前两个状态有关，可以优化为两个变量。
+- 典型的线性 dp ，按末尾一个字符或两个字符能否映射即可递推
+- 递推过程只和前两个状态有关，可以优化为两个变量
 
 ## 解答
 
 ```python
-def numDecodings(self, s: str) -> int:
-    a, b = 0, 1
-    for i in range(len(s)):
-        a, b = b, b*(s[i]!='0')+a*(i and 10<=int(s[i-1:i+1])<=26)
-    return b
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        a,b = 0,1
+        for i in range(len(s)):
+            a,b = b,b*(s[i]!='0')+a*(i and 10<=int(s[i-1:i+1])<=26)
+        return b
 ```
-40 ms
+28 ms
 
 

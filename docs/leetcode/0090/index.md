@@ -41,24 +41,45 @@
 
 ## 分析
 
-{{< lc "0078" >}} 升级版，区别在于可能有重复数字，采用排序并跳过相同数字的通用方法即可。
+### #1
+
+{{< lc "0078" >}} 升级版，区别在于有重复数字，回溯时用 Counter 计数即可。
+
+```python
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        def dfs(i):
+            if i==len(A):
+                res.append(path[:])
+                return
+            dfs(i+1)
+            x,w = A[i]
+            if w:
+                A[i][1]-=1
+                path.append(x)
+                dfs(i)
+                path.pop()
+                A[i][1]+=1
+        res,path = [],[]
+        A = [[x,w] for x,w in Counter(nums).items()]
+        dfs(0)
+        return res
+```
+29 ms
+
+
+### #2
+
+也可以直接递推。
 
 ## 解答
 
 ```python
-def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-    def dfs(i):
-        res.append(path[:])
-        for j in range(i, n):
-            if j > i and nums[j] == nums[j - 1]:
-                continue
-            path.append(nums[j])
-            dfs(j + 1)
-            path.pop()
-
-    res, path, n = [], [], len(nums)
-    nums.sort()
-    dfs(0)
-    return res
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        res = [[]]
+        for x,w in Counter(nums).items():
+            res += [sub+[x]*k for sub in res for k in range(1,w+1)]
+        return res
 ```
-28 ms
+37 ms

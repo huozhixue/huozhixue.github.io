@@ -46,36 +46,26 @@
 
 ## 分析
 
-### #1
-
-先写出递归算法，显然，将左子树的中序遍历、根节点、右子树的中序遍历拼接起来即可。
-
-```python
-def inorderTraversal(self, root: TreeNode) -> List[int]:
-	return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
-```
-40 ms
-
-### #2
-
-可以借助栈改写成迭代算法：
-- 初始栈保存根节点
-- 每轮出栈，如果是节点，按 [右子树、节点值、左子树] 顺序入栈
-- 如果出栈的是节点值，说明其左子树已经遍历完，将节点值添加到结果中
-- 依此循环直到栈空即遍历完毕
+- 对于树，有个通用的遍历方法：
+	- 初始栈保存根节点
+	- 每轮出栈，如果是节点，按 [右子树、节点值、左子树] 顺序入栈
+	- 如果出栈的是节点值，说明其左子树已经遍历完，将节点值添加到结果中
+	- 依此循环直到栈空即遍历完毕
+- 前/后序遍历只需改变 右子树、节点值、左子树 的入栈顺序即可
 
 ## 解答
 
 ```python
-def inorderTraversal(self, root: TreeNode) -> List[int]:
-	res, stack = [], [root]
-	while stack:
-		node = stack.pop()
-		if isinstance(node, int):
-			res.append(node)
-		elif node:
-			stack.extend([node.right, node.val, node.left])
-	return res
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        res,sk = [],[root]
+        while sk:
+            p = sk.pop()
+            if isinstance(p,int):
+                res.append(p)
+            elif p:
+                sk.extend([p.right,p.val,p.left])
+        return res
 ```
-32 ms
+37 ms
 
