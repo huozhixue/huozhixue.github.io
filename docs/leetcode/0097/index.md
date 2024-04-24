@@ -58,21 +58,21 @@
 
 ## 分析
 
-典型的多串 dp，按 s3 的末尾由 s1 或 s2 末尾拼成，即可递归。
+典型的 dp，按 s3 的末尾由 s1 或 s2 末尾拼成，即可递推。
 
 ## 解答
 
 ```python
-def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
-    @lru_cache(None)
-    def dfs(s1, s2, s3):
-        if not s3:
-            return True
-        if s1 and s3[-1]==s1[-1] and dfs(s1[:-1], s2, s3[:-1]):
-            return True
-        return len(s2)>0 and s3[-1]==s2[-1] and dfs(s1, s2[:-1], s3[:-1])
-
-    return len(s3) == len(s1) + len(s2) and dfs(s1, s2, s3)
+class Solution:
+    def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
+        m,n = len(s1),len(s2)
+        if len(s3)!=m+n:
+            return False
+        dp = [[0]*(n+1) for _ in range(m+1)]
+        for i in range(m+1):
+            for j in range(n+1):
+                dp[i][j] = i==j==0 or (i and s1[i-1]==s3[i+j-1] and dp[i-1][j]) or (j and s2[j-1]==s3[i+j-1] and dp[i][j-1])
+        return bool(dp[-1][-1])
 ```
-32 ms
+55 ms
 

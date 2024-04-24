@@ -41,16 +41,19 @@
 
 ## 分析
 
-将中点作为根节点，前半部分和后半部分分别作为左子树和右子树，即可转为递归子问题。
+将中点作为根节点，前半部分和后半部分分别作为左子树和右子树，即可递归。
 
 ## 解答
 
 ```python
-def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
-    def dfs(i, j):
-        mid = (i+j)//2
-        return None if i==j else TreeNode(nums[mid], dfs(i, mid), dfs(mid+1, j))
-    return dfs(0, len(nums))
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
+        def dfs(i,j):
+            if i>j:
+                return None
+            k = (i+j)//2
+            return TreeNode(nums[k],dfs(i,k-1),dfs(k+1,j))
+        return dfs(0,len(nums)-1)
 ```
-40 ms
+46 ms
 

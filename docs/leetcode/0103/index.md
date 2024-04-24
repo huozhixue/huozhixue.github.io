@@ -47,13 +47,13 @@
 ## 解答
 
 ```python
-def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
-    res, Q = [], [root] if root else []
-    while Q:
-        A = [node.val for node in Q]
-        res.append(A[::-1] if len(res)%2 else A)
-        Q = [child for node in Q for child in [node.left, node.right] if child]
-    return res
+class Solution:
+    def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        res,Q = [],[root] if root else []
+        while Q:
+            res.append([u.val for u in (Q[::-1] if len(res)%2 else Q)])
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res
 ```
-32 ms
+26 ms
 

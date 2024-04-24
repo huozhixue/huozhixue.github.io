@@ -38,24 +38,23 @@
 
 ## 分析
 
-类似于 {{< lc "0096" >}} ，不过需要生成所有实际的树。
-
-令 dfs(i,j) 代表节点值 [i,j] 组成的不同二叉搜索树，即可递归。
+令 dfs(i,j) 代表节点值 i 到 j 组成的不同二叉搜索树，即可递归。
 
 ## 解答
 
 ```python
-def generateTrees(self, n: int) -> List[TreeNode]:
-    def dfs(i, j):
-        if i > j:
-            return [None]
-        res = []
-        for k in range(i, j+1):
-            for l in dfs(i, k-1):
-                for r in dfs(k+1, j):
-                    res.append(TreeNode(k, l, r))
-        return res
-    return dfs(1, n)
+class Solution:
+    def generateTrees(self, n: int) -> List[Optional[TreeNode]]:
+        def dfs(i,j):
+            if i>j:
+                return [None]
+            res = []
+            for k in range(i,j+1):
+                for l in dfs(i,k-1):
+                    for r in dfs(k+1,j):
+                        res.append(TreeNode(k,l,r))
+            return res
+        return dfs(1,n)
 ```
 56 ms
 

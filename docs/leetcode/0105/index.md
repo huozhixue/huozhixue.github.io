@@ -40,7 +40,6 @@
 
 ## 分析
 
-从上往下构造：
 - 根节点即是 preorder[0]
 - 在 inorder 中找到根节点位置 i，inorder[:i]、inorder[i+1:] 分别代表左/右子树
 - 显然 preorder 和 inorder 中代表左子树的长度应该相等
@@ -50,13 +49,14 @@
 ## 解答
 
 ```python
-def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-    def dfs(po, io):
-        if not po:
-            return None
-        i = io.index(po[0])
-        return TreeNode(po[0], dfs(po[1:i+1], io[:i]), dfs(po[i+1:], io[i+1:]))
-    return dfs(preorder, inorder)
+class Solution:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        def dfs(A,B):
+            if not A:
+                return None
+            i = B.index(A[0])
+            return TreeNode(A[0],dfs(A[1:i+1],B[:i]),dfs(A[i+1:],B[i+1:]))
+        return dfs(preorder,inorder)
 ```
-132 ms
+140 ms
 

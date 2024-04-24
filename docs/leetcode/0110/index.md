@@ -48,21 +48,22 @@
 
 ## 分析
 
-用 dfs(node) 同时返回 node 是否平衡、node 的深度，即可递归。
-
-为了方便，可以用深度为 -1 来代表不平衡，dfs(node) 返回 node 的深度即可。
+- 用 dfs 同时返回子树深度和是否平衡，即可递归
+- 为了方便，可以用深度为 -1 代表不平衡，dfs 返回一个参数即可
 
 ## 解答
 
 ```python
-def isBalanced(self, root: TreeNode) -> bool:
-    def dfs(root):
-        if not root:
-            return 0
-        l, r = dfs(root.left), dfs(root.right)
-        return -1 if l==-1 or r==-1 or abs(l-r)>1 else 1+max(l, r)
-
-    return dfs(root) != -1
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        def dfs(u):
+            if not u:
+                return 0
+            l,r = dfs(u.left),dfs(u.right)
+            if l==-1 or r==-1 or abs(l-r)>1:
+                return -1
+            return max(l,r)+1
+        return dfs(root)!=-1
 ```
-52 ms
+42 ms
 

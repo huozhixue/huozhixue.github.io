@@ -40,49 +40,24 @@
 
 ## 分析
 
-### #1
-
-{{< lc "0108" >}} 升级版。可以先将链表转为数组，再转换。 
-
-```python
-def sortedListToBST(self, head: Optional[ListNode]) -> Optional[TreeNode]:
-    def dfs(i, j):
-        mid = (i + j) // 2
-        return None if i == j else TreeNode(nums[mid], dfs(i, mid), dfs(mid + 1, j))
-
-    nums = []
-    while head:
-        nums.append(head.val)
-        head = head.next
-    return dfs(0, len(nums))
-```
-52 ms
-
-### #2
-
-也可以直接用快慢指针在链表上找到中点，然后转为递归子问题。
+{{< lc "0108" >}} 升级版，可以用快慢指针在链表上找中点，实现递归。更简单的做法是直接将链表转为数组。 
 
 ## 解答
 
 ```python
-def sortedListToBST(self, head: Optional[ListNode]) -> Optional[TreeNode]:
-    def findMid(head):
-        slow = fast = ListNode(next=head)
-        while fast.next and fast.next.next:
-            slow, fast = slow.next, fast.next.next
-        return slow
-
-    def dfs(head):
-        if not head:
-            return None
-        if not head.next:
-            return TreeNode(head.val)
-        mid = findMid(head)
-        root = mid.next
-        mid.next = None
-        return TreeNode(root.val, dfs(head), dfs(root.next))
-
-    return dfs(head)
+class Solution:
+    def sortedListToBST(self, head: Optional[ListNode]) -> Optional[TreeNode]:
+        A = []
+        while head:
+            A.append(head.val)
+            head = head.next
+        def dfs(i,j):
+            if i>j:
+                return None
+            k = (i+j)//2
+            return TreeNode(A[k],dfs(i,k-1),dfs(k+1,j))
+        return dfs(0,len(A)-1)
 ```
-72 ms
+49 ms
+
 

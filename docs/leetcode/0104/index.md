@@ -25,29 +25,19 @@
 
 ## 分析
 
-### #1
-
-层序遍历，记录有多少层即可。
-
-```python
-def maxDepth(self, root: Optional[TreeNode]) -> int:
-    res, Q = 0, [root] if root else []
-    while Q:
-        res += 1
-        Q = [child for node in Q for child in [node.left, node.right] if child]
-    return res
-```
-44 ms
-
-### #2
-
-也可以用递归。
+可以用递归，也可以用层序遍历。
 
 ## 解答
 
 ```python
-def maxDepth(self, root: TreeNode) -> int:
-	return 0 if not root else max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        res,Q = 0,[root] if root else []
+        while Q:
+            res += 1
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res
 ```
-48 ms
+41 ms
+
 

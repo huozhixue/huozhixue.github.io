@@ -52,19 +52,20 @@
 
 ### #1
 
-令 dfs(p, x) 代表是否存在节点 p 到叶子节点的路径和为 x，即可递归。
+令 dfs(u, s) 代表是否存在节点 u 到叶子节点的路径和为 s，即可递归。
 
 ```python
-def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-    def dfs(p, x):
-        if not p:
-            return False
-        if not p.left and not p.right:
-            return p.val == x
-        return dfs(p.left, x-p.val) or dfs(p.right, x-p.val)
-    return dfs(root, targetSum)
+class Solution:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        def dfs(u,s):
+            if not u:
+                return False
+            if not u.left and not u.right:
+                return s==u.val
+            return dfs(u.left,s-u.val) or dfs(u.right,s-u.val)
+        return  dfs(root,targetSum)
 ```
-40 ms
+42 ms
 
 ### #2
 
@@ -73,16 +74,17 @@ def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
 ## 解答
 
 ```python
-def hasPathSum(self, root: TreeNode, targetSum: int) -> bool:
-    stack = [(root, 0)]
-    while stack:
-        node, val = stack.pop()
-        if node:
-            val += node.val
-            if not node.left and not node.right and val == targetSum:
-                return True
-            stack.extend([(node.right, val), (node.left,val)])
-    return False
+class Solution:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        sk = [(root,0)] if root else []
+        while sk:
+            u,s = sk.pop()
+            if u:
+                s += u.val
+                if not u.left and not u.right and s==targetSum:
+                    return True
+                sk.extend([(u.right,s),(u.left,s)])
+        return False
 ```
-40 ms
+43 ms
 

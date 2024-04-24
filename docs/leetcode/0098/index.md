@@ -44,41 +44,19 @@
 
 ## 分析
 
-有效的二叉搜索树等价于其中序遍历的节点值是递增的，所以中序遍历加个判断即可。
+可以中序遍历判断是否递增，也可以用递归，令 dfs(u,a,b) 返回子树 u 是否在范围(a,b)内即可。
 
 ## 解答
 
 ```python
-def isValidBST(self, root: TreeNode) -> bool:
-	pre, stack = float('-inf'), [root]
-	while stack:
-		node = stack.pop()
-		if isinstance(node, int):
-			if node <= pre:
-				return False
-			pre = node
-		elif node:
-			stack.extend([node.right, node.val, node.left])
-	return True
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        def dfs(u,a,b):
+            if not u:
+                return True
+            return a<u.val<b and dfs(u.left,a,u.val) and dfs(u.right,u.val,b)
+        return dfs(root,-inf,inf)
 ```
-52 ms
+49 ms
 
-## *附加
 
-也可以用递归：
-- 如果 node 的左子树和右子树都是二叉搜索树，且左子树的数都小于node.val，右子树的数都大于 node.val，node 即为二叉搜索树
-- 于是令 dfs(node, low, high) 代表 node 子树是否为 [low, high] 范围内的二叉搜索树，即可递归
-- 初始无限制，所以 low/high 设为极小/大值
-
-```python
-def isValidBST(self, root: TreeNode) -> bool:
-    def dfs(node, low, high):
-        if not node:
-            return True
-        if not low<node.val<high:
-            return False
-        return dfs(node.left, low, node.val) and dfs(node.right, node.val, high)
-
-    return dfs(root, float('-inf'), float('inf'))
-```
-36 ms

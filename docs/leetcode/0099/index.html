@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0099\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  569 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  424 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0099\/","datePublished": "2015-04-09T00:00:00+08:00","dateModified": "2015-04-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,8 +111,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0099：恢复二叉搜索树（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-04-09">2015-04-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 569 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0099/" class="leancloud_visitors" data-flag-title="0099：恢复二叉搜索树（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-04-09">2015-04-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 424 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0099/" class="leancloud_visitors" data-flag-title="0099：恢复二叉搜索树（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -153,44 +153,12 @@
 </ul>
 <p><strong>进阶：</strong>使用 <code>O(n)</code> 空间复杂度的解法很容易实现。你能想出一个只使用 <code>O(1)</code> 空间的解决方案吗？</p>
 <h2 id="分析">分析</h2>
-<p>二叉搜索树等价于其中序遍历的节点值是递增的，所以可以遍历找到两个错误的节点，然后交换。</p>
-<p>第一个错误节点就是第一个大于后继节点的节点，第二个错误节点就是最后一个小于前面节点的节点。</p>
+<ul>
+<li>二叉搜索树等价于其中序遍历的节点值是递增的</li>
+<li>错误的节点处不递增</li>
+<li>找出两处或一处不递增的地方，即可找到两个错误节点</li>
+</ul>
 <h2 id="解答">解答</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">recoverTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stack</span><span class="p">,</span> <span class="n">prev</span> <span class="o">=</span> <span class="p">[(</span><span class="n">root</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">node</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">prev</span> <span class="ow">and</span> <span class="n">prev</span><span class="o">.</span><span class="n">val</span> <span class="o">&gt;</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="n">prev</span><span class="p">,</span> <span class="n">node</span>
-</span></span><span class="line"><span class="cl">            <span class="n">prev</span> <span class="o">=</span> <span class="n">node</span>
-</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="n">node</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="mi">0</span><span class="p">)])</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">val</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>60 ms</p>
-<h2 id="附加">*附加</h2>
-<p>要求 O(1) 空间，需要用
-<a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/" target="_blank" rel="noopener noreffer">Morris 中序遍历</a></p>
-<p>Morris 遍历减少了空间但也增加了时间，一般不用。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -209,39 +177,29 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">recoverTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">prev</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">root</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">predecessor</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">predecessor</span><span class="o">.</span><span class="n">right</span> <span class="ow">and</span> <span class="n">predecessor</span><span class="o">.</span><span class="n">right</span> <span class="o">!=</span> <span class="n">root</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">predecessor</span> <span class="o">=</span> <span class="n">predecessor</span><span class="o">.</span><span class="n">right</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="ow">not</span> <span class="n">predecessor</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">predecessor</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">root</span>
-</span></span><span class="line"><span class="cl">                <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">predecessor</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">prev</span> <span class="ow">and</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">prev</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="n">prev</span><span class="p">,</span> <span class="n">root</span>
-</span></span><span class="line"><span class="cl">                <span class="n">prev</span> <span class="o">=</span> <span class="n">root</span>
-</span></span><span class="line"><span class="cl">                <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">prev</span> <span class="ow">and</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">prev</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="n">prev</span><span class="p">,</span> <span class="n">root</span>
-</span></span><span class="line"><span class="cl">            <span class="n">prev</span> <span class="o">=</span> <span class="n">root</span>
-</span></span><span class="line"><span class="cl">            <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">val</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">recoverTree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Do not return anything, modify root in-place instead.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="n">TreeNode</span><span class="p">(</span><span class="o">-</span><span class="n">inf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sk</span> <span class="o">=</span> <span class="p">[(</span><span class="n">root</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">sk</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">u</span><span class="p">,</span><span class="n">flag</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">val</span><span class="o">&lt;</span><span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">u</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span> <span class="k">else</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">p</span> <span class="o">=</span> <span class="n">u</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">u</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sk</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="n">u</span><span class="o">.</span><span class="n">right</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="n">u</span><span class="o">.</span><span class="n">left</span><span class="p">,</span><span class="mi">0</span><span class="p">)])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="o">.</span><span class="n">val</span><span class="p">,</span><span class="n">b</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">val</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">val</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>44 ms</p>
+</div><p>40 ms</p>
+<h2 id="附加">*附加</h2>
+<p>要求 O(1) 空间，需要用 <a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/" target="_blank" rel="noopener noreffer">Morris 中序遍历</a>。Morris 遍历减少了空间但也增加了时间，一般不用。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

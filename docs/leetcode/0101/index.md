@@ -41,39 +41,38 @@
 
 ### #1
 
-{{< lc "0100" >}} 升级版，相当于判断左子树和右子树是否镜像对称。
-
-令 dfs(p, q) 代表 p 和 q 是否镜像对称，即可递归。
+- {{< lc "0100" >}} 升级版，等价于判断左子树和右子树是否镜像对称
+- 令 dfs(p, q) 代表 p 和 q 是否镜像对称，即可递归
 
 ```python
-def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-    def dfs(p, q):
-        if not p or not q:
-            return not p and not q
-        return p.val == q.val and dfs(p.left, q.right) and dfs(p.right, q.left)
-
-    return dfs(root.left, root.right)
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        def dfs(p,q):
+            if not p or not q:
+                return not p and not q
+            return p.val==q.val and dfs(p.left,q.right) and dfs(p.right,q.left)
+        return dfs(root.left,root.right)
 ```
-28 ms
+42 ms
 
 ### #2
 
-也可以用迭代。与 {{< lc "0100" >}} 类似，只是要交叉比较，入栈顺序处理下即可。
+也可以用栈遍历迭代，改下入栈顺序即可。
 
 ## 解答
 
 ```python
-def isSymmetric(self, root: TreeNode) -> bool:
-	stack1, stack2 = [root], [root]
-	while stack1:
-		p, q = stack1.pop(), stack2.pop()
-		if not p and not q:
-			continue
-		if not p or not q or p.val != q.val:
-			return False
-		stack1.extend([p.right, p.left])
-		stack2.extend([q.left, q.right])
-	return True
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        sk = [(root.left,root.right)]
+        while sk:
+            a,b = sk.pop()
+            if not a and not b:
+                continue
+            if not a or not b or a.val!=b.val:
+                return False
+            sk.extend([(a.left,b.right),(a.right,b.left)])
+        return True
 ```
-40 ms
+32 ms
 

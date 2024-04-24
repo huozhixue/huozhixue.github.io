@@ -46,38 +46,36 @@
 
 ### #1
 
-显然两个二叉树相同等价于根节点、左子树、右子树都相同，容易写出递归解法。
+递归很容易写出。
 
 ```python
-def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
-    if not p or not q:
-        return not p and not q
-    return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        def dfs(p,q):
+            if not p or not q:
+                return not p and not q
+            return p.val==q.val and dfs(p.left,q.left) and dfs(p.right,q.right)
+        return dfs(p,q)
 ```
-28 ms
+37 ms
 
 ### #2
 
-也可以用迭代。
-
-遍历一遍二叉树，如果每一步经过的节点都相同，那么两个二叉树相同。
-
-为了方便，这里用前序遍历。
-
+也可以用栈遍历判断。
 ## 解答
 
 ```python
-def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
-	stack1, stack2 = [p], [q]
-	while stack1:
-		p, q = stack1.pop(), stack2.pop()
-		if not p and not q:
-			continue
-		if not p or not q or p.val != q.val:
-			return False
-		stack1.extend([p.right, p.left])
-		stack2.extend([q.right, q.left])
-	return True
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        sk = [(p,q)]
+        while sk:
+            a,b = sk.pop()
+            if not a and not b:
+                continue
+            if not a or not b or a.val!=b.val:
+                return False
+            sk.extend([(a.right,b.right),(a.left,b.left)])
+        return True
 ```
-28 ms
+34 ms
 

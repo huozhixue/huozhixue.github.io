@@ -47,12 +47,13 @@
 ## 解答
 
 ```python
-def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
-    res, Q = [], [root] if root else []
-    while Q:
-        res.append([node.val for node in Q])
-        Q = [child for node in Q for child in [node.left, node.right] if child]
-    return res[::-1]
+class Solution:
+    def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
+        res,Q = [],[root] if root else []
+        while Q:
+            res.append([u.val for u in Q])
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res[::-1]
 ```
-32 ms
+38 ms
 

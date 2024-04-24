@@ -34,20 +34,19 @@
 
 ## 分析
 
-按左右子树的节点数可以转为递归子问题。
-
-显然有重复子问题，所以用动态规划。
+{{< lc "0095" >}}  变型，本题只需要计算数量，可以用 dp。
 
 ## 解答
 
 ```python
-def numTrees(self, n: int) -> int:
-    dp = [1] * (n+1)
-    for i in range(1, n+1):
-        dp[i] = sum(dp[j]*dp[i-1-j] for j in range(i))
-    return dp[-1]
+class Solution:
+    def numTrees(self, n: int) -> int:
+        dp = [1]*(n+1)
+        for i in range(1,n+1):
+            dp[i] = sum(dp[j-1]*dp[i-j] for j in range(1,i+1))
+        return dp[-1]
 ```
-36 ms
+29 ms
 
 ## *附加
 
@@ -56,13 +55,10 @@ def numTrees(self, n: int) -> int:
 $$dp[n] = {(2n)! \over (n!*(n+1)!)} $$
 
 
-
 ```python
-def numTrees(self, n: int) -> int:
-    res = 1
-    for i in range(1, n+1):
-        res = res*(i+n)//i
-    return res//(n+1)
+class Solution:
+    def numTrees(self, n: int) -> int:
+        return comb(2*n,n)//(n+1)
 ```
-32 ms
+37 ms
 

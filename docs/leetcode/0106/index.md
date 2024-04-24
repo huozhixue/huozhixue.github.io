@@ -40,17 +40,18 @@
 
 ## 分析
 
-类似 {{< lc "0105" >}}，只是从找 preorder[0] 变成了找 postorder[-1]。
+ {{< lc "0105" >}} 变形，只是从找 preorder[0] 变成了找 postorder[-1]。
 
 ## 解答
 
 ```python
-def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
-    def dfs(io, po):
-        if not po:
-            return None
-        i = io.index(po[-1])
-        return TreeNode(po[-1], dfs(io[:i], po[:i]), dfs(io[i+1:], po[i:-1]))
-    return dfs(inorder, postorder)
+class Solution:
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
+        def dfs(A,B):
+            if not A:
+                return None
+            i = A.index(B[-1])
+            return TreeNode(B[-1],dfs(A[:i],B[:i]),dfs(A[i+1:],B[i:-1]))
+        return dfs(inorder,postorder)
 ```
-112 ms
+141 ms

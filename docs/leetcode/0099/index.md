@@ -40,57 +40,32 @@
 
 ## 分析
 
-二叉搜索树等价于其中序遍历的节点值是递增的，所以可以遍历找到两个错误的节点，然后交换。
-
-第一个错误节点就是第一个大于后继节点的节点，第二个错误节点就是最后一个小于前面节点的节点。
+- 二叉搜索树等价于其中序遍历的节点值是递增的
+- 错误的节点处不递增
+- 找出两处或一处不递增的地方，即可找到两个错误节点
 
 ## 解答
 
 ```python
-def recoverTree(self, root: TreeNode) -> None:
-    stack, prev = [(root, 0)], None
-    x, y = None, None
-    while stack:
-        node, flag = stack.pop()
-        if flag:
-            if prev and prev.val > node.val:
-                x, y = x if x else prev, node
-            prev = node
-        elif node:
-            stack.extend([(node.right, 0), (node, 1), (node.left, 0)])
-    x.val, y.val = y.val, x.val
+class Solution:
+    def recoverTree(self, root: Optional[TreeNode]) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+        a,b,p = None,None,TreeNode(-inf)
+        sk = [(root,0)]
+        while sk:
+            u,flag = sk.pop()
+            if flag:
+                if u.val<p.val:
+                    a,b = (a,u) if a else (p,u)
+                p = u
+            elif u:
+                sk.extend([(u.right,0),(u,1),(u.left,0)])
+        a.val,b.val = b.val,a.val
 ```
-60 ms
+40 ms
 
 ## *附加
 
-要求 O(1) 空间，需要用 
-[Morris 中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/)
-
-Morris 遍历减少了空间但也增加了时间，一般不用。
-
-```python
-def recoverTree(self, root: TreeNode) -> None:
-    x, y, prev = None, None, None
-    while root:
-        if root.left:
-            predecessor = root.left
-            while predecessor.right and predecessor.right != root:
-                predecessor = predecessor.right
-            if not predecessor.right:
-                predecessor.right = root
-                root = root.left
-            else:
-                predecessor.right = None
-                if prev and root.val < prev.val:
-                    x, y = x if x else prev, root
-                prev = root
-                root = root.right
-        else:
-            if prev and root.val < prev.val:
-                x, y = x if x else prev, root
-            prev = root
-            root = root.right
-    x.val, y.val = y.val, x.val
-```
-44 ms
+要求 O(1) 空间，需要用 [Morris 中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/)。Morris 遍历减少了空间但也增加了时间，一般不用。

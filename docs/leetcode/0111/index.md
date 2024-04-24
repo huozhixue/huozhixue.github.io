@@ -39,35 +39,20 @@
 
 ## 分析
 
-### #1
-
-类似 {{< lc "0104" >}} ，可以用递归。
-
-```python
-def minDepth(self, root: TreeNode) -> int:
-	if not root:
-		return 0
-	if not root.left or not root.right:
-		return self.minDepth(root.right) + self.minDepth(root.left) + 1
-	return min(self.minDepth(root.left), self.minDepth(root.right)) + 1
-```
-616 ms
-
-### #2
-
-也可以层序遍历，遇到第一个叶子节点即返回。
+可以用递归，也可以层序遍历，遇到第一个叶子节点返回层数即可。
 
 ## 解答
 
 ```python
-def minDepth(self, root: TreeNode) -> int:
-    res, Q = 0, [root] if root else []
-    while Q:
-        res += 1
-        if any(not node.left and not node.right for node in Q):
-            break
-        Q = [child for node in Q for child in [node.left, node.right] if child]
-    return res
+class Solution:
+    def minDepth(self, root: Optional[TreeNode]) -> int:
+        res,Q = 0,[root] if root else []
+        while Q:
+            res += 1
+            if any(not u.left and not u.right for u in Q):
+                break
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res
 ```
-476 ms
+233 ms
 
