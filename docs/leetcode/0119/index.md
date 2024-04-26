@@ -51,18 +51,19 @@
 
 ## 分析
 
-迭代时覆盖上一层即可节省空间。
+迭代即可。
 
 ## 解答
 
 ```python
-def getRow(self, rowIndex: int) -> List[int]:
-    res = [1]
-    for _ in range(rowIndex):
-        res = [1] + [a+b for a,b in pairwise(res)] + [1]
-    return res
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        res = [1]
+        for _ in range(rowIndex):
+            res = [1]+[a+b for a,b in pairwise(res)]+[1]
+        return res
 ```
-32 ms
+31 ms
 
 ## *附加
 
@@ -70,9 +71,18 @@ def getRow(self, rowIndex: int) -> List[int]:
 
 $$[ C_k^0, C_k^1, ..., C_k^k ]$$
 
+可以直接递推写出每一项。
+
 ```python
-def getRow(self, rowIndex: int) -> List[int]:
-	return [comb(rowIndex, i) for i in range(rowIndex+1)]
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        res = [1]
+        for i in range(1,rowIndex+1):
+            res.append(res[-1]*(rowIndex+1-i)//i)
+        return res
 ```
-40 ms
+31 ms
+
+
+
 

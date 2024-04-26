@@ -37,45 +37,27 @@
 
 ## 分析
 
-### #1
-
-最简单的就是去重排序，然后遍历比较每条数字连续的序列即可。
-
-```python
-def longestConsecutive(self, nums: List[int]) -> int:
-	nums = sorted(set(nums))
-	res, i = 0, 0
-	for j, num in enumerate(nums):
-		if j == len(nums)-1 or num+1 != nums[j+1]:
-			res = max(res, j-i+1)
-			i = j+1
-	return res
-```
-32 ms
-
-### #2
-
-要求时间复杂度 O(n)，考虑找到每条序列的起点开始遍历。
-
-有个巧妙的方法判断起点：
-- 如果 x-1 在 nums 中，x 不是起点
-- 如果 x-1 不在 nums 中，x 是起点
+最简单的就是去重排序，再遍历即可。要求时间复杂度 O(n)，有个巧妙的方法：
+- 考虑找到每条序列的起点开始遍历
+- 如果 x-1 不在 nums 中，x 就是起点
 
 ## 解答
 
 ```python
-def longestConsecutive(self, nums: List[int]) -> int:
-	res, nums = 0, set(nums)
-	for num in nums:
-		if num-1 not in nums:
-			cnt = 0
-			while num in nums:
-				num += 1
-				cnt += 1
-			res = max(res, cnt) 
-	return res
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        vis = set(nums)
+        res = 0
+        for x in vis:
+            if x-1 not in vis:
+                w = 0
+                while x in vis:
+                    w += 1
+                    x += 1
+                res = max(res,w)
+        return res
 ```
-44 ms
+91 ms
 
 
 

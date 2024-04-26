@@ -57,42 +57,24 @@ Node *next;
 
 ## 分析
 
-### #1
-
-与 {{< lc "0116" >}} 的区别在于不是完美二叉树了。
-
-层序遍历的代码相同。
-
-```python
-def connect(self, root: 'Node') -> 'Node':
-    Q = [root] if root else []
-    while Q:
-        for p, q in pairwise(Q):
-            p.next = q
-        Q = [child for p in Q for child in [p.left, p.right] if child]
-    return root
-```
-52 ms
-
-### #2
-
-依然可以每层提前填充下一层的 next 指针。额外添加哑结点，并记录前置节点即可。
+ {{< lc "0116" >}} 升级版，方法类似，每层提前填充下一层的 next 指针。
 	
 ## 解答
 
 ```python
-def connect(self, root: 'Node') -> 'Node':
-    p = root
-    while p:
-        dummy = prev = Node()
-        while p:
-            for child in [p.left, p.right]:
-                if child:
-                    prev.next = child
-                    prev = child
-            p = p.next
-        p = dummy.next
-    return root
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        u = root
+        while u:
+            dum = p = Node()
+            while u:
+                for c in [u.left,u.right]:
+                    if c:
+                        p.next = c
+                        p = c
+                u = u.next
+            u = dum.next
+        return root
 ```
-52 ms
+38 ms
 

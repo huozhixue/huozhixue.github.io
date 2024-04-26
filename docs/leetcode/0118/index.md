@@ -43,11 +43,12 @@
 ## 解答
 
 ```python
-def generate(self, numRows: int) -> List[List[int]]:
-    res = [[1]]
-    for _ in range(numRows-1):
-        res.append([1]+[a+b for a,b in pairwise(res[-1])]+[1])
-    return res
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        res = [[1]]
+        for _ in range(numRows-1):
+            res.append([1]+[a+b for a,b in pairwise(res[-1])]+[1])
+        return res
 ```
-32 ms
+37 ms
 

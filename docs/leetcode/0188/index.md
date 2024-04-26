@@ -41,19 +41,16 @@
 
 ## 分析
 
-类似 {{< lc "0121" >}}，只是从 2 次变成了 k 次。
+ {{< lc "0123" >}} 升级版，从 2 次变成了 k 次，最后可以优化为 2*k 个参数。
 			
 ## 解答
 
 ```python
-def maxProfit(self, k: int, prices: List[int]) -> int:
-    n = len(prices)
-    dp = [[float('-inf'), 0] for _ in range(k+1)] 
-    for x in prices:
-        prev = dp[:]
-        for j in range(1, k+1):
-            dp[j][0] = max(prev[j][0], prev[j-1][1]-x)
-            dp[j][1] = max(prev[j][1], prev[j][0]+x)
-    return dp[-1][-1]
+class Solution:
+    def maxProfit(self, k: int, prices: List[int]) -> int:
+        dp = [0 if i%2 else -inf for i in range(2*k)]
+        for x in prices:
+            dp = [max(dp[i],(dp[i-1] if i else 0)+(x if i%2 else -x)) for i in range(2*k)]
+        return dp[-1]
 ```
-84 ms
+110 ms

@@ -49,45 +49,23 @@
 
 ## 分析
 
-### #1
-
-类似 {{< lc "0131" >}}，可以递归。
-
-要注意的是若本身就是回文串，应直接返回 0。
-
-```python
-def minCut(self, s: str) -> int:
-    @cache
-    def dfs(i):
-        if s[i:] == s[i:][::-1]:
-            return 0
-        res = float('inf')
-        for j in range(i+1, len(s)):
-            if s[i:j] == s[i:j][::-1]:
-                res = min(res, 1+dfs(j))
-        return res
-    return dfs(0)
-```
-1784 ms
-
-### #2
-
-观察可发现，有很多重复判断 s 的子串是否回文。根据 {{< lc "0005" >}}，也可以用动态规划解决。
-
-另外，求最小分割也可以改成动态规划的非递归形式，节省空间。
+-  {{< lc "0131" >}} 进阶版，数据范围大了不少，考虑用 dp
+- 按最后的分割点位置即可递推
+- 要判断某个子串是否回文，可以另外再用 dp 提前计算好
 
 ## 解答
 
 ```python
-def minCut(self, s: str) -> int:
-    n = len(s)
-    f = [[True]*n for _ in range(n)]
-    for j in range(n):
-        for i in range(j):
-            f[i][j] = f[i+1][j-1] and s[i]==s[j]
-    dp = [0]*n
-    for i in range(n):
-        dp[i] = 0 if f[0][i] else 1+min(dp[j] for j in range(i) if f[j+1][i])
-    return dp[-1]
+class Solution:
+    def minCut(self, s: str) -> int:
+        n = len(s)
+        f = [[1]*n for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            for j in range(i+1,n):
+                f[i][j] = s[i]==s[j] and f[i+1][j-1]
+        dp = [-1]+[0]*n
+        for j in range(1,n+1):
+            dp[j] = 1+min(dp[i] for i in range(j) if f[i][j-1])
+        return dp[-1]
 ```
-时间复杂度 O(N^2)，572 ms
+714 ms

@@ -57,47 +57,25 @@
 
 ## 分析
 
-### #1
 
-{{< lc "0121" >}} 升级版，添加了次数限制，所以考虑加一个状态参数。
-
-令 dp[i][j][0]、dp[i][j][1] 分别代表 prices[:i] 最多买过 j 支股票且手里有/无股票的最大利润，即可递推：
-
+- {{< lc "0121" >}} 升级版，添加了次数限制，所以加一个状态参数
+- 令 dp[i][j][0]、dp[i][j][1] 分别代表 prices[:i] 最多买过 j 支股票且手里有/无股票的最大利润，即可递推：
 $$\begin{cases}
 dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j-1][1]-prices[i-1]) \\\ 
 dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j][0]+prices[i-1])
 \end{cases}$$
- 
-```python
-def maxProfit(self, prices: List[int]) -> int:
-    n = len(prices)
-    dp = [[[float('-inf'), 0] for _ in range(3)] for _ in range(n+1)]
-    for i in range(1, n+1):
-        for j in range(1, 3):
-            dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j-1][1]-prices[i-1])
-            dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j][0]+prices[i-1])
-    return dp[-1][-1][-1]
-```
-1660 ms
-
-### #2
-
-可以用滚动数组优化空间。
-
+- 可以优化为 4 个参数
 ## 解答
 
 ```python
-def maxProfit(self, prices: List[int]) -> int:
-    n = len(prices)
-    dp = [[float('-inf'), 0] for _ in range(3)] 
-    for x in prices:
-        prev = dp[:]
-        for j in range(1, 3):
-            dp[j][0] = max(prev[j][0], prev[j-1][1]-x)
-            dp[j][1] = max(prev[j][1], prev[j][0]+x)
-    return dp[-1][-1]
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        a,b,c,d = -inf,0,-inf,0
+        for x in prices:
+            a,b,c,d = max(a,-x),max(b,a+x),max(c,b-x),max(d,c+x)
+        return d
 ```
-692 ms
+274 ms
 
 
 

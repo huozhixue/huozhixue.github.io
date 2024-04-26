@@ -37,25 +37,24 @@
 
 ## 分析
 
-典型的单串 dp，按第一个回文子串的长度可以递归。
+按第一个回文子串的长度递归即可。
 
 ## 解答
 
 ```python
-def partition(self, s: str) -> List[List[str]]:
-    @cache
-    def dfs(i):
-        if i==len(s):
-            return [[]]
-        res = []
-        for j in range(i+1, len(s)+1):
-            pre = s[i:j]
-            if pre == pre[::-1]:
-                res.extend([pre]+sub for sub in dfs(j))
-        return res
-
-    return dfs(0)
+class Solution:
+    def partition(self, s: str) -> List[List[str]]:
+        @cache
+        def dfs(s):
+            if not s:
+                return [[]]
+            res = []
+            for i in range(1,len(s)+1):
+                if s[:i]==s[:i][::-1]:
+                    res.extend([s[:i]]+sub for sub in dfs(s[i:]))
+            return res
+        return dfs(s)
 ```
-88 ms
+92 ms
 
 

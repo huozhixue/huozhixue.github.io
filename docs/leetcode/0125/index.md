@@ -55,11 +55,12 @@
 ## 解答
 
 ```python
-def isPalindrome(self, s: str) -> bool:
-    ss = ''.join(char for char in s if char.isalnum()).lower()
-    return ss == ss[::-1]
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = [c.lower() for c in s if c.isalnum()]
+        return s==s[::-1]
 ```
-36 ms
+47 ms
 
 
 

@@ -66,36 +66,38 @@ Node *next;
 最简单的就是层序遍历，每一层填充即可。
 
 ```python
-def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-    Q = [root] if root else []
-    while Q:
-        for p, q in pairwise(Q):
-            p.next = q
-        Q = [child for p in Q for child in [p.left, p.right] if child]
-    return root
+class Solution:
+    def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
+        Q = [root] if root else []
+        while Q:
+            for u,v in pairwise(Q):
+                u.next = v
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return root
 ```
-56 ms
+54 ms
 
 ### #2
 
-要求不用额外空间，有个巧妙的想法。
-
-每层提前填充下一层的 next 指针，那么从每层最左边根据 next 指针就可以完成遍历，不需要存储其它节点。
+要求不用额外空间，有个巧妙的想法
+- 每层提前填充下一层的 next 指针
+- 每层根据 next 指针即可遍历
 	
 ## 解答
 
 ```python
-def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-    cur = root
-    while cur and cur.left:
-        p = cur
-        while p:
-            p.left.next = p.right
-            if p.next:
-                p.right.next = p.next.left
-            p = p.next
-        cur = cur.left
-    return root
+class Solution:
+    def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
+        u = root
+        while u and u.left:
+            p = u
+            while p:
+                p.left.next = p.right
+                if p.next:
+                    p.right.next = p.next.left
+                p = p.next
+            u = u.left
+        return root
 ```
-60 ms
+38 ms
 

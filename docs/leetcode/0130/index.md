@@ -41,41 +41,43 @@
 
 ## 分析
 
-本题可以用 dfs 或 bfs 遍历找到所有与边界外连通的 'O'，剩下的 'O' 换成 'X' 即可。
-
-不过连通问题一般还是用并查集，方便进阶问题的解决。
-
-并查集做法：
-- 将边界上的 'O' 都与哑节点 dummy 连通，
-- 再将相邻的 'O' 连通。
-- 将不与 dummy 连通的 'O' 换成 'X' 即可
+- 只有与边界连通的 'O' 才不会被填充
+- 可以用 dfs 或 bfs 遍历找，更一般的是用并查集
+	- 将边界上的 'O' 都与哑节点 m*n 连通
+	- 再将相邻的 'O' 连通
+	- 最后将不与哑节点连通的 'O' 换成 'X' 即可
 
 ## 解答
 
 ```python
-def solve(self, board: List[List[str]]) -> None:
-    def find(x):
-        if f.setdefault(x, x) != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def solve(self, board: List[List[str]]) -> None:
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        def find(x):
+            if f[x]!=x:
+                f[x]=find(f[x])
+            return f[x]
+        
+        def union(x,y):
+            f[find(x)]=find(y)
 
-    def union(x, y):
-        f[find(x)] = find(y)
-
-    m, n = len(board), len(board[0])
-    f, dummy = {}, (-1, -1)
-    for i, j in product(range(m), range(n)):
-        if board[i][j] == 'O':
-            if i in [0, m - 1] or j in [0, n - 1]:
-                union(dummy, (i, j))
-            if i and board[i - 1][j] == 'O':
-                union((i - 1, j), (i, j))
-            if j and board[i][j - 1] == 'O':
-                union((i, j - 1), (i, j))
-    for i, j in product(range(m), range(n)):
-        board[i][j] = 'O' if find((i, j)) == find(dummy) else 'X'
+        m,n = len(board),len(board[0])
+        f = list(range(m*n+1))
+        A = [(i,j) for i in range(m) for j in range(n) if board[i][j]=='O']
+        for i,j in A:
+            if i in [0,m-1] or j in [0,n-1]:
+                union(i*n+j,m*n)
+            if i and board[i-1][j]=='O':
+                union(i*n+j,(i-1)*n+j)
+            if j and board[i][j-1]=='O':
+                union(i*n+j,i*n+j-1)
+        for i,j in A:
+            if find(i*n+j)!=find(m*n):
+                board[i][j] = 'X'
 ```
-168 ms
+73 ms
 
 
 

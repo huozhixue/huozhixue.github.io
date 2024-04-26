@@ -49,21 +49,19 @@
 
 ## 分析
 
-类似 {{< lc "0121" >}}，区别在于可以多次买卖，dp[i][0] 的递推式有变化：
-
-$$\begin{cases} dp[i][0] = max(dp[i-1][0], dp[i-1][1]-prices[i-1]) \\\ 
-dp[i][1] = max(dp[i-1][1], dp[i-1][0]+prices[i-1])\end{cases}$$
+ {{< lc "0121" >}} 变形，区别在于可以多次买卖，dp[i][0] 可以由dp[i-1][1] 递推。
 
 ## 解答
 
 ```python
-def maxProfit(self, prices: List[int]) -> int:
-    a, b = float('-inf'), 0
-    for price in prices:
-        a, b = max(a, b-price), max(b, a+price)
-    return b
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        a,b = -inf,0
+        for x in prices:
+            a,b = max(a,b-x),max(b,a+x)
+        return b
 ```
-28 ms
+42 ms
 
 
 

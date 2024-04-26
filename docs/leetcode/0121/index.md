@@ -42,31 +42,28 @@
 
 ## 分析
 
-经典 dp 问题。
-
-考虑最后一天的交易状态：
-- 如果没有卖出，则转为 prices[:-1] 的递归子问题
-- 如果卖了，则要求 prices[:-1] 有股票状态下的最大值
-
-那么令 dp[i][0]、dp[i][1] 分别代表 prices[:i] 手里有/无股票的最大利润，即可递推：
-
+经典 dp 问题：
+- 考虑最后一天的交易状态：
+	- 如果没有卖出，则转为 prices[:-1] 的递归子问题
+	- 如果卖了，则要求 prices[:-1] 有股票状态下的最大值
+- 令 dp[i][0]、dp[i][1] 分别代表 prices[:i] 手里有/无股票的最大利润，即可递推：
 $$ \begin{cases} 
 dp[i][0] = max(dp[i-1][0], -prices[i-1]) \\\ 
 dp[i][1] = max(dp[i-1][1], dp[i-1][0]+prices[i-1])
 \end{cases} $$
-
-还可以优化为两个参数。
+- 还可以优化为两个参数
 
 ## 解答
 
 ```python
-def maxProfit(self, prices: List[int]) -> int:
-    a, b = float('-inf'), 0
-    for price in prices:
-        a, b = max(a, -price), max(b, a+price)
-    return b
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        a,b = -inf,0
+        for x in prices:
+            a,b = max(-x,a),max(a+x,b)
+        return b
 ```
-188 ms
+198 ms
 
 
 

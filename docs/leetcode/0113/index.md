@@ -50,19 +50,20 @@
 ## 分析
 
 
-类似 {{< lc "0112" >}}，可以用递归或遍历，这里用递归。
+ {{< lc "0112" >}} 升级版，可以用递归或遍历，递归时 dfs 返回符合的路径即可。
 
 ## 解答
 
 ```python
-def pathSum(self, root: TreeNode, targetSum: int) -> List[List[int]]:
-    def dfs(p, x):
-        if not p:
-            return []
-        if not p.left and not p.right and p.val==x:
-            return [[x]]
-        return [[p.val]+sub for sub in dfs(p.left, x-p.val) + dfs(p.right, x-p.val)]
-    return dfs(root, targetSum)
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
+        def dfs(u,s):
+            if not u:
+                return []
+            if not u.left and not u.right and u.val==s:
+                return [[s]]
+            return [[u.val]+sub for sub in dfs(u.left,s-u.val)+dfs(u.right,s-u.val)]
+        return dfs(root, targetSum)
 ```
-60 ms
+45 ms
 

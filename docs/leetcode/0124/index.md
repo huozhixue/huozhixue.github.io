@@ -40,23 +40,25 @@
 
 ## 分析
 
-用 dfs(node) 同时返回 node 的最大路径和，以 node 为起点的最大路径和，即可递归。
+用 dfs(node) 返回以 node 为起点的最大路径和，递归中即可计算经过 node 的最大路径和。
 
 ## 解答
 
 ```python
-def maxPathSum(self, root: Optional[TreeNode]) -> int:
-    def dfs(node):
-        if not node:
-            return float('-inf'), float('-inf')
-        l1, l2 = dfs(node.left)
-        r1, r2 = dfs(node.right)
-        l2, r2 = max(0, l2), max(0, r2)
-        return max(l1, r1, node.val+l2+r2), node.val+max(l2, r2)
-
-    return dfs(root)[0]
+class Solution:
+    def maxPathSum(self, root: Optional[TreeNode]) -> int:
+        def dfs(u):
+            if not u:
+                return 0
+            l = max(0,dfs(u.left))
+            r = max(0,dfs(u.right))
+            self.res = max(self.res,l+r+u.val)
+            return max(l,r)+u.val
+        self.res = -inf
+        dfs(root)
+        return self.res
 ```
-84 ms
+61 ms
 
 
 

@@ -51,22 +51,25 @@
 
 ## 分析
 
-先序遍历 root，每次将上一个节点的 right 指向当前节点即可。
-
-注意要去掉节点的 left 指针。
+- 先序遍历 root，将上一个节点的 right 指向当前节点即可
+- 注意节点遍历后，要去掉原有的指针
 
 ## 解答
 
 ```python
-def flatten(self, root: TreeNode) -> None:
-    stack, prev = [root], TreeNode()
-    while stack:
-        node = stack.pop()
-        if node:
-            stack.extend([node.right, node.left])
-            prev.right = node
-            node.left = None
-            prev = node
+class Solution:
+    def flatten(self, root: Optional[TreeNode]) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+        p,sk = TreeNode(),[root]
+        while sk:
+            u = sk.pop()
+            if u:
+                sk.extend([u.right,u.left])
+                u.left=u.right=None
+                p.right = u
+                p = u
 ```
-40 ms
+34 ms
 

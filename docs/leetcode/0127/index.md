@@ -48,34 +48,34 @@
 
 ## 分析
 
-显然可以用 bfs，从 beginWord 开始，每一轮搜索能转换的单词，直到搜到 endWord 或没有能转换的单词。
-
-搜索过程类似 {{< lc "0676" >}}：
-- 将单词的某一位改为 '.' 作为单词的 key
-- 每个单词按所有的 key 存在哈希表中
-- 搜索时，取所有 key 对应的列表即可
+- 找最短容易想到用 bfs，每轮搜索能转换的单词即可
+- 搜索可以用 {{< lc "0676" >}} 的方法加速
+	- 将单词的某一位改为 '.' 作为单词的 key
+	- 每个单词按所有的 key 存在哈希表中
+	- 搜索时，取所有 key 对应的列表即可
 
 ## 解答
 
 ```python
-def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-    d = defaultdict(list)
-    for w in wordList:
-        for i in range(len(w)):
-            d[w[:i]+'.'+w[i+1:]].append(w)
-    Q, dis = deque([beginWord]), {beginWord: 1}
-    while Q:
-        u = Q.popleft()
-        if u == endWord:
-            return dis[u]
-        for i in range(len(u)):
-            for v in d[u[:i]+'.'+u[i+1:]]:
-                if v not in dis:
-                    dis[v] = dis[u]+1
-                    Q.append(v)
-    return 0
+class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        d = defaultdict(list)
+        for w in wordList:
+            for i in range(len(w)):
+                d[w[:i]+'*'+w[i+1:]].append(w)
+        Q,vis = deque([(beginWord,1)]), {beginWord}
+        while Q:
+            u,w = Q.popleft()
+            if u==endWord:
+                return w
+            for i in range(len(u)):
+                for v in d[u[:i]+'*'+u[i+1:]]:
+                    if v not in vis:
+                        Q.append((v,w+1))
+                        vis.add(v)
+        return 0
 ```
-84 ms
+119 ms
 
 
 

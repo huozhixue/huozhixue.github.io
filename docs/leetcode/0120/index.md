@@ -53,17 +53,18 @@
 
 ## 分析
 
-典型的 dp 问题。还可以直接用 triangle 保存结果，节省空间。
+典型的 dp 问题。可以直接用 triangle 保存结果，节省空间。
 
 ## 解答
 
 ```python
-def minimumTotal(self, triangle: List[List[int]]) -> int:
-    n = len(triangle)
-    for i in range(n-2, -1, -1):
-        for j in range(i+1):
-            triangle[i][j] += min(triangle[i+1][j], triangle[i+1][j+1])
-    return triangle[0][0]
+class Solution:
+    def minimumTotal(self, triangle: List[List[int]]) -> int:
+        n = len(triangle)
+        for i in range(n-2, -1, -1):
+            for j in range(i+1):
+                triangle[i][j] += min(triangle[i+1][j], triangle[i+1][j+1])
+        return triangle[0][0]
 ```
-36 ms
+40 ms
 

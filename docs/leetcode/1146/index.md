@@ -43,7 +43,7 @@ snapshotArr.get(0,0);  // 获取 snap_id = 0 的快照中 array[0] 的值，返�
 
 ## 分析
 
-set 时保存此时的快照号和值，get 时二分查找到即可。
+set 时保存 <快照号,值> 到值对应的列表中，get 时二分查找到即可。
 
 ## 解答
 
@@ -52,19 +52,21 @@ set 时保存此时的快照号和值，get 时二分查找到即可。
 class SnapshotArray:
 
     def __init__(self, length: int):
-        self.sid = 0
+        self.id = 0
         self.d = defaultdict(list)
 
+
     def set(self, index: int, val: int) -> None:
-        self.d[index].append((self.sid, val))
+        self.d[index].append((self.id,val))
 
     def snap(self) -> int:
-        self.sid += 1
-        return self.sid-1
+        self.id += 1
+        return self.id-1
 
     def get(self, index: int, snap_id: int) -> int:
-        pos = bisect_right(self.d[index], (snap_id,inf))-1
-        return self.d[index][pos][1] if pos>=0 else 0
+        A = self.d[index]
+        i = bisect_left(A,(snap_id+1,))-1
+        return A[i][1] if i>=0 else 0
 ```
 
-396 ms
+436 ms

@@ -56,47 +56,42 @@
 
 ## 分析
 
-{{< lc "0127" >}} 升级版。
-
-要求所有序列，考虑从 bfs 的路径中倒推：
-- bfs 的过程中得到 dis 字典，保存了经过的每个单词到 beginWord 的距离
-- 假设单词 w 和 endWord 相邻且 dis[w]==dis[endWord]-1，那么可以经过 w 来组成最短路径
-- 依此类推，找到 beginWord 时，即得到一条最短路径
-- 用回溯法可以搜索到所有最短路径
-
-特别注意 beginWord 可能在 wordList 中，也可能不在，因此构建字典 d 时，
-要遍历 set(wordList)|{beginWord}。
+- {{< lc "0127" >}} 升级版
+- 可以先  bfs 求得最短路径长度，并保存每个单词到 beginWord 的距离
+- 然后从 endWord 倒推，假设单词 w 和 endWord 相邻且 dis[w]==dis[endWord]-1，那么可以经过 w 来组成最短路径
+- 依此递归即可
 
 ## 解答
 
 ```python
-def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
-    d = defaultdict(list)
-    for w in set(wordList)|{beginWord}:
-        for i in range(len(w)):
-            d[w[:i]+'.'+w[i+1:]].append(w)
-    Q, dis = deque([beginWord]), {beginWord: 1}
-    while Q:
-        u = Q.popleft()
-        if u == endWord:
-            break
-        for i in range(len(u)):
-            for v in d[u[:i]+'.'+u[i+1:]]:
-                if v not in dis:
-                    dis[v] = dis[u]+1
-                    Q.append(v)
-    
-    def dfs(u):
-        if dis[u] == 1:
-            return [[u]]
-        res = []
-        for i in range(len(u)):
-            for v in d[u[:i]+'.'+u[i+1:]]:
-                if v in dis and dis[v]==dis[u]-1:
-                    res.extend(sub+[u] for sub in dfs(v))
-        return res
-
-    return [] if endWord not in dis else dfs(endWord)
+class Solution:
+    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
+        d = defaultdict(list)
+        for w in wordList:
+            for i in range(len(w)):
+                d[w[:i]+'*'+w[i+1:]].append(w)
+        Q, dis = deque([beginWord]), {beginWord:0}
+        while Q:
+            u = Q.popleft()
+            if u==endWord:
+                break
+            for i in range(len(u)):
+                for v in d[u[:i]+'*'+u[i+1:]]:
+                    if v not in dis:
+                        dis[v] = dis[u]+1
+                        Q.append(v)
+        if endWord not in dis:
+            return []
+        def dfs(u):
+            if dis[u]==1:
+                return [[beginWord,u]]
+            res = []
+            for i in range(len(u)):
+                for v in d[u[:i]+'*'+u[i+1:]]:
+                    if dis.get(v,inf)==dis[u]-1:
+                        res.extend(sub+[u] for sub in dfs(v))
+            return res
+        return dfs(endWord)
 ```
-44 ms
+42 ms
 
