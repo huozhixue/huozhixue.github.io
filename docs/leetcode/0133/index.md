@@ -78,25 +78,43 @@ public List&lt;Node&gt; neighbors;
 
 ## 分析
 
-考虑在遍历时维护 <原节点,克隆节点> 的映射 d，即可解决循环的问题：
+### #1
+- 遍历时维护 <原节点,克隆节点> 的映射 d，即可解决循环的问题
 - 遍历到节点 u ，若 u 在 d 中则跳过
 - 若 u 不在 d 中，只克隆值得到节点 u'，保存映射 <u,u'> 到 d
-- 当 u 的邻居 v 遍历完后，将 v 的克隆 v' 添加到 u' 的邻居列表中即可
+- 继续遍历 u 的邻居列表，并将遍历后的克隆添加到 u' 的邻居列表即可
 
-遍历可以用 bfs，也可以用 dfs：
-- > 用 bfs 时注意入队前就应克隆，防止重复入队。
-- > 用 dfs 时注意不能用 d.get(v, dfs(v)) 来简化。即使元素在 dict 中，dict.get 的 default 也会执行，只不过不返回该值。
+> 用 dfs 遍历，注意不能用 d.get(v, dfs(v)) 来简化。即使元素在 dict 中，dict.get 的 default 也会执行，只不过不返回该值。
+```python
+class Solution:
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        def dfs(u):
+            d[u] = Node(u.val)
+            d[u].neighbors = [d[v] if v in d else dfs(v) for v in u.neighbors]
+            return d[u]
+        d = {}
+        return dfs(node) if node else None
+```
+43 ms
 
+### #2
+也可以用 bfs 遍历，注意入队前就应克隆，防止重复入队。
 ## 解答
 
 ```python
-def cloneGraph(self, node: 'Node') -> 'Node':
-    def dfs(u):
-        d[u] = Node(u.val)
-        d[u].neighbors = [d[v] if v in d else dfs(v) for v in u.neighbors]
-        return d[u]
-
-    d = {}
-    return dfs(node) if node else None
+class Solution:
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        if not node:
+            return None
+        d = {node:Node(node.val)}
+        sk = [node]
+        while sk:
+            u = sk.pop()
+            for v in u.neighbors:
+                if v not in d:
+                    d[v] = Node(v.val)
+                    sk.append(v)
+                d[u].neighbors.append(d[v])
+        return d[node]
 ```
-40 ms
+42 ms

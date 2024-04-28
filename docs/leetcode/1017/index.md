@@ -52,11 +52,12 @@
 
 
 ```python
-def baseNeg2(self, n: int) -> str:
-	res = ''
-	while n:
-		n, r = -(n//2), n%2
-		res = str(r)+res
-	return res or '0'
+class Solution:
+    def baseNeg2(self, n: int) -> str:
+        res = ''
+        while n:
+            n,r = -(n//2),n%2
+            res += str(r)
+        return res[::-1] or '0'
 ```
-40 ms
+36 ms
