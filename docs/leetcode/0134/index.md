@@ -54,52 +54,20 @@
 
 ## 分析
 
-可以将 gas 和 cost 逐项相减得到数组 A，代表经过每段路的汽油变化。
-
-问题等价于在 B=A+A 中找一个长度 len(A) 的子数组，其前缀和都非负。
-
-具体实现时：
-- 初始起点 i=0，从 i 开始遍历 j
-- 遇到第一个 j 使得 sum(B[i:j])<0 时：
-	- 对任意 (i,j) 范围内的 k：
-		- sum(B[i:k])>=0
-		- sum(B[k:j])=sum(B[i:j])-sum(B[i:k])<0
-		- 故 k 不能作为起点
-	- 所以重置起点 i=j，重置遍历
-- 否则，当 j-i==len(A) 时，即符合要求
-
-## 解答
-
-```python
-def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-    A = [g-c for g,c in zip(gas, cost)]
-    pre, i = 0, 0
-    for j, x in enumerate(A+A):
-        pre += x
-        if pre<0:
-            pre, i = 0, j+1
-        if j-i==len(A)-1:
-            return i
-    return -1
-```
-136 ms
-
-## *附加
-
-问题还可以转为：在 A+A 的前缀和数组 pre 中，找一个长度 len(A)+1 的子数组，满足其首位是最小元素。
+- 将 gas 和 cost 逐项相减得到数组 A，代表经过每段路的汽油变化
+- 问题等价于在 A+A 中找长度 len(A) 的子数组，其前缀和都非负
+- 算出 A+A 的前缀和数组 pre，问题等价于在 pre 中找长度 len(A)+1 的子数组，其首位是最小元素
 - 容易想到直接找 pre 前半部分的最小位置 i 作为首位
-- 注意 pre 的后半部分其实就是前半部分的元素分别加上 sum(A)
-- 如果 sum(A)<0，则 pre[i+len(A)]<pre[i]，没有满足要求的 i
-- 如果 sum(A)>=0，那么 i 就是符合要求的位置
+	- 注意 pre 的后半部分其实就是前半部分的元素分别加上 sum(A)
+	- 如果 sum(A)<0，则 pre[i+len(A)]<pre[i]，没有满足要求的 i
+	- 如果 sum(A)>=0， i 即为所求
 
-最后 (i+1)%len(A) 即为所求。
 
 ```python
-def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-    pre = list(accumulate(g-c for g, c in zip(gas, cost)))
-    if pre[-1]<0:
-        return -1
-    i = pre.index(min(pre))
-    return (i+1)%len(pre)
+class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        A = [g-c for g,c in zip(gas,cost)]
+        P = list(accumulate([0]+A))
+        return -1 if P[-1]<0 else P.index(min(P))
 ```
-60 ms
+95 ms
