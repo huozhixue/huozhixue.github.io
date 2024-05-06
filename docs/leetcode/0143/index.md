@@ -48,35 +48,39 @@ L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<su
 
 ## 分析
 
-先用快慢节点找到中点位置，截断为两部分，将后半部分链表反转后依次插入前半部分中即可。
-
-反转链表即是问题 {{< lc "0206" >}} 。
+- 先用快慢节点找到中点位置，截断为两部分
+- 将后半部分链表反转后依次插入前半部分中即可
+- 反转链表即是问题 {{< lc "0206" >}} 
 
 ## 解答
 
 ```python
-def reorderList(self, head: ListNode) -> None:
-	def reverse(head):
-		tail = head
-		while tail and tail.next:
-			tmp = tail.next
-			tail.next = tmp.next
-			tmp.next = head
-			head = tmp
-		return head
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+        """
+        def reverse(head):
+            tail = head
+            while tail and tail.next:
+                tmp = tail.next
+                tail.next = tmp.next
+                tmp.next = head
+                head = tmp
+            return head
 
-	slow = fast = ListNode(next=head)
-	while fast and fast.next:
-		slow, fast = slow.next, fast.next.next
-	q = slow.next
-	slow.next = None
-	p, q = head, reverse(q)
-	while q:
-		tmp = p.next
-		p.next = q
-		q = q.next
-		p.next.next = tmp
-		p = tmp
+        slow = fast = ListNode(next=head)
+        while fast and fast.next:
+            slow, fast = slow.next, fast.next.next
+        q = slow.next
+        slow.next = None
+        p, q = head, reverse(q)
+        while q:
+            tmp = p.next
+            p.next = q
+            q = q.next
+            p.next.next = tmp
+            p = tmp
 ```
-88 ms
+63 ms
 

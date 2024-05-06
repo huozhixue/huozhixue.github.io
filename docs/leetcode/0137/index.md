@@ -38,29 +38,19 @@
 
 ## 分析
 
-### #1
-
-最简单的依然是哈希表。
-
-```python
-def singleNumber(self, nums: List[int]) -> int:
-    return [x for x,freq in Counter(nums).items() if freq==1].pop()
-```
-32 ms
-
-### #2
 
 要不用额外空间实现，有个非常巧妙的位运算方法：[逻辑电路角度详细分析该题思路](https://leetcode-cn.com/problems/single-number-ii/solution/luo-ji-dian-lu-jiao-du-xiang-xi-fen-xi-gai-ti-si-l/)。
 
 ## 解答
 
 ```python
-def singleNumber(self, nums: List[int]) -> int:
-	X, Y = 0, 0
-	for Z in nums:
-		Y = Y^Z & ~X
-		X = X^Z & ~Y
-	return Y
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        X, Y = 0, 0
+        for Z in nums:
+            Y = Y ^ Z & ~X
+            X = X ^ Z & ~Y
+        return Y
 ```
-48 ms
+35 ms
 

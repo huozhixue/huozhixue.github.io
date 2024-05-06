@@ -47,23 +47,26 @@
 
 ## 分析
 
-考虑每个孩子最少多少颗：
-- 对于孩子 i，假如左侧的严格递减序列长度为 left[i]，那么 i 至少 left[i] 颗
-- 同理，假如右侧的严格递减序列长度为 right[i]，那么 i 至少 right[i] 颗
-- 孩子 i 发 max(left[i],right[i]) 颗即可
-- left 和 right 数组可以一趟递推求出
+- 先考虑每个孩子最少多少颗
+	- 对于孩子 i，假如左侧的严格递减序列长度为 a，那么 i 至少 a 颗
+	- 同理，假如右侧的严格递增序列长度为 b，那么 i 至少 b 颗
+	- i 至少 max(a,b) 颗
+- 反过来，给每个孩子最少的颗数，可以证明该构造符合要求
+- 所以，递推求出每个位置的严格递增/减序列即可
 
 ## 解答
 
 ```python
-def candy(self, ratings: List[int]) -> int:
-    n = len(ratings)
-    left, right = [1] * n, [1] * n
-    for i in range(1, n):
-        left[i] = left[i-1] + 1 if ratings[i] > ratings[i-1] else 1
-    for i in range(n-2, -1, -1):
-        right[i] = right[i+1] + 1 if ratings[i] > ratings[i+1] else 1
-    return sum(max(l, r) for l, r in zip(left, right))
+class Solution:
+    def candy(self, ratings: List[int]) -> int:
+        def gen(A):
+            res = [1]
+            for a,b in pairwise(A):
+                res.append(res[-1]+1 if a<b else 1)
+            return res
+        L = gen(ratings)
+        R = gen(ratings[::-1])[::-1]
+        return sum(max(l,r) for l,r in zip(L,R))
 ```
-68 ms
+66 ms
 

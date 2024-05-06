@@ -71,22 +71,25 @@
 - 当快慢节点相遇时：
 	- 慢节点在环上走了 L-x%L 步
 	- 若慢节点再在环上走 x 步，即到达位置 x
-- 于是有个巧妙的想法，此时令另一个慢节点从起点开始同步走，两个慢节点相遇位置即为位置 x
+- 于是有个巧妙的想法:
+	- 令另一个慢节点从起点开始同步走
+	- 两个慢节点相遇位置即为位置 x
 
 
 ## 解答
 
 ```python
-def detectCycle(self, head: ListNode) -> ListNode:
-    slow = fast = head
-    while fast and fast.next:
-        slow, fast = slow.next, fast.next.next
-        if slow == fast:
-            slow2 = head
-            while slow != slow2:
-                slow, slow2 = slow.next, slow2.next
-            return slow
-    return None
+class Solution:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow=fast=head
+        while fast and fast.next:
+            slow,fast = slow.next,fast.next.next
+            if slow==fast:
+                p = head
+                while p!=slow:
+                    p,slow = p.next,slow.next
+                return p
+        return None
 ```
-44 ms
+47 ms
 

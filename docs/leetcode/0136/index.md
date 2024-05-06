@@ -49,31 +49,20 @@
 
 ## 分析
 
-### #1
 
-最简单的就是哈希表。
-
-```python
-def singleNumber(self, nums: List[int]) -> int:
-    return [x for x,freq in Counter(nums).items() if freq==1].pop()
-```
-
-40 ms
-
-### #2
-
-要求不用额外空间实现，有个非常巧妙的思路，利用了异或运算的特性。
-- 满足交换律和结合律
-- x^x=0
-- x^0=x
-
-可以推出：题目所给数组的所有元素的异或结果即为所求。
+最简单的就是哈希表。要求不用额外空间实现，有个巧妙的位运算方法：
+- 异或运算满足
+	- 交换律和结合律
+	- x^x=0
+	- x^0=x
+- 因此数组所有元素的异或结果即为所求
 
 ## 解答
 
 ```python
-def singleNumber(self, nums: List[int]) -> int:
-    return reduce(xor, nums)
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        return reduce(xor,nums)
 ```
 40 ms
 

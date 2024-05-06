@@ -60,25 +60,7 @@
 
 ## 分析
 
-### #1
-
-最简单的就是哈希。
-
-```python
-def hasCycle(self, head: ListNode) -> bool:
-    vis = set()
-    while head:
-        if head in vis:
-            return True
-        vis.add(head)
-        head = head.next
-    return False
-```
-48 ms
-
-### #2
-
-要求 O(1) 空间，本题有个经典的快慢指针解法：
+要求 O(1) 空间，有个经典的快慢指针解法：
 - 初始快慢指针都指向表头
 - 每轮快指针移动两步，慢指针移动一步
 - 若链表无环，快指针先到达末尾，无法再移动
@@ -87,14 +69,14 @@ def hasCycle(self, head: ListNode) -> bool:
 ## 解答
 
 ```python
-def hasCycle(self, head: ListNode) -> bool:
-	slow = fast = head
-	while fast and fast.next:
-		slow = slow.next
-		fast = fast.next.next
-		if slow == fast:
-			return True
-	return False
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        slow=fast=head
+        while fast and fast.next:
+            slow,fast = slow.next,fast.next.next
+            if slow==fast:
+                return True
+        return False
 ```
-64 ms
+49 ms
 

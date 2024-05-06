@@ -55,19 +55,20 @@
 ## 解答
 
 ```python
-def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-    @cache
-    def dfs(s):
-        if not s:
-            return [[]]
-        res = []
-        for i in range(len(s)):
-            if s[:i+1] in W:
-                res.extend([s[:i+1]]+sub for sub in dfs(s[i+1:]))
-        return res
-
-    W = set(wordDict)
-    return [' '.join(sub) for sub in dfs(s)]
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        @cache
+        def dfs(s):
+            if not s:
+                return ['']
+            res = []
+            for i in range(1,min(len(s),m)+1):
+                if s[:i] in vis:
+                    res.extend(s[:i]+' '+sub if sub else s[:i] for sub in dfs(s[i:]))
+            return res
+        vis = set(wordDict)
+        m = max(len(w) for w in vis)
+        return dfs(s)
 ```
-32 ms
+37 ms
 

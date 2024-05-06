@@ -64,52 +64,53 @@
 
 ## 分析
 
-### #1
 
-最直接的就是维护原节点和新节点的映射 d：
-- 遍历节点 p，若 p 在 d 中就跳过
-- 若 p 不在 d 中，只拷贝值得到节点 p'，保存映射 <p,p'> 到 d 中
-- p.next/random 遍历完后，将 p' 的 next/random 指向 p.next/random 的拷贝节点即可
-
-```python
-def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-    d, p = {head: Node(head.val) if head else None}, head
-    while p:
-        d[p].next =  d.setdefault(p.next, Node(p.next.val) if p.next else None)
-        d[p].random = d.setdefault(p.random, Node(p.random.val) if p.random else None)
-        p = p.next
-    return d[head]
-```
-28 ms
-
-### #2
-
-本题还有个非常巧妙的方法，不用额外空间。
-- 先将新节点 new 依次插入到原节点 old 的后面
-- 那么 old.random.next 就应该是 new.random
-- 最后再按顺序拆分出新节点，即满足了 next 的正确指向
-
+类似 {{< lc "0133" >}}，可以用哈希表加 dfs。
 
 ## 解答
 
 ```python
-def copyRandomList(self, head: 'Node') -> 'Node':
-	p = head
-	while p:
-		p.next = Node(p.val, p.next)
-		p = p.next.next
-	p = head
-	while p:
-		p.next.random = p.random.next if p.random else None
-		p = p.next.next
-	p = head
-	dummy = q = Node(0)
-	while p:
-		q.next = p.next
-		p.next = p.next.next
-		p = p.next
-		q = q.next
-	return dummy.next
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        def dfs(u):
+            if not u:
+                return None
+            d[u] = Node(u.val)
+            d[u].next = d[u.next] if u.next in d else dfs(u.next)
+            d[u].random = d[u.random] if u.random in d else dfs(u.random)
+            return d[u]
+        d = {}
+        return dfs(head)
 ```
-40 ms
+34 ms
+
+## *附加
+
+本题还有个非常巧妙的方法，不用额外空间。
+- 先将新节点 new 依次插入到原节点 old 的后面
+- 那么 old.random.next 就应该是 new.random
+- 最后再按顺序拆分出新节点，即调整 next 的指向
+
+
+```python
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        p = head
+        while p:
+            p.next = Node(p.val, p.next)
+            p = p.next.next
+        p = head
+        while p:
+            p.next.random = p.random.next if p.random else None
+            p = p.next.next
+        p = head
+        dum = q = Node(0)
+        while p:
+            q.next = p.next
+            p.next = p.next.next
+            p = p.next
+            q = q.next
+        return dum.next
+```
+32 ms
 

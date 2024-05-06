@@ -60,32 +60,20 @@
 
 ## 分析
 
-### #1
-
-先写出递归算法，显然，将根节点、左子树的前序遍历、右子树的前序遍历拼接起来即可。
-
-```python
-def preorderTraversal(self, root: TreeNode) -> List[int]:
-	return [root.val]+self.preorderTraversal(root.left)+self.preorderTraversal(root.right) if root else []
-```
-
-40 ms
-
-### #2
-
-迭代算法类似 {{< lc "0094" >}}，入栈顺序换成 [右子树、左子树] ，节点值不需入栈直接输出即可。
+迭代算法类似 {{< lc "0094" >}}，入栈顺序换成 [右子树、左子树] 即可。
 
 ## 解答
 
 ```python
-def preorderTraversal(self, root: TreeNode) -> List[int]:
-	res, stack = [], [root]
-	while stack:
-		node = stack.pop()
-		if node:
-			res.append(node.val)
-			stack.extend([node.right, node.left])
-	return res
+class Solution:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        res,sk = [],[root] if root else []
+        while sk:
+            u = sk.pop()
+            if u:
+                res.append(u.val)
+                sk.extend([u.right,u.left])
+        return res
 ```
-32 ms
+45 ms
 

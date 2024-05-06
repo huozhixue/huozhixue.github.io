@@ -50,18 +50,24 @@
 
 ## 分析
 
-典型的单串 dp，按第一个单词长度即可递归。
+按第一个单词长度递归即可。
 
 ## 解答
 
 ```python
-def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-    @cache
-    def dfs(s):
-        return not s or any(s[:i+1] in W and dfs(s[i+1:]) for i in range(len(s)))
-
-    W = set(wordDict)
-    return dfs(s)
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        @cache
+        def dfs(s):
+            if not s:
+                return True
+            for i in range(1,min(len(s),m)+1):
+                if s[:i] in vis and dfs(s[i:]):
+                    return True
+            return False
+        vis = set(wordDict)
+        m = max(len(w) for w in vis)
+        return dfs(s)
 ```
-48 ms
+46 ms
 
