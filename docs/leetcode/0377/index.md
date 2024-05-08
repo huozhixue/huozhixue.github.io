@@ -58,11 +58,12 @@
 ## 解答
 
 ```python
-def combinationSum4(self, nums: List[int], target: int) -> int:
-    dp = [1] * (target+1)
-    for i in range(1, target+1):
-        dp[i] = sum(dp[i-x] for x in nums if x<=i)
-    return dp[-1]
+class Solution:
+    def combinationSum4(self, nums: List[int], target: int) -> int:
+        f = [1]+[0]*target
+        for i in range(1,target+1):
+            f[i] = sum(f[i-x] for x in nums if x<=i)
+        return f[-1]
 ```
-44 ms
+36 ms
 

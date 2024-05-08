@@ -41,21 +41,21 @@
 
 ## 分析
 
-{{< lc "0053" >}} 进阶版，加法变成了乘法。
-
-注意乘法的最值和正负有关。因此令 dp[j][0]、dp[j][1] 分别代表以位置 j 结尾的最小/大乘积，即可递推。
-
-还可以优化为两个参数。
+- {{< lc "0053" >}} 进阶版，加法变成了乘法
+- 注意乘法的最值和正负有关
+- 因此令 dp[j][0]、dp[j][1] 分别代表以位置 j 结尾的最小/大乘积，即可递推
+- 还可以优化为两个参数
 
 ## 解答
 
 ```python
-def maxProduct(self, nums: List[int]) -> int:
-    res, Min, Max = float('-inf'), 1, 1
-    for num in nums:
-        Min, _, Max = sorted([num*Max, num*Min, num])
-        res = max(res, Max)
-    return res
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        res,mi,ma = -inf,1,1
+        for x in nums:
+            mi,ma = min(x,x*mi,x*ma),max(x,x*ma,x*mi)
+            res = max(res,ma)
+        return res
 ```
-44 ms
+50 ms
 

@@ -43,19 +43,20 @@
 
 ## 分析
 
-{{< lc "0122" >}} 升级版，dp[i][0] 的递推式有变化：
+- {{< lc "0122" >}} 升级版，dp[i][0] 的递推式有变化：
 
 $$dp[i][0] = max(dp[i-1][0], dp[i-2][1]-prices[i-1])$$
-
+- 可以优化为 3 个变量
 
 ## 解答
 
 ```python
-def maxProfit(self, prices: List[int]) -> int:
-    a, b, c = float('-inf'), 0, 0
-    for price in prices:
-        a, b, c = max(a, b-price), c, max(c, a+price)
-    return c
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        b0,a,b = 0,-inf,0
+        for x in prices:
+            b0,a,b = b,max(a,b0-x),max(b,a+x)
+        return b
 ```
-32 ms
+42 ms
 

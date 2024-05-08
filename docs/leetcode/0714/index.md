@@ -47,42 +47,18 @@
 
 ## 分析
 
-### #1
-
-与 0122 类似，但方法行不通了，考虑与 0309 一样，尝试动态规划。
-
-令 sell[i] 表示 prices[:i] 能获得的最大利润，buy[i] 代表买入状态下 prices[:i] 能获得的最大利润，状态转移方程为：
-
-	if i==0:	sell[i]=0, buy[i]=float('-inf')
-	else:		sell[i] = max(sell[i-1], buy[i-1]+prices[i-1]-fee)
-				buy[i] = max(buy[i-1], sell[i-1]-prices[i-1])
-				
-```python
-def maxProfit(self, prices: List[int], fee: int) -> int:
-	n = len(prices)
-	buy, sell = [float('-inf')]*(n+1), [0]*(n+1)
-	for i in range(1, n+1):
-		sell[i] = max(sell[i-1], buy[i-1]+prices[i-1]-fee)
-		buy[i] = max(buy[i-1], sell[i-1]-prices[i-1]) 
-	return sell[-1]
-```
-
-876 ms
-
-### #2
-
-类似 0309 ，可以只用两个参数 buy, sell 保存状态，先更新 buy 不会影响到 sell。
+{{< lc "0122" >}} 升级版，修改下递推式即可。
 
 ## 解答
 
 ```python
-def maxProfit(self, prices: List[int], fee: int) -> int:
-	buy, sell = float('-inf'), 0
-	for price in prices:
-		buy = max(buy, sell-price)
-		sell = max(sell, buy+price-fee)
-	return sell
+class Solution:
+    def maxProfit(self, prices: List[int], fee: int) -> int:
+        a,b = -inf,0
+        for x in prices:
+            a,b = max(a,b-x-fee),max(b,a+x)
+        return b
 ```
 
-812 ms
+142 ms
 

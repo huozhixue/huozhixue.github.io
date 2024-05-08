@@ -40,20 +40,20 @@
 
 ## 分析
 
-经典 dp，按偷不偷最后一家即可递归。
-
-按非递归形式的动态规划写时，可以优化为两个变量。
+- 经典 dp，按偷不偷最后一家即可递归
+- 可以优化为两个变量
  
 ## 解答
 
 ```python
-def rob(self, nums: List[int]) -> int:
-    a, b = 0, 0
-    for x in nums:
-        a, b = b, max(x+a, b)
-    return b
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        a,b = 0,0
+        for x in nums:
+            a,b = b,max(a+x,b)
+        return b
 ```
-28 ms
+40 ms
 
 
 

@@ -82,24 +82,23 @@
 
 ## 分析
 
-栈的典型应用，每次遇到运算符出栈两个数字进行计算，将结果入栈即可。
-
-注意 python 中 // 是向下取整，不满足要求，应该用 int(x/y) 。
+- 栈的典型应用，每次遇到运算符出栈两个数字进行计算，将结果入栈即可
+- 注意 python 中 // 是向下取整，不满足要求，应该用 int(x/y) 
 
 ## 解答
 
 ```python
-def evalRPN(self, tokens: List[str]) -> int:
-    func = {'+': int.__add__, '-': int.__sub__, '*': int.__mul__, 
-    '/': lambda x,y: int(x/y)}
-    stack = []
-    for token in tokens:
-        if token in func:
-            y, x = stack.pop(), stack.pop()
-            stack.append(func[token](x, y))
-        else:
-            stack.append(int(token))
-    return stack[0]
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        func = {'+':int.__add__,'-':int.__sub__,'*':int.__mul__,'/':lambda x,y:int(x/y)}
+        sk = []
+        for x in tokens:
+            if x in func:
+                b,a = sk.pop(),sk.pop()
+                sk.append(func[x](a,b))
+            else:
+                sk.append(int(x))
+        return sk.pop()
 ```
 40 ms
 

@@ -67,12 +67,55 @@ lfu.get(4);      // 返回 4
 
 ## 分析
 
-{{< lc "0146" >}} 的升级版。
-- 需要先找到最小使用次数的键集合，再找到最久未使用的键
-- 因此考虑用哈希表存 key 的使用次数 freq。对于相同 freq 的键, 用 OrderedDict 维护顺序
-- get 和 put 时先得到 key 的使用次数 freq，从 freq 对应的字典中弹出 key，并添加到 freq+1 对应的字典中
-- 如果是 put 新的 key 且容量达到上限，则找到最小使用次数 minFreq，从 minFreq 对应的 OrderedDict 中弹出首位元素
-- 注意到当 get 或 put 已有 key 时，minFreq 只可能不变或加 1，而 put 新的 key 时，minFreq 变为 1
+### #1
+
+{{< lc "0146" >}} 升级版，同样可以用有序集合解决。
+
+```python
+class LFUCache:
+
+    def __init__(self, capacity: int):
+        from sortedcontainers import SortedList
+        self.sl = SortedList()
+        self.m = capacity
+        self.t = 0
+        self.d = {}
+
+    def get(self, key: int) -> int:
+        if key not in self.d:
+            return -1
+        w,t,x = self.d[key]
+        self.sl.remove((w,t,key))
+        self.sl.add((w+1,self.t,key))
+        self.d[key] = (w+1,self.t,x)
+        self.t += 1
+        return x
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.d:
+            w,t,_ = self.d[key]
+            self.sl.remove((w,t,key))
+            self.sl.add((w+1,self.t,key))
+            self.d[key] = (w+1,self.t,value)
+        else:
+            if len(self.sl)==self.m:
+                _,_,x = self.sl.pop(0)
+                self.d.pop(x)
+            self.sl.add((1,self.t,key))
+            self.d[key] = (1,self.t,value)
+        self.t += 1
+```
+553 ms
+
+### #2
+
+要求 O(1)，同样考虑用 OrderedDict：
+- 计数器 ct 维护每个 key 的频率
+- 将相同频率的 key 放一起，用 OrderedDict 维护顺序
+- 维护最小频率 minw
+	- get 或 put 时，若已有 key，则 minw 不变或加 1
+	- put 新 key 时，minw 变为 1
+- 其它模拟即可
 
 ## 解答
 
@@ -80,39 +123,37 @@ lfu.get(4);      // 返回 4
 class LFUCache:
 
     def __init__(self, capacity: int):
-        self.ct = Counter()
+        self.ct = {}
         self.d = defaultdict(OrderedDict)
-        self.capacity = capacity
-        self.minFreq = 0
+        self.m = capacity
+        self.minw = 0
 
     def pop(self, key):
-        freq = self.ct[key]
-        val = self.d[freq].pop(key)
-        if not self.d[freq] and self.minFreq == freq:
-            self.minFreq = freq+1
-        return freq, val
+        w = self.ct[key]
+        val = self.d[w].pop(key)
+        if not self.d[w] and self.minw==w:
+            self.minw = w+1
+        return w,val
 
     def get(self, key: int) -> int:
         if key not in self.ct:
             return -1
-        freq, val = self.pop(key)
-        self.d[freq+1][key] = val
-        self.ct[key] = freq + 1
+        w,val = self.pop(key)
+        self.d[w+1][key] = val
+        self.ct[key] = w+1
         return val
 
     def put(self, key: int, value: int) -> None:
-        if self.capacity == 0:
-            return
         if key in self.ct:
-            freq, _ = self.pop(key)
-            self.d[freq+1][key] = value
-            self.ct[key] = freq + 1
-            return  
-        if len(self.ct) == self.capacity:
-            x = self.d[self.minFreq].popitem(last=False)[0]
-            del self.ct[x]
-        self.d[1][key] = value
-        self.ct[key] = 1
-        self.minFreq = 1
+            w,_ = self.pop(key)
+            self.d[w+1][key] = value
+            self.ct[key] = w+1
+        else:
+            if len(self.ct)==self.m:
+                x = self.d[self.minw].popitem(last=False)[0]
+                self.ct.pop(x)
+            self.d[1][key] = value
+            self.ct[key] = 1
+            self.minw= 1
 ```
-556 ms
+382 ms

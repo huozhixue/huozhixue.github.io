@@ -61,40 +61,49 @@ lRUCache.get(4);    // 返回 4
 
 ### #1
 
-先考虑最简单的方法，用数组维护关键字的顺序:
-- get 和 put 时将对应关键字移到最后面
-- 容量达到上限时，弹出数组首个元素即可
+先考虑通用方法，用有序集合维护关键字的顺序:
+- 维护时间戳 t
+- 有序集合 sl 维护 (t,key) 
+- 哈希表维护 d 维护 key 对应的 t 和 value
+- get 和 put 时模拟操作即可
 
 ```python
 class LRUCache:
 
     def __init__(self, capacity: int):
-        self.A = []
+        from sortedcontainers import SortedList
+        self.sl = SortedList()
+        self.m = capacity
+        self.t = 0
         self.d = {}
-        self.capacity = capacity
 
     def get(self, key: int) -> int:
         if key not in self.d:
             return -1
-        self.A.remove(key)
-        self.A.append(key)
-        return self.d[key]
+        t,x = self.d[key]
+        self.sl.remove((t,key))
+        self.sl.add((self.t,key))
+        self.d[key] = (self.t,x)
+        self.t += 1
+        return x
 
     def put(self, key: int, value: int) -> None:
         if key in self.d:
-            self.A.remove(key)
-        elif len(self.A) == self.capacity:
-            del self.d[self.A.pop(0)]
-        self.A.append(key)
-        self.d[key] = value
+            t,_ = self.d[key]
+            self.sl.remove((t,key))
+        elif len(self.sl)==self.m:
+            _,x = self.sl.pop(0)
+            self.d.pop(x)
+        self.sl.add((self.t,key))
+        self.d[key] = (self.t,value)
+        self.t += 1
 ```
-2396 ms
+578 ms
 
 ### #2
 
-要求 O(1) 时间完成 put() 和 get()，也就是 O(1) 时间内删除元素，在头部或尾部添加元素。
-
-可以用双向链表+哈希表来实现。不过 python 有个更方便的 OrderedDict。
+- 要求 O(1) 时间完成 put() 和 get()，可以用双向链表+哈希表来实现
+-  python 可以用 OrderedDict 方便地实现
 
 ## 解答
 
@@ -103,7 +112,7 @@ class LRUCache:
 
     def __init__(self, capacity: int):
         self.d = OrderedDict()
-        self.capacity = capacity
+        self.m = capacity
 
     def get(self, key: int) -> int:
         if key not in self.d:
@@ -114,9 +123,9 @@ class LRUCache:
     def put(self, key: int, value: int) -> None:
         if key in self.d:
             self.d.move_to_end(key)
-        elif len(self.d) == self.capacity:
+        elif len(self.d)==self.m:
             self.d.popitem(last=False)
         self.d[key] = value
 ```
-464 ms
+382 ms
 

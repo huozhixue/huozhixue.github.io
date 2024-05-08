@@ -46,18 +46,35 @@
 
 ## 分析
 
-拿了 nums[i] 的点数，就拿不到 nums[i]-1 和 nums[i]+1 的点数，这个限制类似 {{< lc "0198" >}} 打家劫舍。
+### #1 
 
-因此，统计得到 min(nums) 到 max(nums) 每个数能拿到的点数，就转为打家劫舍问题了。
+- 不能拿相邻的数，这个限制类似 {{< lc "0198" >}} 打家劫舍
+- 可以用计数器统计每个数的个数，然后按值域范围递推即可
+```python
+class Solution:
+    def deleteAndEarn(self, nums: List[int]) -> int:
+        ct = Counter(nums)
+        a,b = 0,0
+        for x in range(min(nums),max(nums)+1):
+            a,b = b,max(a+x*ct[x],b)
+        return b
+```
+48 ms
+
+### #2
+
+也可以排序后按元素递推，相邻元素之差不为 1 即可同时选。
 
 ## 解答
 
 ```python
-def deleteAndEarn(self, nums: List[int]) -> int:
-    ct, a, b = Counter(nums), 0, 0
-    for x in range(min(ct), max(ct)+1):
-        a, b = b, max(b, a+x*ct[x])
-    return b
+class Solution:
+    def deleteAndEarn(self, nums: List[int]) -> int:
+        A = sorted(Counter(nums).items())
+        a,b = 0,0
+        for i,(x,w) in enumerate(A):
+            a,b = b,max(a+x*w,b) if i and A[i-1][0]==x-1 else b+x*w
+        return b
 ```
-40 ms
+46 ms
 

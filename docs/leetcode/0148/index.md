@@ -49,36 +49,35 @@
 
 ## 分析
 
-要求 O(n log n) 时间复杂度和常数级空间复杂度，马上想到快排和归并排序。
-
-这里使用归并排序，用快慢指针找到中点，归并部分即问题 {{< lc "0021" >}} 。
+- 要求 O(n log n) 时间复杂度和常数级空间复杂度，想到归并排序
+- 用快慢指针找到中点，归并部分即问题 {{< lc "0021" >}} 
 
 ## 解答
 
 ```python
-def sortList(self, head: ListNode) -> ListNode:
-	def merge(l1, l2):
-		dummy = l3 = ListNode()
-		while l1 and l2:
-			if l1.val <= l2.val:
-				l3.next = l1
-				l1 = l1.next
-			else:
-				l3.next = l2
-				l2 = l2.next
-			l3 = l3.next
-		l3.next = l1 if l1 else l2
-		return dummy.next
-	
-	if not head or not head.next:
-		return head
-	slow = fast = head
-	while fast.next and fast.next.next:
-		slow = slow.next
-		fast = fast.next.next
-	l1, l2 = head, slow.next
-	slow.next = None
-	return merge(self.sortList(l1), self.sortList(l2))
+class Solution:
+    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        def merge(a, b):
+            dum=p=ListNode()
+            while a and b:
+                if a.val<=b.val:
+                    p.next = a
+                    a = a.next
+                else:
+                    p.next = b
+                    b = b.next
+                p = p.next
+            p.next = a or b
+            return dum.next
+        
+        if not head or not head.next:
+            return head
+        slow=fast=head
+        while fast.next and fast.next.next:
+            slow,fast = slow.next,fast.next.next
+        a, b = head, slow.next
+        slow.next = None
+        return merge(self.sortList(a), self.sortList(b))
 ```
-408 ms
+283 ms
 

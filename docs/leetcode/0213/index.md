@@ -46,22 +46,21 @@
 
 ## 分析
 
-{{< lc "0198" >}} 升级版，只是第一个房屋和最后一个房屋也不能同时偷了，
-按偷不偷第一个房屋分类即可。
+{{< lc "0198" >}} 升级版，只是第一个房屋和最后一个房屋也不能同时偷了，按偷不偷第一个房屋分类即可。
 
 ## 解答
 
 ```python
-def rob(self, nums: List[int]) -> int:
-    def dfs(nums):
-        a, b = 0, 0
-        for num in nums:
-            a, b = b, max(num + a, b)
-        return b
-
-    return max(dfs(nums[1:]), nums[0]+dfs(nums[2:-1]))
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        def cal(A):
+            a,b = 0,0
+            for x in A:
+                a,b = b,max(a+x,b)
+            return b
+        return max(nums[0]+cal(nums[2:-1]),cal(nums[1:]))
 ```
-32 ms
+34 ms
 
 
 

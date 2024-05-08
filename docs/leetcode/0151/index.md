@@ -58,13 +58,14 @@
 
 ## 分析
 
-按空格分割得到单词列表，将列表反转后再用空格拼接起来即可。
+先分割再拼接即可。
 
 ## 解答
 
 ```python
-def reverseWords(self, s: str) -> str:
-	return ' '.join(s.split()[::-1])
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(s.split()[::-1])
 ```
-24 ms
+28 ms
 

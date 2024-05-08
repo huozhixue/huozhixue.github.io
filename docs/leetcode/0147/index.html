@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0147\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  444 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  426 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0147\/","datePublished": "2015-05-27T00:00:00+08:00","dateModified": "2015-05-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,7 +111,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0147：对链表进行插入排序（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-27">2015-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 444 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-27">2015-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 426 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0147/" class="leancloud_visitors" data-flag-title="0147：对链表进行插入排序（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -158,8 +158,12 @@
 <li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>维护两个指针 tail，cur 分别指向 已排序的结尾节点 和 当前要排序的节点。</p>
-<p>若 cur.val &gt;= tail.val，就无需插入了，否则要在前面找插入位置 p，改变几个节点的指向。</p>
+<ul>
+<li>维护指针 p 指向当前要排序的节点</li>
+<li>维护指针 tail 指向已排序的结尾节点</li>
+<li>若 p.val &gt;= tail.val，无需插入</li>
+<li>否则从头遍历找到插入位置 q，将 p 节点插入</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -178,26 +182,28 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">insertionSortList</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">dummy</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">),</span> <span class="nb">next</span><span class="o">=</span><span class="n">head</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">tail</span><span class="p">,</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">,</span> <span class="n">head</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">cur</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">tail</span><span class="o">.</span><span class="n">val</span> <span class="o">&lt;=</span> <span class="n">cur</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">p</span> <span class="o">=</span> <span class="n">dummy</span>
-</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">val</span> <span class="o">&lt;=</span> <span class="n">cur</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">			<span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">			<span class="n">cur</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">			<span class="n">p</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cur</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cur</span> <span class="o">=</span> <span class="n">tail</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">dummy</span><span class="o">.</span><span class="n">next</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">insertionSortList</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dum</span><span class="o">=</span><span class="n">tail</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="n">head</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="n">head</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="o">&gt;=</span><span class="n">tail</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tail</span> <span class="o">=</span> <span class="n">p</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">q</span> <span class="o">=</span> <span class="n">dum</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">val</span><span class="o">&lt;</span><span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">                <span class="n">p</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">                <span class="n">q</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">tail</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dum</span><span class="o">.</span><span class="n">next</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>168 ms</p>
+</div><p>77 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

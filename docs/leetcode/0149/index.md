@@ -24,42 +24,40 @@
 </pre>
 
 
+**提示：**
 
-<p><strong>提示：</strong></p>
-
-<ul>
-<li><code>1 <= points.length <= 300</code></li>
-<li><code>points[i].length == 2</code></li>
-<li><code>-10<sup>4</sup> <= x<sub>i</sub>, y<sub>i</sub> <= 10<sup>4</sup></code></li>
-<li><code>points</code> 中的所有点 <strong>互不相同</strong></li>
-</ul>
+- `1 <= points.length <= 300`
+- `points[i].length == 2`
+- `-104 <= xi, yi <= 104`
+- `points` 中的所有点 **互不相同**
 
 
 ## 分析
 
-本题可能有重复点，因此不能按直线遍历，考虑按点来遍历：
-- 对于点 i，首先统计重复个数 same
-- 然后将其它点按斜率分组
-- 最大的组大小加上 same 即可
-
-考虑到精度问题，可以用最简分数来表示斜率，注意下不存在斜率的特殊情况即可。
+- 本题可能有重复点，因此考虑按点遍历更方便：
+	- 对于每个点，首先统计重复个数 same
+	- 然后将其它点按斜率分组
+	- 最大的组大小加上 same 即可
+- 考虑到精度问题，可以用最简分数来表示斜率，注意不存在斜率的特殊情况
 
 ## 解答
 
 ```python
-def maxPoints(self, points: List[List[int]]) -> int:
-    from fractions import Fraction
-    res = 0
-    for p in points:
-        d, same = defaultdict(int), 0
-        for q in points:
-            if p==q:
-                same += 1
-            else:
-                key = str(Fraction(q[1]-p[1], q[0]-p[0])) if q[0]!=p[0] else '1/0'
-                d[key] += 1
-        res = max(res, same+max(d.values(), default=0))
-    return res
+class Solution:
+    def maxPoints(self, points: List[List[int]]) -> int:
+        def cal(x,y):
+            if y==0:
+                return (1,0)
+            if y<0:
+                return cal(-x,-y)
+            a = gcd(x,y)
+            return (x//a,y//a)
+        res = 0
+        for a in points:
+            same = points.count(a)
+            ct = Counter(cal(b[0]-a[0],b[1]-a[1]) for b in points if b!=a)
+            res = max(res,max(ct.values(),default=0)+same)
+        return res
 ```
 212 ms
 
