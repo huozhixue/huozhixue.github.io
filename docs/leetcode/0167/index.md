@@ -51,25 +51,27 @@
 
 ## 分析
 
-类似 {{< lc "0001" >}}，可以用哈希表。
-
-数组有序，也可以用双指针来解决：
-- 初始指针 i、j 分别指向 numbers 的首尾。
-- 如果 numbers[i]+numbers[j]<target，则 numbers[i] 与任意 [i+1,j-1] 内的数相加更小，故可以不再考虑 numbers[i]，缩小查找范围为 [i+1,j]。
-- 同理，如果 numbers[i]+numbers[j]>target，可以缩小查找范围为 [i, j-1]。
+要求常量空间，考虑用双指针解决：
+- 初始指针 i、j 分别指向 numbers 的首尾
+- 如果 numbers[i]+numbers[j]<target，则 numbers[i] 与任意 [i+1,j-1] 内的数相加更小，故可以不再考虑 numbers[i]，缩小查找范围为 [i+1,j]
+- 同理，如果 numbers[i]+numbers[j]>target，可以缩小查找范围为 [i, j-1]
 - 循环操作直到找到结果即可
  
 ## 解答
 
 ```python
-def twoSum(self, numbers: List[int], target: int) -> List[int]:
-	i, j = 0, len(numbers) - 1
-	while numbers[i] + numbers[j] != target:
-		if numbers[i] + numbers[j] < target:
-			i += 1
-		else:
-			j -= 1
-	return [i+1, j+1]
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        n = len(numbers)
+        i,j = 0,n-1
+        while i<j:
+            s = numbers[i]+numbers[j]
+            if s==target:
+                return [i+1,j+1]
+            if s<target:
+                i += 1
+            else:
+                j -= 1
 ```
-40 ms
+43 ms
 

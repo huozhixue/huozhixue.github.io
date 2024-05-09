@@ -40,19 +40,7 @@
 
 ## 分析
 
-### #1
-
-时间复杂度 O(N) 很简单，直接计数即可。
-
-```python
-def majorityElement(self, nums: List[int]) -> int:
-	ct = Counter(nums)
-	return max(ct, key=ct.get)
-```
-
-### #2
-
-要求空间复杂度 O(1)，有个经典的摩尔投票法 ：
+要求空间 O(1)，有个经典的摩尔投票法 ：
 - 在 nums 中任意消除两个不同的数直到剩下的数都相同
 - 假如 nums 中存在多数元素，那么该元素必然会留下来
 - 因此返回最终留下来的数即可
@@ -60,13 +48,16 @@ def majorityElement(self, nums: List[int]) -> int:
 ## 解答
 
 ```python
-def majorityElement(self, nums: List[int]) -> int:
-    cand, cnt = None, 0
-    for num in nums:
-        cand = cand if cnt else num
-        cnt += 1 if num == cand else -1
-    return cand
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        res,w = None,0
+        for x in nums:
+            if w==0:
+                res,w = x,1
+            else:
+                w += 1 if x==res else -1
+        return res
 ```
-56 ms
+39 ms
 
 

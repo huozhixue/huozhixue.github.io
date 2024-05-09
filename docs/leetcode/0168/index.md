@@ -66,12 +66,13 @@ AB -> 28
 ## 解答
 
 ```python
-def convertToTitle(self, columnNumber: int) -> str:
-    res, n = '', columnNumber
-    while n:
-        n, r = divmod(n-1, 26)
-        res = chr(ord('A')+r) + res
-    return res
+class Solution:
+    def convertToTitle(self, columnNumber: int) -> str:
+        res = ''
+        while columnNumber:
+            columnNumber,r = divmod(columnNumber-1,26)
+            res = chr(ord('A')+r)+res
+        return res
 ```
-28 ms
+37 ms
 

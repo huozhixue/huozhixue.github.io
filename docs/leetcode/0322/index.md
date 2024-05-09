@@ -46,16 +46,20 @@
 
 ## 分析
 
-典型的线性 dp，按最后选择的硬币即可递归。
+- 完全背包与 01 背包的区别在于递推式 f[i][j] 由 f[i][j-x] 而不是 f[i-1][j-x] 推出
+- 可以将 dp 数组优化为一维，与 01 背包的区别仅在于 j 的遍历顺序不同
 
 	
 ## 解答
 
 ```python
-def coinChange(self, coins: List[int], amount: int) -> int:
-    dp = [0] * (amount+1)
-    for i in range(1, amount+1):
-        dp[i] = 1 + min(dp[i-coin] if coin<=i else float('inf') for coin in coins)
-    return dp[-1] if dp[-1]<float('inf') else -1
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        n = len(coins)
+        f = [0]+[inf]*amount
+        for x in coins:
+            for j in range(x,amount+1):
+                f[j] = min(f[j],1+f[j-x])
+        return f[-1] if f[-1]<inf else -1
 ```
-时间复杂度 $O(N*S)$，848 ms
+744 ms

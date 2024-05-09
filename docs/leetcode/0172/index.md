@@ -53,20 +53,19 @@
 - 结尾零的个数等于 n! 的质因数中 (2, 5) 对的个数
 - 显然 5 更少，因此结果就等于因子 5 的个数
 - 从 1 到 n ，含有 1 个因子 5 的个数是 n // 5，含有 2 个因子 5 的个数是 n // 25，依此类推
-
-因此结果为：
-
+- 结果为：
 $$n // 5 + n // 25 + n // 125 + ...$$
  
 ## 解答
 
 ```python
-def trailingZeroes(self, n: int) -> int:
-    res = 0
-    while n:
-        n //= 5
-        res += n
-    return res
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        res = 0
+        while n:
+            n //= 5
+            res += n
+        return res
 ```
-28 ms
+51 ms
 

@@ -97,18 +97,19 @@
 最直接的是哈希。
 
 ```python
-def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-    p, q, vis = headA, headB, set()
-    while p:
-        vis.add(p)
-        p = p.next
-    while q:
-        if q in vis:
-            return q
-        q = q.next
-    return None
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+        p, q, vis = headA, headB, set()
+        while p:
+            vis.add(p)
+            p = p.next
+        while q:
+            if q in vis:
+                return q
+            q = q.next
+        return None
 ```
-140 ms
+86 ms
 
 ### #2
 
@@ -121,14 +122,15 @@ def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
 ## 解答
 
 ```python
-def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-	p, q = headA, headB
-	while p != q:
-		p = p.next if p else headB
-		q = q.next if q else headA
-	return p
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+        p, q = headA, headB
+        while p != q:
+            p = p.next if p else headB
+            q = q.next if q else headA
+        return p
 ```
-164 ms
+96 ms
 
 
 

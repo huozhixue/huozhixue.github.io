@@ -58,16 +58,14 @@
 
 ## 分析
 
-以最小值位置 i 为界，nums[:i] 都大于 nums[-1]，nums[i:] 都小于等于 nums[-1]。
-
-因此二分查找第一个小于等于 nums[-1] 的数即可。
+二分查找第一个小于等于 nums[-1] 的数即可。
 
 ## 解答
 
 ```python
-def findMin(self, nums: List[int]) -> int:
-    self.__class__.__getitem__ = lambda self, i: nums[i]<=nums[-1]
-    return nums[bisect_left(self, True, 0, len(nums)-1)]
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        return nums[bisect_left(nums,True,key=lambda x:x<=nums[-1])]
 ```
-24 ms
+32 ms
 

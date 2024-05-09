@@ -59,48 +59,18 @@
 
 ## 分析
 
-### #1
-
-将硬币组合按升序排列，只要排列不同，就是不同的组合。
-
-那么总金额 amount 的组合有两种可能：
-- 最后一个硬币是 coins[-1]，转为 (amount-coins[-1], coins) 的子问题
-- 最后一个硬币不是 coins[-1]，转为 (amount, coins[:-1]) 的子问题
-
-因此，令 dfs(i, j) 代表总金额 j 由 coins[:i+1] 组成的种数，即可递归。
-
-```python
-def change(self, amount: int, coins: List[int]) -> int:
-    @lru_cache(None)
-    def dfs(i, j):
-        if i<0 or j<0:
-            return 0
-        if j==0:
-            return 1
-        return dfs(i, j-coins[i])+dfs(i-1, j)
-    return dfs(len(coins)-1, amount)
-```
-时间复杂度 O(N*S)，156 ms
-
-### #2
-
-可以改写成非递归形式，递推式为：
-    
-    dp[i][j]=dp[i][j-coins[i]]+dp[i-1][j]
-
-注意到 dp[i][j] 依赖的是 dp[i-1][j]，可以直接优化为一维数组。
-
-> 这是典型的完全背包问题
+类似 {{< lc "0322" >}}，修改下递推式即可。
 
 ## 解答
 
 ```python
-def change(self, amount: int, coins: List[int]) -> int:
-    dp = [1]+[0]*amount
-    for coin in coins:
-        for j in range(coin, amount+1):
-            dp[j] += dp[j-coin]
-    return dp[-1]
+class Solution:
+    def change(self, amount: int, coins: List[int]) -> int:
+        f = [1]+[0]*amount
+        for x in coins:
+            for j in range(x,amount+1):
+                f[j] += f[j-x]
+        return f[-1]
 ```
-116 ms
+95 ms
 

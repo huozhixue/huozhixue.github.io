@@ -35,37 +35,39 @@
 
 ## 分析
 
-典型的线性 dp，按分割递归即可。
+将平方数看成元素，即是完全背包问题。
 
 ## 解答
 
 ```python
-def numSquares(self, n: int) -> int:
-    dp = [0] * (n+1)
-    for i in range(1, n+1):
-        dp[i] = 1 + min(dp[i - j * j] for j in range(1, int(sqrt(i)) + 1))
-    return dp[-1]
+class Solution:
+    def numSquares(self, n: int) -> int:
+        f = [0]+[inf]*n
+        for x in range(1,n+1):
+            for j in range(x*x,n+1):
+                f[j] = min(f[j],1+f[j-x*x])
+        return f[-1]
 ```
-时间复杂度 $O(N*\sqrt N)$，1648 ms
+2518 ms
 
 ## *附加
 
-根据数学上的 [四平方和定理](https://baike.baidu.com/item/%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86)，每个正整数均可表示为4个整数的平方和。
-
-因此只需逐层遍历 i 个正整数平方的和，找到 n 即可。
+- 根据数学上的 [四平方和定理](https://baike.baidu.com/item/%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86)，每个正整数均可表示为4个整数的平方和
+- 因此只需逐层遍历 i 个正整数平方的和，找到 n 即可
 
 ```python
-def numSquares(self, n: int) -> int:
-    queue, vis = deque([(0, 0)]), {0}
-    while True:
-        u, step = queue.popleft()
-        for j in range(1, int(sqrt(n-u))+1):
-            v = u + j*j
-            if v not in vis:
-                if v == n:
-                    return step+1
-                vis.add(v)
-                queue.append((v, step+1))
+class Solution:
+    def numSquares(self, n: int) -> int:
+        Q, vis = deque([(0, 0)]), {0}
+        while True:
+            u,w = Q.popleft()
+            for j in range(1,isqrt(n-u)+1):
+                v = u+j*j
+                if v==n:
+                    return w+1
+                if v not in vis:
+                    vis.add(v)
+                    Q.append((v,w+1))
 ```
-时间复杂度 $O(\sqrt N)$，192 ms
+时间 $O(\sqrt N)$，169 ms
 

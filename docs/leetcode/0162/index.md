@@ -44,28 +44,29 @@
 
 ## 分析
 
-显然最大值即是一个峰值。但要求时间复杂度 O(log N)，考虑二分查找。
-- nums[mid] > max(nums[mid-1], nums[mid+1])，mid 即为所求
-- nums[mid] < nums[mid+1]，[mid+1, n-1] 范围内必然有一个峰值
-- nums[mid] < nums[mid-1]，[0, mid-1] 范围内必然有一个峰值
+- 要求时间复杂度 O(log N)，考虑二分查找
+- nums[k] < nums[k+1]，[k+1, n-1] 范围内必然有一个峰值
+- nums[k] < nums[k-1]，[0, k-1] 范围内必然有一个峰值
+- 否则 k 即满足
 
  
 ## 解答
 
 ```python
-def findPeakElement(self, nums: List[int]) -> int:
-    n = len(nums)
-    i, j = 0, n - 1
-    while i <= j:
-        mid = i + (j - i) // 2
-        if (mid == 0 or nums[mid] > nums[mid-1]) and (mid == n-1 or nums[mid] > nums[mid+1]):
-            return mid
-        if nums[mid] < nums[mid+1]:
-            i = mid + 1
-        else:
-            j = mid - 1
+class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+        n = len(nums)
+        i,j = 0,n-1
+        while i<=j:
+            k = (i+j)//2
+            if k and nums[k-1]>nums[k]:
+                j = k-1
+            elif k+1<n and nums[k+1]>nums[k]:
+                i = k+1
+            else:
+                return k
 ```
-32 ms
+39 ms
 
 
 

@@ -59,11 +59,12 @@ AB -&gt; 28
 ## 解答
 
 ```python
-def titleToNumber(self, columnTitle: str) -> int:
-    res = 0
-    for char in columnTitle:
-        res = res * 26 + ord(char) - ord('A') + 1
-    return res
+class Solution:
+    def titleToNumber(self, columnTitle: str) -> int:
+        res = 0
+        for c in columnTitle:
+            res = res*26+ord(c)-ord('A')+1
+        return res
 ```
-36 ms
+40 ms
 

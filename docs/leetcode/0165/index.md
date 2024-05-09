@@ -64,13 +64,17 @@
 ## 解答
 
 ```python
-def compareVersion(self, version1: str, version2: str) -> int:
-    A, B = version1.split('.'), version2.split('.')
-    for a, b in zip_longest(A, B, fillvalue=0):
-        a, b = int(a), int(b)
-        if a != b:
-            return 1 if a > b else -1
-    return 0
+class Solution:
+    def compareVersion(self, version1: str, version2: str) -> int:
+        A = version1.split('.')
+        B = version2.split('.')
+        for a,b in zip_longest(A,B,fillvalue=0):
+            a,b = int(a),int(b)
+            if a>b:
+                return 1
+            if a<b:
+                return -1
+        return 0
 ```
-32 ms
+42 ms
 

@@ -51,21 +51,18 @@
 
 ## 分析
 
-直接调用 {{< lc "0153" >}} 的方法会出错，
-因为有重复元素，可能 nums[0] 等于 nums[-1]，不满足二分条件。
-
-那么不断弹出末尾元素使得 nums[0] > nums[-1] 即可转换为  {{< lc "0153" >}} 。
-
-注意 nums 全都相等的特殊情况。
+- {{< lc "0153" >}} 升级版，有重复元素
+- 可能 nums[0] 等于 nums[-1]，不满足二分条件
+- 那么不断弹出末尾元素使得 nums[0] > nums[-1] 即可转换为  {{< lc "0153" >}} 
 
 ## 解答
 
 ```python
-def findMin(self, nums: List[int]) -> int:
-    while len(nums) > 1 and nums[-1] == nums[0]:
-        nums.pop()
-    self.__class__.__getitem__ = lambda self, i: nums[i]<=nums[-1]
-    return nums[bisect_left(self, True, 0, len(nums)-1)]
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        while len(nums)>1 and nums[0]==nums[-1]:
+            nums.pop()
+        return nums[bisect_left(nums,True,key=lambda x:x<=nums[-1])]
 ```
 36 ms
 

@@ -53,7 +53,7 @@ minStack.getMin();   --&gt; 返回 -2.
 
 ## 分析
 
-每次入栈的同时保存当前最小值即可。
+栈顶同时维护栈中最小值即可。
 
 ## 解答
 
@@ -61,21 +61,20 @@ minStack.getMin();   --&gt; 返回 -2.
 class MinStack:
 
     def __init__(self):
-        self.stack = []
+        self.sk = [(inf,inf)]
 
     def push(self, val: int) -> None:
-        Min = min(self.stack[-1][1], val) if self.stack else val
-        self.stack.append((val, Min))
+        self.sk.append((val,min(val,self.sk[-1][1])))
 
     def pop(self) -> None:
-        self.stack.pop()
+        self.sk.pop()
 
     def top(self) -> int:
-        return self.stack[-1][0]
+        return self.sk[-1][0]
 
     def getMin(self) -> int:
-        return self.stack[-1][1]
+        return self.sk[-1][1]
 ```
-76 ms
+64 ms
 
 
