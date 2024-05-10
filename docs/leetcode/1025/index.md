@@ -52,30 +52,32 @@
 
 ### #1
 
-先考虑递归。任选 N 的一个小于 N 的因数 i，转为递归子问题用 N-i 玩游戏。
+典型的博弈问题，令 f[i] 代表先手面对数字 i 能否获胜，即可递推。
 
 ```python
-@lru_cache(None)
-def divisorGame(self, N: int) -> bool:
-	if N < 2:
-		return False
-	return any(N % i==0 and not self.divisorGame(N-i) for i in range(1, N//2+1))
+class Solution:
+    def divisorGame(self, n: int) -> bool:
+        f = [0]*(n+1)
+        for i in range(2,n+1):
+            f[i] = any(not f[i-x] for x in range(1,i) if i%x==0)
+        return bool(f[-1])
 ```
-
-64 ms
+71 ms
 
 ### #2
 
-还有个巧妙的想法。若 N 是偶数，则爱丽丝取 1，那么不管鲍勃怎么选，留给爱丽丝的仍然是偶数。
-这样到最后必然是鲍勃面对 1，爱丽丝获胜。
-
-若 N 是奇数，同理鲍勃每次取 1 就必胜。因此答案只跟 N 的奇偶性相关。
+还有个巧妙的想法
+- 若 N 是偶数，则爱丽丝取 1
+	- N-1 的因子都是奇数，不管鲍勃选什么，留给爱丽丝的仍然是偶数
+	- 到最后必然是鲍勃面对 1，爱丽丝获胜
+- 同理，若 N 是奇数，则鲍勃必胜
 
 ## 解答
 
 ```python
-def divisorGame(self, N: int) -> bool:
-	return  N % 2 == 0
+class Solution:
+    def divisorGame(self, n: int) -> bool:
+        return n%2==0
 ```
 
-32 ms
+37 ms

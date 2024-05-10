@@ -64,10 +64,9 @@
 
 ## 分析
 
+### #1
+
 多重背包，按最后一个元素选择 1 到 cnt 个递推。
-
-## 解答
-
 
 ```python
 class Solution:
@@ -82,3 +81,27 @@ class Solution:
         return f[-1]
 ```
 906 ms
+
+### #2
+
+- 观察 f[j] 的递推式，可以预先保存等差 m 的 f 序列的前缀和，即可优化时间
+- 可以直接在 f 上预先保存前缀和，节省时间
+
+## 解答
+
+```python
+class Solution:
+    def waysToReachTarget(self, target: int, types: List[List[int]]) -> int:
+        mod = 10**9+7
+        f = [1]+[0]*target
+        for c,m in types:
+            for j in range(m,target+1):
+                f[j] = (f[j]+f[j-m])%mod
+            a = c*m+m
+            for j in range(target,a-1,-1):
+                f[j] = (f[j]-f[j-a])%mod
+        return f[-1]
+```
+134 ms
+
+

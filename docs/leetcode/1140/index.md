@@ -44,55 +44,24 @@
 
 ## 分析
 
-这类问题先考虑能否递归。类似 0486 ，但发现 M 会影响过程。
+典型的博弈问题，多加一个 M 参数即可。
 
-所以用辅助函数 help(i, m) 表示初始 M=m，用 piles[i:] 玩游戏亚历克斯最多能拿到石头的数量。
-	
-	亚历克斯先拿 X 堆石子，M 变为 max(m,X)，转为求递归子问题 help(i+X, max(m, X))。
-	
-	help(i+X, max(m, X)) 等价于剩下的石子中李最多拿到的石头个数。
-	
-	两个人一共拿的石子是固定的 sum(piles[i:])，因此遍历 X 找到最小的 help(i+X, max(m, X)) 即可。
-	
-再考虑下边界条件，剩下的堆数 <= 2*m 时，全部拿走即可。便可以写出递归解法。
 
 ## 解答
 
 ```python
-def stoneGameII(self, piles: List[int]) -> int:
-	@lru_cache(None)
-	def help(i, m):
-		res = sum(piles[i:])
-		if len(piles)-i > 2*m:
-			res -= min(help(i+X,max(X,m)) for X in range(1, 2*m+1))
-		return res
-	return help(0, 1)
+class Solution:
+    def stoneGameII(self, piles: List[int]) -> int:
+        @cache
+        def dfs(i,m):
+            res = sum(piles[i:])
+            if i+2*m<n:
+                res -= min(dfs(i+x,max(x,m)) for x in range(1,2*m+1))
+            return res
+        n = len(piles)
+        return dfs(0,1)
 ```
 
-196 ms
+146 ms
 
-## *附加
-
-可以改写成动态规划。令 dp[i][j] 代表初始 M=j，用 piles[i:] 玩游戏亚历克斯最多能拿到石头的数量。
-状态转移方程为：
-	
-	if len(piles)-i <= 2*j:		dp[i][j] = sum(piles[i:])
-	else:						dp[i][j] = sum(piles[i:]) - min(dp[i+X][max(X,j)] for X in range(1, 2*j+1))
-
-显然遍历时 i 应该倒序。
-
-```python
-def stoneGameII(self, piles: List[int]) -> int:
-	n = len(piles)
-	dp, total = [[0]*(n+1) for _ in range(n)], 0
-	for i in range(n-1, -1, -1):
-		total += piles[i]
-		for j in range(1, n+1):
-			dp[i][j] = total
-			if n-i > 2*j:
-				dp[i][j] -= min(dp[i+X][max(X,j)] for X in range(1, 2*j+1))
-	return dp[0][1]
-```
-
-340 ms
 

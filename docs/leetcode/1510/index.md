@@ -66,23 +66,18 @@
 ## 分析
 
 
-依然是考虑递归，递推式很显然：
-
-	help(n) = any(not help(n-i*i) for i in range(1, int(sqrt(n))+1))
-	
-遍历 i 时可以反序，以提前排除 n 是平方数的情况。
-
+博弈问题，按先手选哪个数递推即可。
 
 ## 解答
 
 ```python
-@lru_cache(None)
-def winnerSquareGame(self, n: int) -> bool:
-	if n==0:
-		return False
-	return any(not self.winnerSquareGame(n-i*i) for i in range(int(sqrt(n)), 0, -1))
+class Solution:
+    def winnerSquareGame(self, n: int) -> bool:
+        f = [0]*(n+1)
+        for i in range(1,n+1):
+            f[i] = any(not f[i-x*x] for x in range(1,isqrt(i)+1))
+        return bool(f[-1])
 ```
-
-324 ms
+667 ms
 
 

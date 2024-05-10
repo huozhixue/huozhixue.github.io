@@ -3,13 +3,27 @@
         <title>数组 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/</link>
         <description>数组 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 28 Oct 2023 22:50:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+    <title>2960：统计已测试设备</title>
+    <link>https://huozhixue.github.io/leetcode/2960/</link>
+    <pubDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2960/</guid>
+    <description><![CDATA[力扣第 375 场周赛第 1 题 题目 给你一个长度为 n 、下标从 0 开始的整数数组 batteryPercentages ，表示 n 个设备的电池百分比。 你的任务是按照顺序测试每个设备 i，执行以下测试]]></description>
+</item><item>
     <title>2915：和为目标值的最长子序列的长度（★）</title>
     <link>https://huozhixue.github.io/leetcode/2915/</link>
     <pubDate>Sat, 28 Oct 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2915/</guid>
     <description><![CDATA[力扣第 116 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums 和一个整数 target 。 返回和为 target 的 nums 子序列中，子序列 长度的最大值 。如果不存在和为 target 的子序列]]></description>
+</item><item>
+    <title>2902：和带限制的子多重集合的数目（★★★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2902/</link>
+    <pubDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2902/</guid>
+    <description><![CDATA[力扣第 115 场双周赛第 4 题 题目 给你一个下标从 0 开始的非负整数数组 nums 和两个整数 l 和 r 。 请你返回 nums 中子多重集合的和在闭区间 [l, r] 之间的 子多重集合的数目]]></description>
 </item><item>
     <title>2585：获得分数的方法数（★★）</title>
     <link>https://huozhixue.github.io/leetcode/2585/</link>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2197/</guid>
     <description><![CDATA[力扣第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则]]></description>
-</item><item>
-    <title>2183：统计可以被 K 整除的下标对数目（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2183/</link>
-    <pubDate>Sun, 20 Feb 2022 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2183/</guid>
-    <description><![CDATA[力扣第 281 场周赛第 4 题 题目 给你一个下标从 0 开始、长度为 n 的整数数组 nums 和一个整数 k ，返回满足下述条件的下标对 (i, j) 的数目： 0 &lt;= i &lt; j &lt;= n - 1 且 nums[i] *]]></description>
-</item><item>
-    <title>2179：统计数组中好三元组数目（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2179/</link>
-    <pubDate>Sat, 19 Feb 2022 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2179/</guid>
-    <description><![CDATA[力扣第 72 场双周赛第 4 题 题目 给你两个下标从 0 开始且长度为 n 的整数数组 nums1 和 nums2 ，两者都是 [0, 1, ..., n - 1] 的 排列 。 好三元组 指的是 3 个 互不相同 的值，且它们]]></description>
 </item></channel>
 </rss>

@@ -62,72 +62,23 @@
 
 ## 分析
 
-### #1
-
-类似 1140 ，考虑递归。用辅助函数表示 help(i) 表示用 stoneValue[i:] 玩游戏 Alice 最多能拿到的分数。
-
-	亚历克斯先拿 X 堆石子，转为求递归子问题 help(i+X)。
-	
-	help(i+X) 等价于剩下的石子中 bob 最多能拿到的分数。
-	
-	两个人一共拿的分数是固定的 sum(stoneValue[i:])，因此遍历 X 找到最小的 help(i+X) 即可。
-	
-再注意边界条件即可写出递归解法。
-
-```python
-def stoneGameIII(self, stoneValue: List[int]) -> str:
-	@lru_cache(None)
-	def help(i):
-		if i>=len(stoneValue):
-			return 0
-		return sum(stoneValue[i:]) - min(help(i+X) for X in range(1,4))
-
-	a = help(0)
-	b = sum(stoneValue)-a
-	return 'Alice' if a > b else ('Bob' if a < b else 'Tie')
-```
-
-超时了
-
-### #2
-
-改写成动态规划。令 dp[i] 代表用 stoneValue[i:] 玩游戏 Alice 最多能拿到的分数。状态转移方程为：
-
-	if i >= len(stoneValue):		dp[i] = 0
-	else:							dp[i] = sum(stoneValue[i:]) - min(dp[i+1:i+4])
-	
-后缀和可以递推得到
-
-```python
-def stoneGameIII(self, stoneValue: List[int]) -> str:
-	n = len(stoneValue)
-	dp, suf = [0] * (n+1), 0
-	for i in range(n-1, -1, -1):
-		suf += stoneValue[i]
-		dp[i] = suf - min(dp[i+1:i+4])
-	a, b = dp[0], suf - dp[0]
-	return 'Alice' if a > b else ('Bob' if a < b else 'Tie')
-```
-
-588 ms
-
-### #3
-
-因为递推式只和前三个状态有关，可以只用三个参数保存状态。
+典型的博弈问题，注意从头开始选，递推时要反着推。
 
 ## 解答
 
 ```python
-def stoneGameIII(self, stoneValue: List[int]) -> str:
-	n = len(stoneValue)
-	x = y = z = suf = 0
-	for i in range(n-1, -1, -1):
-		suf += stoneValue[i]
-		x, y, z = suf-min(x,y,z), x, y
-	a, b = x, suf - x
-	return 'Alice' if a > b else ('Bob' if a < b else 'Tie')
+class Solution:
+    def stoneGameIII(self, stoneValue: List[int]) -> str:
+        n = len(stoneValue)
+        f = [-inf]*n+[0]
+        for i in range(n-1,-1,-1):
+            s = 0
+            for j in range(i,min(i+3,n)):
+                s += stoneValue[j]
+                f[i] = max(f[i],s-f[j+1])
+        return 'Alice' if f[0]>0 else 'Bob' if f[0]<0 else 'Tie'
 ```
 
-368 ms
+878 ms
 
 

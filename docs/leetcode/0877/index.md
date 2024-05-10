@@ -51,31 +51,35 @@ Alice 先开始，只能拿前 5 颗或后 5 颗石子 。
 
 ### #1
 
-本题是 0486 的子问题，可以直接套用代码：
+本题是 {{< lc "0486">}}  的子问题，可以直接套用代码：
 	
 ```python
-def stoneGame(self, piles: List[int]) -> bool:
-	n = len(piles)
-	dp = [0]*(n+1)
-	for i in range(n-1, -1, -1):
-		for j in range(i+1, n+1):
-			dp[j] = max(piles[i]-dp[j], piles[j-1]-dp[j-1])
-	return dp[-1] >= 0
+class Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        @cache
+        def dfs(i,j):
+            if i==j:
+                return piles[i]
+            return max(piles[i]-dfs(i+1,j),piles[j]-dfs(i,j-1))
+        return dfs(0,len(piles)-1)>0
 ```
 
-236 ms
+424 ms
 
 ### #2
 
-还有个巧妙的想法，将数组中位置为偶数的标记为白色，位置为奇数的标记为黑色，那么先手能保证拿到所有白色或所有黑色。
-因此先手必胜，拿和较大的颜色即可。
+还有个巧妙的想法:
+- 将数组偶数下标标记为白色，奇数下标标记为黑色
+- 那么先手能保证拿到所有白色或所有黑色。
+- 因此先手必胜，拿和较大的颜色即可
 
 ## 解答
 
 ```python
-def stoneGame(self, piles: List[int]) -> bool:
-	return True
+class Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        return True
 ```
 
-36 ms
+26 ms
 

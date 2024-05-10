@@ -45,17 +45,16 @@
 
 典型的博弈问题，令 dfs(i, j) 表示用 nums[i:j+1] 玩游戏得到的玩家 1 和 2 的分数差，即可递归。 
 
-
 ## 解答
 
 ```python
-def PredictTheWinner(self, nums: List[int]) -> bool:
-    @cache
-    def dfs(i, j):
-        if i>j:
-            return 0
-        return max(nums[i]-dfs(i+1, j), nums[j]-dfs(i, j-1))
-    
-    return dfs(0, len(nums)-1)>=0
+class Solution:
+    def predictTheWinner(self, nums: List[int]) -> bool:
+        @cache
+        def dfs(i,j):
+            if i==j:
+                return nums[i]
+            return max(nums[i]-dfs(i+1,j),nums[j]-dfs(i,j-1))
+        return dfs(0,len(nums)-1)>=0
 ```
-40 ms
+32 ms

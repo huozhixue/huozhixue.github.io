@@ -48,71 +48,22 @@
 
 ## 分析
 
-### #1
-
-先考虑递归。用辅助函数 help(i, j) 直接表示用 stones[i:j] 玩游戏爱丽丝和鲍勃能拿到的最大分数差。
-
-	爱丽丝先拿 i 位，最大分数差是 sum(stones[i+1:j])-help(i+1, j)（注意这里是减）
-	爱丽丝先拿 j-1 位，最大分数差是 sum(stones[i:j-1])-help(i,j-1)（注意这里是减）
-	比较两种情况即可
-
-```python
-def stoneGameVII(self, stones: List[int]) -> int:
-	@lru_cache(None)
-	def help(i, j):
-		if j-i == 1:
-			return 0
-		return max(sum(stones[i+1:j])-help(i+1, j), sum(stones[i:j-1])-help(i,j-1))
-	return help(0, len(stones))
-```
-
-超时了
-
-### #2
-
-改写为动态规划试试。令 dp[i][j] 表示用 stones[i:j] 玩游戏爱丽丝和鲍勃能拿到的最大分数差。状态转移方程为：
-
-	if j<=i+1:		dp[i][j] = 0
-	else:			dp[i][j] = max(sum(stones[i+1:j])-help(i+1, j), sum(stones[i:j-1])-help(i,j-1))
-	
-可以先计算保存所有前缀和，以减少计算。
-
-```python
-def stoneGameVII(self, stones: List[int]) -> int:
-	pre = [0]
-	for stone in stones:
-		pre.append(pre[-1]+stone)
-	n = len(stones)
-	dp = [[0]*(n+1) for _ in range(n+1)]
-	for i in range(n-1, -1, -1):
-		for j in range(i+1, n+1):
-			dp[i][j] = max(pre[j]-pre[i+1]-dp[i+1][j], pre[j-1]-pre[i]-dp[i][j-1])
-	return dp[0][-1]
-```
-
-时间复杂度 $O(N^2)$，3376 ms
-
-### #3
-
-直觉来说应该有更简单的规律。观察发现，如果把爱丽丝先选、鲍勃后选合起来看成一轮，那么这一轮的得分之差其实就是鲍勃选的数字。
-不管数组长度是奇数或偶数，最终的得分之差就是鲍勃选的数字之和。
-
-所以爱丽丝和鲍勃的目标等价于使选的数字之和最小化，问题等价于求最终鲍勃选的数字之和。这非常类似 0486 了，只是最大化变成了最小化。
-
-可以直接调用 0486 的代码。注意这里求出的是爱丽丝和鲍勃选的数字之和的差，需要结合 sum(stones) 求出鲍勃选出的数字之和。
+{{< lc "0486" >}}，升级版，唯一的区别是分值要算剩下元素总和，可以用前缀和快速得到。
 
 ## 解答
 
 ```python
-def stoneGameVII(self, stones: List[int]) -> int:
-	n = len(stones)
-	dp = [0]*(n+1)
-	for i in range(n-1, -1, -1):
-		for j in range(i+1, n+1):
-			dp[j] = min(stones[i]-dp[j], stones[j-1]-dp[j-1])
-	return (sum(stones)-dp[-1]) // 2
+class Solution:
+    def stoneGameVII(self, stones: List[int]) -> int:
+        n = len(stones)
+        P = list(accumulate([0]+stones))
+        dp = [[0]*n for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            for j in range(i+1,n):
+                dp[i][j] = max(P[j+1]-P[i+1]-dp[i+1][j],P[j]-P[i]-dp[i][j-1])
+        return dp[0][-1]
 ```
 
-2256 ms
+1678 ms
 
 
