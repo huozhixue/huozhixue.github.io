@@ -45,37 +45,41 @@
 
 ### #1
 
-最简单的就是依次遍历子串，用哈希表判断是否出现过即可。	
+最简单的就是哈希表。	
 
 ```python
-def findRepeatedDnaSequences(self, s: str) -> List[str]:
-    ct = Counter(s[i:i + 10] for i in range(len(s) - 9))
-    return [sub for sub, freq in ct.items() if freq > 1]
+class Solution:
+    def findRepeatedDnaSequences(self, s: str) -> List[str]:
+        ct = Counter(s[i:i+10] for i in range(len(s)-9))
+        return [k for k,v in ct.items() if v>1]
 ```
-60 ms
+51 ms
 
 ### #2
 
-当子串长度较大时，朴素哈希比较耗时。更为通用的方法是滚动哈希。
+当子串长度较大时，朴素哈希比较耗时，可以用滚动哈希。
 
 ## 解答
 
 ```python
-def findRepeatedDnaSequences(self, s: str) -> List[str]:
-    d = dict(zip('ACGT', range(4)))
-    base, L = 5, 10
-    w, bL = 0, base**L
-    res, ct = [], Counter()
-    for j, char in enumerate(s):
-        w = w * base + d[char]
-        if j >= L:
-            w -= d[s[j-L]] * bL
-        if j >= L-1:
-            ct[w] += 1
-            if ct[w] == 2:
-                res.append(s[j-L+1:j+1])
-    return res
+class Solution:
+    def findRepeatedDnaSequences(self, s: str) -> List[str]:
+        d = dict(zip('ACGT',range(4)))
+        A = [d[c] for c in s]
+        base,L = 4,10
+        bL = base**L
+        d = defaultdict(int)
+        res,w = [],0
+        for j,a in enumerate(A):
+            w = w*base+a
+            if j>=L:
+                w -= A[j-L]*bL
+            if j>=L-1:
+                if d[w]==1:
+                    res.append(s[j-L+1:j+1])
+                d[w] += 1
+        return res
 ```
-88 ms
+72 ms
 
 

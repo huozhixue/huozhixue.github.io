@@ -49,42 +49,24 @@
 
 ## 分析
 
-直觉上这个过程中数不会越来越大，最终必然进入一个循环，判断是否在 1 上循环即可。
-
-可以用数学知识证明：
-- 设 n 是一个 k 位数，第一次替换后得到 n'
-- 必然有 n'<=81*k，n'的位数 <= $3+\lfloor log_{10}k \rfloor$。
-- 有限步之后 n 的位数必然 <=3
-
+- 直觉上最后数会越来越，进入一个循环
+- 可以用数学知识证明：
+	- 设 n 是一个 k 位数，第一次替换后得到 n'
+	- 必然有 n'<=81*k，n'的位数 <= $3+\lfloor log_{10}k \rfloor$。
+	- 有限步之后 n 的位数必然 <=3
 
 ## 解答
 
 ```python
-def isHappy(self, n: int) -> bool:
-    vis = set()
-    while n not in vis:
-        vis.add(n)
-        n = sum(int(x)**2 for x in str(n))
-    return n == 1
-```
-36 ms
-
-## *附加
-
-还可以遍历 [0, 999] 来找出所有循环。最后发现只有两种循环：
-
-	1 → 1
-	4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4
-
-故无需哈希表，直接判断是否变成 1 或 4 即可。
-
-```python
-def isHappy(self, n: int) -> bool:
-    while n not in [1, 4]:
-        n = sum(int(x)**2 for x in str(n))
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        vis = set()
+        while n not in vis:
+            vis.add(n)
+            n = sum(int(c)**2 for c in str(n))
         return n == 1
 ```
-32 ms
+35 ms
 
 
 

@@ -66,29 +66,28 @@ bSTIterator.hasNext(); // 返回 False
 ## 分析
 
 模拟中序遍历的过程即可。
-为了方便，可以将遍历过程写在 hasNext 中，然后每次 next 时先调用 hasNext。
  
 ## 解答
 
 ```python
 class BSTIterator:
 
-    def __init__(self, root: TreeNode):
-        self.stack = [root]
+    def __init__(self, root: Optional[TreeNode]):
+        self.sk = [root]
 
     def next(self) -> int:
-        if self.hasNext():
-            return self.stack.pop()
+        while self.sk:
+            u = self.sk.pop()
+            if isinstance(u,int):
+                return u
+            if u.right:
+                self.sk.append(u.right)
+            self.sk.append(u.val)
+            if u.left:
+                self.sk.append(u.left)
+        return None
 
     def hasNext(self) -> bool:
-        while self.stack:
-            node = self.stack.pop()
-            if isinstance(node, int):
-                self.stack.append(node)
-                return True
-            if node:
-                self.stack.extend([node.right, node.val, node.left])
-        return False
+        return bool(self.sk)
 ```
-100 ms
-
+63 ms

@@ -50,14 +50,15 @@
 ## 解答
 
 ```python
-def countPrimes(self, n: int) -> int:
-    flags = [0] * 2 + [1] * (n - 2)
-    for i in range(2, int(sqrt(n)) + 1):
-        if flags[i]:
-            flags[i*i:n:i] = [0] * ((n-1-i*i)//i+1)
-    return sum(flags)
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        f = [0]*2+[1]*(n-2)
+        for i in range(2,isqrt(n)+1):
+            if f[i]:
+                f[i*i:n:i] = [0]*((n-i*i-1)//i+1)
+        return sum(f)
 ```
-时间复杂度 O(N log N)，784 ms
+757 ms
 
 ## *附加
 

@@ -41,22 +41,23 @@
 
 ## 分析
 
-本题要利用位运算与的特性：
-- 假如 right 的二进制位数比 left 多，结果必然为 0 
-- 假如位数相等，去掉 right 和 left 二进制的第一位，转为递归子问题
+- 本题要利用位运算与的特性：
+	- 假如 right 的二进制位数比 left 多，结果必然为 0 
+	- 假如位数相等，去掉 right 和 left 二进制的第一位，转为递归子问题
 - 因此只需要找到 right 和 left 的二进制表示的公共前缀，后面补 0 即可
+- 具体实现时有个巧妙的方法：
+	- right 不断去掉最右边的 1 直到 right<=left，即为所求
 
-具体实现时有个巧妙的方法：right 不断去掉最右边的 1 直到 right<=left，即为所求。
- 
 ## 解答
 
 ```python
-def rangeBitwiseAnd(self, left: int, right: int) -> int:
-	while right > left:
-		right &= right - 1
-	return right
+class Solution:
+    def rangeBitwiseAnd(self, left: int, right: int) -> int:
+        while right>left:
+            right &= right-1
+        return right
 ```
-48 ms
+46 ms
 
 
 

@@ -42,19 +42,20 @@
 
 ## 分析
 
-遍历删除即可。头节点也可能删除，所以要建个哑结点。
+遍历删除即可。头节点也可能删除，所以建个哑结点。
 
 ## 解答
 
 ```python
-def removeElements(self, head: ListNode, val: int) -> ListNode:
-	dummy = p = ListNode(next=head)
-	while p.next:
-		if p.next.val == val:
-			p.next = p.next.next
-		else:
-			p = p.next
-	return dummy.next
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        dum=p=ListNode(next=head)
+        while p.next:
+            if p.next.val==val:
+                p.next = p.next.next
+            else:
+                p = p.next
+        return dum.next
 ```
 76 ms
 

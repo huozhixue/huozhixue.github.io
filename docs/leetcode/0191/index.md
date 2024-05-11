@@ -68,26 +68,28 @@
 可以直接调包。
 
 ```python
-def hammingWeight(self, n: int) -> int:
-    return n.bit_count()
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        return n.bit_count()
 ```
-32 ms
+30 ms
 
 ### #2
 
-有个巧妙的位计算技巧，n & (n-1) 等价于将 n 中最后一个 1 变为 0。
-
-循环操作直到 n 变为 0 即可。
+有个巧妙的位计算技巧：
+- n & (n-1) 等价于将 n 中最后一个 1 变为 0
+- 循环操作直到 n 变为 0 即可
  
 ## 解答
 
 ```python
-def hammingWeight(self, n: int) -> int:
-    res = 0
-    while n:
-        n &= n - 1
-        res += 1
-    return res
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0
+        while n:
+            n &= n-1
+            res += 1
+        return res
 ```
 40 ms
 

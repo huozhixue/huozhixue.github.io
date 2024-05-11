@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0201\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  291 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  285 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0201\/","datePublished": "2015-07-20T00:00:00+08:00","dateModified": "2015-07-20T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,7 +111,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0201：数字范围按位与（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-20">2015-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 291 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-20">2015-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 285 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0201/" class="leancloud_visitors" data-flag-title="0201：数字范围按位与（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -152,13 +152,20 @@
 <li><code>0 <= left <= right <= 2<sup>31</sup> - 1</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>本题要利用位运算与的特性：</p>
+<ul>
+<li>本题要利用位运算与的特性：
 <ul>
 <li>假如 right 的二进制位数比 left 多，结果必然为 0</li>
 <li>假如位数相等，去掉 right 和 left 二进制的第一位，转为递归子问题</li>
-<li>因此只需要找到 right 和 left 的二进制表示的公共前缀，后面补 0 即可</li>
 </ul>
-<p>具体实现时有个巧妙的方法：right 不断去掉最右边的 1 直到 right&lt;=left，即为所求。</p>
+</li>
+<li>因此只需要找到 right 和 left 的二进制表示的公共前缀，后面补 0 即可</li>
+<li>具体实现时有个巧妙的方法：
+<ul>
+<li>right 不断去掉最右边的 1 直到 right&lt;=left，即为所求</li>
+</ul>
+</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -166,15 +173,17 @@
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rangeBitwiseAnd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">right</span> <span class="o">&gt;</span> <span class="n">left</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">right</span> <span class="o">&amp;=</span> <span class="n">right</span> <span class="o">-</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">right</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">rangeBitwiseAnd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">right</span><span class="o">&gt;</span><span class="n">left</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">right</span> <span class="o">&amp;=</span> <span class="n">right</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">right</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>48 ms</p>
+</div><p>46 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

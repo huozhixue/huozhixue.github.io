@@ -51,32 +51,32 @@
 
 ## 分析
 
-本题可以用 dfs/bfs 遍历找到每一个岛。
-
-不过连通问题一般还是用并查集，方便进阶问题的解决。
-- 将相邻的陆地连通
-- 最终连通块的个数即是岛屿数量
+- 可以用 dfs/bfs 遍历找到每一个岛
+- 连通问题更通用的办法是用并查集
+	- 将相邻的陆地连通
+	- 最终陆地连通块的个数即是所求
 
 ## 解答
 
 ```python
-def numIslands(self, grid: List[List[str]]) -> int:
-    def find(x):
-        if f[x] != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        def find(x):
+            if f[x] != x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(x, y):
-        f[find(x)] = find(y)
+        def union(x, y):
+            f[find(x)] = find(y)
 
-    f, m, n = {}, len(grid), len(grid[0])
-    for i, j in product(range(m), range(n)):
-        if grid[i][j] == '1':
-            f[(i, j)] = (i, j)
-            if i and grid[i-1][j] == '1':
-                union((i-1, j), (i, j))
-            if j and grid[i][j-1] == '1':
-                union((i, j-1), (i, j))
-    return sum(find(x)==x for x in f)
+        m, n = len(grid), len(grid[0])
+        f = list(range(m*n))
+        for i, j in product(range(m), range(n)):
+            if grid[i][j] == '1':
+                if i and grid[i-1][j] == '1':
+                    union(i*n+j,(i-1)*n+j)
+                if j and grid[i][j-1] == '1':
+                    union(i*n+j,i*n+j-1)
+        return sum(find(x)==x for x in range(m*n) if grid[x//n][x%n]=='1')
 ```
-188 ms
+244 ms

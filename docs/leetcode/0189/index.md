@@ -56,35 +56,43 @@
 最简单的就是切片。
 				
 ```python
-def rotate(self, nums: List[int], k: int) -> None:
-    k %= len(nums)
-    nums[:] = nums[-k:] + nums[:-k]
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        k%=len(nums)
+        nums[:] = nums[-k:]+nums[:-k]
 ```
-40 ms
+42 ms
 
 ### #2
 
-要求空间复杂度 O(1)，有一个很巧妙的方法。
-
-将 nums 反转，和最终结果比较，发现只要再将 nums[:k] 和 nums[k:] 反转即可。
+- 要求空间复杂度 O(1)，考虑原地反转
+- 先将 nums 反转
+- 再将 nums[:k] 和 nums[k:] 反转即可
  
 ## 解答
 
 ```python
-def rotate(self, nums: List[int], k: int) -> None:
-    def rev(i, j):
-        while i < j:
-            nums[i], nums[j] = nums[j], nums[i]
-            i += 1
-            j -= 1
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        def rev(i, j):
+            while i < j:
+                nums[i], nums[j] = nums[j], nums[i]
+                i += 1
+                j -= 1
 
-    n = len(nums)
-    k %= n
-    rev(0, n-1)
-    rev(0, k-1)
-    rev(k, n-1)
+        n = len(nums)
+        k %= n
+        rev(0, n-1)
+        rev(0, k-1)
+        rev(k, n-1)
 ```
-56 ms
+43 ms
 
 
 

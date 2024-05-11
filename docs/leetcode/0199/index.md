@@ -49,12 +49,13 @@
 ## 解答
 
 ```python
-def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-    res, Q = [], [root] if root else []
-    while Q:
-        res.append(Q[-1].val)
-        Q = [child for p in Q for child in [p.left, p.right] if child]
-    return res
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        res,Q = [],[root] if root else []
+        while Q:
+            res.append(Q[-1].val)
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res
 ```
 28 ms
 
