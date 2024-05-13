@@ -44,52 +44,32 @@
 
 ## 分析
 
-### #1
 
-类似 {{< lc "0200" >}}，只不过从求岛屿数量换成求最大岛屿。
-遍历时记录面积即可。
-
-```python
-def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-    def dfs(i, j):
-        cnt, grid[i][j] = 1, 'M'
-        for x, y in [(i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)]:
-            if 0 <= x < m and 0 <= y < n and grid[x][y] == 1:
-                cnt += dfs(x, y)
-        return cnt
-
-    res, m, n = 0, len(grid), len(grid[0])
-    for i, j in product(range(m), range(n)):
-        if grid[i][j] == 1:
-            res = max(res, dfs(i, j))
-    return res
-```
-60 ms
-
-### #2
-
-也可以用并查集，将相邻的陆地连通。最终统计陆地连通块的大小即可。
+类似 {{< lc "0200" >}}，可以用并查集，最终统计连通块的大小即可。
 
 ## 解答
 
 ```python
-def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-    def find(x):
-        if f.setdefault(x, x) != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        def find(x):
+            if f[x] != x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(x, y):
-        f[find(x)] = find(y)
+        def union(x, y):
+            f[find(x)] = find(y)
 
-    f, m, n = {}, len(grid), len(grid[0])
-    for i, j in product(range(m), range(n)):
-        if i and grid[i - 1][j] == grid[i][j] == 1:
-            union((i - 1, j), (i, j))
-        if j and grid[i][j - 1] == grid[i][j] == 1:
-            union((i, j - 1), (i, j))
-    ct = Counter(find((i, j)) for i, j in product(range(m), range(n)) if grid[i][j] == 1)
-    return max(ct.values(), default=0)
+        m, n = len(grid), len(grid[0])
+        f = list(range(m*n))
+        for i, j in product(range(m), range(n)):
+            if grid[i][j] == 1:
+                if i and grid[i-1][j] == 1:
+                    union(i*n+j,(i-1)*n+j)
+                if j and grid[i][j-1] == 1:
+                    union(i*n+j,i*n+j-1)
+        ct = Counter(find(x) for x in range(m*n) if grid[x//n][x%n]==1)
+        return max(ct.values(),default=0)
 ```
-64 ms
+67 ms
 

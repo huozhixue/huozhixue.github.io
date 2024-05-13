@@ -49,42 +49,25 @@
 
 ## 分析
 
-### #1
-
-先考虑递归方法：
-- 首先反转 head.next 后的链表，这是递归子问题
-- 然后改变 head.next 和 head 之间的指向即可
-
-```python
-def reverseList(self, head: ListNode) -> ListNode:
-	if not head or not head.next:
-		return head
-	newhead = self.reverseList(head.next)
-	head.next.next = head
-	head.next = None
-	return newhead
-```
-48 ms
-
-### #2
-
-也可以用迭代法：
-- 用 tail 维护已经反转部分的尾节点
-- 初始新建哑节点，tail 指向 head
+递归法很简单，也可以用迭代法：
+- 新建哑节点 dum
+- tail 维护已反转部分的尾节点，初始指向 head
 - tail 后面还剩节点时，将该节点去除并插入到哑结点后即可
 
 ## 解答
 
 ```python
-def reverseList(self, head: ListNode) -> ListNode:
-    dummy, tail = ListNode(next=head), head
-    while tail and tail.next:
-        tmp = tail.next
-        tail.next = tmp.next
-        tmp.next = dummy.next
-        dummy.next = tmp
-    return dummy.next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dum=ListNode(next=head)
+        tail = head
+        while tail and tail.next:
+            tmp = tail.next
+            tail.next = tmp.next
+            tmp.next = dum.next
+            dum.next = tmp
+        return dum.next
 ```
-36 ms
+43 ms
 
 

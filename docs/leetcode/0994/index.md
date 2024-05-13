@@ -58,25 +58,22 @@
 
 ## 分析
 
-典型的广度优先搜索。模拟过程，每分钟保存腐烂橘子相邻的新鲜橘子，作为下一分钟的腐烂橘子，直到没有相邻的新鲜橘子为止。
-最后再判断是否存在新鲜橘子即可。
-
-为了方便，可以把橘子的腐烂时间也保存起来。
+多源bfs，模拟即可。注意最后要判断是否还存在新鲜橘子。
 
 ## 解答
-
 ```python
-def orangesRotting(self, grid: List[List[int]]) -> int:
-	m, n = len(grid), len(grid[0])
-	queue = deque((i, j, 0) for i in range(m) for j in range(n) if grid[i][j]==2)
-	t = 0
-	while queue:
-		i, j, t = queue.popleft()
-		for x, y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-			if 0<=x<m and 0<=y<n and grid[x][y] == 1:
-				queue.append((x, y, t+1))
-				grid[x][y] = 2
-	return -1 if any(1 in row for row in grid) else t
+class Solution:
+    def orangesRotting(self, grid: List[List[int]]) -> int:
+        m,n = len(grid),len(grid[0])
+        Q = deque((i,j,0) for i in range(m) for j in range(n) if grid[i][j]==2)
+        w = 0
+        while Q:
+            i,j,w = Q.popleft()
+            for x,y in [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]:
+                if 0<=x<m and 0<=y<n and grid[x][y]==1:
+                    Q.append((x,y,w+1))
+                    grid[x][y] = 2
+        return -1 if any(1 in row for row in grid) else w
 ```
 
-44 ms
+43 ms

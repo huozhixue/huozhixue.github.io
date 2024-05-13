@@ -7,32 +7,32 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0463：岛屿的周长 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0463/">
+        <title>1553：吃掉 N 个橘子的最少天数（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1553/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0463：岛屿的周长">
-  <meta property="og:description" content="力扣第 463 题 题目 给定一个 row x col 的二维网格地图 grid ，其中：grid[i][j] = 1 表示陆地， grid[i][j] = 0 表示水域。 网格中的格子 水平和垂直 方向相连（对角线">
+  <meta property="og:title" content="1553：吃掉 N 个橘子的最少天数（★★）">
+  <meta property="og:description" content="力扣第 202 场周赛第 4 题 题目 厨房里总共有 n 个橘子，你决定每一天选择如下方式之一吃这些橘子： 吃掉一个橘子。 如果剩余橘子数 n 能被 2 整除，那么你可以吃">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
-    <meta property="article:published_time" content="2016-04-07T00:00:00+08:00">
-    <meta property="article:modified_time" content="2016-04-07T00:00:00+08:00">
+    <meta property="article:published_time" content="2020-08-16T11:00:00+08:00">
+    <meta property="article:modified_time" content="2020-08-16T11:00:00+08:00">
     <meta property="og:image" content="https://huozhixue.github.io/logo.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"><meta name="twitter:title" content="0463：岛屿的周长">
-<meta name="twitter:description" content="力扣第 463 题 题目 给定一个 row x col 的二维网格地图 grid ，其中：grid[i][j] = 1 表示陆地， grid[i][j] = 0 表示水域。 网格中的格子 水平和垂直 方向相连（对角线">
+<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"><meta name="twitter:title" content="1553：吃掉 N 个橘子的最少天数（★★）">
+<meta name="twitter:description" content="力扣第 202 场周赛第 4 题 题目 厨房里总共有 n 个橘子，你决定每一天选择如下方式之一吃这些橘子： 吃掉一个橘子。 如果剩余橘子数 n 能被 2 整除，那么你可以吃">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0463/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0462/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0464/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1553/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1544/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1557/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0463：岛屿的周长",
+        "headline": "1553：吃掉 N 个橘子的最少天数（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0463\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  363 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0463\/","datePublished": "2016-04-07T00:00:00+08:00","dateModified": "2016-04-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1553\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  499 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1553\/","datePublished": "2020-08-16T11:00:00+08:00","dateModified": "2020-08-16T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -109,10 +109,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0463：岛屿的周长</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1553：吃掉 N 个橘子的最少天数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-07">2016-04-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 363 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0463/" class="leancloud_visitors" data-flag-title="0463：岛屿的周长">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-16">2020-08-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 499 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1553/" class="leancloud_visitors" data-flag-title="1553：吃掉 N 个橘子的最少天数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -128,80 +128,85 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/island-perimeter/" target="_blank" rel="noopener noreffer">力扣第 463 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/" target="_blank" rel="noopener noreffer">力扣第 202 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个 <code>row x col</code> 的二维网格地图 <code>grid</code> ，其中：<code>grid[i][j] = 1</code> 表示陆地， <code>grid[i][j] = 0</code> 表示水域。</p>
-<p>网格中的格子 <strong>水平和垂直</strong> 方向相连（对角线方向不相连）。整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。</p>
-<p>岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。格子是边长为 1 的正方形。网格为长方形，且宽度和高度均不超过 100 。计算这个岛屿的周长。</p>
+<p>厨房里总共有 <code>n</code> 个橘子，你决定每一天选择如下方式之一吃这些橘子：</p>
+<ul>
+<li>吃掉一个橘子。</li>
+<li>如果剩余橘子数 <code>n</code> 能被 2 整除，那么你可以吃掉 <code>n/2</code> 个橘子。</li>
+<li>如果剩余橘子数 <code>n</code> 能被 3 整除，那么你可以吃掉 <code>2*(n/3)</code> 个橘子。</li>
+</ul>
+<p>每天你只能从以上 3 种方案中选择一种方案。</p>
+<p>请你返回吃掉所有 <code>n</code> 个橘子的最少天数。</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/island.png" /></p>
-<pre>
-<strong>输入：</strong>grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
-<strong>输出：</strong>16
-<strong>解释：</strong>它的周长是上面图片中的 16 个黄色的边</pre>
-<p><strong>示例 2：</strong></p>
-<pre>
-<strong>输入：</strong>grid = [[1]]
+<pre><strong>输入：</strong>n = 10
 <strong>输出：</strong>4
+<strong>解释：</strong>你总共有 10 个橘子。
+第 1 天：吃 1 个橘子，剩余橘子数 10 - 1 = 9。
+第 2 天：吃 6 个橘子，剩余橘子数 9 - 2*(9/3) = 9 - 6 = 3。（9 可以被 3 整除）
+第 3 天：吃 2 个橘子，剩余橘子数 3 - 2*(3/3) = 3 - 2 = 1。
+第 4 天：吃掉最后 1 个橘子，剩余橘子数 1 - 1 = 0。
+你需要至少 4 天吃掉 10 个橘子。
+</pre>
+<p><strong>示例 2：</strong></p>
+<pre><strong>输入：</strong>n = 6
+<strong>输出：</strong>3
+<strong>解释：</strong>你总共有 6 个橘子。
+第 1 天：吃 3 个橘子，剩余橘子数 6 - 6/2 = 6 - 3 = 3。（6 可以被 2 整除）
+第 2 天：吃 2 个橘子，剩余橘子数 3 - 2*(3/3) = 3 - 2 = 1。（3 可以被 3 整除）
+第 3 天：吃掉剩余 1 个橘子，剩余橘子数 1 - 1 = 0。
+你至少需要 3 天吃掉 6 个橘子。
 </pre>
 <p><strong>示例 3：</strong></p>
-<pre>
-<strong>输入：</strong>grid = [[1,0]]
-<strong>输出：</strong>4
+<pre><strong>输入：</strong>n = 1
+<strong>输出：</strong>1
+</pre>
+<p><strong>示例 4：</strong></p>
+<pre><strong>输入：</strong>n = 56
+<strong>输出：</strong>6
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>row == grid.length</code></li>
-<li><code>col == grid[i].length</code></li>
-<li><code>1 <= row, col <= 100</code></li>
-<li><code>grid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
+<li><code>1 &lt;= n &lt;= 2*10^9</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>遍历陆地并去掉相邻格子的重叠边即可。</p>
+<p>用递归即可，优先除2或除3。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">islandPerimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="mi">4</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">res</span> <span class="o">-=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">res</span> <span class="o">-=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minDays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@cache</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">1</span><span class="o">+</span><span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">),</span><span class="n">n</span><span class="o">%</span><span class="mi">3</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>81 ms</p>
+</div><p>41 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-04-07</span>
+                <span>更新于 2020-08-16</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0463/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/1553/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -210,14 +215,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/dfs/">Dfs</a>,&nbsp;<a href="/leetcode_tags/bfs/">Bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">记忆化搜索</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0464/" class="prev" rel="prev" title="0464：我能赢吗（★）"><i class="fas fa-angle-left fa-fw"></i>0464：我能赢吗（★）</a>
-            <a href="/leetcode/0462/" class="next" rel="next" title="0462：最小操作次数使数组元素相等 II（★）">0462：最小操作次数使数组元素相等 II（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1557/" class="prev" rel="prev" title="1557：可以到达所有点的最少点数目（★）"><i class="fas fa-angle-left fa-fw"></i>1557：可以到达所有点的最少点数目（★）</a>
+            <a href="/leetcode/1544/" class="next" rel="next" title="1544：整理字符串">1544：整理字符串<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

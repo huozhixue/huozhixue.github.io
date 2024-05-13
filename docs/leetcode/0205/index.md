@@ -49,21 +49,25 @@
 
 ### #1
 
-显然可以用哈希表。因为要求一一对应，所以用两个哈希表来记录双向关系。
+可以用哈希表判断是否单射，正反两次即可判断是否双射。
 
 ```python
-def isIsomorphic(self, s: str, t: str) -> bool:
-    d1, d2 = {}, {}
-    for a, b in zip(s, t):
-        if d1.setdefault(a, b) != b or d2.setdefault(b, a) != a:
-            return False
-    return True
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        def check(s,t):
+            d = {}
+            for a,b in zip(s,t):
+                if a in d and d[a]!=b:
+                    return False
+                d[a] = b
+            return True
+        return check(s,t) and check(t,s)
 ```
-40 ms
+45 ms
 
 ### #2
 
-还有个更巧妙的方法。
+还有个更巧妙的方法：
 - 若 len(set(s))==len(set(zip(s,t)))，代表 s 到 t 是单射
 - 若 len(set(t))==len(set(zip(s,t)))，代表 t 到 s 是单射
 - 同时满足即说明是双射
@@ -71,9 +75,10 @@ def isIsomorphic(self, s: str, t: str) -> bool:
 ## 解答
 
 ```python
-def isIsomorphic(self, s: str, t: str) -> bool:
-	return len(set(s))==len(set(t))==len(set(zip(s,t)))
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        return len(set(zip(s,t)))==len(set(s))==len(set(t))
 ```
-32 ms
+41 ms
 
 

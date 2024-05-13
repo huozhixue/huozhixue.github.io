@@ -65,61 +65,62 @@ class Solution:
 ### #1
 
 基于埃氏筛法还有个很巧妙的动态规划方法。
-- 令 dp[p][v] 代表埃氏筛法遍历到数 p 时[2, v] 内还未标记的个数，f(x) 代表 x 的最小质因数
+- 令 f[p][v] 代表埃氏筛法遍历到数 p 时，[2, v] 内还未标记的个数
 - 如果 p*p > v 或者 p 是合数：
-$$p \ 筛不到数，dp[p][v] = dp[p-1][v]$$
+	- p 筛不到数，f[p][v] = f[p-1][v]
 - 如果 p*p <= v 且 p 是质数:	
-	- $$p 能筛掉合数 C=p*x，当且仅当 f(x)>=p$$
-	- $$\begin{aligned} p 能筛掉的合数个数 
-	    &= 满足 p*x \le v 且 f(x) \ge p 的 x 的个数 \\\
-		&= 遍历到 p-1 时 [p, v//p] 内还未标记的个数 \\\
-		&= dp[p-1][v//p] - dp[p-1][p-1]
-	\end{aligned}$$
-    - $$dp[p][v] = dp[p-1][v] - (dp[p-1][v//p] - dp[p-1][p-1])$$
-- p 是质数就不会被标记，所以可以用 $dp[p-1][p]>dp[p-1][p-1]$ 判断
-- 要求的即是 $dp[\lfloor \sqrt n \rfloor][n-1]$
+	- 令 g(x) 代表 x 的最小质因数
+	- p 能筛掉合数 C=p*x，当且仅当 g(x)>=p
+	- p 能筛掉的合数个数 
+	    - = 满足 p*x<=v 且 g(x)>=p 的 x 的个数 
+		 - = [p, v//p] 内还未标记的个数
+		 - = f[p-1][v//p] - f[p-1][p-1]
+	- f[p][v] = f[p-1][v] - (f[p-1][v//p] - f[p-1][p-1])
+- 质数不会被标记，所以可以用 f[p-1][p]>f[p-1][p-1] 判断 p 是否质数
+- 要求的即是 $f[\lfloor \sqrt n \rfloor][n]$
 
-> 注意 dp[p][v] 只和 v'=v//x 形式的 v' 相关，不需要递推整个 [2, n-1] 范围。
->
-> v' 的个数是 $O(\sqrt n)$，所以总的时间复杂度为 O(N)。
+> - 注意递推时 f[p][v] 涉及到的 v 不是 [2,n]
+> 	- 要么 v<=$\sqrt n$，要么 v 是 n//p 的形式
+> 	- v 的个数是 $O(\sqrt n)$
+> - 所以总的时间复杂度为 O(N)
 
 ```python
-def countPrimes(self, n: int) -> int:
-    n -= 1
-    if n < 2:
-        return 0
-    r = int(sqrt(n))
-    V = list(range(1, n//r)) + [n//x for x in range(r, 0, -1)]
-    dp = [{} for _ in range(r+1)]
-    dp[1] = {v: v-1 for v in V}
-    for p in range(2, r+1):
-        for v in V:
-            dp[p][v] = dp[p-1][v]
-            if p*p <= v and dp[p-1][p]>dp[p-1][p-1]:
-                dp[p][v] -= dp[p-1][v//p]-dp[p-1][p-1]
-    return dp[r][n]
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        n -= 1
+        if n < 2:
+            return 0
+        r = isqrt(n)
+        V = list(range(1,n//r))+[n//x for x in range(r,0,-1)]
+        f = [{} for _ in range(r+1)]
+        f[1] = {v: v-1 for v in V}
+        for p in range(2, r+1):
+            for v in V:
+                f[p][v] = f[p-1][v]
+                if p*p <= v and f[p-1][p]>f[p-1][p-1]:
+                    f[p][v] -= f[p-1][v//p]-f[p-1][p-1]
+        return f[r][n]
 ```
-时间复杂度 O(N)，7548 ms
-
+4224 ms
 ### #2
 
-> 注意反向遍历 v 就可以优化为一维数组。
->
-> 并且当 p*p > v 或者 p 是合数时，可以直接跳出遍历，极大地优化时间。
+- 注意反向遍历 v 就可以优化为一维数组
+- 当 p*p > v 或者 p 是合数时，可以直接跳出遍历，极大地优化时间
  
 ```python
-def countPrimes(self, n: int) -> int:
-    n -= 1
-    if n < 2:
-        return 0
-    r = int(sqrt(n))
-    V = [n//x for x in range(1, r)] + list(range(n//r, 0, -1))
-    dp = {v: v-1 for v in V}
-    for p in range(2, r+1):
-        for v in V:
-            if dp[p]==dp[p-1] or p*p>v:
-                break
-            dp[v] -= dp[v//p]-dp[p-1]
-    return dp[n]
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        n -= 1
+        if n < 2:
+            return 0
+        r = isqrt(n)
+        V = [n//x for x in range(1,r)] + list(range(n//r,0,-1))
+        f = {v: v-1 for v in V}
+        for p in range(2, r+1):
+            for v in V:
+                if p*p>v or f[p]==f[p-1]:
+                    break
+                f[v] -= f[v//p]-f[p-1]
+        return f[n]
 ```
-时间复杂度 O(N)，196 ms
+158 ms
