@@ -58,21 +58,24 @@
 ## 解答
 
 ```python
-def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-    n = numCourses
-    nxt, indeg = defaultdict(list), [0]*n
-    for v, u in prerequisites:
-        nxt[u].append(v)
-        indeg[v] += 1
-    res, Q = [], deque(u for u in range(n) if indeg[u]==0)
-    while Q:
-        u = Q.popleft()
-        res.append(u)
-        for v in nxt[u]:
-            indeg[v] -= 1
-            if indeg[v] == 0:
-                Q.append(v)
-    return res if len(res)==n else []
+class Solution:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        n = numCourses
+        g = [[] for _ in range(n)]
+        ind = [0]*n
+        for u,v in prerequisites:
+            g[v].append(u)
+            ind[u] += 1
+        Q = deque(u for u in range(n) if ind[u]==0)
+        res = []
+        while Q:
+            u = Q.popleft()
+            res.append(u)
+            for v in g[u]:
+                ind[v] -= 1
+                if ind[v]==0:
+                    Q.append(v)
+        return res if len(res)==n else []
 ```
-56 ms
+37 ms
 

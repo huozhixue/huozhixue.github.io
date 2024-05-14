@@ -62,10 +62,22 @@
 ## 解答
 
 ```python
-def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-    return [A for A in combinations(range(1, 10), k) if sum(A) == n]
+class Solution:
+    def combinationSum3(self, k: int, n: int) -> List[List[int]]:
+        def dfs(i,s):
+            if i>9 or len(path)==k or s>=n:
+                if len(path)==k and s==n:
+                    res.append(path[:])
+                return
+            dfs(i+1,s)
+            path.append(i)
+            dfs(i+1,s+i)
+            path.pop()
+        res,path = [],[]
+        dfs(1,0)
+        return res
 ```
-32 ms
+30 ms
 
 
 

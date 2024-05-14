@@ -43,43 +43,43 @@
 
 ## 分析
 
-{{< lc "0079" >}} 的升级版，变成搜索多个单词。
-
-单词数量太多，一个个搜会超时，考虑怎么同时搜索：
-- 只要搜索路径是某一个单词的前缀，就可以继续搜索
-- 否则，可以直接跳出
-- 当搜索路径匹配某一个单词时，添加到结果中即可
-
-于是想到用 trie 树，方便判断路径是否单词前缀或单词本身。
-
-> 注意不同路径可能找到相同单词，结果要去重
+- {{< lc "0079" >}} 的升级版，变成搜索多个单词
+- 单词数量太多，一个个搜会超时，考虑怎么同时搜索：
+	- 只要搜索路径是某一个单词的前缀，就可以继续搜索
+	- 否则，可以直接跳出
+	- 当搜索路径匹配某一个单词时，添加到结果中即可
+- 于是想到用 trie 树，方便判断路径是否单词前缀或单词本身
+- 注意不同路径可能找到相同单词，结果要去重
 
 ## 解答
 
 
 ```python
-def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
-    def dfs(p, i, j):
-        if '#' in p:
-            res.add(p['#'])
-        A = product(range(m),range(n)) if p==trie else [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]
-        for x, y in A:
-            if 0 <=x<m and 0<=y<n and board[x][y] in p:
-                c = board[x][y]
-                board[x][y] = '0'
-                dfs(p[c], x, y)
-                board[x][y] = c
-
-    m, n = len(board), len(board[0])
-    T = lambda: defaultdict(T)
-    trie = T()
-    for word in words:
-        reduce(dict.__getitem__, word, trie)['#'] = word
-    res = set()
-    dfs(trie, -1, -1)
-    return list(res)
+class Solution:
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        m,n = len(board),len(board[0])
+        T = lambda:defaultdict(T)
+        trie = T()
+        for w in words:
+            p = trie
+            for c in w:
+                p = p[c]
+            p['#'] = w
+        def dfs(p,i,j):
+            if '#' in p:
+                res.add(p['#'])
+            A = product(range(m),range(n)) if p==trie else [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]
+            for x,y in A:
+                if 0<=x<m and 0<=y<n and board[x][y] in p:
+                    c = board[x][y]
+                    board[x][y] = ''
+                    dfs(p[c],x,y)
+                    board[x][y] = c
+        res = set()
+        dfs(trie,-1,-1)
+        return list(res)
 ```
-6156 ms
+4710 ms
 
 ## *附加
 
@@ -88,29 +88,32 @@ def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
 - 弹出 '#' 后，非 '#' 的叶子结点也可以弹出，无需再考虑
 
 ```python
-def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
-    def dfs(p, i, j):
-        if '#' in p:
-            res.append(p.pop('#'))
-        A = product(range(m),range(n)) if p==trie else [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]
-        for x, y in A:
-            if 0 <=x<m and 0<=y<n and board[x][y] in p:
-                c = board[x][y]
-                board[x][y] = '0'
-                dfs(p[c], x, y)
-                board[x][y] = c
-                if not p[c]:
-                    p.pop(c)
-
-    m, n = len(board), len(board[0])
-    T = lambda: defaultdict(T)
-    trie = T()
-    for word in words:
-        reduce(dict.__getitem__, word, trie)['#'] = word
-    res = []
-    dfs(trie, -1, -1)
-    return res
+class Solution:
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        m,n = len(board),len(board[0])
+        T = lambda:defaultdict(T)
+        trie = T()
+        for w in words:
+            p = trie
+            for c in w:
+                p = p[c]
+            p['#'] = w
+        def dfs(p,i,j):
+            if '#' in p:
+                res.append(p.pop('#'))
+            A = product(range(m),range(n)) if p==trie else [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]
+            for x,y in A:
+                if 0<=x<m and 0<=y<n and board[x][y] in p:
+                    c = board[x][y]
+                    board[x][y] = ''
+                    dfs(p[c],x,y)
+                    board[x][y] = c
+                    if not p[c]:
+                        p.pop(c)
+        res = []
+        dfs(trie,-1,-1)
+        return res
 ```
-832 ms
+506 ms
 
 

@@ -51,9 +51,7 @@ wordDictionary.search("b.."); // 返回 True
 
 ## 分析
 
-{{< lc "0208" >}} 升级版，search 里可能含有 '.'。
-
-按首位是否为 '.'，分别递归即可。
+{{< lc "0208" >}} 升级版，search 里可能含有 '.'，分别递归即可。
 
 ## 解答
 
@@ -61,23 +59,25 @@ wordDictionary.search("b.."); // 返回 True
 class WordDictionary:
 
     def __init__(self):
-        T = lambda: defaultdict(T)
+        T = lambda:defaultdict(T)
         self.trie = T()
 
     def addWord(self, word: str) -> None:
-        reduce(dict.__getitem__, word, self.trie)['#'] = {}
+        p = self.trie
+        for c in word:
+            p = p[c]
+        p['#'] = {}
 
     def search(self, word: str) -> bool:
-        def dfs(p, w):
-            if not w:
+        def dfs(p,i):
+            if i==len(word):
                 return True
-            if w[0]=='.':
-                return any(dfs(q, w[1:]) for q in p.values())
-            if w[0] not in p:
-                return False
-            return dfs(p[w[0]], w[1:])
+            if word[i]=='.':
+                return any(dfs(q,i+1) for q in p.values())
+            return word[i] in p and dfs(p[word[i]],i+1)
 
-        return dfs(self.trie, word+'#')
+        word += '#'
+        return dfs(self.trie,0)
 ```
-7152 ms
+1207 ms
 

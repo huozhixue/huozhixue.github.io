@@ -46,32 +46,31 @@
 
 ## 分析
 
-典型的拓扑排序，等价于判断有向图中是否有环。
-
-一般用 bfs 实现，更容易理解：
+典型的拓扑排序，一般用 bfs 实现：
 - 初始将所有入度为 0 的顶点入队
 - 每轮弹出队首顶点，将所有后继顶点的入度减一，入度变为 0 的顶点入队
-- 循环直到队空，判断弹出的顶点个数是否等于 numCourses 即可
+- 循环直到队空
 
 ## 解答
 
 ```python
-def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-    n = numCourses
-    nxt, indeg = defaultdict(list), [0]*n
-    for v, u in prerequisites:
-        nxt[u].append(v)
-        indeg[v] += 1
-    res, Q = 0, deque(u for u in range(n) if indeg[u]==0)
-    while Q:
-        u = Q.popleft()
-        res += 1
-        for v in nxt[u]:
-            indeg[v] -= 1
-            if indeg[v] == 0:
-                Q.append(v)
-    return res==n
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        n = numCourses
+        g = [[] for _ in range(n)]
+        ind = [0]*n
+        for u,v in prerequisites:
+            g[v].append(u)
+            ind[u] += 1
+        Q = deque([u for u in range(n) if ind[u]==0])
+        while Q:
+            u = Q.popleft()
+            for v in g[u]:
+                ind[v] -= 1
+                if ind[v]==0:
+                    Q.append(v)
+        return sum(ind)==0
 ```
-48 ms
+41 ms
 
 

@@ -35,58 +35,31 @@
 
 ## 分析
 
-观察可知问题等价于找到 s 最长的前缀回文子串 s[:i]，然后在前面添加 s[i:][::-1] 即可。
-
-与回文相关，首先想到 Manacher 算法。Manacher 算法能在 O(N) 时间内得到每个位置 i 的臂长，
-那么找最后一个 i 满足其臂长等于 i 即可。
-
+- 问题等价于找到 s 最长的前缀回文子串 s[:i]，然后在前面添加 s[i:][::-1] 即可
+- 与回文相关，首先想到 Manacher 算法，O(N) 时间完成
 ## 解答
 
 ```python
-def shortestPalindrome(self, s: str) -> str:
-    def expand(l, r):
-        while l > 0 and r < len(ss) - 1 and ss[l - 1] == ss[r + 1]:
-            l -= 1
-            r += 1
-        return (r - l) // 2
-
-    pos, ss = 0, '#' + '#'.join(s) + '#'
-    A, center, right = [], 0, 0
-    for i in range(len(ss)//2+1):
-        min_arm = min(A[2*center-i], right-i) if right > i else 0
-        cur_arm = expand(i - min_arm, i + min_arm)
-        A.append(cur_arm)
-        if i + cur_arm > right:
-            center, right = i, i + cur_arm
-        if cur_arm == i:
-            pos = i
-    return s[pos:][::-1] + s
+class Solution:
+    def shortestPalindrome(self, s: str) -> str:
+        def manacher(s):
+            n = len(s)
+            A, B = [], [1]*n
+            mid, r = 0, 0
+            for i in range(n):
+                a = min(A[2*mid-i], r-i) if r>i else 0
+                while i-a and i+a<n-1 and s[i-a-1]==s[i+a+1]:
+                    a += 1
+                    B[i+a] = max(B[i+a],a*2+1)
+                A.append(a)
+                if i+a>r:
+                    mid, r = i, i+a
+            return B       # B[i]:i结尾的最大回文子串长度（奇数）
+        B = manacher('#'+'#'.join(s)+'#')
+        i = max(i for i,b in enumerate(B) if b==i+1)//2
+        return s[i:][::-1]+s
 ```
-时间复杂度 O(N)，64 ms
+171 ms
 
-## *附加
-
-还有个很巧妙的 KMP 解法。
-
-若 s[:i] 是回文子串，那么 s[::-1][-i:] 也是回文子串，ss[::-1][-i:] 和 s[:i] 相同。
-
-因此将 s 作为模式串在 s[::-1] 中用 KMP 匹配，最终匹配到的 s[:j] 即为最长的前缀回文子串。
-
-```python
-def shortestPalindrome(self, s: str) -> str:
-    nxt, j, n = [-1], -1, len(s)
-    for i in range(n):
-        while j >= 0 and s[i] != s[j]:
-            j = nxt[j]
-        j += 1
-        nxt.append(j)
-    t, j = s[::-1], 0
-    for i in range(n):
-        while j >= 0 and t[i] != s[j]:
-            j = nxt[j]
-        j += 1
-    return s[j:][::-1] + s
-```
-48 ms
 
 

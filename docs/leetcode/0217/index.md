@@ -38,15 +38,16 @@
 
 ## 分析
 
-典型的哈希应用，判断去重后长度是否减小即可。
+判断去重后长度是否减小即可。
 
 ## 解答
 
 ```python
-def containsDuplicate(self, nums: List[int]) -> bool:
-	return len(nums) != len(set(nums))
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(set(nums))<len(nums)
 ```
-44 ms
+69 ms
 
 
 

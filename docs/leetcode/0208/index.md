@@ -63,15 +63,18 @@ trie 树是一种经典的树结构，python 中用 defaultdict 实现比较方�
 class Trie:
 
     def __init__(self):
-        T = lambda: defaultdict(T)
-        self.trie = T() 
-        
+        T = lambda:defaultdict(T)
+        self.trie = T()
+
     def insert(self, word: str) -> None:
-        reduce(dict.__getitem__, word, self.trie)['#'] = {}
+        p = self.trie
+        for c in word:
+            p = p[c]
+        p['#'] = ''
 
     def search(self, word: str) -> bool:
-        return self.startsWith(word + '#')
-        
+        return self.startsWith(word+'#')
+
     def startsWith(self, prefix: str) -> bool:
         p = self.trie
         for c in prefix:
@@ -80,6 +83,6 @@ class Trie:
             p = p[c]
         return True
 ```
-112 ms
+113 ms
 
 
