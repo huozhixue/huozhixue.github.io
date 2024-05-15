@@ -53,50 +53,55 @@
 典型的并查集应用。遍历边，如果两个顶点已经连通则返回，否则就连通。
 
 ```python
-def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-    def find(x):
-        if f[x] != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
+        def find(x):
+            if f[x] != x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(x, y):
-        f[find(x)] = find(y)
+        def union(x, y):
+            f[find(x)] = find(y)
 
-    f = list(range(len(edges) + 1))
-    for u, v in edges:
-        if find(u) == find(v):
-            return [u, v]
-        union(u, v)
+        f = list(range(len(edges) + 1))
+        for u, v in edges:
+            if find(u) == find(v):
+                return [u, v]
+            union(u, v)
 ```
-40 ms
+37 ms
 
 ### #2
 
-也可以用拓扑排序。先将所有入度为 1 的顶点入队。然后每轮弹出队首顶点，将所有后继顶点的入度减一，
-并将其中所有入度为 1 的顶点入队。循环直到队空，剩下的环中的顶点的入度都大于 1，
-返回最后一条剩下的边即可。
+也可以用拓扑排序：
+- 先将所有入度为 1 的顶点入队
+- 每轮弹出队首，将后继顶点的入度减 1，并将入度变为 1 的顶点入队
+- 循环直到队空，剩下的环中的顶点的入度都大于 1
+- 返回最后一条剩下的边即可
 
 ## 解答
 
 ```python
-def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-    n = len(edges)
-    nxt, indeg = defaultdict(list), [0] * (n+1)
-    for u, v in edges:
-        nxt[u].append(v)
-        nxt[v].append(u)
-        indeg[u] += 1
-        indeg[v] += 1
-    queue = deque(u for u in range(1, n+1) if indeg[u]==1)
-    while queue:
-        u = queue.popleft()
-        for v in nxt[u]:
-            indeg[v] -= 1
-            if indeg[v] == 1:
-                queue.append(v)
-    for u, v in edges[::-1]:
-        if indeg[u] > 1 and indeg[v] > 1:
-            return [u, v]
+class Solution:
+    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
+        n = len(edges)
+        g = [[] for _ in range(n+1)]
+        deg = [0]*(n+1)
+        for a,b in edges:
+            g[a].append(b)
+            g[b].append(a)
+            deg[a] += 1
+            deg[b] += 1
+        Q = deque(u for u in range(n+1) if deg[u]==1)
+        while Q:
+            u = Q.popleft()
+            for v in g[u]:
+                deg[v]-=1
+                if deg[v]==1:
+                    Q.append(v)
+        for a,b in edges[::-1]:
+            if deg[a]>1 and deg[b]>1:
+                return [a,b]
 ```
-44 ms
+33 ms
 
