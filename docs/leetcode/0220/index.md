@@ -5,65 +5,64 @@
 
 ## 题目
 
-<p>给你一个整数数组 <code>nums</code> 和两个整数 <code>k</code> 和 <code>t</code> 。请你判断是否存在 <b>两个不同下标</b> <code>i</code> 和 <code>j</code>，使得 <code>abs(nums[i] - nums[j]) <= t</code> ，同时又满足 <code>abs(i - j) <= k</code><em> </em>。</p>
+给你一个整数数组 `nums` 和两个整数 `indexDiff` 和 `valueDiff` 。
 
-<p>如果存在则返回 <code>true</code>，不存在返回 <code>false</code>。</p>
+找出满足下述条件的下标对 `(i, j)`：
 
+- `i != j`,
+- `abs(i - j) <= indexDiff`
+- `abs(nums[i] - nums[j]) <= valueDiff`
 
+如果存在，返回 `true` _；_否则，返回 `false` 。
 
-<p><strong>示例 1：</strong></p>
+**示例 1：**
 
-<pre>
-<strong>输入：</strong>nums = [1,2,3,1], k<em> </em>= 3, t = 0
-<strong>输出：</strong>true</pre>
+**输入：**nums = [1,2,3,1], indexDiff = 3, valueDiff = 0
+**输出：**true
+**解释：**可以找出 (i, j) = (0, 3) 。
+满足下述 3 个条件：
+i != j --> 0 != 3
+abs(i - j) <= indexDiff --> abs(0 - 3) <= 3
+abs(nums[i] - nums[j]) <= valueDiff --> abs(1 - 1) <= 0
 
-<p><strong>示例 2：</strong></p>
+**示例 2：**
 
-<pre>
-<strong>输入：</strong>nums = [1,0,1,1], k<em> </em>=<em> </em>1, t = 2
-<strong>输出：</strong>true</pre>
+**输入：**nums = [1,5,9,1,5,9], indexDiff = 2, valueDiff = 3
+**输出：**false
+**解释：**尝试所有可能的下标对 (i, j) ，均无法满足这 3 个条件，因此返回 false 。
 
-<p><strong>示例 3：</strong></p>
+**提示：**
 
-<pre>
-<strong>输入：</strong>nums = [1,5,9,1,5,9], k = 2, t = 3
-<strong>输出：</strong>false</pre>
-
-
-
-<p><strong>提示：</strong></p>
-
-<ul>
-<li><code>0 <= nums.length <= 2 * 10<sup>4</sup></code></li>
-<li><code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code></li>
-<li><code>0 <= k <= 10<sup>4</sup></code></li>
-<li><code>0 <= t <= 2<sup>31</sup> - 1</code></li>
-</ul>
+- `2 <= nums.length <= 105`
+- `-109 <= nums[i] <= 109`
+- `1 <= indexDiff <= nums.length`
+- `0 <= valueDiff <= 109`
 
 
 ## 分析
 
 ### #1
 
-{{< lc "0219" >}} 升级版，要找的不是相同数而是一个范围内的数了。
+{{< lc "0219" >}} 升级版，要找的不是相同数而是一个范围内的数了
 - 考虑维护窗口 [j-k, j-1] 有序，即可二分查找离 nums[j] 最近的数
 - 有序窗口要进行插入、删除、查找操作，考虑用有序集合 SortedList 实现
 
 ```python
-def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
-    from sortedcontainers import SortedList
-    sl = SortedList()
-    for j, num in enumerate(nums):
-        if j > k:
-            sl.remove(nums[j-k-1])
-        pos = sl.bisect_left(num)
-        for x in [pos-1, pos]:
-            if 0<=x<len(sl) and abs(sl[x]-num) <= t:
-                return True
-        sl.add(num)
-    return False
+class Solution:
+    def containsNearbyAlmostDuplicate(self, nums: List[int], indexDiff: int, valueDiff: int) -> bool:
+        from sortedcontainers import SortedList
+        sl = SortedList()
+        for j,x in enumerate(nums):
+            if j>indexDiff:
+                sl.remove(nums[j-indexDiff-1])
+            pos = sl.bisect_left(x)
+            for y in sl[max(0,pos-1):pos+1]:
+                if abs(x-y)<=valueDiff:
+                    return True
+            sl.add(x)
+        return False
 ```
-376 ms
+909 ms
 
 
 ### #2
@@ -77,17 +76,18 @@ def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool
 ## 解答
 
 ```python
-def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
-    bucket, size = {}, t + 1
-    for j, num in enumerate(nums):
-        if j > k:
-            bucket.pop(nums[j - k - 1] // size)
-        key = num // size
-        if any(kk in bucket and abs(bucket[kk]-num)<=t for kk in [key, key-1, key+1]):
-            return True
-        bucket[key] = num
-    return False
+class Solution:
+    def containsNearbyAlmostDuplicate(self, nums: List[int], indexDiff: int, valueDiff: int) -> bool:
+        B,w = {}, valueDiff+1
+        for j,x in enumerate(nums):
+            if j>indexDiff:
+                B.pop(nums[j-indexDiff-1]//w)
+            key = x//w
+            if any(abs(B.get(k,inf)-x)<=valueDiff for k in [key,key-1,key+1]):
+                return True
+            B[key] = x
+        return False
 ```
-64 ms
+363 ms
 
 

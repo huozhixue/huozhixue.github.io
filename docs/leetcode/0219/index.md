@@ -47,14 +47,15 @@
 ## 解答
 
 ```python
-def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-	d = {}
-	for i, num in enumerate(nums):
-		if num in d and i-d[num] <= k:
-			return True
-		d[num] = i
-	return False
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        d = {}
+        for i,x in enumerate(nums):
+            if i-d.get(x,-inf)<=k:
+                return True
+            d[x] = i
+        return False
 ```
-40 ms
+76 ms
 
 

@@ -54,29 +54,33 @@
 ## 分析
 
 典型的扫描线问题：
-- 显然只有边缘处才可能改变高度，考虑按顺序遍历所有边缘坐标 x
+- 只有边缘处才可能改变高度，考虑按顺序遍历所有边缘坐标 x
 - 遍历 x 时，维护还没有掠过的建筑物高度集合 H，max(H) 就是对应的轮廓高度
 - max(H) 和上一个关键点高度比较，即可判断高度是否改变
-
-具体实现时，H 要进行插入、删除、取最大值的操作，考虑用有序集合 SortedList，都能在 O(logN) 时间内完成。
+- H 要进行插入、删除、取最大值的操作，考虑用有序集合 SortedList，都能在 O(logN) 时间内完成
 
 ## 解答
 	
 ```python
-def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:
-    from sortedcontainers import SortedList
-    d = defaultdict(list)
-    for left, right, h in buildings:
-        d[left].append((h, 1))
-        d[right].append((h, 0))
-    res, H = [], SortedList()
-    for x in sorted(d):
-        for h, flag in d[x]:
-            H.add(h) if flag else H.remove(h)
-        cur = H[-1] if H else 0
-        if not res or res[-1][1] != cur:
-            res.append([x, cur])
-    return res
+class Solution:
+    def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:
+        from sortedcontainers import SortedList
+        d = defaultdict(list)
+        for l,r,h in buildings:
+            d[l].append((h,0))
+            d[r].append((h,1))
+        sl = SortedList()
+        res = []
+        for x in sorted(d):
+            for h,flag in d[x]:
+                if flag:
+                    sl.remove(h)
+                else:
+                    sl.add(h)
+            ma = sl[-1] if sl else 0
+            if not res or ma!=res[-1][1]:
+                res.append((x,ma))
+        return res
 ```
-64 ms
+63 ms
 
