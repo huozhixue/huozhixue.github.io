@@ -240,36 +240,57 @@ f, sz = {}, defaultdict(lambda: 1)
 
 ### 6.1 最短路
 
-#### 6.1.1 dijkstra
+####  dijkstra
 
 ```python
-def dij(nxt,s):
-	pq, D = [(0,s)], defaultdict(lambda:inf)
-	D[s] = 0
+def dij(g,s):
+	pq,d = [(0,s)], [inf]*n
+	d[s] = 0
 	while pq:
 		w,u = heappop(pq)
-		if w>D[u]:
+		if w>d[u]:
 			continue
-		for v,w2 in nxt[u]:
+		for v,w2 in g[u]:
 			nw = w+w2
-			if nw<D[v]:
-				D[v] = nw
+			if nw<d[v]:
+				d[v] = nw
 				heappush(pq, (nw,v))
-	return D
+	return d
 ```
 
 ```python
-def dij(s):
+def dij(g,s):
 	Q, d = set(range(n)), [inf]*n
 	d[s] = 0
 	while Q:
 		u = min(Q, key=d.__getitem__)
 		Q.remove(u)
-		for v, w in nxt[u]:
+		for v, w in g[u]:
 			if v in Q:
 				d[v] = min(d[v], d[u]+w)
 ```
 
+#### spfa
+
+```python []
+def spfa(edges,s):
+    g = defaultdict(list)
+    for u, v, w in edges:
+        g[u].append((v, w))
+    d = [inf] * n
+    d[s] = 0
+    Q, vis = deque([s]), {s}
+    while Q:
+        u = Q.popleft()
+        vis.remove(u)
+        for v, w in g[u]:
+            if d[u]+w<d[v]:
+                d[v] = d[u]+w
+                if v not in vis:
+                    vis.add(v)
+                    Q.append(v)
+    return d
+```
 ### 6.2 拓扑排序
 
 #### 6.2.1 博弈反推
@@ -368,6 +389,107 @@ def km(g):                   # g 是 n-n 完全二分图的权值
     return sum(g[d[y]][y] for y in range(n))
 ```
 
+### 6.5 网络流
+#### 最大流
+
+```python
+class Dinic:
+    def __init__(self,):
+        self.g = defaultdict(list)          # g 是图中每个 u 对应的 v 列表
+        self.h = {}                         # h 是图中每个 u 离源点 s 的距离
+        self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
+
+    def add(self,u,v,c):
+        self.g[u].append([v,len(self.g[v]),c])
+        self.g[v].append([u,len(self.g[u])-1,0])
+
+    def bfs(self,s,t):
+        self.p.clear()
+        self.h.clear()
+        self.h[s]=0
+        Q = deque([s])
+        while Q:
+            u = Q.popleft()
+            for v,_,c in self.g[u]:
+                if v not in self.h and c>0:
+                    Q.append(v)
+                    self.h[v]=self.h[u]+1
+        return t in self.h
+
+    def dfs(self,u,t,flow):
+        if u==t:
+            return flow
+        res = 0
+        for i in range(self.p[u],len(self.g[u])):
+            v,j,c = self.g[u][i]
+            if self.h[v]==self.h[u]+1 and c>0:
+                a = self.dfs(v,t,min(flow,c))
+                flow -= a
+                self.g[u][i][-1]-=a
+                self.g[v][j][-1]+=a
+                res += a
+            self.p[u] += 1
+        return res
+
+    def cal(self,s,t):
+        res = 0
+        while self.bfs(s,t):
+            res += self.dfs(s,t,inf)
+        return res
+```
+
+#### 最小费用最大流
+```python
+class Dinic:
+    def __init__(self,):
+        self.g = defaultdict(list)          # g 是图中每个 u 对应的 v 列表
+        self.h = defaultdict(lambda:inf)    # h 是图中每个 u 离源点 s 的距离
+        self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
+        self.vis = set()
+
+    def add(self,u,v,c,w):
+        self.g[u].append([v,len(self.g[v]),c,w])
+        self.g[v].append([u,len(self.g[u])-1,0,-w])
+
+    def spfa(self,s,t):
+        self.h.clear()
+        self.h[s]=0
+        Q, vis = deque([s]), {s}
+        while Q:
+            u = Q.popleft()
+            vis.remove(u)
+            for v,_,c,w in self.g[u]:
+                if c>0 and self.h[u]+w<self.h[v]:
+                    self.h[v] = self.h[u]+w
+                    if v not in vis:
+                        vis.add(v)
+                        Q.append(v)
+        return self.h[t]<inf
+
+    def dfs(self,u,t,flow):
+        if u==t:
+            return flow
+        self.vis.add(u)
+        res = 0
+        for i in range(self.p[u],len(self.g[u])):
+            v,j,c,w = self.g[u][i]
+            if c>0 and v not in self.vis and self.h[v]==self.h[u]+w:
+                a = self.dfs(v,t,min(flow,c))
+                flow -= a
+                self.g[u][i][2]-=a
+                self.g[v][j][2]+=a
+                res += a
+            self.p[u] += 1
+        self.vis.remove(u)
+        return res
+
+    def cal(self,s,t):
+        res = 0
+        while self.spfa(s,t):
+            res += self.dfs(s,t,inf)*self.h[t]
+            self.p.clear()
+        return res
+```
 ## 7 树
 
 ### 7.1 lca
