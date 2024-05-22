@@ -202,7 +202,7 @@ def mpow(mat, n):
 	return res
 ```
 
-### 4.3 爬山法
+### 4.4 爬山法
 ```python
 def climb(p,cal):
 	eps, step = 1e-7, 1
@@ -221,7 +221,7 @@ def climb(p,cal):
 
 ```python
 def find(x):
-	if f.setdefault(x,x)!=x:
+	if f[x]!=x:
 		f[x] = find(f[x])
 	return f[x]
 
@@ -232,8 +232,6 @@ def union(x,y):
 			fx, fy = fy, fx
 		f[fx] = fy
 		sz[fy] += sz[fx]
-
-f, sz = {}, defaultdict(lambda: 1)
 ```
 
 ## 6 图

@@ -1,22 +1,26 @@
 # 力扣总结 数据结构（八）：图
 
 
-图是一种比树形结构更复杂的非线性数据结构。
-树形结构中的结点是一对多的关系，且有明显的层次关系。
-图中的顶点是多对多的关系，无明显的层次关系。
-
-按顶点连线（边）是否有方向，可以将图分为有向图和无向图。
-有些图的边还附带数据信息（权），被称为网或网络。
-
-图的遍历和树的遍历相似，但图中可能出现回路，因此常用一个辅助数组或哈希表 vis 记录访问过的顶点。
-
-图最常见的问题有：
-- 最小生成树，常用算法 [并查集](/algorithm-union_find)
-- 拓扑排序，常用算法 [bfs](/algorithm-dfs_bfs)
-- 最短路径，常用算法 dijkstra、Bellman-Ford、floyd
-- 割点和桥，常用算法 [tarjan](https://zhuanlan.zhihu.com/p/101923309)
-- 欧拉图，常用算法  [Hierholzer](https://zhuanlan.zhihu.com/p/108411618)
-
+- 图是一种比树形结构更复杂的非线性数据结构
+	- 树形结构中的结点是一对多的关系，且有明显的层次关系
+	- 图中的顶点是多对多的关系，无明显的层次关系。
+- 按顶点连线（边）是否有方向，可以将图分为有向图和无向图
+- 有些图的边还附带数据信息（权），被称为网或网络
+- 图的遍历和树的遍历相似，但图中可能出现回路
+	- 因此常用一个辅助数组或哈希表 vis 记录访问过的顶点
+- 图最常见的问题有：
+	- 最小生成树，常用 [并查集](/algorithm-union_find)
+	- 拓扑排序，常用 [bfs](/algorithm-dfs_bfs)
+	- 最短路径， dijkstra、Bellman-Ford、floyd
+	- 割点和桥， [tarjan](https://zhuanlan.zhihu.com/p/101923309)
+	- 欧拉图，  [Hierholzer](https://zhuanlan.zhihu.com/p/108411618)
+	- 二分图
+		- 最大匹配，[匈牙利算法](https://zhuanlan.zhihu.com/p/96229700)
+		- 最大权匹配，[KM算法](https://www.cnblogs.com/lcbwwy/p/13125327.html)、[bfs版KM算法](https://www.cnblogs.com/zhangjianjunab/p/13812944.html)
+	- 网络流
+		- [最大流](https://zhuanlan.zhihu.com/p/122375531)
+		- [最小费用最大流](https://zhuanlan.zhihu.com/p/127046673)
+- [图的模板](/algorithm-template/#6-图)
 
 ## 1 基础
 

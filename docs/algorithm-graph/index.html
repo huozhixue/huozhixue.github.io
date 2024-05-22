@@ -10,7 +10,7 @@
         <title>力扣总结 数据结构（八）：图 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/algorithm-graph/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="力扣总结 数据结构（八）：图">
-  <meta property="og:description" content="图是一种比树形结构更复杂的非线性数据结构。 树形结构中的结点是一对多的关系，且有明显的层次关系。 图中的顶点是多对多的关系，无明显的层次关系。 按">
+  <meta property="og:description" content="图是一种比树形结构更复杂的非线性数据结构 树形结构中的结点是一对多的关系，且有明显的层次关系 图中的顶点是多对多的关系，无明显的层次关系。 按顶点">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="力扣总结 数据结构（八）：图">
-  <meta name="twitter:description" content="图是一种比树形结构更复杂的非线性数据结构。 树形结构中的结点是一对多的关系，且有明显的层次关系。 图中的顶点是多对多的关系，无明显的层次关系。 按">
+  <meta name="twitter:description" content="图是一种比树形结构更复杂的非线性数据结构 树形结构中的结点是一对多的关系，且有明显的层次关系 图中的顶点是多对多的关系，无明显的层次关系。 按顶点">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algorithm-graph/" /><link rel="prev" href="https://huozhixue.github.io/algorithm-heap/" /><link rel="next" href="https://huozhixue.github.io/algorithm-sort/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algorithm-graph\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  619 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  646 ,
         "url": "https:\/\/huozhixue.github.io\/algorithm-graph\/","datePublished": "2020-11-11T00:00:00+08:00","dateModified": "2020-11-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">力扣总结 数据结构（八）：图</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-11">2020-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 619 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-11">2020-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 646 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/algorithm-graph/" class="leancloud_visitors" data-flag-title="力扣总结 数据结构（八）：图">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -145,19 +145,42 @@
     <li><a href="#6-割点和桥">*6 割点和桥</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>图是一种比树形结构更复杂的非线性数据结构。
-树形结构中的结点是一对多的关系，且有明显的层次关系。
-图中的顶点是多对多的关系，无明显的层次关系。</p>
-<p>按顶点连线（边）是否有方向，可以将图分为有向图和无向图。
-有些图的边还附带数据信息（权），被称为网或网络。</p>
-<p>图的遍历和树的遍历相似，但图中可能出现回路，因此常用一个辅助数组或哈希表 vis 记录访问过的顶点。</p>
-<p>图最常见的问题有：</p>
+            </div><div class="content" id="content"><ul>
+<li>图是一种比树形结构更复杂的非线性数据结构
 <ul>
-<li>最小生成树，常用算法 <a href="/algorithm-union_find" rel="">并查集</a></li>
-<li>拓扑排序，常用算法 <a href="/algorithm-dfs_bfs" rel="">bfs</a></li>
-<li>最短路径，常用算法 dijkstra、Bellman-Ford、floyd</li>
-<li>割点和桥，常用算法 <a href="https://zhuanlan.zhihu.com/p/101923309" target="_blank" rel="noopener noreffer">tarjan</a></li>
-<li>欧拉图，常用算法  <a href="https://zhuanlan.zhihu.com/p/108411618" target="_blank" rel="noopener noreffer">Hierholzer</a></li>
+<li>树形结构中的结点是一对多的关系，且有明显的层次关系</li>
+<li>图中的顶点是多对多的关系，无明显的层次关系。</li>
+</ul>
+</li>
+<li>按顶点连线（边）是否有方向，可以将图分为有向图和无向图</li>
+<li>有些图的边还附带数据信息（权），被称为网或网络</li>
+<li>图的遍历和树的遍历相似，但图中可能出现回路
+<ul>
+<li>因此常用一个辅助数组或哈希表 vis 记录访问过的顶点</li>
+</ul>
+</li>
+<li>图最常见的问题有：
+<ul>
+<li>最小生成树，常用 <a href="/algorithm-union_find" rel="">并查集</a></li>
+<li>拓扑排序，常用 <a href="/algorithm-dfs_bfs" rel="">bfs</a></li>
+<li>最短路径， dijkstra、Bellman-Ford、floyd</li>
+<li>割点和桥， <a href="https://zhuanlan.zhihu.com/p/101923309" target="_blank" rel="noopener noreffer">tarjan</a></li>
+<li>欧拉图，  <a href="https://zhuanlan.zhihu.com/p/108411618" target="_blank" rel="noopener noreffer">Hierholzer</a></li>
+<li>二分图
+<ul>
+<li>最大匹配，<a href="https://zhuanlan.zhihu.com/p/96229700" target="_blank" rel="noopener noreffer">匈牙利算法</a></li>
+<li>最大权匹配，<a href="https://www.cnblogs.com/lcbwwy/p/13125327.html" target="_blank" rel="noopener noreffer">KM算法</a>、<a href="https://www.cnblogs.com/zhangjianjunab/p/13812944.html" target="_blank" rel="noopener noreffer">bfs版KM算法</a></li>
+</ul>
+</li>
+<li>网络流
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/122375531" target="_blank" rel="noopener noreffer">最大流</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/127046673" target="_blank" rel="noopener noreffer">最小费用最大流</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/algorithm-template/#6-%e5%9b%be" rel="">图的模板</a></li>
 </ul>
 <h2 id="1-基础">1 基础</h2>
 <ul>
