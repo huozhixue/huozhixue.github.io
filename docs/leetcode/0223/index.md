@@ -43,19 +43,17 @@
 
 ## 分析
 
-用两个矩形面积的和去掉重叠面积即可：
-
-若有重叠部分，宽必然等于 [ax1, ax2] 和 [bx1, bx2] 的重叠长度，即
-$$min(ax2, bx2)-max(ax1, bx1)$$
-
-高也同理。
+- 用两个矩形面积的和去掉重叠面积即可
+- 若有重叠部分，宽必然等于 [ax1, ax2] 和 [bx1, bx2] 的重叠长度，即  $min(ax2, bx2)-max(ax1, bx1)$
+- 高也同理
 
 ## 解答
 
 ```python
-def computeArea(self, ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: int, bx2: int, by2: int) -> int:
-    x = max(0, min(ax2, bx2)-max(ax1, bx1))
-    y = max(0, min(ay2, by2)-max(ay1, by1))
-    return (ax2-ax1)*(ay2-ay1)+(bx2-bx1)*(by2-by1)-x*y
+class Solution:
+    def computeArea(self, ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: int, bx2: int, by2: int) -> int:
+        a = min(ax2,bx2)-max(ax1,bx1)
+        b = min(ay2,by2)-max(ay1,by1)
+        return (ay2-ay1)*(ax2-ax1)+(by2-by1)*(bx2-bx1)-max(0,a)*max(0,b)
 ```
-52 ms
+45 ms

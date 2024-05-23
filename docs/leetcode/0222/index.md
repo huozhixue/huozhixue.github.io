@@ -49,41 +49,28 @@
 
 ## 分析
 
-递归很简单。
-
-## 解答
-
-```python
-def countNodes(self, root: TreeNode) -> int:
-    return 0 if not root else 1 + self.countNodes(root.left)+self.countNodes(root.right)
-```
-64 ms
-
-## *附加
-
-利用完全二叉树的特性，还有个巧妙的二分查找方法。
+递归很简单，要求比 O(N) 更快，考虑二分：
 - 先遍历到最底层最左边的节点，得到高度 h
-- 该完全二叉树的节点数 x 必然满足 x<=2^(h+1)-1
-- 以节点数 x 为界，序号 [1, x] 的节点都存在，序号 [x+1, M] 都不存在
-- 因此可以在 [0， 2^(h+1)-1] 范围内二分查找 x
-- 判断序号 y 是否存在，可以按 y 的二进制遍历树
+- 该完全二叉树的节点数 x 必然满足 x<=2^h-1
+- 以节点数 x 为界，序号 [1, x] 的节点都存在，序号 [x+1, 2^h-1] 都不存在
+- 因此可以二分查找 x 是否存在
+- 判断序号 x 是否存在，可以按 x 的二进制遍历树
 
 
 ```python
-def countNodes(self, root: TreeNode) -> int:
-    def check(x):
-        p = root
-        for bit in bin(x)[3:]:
-            p = p.left if bit == '0' else p.right
-            if not p:
-                return True
-        return False
-
-    h, p = 0, root
-    while p:
-        p = p.left
-        h += 1
-    self.__class__.__getitem__ = lambda self, x: check(x)
-    return bisect_left(self, True, 1, 1<<h) - 1
+class Solution:
+    def countNodes(self, root: Optional[TreeNode]) -> int:
+        def check(x):
+            p = root
+            for bit in bin(x)[3:]:
+                p=p.left if bit=='0' else p.right
+                if not p:
+                    return True
+            return False
+        h,p = 0,root
+        while p:
+            p=p.left
+            h+=1
+        return bisect_left(range(1<<h),True,(1<<h)//2,key=check)-1
 ```
-时间复杂度 $O(log^2 N)$，84 ms
+52 ms

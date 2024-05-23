@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0227\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  507 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  406 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0227\/","datePublished": "2015-08-15T00:00:00+08:00","dateModified": "2015-08-15T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0227：基本计算器 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-15">2015-08-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 507 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0227/" class="leancloud_visitors" data-flag-title="0227：基本计算器 II（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-15">2015-08-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 406 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0227/" class="leancloud_visitors" data-flag-title="0227：基本计算器 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,12 +125,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -166,30 +161,13 @@
 <li>题目数据保证答案是一个 <strong>32-bit 整数</strong></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>本题不含括号和符号位，所以将 &lsquo;/&rsquo; 替换为 &lsquo;//&rsquo; 就可以直接调用 eval 了。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;//&#39;</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>64 ms</p>
-<h3 id="2">#2</h3>
-<p>也可以自己实现 eval，有个通用的方法：</p>
+<p>四则运算有个通用的方法：</p>
 <ul>
-<li>用一个栈 stack 维护数字，一个栈 op 维护运算符</li>
-<li>遍历到某个运算符时，将前面优先级更高的运算符从 op 弹出，先运算了</li>
-<li>比如遇到 &lsquo;+-&rsquo; 时，可以将 op 栈顶的 &lsquo;+-*/&rsquo; 先运算了</li>
+<li>用一个栈 sk 维护数字，一个栈 op 维护运算符</li>
+<li>遍历到某个运算符时，将前面优先级更高的运算符从 op 弹出，先运算</li>
+<li>比如遇到 &lsquo;+-&rsquo; 时，可以将 op 栈顶的 &lsquo;+-*/&rsquo; 先运算</li>
+<li>注意 s 末尾添加一个加号，让所有运算符都出栈</li>
 </ul>
-<blockquote>
-<p>注意最终栈 op 非空时，还需要弹出运算。
-更方便的方法是末尾添加优先级最低的运算符，让所有运算符都出栈。</p>
-</blockquote>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -206,24 +184,26 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">func</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;+&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="o">.</span><span class="fm">__sub__</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="o">.</span><span class="fm">__mul__</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">//</span><span class="n">y</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pro</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;+-*/&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stack</span><span class="p">,</span> <span class="n">ops</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+)|([-+/*])&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">+</span><span class="s1">&#39;+&#39;</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">num</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">ops</span> <span class="ow">and</span> <span class="n">pro</span><span class="p">[</span><span class="n">ops</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&gt;=</span> <span class="n">pro</span><span class="p">[</span><span class="n">op</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">(),</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">[</span><span class="n">ops</span><span class="o">.</span><span class="n">pop</span><span class="p">()](</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ops</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">stack</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">func</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;+&#39;</span><span class="p">:</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">:</span><span class="nb">int</span><span class="o">.</span><span class="fm">__sub__</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">:</span><span class="nb">int</span><span class="o">.</span><span class="fm">__mul__</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">:</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">//</span><span class="n">y</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pro</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;*/+-&#39;</span><span class="p">,</span><span class="s1">&#39;1122&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sk</span><span class="p">,</span><span class="n">ops</span> <span class="o">=</span> <span class="p">[],[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">op</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(\d+)|([-+*/])&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="s1">&#39;+&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">ops</span> <span class="ow">and</span> <span class="n">pro</span><span class="p">[</span><span class="n">ops</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">&lt;=</span><span class="n">pro</span><span class="p">[</span><span class="n">op</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">b</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">(),</span><span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">[</span><span class="n">ops</span><span class="o">.</span><span class="n">pop</span><span class="p">()](</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ops</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>100 ms</p>
+</div><p>190 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
