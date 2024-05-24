@@ -27,15 +27,12 @@
 
 
 
-<p><strong>提示：</strong></p>
 
-<ul>
-<li>树中的节点数为 <code>n</code> 。</li>
-<li><code>1 <= k <= n <= 10<sup>4</sup></code></li>
-<li><code>0 <= Node.val <= 10<sup>4</sup></code></li>
-</ul>
+**提示：**
 
-
+- 树中的节点数为 `n` 。
+- `1 <= k <= n <= 10^4`
+- `0 <= Node.val <= 10^4`
 
 <p><strong>进阶：</strong>如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 <code>k</code> 小的值，你将如何优化算法？</p>
 
@@ -47,15 +44,16 @@
 ## 解答
 
 ```python
-def kthSmallest(self, root: TreeNode, k: int) -> int:
-    stack = [root]
-    while stack:
-        node = stack.pop()
-        if isinstance(node, int):
-            k -= 1
-            if k == 0:
-                return node
-        elif node:
-            stack.extend([node.right, node.val, node.left]
+class Solution:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        sk = [root]
+        while sk:
+            u = sk.pop()
+            if isinstance(u,int):
+                k -= 1
+                if k==0:
+                    return u
+            elif u:
+                sk.extend([u.right,u.val,u.left])
 ```
-52 ms
+48 ms

@@ -54,15 +54,16 @@
 ## 解答
 
 ```python
-def majorityElement(self, nums: List[int]) -> List[int]:
-    d = defaultdict(int)
-    for num in nums:
-        d[num] += 1
-        if len(d)==3:
-            for x in list(d):
-                d[x] -= 1
-                if d[x] == 0:
-                    del d[x]
-    return [x for x in d if nums.count(x)>len(nums)//3]
+class Solution:
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        ct = defaultdict(int)
+        for x in nums:
+            ct[x] += 1
+            if len(ct)==3:
+                for x in list(ct):
+                    ct[x] -= 1
+                    if not ct[x]:
+                        del ct[x]
+        return [x for x in ct if nums.count(x)>len(nums)//3]
 ```
-52 ms
+38 ms

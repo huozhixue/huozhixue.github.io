@@ -51,10 +51,13 @@
 ## 解答
 
 ```python
-def invertTree(self, root: TreeNode) -> TreeNode:
-	if not root:
-		return None
-	root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
-	return root
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        def dfs(u):
+            if not u:
+                return u
+            u.left,u.right = dfs(u.right),dfs(u.left)
+            return u
+        return dfs(root)
 ```
-36 ms
+37 ms

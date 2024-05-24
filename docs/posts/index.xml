@@ -3,75 +3,75 @@
         <title>所有文章 - 个人博客</title>
         <link>https://huozhixue.github.io/posts/</link>
         <description>所有文章 | 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>力扣总结 算法模板</title>
-    <link>https://huozhixue.github.io/algorithm-template/</link>
-    <pubDate>Thu, 01 Jun 2023 00:00:00 &#43;0800</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 May 2024 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>算法模板</title>
+    <link>https://huozhixue.github.io/template/</link>
+    <pubDate>Wed, 01 May 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-template/</guid>
-    <description><![CDATA[1 字符串匹配 1.1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, i = [-1], -1 for c in s: while i&gt;=0 and s[i]!=c: i = nxt[i] i += 1 nxt.append(i) return nxt # nxt[i]:i-1结尾的最大真前缀长度 1.2 manacher 1 2 3 4 5 6 7]]></description>
+    <guid>https://huozhixue.github.io/template/</guid>
+    <description><![CDATA[1 字符串 字符串匹配：kmp、mancher、z函数、滚动哈希 后缀数组 2 栈 计算器 3 贪心 贪心 4 数学 数学 5 并查集 并查集 6 图 最短路 拓扑排序 图匹配 网络]]></description>
 </item><item>
-    <title>力扣总结 数据结构进阶（六）：线段树</title>
-    <link>https://huozhixue.github.io/algorithm-segment_tree/</link>
-    <pubDate>Wed, 21 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <title>贪心模板</title>
+    <link>https://huozhixue.github.io/template-greedy/</link>
+    <pubDate>Wed, 01 Feb 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-segment_tree/</guid>
-    <description><![CDATA[线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。 相比于 前缀和 和 树状数组， 线段树更复杂，也更通用。 线段树可以区间修改、]]></description>
+    <guid>https://huozhixue.github.io/template-greedy/</guid>
+    <description><![CDATA[下一个排列 1 2 3 4 5 6 7 8 9 10 11 12 13 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i+1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j] &lt;= A[i]: j -= 1 A[i], A[j] = A[j], A[i] A[i+1:] = A[i+1:][::-1] return A]]></description>
 </item><item>
-    <title>力扣总结 数据结构进阶（五）：树状数组</title>
-    <link>https://huozhixue.github.io/algorithm-binary_indexed_tree/</link>
-    <pubDate>Sun, 11 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <title>数学模板</title>
+    <link>https://huozhixue.github.io/template-math/</link>
+    <pubDate>Sun, 01 Jan 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-binary_indexed_tree/</guid>
-    <description><![CDATA[树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。 是一种解决动态数组区间查询问题的算法。 最简单的树状数组支持两种操作，]]></description>
+    <guid>https://huozhixue.github.io/template-math/</guid>
+    <description><![CDATA[1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ma = def get_primes(M): f = [1]*M for i in range(2,isqrt(M)+1): if f[i]: f[i*i:M:i] = [0] * ((M-1-i*i)//i+1) return [i for i in range(2,M) if f[i]] primes = get_primes(isqrt(ma)+1) @cache def factor(x): ct = Counter() for p in primes: while x%p==0: x//=p ct[p]]]></description>
 </item><item>
-    <title>力扣总结 数据结构进阶（四）：字典树</title>
-    <link>https://huozhixue.github.io/algorithm-trie/</link>
-    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0800</pubDate>
+    <title>并查集模板</title>
+    <link>https://huozhixue.github.io/template-dsu/</link>
+    <pubDate>Thu, 01 Dec 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-trie/</guid>
-    <description><![CDATA[字典树，又叫前缀树，是一种 N 叉树，用于高效地存储、查找字符串前缀。 python 中可以用 defaultdict 来实现。 1 基础 0208 实现 Trie (前缀树) 0648 单词替换 2 进阶 0211 添加与搜索单]]></description>
+    <guid>https://huozhixue.github.io/template-dsu/</guid>
+    <description><![CDATA[并查集 1 2 3 4 5 6 7 8 9 10 11 12 def find(x): if f[x]!=x: f[x] = find(f[x]) return f[x] def union(x,y): fx, fy = find(x),find(y) if fx != fy: if sz[fx]&gt;sz[fy]: fx, fy = fy, fx f[fx] = fy sz[fy] += sz[fx]]]></description>
 </item><item>
-    <title>力扣总结 数据结构进阶（三）：并查集</title>
-    <link>https://huozhixue.github.io/algorithm-union_find/</link>
-    <pubDate>Mon, 21 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <title>图模板：图匹配</title>
+    <link>https://huozhixue.github.io/template-graph_flow/</link>
+    <pubDate>Sun, 03 Apr 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-union_find/</guid>
-    <description><![CDATA[并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构， 专门用于 动态处理 不相交集合的「查询」与「合并]]></description>
+    <guid>https://huozhixue.github.io/template-graph_flow/</guid>
+    <description><![CDATA[最大流 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 class Dinic: def __init__(self,): self.g = defaultdict(list) # g 是图中每个 u 对应的 v 列表 self.h = {}]]></description>
 </item><item>
-    <title>力扣总结 数据结构进阶（二）：有序集合</title>
-    <link>https://huozhixue.github.io/algorithm-ordered_set/</link>
-    <pubDate>Fri, 11 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <title>图模板：图匹配</title>
+    <link>https://huozhixue.github.io/template-graph_match/</link>
+    <pubDate>Sun, 03 Apr 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-ordered_set/</guid>
-    <description><![CDATA[很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N)]]></description>
+    <guid>https://huozhixue.github.io/template-graph_match/</guid>
+    <description><![CDATA[二分图 最大匹配 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def hgr(g): # g 是二分图中每个 x 对应的 y 列表 def find(x): for y in g[x]: if y not in vis: vis.add(y) if y not in d or find(d[y]): d[y]=x return True return False res,vis,d = 0,set(),{} for x in g:]]></description>
 </item><item>
-    <title>力扣总结 数据结构进阶（一）：单调栈和单调队列</title>
-    <link>https://huozhixue.github.io/algorithm-monotonic_stack/</link>
-    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0800</pubDate>
+    <title>图模板：拓扑排序</title>
+    <link>https://huozhixue.github.io/template-graph_topo/</link>
+    <pubDate>Sat, 02 Apr 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-monotonic_stack/</guid>
-    <description><![CDATA[1 基础 0496 下一个更大元素 I 0739 每日温度 0901 股票价格跨度 2 进阶 0084 柱状图中最大的矩形 0085 最大矩形 0907 子数组的最小值之和 3 挑战 0456 132 模式 0962 最大宽度坡 0975 奇偶跳 1124]]></description>
+    <guid>https://huozhixue.github.io/template-graph_topo/</guid>
+    <description><![CDATA[博弈反推 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Q = deque(res) # res[u]：终态 u 的胜负结果 while Q: u = Q.popleft() if u==start: # start：初始态 return res[u] for v in nxt[u]: if v in res: continue if v[-1]==res[u]: res[v]]]></description>
 </item><item>
-    <title>力扣总结 算法进阶（四）：几何</title>
-    <link>https://huozhixue.github.io/algorithm-math_geometry/</link>
-    <pubDate>Sun, 11 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <title>图模板：最短路</title>
+    <link>https://huozhixue.github.io/template-graph_shortest/</link>
+    <pubDate>Fri, 01 Apr 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-math_geometry/</guid>
-    <description><![CDATA[一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。 相关的算法有 扫描线算法 等。 1 基础 0223 矩形面积 2 进阶 0149 直线上最多的点数 3 挑战 0335 路径交叉 *4 扫]]></description>
+    <guid>https://huozhixue.github.io/template-graph_shortest/</guid>
+    <description><![CDATA[dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w+w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u =]]></description>
 </item><item>
-    <title>力扣总结 算法进阶（三）：代数</title>
-    <link>https://huozhixue.github.io/algorithm-math_algebra/</link>
-    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0800</pubDate>
+    <title>栈模板：计算器</title>
+    <link>https://huozhixue.github.io/template-stack_cal/</link>
+    <pubDate>Tue, 01 Feb 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-math_algebra/</guid>
-    <description><![CDATA[一些问题涉及到数学的代数知识： 基础的四则运算、平方开根、进制转换等 排列组合、概率统计 数论知识，包括质数、同余、因式分解、乘法逆元等 1 运算 1.1 基]]></description>
+    <guid>https://huozhixue.github.io/template-stack_cal/</guid>
+    <description><![CDATA[计算器 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 def cal(s: str) -&gt; int: func = {&#39;+&#39;:int.__add__,&#39;-&#39;:int.__sub__,&#39;*&#39;:int.__mul__,&#39;/&#39;:lambda x,y:x//y} pro = dict(zip(&#39;+-*/(&#39;,&#39;11223&#39;)) sk,ops = [],[] for x,op in re.findall(&#39;(\d+)|([-+*/()])&#39;,s+&#39;+&#39;): if x: sk.append(int(x)) elif op==&#39;(&#39;: ops.append(op) elif op==&#39;)&#39;: while ops[-1] != &#39;(&#39;: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.pop() else: while ops and pro[ops[-1]]&lt;=pro[op]: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.append(op) return]]></description>
 </item><item>
-    <title>力扣总结 算法进阶（二）：滚动哈希</title>
-    <link>https://huozhixue.github.io/algorithm-rolling_hash/</link>
-    <pubDate>Thu, 11 Mar 2021 00:00:00 &#43;0800</pubDate>
+    <title>字符串模板：后缀数组</title>
+    <link>https://huozhixue.github.io/template-string_sa/</link>
+    <pubDate>Sun, 02 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/algorithm-rolling_hash/</guid>
-    <description><![CDATA[滚动哈希是一种针对固定长度的滑动窗口的哈希方法。 朴素的哈希需要对所有窗口单独求哈希值，时间复杂度和空间复杂度都和窗口长度相关。 用滚动哈希则可]]></description>
+    <guid>https://huozhixue.github.io/template-string_sa/</guid>
+    <description><![CDATA[后缀数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 def SA(A): def SA_IS(A): def equal(pos1,]]></description>
 </item></channel>
 </rss>

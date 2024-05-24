@@ -62,33 +62,8 @@ myStack.empty(); // 返回 False
 
 ## 分析
 
-### #1
 
-python 一般直接用 list 作为栈。
-
-```python
-class MyStack:
-
-    def __init__(self):
-        self.stack = []
-
-    def push(self, x: int) -> None:
-        self.stack.append(x)
-
-    def pop(self) -> int:
-        return self.stack.pop()
-
-    def top(self) -> int:
-        return self.stack[-1]
-
-    def empty(self) -> bool:
-        return not self.stack
-```
-40 ms
-
-### #2
-
-要求用队列实现，那么 pop 时只能把前面所有元素都出队再加在末尾。
+要求队列实现， push 时加入元素，再把前面所有元素弹出加到后面即可。
 
 ## 解答
 
@@ -96,20 +71,20 @@ class MyStack:
 class MyStack:
 
     def __init__(self):
-        self.queue = deque()
+        self.q = deque()
 
     def push(self, x: int) -> None:
-        self.queue.append(x)
+        self.q.append(x)
+        for _ in range(len(self.q)-1):
+            self.q.append(self.q.popleft())
 
     def pop(self) -> int:
-        for _ in range(len(self.queue)-1):
-            self.queue.append(self.queue.popleft())
-        return self.queue.popleft()
+        return self.q.popleft()
 
     def top(self) -> int:
-        return self.queue[-1]
+        return self.q[0]
 
     def empty(self) -> bool:
-        return not self.queue
+        return not self.q
 ```
-44 ms
+34 ms

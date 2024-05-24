@@ -63,24 +63,18 @@
 
 ## 分析
 
-n 是 2 的幂等价于 n 是正整数且 n 的二进制中只有一个 1。
-
-那么用 n&(n-1) 移除最后一个 1 即变为 0。或者用 n&(-n) 提取出最后一个 1 后面的部分，即等于 n。
+可以利用位运算：
+- n 是 2 的幂等价于 n 是正整数且 n 的二进制中只有一个 1
+- 那么用 n&(n-1) 移除最后一个 1 即变为 0
+- 或者用 n&(-n) 提取出最后一个 1 后面的部分，即等于 n
 
 ## 解答
 
 ```python
-def isPowerOfTwo(self, n: int) -> bool:
-    return n>0 and n&(n-1)==0
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        return n>0 and n&(n-1)==0
 ```
-40 ms
+31 ms
 
-## *附加
 
-还有个巧妙的方法。n 是 2 的幂等价于 n 是正整数且 n 被 2^31 整除。
-
-```python
-def isPowerOfTwo(self, n: int) -> bool:
-    return n>0 and (1<<31)%n==0
-```
-32 ms

@@ -67,33 +67,31 @@ myQueue.empty(); // return false
 
 ## 分析
 
-python 一般直接用 deque 作为队列。本题要求用栈实现，pop 时只能先把后面所有元素都出栈。
-
-这里有个巧妙的想法，将出栈的元素依次保存到另一个栈 stack2 中，相当于反序保存了，后面要 pop 时若 stack2 还有元素，直接弹出即可。
-
+- 两个栈的话可以将一个栈的元素不断出栈保存到另一个栈中，相当于反序保存
+- 为了均摊 O(1)，考虑只有当 pop/peek 且第二个栈为空时，才进行这个反序操作
 ## 解答
 
 ```python
 class MyQueue:
 
     def __init__(self):
-        self.stack1 = []
-        self.stack2 = []
+        self.sk1 = []
+        self.sk2 = []
 
     def push(self, x: int) -> None:
-        self.stack1.append(x)
+        self.sk1.append(x)
 
     def pop(self) -> int:
-        if self.stack2:
-            return self.stack2.pop()
-        for _ in range(len(self.stack1)-1):
-            self.stack2.append(self.stack1.pop())
-        return self.stack1.pop()
+        self.peek()
+        return self.sk2.pop()
 
     def peek(self) -> int:
-        return self.stack2[-1] if self.stack2 else self.stack1[0]
+        if not self.sk2:
+            while self.sk1:
+                self.sk2.append(self.sk1.pop())
+        return self.sk2[-1]
 
     def empty(self) -> bool:
-        return not self.stack1 and not self.stack2
+        return bool(not self.sk2 and not self.sk1)
 ```
-36 ms
+30 ms

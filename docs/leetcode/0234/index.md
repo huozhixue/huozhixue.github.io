@@ -44,43 +44,47 @@
 用额外空间的话很简单。
 
 ```python
-def isPalindrome(self, head: ListNode) -> bool:
-	tmp = []
-	while head:
-		tmp.append(head.val)
-		head = head.next
-	return tmp == tmp[::-1]
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        A,p = [],head
+        while p:
+            A.append(p.val)
+            p=p.next
+        return A[::-1]==A
 ```
 
-780 ms
+282 ms
 
 ### #2
 
-不用额外空间，考虑将链表均分为两部分，反转其中一部分，再遍历判断两部分的节点值序列是否相同。
-
-找中点可以用快慢指针，而反转链表即是 {{< lc "0206" >}} 。
+不用额外空间，类似 {{< lc "0143" >}}:
+- 先用快慢节点找到中点位置，截断为两部分
+- 将后半部分链表反转后和前半部分对比即可
 
 ## 解答
 
 ```python
-def isPalindrome(self, head: ListNode) -> bool:
-	def reverseList(head):
-		tail = head
-		while tail and tail.next:
-			tmp = tail.next
-			tail.next = tmp.next
-			tmp.next = head
-			head = tmp
-		return head
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        def reverse(head):
+            tail = head
+            while tail and tail.next:
+                tmp = tail.next
+                tail.next = tmp.next
+                tmp.next = head
+                head = tmp
+            return head
 
-	dummy = slow = fast = ListNode(next=head)
-	while fast and fast.next:
-		slow, fast = slow.next, fast.next.next
-	head2 = reverseList(slow.next)
-	while head2:
-		if head.val != head2.val:
-			return False
-		head, head2 = head.next, head2.next
-	return True
+        slow = fast = ListNode(next=head)
+        while fast and fast.next:
+            slow, fast = slow.next, fast.next.next
+        q = slow.next
+        slow.next = None
+        p, q = head, reverse(q)
+        while q:
+            if p.val!=q.val:
+                return False
+            p,q = p.next,q.next
+        return True
 ```
-708 ms
+275 ms

@@ -58,14 +58,14 @@
 遍历数组，记录连续区间的首尾即可。
 
 ## 解答
-
 ```python
-def summaryRanges(self, nums: List[int]) -> List[str]:
-	res, i = [], 0
-	for j, num in enumerate(nums):
-		if j==len(nums)-1 or nums[j+1] != num+1:
-			res.append('%d->%d' % (nums[i], num) if j>i else str(num))
-			i = j+1
-	return res
+class Solution:
+    def summaryRanges(self, nums: List[int]) -> List[str]:
+        res, i = [], 0
+        for j,x in enumerate(nums):
+            if j==len(nums)-1 or nums[j+1]>x+1:
+                res.append(str(nums[i])+'->'+str(x) if j>i else str(x))
+                i = j+1
+        return res
 ```
 32 ms

@@ -34,28 +34,29 @@
 
 ## 分析
 
-求范围内数字满足某种性质的个数，典型的数位 dp 问题。
-
-令 dfs(pos, st, bound) 代表某个状态下的结果：
-- 遍历到 n 的第 pos 位
-- 前面取的数中有 st 个 1
-- bound 代表前面取的数是否贴着 n 的上界
-
-即可递归。
+- 求范围内数字满足某种性质的个数，典型的数位 dp 问题，可以采用通用模板
+- 令 dfs(i, st, bd) 代表某个状态下的结果：
+	- 遍历到 n 的第 i 位
+	- 前面取的数中有 st 个 1
+	- bd 代表前面取的数是否贴着 n 的上界
+- 即可递归
 
 ## 解答
 
 ```python
-def countDigitOne(self, n: int) -> int:
-    @cache
-    def dfs(pos, st, bound):
-        if pos == len(s):
-            return st
-        cur = int(s[pos])
-        up = cur if bound else 9
-        return sum(dfs(pos+1, st+(x==1), bound and x==cur) for x in range(up+1))
-
-    s = str(n)
-    return dfs(0, 0, 1)
+class Solution:
+    def countDigitOne(self, n: int) -> int:
+        @cache
+        def dfs(i,st,bd):
+            if i==len(s):
+                return st
+            res = 0
+            cur = int(s[i])
+            up = cur if bd else 9
+            for x in range(up+1):
+                res += dfs(i+1,st+(x==1),bd and x==cur)
+            return res
+        s = str(n)
+        return dfs(0,0,True)
 ```
-32 ms
+48 ms

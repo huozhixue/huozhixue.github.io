@@ -49,48 +49,42 @@
 
 ## 分析
 
-### #1
+四则运算有个通用的方法：
+- 用一个栈 sk 维护数字，一个栈 ops 维护运算符
+- 遍历到某个运算符时，将前面优先级更高的运算符从 ops 弹出，先运算
+	- 比如遇到 '+-' 时，可以将 ops 栈顶的 '+-*/' 先运算
+- 遇到 ')' 时，一直弹出 ops 的运算符，直到栈顶为 '(' 为止 
+- 注意 s 末尾添加一个加号，让所有运算符都出栈
 
-python 的 eval 最多只能处理 200 层括号，因此考虑用栈模拟递归过程，
-先处理括号内并转为一个值。括号内的计算就可以直接用 eval 了。
-
-```python
-def calculate(self, s: str) -> int:
-    stack = ['']
-    for char in s:
-        if char == '(':
-            stack.append('')
-        elif char == ')':
-            x = eval(stack.pop())
-            stack[-1] += str(x)
-        elif char:
-            stack[-1] += char
-    return eval(stack[0])
-```
-100 ms
-
-### #2
-
-也可以自己实现 eval。本题只有加减号，看作是带正负号的数之和即可。
-
-> 注意当括号内结果为负数，且括号前为负号时，会出现 '- -' 的情况，提前替换为 '+' 即可。
+> 注意本题的'-'可以用作一元运算，观察发现只有当 '-' 在开头或在 '(' 后面时才是一元运算，所以用 pre 保存上一个遍历元素，特判即可。
 
 ## 解答
 
 ```python
-def calculate(self, s: str) -> int:
-    def cal(ss):
-        return sum(map(int, re.findall('[-+]?\d+', ss.replace('--', '+'))))
-
-    stack = ['']
-    for char in s:
-        if char == '(':
-            stack.append('')
-        elif char == ')':
-            x = cal(stack.pop())
-            stack[-1] += str(x)
-        elif char != ' ':
-            stack[-1] += char
-    return cal(stack[0])
+class Solution:
+    def calculate(self, s: str) -> int:
+        func = {'+':int.__add__,'-':int.__sub__}
+        pro = dict(zip('+-(','113'))
+        sk,ops = [],[]
+        pre = '('
+        for x,op in re.findall('(\d+)|([-+*/()])',s+'+'):
+            if x:
+                sk.append(int(x))
+            elif op=='(':
+                ops.append(op)
+            elif op==')':
+                while ops[-1] != '(':
+                    b,a = sk.pop(),sk.pop()
+                    sk.append(func[ops.pop()](a,b))
+                ops.pop()
+            else:
+                if op=='-' and pre=='(':
+                    sk.append(0)
+                while ops and pro[ops[-1]]<=pro[op]:
+                    b,a = sk.pop(),sk.pop()
+                    sk.append(func[ops.pop()](a,b))
+                ops.append(op)
+            pre = x or op
+        return sk.pop()
 ```
-84 ms
+122 ms

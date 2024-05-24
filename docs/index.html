@@ -113,54 +113,54 @@
                     window.config.typeit.data = {"id-1":["id-1"]};
                 </script></h2><div class="links"><a href="https://github.com/huozhixue" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw"></i></a><a href="https://leetcode-cn.com/u/IanCN" title="leetcode" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/leetcode.min.svg"></i></a><a href="https://space.bilibili.com/577315" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/bilibili.min.svg"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-template/">力扣总结 算法模板</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-01">2023-06-01</time></span></div><div class="content">1 字符串匹配 1.1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, i = [-1], -1 for c in s: while i&gt;=0 and s[i]!=c: i = nxt[i] i += 1 nxt.append(i) return nxt # nxt[i]:i-1结尾的最大真前缀长度 1.2 manacher 1 2 3 4 5 6 7</div><div class="post-footer">
-        <a href="/algorithm-template/">阅读全文</a><div class="post-tags">
+        <a href="/template/">算法模板</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-05-01">2024-05-01</time></span></div><div class="content">1 字符串 字符串匹配：kmp、mancher、z函数、滚动哈希 后缀数组 2 栈 计算器 3 贪心 贪心 4 数学 数学 5 并查集 并查集 6 图 最短路 拓扑排序 图匹配 网络</div><div class="post-footer">
+        <a href="/template/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-segment_tree/">力扣总结 数据结构进阶（六）：线段树</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-07-21">2021-07-21</time></span></div><div class="content">线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。 相比于 前缀和 和 树状数组， 线段树更复杂，也更通用。 线段树可以区间修改、</div><div class="post-footer">
-        <a href="/algorithm-segment_tree/">阅读全文</a><div class="post-tags">
+        <a href="/template-greedy/">贪心模板</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-02-01">2023-02-01</time></span></div><div class="content">下一个排列 1 2 3 4 5 6 7 8 9 10 11 12 13 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i+1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j] &lt;= A[i]: j -= 1 A[i], A[j] = A[j], A[i] A[i+1:] = A[i+1:][::-1] return A</div><div class="post-footer">
+        <a href="/template-greedy/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-binary_indexed_tree/">力扣总结 数据结构进阶（五）：树状数组</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-07-11">2021-07-11</time></span></div><div class="content">树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。 是一种解决动态数组区间查询问题的算法。 最简单的树状数组支持两种操作，</div><div class="post-footer">
-        <a href="/algorithm-binary_indexed_tree/">阅读全文</a><div class="post-tags">
+        <a href="/template-math/">数学模板</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-01-01">2023-01-01</time></span></div><div class="content">1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ma = def get_primes(M): f = [1]*M for i in range(2,isqrt(M)+1): if f[i]: f[i*i:M:i] = [0] * ((M-1-i*i)//i+1) return [i for i in range(2,M) if f[i]] primes = get_primes(isqrt(ma)+1) @cache def factor(x): ct = Counter() for p in primes: while x%p==0: x//=p ct[p]</div><div class="post-footer">
+        <a href="/template-math/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-trie/">力扣总结 数据结构进阶（四）：字典树</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-07-01">2021-07-01</time></span></div><div class="content">字典树，又叫前缀树，是一种 N 叉树，用于高效地存储、查找字符串前缀。 python 中可以用 defaultdict 来实现。 1 基础 0208 实现 Trie (前缀树) 0648 单词替换 2 进阶 0211 添加与搜索单</div><div class="post-footer">
-        <a href="/algorithm-trie/">阅读全文</a><div class="post-tags">
+        <a href="/template-dsu/">并查集模板</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-01">2022-12-01</time></span></div><div class="content">并查集 1 2 3 4 5 6 7 8 9 10 11 12 def find(x): if f[x]!=x: f[x] = find(f[x]) return f[x] def union(x,y): fx, fy = find(x),find(y) if fx != fy: if sz[fx]&gt;sz[fy]: fx, fy = fy, fx f[fx] = fy sz[fy] += sz[fx]</div><div class="post-footer">
+        <a href="/template-dsu/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-union_find/">力扣总结 数据结构进阶（三）：并查集</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-06-21">2021-06-21</time></span></div><div class="content">并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构， 专门用于 动态处理 不相交集合的「查询」与「合并</div><div class="post-footer">
-        <a href="/algorithm-union_find/">阅读全文</a><div class="post-tags">
+        <a href="/template-graph_flow/">图模板：图匹配</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-04-03">2022-04-03</time></span></div><div class="content">最大流 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 class Dinic: def __init__(self,): self.g = defaultdict(list) # g 是图中每个 u 对应的 v 列表 self.h = {}</div><div class="post-footer">
+        <a href="/template-graph_flow/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-ordered_set/">力扣总结 数据结构进阶（二）：有序集合</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-06-11">2021-06-11</time></span></div><div class="content">很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N)</div><div class="post-footer">
-        <a href="/algorithm-ordered_set/">阅读全文</a><div class="post-tags">
+        <a href="/template-graph_match/">图模板：图匹配</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-04-03">2022-04-03</time></span></div><div class="content">二分图 最大匹配 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def hgr(g): # g 是二分图中每个 x 对应的 y 列表 def find(x): for y in g[x]: if y not in vis: vis.add(y) if y not in d or find(d[y]): d[y]=x return True return False res,vis,d = 0,set(),{} for x in g:</div><div class="post-footer">
+        <a href="/template-graph_match/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-monotonic_stack/">力扣总结 数据结构进阶（一）：单调栈和单调队列</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-06-01">2021-06-01</time></span></div><div class="content">1 基础 0496 下一个更大元素 I 0739 每日温度 0901 股票价格跨度 2 进阶 0084 柱状图中最大的矩形 0085 最大矩形 0907 子数组的最小值之和 3 挑战 0456 132 模式 0962 最大宽度坡 0975 奇偶跳 1124</div><div class="post-footer">
-        <a href="/algorithm-monotonic_stack/">阅读全文</a><div class="post-tags">
+        <a href="/template-graph_topo/">图模板：拓扑排序</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-04-02">2022-04-02</time></span></div><div class="content">博弈反推 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Q = deque(res) # res[u]：终态 u 的胜负结果 while Q: u = Q.popleft() if u==start: # start：初始态 return res[u] for v in nxt[u]: if v in res: continue if v[-1]==res[u]: res[v]</div><div class="post-footer">
+        <a href="/template-graph_topo/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-math_geometry/">力扣总结 算法进阶（四）：几何</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-04-11">2021-04-11</time></span></div><div class="content">一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。 相关的算法有 扫描线算法 等。 1 基础 0223 矩形面积 2 进阶 0149 直线上最多的点数 3 挑战 0335 路径交叉 *4 扫</div><div class="post-footer">
-        <a href="/algorithm-math_geometry/">阅读全文</a><div class="post-tags">
+        <a href="/template-graph_shortest/">图模板：最短路</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-04-01">2022-04-01</time></span></div><div class="content">dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w+w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u =</div><div class="post-footer">
+        <a href="/template-graph_shortest/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-math_algebra/">力扣总结 算法进阶（三）：代数</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-04-01">2021-04-01</time></span></div><div class="content">一些问题涉及到数学的代数知识： 基础的四则运算、平方开根、进制转换等 排列组合、概率统计 数论知识，包括质数、同余、因式分解、乘法逆元等 1 运算 1.1 基</div><div class="post-footer">
-        <a href="/algorithm-math_algebra/">阅读全文</a><div class="post-tags">
+        <a href="/template-stack_cal/">栈模板：计算器</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-02-01">2022-02-01</time></span></div><div class="content">计算器 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 def cal(s: str) -&gt; int: func = {&#39;+&#39;:int.__add__,&#39;-&#39;:int.__sub__,&#39;*&#39;:int.__mul__,&#39;/&#39;:lambda x,y:x//y} pro = dict(zip(&#39;+-*/(&#39;,&#39;11223&#39;)) sk,ops = [],[] for x,op in re.findall(&#39;(\d+)|([-+*/()])&#39;,s+&#39;+&#39;): if x: sk.append(int(x)) elif op==&#39;(&#39;: ops.append(op) elif op==&#39;)&#39;: while ops[-1] != &#39;(&#39;: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.pop() else: while ops and pro[ops[-1]]&lt;=pro[op]: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.append(op) return</div><div class="post-footer">
+        <a href="/template-stack_cal/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/algorithm-rolling_hash/">力扣总结 算法进阶（二）：滚动哈希</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-03-11">2021-03-11</time></span></div><div class="content">滚动哈希是一种针对固定长度的滑动窗口的哈希方法。 朴素的哈希需要对所有窗口单独求哈希值，时间复杂度和空间复杂度都和窗口长度相关。 用滚动哈希则可</div><div class="post-footer">
-        <a href="/algorithm-rolling_hash/">阅读全文</a><div class="post-tags">
+        <a href="/template-string_sa/">字符串模板：后缀数组</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-01-02">2022-01-02</time></span></div><div class="content">后缀数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 def SA(A): def SA_IS(A): def equal(pos1,</div><div class="post-footer">
+        <a href="/template-string_sa/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
@@ -175,8 +175,10 @@
                         <a href="/page/3/">3</a>
                     </span>
                 </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/4/">4</a>
+                        <a href="/page/5/">5</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
