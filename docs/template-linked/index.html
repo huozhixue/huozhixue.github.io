@@ -7,35 +7,35 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>并查集模板 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-dsu/">
+        <title>链表模版 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-linked/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="并查集模板">
-  <meta property="og:description" content="并查集 1 2 3 4 5 6 7 8 9 10 11 12 def find(x): if f[x]!=x: f[x] = find(f[x]) return f[x] def union(x,y): fx, fy = find(x),find(y) if fx != fy: if sz[fx]&gt;sz[fy]: fx, fy = fy, fx f[fx] = fy sz[fy] &#43;= sz[fx]">
+  <meta property="og:title" content="链表模版">
+  <meta property="og:description" content="计算器 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 def cal(s: str) -&gt; int: func = {&#39;&#43;&#39;:int.__add__,&#39;-&#39;:int.__sub__,&#39;*&#39;:int.__mul__,&#39;/&#39;:lambda x,y:x//y} pro = dict(zip(&#39;&#43;-*/(&#39;,&#39;11223&#39;)) sk,ops = [],[] for x,op in re.findall(&#39;(\d&#43;)|([-&#43;*/()])&#39;,s&#43;&#39;&#43;&#39;): if x: sk.append(int(x)) elif op==&#39;(&#39;: ops.append(op) elif op==&#39;)&#39;: while ops[-1] != &#39;(&#39;: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.pop() else: while ops and pro[ops[-1]]&lt;=pro[op]: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.append(op) return">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-12-01T00:00:00+08:00">
-    <meta property="article:modified_time" content="2022-12-01T00:00:00+08:00">
+    <meta property="article:published_time" content="2023-02-02T00:00:00+08:00">
+    <meta property="article:modified_time" content="2023-02-02T00:00:00+08:00">
     <meta property="article:tag" content="算法">
     <meta property="og:image" content="https://huozhixue.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="并查集模板">
-  <meta name="twitter:description" content="并查集 1 2 3 4 5 6 7 8 9 10 11 12 def find(x): if f[x]!=x: f[x] = find(f[x]) return f[x] def union(x,y): fx, fy = find(x),find(y) if fx != fy: if sz[fx]&gt;sz[fy]: fx, fy = fy, fx f[fx] = fy sz[fy] &#43;= sz[fx]">
+  <meta name="twitter:title" content="链表模版">
+  <meta name="twitter:description" content="计算器 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 def cal(s: str) -&gt; int: func = {&#39;&#43;&#39;:int.__add__,&#39;-&#39;:int.__sub__,&#39;*&#39;:int.__mul__,&#39;/&#39;:lambda x,y:x//y} pro = dict(zip(&#39;&#43;-*/(&#39;,&#39;11223&#39;)) sk,ops = [],[] for x,op in re.findall(&#39;(\d&#43;)|([-&#43;*/()])&#39;,s&#43;&#39;&#43;&#39;): if x: sk.append(int(x)) elif op==&#39;(&#39;: ops.append(op) elif op==&#39;)&#39;: while ops[-1] != &#39;(&#39;: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.pop() else: while ops and pro[ops[-1]]&lt;=pro[op]: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.append(op) return">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/template-dsu/" /><link rel="prev" href="https://huozhixue.github.io/template-graph_flow/" /><link rel="next" href="https://huozhixue.github.io/template-math/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/template-linked/" /><link rel="prev" href="https://huozhixue.github.io/template-bit/" /><link rel="next" href="https://huozhixue.github.io/template-stack/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "并查集模板",
+        "headline": "链表模版",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/template-dsu\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  47 ,
-        "url": "https:\/\/huozhixue.github.io\/template-dsu\/","datePublished": "2022-12-01T00:00:00+08:00","dateModified": "2022-12-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/template-linked\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  71 ,
+        "url": "https:\/\/huozhixue.github.io\/template-linked\/","datePublished": "2023-02-02T00:00:00+08:00","dateModified": "2023-02-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -112,10 +112,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">并查集模板</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">链表模版</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-12-01">2022-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 47 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-dsu/" class="leancloud_visitors" data-flag-title="并查集模板">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-02">2023-02-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 71 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-linked/" class="leancloud_visitors" data-flag-title="链表模版">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,10 +125,10 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#并查集">并查集</a></li>
+    <li><a href="#计算器">计算器</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="并查集">并查集</h2>
+            </div><div class="content" id="content"><h2 id="计算器">计算器</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -143,33 +143,49 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">!=</span><span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">fx</span><span class="p">,</span> <span class="n">fy</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">fx</span> <span class="o">!=</span> <span class="n">fy</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">sz</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">fy</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">fx</span><span class="p">,</span> <span class="n">fy</span> <span class="o">=</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fx</span>
-</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span> <span class="o">=</span> <span class="n">fy</span>
-</span></span><span class="line"><span class="cl">		<span class="n">sz</span><span class="p">[</span><span class="n">fy</span><span class="p">]</span> <span class="o">+=</span> <span class="n">sz</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">func</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;+&#39;</span><span class="p">:</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">:</span><span class="nb">int</span><span class="o">.</span><span class="fm">__sub__</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">:</span><span class="nb">int</span><span class="o">.</span><span class="fm">__mul__</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">:</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">//</span><span class="n">y</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pro</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;+-*/(&#39;</span><span class="p">,</span><span class="s1">&#39;11223&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="n">sk</span><span class="p">,</span><span class="n">ops</span> <span class="o">=</span> <span class="p">[],[]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">op</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(\d+)|([-+*/()])&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="s1">&#39;+&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">op</span><span class="o">==</span><span class="s1">&#39;(&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">ops</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">op</span><span class="o">==</span><span class="s1">&#39;)&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="n">ops</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">				<span class="n">b</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">(),</span><span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">				<span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">[</span><span class="n">ops</span><span class="o">.</span><span class="n">pop</span><span class="p">()](</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">			<span class="n">ops</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="n">ops</span> <span class="ow">and</span> <span class="n">pro</span><span class="p">[</span><span class="n">ops</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">&lt;=</span><span class="n">pro</span><span class="p">[</span><span class="n">op</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">				<span class="n">b</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">(),</span><span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">				<span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">[</span><span class="n">ops</span><span class="o">.</span><span class="n">pop</span><span class="p">()](</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">			<span class="n">ops</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-12-01</span>
+                <span>更新于 2023-02-02</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/template-dsu/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/template-linked/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -184,8 +200,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/template-math/" class="prev" rel="prev" title="数学模板"><i class="fas fa-angle-left fa-fw"></i>数学模板</a>
-            <a href="/template-graph_flow/" class="next" rel="next" title="图模板：图匹配">图模板：图匹配<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/template-stack/" class="prev" rel="prev" title="栈模板"><i class="fas fa-angle-left fa-fw"></i>栈模板</a>
+            <a href="/template-bit/" class="next" rel="next" title="位运算模版">位运算模版<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

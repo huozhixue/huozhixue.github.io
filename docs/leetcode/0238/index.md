@@ -44,35 +44,24 @@
 
 ## 分析
 
-### #1
-
-要求不用除法，只能考虑 answer[i] 等于 nums[:i] 的连乘再乘以 nums[i+1:] 的连乘。
-
-于是先遍历得到前缀乘和后缀乘，再相乘即可。
-
-```python
-def productExceptSelf(self, nums: List[int]) -> List[int]:
-    pre = list(accumulate([1]+nums[:-1], mul))
-    suf = list(accumulate([1]+nums[:0:-1], mul))[::-1]
-    return [a*b for a,b in zip(pre, suf)]
-```
-48 ms
-
-### #2
-
-要求常数空间，可以用 answer 先保存前缀乘的信息，再遍历后缀乘并修改。
+- 要求不用除法，只能求出前缀乘和后缀乘，再相乘。
+- 要求常数空间，遍历时用变量维护前/后缀乘即可
 
 ## 解答
 
 ```python
-def productExceptSelf(self, nums: List[int]) -> List[int]:
-    ans, n = [1], len(nums)
-    for i in range(n-1):
-        ans.append(nums[i]*ans[-1])
-    suf = 1
-    for i in range(n-1, -1, -1):
-        ans[i] *= suf
-        suf *= nums[i]
-    return ans
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = [1]*n
+        s = 1
+        for i in range(1,n):
+            s *= nums[i-1]
+            res[i] *= s
+        s = 1
+        for i in range(n-2,-1,-1):
+            s *= nums[i+1]
+            res[i] *= s
+        return res
 ```
-52 ms
+78 ms

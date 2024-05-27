@@ -43,25 +43,26 @@
 
 ### #1
 
-模拟即可。
+模拟即可
 
 ```python
-def addDigits(self, num: int) -> int:
-    while num >= 10:
-        num = sum(map(int, str(num)))
-    return num
+class Solution:
+    def addDigits(self, num: int) -> int:
+        while num >= 10:
+            num = sum(map(int,str(num)))
+        return num
 ```
+29 ms
 
 ### #2
 
 由数学知识可知，一个数各位相加模 9 的余数等于该数模 9 的余数。
 
-注意排除 num 为 0 的情况。
-
 ## 解答
 
 ```python
-def addDigits(self, num: int) -> int:
-    return num%9 or min(num, 9)
+class Solution:
+    def addDigits(self, num: int) -> int:
+        return (num-1)%9+1 if num else 0
 ```
-32 ms
+45 ms

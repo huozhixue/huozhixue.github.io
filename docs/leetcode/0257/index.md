@@ -41,15 +41,18 @@
 ## 解答
 
 ```python
-def binaryTreePaths(self, root: TreeNode) -> List[str]:
-    res, stack = [], [(root, '')]
-    while stack:
-        node, s = stack.pop()
-        if node:
-            s += ('->' if s else '') + str(node.val)
-            if not node.left and not node.right:
-                res.append(s)
-            stack.extend([(node.right, s), (node.left, s)])
-    return res
+class Solution:
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+        def dfs(u):
+            path.append(str(u.val))
+            if not u.left and not u.right:
+                res.append('->'.join(path))
+            for v in [u.left,u.right]:
+                if v:
+                    dfs(v)
+            path.pop()
+        res,path = [],[]
+        dfs(root)
+        return res
 ```
-24 ms
+26 ms

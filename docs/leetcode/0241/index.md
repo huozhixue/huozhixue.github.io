@@ -47,21 +47,24 @@
 
 ## 分析
 
-典型的区间 dp，按最后一步运算的运算符即可递归。
+按最后一步运算的运算符即可递归。
 
 ## 解答
 
 ```python
-def diffWaysToCompute(self, expression: str) -> List[int]:
-    @cache
-    def dfs(s):
-        res = []
-        for i, c in enumerate(s):
-            if c in func:
-                res.extend(func[c](x, y) for x in dfs(s[:i]) for y in dfs(s[i+1:]))
-        return res if res else [int(s)]
+class Solution:
+    def diffWaysToCompute(self, expression: str) -> List[int]:
+        func = {'+':int.__add__,'-':int.__sub__,'*':int.__mul__}
 
-    func = {'+': int.__add__, '-': int.__sub__, '*': int.__mul__}
-    return dfs(expression)
+        @cache
+        def dfs(s):
+            res = []
+            for i,c in enumerate(s):
+                if c in '+-*':
+                    for x in dfs(s[:i]):
+                        for y in dfs(s[i+1:]):
+                            res.append(func[c](x,y))
+            return res or [int(s)]
+        return dfs(expression)
 ```
-32 ms
+37 ms

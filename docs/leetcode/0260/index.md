@@ -46,40 +46,24 @@
 
 ## 分析
 
-### #1
 
-{{< lc "0136"  >}} 升级版，最简单的依然是哈希表。
-
-```python
-def singleNumber(self, nums: List[int]) -> List[int]:
-	ct = Counter(nums)
-	return [num for num in nums if ct[num]==1]
-```
-
-44 ms
-
-### #2
-
-同样有巧妙的位运算方法：
-- 设出现两次的元素是 a、b
-- 将所有数字异或得到 x，显然 x = a^b
-- 在 x 的二进制表示中，任选一个为 1 的位置 i，按二进制的位置 i 是否为 1 可以将 nums 分为两组
+{{< lc "0136"  >}} 升级版，同样有巧妙的位运算方法：
+- 设出现一次的元素是 a、b
+- 将所有数字异或得到 c，显然 c = a^b
+- 在 c 的二进制表示中，任选一个为 1 的位置 i，按二进制的位置 i 是否为 1 可以将 nums 分为两组
 - 显然 a、b 必然在不同的组，而相同的数必然在同一组
 - 每一组就转为问题 {{< lc "0136">}} 
-
 
 ## 解答
 
 ```python
-def singleNumber(self, nums: List[int]) -> List[int]:
-    x = reduce(xor, nums)
-    i = len(bin(x))-3
-    a, b = 0, 0
-    for num in nums:
-        if num & (1<<i):
-            a ^= num
-        else:
-            b ^= num
-    return [a, b]
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+        c = reduce(xor,nums)
+        c = c&-c
+        res = [0,0]
+        for x in nums:
+            res[x&c>0] ^= x
+        return res
 ```
-40 ms
+45 ms

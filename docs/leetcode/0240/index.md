@@ -45,63 +45,54 @@
 
 ## 分析
 
-### #1
-
-最简单的就是遍历每行，二分查找即可。
-
-```python
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    return any(target <= row[-1] and row[bisect_left(row, target)]==target for row in matrix)
-```
-时间 $O(M*logN)$，156ms
-
-### #2
-
-上一方法只利用了每行升序的条件，没有利用到每列升序的条件。
-
-先在第 i=m//2 行二分查找到第一个 >=target 的位置 j，如果 matrix[i][j] != target，则：
-- 位于矩形  (<0, 0>, <i, j-1>) 内的元素必然小于 target
-- 位于矩形  (<i, j>, <m-1, n-1>) 内的元素必然大于 target
-- 转为搜索矩形 (<i+1, 0>, <m-1, j-1>) 和矩形 (<0, j>, <i-1, n-1>)
-
-搜索范围至少缩小了一半，递归搜索即可
+- 最简单的就是遍历每行，二分查找即可
+- 注意到每行二分查找到的位置 j 是递减的
+- 因此令 j 初始在最右边，遍历每行并移动 j，即可线性时间完成
 
 ## 解答
 
 ```python
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    def help(x0, y0, x1, y1):
-        if x0 > x1 or y0 > y1:
-            return False
-        i = x0 + (x1 - x0) // 2
-        j = bisect_left(matrix[i], target, y0, y1+1)
-        if j <= y1 and matrix[i][j] == target:
-            return True
-        return help(i+1, y0, x1, j-1) or help(x0, j, i - 1, y1)
-
-    m, n = len(matrix), len(matrix[0])
-    return help(0, 0, m-1, n-1)
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        j = len(matrix[0])-1
+        for row in matrix:
+            while j>=0 and row[j]>target:
+                j -= 1
+            if row[j]==target:
+                return True
+        return False
 ```
-时间 $O(log(M*N))$，176 ms
+153 ms
+
 
 ## *附加
 
-还有个巧妙的双指针方法。
-- 方法一中每行二分查找 target 得到的位置 j 必然是递减的
-- 初始令 <i,j>=<0,n-1>
-- 遍历每一行，移动 j 直到 matrix[i][j]<=target 即可
-- j 最多移动 n 步，总共最多 m+n 步即可完成
+还可以考虑直接对矩阵二分：
+- 先在第 i=m//2 行二分查找到第一个 >=target 的位置 j，假如不等于 target
+- 矩形 <0,0,i,j-1> 内的元素必然 < target
+- 矩形  <i, j, m-1, n-1>)内的元素必然大于 target
+- 只用再搜索矩形 <i+1, 0,m-1, j-1> 和矩形 <0, j, i-1, n-1> 即可
+
+## 解答
 
 ```python
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    m, n = len(matrix), len(matrix[0])
-    i, j = 0, n-1
-    for i in range(m):
-        while j >= 0 and matrix[i][j] > target:
-            j -= 1
-        if j >= 0 and matrix[i][j] == target:
-            return True
-    return False
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        def dfs(x1, y1, x2, y2):
+            if x1>x2 or y1>y2:
+                return False
+            i = (x1+x2)//2
+            j = bisect_left(matrix[i], target, y1, y2+1)
+            if j<=y2 and matrix[i][j]==target:
+                return True
+            return dfs(i+1,y1,x2,j-1) or dfs(x1,j,i-1,y2)
+
+        m, n = len(matrix), len(matrix[0])
+        return dfs(0,0,m-1,n-1)
 ```
-时间 $O(M+N)$，152 ms
+时间 $O(log(M*N))$，159 ms
+
+
+
+
 

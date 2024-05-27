@@ -49,29 +49,26 @@
 
 ## 分析
 
-与 {{< lc "0235" >}} 的区别在于只是二叉树，并不有序。
-
-依然可以考虑递归：
-- 如果 root 等于 p 或 q，结果就是 root
-- 如果 p、q 分别在 root 的左右子树，结果就是 root
-- 如果 p、q 都在 root 的左子树或右子树，转为递归子问题
-
-于是令 dfs(node) 代表 node 包含 p、q 的状态：
-- 若 node 同时有 p、q，返回 p、q 的最近公共祖先
-- 若 node 中有 p 或 q，返回 p 或 q 节点
-- 若 node 中都没有，返回 None
-
-即可递归。
+- 与 {{< lc "0235" >}} 不同，不再有序了，考虑换一种递归方式
+	- 假如 p、q 分别在 root 的左右子树，结果就是 root
+	- 否则应该递归一边
+- 为了递归，dfs(u) 应返回 u 包含 p、q 的状态：
+	- 若 u 同时有 p、q，返回 p、q 的最近公共祖先
+	- 若 u 中有 p 或 q，返回 p 或 q 节点
+	- 若 u 中都没有，返回 None
 
 ## 解答
 
 ```python
-def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-    def dfs(node):
-        if not node or node in [p, q]:
-            return node
-        l, r = dfs(node.left), dfs(node.right)
-        return node if l and r else (l or r)
-    return dfs(root)
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        def dfs(u):
+            if not u:
+                return None
+            if u.val in [p.val,q.val]:
+                return u
+            l,r = dfs(u.left),dfs(u.right)
+            return u if l and r else (l or r)
+        return dfs(root)
 ```
-56 ms
+46 ms

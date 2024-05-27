@@ -1,7 +1,7 @@
-# 图模板：图匹配
+# 图模板：网络流
 
 
-## 最大流
+## 1 最大流
 
 ```python
 class Dinic:
@@ -49,7 +49,7 @@ class Dinic:
         return res
 ```
 
-## 最小费用最大流
+## 2 最小费用最大流
 
 ```python
 class Dinic:

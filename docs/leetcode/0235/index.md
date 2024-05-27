@@ -40,39 +40,20 @@
 
 ## 分析
 
-### #1
-
-由 root 和 p、q 的大小关系可以分类讨论：
-- 如果 root 比 p、q 的值都大，结果必然在 root 的左子树中。
-- 如果 root 比 p、q 的值都小，结果必然在 root 的右子树中。
-- 如果 root 在 p、q 的值之间，结果就是 root
-
-于是可以递归解决。
-
-```python
-def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-	if root.val > max(p.val, q.val):
-		return self.lowestCommonAncestor(root.left, p, q)
-	if root.val < min(p.val, q.val):
-		return self.lowestCommonAncestor(root.right, p, q)
-	return root
-```
-92 ms
-
-### #2
-
-也可以写成迭代的形式。
+由于是二叉搜索树，比较根节点和 p、q的值，递归即可。也可以写成迭代的形式。
 
 ## 解答
 
 ```python
-def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-	while root:
-		if root.val > max(p.val, q.val):
-			root = root.left
-		elif root.val < min(p.val, q.val):
-			root = root.right
-		else:
-			return root
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        a,b = sorted([p.val,q.val])
+        while True:
+            if root.val>b:
+                root = root.left
+            elif root.val<a:
+                root = root.right
+            else:
+                return root
 ```
-92 ms
+65 ms
