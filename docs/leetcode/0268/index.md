@@ -58,13 +58,15 @@
 
 ## 分析
 
-直接算比原本的总和 sum(range(n+1)) 少了多少即可。
+直接算比 0 到 n 的总和少了多少即可。
 
 ## 解答
 
 ```python
-def missingNumber(self, nums: List[int]) -> int:
-	return sum(range(len(nums)+1)) - sum(nums)
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        return n*(n+1)//2-sum(nums)
 ```
-32 ms
+23 ms
 

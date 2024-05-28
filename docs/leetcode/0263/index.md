@@ -44,33 +44,19 @@
 
 ## 分析
 
-### #1
 
 去掉所有 2、3、5 的因子，看是否变为 1 即可。
-
-```python
-def isUgly(self, n: int) -> bool:
-    if n <= 0:
-        return False
-    for p in [2, 3, 5]:
-        while n % p == 0:
-            n //= p
-    return n == 1
-```
-36 ms
-
-### #2
-
-丑数必然是 $2^{a}*3^{b}*5^{c}$ 的形式。
-
-而所给范围内的丑数，必然有 a<=30，b<=19，c<=13。
-
-因此丑数等价于是 $2^{30}*3^{19}*5^{13}$ 的因数。
 
 ## 解答
 
 ```python
-def isUgly(self, n: int) -> bool:
-    return n > 0 and pow(2,30)*pow(3,19)*pow(5,13)%n == 0
+class Solution:
+    def isUgly(self, n: int) -> bool:
+        if n<=0:
+            return False
+        for p in [2,3,5]:
+            while n%p==0:
+                n//=p
+        return n==1
 ```
-36 ms
+32 ms

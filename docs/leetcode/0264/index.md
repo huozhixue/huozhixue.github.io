@@ -38,32 +38,42 @@
 
 ## 分析
 
-{{< lc "0263" >}} 升级版，有个巧妙的 dp 方法：
-- 令 dp[n] 代表第 n 个丑数
-- 显然后面的丑数必然是前面的某个丑数乘 2或3或5 得到：
 
-$$ dp[n]=min(dp[j]*p)_{ \substack{
-0\le j<n;\ p\in\ [2,3,5] \\\
-if\ dp[j]*p>dp[n-1]}}$$
-- 观察发现，p 固定时，只需要考虑第一个使得 dp[j]*p>dp[n-1] 的 j
-- 令 A[p] 代表第一个使得 dp[j]*p>dp[n-1] 的 j，递推式转为：
+### #1
 
-$$dp[n]=min(dp[A[p]]*p)_{p\in\ [2,3,5]} $$
-- 维护 A[p] 很简单，当 dp[A[p]]*p==dp[n] 时，将 A[p] 增 1 即可。
+{{< lc "0263" >}} 升级版，可以用前面的丑数递推。
 
+```python
+class Solution:
+    def nthUglyNumber(self, n: int) -> int:
+        P = [2,3,5]
+        f = [1]*n
+        for i in range(1,n):
+            f[i] = min(f[j]*p for j in range(i) for p in P if f[j]*p>f[i-1])
+        return f[-1]
+```
+9869 ms
 
+### #2
+
+- 递推式中，对于质数 p，需要找到第一个 j 使得 f[j]*p>f[i-1] 
+- 显然 j 是随着 i 递增而递增的
+- 因此考虑维护 p 对应的 j 即可
 
 ## 解答
 
 ```python
-def nthUglyNumber(self, n: int) -> int:
-    dp, A = [1] * n, defaultdict(int)
-    for i in range(1, n):
-        dp[i] = min(dp[A[p]]*p for p in [2,3,5])
-        for p in [2,3,5]:
-            if dp[A[p]]*p == dp[i]:
-                A[p] += 1
-    return dp[-1]
+class Solution:
+    def nthUglyNumber(self, n: int) -> int:
+        P = [2,3,5]
+        f = [1]*n
+        g = defaultdict(int)
+        for i in range(1,n):
+            f[i] = min(f[g[p]]*p for p in P)
+            for p in P:
+                if f[g[p]]*p==f[i]:
+                    g[p] += 1
+        return f[-1]
 ```
-时间复杂度 O(N)，224 ms
+199 ms
 
