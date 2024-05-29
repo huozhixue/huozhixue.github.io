@@ -41,19 +41,21 @@
 
 ## 分析
 
-将 citations 排序后，citations[i:] 这 n-i 篇论文的最低引用数是 citations[i]。
-
-因此遍历找到第一个满足 n-i<=citations[i] 的 i 即可。
+- 先将 citations 排序
+- citations[i:] 这 n-i 篇论文的引用数都 >=citations[i]
+- 因此遍历找到第一个满足 n-i<=citations[i] 的 i 即可
 
 ## 解答
 
 ```python
-def hIndex(self, citations: List[int]) -> int:
-    n = len(citations)
-    for i, c in enumerate(sorted(citations)):
-        if n-i <= c:
-            return n-i
-    return 0
+class Solution:
+    def hIndex(self, citations: List[int]) -> int:
+        citations.sort()
+        n = len(citations)
+        for i,x in enumerate(citations):
+            if x>=n-i:
+                return n-i
+        return 0
 ```
-时间复杂度 O(N*logN)，28 ms
+34 ms
 

@@ -55,9 +55,8 @@
 
 ### #1
 
-最简单粗暴的是 json 做法，
-
-将树转为多重字典，用 json 序列化/反序列化。
+- 最简单粗暴的是 json 做法
+- 将树转为多重字典，用 json 序列化/反序列化
 
 ```python
 class Codec:
@@ -80,12 +79,10 @@ class Codec:
 
 ### #2
 
-也可以用树的遍历列表来对应，空节点用 '#' 表示即可。
-
-这里采用前序遍历：
-- 序列化时，递归地拼接遍历列表。
-- 反序列化时，从遍历列表 Q 中弹出第一个元素作为 root，然后递归地构建左右子树。
-遇到空节点时就返回上一层递归即可。
+- 也可以用树的遍历列表，空节点用 '#' 表示即可
+- 序列化时，递归地拼接遍历列表
+- 反序列化时，从 Q 中弹出第一个元素作为 root，然后递归地构建左右子树
+- 遇到空节点时就返回上一层递归即可
 
 ## 解答
 
@@ -93,19 +90,30 @@ class Codec:
 class Codec:
 
     def serialize(self, root):
-        def dfs(node):
-            if not node:
+        """Encodes a tree to a single string.
+        
+        :type root: TreeNode
+        :rtype: str
+        """
+        def dfs(u):
+            if not u:
                 return '#'
-            return '%d,%s,%s' % (node.val, dfs(node.left), dfs(node.right))
+            return str(u.val)+','+dfs(u.left)+','+dfs(u.right)
         return dfs(root)
-
+            
     def deserialize(self, data):
+        """Decodes your encoded data to tree.
+        
+        :type data: str
+        :rtype: TreeNode
+        """
         def dfs():
-            val = Q.popleft()
-            return None if val=='#' else TreeNode(val, dfs(), dfs())
-
+            u = Q.popleft()
+            if u=='#':
+                return None
+            return TreeNode(u,dfs(),dfs())
         Q = deque(data.split(','))
         return dfs()
 ```
-100 ms
+82 ms
 

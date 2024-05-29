@@ -59,49 +59,30 @@
 
 ### #1
 
-先写出额外数组的方法。根据规则，下一个状态是存活只有两种情况：
-- 周围加自身共有三个活细胞
-- 周围加自身共有四个活细胞，且当前状态是存活
-
-```python
-def gameOfLife(self, board: List[List[int]]) -> None:
-    m, n = len(board), len(board[0])
-    tmp = [[0] * n for _ in range(m)]
-    for i, j in product(range(m), range(n)):
-        cnt = 0
-        for x, y in product([i - 1, i, i + 1], [j - 1, j, j + 1]):
-            if 0 <= x < m and 0 <= y < n and board[x][y]:
-                cnt += 1
-        tmp[i][j] = 1 if cnt == 3 or (cnt == 4 and board[i][j]) else 0
-    board[:] = tmp
-```
-32 ms
-
-### #2
-
-要求原地算法，考虑用 board 自身来保存信息。
-
-最简单的就是增加一位 bit 来表示下一轮状态，于是遍历中可能遇到的标志有：
-- 0，当前状态为死，下一轮状态未知
-- 1，当前状态为活，下一轮状态未知
-- 10，当前状态为死，下一轮状态为活
-- 11，当前状态为活，下一轮状态为活
-	
-那么遍历中 值%2 即是当前状态，遍历完后 值//2 即是下一轮状态。
-
+- 额外数组的方法很简单，下一个状态是存活只有两种情况：
+	- 周围共三个活细胞
+	- 周围加自身共三个活细胞
+- 要求原地算法，考虑用 board 自身来保存信息
+- 最简单的就是用两位 bit 分别表示当轮和下一轮状态
+- 注意遍历中要 %2 取得当轮状态
 ## 解答
 
 ```python
-def gameOfLife(self, board: List[List[int]]) -> None:
-    m, n = len(board), len(board[0])
-    for i, j in product(range(m), range(n)):
-        cnt = 0
-        for x, y in product([i - 1, i, i + 1], [j - 1, j, j + 1]):
-            if 0 <= x < m and 0 <= y < n and board[x][y] % 2:
-                cnt += 1
-        board[i][j] += 2 if cnt == 3 or (cnt == 4 and board[i][j]) else 0
-    for i, j in product(range(m), range(n)):
-        board[i][j] //= 2
+class Solution:
+    def gameOfLife(self, board: List[List[int]]) -> None:
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        m,n = len(board),len(board[0])
+        for i,j in product(range(m),range(n)):
+            a = board[i][j]
+            w = 0
+            for x,y in product(range(i-1,i+2),range(j-1,j+2)):
+                if 0<=x<m and 0<=y<n and (x,y)!=(i,j):
+                    w += board[x][y]%2
+            board[i][j] += 2*(w==3 or w+a==3)
+        for i,j in product(range(m),range(n)): 
+            board[i][j] //= 2
 ```
-36 ms
+41 ms
 

@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0299\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  596 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  583 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0299\/","datePublished": "2015-10-26T00:00:00+08:00","dateModified": "2015-10-26T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0299：猜数字游戏（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-26">2015-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 596 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-26">2015-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 583 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0299/" class="leancloud_visitors" data-flag-title="0299：猜数字游戏（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -166,8 +166,10 @@
 <li><code>secret</code> 和 <code>guess</code> 仅由数字组成</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>计算 &ldquo;Bulls&rdquo; 很简单，但 &ldquo;Cows&rdquo; 较麻烦。可以考虑先计算 Bulls+Cows，即数字正确的个数，
-再减去 Bulls 即是 Cows。</p>
+<ul>
+<li>计算 &ldquo;Bulls&rdquo; 很简单，但 &ldquo;Cows&rdquo; 较麻烦</li>
+<li>可以考虑直接计算 Bulls+Cows，即数字正确的个数</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -175,15 +177,17 @@
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">getHint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">secret</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">guess</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">s</span><span class="o">==</span><span class="n">g</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span><span class="n">g</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">secret</span><span class="p">,</span> <span class="n">guess</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="n">C</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">Counter</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span><span class="o">&amp;</span><span class="n">Counter</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">A</span><span class="si">%d</span><span class="s1">B&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="o">-</span><span class="n">A</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">getHint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">secret</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">guess</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">secret</span><span class="p">,</span><span class="n">guess</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span><span class="o">&amp;</span><span class="n">Counter</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span><span class="o">.</span><span class="n">total</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">A</span><span class="si">%d</span><span class="s1">B&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>48 ms</p>
+</div><p>36 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

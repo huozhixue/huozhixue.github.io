@@ -50,63 +50,58 @@
 
 ### #1
 
-最简单的就是遍历每一种情况，判断是否等于 target。
-
-可以用 dfs，每一步添加 +、-、* 或空。注意不能有前置 0。
+- 回溯时，要递推 exp+op+num[i:j] 的值
+- 考虑将 exp 最后一个连乘式（包括负号）拆出来，变成 exp_ + mul
+- 维护 exp_ 和 mul 的值，即可递推
 
 
 ```python
-def addOperators(self, num: str, target: int) -> List[str]:
-    def dfs(i, exp):
-        if i == n:
-            if eval(exp) == target:
-                res.append(exp)
-            return
-        ops = ['+','-','*','']
-        if not exp:
-            ops = ['']
-        elif exp[-2:] in ['0','+0','-0','*0']:
-            ops = '+-*'
-        for op in ops:
-            dfs(i+1, exp+op+num[i])
-
-    res, n = [], len(num)
-    dfs(0, '')
-    return res
+class Solution:
+    def addOperators(self, num: str, target: int) -> List[str]:
+        def dfs(i,s,w,mul):
+            if i==n:
+                if w+mul==target:
+                    res.append(s)
+                return
+            for j in range(i,i+1 if num[i]=='0' else n):
+                x = num[i:j+1]
+                if not s:
+                    dfs(j+1,s+x,w,int(x))
+                else:
+                    dfs(j+1,s+'+'+x,w+mul,int(x))
+                    dfs(j+1,s+'-'+x,w+mul,-int(x))
+                    dfs(j+1,s+'*'+x,w,mul*int(x))
+        res = []
+        n = len(num)
+        dfs(0,'',0,0)
+        return res
 ```
-9576 ms
+510 ms
 
 ### 2
 
-考虑在遍历时维护当前表达式的值，节省时间。
-
-为了递推 exp+op+num[i:j] 的值，需要知道 
-- exp 计算后的值 val
-- exp 计算了乘法之后的最后一个数（包括正负号） prev
-   
-因此 dfs 时添加两个传递的变量。
+- 还可以将连乘式 mul 拆成 a * b，a 包括负号，b 是最后一个乘数
+- 即可按 num 的每一位递推
 
 ## 解答
 
 ```python
-def addOperators(self, num: str, target: int) -> List[str]:
-    def dfs(i, exp, prev, val):
-        if i == n:
-            if val == target:
-                res.append(exp)
-            return
-        for j in range(i+1, i+2 if num[i] == '0' else n+1):
-            s = num[i:j]
-            x = int(s)
-            if not exp:
-                dfs(j, s, x, x)
-            else:
-                dfs(j, exp+'+'+s, x, val+x)
-                dfs(j, exp+'-'+s, -x, val-x)
-                dfs(j, exp+'*'+s, prev*x, val-prev+x*prev)
-
-    res, n = [], len(num)
-    dfs(0, '', 0, 0)
-    return res
+class Solution:
+    def addOperators(self, num: str, target: int) -> List[str]:
+        def dfs(i,s,w,a,b):
+            if i==n:
+                if w+a*b==target:
+                    res.append(s)
+                return
+            x = num[i]
+            if b:
+                dfs(i+1,s+x,w,a,b*10+int(x))
+            dfs(i+1,s+'+'+x,w+a*b,1,int(x))
+            dfs(i+1,s+'-'+x,w+a*b,-1,int(x))
+            dfs(i+1,s+'*'+x,w,a*b,int(x))
+        res = []
+        n = len(num)
+        dfs(1,num[0],0,1,int(num[0]))
+        return res
 ```
-588 ms
+410 ms

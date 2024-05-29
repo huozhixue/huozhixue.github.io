@@ -5,53 +5,43 @@
 
 ## 题目
 
-<p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
+给定一个数组 `nums`，编写一个函数将所有 `0` 移动到数组的末尾，同时保持非零元素的相对顺序。
 
-<p><strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p>
+**请注意** ，必须在不复制数组的情况下原地对数组进行操作。
 
+**示例 1:**
 
+**输入:** nums = `[0,1,0,3,12]`
+**输出:** `[1,3,12,0,0]`
 
-<p><strong>示例 1:</strong></p>
+**示例 2:**
 
-<pre>
-<strong>输入:</strong> nums = <code>[0,1,0,3,12]</code>
-<strong>输出:</strong> <code>[1,3,12,0,0]</code>
-</pre>
+**输入:** nums = `[0]`
+**输出:** `[0]`
 
-<p><strong>示例 2:</strong></p>
+**提示**:
 
-<pre>
-<strong>输入:</strong> nums = <code>[0]</code>
-<strong>输出:</strong> <code>[0]</code></pre>
+- `1 <= nums.length <= 104`
+- `-231 <= nums[i] <= 231 - 1`
 
-
-
-<p><strong>提示</strong>:</p>
-<meta charset="UTF-8" />
-
-<ul>
-<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
-<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
-</ul>
-
-
-
-<p><b>进阶：</b>你能尽量减少完成的操作次数吗？</p>
-
+**进阶：**你能尽量减少完成的操作次数吗
 
 ## 分析
 
-类似 {{< lc "0027" >}} ，等价于移除前面的 0 ，再在后面补 0 即可。
+类似 {{< lc "0027" >}} ，将非零元素交换到前面即可。
 
 ## 解答
 
 ```python
-def moveZeroes(self, nums: List[int]) -> None:
-    i = 0
-    for num in nums:
-        if num != 0:
-            nums[i] = num
-            i += 1
-    nums[i:] = [0] * (len(nums)-i)
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        i = 0
+        for j,x in enumerate(nums):
+            if x:
+                nums[i],nums[j] = nums[j],nums[i]
+                i += 1
 ```
-40 ms
+41 ms

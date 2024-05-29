@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0290\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  267 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  265 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0290\/","datePublished": "2015-10-17T00:00:00+08:00","dateModified": "2015-10-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0290：单词规律</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-17">2015-10-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 267 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-17">2015-10-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 265 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0290/" class="leancloud_visitors" data-flag-title="0290：单词规律">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -157,21 +157,23 @@
 <li><code>s</code> 中每个单词都被 <strong>单个空格 </strong>分隔</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>类似 <a href="/leetcode/0205" title="0205" rel="noopener noreferrer">0205</a>，注意先判断 s 的单词数和 pattern 长度是否相同即可。</p>
+<p>类似 <a href="/leetcode/0205" title="0205" rel="noopener noreferrer">0205</a>，注意先判断 s 的单词数和 pattern 长度是否相同。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">wordPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span>  <span class="n">pattern</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">B</span><span class="p">))</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)))</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">wordPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">,</span><span class="n">B</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">,</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">B</span><span class="p">))</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>32 ms</p>
+</div><p>31 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

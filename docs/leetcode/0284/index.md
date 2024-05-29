@@ -56,28 +56,44 @@ peekingIterator.hasNext(); // 返回 False
 
 ## 分析
 
-peek 必须获得下一个元素，但不能移动指针。
-
-因此考虑用缓存保存已看过但还没移到的元素，每次 next/hasNext/peek 时先看缓存，没有再调用迭代器。
+- peek 要查看下一个元素，但不能丢掉
+- 因此考虑用缓存下一个元素
+- 每次调用时先看缓存，再看迭代器即可
 
 ## 解答
 
 ```python
 class PeekingIterator:
     def __init__(self, iterator):
+        """
+        Initialize your data structure here.
+        :type iterator: Iterator
+        """
         self.it = iterator
-        self.cache = None
+        self.x = None
 
     def peek(self):
-        self.cache = self.cache or self.it.next()
-        return self.cache
-
+        """
+        Returns the next element in the iteration without advancing the iterator.
+        :rtype: int
+        """
+        if self.x==None:
+            self.x = self.it.next()
+        return self.x
+        
     def next(self):
-        res = self.cache or self.it.next()
-        self.cache = None
+        """
+        :rtype: int
+        """
+        res = self.x if self.x!=None else self.it.next()
+        self.x = None
         return res
 
+        
     def hasNext(self):
-        return bool(self.cache) or self.it.hasNext()
+        """
+        :rtype: bool
+        """
+        return self.x!=None or self.it.hasNext()
 ```
 36 ms

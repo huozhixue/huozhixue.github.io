@@ -41,29 +41,27 @@
 
 ## 分析
 
-容易看出用递归，但要注意细节处理：
-- 当 num 为 0 时要返回 Zero
-- 其它数（比如100）递归求 0 的表示时应该返回空
-- 为了方便处理空格，dfs 返回元组形式，主函数再拼接
+用递归比较方便，注意特判 num 为 0 返回 Zero。
 
 
 ## 解答
 
 ```python
-def numberToWords(self, num: int) -> str:
-    def dfs(num):
-        if num == 0:
-            return ()
-        for unit, exp in zip([10**9, 10**6, 10**3, 10**2], ['Billion', 'Million', 'Thousand', 'Hundred']):
-            if num >= unit:
-                return dfs(num//unit)+(exp,)+dfs(num%unit)
-        return (ones[num-1],) if num < 20 else (tens[num//10-2],)+dfs(num%10)
-
-    tens = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
-    ones = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
-            'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen',
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        A = [(10**9,'Billion'),(10**6,'Million'),(1000,'Thousand'),(100,'Hundred')]
+        B = ['Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety']
+        C = ['One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten', 
+            'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen',
             'Seventeen', 'Eighteen', 'Nineteen']
-    return 'Zero' if num == 0 else ' '.join(dfs(num))
+        def dfs(x):
+            for w,s in A:
+                if x>=w:
+                    return dfs(x//w)+[s]+dfs(x%w)
+            if x>=20:
+                return [B[x//10-2]]+dfs(x%10)
+            return [C[x-1]] if x else []
+        return ' '.join(dfs(num)) or 'Zero'
 ```
-28 ms
+30 ms
 

@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0300\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  563 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  476 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0300\/","datePublished": "2015-10-27T00:00:00+08:00","dateModified": "2015-10-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0300：最长递增子序列（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-27">2015-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 563 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0300/" class="leancloud_visitors" data-flag-title="0300：最长递增子序列（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-27">2015-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 476 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0300/" class="leancloud_visitors" data-flag-title="0300：最长递增子序列（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -167,12 +167,7 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>子序列/子数组相关的问题容易想到遍历结尾位置 j，分别找最值。</p>
-<p>令 dp[j] 代表结尾位置 j 的最长递增子序列长度。那么：</p>
-<p>$$dp[j] = 1 + max(dp[i])_{\begin{subarray}{l}
-i \ in \ range(j) \\ if \ nums[i]&lt;nums[j]
-\end{subarray}}$$</p>
-<p>递推即可。</p>
+<p>按前一元素选哪个即可递推。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -181,31 +176,26 @@ i \ in \ range(j) \\ if \ nums[i]&lt;nums[j]
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">lengthOfLIS</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">([</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">lengthOfLIS</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="nb">max</span><span class="p">([</span><span class="n">f</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间 $O(N^2)$，1824 ms</p>
+</div><p>1000 ms</p>
 <h3 id="2">#2</h3>
-<p>本题还有个很经典的优化解法：</p>
 <ul>
-<li>假如 dp[i1]==dp[i2] 且 nums[i1]&lt;nums[i2]，那么在递推式中只需要考虑 i1 而不用考虑 i2</li>
-<li>令 A[k] 代表使 dp[i]==k 的最小 nums[i]，递推式即转为：
-$$dp[j] = 1 + max(k)_{\begin{subarray}{l}
-k \ in \ range(j) \\ if \ A[k]&lt;nums[j]
-\end{subarray}}$$</li>
-<li>注意到 A 是严格递增的数组，因此可以二分查找最大的 k</li>
-<li>得到 dp[j] 后，只需要更新 A[k+1] = nums[j] 即可维护 A</li>
+<li>观察递推式，这种限制一个维度 （nums[j]&lt;nums[i]），求另一个维度（f[j]）最值的问题，一种常用的方法是维护一种单调性</li>
+<li>假如 num[j1]&lt;nums[j2] 且 f[j1]&gt;f[j2]，显然 j2 对之后的递推式来说是无用的，可以去掉</li>
+<li>那么维护有用的 j 的集合，按 nums[j] 排序，f[j] 必然也是递增的</li>
+<li>因此只需在这个集合中二分查找最后一个满足 nums[j]&lt;nums[i] 的 j 即可</li>
 </ul>
-<blockquote>
-<p>额外的，令 A 初始为空数组并动态维护，最终 len(A) 即为所求，无需 dp 数组。</p>
-</blockquote>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -245,7 +235,7 @@ k \ in \ range(j) \\ if \ A[k]&lt;nums[j]
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

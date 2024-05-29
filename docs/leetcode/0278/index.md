@@ -42,14 +42,14 @@
 
 ## 分析
 
-以出错版本 bad 为界，前面的都是正确的，后面的都是错的。所以可以二分查找。
+二分查找第一个出错版本即可。
 
 ## 解答
 
 ```python
-def firstBadVersion(self, n):
-	self.__class__.__getitem__ = lambda self, i: isBadVersion(i)
-	return bisect_left(self, True, 1, n)
+class Solution:
+    def firstBadVersion(self, n: int) -> int:
+        return bisect_left(range(n),True,1,n,key=isBadVersion)
 ```
-32 ms
+40 ms
 

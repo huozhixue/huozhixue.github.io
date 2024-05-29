@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0273\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  287 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  207 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0273\/","datePublished": "2015-09-30T00:00:00+08:00","dateModified": "2015-09-30T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0273：整数转换英文表示（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-30">2015-09-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 287 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-30">2015-09-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 207 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0273/" class="leancloud_visitors" data-flag-title="0273：整数转换英文表示（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -154,12 +154,7 @@
 <li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>容易看出用递归，但要注意细节处理：</p>
-<ul>
-<li>当 num 为 0 时要返回 Zero</li>
-<li>其它数（比如100）递归求 0 的表示时应该返回空</li>
-<li>为了方便处理空格，dfs 返回元组形式，主函数再拼接</li>
-</ul>
+<p>用递归比较方便，注意特判 num 为 0 返回 Zero。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -177,25 +172,27 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">numberToWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">unit</span><span class="p">,</span> <span class="n">exp</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Billion&#39;</span><span class="p">,</span> <span class="s1">&#39;Million&#39;</span><span class="p">,</span> <span class="s1">&#39;Thousand&#39;</span><span class="p">,</span> <span class="s1">&#39;Hundred&#39;</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="n">unit</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="n">num</span><span class="o">//</span><span class="n">unit</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">exp</span><span class="p">,)</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="n">unit</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="n">ones</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">],)</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="k">else</span> <span class="p">(</span><span class="n">tens</span><span class="p">[</span><span class="n">num</span><span class="o">//</span><span class="mi">10</span><span class="o">-</span><span class="mi">2</span><span class="p">],)</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">tens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Twenty&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirty&#39;</span><span class="p">,</span> <span class="s1">&#39;Forty&#39;</span><span class="p">,</span> <span class="s1">&#39;Fifty&#39;</span><span class="p">,</span> <span class="s1">&#39;Sixty&#39;</span><span class="p">,</span> <span class="s1">&#39;Seventy&#39;</span><span class="p">,</span> <span class="s1">&#39;Eighty&#39;</span><span class="p">,</span> <span class="s1">&#39;Ninety&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ones</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Three&#39;</span><span class="p">,</span> <span class="s1">&#39;Four&#39;</span><span class="p">,</span> <span class="s1">&#39;Five&#39;</span><span class="p">,</span> <span class="s1">&#39;Six&#39;</span><span class="p">,</span> <span class="s1">&#39;Seven&#39;</span><span class="p">,</span> <span class="s1">&#39;Eight&#39;</span><span class="p">,</span> <span class="s1">&#39;Nine&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s1">&#39;Ten&#39;</span><span class="p">,</span> <span class="s1">&#39;Eleven&#39;</span><span class="p">,</span> <span class="s1">&#39;Twelve&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Fourteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Fifteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Sixteen&#39;</span><span class="p">,</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">numberToWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Billion&#39;</span><span class="p">),(</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Million&#39;</span><span class="p">),(</span><span class="mi">1000</span><span class="p">,</span><span class="s1">&#39;Thousand&#39;</span><span class="p">),(</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;Hundred&#39;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Twenty&#39;</span><span class="p">,</span><span class="s1">&#39;Thirty&#39;</span><span class="p">,</span><span class="s1">&#39;Forty&#39;</span><span class="p">,</span><span class="s1">&#39;Fifty&#39;</span><span class="p">,</span><span class="s1">&#39;Sixty&#39;</span><span class="p">,</span><span class="s1">&#39;Seventy&#39;</span><span class="p">,</span><span class="s1">&#39;Eighty&#39;</span><span class="p">,</span><span class="s1">&#39;Ninety&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">C</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span><span class="s1">&#39;Two&#39;</span><span class="p">,</span><span class="s1">&#39;Three&#39;</span><span class="p">,</span><span class="s1">&#39;Four&#39;</span><span class="p">,</span><span class="s1">&#39;Five&#39;</span><span class="p">,</span><span class="s1">&#39;Six&#39;</span><span class="p">,</span><span class="s1">&#39;Seven&#39;</span><span class="p">,</span><span class="s1">&#39;Eight&#39;</span><span class="p">,</span><span class="s1">&#39;Nine&#39;</span><span class="p">,</span><span class="s1">&#39;Ten&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;Eleven&#39;</span><span class="p">,</span> <span class="s1">&#39;Twelve&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Fourteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Fifteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Sixteen&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="s1">&#39;Seventeen&#39;</span><span class="p">,</span> <span class="s1">&#39;Eighteen&#39;</span><span class="p">,</span> <span class="s1">&#39;Nineteen&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;Zero&#39;</span> <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">w</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">w</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="n">w</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="p">[</span><span class="n">B</span><span class="p">[</span><span class="n">x</span><span class="o">//</span><span class="mi">10</span><span class="o">-</span><span class="mi">2</span><span class="p">]]</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">[</span><span class="n">C</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">num</span><span class="p">))</span> <span class="ow">or</span> <span class="s1">&#39;Zero&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>28 ms</p>
+</div><p>30 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

@@ -54,40 +54,26 @@
 
 ### #1
 
-子序列/子数组相关的问题容易想到遍历结尾位置 j，分别找最值。
+按前一元素选哪个即可递推。
 
-令 dp[j] 代表结尾位置 j 的最长递增子序列长度。那么：
-
-$$dp[j] = 1 + max(dp[i])_{\begin{subarray}{l} 
-i \ in \ range(j) \\\ if \ nums[i]<nums[j] 
-\end{subarray}}$$
-
-
-
-递推即可。
-					
 ```python
-def lengthOfLIS(self, nums: List[int]) -> int:
-    n = len(nums)
-    dp = [0] * n
-    for j in range(n):
-        dp[j] = 1 + max([dp[i] for i in range(j) if nums[i]<nums[j]], default=0)
-    return max(dp)
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        n = len(nums)
+        f = [1]*n
+        for i in range(1,n):
+            f[i] = 1+max([f[j] for j in range(i) if nums[j]<nums[i]],default=0)
+        return max(f)
 ```
-时间 $O(N^2)$，1824 ms
+1000 ms
 
 ### #2
 
-本题还有个很经典的优化解法：
-- 假如 dp[i1]==dp[i2] 且 nums[i1]<nums[i2]，那么在递推式中只需要考虑 i1 而不用考虑 i2
-- 令 A[k] 代表使 dp[i]==k 的最小 nums[i]，递推式即转为：
- $$dp[j] = 1 + max(k)_{\begin{subarray}{l} 
-k \ in \ range(j) \\\ if \ A[k]<nums[j] 
-\end{subarray}}$$
-- 注意到 A 是严格递增的数组，因此可以二分查找最大的 k
-- 得到 dp[j] 后，只需要更新 A[k+1] = nums[j] 即可维护 A
+- 观察递推式，这种限制一个维度 （nums[j]<nums[i]），求另一个维度（f[j]）最值的问题，一种常用的方法是维护一种单调性
+- 假如 num[j1]<nums[j2] 且 f[j1]>f[j2]，显然 j2 对之后的递推式来说是无用的，可以去掉
+- 那么维护有用的 j 的集合，按 nums[j] 排序，f[j] 必然也是递增的
+- 因此只需在这个集合中二分查找最后一个满足 nums[j]<nums[i] 的 j 即可
 
-> 额外的，令 A 初始为空数组并动态维护，最终 len(A) 即为所求，无需 dp 数组。
 
 ## 解答
 

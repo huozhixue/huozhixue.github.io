@@ -64,8 +64,10 @@
 ## 解答
 
 ```python
-def canWinNim(self, n: int) -> bool:
-	return n % 4 != 0
+class Solution:
+    def canWinNim(self, n: int) -> bool:
+        return n%4>0
 ```
-32 ms
+30 ms
+
 

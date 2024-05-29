@@ -56,9 +56,7 @@ medianFinder.findMedian(); // return 2.0</pre>
 
 ### #1
 
-考虑维护一个有序集合，根据中间位置的一个数或两个数即可得到中位数。
-
-要进行插入、访问的操作，考虑用 SortedList，都能在 O(logN) 时间内完成。
+最简单的是用 SortedList 维护一个有序集合即可。
 
 ```python
 class MedianFinder:
@@ -67,28 +65,28 @@ class MedianFinder:
         from sortedcontainers import SortedList
         self.sl = SortedList()
 
+
     def addNum(self, num: int) -> None:
         self.sl.add(num)
 
+
     def findMedian(self) -> float:
         n = len(self.sl)
-        return (self.sl[(n-1)//2] + self.sl[n//2])/2
+        return (self.sl[(n-1)//2]+self.sl[n//2])/2
 ```
-664 ms
+439 ms
 
 ### #2
 
 也可以用双堆维护：
-- 用两个堆 low、high 分别维护较小的一半和较大的一半
-- low 为大顶堆，high 为小顶堆，并且保证 len(low)>=len(high)
+- 用两个堆 A、B 分别维护较小的一半和较大的一半
+- A 要弹出最大数，B 要弹出最小数，因此 A 为大顶堆，注意入堆时元素取负
+- 为了方便，总个数为奇数时，多余的一个放在 A
 - addNum 时
-	- 先将元素添加到 low 中，弹出堆顶并添加到 high 中
-	- 如果 len(low)<len(high)，就再弹出 high 堆顶添加到 low 中
-- findMedian 时
-	- 若 len(low)==len(high)，中位数等于 (max(low)+min(high))//2
-	- 若 len(low)>len(high)，中位数等于 max(low)
+	- 先将元素添加到 A 中，弹出堆顶并加到 B 中
+	- 如果 len(A)<len(B)，就再弹出 B 堆顶加到 A 中 
+- findMedian 时，根据奇偶情况返回即可
         
-addNum 时间复杂度 O(logN)，findMedian 时间复杂度 O(1)。
 
 ## 解答
 
@@ -96,15 +94,19 @@ addNum 时间复杂度 O(logN)，findMedian 时间复杂度 O(1)。
 class MedianFinder:
 
     def __init__(self):
-        self.low, self.high = [], []
+        self.A = []
+        self.B = []
 
     def addNum(self, num: int) -> None:
-        heappush(self.high, -heappushpop(self.low, -num))
-        if len(self.high) > len(self.low):
-            heappush(self.low, -heappop(self.high))
+        heappush(self.A,-num)
+        heappush(self.B,-heappop(self.A))
+        if len(self.B)>len(self.A):
+            heappush(self.A,-heappop(self.B))
 
     def findMedian(self) -> float:
-        return (-self.low[0]+self.high[0]) / 2 if len(self.high) == len(self.low) else -self.low[0]
+        if len(self.A)>len(self.B):
+            return -self.A[0]
+        return (self.B[0]-self.A[0])/2
 ```
-460 ms
+330 ms
 

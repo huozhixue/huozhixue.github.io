@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0284\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  501 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  538 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0284\/","datePublished": "2015-10-11T00:00:00+08:00","dateModified": "2015-10-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0284：顶端迭代器（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-11">2015-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 501 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0284/" class="leancloud_visitors" data-flag-title="0284：顶端迭代器（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-11">2015-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 538 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0284/" class="leancloud_visitors" data-flag-title="0284：顶端迭代器（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -167,8 +167,11 @@ peekingIterator.hasNext(); // 返回 False
 </ul>
 <p><strong>进阶：</strong>你将如何拓展你的设计？使之变得通用化，从而适应所有的类型，而不只是整数型？</p>
 <h2 id="分析">分析</h2>
-<p>peek 必须获得下一个元素，但不能移动指针。</p>
-<p>因此考虑用缓存保存已看过但还没移到的元素，每次 next/hasNext/peek 时先看缓存，没有再调用迭代器。</p>
+<ul>
+<li>peek 要查看下一个元素，但不能丢掉</li>
+<li>因此考虑用缓存下一个元素</li>
+<li>每次调用时先看缓存，再看迭代器即可</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -188,24 +191,56 @@ peekingIterator.hasNext(); // 返回 False
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PeekingIterator</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterator</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Initialize your data structure here.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        :type iterator: Iterator
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">it</span> <span class="o">=</span> <span class="n">iterator</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Returns the next element in the iteration without advancing the iterator.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        :rtype: int
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+</span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        :rtype: int
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">!=</span><span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">hasNext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">it</span><span class="o">.</span><span class="n">hasNext</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        :rtype: bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">!=</span><span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">it</span><span class="o">.</span><span class="n">hasNext</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>36 ms</p>

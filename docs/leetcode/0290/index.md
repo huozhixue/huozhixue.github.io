@@ -45,14 +45,15 @@
 
 ## 分析
 
-类似 {{< lc "0205" >}}，注意先判断 s 的单词数和 pattern 长度是否相同即可。
+类似 {{< lc "0205" >}}，注意先判断 s 的单词数和 pattern 长度是否相同。
 
 ## 解答
 
 ```python
-def wordPattern(self, pattern: str, s: str) -> bool:
-    A, B =  pattern, s.split()
-    return len(A)==len(B) and len(set(A))==len(set(B))==len(set(zip(A, B)))
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        A,B = pattern,s.split()
+        return len(A)==len(B) and len(set(A))==len(set(B))==len(set(zip(A,B)))
 ```
-32 ms
+31 ms
 

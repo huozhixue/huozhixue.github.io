@@ -52,20 +52,25 @@
 
 ### #1
 
-以重复的数 x 为界，任意 y<x 必然满足 [1,y] 范围内的个数 <= y，任意 y>=x 则反之。
-
-因此二分查找第一个满足 [1,y] 范围内的个数 > y 的 y 即可。
+- 如果可以修改数组，可以采用 {{< lc "0041" >}} 的方法
+- 还可以采用标记负数的方法
+	- 遍历到值 x 时，将位置 abs(x) 的值标记为负数
+	- 若位置 abs(x) 的值已经被标记为负数，abs(x) 即为所求
 
 ```python
-def findDuplicate(self, nums: List[int]) -> int:
-    self.__class__.__getitem__ = lambda self, x: sum(num<=x for num in nums)>x
-    return bisect_left(self, True, 1, len(nums)-1)
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        for x in nums:
+            if nums[abs(x)]<0:
+                return abs(x)
+            nums[abs(x)] *= -1
 ```
-时间复杂度 O(N*logN)，384 ms
+72 ms
+
 
 ### #2
 
-要求 O(N)，有个非常巧妙的方法：
+要求不修改数组，有个非常巧妙的方法：
 - 将 nums 看作是链表，nums[i] 表示节点 i 指向节点 nums[i]
 - 那么从节点 0 出发的链表必然存在一个环，入环的节点即是所求
 - 问题便等价于 {{< lc "0142" >}} 了
@@ -73,31 +78,17 @@ def findDuplicate(self, nums: List[int]) -> int:
 ## 解答
 
 ```python
-def findDuplicate(self, nums: List[int]) -> int:
-	slow = fast = 0
-	while True:
-		slow, fast = nums[slow], nums[nums[fast]]
-		if slow == fast:
-			break
-	slow = 0
-	while slow != fast:
-		slow, fast = nums[slow], nums[fast]
-	return slow
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        slow=fast=0
+        while True:
+            slow,fast = nums[slow],nums[nums[fast]]
+            if slow==fast:
+                break
+        p = 0
+        while p!=slow:
+            p,slow = nums[p],nums[slow]
+        return p
 ```
-时间复杂度 O(N)，108 ms
-
-## *附加
-
-如果可以修改数组，那么还有种时间 O(N)，空间 O(1) 的做法：
-- 遍历到值 x 时，将位置 abs(x) 的值标记为负数
-- 若位置 abs(x) 的值已经被标记为负数，abs(x) 即为所求
-
-```python
-def findDuplicate(self, nums: List[int]) -> int:
-    for x in nums:
-        if nums[abs(x)]<0:
-            return abs(x)
-        nums[abs(x)] *= -1
-```
-120 ms
+64 ms
 

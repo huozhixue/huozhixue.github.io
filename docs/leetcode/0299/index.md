@@ -56,16 +56,17 @@
 
 ## 分析
 
-计算 "Bulls" 很简单，但 "Cows" 较麻烦。可以考虑先计算 Bulls+Cows，即数字正确的个数，
-再减去 Bulls 即是 Cows。
+- 计算 "Bulls" 很简单，但 "Cows" 较麻烦
+- 可以考虑直接计算 Bulls+Cows，即数字正确的个数
 
 ## 解答
 
 ```python
-def getHint(self, secret: str, guess: str) -> str:
-	A = sum(s==g for s,g in zip(secret, guess))
-	C = sum((Counter(secret)&Counter(guess)).values())
-	return '%dA%dB' % (A, C-A)
+class Solution:
+    def getHint(self, secret: str, guess: str) -> str:
+        x = sum(a==b for a,b in zip(secret,guess))
+        y = (Counter(secret)&Counter(guess)).total()
+        return '%dA%dB'%(x,y-x)
 ```
-48 ms
+36 ms
 

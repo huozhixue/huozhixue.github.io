@@ -44,17 +44,15 @@
 
 ## 分析
 
-类似 {{< lc "0274" >}}，找第一个满足 n-i<=citations[i] 的 i 即可。
-
-本题已排好序了，由于单调性，可以二分查找。
+ {{< lc "0274" >}}进阶，二分查找第一个满足 n-i<=citations[i] 的 i 即可。
 
 ## 解答
 
 ```python
-def hIndex(self, citations: List[int]) -> int:
-    n = len(citations)
-    self.__class__.__getitem__ = lambda self, i: n-i<=citations[i]
-    return n - bisect_left(self, True, 0, n)
+class Solution:
+    def hIndex(self, citations: List[int]) -> int:
+        n = len(citations)
+        return n-bisect_left(range(n),True,key=lambda i:n-i<=citations[i])
 ```
-时间复杂度 O(log N)，44 ms
+32 ms
 
