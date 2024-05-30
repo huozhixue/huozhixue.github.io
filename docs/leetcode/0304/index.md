@@ -55,13 +55,9 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
 
 ## 分析
 
-{{< lc "0303" >}} 的升级版，需要用二维前缀和。
-
-令 
-$$ pre[i][j]  = \sum_{\substack {0 \le r<i  \\\ 0 \le c<j }} matrix[r][c] $$那么：
-
-$$sumRegion(r1, c1, r2, c2) = pre[r2+1][c2+1] \\\ 
--pre[r1][c2+1]-pre[r2+1][c1]+pre[r1][c1]$$
+- {{< lc "0303" >}} 的升级版，需要用二维前缀和
+- 令 $ P[i][j]  = \sum_{\substack {0 \le r<i  \\\ 0 \le c<j }} matrix[r][c] $
+- 则 $sumRegion(r1, c1, r2, c2) = P[r2+1][c2+1] -P[r1][c2+1]-P[r2+1][c1]+P[r1][c1]$
 
 
 ## 解答
@@ -70,11 +66,12 @@ $$sumRegion(r1, c1, r2, c2) = pre[r2+1][c2+1] \\\
 class NumMatrix:
 
     def __init__(self, matrix: List[List[int]]):
-        self.pre = [list(accumulate((0,)+col)) for col in zip(*matrix)]
-        self.pre = [list(accumulate((0,)+col)) for col in zip(*self.pre)]
+        self.P = [[0]+list(accumulate(col)) for col in zip(*matrix)]
+        self.P = [[0]+list(accumulate(col)) for col in zip(*self.P)]
+
 
     def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
-        return self.pre[row2+1][col2+1]-self.pre[row1][col2+1]-self.pre[row2+1][col1]+self.pre[row1][col1]
+        return self.P[row2+1][col2+1]-self.P[row1][col2+1]-self.P[row2+1][col1]+self.P[row1][col1]
 ```
-536 ms
+355 ms
 

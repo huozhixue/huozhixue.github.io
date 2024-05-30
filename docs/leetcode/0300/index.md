@@ -52,7 +52,7 @@
 
 ## 分析
 
-### #1
+### #1 dp
 
 按前一元素选哪个即可递推。
 
@@ -67,23 +67,90 @@ class Solution:
 ```
 1000 ms
 
-### #2
+### #2 dp+树状数组
 
-- 观察递推式，这种限制一个维度 （nums[j]<nums[i]），求另一个维度（f[j]）最值的问题，一种常用的方法是维护一种单调性
-- 假如 num[j1]<nums[j2] 且 f[j1]>f[j2]，显然 j2 对之后的递推式来说是无用的，可以去掉
-- 那么维护有用的 j 的集合，按 nums[j] 排序，f[j] 必然也是递增的
-- 因此只需在这个集合中二分查找最后一个满足 nums[j]<nums[i] 的 j 即可
+- 观察递推式，限制了一个维度 （nums[j]<nums[i]），求另一个维度（f[j]）最值
+- 这种问题的一种常用方法是树状数组/线段树
+- 将一个维度看作区间范围，维护区间内的最值即可
+- 由于nums 元素可能为负，所以要归一处理后才能用树状数组
 
+
+```python
+class BIT:
+    def __init__(self, n):
+        self.n = n+1
+        self.t = defaultdict(int)
+
+    def update(self, i, x):
+        i += 1
+        while i<self.n:
+            self.t[i] = max(self.t[i],x)
+            i += i&(-i)
+
+    def get(self, i):
+        res, i = 0, i+1
+        while i:
+            res = max(res,self.t[i])
+            i &= i-1
+        return res
+
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        mi = min(nums)
+        A = [x-mi for x in nums]
+        tree = BIT(max(A))
+        res = 0
+        for x in A:
+            f = 1+tree.get(x-1)
+            tree.update(x,f)
+            res = max(res,f)
+        return res
+```
+101 ms
+
+### #3 dp+有序集合
+
+- 这种问题的另一种常用的方法是维护一种单调性
+- 假如 num[j1]<=nums[j2] 且 f[j1]>=f[j2]，显然 j2 对之后的递推式来说是无用的，可以去掉
+- 那么维护有用的 <x=nums[j],y=f[j]> 的有序集合，x 和 y 都是递增的
+- 遍历到 nums[i] 时，在这个有序集合中二分查找最后一个满足 x<nums[i] 的元素 <x,y>，即得到 f[i]=1+y
+- 然后将所有不符合单调性的元素 <x,y> 去掉即可，类似单调栈
+
+```python
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        from sortedcontainers import SortedList
+        sl = SortedList()
+        res = 0
+        for x in nums:
+            pos = sl.bisect_left((x,))
+            f = 1+sl[pos-1][1] if pos else 1
+            while pos<len(sl) and sl[pos][1]<=f:
+                sl.pop(pos)
+            sl.add((x,f))
+            res = max(res,f)
+        return res
+```
+92 ms
+
+### #4 dp+单调数组
+
+- f 的范围更方便处理，还可以考虑反过来，维护  <x=f[j],y=nums[j]> 的有序集合
+- 遍历到 nums[i] 时，二分查找最后一个满足 y<nums[i] 的元素 <x,y>，得到 f[i]=1+x
+- 然后将所有不符合单调性的元素 <x,y> 去掉
+- 显然，这样的 k 最多一个，满足 x=f[i],y>=nums[i]
+- 因此 f 可以直接用数组维护，将 f[i] 位置改为 nums[i] 即可
 
 ## 解答
 
 ```python
-def lengthOfLIS(self, nums: List[int]) -> int:
-    A = []
-    for num in nums:
-        j = bisect_left(A, num)
-        A[j:j + 1] = [num]
-    return len(A)
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        A = []
+        for x in nums:
+            pos = bisect_left(A,x)
+            A[pos:pos+1] = [x]
+        return len(A)
 ```
-时间 $O(N*logN)$，40 ms
+37 ms
 

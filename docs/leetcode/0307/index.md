@@ -54,78 +54,76 @@ numArray.sumRange(0, 2); // 返回 1 + 2 + 5 = 8
 
 ## 分析
 
-{{< lc "0303" >}} 升级版，元素不固定了。
-
-每次 sumRange 都挨个求和，显然会有大量不必要的运算。
-有个想法是维护一些区间和，修改的数无关时就无需重新计算区间和。
-
-这个想法也就是块状数组：
-- 将数组分成大小 size 的块，并计算得到每一块的和
-- update 时，更新该数所属的块的和即可
-- sumRange 时，其中包含的完整的块的和无需再计算，只需计算两边的残块的和
-- 完整的块最多有 n//size 个，残块的元素个数不超过 2*size 个 
-- 因此，当 size 取 $\sqrt n$ 时，sumRange 时间是 $O(\sqrt n)$
+{{< lc "0303" >}} 升级版，单点更新+区间查询，可以用树状数组。
 
 ## 解答
+```python
+class BIT:
+    def __init__(self, n):
+        self.n = n+1
+        self.t = [0]*(n+1)
+
+    def update(self, i, x):
+        i += 1
+        while i<self.n:
+            self.t[i] += x
+            i += i&(-i)
+
+    def get(self, i):
+        res, i = 0, i+1
+        while i:
+            res += self.t[i]
+            i &= i-1
+        return res
+
+class NumArray:
+
+    def __init__(self, nums: List[int]):
+        self.nums = nums
+        self.tree = BIT(len(nums))
+        for i,x in enumerate(nums):
+            self.tree.update(i,x)
+
+    def update(self, index: int, val: int) -> None:
+        add = val-self.nums[index]
+        self.nums[index] = val
+        self.tree.update(index,add)
+
+    def sumRange(self, left: int, right: int) -> int:
+        return self.tree.get(right)-self.tree.get(left-1)
+```
+682 ms
+
+## *附加
+
+也可以用块状数组。
+
 
 ```python
 class NumArray:
 
     def __init__(self, nums: List[int]):
         n = len(nums)
-        self.size = int(sqrt(n))
-        self.B = [0]*((n-1)//self.size+1)
-        for i in range(n):
-            self.B[i//self.size] += nums[i]
-        self.nums = nums
-
-    def update(self, index: int, val: int) -> None:
-        self.B[index//self.size] += val-self.nums[index]
-        self.nums[index] = val
-
-    def sumRange(self, left: int, right: int) -> int:
-        m, nums = self.size, self.nums
-        l, r = left//m, right//m
-        if l==r:
-            return sum(nums[left:right+1])
-        return sum(self.B[l+1:r])+sum(nums[left:(l+1)*m])+ sum(nums[r*m:right+1])
-```
-792 ms
-
-## *附加
-
-还有个专门针对 单点更新+区间查询 的算法——树状数组。更新和查询时间 O(logN)。
-
-
-```python
-class Fwk:
-    def __init__(self, N):
-        self.tree = [0] * (N + 1)
-
-    def update(self, i, x):
-        while i < len(self.tree):
-            self.tree[i] += x
-            i += i & (-i)
-
-    def get(self, i):
-        res = 0
-        while i > 0:
-            res += self.tree[i]
-            i &= i-1
-        return res
-
-class NumArray:
-    def __init__(self, nums: List[int]):
-        self.nums = nums
-        self.tree = Fwk(len(nums))
+        w = isqrt(n)
+        B = [0]*((n-1)//w+1)
         for i,x in enumerate(nums):
-            self.tree.update(i+1,x)
+            B[i//w] += x
+        self.nums =nums
+        self.B = B
+        self.w = w
 
     def update(self, index: int, val: int) -> None:
-        self.tree.update(index+1, val-self.nums[index])
+        add = val-self.nums[index]
+        self.B[index//self.w] += add
         self.nums[index] = val
 
     def sumRange(self, left: int, right: int) -> int:
-        return self.tree.get(right+1)-self.tree.get(left)
+        A,w = self.nums,self.w
+        i,j = left//w,right//w
+        if i==j:
+            return sum(A[left:right+1])
+        return sum(A[left:(i+1)*w])+sum(A[j*w:right+1])+sum(self.B[i+1:j])
 ```
-1116 ms 
+742 ms
+
+

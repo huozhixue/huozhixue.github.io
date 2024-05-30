@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0301\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  478 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  319 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0301\/","datePublished": "2015-10-28T00:00:00+08:00","dateModified": "2015-10-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0301：删除无效的括号（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-28">2015-10-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 478 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-28">2015-10-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 319 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0301/" class="leancloud_visitors" data-flag-title="0301：删除无效的括号（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,12 +125,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -162,52 +157,10 @@
 <li><code>s</code> 中至多含 <code>20</code> 个括号</li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p><a href="/leetcode/1249" title="1249" rel="noopener noreferrer">1249</a> 的升级版，但要求所有最少删除数的方案。</p>
-<p>考虑先得到最少删除数 k，然后遍历所有删除 k 个括号的子序列，判断是否有效即可。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">removeInvalidParentheses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ans</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;)&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">stack</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ans</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">ss</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cal</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ss</span> <span class="o">=</span> <span class="p">{</span><span class="n">sub</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ss</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sub</span><span class="p">))</span> <span class="k">if</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="s1">&#39;()&#39;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span><span class="n">sub</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ss</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">cal</span><span class="p">(</span><span class="n">sub</span><span class="p">)]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>124 ms</p>
-<h3 id="2">#2</h3>
-<p>注意到计算最少删除数时，其实只关心栈的长度。所以可以用一个变量来维护，而无需真正地进行栈操作。</p>
+<ul>
+<li>可以直接递归求删除 k 个括号的序列集合</li>
+<li>假如其中有符合的序列，k 即是最小，返回所有符合的序列即可</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -226,22 +179,22 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">removeInvalidParentheses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ans</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">size</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;)&#39;</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">ans</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">ans</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ans</span> <span class="o">+</span> <span class="n">size</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">ss</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cal</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ss</span> <span class="o">=</span> <span class="p">{</span><span class="n">sub</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ss</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sub</span><span class="p">))</span> <span class="k">if</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="s1">&#39;()&#39;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span><span class="n">sub</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">ss</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">cal</span><span class="p">(</span><span class="n">sub</span><span class="p">)]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">removeInvalidParentheses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">if</span> <span class="n">c</span><span class="o">==</span><span class="s1">&#39;(&#39;</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;()&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">P</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">P</span><span class="p">)</span><span class="o">==</span><span class="n">P</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Q</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">Q</span> <span class="k">if</span> <span class="n">check</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">res</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Q</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">Q</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;()&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>112 ms</p>
+</div><p>154 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

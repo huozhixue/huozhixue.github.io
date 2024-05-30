@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0300\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  476 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  881 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0300\/","datePublished": "2015-10-27T00:00:00+08:00","dateModified": "2015-10-27T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0300：最长递增子序列（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-27">2015-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 476 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0300/" class="leancloud_visitors" data-flag-title="0300：最长递增子序列（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-27">2015-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 881 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0300/" class="leancloud_visitors" data-flag-title="0300：最长递增子序列（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -127,8 +127,10 @@
     <li><a href="#题目">题目</a></li>
     <li><a href="#分析">分析</a>
       <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
+        <li><a href="#1-dp">#1 dp</a></li>
+        <li><a href="#2-dp树状数组">#2 dp+树状数组</a></li>
+        <li><a href="#3-dp有序集合">#3 dp+有序集合</a></li>
+        <li><a href="#4-dp单调数组">#4 dp+单调数组</a></li>
       </ul>
     </li>
     <li><a href="#解答">解答</a></li>
@@ -166,7 +168,7 @@
 <li>你能将算法的时间复杂度降低到 <code>O(n log(n))</code> 吗?</li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
+<h3 id="1-dp">#1 dp</h3>
 <p>按前一元素选哪个即可递推。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -189,12 +191,126 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>1000 ms</p>
-<h3 id="2">#2</h3>
+<h3 id="2-dp树状数组">#2 dp+树状数组</h3>
 <ul>
-<li>观察递推式，这种限制一个维度 （nums[j]&lt;nums[i]），求另一个维度（f[j]）最值的问题，一种常用的方法是维护一种单调性</li>
-<li>假如 num[j1]&lt;nums[j2] 且 f[j1]&gt;f[j2]，显然 j2 对之后的递推式来说是无用的，可以去掉</li>
-<li>那么维护有用的 j 的集合，按 nums[j] 排序，f[j] 必然也是递增的</li>
-<li>因此只需在这个集合中二分查找最后一个满足 nums[j]&lt;nums[i] 的 j 即可</li>
+<li>观察递推式，限制了一个维度 （nums[j]&lt;nums[i]），求另一个维度（f[j]）最值</li>
+<li>这种问题的一种常用方法是树状数组/线段树</li>
+<li>将一个维度看作区间范围，维护区间内的最值即可</li>
+<li>由于nums 元素可能为负，所以要归一处理后才能用树状数组</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BIT</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">+=</span> <span class="n">i</span><span class="o">&amp;</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">i</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">&amp;=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">lengthOfLIS</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mi</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="n">mi</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tree</span> <span class="o">=</span> <span class="n">BIT</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">tree</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tree</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>101 ms</p>
+<h3 id="3-dp有序集合">#3 dp+有序集合</h3>
+<ul>
+<li>这种问题的另一种常用的方法是维护一种单调性</li>
+<li>假如 num[j1]&lt;=nums[j2] 且 f[j1]&gt;=f[j2]，显然 j2 对之后的递推式来说是无用的，可以去掉</li>
+<li>那么维护有用的 &lt;x=nums[j],y=f[j]&gt; 的有序集合，x 和 y 都是递增的</li>
+<li>遍历到 nums[i] 时，在这个有序集合中二分查找最后一个满足 x&lt;nums[i] 的元素 &lt;x,y&gt;，即得到 f[i]=1+y</li>
+<li>然后将所有不符合单调性的元素 &lt;x,y&gt; 去掉即可，类似单调栈</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">lengthOfLIS</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">from</span> <span class="nn">sortedcontainers</span> <span class="kn">import</span> <span class="n">SortedList</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="n">SortedList</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pos</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">x</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">sl</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">pos</span> <span class="k">else</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">pos</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">sl</span><span class="p">)</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">pos</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sl</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>92 ms</p>
+<h3 id="4-dp单调数组">#4 dp+单调数组</h3>
+<ul>
+<li>f 的范围更方便处理，还可以考虑反过来，维护  &lt;x=f[j],y=nums[j]&gt; 的有序集合</li>
+<li>遍历到 nums[i] 时，二分查找最后一个满足 y&lt;nums[i] 的元素 &lt;x,y&gt;，得到 f[i]=1+x</li>
+<li>然后将所有不符合单调性的元素 &lt;x,y&gt; 去掉</li>
+<li>显然，这样的 k 最多一个，满足 x=f[i],y&gt;=nums[i]</li>
+<li>因此 f 可以直接用数组维护，将 f[i] 位置改为 nums[i] 即可</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -205,17 +321,19 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">lengthOfLIS</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">lengthOfLIS</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pos</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">pos</span><span class="p">:</span><span class="n">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间 $O(N*logN)$，40 ms</p>
+</div><p>37 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -235,7 +353,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">有序集合</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

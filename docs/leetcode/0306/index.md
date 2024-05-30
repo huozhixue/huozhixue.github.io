@@ -46,26 +46,54 @@
 
 ## 分析
 
+
+### #1
+
 类似 {{< lc "0093" >}}，回溯即可。
 
+```python
+class Solution:
+    def isAdditiveNumber(self, num: str) -> bool:
+        def dfs(i):
+            if len(path)>=3 and path[-1]!=path[-2]+path[-3]:
+                return False
+            if i == n:
+                return len(path)>2
+            for j in range(i+1, n+1 if num[i]!='0' else i+2):
+                path.append(int(num[i:j]))
+                if dfs(j):
+                    return True
+                path.pop()
+            return False
+
+        path, n = [], len(num)
+        return dfs(0)
+```
+46 ms
+### #2
+
+也可以先确定前两个数，然后递推序列是否符合即可。
 ## 解答
 
+
 ```python
-def isAdditiveNumber(self, num: str) -> bool:
-    def dfs(i):
-        if len(path) >= 3 and path[-1] != path[-2] + path[-3]:
+class Solution:
+    def isAdditiveNumber(self, num: str) -> bool:
+        def check(a,b,s):
+            while s:
+                c = str(int(a)+int(b))
+                if s[:len(c)]!=c:
+                    return False
+                s = s[len(c):]
+                a,b = b,c
+            return True
+        n = len(num)
+        if n<3:
             return False
-        if i == n:
-            return len(path) > 2
-        for j in range(i+1, n + 1 if num[i] != '0' else i+2):
-            path.append(int(num[i:j]))
-            if dfs(j):
-                return True
-            path.pop()
+        for i in range(1 if num[0]=='0' else n-2):
+            for j in range(i+1,i+2 if num[i+1]=='0' else n-1):
+                if check(num[:i+1],num[i+1:j+1],num[j+1:]):
+                    return True
         return False
-
-    path, n = [], len(num)
-    return dfs(0)
 ```
-36 ms
-
+29 ms

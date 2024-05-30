@@ -45,53 +45,27 @@
 
 ## 分析
 
-### #1
+- 可以直接递归求删除 k 个括号的序列集合
+- 假如其中有符合的序列，k 即是最小，返回所有符合的序列即可
 
-{{< lc "1249" >}} 的升级版，但要求所有最少删除数的方案。
 
-考虑先得到最少删除数 k，然后遍历所有删除 k 个括号的子序列，判断是否有效即可。
-
-```python
-def removeInvalidParentheses(self, s: str) -> List[str]:
-    def cal(s):
-        ans, stack = 0, []
-        for char in s:
-            if char == '(':
-                stack.append(char)
-            elif char == ')':
-                if stack:
-                    stack.pop()
-                else:
-                    ans += 1
-        return ans + len(stack)
-
-    ss = {s}
-    for _ in range(cal(s)):
-        ss = {sub[:i]+sub[i+1:] for sub in ss for i in range(len(sub)) if sub[i] in '()'}
-    return [sub for sub in ss if not cal(sub)]
-```
-124 ms
-
-### #2
-
-注意到计算最少删除数时，其实只关心栈的长度。所以可以用一个变量来维护，而无需真正地进行栈操作。
 
 ## 解答
 
 ```python
-def removeInvalidParentheses(self, s: str) -> List[str]:
-    def cal(s):
-        ans, size = 0, 0
-        for char in s:
-            size += 1 if char == '(' else -1 if char == ')' else 0
-            if size < 0:
-                ans, size = ans+1, 0
-        return ans + size
-
-    ss = {s}
-    for _ in range(cal(s)):
-        ss = {sub[:i]+sub[i+1:] for sub in ss for i in range(len(sub)) if sub[i] in '()'}
-    return [sub for sub in ss if not cal(sub)]
+class Solution:
+    def removeInvalidParentheses(self, s: str) -> List[str]:
+        def check(s):
+            A = [1 if c=='(' else -1 for c in s if c in '()']
+            P = list(accumulate([0]+A))
+            return min(P)==P[-1]==0
+        Q = [s]
+        while True:
+            res = [s for s in Q if check(s)]
+            if res:
+                return res
+            Q = {s[:i]+s[i+1:] for s in Q for i,c in enumerate(s) if c in '()'}
+        return res
 ```
-112 ms
+154 ms
 

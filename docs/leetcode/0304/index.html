@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0304\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  334 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  330 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0304\/","datePublished": "2015-10-31T00:00:00+08:00","dateModified": "2015-10-31T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0304：二维区域和检索 - 矩阵不可变（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-31">2015-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 334 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-10-31">2015-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 330 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0304/" class="leancloud_visitors" data-flag-title="0304：二维区域和检索 - 矩阵不可变（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -168,11 +168,11 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
 <li><meta charset="UTF-8" />最多调用 <code>10<sup>4</sup></code> 次 <code>sumRegion</code> 方法</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p><a href="/leetcode/0303" title="0303" rel="noopener noreferrer">0303</a> 的升级版，需要用二维前缀和。</p>
-<p>令
-$$ pre[i][j]  = \sum_{\substack {0 \le r&lt;i  \\ 0 \le c&lt;j }} matrix[r][c] $$那么：</p>
-<p>$$sumRegion(r1, c1, r2, c2) = pre[r2+1][c2+1] \\
--pre[r1][c2+1]-pre[r2+1][c1]+pre[r1][c1]$$</p>
+<ul>
+<li><a href="/leetcode/0303" title="0303" rel="noopener noreferrer">0303</a> 的升级版，需要用二维前缀和</li>
+<li>令 $ P[i][j]  = \sum_{\substack {0 \le r&lt;i  \\ 0 \le c&lt;j }} matrix[r][c] $</li>
+<li>则 $sumRegion(r1, c1, r2, c2) = P[r2+1][c2+1] -P[r1][c2+1]-P[r2+1][c1]+P[r1][c1]$</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -184,19 +184,21 @@ $$ pre[i][j]  = \sum_{\substack {0 \le r&lt;i  \\ 0 \le c&lt;j }} matrix[r][c] $
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">NumMatrix</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matrix</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pre</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">((</span><span class="mi">0</span><span class="p">,)</span><span class="o">+</span><span class="n">col</span><span class="p">))</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">matrix</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pre</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">((</span><span class="mi">0</span><span class="p">,)</span><span class="o">+</span><span class="n">col</span><span class="p">))</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">pre</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">P</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">col</span><span class="p">))</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">matrix</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">P</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">col</span><span class="p">))</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">sumRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">col1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">row2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">col2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pre</span><span class="p">[</span><span class="n">row2</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">col2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">pre</span><span class="p">[</span><span class="n">row1</span><span class="p">][</span><span class="n">col2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">pre</span><span class="p">[</span><span class="n">row2</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">col1</span><span class="p">]</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">pre</span><span class="p">[</span><span class="n">row1</span><span class="p">][</span><span class="n">col1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="n">row2</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">col2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="n">row1</span><span class="p">][</span><span class="n">col2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="n">row2</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">col1</span><span class="p">]</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="n">row1</span><span class="p">][</span><span class="n">col1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>536 ms</p>
+</div><p>355 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

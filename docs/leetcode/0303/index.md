@@ -58,10 +58,11 @@ numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))
 class NumArray:
 
     def __init__(self, nums: List[int]):
-        self.pre = list(accumulate([0]+nums))
+        self.P = list(accumulate([0]+nums))
+
 
     def sumRange(self, left: int, right: int) -> int:
-        return self.pre[right+1] - self.pre[left]
+        return self.P[right+1]-self.P[left]
 ```
-76 ms
+51 ms
 
