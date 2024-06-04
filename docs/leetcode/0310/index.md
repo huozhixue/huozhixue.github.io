@@ -49,31 +49,64 @@
 
 ## 分析
 
-本题是拓扑排序的变种。从最外层的叶子节点向里面广度遍历，最里面的一层即是所求。
-
-无向图的拓扑排序从考虑入度 0 变为考虑入度 1 的节点即可。
-
-注意 n=1 的特殊情况。
+可以用拓扑排序，一层层去掉叶子，最里面的一层即是所求。证明见 [力扣](https://leetcode.cn/problems/minimum-height-trees/solutions/1395249/zui-xiao-gao-du-shu-by-leetcode-solution-6v6f/)
 
 ## 解答
 
 ```python
-def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
-    nxt, indeg = defaultdict(list), [0] * n
-    for u, v in edges:
-        nxt[u].append(v)
-        nxt[v].append(u)
-        indeg[u] += 1
-        indeg[v] += 1
-    res, Q = [], [u for u in range(n) if indeg[u] <= 1]
-    while Q:
-        res, Q = Q, []
-        for u in res:
-            for v in nxt[u]:
-                indeg[v] -= 1
-                if indeg[v] == 1:
-                    Q.append(v)
-    return res
+class Solution:
+    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
+        g = [[] for _ in range(n)]
+        for a,b in edges:
+            g[a].append(b)
+            g[b].append(a)
+        deg = [len(row) for row in g]
+        Q = [u for u in range(n) if deg[u]<=1]
+        res = []
+        while Q:
+            res,Q = Q,[]
+            for u in res:
+                for v in g[u]:
+                    deg[v]-=1
+                    if deg[v]==1:
+                        Q.append(v)
+        return res 
 ```
-124 ms
+73 ms
 
+## *附加
+
+也可以用换根dp的方法
+- 初始节点 0 作为根
+- 第一遍 dfs 得到每个节点的高 H
+- 第二遍 dfs 得到每个节点向上能走的最大距离 up
+- max(H,up) 即是该节点作为根的高度
+
+```python
+class Solution:
+    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
+        g = [[] for _ in range(n)]
+        for a,b in edges:
+            g[a].append(b)
+            g[b].append(a)
+        H = [0]*n
+        def dfs(u,f):
+            for v in g[u]:
+                if v!=f:
+                    dfs(v,u)
+                    H[u] = max(H[u],H[v]+1)
+        dfs(0,-1)
+        up = [0]*n
+        def dfs(u,f):
+            A = [1+H[v] for v in g[u] if v!=f]+[up[u],0]
+            a,b = nlargest(2,A)
+            for v in g[u]:
+                if v!=f:
+                    up[v]=1+b if 1+H[v]==a else 1+a
+                    dfs(v,u)
+        dfs(0,-1)
+        res = [max(a,b) for a,b in zip(H,up)]
+        mi = min(res)
+        return [u for u in range(n) if res[u]==mi]
+```
+187 ms

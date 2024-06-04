@@ -41,24 +41,23 @@ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167</pre>
 
 ## 分析
 
-为了方便，在前后各加一个数字 1 的气球得到数组 A。问题转为求 A 戳破非边界气球能得到的最大硬币数。
 
-假设最后戳破第 k 个气球，获得 A[0]*A[-1]*A[k] 个硬币，剩下的即转为 A[:k+1] 和 A[k:] 的递归子问题。
-
-令 dp[i][j] 代表 A[i:j+1] 能得到的最大硬币数，则递推式为：
-$$dp[i][j] = max(A[k]*A[i]*A[j]+dp[i][k]+dp[k][j])_{\ i<k<j}$$
-
+- 为了方便，在前后各加一个数字 1 作为边界，得到数组 A
+- 假设最后戳破第 k 个气球，获得 A[0]*A[k]*A[-1] 个硬币，剩下的转为 A[:k+1] 和 A[k:] 的递归子问题
+- 因此采用区间 dp 即可
 ## 解答
 
 ```python
-def maxCoins(self, nums: List[int]) -> int:
-    A = [1]+nums+[1]
-    n = len(A)
-    dp = [[0]*n for _ in range(n)]
-    for i in range(n-3, -1, -1):
-        for j in range(i+2, n):
-            dp[i][j] = max(A[k]*A[i]*A[j]+dp[i][k]+dp[k][j] for k in range(i+1, j))
-    return dp[0][-1]
+class Solution:
+    def maxCoins(self, nums: List[int]) -> int:
+        A = [1]+nums+[1]
+        n = len(A)
+        f = [[0]*n for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            for j in range(i+2,n):
+                for k in range(i+1,j):
+                    f[i][j] = max(f[i][j],f[i][k]+f[k][j]+A[i]*A[j]*A[k])
+        return f[0][-1]
 ```
-时间复杂度 O(N^3)，2968 ms
+2541 ms
 

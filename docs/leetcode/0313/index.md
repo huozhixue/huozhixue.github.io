@@ -50,37 +50,40 @@
 
 ### #1
 
-类似 {{< lc "0264" >}}，只不过质数数组不固定了。
+ {{< lc "0264" >}} 进阶，可以用同样的方法。
 
 ```python
-def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
-    dp, A = [1] * n, defaultdict(int)
-    for i in range(1, n):
-        dp[i] = min(dp[A[p]] * p for p in primes)
-        for p in primes:
-            if dp[A[p]] * p == dp[i]:
-                A[p] += 1
-    return dp[-1]
+class Solution:
+    def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
+        f = [1]*n
+        g = defaultdict(int)
+        for i in range(1,n):
+            f[i] = min(f[g[p]]*p for p in primes)
+            for p in primes:
+                if f[g[p]]*p==f[i]:
+                    g[p] += 1
+        return f[-1]
 ```
 
-时间 $O(N*M)$，超时了
+1638 ms
 
 ### #2
 
-注意到每次是取最小的 dp[A[p]]*p，想到可以用堆来维护 <dp[A[p]]*p, A[p], p> 三元组，可以快速获得最小值。
+注意到每次要取最小的 f[g[p]]*p，可以用堆来维护 <f[g[p]]*p, g[p], p> 三元组，快速获得最小值。
 
 ## 解答
 
 ```python
-def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
-    dp = [1] * n
-    pq = [(p, 0, p) for p in primes]
-    for i in range(1, n):
-        dp[i] = pq[0][0]
-        while pq and pq[0][0] == dp[i]:
-            _, idx, p = heappop(pq)
-            heappush(pq, (dp[idx+1] * p, idx+1, p))
-    return dp[-1]
+class Solution:
+    def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
+        f = [1]*n
+        pq = [(p,0,p) for p in primes]
+        for i in range(1,n):
+            f[i] = pq[0][0]
+            while pq[0][0]==f[i]:
+                _,j,p = heappop(pq)
+                heappush(pq,(f[j+1]*p,j+1,p))
+        return f[-1]
 ```
-时间 $O(N*logM)$，2548 ms
+304 ms
 

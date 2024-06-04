@@ -47,21 +47,88 @@
 
 ## 分析
 
-考虑从右往左遍历，并维护一个有序集合。二分查找 nums[i] 的位置即可得到 counts[i]。
 
-要进行插入、查找的操作，考虑用 SortedList 维护，都能在 O(logN) 时间内完成。 
+### #1
+考虑从右往左遍历，维护右侧元素的有序集合，二分查找即可。 
+
+
+```python
+class Solution:
+    def countSmaller(self, nums: List[int]) -> List[int]:
+        from sortedcontainers import SortedList
+        res = []
+        sl = SortedList()
+        for x in nums[::-1]:
+            res.append(sl.bisect_left(x))
+            sl.add(x)
+        return res[::-1]
+```
+727 ms
+
+### #2
+
+也可以用树状数组维护，注意先离散化处理负数。
 
 ## 解答
 
 ```python
-def countSmaller(self, nums: List[int]) -> List[int]:
-    from sortedcontainers import SortedList
-    n = len(nums)
-    res, sl = [0]*n, SortedList()
-    for i in range(n-1, -1, -1):
-        res[i] = sl.bisect_left(nums[i])
-        sl.add(nums[i])
-    return res
-```
-时间 $O(N*logN)$，1088 ms
+class BIT:
+    def __init__(self,n):
+        self.n = n+1
+        self.t = [0]*(n+1)
+    
+    def update(self,i,x):
+        i += 1
+        while i<self.n:
+            self.t[i]+=x
+            i += i&-i
+    
+    def get(self,i):
+        res,i = 0,i+1
+        while i:
+            res += self.t[i]
+            i &= i-1
+        return res
 
+class Solution:
+    def countSmaller(self, nums: List[int]) -> List[int]:
+        d = {x:i for i,x in enumerate(sorted(set(nums)))}
+        A = [d[x] for x in nums[::-1]]
+        res = []
+        tree = BIT(max(A)+1)
+        for x in A:
+            res.append(tree.get(x-1))
+            tree.update(x,1)
+        return res[::-1]
+```
+607 ms
+
+## *附加
+
+还可以类似归并排序，采用分治法
+- 先递归地将前后两部分排序
+- 然后归并两部分，并计算后半部分对前半部分的贡献
+- 于是在递归过程中，计算出了所有后面元素对前面元素的贡献
+
+```python
+class Solution:
+    def countSmaller(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = [0]*n
+        def dfs(A):
+            m = len(A)//2
+            if not m:
+                return A
+            B,C = dfs(A[:m]),dfs(A[m:])
+            A = []
+            while B or C:
+                if not C or (B and nums[B[-1]]>nums[C[-1]]):
+                    res[B[-1]] += len(C)
+                    A.append(B.pop())
+                else:
+                    A.append(C.pop())
+            return A[::-1]
+        dfs(list(range(n)))
+        return res
+```
+1121 ms

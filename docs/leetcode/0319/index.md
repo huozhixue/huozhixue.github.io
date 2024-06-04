@@ -57,15 +57,15 @@
 可以观察每个位置的灯泡切换了多少次：
 - 位置 x 的灯泡，第 i 轮切换等价于 x % i == 0
 - 位置 x 的灯泡的切换次数即为 x 的因数个数
-
-根据数学知识，只有完全平方数有奇数个因数，其它都是偶数个因数。
-因此计算 1 到 n 有多少个完全平方数即可。
+- 根据数学知识，只有完全平方数有奇数个因数，其它都是偶数个因数
+- 因此计算 1 到 n 有多少个完全平方数即可
 
 ## 解答
 
 ```python
-def bulbSwitch(self, n: int) -> int:
-	return int(sqrt(n))
+class Solution:
+    def bulbSwitch(self, n: int) -> int:
+        return isqrt(n)
 ```
-44 ms
+32 ms
 

@@ -38,25 +38,25 @@
 
 ## 分析
 
-{{< lc "0402" >}} 的进阶版。如果没有每个字母出现一次的限制，保持字符串升序即可。
+- 要字典序最小，遍历时考虑贪心
+- 假如当前字符已采用过，跳过它
+- 否则，假如当前字符比前一字符小，考虑删掉前一字符
+	- 若前一字符在后面还有，只能保留
+	- 否则，删掉前一字符，继续比较当前字符和前一字符
 
-为了保证每个字母出现一次:
-- 若某个字母已经在栈中，应该跳过它
-- 若某个字母后面不再出现，就不能去掉它
-
-	
 ## 解答
 
 ```python
-def removeDuplicateLetters(self, s: str) -> str:
-    stack, vis, ct = [], set(), Counter(s)
-    for c in s:
-        ct[c] -= 1
-        if c not in vis:
-            while stack and stack[-1]>c and ct[stack[-1]]:
-                vis.remove(stack.pop())
-            stack.append(c)
-            vis.add(c)
-    return ''.join(stack)
+class Solution:
+    def removeDuplicateLetters(self, s: str) -> str:
+        d = {c:i for i,c in enumerate(s)}
+        sk,vis = [],set()
+        for i,c in enumerate(s):
+            if c not in vis:
+                while sk and sk[-1]>c and d[sk[-1]]>i:
+                    vis.remove(sk.pop())
+                sk.append(c)
+                vis.add(c)
+        return ''.join(sk)
 ```
 32 ms

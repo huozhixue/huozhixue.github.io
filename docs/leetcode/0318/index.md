@@ -49,24 +49,32 @@
 先保存每个单词的字母集合，然后遍历每一对单词，判断是否有公共字母即可。
 
 ```python
-def maxProduct(self, words: List[str]) -> int:
-    A, n = [set(w) for w in words], len(words)
-    return max(len(words[i])*len(words[j]) if not A[i] & A[j] else 0 for i in range(n) for j in range(i))
+class Solution:
+    def maxProduct(self, words: List[str]) -> int:
+        n = len(words)
+        A = [sum(1<<(ord(c)-ord('a')) for c in set(w)) for w in words]
+        res = 0
+        for i in range(n):
+            for j in range(i+1,n):
+                if A[i]&A[j]==0:
+                    res = max(res,len(words[i])*len(words[j]))
+        return res
 ```
-1024 ms
+238 ms
 
 ### #2
 
-注意到可能有多个单词的字母集合相同，所以可以用状态压缩表示的字母集合作为 key，保存对应的最大长度。
+注意到可能有多个单词的字母集合相同，可以只保留最大长度。
 
 ## 解答
 
 ```python
-def maxProduct(self, words: List[str]) -> int:
-    d = defaultdict(int)
-    for w in words:
-        st = reduce(lambda x, y: x | 1 << (ord(y) - ord('a')), w, 0)
-        d[st] = max(d[st], len(w))
-    return max([d[a] * d[b] for a in d for b in d if not a & b], default=0)
+class Solution:
+    def maxProduct(self, words: List[str]) -> int:
+        d = defaultdict(int)
+        for w in words:
+            st = sum(1<<(ord(c)-ord('a')) for c in set(w))
+            d[st] = max(d[st], len(w))
+        return max([d[a]*d[b] for a in d for b in d if not a&b], default=0)
 ```
-284 ms
+103 ms
