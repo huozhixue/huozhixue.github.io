@@ -1,4 +1,4 @@
-# 1979：找出数组的最大公约数
+# 1979：找出数组的最大公约数（1184 分）
 
 
 > <u>**[力扣第 255 场周赛第 1 题](https://leetcode.cn/problems/find-greatest-common-divisor-of-array/)**</u>

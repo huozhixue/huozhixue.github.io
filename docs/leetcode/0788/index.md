@@ -1,4 +1,4 @@
-# 0788：旋转数字
+# 0788：旋转数字（1396 分）
 
 
 > <u>**[力扣第 788 题](https://leetcode.cn/problems/rotated-digits/)**</u>

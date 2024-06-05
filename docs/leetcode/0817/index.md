@@ -1,4 +1,4 @@
-# 0817：链表组件（★）
+# 0817：链表组件（1428 分）
 
 
 > <u>**[力扣第 817 题](https://leetcode.cn/problems/linked-list-components/)**</u>

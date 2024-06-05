@@ -1,4 +1,4 @@
-# 1052：爱生气的书店老板（★）
+# 1052：爱生气的书店老板（1418 分）
 
 
 > <u>**[力扣第 138 场周赛第 2 题](https://leetcode.cn/problems/grumpy-bookstore-owner/)**</u>

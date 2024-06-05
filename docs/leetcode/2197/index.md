@@ -1,4 +1,4 @@
-# 2197：替换数组中的非互质数（★★）
+# 2197：替换数组中的非互质数（2057 分）
 
 
 > <u>**[力扣第 283 场周赛第 4 题](https://leetcode.cn/problems/replace-non-coprime-numbers-in-array/)**</u>

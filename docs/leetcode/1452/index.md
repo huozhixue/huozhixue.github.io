@@ -1,4 +1,4 @@
-# 1452：收藏清单（★）
+# 1452：收藏清单（1562 分）
 
 
 > <u>**[力扣第 189 场周赛第 3 题](https://leetcode.cn/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list/)**</u>

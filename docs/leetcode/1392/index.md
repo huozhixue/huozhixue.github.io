@@ -1,4 +1,4 @@
-# 1392：最长快乐前缀（★★）
+# 1392：最长快乐前缀（1876 分）
 
 
 > <u>**[力扣第 181 场周赛第 4 题](https://leetcode.cn/problems/longest-happy-prefix/)**</u>

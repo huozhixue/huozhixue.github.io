@@ -1,4 +1,4 @@
-# 1801：积压订单中的订单总数（★）
+# 1801：积压订单中的订单总数（1711 分）
 
 
 > <u>**[力扣第 233 场周赛第 2 题](https://leetcode.cn/problems/number-of-orders-in-the-backlog/)**</u>

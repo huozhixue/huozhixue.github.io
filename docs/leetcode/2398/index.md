@@ -1,4 +1,4 @@
-# 2398：预算内的最多机器人数目（★★）
+# 2398：预算内的最多机器人数目（1917 分）
 
 
 > <u>**[力扣第 86 场双周赛第 4 题](https://leetcode.cn/problems/maximum-number-of-robots-within-budget/)**</u>

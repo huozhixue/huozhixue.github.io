@@ -1,4 +1,4 @@
-# 1306：跳跃游戏 III
+# 1306：跳跃游戏 III（1396 分）
 
 
 > <u>**[力扣第 169 场周赛第 3 题](https://leetcode.cn/problems/jump-game-iii/)**</u>

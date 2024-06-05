@@ -1,4 +1,4 @@
-# 1288：删除被覆盖区间
+# 1288：删除被覆盖区间（1375 分）
 
 
 > <u>**[力扣第 15 场双周赛第 2 题](https://leetcode.cn/problems/remove-covered-intervals/)**</u>

@@ -7,10 +7,10 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0786：第 K 个最小的素数分数（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0786/">
+        <title>0786：第 K 个最小的质数分数（2168 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0786/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0786：第 K 个最小的素数分数（★★）">
-  <meta property="og:description" content="力扣第 786 题 题目 给你一个按递增顺序排序的数组 arr 和一个整数 k 。数组 arr 由 1 和若干 素数 组成，且其中所有整数互不相同。 对于每对满足 0 &lt;= i &lt; j &lt; arr.length 的 i 和">
+  <meta property="og:title" content="0786：第 K 个最小的质数分数（2168 分）">
+  <meta property="og:description" content="力扣第 786 题 题目 给你一个按递增顺序排序的数组 arr 和一个整数 k 。数组 arr 由 1 和若干 质数 组成，且其中所有整数互不相同。 对于每对满足 0 &lt;= i &lt; j &lt; arr.length 的 i 和">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -20,15 +20,15 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0786：第 K 个最小的素数分数（★★）">
-  <meta name="twitter:description" content="力扣第 786 题 题目 给你一个按递增顺序排序的数组 arr 和一个整数 k 。数组 arr 由 1 和若干 素数 组成，且其中所有整数互不相同。 对于每对满足 0 &lt;= i &lt; j &lt; arr.length 的 i 和">
+  <meta name="twitter:title" content="0786：第 K 个最小的质数分数（2168 分）">
+  <meta name="twitter:description" content="力扣第 786 题 题目 给你一个按递增顺序排序的数组 arr 和一个整数 k 。数组 arr 由 1 和若干 质数 组成，且其中所有整数互不相同。 对于每对满足 0 &lt;= i &lt; j &lt; arr.length 的 i 和">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0786/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0785/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0787/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0786：第 K 个最小的素数分数（★★）",
+        "headline": "0786：第 K 个最小的质数分数（2168 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0786：第 K 个最小的素数分数（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0786：第 K 个最小的质数分数（2168 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-24">2017-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 419 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0786/" class="leancloud_visitors" data-flag-title="0786：第 K 个最小的素数分数（★★）">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0786/" class="leancloud_visitors" data-flag-title="0786：第 K 个最小的质数分数（2168 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -138,7 +138,7 @@
 <p><u><strong><a href="https://leetcode.cn/problems/k-th-smallest-prime-fraction/" target="_blank" rel="noopener noreffer">力扣第 786 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个按递增顺序排序的数组 <code>arr</code> 和一个整数 <code>k</code> 。数组 <code>arr</code> 由 <code>1</code> 和若干 <strong>素数</strong>  组成，且其中所有整数互不相同。</p>
+<p>给你一个按递增顺序排序的数组 <code>arr</code> 和一个整数 <code>k</code> 。数组 <code>arr</code> 由 <code>1</code> 和若干 <strong>质数</strong> 组成，且其中所有整数互不相同。</p>
 <p>对于每对满足 <code>0 &lt;= i &lt; j &lt; arr.length</code> 的 <code>i</code> 和 <code>j</code> ，可以得到分数 <code>arr[i] / arr[j]</code> 。</p>
 <p>那么第 <code>k</code> 个最小的分数是多少呢?  以长度为 <code>2</code> 的整数数组返回你的答案, 这里 <code>answer[0] == arr[i]</code> 且 <code>answer[1] == arr[j]</code> 。</p>
 <p><strong>示例 1：</strong></p>
@@ -159,7 +159,7 @@
 <li><code>2 &lt;= arr.length &lt;= 1000</code></li>
 <li><code>1 &lt;= arr[i] &lt;= 3 * 10<sup>4</sup></code></li>
 <li><code>arr[0] == 1</code></li>
-<li><code>arr[i]</code> 是一个 <strong>素数</strong> ，<code>i &gt; 0</code></li>
+<li><code>arr[i]</code> 是一个 <strong>质数</strong> ，<code>i &gt; 0</code></li>
 <li><code>arr</code> 中的所有数字 <strong>互不相同</strong> ，且按 <strong>严格递增</strong> 排序</li>
 <li><code>1 &lt;= k &lt;= arr.length * (arr.length - 1) / 2</code></li>
 </ul>
@@ -225,8 +225,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0787/" class="prev" rel="prev" title="0787：K 站中转内最便宜的航班（★）"><i class="fas fa-angle-left fa-fw"></i>0787：K 站中转内最便宜的航班（★）</a>
-            <a href="/leetcode/0785/" class="next" rel="next" title="0785：判断二分图（★）">0785：判断二分图（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0787/" class="prev" rel="prev" title="0787：K 站中转内最便宜的航班（1786 分）"><i class="fas fa-angle-left fa-fw"></i>0787：K 站中转内最便宜的航班（1786 分）</a>
+            <a href="/leetcode/0785/" class="next" rel="next" title="0785：判断二分图（1624 分）">0785：判断二分图（1624 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,4 +1,4 @@
-# 0997：找到小镇的法官
+# 0997：找到小镇的法官（1201 分）
 
 
 > <u>**[力扣第 125 场周赛第 1 题](https://leetcode.cn/problems/find-the-town-judge/)**</u>

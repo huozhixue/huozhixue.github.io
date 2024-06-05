@@ -1,4 +1,4 @@
-# 0783：二叉搜索树节点最小距离
+# 0783：二叉搜索树节点最小距离（1303 分）
 
 
 > <u>**[力扣第 783 题](https://leetcode.cn/problems/minimum-distance-between-bst-nodes/)**</u>

@@ -62,6 +62,8 @@
 
 可以将集合状态压缩为一个数，即可用记忆化递归。
 
+## 解答
+
 ```python
 def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
 	@cache

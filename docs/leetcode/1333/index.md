@@ -1,4 +1,4 @@
-# 1333：餐厅过滤器（★）
+# 1333：餐厅过滤器（1423 分）
 
 
 > <u>**[力扣第 173 场周赛第 2 题](https://leetcode.cn/problems/filter-restaurants-by-vegan-friendly-price-and-distance/)**</u>

@@ -1,4 +1,4 @@
-# 0284：顶端迭代器（★）
+# 0284：窥视迭代器（★）
 
 
 > <u>**[力扣第 284 题](https://leetcode.cn/problems/peeking-iterator/)**</u>

@@ -1,4 +1,4 @@
-# 0801：使序列递增的最小交换次数（★★）
+# 0801：使序列递增的最小交换次数（2066 分）
 
 
 > <u>**[力扣第 801 题](https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/)**</u>

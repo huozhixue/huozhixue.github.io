@@ -1,4 +1,4 @@
-# 1209：删除字符串中的所有相邻重复项 II（★）
+# 1209：删除字符串中的所有相邻重复项 II（1541 分）
 
 
 > <u>**[力扣第 156 场周赛第 3 题](https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string-ii/)**</u>

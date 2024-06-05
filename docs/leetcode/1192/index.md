@@ -1,4 +1,4 @@
-# 1192：查找集群内的关键连接（★★）
+# 1192：查找集群内的关键连接（2084 分）
 
 
 > <u>**[力扣第 154 场周赛第 4 题](https://leetcode.cn/problems/critical-connections-in-a-network/)**</u>

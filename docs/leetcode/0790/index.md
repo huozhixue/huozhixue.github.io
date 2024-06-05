@@ -1,4 +1,4 @@
-# 0790：多米诺和托米诺平铺（★★）
+# 0790：多米诺和托米诺平铺（1830 分）
 
 
 > <u>**[力扣第 790 题](https://leetcode.cn/problems/domino-and-tromino-tiling/)**</u>

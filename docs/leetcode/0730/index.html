@@ -10,7 +10,7 @@
         <title>0730：统计不同回文子序列（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0730/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0730：统计不同回文子序列（★★）">
-  <meta property="og:description" content="力扣第 730 题 题目 给定一个字符串 s，返回 s 中不同的非空「回文子序列」个数 。 通过从 s 中删除 0 个或多个字符来获得子序列。 如果一个字符序列与它反转后的">
+  <meta property="og:description" content="力扣第 730 题 题目 给你一个字符串 s ，返回 s 中不同的非空回文子序列个数 。由于答案可能很大，请返回对 109 &#43; 7 取余 的结果。 字符串的子序列可以经由字符串删">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0730：统计不同回文子序列（★★）">
-  <meta name="twitter:description" content="力扣第 730 题 题目 给定一个字符串 s，返回 s 中不同的非空「回文子序列」个数 。 通过从 s 中删除 0 个或多个字符来获得子序列。 如果一个字符序列与它反转后的">
+  <meta name="twitter:description" content="力扣第 730 题 题目 给你一个字符串 s ，返回 s 中不同的非空回文子序列个数 。由于答案可能很大，请返回对 109 &#43; 7 取余 的结果。 字符串的子序列可以经由字符串删">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0730/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0726/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0735/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0730\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  627 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  626 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0730\/","datePublished": "2016-12-30T00:00:00+08:00","dateModified": "2016-12-30T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0730：统计不同回文子序列（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-30">2016-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 627 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-30">2016-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 626 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0730/" class="leancloud_visitors" data-flag-title="0730：统计不同回文子序列（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,14 +133,10 @@
 <p><u><strong><a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/" target="_blank" rel="noopener noreffer">力扣第 730 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个字符串 s，返回 <em><code>s</code> 中不同的非空「回文子序列」个数 。</em></p>
-<p>通过从 s 中删除 0 个或多个字符来获得子序列。</p>
-<p>如果一个字符序列与它反转后的字符序列一致，那么它是「回文字符序列」。</p>
-<p>如果有某个 <code>i</code> , 满足 <code>a<sub>i</sub> != b<sub>i</sub></code><sub> </sub>，则两个序列 <code>a<sub>1</sub>, a<sub>2</sub>, ...</code> 和 <code>b<sub>1</sub>, b<sub>2</sub>, ...</code> 不同。</p>
-<p><strong>注意：</strong></p>
-<ul>
-<li>结果可能很大，你需要对 <code>10<sup>9</sup> + 7</code> 取模 。</li>
-</ul>
+<p>给你一个字符串 <code>s</code> ，返回 <code>s</code> 中不同的非空回文子序列个数 。由于答案可能很大，请返回对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 的结果。</p>
+<p>字符串的子序列可以经由字符串删除 0 个或多个字符获得。</p>
+<p>如果一个序列与它反转后的序列一致，那么它是回文序列。</p>
+<p>如果存在某个 <code>i</code> , 满足 <code>a<sub>i</sub> != b<sub>i</sub></code><sub> </sub>，则两个序列 <code>a<sub>1</sub>, a<sub>2</sub>, ...</code> 和 <code>b<sub>1</sub>, b<sub>2</sub>, ...</code> 不同。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>s = 'bccb'
@@ -152,7 +148,7 @@
 <pre>
 <strong>输入：</strong>s = 'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
 <strong>输出：</strong>104860361
-<strong>解释：</strong>共有 3104860382 个不同的非空回文子序列，104860361 对 10<sup>9</sup> + 7 取模后的值。
+<strong>解释：</strong>共有 3104860382 个不同的非空回文子序列，104860361 是对 10<sup>9</sup> + 7 取余后的值。
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
@@ -235,7 +231,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0735/" class="prev" rel="prev" title="0735：行星碰撞（★）"><i class="fas fa-angle-left fa-fw"></i>0735：行星碰撞（★）</a>
+    <div class="post-nav"><a href="/leetcode/0735/" class="prev" rel="prev" title="0735：小行星碰撞（★）"><i class="fas fa-angle-left fa-fw"></i>0735：小行星碰撞（★）</a>
             <a href="/leetcode/0726/" class="next" rel="next" title="0726：原子的数量（★★）">0726：原子的数量（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

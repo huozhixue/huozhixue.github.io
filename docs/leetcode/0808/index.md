@@ -1,4 +1,4 @@
-# 0808：分汤（★★★）
+# 0808：分汤（2396 分）
 
 
 > <u>**[力扣第 808 题](https://leetcode.cn/problems/soup-servings/)**</u>

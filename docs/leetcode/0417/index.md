@@ -1,4 +1,4 @@
-# 0417：太平洋大西洋水流问题（★★）
+# 0417：太平洋大西洋水流问题（★）
 
 
 > <u>**[力扣第 417 题](https://leetcode.cn/problems/pacific-atlantic-water-flow/)**</u>

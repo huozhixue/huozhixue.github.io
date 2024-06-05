@@ -1,4 +1,4 @@
-# 1154：一年中的第几天
+# 1154：一年中的第几天（1199 分）
 
 
 > <u>**[力扣第 149 场周赛第 1 题](https://leetcode.cn/problems/day-of-the-year/)**</u>

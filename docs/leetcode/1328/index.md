@@ -1,4 +1,4 @@
-# 1328：破坏回文串（★）
+# 1328：破坏回文串（1473 分）
 
 
 > <u>**[力扣第 18 场双周赛第 2 题](https://leetcode.cn/problems/break-a-palindrome/)**</u>

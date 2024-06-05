@@ -1,4 +1,4 @@
-# 1044：最长重复子串（★★★）
+# 1044：最长重复子串（2428 分）
 
 
 > <u>**[力扣第 136 场周赛第 4 题](https://leetcode.cn/problems/longest-duplicate-substring/)**</u>

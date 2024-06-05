@@ -1,4 +1,4 @@
-# 1996：游戏中弱角色的数量（★★）
+# 1996：游戏中弱角色的数量（1860 分）
 
 
 > <u>**[力扣第 257 场周赛第 2 题](https://leetcode.cn/problems/the-number-of-weak-characters-in-the-game/)**</u>

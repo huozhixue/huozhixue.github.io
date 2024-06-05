@@ -1,4 +1,4 @@
-# 2001：可互换矩形的组数（★）
+# 2001：可互换矩形的组数（1435 分）
 
 
 > <u>**[力扣第 258 场周赛第 2 题](https://leetcode.cn/problems/number-of-pairs-of-interchangeable-rectangles/)**</u>

@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1072：按列翻转得到最大值等行数（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1072/">
+        <title>1072：按列翻转得到最大值等行数（1797 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1072/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="1072：按列翻转得到最大值等行数（★）">
+  <meta property="og:title" content="1072：按列翻转得到最大值等行数（1797 分）">
   <meta property="og:description" content="力扣第 139 场周赛第 2 题 题目 给定 m x n 矩阵 matrix 。 你可以从中选出任意数量的列并翻转其上的 每个 单元格。（即翻转后，单元格的值从 0 变成 1，或者从 1 变为 0">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="1072：按列翻转得到最大值等行数（★）">
+  <meta name="twitter:title" content="1072：按列翻转得到最大值等行数（1797 分）">
   <meta name="twitter:description" content="力扣第 139 场周赛第 2 题 题目 给定 m x n 矩阵 matrix 。 你可以从中选出任意数量的列并翻转其上的 每个 单元格。（即翻转后，单元格的值从 0 变成 1，或者从 1 变为 0">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1072：按列翻转得到最大值等行数（★）",
+        "headline": "1072：按列翻转得到最大值等行数（1797 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1072\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  363 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  360 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1072\/","datePublished": "2019-06-02T10:40:00+08:00","dateModified": "2019-06-02T10:40:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1072：按列翻转得到最大值等行数（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1072：按列翻转得到最大值等行数（1797 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-06-02">2019-06-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 363 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1072/" class="leancloud_visitors" data-flag-title="1072：按列翻转得到最大值等行数（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-06-02">2019-06-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 360 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1072/" class="leancloud_visitors" data-flag-title="1072：按列翻转得到最大值等行数（1797 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -135,7 +135,7 @@
 <h2 id="题目">题目</h2>
 <p>给定 <code>m x n</code> 矩阵 <code>matrix</code> 。</p>
 <p>你可以从中选出任意数量的列并翻转其上的 <strong>每个 </strong>单元格。（即翻转后，单元格的值从 <code>0</code> 变成 <code>1</code>，或者从 <code>1</code> 变为 <code>0</code> 。）</p>
-<p>返回 <em>经过一些翻转后，行与行之间所有值都相等的最大行数</em> 。</p>
+<p>返回 <em>经过一些翻转后，行内所有值都相等的最大行数</em> 。</p>
 <ol>
 </ol>
 <p><strong>示例 1：</strong></p>
@@ -210,8 +210,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1073/" class="prev" rel="prev" title="1073：负二进制数相加（★★）"><i class="fas fa-angle-left fa-fw"></i>1073：负二进制数相加（★★）</a>
-            <a href="/leetcode/1054/" class="next" rel="next" title="1054：距离相等的条形码（★）">1054：距离相等的条形码（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1073/" class="prev" rel="prev" title="1073：负二进制数相加（1806 分）"><i class="fas fa-angle-left fa-fw"></i>1073：负二进制数相加（1806 分）</a>
+            <a href="/leetcode/1054/" class="next" rel="next" title="1054：距离相等的条形码（1701 分）">1054：距离相等的条形码（1701 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

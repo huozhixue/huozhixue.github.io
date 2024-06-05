@@ -1,4 +1,4 @@
-# 1451：重新排列句子中的单词
+# 1451：重新排列句子中的单词（1309 分）
 
 
 > <u>**[力扣第 189 场周赛第 2 题](https://leetcode.cn/problems/rearrange-words-in-a-sentence/)**</u>

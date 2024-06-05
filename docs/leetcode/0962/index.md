@@ -1,4 +1,4 @@
-# 0962：最大宽度坡（★）
+# 0962：最大宽度坡（1607 分）
 
 
 > <u>**[力扣第 116 场周赛第 2 题](https://leetcode.cn/problems/maximum-width-ramp/)**</u>

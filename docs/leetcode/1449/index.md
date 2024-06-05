@@ -1,4 +1,4 @@
-# 1449：数位成本和为目标值的最大数字（★★）
+# 1449：数位成本和为目标值的最大数字（1927 分）
 
 
 > <u>**[力扣第 26 场双周赛第 4 题](https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/)**</u>

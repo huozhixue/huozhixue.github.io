@@ -1,4 +1,4 @@
-# 0844：比较含退格的字符串
+# 0844：比较含退格的字符串（1227 分）
 
 
 > <u>**[力扣第 87 场周赛第 1 题](https://leetcode.cn/problems/backspace-string-compare/)**</u>

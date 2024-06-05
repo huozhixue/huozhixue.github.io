@@ -1,4 +1,4 @@
-# 2179：统计数组中好三元组数目（★★★）
+# 2179：统计数组中好三元组数目（2272 分）
 
 
 > <u>**[力扣第 72 场双周赛第 4 题](https://leetcode.cn/problems/count-good-triplets-in-an-array/)**</u>

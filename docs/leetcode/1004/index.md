@@ -1,4 +1,4 @@
-# 1004：最大连续1的个数 III（★）
+# 1004：最大连续1的个数 III（1655 分）
 
 
 > <u>**[力扣第 126 场周赛第 3 题](https://leetcode.cn/problems/max-consecutive-ones-iii/)**</u>

@@ -1,4 +1,4 @@
-# 0974：和可被 K 整除的子数组（★）
+# 0974：和可被 K 整除的子数组（1675 分）
 
 
 > <u>**[力扣第 119 场周赛第 3 题](https://leetcode.cn/problems/subarray-sums-divisible-by-k/)**</u>

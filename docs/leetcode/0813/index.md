@@ -1,11 +1,11 @@
-# 0813：最大平均值和的分组（★★）
+# 0813：最大平均值和的分组（1936 分）
 
 
 > <u>**[力扣第 813 题](https://leetcode.cn/problems/largest-sum-of-averages/)**</u>
 
 ## 题目
 
-<p>给定数组 <code>nums</code> 和一个整数 <code>k</code> 。我们将给定的数组 <code>nums</code> 分成 <strong>最多</strong> <code>k</code> 个相邻的非空子数组 。 <strong>分数</strong> 由每个子数组内的平均值的总和构成。</p>
+<p>给定数组 <code>nums</code> 和一个整数 <code>k</code> 。我们将给定的数组 <code>nums</code> 分成 <strong>最多</strong> <code>k</code> 个非空子数组，且数组内部是连续的 。 <strong>分数</strong> 由每个子数组内的平均值的总和构成。</p>
 
 <p>注意我们必须使用 <code>nums</code> 数组中的每一个数进行分组，并且分数不一定需要是整数。</p>
 

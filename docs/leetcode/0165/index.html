@@ -10,7 +10,7 @@
         <title>0165：比较版本号（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0165/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0165：比较版本号（★）">
-  <meta property="og:description" content="力扣第 165 题 题目 给你两个版本号 version1 和 version2 ，请你比较它们。 版本号由一个或多个修订号组成，各修订号由一个 &#39;.&#39; 连接。每个修订号由 多位数字 组成，可能包含 前导">
+  <meta property="og:description" content="力扣第 165 题 题目 给你两个 版本号字符串 version1 和 version2 ，请你比较它们。版本号由被点 &#39;.&#39; 分开的修订号组成。修订号的值 是它 转换为整数 并忽略前导零。 比较版本号时，">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0165：比较版本号（★）">
-  <meta name="twitter:description" content="力扣第 165 题 题目 给你两个版本号 version1 和 version2 ，请你比较它们。 版本号由一个或多个修订号组成，各修订号由一个 &#39;.&#39; 连接。每个修订号由 多位数字 组成，可能包含 前导">
+  <meta name="twitter:description" content="力扣第 165 题 题目 给你两个 版本号字符串 version1 和 version2 ，请你比较它们。版本号由被点 &#39;.&#39; 分开的修订号组成。修订号的值 是它 转换为整数 并忽略前导零。 比较版本号时，">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0165/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0164/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0166/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0165\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  625 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  452 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0165\/","datePublished": "2015-06-14T00:00:00+08:00","dateModified": "2015-06-14T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0165：比较版本号（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-14">2015-06-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 625 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0165/" class="leancloud_visitors" data-flag-title="0165：比较版本号（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-14">2015-06-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 452 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0165/" class="leancloud_visitors" data-flag-title="0165：比较版本号（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,33 +133,35 @@
 <p><u><strong><a href="https://leetcode.cn/problems/compare-version-numbers/" target="_blank" rel="noopener noreffer">力扣第 165 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你两个版本号 <code>version1</code> 和 <code>version2</code> ，请你比较它们。</p>
-<p>版本号由一个或多个修订号组成，各修订号由一个 <code>'.'</code> 连接。每个修订号由 <strong>多位数字</strong> 组成，可能包含 <strong>前导零</strong> 。每个版本号至少包含一个字符。修订号从左到右编号，下标从 0 开始，最左边的修订号下标为 0 ，下一个修订号下标为 1 ，以此类推。例如，<code>2.5.33</code> 和 <code>0.1</code> 都是有效的版本号。</p>
-<p>比较版本号时，请按从左到右的顺序依次比较它们的修订号。比较修订号时，只需比较 <strong>忽略任何前导零后的整数值</strong> 。也就是说，修订号 <code>1</code> 和修订号 <code>001</code> <strong>相等 </strong>。如果版本号没有指定某个下标处的修订号，则该修订号视为 <code>0</code> 。例如，版本 <code>1.0</code> 小于版本 <code>1.1</code> ，因为它们下标为 <code>0</code> 的修订号相同，而下标为 <code>1</code> 的修订号分别为 <code>0</code> 和 <code>1</code> ，<code>0 &lt; 1</code> 。</p>
+<p>给你两个 <strong>版本号字符串</strong> <code>version1</code> 和 <code>version2</code> ，请你比较它们。版本号由被点 <code>'.'</code> 分开的修订号组成。<strong>修订号的值</strong> 是它 <strong>转换为整数</strong> 并忽略前导零。</p>
+<p>比较版本号时，请按 <strong>从左到右的顺序</strong> 依次比较它们的修订号。如果其中一个版本字符串的修订号较少，则将缺失的修订号视为 <code>0</code>。</p>
 <p>返回规则如下：</p>
 <ul>
-<li>如果 <code><em>version1 </em>&gt; <em>version2</em></code> 返回 <code>1</code>，</li>
 <li>如果 <code><em>version1 </em>&lt; <em>version2</em></code> 返回 <code>-1</code>，</li>
+<li>如果 <code><em>version1 </em>&gt; <em>version2</em></code> 返回 <code>1</code>，</li>
 <li>除此之外返回 <code>0</code>。</li>
 </ul>
-<p><strong>示例 1：</strong></p>
-<pre>
-<strong>输入：</strong>version1 = "1.01", version2 = "1.001"
-<strong>输出：</strong>0
-<strong>解释：</strong>忽略前导零，"01" 和 "001" 都表示相同的整数 "1"
-</pre>
-<p><strong>示例 2：</strong></p>
-<pre>
-<strong>输入：</strong>version1 = "1.0", version2 = "1.0.0"
-<strong>输出：</strong>0
-<strong>解释：</strong>version1 没有指定下标为 2 的修订号，即视为 "0"
-</pre>
-<p><strong>示例 3：</strong></p>
-<pre>
-<strong>输入：</strong>version1 = "0.1", version2 = "1.1"
-<strong>输出：</strong>-1
-<strong>解释：</strong>version1 中下标为 0 的修订号是 "0"，version2 中下标为 0 的修订号是 "1" 。0 &lt; 1，所以 version1 &lt; version2
-</pre>
+<p><strong class="example">示例 1：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">version1 = "1.2", version2 = "1.10"</span></p>
+<p><strong>输出：</strong><span class="example-io">-1</span></p>
+<p><strong>解释：</strong></p>
+<p>version1 的第二个修订号为 "2"，version2 的第二个修订号为 "10"：2 &lt; 10，所以 version1 &lt; version2。</p>
+</div>
+<p><strong class="example">示例 2：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">version1 = "1.01", version2 = "1.001"</span></p>
+<p><strong>输出：</strong><span class="example-io">0</span></p>
+<p><strong>解释：</strong></p>
+<p>忽略前导零，"01" 和 "001" 都代表相同的整数 "1"。</p>
+</div>
+<p><strong class="example">示例 3：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">version1 = "1.0", version2 = "1.0.0.0"</span></p>
+<p><strong>输出：</strong><span class="example-io">0</span></p>
+<p><strong>解释：</strong></p>
+<p>version1 有更少的修订号，每个缺失的修订号按 "0" 处理。</p>
+</div>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= version1.length, version2.length &lt;= 500</code></li>
@@ -225,7 +227,7 @@
     </div>
 
     <div class="post-nav"><a href="/leetcode/0166/" class="prev" rel="prev" title="0166：分数到小数（★）"><i class="fas fa-angle-left fa-fw"></i>0166：分数到小数（★）</a>
-            <a href="/leetcode/0164/" class="next" rel="next" title="0164：最大间距（★★）">0164：最大间距（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0164/" class="next" rel="next" title="0164：最大间距（★）">0164：最大间距（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,4 +1,4 @@
-# 1012：至少有 1 位重复的数字（★★★）
+# 1012：至少有 1 位重复的数字（2230 分）
 
 
 > <u>**[力扣第 128 场周赛第 4 题](https://leetcode.cn/problems/numbers-with-repeated-digits/)**</u>

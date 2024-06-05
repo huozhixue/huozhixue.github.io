@@ -13,7 +13,7 @@
 <li>例如，如果 <code>words = ["ab","cd","ef"]</code>， 那么 <code>"abcdef"</code>， <code>"abefcd"</code>，<code>"cdabef"</code>， <code>"cdefab"</code>，<code>"efabcd"</code>， 和 <code>"efcdab"</code> 都是串联子串。 <code>"acdbef"</code> 不是串联子串，因为他不是任何 <code>words</code> 排列的连接。</li>
 </ul>
 
-<p>返回所有串联字串在 <code>s</code><strong> </strong>中的开始索引。你可以以 <strong>任意顺序</strong> 返回答案。</p>
+<p>返回所有串联子串在 <code>s</code><strong> </strong>中的开始索引。你可以以 <strong>任意顺序</strong> 返回答案。</p>
 
 
 

@@ -1,4 +1,4 @@
-# 1465：切割后面积最大的蛋糕（★）
+# 1465：切割后面积最大的蛋糕（1444 分）
 
 
 > <u>**[力扣第 191 场周赛第 2 题](https://leetcode.cn/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/)**</u>

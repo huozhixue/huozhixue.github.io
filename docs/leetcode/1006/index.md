@@ -1,4 +1,4 @@
-# 1006：笨阶乘（★）
+# 1006：笨阶乘（1407 分）
 
 
 > <u>**[力扣第 127 场周赛第 2 题](https://leetcode.cn/problems/clumsy-factorial/)**</u>

@@ -1,5 +1,4 @@
-# 0856：括号的分数（★）
-
+# 0856：括号的分数（1562 分）
 
 > <u>**[力扣第 90 场周赛第 2 题](https://leetcode.cn/problems/score-of-parentheses/)**</u>
 
@@ -70,4 +69,3 @@ def scoreOfParentheses(self, s: str) -> int:
     return stack[0]
 ```
 24 ms
-

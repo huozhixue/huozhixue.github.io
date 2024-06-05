@@ -1,4 +1,4 @@
-# 2000：反转单词前缀
+# 2000：反转单词前缀（1199 分）
 
 
 > <u>**[力扣第 258 场周赛第 1 题](https://leetcode.cn/problems/reverse-prefix-of-word/)**</u>

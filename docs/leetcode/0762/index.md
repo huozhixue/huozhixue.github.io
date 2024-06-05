@@ -1,4 +1,4 @@
-# 0762：二进制表示中质数个计算置位
+# 0762：二进制表示中质数个计算置位（1383 分）
 
 
 > <u>**[力扣第 762 题](https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation/)**</u>

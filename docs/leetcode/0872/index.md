@@ -1,4 +1,4 @@
-# 0872：叶子相似的树
+# 0872：叶子相似的树（1287 分）
 
 
 > <u>**[力扣第 94 场周赛第 1 题](https://leetcode.cn/problems/leaf-similar-trees/)**</u>

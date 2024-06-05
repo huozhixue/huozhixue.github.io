@@ -1,4 +1,4 @@
-# 0407：接雨水 II（★★★）
+# 0407：接雨水 II（★★）
 
 
 > <u>**[力扣第 407 题](https://leetcode.cn/problems/trapping-rain-water-ii/)**</u>

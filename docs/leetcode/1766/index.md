@@ -1,4 +1,4 @@
-# 1766：互质树（★★★）
+# 1766：互质树（2231 分）
 
 
 > <u>**[力扣第 46 场双周赛第 4 题](https://leetcode.cn/problems/tree-of-coprimes/)**</u>

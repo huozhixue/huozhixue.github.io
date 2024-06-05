@@ -1,4 +1,4 @@
-# 1250：检查「好数组」（★★）
+# 1250：检查「好数组」（1983 分）
 
 
 > <u>**[力扣第 161 场周赛第 4 题](https://leetcode.cn/problems/check-if-it-is-a-good-array/)**</u>

@@ -1,4 +1,4 @@
-# 1410：HTML 实体解析器（★）
+# 1410：HTML 实体解析器（1405 分）
 
 
 > <u>**[力扣第 184 场周赛第 3 题](https://leetcode.cn/problems/html-entity-parser/)**</u>

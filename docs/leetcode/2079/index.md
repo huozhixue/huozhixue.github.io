@@ -1,4 +1,4 @@
-# 2079：给植物浇水
+# 2079：给植物浇水（1320 分）
 
 
 > <u>**[力扣第 268 场周赛第 2 题](https://leetcode.cn/problems/watering-plants/)**</u>

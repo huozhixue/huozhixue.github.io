@@ -1,4 +1,6 @@
-# 2302：统计得分小于 K 的子数组数目（★）
+# 2302：统计得分小于 K 的子数组数目（1808 分）
+
+
 
 
 > <u>**[力扣第 80 场双周赛第 4 题](https://leetcode.cn/problems/count-subarrays-with-score-less-than-k/)**</u>

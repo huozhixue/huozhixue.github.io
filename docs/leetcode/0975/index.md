@@ -1,4 +1,4 @@
-# 0975：奇偶跳（★★）
+# 0975：奇偶跳（2079 分）
 
 
 > <u>**[力扣第 119 场周赛第 4 题](https://leetcode.cn/problems/odd-even-jump/)**</u>

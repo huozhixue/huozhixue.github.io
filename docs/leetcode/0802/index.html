@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0802：找到最终的安全状态（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0802/">
+        <title>0802：找到最终的安全状态（1962 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0802/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0802：找到最终的安全状态（★★）">
+  <meta property="og:title" content="0802：找到最终的安全状态（1962 分）">
   <meta property="og:description" content="力扣第 802 题 题目 有一个有 n 个节点的有向图，节点按 0 到 n - 1 编号。图由一个 索引从 0 开始 的 2D 整数数组 graph表示， graph[i]是与节点 i 相邻">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0802：找到最终的安全状态（★★）">
+  <meta name="twitter:title" content="0802：找到最终的安全状态（1962 分）">
   <meta name="twitter:description" content="力扣第 802 题 题目 有一个有 n 个节点的有向图，节点按 0 到 n - 1 编号。图由一个 索引从 0 开始 的 2D 整数数组 graph表示， graph[i]是与节点 i 相邻">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0802：找到最终的安全状态（★★）",
+        "headline": "0802：找到最终的安全状态（1962 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0802\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  553 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  539 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0802\/","datePublished": "2017-03-12T00:00:00+08:00","dateModified": "2017-03-12T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0802：找到最终的安全状态（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0802：找到最终的安全状态（1962 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-12">2017-03-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 553 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0802/" class="leancloud_visitors" data-flag-title="0802：找到最终的安全状态（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-12">2017-03-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 539 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0802/" class="leancloud_visitors" data-flag-title="0802：找到最终的安全状态（1962 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -134,7 +134,7 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>有一个有 <code>n</code> 个节点的有向图，节点按 <code>0</code> 到 <code>n - 1</code> 编号。图由一个 <strong>索引从 0 开始</strong> 的 2D 整数数组 <code>graph</code>表示， <code>graph[i]</code>是与节点 <code>i</code> 相邻的节点的整数数组，这意味着从节点 <code>i</code> 到 <code>graph[i]</code>中的每个节点都有一条边。</p>
-<p>如果一个节点没有连出的有向边，则它是 <strong>终端节点</strong> 。如果没有出边，则节点为终端节点。如果从该节点开始的所有可能路径都通向 <strong>终端节点</strong> ，则该节点为 <strong>安全节点</strong> 。</p>
+<p>如果一个节点没有连出的有向边，则该节点是 <strong>终端节点</strong> 。如果从该节点开始的所有可能路径都通向 <strong>终端节点</strong> ，则该节点为 <strong>安全节点</strong> 。</p>
 <p>返回一个由图中所有 <strong>安全节点</strong> 组成的数组作为答案。答案数组中的元素应当按 <strong>升序</strong> 排列。</p>
 <p><strong>示例 1：</strong></p>
 <p><img alt="Illustration of graph" src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/03/17/picture1.png" /></p>
@@ -227,8 +227,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0803/" class="prev" rel="prev" title="0803：打砖块（★★★★）"><i class="fas fa-angle-left fa-fw"></i>0803：打砖块（★★★★）</a>
-            <a href="/leetcode/0801/" class="next" rel="next" title="0801：使序列递增的最小交换次数（★★）">0801：使序列递增的最小交换次数（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0803/" class="prev" rel="prev" title="0803：打砖块（2765 分）"><i class="fas fa-angle-left fa-fw"></i>0803：打砖块（2765 分）</a>
+            <a href="/leetcode/0801/" class="next" rel="next" title="0801：使序列递增的最小交换次数（2066 分）">0801：使序列递增的最小交换次数（2066 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

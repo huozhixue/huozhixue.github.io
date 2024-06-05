@@ -1,4 +1,4 @@
-# 0767：重构字符串（★）
+# 0767：重构字符串（1681 分）
 
 
 > <u>**[力扣第 767 题](https://leetcode.cn/problems/reorganize-string/)**</u>

@@ -1,4 +1,4 @@
-# 0421：数组中两个数的最大异或值（★★）
+# 0421：数组中两个数的最大异或值（★）
 
 
 > <u>**[力扣第 421 题](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/)**</u>

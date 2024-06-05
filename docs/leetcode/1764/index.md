@@ -1,4 +1,4 @@
-# 1764：通过连接另一个数组的子数组得到一个数组（★）
+# 1764：通过连接另一个数组的子数组得到一个数组（1588 分）
 
 
 > <u>**[力扣第 46 场双周赛第 2 题](https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/)**</u>

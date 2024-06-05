@@ -1,4 +1,4 @@
-# 0309：最佳买卖股票时机含冷冻期（★）
+# 0309：买卖股票的最佳时机含冷冻期（★）
 
 
 > <u>**[力扣第 309 题](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/)**</u>

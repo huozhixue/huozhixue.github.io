@@ -1,4 +1,4 @@
-# 0980：不同路径 III（★★）
+# 0980：不同路径 III（1830 分）
 
 
 > <u>**[力扣第 120 场周赛第 4 题](https://leetcode.cn/problems/unique-paths-iii/)**</u>

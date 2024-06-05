@@ -1,4 +1,4 @@
-# 1439：有序矩阵中的第 k 个最小数组和（★★）
+# 1439：有序矩阵中的第 k 个最小数组和（2133 分）
 
 
 > <u>**[力扣第 187 场周赛第 4 题](https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/)**</u>

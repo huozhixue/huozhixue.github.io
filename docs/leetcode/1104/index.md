@@ -1,4 +1,4 @@
-# 1104：二叉树寻路（★）
+# 1104：二叉树寻路（1544 分）
 
 
 > <u>**[力扣第 143 场周赛第 2 题](https://leetcode.cn/problems/path-in-zigzag-labelled-binary-tree/)**</u>

@@ -10,7 +10,7 @@
         <title>0184：部门工资最高的员工（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0184/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0184：部门工资最高的员工（★）">
-  <meta property="og:description" content="力扣第 184 题 题目 表： Employee &#43;--------------&#43;---------&#43; | 列名 | 类型 | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; id是此表的主键列。 departmentId是Departm">
+  <meta property="og:description" content="力扣第 184 题 题目 表： Employee &#43;--------------&#43;---------&#43; | 列名 | 类型 | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; 在 SQL 中，id是此表的主键。 departmentId 是 Department 表中 id 的外键（在 Pandas 中称为 join k">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0184：部门工资最高的员工（★）">
-  <meta name="twitter:description" content="力扣第 184 题 题目 表： Employee &#43;--------------&#43;---------&#43; | 列名 | 类型 | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; id是此表的主键列。 departmentId是Departm">
+  <meta name="twitter:description" content="力扣第 184 题 题目 表： Employee &#43;--------------&#43;---------&#43; | 列名 | 类型 | &#43;--------------&#43;---------&#43; | id | int | | name | varchar | | salary | int | | departmentId | int | &#43;--------------&#43;---------&#43; 在 SQL 中，id是此表的主键。 departmentId 是 Department 表中 id 的外键（在 Pandas 中称为 join k">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0184/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0183/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0185/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0184\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  502 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  491 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0184\/","datePublished": "2015-07-03T00:00:00+08:00","dateModified": "2015-07-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0184：部门工资最高的员工（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-03">2015-07-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 502 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0184/" class="leancloud_visitors" data-flag-title="0184：部门工资最高的员工（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-03">2015-07-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 491 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0184/" class="leancloud_visitors" data-flag-title="0184：部门工资最高的员工（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -143,9 +143,9 @@
 | salary       | int     |
 | departmentId | int     |
 +--------------+---------+
-id是此表的主键列。
-departmentId是Department表中ID的外键。
-此表的每一行都表示员工的ID、姓名和工资。它还包含他们所在部门的ID。
+在 SQL 中，id是此表的主键。
+departmentId 是 Department 表中 id 的外键（在 Pandas 中称为 join key）。
+此表的每一行都表示员工的 id、姓名和工资。它还包含他们所在部门的 id。
 </pre>
 <p>表： <code>Department</code></p>
 <pre>
@@ -155,10 +155,10 @@ departmentId是Department表中ID的外键。
 | id          | int     |
 | name        | varchar |
 +-------------+---------+
-id是此表的主键列。
-此表的每一行都表示一个部门的ID及其名称。
+在 SQL 中，id 是此表的主键列。
+此表的每一行都表示一个部门的 id 及其名称。
 </pre>
-<p>编写SQL查询以查找每个部门中薪资最高的员工。<br />
+<p>查找出每个部门中薪资最高的员工。<br />
 按 <strong>任意顺序</strong> 返回结果表。<br />
 查询结果格式如下例所示。</p>
 <p><strong>示例 1:</strong></p>

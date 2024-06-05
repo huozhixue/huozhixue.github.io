@@ -1,4 +1,4 @@
-# 1462：课程表 IV（★）
+# 1462：课程表 IV（1692 分）
 
 
 > <u>**[力扣第 27 场双周赛第 3 题](https://leetcode.cn/problems/course-schedule-iv/)**</u>
@@ -60,6 +60,7 @@
 <li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
 <li>每一对<meta charset="UTF-8" /> <code>[a<sub>i</sub>, b<sub>i</sub>]</code> 都 <strong>不同</strong></li>
 <li>先修课程图中没有环。</li>
+<li><code>1 &lt;= queries.length &lt;= 10<sup>4</sup></code></li>
 <li><code>0 &lt;= u<sub>i</sub>, v<sub>i</sub> &lt;= n - 1</code></li>
 <li><code>u<sub>i</sub> != v<sub>i</sub></code></li>
 </ul>

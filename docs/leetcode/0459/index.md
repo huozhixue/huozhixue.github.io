@@ -1,4 +1,4 @@
-# 0459：重复的子字符串（★）
+# 0459：重复的子字符串
 
 
 > <u>**[力扣第 459 题](https://leetcode.cn/problems/repeated-substring-pattern/)**</u>

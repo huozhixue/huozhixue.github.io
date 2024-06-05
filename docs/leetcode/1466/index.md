@@ -1,4 +1,4 @@
-# 1466：重新规划路线（★）
+# 1466：重新规划路线（1633 分）
 
 
 > <u>**[力扣第 191 场周赛第 3 题](https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)**</u>

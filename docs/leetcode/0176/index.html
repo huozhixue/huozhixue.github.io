@@ -10,7 +10,7 @@
         <title>0176：第二高的薪水（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0176/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0176：第二高的薪水（★）">
-  <meta property="og:description" content="力扣第 176 题 题目 Employee 表： &#43;-------------&#43;------&#43; | Column Name | Type | &#43;-------------&#43;------&#43; | id | int | | salary | int | &#43;-------------&#43;------&#43; id 是这个表的主键。 表的每一行包含员工的工资信息。 编写一个 SQL 查询，获取并返回 Employee 表中第">
+  <meta property="og:description" content="力扣第 176 题 题目 Employee 表： &#43;-------------&#43;------&#43; | Column Name | Type | &#43;-------------&#43;------&#43; | id | int | | salary | int | &#43;-------------&#43;------&#43; 在 SQL 中，id 是这个表的主键。 表的每一行包含员工的工资信息。 查询并返回 Employee 表中第二高的">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0176：第二高的薪水（★）">
-  <meta name="twitter:description" content="力扣第 176 题 题目 Employee 表： &#43;-------------&#43;------&#43; | Column Name | Type | &#43;-------------&#43;------&#43; | id | int | | salary | int | &#43;-------------&#43;------&#43; id 是这个表的主键。 表的每一行包含员工的工资信息。 编写一个 SQL 查询，获取并返回 Employee 表中第">
+  <meta name="twitter:description" content="力扣第 176 题 题目 Employee 表： &#43;-------------&#43;------&#43; | Column Name | Type | &#43;-------------&#43;------&#43; | id | int | | salary | int | &#43;-------------&#43;------&#43; 在 SQL 中，id 是这个表的主键。 表的每一行包含员工的工资信息。 查询并返回 Employee 表中第二高的">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0176/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0175/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0177/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0176\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  256 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  257 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0176\/","datePublished": "2015-06-25T00:00:00+08:00","dateModified": "2015-06-25T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0176：第二高的薪水（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-25">2015-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 256 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-06-25">2015-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 257 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0176/" class="leancloud_visitors" data-flag-title="0176：第二高的薪水（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -143,10 +143,10 @@
 | id          | int  |
 | salary      | int  |
 +-------------+------+
-id 是这个表的主键。
+在 SQL 中，id 是这个表的主键。
 表的每一行包含员工的工资信息。
 </pre>
-<p>编写一个 SQL 查询，获取并返回 <code>Employee</code> 表中第二高的薪水 。如果不存在第二高的薪水，查询应该返回 <code>null</code> 。</p>
+<p>查询并返回 <code>Employee</code> 表中第二高的薪水 。如果不存在第二高的薪水，查询应该返回 <code>null(Pandas 则返回 None)</code> 。</p>
 <p>查询结果如下例所示。</p>
 <p><strong>示例 1：</strong></p>
 <pre>

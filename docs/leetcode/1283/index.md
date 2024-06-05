@@ -1,4 +1,4 @@
-# 1283：使结果不超过阈值的最小除数（★）
+# 1283：使结果不超过阈值的最小除数（1541 分）
 
 
 > <u>**[力扣第 166 场周赛第 3 题](https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/)**</u>

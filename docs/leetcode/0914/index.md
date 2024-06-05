@@ -1,4 +1,4 @@
-# 0914：卡牌分组
+# 0914：卡牌分组（1370 分）
 
 
 > <u>**[力扣第 104 场周赛第 1 题](https://leetcode.cn/problems/x-of-a-kind-in-a-deck-of-cards/)**</u>

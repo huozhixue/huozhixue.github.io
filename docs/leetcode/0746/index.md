@@ -1,7 +1,7 @@
-# 0746：使用最小花费爬楼梯
+# 0746：使用最小花费爬楼梯（1358 分）
 
 
-> <u>**[力扣第 0746 题](https://leetcode.cn/problems/min-cost-climbing-stairs/)**</u>
+> <u>**[力扣第 746 题](https://leetcode.cn/problems/min-cost-climbing-stairs/)**</u>
 
 ## 题目
 

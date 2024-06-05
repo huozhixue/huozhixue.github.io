@@ -1,4 +1,4 @@
-# 0902：最大为 N 的数字组合（★★）
+# 0902：最大为 N 的数字组合（1989 分）
 
 
 > <u>**[力扣第 101 场周赛第 3 题](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/)**</u>

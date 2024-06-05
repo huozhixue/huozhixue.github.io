@@ -1,4 +1,4 @@
-# 0606：根据二叉树创建字符串
+# 0606：根据二叉树创建字符串（★）
 
 
 > <u>**[力扣第 606 题](https://leetcode.cn/problems/construct-string-from-binary-tree/)**</u>

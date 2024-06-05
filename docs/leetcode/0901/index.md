@@ -1,4 +1,4 @@
-# 0901：股票价格跨度（★）
+# 0901：股票价格跨度（1708 分）
 
 
 > <u>**[力扣第 101 场周赛第 2 题](https://leetcode.cn/problems/online-stock-span/)**</u>

@@ -1,4 +1,4 @@
-# 1423：可获得的最大点数（★）
+# 1423：可获得的最大点数（1573 分）
 
 
 > <u>**[力扣第 186 场周赛第 2 题](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/)**</u>

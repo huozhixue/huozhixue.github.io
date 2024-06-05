@@ -1,4 +1,4 @@
-# 1938：查询最大基因差（★★★）
+# 1938：查询最大基因差（2502 分）
 
 
 > <u>**[力扣第 250 场周赛第 4 题](https://leetcode.cn/problems/maximum-genetic-difference-query/)**</u>

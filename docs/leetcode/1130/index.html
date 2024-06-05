@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1130：叶值的最小代价生成树（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1130/">
+        <title>1130：叶值的最小代价生成树（1919 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1130/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="1130：叶值的最小代价生成树（★★）">
+  <meta property="og:title" content="1130：叶值的最小代价生成树（1919 分）">
   <meta property="og:description" content="力扣第 146 场周赛第 3 题 题目 给你一个正整数数组 arr，考虑所有满足以下条件的二叉树： 每个节点都有 0 个或是 2 个子节点。 数组 arr 中的值与树的中序遍历中">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="1130：叶值的最小代价生成树（★★）">
+  <meta name="twitter:title" content="1130：叶值的最小代价生成树（1919 分）">
   <meta name="twitter:description" content="力扣第 146 场周赛第 3 题 题目 给你一个正整数数组 arr，考虑所有满足以下条件的二叉树： 每个节点都有 0 个或是 2 个子节点。 数组 arr 中的值与树的中序遍历中">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1130：叶值的最小代价生成树（★★）",
+        "headline": "1130：叶值的最小代价生成树（1919 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1130\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  765 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  753 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1130\/","datePublished": "2019-07-21T10:50:00+08:00","dateModified": "2019-07-21T10:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1130：叶值的最小代价生成树（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1130：叶值的最小代价生成树（1919 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-07-21">2019-07-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 765 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1130/" class="leancloud_visitors" data-flag-title="1130：叶值的最小代价生成树（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-07-21">2019-07-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 753 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1130/" class="leancloud_visitors" data-flag-title="1130：叶值的最小代价生成树（1919 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -140,27 +140,30 @@
 <h2 id="题目">题目</h2>
 <p>给你一个正整数数组 <code>arr</code>，考虑所有满足以下条件的二叉树：</p>
 <ul>
-<li>每个节点都有 0 个或是 2 个子节点。</li>
-<li>数组 <code>arr</code> 中的值与树的中序遍历中每个叶节点的值一一对应。（知识回顾：如果一个节点有 0 个子节点，那么该节点为叶节点。）</li>
+<li>每个节点都有 <code>0</code> 个或是 <code>2</code> 个子节点。</li>
+<li>数组 <code>arr</code> 中的值与树的中序遍历中每个叶节点的值一一对应。</li>
 <li>每个非叶节点的值等于其左子树和右子树中叶节点的最大值的乘积。</li>
 </ul>
 <p>在所有这样的二叉树中，返回每个非叶节点的值的最小可能总和。这个和的值是一个 32 位整数。</p>
-<p><strong>示例：</strong></p>
-<pre><strong>输入：</strong>arr = [6,2,4]
+<p>如果一个节点有 0 个子节点，那么该节点为叶节点。</p>
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/08/10/tree1.jpg" style="width: 500px; height: 169px;" />
+<pre>
+<strong>输入：</strong>arr = [6,2,4]
 <strong>输出：</strong>32
-<strong>解释：</strong>
-有两种可能的树，第一种的非叶节点的总和为 36，第二种非叶节点的总和为 32。
-
-24            24
-/  \          /  \
-12   4        6    8
-/  \               / \
-6    2             2   4</pre>
+<strong>解释：</strong>有两种可能的树，第一种的非叶节点的总和为 36 ，第二种非叶节点的总和为 32 。
+</pre>
+<p><strong>示例 2：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/08/10/tree2.jpg" style="width: 224px; height: 145px;" />
+<pre>
+<strong>输入：</strong>arr = [4,11]
+<strong>输出：</strong>44
+</pre>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>2 &lt;= arr.length &lt;= 40</code></li>
 <li><code>1 &lt;= arr[i] &lt;= 15</code></li>
-<li>答案保证是一个 32 位带符号整数，即小于 <code>2^31</code>。</li>
+<li>答案保证是一个 32 位带符号整数，即小于 <code>2<sup>31</sup></code> 。</li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
@@ -250,8 +253,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1140/" class="prev" rel="prev" title="1140：石子游戏 II（★★）"><i class="fas fa-angle-left fa-fw"></i>1140：石子游戏 II（★★）</a>
-            <a href="/leetcode/1124/" class="next" rel="next" title="1124：表现良好的最长时间段（★★）">1124：表现良好的最长时间段（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1140/" class="prev" rel="prev" title="1140：石子游戏 II（2034 分）"><i class="fas fa-angle-left fa-fw"></i>1140：石子游戏 II（2034 分）</a>
+            <a href="/leetcode/1124/" class="next" rel="next" title="1124：表现良好的最长时间段（1908 分）">1124：表现良好的最长时间段（1908 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

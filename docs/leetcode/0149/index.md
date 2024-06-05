@@ -24,12 +24,15 @@
 </pre>
 
 
-**提示：**
 
-- `1 <= points.length <= 300`
-- `points[i].length == 2`
-- `-104 <= xi, yi <= 104`
-- `points` 中的所有点 **互不相同**
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 <= points.length <= 300</code></li>
+<li><code>points[i].length == 2</code></li>
+<li><code>-10<sup>4</sup> <= x<sub>i</sub>, y<sub>i</sub> <= 10<sup>4</sup></code></li>
+<li><code>points</code> 中的所有点 <strong>互不相同</strong></li>
+</ul>
 
 
 ## 分析

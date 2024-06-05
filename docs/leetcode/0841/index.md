@@ -1,4 +1,4 @@
-# 0841：钥匙和房间（★）
+# 0841：钥匙和房间（1412 分）
 
 
 > <u>**[力扣第 86 场周赛第 2 题](https://leetcode.cn/problems/keys-and-rooms/)**</u>

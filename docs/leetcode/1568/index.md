@@ -1,4 +1,4 @@
-# 1568：使陆地分离的最少天数（★★★）
+# 1568：使陆地分离的最少天数（2208 分）
 
 
 > <u>**[力扣第 204 场周赛第 3 题](https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/)**</u>

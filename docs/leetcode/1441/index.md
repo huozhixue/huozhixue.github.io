@@ -1,4 +1,4 @@
-# 1441：用栈操作构建数组
+# 1441：用栈操作构建数组（1180 分）
 
 
 > <u>**[力扣第 188 场周赛第 1 题](https://leetcode.cn/problems/build-an-array-with-stack-operations/)**</u>

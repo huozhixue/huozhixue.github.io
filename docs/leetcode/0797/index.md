@@ -1,4 +1,4 @@
-# 0797：所有可能的路径
+# 0797：所有可能的路径（1382 分）
 
 
 > <u>**[力扣第 797 题](https://leetcode.cn/problems/all-paths-from-source-to-target/)**</u>

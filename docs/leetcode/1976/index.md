@@ -1,4 +1,4 @@
-# 1976：到达目的地的方案数（★★）
+# 1976：到达目的地的方案数（2094 分）
 
 
 > <u>**[力扣第 59 场双周赛第 3 题](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/)**</u>

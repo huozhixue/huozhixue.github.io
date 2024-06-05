@@ -1,4 +1,4 @@
-# 1514：概率最大的路径（★★）
+# 1514：概率最大的路径（1846 分）
 
 
 > <u>**[力扣第 197 场周赛第 3 题](https://leetcode.cn/problems/path-with-maximum-probability/)**</u>

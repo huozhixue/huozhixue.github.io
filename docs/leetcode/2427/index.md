@@ -1,4 +1,4 @@
-# 2427：公因子的数目
+# 2427：公因子的数目（1172 分）
 
 
 > <u>**[力扣第 313 场周赛第 1 题](https://leetcode.cn/problems/number-of-common-factors/)**</u>

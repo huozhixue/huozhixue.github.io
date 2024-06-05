@@ -59,16 +59,17 @@
 ## 解答
 
 ```python
-def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
-	A = sorted(zip(capital,profits),reverse=True)
-	res, pq = w, []
-	for _ in range(k):
-		while A and A[-1][0]<=res:
-			heappush(pq, -A.pop()[1])
-		if pq:
-			res -= heappop(pq)
-	return res
+class Solution:
+    def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
+        A = sorted(zip(capital,profits))[::-1]
+        pq = []
+        for _ in range(k):
+            while A and A[-1][0]<=w:
+                heappush(pq,-A.pop()[1])
+            if not pq:
+                break
+            w -= heappop(pq)
+        return w
 ```
-
-288 ms
+237 ms
 

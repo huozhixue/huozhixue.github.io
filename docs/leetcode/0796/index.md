@@ -1,4 +1,4 @@
-# 0796：旋转字符串
+# 0796：旋转字符串（1167 分）
 
 
 > <u>**[力扣第 796 题](https://leetcode.cn/problems/rotate-string/)**</u>

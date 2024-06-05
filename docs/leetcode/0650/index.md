@@ -1,4 +1,4 @@
-# 0650：只有两个键的键盘（★）
+# 0650：两个键的键盘（★）
 
 
 > <u>**[力扣第 650 题](https://leetcode.cn/problems/2-keys-keyboard/)**</u>

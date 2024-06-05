@@ -15,29 +15,29 @@
 <pre>
 <strong>输入：</strong>nums = [1,2,0]
 <strong>输出：</strong>3
-</pre>
+<strong>解释：</strong>范围 [1,2] 中的数字都在数组中。</pre>
 
 <p><strong>示例 2：</strong></p>
 
 <pre>
 <strong>输入：</strong>nums = [3,4,-1,1]
 <strong>输出：</strong>2
-</pre>
+<strong>解释：</strong>1 在数组中，但 2 没有。</pre>
 
 <p><strong>示例 3：</strong></p>
 
 <pre>
 <strong>输入：</strong>nums = [7,8,9,11,12]
 <strong>输出：</strong>1
-</pre>
+<strong>解释：</strong>最小的正数 1 没有出现。</pre>
 
 
 
 <p><strong>提示：</strong></p>
 
 <ul>
-<li><code>1 <= nums.length <= 5 * 10<sup>5</sup></code></li>
-<li><code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code></li>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
 

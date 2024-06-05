@@ -1,4 +1,4 @@
-# 1807：替换字符串中的括号内容（★）
+# 1807：替换字符串中的括号内容（1481 分）
 
 
 > <u>**[力扣第 234 场周赛第 3 题](https://leetcode.cn/problems/evaluate-the-bracket-pairs-of-a-string/)**</u>

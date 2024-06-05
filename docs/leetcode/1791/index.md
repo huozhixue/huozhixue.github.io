@@ -1,4 +1,4 @@
-# 1791：找出星型图的中心节点
+# 1791：找出星型图的中心节点（1286 分）
 
 
 > <u>**[力扣第 232 场周赛第 2 题](https://leetcode.cn/problems/find-center-of-star-graph/)**</u>

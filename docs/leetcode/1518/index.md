@@ -1,4 +1,4 @@
-# 1518：换水问题
+# 1518：换水问题（1245 分）
 
 
 > <u>**[力扣第 198 场周赛第 1 题](https://leetcode.cn/problems/water-bottles/)**</u>

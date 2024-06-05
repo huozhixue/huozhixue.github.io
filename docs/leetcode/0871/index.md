@@ -1,4 +1,4 @@
-# 0871：最低加油次数（★★）
+# 0871：最低加油次数（2074 分）
 
 
 > <u>**[力扣第 93 场周赛第 4 题](https://leetcode.cn/problems/minimum-number-of-refueling-stops/)**</u>

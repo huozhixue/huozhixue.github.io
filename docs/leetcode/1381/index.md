@@ -1,4 +1,4 @@
-# 1381：设计一个支持增量操作的栈
+# 1381：设计一个支持增量操作的栈（1285 分）
 
 
 > <u>**[力扣第 180 场周赛第 2 题](https://leetcode.cn/problems/design-a-stack-with-increment-operation/)**</u>

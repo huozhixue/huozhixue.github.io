@@ -7,10 +7,10 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0813：最大平均值和的分组（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0813/">
+        <title>0813：最大平均值和的分组（1936 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0813/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0813：最大平均值和的分组（★★）">
-  <meta property="og:description" content="力扣第 813 题 题目 给定数组 nums 和一个整数 k 。我们将给定的数组 nums 分成 最多 k 个相邻的非空子数组 。 分数 由每个子数组内的平均值的总和构成。 注意我们必须使用">
+  <meta property="og:title" content="0813：最大平均值和的分组（1936 分）">
+  <meta property="og:description" content="力扣第 813 题 题目 给定数组 nums 和一个整数 k 。我们将给定的数组 nums 分成 最多 k 个非空子数组，且数组内部是连续的 。 分数 由每个子数组内的平均值的总和构成。 注">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -20,20 +20,20 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0813：最大平均值和的分组（★★）">
-  <meta name="twitter:description" content="力扣第 813 题 题目 给定数组 nums 和一个整数 k 。我们将给定的数组 nums 分成 最多 k 个相邻的非空子数组 。 分数 由每个子数组内的平均值的总和构成。 注意我们必须使用">
+  <meta name="twitter:title" content="0813：最大平均值和的分组（1936 分）">
+  <meta name="twitter:description" content="力扣第 813 题 题目 给定数组 nums 和一个整数 k 。我们将给定的数组 nums 分成 最多 k 个非空子数组，且数组内部是连续的 。 分数 由每个子数组内的平均值的总和构成。 注">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0813/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0810/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0814/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0813：最大平均值和的分组（★★）",
+        "headline": "0813：最大平均值和的分组（1936 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0813\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  344 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  351 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0813\/","datePublished": "2017-03-23T00:00:00+08:00","dateModified": "2017-03-23T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0813：最大平均值和的分组（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0813：最大平均值和的分组（1936 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-23">2017-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 344 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0813/" class="leancloud_visitors" data-flag-title="0813：最大平均值和的分组（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-23">2017-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 351 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0813/" class="leancloud_visitors" data-flag-title="0813：最大平均值和的分组（1936 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,7 +133,7 @@
 <p><u><strong><a href="https://leetcode.cn/problems/largest-sum-of-averages/" target="_blank" rel="noopener noreffer">力扣第 813 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定数组 <code>nums</code> 和一个整数 <code>k</code> 。我们将给定的数组 <code>nums</code> 分成 <strong>最多</strong> <code>k</code> 个相邻的非空子数组 。 <strong>分数</strong> 由每个子数组内的平均值的总和构成。</p>
+<p>给定数组 <code>nums</code> 和一个整数 <code>k</code> 。我们将给定的数组 <code>nums</code> 分成 <strong>最多</strong> <code>k</code> 个非空子数组，且数组内部是连续的 。 <strong>分数</strong> 由每个子数组内的平均值的总和构成。</p>
 <p>注意我们必须使用 <code>nums</code> 数组中的每一个数进行分组，并且分数不一定需要是整数。</p>
 <p>返回我们所能得到的最大 <strong>分数</strong> 是多少。答案误差在 <code>10<sup>-6</sup></code> 内被视为是正确的。</p>
 <p><strong>示例 1:</strong></p>
@@ -214,8 +214,8 @@ nums 的最优分组是[9], [1, 2, 3], [9]. 得到的分数是 9 + (1 + 2 + 3) /
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0814/" class="prev" rel="prev" title="0814：二叉树剪枝"><i class="fas fa-angle-left fa-fw"></i>0814：二叉树剪枝</a>
-            <a href="/leetcode/0810/" class="next" rel="next" title="0810：黑板异或游戏（★★★）">0810：黑板异或游戏（★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0814/" class="prev" rel="prev" title="0814：二叉树剪枝（1380 分）"><i class="fas fa-angle-left fa-fw"></i>0814：二叉树剪枝（1380 分）</a>
+            <a href="/leetcode/0810/" class="next" rel="next" title="0810：黑板异或游戏（2341 分）">0810：黑板异或游戏（2341 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

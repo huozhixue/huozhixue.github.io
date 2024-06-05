@@ -1,4 +1,4 @@
-# 0491：递增子序列（★）
+# 0491：非递减子序列（★）
 
 
 > <u>**[力扣第 491 题](https://leetcode.cn/problems/non-decreasing-subsequences/)**</u>

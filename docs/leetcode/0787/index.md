@@ -1,4 +1,4 @@
-# 0787：K 站中转内最便宜的航班（★）
+# 0787：K 站中转内最便宜的航班（1786 分）
 
 
 > <u>**[力扣第 787 题](https://leetcode.cn/problems/cheapest-flights-within-k-stops/)**</u>

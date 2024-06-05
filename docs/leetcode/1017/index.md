@@ -1,4 +1,4 @@
-# 1017：负二进制转换（★）
+# 1017：负二进制转换（1697 分）
 
 
 > <u>**[力扣第 130 场周赛第 2 题](https://leetcode.cn/problems/convert-to-base-2/)**</u>

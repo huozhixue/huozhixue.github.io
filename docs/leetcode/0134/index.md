@@ -9,7 +9,7 @@
 
 <p>你有一辆油箱容量无限的的汽车，从第<em> </em><code>i</code><em> </em>个加油站开往第<em> </em><code>i+1</code><em> </em>个加油站需要消耗汽油 <code>cost[i]</code><em> </em>升。你从其中的一个加油站出发，开始时油箱为空。</p>
 
-<p>给定两个整数数组 <code>gas</code> 和 <code>cost</code> ，如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 <code>-1</code> 。如果存在解，则 <strong>保证</strong> 它是 <strong>唯一</strong> 的。</p>
+<p>给定两个整数数组 <code>gas</code> 和 <code>cost</code> ，如果你可以按顺序绕环路行驶一周，则返回出发时加油站的编号，否则返回 <code>-1</code> 。如果存在解，则 <strong>保证</strong> 它是 <strong>唯一</strong> 的。</p>
 
 
 
@@ -62,6 +62,7 @@
 	- 如果 sum(A)<0，则 pre[i+len(A)]<pre[i]，没有满足要求的 i
 	- 如果 sum(A)>=0， i 即为所求
 
+## 解答
 
 ```python
 class Solution:

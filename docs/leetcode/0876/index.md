@@ -1,4 +1,4 @@
-# 0876：链表的中间结点
+# 0876：链表的中间结点（1231 分）
 
 
 > <u>**[力扣第 95 场周赛第 1 题](https://leetcode.cn/problems/middle-of-the-linked-list/)**</u>

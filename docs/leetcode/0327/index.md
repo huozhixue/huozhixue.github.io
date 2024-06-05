@@ -39,24 +39,50 @@
 
 ## 分析
 
-区间和容易想到前缀和，于是先得到前缀和数组 pre，pre[i]=sum(nums[:i])。
-
-遍历位置 j，求满足 i<j, lower<=pre[j]-pre[i]<=upper 的 i 个数即可。
-
-于是考虑维护 pre[:j] 的有序集合，即可二分查找 i 的个数。
-
-要进行插入、查找的操作，考虑用 SortedList，都能在 O(logN) 时间内完成。
+- 区间和容易想到前缀和，先得到前缀和数组 P
+- 遍历 j，在 P[:j] 中找 [P[j]-upper,P[j]-lower] 范围内的个数即可
+- 可以维护有序集合，二分即可
 
 ## 解答
 
 ```python
-def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
-    from sortedcontainers import SortedList
-    res, sl = 0, SortedList()
-    for x in accumulate([0]+nums):
-        res += sl.bisect_right(x-lower)-sl.bisect_left(x-upper)
-        sl.add(x)
-    return res
+class Solution:
+    def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
+        from sortedcontainers import SortedList
+        res, sl = 0, SortedList()
+        for x in accumulate([0]+nums):
+            res += sl.bisect_right(x-lower)-sl.bisect_left(x-upper)
+            sl.add(x)
+        return res
 ```
-时间 $O(N*logN)$，1492 ms
+833 ms
 
+## *附加
+
+还可以用 cdq 分治。
+
+```python
+class Solution:
+    def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
+        def dfs(A,l,r):
+            if l==r:
+                return 0
+            m = (l+r)//2
+            B,C = [],[]
+            for i in A:
+                (C if i>m else B).append(i)
+            res = dfs(B,l,m)+dfs(C,m+1,r)
+            j,k=0,0
+            for i in C:
+                while k<len(B) and P[B[k]]<=P[i]-lower:
+                    k += 1
+                while j<len(B) and P[B[j]]<P[i]-upper:
+                    j += 1
+                res += k-j
+            return res
+        P = [0]+list(accumulate(nums))
+        n = len(P)
+        A = sorted(range(n),key=lambda i:P[i])
+        return dfs(A,0,n-1)
+```
+1067 ms

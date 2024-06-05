@@ -1,4 +1,4 @@
-# 0803：打砖块（★★★★）
+# 0803：打砖块（2765 分）
 
 
 > <u>**[力扣第 803 题](https://leetcode.cn/problems/bricks-falling-when-hit/)**</u>

@@ -1,4 +1,4 @@
-# 1792：最大平均通过率（★★）
+# 1792：最大平均通过率（1817 分）
 
 
 > <u>**[力扣第 232 场周赛第 3 题](https://leetcode.cn/problems/maximum-average-pass-ratio/)**</u>

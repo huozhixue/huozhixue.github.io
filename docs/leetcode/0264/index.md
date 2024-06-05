@@ -7,7 +7,7 @@
 
 <p>给你一个整数 <code>n</code> ，请你找出并返回第 <code>n</code> 个 <strong>丑数</strong> 。</p>
 
-<p><strong>丑数 </strong>就是只包含质因数 <code>2</code>、<code>3</code> 和/或 <code>5</code> 的正整数。</p>
+<p><strong>丑数 </strong>就是质因子只包含 <code>2</code>、<code>3</code> 和 <code>5</code> 的正整数。</p>
 
 
 
@@ -32,7 +32,7 @@
 <p><strong>提示：</strong></p>
 
 <ul>
-<li><code>1 <= n <= 1690</code></li>
+<li><code>1 &lt;= n &lt;= 1690</code></li>
 </ul>
 
 

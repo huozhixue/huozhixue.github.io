@@ -10,7 +10,7 @@
         <title>0005：最长回文子串（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0005/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0005：最长回文子串（★）">
-  <meta property="og:description" content="力扣第 5 题 题目 给你一个字符串 s，找到 s 中最长的回文子串。 如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。 示例 1： 输入：s = &#34;babad&#34; 输出">
+  <meta property="og:description" content="力扣第 5 题 题目 给你一个字符串 s，找到 s 中最长的 回文 子串。 示例 1： 输入：s = &#34;babad&#34; 输出：&#34;bab&#34; 解释：&#34;aba&#34; 同样是符合题意的答案。 示例 2： 输">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0005：最长回文子串（★）">
-  <meta name="twitter:description" content="力扣第 5 题 题目 给你一个字符串 s，找到 s 中最长的回文子串。 如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。 示例 1： 输入：s = &#34;babad&#34; 输出">
+  <meta name="twitter:description" content="力扣第 5 题 题目 给你一个字符串 s，找到 s 中最长的 回文 子串。 示例 1： 输入：s = &#34;babad&#34; 输出：&#34;bab&#34; 解释：&#34;aba&#34; 同样是符合题意的答案。 示例 2： 输">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0005/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0004/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0006/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0005\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  691 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  663 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0005\/","datePublished": "2015-01-05T00:00:00+08:00","dateModified": "2015-01-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0005：最长回文子串（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-05">2015-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 691 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-05">2015-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 663 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0005/" class="leancloud_visitors" data-flag-title="0005：最长回文子串（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -132,14 +132,14 @@
         <li><a href="#3">#3</a></li>
       </ul>
     </li>
+    <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
 <p><u><strong><a href="https://leetcode.cn/problems/longest-palindromic-substring/" target="_blank" rel="noopener noreffer">力扣第 5 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串。</p>
-<p>如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。</p>
+<p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的 <span data-keyword="palindromic-string">回文</span> <span data-keyword="substring-nonempty">子串</span>。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>s = "babad"
@@ -258,6 +258,7 @@ $$dp[i][j] = dp[i+1][j-1] \ and  \ s[i]==s[j]$$</li>
 </li>
 <li>因此在与回文相关的问题中，都可以尝试用 Manacher 算法解决。</li>
 </ul>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -326,7 +327,7 @@ $$dp[i][j] = dp[i+1][j-1] \ and  \ s[i]==s[j]$$</li>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0006/" class="prev" rel="prev" title="0006：N 字形变换（★）"><i class="fas fa-angle-left fa-fw"></i>0006：N 字形变换（★）</a>
+    <div class="post-nav"><a href="/leetcode/0006/" class="prev" rel="prev" title="0006：Z 字形变换（★）"><i class="fas fa-angle-left fa-fw"></i>0006：Z 字形变换（★）</a>
             <a href="/leetcode/0004/" class="next" rel="next" title="0004：寻找两个正序数组的中位数（★★）">0004：寻找两个正序数组的中位数（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

@@ -10,7 +10,7 @@
         <title>0074：搜索二维矩阵（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0074/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0074：搜索二维矩阵（★）">
-  <meta property="og:description" content="力扣第 74 题 题目 编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性： 每行中的整数从左到右按升序排列。 每行的第一个整数">
+  <meta property="og:description" content="力扣第 74 题 题目 给你一个满足下述两条属性的 m x n 整数矩阵： 每行中的整数从左到右按非严格递增顺序排列。 每行的第一个整数大于前一行的最后一个整数。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0074：搜索二维矩阵（★）">
-  <meta name="twitter:description" content="力扣第 74 题 题目 编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性： 每行中的整数从左到右按升序排列。 每行的第一个整数">
+  <meta name="twitter:description" content="力扣第 74 题 题目 给你一个满足下述两条属性的 m x n 整数矩阵： 每行中的整数从左到右按非严格递增顺序排列。 每行的第一个整数大于前一行的最后一个整数。">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0074/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0073/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0075/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0074\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  227 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  241 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0074\/","datePublished": "2015-03-15T00:00:00+08:00","dateModified": "2015-03-15T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0074：搜索二维矩阵（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-15">2015-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 227 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-03-15">2015-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 241 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0074/" class="leancloud_visitors" data-flag-title="0074：搜索二维矩阵（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,11 +133,12 @@
 <p><u><strong><a href="https://leetcode.cn/problems/search-a-2d-matrix/" target="_blank" rel="noopener noreffer">力扣第 74 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>编写一个高效的算法来判断 <code>m x n</code> 矩阵中，是否存在一个目标值。该矩阵具有如下特性：</p>
+<p>给你一个满足下述两条属性的 <code>m x n</code> 整数矩阵：</p>
 <ul>
-<li>每行中的整数从左到右按升序排列。</li>
+<li>每行中的整数从左到右按非严格递增顺序排列。</li>
 <li>每行的第一个整数大于前一行的最后一个整数。</li>
 </ul>
+<p>给你一个整数 <code>target</code> ，如果 <code>target</code> 在矩阵中，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://assets.leetcode.com/uploads/2020/10/05/mat.jpg" style="width: 322px; height: 242px;" />
 <pre>
@@ -154,8 +155,8 @@
 <ul>
 <li><code>m == matrix.length</code></li>
 <li><code>n == matrix[i].length</code></li>
-<li><code>1 <= m, n <= 100</code></li>
-<li><code>-10<sup>4</sup> <= matrix[i][j], target <= 10<sup>4</sup></code></li>
+<li><code>1 &lt;= m, n &lt;= 100</code></li>
+<li><code>-10<sup>4</sup> &lt;= matrix[i][j], target &lt;= 10<sup>4</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>先二分查找定位是哪一行，再在该行中二分查找即可。</p>

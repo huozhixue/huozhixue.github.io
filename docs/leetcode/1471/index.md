@@ -1,4 +1,4 @@
-# 1471：数组中的 k 个最强值
+# 1471：数组中的 k 个最强值（1332 分）
 
 
 > <u>**[力扣第 192 场周赛第 2 题](https://leetcode.cn/problems/the-k-strongest-values-in-an-array/)**</u>

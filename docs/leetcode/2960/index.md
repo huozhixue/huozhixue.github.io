@@ -1,4 +1,4 @@
-# 2960：统计已测试设备
+# 2960：统计已测试设备（1169 分）
 
 
 > <u>**[力扣第 375 场周赛第 1 题](https://leetcode.cn/problems/count-tested-devices-after-test-operations/)**</u>

@@ -1,4 +1,4 @@
-# 2585：获得分数的方法数（★★）
+# 2585：获得分数的方法数（1909 分）
 
 
 > <u>**[力扣第 335 场周赛第 4 题](https://leetcode.cn/problems/number-of-ways-to-earn-points/)**</u>

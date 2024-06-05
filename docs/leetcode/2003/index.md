@@ -1,4 +1,4 @@
-# 2003：每棵子树内缺失的最小基因值（★★★）
+# 2003：每棵子树内缺失的最小基因值（2415 分）
 
 
 > <u>**[力扣第 258 场周赛第 4 题](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/)**</u>

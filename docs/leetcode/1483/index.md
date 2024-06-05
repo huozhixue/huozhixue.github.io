@@ -1,4 +1,4 @@
-# 1483：树节点的第 K 个祖先（★★）
+# 1483：树节点的第 K 个祖先（2115 分）
 
 
 > <u>**[力扣第 193 场周赛第 4 题](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/)**</u>

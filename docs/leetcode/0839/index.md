@@ -1,4 +1,4 @@
-# 0839：相似字符串组（★★）
+# 0839：相似字符串组（2053 分）
 
 
 > <u>**[力扣第 85 场周赛第 4 题](https://leetcode.cn/problems/similar-string-groups/)**</u>

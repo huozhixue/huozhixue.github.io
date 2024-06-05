@@ -10,7 +10,7 @@
         <title>0139：单词拆分（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0139/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0139：单词拆分（★）">
-  <meta property="og:description" content="力扣第 139 题 题目 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。请你判断是否可以利用字典中出现的单词拼接出 s 。 注意：不要求字典中出现的单词全部都使">
+  <meta property="og:description" content="力扣第 139 题 题目 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。如果可以利用字典中出现的一个或多个单词拼接出 s 则返回 true。 注意：不要求字典中出">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0139：单词拆分（★）">
-  <meta name="twitter:description" content="力扣第 139 题 题目 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。请你判断是否可以利用字典中出现的单词拼接出 s 。 注意：不要求字典中出现的单词全部都使">
+  <meta name="twitter:description" content="力扣第 139 题 题目 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。如果可以利用字典中出现的一个或多个单词拼接出 s 则返回 true。 注意：不要求字典中出">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0139/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0138/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0140/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0139\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  318 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  326 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0139\/","datePublished": "2015-05-19T00:00:00+08:00","dateModified": "2015-05-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0139：单词拆分（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-19">2015-05-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 318 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-19">2015-05-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 326 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0139/" class="leancloud_visitors" data-flag-title="0139：单词拆分（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,7 +133,7 @@
 <p><u><strong><a href="https://leetcode.cn/problems/word-break/" target="_blank" rel="noopener noreffer">力扣第 139 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> 和一个字符串列表 <code>wordDict</code> 作为字典。请你判断是否可以利用字典中出现的单词拼接出 <code>s</code> 。</p>
+<p>给你一个字符串 <code>s</code> 和一个字符串列表 <code>wordDict</code> 作为字典。如果可以利用字典中出现的一个或多个单词拼接出 <code>s</code> 则返回 <code>true</code>。</p>
 <p><strong>注意：</strong>不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
@@ -145,7 +145,7 @@
 <pre>
 <strong>输入:</strong> s = "applepenapple", wordDict = ["apple", "pen"]
 <strong>输出:</strong> true
-<strong>解释:</strong> 返回 true 因为 <code>"</code>applepenapple<code>"</code> 可以由 <code>"</code>apple" "pen" "apple<code>" 拼接成</code>。
+<strong>解释:</strong> 返回 true 因为 "applepenapple" 可以由 "apple" "pen" "apple" 拼接成。
 注意，你可以重复使用字典中的单词。
 </pre>
 <p><strong>示例 3：</strong></p>
@@ -158,7 +158,7 @@
 <li><code>1 &lt;= s.length &lt;= 300</code></li>
 <li><code>1 &lt;= wordDict.length &lt;= 1000</code></li>
 <li><code>1 &lt;= wordDict[i].length &lt;= 20</code></li>
-<li><code>s</code> 和 <code>wordDict[i]</code> 仅有小写英文字母组成</li>
+<li><code>s</code> 和 <code>wordDict[i]</code> 仅由小写英文字母组成</li>
 <li><code>wordDict</code> 中的所有字符串 <strong>互不相同</strong></li>
 </ul>
 <h2 id="分析">分析</h2>
@@ -223,7 +223,7 @@
     </div>
 
     <div class="post-nav"><a href="/leetcode/0140/" class="prev" rel="prev" title="0140：单词拆分 II（★★）"><i class="fas fa-angle-left fa-fw"></i>0140：单词拆分 II（★★）</a>
-            <a href="/leetcode/0138/" class="next" rel="next" title="0138：复制带随机指针的链表（★）">0138：复制带随机指针的链表（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/0138/" class="next" rel="next" title="0138：随机链表的复制（★）">0138：随机链表的复制（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

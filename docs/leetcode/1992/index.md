@@ -1,4 +1,4 @@
-# 1992：找到所有的农场组（★）
+# 1992：找到所有的农场组（1539 分）
 
 
 > <u>**[力扣第 60 场双周赛第 2 题](https://leetcode.cn/problems/find-all-groups-of-farmland/)**</u>

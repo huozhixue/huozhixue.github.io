@@ -1,4 +1,4 @@
-# 0204：计数质数（★★★★）
+# 0204：计数质数（★）
 
 
 > <u>**[力扣第 204 题](https://leetcode.cn/problems/count-primes/)**</u>

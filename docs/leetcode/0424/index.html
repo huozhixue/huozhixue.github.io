@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0424：替换后的最长重复字符（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0424/">
+        <title>0424：替换后的最长重复字符（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0424/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0424：替换后的最长重复字符（★★）">
+  <meta property="og:title" content="0424：替换后的最长重复字符（★）">
   <meta property="og:description" content="力扣第 424 题 题目 给你一个字符串 s 和一个整数 k 。你可以选择字符串中的任一字符，并将其更改为任何其他大写英文字符。该操作最多可执行 k 次。 在执行上述">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0424：替换后的最长重复字符（★★）">
+  <meta name="twitter:title" content="0424：替换后的最长重复字符（★）">
   <meta name="twitter:description" content="力扣第 424 题 题目 给你一个字符串 s 和一个整数 k 。你可以选择字符串中的任一字符，并将其更改为任何其他大写英文字符。该操作最多可执行 k 次。 在执行上述">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0424：替换后的最长重复字符（★★）",
+        "headline": "0424：替换后的最长重复字符（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0424\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  335 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  353 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0424\/","datePublished": "2016-02-28T00:00:00+08:00","dateModified": "2016-02-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0424：替换后的最长重复字符（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0424：替换后的最长重复字符（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-28">2016-02-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 335 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0424/" class="leancloud_visitors" data-flag-title="0424：替换后的最长重复字符（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-28">2016-02-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 353 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0424/" class="leancloud_visitors" data-flag-title="0424：替换后的最长重复字符（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -134,7 +134,7 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> 。你可以选择字符串中的任一字符，并将其更改为任何其他大写英文字符。该操作最多可执行 <code>k</code> 次。</p>
-<p>在执行上述操作后，返回包含相同字母的最长子字符串的长度。</p>
+<p>在执行上述操作后，返回 <em>包含相同字母的最长子字符串的长度。</em></p>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>s = "ABAB", k = 2
@@ -148,6 +148,7 @@
 <strong>解释：</strong>
 将中间的一个'A'替换为'B',字符串变为 "AABBBBA"。
 子串 "BBBB" 有最长重复字母, 答案为 4。
+可能存在其他的方法来得到同样的结果。
 </pre>
 <p><strong>提示：</strong></p>
 <ul>

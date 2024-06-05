@@ -1,4 +1,4 @@
-# 1287：有序数组中出现次数超过25%的元素
+# 1287：有序数组中出现次数超过25%的元素（1179 分）
 
 
 > <u>**[力扣第 15 场双周赛第 1 题](https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array/)**</u>

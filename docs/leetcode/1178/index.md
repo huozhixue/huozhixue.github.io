@@ -1,4 +1,4 @@
-# 1178：猜字谜（★★★）
+# 1178：猜字谜（2233 分）
 
 
 > <u>**[力扣第 152 场周赛第 4 题](https://leetcode.cn/problems/number-of-valid-words-for-each-puzzle/)**</u>

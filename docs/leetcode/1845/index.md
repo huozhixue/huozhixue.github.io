@@ -1,4 +1,4 @@
-# 1845：座位预约管理系统（★）
+# 1845：座位预约管理系统（1428 分）
 
 
 > <u>**[力扣第 51 场双周赛第 2 题](https://leetcode.cn/problems/seat-reservation-manager/)**</u>

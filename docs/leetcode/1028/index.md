@@ -1,4 +1,4 @@
-# 1028：从先序遍历还原二叉树（★）
+# 1028：从先序遍历还原二叉树（1797 分）
 
 
 > <u>**[力扣第 132 场周赛第 4 题](https://leetcode.cn/problems/recover-a-tree-from-preorder-traversal/)**</u>

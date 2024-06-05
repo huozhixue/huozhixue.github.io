@@ -1,4 +1,4 @@
-# 0006：N 字形变换（★）
+# 0006：Z 字形变换（★）
 
 
 > <u>**[力扣第 6 题](https://leetcode.cn/problems/zigzag-conversion/)**</u>

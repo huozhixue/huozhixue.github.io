@@ -1,4 +1,4 @@
-# 2300：咒语和药水的成功对数（★）
+# 2300：咒语和药水的成功对数（1476 分）
 
 
 > <u>**[力扣第 80 场双周赛第 2 题](https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/)**</u>

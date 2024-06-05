@@ -1,4 +1,4 @@
-# 1095：山脉数组中查找目标值（★★）
+# 1095：山脉数组中查找目标值（1827 分）
 
 
 > <u>**[力扣第 142 场周赛第 3 题](https://leetcode.cn/problems/find-in-mountain-array/)**</u>

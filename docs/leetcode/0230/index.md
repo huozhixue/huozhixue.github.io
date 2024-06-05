@@ -27,12 +27,15 @@
 
 
 
+<p><strong>提示：</strong></p>
 
-**提示：**
+<ul>
+<li>树中的节点数为 <code>n</code> 。</li>
+<li><code>1 <= k <= n <= 10<sup>4</sup></code></li>
+<li><code>0 <= Node.val <= 10<sup>4</sup></code></li>
+</ul>
 
-- 树中的节点数为 `n` 。
-- `1 <= k <= n <= 10^4`
-- `0 <= Node.val <= 10^4`
+
 
 <p><strong>进阶：</strong>如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 <code>k</code> 小的值，你将如何优化算法？</p>
 

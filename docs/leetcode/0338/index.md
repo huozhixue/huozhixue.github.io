@@ -1,4 +1,4 @@
-# 0338：比特位计数（★）
+# 0338：比特位计数
 
 
 > <u>**[力扣第 338 题](https://leetcode.cn/problems/counting-bits/)**</u>

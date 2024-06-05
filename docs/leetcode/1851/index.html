@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1851：包含每个查询的最小区间（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1851/">
+        <title>1851：包含每个查询的最小区间（2286 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1851/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="1851：包含每个查询的最小区间（★★★）">
+  <meta property="og:title" content="1851：包含每个查询的最小区间（2286 分）">
   <meta property="og:description" content="力扣第 239 场周赛第 4 题 题目 给你一个二维整数数组 intervals ，其中 intervals[i] = [lefti, righti] 表示第 i 个区间开始于 lefti 、结束于 righti（包含两侧取值，闭区间）。区间的 长度 定">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="1851：包含每个查询的最小区间（★★★）">
+  <meta name="twitter:title" content="1851：包含每个查询的最小区间（2286 分）">
   <meta name="twitter:description" content="力扣第 239 场周赛第 4 题 题目 给你一个二维整数数组 intervals ，其中 intervals[i] = [lefti, righti] 表示第 i 个区间开始于 lefti 、结束于 righti（包含两侧取值，闭区间）。区间的 长度 定">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,7 +28,7 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1851：包含每个查询的最小区间（★★★）",
+        "headline": "1851：包含每个查询的最小区间（2286 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1851：包含每个查询的最小区间（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1851：包含每个查询的最小区间（2286 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-02">2021-05-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 756 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1851/" class="leancloud_visitors" data-flag-title="1851：包含每个查询的最小区间（★★★）">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1851/" class="leancloud_visitors" data-flag-title="1851：包含每个查询的最小区间（2286 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -134,7 +134,7 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>给你一个二维整数数组 <code>intervals</code> ，其中 <code>intervals[i] = [left<sub>i</sub>, right<sub>i</sub>]</code> 表示第 <code>i</code> 个区间开始于 <code>left<sub>i</sub></code> 、结束于 <code>right<sub>i</sub></code>（包含两侧取值，<strong>闭区间</strong>）。区间的 <strong>长度</strong> 定义为区间中包含的整数数目，更正式地表达是 <code>right<sub>i</sub> - left<sub>i</sub> + 1</code> 。</p>
-<p>再给你一个整数数组 <code>queries</code> 。第 <code>j</code> 个查询的答案是满足 <code>left<sub>i</sub> <= queries[j] <= right<sub>i</sub></code> 的 <strong>长度最小区间 <code>i</code> 的长度</strong> 。如果不存在这样的区间，那么答案是 <code>-1</code> 。</p>
+<p>再给你一个整数数组 <code>queries</code> 。第 <code>j</code> 个查询的答案是满足 <code>left<sub>i</sub> &lt;= queries[j] &lt;= right<sub>i</sub></code> 的 <strong>长度最小区间 <code>i</code> 的长度</strong> 。如果不存在这样的区间，那么答案是 <code>-1</code> 。</p>
 <p>以数组形式返回对应查询的所有答案。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
@@ -158,11 +158,11 @@
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 <= intervals.length <= 10<sup>5</sup></code></li>
-<li><code>1 <= queries.length <= 10<sup>5</sup></code></li>
-<li><code>queries[i].length == 2</code></li>
-<li><code>1 <= left<sub>i</sub> <= right<sub>i</sub> <= 10<sup>7</sup></code></li>
-<li><code>1 <= queries[j] <= 10<sup>7</sup></code></li>
+<li><code>1 &lt;= intervals.length &lt;= 10<sup>5</sup></code></li>
+<li><code>1 &lt;= queries.length &lt;= 10<sup>5</sup></code></li>
+<li><code>intervals[i].length == 2</code></li>
+<li><code>1 &lt;= left<sub>i</sub> &lt;= right<sub>i</sub> &lt;= 10<sup>7</sup></code></li>
+<li><code>1 &lt;= queries[j] &lt;= 10<sup>7</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>有点类似 <a href="/leetcode/0218" title="0218" rel="noopener noreferrer">0218</a>，不过查询的不一定是边界，可能在区间中间。</p>
@@ -242,8 +242,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1857/" class="prev" rel="prev" title="1857：有向图中最大颜色值（★★★）"><i class="fas fa-angle-left fa-fw"></i>1857：有向图中最大颜色值（★★★）</a>
-            <a href="/leetcode/1845/" class="next" rel="next" title="1845：座位预约管理系统（★）">1845：座位预约管理系统（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1857/" class="prev" rel="prev" title="1857：有向图中最大颜色值（2312 分）"><i class="fas fa-angle-left fa-fw"></i>1857：有向图中最大颜色值（2312 分）</a>
+            <a href="/leetcode/1845/" class="next" rel="next" title="1845：座位预约管理系统（1428 分）">1845：座位预约管理系统（1428 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,6 +1,7 @@
 # 0178：分数排名（★）
 
 
+
 > <u>**[力扣第 178 题](https://leetcode.cn/problems/rank-scores/)**</u>
 
 ## 题目
@@ -73,6 +74,4 @@ select score, dense_rank() over (order by score desc) as "rank"
 from Scores
 ```
 280 ms
-
-
 

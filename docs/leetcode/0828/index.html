@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0828：统计子串中的唯一字符（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0828/">
+        <title>0828：统计子串中的唯一字符（2034 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0828/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0828：统计子串中的唯一字符（★★）">
+  <meta property="og:title" content="0828：统计子串中的唯一字符（2034 分）">
   <meta property="og:description" content="力扣第 83 场周赛第 4 题 题目 我们定义了一个函数 countUniqueChars(s) 来统计字符串 s 中的唯一字符，并返回唯一字符的个数。 例如：s = &#34;LEETCODE&#34; ，则其中 &#34;L&#34;, &#34;T&#34;,&#34;C&#34;,&#34;O&#34;,&#34;D&#34; 都是唯一字符，因为它们">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0828：统计子串中的唯一字符（★★）">
+  <meta name="twitter:title" content="0828：统计子串中的唯一字符（2034 分）">
   <meta name="twitter:description" content="力扣第 83 场周赛第 4 题 题目 我们定义了一个函数 countUniqueChars(s) 来统计字符串 s 中的唯一字符，并返回唯一字符的个数。 例如：s = &#34;LEETCODE&#34; ，则其中 &#34;L&#34;, &#34;T&#34;,&#34;C&#34;,&#34;O&#34;,&#34;D&#34; 都是唯一字符，因为它们">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,7 +28,7 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0828：统计子串中的唯一字符（★★）",
+        "headline": "0828：统计子串中的唯一字符（2034 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0828：统计子串中的唯一字符（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0828：统计子串中的唯一字符（2034 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-06">2018-05-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 570 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0828/" class="leancloud_visitors" data-flag-title="0828：统计子串中的唯一字符（★★）">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0828/" class="leancloud_visitors" data-flag-title="0828：统计子串中的唯一字符（2034 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -137,7 +137,7 @@
 <p>例如：<code>s = "LEETCODE"</code> ，则其中 <code>"L"</code>, <code>"T"</code>,<code>"C"</code>,<code>"O"</code>,<code>"D"</code> 都是唯一字符，因为它们只出现一次，所以 <code>countUniqueChars(s) = 5</code> 。</p>
 <p>本题将会给你一个字符串 <code>s</code> ，我们需要返回 <code>countUniqueChars(t)</code> 的总和，其中 <code>t</code> 是 <code>s</code> 的子字符串。输入用例保证返回值为 32 位整数。</p>
 <p>注意，某些子字符串可能是重复的，但你统计时也必须算上这些重复的子字符串（也就是说，你必须统计 <code>s</code> 的所有子字符串中的唯一字符）。</p>
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 <pre>
 <strong>输入: </strong>s = "ABC"
 <strong>输出: </strong>10
@@ -145,20 +145,20 @@
 其中，每一个子串都由独特字符构成。
 所以其长度总和为：1 + 1 + 1 + 2 + 2 + 3 = 10
 </pre>
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 <pre>
 <strong>输入: </strong>s = "ABA"
 <strong>输出: </strong>8
-<strong>解释: </strong>除<code>了 countUniqueChars</code>("ABA") = 1 之外，其余与示例 1 相同。
+<strong>解释: </strong>除了 countUniqueChars("ABA") = 1 之外，其余与示例 1 相同。
 </pre>
-<p><strong>示例 3：</strong></p>
+<p><strong class="example">示例 3：</strong></p>
 <pre>
 <strong>输入：</strong>s = "LEETCODE"
 <strong>输出：</strong>92
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
+<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
 <li><code>s</code> 只包含大写英文字符</li>
 </ul>
 <h2 id="分析">分析</h2>
@@ -230,8 +230,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0832/" class="prev" rel="prev" title="0832：翻转图像"><i class="fas fa-angle-left fa-fw"></i>0832：翻转图像</a>
-            <a href="/leetcode/0829/" class="next" rel="next" title="0829：连续整数求和（★）">0829：连续整数求和（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0832/" class="prev" rel="prev" title="0832：翻转图像（1243 分）"><i class="fas fa-angle-left fa-fw"></i>0832：翻转图像（1243 分）</a>
+            <a href="/leetcode/0829/" class="next" rel="next" title="0829：连续整数求和（1694 分）">0829：连续整数求和（1694 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

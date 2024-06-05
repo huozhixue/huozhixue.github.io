@@ -10,7 +10,7 @@
         <title>0678：有效的括号字符串（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0678/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0678：有效的括号字符串（★）">
-  <meta property="og:description" content="力扣第 678 题 题目 给定一个只包含三种字符的字符串：（ ，） 和 *，写一个函数来检验这个字符串是否为有效字符串。有效字符串具有如下规则： 任何左括号 ( 必">
+  <meta property="og:description" content="力扣第 678 题 题目 给你一个只包含三种字符的字符串，支持的字符类型分别是 &#39;(&#39;、&#39;)&#39; 和 &#39;*&#39;。请你检验这个字符串是否为有效字符串，如果是 有效 字符">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0678：有效的括号字符串（★）">
-  <meta name="twitter:description" content="力扣第 678 题 题目 给定一个只包含三种字符的字符串：（ ，） 和 *，写一个函数来检验这个字符串是否为有效字符串。有效字符串具有如下规则： 任何左括号 ( 必">
+  <meta name="twitter:description" content="力扣第 678 题 题目 给你一个只包含三种字符的字符串，支持的字符类型分别是 &#39;(&#39;、&#39;)&#39; 和 &#39;*&#39;。请你检验这个字符串是否为有效字符串，如果是 有效 字符">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0678/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0677/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0680/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0678\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  451 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  481 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0678\/","datePublished": "2016-11-08T00:00:00+08:00","dateModified": "2016-11-08T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0678：有效的括号字符串（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-08">2016-11-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 451 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-08">2016-11-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 481 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0678/" class="leancloud_visitors" data-flag-title="0678：有效的括号字符串（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,33 +133,34 @@
 <p><u><strong><a href="https://leetcode.cn/problems/valid-parenthesis-string/" target="_blank" rel="noopener noreffer">力扣第 678 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个只包含三种字符的字符串：<code>（ </code>，<code>）</code> 和 <code>*</code>，写一个函数来检验这个字符串是否为有效字符串。有效字符串具有如下规则：</p>
-<ol>
-<li>任何左括号 <code>(</code> 必须有相应的右括号 <code>)</code>。</li>
-<li>任何右括号 <code>)</code> 必须有相应的左括号 <code>(</code> 。</li>
-<li>左括号 <code>(</code> 必须在对应的右括号之前 <code>)</code>。</li>
-<li><code>*</code> 可以被视为单个右括号 <code>)</code> ，或单个左括号 <code>(</code> ，或一个空字符串。</li>
-<li>一个空字符串也被视为有效字符串。</li>
-</ol>
-<p><strong>示例 1:</strong></p>
+<p>给你一个只包含三种字符的字符串，支持的字符类型分别是 <code>'('</code>、<code>')'</code> 和 <code>'*'</code>。请你检验这个字符串是否为有效字符串，如果是 <strong>有效</strong> 字符串返回 <code>true</code> 。</p>
+<p><strong>有效</strong> 字符串符合如下规则：</p>
+<ul>
+<li>任何左括号 <code>'('</code> 必须有相应的右括号 <code>')'</code>。</li>
+<li>任何右括号 <code>')'</code> 必须有相应的左括号 <code>'('</code> 。</li>
+<li>左括号 <code>'('</code> 必须在对应的右括号之前 <code>')'</code>。</li>
+<li><code>'*'</code> 可以被视为单个右括号 <code>')'</code> ，或单个左括号 <code>'('</code> ，或一个空字符串 <code>""</code>。</li>
+</ul>
+<p><strong class="example">示例 1：</strong></p>
 <pre>
-<strong>输入:</strong> &quot;()&quot;
-<strong>输出:</strong> True
+<strong>输入：</strong>s = "()"
+<strong>输出：</strong>true
 </pre>
-<p><strong>示例 2:</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 <pre>
-<strong>输入:</strong> &quot;(*)&quot;
-<strong>输出:</strong> True
+<strong>输入：</strong>s = "(*)"
+<strong>输出：</strong>true
 </pre>
-<p><strong>示例 3:</strong></p>
+<p><strong class="example">示例 3：</strong></p>
 <pre>
-<strong>输入:</strong> &quot;(*))&quot;
-<strong>输出:</strong> True
+<strong>输入：</strong>s = "(*))"
+<strong>输出：</strong>true
 </pre>
-<p><strong>注意:</strong></p>
-<ol>
-<li>字符串大小将在 [1，100] 范围内。</li>
-</ol>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 100</code></li>
+<li><code>s[i]</code> 为 <code>'('</code>、<code>')'</code> 或 <code>'*'</code></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>先不考虑星号，那么类似 <a href="/leetcode/0032" title="0032" rel="noopener noreferrer">0032</a>，可以得到不属于有效子串的括号的位置。</p>
 <p>再考虑星号，要使得字符串变为有效，那么无效 &lsquo;)&rsquo; 的左边必然有星号作为 &lsquo;(&rsquo;，无效 &lsquo;(&rsquo; 的右边必然有星号作为 &lsquo;)&rsquo;。</p>

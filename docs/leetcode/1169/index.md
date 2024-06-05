@@ -1,4 +1,4 @@
-# 1169：查询无效交易（★）
+# 1169：查询无效交易（1658 分）
 
 
 > <u>**[力扣第 151 场周赛第 1 题](https://leetcode.cn/problems/invalid-transactions/)**</u>

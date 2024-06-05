@@ -54,14 +54,15 @@
 
 ## 分析
 
-类似 {{< lc "0231" >}} ，n 是 3 的幂等价于 n 是正整数且 n 被 3^19 整除。
-（3^19 是给定范围内最大的 3 的幂次方）
+要求不用循环递归，考虑用数学
+- n 是 3 的幂等价于 n 被范围内最大的 3 的幂数整除
 
 ## 解答
 
 ```python
-def isPowerOfThree(self, n: int) -> bool:
-    return n > 0 and (3**19) % n == 0
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        return n>0 and pow(3,21)%n==0
 ```
-72 ms
+80 ms
 

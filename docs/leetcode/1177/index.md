@@ -1,4 +1,4 @@
-# 1177：构建回文串检测（★★）
+# 1177：构建回文串检测（1848 分）
 
 
 > <u>**[力扣第 152 场周赛第 3 题](https://leetcode.cn/problems/can-make-palindrome-from-substring/)**</u>

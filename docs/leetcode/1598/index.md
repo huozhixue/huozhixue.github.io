@@ -1,4 +1,4 @@
-# 1598：文件夹操作日志搜集器
+# 1598：文件夹操作日志搜集器（1297 分）
 
 
 > <u>**[力扣第 208 场周赛第 1 题](https://leetcode.cn/problems/crawler-log-folder/)**</u>

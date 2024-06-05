@@ -1,4 +1,4 @@
-# 0834：树中距离之和（★★）
+# 0834：树中距离之和（2197 分）
 
 
 > <u>**[力扣第 84 场周赛第 4 题](https://leetcode.cn/problems/sum-of-distances-in-tree/)**</u>

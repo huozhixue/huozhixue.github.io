@@ -1,4 +1,4 @@
-# 2203：得到要求路径的最小带权子图（★★★）
+# 2203：得到要求路径的最小带权子图（2364 分）
 
 
 > <u>**[力扣第 284 场周赛第 4 题](https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/)**</u>

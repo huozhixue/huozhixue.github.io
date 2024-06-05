@@ -1,4 +1,4 @@
-# 1461：检查一个字符串是否包含所有长度为 K 的二进制子串（★）
+# 1461：检查一个字符串是否包含所有长度为 K 的二进制子串（1504 分）
 
 
 > <u>**[力扣第 27 场双周赛第 2 题](https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)**</u>

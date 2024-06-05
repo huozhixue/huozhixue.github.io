@@ -1,4 +1,4 @@
-# 0781：森林中的兔子（★）
+# 0781：森林中的兔子（1453 分）
 
 
 > <u>**[力扣第 781 题](https://leetcode.cn/problems/rabbits-in-forest/)**</u>

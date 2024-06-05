@@ -1,4 +1,4 @@
-# 1499：满足不等式的最大值（★★★）
+# 1499：满足不等式的最大值（2456 分）
 
 
 > <u>**[力扣第 195 场周赛第 4 题](https://leetcode.cn/problems/max-value-of-equation/)**</u>

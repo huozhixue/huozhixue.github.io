@@ -1,4 +1,4 @@
-# 1046：最后一块石头的重量
+# 1046：最后一块石头的重量（1172 分）
 
 
 > <u>**[力扣第 137 场周赛第 1 题](https://leetcode.cn/problems/last-stone-weight/)**</u>

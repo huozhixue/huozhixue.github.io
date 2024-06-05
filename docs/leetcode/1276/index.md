@@ -1,4 +1,4 @@
-# 1276：不浪费原料的汉堡制作方案
+# 1276：不浪费原料的汉堡制作方案（1386 分）
 
 
 > <u>**[力扣第 165 场周赛第 2 题](https://leetcode.cn/problems/number-of-burgers-with-no-waste-of-ingredients/)**</u>

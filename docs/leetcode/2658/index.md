@@ -1,4 +1,4 @@
-# 2658：网格图中鱼的最大数目（★）
+# 2658：网格图中鱼的最大数目（1489 分）
 
 
 > <u>**[力扣第 103 场双周赛第 3 题](https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/)**</u>

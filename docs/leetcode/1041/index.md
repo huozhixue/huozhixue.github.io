@@ -1,4 +1,4 @@
-# 1041：困于环中的机器人（★）
+# 1041：困于环中的机器人（1521 分）
 
 
 > <u>**[力扣第 136 场周赛第 1 题](https://leetcode.cn/problems/robot-bounded-in-circle/)**</u>

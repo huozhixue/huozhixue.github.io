@@ -1,4 +1,4 @@
-# 2127：参加会议的最多员工数（★★★）
+# 2127：参加会议的最多员工数（2449 分）
 
 
 > <u>**[力扣第 274 场周赛第 4 题](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/)**</u>

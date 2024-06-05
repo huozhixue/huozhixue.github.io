@@ -1,4 +1,4 @@
-# 0893：特殊等价字符串组（★）
+# 0893：特殊等价字符串组（1590 分）
 
 
 > <u>**[力扣第 99 场周赛第 2 题](https://leetcode.cn/problems/groups-of-special-equivalent-strings/)**</u>

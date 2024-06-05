@@ -1,4 +1,4 @@
-# 2584：分割数组使乘积互质（★★）
+# 2584：分割数组使乘积互质（2159 分）
 
 
 > <u>**[力扣第 335 场周赛第 3 题](https://leetcode.cn/problems/split-the-array-to-make-coprime-products/)**</u>

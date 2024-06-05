@@ -1,4 +1,4 @@
-# 1316：不同的循环子字符串（★★）
+# 1316：不同的循环子字符串（1836 分）
 
 
 > <u>**[力扣第 17 场双周赛第 4 题](https://leetcode.cn/problems/distinct-echo-substrings/)**</u>

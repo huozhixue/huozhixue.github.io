@@ -1,4 +1,4 @@
-# 1702：修改后的最大二进制字符串（★★）
+# 1702：修改后的最大二进制字符串（1825 分）
 
 
 > <u>**[力扣第 42 场双周赛第 3 题](https://leetcode.cn/problems/maximum-binary-string-after-change/)**</u>

@@ -1,4 +1,4 @@
-# 1208：尽可能使字符串相等（★）
+# 1208：尽可能使字符串相等（1496 分）
 
 
 > <u>**[力扣第 156 场周赛第 2 题](https://leetcode.cn/problems/get-equal-substrings-within-budget/)**</u>

@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0857：雇佣 K 名工人的最低成本（★★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0857/">
+        <title>0857：雇佣 K 名工人的最低成本（2259 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0857/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0857：雇佣 K 名工人的最低成本（★★★）">
+  <meta property="og:title" content="0857：雇佣 K 名工人的最低成本（2259 分）">
   <meta property="og:description" content="力扣第 90 场周赛第 4 题 题目 有 n 名工人。 给定两个数组 quality 和 wage ，其中，quality[i] 表示第 i 名工人的工作质量，其最低期望工资为 wage[i] 。 现在我们想雇">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0857：雇佣 K 名工人的最低成本（★★★）">
+  <meta name="twitter:title" content="0857：雇佣 K 名工人的最低成本（2259 分）">
   <meta name="twitter:description" content="力扣第 90 场周赛第 4 题 题目 有 n 名工人。 给定两个数组 quality 和 wage ，其中，quality[i] 表示第 i 名工人的工作质量，其最低期望工资为 wage[i] 。 现在我们想雇">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0857：雇佣 K 名工人的最低成本（★★★）",
+        "headline": "0857：雇佣 K 名工人的最低成本（2259 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0857\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  760 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  763 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0857\/","datePublished": "2018-06-24T10:00:00+08:00","dateModified": "2018-06-24T10:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0857：雇佣 K 名工人的最低成本（★★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0857：雇佣 K 名工人的最低成本（2259 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-06-24">2018-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 760 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0857/" class="leancloud_visitors" data-flag-title="0857：雇佣 K 名工人的最低成本（★★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-06-24">2018-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 763 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0857/" class="leancloud_visitors" data-flag-title="0857：雇佣 K 名工人的最低成本（2259 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -139,20 +139,20 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>有 <code>n</code> 名工人。 给定两个数组 <code>quality</code> 和 <code>wage</code> ，其中，<code>quality[i]</code> 表示第 <code>i</code> 名工人的工作质量，其最低期望工资为 <code>wage[i]</code> 。</p>
-<p>现在我们想雇佣 <code>k</code> 名工人组成一个<em>工资组。</em>在雇佣 一组 <code>k</code> 名工人时，我们必须按照下述规则向他们支付工资：</p>
+<p>现在我们想雇佣 <code>k</code> 名工人组成一个 <strong>工资组</strong><em>。</em>在雇佣 一组 <code>k</code> 名工人时，我们必须按照下述规则向他们支付工资：</p>
 <ol>
 <li>对工资组中的每名工人，应当按其工作质量与同组其他工人的工作质量的比例来支付工资。</li>
 <li>工资组中的每名工人至少应当得到他们的最低期望工资。</li>
 </ol>
-<p>给定整数 <code>k</code> ，返回 <em>组成满足上述条件的付费群体所需的最小金额 </em>。在实际答案的 <code>10<sup>-5</sup></code> 以内的答案将被接受。。</p>
+<p>给定整数 <code>k</code> ，返回 <em>组成满足上述条件的付费群体所需的最小金额 </em>。与实际答案误差相差在 <code>10<sup>-5</sup></code> 以内的答案将被接受。</p>
 <ol>
 </ol>
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 <pre>
 <strong>输入： </strong>quality = [10,20,5], wage = [70,50,30], k = 2
 <strong>输出： </strong>105.00000
 <strong>解释：</strong> 我们向 0 号工人支付 70，向 2 号工人支付 35。</pre>
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 <pre>
 <strong>输入： </strong>quality = [3,1,10,10,1], wage = [4,8,2,2,7], k = 3
 <strong>输出： </strong>30.66667
@@ -244,8 +244,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0862/" class="prev" rel="prev" title="0862：和至少为 K 的最短子数组（★★★）"><i class="fas fa-angle-left fa-fw"></i>0862：和至少为 K 的最短子数组（★★★）</a>
-            <a href="/leetcode/0856/" class="next" rel="next" title="0856：括号的分数（★）">0856：括号的分数（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0862/" class="prev" rel="prev" title="0862：和至少为 K 的最短子数组（2306 分）"><i class="fas fa-angle-left fa-fw"></i>0862：和至少为 K 的最短子数组（2306 分）</a>
+            <a href="/leetcode/0856/" class="next" rel="next" title="0856：括号的分数（1562 分）">0856：括号的分数（1562 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

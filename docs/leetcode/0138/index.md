@@ -1,4 +1,4 @@
-# 0138：复制带随机指针的链表（★）
+# 0138：随机链表的复制（★）
 
 
 > <u>**[力扣第 138 题](https://leetcode.cn/problems/copy-list-with-random-pointer/)**</u>
@@ -24,7 +24,7 @@
 
 
 
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 
 <p><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e1.png" style="height: 142px; width: 700px;" /></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>[[7,null],[13,0],[11,4],[10,2],[1,0]]
 </pre>
 
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 
 <p><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e2.png" style="height: 114px; width: 700px;" /></p>
 
@@ -42,7 +42,7 @@
 <strong>输出：</strong>[[1,1],[2,1]]
 </pre>
 
-<p><strong>示例 3：</strong></p>
+<p><strong class="example">示例 3：</strong></p>
 
 <p><strong><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e3.png" style="height: 122px; width: 700px;" /></strong></p>
 
@@ -60,6 +60,8 @@
 <li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 <li><code>Node.random</code> 为 <code>null</code> 或指向链表中的节点。</li>
 </ul>
+
+
 
 
 ## 分析

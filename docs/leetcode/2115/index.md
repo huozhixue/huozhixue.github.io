@@ -1,4 +1,4 @@
-# 2115：从给定原材料中找到所有可以做出的菜（★）
+# 2115：从给定原材料中找到所有可以做出的菜（1678 分）
 
 
 > <u>**[力扣第 68 场双周赛第 2 题](https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/)**</u>

@@ -1,4 +1,4 @@
-# 0989：数组形式的整数加法
+# 0989：数组形式的整数加法（1234 分）
 
 
 > <u>**[力扣第 123 场周赛第 1 题](https://leetcode.cn/problems/add-to-array-form-of-integer/)**</u>

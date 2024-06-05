@@ -1,4 +1,4 @@
-# 1473：粉刷房子 III（★★）
+# 1473：粉刷房子 III（2056 分）
 
 
 > <u>**[力扣第 192 场周赛第 4 题](https://leetcode.cn/problems/paint-house-iii/)**</u>

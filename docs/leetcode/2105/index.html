@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>2105：给植物浇水 II（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/2105/">
+        <title>2105：给植物浇水 II（1507 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/2105/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="2105：给植物浇水 II（★）">
+  <meta property="og:title" content="2105：给植物浇水 II（1507 分）">
   <meta property="og:description" content="力扣第 271 场周赛第 3 题 题目 Alice 和 Bob 打算给花园里的 n 株植物浇水。植物排成一行，从左到右进行标记，编号从 0 到 n - 1 。其中，第 i 株植物的位置是 x = i 。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="2105：给植物浇水 II（★）">
+  <meta name="twitter:title" content="2105：给植物浇水 II（1507 分）">
   <meta name="twitter:description" content="力扣第 271 场周赛第 3 题 题目 Alice 和 Bob 打算给花园里的 n 株植物浇水。植物排成一行，从左到右进行标记，编号从 0 到 n - 1 。其中，第 i 株植物的位置是 x = i 。">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "2105：给植物浇水 II（★）",
+        "headline": "2105：给植物浇水 II（1507 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/2105\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  970 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  966 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/2105\/","datePublished": "2021-12-12T10:50:00+08:00","dateModified": "2021-12-12T10:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">2105：给植物浇水 II（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">2105：给植物浇水 II（1507 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-12">2021-12-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 970 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2105/" class="leancloud_visitors" data-flag-title="2105：给植物浇水 II（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-12">2021-12-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 966 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/2105/" class="leancloud_visitors" data-flag-title="2105：给植物浇水 II（1507 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -137,11 +137,9 @@
 <p>每一株植物都需要浇特定量的水。Alice 和 Bob 每人有一个水罐，<strong>最初是满的 </strong>。他们按下面描述的方式完成浇水：</p>
 <ul>
 <li> Alice 按 <strong>从左到右</strong> 的顺序给植物浇水，从植物 <code>0</code> 开始。Bob 按 <strong>从右到左</strong> 的顺序给植物浇水，从植物 <code>n - 1</code> 开始。他们 <strong>同时</strong> 给植物浇水。</li>
-<li>如果没有足够的水 <strong>完全</strong> 浇灌下一株植物，他 / 她会立即重新灌满浇水罐。</li>
-<li>不管植物需要多少水，浇水所耗费的时间都是一样的。</li>
-<li><strong>不能</strong> 提前重新灌满水罐。</li>
-<li>每株植物都可以由 Alice 或者 Bob 来浇水。</li>
-<li>如果 Alice 和 Bob 到达同一株植物，那么当前水罐中水更多的人会给这株植物浇水。如果他俩水量相同，那么 Alice 会给这株植物浇水。</li>
+<li>无论需要多少水，为每株植物浇水所需的时间都是相同的。</li>
+<li>如果 Alice/Bob 水罐中的水足以 <strong>完全</strong> 灌溉植物，他们 <strong>必须</strong> 给植物浇水。否则，他们 <strong>首先</strong>（立即）重新装满罐子，然后给植物浇水。</li>
+<li>如果 Alice 和 Bob 到达同一株植物，那么当前水罐中水 <strong>更多</strong> 的人会给这株植物浇水。如果他俩水量相同，那么 Alice 会给这株植物浇水。</li>
 </ul>
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>plants</code> ，数组由 <code>n</code> 个整数组成。其中，<code>plants[i]</code> 为第 <code>i</code> 株植物需要的水量。另有两个整数 <code>capacityA</code> 和 <code>capacityB</code> 分别表示 Alice 和 Bob 水罐的容量。返回两人浇灌所有植物过程中重新灌满水罐的 <strong>次数</strong> 。</p>
 <p><strong>示例 1：</strong></p>
@@ -242,8 +240,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/2115/" class="prev" rel="prev" title="2115：从给定原材料中找到所有可以做出的菜（★）"><i class="fas fa-angle-left fa-fw"></i>2115：从给定原材料中找到所有可以做出的菜（★）</a>
-            <a href="/leetcode/2097/" class="next" rel="next" title="2097：合法重新排列数对（★★★★）">2097：合法重新排列数对（★★★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/2115/" class="prev" rel="prev" title="2115：从给定原材料中找到所有可以做出的菜（1678 分）"><i class="fas fa-angle-left fa-fw"></i>2115：从给定原材料中找到所有可以做出的菜（1678 分）</a>
+            <a href="/leetcode/2097/" class="next" rel="next" title="2097：合法重新排列数对（2650 分）">2097：合法重新排列数对（2650 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

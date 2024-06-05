@@ -1,4 +1,4 @@
-# 0959：由斜杠划分区域（★★）
+# 0959：由斜杠划分区域（2135 分）
 
 
 > <u>**[力扣第 115 场周赛第 3 题](https://leetcode.cn/problems/regions-cut-by-slashes/)**</u>

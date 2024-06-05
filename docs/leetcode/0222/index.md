@@ -1,4 +1,4 @@
-# 0222：完全二叉树的节点个数（★）
+# 0222：完全二叉树的节点个数
 
 
 > <u>**[力扣第 222 题](https://leetcode.cn/problems/count-complete-tree-nodes/)**</u>
@@ -56,6 +56,7 @@
 - 因此可以二分查找 x 是否存在
 - 判断序号 x 是否存在，可以按 x 的二进制遍历树
 
+## 解答
 
 ```python
 class Solution:

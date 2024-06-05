@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0973：最接近原点的 K 个点 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0973/">
+        <title>0973：最接近原点的 K 个点（1213 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0973/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0973：最接近原点的 K 个点">
+  <meta property="og:title" content="0973：最接近原点的 K 个点（1213 分）">
   <meta property="og:description" content="力扣第 119 场周赛第 1 题 题目 给定一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点，并且是一个整数 k ，返回离原点 (0,0) 最近的 k 个点。 这里，平面上两点之间的">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0973：最接近原点的 K 个点">
+  <meta name="twitter:title" content="0973：最接近原点的 K 个点（1213 分）">
   <meta name="twitter:description" content="力扣第 119 场周赛第 1 题 题目 给定一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点，并且是一个整数 k ，返回离原点 (0,0) 最近的 k 个点。 这里，平面上两点之间的">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,7 +28,7 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0973：最接近原点的 K 个点",
+        "headline": "0973：最接近原点的 K 个点（1213 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0973：最接近原点的 K 个点</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0973：最接近原点的 K 个点（1213 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-01-13">2019-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 349 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0973/" class="leancloud_visitors" data-flag-title="0973：最接近原点的 K 个点">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0973/" class="leancloud_visitors" data-flag-title="0973：最接近原点的 K 个点（1213 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -136,7 +136,7 @@
 <p>给定一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示 <strong>X-Y</strong> 平面上的一个点，并且是一个整数 <code>k</code> ，返回离原点 <code>(0,0)</code> 最近的 <code>k</code> 个点。</p>
 <p>这里，平面上两点之间的距离是 <strong>欧几里德距离</strong>（ <code>√(x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup></code> ）。</p>
 <p>你可以按 <strong>任何顺序</strong> 返回答案。除了点坐标的顺序之外，答案 <strong>确保</strong> 是 <strong>唯一</strong> 的。</p>
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/03/03/closestplane1.jpg" style="height: 400px; width: 400px;" /></p>
 <pre>
 <strong>输入：</strong>points = [[1,3],[-2,2]], k = 1
@@ -147,7 +147,7 @@
 由于 sqrt(8) &lt; sqrt(10)，(-2, 2) 离原点更近。
 我们只需要距离原点最近的 K = 1 个点，所以答案就是 [[-2,2]]。
 </pre>
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 <pre>
 <strong>输入：</strong>points = [[3,3],[5,-1],[-2,4]], k = 2
 <strong>输出：</strong>[[3,3],[-2,4]]
@@ -197,8 +197,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0974/" class="prev" rel="prev" title="0974：和可被 K 整除的子数组（★）"><i class="fas fa-angle-left fa-fw"></i>0974：和可被 K 整除的子数组（★）</a>
-            <a href="/leetcode/0966/" class="next" rel="next" title="0966：元音拼写检查器（★）">0966：元音拼写检查器（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0974/" class="prev" rel="prev" title="0974：和可被 K 整除的子数组（1675 分）"><i class="fas fa-angle-left fa-fw"></i>0974：和可被 K 整除的子数组（1675 分）</a>
+            <a href="/leetcode/0966/" class="next" rel="next" title="0966：元音拼写检查器（1795 分）">0966：元音拼写检查器（1795 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

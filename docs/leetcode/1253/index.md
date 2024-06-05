@@ -1,4 +1,4 @@
-# 1253：重构 2 行二进制矩阵（★）
+# 1253：重构 2 行二进制矩阵（1505 分）
 
 
 > <u>**[力扣第 162 场周赛第 2 题](https://leetcode.cn/problems/reconstruct-a-2-row-binary-matrix/)**</u>

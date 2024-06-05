@@ -1,4 +1,4 @@
-# 0406：根据身高重建队列（★★）
+# 0406：根据身高重建队列（★）
 
 
 > <u>**[力扣第 406 题](https://leetcode.cn/problems/queue-reconstruction-by-height/)**</u>

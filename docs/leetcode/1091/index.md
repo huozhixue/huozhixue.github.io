@@ -1,4 +1,4 @@
-# 1091：二进制矩阵中的最短路径（★）
+# 1091：二进制矩阵中的最短路径（1658 分）
 
 
 > <u>**[力扣第 141 场周赛第 3 题](https://leetcode.cn/problems/shortest-path-in-binary-matrix/)**</u>
@@ -10,7 +10,7 @@
 <p>二进制矩阵中的 畅通路径 是一条从 <strong>左上角</strong> 单元格（即，<code>(0, 0)</code>）到 右下角 单元格（即，<code>(n - 1, n - 1)</code>）的路径，该路径同时满足下述要求：</p>
 
 <ul>
-<li>路径途经的所有单元格都的值都是 <code>0</code> 。</li>
+<li>路径途经的所有单元格的值都是 <code>0</code> 。</li>
 <li>路径中所有相邻的单元格应当在 <strong>8 个方向之一</strong> 上连通（即，相邻两单元之间彼此不同且共享一条边或者一个角）。</li>
 </ul>
 
@@ -46,7 +46,7 @@
 <ul>
 <li><code>n == grid.length</code></li>
 <li><code>n == grid[i].length</code></li>
-<li><code>1 <= n <= 100</code></li>
+<li><code>1 &lt;= n &lt;= 100</code></li>
 <li><code>grid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
 </ul>
 

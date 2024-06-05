@@ -1,4 +1,4 @@
-# 2367：算术三元组的数目
+# 2367：算术三元组的数目（1203 分）
 
 
 > <u>**[力扣第 305 场周赛第 1 题](https://leetcode.cn/problems/number-of-arithmetic-triplets/)**</u>

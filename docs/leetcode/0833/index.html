@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0833：字符串中的查找与替换（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0833/">
+        <title>0833：字符串中的查找与替换（1460 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0833/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0833：字符串中的查找与替换（★）">
+  <meta property="og:title" content="0833：字符串中的查找与替换（1460 分）">
   <meta property="og:description" content="力扣第 84 场周赛第 2 题 题目 你会得到一个字符串 s (索引从 0 开始)，你必须对它执行 k 个替换操作。替换操作以三个长度均为 k 的并行数组给出：indic">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0833：字符串中的查找与替换（★）">
+  <meta name="twitter:title" content="0833：字符串中的查找与替换（1460 分）">
   <meta name="twitter:description" content="力扣第 84 场周赛第 2 题 题目 你会得到一个字符串 s (索引从 0 开始)，你必须对它执行 k 个替换操作。替换操作以三个长度均为 k 的并行数组给出：indic">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,7 +28,7 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0833：字符串中的查找与替换（★）",
+        "headline": "0833：字符串中的查找与替换（1460 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0833：字符串中的查找与替换（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0833：字符串中的查找与替换（1460 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-13">2018-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 596 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0833/" class="leancloud_visitors" data-flag-title="0833：字符串中的查找与替换（★）">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0833/" class="leancloud_visitors" data-flag-title="0833：字符串中的查找与替换（1460 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -148,17 +148,17 @@
 <p><em>在对 <code>s</code> 执行所有替换操作后返回 <strong>结果字符串</strong> 。</em></p>
 <p><strong>子字符串</strong> 是字符串中连续的字符序列。</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/06/12/833-ex1.png" style="height: 251px; width: 411px;" /></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/06/12/833-ex1.png" /></p>
 <pre>
-<strong>输入：</strong>s = "abcd", indexes = [0,2], sources = ["a","cd"], targets = ["eee","ffff"]
+<strong>输入：</strong>s = "abcd", indices = [0,2], sources = ["a","cd"], targets = ["eee","ffff"]
 <strong>输出：</strong>"eeebffff"
 <strong>解释：
 </strong>"a" 从 s 中的索引 0 开始，所以它被替换为 "eee"。
 "cd" 从 s 中的索引 2 开始，所以它被替换为 "ffff"。
 </pre>
-<p><strong>示例 2：</strong><img src="https://assets.leetcode.com/uploads/2021/06/12/833-ex2-1.png" style="height: 251px; width: 411px;" /></p>
+<p><strong>示例 2：</strong><img src="https://assets.leetcode.com/uploads/2021/06/12/833-ex2-1.png" /></p>
 <pre>
-<strong>输入：</strong>s = "abcd", indexes = [0,2], sources = ["ab","ec"], targets = ["eee","ffff"]
+<strong>输入：</strong>s = "abcd", indices = [0,2], sources = ["ab","ec"], targets = ["eee","ffff"]
 <strong>输出：</strong>"eeecd"
 <strong>解释：
 </strong>"ab" 从 s 中的索引 0 开始，所以它被替换为 "eee"。
@@ -169,7 +169,7 @@
 <li><code>1 &lt;= s.length &lt;= 1000</code></li>
 <li><code>k == indices.length == sources.length == targets.length</code></li>
 <li><code>1 &lt;= k &lt;= 100</code></li>
-<li><code>0 &lt;= indexes[i] &lt; s.length</code></li>
+<li><code>0 &lt;= indices[i] &lt; s.length</code></li>
 <li><code>1 &lt;= sources[i].length, targets[i].length &lt;= 50</code></li>
 <li><code>s</code> 仅由小写英文字母组成</li>
 <li><code>sources[i]</code> 和 <code>targets[i]</code> 仅由小写英文字母组成</li>
@@ -221,8 +221,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0835/" class="prev" rel="prev" title="0835：图像重叠（★★）"><i class="fas fa-angle-left fa-fw"></i>0835：图像重叠（★★）</a>
-            <a href="/leetcode/0832/" class="next" rel="next" title="0832：翻转图像">0832：翻转图像<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0835/" class="prev" rel="prev" title="0835：图像重叠（1969 分）"><i class="fas fa-angle-left fa-fw"></i>0835：图像重叠（1969 分）</a>
+            <a href="/leetcode/0832/" class="next" rel="next" title="0832：翻转图像（1243 分）">0832：翻转图像（1243 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -1,4 +1,4 @@
-# 0973：最接近原点的 K 个点
+# 0973：最接近原点的 K 个点（1213 分）
 
 
 > <u>**[力扣第 119 场周赛第 1 题](https://leetcode.cn/problems/k-closest-points-to-origin/)**</u>
@@ -13,7 +13,7 @@
 
 
 
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 
 <p><img src="https://assets.leetcode.com/uploads/2021/03/03/closestplane1.jpg" style="height: 400px; width: 400px;" /></p>
 
@@ -27,7 +27,7 @@
 我们只需要距离原点最近的 K = 1 个点，所以答案就是 [[-2,2]]。
 </pre>
 
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 
 <pre>
 <strong>输入：</strong>points = [[3,3],[5,-1],[-2,4]], k = 2

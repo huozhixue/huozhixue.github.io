@@ -1,4 +1,4 @@
-# 1591：奇怪的打印机 II（★★★）
+# 1591：奇怪的打印机 II（2290 分）
 
 
 > <u>**[力扣第 35 场双周赛第 4 题](https://leetcode.cn/problems/strange-printer-ii/)**</u>

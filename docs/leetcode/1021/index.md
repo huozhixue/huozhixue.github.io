@@ -1,4 +1,4 @@
-# 1021：删除最外层的括号
+# 1021：删除最外层的括号（1311 分）
 
 
 > <u>**[力扣第 131 场周赛第 1 题](https://leetcode.cn/problems/remove-outermost-parentheses/)**</u>

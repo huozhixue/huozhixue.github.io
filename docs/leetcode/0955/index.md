@@ -1,4 +1,4 @@
-# 0955：删列造序 II（★★）
+# 0955：删列造序 II（1876 分）
 
 
 > <u>**[力扣第 114 场周赛第 3 题](https://leetcode.cn/problems/delete-columns-to-make-sorted-ii/)**</u>

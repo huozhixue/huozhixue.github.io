@@ -1,4 +1,4 @@
-# 2266：统计打字方案数（★★）
+# 2266：统计打字方案数（1856 分）
 
 
 > <u>**[力扣第 292 场周赛第 3 题](https://leetcode.cn/problems/count-number-of-texts/)**</u>

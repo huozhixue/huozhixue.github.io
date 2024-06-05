@@ -1,4 +1,4 @@
-# 1995：统计特殊四元组
+# 1995：统计特殊四元组（1352 分）
 
 
 > <u>**[力扣第 257 场周赛第 1 题](https://leetcode.cn/problems/count-special-quadruplets/)**</u>

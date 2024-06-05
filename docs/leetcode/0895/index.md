@@ -1,4 +1,4 @@
-# 0895：最大频率栈（★★）
+# 0895：最大频率栈（2027 分）
 
 
 > <u>**[力扣第 99 场周赛第 4 题](https://leetcode.cn/problems/maximum-frequency-stack/)**</u>

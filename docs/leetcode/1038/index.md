@@ -1,4 +1,4 @@
-# 1038：从二叉搜索树到更大和树
+# 1038：从二叉搜索树到更大和树（1374 分）
 
 
 > <u>**[力扣第 135 场周赛第 2 题](https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/)**</u>

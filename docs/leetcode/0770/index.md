@@ -1,4 +1,4 @@
-# 0770：基本计算器 IV（★★★★）
+# 0770：基本计算器 IV（2863 分）
 
 
 > <u>**[力扣第 770 题](https://leetcode.cn/problems/basic-calculator-iv/)**</u>

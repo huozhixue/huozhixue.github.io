@@ -1,6 +1,7 @@
 # 0506：相对名次
 
 
+
 > <u>**[力扣第 506 题](https://leetcode.cn/problems/relative-ranks/)**</u>
 
 ## 题目

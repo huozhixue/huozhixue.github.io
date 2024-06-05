@@ -1,4 +1,4 @@
-# 2739：总行驶距离
+# 2739：总行驶距离（1262 分）
 
 
 > <u>**[力扣第 350 场周赛第 1 题](https://leetcode.cn/problems/total-distance-traveled/)**</u>

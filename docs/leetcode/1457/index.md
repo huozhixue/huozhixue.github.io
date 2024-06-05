@@ -1,4 +1,4 @@
-# 1457：二叉树中的伪回文路径（★）
+# 1457：二叉树中的伪回文路径（1405 分）
 
 
 > <u>**[力扣第 190 场周赛第 3 题](https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/)**</u>

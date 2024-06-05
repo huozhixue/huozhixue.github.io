@@ -1,4 +1,4 @@
-# 0799：香槟塔（★★）
+# 0799：香槟塔（1855 分）
 
 
 > <u>**[力扣第 799 题](https://leetcode.cn/problems/champagne-tower/)**</u>

@@ -1,4 +1,4 @@
-# 0753：破解保险箱（★★★）
+# 0753：破解保险箱（2273 分）
 
 
 > <u>**[力扣第 753 题](https://leetcode.cn/problems/cracking-the-safe/)**</u>

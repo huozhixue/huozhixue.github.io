@@ -1,11 +1,13 @@
-# 0395：至少有 K 个重复字符的最长子串（★★）
+# 0395：至少有 K 个重复字符的最长子串（★）
 
 
 > <u>**[力扣第 395 题](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/)**</u>
 
 ## 题目
 
-<p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> ，请你找出 <code>s</code> 中的最长子串， 要求该子串中的每一字符出现次数都不少于 <code>k</code> 。返回这一子串的长度。</p>
+<p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> ，请你找出 <code>s</code> 中的最长子串， 要求该子串中的每一字符出现次数都不少于 <code>k</code> 。返回这一子串的长度。</p>
+
+<p data-pm-slice="1 1 []">如果不存在这样的子字符串，则返回 0。</p>
 
 
 
@@ -29,9 +31,9 @@
 <p><strong>提示：</strong></p>
 
 <ul>
-<li><code>1 <= s.length <= 10<sup>4</sup></code></li>
+<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
 <li><code>s</code> 仅由小写英文字母组成</li>
-<li><code>1 <= k <= 10<sup>5</sup></code></li>
+<li><code>1 &lt;= k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
 

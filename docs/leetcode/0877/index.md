@@ -1,4 +1,4 @@
-# 0877：石子游戏（★）
+# 0877：石子游戏（1590 分）
 
 
 > <u>**[力扣第 95 场周赛第 2 题](https://leetcode.cn/problems/stone-game/)**</u>

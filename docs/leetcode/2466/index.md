@@ -1,4 +1,4 @@
-# 2466：统计构造好字符串的方案数（★）
+# 2466：统计构造好字符串的方案数（1694 分）
 
 
 > <u>**[力扣第 91 场双周赛第 2 题](https://leetcode.cn/problems/count-ways-to-build-good-strings/)**</u>

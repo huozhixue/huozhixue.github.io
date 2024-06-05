@@ -1,4 +1,4 @@
-# 1997：访问完所有房间的第一天（★★★）
+# 1997：访问完所有房间的第一天（2260 分）
 
 
 > <u>**[力扣第 257 场周赛第 3 题](https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms/)**</u>

@@ -1,4 +1,4 @@
-# 1157：子数组中占绝大多数的元素（★★★）
+# 1157：子数组中占绝大多数的元素（2205 分）
 
 
 > <u>**[力扣第 149 场周赛第 4 题](https://leetcode.cn/problems/online-majority-element-in-subarray/)**</u>

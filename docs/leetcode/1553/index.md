@@ -1,4 +1,4 @@
-# 1553：吃掉 N 个橘子的最少天数（★★）
+# 1553：吃掉 N 个橘子的最少天数（2048 分）
 
 
 > <u>**[力扣第 202 场周赛第 4 题](https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/)**</u>

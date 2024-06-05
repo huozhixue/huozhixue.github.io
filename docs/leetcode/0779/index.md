@@ -1,4 +1,4 @@
-# 0779：第K个语法符号（★）
+# 0779：第K个语法符号（1571 分）
 
 
 > <u>**[力扣第 779 题](https://leetcode.cn/problems/k-th-symbol-in-grammar/)**</u>

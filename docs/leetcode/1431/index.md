@@ -1,4 +1,4 @@
-# 1431：拥有最多糖果的孩子
+# 1431：拥有最多糖果的孩子（1176 分）
 
 
 > <u>**[力扣第 25 场双周赛第 1 题](https://leetcode.cn/problems/kids-with-the-greatest-number-of-candies/)**</u>

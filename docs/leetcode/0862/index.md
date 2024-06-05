@@ -1,4 +1,4 @@
-# 0862：和至少为 K 的最短子数组（★★★）
+# 0862：和至少为 K 的最短子数组（2306 分）
 
 
 > <u>**[力扣第 91 场周赛第 4 题](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)**</u>

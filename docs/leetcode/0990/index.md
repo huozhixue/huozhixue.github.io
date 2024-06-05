@@ -1,4 +1,4 @@
-# 0990：等式方程的可满足性（★）
+# 0990：等式方程的可满足性（1638 分）
 
 
 > <u>**[力扣第 123 场周赛第 2 题](https://leetcode.cn/problems/satisfiability-of-equality-equations/)**</u>

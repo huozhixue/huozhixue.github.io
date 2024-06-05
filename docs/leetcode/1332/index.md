@@ -1,4 +1,4 @@
-# 1332：删除回文子序列（★）
+# 1332：删除回文子序列（1628 分）
 
 
 > <u>**[力扣第 173 场周赛第 1 题](https://leetcode.cn/problems/remove-palindromic-subsequences/)**</u>

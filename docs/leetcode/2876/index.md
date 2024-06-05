@@ -1,4 +1,4 @@
-# 2876：有向图访问计数（★★★）
+# 2876：有向图访问计数（2209 分）
 
 
 > <u>**[力扣第 365 场周赛第 4 题](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/)**</u>

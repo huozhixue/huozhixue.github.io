@@ -1,4 +1,4 @@
-# 0164：最大间距（★★）
+# 0164：最大间距（★）
 
 
 > <u>**[力扣第 164 题](https://leetcode.cn/problems/maximum-gap/)**</u>

@@ -1,4 +1,4 @@
-# 1510：石子游戏 IV（★）
+# 1510：石子游戏 IV（1786 分）
 
 
 > <u>**[力扣第 30 场双周赛第 4 题](https://leetcode.cn/problems/stone-game-iv/)**</u>

@@ -5,7 +5,7 @@
 
 ## 题目
 
-<p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长子串 </strong>的长度。</p>
+<p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长 <span data-keyword="substring-nonempty">子串</span></strong><strong> </strong>的长度。</p>
 
 
 
@@ -14,7 +14,7 @@
 <pre>
 <strong>输入: </strong>s = "abcabcbb"
 <strong>输出: </strong>3
-<strong>解释:</strong> 因为无重复字符的最长子串是 <code>"abc"，所以其</code>长度为 3。
+<strong>解释:</strong> 因为无重复字符的最长子串是 <code>"abc"</code>，所以其长度为 3。
 </pre>
 
 <p><strong>示例 2:</strong></p>

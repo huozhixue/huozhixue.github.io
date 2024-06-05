@@ -1,4 +1,4 @@
-# 0889：根据前序和后序遍历构造二叉树（★）
+# 0889：根据前序和后序遍历构造二叉树（1731 分）
 
 
 > <u>**[力扣第 98 场周赛第 3 题](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)**</u>

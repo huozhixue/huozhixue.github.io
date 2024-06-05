@@ -1,4 +1,4 @@
-# 2183：统计可以被 K 整除的下标对数目（★★★）
+# 2183：统计可以被 K 整除的下标对数目（2246 分）
 
 
 > <u>**[力扣第 281 场周赛第 4 题](https://leetcode.cn/problems/count-array-pairs-divisible-by-k/)**</u>

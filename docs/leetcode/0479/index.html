@@ -10,7 +10,7 @@
         <title>0479：最大回文数乘积（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0479/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0479：最大回文数乘积（★★）">
-  <meta property="og:description" content="力扣第 479 题 题目 给定一个整数 n ，返回 可表示为两个 n 位整数乘积的 最大回文整数 。因为答案可能非常大，所以返回它对 1337 取余 。 示例 1: 输入：n = 2 输出：9">
+  <meta property="og:description" content="力扣第 479 题 题目 给定一个整数 n ，返回 可表示为两个 n 位整数乘积的 最大回文整数 。因为答案可能非常大，所以返回它对 1337 取余 。 示例 1： 输入：n = 2 输出：">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0479：最大回文数乘积（★★）">
-  <meta name="twitter:description" content="力扣第 479 题 题目 给定一个整数 n ，返回 可表示为两个 n 位整数乘积的 最大回文整数 。因为答案可能非常大，所以返回它对 1337 取余 。 示例 1: 输入：n = 2 输出：9">
+  <meta name="twitter:description" content="力扣第 479 题 题目 给定一个整数 n ，返回 可表示为两个 n 位整数乘积的 最大回文整数 。因为答案可能非常大，所以返回它对 1337 取余 。 示例 1： 输入：n = 2 输出：">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0479/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0478/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0480/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0479\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  314 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  316 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0479\/","datePublished": "2016-04-23T00:00:00+08:00","dateModified": "2016-04-23T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0479：最大回文数乘积（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-23">2016-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 314 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-23">2016-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 316 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0479/" class="leancloud_visitors" data-flag-title="0479：最大回文数乘积（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -134,16 +134,16 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>给定一个整数 n ，返回 <em>可表示为两个 <code>n</code> 位整数乘积的 <strong>最大回文整数</strong></em> 。因为答案可能非常大，所以返回它对 <code>1337</code> <strong>取余</strong> 。</p>
-<p><strong>示例 1:</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 <pre>
-<b>输入：</b>n = 2
-<b>输出：</b>987
+<strong>输入：</strong>n = 2
+<strong>输出：</strong>987
 <strong>解释：</strong>99 x 91 = 9009, 9009 % 1337 = 987
 </pre>
-<p><strong>示例 2:</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 <pre>
-<strong>输入：</strong> n = 1
-<strong>输出：</strong> 9
+<strong>输入：</strong>n = 1
+<strong>输出：</strong>9
 </pre>
 <p><strong>提示:</strong></p>
 <ul>

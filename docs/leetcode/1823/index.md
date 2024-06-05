@@ -1,4 +1,4 @@
-# 1823：找出游戏的获胜者（★）
+# 1823：找出游戏的获胜者（1412 分）
 
 
 > <u>**[力扣第 236 场周赛第 2 题](https://leetcode.cn/problems/find-the-winner-of-the-circular-game/)**</u>

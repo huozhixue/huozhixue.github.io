@@ -1,4 +1,4 @@
-# 1140：石子游戏 II（★★）
+# 1140：石子游戏 II（2034 分）
 
 
 > <u>**[力扣第 147 场周赛第 4 题](https://leetcode.cn/problems/stone-game-ii/)**</u>

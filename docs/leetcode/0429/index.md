@@ -11,7 +11,7 @@
 
 
 
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 
 <p><img src="https://assets.leetcode.com/uploads/2018/10/12/narytreeexample.png" style="width: 100%; max-width: 300px;" /></p>
 
@@ -20,7 +20,7 @@
 <strong>输出：</strong>[[1],[3,2,4],[5,6]]
 </pre>
 
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 
 <p><img alt="" src="https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png" style="width: 296px; height: 241px;" /></p>
 
@@ -34,8 +34,8 @@
 <p><strong>提示：</strong></p>
 
 <ul>
-<li>树的高度不会超过 <code>1000</code></li>
-<li>树的节点总数在 <code>[0, 10^4]</code> 之间</li>
+<li>树的高度不会超过 <code>1000</code></li>
+<li>树的节点总数在 <code>[0, 10<sup>4</sup>]</code> 之间</li>
 </ul>
 
 

@@ -1,4 +1,4 @@
-# 0830：较大分组的位置
+# 0830：较大分组的位置（1251 分）
 
 
 > <u>**[力扣第 83 场周赛第 1 题](https://leetcode.cn/problems/positions-of-large-groups/)**</u>

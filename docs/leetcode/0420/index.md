@@ -1,4 +1,4 @@
-# 0420：强密码检验器（★★★）
+# 0420：强密码检验器（★★）
 
 
 > <u>**[力扣第 420 题](https://leetcode.cn/problems/strong-password-checker/)**</u>

@@ -1,4 +1,4 @@
-# 1707：与数组中元素的最大异或值（★★★）
+# 1707：与数组中元素的最大异或值（2358 分）
 
 
 > <u>**[力扣第 221 场周赛第 4 题](https://leetcode.cn/problems/maximum-xor-with-an-element-from-array/)**</u>

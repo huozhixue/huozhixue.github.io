@@ -1,4 +1,4 @@
-# 0966：元音拼写检查器（★）
+# 0966：元音拼写检查器（1795 分）
 
 
 > <u>**[力扣第 117 场周赛第 3 题](https://leetcode.cn/problems/vowel-spellchecker/)**</u>

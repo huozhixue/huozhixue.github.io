@@ -10,7 +10,7 @@
         <title>0262：行程和用户（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0262/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0262：行程和用户（★★）">
-  <meta property="og:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | &#43;-------------&#43;----------&#43; id 是这张表的主键。 这张表中存所有出">
+  <meta property="og:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | &#43;-------------&#43;----------&#43; id 是这张表的主键（具有唯一值的列）">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0262：行程和用户（★★）">
-  <meta name="twitter:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | &#43;-------------&#43;----------&#43; id 是这张表的主键。 这张表中存所有出">
+  <meta name="twitter:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | &#43;-------------&#43;----------&#43; id 是这张表的主键（具有唯一值的列）">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0262/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0261/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0263/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0262\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1138 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1151 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0262\/","datePublished": "2015-09-19T00:00:00+08:00","dateModified": "2015-09-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0262：行程和用户（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-19">2015-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1138 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-19">2015-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1151 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0262/" class="leancloud_visitors" data-flag-title="0262：行程和用户（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -147,7 +147,7 @@
 | status      | enum     |
 | request_at  | date     |
 +-------------+----------+
-id 是这张表的主键。
+id 是这张表的主键（具有唯一值的列）。
 这张表中存所有出租车的行程信息。每段行程有唯一 id ，其中 client_id 和 driver_id 是 Users 表中 users_id 的外键。
 status 是一个表示行程状态的枚举类型，枚举成员为(‘completed’, ‘cancelled_by_driver’, ‘cancelled_by_client’) 。
 </pre>
@@ -164,15 +164,15 @@ status 是一个表示行程状态的枚举类型，枚举成员为(‘completed
 | banned      | enum     |
 | role        | enum     |
 +-------------+----------+
-users_id 是这张表的主键。
+users_id 是这张表的主键（具有唯一值的列）。
 这张表中存所有用户，每个用户都有一个唯一的 users_id ，role 是一个表示用户身份的枚举类型，枚举成员为 (‘client’, ‘driver’, ‘partner’) 。
 banned 是一个表示用户是否被禁止的枚举类型，枚举成员为 (‘Yes’, ‘No’) 。
 </pre>
 <p><strong>取消率</strong> 的计算方式如下：(被司机或乘客取消的非禁止用户生成的订单数量) / (非禁止用户生成的订单总数)。</p>
-<p>写一段 SQL 语句查出 <code>"2013-10-01"</code><strong> </strong>至 <code>"2013-10-03"</code><strong> </strong>期间非禁止用户（<strong>乘客和司机都必须未被禁止</strong>）的取消率。非禁止用户即 banned 为 No 的用户，禁止用户即 banned 为 Yes 的用户。</p>
-<p>返回结果表中的数据可以按任意顺序组织。其中取消率 <code>Cancellation Rate</code> 需要四舍五入保留 <strong>两位小数</strong> 。</p>
-<p>查询结果格式如下例所示。</p>
-<p><strong>示例：</strong></p>
+<p>编写解决方案找出 <code>"2013-10-01"</code><strong> </strong>至 <code>"2013-10-03"</code><strong> </strong>期间非禁止用户（<strong>乘客和司机都必须未被禁止</strong>）的取消率。非禁止用户即 banned 为 No 的用户，禁止用户即 banned 为 Yes 的用户。其中取消率 <code>Cancellation Rate</code> 需要四舍五入保留 <strong>两位小数</strong> 。</p>
+<p>返回结果表中的数据 <strong>无顺序要求</strong> 。</p>
+<p>结果格式如下例所示。</p>
+<p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>
 Trips 表：
@@ -190,7 +190,6 @@ Trips 表：
 | 9  | 3         | 10        | 12      | completed           | 2013-10-03 |
 | 10 | 4         | 13        | 12      | cancelled_by_driver | 2013-10-03 |
 +----+-----------+-----------+---------+---------------------+------------+
-
 Users 表：
 +----------+--------+--------+
 | users_id | banned | role   |

@@ -1,4 +1,4 @@
-# 1249：移除无效的括号（★）
+# 1249：移除无效的括号（1657 分）
 
 
 > <u>**[力扣第 161 场周赛第 3 题](https://leetcode.cn/problems/minimum-remove-to-make-valid-parentheses/)**</u>

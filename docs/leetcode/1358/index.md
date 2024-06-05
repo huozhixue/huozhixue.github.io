@@ -1,4 +1,4 @@
-# 1358：包含所有三种字符的子字符串数目（★）
+# 1358：包含所有三种字符的子字符串数目（1646 分）
 
 
 > <u>**[力扣第 20 场双周赛第 3 题](https://leetcode.cn/problems/number-of-substrings-containing-all-three-characters/)**</u>

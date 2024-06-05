@@ -1,4 +1,4 @@
-# 2915：和为目标值的最长子序列的长度（★）
+# 2915：和为目标值的最长子序列的长度（1658 分）
 
 
 > <u>**[力扣第 116 场双周赛第 3 题](https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target/)**</u>

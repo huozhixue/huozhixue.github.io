@@ -1,4 +1,4 @@
-# 1686：石子游戏 VI（★★）
+# 1686：石子游戏 VI（2000 分）
 
 
 > <u>**[力扣第 41 场双周赛第 3 题](https://leetcode.cn/problems/stone-game-vi/)**</u>

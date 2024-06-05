@@ -1,4 +1,4 @@
-# 2902：和带限制的子多重集合的数目（★★★★）
+# 2902：和带限制的子多重集合的数目（2758 分）
 
 
 > <u>**[力扣第 115 场双周赛第 4 题](https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/)**</u>

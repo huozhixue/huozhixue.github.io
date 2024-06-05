@@ -1,4 +1,4 @@
-# 1668：最大重复子字符串
+# 1668：最大重复子字符串（1395 分）
 
 
 > <u>**[力扣第 40 场双周赛第 1 题](https://leetcode.cn/problems/maximum-repeating-substring/)**</u>

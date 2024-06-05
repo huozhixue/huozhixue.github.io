@@ -1,4 +1,4 @@
-# 0851：喧闹和富有（★）
+# 0851：喧闹和富有（1783 分）
 
 
 > <u>**[力扣第 88 场周赛第 3 题](https://leetcode.cn/problems/loud-and-rich/)**</u>
@@ -9,7 +9,7 @@
 
 <p>给你一个数组 <code>richer</code> ，其中 <code>richer[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示 person <code>a<sub>i</sub></code> 比 person <code>b<sub>i</sub></code> 更有钱。另给你一个整数数组 <code>quiet</code> ，其中 <code>quiet[i]</code> 是 person <code>i</code> 的安静值。<code>richer</code> 中所给出的数据 <strong>逻辑自洽</strong>（也就是说，在 person <code>x</code> 比 person <code>y</code> 更有钱的同时，不会出现 person <code>y</code> 比 person <code>x</code> 更有钱的情况 ）。</p>
 
-<p>现在，返回一个整数数组 <code>answer</code> 作为答案，其中 <code>answer[x] = y</code> 的前提是，在所有拥有的钱肯定不少于 person <code>x</code> 的人中，person <code>y</code> 是最安静的人（也就是安静值 <code>quiet[y]</code> 最小的人）。</p>
+<p>现在，返回一个整数数组 <code>answer</code> 作为答案，其中 <code>answer[x] = y</code> 的前提是，在所有拥有的钱肯定不少于 person <code>x</code> 的人中，person <code>y</code> 是最不安静的人（也就是安静值 <code>quiet[y]</code> 最小的人）。</p>
 
 
 

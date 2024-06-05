@@ -1,4 +1,4 @@
-# 1447：最简分数
+# 1447：最简分数（1268 分）
 
 
 > <u>**[力扣第 26 场双周赛第 2 题](https://leetcode.cn/problems/simplified-fractions/)**</u>

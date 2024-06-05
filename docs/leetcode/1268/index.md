@@ -1,4 +1,4 @@
-# 1268：搜索推荐系统（★）
+# 1268：搜索推荐系统（1573 分）
 
 
 > <u>**[力扣第 164 场周赛第 3 题](https://leetcode.cn/problems/search-suggestions-system/)**</u>

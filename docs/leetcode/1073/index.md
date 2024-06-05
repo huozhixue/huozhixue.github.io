@@ -1,4 +1,4 @@
-# 1073：负二进制数相加（★★）
+# 1073：负二进制数相加（1806 分）
 
 
 > <u>**[力扣第 139 场周赛第 3 题](https://leetcode.cn/problems/adding-two-negabinary-numbers/)**</u>

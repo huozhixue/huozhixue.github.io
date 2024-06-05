@@ -1,4 +1,4 @@
-# 0313：超级丑数（★★★）
+# 0313：超级丑数（★）
 
 
 > <u>**[力扣第 313 题](https://leetcode.cn/problems/super-ugly-number/)**</u>

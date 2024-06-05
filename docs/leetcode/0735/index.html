@@ -7,10 +7,10 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0735：行星碰撞（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0735/">
+        <title>0735：小行星碰撞（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0735/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0735：行星碰撞（★）">
-  <meta property="og:description" content="力扣第 735 题 题目 给定一个整数数组 asteroids，表示在同一行的行星。 对于数组中的每一个元素，其绝对值表示行星的大小，正负表示行星的移动方向">
+  <meta property="og:title" content="0735：小行星碰撞（★）">
+  <meta property="og:description" content="力扣第 735 题 题目 给定一个整数数组 asteroids，表示在同一行的小行星。 对于数组中的每一个元素，其绝对值表示小行星的大小，正负表示小行星的移">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -20,20 +20,20 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0735：行星碰撞（★）">
-  <meta name="twitter:description" content="力扣第 735 题 题目 给定一个整数数组 asteroids，表示在同一行的行星。 对于数组中的每一个元素，其绝对值表示行星的大小，正负表示行星的移动方向">
+  <meta name="twitter:title" content="0735：小行星碰撞（★）">
+  <meta name="twitter:description" content="力扣第 735 题 题目 给定一个整数数组 asteroids，表示在同一行的小行星。 对于数组中的每一个元素，其绝对值表示小行星的大小，正负表示小行星的移">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0735/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0730/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0739/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0735：行星碰撞（★）",
+        "headline": "0735：小行星碰撞（★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0735\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  505 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  515 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0735\/","datePublished": "2017-01-04T00:00:00+08:00","dateModified": "2017-01-04T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0735：行星碰撞（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0735：小行星碰撞（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-01-04">2017-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 505 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0735/" class="leancloud_visitors" data-flag-title="0735：行星碰撞（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-01-04">2017-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 515 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0735/" class="leancloud_visitors" data-flag-title="0735：小行星碰撞（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,9 +133,9 @@
 <p><u><strong><a href="https://leetcode.cn/problems/asteroid-collision/" target="_blank" rel="noopener noreffer">力扣第 735 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个整数数组 <code>asteroids</code>，表示在同一行的行星。</p>
-<p>对于数组中的每一个元素，其绝对值表示行星的大小，正负表示行星的移动方向（正表示向右移动，负表示向左移动）。每一颗行星以相同的速度移动。</p>
-<p>找出碰撞后剩下的所有行星。碰撞规则：两个行星相互碰撞，较小的行星会爆炸。如果两颗行星大小相同，则两颗行星都会爆炸。两颗移动方向相同的行星，永远不会发生碰撞。</p>
+<p>给定一个整数数组 <code>asteroids</code>，表示在同一行的小行星。</p>
+<p>对于数组中的每一个元素，其绝对值表示小行星的大小，正负表示小行星的移动方向（正表示向右移动，负表示向左移动）。每一颗小行星以相同的速度移动。</p>
+<p>找出碰撞后剩下的所有小行星。碰撞规则：两个小行星相互碰撞，较小的小行星会爆炸。如果两颗小行星大小相同，则两颗小行星都会爆炸。两颗移动方向相同的小行星，永远不会发生碰撞。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>asteroids = [5,10,-5]

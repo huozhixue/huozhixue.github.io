@@ -1,4 +1,4 @@
-# 1311：获取你好友已观看的视频（★）
+# 1311：获取你好友已观看的视频（1652 分）
 
 
 > <u>**[力扣第 170 场周赛第 3 题](https://leetcode.cn/problems/get-watched-videos-by-your-friends/)**</u>

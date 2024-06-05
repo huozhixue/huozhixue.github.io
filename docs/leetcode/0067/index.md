@@ -36,6 +36,8 @@
 
 模拟进位加法，除数换成 2 即可。
 
+## 解答
+
 ```python
 class Solution:
     def addBinary(self, a: str, b: str) -> str:

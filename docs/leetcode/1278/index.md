@@ -1,4 +1,4 @@
-# 1278：分割回文串 III（★★）
+# 1278：分割回文串 III（1979 分）
 
 
 > <u>**[力扣第 165 场周赛第 4 题](https://leetcode.cn/problems/palindrome-partitioning-iii/)**</u>

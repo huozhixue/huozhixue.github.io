@@ -1,4 +1,4 @@
-# 0918：环形子数组的最大和（★）
+# 0918：环形子数组的最大和（1777 分）
 
 
 > <u>**[力扣第 105 场周赛第 2 题](https://leetcode.cn/problems/maximum-sum-circular-subarray/)**</u>

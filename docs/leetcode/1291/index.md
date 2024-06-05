@@ -1,4 +1,4 @@
-# 1291：顺次数
+# 1291：顺次数（1373 分）
 
 
 > <u>**[力扣第 167 场周赛第 2 题](https://leetcode.cn/problems/sequential-digits/)**</u>

@@ -1,4 +1,4 @@
-# 1187：使数组严格递增（★★★）
+# 1187：使数组严格递增（2315 分）
 
 
 > <u>**[力扣第 153 场周赛第 4 题](https://leetcode.cn/problems/make-array-strictly-increasing/)**</u>
@@ -13,23 +13,26 @@
 
 
 
-<p><strong>示例 1：</strong></p>
+<p><strong class="example">示例 1：</strong></p>
 
-<pre><strong>输入：</strong>arr1 = [1,5,3,6,7], arr2 = [1,3,2,4]
+<pre>
+<strong>输入：</strong>arr1 = [1,5,3,6,7], arr2 = [1,3,2,4]
 <strong>输出：</strong>1
 <strong>解释：</strong>用 2 来替换 <code>5，之后</code> <code>arr1 = [1, 2, 3, 6, 7]</code>。
 </pre>
 
-<p><strong>示例 2：</strong></p>
+<p><strong class="example">示例 2：</strong></p>
 
-<pre><strong>输入：</strong>arr1 = [1,5,3,6,7], arr2 = [4,3,1]
+<pre>
+<strong>输入：</strong>arr1 = [1,5,3,6,7], arr2 = [4,3,1]
 <strong>输出：</strong>2
 <strong>解释：</strong>用 3 来替换 <code>5，然后</code>用 4 来替换 3<code>，得到</code> <code>arr1 = [1, 3, 4, 6, 7]</code>。
 </pre>
 
-<p><strong>示例 3：</strong></p>
+<p><strong class="example">示例 3：</strong></p>
 
-<pre><strong>输入：</strong>arr1 = [1,5,3,6,7], arr2 = [1,6,3,3]
+<pre>
+<strong>输入：</strong>arr1 = [1,5,3,6,7], arr2 = [1,6,3,3]
 <strong>输出：</strong>-1
 <strong>解释：</strong>无法使 <code>arr1 严格递增</code>。</pre>
 

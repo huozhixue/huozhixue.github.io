@@ -10,7 +10,7 @@
         <title>0336：回文对（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0336/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0336：回文对（★★）">
-  <meta property="og:description" content="力扣第 336 题 题目 给定一组 互不相同 的单词， 找出所有 不同 的索引对 (i, j)，使得列表中的两个单词， words[i] &#43; words[j] ，可拼接成回文串。 示例 1： 输入：words = [&#34;abcd&#34;,&#34;dcba&#34;,&#34;lls&#34;,&#34;s&#34;,&#34;sssll&#34;]">
+  <meta property="og:description" content="力扣第 336 题 题目 给定一个由唯一字符串构成的 0 索引 数组 words 。 回文对 是一对整数 (i, j) ，满足以下条件： 0 &lt;= i, j &lt; words.length， i != j ，并且 words[i]">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0336：回文对（★★）">
-  <meta name="twitter:description" content="力扣第 336 题 题目 给定一组 互不相同 的单词， 找出所有 不同 的索引对 (i, j)，使得列表中的两个单词， words[i] &#43; words[j] ，可拼接成回文串。 示例 1： 输入：words = [&#34;abcd&#34;,&#34;dcba&#34;,&#34;lls&#34;,&#34;s&#34;,&#34;sssll&#34;]">
+  <meta name="twitter:description" content="力扣第 336 题 题目 给定一个由唯一字符串构成的 0 索引 数组 words 。 回文对 是一对整数 (i, j) ，满足以下条件： 0 &lt;= i, j &lt; words.length， i != j ，并且 words[i]">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0336/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0335/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0337/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0336\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  563 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  649 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0336\/","datePublished": "2015-12-02T00:00:00+08:00","dateModified": "2015-12-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0336：回文对（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-02">2015-12-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 563 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-02">2015-12-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 649 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0336/" class="leancloud_visitors" data-flag-title="0336：回文对（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,7 +133,15 @@
 <p><u><strong><a href="https://leetcode.cn/problems/palindrome-pairs/" target="_blank" rel="noopener noreffer">力扣第 336 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一组<strong> 互不相同</strong> 的单词， 找出所有<strong> 不同<em> </em></strong>的索引对 <code>(i, j)</code>，使得列表中的两个单词， <code>words[i] + words[j]</code> ，可拼接成回文串。</p>
+<p>给定一个由唯一字符串构成的 <strong>0 索引 </strong>数组 <code>words</code> 。</p>
+<p><strong>回文对</strong> 是一对整数 <code>(i, j)</code> ，满足以下条件：</p>
+<ul>
+<li><code>0 &lt;= i, j &lt; words.length</code>，</li>
+<li><code>i != j</code> ，并且</li>
+<li><code>words[i] + words[j]</code>（两个字符串的连接）是一个<span data-keyword="palindrome-string">回文串</span>。</li>
+</ul>
+<p>返回一个数组，它包含 <code>words</code> 中所有满足 <strong>回文对</strong> 条件的字符串。</p>
+<p>你必须设计一个时间复杂度为 <code>O(sum of words[i].length)</code> 的算法。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>words = ["abcd","dcba","lls","s","sssll"]
@@ -152,8 +160,8 @@
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 <= words.length <= 5000</code></li>
-<li><code>0 <= words[i].length <= 300</code></li>
+<li><code>1 &lt;= words.length &lt;= 5000</code></li>
+<li><code>0 &lt;= words[i].length &lt;= 300</code></li>
 <li><code>words[i]</code> 由小写英文字母组成</li>
 </ul>
 <h2 id="分析">分析</h2>

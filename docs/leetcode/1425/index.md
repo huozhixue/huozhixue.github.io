@@ -1,4 +1,4 @@
-# 1425：带限制的子序列和（★★）
+# 1425：带限制的子序列和（2032 分）
 
 
 > <u>**[力扣第 186 场周赛第 4 题](https://leetcode.cn/problems/constrained-subsequence-sum/)**</u>

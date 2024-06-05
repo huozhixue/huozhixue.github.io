@@ -1,4 +1,4 @@
-# 0843：猜猜这个单词（★★）
+# 0843：猜猜这个单词（2077 分）
 
 
 > <u>**[力扣第 86 场周赛第 4 题](https://leetcode.cn/problems/guess-the-word/)**</u>

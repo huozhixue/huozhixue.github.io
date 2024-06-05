@@ -1,4 +1,4 @@
-# 2009：使数组连续的最少操作数（★★）
+# 2009：使数组连续的最少操作数（2084 分）
 
 
 > <u>**[力扣第 61 场双周赛第 4 题](https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-continuous/)**</u>

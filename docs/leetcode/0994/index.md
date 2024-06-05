@@ -1,4 +1,4 @@
-# 0994：腐烂的橘子（★）
+# 0994：腐烂的橘子（1432 分）
 
 
 > <u>**[力扣第 124 场周赛第 2 题](https://leetcode.cn/problems/rotting-oranges/)**</u>
@@ -33,7 +33,7 @@
 <pre>
 <strong>输入：</strong>grid = [[2,1,1],[0,1,1],[1,0,1]]
 <strong>输出：</strong>-1
-<strong>解释：</strong>左下角的橘子（第 2 行， 第 0 列）永远不会腐烂，因为腐烂只会发生在 4 个正向上。
+<strong>解释：</strong>左下角的橘子（第 2 行， 第 0 列）永远不会腐烂，因为腐烂只会发生在 4 个方向上。
 </pre>
 
 <p><strong>示例 3：</strong></p>

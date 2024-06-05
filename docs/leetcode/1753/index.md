@@ -1,4 +1,5 @@
-# 1753：移除石子的最大得分（★）
+# 1753：移除石子的最大得分（1487 分）
+
 
 
 > <u>**[力扣第 227 场周赛第 2 题](https://leetcode.cn/problems/maximum-score-from-removing-stones/)**</u>
@@ -77,5 +78,3 @@ def maximumScore(self, a: int, b: int, c: int) -> int:
 ```
 
 36 ms
-
-

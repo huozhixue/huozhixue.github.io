@@ -1,4 +1,4 @@
-# 0028：找出字符串中第一个匹配项的下标（★）
+# 0028：找出字符串中第一个匹配项的下标
 
 
 > <u>**[力扣第 28 题](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/)**</u>
@@ -40,6 +40,8 @@
 
 
 可以直接调包 find。最优解是经典的 [KMP 算法](http://www.matrix67.com/blog/archives/115)，能在线性时间内完成。
+
+## 解答
 
 ```python
 class Solution:

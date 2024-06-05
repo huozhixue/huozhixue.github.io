@@ -1,4 +1,4 @@
-# 1557：可以到达所有点的最少点数目（★）
+# 1557：可以到达所有点的最少点数目（1512 分）
 
 
 > <u>**[力扣第 33 场双周赛第 2 题](https://leetcode.cn/problems/minimum-number-of-vertices-to-reach-all-nodes/)**</u>

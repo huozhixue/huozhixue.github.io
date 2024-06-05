@@ -1,4 +1,4 @@
-# 1690：石子游戏 VII（★★）
+# 1690：石子游戏 VII（1951 分）
 
 
 > <u>**[力扣第 219 场周赛第 3 题](https://leetcode.cn/problems/stone-game-vii/)**</u>

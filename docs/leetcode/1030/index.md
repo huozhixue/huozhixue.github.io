@@ -1,4 +1,4 @@
-# 1030：距离顺序排列矩阵单元格（★）
+# 1030：距离顺序排列矩阵单元格（1585 分）
 
 
 > <u>**[力扣第 133 场周赛第 2 题](https://leetcode.cn/problems/matrix-cells-in-distance-order/)**</u>

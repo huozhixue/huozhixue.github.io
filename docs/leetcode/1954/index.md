@@ -1,4 +1,4 @@
-# 1954：收集足够苹果的最小花园周长（★）
+# 1954：收集足够苹果的最小花园周长（1758 分）
 
 
 > <u>**[力扣第 252 场周赛第 3 题](https://leetcode.cn/problems/minimum-garden-perimeter-to-collect-enough-apples/)**</u>

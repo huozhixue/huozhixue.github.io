@@ -1,4 +1,4 @@
-# 0832：翻转图像
+# 0832：翻转图像（1243 分）
 
 
 > <u>**[力扣第 84 场周赛第 1 题](https://leetcode.cn/problems/flipping-an-image/)**</u>

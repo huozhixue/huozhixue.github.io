@@ -1,4 +1,4 @@
-# 0072：编辑距离（★★）
+# 0072：编辑距离（★）
 
 
 > <u>**[力扣第 72 题](https://leetcode.cn/problems/edit-distance/)**</u>

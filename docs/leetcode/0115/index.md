@@ -1,7 +1,12 @@
 # 0115：不同的子序列（★★）
 
 
+> <u>**[力扣第 115 题](https://leetcode.cn/problems/distinct-subsequences/)**</u>
+
+## 题目
+
 <p>给你两个字符串 <code>s</code><strong> </strong>和 <code>t</code> ，统计并返回在 <code>s</code> 的 <strong>子序列</strong> 中 <code>t</code> 出现的个数，结果需要对 10<sup>9</sup> + 7 取模。</p>
+
 
 
 <p><strong>示例 1：</strong></p>

@@ -7,9 +7,9 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0831：隐藏个人信息（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0831/">
+        <title>0831：隐藏个人信息（1450 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0831/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0831：隐藏个人信息（★）">
+  <meta property="og:title" content="0831：隐藏个人信息（1450 分）">
   <meta property="og:description" content="力扣第 83 场周赛第 2 题 题目 给你一条个人信息字符串 s ，可能表示一个 邮箱地址 ，也可能表示一串 电话号码 。返回按如下规则 隐藏 个人信息后的结果： 电子邮件">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0831：隐藏个人信息（★）">
+  <meta name="twitter:title" content="0831：隐藏个人信息（1450 分）">
   <meta name="twitter:description" content="力扣第 83 场周赛第 2 题 题目 给你一条个人信息字符串 s ，可能表示一个 邮箱地址 ，也可能表示一串 电话号码 。返回按如下规则 隐藏 个人信息后的结果： 电子邮件">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
@@ -28,12 +28,12 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0831：隐藏个人信息（★）",
+        "headline": "0831：隐藏个人信息（1450 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0831\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  954 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  866 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0831\/","datePublished": "2018-05-06T09:40:00+08:00","dateModified": "2018-05-06T09:40:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0831：隐藏个人信息（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0831：隐藏个人信息（1450 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-06">2018-05-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 954 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0831/" class="leancloud_visitors" data-flag-title="0831：隐藏个人信息（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-06">2018-05-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 866 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0831/" class="leancloud_visitors" data-flag-title="0831：隐藏个人信息（1450 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -193,14 +193,6 @@
 共计 10 位数字，所以本地号码为 10 位数字，国家代码为 0 位数字。
 因此，隐藏后的电话号码应该是 "***-***-7890" 。
 </pre>
-<p><strong>示例 4：</strong></p>
-<pre>
-<strong>输入：</strong>s = "86-(10)12345678"
-<strong>输出：</strong>"+**-***-***-5678"
-<strong>解释：</strong>s 是一个电话号码。
-共计 12 位数字，所以本地号码为 10 位数字，国家代码为 2 位数字。
-因此，隐藏后的电话号码应该是 "+**-***-***-7890" 。
-</pre>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>s</code> 是一个 <strong>有效</strong> 的电子邮件或者电话号码</li>
@@ -269,8 +261,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0829/" class="prev" rel="prev" title="0829：连续整数求和（★）"><i class="fas fa-angle-left fa-fw"></i>0829：连续整数求和（★）</a>
-            <a href="/leetcode/0830/" class="next" rel="next" title="0830：较大分组的位置">0830：较大分组的位置<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0829/" class="prev" rel="prev" title="0829：连续整数求和（1694 分）"><i class="fas fa-angle-left fa-fw"></i>0829：连续整数求和（1694 分）</a>
+            <a href="/leetcode/0830/" class="next" rel="next" title="0830：较大分组的位置（1251 分）">0830：较大分组的位置（1251 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

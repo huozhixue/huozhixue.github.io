@@ -10,7 +10,7 @@
         <title>0012：整数转罗马数字（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0012/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0012：整数转罗马数字（★）">
-  <meta property="og:description" content="力扣第 12 题 题目 罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。 字符 数值 I 1 V 5 X 10 L 50 C 100 D 500 M 1000 例如， 罗马数字 2 写做 II ，即为两个并列">
+  <meta property="og:description" content="力扣第 12 题 题目 七个不同的符号代表罗马数字，其值如下： 符号 值 I 1 V 5 X 10 L 50 C 100 D 500 M 1000 罗马数字是通过添加从最高到最低的小数位值的转换而形成的">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0012：整数转罗马数字（★）">
-  <meta name="twitter:description" content="力扣第 12 题 题目 罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。 字符 数值 I 1 V 5 X 10 L 50 C 100 D 500 M 1000 例如， 罗马数字 2 写做 II ，即为两个并列">
+  <meta name="twitter:description" content="力扣第 12 题 题目 七个不同的符号代表罗马数字，其值如下： 符号 值 I 1 V 5 X 10 L 50 C 100 D 500 M 1000 罗马数字是通过添加从最高到最低的小数位值的转换而形成的">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0012/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0011/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0013/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0012\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  437 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  557 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0012\/","datePublished": "2015-01-12T00:00:00+08:00","dateModified": "2015-01-12T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0012：整数转罗马数字（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-12">2015-01-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 437 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0012/" class="leancloud_visitors" data-flag-title="0012：整数转罗马数字（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-12">2015-01-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 557 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0012/" class="leancloud_visitors" data-flag-title="0012：整数转罗马数字（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,50 +133,90 @@
 <p><u><strong><a href="https://leetcode.cn/problems/integer-to-roman/" target="_blank" rel="noopener noreffer">力扣第 12 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>罗马数字包含以下七种字符： <code>I</code>， <code>V</code>， <code>X</code>， <code>L</code>，<code>C</code>，<code>D</code> 和 <code>M</code>。</p>
-<pre>
-<strong>字符</strong>          <strong>数值</strong>
-I             1
-V             5
-X             10
-L             50
-C             100
-D             500
-M             1000</pre>
-<p>例如， 罗马数字 2 写做 <code>II</code> ，即为两个并列的 1。12 写做 <code>XII</code> ，即为 <code>X</code> + <code>II</code> 。 27 写做  <code>XXVII</code>, 即为 <code>XX</code> + <code>V</code> + <code>II</code> 。</p>
-<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 <code>IIII</code>，而是 <code>IV</code>。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 <code>IX</code>。这个特殊的规则只适用于以下六种情况：</p>
+<p>七个不同的符号代表罗马数字，其值如下：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>1</td>
+</tr>
+<tr>
+<td>V</td>
+<td>5</td>
+</tr>
+<tr>
+<td>X</td>
+<td>10</td>
+</tr>
+<tr>
+<td>L</td>
+<td>50</td>
+</tr>
+<tr>
+<td>C</td>
+<td>100</td>
+</tr>
+<tr>
+<td>D</td>
+<td>500</td>
+</tr>
+<tr>
+<td>M</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+<p>罗马数字是通过添加从最高到最低的小数位值的转换而形成的。将小数位值转换为罗马数字有以下规则：</p>
 <ul>
-<li><code>I</code> 可以放在 <code>V</code> (5) 和 <code>X</code> (10) 的左边，来表示 4 和 9。</li>
-<li><code>X</code> 可以放在 <code>L</code> (50) 和 <code>C</code> (100) 的左边，来表示 40 和 90。 </li>
-<li><code>C</code> 可以放在 <code>D</code> (500) 和 <code>M</code> (1000) 的左边，来表示 400 和 900。</li>
+<li>如果该值不是以 4 或 9 开头，请选择可以从输入中减去的最大值的符号，将该符号附加到结果，减去其值，然后将其余部分转换为罗马数字。</li>
+<li>如果该值以 4 或 9 开头，使用 <strong>减法形式</strong>，表示从以下符号中减去一个符号，例如 4 是 5 (<code>V</code>) 减 1 (<code>I</code>): <code>IV</code> ，9 是 10 (<code>X</code>) 减 1 (<code>I</code>)：<code>IX</code>。仅使用以下减法形式：4 (<code>IV</code>)，9 (<code>IX</code>)，40 (<code>XL</code>)，90 (<code>XC</code>)，400 (<code>CD</code>) 和 900 (<code>CM</code>)。</li>
+<li>只有 10 的次方（<code>I</code>, <code>X</code>, <code>C</code>, <code>M</code>）最多可以连续附加 3 次以代表 10 的倍数。你不能多次附加 5 (<code>V</code>)，50 (<code>L</code>) 或 500 (<code>D</code>)。如果需要将符号附加4次，请使用 <strong>减法形式</strong>。</li>
 </ul>
-<p>给你一个整数，将其转为罗马数字。</p>
-<p><strong>示例 1:</strong></p>
+<p>给定一个整数，将其转换为罗马数字。</p>
+<p><strong class="example">示例 1：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">num = 3749</span></p>
+<p><strong>输出：</strong> <span class="example-io">"MMMDCCXLIX"</span></p>
+<p><strong>解释：</strong></p>
 <pre>
-<strong>输入:</strong> num = 3
-<strong>输出:</strong> "III"</pre>
-<p><strong>示例 2:</strong></p>
-<pre>
-<strong>输入:</strong> num = 4
-<strong>输出:</strong> "IV"</pre>
-<p><strong>示例 3:</strong></p>
-<pre>
-<strong>输入:</strong> num = 9
-<strong>输出:</strong> "IX"</pre>
-<p><strong>示例 4:</strong></p>
-<pre>
-<strong>输入:</strong> num = 58
-<strong>输出:</strong> "LVIII"
-<strong>解释:</strong> L = 50, V = 5, III = 3.
+3000 = MMM 由于 1000 (M) + 1000 (M) + 1000 (M)
+700 = DCC 由于 500 (D) + 100 (C) + 100 (C)
+40 = XL 由于 50 (L) 减 10 (X)
+9 = IX 由于 10 (X) 减 1 (I)
+注意：49 不是 50 (L) 减 1 (I) 因为转换是基于小数位
 </pre>
-<p><strong>示例 5:</strong></p>
+</div>
+<p><strong class="example">示例 2：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">num = 58</span></p>
+<p><strong>输出：</strong><span class="example-io">"LVIII"</span></p>
+<p><strong>解释：</strong></p>
 <pre>
-<strong>输入:</strong> num = 1994
-<strong>输出:</strong> "MCMXCIV"
-<strong>解释:</strong> M = 1000, CM = 900, XC = 90, IV = 4.</pre>
+50 = L
+8 = VIII
+</pre>
+</div>
+<p><strong class="example">示例 3：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">num = 1994</span></p>
+<p><strong>输出：</strong><span class="example-io">"MCMXCIV"</span></p>
+<p><strong>解释：</strong></p>
+<pre>
+1000 = M
+900 = CM
+90 = XC
+4 = IV
+</pre>
+</div>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 <= num <= 3999</code></li>
+<li><code>1 &lt;= num &lt;= 3999</code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>从大到小依此放字符即可。</p>

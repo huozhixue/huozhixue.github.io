@@ -1,4 +1,4 @@
-# 1190：反转每对括号间的子串（★）
+# 1190：反转每对括号间的子串（1485 分）
 
 
 > <u>**[力扣第 154 场周赛第 2 题](https://leetcode.cn/problems/reverse-substrings-between-each-pair-of-parentheses/)**</u>

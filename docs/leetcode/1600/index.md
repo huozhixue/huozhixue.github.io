@@ -1,4 +1,4 @@
-# 1600：王位继承顺序（★）
+# 1600：王位继承顺序（1768 分）
 
 
 > <u>**[力扣第 208 场周赛第 3 题](https://leetcode.cn/problems/throne-inheritance/)**</u>
@@ -12,8 +12,8 @@
 <pre>
 Successor(x, curOrder):
 如果 x 没有孩子或者所有 x 的孩子都在 curOrder 中：
-	如果 x 是国王，那么返回 null
-	否则，返回 Successor(x 的父亲, curOrder)
+如果 x 是国王，那么返回 null
+否则，返回 Successor(x 的父亲, curOrder)
 否则，返回 x 不在 curOrder 中最年长的孩子
 </pre>
 

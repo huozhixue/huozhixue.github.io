@@ -1,4 +1,4 @@
-# 1172：餐盘栈（★★）
+# 1172：餐盘栈（2109 分）
 
 
 > <u>**[力扣第 151 场周赛第 4 题](https://leetcode.cn/problems/dinner-plate-stacks/)**</u>

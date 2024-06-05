@@ -1,4 +1,4 @@
-# 0814：二叉树剪枝
+# 0814：二叉树剪枝（1380 分）
 
 
 > <u>**[力扣第 814 题](https://leetcode.cn/problems/binary-tree-pruning/)**</u>

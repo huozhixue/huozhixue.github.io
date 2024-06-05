@@ -1,4 +1,4 @@
-# 2360：图中的最长环（★★）
+# 2360：图中的最长环（1897 分）
 
 
 > <u>**[力扣第 304 场周赛第 4 题](https://leetcode.cn/problems/longest-cycle-in-a-graph/)**</u>

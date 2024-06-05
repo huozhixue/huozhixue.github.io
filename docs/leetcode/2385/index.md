@@ -1,4 +1,4 @@
-# 2385：感染二叉树需要的总时间（★）
+# 2385：感染二叉树需要的总时间（1711 分）
 
 
 > <u>**[力扣第 307 场周赛第 3 题](https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/)**</u>

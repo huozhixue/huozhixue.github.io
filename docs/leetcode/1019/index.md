@@ -1,4 +1,4 @@
-# 1019：链表中的下一个更大节点（★）
+# 1019：链表中的下一个更大节点（1570 分）
 
 
 > <u>**[力扣第 130 场周赛第 3 题](https://leetcode.cn/problems/next-greater-node-in-linked-list/)**</u>

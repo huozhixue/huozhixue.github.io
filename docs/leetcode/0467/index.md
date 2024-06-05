@@ -55,6 +55,7 @@
 - 但这样存在重复计算的问题，比如 'cac' 中 'c' 会被计算两次
 - 因此考虑针对字符值而不是下标递推
 - 令 dp[c] 代表以字符 c 结尾的符合的最长子串，递推即可
+## 解答
 
 ```python
 def findSubstringInWraproundString(self, s: str) -> int:

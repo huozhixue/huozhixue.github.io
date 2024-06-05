@@ -1,4 +1,4 @@
-# 1170：比较字符串最小字母出现频次（★）
+# 1170：比较字符串最小字母出现频次（1431 分）
 
 
 > <u>**[力扣第 151 场周赛第 2 题](https://leetcode.cn/problems/compare-strings-by-frequency-of-the-smallest-character/)**</u>

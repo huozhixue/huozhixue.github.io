@@ -1,4 +1,4 @@
-# 0764：最大加号标志（★）
+# 0764：最大加号标志（1753 分）
 
 
 > <u>**[力扣第 764 题](https://leetcode.cn/problems/largest-plus-sign/)**</u>

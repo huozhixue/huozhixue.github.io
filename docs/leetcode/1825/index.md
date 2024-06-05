@@ -1,4 +1,4 @@
-# 1825：求出 MK 平均值（★★★）
+# 1825：求出 MK 平均值（2395 分）
 
 
 > <u>**[力扣第 236 场周赛第 4 题](https://leetcode.cn/problems/finding-mk-average/)**</u>

@@ -1,4 +1,4 @@
-# 1043：分隔数组以得到最大和（★★）
+# 1043：分隔数组以得到最大和（1916 分）
 
 
 > <u>**[力扣第 136 场周赛第 3 题](https://leetcode.cn/problems/partition-array-for-maximum-sum/)**</u>

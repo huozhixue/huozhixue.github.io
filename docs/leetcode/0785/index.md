@@ -1,4 +1,4 @@
-# 0785：判断二分图（★）
+# 0785：判断二分图（1624 分）
 
 
 > <u>**[力扣第 785 题](https://leetcode.cn/problems/is-graph-bipartite/)**</u>

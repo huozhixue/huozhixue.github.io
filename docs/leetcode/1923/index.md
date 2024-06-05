@@ -1,4 +1,4 @@
-# 1923：最长公共子路径（★★★★）
+# 1923：最长公共子路径（2661 分）
 
 
 > <u>**[力扣第 248 场周赛第 4 题](https://leetcode.cn/problems/longest-common-subpath/)**</u>

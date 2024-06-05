@@ -1,4 +1,4 @@
-# 0380：O(1) 时间插入、删除和获取随机元素（★★）
+# 0380：O(1) 时间插入、删除和获取随机元素（★）
 
 
 > <u>**[力扣第 380 题](https://leetcode.cn/problems/insert-delete-getrandom-o1/)**</u>

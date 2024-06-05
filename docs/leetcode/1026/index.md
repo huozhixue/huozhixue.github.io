@@ -1,4 +1,4 @@
-# 1026：节点与其祖先之间的最大差值（★）
+# 1026：节点与其祖先之间的最大差值（1446 分）
 
 
 > <u>**[力扣第 132 场周赛第 2 题](https://leetcode.cn/problems/maximum-difference-between-node-and-ancestor/)**</u>

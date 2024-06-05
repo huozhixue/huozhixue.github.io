@@ -1,4 +1,4 @@
-# 1455：检查单词是否为句中其他单词的前缀
+# 1455：检查单词是否为句中其他单词的前缀（1125 分）
 
 
 > <u>**[力扣第 190 场周赛第 1 题](https://leetcode.cn/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/)**</u>
