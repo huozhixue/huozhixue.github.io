@@ -51,26 +51,26 @@
 
 ## 分析
 
-假设现有组合不能得到的最小数是 x，显然 x 是必须要补充的。加上 x 并更新组合能得到的数，依此循环即可。
-
-具体实现：
-- 先找到第一个 i 使得 nums[i] > sum(nums[:i])+1，sum(nums[:i])+1 即是 x
-- 在位置 i 插入 x，跳回上一步
-
-> 不需要真的插入，更新 s=sum(nums[:i]) 即可
+- 假设当前能表示的区间是 [1,s]
+- 如果 nums[i]<=s+1，插入 nums[i]，s 变为 s+nums[i]
+- 否则，必须要补充 s+1，更新 s 为 s+s+1
+- 循环直到 s>=n 为止
 
 ## 解答
 
 ```python
-def minPatches(self, nums: List[int], n: int) -> int:
-    res, Q, s = 0, deque(nums), 0
-    while s < n:
-        if Q and Q[0] <= s+1:
-            s += Q.popleft()
-        else:
-            s += s + 1
-            res += 1
-    return res
+class Solution:
+    def minPatches(self, nums: List[int], n: int) -> int:
+        res = 0
+        s,i = 0,0
+        while s<n:
+            if i<len(nums) and nums[i]<=s+1:
+                s += nums[i]
+                i += 1
+            else:
+                s += s+1
+                res += 1
+        return res
 ```
-32 ms
+42 ms
 

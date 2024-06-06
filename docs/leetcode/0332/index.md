@@ -53,18 +53,19 @@
 ## 解答
 
 ```python
-def findItinerary(self, tickets: List[List[str]]) -> List[str]:
-    def dfs(u):
-        while nxt[u]:
-            dfs(heappop(nxt[u]))
-        res.append(u)
+class Solution:
+    def findItinerary(self, tickets: List[List[str]]) -> List[str]:
+        def dfs(u):
+            while g[u]:
+                dfs(heappop(g[u]))
+            res.append(u)
 
-    nxt = defaultdict(list)
-    for u, v in tickets:
-        heappush(nxt[u], v)
-    res = []
-    dfs('JFK')
-    return res[::-1]
+        g = defaultdict(list)
+        for a,b in tickets:
+            heappush(g[a],b)
+        res = []
+        dfs('JFK')
+        return res[::-1]
 ```
-32 ms
+43 ms
 

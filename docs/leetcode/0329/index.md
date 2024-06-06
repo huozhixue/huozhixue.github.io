@@ -47,22 +47,22 @@
 
 ## 分析
 
-显然路径中不存在环，所以直接递归每个点出发的最长路径即可。
+显然路径中不存在环，所以直接记忆化递归即可。
 
 ## 解答
 
 ```python
-def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
-    @cache
-    def dfs(i, j):
-        res = 1
-        for x, y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-            if 0<=x<m and 0<=y<n and matrix[i][j]<matrix[x][y]:
-                res = max(res, 1+dfs(x, y))
-        return res
-
-    m, n = len(matrix), len(matrix[0])
-    return max(dfs(i, j) for i in range(m) for j in range(n))
+class Solution:
+    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+        @cache
+        def dfs(i,j):
+            res = 1
+            for x,y in [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]:
+                if 0<=x<m and 0<=y<n and matrix[x][y]>matrix[i][j]:
+                    res = max(res,1+dfs(x,y))
+            return res
+        m,n = len(matrix),len(matrix[0])
+        return max(dfs(i,j) for i in range(m) for j in range(n))
 ```
-268 ms
+189 ms
 

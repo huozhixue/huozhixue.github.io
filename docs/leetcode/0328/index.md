@@ -49,16 +49,17 @@
 ## 解答
 
 ```python
-def oddEvenList(self, head: ListNode) -> ListNode:
-	dummy1 = p = ListNode(next=head)
-	dummy2 = q = ListNode()
-	while p and p.next:
-		q.next = p.next
-		q = q.next
-		p.next = p.next.next
-		p = p.next
-	q.next = dummy1.next
-	return dummy2.next
+class Solution:
+    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dum1=p=ListNode(next=head)
+        dum2=q=ListNode()
+        while p and p.next:
+            q.next = p.next
+            p.next = p.next.next
+            p = p.next
+            q = q.next
+        q.next = dum1.next
+        return dum2.next
 ```
-48 ms
+36 ms
 

@@ -59,7 +59,7 @@ class Solution:
 
 ## *附加
 
-还可以用 cdq 分治。
+还可以用 cdq 分治，分成排好序的两部分，计算前半部分对后半部分的贡献。
 
 ```python
 class Solution:

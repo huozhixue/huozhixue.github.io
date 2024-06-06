@@ -50,19 +50,24 @@
 
 ## 分析
 
-{{< lc "0300" >}} 简化版，当最长递增子序列的长度大于 2 时，即可返回 True。
+- 遍历 nums，令 a 代表最小值，b 代表长度 2 的递增序列的最小尾数，即可递推
+- 这其实就是 {{< lc "0300" >}} 简化版，思想是相同的
 
 ## 解答
 
 ```python
-def increasingTriplet(self, nums: List[int]) -> bool:
-    A = []
-    for num in nums:
-        j = bisect_left(A, num)
-        A[j:j + 1] = [num]
-        if len(A) > 2:
-            return True
-    return False
+class Solution:
+    def increasingTriplet(self, nums: List[int]) -> bool:
+        a,b = inf,inf
+        for x in nums:
+            if b<x:
+                return True
+            if a<x<b:
+                b = x
+            if x<a:
+                a = x
+        return False
 ```
-132 ms
+84 ms
+
 

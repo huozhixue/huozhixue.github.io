@@ -58,25 +58,22 @@
 ## 分析
 
 
-前序序列中，叶子节点后必然是两个空节点。
-
-不断将叶子节点和后面的两个空节点替换为一个空节点，
-直到只剩下一个空节点，即说明是正确的。
-
-具体实现可以用栈。
-
+- 注意到叶子节点后必然是两个空节点
+- 不断将叶子节点和后面的两个空节点替换为一个空节点
+- 直到只剩下一个空节点，即说明是正确的
 
 ## 解答
 
 ```python
-def isValidSerialization(self, preorder: str) -> bool:
-    stack = []
-    for c in preorder.split(','):
-        while len(stack)>1 and c==stack[-1]=='#'!=stack[-2]:
-            stack.pop()
-            stack.pop()
-        stack.append(c)
-    return stack == ['#']
+class Solution:
+    def isValidSerialization(self, preorder: str) -> bool:
+        sk = []
+        for c in preorder.split(','):
+            while len(sk)>1 and c==sk[-1]=='#'!=sk[-2]:
+                sk.pop()
+                sk.pop()
+            sk.append(c)
+        return sk==['#']
 ```
-32 ms
+33 ms
 

@@ -34,6 +34,7 @@
 
 ## 分析
 
+### #1
 - 求范围内数字满足某种性质的个数，典型的数位 dp 问题，可以采用通用模板
 - 令 dfs(i, st, bd) 代表某个状态下的结果：
 	- 遍历到 n 的第 i 位
@@ -41,7 +42,7 @@
 	- bd 代表前面取的数是否贴着 n 的上界
 - 即可递归
 
-## 解答
+
 
 ```python
 class Solution:
@@ -60,3 +61,28 @@ class Solution:
         return dfs(0,0,True)
 ```
 48 ms
+
+
+### #2
+
+还可以用贡献法，计算每一位上 1 的个数
+- 以百位为例，百位上的数字以 1000 为周期循环，一个完整周期内有 100 个 1
+- 再计算不完整周期，即 m=n%1000 内，分类讨论
+	- 假如 m<100，百位上没有 1
+	- 假如 m>=100，百位上 1 的个数是 min(100,m-100+1)
+- 其它位数同理
+
+
+## 解答
+
+```python
+class Solution:
+    def countDigitOne(self, n: int) -> int:
+        res,x = 0,1
+        while x<=n:
+            q,r = divmod(n,x*10)
+            res += q*x+max(0,min(x,r-x+1))
+            x *= 10
+        return res
+```
+33 ms

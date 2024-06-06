@@ -105,30 +105,32 @@ class Solution:
 
 ## *附加
 
-还可以类似归并排序，采用分治法
-- 先递归地将前后两部分排序
-- 然后归并两部分，并计算后半部分对前半部分的贡献
-- 于是在递归过程中，计算出了所有后面元素对前面元素的贡献
+- 还可以类似归并排序，采用cdq分治法
+	- 先递归地将前后两部分排序
+	- 然后归并两部分，并计算后半部分对前半部分的贡献
+	- 于是在递归过程中，计算出了所有后面元素对前面元素的贡献
+- 提前将下标排序，dfs 只需计算贡献，就可以随意改变子问题递归的顺序，能解决更多问题
 
 ```python
 class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
+        def dfs(A,l,r):
+            if l==r:
+                return
+            m = (l+r)//2
+            B = [[],[]]
+            for i in A:
+                if i>m:
+                    B[1].append(i)
+                else:
+                    B[0].append(i)
+                    res[i]+=len(B[1])
+            dfs(B[0],l,m)
+            dfs(B[1],m+1,r)
         n = len(nums)
         res = [0]*n
-        def dfs(A):
-            m = len(A)//2
-            if not m:
-                return A
-            B,C = dfs(A[:m]),dfs(A[m:])
-            A = []
-            while B or C:
-                if not C or (B and nums[B[-1]]>nums[C[-1]]):
-                    res[B[-1]] += len(C)
-                    A.append(B.pop())
-                else:
-                    A.append(C.pop())
-            return A[::-1]
-        dfs(list(range(n)))
+        A = sorted(range(n),key=lambda i:nums[i])
+        dfs(A,0,n-1)
         return res
 ```
-1121 ms
+703 ms

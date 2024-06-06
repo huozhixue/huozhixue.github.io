@@ -55,7 +55,7 @@
 ## 解答
 
 ```python
-def findRelativeRanks(self, score: List[int]) -> List[str]:
+def findRelativeRanks(self, score: "List[int]) -> List[str]:"
     medals = ["Gold Medal", "Silver Medal", "Bronze Medal"]
     d = {x: str(i+1) if i > 2 else medals[i] for i, x in enumerate(sorted(score, reverse=True))}
     return [d[x] for x in score]
