@@ -105,7 +105,6 @@ class AllOne:
 	- 若节点 x 的 key 集合为空了，就去掉该节点
 - GetMaxKey 和 GetMinKey 时，取首/尾节点（排除哑结点）的任意一个 key 返回即可
 
-## 解答
 
 ```python
 class Node:
@@ -162,3 +161,59 @@ class AllOne:
 ```
 148 ms
 
+### #3
+
+还可以用数组模拟双向链表，令 L[i]、R[i] 代表 i 节点的左右指针即可。
+
+## 解答
+
+```python
+class AllOne:
+    def __init__(self):
+        self.A = [{''}]
+        self.L = [0]
+        self.R = [0]
+        self.d = {}
+    
+    def insert(self,pre,i):
+        if len(self.A)==i:
+            self.A.append(set())
+            self.L.append(0)
+            self.R.append(0)
+        j = self.R[pre]
+        self.L[i],self.R[i]=pre,j
+        self.R[pre]=i
+        self.L[j]=i
+    
+    def pop(self,i,key):
+        self.A[i].remove(key)
+        if not self.A[i]:
+            j,k = self.L[i],self.R[i]
+            self.R[j]=k
+            self.L[k]=j
+
+    def inc(self, key: str) -> None:
+        i = self.d.get(key,0)
+        if self.R[i]!=i+1:
+            self.insert(i,i+1)
+        self.A[i+1].add(key)
+        if i:
+            self.pop(i,key)
+        self.d[key] = i+1
+
+    def dec(self, key: str) -> None:
+        i = self.d[key]
+        if self.L[i]!= i-1:
+            self.insert(self.L[i],i-1)
+        if i:
+            self.A[i-1].add(key)
+        self.pop(i,key)
+        self.d[key] = i-1
+
+    def getMaxKey(self) -> str:
+        return next(iter(self.A[self.L[0]]))
+
+    def getMinKey(self) -> str:
+        return next(iter(self.A[self.R[0]]))
+```
+105 ms

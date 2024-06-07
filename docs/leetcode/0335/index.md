@@ -45,20 +45,47 @@
 
 ## 分析
 
-观察发现，第 i 步的路径只可能和 [i-5,i-3] 范围内的路径交叉。分别判断即可。
+### #1
 
+- 观察发现，第 i 步的路径只可能和 i+3、i+4、i+5 的路径交叉
+- 判断路径交叉可以用类似 {{< lc "0223" >}} 的方法，看 x/y 方向上是否重叠
+- 遍历时保存每个端点，分别判断即可
+
+```python
+class Solution:
+    def isSelfCrossing(self, distance: List[int]) -> bool:
+        def check(a1,a2,b1,b2):
+            a1,a2 = sorted([a1,a2])
+            b1,b2 = sorted([b1,b2])
+            return all(max(a1[i],b1[i])<=min(a2[i],b2[i]) for i in range(2))
+
+        A,dx,dy = [(0,0)],0,1
+        for a in distance:
+            A.append((A[-1][0]+dx*a,A[-1][1]+dy*a))
+            dx,dy = -dy,dx
+            for i in range(4,min(7,len(A))):
+                if check(A[-1],A[-2],A[-i],A[-i-1]):
+                    return True
+        return False
+```
+491 ms
+
+### #2
+
+还可以继续观察，直接找交叉时距离之间的规律，具体见 [力扣官解](https://leetcode.cn/problems/self-crossing/solutions/1069749/lu-jing-jiao-cha-by-leetcode-solution-dekx/)。
 ## 解答
 
 ```python
-def isSelfCrossing(self, distance: List[int]) -> bool:
-    n, A = len(distance), distance
-    for i in range(3, n):
-        if A[i]>=A[i-2] and A[i-1]<=A[i-3]:
-            return True
-        if i>=4 and A[i-1]==A[i-3] and A[i]+A[i-4]>=A[i-2]:
-            return True
-        if i>=5 and A[i]+A[i-4]>=A[i-2]>=A[i-4] and A[i-1]+A[i-5]>=A[i-3]>=A[i-1]:
-            return True
-    return False
+class Solution:
+    def isSelfCrossing(self, distance: List[int]) -> bool:
+        A = distance
+        for i in range(3,len(A)):
+            if A[i]>=A[i-2] and A[i-1]<=A[i-3]:
+                return True
+            if i>=4 and A[i-1]==A[i-3] and A[i]+A[i-4]>=A[i-2]:
+                return True
+            if i>=5 and A[i]+A[i-4]>=A[i-2]>=A[i-4] and A[i-1]+A[i-5]>=A[i-3]>=A[i-1]:
+                return True
+        return False
 ```
-80 ms
+64 ms
