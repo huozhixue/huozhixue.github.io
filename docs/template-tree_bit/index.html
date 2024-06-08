@@ -10,7 +10,7 @@
         <title>树模板：树状数组 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-tree_bit/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="树模板：树状数组">
-  <meta property="og:description" content="1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n&#43;1 self.t = [0]*(n&#43;1) def update(self, i, x): i &#43;= 1 while i&lt;self.n: self.t[i] &#43;= x i &#43;= i&amp;(-i) def get(self, i): res, i = 0, i&#43;1 while i: res &#43;= self.t[i] i &amp;= i-1 return res 2 区间最大">
+  <meta property="og:description" content="1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n&#43;1 self.t = [0]*(n&#43;1) def update(self, i, x): i &#43;= 1 while i&lt;self.n: self.t[i] &#43;= x i &#43;= i&amp;-i def get(self, i): res, i = 0, i&#43;1 while i: res &#43;= self.t[i] i &amp;= i-1 return res 2 区间最大">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="树模板：树状数组">
-  <meta name="twitter:description" content="1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n&#43;1 self.t = [0]*(n&#43;1) def update(self, i, x): i &#43;= 1 while i&lt;self.n: self.t[i] &#43;= x i &#43;= i&amp;(-i) def get(self, i): res, i = 0, i&#43;1 while i: res &#43;= self.t[i] i &amp;= i-1 return res 2 区间最大">
+  <meta name="twitter:description" content="1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n&#43;1 self.t = [0]*(n&#43;1) def update(self, i, x): i &#43;= 1 while i&lt;self.n: self.t[i] &#43;= x i &#43;= i&amp;-i def get(self, i): res, i = 0, i&#43;1 while i: res &#43;= self.t[i] i &amp;= i-1 return res 2 区间最大">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-tree_bit/" /><link rel="prev" href="https://huozhixue.github.io/template-tree_st/" /><link rel="next" href="https://huozhixue.github.io/template-tree_seg/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -161,7 +161,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">+=</span> <span class="n">i</span><span class="o">&amp;</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">+=</span> <span class="n">i</span><span class="o">&amp;-</span><span class="n">i</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>

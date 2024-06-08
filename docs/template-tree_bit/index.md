@@ -13,7 +13,7 @@ class BIT:
         i += 1
         while i<self.n:
             self.t[i] += x
-            i += i&(-i)
+            i += i&-i
 
     def get(self, i):
         res, i = 0, i+1

@@ -67,7 +67,7 @@
     <pubDate>Tue, 04 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-tree_bit/</guid>
-    <description><![CDATA[1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n+1 self.t = [0]*(n+1) def update(self, i, x): i += 1 while i&lt;self.n: self.t[i] += x i += i&amp;(-i) def get(self, i): res, i = 0, i+1 while i: res += self.t[i] i &amp;= i-1 return res 2 区间最大]]></description>
+    <description><![CDATA[1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n+1 self.t = [0]*(n+1) def update(self, i, x): i += 1 while i&lt;self.n: self.t[i] += x i += i&amp;-i def get(self, i): res, i = 0, i+1 while i: res += self.t[i] i &amp;= i-1 return res 2 区间最大]]></description>
 </item><item>
     <title>树模板：st表</title>
     <link>https://huozhixue.github.io/template-tree_st/</link>
