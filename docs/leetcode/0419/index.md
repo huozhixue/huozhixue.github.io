@@ -43,19 +43,20 @@
 
 ## 分析
 
-类似 {{< lc "0200" >}} 岛屿问题，不过这里战舰只能是长方形，所以遍历找到左上顶点即可。
+类似 {{< lc "0200" >}} 岛屿问题，不过战舰只能是长方形，所以遍历找到左上顶点即可。
 
 
 ## 解答
 
 
 ```python
-def countBattleships(self, board: List[List[str]]) -> int:
-	res, A = 0, board
-	m, n = len(A), len(A[0])
-	for i, j in product(range(m), range(n)):
-		if A[i][j]=='X' and (i==0 or A[i-1][j]=='.') and (j==0 or A[i][j-1]=='.'):
-			res += 1
-	return res
+class Solution:
+    def countBattleships(self, board: List[List[str]]) -> int:
+        m,n = len(board),len(board[0])
+        res = 0
+        for i,j in product(range(m),range(n)):
+            if board[i][j]=='X' and not (i and board[i-1][j]=='X') and not (j and board[i][j-1]=='X'):
+                res += 1
+        return res
 ```
-36 ms
+33 ms
