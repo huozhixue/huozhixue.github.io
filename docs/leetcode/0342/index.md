@@ -47,15 +47,16 @@
 
 ## 分析
 
-{{< lc "0231" >}} 升级版。n 是 4 的幂等价于 n 是 2 的幂且 n 的二进制中的 1 在偶数位上。
-
-只要 n & 0xAAAAAAAA == 0，即说明 n 的二进制不存在奇数位的 1。
+- {{< lc "0231" >}} 升级版
+- n 是 4 的幂等价于 n 是 2 的幂且 n 的二进制中的 1 在偶数位上
+- 用二进制长度判断即可
 
 ## 解答
 
 ```python
-def isPowerOfFour(self, n: int) -> bool:
-    return n > 0 and n&(n-1) == 0 and n & 0xAAAAAAAA == 0
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:
+        return n>0 and n&(n-1)==0 and (n.bit_length()-1)%2==0
 ```
-32 ms
+45 ms
 

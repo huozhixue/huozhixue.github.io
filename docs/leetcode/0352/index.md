@@ -60,9 +60,8 @@ summaryRanges.getIntervals(); // 返回 [[1, 3], [6, 7]]
 
 ## 分析
 
-{{< lc "0057" >}} 升级版。
+ {{< lc "0057" >}} 升级版，可以用数组，也可以用有序集合维护区间。
 
-addNum 时二分查找与 [val,val] 相交的区间下标，替换为合并后的区间即可。
 
 ## 解答
 
@@ -70,18 +69,21 @@ addNum 时二分查找与 [val,val] 相交的区间下标，替换为合并后�
 class SummaryRanges:
 
     def __init__(self):
-        self.A = []
+        from sortedcontainers import SortedList
+        self.sl = SortedList()
 
-    def addNum(self, val: int) -> None:
-        L, R = val, val
-        i = bisect_left(self.A, L-1, key=lambda x: x[1])
-        j = bisect_right(self.A, R+1, key=lambda x: x[0])
-        if i<j:
-            L, R = min(L, self.A[i][0]), max(R, self.A[j-1][1])
-        self.A[i:j] = [[L, R]]
+    def addNum(self, value: int) -> None:
+        pos = self.sl.bisect_left((value+1,))
+        l,r = value,value
+        if pos<len(self.sl) and self.sl[pos][0]==value+1:
+            r = self.sl.pop(pos)[1]
+        if pos and self.sl[pos-1][1]>=value-1:
+            a,b = self.sl.pop(pos-1)
+            l,r = a,max(r,b)
+        self.sl.add((l,r))
 
     def getIntervals(self) -> List[List[int]]:
-        return self.A
+        return list(self.sl)
 ```
-64 ms
+43 ms
 

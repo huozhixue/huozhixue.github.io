@@ -40,18 +40,18 @@
 
 ## 分析
 
-{{< lc "0069" >}} 升级版，找到平方根取整后，判断其平方是否等于 num 即可。
-
-找平方根可以用二分查找，也可以用牛顿迭代法。
+- 类似 {{< lc "0069" >}}，找到平方根取整后，判断其平方是否等于 num 即可
+- 找平方根可以用二分查找，也可以用牛顿迭代法
 
 ## 解答
 
 ```python
-def isPerfectSquare(self, num: int) -> bool:
-    i = num
-    while i * i > num:
-        i = (i+num//i) // 2
-    return i * i == num
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        i = num
+        while i * i > num:
+            i = (i+num//i) // 2
+        return i * i == num
 ```
-32 ms
+28 ms
 

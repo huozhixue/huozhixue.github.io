@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0365\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  559 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  561 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0365\/","datePublished": "2015-12-31T00:00:00+08:00","dateModified": "2015-12-31T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0365：水壶问题（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-31">2015-12-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 559 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-31">2015-12-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 561 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0365/" class="leancloud_visitors" data-flag-title="0365：水壶问题（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -169,25 +169,27 @@
 <li><code>1 &lt;= x, y, target &lt;= 10<sup>3</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>注意到有效的操作对应的容量变化只能是 ±x、±y、0：</p>
 <ul>
+<li>注意到有效的操作对应的容量变化只能是 ±x、±y、0</li>
 <li>有效的 z 必然能表示为 ax+by（a、b为整数）</li>
 <li>反过来，若 z 能表示为 ax+by（a、b为整数），且 z&lt;=x+y，可以构造出方案得到 z</li>
 <li>根据 <a href="//oi-wiki.org/math/number-theory/bezouts/" target="_blank" rel="noopener noreffer">裴蜀定理</a>，z 能表示为 ax+by（a、b为整数）等价于 z 是 a、b 的最大公约数的倍数</li>
-<li>因此满足 z&lt;=x+y 且 z%gcd(x,y)==0 即可</li>
+<li>因此满足 z&lt;=x+y 且 z%gcd(x,y)=0 即可</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">canMeasureWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">z</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="ow">and</span> <span class="n">z</span><span class="o">%</span><span class="n">gcd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">canMeasureWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">target</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="ow">and</span> <span class="n">target</span><span class="o">%</span><span class="n">gcd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>28 ms</p>
+</div><p>40 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

@@ -39,14 +39,15 @@
 
 ## 分析
 
-典型的排序问题。要求优于 O(n log n)，考虑用堆排序。
+要求优于 O(n log n)，用堆即可。
 
 ## 解答
 
 ```python
-def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-	ct = Counter(nums)
-	return nlargest(k, ct.keys(), key=ct.get)
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        ct = Counter(nums)
+        return nlargest(k,ct,key=ct.get)
 ```
-44 ms
+43 ms
 

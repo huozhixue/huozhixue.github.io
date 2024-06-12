@@ -58,18 +58,18 @@
 
 ## 分析
 
-{{< lc "0191" >}} 进阶版。已知 n & (n-1) 等价于将 n 中最后一个 1 变为 0。
 
-所以 n 的 1 的数目就是 n & (n-1) 的 1 的数目加 1。递推即可。
+可以直接计数，也可以基于 {{< lc "0191" >}}，用 n & (n-1) 递推 n。
 
 ## 解答
 
 ```python
-def countBits(self, num: int) -> List[int]:
-    dp = [0]
-    for i in range(1, num + 1):
-        dp.append(dp[i & (i - 1)] + 1)
-    return dp
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        res = [0]*(n+1)
+        for i in range(1,n+1):
+            res[i] = res[i&(i-1)]+1
+        return res
 ```
-40 ms
+42 ms
 

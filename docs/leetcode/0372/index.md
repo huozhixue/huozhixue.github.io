@@ -51,22 +51,17 @@
 
 ## 分析
 
-可以递推。令 dp[i] 代表 $a^{b[:i]}，n_i$ 是 b[:i+1] 对应的数，那么：
-$$\begin{aligned} dp[i]&=a^{n_i}=a^{n_{i-1}*10+b[i]} \\\
-&= (a^{n_{i-1}})^{10}*a^{b[i]} \\\
-&=dp[i-1]^{10}*a^{b[i]}
-\end{aligned}$$
-
-再注意取模即可。
+根据 $\begin{aligned} a^{b*10+c}=(a^{b})^{10}*a^{c}\end{aligned}$，递推即可。
 
 ## 解答
 
 ```python
-def superPow(self, a: int, b: List[int]) -> int:
-    dp, mod = 1, 1337
-    for x in b:
-        dp = pow(dp, 10, 1337)*pow(a, x, 1337)%mod
-    return dp
+class Solution:
+    def superPow(self, a: int, b: List[int]) -> int:
+        res = 1
+        for x in b:
+            res = pow(res,10,1337)*pow(a,x,1337)%1337
+        return res
 ```
-100 ms
+43 ms
 

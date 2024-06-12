@@ -43,32 +43,30 @@
 
 ## 分析
 
-典型的子序列 dp。先将 nums 排序后得到数组 A。
-
-令 dp[i] 代表以 A[i] 结尾的最大整除子集的长度，按A[i]前元素位置即可递推。
-
-本题要求给出一个最大整除子集，考虑从递推的路径反推：
-- 先找到一个终点 i，满足 dp[i]==max(dp)
-- 往前找点 j ，满足 A[i]%A[j]==0 且 dp[j]==dp[i]-1
-- 依此类推即可
+- 先将 nums 排序后得到数组 A
+- 令 f[i] 代表以位置 i 结尾的最大长度，按前一个位置即可递推
+- 要求一个具体的子集，在递推时保存最优情况下的前一个位置即可
 
 ## 解答
 
 ```python
-def largestDivisibleSubset(self, nums: List[int]) -> List[int]:
-    A, n = sorted(nums), len(nums)
-    dp = [1]*n
-    for i in range(n):
-        dp[i] = 1+max([dp[j] for j in range(i) if A[i]%A[j]==0], default=0)
-    i = dp.index(max(dp))
-    res = [A[i]]
-    while dp[i] != 1:
-        for j in range(i):
-            if dp[j]==dp[i]-1 and A[i]%A[j]==0:
-                i = j
-                break
-        res.append(A[i])
-    return res[::-1]
+class Solution:
+    def largestDivisibleSubset(self, nums: List[int]) -> List[int]:
+        A = sorted(nums)
+        n = len(A)
+        f = [1]*n
+        g = [-1]*n
+        for i in range(1,n):
+            for j in range(i):
+                if A[i]%A[j]==0 and 1+f[j]>f[i]:
+                    f[i] = 1+f[j]
+                    g[i] = j
+        i = f.index(max(f))
+        res = []
+        while i>=0:
+            res.append(A[i])
+            i = g[i]
+        return res
 ```
-时间复杂度 O(N^2)，308 ms
+203 ms
 

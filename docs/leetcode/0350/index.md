@@ -49,8 +49,9 @@
 ## 解答
 
 ```python
-def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-	return list((Counter(nums1)&Counter(nums2)).elements())
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        return list((Counter(nums1)&Counter(nums2)).elements())
 ```
-36 ms
+46 ms
 

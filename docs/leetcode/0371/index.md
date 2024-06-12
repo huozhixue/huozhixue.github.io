@@ -34,13 +34,13 @@
 
 ## 分析
 
-可以用位运算来解决，但 python 处理本题的负数较为麻烦，所以直接调库。
-
+可以用位运算来解决，但 python 处理负数较为麻烦，所以直接调库。
 ## 解答
 
 ```python
-def getSum(self, a: int, b: int) -> int:
-	return sum([a,b])
+class Solution:
+    def getSum(self, a: int, b: int) -> int:
+        return int.__add__(a,b)
 ```
-40 ms
+37 ms
 

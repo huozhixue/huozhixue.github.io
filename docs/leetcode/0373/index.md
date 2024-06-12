@@ -46,24 +46,49 @@
 
 ## 分析
 
-有个巧妙的想法。令 A[i][j] 代表 nums1[i]+nums2[j]，每一行都是升序列表。
 
-问题等价于归并排序 A 的前 k 行，取前 k 项，可以用堆实现。
+### #1
 
-> 具体实现时，不需要真的构造出 A，归并时根据下标计算值即可。
+- 类似多路归并算法，每次出堆最小和即对应的下标 (i,j)，将 (i+1,j) 和 (i,j+1) 入堆
+- 可以维护一个哈希表，防止重复入堆
+
+```python
+class Solution:
+    def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
+        res = []
+        pq = [(nums1[0]+nums2[0],0,0)]
+        vis = {(0,0)}
+        for _ in range(k):
+            _,i,j = heappop(pq)
+            res.append([nums1[i],nums2[j]])
+            for x,y in [(i+1,j),(i,j+1)]:
+                if x<len(nums1) and y<len(nums2) and (x,y) not in vis:
+                    vis.add((x,y))
+                    heappush(pq,(nums1[x]+nums2[y],x,y))
+        return res
+```
+180 ms
+
+### #2
+
+- 还有个防止重复入堆的技巧
+- 只有当 j=0 时，才将 (i+1,j) 入堆
 
 ## 解答
 
 ```python
-def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
-    m, n = len(nums1), len(nums2)
-    res, A = [], [(nums1[i]+nums2[0], i, 0) for i in range(min(m, k))]
-    for _ in range(min(m * n, k)):
-        _, i, j = heappop(A)
-        res.append([nums1[i], nums2[j]])
-        if j < n - 1:
-            heappush(A, (nums1[i]+nums2[j+1], i, j+1))
-    return res
+class Solution:
+    def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
+        res = []
+        pq = [(nums1[0]+nums2[0],0,0)]
+        for _ in range(k):
+            _,i,j = heappop(pq)
+            res.append([nums1[i],nums2[j]])
+            if j==0 and i+1<len(nums1):
+                heappush(pq,(nums1[i+1]+nums2[j],i+1,j))
+            if j+1<len(nums2):
+                heappush(pq,(nums1[i]+nums2[j+1],i,j+1))
+        return res
 ```
-时间复杂度 $O(KlogK)$，136 ms
+113 ms
 

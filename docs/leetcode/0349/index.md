@@ -41,8 +41,9 @@
 ## 解答
 
 ```python
-def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-	return list(set(nums1)&set(nums2))
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        return list(set(nums1)&set(nums2))
 ```
-44 ms
+46 ms
 

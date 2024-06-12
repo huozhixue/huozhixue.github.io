@@ -55,35 +55,8 @@ return res</pre>
 
 ## 分析
 
-### #1
-
-可以直接递归将 nextedList 转为一维列表，然后迭代返回即可。
-
-为了方便，可以用转为队列，不断弹出首位元素即可。
-
-```python
-class NestedIterator:
-    def __init__(self, nestedList: [NestedInteger]):
-        def dfs(nest):
-            if nest.isInteger():
-                return [nest.getInteger()]
-            return [x for sub in nest.getList() for x in dfs(sub)]
-        self.A = deque(x for sub in nestedList for x in dfs(sub))
-    
-    def next(self) -> int:
-        return self.A.popleft()
-
-    def hasNext(self) -> bool:
-        return bool(self.A)
-```
-64 ms
-
-### #2
-
-还可以边迭代边转换：
-- 如果队首是列表，就拆为元素加到队首
-- 循环操作直到队首是整数，再弹出即可
-- 为了方便，在 hasNext() 中完成转换，从而判断是否为空
+- 维护队列，将最左边的列表拆为元素即可
+- 为了方便，在 hasNext() 中完成转换
 
 ## 解答
 
@@ -91,16 +64,17 @@ class NestedIterator:
 ```python
 class NestedIterator:
     def __init__(self, nestedList: [NestedInteger]):
-        self.A = deque(nestedList)
-
+        self.Q = deque(nestedList)
+    
     def next(self) -> int:
-        return self.A.popleft().getInteger()
-
+        return self.Q.popleft()
+        
     def hasNext(self) -> bool:
-        while self.A and not self.A[0].isInteger():
-            self.A.extendleft(self.A.popleft().getList()[::-1])
-        return bool(self.A)
+        while self.Q and not self.Q[0].isInteger():
+            A = self.Q.popleft()
+            self.Q.extendleft(A.getList()[::-1])
+        return bool(self.Q)
 ```
-72 ms
+57 ms
 
 

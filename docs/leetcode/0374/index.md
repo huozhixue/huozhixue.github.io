@@ -61,9 +61,9 @@
 ## 解答
 
 ```python
-def guessNumber(self, n: int) -> int:
-    self.__class__.__getitem__ = lambda self, i: guess(i)<=0
-    return bisect_left(self, True, 1, n)
+class Solution:
+    def guessNumber(self, n: int) -> int:
+        return bisect_left(range(n),True,key=lambda i:guess(i)<=0)
 ```
 28 ms
 

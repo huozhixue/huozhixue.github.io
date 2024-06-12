@@ -43,17 +43,18 @@
 
 将信封按宽度排序：
 - 如果宽度各不相同，等价于在高度序列中找最长递增子序列，即是问题 {{< lc "0300" >}} 
-- 若存在宽度相同的信封，按高度反序排列，就依然等价
+- 若存在宽度相同的信封，按高度反序排列即可
 
 ## 解答
 
 ```python
-def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
-    A = []
-    for _, h in sorted(envelopes, key=lambda x: [x[0], -x[1]]):
-        j = bisect_left(A, h)
-        A[j:j + 1] = [h]
-    return len(A)
+class Solution:
+    def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
+        A = []
+        for w,h in sorted(envelopes,key=lambda p:(p[0],-p[1])):
+            pos = bisect_left(A,h)
+            A[pos:pos+1] = [h]
+        return len(A)
 ```
-56 ms
+243 ms
 

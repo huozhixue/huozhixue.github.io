@@ -46,24 +46,23 @@
 
 ## 分析
 
-令 dfs(node) 同时返回
-- 能偷的最高金额
-- 不偷 node 情况下的最高金额
-
-即可递归。
+- 令 dfs(u) 同时返回
+	- 能偷的最高金额
+	- 不偷 u 情况下的最高金额
+- 即可递归
 
 
 ## 解答
 
 ```python
-def rob(self, root: TreeNode) -> int:
-    def dfs(node):
-        if not node:
-            return 0, 0
-        l1, l2 = dfs(node.left)
-        r1, r2 = dfs(node.right)
-        return max(node.val+l2+r2, l1+r1), l1+r1
-    return dfs(root)[0]
+class Solution:
+    def rob(self, root: Optional[TreeNode]) -> int:
+        def dfs(u):
+            if not u:
+                return 0,0
+            l,r = dfs(u.left),dfs(u.right)
+            return max(u.val+l[1]+r[1],l[0]+r[0]),l[0]+r[0]
+        return dfs(root)[0]
 ```
-48 ms
+42 ms
 

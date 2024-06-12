@@ -71,3 +71,32 @@ class Solution:
 ```
 46 ms
 
+## *附加
+
+也可以用字典树加速查找。
+
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        T = lambda:defaultdict(T)
+        trie = T()
+        for w in wordDict:
+            p = trie
+            for c in w:
+                p=p[c]
+            p['#'] = ''
+        @cache
+        def dfs(i):
+            if i==len(s):
+                return True
+            p = trie
+            for j in range(i,len(s)):
+                if s[j] not in p:
+                    return False
+                p = p[s[j]]
+                if '#' in p and dfs(j+1):
+                    return True
+            return False
+        return dfs(0)
+```
+37 ms

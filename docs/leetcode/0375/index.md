@@ -74,22 +74,22 @@
 
 ## 分析
 
-典型的区间 dp，按一开始猜的数字即可递归。
-
-令 dp[i][j] 代表在 [i, j] 玩游戏的最小必胜现金：
-- 选 x 时，最坏情况下要支付 x+max(dp[i][x-1], dp[x+1][n])
-- 遍历 x，取最小的必胜值即可
+- 区间 dp，按猜的数字即可递推
+- 令 f[i][j] 代表在 [i, j] 玩游戏的最小必胜现金
+- 选 k 时，最坏情况下要支付 k+max(dp[i][k-1], dp[k+1][j])
+- 遍历 k，取最小的必胜值即可
 
 ## 解答
 
 ```python
-def getMoneyAmount(self, n: int) -> int:
-    dp = [[0]*(n+2) for _ in range(n+2)]
-    for i in range(n, 0, -1):
-        for j in range(i+1, n+1):
-            dp[i][j] = min(x+max(dp[i][x-1], dp[x+1][j]) for x in range(i, j+1))
-    return dp[1][n]
+class Solution:
+    def getMoneyAmount(self, n: int) -> int:
+        f = [[0]*(n+2) for _ in range(n+2)]
+        for i in range(n,0,-1):
+            for j in range(i+1,n+1):
+                f[i][j] = min(k+max(f[i][k-1],f[k+1][j]) for k in range(i,j+1))
+        return f[1][n]
 ```
-时间复杂度 O(N^3)，1536 ms
+1158 ms
 
 

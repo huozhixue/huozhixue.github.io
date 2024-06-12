@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0336\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  649 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  719 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0336\/","datePublished": "2015-12-02T00:00:00+08:00","dateModified": "2015-12-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0336：回文对（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-02">2015-12-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 649 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-12-02">2015-12-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 719 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0336/" class="leancloud_visitors" data-flag-title="0336：回文对（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -127,6 +127,7 @@
     <li><a href="#题目">题目</a></li>
     <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
+    <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -165,17 +166,17 @@
 <li><code>words[i]</code> 由小写英文字母组成</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>单词个数范围较大，而单词长度范围较小，因此考虑优化搜索方法。</p>
-<p>假如 w1+w2 是回文串，那么必然是以下情况之一：</p>
 <ul>
-<li>len(w1) == len(w2)，w1==w2[::-1]</li>
-<li>len(w1) &lt; len(w2), w2 可拆分为 pre、suf，pre==pre[::-1]，suf==w1[::-1]</li>
-<li>len(w1) &gt; len(w2), w1 可拆分为 pre、suf，pre==w2[::-1]，suf==suf[::-1]</li>
+<li>单词长度较短，因此考虑直接用单词子串去搜索</li>
+<li>假设 w1+w2 是回文串，分类讨论
+<ul>
+<li>w1 拆分为 a、b，b 回文，a 是 w2 的反</li>
+<li>w2 拆分为 a、b，a 回文，b 是 w1 的反</li>
 </ul>
-<p>因此，遍历单词 x 的所有拆分方式，假如能拆分为一个回文串和另一个单词 y 的反序，那么 x+y 或者 y+x 就是回文串。</p>
-<blockquote>
-<p>特别注意空单词的情况，空单词+回文单词或者回文单词+空单词的组合都是可行的。</p>
-</blockquote>
+</li>
+<li>为了方便，遍历时考虑当前单词为更长的那个即可</li>
+<li>注意 w1 和 w2 长度相等，或 w1/w2 为空串的特殊情况</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -193,25 +194,111 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">palindromePairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">)}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span><span class="o">==</span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">.</span><span class="n">extend</span><span class="p">([[</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">]])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">pre</span><span class="p">,</span> <span class="n">suf</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="n">k</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">:]</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">pre</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d</span> <span class="ow">and</span> <span class="n">suf</span><span class="o">==</span><span class="n">suf</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">pre</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]])</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">pre</span><span class="o">==</span><span class="n">pre</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">suf</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="n">suf</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">palindromePairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">[:</span><span class="n">j</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="n">b</span><span class="p">],</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">b</span><span class="o">==</span><span class="n">b</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">w</span><span class="o">==</span><span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">w</span> <span class="ow">and</span> <span class="s1">&#39;&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间 $O(N*M^2)$，2256 ms</p>
+</div><p>1460 ms</p>
+<h2 id="附加">*附加</h2>
+<p>还可以用字典树解决</p>
+<ul>
+<li>两个字典树分别保存单词和单词的反序</li>
+<li>同步搜索两个字典树，假如搜到某个单词的结尾，且另一个单词的后续部分是回文，即符合</li>
+<li>为了方便，可以将单词的后缀回文信息保存到字典树中</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">palindromePairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">:]</span><span class="o">==</span><span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,[])</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="n">T</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span><span class="n">defaultdict</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t1</span><span class="p">,</span><span class="n">t2</span> <span class="o">=</span> <span class="n">T</span><span class="p">(),</span><span class="n">T</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">add</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">add</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sk</span> <span class="o">=</span> <span class="p">[(</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">sk</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p</span><span class="p">,</span><span class="n">q</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;#&#39;</span> <span class="ow">in</span> <span class="n">p</span> <span class="ow">and</span> <span class="s1">&#39;#&#39;</span> <span class="ow">in</span> <span class="n">q</span> <span class="ow">and</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]</span><span class="o">!=</span><span class="n">q</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;#&#39;</span> <span class="ow">in</span> <span class="n">q</span> <span class="ow">and</span> <span class="s1">&#39;.&#39;</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">i</span><span class="o">!=</span><span class="n">q</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">q</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;#&#39;</span> <span class="ow">in</span> <span class="n">p</span> <span class="ow">and</span> <span class="s1">&#39;.&#39;</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">q</span><span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">j</span><span class="o">!=</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;#&#39;</span><span class="p">],</span><span class="n">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;.#&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p</span><span class="p">[</span><span class="n">c</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="n">c</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3664 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

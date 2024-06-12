@@ -38,19 +38,19 @@
 
 ## 分析
 
-根据数学知识：
-- [1, 9] 的对应个数：9
-- [10, 99] 的对应个数：9*9
-- [100, 999] 的对应个数：9*9*8
-- 一般性的，[10^k, 10^(k+1)-1] 的对应个数为 9*perm(9, k)。
-
-因此可以分段计算 [0, 10^n-1] 的对应个数。甚至可以直接打表。
+- 根据数学知识：
+	- [1, 9] 的对应个数：9
+	- [10, 99] 的对应个数：9*9
+	- [100, 999] 的对应个数：9*9*8
+	- 一般性的，[10^k, 10^(k+1)-1] 的对应个数为 9*perm(9, k)。
+- 因此可以分段计算 [0, 10^n-1] 的对应个数。甚至可以直接打表
 
 ## 解答
 
 ```python
-def countNumbersWithUniqueDigits(self, n: int) -> int:
-    return 1+9*sum(perm(9, k) for k in range(n))
+class Solution:
+    def countNumbersWithUniqueDigits(self, n: int) -> int:
+        return 1+9*sum(perm(9, k) for k in range(n))
 ```
 36 ms
 

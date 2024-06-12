@@ -52,31 +52,34 @@ twitter.getNewsFeed(1);  // 用户 1 获取推文应当返回一个列表，其�
 
 ## 分析
 
-维护一个时间变量 t，记录每个用户发过的推文及时间，记录每个用户的关注列表，检索时将相关的推文合并排序即可。
-
+- 维护一个时间变量 t，并记录每个用户发过的推文及时间
+- 维护每个用户的关注列表
+- 检索时将相关的推文合并排序即可
 ## 解答
 
 ```python
 class Twitter:
 
     def __init__(self):
+        self.d = defaultdict(list)
+        self.f = defaultdict(set)
         self.t = 0
-        self.tw = defaultdict(list)
-        self.fo = defaultdict(set)
 
     def postTweet(self, userId: int, tweetId: int) -> None:
-        self.tw[userId].append((tweetId, self.t))
+        self.d[userId].append((self.t,tweetId))
         self.t += 1
 
+
     def getNewsFeed(self, userId: int) -> List[int]:
-        news = {tid: t for uid in (self.fo[userId] | {userId}) for tid, t in self.tw[uid][-10:]}
-        return nlargest(10, news, key=news.get)
+        A = [p for u in self.f[userId]|{userId} for p in self.d[u][-10:]]
+        return [p[1] for p in nlargest(10,A)]
+
 
     def follow(self, followerId: int, followeeId: int) -> None:
-        self.fo[followerId].add(followeeId)
+        self.f[followerId].add(followeeId)
 
     def unfollow(self, followerId: int, followeeId: int) -> None:
-        self.fo[followerId].discard(followeeId)
+        self.f[followerId].discard(followeeId)
 ```
-36 ms
+33 ms
 
