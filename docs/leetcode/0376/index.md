@@ -62,43 +62,60 @@
 
 ### #1
 
-观察发现可以递推。
+- 按结尾元素即可递推
+- 令 U[i],D[i] 代表以位置 i 结尾且最后一个差值为正/负的最大长度
 
-令 dp[i][0]、dp[i][1] 分别代表以位置 i 结尾且最后一个差值为 正/负 的最长摆动序列长度，
-即可递推。
     
 ```python
-def wiggleMaxLength(self, nums: List[int]) -> int:
-    n = len(nums)
-    dp = [[1, 1] for _ in range(n)]
-    for i in range(1, n):
-        dp[i][0] = 1 + max([dp[j][1] for j in range(i) if nums[j]<nums[i]], default=0)
-        dp[i][1] = 1 + max([dp[j][0] for j in range(i) if nums[j]>nums[i]], default=0)
-    return max(max(sub) for sub in dp)
+class Solution:
+    def wiggleMaxLength(self, nums: List[int]) -> int:
+        n = len(nums)
+        U = [1]+[0]*(n-1)
+        D = [1]+[0]*(n-1)
+        for i in range(1,n):
+            U[i] = 1+max([D[j] for j in range(i) if nums[j]<nums[i]],default=0)
+            D[i] = 1+max([U[j] for j in range(i) if nums[j]>nums[i]],default=0)
+        return max(max(U),max(D))
 ```
-时间复杂度 O(N^2)，120 ms
+91 ms
 
 ### #2
 
-还有个巧妙的贪心方法：
-- 显然相邻重复的点只留一个即可，其它可以忽略
+- 考虑优化，可以比较 U[i] 和 U[i-1] 的递推式
+- U[i] 只比 U[i-1] 多了 j=i-1 的遍历
+- 因此， U[i]=max(U[i-1],1+D[i-1] if nums[i-1]<nums[i] else -inf)
+- D 同理
+- U/D 由相邻项即可递推，而且递增，所以直接优化为 u,d 两个参数
+
+```python
+class Solution:
+    def wiggleMaxLength(self, nums: List[int]) -> int:
+        u,d = 1,1
+        for a,b in pairwise(nums):
+            u,d = (max(u,d+1),d) if a<b else (u,max(u+1,d)) if a>b else (u,d)
+        return max(u,d)
+```
+37 ms
+
+### #3
+
+还可以用贪心的思路：
+- 显然相邻重复的点只留一个即可，其它可以去掉
 - 假设存在 nums[i-1]<nums[i]<nums[i+1]
 	- 任意包含 nums[i] 的摆动序列都可以将 nums[i] 替换为 nums[i-1] 或 nums[i+1]，依然是摆动序列
-	- 所以可以忽略掉这样的 nums[i]
-- 同理，当 nums[i-1]>nums[i]>nums[i+1] 时，也可以忽略掉 nums[i]
-- 因此只需要考虑波峰/谷的点，其它点都可以忽略掉
-- 所有波峰/谷的点组成的显然是摆动序列，即为所求
-
-注意首尾也是波峰/谷。
+	- 所以可以去掉这样的 nums[i]
+- 同理，当 nums[i-1]>nums[i]>nums[i+1] 时，也可以去掉 nums[i]
+- 因此只需要考虑拐点，计数即可
 
 ## 解答
 
 ```python
-def wiggleMaxLength(self, nums: List[int]) -> int:
-    A = [a for a,_ in groupby(nums)]
-    n = len(A)
-    return sum(i in [0, n-1] or (A[i]-A[i-1])*(A[i]-A[i+1])>0 for i in range(n))
+class Solution:
+    def wiggleMaxLength(self, nums: List[int]) -> int:
+        A = [a for a,_ in groupby(nums)]
+        n = len(A)
+        return sum(i in [0, n-1] or (A[i]-A[i-1])*(A[i]-A[i+1])>0 for i in range(n))
 ```
-时间复杂度 O(N)，36 ms
+38 ms
 
 

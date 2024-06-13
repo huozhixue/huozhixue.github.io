@@ -52,40 +52,20 @@
 
 ## 分析
 
-### #1
-
-每一行都是升序列表。问题等价于归并排序矩阵的 n 行，取第 k 项，可以用堆实现。
-
-```python
-def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-	n = len(matrix)
-	pq = [(matrix[i][0], i, 0) for i in range(min(n, k))]
-	for _ in range(k-1):
-		_, i, j = heappop(pq)
-		if j+1 < n:
-			heappush(pq, (matrix[i][j+1], i, j+1))
-	return heappop(pq)[0]
-```
-时间复杂度 $O(K*logN)$，88 ms
-
-### #2
-
-还有个巧妙的二分查找方法。
-- 以最终答案 x 为界
-	- 若 y<x，那么矩阵中小于等于 y 的元素小于 k个
-	- 若 y>=x，矩阵中小于等于 y 的元素大于等于 k个
-- 令 check(x) 代表矩阵中小于等于 x 的元素是否大于等于 k 个，二分查找第一个满足 check(x) 为真的 x 即可
+- k 很大，考虑二分
+- 令 check(x) 代表矩阵中 <=x 的元素个数是否 >=k
+- 二分查找第一个满足 check(x) 为真的 x 即可
 - 具体求 check(x)，每一行二分查找 x 的位置即可
 
 ## 解答
 
 ```python
-def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-    def check(x):
-        return sum(bisect_right(row, x) for row in matrix) >= k
-
-    self.__class__.__getitem__ = lambda self, i: check(i-10**9)
-    return bisect_left(self, True, 0, 2*10**9)-10**9
+class Solution:
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        def check(x):
+            return sum(bisect_right(row,x-ma) for row in matrix)>=k
+        ma = 10**9
+        return bisect_left(range(ma*2),True,key=check)-ma
 ```
-时间复杂度 $O(N * logN * logS)$，44 ms
+45 ms
 
