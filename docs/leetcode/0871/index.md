@@ -60,24 +60,26 @@
 
 ## 分析
 
-每轮在能用的加油站中选汽油最多的，然后更新能到达的位置，直到达到 target 为止。
-
-具体实现时，可以用大顶堆维护能到达但还没有用过的加油站，若还没到 target 但堆空就返回 -1。
+- 典型的贪心
+- 每轮在能用的加油站中选汽油最多的，更新能到达的位置即可
 
 ## 解答
 
 ```python
-def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
-	res, cur, pq, stations = 0, startFuel, [], deque(stations)
-	while cur < target:
-		while stations and stations[0][0] <= cur:
-			heappush(pq, -stations.popleft()[1])
-		if not pq:
-			return -1
-		cur -= heappop(pq)
-		res += 1
-	return res
+class Solution:
+    def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
+        s = startFuel
+        A,pq = stations[::-1],[]
+        res = 0
+        while s<target:
+            while A and A[-1][0]<=s:
+                heappush(pq,-A.pop()[1])
+            if not pq:
+                return -1
+            s -= heappop(pq)
+            res += 1
+        return res
 ```
 
-120 ms
+50 ms
 

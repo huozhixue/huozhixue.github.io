@@ -41,14 +41,15 @@
 
 ## 分析
 
-简单的计数。
+Counter() 相减即可。也可以转为数字，算总和之差。
 
 ## 解答
 
 ```python
-def findTheDifference(self, s: str, t: str) -> str:
-	return (Counter(t) - Counter(s)).popitem()[0]
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        return (Counter(t)-Counter(s)).popitem()[0]
 ```
-24 ms
+29 ms
 
 

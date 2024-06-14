@@ -64,28 +64,26 @@
 
 ## 分析
 
-先取第一个字节，得到第一个字符的长度，然后判断是否符合。再从该字符后的位置循环即可。
+取第一个字节，得到第一个字符的长度，判断是否符合。循环判断每个字符即可。
 
 ## 解答
 
 ```python
-def validUtf8(self, data: List[int]) -> bool:
-    def cal(num):
-        bits = bin(num&255)[2:].zfill(8)
-        return len(bits.split('0')[0])
-
-    i, n = 0, len(data)
-    while i < n:
-        x = cal(data[i])
-        if x not in [0, 2, 3, 4]:
-            return False
-        x = x or 1
-        if i+x > n or any(cal(num) != 1 for num in data[i+1:i+x]):
-            return False
-        i += x
-    return True
+class Solution:
+    def validUtf8(self, data: List[int]) -> bool:
+        n = len(data)
+        i = 0
+        while i<n:
+            w = len(bin(data[i])[2:].zfill(8).split('0')[0])
+            if w==1 or w>4:
+                return False
+            w = max(w,1)
+            if i+w>n or any((data[j]>>6)!=2 for j in range(i+1,i+w)):
+                return False
+            i += w
+        return True
 ```
-60 ms
+53 ms
 
 
 

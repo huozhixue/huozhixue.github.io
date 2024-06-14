@@ -48,49 +48,36 @@
 
 ### #1
 
-遍历 s 的每个字符，在剩下的 t 中找第一个位置即可。
+遍历 s 或 t，逐步匹配即可。
 
 ```python
-def isSubsequence(self, s: str, t: str) -> bool:
-    pos = 0
-    for char in s:
-        pos = t.find(char, pos) + 1
-        if not pos:
-            return False
-    return True
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        i = 0
+        for c in s:
+            while i<len(t) and t[i]!=c:
+                i += 1
+            if i==len(t):
+                return False
+            i += 1
+        return True
 ```
-24 ms
+33 ms
 
 ### #2
-
-也可以遍历 t，逐步匹配 s。
-
-```python
-def isSubsequence(self, s: str, t: str) -> bool:
-    i, n = 0, len(s)
-    for char in t:
-        if i<n and char == s[i]:
-            i += 1
-    return i==n
-```
-40 ms
-
-### #3
 
 还有种简单的迭代器写法。
 
 ## 解答
 
 ```python
-def isSubsequence(self, s: str, t: str) -> bool:
-    it = iter(t)
-    return all(c in it for c in s)
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        it = iter(t)
+        return all(c in it for c in s)
 ```
 40 ms
 
-## *附加
-
-如果有大量的 s，考虑保存 t 中字符 x 对应的下标列表，遍历 s 时从下标列表中二分查询即可。
 
 
 

@@ -65,11 +65,11 @@ class Solution:
         random.shuffle(self.A)
         return self.A
 ```
-192 ms
+88 ms
 
 ### #2
 
-经典的洗牌方法就是第 i 轮随机取 [i, n) 的一个索引 j，将 A[i]、A[j] 互换。
+经典的洗牌方法就是第 i 轮随机取 [i, n-1] 的一个索引 j，将 A[i]、A[j] 互换。
 
 ## 解答
 
@@ -89,5 +89,5 @@ class Solution:
             self.A[i], self.A[j] = self.A[j], self.A[i]
         return self.A
 ```
-228 ms
+91 ms
 

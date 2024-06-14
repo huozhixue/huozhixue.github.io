@@ -59,9 +59,9 @@ collection.getRandom(); // getRandom 应该返回 1 或 2，两者的可能性�
 
 ## 分析
 
-{{< lc "0380" >}} 进阶版，只是允许元素重复了，于是用哈希表记录元素的所有位置即可。
-
-为了保证 O(1)，哈希表用 {int:set} 的结构。
+- {{< lc "0380" >}} 进阶版，允许元素重复了
+- 考虑用哈希表记录元素的所有下标
+- 注意过程中下标列表不一定保持有序，因此用 defaultdict(set) 而不是 defaultdict(list)
 
 ## 解答
 
@@ -73,22 +73,25 @@ class RandomizedCollection:
         self.d = defaultdict(set)
 
     def insert(self, val: int) -> bool:
+        res = not self.d[val]
+        self.d[val].add(len(self.A))
         self.A.append(val)
-        self.d[val].add(len(self.A)-1)
-        return len(self.d[val]) == 1
+        return res
 
     def remove(self, val: int) -> bool:
         if not self.d[val]:
             return False
-        i, last = self.d[val].pop(), self.A[-1]
+        i = self.d[val].pop()
+        last = self.A[-1]
         self.A[i] = last
         self.A.pop()
         self.d[last].add(i)
         self.d[last].remove(len(self.A))
         return True
 
+        
     def getRandom(self) -> int:
         return random.choice(self.A)
 ```
-432 ms
+325 ms
 

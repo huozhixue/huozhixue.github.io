@@ -199,9 +199,9 @@ solution.shuffle();    // 随机返回数组 [1, 2, 3] 打乱后的结果。例�
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>192 ms</p>
+</div><p>88 ms</p>
 <h3 id="2">#2</h3>
-<p>经典的洗牌方法就是第 i 轮随机取 [i, n) 的一个索引 j，将 A[i]、A[j] 互换。</p>
+<p>经典的洗牌方法就是第 i 轮随机取 [i, n-1] 的一个索引 j，将 A[i]、A[j] 互换。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -237,7 +237,7 @@ solution.shuffle();    // 随机返回数组 [1, 2, 3] 打乱后的结果。例�
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>228 ms</p>
+</div><p>91 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

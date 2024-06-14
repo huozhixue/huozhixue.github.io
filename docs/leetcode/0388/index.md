@@ -77,26 +77,26 @@ dir
 
 ## 分析
 
-观察可知：
-- input 按 '\n' 分割即为文本格式
-- 分割后，每一行开头的 '\t' 个数即代表层级
-- 若包含 '.' 即为文件名，否则为目录名
-
-维护每一层对应的绝对路径长度，即可得到当前目录/文件的绝对路径长度。
+模拟即可
+- input 按 '\n' 分割得到每个路径
+- 路径开头的 '\t' 个数即是层级
+- 维护每层对应的路径长度即可
 
 ## 解答
 
 ```python
-def lengthLongestPath(self, input: str) -> int:
-    res, d = 0, {-1: -1}
-    for line in input.split('\n'):
-        name = line.strip('\t')
-        rank = len(line)-len(name)
-        d[rank] = d[rank-1]+1+len(name)
-        if '.' in name:
-            res = max(res, d[rank])
-    return res
+class Solution:
+    def lengthLongestPath(self, input: str) -> int:
+        res = 0
+        d = {}
+        for s in input.split('\n'):
+            A = s.split('\t')
+            h = len(A)-1
+            d[h] = d.get(h-1,-1)+len(A[-1])+1
+            if '.' in A[-1]:
+                res = max(res,d[h])
+        return res
 ```
-32 ms
+31 ms
 
 

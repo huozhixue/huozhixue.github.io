@@ -41,30 +41,30 @@
 观察知道字典排序和字符串排序是一样的，可直接调包。
 
 ```python
-def lexicalOrder(self, n: int) -> List[int]:
-	return sorted(range(1, n+1), key=str)
+class Solution:
+    def lexicalOrder(self, n: int) -> List[int]:
+        return sorted(range(1,n+1), key=str)
 ```
-44 ms
+48 ms
 
 ### #2
 
-要求时间 O(N)，空间 O(1)，可以用 dfs 构造。
-
-先考虑 '1'，然后在后面加 '0'，当大于 n 时就返回上一步，尝试加更大的数。
+- 可以把字符串看作十叉树
+- 字典排序即是树的前序遍历
 
 ## 解答
 
 ```python
-def lexicalOrder(self, n: int) -> List[int]:
-	def dfs(i):
-		for j in range(max(1, i*10), min(i*10+10, n+1)):
-			res.append(j)
-			dfs(j) 
-	res = []
-	dfs(0)
-	return res
+    def lexicalOrder(self, n: int) -> List[int]:
+        res = []
+        sk = [0]
+        while sk:
+            u = sk.pop()
+            res.append(u)
+            sk.extend(u*10+i for i in range(9,-1,-1) if 0<u*10+i<=n)
+        return res[1:]
 ```
-136 ms
+129 ms
 
 
 

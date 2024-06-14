@@ -42,18 +42,19 @@
 
 ## 分析
 
-记录每个字符出现的次数，遍历找到第一个出现一次的字符即可。
+计数再遍历即可。
 
 ## 解答
 
 ```python
-def firstUniqChar(self, s: str) -> int:
-	ct = Counter(s)
-	for i, char in enumerate(s):
-		if ct[char] == 1:
-			return i
-	return -1
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        ct = Counter(s)
+        for i,c in enumerate(s):
+            if ct[c]==1:
+                return i
+        return -1
 ```
-92 ms
+88 ms
 
 

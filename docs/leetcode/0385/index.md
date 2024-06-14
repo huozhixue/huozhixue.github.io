@@ -46,26 +46,25 @@ a. 一个 integer 包含值 789
 
 ## 分析
 
-显然 s 的对象由子串递归地组成。可以用栈模拟这个过程，一趟解决。
-
-> 特别注意数字前可能有负号。
+用栈模拟即可。
 
 ## 解答
 
 ```python
-def deserialize(self, s: str) -> NestedInteger:
-    stack = [NestedInteger()]
-    for left, num, right in re.findall(r'(\[)|(-?\d+)|(\])', s):
-        if left:
-            stack.append(NestedInteger())
-        elif num:
-            stack[-1].add(NestedInteger(int(num)))
-        else:
-            x = stack.pop()
-            stack[-1].add(x)
-    return stack[0].getList()[0]
+class Solution:
+    def deserialize(self, s: str) -> NestedInteger:
+        sk = [[]]
+        for x,op in re.findall('(-?\d+)|([\[\]])',s):
+            if x:
+                sk[-1].append(int(x))
+            elif op=='[':
+                sk.append([])
+            else:
+                A = sk.pop()
+                sk[-1].append(A)
+        return NestedInteger(sk[0][0])
 ```
-40 ms
+41 ms
 
 
 

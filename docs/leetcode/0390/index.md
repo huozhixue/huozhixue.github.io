@@ -51,18 +51,35 @@ arr = [6]
 
 ## 分析
 
-典型的递归。令 dfs(n) 代表长度 n 玩游戏最终剩下的是第几个数字：
-- 设初始数组 A，第一轮后剩下长度为 n//2 的数组 B=A[1::2]
-- 最终数字即是 B 的第 dfs(n//2) 个数字
-- B[0] 是 A 中第 n//2*2 个数字
-- 最终数字即是 A 的第 n//2 * 2 - 2 * (dfs(n//2)-1) 个数字
+容易想到递归：
+- 令 dfs(n) 表示 n 个数字玩游戏剩下第几个
+- 设初始数组 A，从左到右删除后转为求 B=A[1::2][::-1]
+- 最终剩下的是 B 的第 dfs(n//2) 个，即 A[1::2] 的第 n//2+1-dfs(n//2) 个
+- 再乘以 2 即是 A 中的序号
 
 	
 ## 解答
 
 ```python
-def lastRemaining(self, n: int) -> int:
-    return 1 if n==1 else n//2*2-2*(self.lastRemaining(n//2)-1)
+class Solution:
+    def lastRemaining(self, n: int) -> int:
+        def dfs(n):
+            m = n//2
+            return (m+1-dfs(m))*2 if m else 1
+        return dfs(n)
 ```
-52 ms
+37 ms
 
+## *附加
+
+也可以写成递推的形式。
+
+```python
+class Solution:
+    def lastRemaining(self, n: int) -> int:
+        res = 1
+        for i in range(n.bit_length()-1,0,-1):
+            res = ((n>>i)+1-res)*2
+        return res
+```
+50 ms

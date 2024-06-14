@@ -57,22 +57,23 @@
 
 ## 分析
 
-显然 s 的编码由子串递归地组成。可以用栈模拟这个过程，一趟解决。
+用栈模拟递归即可。
 
 ## 解答
 
 ```python
-def decodeString(self, s: str) -> str:
-    stack = [[]]
-    for left, sub, right in re.findall(r'(\[)|([a-z]+|\d+)|(\])', s):
-        if left:
-            stack.append([])
-        elif right:
-            x = ''.join(stack.pop())
-            stack[-1][-1] = x*int(stack[-1][-1])
-        else:
-            stack[-1].append(sub)
-    return ''.join(stack[0])
+class Solution:
+    def decodeString(self, s: str) -> str:
+        sk = [[]]
+        for x,op in re.findall('(\d+|[a-z]+)|([\[\]])',s):
+            if x:
+                sk[-1].append(x)
+            elif op=='[':
+                sk.append([])
+            else:
+                a = ''.join(sk.pop())
+                sk[-1][-1] = a*int(sk[-1][-1])
+        return ''.join(sk[0])
 ```
 32 ms
 

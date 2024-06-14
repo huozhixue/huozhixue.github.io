@@ -60,26 +60,26 @@
 
 ## 分析
 
-显然应该用梯子解决最大的高度差，剩下的用砖块。因此遍历位置 i，记录所有需要攀爬的高度差，去掉 ladders 个最大值，
-判断剩下的能否用砖块解决。若无法解决，就返回位置 i-1 即可。
-
-可以用堆来维护 ladders 个最大值来节省时间。
+- 显然应该用梯子解决最大的高度差，剩下的用砖块
+- 因此记录所有需要攀爬的高度差，维护前 ladders 大以外的和即可
 
 ## 解答
 
 ```python
-def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
-	n, pq = len(heights), []
-	for i in range(1, n):
-		if heights[i] - heights[i-1] > 0:
-			heappush(pq, heights[i] - heights[i-1])
-			if len(pq) > ladders:
-				bricks -= heappop(pq)
-				if bricks < 0:
-					return i-1
-	return n - 1
+class Solution:
+    def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
+        n = len(heights)
+        pq,s = [],0
+        for i in range(n-1):
+            diff = heights[i+1]-heights[i]
+            if diff>0:
+                heappush(pq,diff)
+                if len(pq)>ladders:
+                    s += heappop(pq)
+                    if s>bricks:
+                        return i
+        return n-1
 ```
-
-176 ms
+93 ms
 
 

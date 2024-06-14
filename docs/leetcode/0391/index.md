@@ -45,43 +45,57 @@
 
 ## 分析
 
-精确覆盖即代表没有重叠、没有间隙。考虑根据轮廓线来判断，类似 {{< lc "0218" >}}
-
-遍历所有边缘坐标 x，维护还没掠过的高度区间集合，如果该集合精确覆盖一个区间且一直不变，即说明是完美矩形。
-
-> 在边缘 x 处（除了第一个和最后一个 x），只需要判断新增的区间集合和弹出的区间集合是否等价即可。不需要真的维护整个区间集合。
-
-## 解答
+- 精确覆盖即代表没有重叠、没有间隙，可以用扫描线算法
+- 遍历边缘坐标 x，维护矩形的高度区间集合，如果该集合精确覆盖一个区间且一直不变，即说明是完美矩形
+- 除了开头和结尾，只需要判断新增的和弹出的高度区间集合是否等价即可
+- 合并区间类似 {{< lc "0056" >}}
 
 ```python
-def isRectangleCover(self, rectangles: List[List[int]]) -> bool:
-    def merge(A):
-        res = []
-        for s, e in sorted(A):
-            if not res or res[-1][1] < s:
-                res.append([s, e])
-            elif res[-1][1] == s:
-                res[-1][1] = e
-            else:
-                return None
-        return res
-
-    d = defaultdict(list)
-    for x1, y1, x2, y2 in rectangles:
-        d[x1].append((y1, y2, 0))
-        d[x2].append((y1, y2, 1))
-    first, last = min(d), max(d)
-    for x in d:
-        A = merge((y1, y2) for y1, y2, flag in d[x] if flag == 0)
-        B = merge((y1, y2) for y1, y2, flag in d[x] if flag == 1)
-        if A is None or B is None:
-            return False
-        if x == first and len(A) != 1:
-            return False
-        if first < x < last and A != B:
-            return False
-    return True
+class Solution:
+    def isRectangleCover(self, rectangles: List[List[int]]) -> bool:
+        def merge(A):
+            res=[]
+            for s,e in sorted(A):
+                if not res or res[-1][1]<s:
+                    res.append([s,e])
+                elif res[-1][1]==s:
+                    res[-1][1] = e
+                else:
+                    return 0
+            return res
+        d = defaultdict(lambda:defaultdict(list))
+        for x,y,a,b in rectangles:
+            d[x][0].append((y,b))
+            d[a][1].append((y,b))
+        for i,x in enumerate(sorted(d)):
+            A,B = merge(d[x][0]),merge(d[x][1])
+            if A==0 or B==0:
+                return False
+            if i==0 and len(A)!=1:
+                return False
+            if 0<i<len(d)-1 and A!=B:
+                return False
+        return True
 ```
-时间复杂度 O(N*logN)，80 ms
+90 ms
 
+### #2
+
+还可以用二维差分，最后不为 0 的只有 4 个点，且应该是两个 1，两个 -1。
+## 解答
+
+
+```python
+class Solution:
+    def isRectangleCover(self, rectangles: List[List[int]]) -> bool:
+        d = defaultdict(int)
+        for x,y,a,b in rectangles:
+            d[(x,y)] += 1
+            d[(x,b)] -= 1
+            d[(a,y)] -= 1
+            d[(a,b)] += 1
+        A = [v for v in d.values() if v!=0]
+        return len(A)==4 and sorted(A)==[-1,-1,1,1]
+```
+88 ms
 

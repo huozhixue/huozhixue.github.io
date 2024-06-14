@@ -46,13 +46,14 @@
 
 ## 分析
 
-显然只要 ransomNote 中每个字符的频数都小于等于在 magazine 中的频数即可。
+比较 Counter 即可。
 
 ## 解答
 
 ```python
-def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-    return not (Counter(ransomNote) - Counter(magazine))
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        return Counter(ransomNote)<=Counter(magazine)
 ```
-48 ms
+50 ms
 

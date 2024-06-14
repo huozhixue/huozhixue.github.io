@@ -39,18 +39,22 @@
 
 ## 分析
 
-若某字符 char 在 s 中出现的次数小于 k，显然子串就不能含有 char。
-所以可以将 s 按 char 分割，转为递归子问题。
+- 若某字符 c 在 s 中出现的次数小于 k，显然子串就不能含有 c
+- 将 s 按 c 分割，即转为递归子问题
+- 字符最多 26 种，因此最多递归 26 次
 
 ## 解答
 
 ```python
-def longestSubstring(self, s: str, k: int) -> int:
-    def dfs(s):
-        A = [c for c, freq in Counter(s).items() if freq < k]
-        return len(s) if not A else max(dfs(sub) for sub in re.split('|'.join(A), s))
-    return dfs(s)
+class Solution:
+    def longestSubstring(self, s: str, k: int) -> int:
+        def dfs(s):
+            A = [c for c,w in Counter(s).items() if w<k]
+            if not A:
+                return len(s)
+            return max(dfs(t) for t in re.split('|'.join(A),s))
+        return dfs(s)
 ```
-56 ms
+55 ms
 
 
