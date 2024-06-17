@@ -31,13 +31,37 @@ def dij(g,s):
 				d[v] = min(d[v], d[u]+w)
 ```
 
+## floyd
+
+- [带你发明 Floyd 算法：从记忆化搜索到递推](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solutions/2525946/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/)
+
+```python
+for i in range(n):
+    f[i][i] = 0
+for k,i,j in product(range(n),range(n),range(n)):
+	f[i][j] = min(f[i][j],f[i][k]+f[k][j])
+```
+
+## Bellman-Ford 
+
+```python
+def BF(edges,s):
+	d = [inf]*n
+	d[s] = 0
+	for _ in range(n-1):
+		flag = True
+		for u,v,w in edges:
+			if d[u]+w<d[v]:
+				d[v] = d[u]+w
+				flag = False
+		if flag:
+			break
+	return d
+```
 ## spfa
 
 ```python []
-def spfa(edges,s):
-    g = defaultdict(list)
-    for u, v, w in edges:
-        g[u].append((v, w))
+def spfa(g,s):
     d = [inf] * n
     d[s] = 0
     Q, vis = deque([s]), {s}

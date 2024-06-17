@@ -57,31 +57,33 @@
 
 ## 分析
 
-类似于最短路，只不过权重从相加改为了相乘，依然可以用 dijkstra 算法。
-
-> python 自带的是小顶堆，因此将初始权重设为 -1，最终结果再取反即可。
+- 类似最短路，权重从相加改为了相乘，求的是最大
+- 依然可以用 dijkstra 算法，初始权重设为 -1 即可
 
 ## 解答
 
 ```python
-def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
-    nxt = defaultdict(list)
-    for (u, v), w in zip(edges, succProb):
-        nxt[u].append((v, w))
-        nxt[v].append((u, w))
-    d, pq = {}, [(-1, start)]
-    while pq:
-        w, u = heappop(pq)
-        if u == end:
-            return -w
-        if u in d:
-            continue
-        d[u] = w
-        for v, w2 in nxt[u]:
-            if v not in d:
-                heappush(pq, (w*w2, v))
-    return 0
+class Solution:
+    def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -> float:
+        g = [[] for _ in range(n)]
+        for (a,b),p in zip(edges,succProb):
+            g[a].append((b,p))
+            g[b].append((a,p))
+        d = [inf]*n
+        d[start_node] = -1
+        pq = [(-1,start_node)]
+        while pq:
+            w,u = heappop(pq)
+            if w>d[u]:
+                continue
+            if u==end_node:
+                return -w
+            for v,w2 in g[u]:
+                if w*w2<d[v]:
+                    d[v]=w*w2
+                    heappush(pq,(w*w2,v))
+        return 0
 ```
-180 ms
+129 ms
 
 

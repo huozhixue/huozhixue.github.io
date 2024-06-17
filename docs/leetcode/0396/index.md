@@ -55,18 +55,19 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 观察发现 F(k) 可以递推：
 
 $$F[k] = F[k-1]+sum(A)-len(A)*A[-k]$$
-
 ## 解答
 
 ```python
-def maxRotateFunction(self, nums: List[int]) -> int:
-    n, s = len(nums), sum(nums)
-    res = f = sum(i*x for i, x in enumerate(nums))
-    for k in range(1, n):
-        f += s-n*nums[-k]
-        res = max(res, f)
-    return res
+class Solution:
+    def maxRotateFunction(self, nums: List[int]) -> int:
+        s,n = sum(nums),len(nums)
+        f = sum(i*x for i,x in enumerate(nums))
+        res = f
+        for x in nums[::-1]:
+            f = f+s-n*x
+            res = max(res,f)
+        return res
 ```
-320 ms
+227 ms
 
 

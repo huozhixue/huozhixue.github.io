@@ -53,107 +53,114 @@
 
 ## 分析
 
-典型的单源最短路径问题，可以用堆优化的 dijkstra 算法。
+典型的单源最短路径问题，可以用 dijkstra 算法。
 
 ## 解答
 
 ```python
-def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-    nxt = defaultdict(list)
-    for u, v, w in times:
-        nxt[u-1].append((v-1, w))
-    d, pq = {}, [(0, k-1)]
-    while pq:
-        w, u = heappop(pq)
-        if u in d:
-            continue
-        d[u] = w
-        for v, w2 in nxt[u]:
-            if v not in d:
-                heappush(pq, (w+w2, v))
-    return max(d.values()) if len(d) == n else -1
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        g = [[] for _ in range(n)]
+        for u,v,w in times:
+            g[u-1].append((v-1,w))
+        d = [inf]*n
+        d[k-1] = 0
+        pq = [(0,k-1)]
+        while pq:
+            w,u = heappop(pq)
+            if w>d[u]:
+                continue
+            for v,w2 in g[u]:
+                if w+w2<d[v]:
+                    d[v] = w+w2
+                    heappush(pq,(w+w2,v))
+        res = max(d)
+        return res if res<inf else -1
 ```
-时间复杂度 O(E*logE)，88 ms
+时间 O(M*logM)，65 ms
 
 ## *附加
 
-本题可以练习各种最短路算法。
+本题数据量很小，可以练习各种最短路算法。
 
 ### #1 Floyd
 
 ```python
-def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-    d = [[float('inf')]*n for _ in range(n)]
-    for i in range(n):
-        d[i][i] = 0
-    for u, v, w in times:
-        d[u-1][v-1] = w
-    for x, i, j in product(range(n), range(n), range(n)):
-        d[i][j] = min(d[i][j], d[i][x]+d[x][j])
-    res = max(d[k-1])
-    return res if res < float('inf') else -1
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        f = [[inf]*n for _ in range(n)]
+        for i in range(n):
+            f[i][i] = 0
+        for u, v, w in times:
+            f[u-1][v-1] = w
+        for x,i,j in product(range(n),range(n),range(n)):
+            f[i][j] = min(f[i][j],f[i][x]+f[x][j])
+        res = max(f[k-1])
+        return res if res<inf else -1
 ```
-时间复杂度 O(V^3)，1188 ms
+时间 O(N^3)，761 ms
 
 ### #2 Bellman-Ford 
-
 ```python
-def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-    d = [float('inf')] * n
-    d[k-1] = 0
-    for _ in range(n - 1):
-        flag = True
-        for u, v, w in times:
-            if d[u-1] + w < d[v-1]:
-                d[v-1] = d[u-1] + w
-                flag = False
-        if flag:
-            break
-    res = max(d)
-    return res if res < float('inf') else -1
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        d = [inf]*n
+        d[k-1] = 0
+        for _ in range(n-1):
+            flag = True
+            for u,v,w in times:
+                if d[u-1]+w<d[v-1]:
+                    d[v-1] = d[u-1]+w
+                    flag = False
+            if flag:
+                break
+        res = max(d)
+        return res if res<inf else -1
 ```
-时间复杂度 O(E*V)，92 ms
+时间 O(M*N)，63 ms
 
 ### #3 SPFA
 
 ```python
-def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-    nxt = defaultdict(list)
-    for u, v, w in times:
-        nxt[u-1].append((v-1, w))
-    d = [float('inf')] * n
-    d[k-1] = 0
-    queue, vis = deque([k-1]), {k-1}
-    while queue:
-        u = queue.popleft()
-        vis.remove(u)
-        for v, w in nxt[u]:
-            if d[u] + w < d[v]:
-                d[v] = d[u] + w
-                if v not in vis:
-                    vis.add(v)
-                    queue.append(v)
-    res = max(d)
-    return res if res != float('inf') else -1
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        g = [[] for _ in range(n)]
+        for u,v,w in times:
+            g[u-1].append((v-1,w))
+        d = [inf]*n
+        d[k-1] = 0
+        Q, vis = deque([k-1]), {k-1}
+        while Q:
+            u = Q.popleft()
+            vis.remove(u)
+            for v,w in g[u]:
+                if d[u]+w<d[v]:
+                    d[v] = d[u]+w
+                    if v not in vis:
+                        vis.add(v)
+                        Q.append(v)
+        res = max(d)
+        return res if res<inf else -1
 ```
-时间复杂度 O(E*V)，80 ms
+时间 O(M*N)，52 ms
 
 ### #4 Dijkstra 朴素
 
 ```python
-def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-    nxt = defaultdict(list)
-    for u, v, w in times:
-        nxt[u-1].append((v-1, w))
-    d, Q = [float('inf')] * n, set(range(n))
-    d[k-1] = 0
-    while Q:
-        u = min(Q, key=d.__getitem__)
-        Q.remove(u)
-        for v, w in nxt[u]:
-            if v in Q:
-                d[v] = min(d[v], d[u] + w)
-    res = max(d)
-    return res if res != float('inf') else -1
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        g = [[] for _ in range(n)]
+        for u,v,w in times:
+            g[u-1].append((v-1,w))
+        d = [inf]*n
+        d[k-1] = 0
+        Q = set(range(n))
+        while Q:
+            u = min(Q,key=lambda i:d[i])
+            Q.remove(u)
+            for v,w in g[u]:
+                d[v] = min(d[v],d[u]+w)
+        res = max(d)
+        return res if res<inf else -1
 ```
-时间复杂度 O(V^2)，84 ms
+时间 O(N^2)，66 ms
