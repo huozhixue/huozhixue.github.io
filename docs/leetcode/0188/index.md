@@ -54,3 +54,9 @@ class Solution:
         return dp[-1]
 ```
 110 ms
+
+
+## *附加
+
+还可以采用 [wqs二分](https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/solutions/1351896/wqs-er-fen-on-log-n-by-zerotrac2-cp7j/)。
+
