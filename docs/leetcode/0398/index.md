@@ -54,9 +54,9 @@ solution.pick(3); // 随机返回索引 2, 3 或者 4 之一。每个索引的�
 
 ## 分析
 
-### #1
+哈希表保存每个数的下标列表即可。
 
-最简单的就是用哈希表保存每个数对应的索引列表。
+## 解答
 
 ```python
 class Solution:
@@ -71,27 +71,7 @@ class Solution:
 ```
 148 ms
 
-### #2
 
-要求额外空间小，想到蓄水池抽样。遇到第 cnt 个等于 target 的数时，以 1/cnt 的概率将该数的索引赋值给 res。
 
-## 解答
-
-```python
-class Solution:
-
-    def __init__(self, nums: List[int]):
-        self.nums = nums
-
-    def pick(self, target: int) -> int:
-        res, cnt = 0, 0
-        for i, num in enumerate(self.nums):
-            if num == target:
-                cnt += 1
-                if random.randint(1, cnt) == cnt:
-                    res = i
-        return res
-```
-112 ms
 
 

@@ -51,21 +51,60 @@
 
 ## 分析
 
-显然递归即可。
+### #1
 
+最简单的就是直接递归。
+
+```python
+class Solution:
+    def integerReplacement(self, n: int) -> int:
+        @cache
+        def dfs(n):
+            if n==1:
+                return 0
+            if n%2==0:
+                return 1+dfs(n//2)
+            return 1+min(dfs(n+1),dfs(n-1))
+        return dfs(n)
+```
+36 ms
+
+### #2
+也可以用 bfs 遍历，与递归本质相同。
+```python
+class Solution:
+    def integerReplacement(self, n: int) -> int:
+        Q = deque([(0,n)])
+        vis = {n}
+        while Q:
+            w,u =Q.popleft()
+            if u==1:
+                return w
+            for v in [u-1,u+1] if u%2 else [u//2]:
+                if v not in vis:
+                    vis.add(v)
+                    Q.append((w+1,v))
+```
+
+### #3
+
+- 还可以从二进制表示考虑
+- 假如后两位是 01，减 1 更优
+- 假如后两位是 11，加 1 更优（除了 3 的特殊情况）
 ## 解答
 
 ```python
-def integerReplacement(self, n: int) -> int:
-    @cache
-    def dfs(n):
-        if n == 1:
-            return 0
-        if n % 2 == 0:
-            return 1 + dfs(n//2)
-        return 1+min(dfs(n+1), dfs(n-1))
-    return dfs(n)
+class Solution:
+    def integerReplacement(self, n: int) -> int:
+        res = 0
+        while n>1:
+            if n&1==0:
+                n >>= 1
+            else:
+                n += 1 if n&3==3<n else -1
+            res += 1
+        return res
 ```
-24 ms
+37 ms
 
 
