@@ -54,12 +54,44 @@
 
 ## 分析
 
-数据量较小，因此可以直接遍历所有有效时间，判断对应的 1 的数量是否为 turnedOn 即可  。
+
+### #1
+
+- 可以用二进制代表灯的状态，遍历[1,1<<10]，判断是否符合
+- 遍历还可以用 [Gosper's Hack](https://zhuanlan.zhihu.com/p/360512296)，只枚举二进制 k 个 1 的数
+
+
+```python
+class Solution:
+    def readBinaryWatch(self, turnedOn: int) -> List[str]:
+        res = []
+        st = (1<<turnedOn)-1
+        while st<(1<<10):
+            a,b = st>>6,st&63
+            if a<12 and b<60:
+                res.append('%d:%02d'%(a,b))
+            lb = st&-st
+            r = st+lb
+            st = (r^st)>>(lb.bit_length()+1)|r
+            if st==0:
+                break
+        return res
+```
+41 ms
+
+### #2
+
+- 数据量较小，因此可以逆向思维，直接遍历所有有效时间，计算亮灯个数
 
 ## 解答
 
 ```python
-def readBinaryWatch(self, turnedOn: int) -> List[str]:
-    return ['%d:%02d' % (h, m) for h in range(12) for m in range(60) if (bin(h)+bin(m)).count('1')==turnedOn]
+A = [[] for _ in range(11)]
+for a,b in product(range(12),range(60)):
+    A[a.bit_count()+b.bit_count()].append('%d:%02d'%(a,b))
+
+class Solution:
+    def readBinaryWatch(self, turnedOn: int) -> List[str]:
+        return A[turnedOn]
 ```
-32 ms
+38 ms

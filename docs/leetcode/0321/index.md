@@ -49,34 +49,33 @@
 
 ## 分析
 
-假设 nums1 取出 x 个，nums2 取出 k-x 个：
-- 显然应该使 nums1 取出的 x 个数拼成的数最大，这等价于 {{< lc "0402" >}} 
-- 同理取出 nums2 的数
-- 可以归求出这 k 个数能拼成的最大数
-
-那么遍历 x，分别计算即可。
-
-> 注意归并时当两个指针指向元素相等，要比较后面的元素。为了方便，可以直接比较数组后缀。
+- 假设 nums1 取出 i 个，nums2 取出 k-i 个
+- 显然应该使 nums1 取出的 i 个数拼成的数最大，这等价于 {{< lc "0402" >}} 
+	- 同理取出 nums2 的数
+- 归求出这 k 个数能拼成的最大数
+	- 为了方便，归并时直接比较整个数组
 
 	
 ## 解答
 
 ```python
-def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
-    def select(A, i):
-        stack, j = [], len(A)-i
-        for x in A:
-            while j and stack and stack[-1]<x:
-                stack.pop()
-                j -= 1
-            stack.append(x)
-        return stack[:i]
+class Solution:
+    def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
+        def gen(A,i):
+            sk,j = [],len(A)-i
+            for c in A:
+                while j and sk and sk[-1]<c:
+                    sk.pop()
+                    j -= 1
+                sk.append(c)
+            return sk[:i]
 
-    def gen(i):
-        A, B = select(nums1, i), select(nums2, k-i)
-        return [max(A,B).pop(0) for _ in range(k)]
-
-    m, n = len(nums1), len(nums2)
-    return max(gen(i) for i in range(max(0, k-n), min(m,k)+1))
+        m,n = len(nums1),len(nums2)
+        res = [0]*k
+        for i in range(max(0, k-n),min(m,k)+1):
+            A = gen(nums1,i)
+            B = gen(nums2,k-i)
+            res = max(res,[max(A,B).pop(0) for _ in range(k)])
+        return res
 ```
-224 ms
+164 ms

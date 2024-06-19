@@ -35,28 +35,49 @@
 
 ## 分析
 
-依次统计发现
 
-    [1, 9]      共 1*9 位
-    [10, 99]    共 2*90 位
-    [100, 999]  共 3*900 位
-    。。。
-    
-因此可以计算出第 n 位数字对应的是 几位数中的第几个。
+### #1
+
+- 针对数位上的这种问题，一种常用的方法是二分+计数
+	- 二分查找第一个 x 使得序列 [1,x] 的数字个数>=n
+	- 然后再定位 x 中的位置即可
+- 求序列 [1,x] 的数字个数，可以用数位 dp，也可以用贡献法
+- 这里采用贡献法
+	- 以百位为例，除了 [1,99]，其它数都有百位，因此就是 x-99
+
+```python
+class Solution:
+    def findNthDigit(self, n: int) -> int:
+        def cal(x):
+            res,y = 0,1
+            while y<=x:
+                res += x-(y-1)
+                y *= 10
+            return res
+        x = bisect_left(range(n),n,key=cal)
+        return int(str(x)[-cal(x)+n-1])
+```
+45 ms
+
+### #2
+
+- 还有一种常用的方法是分段计数
+- 将序列分为 [1,9]、[10,99]、[100,999] 等段，分别计数
+- 遍历求出第 n 个属于哪一段，再定位具体位置即可
 
 ## 解答
 
 ```python
-def findNthDigit(self, n: int) -> int:
-    x, y = 1, 9
-    while n > x*y:
-        n -= x*y
-        x+=1
-        y*=10
-    q, r = divmod(n-1, x)
-    ans = 10**(x-1)+q
-    return int(str(ans)[r])
+class Solution:
+    def findNthDigit(self, n: int) -> int:
+        x = 1
+        while n>x*9*10**(x-1):
+            n -= x*9*10**(x-1)
+            x += 1
+        q,r = divmod(n-1,x)
+        res = 10**(x-1)+q
+        return int(str(res)[r])
 ```
-24 ms
+36 ms
 
 

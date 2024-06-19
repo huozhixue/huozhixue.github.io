@@ -123,14 +123,14 @@
     <pubDate>Thu, 02 Feb 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-linked/</guid>
-    <description><![CDATA[计算器 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 def cal(s: str) -&gt; int: func = {&#39;+&#39;:int.__add__,&#39;-&#39;:int.__sub__,&#39;*&#39;:int.__mul__,&#39;/&#39;:lambda x,y:x//y} pro = dict(zip(&#39;+-*/(&#39;,&#39;11223&#39;)) sk,ops = [],[] for x,op in re.findall(&#39;(\d+)|([-+*/()])&#39;,s+&#39;+&#39;): if x: sk.append(int(x)) elif op==&#39;(&#39;: ops.append(op) elif op==&#39;)&#39;: while ops[-1] != &#39;(&#39;: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.pop() else: while ops and pro[ops[-1]]&lt;=pro[op]: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.append(op) return]]></description>
+    <description><![CDATA[反转链表 1 2 3 4 5 6 7 8 def reverse(head): tail = head while tail and tail.next: tmp = tail.next tail.next = tmp.next tmp.next = head head = tmp return head]]></description>
 </item><item>
     <title>位运算模版</title>
     <link>https://huozhixue.github.io/template-bit/</link>
     <pubDate>Wed, 01 Feb 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-bit/</guid>
-    <description><![CDATA[反转链表 1 2 3 4 5 6 7 8 def reverse(head): tail = head while tail and tail.next: tmp = tail.next tail.next = tmp.next tmp.next = head head = tmp return head]]></description>
+    <description><![CDATA[Gosper&rsquo;s Hack 算法学习笔记(75): Gosper&rsquo;s Hack 1 2 3 4 5 6 7 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子集 while st&lt;ma: lb = st&amp;-st r = st+lb st = (r^st)&gt;&gt;(lb.bit_length()+1)|r if st==0: break]]></description>
 </item><item>
     <title>字符串模板：后缀数组</title>
     <link>https://huozhixue.github.io/template-string_sa/</link>

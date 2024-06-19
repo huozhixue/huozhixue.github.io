@@ -63,60 +63,70 @@
 
 ### #1
 
-将等式看作边 (a, b)，value 看作边的权重，同时反向边 (b, a) 的权重为 1/value。
-那么问题就相当于找到从 c 到 d 在图中的路径，计算路径的权重乘积。
-
-因为数据规模较小，所以可以对每个问题进行遍历查找，bfs 或 dfs 都可以。
+- 将等式看作边 (a, b)，value 看作边的权重，反向边 (b, a) 的权重为 1/value
+- 问题就相当于找到从 c 到 d 在图中的路径，计算路径的权重乘积
+- 可以用 bfs/dfs 查找每个问题的路径
 
 ```python
-def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-    def bfs(c, d):
-        queue, vis = deque([(c, 1.0)]), set()
-        while queue:
-            u, w = queue.popleft()
-            for v, w2 in nxt[u]:
-                if v not in vis:
-                    if v == d:
-                        return w * w2
-                    vis.add(v)
-                    queue.append((v, w * w2))
-        return -1
-
-    nxt = defaultdict(list)
-    for (a, b), value in zip(equations, values):
-        nxt[a].append((b, value))
-        nxt[b].append((a, 1/value))
-    return [bfs(c, d) for c, d in queries]
+class Solution:
+    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+        def bfs(c,d):
+            if c not in g or d not in g:
+                return -1.0
+            Q = deque([(1.0,c)])
+            vis = {c}
+            while Q:
+                w,u = Q.popleft()
+                if u==d:
+                    return w
+                for v,w2 in g[u]:
+                    if v not in vis:
+                        vis.add(v)
+                        Q.append((w*w2,v))
+            return -1.0
+        g = defaultdict(list)
+        for (a,b),w in zip(equations,values):
+            g[a].append((b,w))
+            g[b].append((a,1/w))
+        return [bfs(c,d) for c,d in queries]
 ```
-36 ms
+33 ms
 
 ### #2
 
-更节省时间的做法是并查集。每个节点维护到父节点的权重，注意路径压缩和合并时都要同步更新。
+- 更节省时间的做法是并查集
+- 每个节点维护到父节点的权重
+- 注意路径压缩和合并时都要同步更新
 
-最终查询 c、d 的比值时，如果 c、d 都出现过且连通，那么 c、d 路径压缩后的权重比值即为所求。
 
 ## 解答
 
 ```python
-def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-    def find(x):
-        if f.setdefault(x, x) != x:
-            root = find(f[x])
-            w[x] *= w[f[x]]
-            f[x] = root
-        return f[x]
+class Solution:
+    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+        def find(x):
+            if f.setdefault(x,x)!=x:
+                fx = find(f[x])
+                g[x] *= g[f[x]]
+                f[x] = fx 
+            return f[x]
+        
+        def union(x,y,w):
+            fx,fy = find(x),find(y)
+            if fx!=fy:
+                f[fx] = fy
+                g[fx] = g[y]*w/g[x]
 
-    def union(x, y, val):
-        root = find(x)
-        f[root] = find(y)
-        w[root] = w[y] * val / w[x]
-
-    f, w = {}, defaultdict(lambda: 1.0)
-    for (a, b), val in zip(equations, values):
-        union(a, b, val)
-    return [w[c]/w[d] if c in f and d in f and find(c)==find(d) else -1 for c, d in queries]
+        f,g = {},defaultdict(lambda:1.0)
+        for (a,b),w in zip(equations,values):
+            union(a,b,w)
+        res = []
+        for c,d in queries:
+            if c not in f or d not in f or find(c)!=find(d):
+                res.append(-1)
+            else:
+                res.append(g[c]/g[d])
+        return res
 ```
-28 ms
 
 

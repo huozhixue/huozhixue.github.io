@@ -45,25 +45,21 @@
 
 ## 分析
 
-经典的贪心问题：
-- 遍历 num，如果当前数字比上一个数字小，可以移除上一个数字
-- 移除后若还是比上一个数字小，可以继续移除
-- 循环操作，直到当前数字大于等于上一个数字，或者 k 用完了
-- 如果最终 k 还有剩余，说明剩下的数字是升序的，去掉最后几位即可
-
-在遍历过程中，每一步能减小的最高位就是上一位，因此这样得到的数就是最小的。
-
+- 类似 {{< lc "0316" >}}，还更简单些
+- 遍历 num，假如还没删够，且当前字符比前一字符小，删掉前一字符
+- 如果最终还没删够，去掉最后几位即可
 
 ## 解答
 
 ```python
-def removeKdigits(self, num: str, k: int) -> str:
-    stack, n = [], len(num)-k
-    for char in num:
-        while k and stack and stack[-1] > char:
-            stack.pop()
-            k -= 1
-        stack.append(char)
-    return ''.join(stack[:n]).lstrip('0') or '0'
+class Solution:
+    def removeKdigits(self, num: str, k: int) -> str:
+        sk = []
+        for c in num:
+            while k and sk and sk[-1]>c:
+                sk.pop()
+                k -= 1
+            sk.append(c)
+        return ''.join(sk[:-k] if k else sk).lstrip('0') or '0'
 ```
-36 ms
+56 ms
