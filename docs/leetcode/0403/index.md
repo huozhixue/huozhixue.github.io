@@ -41,21 +41,23 @@
 
 ## 分析
 
-典型的递归问题。令 dfs(i, k) 代表上一步跳跃 k 位到达位置 i 的情况下能否过河，即可递归。
-
-注意有重复子问题，所以用记忆化递归。
+按第一步跳跃距离递归即可。
 
 ## 解答
 
 ```python
-def canCross(self, stones: List[int]) -> bool:
-    @cache
-    def dfs(i, k):
-        if i == last:
-            return True
-        return any(dfs(i+j, j)  for j in [k-1, k, k+1] if i<i+j<=last and i+j in vis)
-    
-    vis, last = set(stones), stones[-1]
-    return dfs(0, 0)
+class Solution:
+    def canCross(self, stones: List[int]) -> bool:
+        @cache
+        def dfs(i,k):
+            if i==stones[-1]:
+                return True
+            for j in range(max(1,k-1),k+2):
+                if i+j in vis and dfs(i+j,j):
+                    return True
+            return False
+        n = len(stones)
+        vis = set(stones)
+        return dfs(stones[0],0)
 ```
-36 ms
+97 ms

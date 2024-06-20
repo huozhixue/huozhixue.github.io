@@ -49,10 +49,9 @@
 
 ## 分析
 
-- 假设 nums1 取出 i 个，nums2 取出 k-i 个
-- 显然应该使 nums1 取出的 i 个数拼成的数最大，这等价于 {{< lc "0402" >}} 
-	- 同理取出 nums2 的数
-- 归求出这 k 个数能拼成的最大数
+- 假设 nums1 删除 i 个，nums2 删除 m+n-k-i 个
+- 删除 i 个得到的序列最大，即是问题 {{< lc "0402" >}} 
+- 归并求出剩下 k 个数能拼成的最大数
 	- 为了方便，归并时直接比较整个数组
 
 	
@@ -62,20 +61,63 @@
 class Solution:
     def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
         def gen(A,i):
-            sk,j = [],len(A)-i
+            sk = []
             for c in A:
-                while j and sk and sk[-1]<c:
+                while i and sk and sk[-1]<c:
                     sk.pop()
-                    j -= 1
+                    i -= 1
                 sk.append(c)
-            return sk[:i]
+            return sk[:-i] if i else sk
 
         m,n = len(nums1),len(nums2)
         res = [0]*k
-        for i in range(max(0, k-n),min(m,k)+1):
+        for i in range(min(m,m+n-k)+1):
             A = gen(nums1,i)
-            B = gen(nums2,k-i)
+            B = gen(nums2,m+n-k-i)
             res = max(res,[max(A,B).pop(0) for _ in range(k)])
         return res
 ```
-164 ms
+165 ms
+
+
+## *附加
+
+- 还有种依次选择每一位的贪心方法
+- 先看第一位，为了尽可能大，先考虑选 9
+	- 找到 nums1 第一个 9 的下标 i
+		- 剩下的数在 nums1[i+1:] 和 nums2 中选
+		- 如果够选，这即是一个最佳候选，可记为 <i+1,0>
+	- 同理在 nums2 中看是否有一个最佳候选 <0,j+1>
+	- 只要存在最佳候选，第一位便确定为 9，同时所有最佳候选参与下一轮
+- 若 9 不可能，就继续考虑 8，依此类推
+- 依此循环，选出 k 位即可
+
+```python
+class Solution:
+    def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
+        m,n = len(nums1),len(nums2)
+        A1,A2 = ([[] for _ in range(10)] for _ in range(2))
+        for i,x in enumerate(nums1):
+            A1[x].append(i)
+        for i,x in enumerate(nums2):
+            A2[x].append(i)
+        res = []
+        Q = {(0,0)}
+        for _ in range(k):
+            for x in range(9,-1,-1):
+                tmp = set()
+                B1,B2 = A1[x],A2[x]
+                for i,j in Q:
+                    p1 = bisect_left(B1,i)
+                    if p1<len(B1) and m-B1[p1]+n-j+len(res)>=k:
+                        tmp.add((B1[p1]+1,j))
+                    p2 = bisect_left(B2,j)
+                    if p2<len(B2) and m-i+n-B2[p2]+len(res)>=k:
+                        tmp.add((i,B2[p2]+1))
+                if tmp:
+                    Q = tmp
+                    res.append(x)
+                    break
+        return res
+```
+73 ms
