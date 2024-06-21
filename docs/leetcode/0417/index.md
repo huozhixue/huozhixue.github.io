@@ -45,26 +45,29 @@
 
 ## 分析
 
-从每个单元格开始遍历，显然会有很多重复。因此考虑反过来，从边界往里面遍历。多源 dfs/bfs 分别求出太平洋/大西洋对应的格子列表，求交集即可。
+- 从每个单元格开始遍历，显然会有很多重复路径
+- 考虑反过来，从边界往里面遍历
+- 多源 dfs/bfs 求出两边的列表，返回交集即可
 
 ## 解答
 
 
 ```python
-def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
-	def bfs(A):
-		Q, vis = deque(A), set(A)
-		while Q:
-			r,c = Q.popleft()
-			for x,y in [(r-1,c),(r+1,c),(r,c-1),(r,c+1)]:
-				if 0<=x<m and 0<=y<n and heights[x][y]>=heights[r][c] and (x,y) not in vis:
-					Q.append((x, y))
-					vis.add((x, y))
-		return vis
-
-	m, n = len(heights), len(heights[0])
-	pa = [(0, j) for j in range(n)] + [(i, 0) for i in range(1, m)]
-	ao = [(m-1, j) for j in range(n)] + [(i, n-1) for i in range(m-1)]
-	return list(bfs(pa)&bfs(ao))
+class Solution:
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+        def bfs(A):
+            Q,vis = deque(A),set(A)
+            while Q:
+                i,j = Q.popleft()
+                for x,y in [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]:
+                    if 0<=x<m and 0<=y<n and H[x][y]>=H[i][j] and (x,y) not in vis:
+                        vis.add((x,y))
+                        Q.append((x,y))
+            return vis
+        H = heights
+        m,n = len(H),len(H[0])
+        A = [(0,j) for j in range(n)]+[(i,0) for i in range(1,m)] 
+        B = [(m-1,j) for j in range(n)]+[(i,n-1) for i in range(m-1)]
+        return [[i,j] for i,j in bfs(A)&bfs(B)]
 ```
-84 ms
+67 ms

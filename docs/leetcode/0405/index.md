@@ -44,26 +44,27 @@
 最简单的就是调库
 
 ```python
-def toHex(self, num: int) -> str:
-    return hex(num%(1<<32))[2:]
+class Solution:
+    def toHex(self, num: int) -> str:
+        return hex(num%(1<<32))[2:]
 ```
-44 ms
+36 ms
 
 ### #2
 
 也可以模拟进制转换的方法。
 
-> 注意 num 为 0 时的特殊情况
-
 ## 解答
 
 ```python
-def toHex(self, num: int) -> str:
-    num %= 1<<32
-    res, s = '', '0123456789abcdef'
-    while num:
-        res = s[num%16]+res
-        num //= 16
-    return res if res else '0'
+class Solution:
+    def toHex(self, num: int) -> str:
+        num %= 1<<32
+        A = '0123456789abcdef'
+        res = ''
+        while num:
+            num,r = divmod(num,16)
+            res = A[r]+res
+        return res or '0'
 ```
-44 ms
+32 ms

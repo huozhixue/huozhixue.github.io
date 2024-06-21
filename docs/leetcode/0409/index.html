@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0409\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  333 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  280 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0409\/","datePublished": "2016-02-13T00:00:00+08:00","dateModified": "2016-02-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0409：最长回文串</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-13">2016-02-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 333 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-13">2016-02-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 280 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0409/" class="leancloud_visitors" data-flag-title="0409：最长回文串">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -154,25 +154,33 @@
 <li><code>s</code> 只由小写 <strong>和/或</strong> 大写英文字母组成</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>分情况讨论：</p>
 <ul>
-<li>如果字符的出现次数是偶数，都能用上</li>
-<li>如果次数是奇数，多余的那个只能作为回文串中心</li>
-<li>如果多个字符的出现次数都是奇数，只能选一个多余的作为回文串中心，剩下的都是真正多余的</li>
+<li>对每个字母，假如次数为偶数，都可以选</li>
+<li>假如次数为奇数，额外的那个可以充当回文串的中心</li>
+<li>注意回文串的中心最多加 1 个</li>
 </ul>
-<p>因此统计出现次数为奇数的字符个数 k，多余的个数即为 max(0, k-1)。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">longestPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">v</span> <span class="o">%</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">())</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">longestPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">,</span><span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="n">a</span><span class="o">//</span><span class="mi">2</span><span class="o">*</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">flag</span> <span class="o">|=</span> <span class="n">a</span><span class="o">%</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="o">+</span><span class="n">flag</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>36 ms</p>
+</div><p>43 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

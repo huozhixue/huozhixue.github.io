@@ -54,8 +54,9 @@
 
 
 ```python
-def thirdMax(self, nums: List[int]) -> int:
-	A = nlargest(3, set(nums))
-	return A[2] if len(A)>=3 else A[0]
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
+        A = nlargest(3,set(nums))
+        return A[-1] if len(A)==3 else A[0]
 ```
-36 ms
+35 ms

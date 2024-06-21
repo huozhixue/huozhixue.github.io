@@ -53,7 +53,8 @@
 
 
 ```python
-def fizzBuzz(self, n: int) -> List[str]:
-	return [('Fizz'*(x%3==0)+'Buzz'*(x%5==0)) or str(x) for x in range(1, n+1)]
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        return [('Fizz'*(i%3==0)+'Buzz'*(i%5==0)) or str(i) for i in range(1,n+1)]
 ```
-32 ms
+42 ms

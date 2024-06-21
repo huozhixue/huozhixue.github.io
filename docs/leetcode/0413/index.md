@@ -48,23 +48,21 @@
 
 ## 分析
 
-令 dp[i] 代表以 i 结尾的等差子数组个数，那么：
- $$dp[i] = \begin{cases}
-   dp[i-1]+1 &\text{if } nums[i]-nums[i-1] \\\ &== nums[i-1]-nums[i-2] \\\
-   0 &\text{else } 
-\end{cases}$$
+递推以 i 结尾的子数组个数即可。
 
-最后 sum(dp) 即为所求。
 
 ## 解答
 
 ```python
-def numberOfArithmeticSlices(self, nums: List[int]) -> int:
-    n = len(nums)
-    dp = [0]*n
-    for i in range(2, n):
-        dp[i] = dp[i-1]+1 if 2*nums[i-1]==nums[i]+nums[i-2] else 0
-    return sum(dp)
+class Solution:
+    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
+        res = 0
+        f,pre = 0,inf
+        for a,b in pairwise(nums):
+            f = f+1 if b-a==pre else 0
+            res += f
+            pre = b-a
+        return res
 ```
 40 ms
 

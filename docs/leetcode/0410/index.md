@@ -48,29 +48,27 @@
 
 ## 分析
 
-直接分割很难入手，一个想法是假如给定和的限制，那么贪心地选择分割点即可。
-
-因此想到对解用二分查找。假如最后的解是 x：
-- 针对所有 y<x，无法将数组分成 m 个和 <=y 的子数组
-- 针对所有 y>=x，可以将数组分成 m 个和 <=y 的子数组
-
-因此可以对解用二分查找。
+- 最大最小问题，首先想到用二分
+- 假设最后的解是 x，代表能划分为 k 个和 <=x 的子数组
+	- 显然对于 y>=x，也能划分为 k 个 和 <=y 的子数组 
+	- 对于 y<x 则不成立，否则解应该是 y 了
+- 因此，二分查找第一个满足划分的 x 即可
+- 判断是否满足划分，贪心即可
 
 ## 解答
 
 
 ```python
-def splitArray(self, nums: List[int], k: int) -> int:
-	def check(x):
-		s, cnt = 0, 1
-		for num in nums:
-			s += num
-			if s > x:
-				cnt += 1
-				s = num
-		return cnt <= k
-
-	self.__class__.__getitem__ = lambda self, x: check(x)
-	return bisect_left(self, True, max(nums), sum(nums))
+class Solution:
+    def splitArray(self, nums: List[int], k: int) -> int:
+        def check(x):
+            res,s=1,0
+            for a in nums:
+                s+=a
+                if s>x:
+                    s=a
+                    res+=1
+            return res<=k
+        return bisect_left(range(sum(nums)),True,max(nums),key=check)
 ```
 32 ms

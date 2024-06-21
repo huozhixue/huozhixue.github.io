@@ -40,17 +40,19 @@
 
 ## 分析
 
-分情况讨论：
-- 如果字符的出现次数是偶数，都能用上
-- 如果次数是奇数，多余的那个只能作为回文串中心
-- 如果多个字符的出现次数都是奇数，只能选一个多余的作为回文串中心，剩下的都是真正多余的
-
-因此统计出现次数为奇数的字符个数 k，多余的个数即为 max(0, k-1)。
+- 对每个字母，假如次数为偶数，都可以选
+- 假如次数为奇数，额外的那个可以充当回文串的中心
+- 注意回文串的中心最多加 1 个
 
 ## 解答
 
 ```python
-def longestPalindrome(self, s: str) -> int:
-	return len(s) - max(0, sum(v % 2 for v in Counter(s).values())-1)
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        res,flag = 0,0
+        for a in Counter(s).values():
+            res += a//2*2
+            flag |= a%2
+        return res+flag
 ```
-36 ms
+43 ms

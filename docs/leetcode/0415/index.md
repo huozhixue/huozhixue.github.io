@@ -47,23 +47,21 @@
 
 ## 分析
 
-和 {{< lc "0067">}} 类似，将除数换成 10 即可。
+类似 {{< lc "0067">}} ，将除数换成 10 即可。
 
 
 ## 解答
 
 ```python
-def addStrings(self, num1: str, num2: str) -> str:
-	res, carry, i, j = '', 0, len(num1)-1, len(num2)-1
-	while i>=0 or j>=0 or carry:
-		x = int(num1[i]) if i>=0 else 0
-		y = int(num2[j]) if j>=0 else 0
-		carry, r = divmod(x+y+carry, 10)
-		res += str(r)
-		i -= 1
-		j -= 1
-	return res[::-1]
+class Solution:
+    def addStrings(self, num1: str, num2: str) -> str:
+        res,c = [],0
+        for x,y in zip_longest(num1[::-1],num2[::-1],fillvalue=0):
+            c,r = divmod(int(x)+int(y)+c,10)
+            res.append(str(r))
+        if c:
+            res.append('1')
+        return ''.join(res[::-1])
 ```
-
-40 ms
+49 ms
 

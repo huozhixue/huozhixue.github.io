@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0416\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  446 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  409 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0416\/","datePublished": "2016-02-20T00:00:00+08:00","dateModified": "2016-02-20T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0416：分割等和子集（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-20">2016-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 446 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-20">2016-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 409 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0416/" class="leancloud_visitors" data-flag-title="0416：分割等和子集（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -129,6 +129,7 @@
       <ul>
         <li><a href="#1">#1</a></li>
         <li><a href="#2">#2</a></li>
+        <li><a href="#2-1">#2</a></li>
       </ul>
     </li>
     <li><a href="#解答">解答</a></li>
@@ -157,16 +158,10 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>令 s=sum(nums)。</p>
 <ul>
-<li>s 为奇数时显然无解</li>
-<li>s 为偶数时，问题等价于分割成子集和为 s//2</li>
+<li>令 s 为数组的和，问题相当于找子集满足和等于 s/2</li>
+<li>这可以看作背包问题，递推即可</li>
 </ul>
-<p>注意到 s//2 最大为 10^4，于是考虑递推 nums[:i] 能得到的所有子集和。</p>
-<p>令 dp[i] 代表nums[:i] 能得到的所有 &lt;=s//2 的子集和，那么</p>
-<p>$$dp[i] = dp[i-1] \ | \ \{x+nums[i-1] \}_
-{\substack{x \in dp[i-1] \\ if \ x+nums[i-1]&lt;=s//2} }$$</p>
-<p>只要递推过程中找到 s//2 即为真。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -180,27 +175,58 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">canPartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">x</span><span class="o">+</span><span class="n">num</span><span class="o">==</span><span class="n">s</span><span class="o">//</span><span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">x</span><span class="o">+</span><span class="n">num</span><span class="o">&lt;</span><span class="n">s</span><span class="o">//</span><span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">num</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">canPartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">//=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">s</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">|=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">x</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>380 ms</p>
+</div><p>785 ms</p>
 <h3 id="2">#2</h3>
-<p>还有个巧妙的想法，可以将集合状态压缩为一个数 st，然后集合内所有数加上 num 得到的集合即是 st&laquo;num。</p>
-<p>这样显著优化了递推的时间。</p>
+<ul>
+<li>由于递推时只关心 f 值为 1 的元素，所以可以直接用 set 维护</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">canPartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">//=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vis</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vis</span> <span class="o">|=</span> <span class="p">{</span><span class="n">y</span><span class="o">+</span><span class="n">x</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">vis</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span> <span class="k">if</span> <span class="n">y</span><span class="o">+</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">s</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">vis</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>534 ms</p>
+<h3 id="2-1">#2</h3>
+<ul>
+<li>由于 vis 集合的递推只涉及到加法，所以可以用二进制优化</li>
+<li>用二进制状态 st 表示 vis 集合，集合内所有数加上 x 即是 st &laquo; x</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -216,19 +242,19 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">canPartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">	<span class="n">st</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">st</span> <span class="o">|=</span> <span class="n">st</span> <span class="o">&lt;&lt;</span> <span class="n">num</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">st</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">s</span><span class="o">//</span><span class="mi">2</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">False</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">canPartition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">//=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">st</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">st</span> <span class="o">|=</span> <span class="p">(</span><span class="n">st</span><span class="o">|</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">x</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">st</span><span class="o">&amp;</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>24 ms</p>
+</div><p>37 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

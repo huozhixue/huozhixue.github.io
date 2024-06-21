@@ -45,14 +45,16 @@
 ## 解答
 
 ```python
-def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
-    res, stack = 0, [(root, 1)]
-    while stack:
-        node, flag = stack.pop()
-        if node:
-            if not node.left and not node.right and flag == 0:
-                res += node.val
-            stack.extend([(node.left, 0), (node.right, 1)])
-    return res
+class Solution:
+    def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
+        res = 0
+        sk = [(root,1)]
+        while sk:
+            u,c = sk.pop()
+            if u:
+                if c==0 and not u.left and not u.right:
+                    res += u.val
+                sk.extend([(u.left,0),(u.right,1)])
+        return res
 ```
-36 ms
+43 ms
