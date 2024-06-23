@@ -43,23 +43,14 @@
 
 ## 分析
 
-可以直接调包。
-
-```python
-def detectCapitalUse(self, word: str) -> bool:
-	return word.isupper() or word.islower() or word.istitle()
-```
-
-40 ms
-
-也可以用正则。
+可以用正则，也可以直接调包。
 
 ## 解答
 
 ```python
-def detectCapitalUse(self, word: str) -> bool:
-	return bool(re.match('^([A-Z]*|[a-z]*|[A-Z][a-z]*)$', word))
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        return word.isupper() or word.islower() or word.istitle()
 ```
-
-36 ms
+26 ms
 
