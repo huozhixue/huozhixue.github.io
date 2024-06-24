@@ -44,42 +44,39 @@
 
 ## 分析
 
-对于每个位置：
-- 如果有一外圈的柱子都更高，那么该位置就能接到雨水，并且至少接到（该外圈的最矮柱子高度 H - 当前高度 h）的雨水。
-- 找到使 H 最大的外圈，就得到该位置总共能接到的雨水 maxH - h。
+### #1
 
-显然遍历所有外圈太耗时了，有个巧妙的想法是从最外圈开始：
-- 假设最矮柱子 A 高度 H，那么相邻内侧位置 B 能接到的雨水就是 max(0, H - B的高度)。
-- 然后可以将位置 A 替换成位置 B，并更新 B 的高度为 max(H, h)，得到一个缩小一格的新外圈，显然不影响里面位置的结果。
-- 这样遍历逐步缩小的外圈即可得到所有位置能接到的雨水。
+- 可以借鉴 {{< lc "0042" >}} 的双指针思想，从外到内遍历
+- 对于最外圈，先找到最低柱子 a 
+	- 则对于 a 相邻的柱子 b，能接到的雨水即是 max(0,a-b)
+- 然后将 a 替换为 b，形成新的外圈，并更新 b 的高度为 max(a,b)
+- 逐步缩小外圈即可得到每个位置能接到的雨水
+- 每轮要找外圈里的最低柱子，用堆维护即可
 
-具体实现时：
-- 可以用小顶堆维护外圈的高度集合，每轮弹出堆顶即为最矮柱子的高度。
-- 另外，为了方便遍历，可以把经过的柱子高度都置 -1。
-
-## 解答
 
 ```python
-def trapRainWater(self, heightMap: List[List[int]]) -> int:
-    pq, H = [], heightMap
-    m, n = len(H), len(H[0])
-    for i, j in product(range(m), range(n)):
-        if i in [0, m-1] or j in [0, n-1]:
-            heappush(pq, [H[i][j], i, j])
-            H[i][j] = -1
-    res = 0
-    while pq:
-        h, i, j = heappop(pq)
-        for x, y in [(i+1, j), (i-1, j), (i, j-1), (i, j+1)]:
-            if 0<=x<m and 0<=y<n and H[x][y]>=0:
-                res += max(0, h-H[x][y])
-                heappush(pq, [max(h, H[x][y]), x, y])
-                H[x][y] = -1
-    return res
+class Solution:
+    def trapRainWater(self, heightMap: List[List[int]]) -> int:
+        H = heightMap
+        m,n = len(H),len(H[0])
+        pq = []
+        for i, j in product(range(m), range(n)):
+            if i in [0, m-1] or j in [0, n-1]:
+                heappush(pq, (H[i][j], i, j))
+                H[i][j] = -1
+        res = 0
+        while pq:
+            h,i,j = heappop(pq)
+            for x, y in [(i+1, j), (i-1, j), (i, j-1), (i, j+1)]:
+                if 0<=x<m and 0<=y<n and H[x][y]!=-1:
+                    res += max(0,h-H[x][y])
+                    heappush(pq, (max(h,H[x][y]),x,y))
+                    H[x][y] = -1
+        return res
 ```
-268 ms
+168 ms
 
-## *附加
+### #2
 
 还有个巧妙的并查集做法。
 
@@ -97,6 +94,8 @@ def trapRainWater(self, heightMap: List[List[int]]) -> int:
 - 依然被围绕的 'O' 个数即是高度为 h 的雨水数量。所有高度的雨水总和即为所求。
 - 而计算被围绕的 'O' 个数可以由 'O' 总数减去与 dummy 连通的 'O' 个数得到。
 - 因此再用 sz 维护并查集每个连通块的大小即可。
+
+## 解答
 
 ```python
 def trapRainWater(self, heightMap: List[List[int]]) -> int:

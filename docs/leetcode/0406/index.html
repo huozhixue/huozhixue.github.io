@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0406\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  705 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  850 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0406\/","datePublished": "2016-02-10T00:00:00+08:00","dateModified": "2016-02-10T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0406：根据身高重建队列（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-10">2016-02-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 705 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-10">2016-02-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 850 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0406/" class="leancloud_visitors" data-flag-title="0406：根据身高重建队列（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,7 +125,12 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a></li>
+    <li><a href="#分析">分析</a>
+      <ul>
+        <li><a href="#1">#1</a></li>
+        <li><a href="#2">#2</a></li>
+      </ul>
+    </li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -163,14 +168,63 @@
 <li>题目数据确保队列可以被重建</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>构造类题目先考虑极端情况：</p>
+<h3 id="1">#1</h3>
 <ul>
-<li>假设最高 h0 且唯一，显然他的属性必然为 [h0, 0]，且可以随意安排</li>
-<li>假设 h0 不唯一，那么这些人的属性必然为 [h0, 0], [h0, 1], [h0, 2], &hellip;, 并依此顺序</li>
-<li>然后假设次高 h1 且唯一，他的属性为 [h1,k]，显然他应该插入到第 k 个 h0 之后</li>
-<li>依此类推，即可构造出结果</li>
+<li>先考虑简化情形，即不存在相等身高的情况
+<ul>
+<li>可以从小到大考虑，依次确定位置</li>
+<li>遍历到 [h,k] 时，由于前面确定了位置的都比 h 小，所以应找到第 k+1 个空位</li>
 </ul>
-<p>实现时，将数组按 &lt;-hi,ki&gt; 排序，遍历并插入即可。</p>
+</li>
+<li>接着考虑相等身高的情况，显然 k 更大的人的位置应该靠后
+<ul>
+<li>所以先确定 k 更大的人的位置，依然是找第 k+1 个空位</li>
+</ul>
+</li>
+<li>找第 k+1 个空位可以用有序集合+二分来加速</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">reconstructQueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">from</span> <span class="nn">sortedcontainers</span> <span class="kn">import</span> <span class="n">SortedList</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="n">SortedList</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">h</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">people</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">pos</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">-</span><span class="n">pos</span><span class="o">&gt;</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="kc">True</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="n">check</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">h</span><span class="p">,</span><span class="n">k</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>98 ms</p>
+<h3 id="2">#2</h3>
+<ul>
+<li>也可以从大到小考虑</li>
+<li>遍历到 [h,k] 时，由于前面的人都比 h 大，插入第 k 个人之后即可</li>
+<li>身高相等的，先插 k 更小的，保证顺序符合</li>
+<li>插第 k 个人之后，也可以用有序集合来加速</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -179,16 +233,24 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">reconstructQueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">reconstructQueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">people</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">from</span> <span class="nn">sortedcontainers</span> <span class="kn">import</span> <span class="n">SortedList</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="n">SortedList</span><span class="p">([(</span><span class="mi">0</span><span class="p">,),(</span><span class="n">n</span><span class="p">,)])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">h</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">sl</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">sl</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">k</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[[</span><span class="n">h</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="n">sl</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>48 ms</p>
+</div><p>42 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -208,7 +270,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>,&nbsp;<a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>,&nbsp;<a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">有序集合</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

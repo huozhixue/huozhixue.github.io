@@ -50,21 +50,52 @@
 
 ## 分析
 
-构造类题目先考虑极端情况：
-- 假设最高 h0 且唯一，显然他的属性必然为 [h0, 0]，且可以随意安排
-- 假设 h0 不唯一，那么这些人的属性必然为 [h0, 0], [h0, 1], [h0, 2], ..., 并依此顺序
-- 然后假设次高 h1 且唯一，他的属性为 [h1,k]，显然他应该插入到第 k 个 h0 之后
-- 依此类推，即可构造出结果
+### #1
 
-实现时，将数组按 <-hi,ki> 排序，遍历并插入即可。
+- 先考虑简化情形，即不存在相等身高的情况
+	- 可以从小到大考虑，依次确定位置
+	- 遍历到 [h,k] 时，由于前面确定了位置的都比 h 小，所以应找到第 k+1 个空位
+- 接着考虑相等身高的情况，显然 k 更大的人的位置应该靠后
+	- 所以先确定 k 更大的人的位置，依然是找第 k+1 个空位
+- 找第 k+1 个空位可以用有序集合+二分来加速
+
+```python
+class Solution:
+    def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
+        from sortedcontainers import SortedList
+        n = len(people)
+        res = [0]*n
+        sl = SortedList()
+        for h,k in sorted(people,key=lambda p:(p[0],-p[1])):
+            def check(i):
+                pos = sl.bisect_left(i+1)
+                return i+1-pos>k
+            i = bisect_left(range(n),True,key=check)
+            res[i] = [h,k]
+            sl.add(i)
+        return res
+```
+98 ms
+
+### #2
+
+- 也可以从大到小考虑
+- 遍历到 [h,k] 时，由于前面的人都比 h 大，插入第 k 个人之后即可
+- 身高相等的，先插 k 更小的，保证顺序符合
+- 插第 k 个人之后，也可以用有序集合来加速
 
 ## 解答
 
 ```python
-def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
-    res = []
-    for p in sorted(people, key=lambda x: (-x[0], x[1])):
-        res.insert(p[1], p)
-    return res
+class Solution:
+    def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
+        from sortedcontainers import SortedList
+        n = len(people)
+        sl = SortedList([(0,),(n,)])
+        for h,k in sorted(people, key=lambda p: (-p[0], p[1])):
+            x = (sl[k][0]+sl[k+1][0])/2
+            sl.add((x,h,k))
+        return [[h,k] for x,h,k in sl[1:-1]]
 ```
-48 ms
+42 ms
+

@@ -48,36 +48,40 @@
 
 ## 分析
 
-模拟除法，用哈希表检测循环即可。注意边界条件较多：
-- 转为两个非负数相除，并判断是否加上负号
+- 模拟除法，注意边界条件较多
+- 先考虑正负性，转为两个非负数相除，并判断是否加上负号
 - 若能整除，直接返回商，没有小数点
-- 若不能整除，加上小数点，每轮相除，添加商
+- 若不能整除，加上小数点，继续模拟相除
 	- 若除得尽，直接返回
 	- 若除不尽，用哈希表找到循环起点，添加括号即可
  
 ## 解答
 
 ```python
-def fractionToDecimal(self, numerator: int, denominator: int) -> str:
-    res = '' if numerator*denominator >= 0 else '-'
-    m, n = abs(numerator), abs(denominator)
-    q, r = divmod(m, n)
-    res += str(q)
-    if r == 0:
-        return res
-    res += '.'
-    d = {}
-    while True:
-        d[r] = len(res)
-        q, r = divmod(r*10, n)
+class Solution:
+    def fractionToDecimal(self, numerator: int, denominator: int) -> str:
+        res = '' if numerator*denominator>=0 else '-'
+        x,y = abs(numerator),abs(denominator)
+        q,r = divmod(x,y)
         res += str(q)
-        if r == 0:
+        if r==0:
             return res
-        if r in d:
-            i = d[r]
-            return res[:i] + '(' + res[i:] + ')'
+        res += '.'
+        d = {r:len(res)}
+        while True:
+            q,r = divmod(r*10,y)
+            res += str(q)
+            if r==0:
+                return res
+            if r in d:
+                j = d[r]
+                return res[:j]+'('+res[j:]+')'
+            d[r] = len(res)
 ```
-24 ms
+39 ms
 
 
+## *附加
+
+还可以利用数论知识直接计算循环节： [计算出1/1000000007的循环节](https://zhuanlan.zhihu.com/p/427502323)
 

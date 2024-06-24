@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0407\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1147 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  963 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0407\/","datePublished": "2016-02-11T00:00:00+08:00","dateModified": "2016-02-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0407：接雨水 II（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-11">2016-02-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1147 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0407/" class="leancloud_visitors" data-flag-title="0407：接雨水 II（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-11">2016-02-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 963 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0407/" class="leancloud_visitors" data-flag-title="0407：接雨水 II（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -125,9 +125,13 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a></li>
+    <li><a href="#分析">分析</a>
+      <ul>
+        <li><a href="#1">#1</a></li>
+        <li><a href="#2">#2</a></li>
+      </ul>
+    </li>
     <li><a href="#解答">解答</a></li>
-    <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -156,23 +160,18 @@
 <li><code>0 &lt;= heightMap[i][j] &lt;= 2 * 10<sup>4</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>对于每个位置：</p>
+<h3 id="1">#1</h3>
 <ul>
-<li>如果有一外圈的柱子都更高，那么该位置就能接到雨水，并且至少接到（该外圈的最矮柱子高度 H - 当前高度 h）的雨水。</li>
-<li>找到使 H 最大的外圈，就得到该位置总共能接到的雨水 maxH - h。</li>
-</ul>
-<p>显然遍历所有外圈太耗时了，有个巧妙的想法是从最外圈开始：</p>
+<li>可以借鉴 <a href="/leetcode/0042" title="0042" rel="noopener noreferrer">0042</a> 的双指针思想，从外到内遍历</li>
+<li>对于最外圈，先找到最低柱子 a
 <ul>
-<li>假设最矮柱子 A 高度 H，那么相邻内侧位置 B 能接到的雨水就是 max(0, H - B的高度)。</li>
-<li>然后可以将位置 A 替换成位置 B，并更新 B 的高度为 max(H, h)，得到一个缩小一格的新外圈，显然不影响里面位置的结果。</li>
-<li>这样遍历逐步缩小的外圈即可得到所有位置能接到的雨水。</li>
+<li>则对于 a 相邻的柱子 b，能接到的雨水即是 max(0,a-b)</li>
 </ul>
-<p>具体实现时：</p>
-<ul>
-<li>可以用小顶堆维护外圈的高度集合，每轮弹出堆顶即为最矮柱子的高度。</li>
-<li>另外，为了方便遍历，可以把经过的柱子高度都置 -1。</li>
+</li>
+<li>然后将 a 替换为 b，形成新的外圈，并更新 b 的高度为 max(a,b)</li>
+<li>逐步缩小外圈即可得到每个位置能接到的雨水</li>
+<li>每轮要找外圈里的最低柱子，用堆维护即可</li>
 </ul>
-<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -191,28 +190,32 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">trapRainWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">heightMap</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pq</span><span class="p">,</span> <span class="n">H</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">heightMap</span>
-</span></span><span class="line"><span class="cl">    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">[</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">pq</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">h</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)]:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">y</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">-</span><span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">                <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">                <span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">trapRainWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">heightMap</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">H</span> <span class="o">=</span> <span class="n">heightMap</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">pq</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">h</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)]:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">y</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">h</span><span class="o">-</span><span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]),</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>268 ms</p>
-<h2 id="附加">*附加</h2>
+</div><p>168 ms</p>
+<h3 id="2">#2</h3>
 <p>还有个巧妙的并查集做法。</p>
 <p>先考虑简化问题：有哪些格子能接到高度为 1 的雨水？</p>
 <ul>
@@ -232,6 +235,7 @@
 <li>而计算被围绕的 &lsquo;O&rsquo; 个数可以由 &lsquo;O&rsquo; 总数减去与 dummy 连通的 &lsquo;O&rsquo; 个数得到。</li>
 <li>因此再用 sz 维护并查集每个连通块的大小即可。</li>
 </ul>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
