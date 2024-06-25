@@ -115,7 +115,6 @@ class BitTrie:
         self.t = [[0]*(n*L+1) for _ in range(2)]  # 模拟树节点
         self.i = 0
         self.L = L
-        self.s = [0]*(n*L+1)
 
     def add(self, x):
         p = 0
@@ -125,7 +124,6 @@ class BitTrie:
                 self.i += 1
                 self.t[bit][p] = self.i  
             p = self.t[bit][p]
-            self.s[p] += 1
 
     def maxxor(self,x):
         p = 0
@@ -149,7 +147,7 @@ class Solution:
             trie.add(x)
         return res
 ```
-3695 ms
+3067 ms
 
 
 
