@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0407\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  963 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  623 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0407\/","datePublished": "2016-02-11T00:00:00+08:00","dateModified": "2016-02-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0407：接雨水 II（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-11">2016-02-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 963 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-11">2016-02-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 623 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0407/" class="leancloud_visitors" data-flag-title="0407：接雨水 II（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -162,7 +162,89 @@
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
 <ul>
-<li>可以借鉴 <a href="/leetcode/0042" title="0042" rel="noopener noreferrer">0042</a> 的双指针思想，从外到内遍历</li>
+<li>可以将下雨看作动态的过程，假如下到高度 h 时，某个柱子上的雨水能流出去，该柱子能接的最大高度即是 h</li>
+<li>雨水能否流出去是一个连通性问题，因此可以考虑用并查集</li>
+<li>从低到高遍历所有柱子，维护连通性，高度 h 时与边界连通的即加到结果中
+<ul>
+<li>可以通过边界所在连通块的大小变化计算</li>
+</ul>
+</li>
+<li>最后再减去柱子本身的高度即可</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">trapRainWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">heightMap</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">!=</span><span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">fx</span><span class="p">,</span><span class="n">fy</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">fx</span><span class="o">!=</span><span class="n">fy</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span><span class="o">=</span><span class="n">fy</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sz</span><span class="p">[</span><span class="n">fy</span><span class="p">]</span><span class="o">+=</span><span class="n">sz</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">H</span> <span class="o">=</span> <span class="n">heightMap</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sz</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">,</span><span class="n">pre</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">union</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="n">j</span><span class="p">,</span><span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">),(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">y</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">H</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">h</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">union</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="n">j</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cur</span> <span class="o">=</span> <span class="n">sz</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="p">(</span><span class="n">cur</span><span class="o">-</span><span class="n">pre</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">h</span><span class="p">])</span><span class="o">*</span><span class="n">h</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pre</span> <span class="o">=</span> <span class="n">cur</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>272 ms</p>
+<h3 id="2">#2</h3>
+<ul>
+<li>还可以借鉴 <a href="/leetcode/0042" title="0042" rel="noopener noreferrer">0042</a> 的双指针思想，从外到内遍历</li>
 <li>对于最外圈，先找到最低柱子 a
 <ul>
 <li>则对于 a 相邻的柱子 b，能接到的雨水即是 max(0,a-b)</li>
@@ -172,6 +254,7 @@
 <li>逐步缩小外圈即可得到每个位置能接到的雨水</li>
 <li>每轮要找外圈里的最低柱子，用堆维护即可</li>
 </ul>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -215,88 +298,6 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>168 ms</p>
-<h3 id="2">#2</h3>
-<p>还有个巧妙的并查集做法。</p>
-<p>先考虑简化问题：有哪些格子能接到高度为 1 的雨水？</p>
-<ul>
-<li>将高度小于 1 的格子标记为 &lsquo;O&rsquo;，其它格子都看作 &lsquo;X&rsquo;，显然只有被 &lsquo;X&rsquo; 围绕的 &lsquo;O&rsquo; 才能接到高度 1 的雨水。</li>
-<li>这类似于问题 <a href="/leetcode/0130" title="0130" rel="noopener noreferrer">0130</a>，可以用并查集解决。</li>
-<li>将边界上的 &lsquo;O&rsquo; 都与一个哑节点 dummy 连通，再将所有相邻的 &lsquo;O&rsquo; 连通。最终所有与 dummy 连通的即是不被围绕的 &lsquo;O&rsquo;。</li>
-</ul>
-<p>同理，对于高度 2：</p>
-<ul>
-<li>将高度小于 2 的格子标记为 &lsquo;O&rsquo;，即可求出哪些格子能接到高度为 2 的雨水。</li>
-<li>注意到前一步被标记为 &lsquo;O&rsquo; 的格子无需改变，只需要将高度为 1 的格子标记为 &lsquo;O&rsquo; 即可。</li>
-</ul>
-<p>因此遍历高度 h：</p>
-<ul>
-<li>每轮将高度为 h-1 的格子标记为 &lsquo;O&rsquo;，并与相邻的 &lsquo;O&rsquo; 连通，边界上的 &lsquo;O&rsquo; 与 dummy 连通。</li>
-<li>依然被围绕的 &lsquo;O&rsquo; 个数即是高度为 h 的雨水数量。所有高度的雨水总和即为所求。</li>
-<li>而计算被围绕的 &lsquo;O&rsquo; 个数可以由 &lsquo;O&rsquo; 总数减去与 dummy 连通的 &lsquo;O&rsquo; 个数得到。</li>
-<li>因此再用 sz 维护并查集每个连通块的大小即可。</li>
-</ul>
-<h2 id="解答">解答</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">trapRainWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">heightMap</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">root1</span><span class="p">,</span> <span class="n">root2</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sz</span><span class="p">[</span><span class="n">root2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">sz</span><span class="p">[</span><span class="n">root1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">root1</span> <span class="o">!=</span> <span class="n">root2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="n">root1</span><span class="p">]</span> <span class="o">=</span> <span class="n">root2</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">H</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">heightMap</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">heightMap</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">H</span><span class="p">[</span><span class="n">heightMap</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="p">,</span> <span class="n">sz</span><span class="p">,</span> <span class="n">dummy</span> <span class="o">=</span> <span class="p">{},</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">H</span><span class="p">[</span><span class="n">h</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">heightMap</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;O&#39;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">union</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">dummy</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]:</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">heightMap</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;O&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">union</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">            <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">+=</span> <span class="n">total</span> <span class="o">-</span> <span class="n">sz</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">dummy</span><span class="p">)]</span> <span class="o">+</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>672 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -316,7 +317,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/bfs/">Bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a>,&nbsp;<a href="/leetcode_tags/%E5%A0%86/">堆</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/bfs/">Bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a>,&nbsp;<a href="/leetcode_tags/%E5%A0%86/">堆</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

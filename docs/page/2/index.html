@@ -149,7 +149,7 @@
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/template-bit/">位运算模版</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-02-01">2023-02-01</time></span></div><div class="content">Gosper&rsquo;s Hack 算法学习笔记(75): Gosper&rsquo;s Hack 1 2 3 4 5 6 7 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子集 while st&lt;ma: lb = st&amp;-st r = st+lb st = (r^st)&gt;&gt;(lb.bit_length()+1)|r if st==0: break</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-02-01">2023-02-01</time></span></div><div class="content">遍历子集 1 2 3 4 y = st # 生成 st 的所有子集 while y: # 处理子集 y y = (y-1)&amp;st Gosper&rsquo;s Hack 算法学习笔记(75): Gosper&rsquo;s Hack 1 2 3 4 5 6 7 8 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子</div><div class="post-footer">
         <a href="/template-bit/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
@@ -159,7 +159,7 @@
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/template-string_trie/">字符串模板：字典树</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-01-02">2023-01-02</time></span></div><div class="content">字典树 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 1 2 3 4 y = 0 for j in range(ma-1,-1,-1): y *= 2 y += T[j][(y+1)^(x&gt;&gt;j)]&gt;0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Trie: def __init__(self,n,L,k): self.t = [[0]*k</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-01-02">2023-01-02</time></span></div><div class="content">一般字典树 哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Trie: def __init__(self,n,L,k): # 插入 n 个长为 L 的字符串，</div><div class="post-footer">
         <a href="/template-string_trie/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
 </article><ul class="pagination"><li class="page-item ">

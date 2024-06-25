@@ -46,13 +46,57 @@
 
 ### #1
 
-- 可以借鉴 {{< lc "0042" >}} 的双指针思想，从外到内遍历
+- 可以将下雨看作动态的过程，假如下到高度 h 时，某个柱子上的雨水能流出去，该柱子能接的最大高度即是 h
+- 雨水能否流出去是一个连通性问题，因此可以考虑用并查集
+- 从低到高遍历所有柱子，维护连通性，高度 h 时与边界连通的即加到结果中
+	- 可以通过边界所在连通块的大小变化计算
+- 最后再减去柱子本身的高度即可
+
+```python
+class Solution:
+    def trapRainWater(self, heightMap: List[List[int]]) -> int:
+        def find(x):
+            if f[x]!=x:
+                f[x]=find(f[x])
+            return f[x]
+        
+        def union(x,y):
+            fx,fy = find(x),find(y)
+            if fx!=fy:
+                f[fx]=fy
+                sz[fy]+=sz[fx]
+
+        H = heightMap
+        m,n = len(H),len(H[0])
+        f = list(range(m*n+1))
+        sz = [1]*(m*n+1)
+        d = defaultdict(list)
+        for i,j in product(range(m),range(n)):
+            d[H[i][j]].append((i,j))
+        res,pre=0,1
+        for h in sorted(d):
+            for i,j in d[h]:
+                if i in [0,m-1] or j in [0,n-1]:
+                    union(i*n+j,m*n)
+                for x,y in [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]:
+                    if 0<=x<m and 0<=y<n and H[x][y]<=h:
+                        union(i*n+j,x*n+y)
+            cur = sz[find(m*n)]
+            res += (cur-pre)*h-len(d[h])*h
+            pre = cur
+        return res
+```
+272 ms
+
+### #2
+- 还可以借鉴 {{< lc "0042" >}} 的双指针思想，从外到内遍历
 - 对于最外圈，先找到最低柱子 a 
 	- 则对于 a 相邻的柱子 b，能接到的雨水即是 max(0,a-b)
 - 然后将 a 替换为 b，形成新的外圈，并更新 b 的高度为 max(a,b)
 - 逐步缩小外圈即可得到每个位置能接到的雨水
 - 每轮要找外圈里的最低柱子，用堆维护即可
 
+## 解答
 
 ```python
 class Solution:
@@ -75,56 +119,4 @@ class Solution:
         return res
 ```
 168 ms
-
-### #2
-
-还有个巧妙的并查集做法。
-
-先考虑简化问题：有哪些格子能接到高度为 1 的雨水？
-- 将高度小于 1 的格子标记为 'O'，其它格子都看作 'X'，显然只有被 'X' 围绕的 'O' 才能接到高度 1 的雨水。
-- 这类似于问题 {{< lc "0130" >}}，可以用并查集解决。
-- 将边界上的 'O' 都与一个哑节点 dummy 连通，再将所有相邻的 'O' 连通。最终所有与 dummy 连通的即是不被围绕的 'O'。
-
-同理，对于高度 2：
-- 将高度小于 2 的格子标记为 'O'，即可求出哪些格子能接到高度为 2 的雨水。
-- 注意到前一步被标记为 'O' 的格子无需改变，只需要将高度为 1 的格子标记为 'O' 即可。
-
-因此遍历高度 h：
-- 每轮将高度为 h-1 的格子标记为 'O'，并与相邻的 'O' 连通，边界上的 'O' 与 dummy 连通。
-- 依然被围绕的 'O' 个数即是高度为 h 的雨水数量。所有高度的雨水总和即为所求。
-- 而计算被围绕的 'O' 个数可以由 'O' 总数减去与 dummy 连通的 'O' 个数得到。
-- 因此再用 sz 维护并查集每个连通块的大小即可。
-
-## 解答
-
-```python
-def trapRainWater(self, heightMap: List[List[int]]) -> int:
-    def find(x):
-        if f.setdefault(x, x) != x:
-            f[x] = find(f[x])
-        return f[x]
-
-    def union(x, y):
-        root1, root2 = find(x), find(y)
-        sz[root2] += sz[root1] * int(root1 != root2)
-        f[root1] = root2
-
-    H, m, n = defaultdict(list), len(heightMap), len(heightMap[0])
-    for i, j in product(range(m), range(n)):
-        H[heightMap[i][j]].append((i, j))
-    f, sz, dummy = {}, defaultdict(lambda: 1), (-1, -1)
-    res, total = 0, 0
-    for h in range(min(H)+1, max(H)+1):
-        for i, j in H[h-1]:
-            heightMap[i][j] = 'O'
-            if i in [0, m - 1] or j in [0, n - 1]:
-                union((i, j), dummy)
-            for x, y in [(i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)]:
-                if 0 <= x < m and 0 <= y < n and heightMap[x][y] == 'O':
-                    union((x, y), (i, j))
-            total += 1
-        res += total - sz[find(dummy)] + 1
-    return res
-```
-672 ms
 

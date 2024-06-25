@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0420\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  621 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  581 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0420\/","datePublished": "2016-02-24T00:00:00+08:00","dateModified": "2016-02-24T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0420：强密码检验器（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-24">2016-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 621 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-02-24">2016-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 581 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0420/" class="leancloud_visitors" data-flag-title="0420：强密码检验器（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -169,13 +169,22 @@
 <h2 id="分析">分析</h2>
 <p>先得到必须补充的字符个数 lack，然后按密码长度 n 分类讨论：</p>
 <ul>
-<li>n&lt;6，可以再按 n==5 和 n&lt;5 分类考虑，结果都满足 max(6-n, lack)</li>
-<li>6&lt;=n&lt;=20，对于任一连续段长度 a，用 a//3 步替换操作即可满足条件“同一字符不连续出现三次 ”，最后取 max(替换操作, lack)即可。</li>
-<li>n&gt;20，必须进行删除操作。
+<li>n&lt;6
 <ul>
-<li>优先删除连续段的字符，而且优先删除长度 a%3==0 的连续段，从而减少之后的替换操作。</li>
-<li>于是考虑用堆，每轮选 a%3 最小的 a 进行删除操作，直到没有连续段长度 &gt;=3 或 n==20 为止。</li>
-<li>删除完成后，就转为上一情况了。</li>
+<li>可以再按 n=5 和 n&lt;5 分类考虑，结果都满足 max(6-n, lack)</li>
+</ul>
+</li>
+<li>6&lt;=n&lt;=20
+<ul>
+<li>对于任一连续段长度 a，用 a//3 步替换操作即可满足条件“同一字符不连续出现三次 ”</li>
+<li>最后取 max(替换操作, lack)即可</li>
+</ul>
+</li>
+<li>n&gt;20，必须进行删除操作
+<ul>
+<li>优先删除连续段的字符，而且优先删除长度 a%3=0 的连续段，从而减少之后的替换操作</li>
+<li>于是考虑用堆，每轮选 a%3 最小的 a 进行删除操作，直到没有连续段长度 &gt;=3 或 n=20</li>
+<li>删除完成后，就转为上一情况了</li>
 </ul>
 </li>
 </ul>
@@ -200,29 +209,31 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
+</span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">strongPasswordChecker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">lack</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">reg</span><span class="p">,</span> <span class="n">password</span><span class="p">))</span> <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;[a-z]&#39;</span><span class="p">,</span> <span class="s1">&#39;[A-Z]&#39;</span><span class="p">,</span> <span class="s1">&#39;[0-9]&#39;</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="n">lack</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">pq</span> <span class="ow">and</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">20</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">_</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">((</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">//</span><span class="mi">3</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">pq</span><span class="p">),</span> <span class="n">lack</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">strongPasswordChecker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lack</span> <span class="o">=</span> <span class="mi">3</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">reg</span><span class="p">,</span><span class="n">password</span><span class="p">))</span> <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;[a-z]&#39;</span><span class="p">,</span><span class="s1">&#39;[A-Z]&#39;</span><span class="p">,</span><span class="s1">&#39;[0-9]&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">n</span><span class="p">,</span><span class="n">lack</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pq</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">a</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">a</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">pq</span> <span class="ow">and</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">_</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">((</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="o">+</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span><span class="o">+</span><span class="nb">max</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">//</span><span class="mi">3</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span><span class="n">a</span> <span class="ow">in</span> <span class="n">pq</span><span class="p">),</span><span class="n">lack</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>24 ms</p>
+</div><p>33 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

@@ -1,7 +1,8 @@
 # 字符串模板：字典树
 
 
-##  字典树
+## 一般字典树
+### 哈希表
 
 ```python
 T = lambda: defaultdict(T)
@@ -9,17 +10,11 @@ trie = T()
 for w in words:
 	reduce(dict.__getitem__, w, trie)['#'] = w
 ```
-
-```python
-y = 0
-for j in range(ma-1,-1,-1):
-	y *= 2
-	y += T[j][(y+1)^(x>>j)]>0
-```
+### 数组
 
 ```python []
 class Trie:
-    def __init__(self,n,L,k):
+    def __init__(self,n,L,k):            # 插入 n 个长为 L 的字符串，字符种类 k
         self.t = [[0]*k for _ in range(n*L+1)]
         self.i = 0
         self.f = [False]*(n*L+1)  
@@ -43,10 +38,12 @@ class Trie:
         return self.f[p]
 ```
 
+## 01 字典树
+
 ```python
 class BitTrie:
-    def __init__(self,n,L):
-        self.t = [[0]*(n*L+1) for _ in range(2)]
+    def __init__(self,n,L):                       # 插入 n 个长为 L 的二进制串
+        self.t = [[0]*(n*L+1) for _ in range(2)]  # 模拟树节点
         self.i = 0
         self.L = L
         self.s = [0]*(n*L+1)

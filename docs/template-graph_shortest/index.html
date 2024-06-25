@@ -10,7 +10,7 @@
         <title>图模板：最短路 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-graph_shortest/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="图模板：最短路">
-  <meta property="og:description" content="dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u =">
+  <meta property="og:description" content="1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="图模板：最短路">
-  <meta name="twitter:description" content="dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u =">
+  <meta name="twitter:description" content="1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-graph_shortest/" /><link rel="prev" href="https://huozhixue.github.io/template-tree_odt/" /><link rel="next" href="https://huozhixue.github.io/template-graph_topo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/template-graph_shortest\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  222 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  226 ,
         "url": "https:\/\/huozhixue.github.io\/template-graph_shortest\/","datePublished": "2023-05-01T00:00:00+08:00","dateModified": "2023-05-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">图模板：最短路</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-05-01">2023-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 222 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-05-01">2023-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 226 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-graph_shortest/" class="leancloud_visitors" data-flag-title="图模板：最短路">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,13 +125,13 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#dijkstra">dijkstra</a></li>
-    <li><a href="#floyd">floyd</a></li>
-    <li><a href="#bellman-ford">Bellman-Ford</a></li>
-    <li><a href="#spfa">spfa</a></li>
+    <li><a href="#1-dijkstra">1 dijkstra</a></li>
+    <li><a href="#2-floyd">2 floyd</a></li>
+    <li><a href="#3-bellman-ford">3 Bellman-Ford</a></li>
+    <li><a href="#4-spfa">4 spfa</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="dijkstra">dijkstra</h2>
+            </div><div class="content" id="content"><h2 id="1-dijkstra">1 dijkstra</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -188,7 +188,7 @@
 </span></span><span class="line"><span class="cl">				<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="floyd">floyd</h2>
+</div><h2 id="2-floyd">2 floyd</h2>
 <ul>
 <li><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solutions/2525946/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/" target="_blank" rel="noopener noreffer">带你发明 Floyd 算法：从记忆化搜索到递推</a></li>
 </ul>
@@ -206,7 +206,7 @@
 </span></span><span class="line"><span class="cl">	<span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="bellman-ford">Bellman-Ford</h2>
+</div><h2 id="3-bellman-ford">3 Bellman-Ford</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -237,7 +237,7 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">d</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="spfa">spfa</h2>
+</div><h2 id="4-spfa">4 spfa</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

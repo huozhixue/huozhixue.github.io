@@ -44,7 +44,7 @@
     <pubDate>Mon, 01 May 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-graph_shortest/</guid>
-    <description><![CDATA[dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w+w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u =]]></description>
+    <description><![CDATA[1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w+w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u]]></description>
 </item><item>
     <title>树模板：珂朵莉树</title>
     <link>https://huozhixue.github.io/template-tree_odt/</link>

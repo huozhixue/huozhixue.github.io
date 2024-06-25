@@ -39,28 +39,117 @@
 
 ## 分析
 
+### #1
 
-经典的位运算问题：
+经典的位运算问题，可以采用试填法：
 - 为了使结果最大，应该尽可能让二进制的高位取 1
 - 假如前 k-1 位能取到的最大值为 M，接下来要使前 k位尽量取到 M'=(M<<1)+1
-- 假设有两个数的 k 位前缀 y、z，满足 y^z=M'，M' 即能取到
-- 根据异或的重要性质：如果 y^z=M'，那么 M'^y=z
-- 因此将 k 位前缀保存在哈希表 vis 中，遍历 vis 中的 y，如果 M'^y 在 vis 中，M' 即能取到 
+- 假设有两个数的 k 位前缀 x、y 满足 x^y=M'，M' 即能取到
+- 根据异或的重要性质：如果 x^y=M'，那么 M'^x=y
+- 因此将 k 位前缀保存在哈希表中，遍历判断即可
 
-根据题目中值的范围，二进制最多 31 位，遍历 k 从 1 到 31 即可。 
+
+```python
+class Solution:
+    def findMaximumXOR(self, nums: List[int]) -> int:
+        L = max(nums).bit_length()
+        res = 0
+        for j in range(L-1,-1,-1):
+            res <<= 1
+            vis = {x>>j for x in nums}
+            res += any(x^(res+1) in vis for x in vis)
+        return res
+```
+611 ms
+
+### #2
+
+- 更通用的方法是用 01 字典树
+- 将每个数的二进制串插入字典树
+- 然后对于每个数，查找最大的异或结果，依然是试填法
+	- 假如第 k 位为 bit，bit^1 在字典树中，那么该位可以取 1，并且树中往 bit^1 走
+	- 否则该位取 0，字典树中往 bit 走
+
+
+```python
+class Solution:
+    def findMaximumXOR(self, nums: List[int]) -> int:
+        def maxxor(x):
+            res = 0
+            p = trie
+            for j in range(L-1,-1,-1):
+                bit = (x>>j)&1
+                if bit^1 in p:
+                    bit ^= 1
+                    res |= 1<<j
+                p = p[bit]
+            return res
+
+        def add(x):
+            p = trie
+            for j in range(L-1,-1,-1):
+                bit = (x>>j)&1
+                p = p[bit]
+
+        L = max(nums).bit_length()
+        T = lambda: defaultdict(T)
+        trie = T()
+        res = 0
+        for x in nums:
+            res = max(res,maxxor(x))
+            add(x)
+        return res
+```
+5764 ms
+
+### #3
+
+还可以用数组模拟 01 字典树，优化时间。
+
 
 ## 解答
 
 ```python
-def findMaximumXOR(self, nums: List[int]) -> int:
-	res = 0
-	for i in range(30, -1, -1):
-		res, vis = res<<1, {x>>i for x in nums}
-		res += any((res+1)^y in vis for y in vis)
-	return res
-```
+class BitTrie:
+    def __init__(self,n,L):                       # 插入 n 个长为 L 的二进制串
+        self.t = [[0]*(n*L+1) for _ in range(2)]  # 模拟树节点
+        self.i = 0
+        self.L = L
+        self.s = [0]*(n*L+1)
 
-940 ms
+    def add(self, x):
+        p = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if not self.t[bit][p]:
+                self.i += 1
+                self.t[bit][p] = self.i  
+            p = self.t[bit][p]
+            self.s[p] += 1
+
+    def maxxor(self,x):
+        p = 0
+        res = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if self.t[bit^1][p]:
+                res |= 1 << j
+                bit ^= 1
+            p = self.t[bit][p]
+        return res
+
+
+class Solution:
+    def findMaximumXOR(self, nums: List[int]) -> int:
+        L = max(nums).bit_length()
+        trie = BitTrie(len(nums),L)
+        res = 0
+        for x in nums:
+            res = max(res,trie.maxxor(x))
+            trie.add(x)
+        return res
+```
+3695 ms
 
 
 

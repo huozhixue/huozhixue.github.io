@@ -10,7 +10,7 @@
         <title>位运算模版 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-bit/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="位运算模版">
-  <meta property="og:description" content="Gosper’s Hack 算法学习笔记(75): Gosper’s Hack 1 2 3 4 5 6 7 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子集 while st&lt;ma: lb = st&amp;-st r = st&#43;lb st = (r^st)&gt;&gt;(lb.bit_length()&#43;1)|r if st==0: break">
+  <meta property="og:description" content="遍历子集 1 2 3 4 y = st # 生成 st 的所有子集 while y: # 处理子集 y y = (y-1)&amp;st Gosper’s Hack 算法学习笔记(75): Gosper’s Hack 1 2 3 4 5 6 7 8 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="位运算模版">
-  <meta name="twitter:description" content="Gosper’s Hack 算法学习笔记(75): Gosper’s Hack 1 2 3 4 5 6 7 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子集 while st&lt;ma: lb = st&amp;-st r = st&#43;lb st = (r^st)&gt;&gt;(lb.bit_length()&#43;1)|r if st==0: break">
+  <meta name="twitter:description" content="遍历子集 1 2 3 4 y = st # 生成 st 的所有子集 while y: # 处理子集 y y = (y-1)&amp;st Gosper’s Hack 算法学习笔记(75): Gosper’s Hack 1 2 3 4 5 6 7 8 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成 n 元集合所有 k 元子">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-bit/" /><link rel="prev" href="https://huozhixue.github.io/template-string_sa/" /><link rel="next" href="https://huozhixue.github.io/template-linked/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/template-bit\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  53 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  91 ,
         "url": "https:\/\/huozhixue.github.io\/template-bit\/","datePublished": "2023-02-01T00:00:00+08:00","dateModified": "2023-02-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">位运算模版</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-01">2023-02-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 53 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-01">2023-02-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 91 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-bit/" class="leancloud_visitors" data-flag-title="位运算模版">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,10 +125,26 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#遍历子集">遍历子集</a></li>
     <li><a href="#gospers-hack">Gosper&rsquo;s Hack</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="gospers-hack">Gosper&rsquo;s Hack</h2>
+            </div><div class="content" id="content"><h2 id="遍历子集">遍历子集</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">st</span>                 <span class="c1"># 生成 st 的所有子集</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">y</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 处理子集 y</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="n">st</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="gospers-hack">Gosper&rsquo;s Hack</h2>
 <ul>
 <li><a href="https://zhuanlan.zhihu.com/p/360512296" target="_blank" rel="noopener noreffer">算法学习笔记(75): Gosper&rsquo;s Hack</a></li>
 </ul>
@@ -141,10 +157,12 @@
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">st</span><span class="p">,</span><span class="n">ma</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span>                   <span class="c1"># 生成 n 元集合所有 k 元子集</span>
 </span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">st</span><span class="o">&lt;</span><span class="n">ma</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 处理子集 st</span>
 </span></span><span class="line"><span class="cl">	<span class="n">lb</span> <span class="o">=</span> <span class="n">st</span><span class="o">&amp;-</span><span class="n">st</span>
 </span></span><span class="line"><span class="cl">	<span class="n">r</span> <span class="o">=</span> <span class="n">st</span><span class="o">+</span><span class="n">lb</span>
 </span></span><span class="line"><span class="cl">	<span class="n">st</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="n">st</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">lb</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">|</span><span class="n">r</span>

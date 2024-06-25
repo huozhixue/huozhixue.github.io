@@ -1,7 +1,7 @@
 # 图模板：最短路
 
 
-##  dijkstra
+## 1 dijkstra
 
 ```python
 def dij(g,s):
@@ -31,7 +31,7 @@ def dij(g,s):
 				d[v] = min(d[v], d[u]+w)
 ```
 
-## floyd
+## 2 floyd
 
 - [带你发明 Floyd 算法：从记忆化搜索到递推](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solutions/2525946/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/)
 
@@ -42,7 +42,7 @@ for k,i,j in product(range(n),range(n),range(n)):
 	f[i][j] = min(f[i][j],f[i][k]+f[k][j])
 ```
 
-## Bellman-Ford 
+## 3 Bellman-Ford 
 
 ```python
 def BF(edges,s):
@@ -58,7 +58,7 @@ def BF(edges,s):
 			break
 	return d
 ```
-## spfa
+## 4 spfa
 
 ```python []
 def spfa(g,s):
