@@ -46,14 +46,14 @@
 ## 解答
 
 ```python
-def levelOrder(self, root: 'Node') -> List[List[int]]:
-	if not root:
-		return []
-	res, Q = [], [root]
-	while level:
-		res.append([node.val for node in Q])
-		Q = [child for node in Q for child in node.children]
-	return res
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+        res = []
+        Q = [root] if root else []
+        while Q:
+            res.append([u.val for u in Q])
+            Q = [c for u in Q for c in u.children]
+        return res
 ```
 
 52 ms

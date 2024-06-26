@@ -57,24 +57,30 @@
 
 ## 分析
 
-典型的 bfs。
-
+- 典型的 bfs，数据量较大时，可以类似 {{< lc "0127" >}}
+	- 将单词的某一位改为 ‘.’ 作为单词的 key
+	- 每个单词按所有的 key 存在哈希表中
+	- 搜索时，取所有 key 对应的列表即可
 ## 解答
 
 
 ```python
-def minMutation(self, start: str, end: str, bank: List[str]) -> int:
-	Q, d, bank = deque([start]), {start:0}, set(bank)
-	while Q:
-		w = Q.popleft()
-		for i in range(len(w)):
-			for c in 'ACGT':
-				w2 = w[:i]+c+w[i+1:]
-				if w2 not in d and w2 in bank:
-					if w2 == end:
-						return d[w]+1
-					Q.append(w2)
-					d[w2] = d[w]+1
-	return -1
+class Solution:
+    def minMutation(self, startGene: str, endGene: str, bank: List[str]) -> int:
+        d = defaultdict(list)
+        for w in bank:
+            for i in range(len(w)):
+                d[w[:i]+'*'+w[i+1:]].append(w)
+        Q,vis = deque([(startGene,0)]), {startGene}
+        while Q:
+            u,w = Q.popleft()
+            if u==endGene:
+                return w
+            for i in range(len(u)):
+                for v in d[u[:i]+'*'+u[i+1:]]:
+                    if v not in vis:
+                        Q.append((v,w+1))
+                        vis.add(v)
+        return -1
 ```
-28 ms
+33 ms

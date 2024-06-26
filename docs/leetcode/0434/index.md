@@ -25,7 +25,8 @@
 
 
 ```python
-def countSegments(self, s: str) -> int:
-	return len(s.split())
+class Solution:
+    def countSegments(self, s: str) -> int:
+        return len(s.split())
 ```
-36 ms
+38 ms

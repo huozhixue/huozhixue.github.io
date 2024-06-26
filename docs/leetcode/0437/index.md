@@ -41,51 +41,30 @@
 
 ## 分析
 
-### #1
-
-依然可以采用 {{< lc "0112" >}} 的思路，只不过要传递的信息变成了所有以当前节点结尾的路径和。
-
-于是遍历每个节点，统计以当前节点结尾的路径和等于目标的个数即可。
-
-```python
-def pathSum(self, root: TreeNode, sum: int) -> int:
-	res, stack = 0, [(root, [])]
-	while stack:
-		node, tmp = stack.pop()
-		if node:
-			tmp = [node.val+v for v in tmp+[0]]
-			res += tmp.count(sum)
-			stack.extend([(node.right, tmp[:]), (node.left,tmp[:])])
-	return res
-```
-
-192 ms
-
-### #2
-
-还以利用前缀和来节省时间：
-- 遍历时，维护从根到当前节点路径上的所有前缀和
-- 以当前节点结尾的路径和等于target的个数，即是当前前缀和-target的前缀和个数
-- 为了维护前缀和的个数，考虑后序遍历，当节点二次出栈时去掉对应的前缀和
+-  {{< lc "0112" >}} 升级版
+- 不需要从根节点开始，考虑用前缀和的差来代表
+- 遍历时，维护所有前缀和的个数即可
 
 ## 解答
 
 ```python
-def pathSum(self, root: TreeNode, sum: int) -> int:
-	d = defaultdict(int)
-	d[0] = 1
-	res, stack = 0, [(root, 0)]
-	while stack:
-		node, val = stack.pop()
-		if isinstance(node, int):
-			d[val] -= 1
-		elif node:
-			val += node.val
-			res += d[val-sum]
-			d[val] += 1
-			stack.extend([(node.val, val), (node.right, val), (node.left, val)])
-	return res
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
+        d = defaultdict(int)
+        d[0] = 1
+        sk = [(root,0)]
+        res = 0
+        while sk:
+            u,s = sk.pop()
+            if isinstance(u,int):
+                d[s] -= 1
+            elif u:
+                s += u.val
+                res += d[s-targetSum]
+                d[s] += 1
+                sk.extend([(u.val,s),(u.right,s),(u.left,s)])
+        return res
 ```
 
-60 ms
+50 ms
 

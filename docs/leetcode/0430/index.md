@@ -95,23 +95,25 @@
 
 ## 分析
 
-看作二叉树，child 看作左子树，先序遍历并修改指针即可。类似 {{< lc "0114" >}}
+看作二叉树，child 看作左子树，先序遍历并修改指针即可。类似 {{< lc "0114" >}}。
 
 ## 解答
 
 ```python
-def flatten(self, head: 'Optional[Node]') -> 'Optional[Node]':
-	stack, p = [head], None
-	while stack:
-		node = stack.pop()
-		if node:
-			if p:
-				p.next = node
-				node.prev = p
-			stack.extend([node.next, node.child])
-			node.child = None
-			p = node
-	return head
+class Solution:
+    def flatten(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        p = None
+        sk = [head]
+        while sk:
+            u = sk.pop()
+            if u:
+                sk.extend([u.next,u.child])
+                u.next=u.child=None
+                if p:
+                    p.next = u
+                    u.prev = p
+                p = u
+        return head
 ```
-48 ms
+38 ms
 

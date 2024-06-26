@@ -53,18 +53,19 @@
 
 ## 分析
 
-典型的排序+二分查找。
+排序+二分查找即可。
 
 ## 解答
 
 ```python
-def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
-	A = sorted((s, i) for i, (s, e) in enumerate(intervals))
-	res = []
-	for _, e in intervals:
-		pos = bisect_left(A, (e, 0))
-		res.append(A[pos][1] if pos<len(A) else -1)
-	return res
+class Solution:
+    def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
+        A = sorted((s,i) for i,(s,e) in enumerate(intervals))
+        res = []
+        for _,e in intervals:
+            pos = bisect_left(A,(e,))
+            res.append(A[pos][1] if pos<len(A) else -1)
+        return res
 ```
-92 ms
+60 ms
 

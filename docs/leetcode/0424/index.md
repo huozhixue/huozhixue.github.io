@@ -43,24 +43,71 @@
 
 ## 分析
 
+### #1
 
-典型的滑动窗口问题。
+典型的滑动窗口问题，维护窗口内的计数即可。
 
-维护一个计数器，如果除了频数最大的字符以外的个数大于 k，就移动左端点。
+```python
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        res,i = 0,0
+        ct = defaultdict(int)
+        for j,x in enumerate(s):
+            ct[x] += 1
+            while j-i+1-max(ct.values())>k:
+                ct[s[i]]-=1
+                i += 1
+            res = max(res,j-i+1)
+        return res
+```
+140 ms
 
+### #2
+
+还有个剪枝技巧：
+- 因为是求最大长度，所以窗口无需缩小，不满足时移动一步即可
+- 窗口不会缩小，那么返回最终窗口大小即可
+
+
+```python
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        i,j = 0,0
+        ct = defaultdict(int)
+        for j,x in enumerate(s):
+            ct[x] += 1
+            if j-i+1-max(ct.values())>k:
+                ct[s[i]]-=1
+                i += 1
+        return j-i+1
+```
+92 ms
+
+### #3
+
+还可以优化掉字符种类的时间
+- 上述过程中，窗口有两种变化，一种是右边不断扩大，一种是滑动
+- 注意到每次从滑动状态切换到扩大状态时，一定是新加入的字母 a 为众数
+	- 否则，假如此时窗口是 [i,j]，字母 b 为满足条件的众数
+	- 那么对于 [i-1,j]，字母 b 也是满足条件的众数
+	- 那么上一步的窗口 [i-1,j-1] 就应该扩大，而不是滑动了，矛盾
+- 因此，只要用新加入的字母维护众数个数 ma 即可
 ## 解答
 
 ```python
-def characterReplacement(self, s: str, k: int) -> int:
-    res, i, ct = 0, 0, Counter()
-    for j, c in enumerate(s):
-        ct[c] += 1
-        while j-i+1-max(ct.values())>k:
-            ct[s[i]] -= 1
-            i += 1
-        res = max(res, j-i+1)
-    return res
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        i,j = 0,0
+        ct = defaultdict(int)
+        ma = 0
+        for j,x in enumerate(s):
+            ct[x] += 1
+            ma = max(ma,ct[x])
+            if j-i+1-ma>k:
+                ct[s[i]]-=1
+                i += 1
+        return j-i+1
 ```
-时间$O(26*N)$，196 ms
+70 ms
 
 

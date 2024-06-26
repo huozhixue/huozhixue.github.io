@@ -47,21 +47,45 @@
 ## 分析
 
 
-可以贪心地选择右端最小的区间。简单证明下：
-- 假如最优解的第一个区间是 <s, e>，将它替换为右端最小的区间，依然不重叠
+### #1
 
-因此将区间按右端点排序，尽量选右端点小的区间即可。 
+- 等价于求最多的不重叠区间
+- 假如选了区间 [a,b]，那么所有在它左边的区间 [c,d] 必然要满足 d<=a
+- 因此考虑将区间按右端点排序，并遍历递推
+	- 令 f[i] 代表 intervals[:i+1] 最多的不重叠区间
+	- 假如不选第 i 个区间，转为 f[i-1]
+	- 假如选第 i 个区间 [a,b]，二分查找到最后一个 j 满足 intervals[j][1]<=a，转为 1+f[j]
+
+```python
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        A = sorted(intervals,key=lambda p:p[1])
+        n = len(A)
+        f = [0]*n
+        for i in range(n):
+            j = bisect_left(range(i),True,key=lambda j:A[j][1]>A[i][0])-1
+            f[i] = max(f[i-1],1+f[j])
+        return n-f[-1]
+```
+1048 ms
+### #2
+
+还可以用贪心
+- 假如最优解的第一个区间是 <a, b>，将它替换为右端最小的区间，依然不重叠
+- 因此将区间按右端点排序，尽量选右端点小的区间即可
 
 
 ## 解答
 
 ```python
-def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-	res, r = len(intervals), -inf
-	for s, e in sorted(intervals, key=lambda x:x[1]):
-		if s>=r:
-			r = e
-			res -= 1
-	return res
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        A = sorted(intervals,key=lambda p:p[1])
+        res,r = len(A),-inf
+        for a,b in A:
+            if a>=r:
+                r = b
+                res -= 1
+        return res
 ```
-156 ms
+167 ms

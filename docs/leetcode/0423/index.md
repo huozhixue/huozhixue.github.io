@@ -36,26 +36,27 @@
 
 ## 分析
 
-可以假设每个数字的个数，得到一个联立方程组，求解即可。
-
-例如只有 '0' 的英文里含有 'z' 字母，故 s 中 'z' 的个数即是原本 '0' 的个数。
+- 可以假设每个数字的个数，得到一个联立方程组，求解即可
+- 例如只有 '0' 的英文里含有 'z' 字母，故 'z' 的个数即是原本 '0' 的个数
 
 ## 解答
 
 
 ```python
-def originalDigits(self, s: str) -> str:
-	res, ct = [0]*10, Counter(s)
-	res[0] = ct['z']
-	res[2] = ct['w']
-	res[4] = ct['u']
-	res[6] = ct['x']
-	res[8] = ct['g']
-	res[5] = ct['f'] - res[4]
-	res[7] = ct['s'] - res[6]
-	res[1] = ct['o'] - res[0] - res[2] - res[4]
-	res[3] = ct['t'] - res[2] - res[8]
-	res[9] = ct['i'] - res[5] - res[6] - res[8]
-	return ''.join(str(x)*res[x] for x in range(10))
+class Solution:
+    def originalDigits(self, s: str) -> str:
+        ct = Counter(s)
+        A = [0]*10
+        A[0] = ct['z']
+        A[2] = ct['w']
+        A[4] = ct['u']
+        A[6] = ct['x']
+        A[8] = ct['g']
+        A[1] = ct['o']-A[0]-A[2]-A[4]
+        A[3] = ct['t']-A[2]-A[8]
+        A[5] = ct['f']-A[4]
+        A[7] = ct['s']-A[6]
+        A[9] = ct['i']-A[5]-A[6]-A[8]
+        return ''.join(str(i)*a for i,a in enumerate(A))
 ```
-56 ms
+561ms

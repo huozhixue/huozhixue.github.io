@@ -92,17 +92,18 @@ topRight 具有不同的值，因此我们将其再分为 4 个子网格，这�
 
 
 ```python
-def construct(self, grid: List[List[int]]) -> 'Node':
-	def dfs(x, y, n):
-		if n==1:
-			return Node(grid[x][y], 1, None, None, None, None)
-		n //= 2
-		tL, tR = dfs(x, y, n), dfs(x, y+n, n)
-		bL, bR = dfs(x+n, y, n), dfs(x+n, y+n, n)
-		if tL.val==tR.val==bL.val==bR.val!=-1:
-			return Node(tL.val, 1, None, None, None, None)
-		return Node(-1, 0, tL, tR, bL, bR)
+class Solution:
+    def construct(self, grid: List[List[int]]) -> 'Node':
+        def dfs(x,y,n):
+            if n==1:
+                return Node(grid[x][y], 1, None, None, None, None)
+            n //= 2
+            tL, tR = dfs(x, y, n), dfs(x, y+n, n)
+            bL, bR = dfs(x+n, y, n), dfs(x+n, y+n, n)
+            if tL.val==tR.val==bL.val==bR.val!=-1:
+                return Node(tL.val, 1, None, None, None, None)
+            return Node(-1, 0, tL, tR, bL, bR)
 
-	return dfs(0, 0, len(grid))
+        return dfs(0, 0, len(grid))
 ```
-212 ms
+94 ms

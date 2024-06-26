@@ -44,24 +44,33 @@
 
 ## 分析
 
-遍历每个窗口，判断是否符合即可。
 
-判断是否异位词可以用排序，也可以用 Counter()。字符种类只有26种，故采用 Counter() 时间更优。
-
+- 遍历每个窗口，判断是否符合即可
+- 维护一个 Counter 判断子串是否符合
+- 判断 Counter 是否符合有个省时的方法
+    - 新加一个变量 valid 维护有用字符的个数
+    - 移动 j 后，如果 ct[s[j]]=ct0[s[j]]，s[j] 就是有用的，valid 增 1
+    - 移动 i 前，如果 ct[s[i]]=ct0[s[i]]，s[i] 就是有用的，valid 减 1
 ## 解答
 
 ```python
-def findAnagrams(self, s: str, p: str) -> List[int]:
-    res, k = [], len(p)
-    ct, ct0 = Counter(), Counter(p)
-    for j, char in enumerate(s):
-        ct[char] += 1
-        if j >= k:
-            ct[s[j-k]] -= 1
-            if ct[s[j-k]] == 0:
-                del ct[s[j-k]]
-        if j >= k-1 and ct == ct0:
-            res.append(j-k+1)
-    return res
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        m = len(p)
+        ct0,ct = Counter(p),defaultdict(int)
+        valid = 0
+        res = []
+        for j,c in enumerate(s):
+            ct[c] += 1
+            if ct[c]==ct0[c]:
+                valid += 1
+            if j>=m:
+                old = s[j-m]
+                if ct[old]==ct0[old]:
+                    valid -= 1
+                ct[old] -= 1
+            if valid==len(ct0):
+                res.append(j-m+1)
+        return res
 ```
-156 ms
+72 ms
