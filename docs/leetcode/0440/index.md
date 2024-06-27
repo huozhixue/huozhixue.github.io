@@ -35,38 +35,41 @@
 
 ## 分析
 
-字典序是先按首位排序，因此考虑先确定首位：
-- 遍历 a 从 1 到 9，统计首位 x 且 <=n 的个数 w
-- 如果 w<k，就更新 k-=w，继续遍历
-- 如果 w>=k，即说明首位是当前的 a
-
-接着考虑第二位：
-- 如果 k 已经变为 1，说明 a 即为所求，无需再遍历
-- 否则，先排除 a，更新 k-=1
-- 继续遍历 b 从 0 到 9，统计前两位是 ab 且 <= n 的个数。后面依此类推
-
+- 采用试填法，先考虑首位：
+	- 统计 [1,n] 中首位 1 的个数 w
+	- 如果 w>=k，首位即是 1
+	- 如果 w<k，更新 k-=w，继续试填 2
+	- 依此类推确定首位为 a
+- 接着考虑第二位：
+	- 如果 k=1，说明 a 即为所求，没有第二位
+	- 否则，更新 k-=1，第二位试填 0
+	- 接着要统计 [1,n] 中前缀为 a0 的个数
+	- 后面依此类推
+- 综上，每一步试填需要计算 [1,n] 中前缀 p 的个数
+	- 可以采用分段计数
+	- 分别计算 p 后面跟 0 位、1 位、2 位等的个数即可
 ## 解答
 
-
 ```python
-def findKthNumber(self, n: int, k: int) -> int:
-	def cal(pre):
-		w, ma = 0, 1
-		while pre <= n:
-			w += min(ma, n-pre+1)
-			ma *= 10
-			pre *= 10
-		return w
+class Solution:
+    def findKthNumber(self, n: int, k: int) -> int:
+        def cal(p):
+            res, w = 0, 1
+            while p<=n:
+                res += min(w,n-p+1)
+                p *= 10
+                w *= 10
+            return res
 
-	res = 1
-	while k>1:
-		w = cal(res)
-		if w < k:
-			k -= w
-			res += 1
-		else:
-			k -= 1
-			res *= 10
-	return res
+        res = 1
+        while k>1:
+            w = cal(res)
+            if w < k:
+                k -= w
+                res += 1
+            else:
+                k -= 1
+                res *= 10
+        return res
 ```
-32 ms
+38 ms

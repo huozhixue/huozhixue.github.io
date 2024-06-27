@@ -38,13 +38,14 @@
 
 ## 分析
 
-二分找到第一个满足 x*(x+1)//2>n 的 x，答案即是 x-1。
+二分查找最后一个满足 i*(i+1)//2<=n 的 i 即可。
 
 ## 解答
 
 
 ```python
-def arrangeCoins(self, n: int) -> int:
-	self.__class__.__getitem__ = lambda self,x:x*(x+1)//2>n
-	return bisect_left(self,True,0,n+1)-1
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        return bisect_right(range(n+1),n,key=lambda i:i*(i+1)//2)-1
 ```
+39 ms

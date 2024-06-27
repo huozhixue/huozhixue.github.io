@@ -51,18 +51,19 @@
 可以类似 {{< lc "0041" >}}，将正数都放在对应的位置上，出现两次的没法全放，即可返回。
 
 ```python
-def findDuplicates(self, nums: List[int]) -> List[int]:
-	for i,x in enumerate(nums):
-		while x!=nums[x-1]:
-			nums[i], nums[x-1] = nums[x-1], nums[i]
-			x = nums[i]
-	return [x for i,x in enumerate(nums) if x!=i+1]
+class Solution:
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        for i,x in enumerate(nums):
+            while x!=nums[x-1]:
+                nums[i], nums[x-1] = nums[x-1], nums[i]
+                x = nums[i]
+        return [x for i,x in enumerate(nums) if x!=i+1]
 ```
-96 ms
+89 ms
 
 ## #2
 
-还有个巧妙的方法：
+还有个修改原数组的方法：
 - 遍历到数 x 时，将位置 x-1 取为负数
 - 如果位置 x-1 已经是负数，即说明 x 是第二次遇见了
 
@@ -70,13 +71,14 @@ def findDuplicates(self, nums: List[int]) -> List[int]:
 
 
 ```python
-def findDuplicates(self, nums: List[int]) -> List[int]:
-	res = []
-	for x in nums:
-		if nums[abs(x)-1] > 0:
-			nums[abs(x)-1] *= -1
-		else:
-			res.append(abs(x))     
-	return res
+class Solution:
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        res = []
+        for x in nums:
+            if nums[abs(x)-1] > 0:
+                nums[abs(x)-1] *= -1
+            else:
+                res.append(abs(x))     
+        return res
 ```
-116 ms
+71 ms

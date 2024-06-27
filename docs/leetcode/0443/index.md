@@ -63,18 +63,20 @@
 ## 解答
 
 ```python
-def compress(self, chars: List[str]) -> int:
-	i = 0
-	for c,g in groupby(chars):
-		w = str(len(list(g)))
-		chars[i] = c
-		i += 1
-		if w!='1':
-			chars[i:i+len(w)] = list(w)
-			i += len(w)
-	return i
+class Solution:
+    def compress(self, chars: List[str]) -> int:
+        i = 0
+        for c,g in groupby(chars):
+            w = len(list(g))
+            chars[i] = c
+            i += 1
+            if w>1:
+                w = str(w)
+                chars[i:i+len(w)] = list(w)
+                i += len(w)
+        return i
 ```
 
-40 ms
+45 ms
 
 

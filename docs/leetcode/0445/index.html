@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0445\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  429 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  337 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0445\/","datePublished": "2016-03-20T00:00:00+08:00","dateModified": "2016-03-20T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0445：两数相加 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-20">2016-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 429 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-03-20">2016-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 337 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0445/" class="leancloud_visitors" data-flag-title="0445：两数相加 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,12 +125,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -164,43 +159,11 @@
 </ul>
 <p><strong>进阶：</strong>如果输入链表不能翻转该如何解决？</p>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>最简单的想法就是先拿到两个数，相加后，再按位添加到新链表中。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">l2</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">l1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">l1</span><span class="o">.</span><span class="n">val</span>
-</span></span><span class="line"><span class="cl">		<span class="n">l1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">l2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">l2</span> <span class="o">=</span> <span class="n">l2</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">l2</span><span class="o">.</span><span class="n">val</span>
-</span></span><span class="line"><span class="cl">		<span class="n">l2</span> <span class="o">=</span> <span class="n">l2</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">	<span class="n">dummy</span> <span class="o">=</span> <span class="n">p</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">p</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">char</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">		<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">dummy</span><span class="o">.</span><span class="n">next</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>80 ms</p>
-<h3 id="2">#2</h3>
-<p>为了防止数太大，也可以用数组存储两个数，再模拟进位加法，类似 <a href="/leetcode/0415" title="0415" rel="noopener noreferrer">0415</a> 。</p>
+<ul>
+<li>可以用 <a href="/leetcode/0206" title="0206" rel="noopener noreferrer">0206</a> 反转链表，即转为问题 <a href="/leetcode/0002" title="0002" rel="noopener noreferrer">0002</a></li>
+<li>更简单的是直接取出两个数相加</li>
+<li>或着数太大时，取出两个数组，再模拟相加，类似 <a href="/leetcode/0415" title="0415" rel="noopener noreferrer">0415</a></li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -218,29 +181,25 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">l2</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">l1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="n">l1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">l2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">B</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="n">l2</span> <span class="o">=</span> <span class="n">l2</span><span class="o">.</span><span class="n">next</span>
-</span></span><span class="line"><span class="cl">	<span class="n">head</span><span class="p">,</span> <span class="n">carry</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">A</span> <span class="ow">or</span> <span class="n">B</span> <span class="ow">or</span> <span class="n">carry</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="k">if</span> <span class="n">A</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">		<span class="n">y</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="k">if</span> <span class="n">B</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">		<span class="n">s</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">carry</span>
-</span></span><span class="line"><span class="cl">		<span class="n">head</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">s</span><span class="o">%</span><span class="mi">10</span><span class="p">,</span> <span class="nb">next</span><span class="o">=</span><span class="n">head</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="n">carry</span> <span class="o">=</span> <span class="n">s</span><span class="o">//</span><span class="mi">10</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">head</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">],</span> <span class="n">l2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">l</span><span class="o">.</span><span class="n">val</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span><span class="o">+</span><span class="n">get</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dum</span> <span class="o">=</span> <span class="n">p</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dum</span><span class="o">.</span><span class="n">next</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>80 ms</p>
+</div><p>59 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
