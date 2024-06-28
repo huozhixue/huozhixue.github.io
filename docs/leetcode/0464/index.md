@@ -55,30 +55,32 @@
 ## 分析
 
 典型的博弈问题：
-- 为了方便，令 M=maxChoosableInteger，T=desiredTotal
-- 先排除特殊情况 M*(M+1)//2<T，此时没有人达到 T，返回 False
-- 否则，令 dfs(A, T) 代表可选集合为 A、 目标 T 的情况下第一个玩家是否必胜
-- 第一个玩家选了 x 后，即转为递归子问题 dfs(A-{x},T-x)
-
-可以将集合状态压缩为一个数，即可用记忆化递归。
+- 为了方便，令 m=maxChoosableInteger，y=desiredTotal
+- 先排除特殊情况 m*(m+1)//2<t，此时没有人达到 t，返回 False
+- 否则，每个集合状态必然对应必胜或必败
+- 令 dfs(st, s) 代表已选集合 st、已选之和 s 的情况下第一个玩家是否必胜
+- 第一个玩家选了不在 st 中的 x 后，转为子问题 dfs(st|1<<x,s+x)
 
 ## 解答
 
 ```python
-def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
-	@cache
-	def dfs(st, T):
-		for x in range(1, M+1):
-			if not st&(1<<x):
-				if x>=T or not dfs(st|(1<<x), T-x):
-					return True
-		return False
+class Solution:
+    def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+        @cache
+        def dfs(st,s):
+            for x in range(m):
+                if not st&1<<x:
+                    if s+x+1>=t or not dfs(st|1<<x,s+x+1):
+                        return True
+            return False
 
-	M, T = maxChoosableInteger, desiredTotal
-	if M*(M+1) // 2 < T:
-		return False
-	return dfs(0, T)
+        m,t = maxChoosableInteger, desiredTotal
+        if m*(m+1)//2<t:
+            return False
+        return dfs(0,0)
 ```
-2680 ms
+1794 ms
+
+
 
 

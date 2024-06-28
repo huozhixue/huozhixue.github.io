@@ -47,20 +47,19 @@
 
 ## 分析
 
-n 个点各不相同，因此可以遍历 n 个点，作为回旋镖的中心，计算能构成多少回旋镖。
-
-具体的，可以统计每个点到该点的距离。假设有 v 个点到该点的距离都为 dis，那么对应的回旋镖数量即为 v*(v-1)。
-
+- n 个点各不相同，因此遍历每个点作为中心，进行计数
+- 统计其它点的距离，任选两个距离相同的即满足要求
 ## 解答
 
 ```python
-def numberOfBoomerangs(self, points: List[List[int]]) -> int:
-	res = 0
-	for x in points:
-		ct = Counter((x[0]-y[0])**2+(x[1]-y[1])**2 for y in points)
-		res += sum(v*(v-1) for v in ct.values())
-	return res
+class Solution:
+    def numberOfBoomerangs(self, points: List[List[int]]) -> int:
+        res = 0
+        for x in points:
+            ct = Counter(dist(x,y) for y in points)
+            res += sum(v*(v-1) for v in ct.values())
+        return res
 ```
-1292 ms
+408 ms
 
 

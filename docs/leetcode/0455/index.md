@@ -45,17 +45,19 @@
 
 ## 分析
 
-经典的贪心问题。按胃口从小到大遍历，找满足胃口且最小的饼干即可。
+优先满足胃口小的孩子，并找满足胃口且最小的饼干即可。
 
 ## 解答
 
-
 ```python
-def findContentChildren(self, g: List[int], s: List[int]) -> int:
-	g.sort()
-	i = 0
-	for x in sorted(s):
-		if i<len(g) and x>=g[i]:
-			i += 1
-	return i
+class Solution:
+    def findContentChildren(self, g: List[int], s: List[int]) -> int:
+        g.sort()
+        s.sort()
+        i = 0
+        for c in s:
+            if i<len(g) and c>=g[i]:
+                i += 1
+        return i
 ```
+46 ms

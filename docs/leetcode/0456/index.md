@@ -53,23 +53,24 @@
 考虑遍历中间的 nums[j]
 -  往 j 左侧找到最小的数 nums[i]，然后在 j 右侧找介于两者之间的数 nums[k] 即可
 - 左侧最小值在遍历中即可维护
-- 右侧需要维护一个有序集合，然后二分查找。
+- 右侧需要维护一个有序集合，然后二分查找
 
 ```python
-def find132pattern(self, nums: List[int]) -> bool:
-	from sortedcontainers import SortedList
-	a, sl = inf, SortedList(nums)
-	for b in nums:
-		sl.remove(b)
-		if a < b:
-			pos = sl.bisect_right(a)
-			if pos < len(sl) and sl[pos] < b:
-				return True
-		a = min(a, b)
-	return False
+class Solution:
+    def find132pattern(self, nums: List[int]) -> bool:
+        from sortedcontainers import SortedList
+        a, sl = inf, SortedList(nums)
+        for b in nums:
+            sl.remove(b)
+            if a<b:
+                pos = sl.bisect_right(a)
+                if pos<len(sl) and sl[pos]<b:
+                    return True
+            a = min(a, b)
+        return False
 ```
 
-时间 $O(N \ log N)$，772 ms
+565 ms
 
 ### #2
 
@@ -81,16 +82,17 @@ def find132pattern(self, nums: List[int]) -> bool:
 ## 解答
 
 ```python
-def find132pattern(self, nums: List[int]) -> bool:
-	dp, stack = [inf], []
-	for i,c in enumerate(nums):
-		while stack and stack[-1][1]<=c:
-			stack.pop()
-		if stack and dp[stack[-1][0]]<c:
-			return True
-		stack.append((i,c))
-		dp.append(min(dp[-1],c))
-	return False
+class Solution:
+    def find132pattern(self, nums: List[int]) -> bool:
+        f, sk = [inf], []
+        for i,x in enumerate(nums):
+            while sk and sk[-1][1]<=x:
+                sk.pop()
+            if sk and f[sk[-1][0]]<x:
+                return True
+            sk.append((i,x))
+            f.append(min(f[-1],x))
+        return False
 ```
 
-时间 $O(N)$，216 ms
+189 ms

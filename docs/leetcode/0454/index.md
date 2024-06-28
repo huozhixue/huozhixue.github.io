@@ -48,17 +48,17 @@
 
 ## 分析
 
-采用 {{< lc "0018" >}} 的方法会超时，注意到本题是计算四元组的个数，而不需要列举出来。
-
-因此在遍历时，可以直接用哈希表保存后两个数的和以及对应的频次，一下去掉后两层循环。
+- 采用 {{< lc "0018" >}} 的方法会超时，注意到本题是计算四元组的个数，不需要列举出来
+- 遍历时，直接用哈希表保存两元组的和以及对应的频次，去掉两层循环
 
 ## 解答
 
 ```python
-def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:
-	ct = Counter(c+d for c in nums3 for d in nums4)
-	return sum(ct[-a-b] for a in nums1 for b in nums2)
+class Solution:
+    def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:
+        ct = Counter(x+y for x in nums1 for y in nums2)
+        return sum(ct[-x-y] for x in nums3 for y in nums4)
 ```
-时间复杂度 O(N^2)，576 ms
+360 ms
 
 

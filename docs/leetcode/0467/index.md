@@ -51,20 +51,21 @@
 
 ## 分析
 
-- 容易想到用 dp[i] 代表以 s[i] 结尾的符合的最长子串，即可递推
+- 容易想到递推以 s[i] 结尾的最长符合子串
 - 但这样存在重复计算的问题，比如 'cac' 中 'c' 会被计算两次
-- 因此考虑针对字符值而不是下标递推
-- 令 dp[c] 代表以字符 c 结尾的符合的最长子串，递推即可
+- 所以对相同字符结尾的，只取最大值即可
 ## 解答
 
 ```python
-def findSubstringInWraproundString(self, s: str) -> int:
-	dp, cnt = defaultdict(int), 0
-	for i, c in enumerate(s):
-		cnt = cnt+1 if i and (ord(c)-ord(s[i-1]))%26==1 else 1
-		dp[c] = max(dp[c], cnt)
-	return sum(dp.values())
+class Solution:
+    def findSubstringInWraproundString(self, s: str) -> int:
+        A = [ord(c)-ord('a') for c in s]
+        f,w = [0]*26,0
+        for i,a in enumerate(A):
+            w = w+1 if i and (a-A[i-1])%26==1 else 1
+            f[a] = max(f[a],w)
+        return sum(f)
 ```
-100 ms
+87 ms
 
 

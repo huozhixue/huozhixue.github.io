@@ -62,13 +62,18 @@
 
 
 ```python
-def validIPAddress(self, queryIP: str) -> str:
-	check4 = lambda x: x.isdigit() and 0<=int(x)<=255 and (x=='0' or x[0]!='0')
-	check6 = lambda x: 1<=len(x)<=4 and all(c in '0123456789abcdefABCDEF' for c in x)
-	if queryIP.count('.')==3 and all(check4(x) for x in queryIP.split('.')):
-		return 'IPv4'
-	if queryIP.count(':')==7 and all(check6(x) for x in queryIP.split(':')):
-		return 'IPv6'
-	return 'Neither'
+class Solution:
+    def validIPAddress(self, queryIP: str) -> str:
+        A = queryIP.split('.')
+        def check(a):
+            return a.isdigit() and 0<=int(a)<=255 and (a=='0' or a[0]!='0')
+        if len(A)==4 and all(check(a) for a in A):
+            return 'IPv4'
+        A = queryIP.split(':')
+        def check(a):
+            return re.match('[0-9a-fA-F]{1,4}$',a)
+        if len(A)==8 and all(check(a) for a in A):
+            return 'IPv6'
+        return 'Neither'
 ```
-24 ms
+37 ms

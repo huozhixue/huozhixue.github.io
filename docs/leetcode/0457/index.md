@@ -77,21 +77,23 @@
 
 
 ```python
-def circularArrayLoop(self, nums: List[int]) -> bool:
-	def check(i):
-		if nums[i]>1000:
-			return False
-		M = i+2000
-		while True:
-			j = (i+nums[i])%n
-			if nums[j]>1000:
-				return nums[j]==M
-			if j==i or nums[i]*nums[j]<0:
-				return False
-			nums[i] = M
-			i = j
+class Solution:
+    def circularArrayLoop(self, nums: List[int]) -> bool:
+        def check(i):
+            if nums[i]>ma:
+                return False
+            M = i+ma+1
+            while True:
+                j = (i+nums[i])%n
+                if nums[j]>ma:
+                    return nums[j]==M
+                if j==i or nums[i]*nums[j]<0:
+                    return False
+                nums[i] = M
+                i = j
 
-	n = len(nums)
-	return any(check(i) for i in range(n))
+        ma = 1000
+        n = len(nums)
+        return any(check(i) for i in range(n))
 ```
-28 ms
+38 ms

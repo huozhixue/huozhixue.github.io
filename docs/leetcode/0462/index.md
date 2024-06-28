@@ -49,9 +49,10 @@
 
 
 ```python
-def minMoves2(self, nums: List[int]) -> int:
-	nums.sort()
-	n = len(nums)
-	return sum(nums[n-1-i]-nums[i] for i in range(n//2))
+class Solution:
+    def minMoves2(self, nums: List[int]) -> int:
+        nums.sort()
+        mid = nums[len(nums)//2]
+        return sum(abs(x-mid) for x in nums)
 ```
-32 ms
+36 ms

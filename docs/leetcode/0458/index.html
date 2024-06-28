@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0458\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  703 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  646 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0458\/","datePublished": "2016-04-02T00:00:00+08:00","dateModified": "2016-04-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0458：可怜的小猪（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-02">2016-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 703 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-04-02">2016-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 646 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0458/" class="leancloud_visitors" data-flag-title="0458：可怜的小猪（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -164,23 +164,28 @@
 <li><code>1 &lt;= minutesToDie &lt;= minutesToTest &lt;= 100</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>先从简单情形入手，假设只有 1 轮：</p>
 <ul>
-<li>每个小猪只有死/活两种状态，n 个小猪一共只有 $2^n$ 种状态，因此 n 个小猪最多只能判断$2^n$ 桶</li>
-<li>接着考虑能否真正达到 $2^n$ 桶，状态相关容易想到二进制</li>
+<li>先从简单情形入手，假设只有 1 轮
+<ul>
+<li>每个小猪只有死/活两种状态，n 个小猪一共 $2^n$ 种状态，最多判断 $2^n$ 桶</li>
+<li>接着考虑能否真正达到 $2^n$ 桶，状态相关容易想到二进制
+<ul>
 <li>将桶编号为 $[0,2^n)$，每个桶对应一个 n 位二进制</li>
-<li>令第一只小猪喝二进制第一位为 0 的所有桶，第二只小猪喝二进制第二位为 0 的所有桶，依此类推</li>
-<li>根据每个小猪的状态即可确定二进制每一位是 0 还是 1，即可确定唯一桶的编号</li>
+<li>令第 i 只小猪喝二进制第 i 位为 1 的所有桶</li>
+<li>根据每个小猪状态即可确定二进制每一位，得到唯一桶编号</li>
 </ul>
-<p>接着推广到 k 轮：</p>
+</li>
+</ul>
+</li>
+<li>接着推广到 k 轮
 <ul>
 <li>每个小猪有 k+1 种状态，即第 1 轮后死、。。。第 k 轮后死、最终活着</li>
 <li>n 个小猪最多判断 $(k+1)^n$ 桶</li>
-<li>类似地，将桶编号对应一个 k 进制数，即可构造</li>
+<li>类似地，将桶编号对应一个 k+1 进制数，即可构造出上界</li>
 </ul>
-<blockquote>
-<p>一个坑：针对浮点数，不要直接取 log 后的 ceil，要再判断一下。</p>
-</blockquote>
+</li>
+<li>注意浮点数取整不要用 ceil，可能会出错</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -188,15 +193,17 @@
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">poorPigs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buckets</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">minutesToDie</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">minutesToTest</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">k</span> <span class="o">=</span> <span class="n">minutesToTest</span><span class="o">//</span><span class="n">minutesToDie</span>
-</span></span><span class="line"><span class="cl">	<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">buckets</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">pow</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">buckets</span> <span class="k">else</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">poorPigs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buckets</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">minutesToDie</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">minutesToTest</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span> <span class="o">=</span> <span class="n">minutesToTest</span><span class="o">//</span><span class="n">minutesToDie</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">buckets</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;</span><span class="n">buckets</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>32 ms</p>
+</div><p>20 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -216,7 +223,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a>,&nbsp;<a href="/leetcode_tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/dp/">Dp</a>,&nbsp;<a href="/leetcode_tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a>,&nbsp;<a href="/leetcode_tags/%E6%9E%84%E9%80%A0/">构造</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

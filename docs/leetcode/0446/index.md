@@ -59,24 +59,48 @@
 
 ## 分析
 
-- 考虑求以位置 i 结尾的等差子序列数目
-- 遍历 j<i，需要知道位置 j 结尾且差为 nums[i]-nums[j] 的等差子序列数目（长度 2 的也算）
-- 因此，令 dp[i][diff] 代表位置 i 结尾且等差 diff 的子序列个数，即可递推
-- 递推过程中，将长度 >=3 的等差子序列累加即可
+### #1
+- 考虑求最后两个数是 x、y 的等差子序列个数（长度 2 也算）
+	- 显然只要知道以 x 结尾、等差为 y-x 的子序列个数
+	- 因此令 f[i][diff] 保存以 nums[i] 结尾、等差 diff 的子序列个数，即可递推
+- 递推过程中，以 x 结尾、等差为 y-x 的子序列再加上 y，长度即 >=3，累加到结果中即可
+
+```python
+class Solution:
+    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
+        res, n = 0, len(nums)
+        f = [defaultdict(int) for _ in range(n)]
+        for i in range(n):
+            for j in range(i):
+                diff = nums[i]-nums[j]
+                f[i][diff] += 1+f[j][diff]
+                res += f[j][diff]
+        return res
+```
+653 ms
+
+### #2
+
+- 还可以直接令 f[x][diff] 保存以 x 结尾、等差 diff 的子序列个数
+- 注意 x 可能有多个，组成的长度 2 的 [x,y] 也有多个，因此要额外保存元素个数 
 
 ## 解答
 
 ```python
-def numberOfArithmeticSlices(self, nums: List[int]) -> int:
-    res, n = 0, len(nums)
-    dp = [defaultdict(int) for _ in range(n)]
-    for i in range(n):
-        for j in range(i):
-            diff = nums[i]-nums[j]
-            dp[i][diff] += 1+dp[j][diff]
-            res += dp[j][diff]
-    return res
+class Solution:
+    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
+        n = len(nums)
+        d = defaultdict(lambda:defaultdict(int))
+        ct = defaultdict(int)
+        res = 0
+        for y in nums:
+            for x in list(ct):
+                diff = y-x
+                res += d[x][diff]
+                d[y][diff] += d[x][diff]+ct[x]
+            ct[y]+=1
+        return res
 ```
-904 ms
+826 ms
 
 

@@ -47,7 +47,8 @@
 
 
 ```python
-def hammingDistance(self, x: int, y: int) -> int:
-	return bin(x^y).count('1')
+class Solution:
+    def hammingDistance(self, x: int, y: int) -> int:
+        return (x^y).bit_count()
 ```
-40 ms
+32 ms

@@ -40,13 +40,14 @@
 
 ## 分析
 
-等价于让一个数减 1，因此计算变成最小数的次数即可。
+等价于让一个数减 1，因此计算所有数变成最小数的次数即可。
 
 ## 解答
 
 
 ```python
-def minMoves(self, nums: List[int]) -> int:
-	return sum(nums) - min(nums) * len(nums)
+class Solution:
+    def minMoves(self, nums: List[int]) -> int:
+        return sum(nums)-min(nums)*len(nums)
 ```
-44 ms
+32 ms

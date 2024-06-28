@@ -52,18 +52,25 @@
 
 ## 分析
 
-类似 {{< lc "0435 ">}}，贪心地选择右端点最小的区间即可。
+- 假设某支箭穿过的气球集合是 A，那么将箭移动到 A 中最小的右端点，依然能穿过这些气球
+- 因此，必然存在一种最优选择是某些气球右端点的集合，接下来找到这种选择
+	- 将气球按右端点排序，第一个气球的右端点必然要选
+	- 接着跳过重合的气球，选剩下的第一个气球的右端点，依此类推即可
+- 当然，也必然存在一种最优选择是某些气球左端点的集合，所以也可以按左端点排序再选择
 
 ## 解答
 
 
 ```python
-def findMinArrowShots(self, points: List[List[int]]) -> int:
-	res, r = 0, -inf
-	for s,e in sorted(points,key=lambda x:x[1]):
-		if s>r:
-			res += 1
-			r = e
-	return res
+class Solution:
+    def findMinArrowShots(self, points: List[List[int]]) -> int:
+        res,r = 0,-inf
+        for a,b in sorted(points,key=lambda p:p[1]):
+            if a>r:
+                r = b
+                res += 1
+        return res
 ```
-148 ms
+165 ms
+
+

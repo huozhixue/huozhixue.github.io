@@ -70,23 +70,26 @@
 ## 解答
 
 ```python
-def deleteNode(self, root: TreeNode, key: int) -> TreeNode:
-    if not root:
-        return None
-    if root.val > key:
-        root.left = self.deleteNode(root.left, key)
-    elif root.val < key:
-        root.right = self.deleteNode(root.right, key)
-    elif not root.left:
-        root = root.right
-    else:
-        p = root.left
-        while p.right:
-            p = p.right
-        p.right = root.right
-        root = root.left
-    return root
+class Solution:
+    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        def dfs(u,x):
+            if not u:
+                return None
+            if u.val>x:
+                u.left = dfs(u.left,x)
+            elif u.val<x:
+                u.right = dfs(u.right,x)
+            elif not u.left:
+                u = u.right
+            else:
+                p = u.left
+                while p.right:
+                    p = p.right
+                p.right = u.right
+                u = u.left
+            return u
+        return dfs(root,key)
 ```
-76 ms
+55 ms
 
 

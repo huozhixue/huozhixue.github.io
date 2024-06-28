@@ -57,7 +57,7 @@
 
 ## 分析
 
-典型的拒绝抽样。
+典型的拒绝抽样
 - 调用两次 rand7，等价于 rand49
 - 然后 1 到 40 对 10 取模即可等价于 rand10
 - 如果大于 40，就重新抽样
@@ -65,13 +65,18 @@
 ## 解答
 
 ```python
-def rand10(self):
-    while True:
-        res = (rand7() - 1) * 7 + rand7()
-        if res <= 40:
-            return res % 10 + 1
+class Solution:
+    def rand10(self):
+        """
+        :rtype: int
+        """
+        while True:
+            a,b = rand7(),rand7()
+            res = (a-1)*7+b
+            if res <= 40:
+                return res%10+1
 ```
 
-340 ms
+169 ms
 
 

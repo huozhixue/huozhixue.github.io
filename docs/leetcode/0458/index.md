@@ -54,27 +54,26 @@
 
 ## 分析
 
-先从简单情形入手，假设只有 1 轮：
-- 每个小猪只有死/活两种状态，n 个小猪一共只有 $2^n$ 种状态，因此 n 个小猪最多只能判断$2^n$ 桶
-- 接着考虑能否真正达到 $2^n$ 桶，状态相关容易想到二进制
-- 将桶编号为 $[0,2^n)$，每个桶对应一个 n 位二进制
-- 令第一只小猪喝二进制第一位为 0 的所有桶，第二只小猪喝二进制第二位为 0 的所有桶，依此类推
-- 根据每个小猪的状态即可确定二进制每一位是 0 还是 1，即可确定唯一桶的编号
-
-接着推广到 k 轮：
-- 每个小猪有 k+1 种状态，即第 1 轮后死、。。。第 k 轮后死、最终活着
-- n 个小猪最多判断 $(k+1)^n$ 桶
-- 类似地，将桶编号对应一个 k 进制数，即可构造
-
-> 一个坑：针对浮点数，不要直接取 log 后的 ceil，要再判断一下。
+- 先从简单情形入手，假设只有 1 轮
+	- 每个小猪只有死/活两种状态，n 个小猪一共 $2^n$ 种状态，最多判断 $2^n$ 桶
+	- 接着考虑能否真正达到 $2^n$ 桶，状态相关容易想到二进制
+		- 将桶编号为 $[0,2^n)$，每个桶对应一个 n 位二进制
+		- 令第 i 只小猪喝二进制第 i 位为 1 的所有桶
+		- 根据每个小猪状态即可确定二进制每一位，得到唯一桶编号
+- 接着推广到 k 轮
+	- 每个小猪有 k+1 种状态，即第 1 轮后死、。。。第 k 轮后死、最终活着
+	- n 个小猪最多判断 $(k+1)^n$ 桶
+	- 类似地，将桶编号对应一个 k+1 进制数，即可构造出上界
+- 注意浮点数取整不要用 ceil，可能会出错
 
 ## 解答
 
 
 ```python
-def poorPigs(self, buckets: int, minutesToDie: int, minutesToTest: int) -> int:
-	k = minutesToTest//minutesToDie
-	x = int(log(buckets, k+1))
-	return x if pow(k+1,x)>=buckets else x+1
+class Solution:
+    def poorPigs(self, buckets: int, minutesToDie: int, minutesToTest: int) -> int:
+        k = minutesToTest//minutesToDie+1
+        x = int(log(buckets, k))
+        return x+(pow(k,x)<buckets)
 ```
-32 ms
+20 ms

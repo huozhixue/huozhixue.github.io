@@ -43,12 +43,14 @@
 ## 解答
 
 ```python
-def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-	for num in nums:
-		i = abs(num)-1
-		nums[i] = -abs(nums[i])
-	return [i+1 for i, num in enumerate(nums) if num>0]
+class Solution:
+    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+        for i,x in enumerate(nums):
+            while x!=nums[x-1]:
+                nums[i],nums[x-1]=nums[x-1],nums[i]
+                x = nums[i]
+        return [i+1 for i,x in enumerate(nums) if x!=i+1]
 ```
-124 ms
+89 ms
 
 

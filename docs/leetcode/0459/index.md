@@ -48,21 +48,21 @@
 
 ### #1
 
-假如长为 n 的 s 能由长 m 的子串 sub 组成，显然 n 是 m 的倍数。
-
-因此考虑遍历 n 的因数 m，判断 s 是否由 s[:m] 重复构成即可。
+- 假如长为 n 的 s 能由长 m 的子串 sub 组成，显然 n 是 m 的倍数
+- 因此考虑遍历 n 的因数 m，判断 s 是否由 s[:m] 重复构成即可
 
 ```python
-def repeatedSubstringPattern(self, s: str) -> bool:
-    n = len(s)
-    for i in range(1, int(sqrt(n))+1):
-        if n%i==0:
-            for j in [i, n//i]:
-                if j<n and s[:j]*(n//j)==s:
-                    return True
-    return False
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        n = len(s)
+        for i in range(1,isqrt(n)+1):
+            if n%i==0:
+                for j in [i,n//i]:
+                    if j<n and s[:j]*(n//j)==s:
+                        return True
+        return False
 ```
-时间复杂度 $O(N*\sqrt N)$，32 ms
+时间复杂度 $O(N*\sqrt N)$，39 ms
 
 ### #2
 
@@ -72,7 +72,8 @@ def repeatedSubstringPattern(self, s: str) -> bool:
 ## 解答
 
 ```python
-def repeatedSubstringPattern(self, s: str) -> bool:
-    return s in (s+s)[1:-1]
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        return s in (s+s)[1:-1]
 ```
-48 ms
+42 ms

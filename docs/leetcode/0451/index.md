@@ -55,8 +55,9 @@
 ## 解答
 
 ```python
-def frequencySort(self, s: str) -> str:
-	return ''.join(c*w for c, w in Counter(s).most_common())
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        return ''.join(c*w for c, w in Counter(s).most_common())
 ```
 48 ms
 
