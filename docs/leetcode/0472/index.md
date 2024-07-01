@@ -42,22 +42,56 @@
 
 ## 分析
 
-- 连接词要么由两个单词组成，要么由一个单词和一个连接词组成
-- 因此可以用 dp 判断某个词是否连接词
+
+类似 {{< lc "0139" >}}，可以按第一个单词长度递归。
 
 ## 解答
 
 
 ```python
-def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
-	@cache
-	def check(w):
-		for i in range(1, len(w)):
-			if w[:i] in vis and (w[i:] in vis or check(w[i:])):
-				return True
-		return False
-	
-	vis = set(words)
-	return [w for w in words if check(w)] 
+class Solution:
+    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
+        @cache
+        def dfs(w):
+            for i in range(1, len(w)):
+                if w[:i] in vis and (w[i:] in vis or dfs(w[i:])):
+                    return True
+            return False
+        vis = set(words)
+        return [w for w in words if dfs(w)]
 ```
-164 ms
+148 ms
+
+## *附加
+
+同样的，可以用字典树来查找。
+
+```python
+class Solution:
+    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
+        T = lambda: defaultdict(T)
+        trie = T()
+        res = []
+        for w in sorted(words,key=len):
+            @cache
+            def dfs(i):
+                if i==len(w):
+                    return True
+                p = trie
+                for j in range(i,len(w)):
+                    if w[j] not in p:
+                        return False
+                    p = p[w[j]]
+                    if '#' in p and dfs(j+1):
+                        return True
+                return False
+            if dfs(0):
+                res.append(w)
+            else:
+                p = trie
+                for c in w:
+                    p = p[c]
+                p['#'] = {}
+        return res
+```
+540 ms

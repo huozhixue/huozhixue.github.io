@@ -50,34 +50,32 @@
 
 ## 分析
 
-将 [s1,n1] 看作 n1 行，每行都是 s1 的矩阵，便类似 {{< lc "0418" >}}：
-- 按顺序匹配 s2，令 d[x]=i 代表第 i 行最先匹配的是 s2 第 x 个字符
-- 显然 x 的值有限，因此有限行之后，必然进入循环
-- 计算出一个循环中匹配了多少个 s2，即可快速得到 n1 行的结果
+- 将 [s1,n1] 看作 n1 行，每行都是 s1 的矩阵，便类似 {{< lc "0418" >}}
+- 按顺序匹配 s2，令 d[k]=i 代表第 i 行最先匹配的是 s2 第 k 个字符
+	- 显然 k 的值有限，有限行之后，必然进入循环
+	- 用哈希表即可找到第一个循环的开始行 j 和结束行 i
+- 遍历时，再用 A[i] 维护前 i 行匹配的 s2 的个数
+	- 根据 A[i]、A[j] 即可计算出一个循环匹配的 s2 的个数，从而快速得到结果
 
 ## 解答
 
 
 ```python
-def getMaxRepetitions(self, s1: str, n1: int, s2: str, n2: int) -> int:
-	def cal(x):
-		w = 0
-		for c in s1:
-			if c == s2[x]:
-				x = (x+1)%len(s2)
-				w += x==0
-		return x, w
-
-	d, x, pre = {}, 0, [0]
-	for j in range(n1):
-		if x in d:
-			i = d[x]
-			s = pre[-1]-pre[i]
-			_q, _r = divmod(n1-i, j-i) 
-			return (_q*s+pre[_r+i])//n2
-		d[x] = j
-		x, w = cal(x)
-		pre.append(pre[-1]+w)
-	return pre[-1]//n2
+class Solution:
+    def getMaxRepetitions(self, s1: str, n1: int, s2: str, n2: int) -> int:
+        d,A = {0:0},[0]
+        k,s = 0,0
+        for i in range(1,n1+1):
+            for c in s1:
+                if c==s2[k]:
+                    s += (k+1)//len(s2)
+                    k = (k+1)%len(s2)
+            if k in d:
+                j = d[k]
+                q,r = divmod(n1-j,i-j)
+                return (q*(s-A[j])+A[j+r])//n2
+            d[k] = i
+            A.append(s)
+        return s//n2
 ```
-40  ms
+38  ms

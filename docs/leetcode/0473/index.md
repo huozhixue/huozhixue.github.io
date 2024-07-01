@@ -41,37 +41,28 @@
 
 ## 分析
 
-为了方便，令 A=matchsticks，s=sum(A)。
-- 显然当 s%4!=0 时非真。否则，要将 A 划分为四个和为 q=s//4 的子集
-- 假如排列的最后一个数是 x，那么只要 A-{x} 能组成 3 个和 q 的子集，即可成功
-- 一般性地，令 dfs(B) 代表集合 B 能否组成 sum(B)//q 个和 t 的子集，尝试递推
-- 从 B 中任选一个数 x，集合 C=B-x，只要 dfs(C) 为真且 x+sum(C)%q<=q，dfs(B) 即为真
-- 为了方便，可以令 dfs(B) 返回 sum(B)%q，若集合 B 非真，则返回 -1
-
-将集合状态压缩为一个数，即可使用记忆化递归。
-
-
+- 显然当总长度不是 4 的倍数时为假
+- 否则，令 f[st] 代表集合 st 的火柴能否拼成若干个完整边，且剩下的长度小于边长，即可递推
+- 为了方便，符合条件时，令 f[st] 直接返回还没拼的长度，否则赋 inf
 ## 解答
 
 ```python
-def makesquare(self, matchsticks: List[int]) -> bool:
-	@cache
-	def dfs(st):
-		if st==0:
-			return 0
-		for i in range(n):
-			if st&(1<<i):
-				x = dfs(st^(1<<i))
-				if x!=-1 and x+A[i]<=q:
-					return (x+A[i])%q
-		return -1
-
-	q, r = divmod(sum(matchsticks),4)
-	if r:
-		return False
-	A, n = matchsticks, len(matchsticks)
-	return dfs((1<<n)-1)==0
+class Solution:
+    def makesquare(self, matchsticks: List[int]) -> bool:
+        s = sum(matchsticks)
+        if s%4:
+            return False
+        s //= 4
+        n = len(matchsticks)
+        f = [inf]*(1<<n)
+        f[0] = 0
+        for st in range(1,1<<n):
+            for i,x in enumerate(matchsticks):
+                if st&1<<i and x+f[st^1<<i]<=s:
+                    f[st] = (x+f[st^1<<i])%s
+                    break
+        return f[-1]==0
 ```
-1528 ms
+1602 ms
 
 
