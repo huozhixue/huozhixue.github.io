@@ -53,16 +53,17 @@
 
 
 ```python
-def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
-	from sortedcontainers import SortedList
-	res, sl = [], SortedList()
-	for j,x in enumerate(nums):
-		sl.add(x)
-		if j>=k:
-			sl.remove(nums[j-k])
-		if j>=k-1:
-			mid = (sl[(k-1)//2]+sl[k//2])/2
-			res.append(mid)
-	return res
+class Solution:
+    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
+        from sortedcontainers import SortedList
+        res, sl = [], SortedList()
+        for j,x in enumerate(nums):
+            sl.add(x)
+            if j>=k:
+                sl.remove(nums[j-k])
+            if j>=k-1:
+                mid = (sl[(k-1)//2]+sl[k//2])/2
+                res.append(mid)
+        return res
 ```
-540 ms
+319 ms

@@ -46,46 +46,22 @@
 
 ## 分析
 
-### #1
-
-显然按是否选最后一个字符串，可以转为递归子问题。
-
-可以提前保存每个字符串的 01 个数，节省时间。
-
->这本质上是个 01 背包问题，m、n 是限制条件，求最多能选多少个。
-
-
-```python
-def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-	@cache
-	def dfs(i, w0, w1):
-		if min(w0,w1)<0:
-			return -inf
-		if i == 0:
-			return 0
-		return max(dfs(i-1,w0,w1), 1+dfs(i-1, w0-A[i-1][0], w1-A[i-1][1]))
-	
-	A = [(s.count('0'), s.count('1')) for s in strs]
-	return dfs(len(strs), m, n)
-```
-1644 ms
-
-### #2
-
-可以改写成非递归形式，并且倒序遍历 w0、w1，将 dp 优化为二维数组。
+- 按是否选最后一个字符串，即可递推
+- 这本质上就是个 01 背包，m、n 是限制条件
 
 ## 解答
 
 ```python
-def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-	dp = [[0]*(n+1) for _ in range(m+1)]
-	for s in strs:
-		cnt0, cnt1 = s.count('0'), s.count('1')
-		for w0 in range(m, cnt0-1, -1):
-			for w1 in range(n, cnt1-1, -1):
-				dp[w0][w1] = max(dp[w0][w1], 1+dp[w0-cnt0][w1-cnt1])
-	return dp[-1][-1]
+class Solution:
+    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+        f = [[0]*(n+1) for _ in range(m+1)]
+        for s in strs:
+            a,b = s.count('0'),s.count('1')
+            for i in range(m,a-1,-1):
+                for j in range(n,b-1,-1):
+                    f[i][j] = max(f[i][j],1+f[i-a][j-b])
+        return f[-1][-1]
 ```
-2392 ms
+1608 ms
 
 

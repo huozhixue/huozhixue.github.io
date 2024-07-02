@@ -41,20 +41,19 @@ HammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 
 
 ## 分析
 
-典型的位运算问题：
-- 二进制最多30位
-- 统计第 i 位上有 a 个数为 0，b个数为 1，那么第 i 位贡献的汉明距离即为 a * b
-- 因此，遍历 i，统计即可
+- 可以用贡献法，计算每个二进制位上贡献的距离
+- 统计第 i 位上 a 个数为 0，b个数为 1，那么贡献即为 a * b
 
 ## 解答
 
 
 ```python
-def totalHammingDistance(self, nums: List[int]) -> int:
-	res, n = 0, len(nums)
-	for i in range(30):
-		w = sum((num>>i)&1 for num in nums)
-		res += w*(n-w)
-	return res
+class Solution:
+    def totalHammingDistance(self, nums: List[int]) -> int:
+        res = 0
+        for i in range(max(nums).bit_length()):
+            ct = Counter(x>>i&1 for x in nums)
+            res += ct[0]*ct[1]
+        return res
 ```
-292 ms
+320 ms

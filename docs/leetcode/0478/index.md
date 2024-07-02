@@ -42,7 +42,7 @@ solution.randPoint ();//返回[0.36572,0.17248]</pre>
 
 ## 分析
 
-可以用拒绝抽样，在外接正方形中随机，落在圆里就返回结果。
+拒绝抽样即可。
 
 ## 解答
 
@@ -50,18 +50,18 @@ solution.randPoint ();//返回[0.36572,0.17248]</pre>
 class Solution:
 
     def __init__(self, radius: float, x_center: float, y_center: float):
+        self.r = radius
         self.x = x_center
         self.y = y_center
-        self.r = radius
 
     def randPoint(self) -> List[float]:
         while True:
-            a = 1-2*random.random()
-            b = 1-2*random.random()
+            a = 2*random.random()-1
+            b = 2*random.random()-1
             if a*a+b*b<=1:
-                return [self.x+a*self.r, self.y+b*self.r]
+                return [self.x+a*self.r,self.y+b*self.r]
 ```
 
-228 ms
+131 ms
 
 

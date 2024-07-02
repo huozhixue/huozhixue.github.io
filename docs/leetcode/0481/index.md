@@ -43,17 +43,18 @@
 
 ## 分析
 
-模拟即可，后面交替添加一组 '0'/'1'，个数即由 s 前面的元素决定。
+模拟即可，后面交替添加一组 1/2，个数即由 s 前面的元素决定。
 
 ## 解答
 
 
 ```python
-def magicalString(self, n: int) -> int:
-	A, i = [1, 2, 2], 2
-	while len(A)<n:
-		A.extend([3-A[-1]]*A[i])
-		i += 1
-	return A[:n].count(1)
+class Solution:
+    def magicalString(self, n: int) -> int:
+        A, i = [1, 2, 2], 2
+        while len(A)<n:
+            A.extend([3-A[-1]]*A[i])
+            i += 1
+        return A[:n].count(1)
 ```
-88 ms
+100 ms

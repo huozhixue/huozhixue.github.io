@@ -50,23 +50,22 @@
 
 ## 分析
 
-将 heaters 排序，然后每个房屋二分查找最近的供暖器，更新半径即可。
-
-还可以在 heaters 前后加上哨兵，方便处理边界。
+每个房屋二分查找最近的供暖器，更新半径即可。
 
 
 ## 解答
 
 
 ```python
-def findRadius(self, houses: List[int], heaters: List[int]) -> int:
-	A = [-inf]+sorted(heaters)+[inf]
-	res = 0
-	for h in houses:
-		pos = bisect_left(A, h)
-		w = min(A[pos]-h, h-A[pos-1])
-		res = max(res, w)
-	return res
+class Solution:
+    def findRadius(self, houses: List[int], heaters: List[int]) -> int:
+        A = sorted(heaters)
+        res = 0
+        for x in houses:
+            pos = bisect_left(A,x)
+            w = min(abs(x-A[j]) for j in [pos-1,pos] if 0<=j<len(A))
+            res = max(res,w)
+        return res
 ```
-时间 $O((N+M)logN)$，96 ms
+115 ms
 

@@ -35,23 +35,24 @@
 
 ## 分析
 
-两个 n 位数相乘，必然是 2n 或 2n-1 位，因此考虑从大到小遍历所有 2n 和 2n-1 位的回文数，判断是否符合。
 
-具体构造回文数：
-- 以基于某数并镜像的方法可以得到回文数
-	- 例如 10 通过两种镜像方式，可得到两个回文数 101、1001
-- 长度为 L 的回文数也必然可以基于前 (L+1)//2 个数字镜像得到，把它称作 L 的回文根
-- 遍历 n 位的回文根，并遍历两种镜像方式，注意大小顺序即可
+- 两个 n 位数相乘，必然是 2n 或 2n-1 位
+- 因此从大到小遍历 n 位回文根，构造回文数，判断即可
+	- 例如 10 作为回文根，可根据两种镜像方式，构造出 1001、101
+	- 遍历两种镜像方式，注意大小顺序即可
 
 ## 解答
 
 
 ```python
-def largestPalindrome(self, n: int) -> int:
-	for is_odd in [0, 1]:
-		for half in range(10**n-1, 10**(n-1), -1):
-			num = int(str(half) + str(half)[-is_odd-1::-1])
-			if any(num%x==0 and num//x<10**n for x in range(10**n-1, isqrt(num)-1, -1)):
-				return num % 1337
+class Solution:
+    def largestPalindrome(self, n: int) -> int:
+        for odd in [0,1]:
+            for h in range(10**n-1,10**(n-1)-1,-1):
+                x = int(str(h)+str(h)[::-1][odd:])
+                mi = max(10**(n-1),(x-1)//(10**n-1)+1)
+                for y in range(mi,isqrt(x)+1):
+                    if x%y==0:
+                        return x%1337
 ```
-2208 ms
+1018 ms

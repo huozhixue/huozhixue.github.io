@@ -43,16 +43,17 @@
 
 ## 分析
 
-模拟即可。注意第一组也包含 k 个字符的特殊情况。
+模拟即可。
 
 ## 解答
 
 
 ```python
-def licenseKeyFormatting(self, s: str, k: int) -> str:
-	s = s.replace('-', '').upper()
-	r = len(s) % k
-	res = [s[:r]] + [s[i:i+k] for i in range(r, len(s), k)]
-	return '-'.join(res).lstrip('-')
+class Solution:
+    def licenseKeyFormatting(self, s: str, k: int) -> str:
+        s = s.replace('-', '').upper()
+        r = len(s)%k
+        res = ([s[:r]] if r else []) + [s[i:i+k] for i in range(r,len(s),k)]
+        return '-'.join(res)
 ```
-40 ms
+36 ms
