@@ -43,18 +43,19 @@
 
 ## 分析
 
-典型的博弈问题，令 dfs(i, j) 表示用 nums[i:j+1] 玩游戏得到的玩家 1 和 2 的分数差，即可递归。 
+典型的博弈问题，令 f[i][j] 表示用 nums[i:j+1] 玩游戏得到的玩家 1 和 2 的分数差，即可递推。 
 
 ## 解答
 
 ```python
 class Solution:
     def predictTheWinner(self, nums: List[int]) -> bool:
-        @cache
-        def dfs(i,j):
-            if i==j:
-                return nums[i]
-            return max(nums[i]-dfs(i+1,j),nums[j]-dfs(i,j-1))
-        return dfs(0,len(nums)-1)>=0
+        n = len(nums)
+        f = [[0]*n for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            f[i][i] = nums[i]
+            for j in range(i+1,n):
+                f[i][j] = max(nums[i]-f[i+1][j],nums[j]-f[i][j-1])
+        return f[0][-1]>=0
 ```
-32 ms
+39 ms

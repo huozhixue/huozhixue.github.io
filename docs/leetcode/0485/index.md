@@ -41,7 +41,8 @@
 ## 解答
 
 ```python
-def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-	return max(len(list(g)) if x==1 else 0 for x,g in groupby(nums))
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        return max(len(list(g)) if c==1 else 0 for c,g in groupby(nums))
 ```
-64 ms
+54 ms
