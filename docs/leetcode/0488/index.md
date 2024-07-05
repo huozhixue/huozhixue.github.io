@@ -85,40 +85,43 @@
 ## 分析
 
 
-所给数据范围的最坏情况下，每种方案相当于是从 21 个位置中选 5 个放入 hand 的一种排列，故方案总数为
-$$A^{5}_{21}≈2.44*10^6$$
-因此考虑 bfs 搜索方案，并通过剪枝优化时间。
-
-最重要的剪枝是：
-- 当手上的球 h[j] 和插入位置 i 前后的球 b[i-1], b[i] 三个球各不相同时，插入是不必要的
-- 可以反证，假如某个成功方案是此时将 h[j] 插入到位置 i，最终和 前面/后面 某个位置的球 x 一起消除
-- 那么直接将 h[j] 插入到球 x 旁边，不会影响 h[j],b[i-1],b[i] 的消除过程，依然是成功方案
+- 考虑 bfs 并剪枝
+- 假设要将 h[j] 插入 b[i-1] 和 b[i] 之间，考虑哪些情况是有效的
+	- h[j]=b[i]，有效
+	- h[j]=b[i-1]，这和插入 b[i-2] 和 b[i-1] 之间没区别，可以不考虑
+	- b[i]=b[i-1]，有效
+		- 例如桌面上的球为 'RRWWRRBBRR'，手中的球为 'WB'
+		- 操作方法：RRWWRRBBRR→RRWWRRBBR(W)R→RRWWRR(B)BBRWR→''
+	- 全都不相等，可以不考虑
+		- 假如某个成功方案是插入 h[j] 到位置 i，最终和 前面/后面 某个位置的球 x 一起消除
+		- 直接将 h[j] 插入到球 x 旁边，不会影响 h[j],b[i-1],b[i] 的消除过程，依然是成功方案
 
 ## 解答
 
 
 ```python
-def findMinStep(self, board: str, hand: str) -> int:
-	@cache
-	def clean(s):
-		n = 1
-		while n:
-			s, n = re.subn(r'(.)\1{2,}', '', s)
-		return s
-
-	hand = ''.join(sorted(hand))
-	Q, vis = deque([(board, hand, 0)]), {(board, hand)}
-	while Q:
-		b, h, w = Q.popleft()
-		for i, j in product(range(len(b)+1), range(len(h))):
-			if 0<i<len(b) and len({b[i],b[i-1],h[j]})==3:
-				continue
-			b2, h2 = clean(b[:i]+h[j]+b[i:]), h[:j]+h[j+1:]
-			if not b2:
-				return w + 1
-			if (b2, h2) not in vis:
-				Q.append((b2, h2, w + 1))
-				vis.add((b2, h2))
-	return -1
+class Solution:
+    def findMinStep(self, board: str, hand: str) -> int:
+        @cache
+        def clean(s):
+            n = 1
+            while n:
+                s,n = re.subn(r'(.)\1{2,}','',s) 
+            return s
+        hand = ''.join(sorted(hand))
+        Q = deque([(0,board,hand)])
+        vis = {(board,hand)}
+        while Q:
+            w,b,h = Q.popleft()
+            for i,j in product(range(len(b)),range(len(h))):
+                if h[j]==b[i] or (i and b[i-1]==b[i]):
+                    b2 = clean(b[:i]+h[j]+b[i:])
+                    h2 = h[:j]+h[j+1:]
+                    if not b2:
+                        return w+1
+                    if (b2,h2) not in vis:
+                        vis.add((b2,h2))
+                        Q.append((w+1,b2,h2))
+        return -1
 ```
-2904 ms
+711 ms

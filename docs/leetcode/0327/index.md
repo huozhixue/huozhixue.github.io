@@ -64,14 +64,14 @@ class Solution:
 ```python
 class Solution:
     def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
-        def dfs(A,l,r):
+        def cdq(A,l,r):
             if l==r:
                 return 0
             m = (l+r)//2
             B,C = [],[]
             for i in A:
                 (C if i>m else B).append(i)
-            res = dfs(B,l,m)+dfs(C,m+1,r)
+            res = cdq(B,l,m)+cdq(C,m+1,r)
             j,k=0,0
             for i in C:
                 while k<len(B) and P[B[k]]<=P[i]-lower:
@@ -83,6 +83,6 @@ class Solution:
         P = [0]+list(accumulate(nums))
         n = len(P)
         A = sorted(range(n),key=lambda i:P[i])
-        return dfs(A,0,n-1)
+        return cdq(A,0,n-1)
 ```
 1067 ms

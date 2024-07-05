@@ -37,16 +37,18 @@
 
 ## 分析
 
-先遍历，递推得到所有递增子序列（包括单个元素），最后再去掉单元素序列即可。
+递推得到所有递增子序列（包括单个元素），再去掉单元素序列即可。
 
 ## 解答
 
 
 ```python
-def findSubsequences(self, nums: List[int]) -> List[List[int]]:
-	res = {tuple()}
-	for x in nums:
-		res |= {sub+(x,) for sub in res if not sub or sub[-1]<=x}
-	return [list(sub) for sub in res if len(sub)>=2]
+class Solution:
+    def findSubsequences(self, nums: List[int]) -> List[List[int]]:
+        res = set()
+        for x in nums:
+            res |= {A+(x,) for A in res if A[-1]<=x}
+            res.add((x,))
+        return [list(A) for A in res if len(A)>=2]
 ```
-60 ms
+53 ms

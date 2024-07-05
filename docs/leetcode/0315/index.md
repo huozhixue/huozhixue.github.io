@@ -114,23 +114,23 @@ class Solution:
 ```python
 class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
-        def dfs(A,l,r):
+        def cdq(A,l,r):
             if l==r:
                 return
             m = (l+r)//2
-            B = [[],[]]
+            B,C = [],[]
             for i in A:
                 if i>m:
-                    B[1].append(i)
+                    C.append(i)
                 else:
-                    B[0].append(i)
-                    res[i]+=len(B[1])
-            dfs(B[0],l,m)
-            dfs(B[1],m+1,r)
+                    B.append(i)
+                    res[i]+=len(C)
+            cdq(B,l,m)
+            cdq(C,m+1,r)
         n = len(nums)
         res = [0]*n
         A = sorted(range(n),key=lambda i:nums[i])
-        dfs(A,0,n-1)
+        cdq(A,0,n-1)
         return res
 ```
-703 ms
+695 ms

@@ -56,9 +56,10 @@
 
 
 ```python
-def constructRectangle(self, area: int) -> List[int]:
-	for x in range(isqrt(area), 0, -1):
-		if area%x==0:
-			return [area//x,x]
+class Solution:
+    def constructRectangle(self, area: int) -> List[int]:
+        for w in range(isqrt(area),0,-1):
+            if area%w==0:
+                return [area//w,w]
 ```
 40 ms

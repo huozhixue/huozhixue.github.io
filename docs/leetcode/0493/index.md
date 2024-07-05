@@ -33,19 +33,46 @@
 
 ## 分析
   
-遍历 j，找 nums[:j] 中大于 2*nums[j] 的个数。
-
-容易想到用有序集合维护 nums[:j]，然后二分查找即可。
+- 遍历 j，找 nums[:j] 中大于 2*nums[j] 的个数。
+- 容易想到用有序集合维护 nums[:j]，二分查找即可
 
 ## 解答
 
 ```python
-def reversePairs(self, nums: List[int]) -> int:
-	from sortedcontainers import SortedList
-	res, sl = 0, SortedList()
-	for x in nums:
-		res += len(sl)-sl.bisect_right(x*2)
-		sl.add(x)
-	return res
+class Solution:
+    def reversePairs(self, nums: List[int]) -> int:
+        from sortedcontainers import SortedList
+        res, sl = 0, SortedList()
+        for x in nums:
+            res += len(sl)-sl.bisect_right(x*2)
+            sl.add(x)
+        return res
 ```
-832 ms
+479 ms
+
+## *附加
+
+还可以用 cdq 分治。
+
+```python
+class Solution:
+    def reversePairs(self, nums: List[int]) -> int:
+        def cdq(A,l,r):
+            if l==r:
+                return 0
+            m = (l+r)//2
+            B,C = [],[]
+            for i in A:
+                (C if i>m else B).append(i)
+            res = cdq(B,l,m)+cdq(C,m+1,r)
+            k = 0
+            for i in C:
+                while k<len(B) and nums[B[k]]<=2*nums[i]:
+                    k += 1
+                res += len(B)-k
+            return res
+        n = len(nums)
+        A = sorted(range(n),key=lambda i:nums[i])
+        return cdq(A,0,n-1)
+```
+743 ms

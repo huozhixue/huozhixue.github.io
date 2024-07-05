@@ -51,19 +51,20 @@
 
 ## 分析
   
-注意到 sum(nums)<=1000，考虑直接递推表达式的和与对应个数即可。
+直接递推表达式的和与对应个数即可。
 
 ## 解答
 
 ```python
-def findTargetSumWays(self, nums: List[int], target: int) -> int:
-	ct = Counter({0: 1})
-	for num in nums:
-		ct2 = Counter()
-		for k in ct:
-			ct2[k+num] += ct[k]
-			ct2[k-num] += ct[k]
-		ct = ct2
-	return ct[target]
+class Solution:
+    def findTargetSumWays(self, nums: List[int], target: int) -> int:
+        f = {0:1}
+        for x in nums:
+            g = defaultdict(int)
+            for y in f:
+                g[y+x] += f[y]
+                g[y-x] += f[y]
+            f = g
+        return f[target]
 ```
-224 ms
+162 ms
