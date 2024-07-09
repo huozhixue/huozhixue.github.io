@@ -49,25 +49,31 @@
 
 ## 分析
 
-最简单的就是遍历得到数组，再求众数。
-
-要求不用额外空间，可以按中序遍历，相同元素必然相邻，因此维护当前元素的频次，更新结果即可。
+- 最简单的就是遍历得到数组，再求众数
+- 要求不用额外空间，可以按中序遍历
+	- 相同元素必然相邻
+	- 因此维护当前元素的频次，更新结果即可
 
 ## 解答
 
 ```python
-def findMode(self, root: TreeNode) -> List[int]:
-	res, maxcnt = [], 0
-	stack, pre, cnt = [root], None, 0
-	while stack:
-		node = stack.pop()
-		if isinstance(node, int):
-			cnt, pre = cnt*(node==pre)+1, node
-			if cnt >= maxcnt:
-				res, maxcnt = res*(cnt==maxcnt)+[node], cnt
-		elif node:
-			stack.extend([node.right, node.val, node.left])
-	return res
+class Solution:
+    def findMode(self, root: Optional[TreeNode]) -> List[int]:
+        sk = [root]
+        res,ma = [],0
+        w,pre = 0,None
+        while sk:
+            u = sk.pop()
+            if isinstance(u,int):
+                w = w+1 if u==pre else 1
+                pre = u
+                if w>ma:
+                    res,ma = [u],w
+                elif w==ma:
+                    res.append(u)
+            elif u:
+                sk.extend([u.right,u.val,u.left])
+        return res
 ```
 
-76 ms
+47 ms

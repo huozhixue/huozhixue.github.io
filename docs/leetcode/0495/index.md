@@ -57,8 +57,9 @@
 ## 解答
 
 ```python
-def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
-	return sum(min(duration,b-a) for a,b in pairwise(timeSeries))+duration
+class Solution:
+    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
+	    return sum(min(duration,b-a) for a,b in pairwise(timeSeries))+duration
 ```
 
-60 ms
+63 ms

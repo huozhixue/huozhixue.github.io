@@ -37,29 +37,18 @@
 
 ## 分析
 
-### #1
-
-遍历拿到因子即可。注意到除了完全平方数的根以外，因子都是成对出现的，因此只需遍历到 int(sqrt(num))。
-
-```python
-    def checkPerfectNumber(self, num: int) -> bool:
-        x = int(sqrt(num))
-        s = 1 + sum(i+num//i for i in range(2, x+1) if num%i==0)
-        s -= x if x*x==num else 0
-        return s == num
-```
-
-56 ms
-
-### #2
-
-完美数很少，根据计算在 32 位以内的完美数只有 5 个，因此可以直接判断。
+模拟即可。
 
 ## 解答
 
 ```python
-def checkPerfectNumber(self, num: int) -> bool:
-	return num in [6, 28, 496, 8128, 33550336]
+class Solution:
+    def checkPerfectNumber(self, num: int) -> bool:
+        s = 0
+        for x in range(1,isqrt(num)+1):
+            if num%x==0:
+                s += sum({x,num//x}-{num})
+        return s==num
 ```
 
-36 ms
+41 ms

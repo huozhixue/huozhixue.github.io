@@ -53,14 +53,14 @@
 
 ## 分析
 
-遍历判断每个单词的字符集合是否是某一行的子集即可。
-
-注意单词可能有大写，要先全转为小写。
+遍历判断是否是某一行的子集即可。
 
 ## 解答
 
 ```python
-def findWords(self, words: List[str]) -> List[str]:
-	return [w for w in words if any(set(w.lower())<=set(s) for s in ["qwertyuiop", "asdfghjkl", "zxcvbnm"])]
+class Solution:
+    def findWords(self, words: List[str]) -> List[str]:
+        A = [set('qwertyuiop'),set('asdfghjkl'),set('zxcvbnm')]
+        return [w for w in words if any(set(w.lower())<=a for a in A)]
 ```
-32 ms
+40 ms

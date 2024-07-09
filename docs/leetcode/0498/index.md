@@ -37,40 +37,28 @@
 
 
 ## 分析
-  
-### #1
 
-最简单的就是遍历矩阵，将元素添加到对应对角线的列表中。最后再将第偶数条对角线反转即可。
+- 可以按对角线遍历，注意边界即可
+- 更简单的是直接遍历矩阵，将元素添加到对应对角线的列表中，最后再合并
 
-
-```python
-def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
-	m, n = len(mat), len(mat[0]) 
-	A = [[] for _ in range(m+n-1)]
-	for i,j in product(range(m), range(n)):
-		A[i+j].append(mat[i][j])
-	res = []
-	for i, sub in enumerate(A):
-		res.extend(sub if i%2 else sub[::-1])
-	return res
-```
-
-56 ms
-
-### #2
-
-也可以直接按对角线遍历。注意边界范围，第偶数条对角线反着遍历。
 
 ## 解答
 
 ```python
-def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
-	res, m, n = [], len(mat), len(mat[0])
-	for k in range(m+n-1):
-		l, r = max(0, k-n+1), min(k, m-1)
-		span = range(l, r+1) if k%2 else range(r, l-1, -1)
-		res.extend(mat[i][k-i] for i in span)
-	return res
+class Solution:
+    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+        m, n = len(mat), len(mat[0]) 
+        A = [[] for _ in range(m+n-1)]
+        for i,j in product(range(m), range(n)):
+            A[i+j].append(mat[i][j])
+        res = []
+        for i, sub in enumerate(A):
+            res.extend(sub if i%2 else sub[::-1])
+        return res
 ```
 
-72 ms
+49 ms
+
+
+
+

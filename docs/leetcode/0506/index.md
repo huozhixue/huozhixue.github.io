@@ -50,15 +50,19 @@
 
 ## 分析
 
-先排序得到每个分数对应的名次，然后遍历 score 替换为名次即可。
+将下标按分数排序，然后替换为名次即可。
 
 ## 解答
 
 ```python
-def findRelativeRanks(self, score: "List[int]) -> List[str]:"
-    medals = ["Gold Medal", "Silver Medal", "Bronze Medal"]
-    d = {x: str(i+1) if i > 2 else medals[i] for i, x in enumerate(sorted(score, reverse=True))}
-    return [d[x] for x in score]
+class Solution:
+    def findRelativeRanks(self, score: List[int]) -> List[str]:
+        n = len(score)
+        A = sorted(range(n),key=lambda i:-score[i])
+        d = ['Gold Medal','Silver Medal','Bronze Medal']
+        res = [0]*n
+        for i,p in enumerate(A):
+            res[p] = d[i] if i<3 else str(i+1)
+        return res
 ```
-
-40 ms
+45 ms

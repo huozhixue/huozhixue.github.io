@@ -41,23 +41,23 @@
 
 ## 分析
 
-统计所有的子树元素和即可。计算根节点的递归过程中就可以完成统计了。
+遍历时统计子树元素和即可。
 
 ## 解答
 
 ```python
-def findFrequentTreeSum(self, root: TreeNode) -> List[int]:
-    def help(root):
-        if not root:
-            return 0
-        key = root.val + help(root.left) + help(root.right)
-        ct[key] += 1
-        return key
+class Solution:
+    def findFrequentTreeSum(self, root: Optional[TreeNode]) -> List[int]:
+        def dfs(u):
+            if not u:
+                return 0
+            s = u.val+dfs(u.left)+dfs(u.right)
+            ct[s] += 1
+            return s
 
-    ct = Counter()
-    help(root)
-    M = max(ct.values())
-    return [key for key in ct if ct[key] == M]
+        ct = defaultdict(int)
+        dfs(root)
+        ma = max(ct.values())
+        return [x for x in ct if ct[x]==ma]
 ```
-
-64 ms
+42 ms

@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0507\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  309 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  197 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0507\/","datePublished": "2016-05-21T00:00:00+08:00","dateModified": "2016-05-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0507：完美数</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-21">2016-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 309 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-21">2016-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 197 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0507/" class="leancloud_visitors" data-flag-title="0507：完美数">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,12 +125,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -156,8 +151,8 @@
 <li><code>1 &lt;= num &lt;= 10<sup>8</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>遍历拿到因子即可。注意到除了完全平方数的根以外，因子都是成对出现的，因此只需遍历到 int(sqrt(num))。</p>
+<p>模拟即可。</p>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -165,30 +160,20 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">checkPerfectNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">num</span><span class="o">//</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">num</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">-=</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">==</span><span class="n">num</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">num</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">checkPerfectNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">isqrt</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">num</span><span class="o">%</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">s</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">({</span><span class="n">x</span><span class="p">,</span><span class="n">num</span><span class="o">//</span><span class="n">x</span><span class="p">}</span><span class="o">-</span><span class="p">{</span><span class="n">num</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">s</span><span class="o">==</span><span class="n">num</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>56 ms</p>
-<h3 id="2">#2</h3>
-<p>完美数很少，根据计算在 32 位以内的完美数只有 5 个，因此可以直接判断。</p>
-<h2 id="解答">解答</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">checkPerfectNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">496</span><span class="p">,</span> <span class="mi">8128</span><span class="p">,</span> <span class="mi">33550336</span><span class="p">]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>36 ms</p>
+</div><p>41 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

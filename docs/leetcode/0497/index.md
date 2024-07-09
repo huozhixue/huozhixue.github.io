@@ -60,24 +60,29 @@ solution.pick(); // 返回 [0, 0]</pre>
 
 ## 分析
   
-类似 {{< lc "0528" >}} ，不过变成了二维。矩阵内点的个数即是矩阵权重。
-
-随机取到一个点后，先找出属于哪一个矩形，还可以得到在该矩形中排第几位，再按预定映射得到该矩形中的某一点。
-
+-  {{< lc "0528" >}}  升级版，变成了二维
+- 考虑依此将矩形的点映射为连续区间的点，随机之后再转换回去即可
+- 为了节省时间，不用实际映射每个点，只映射区间首尾即可
+	- 转换回去时，先二分查找属于哪一个矩形
+	- 再得到在该矩形中排第几位，转换成坐标即可
 ## 解答
 
 ```python
 class Solution:
 
     def __init__(self, rects: List[List[int]]):
+        A = [0]
+        for a,b,x,y in rects:
+            A.append(A[-1]+(x-a+1)*(y-b+1))
+        self.A = A
         self.rects = rects
-        self.pre = [0]+list(accumulate((x2-x1+1)*(y2-y1+1) for x1,y1,x2,y2 in rects))
 
     def pick(self) -> List[int]:
-        k = randrange(self.pre[-1])
-        pos = bisect_right(self.pre, k)-1
-        x1, y1, x2, y2 = self.rects[pos]
-        dx, dy = divmod(k-self.pre[pos],y2-y1+1)
-        return [x1+dx, y1+dy]
+        k = randrange(self.A[-1])
+        pos = bisect_right(self.A,k)-1
+        k -= self.A[pos]
+        a,b,x,y = self.rects[pos]
+        i,j = divmod(k,(y-b+1))
+        return [a+i,b+j]
 ```
-92 ms
+111 ms

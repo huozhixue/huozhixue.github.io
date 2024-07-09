@@ -71,5 +71,5 @@ class Solution:
             w -= heappop(pq)
         return w
 ```
-237 ms
+256 ms
 
