@@ -54,3 +54,4 @@ def findBottomLeftValue(self, root: TreeNode) -> int:
     return res
 ```
 44 ms
+
