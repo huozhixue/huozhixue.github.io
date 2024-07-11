@@ -59,77 +59,106 @@
 ## 解答
 
 ```python
-def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
-    def find(x):
-        ans = 0
-        for j in range(17, -1, -1):
-            ans <<= 1
-            ans += 1 if A[j][(ans+1)^(x>>j)] else 0
-        return ans
-
-    def dfs(u):
-        for v in nxt[u]:
-            for j in range(18):
-                A[j][v >> j] += 1
-            for i, val in qr[v]:
-                res[i] = find(val)
-            dfs(v)
-            for j in range(18):
-                A[j][v >> j] -= 1
-
-    nxt = defaultdict(list)
-    for v, u in enumerate(parents):
-        nxt[u].append(v)
-    qr = defaultdict(list)
-    for i, (node,val) in enumerate(queries):
-        qr[node].append((i, val))
-    A = [defaultdict(int) for _ in range(18)]
-    res = [0] * len(queries)
-    dfs(-1)
-    return res
+class Solution:
+    def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
+        n = len(parents)
+        root = 0
+        g = [[] for _ in range(n)]
+        for u,v in enumerate(parents):
+            if v==-1:
+                root = u
+            else:
+                g[v].append(u)
+        L = max(n-1,max(x for _,x in queries)).bit_length()
+        d = defaultdict(list)
+        for i,(u,x) in enumerate(queries):
+            d[u].append((i,x))
+        T = [defaultdict(int) for _ in range(L)]
+        res = [0]*len(queries)
+        def dfs(u):
+            for j in range(L):
+                T[j][u>>j] += 1
+            for i,x in d[u]:
+                y = 0
+                for j in range(L-1,-1,-1):
+                    y <<= 1
+                    y += T[j][(y+1)^(x>>j)]>0
+                res[i] = y
+            for v in g[u]:
+                dfs(v)
+            for j in range(L):
+                T[j][u>>j] -= 1
+        dfs(root)
+        return res
 ```
 
-3476 ms
+2778 ms
 
 ## *附加
 
 字典树写法。
 
 ```python
-def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
-    def find(x):
-        ans, p = '', trie
-        for bit in bin(x)[2:].zfill(18):
-            bit_rev = str(int(bit)^1)
-            ans += '1' if p[bit_rev].get('cnt') else '0'
-            p = p[bit_rev] if p[bit_rev].get('cnt') else p[bit]
-        return int(ans, 2)
+class BitTrie:
+    def __init__(self,n,L):                       # 插入 n 个长为 L 的二进制串
+        self.t = [[0]*(n*L+1) for _ in range(2)]  # 模拟树节点
+        self.i = 0
+        self.L = L
+        self.s = [0]*(n*L+1)
 
-    def dfs(u):
-        for v in nxt[u]:
-            p = trie
-            for bit in bin(v)[2:].zfill(18):
-                p = p[bit]
-                p['cnt'] = p.get('cnt', 0) + 1
-            for i, val in qr[v]:
-                res[i] = find(val)
-            dfs(v)
-            p = trie
-            for bit in bin(v)[2:].zfill(18):
-                p = p[bit]
-                p['cnt'] -= 1
+    def add(self, x):
+        p = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if not self.t[bit][p]:
+                self.i += 1
+                self.t[bit][p] = self.i  
+            p = self.t[bit][p]
+            self.s[p] += 1
+            
+    def remove(self,x):
+        p = 0
+        for j in range(self.L-1,-1,-1):
+            bit = (x>>j)&1
+            p = self.t[bit][p]
+            self.s[p]-=1
 
-    nxt = defaultdict(list)
-    for v, u in enumerate(parents):
-        nxt[u].append(v)
-    qr = defaultdict(list)
-    for i, (node,val) in enumerate(queries):
-        qr[node].append((i, val))
-    T = lambda: defaultdict(T)
-    trie = T()
-    res = [0] * len(queries)
-    dfs(-1)
-    return res
+    def maxxor(self,x):
+        p = 0
+        res = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            q = self.t[bit^1][p]
+            if q and self.s[q]:
+                res |= 1 << j
+                bit ^= 1
+            p = self.t[bit][p]
+        return res
+
+
+class Solution:
+    def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
+        n = len(parents)
+        root = parents.index(-1)
+        g = [[] for _ in range(n)]
+        for u,v in enumerate(parents):
+            if v!=-1:
+                g[v].append(u)
+        L = max(n-1,max(x for _,x in queries)).bit_length()
+        d = defaultdict(list)
+        for i,(u,x) in enumerate(queries):
+            d[u].append((i,x))
+        trie = BitTrie(n,L)
+        res = [0]*len(queries)
+        def dfs(u):
+            trie.add(u)
+            for i,x in d[u]:
+                res[i] = trie.maxxor(x)
+            for v in g[u]:
+                dfs(v)
+            trie.remove(u)
+        dfs(root)
+        return res 
 ```
 
-4444 ms
+2778 ms

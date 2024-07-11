@@ -144,6 +144,6 @@
     <pubDate>Mon, 02 Jan 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-string_trie/</guid>
-    <description><![CDATA[一般字典树 哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Trie: def __init__(self,n,L,k): # 插入 n 个长为 L 的字符串，]]></description>
+    <description><![CDATA[一般字典树 哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Trie: def __init__(self,n,k): # 插入总长度为 n-1 的字符串，字]]></description>
 </item></channel>
 </rss>
