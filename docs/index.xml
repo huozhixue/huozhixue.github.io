@@ -134,16 +134,16 @@
 </item><item>
     <title>字符串模板：后缀数组</title>
     <link>https://huozhixue.github.io/template-string_sa/</link>
-    <pubDate>Tue, 03 Jan 2023 00:00:00 &#43;0800</pubDate>
+    <pubDate>Wed, 04 Jan 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-string_sa/</guid>
     <description><![CDATA[后缀数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 def SA(A): def SA_IS(A): def equal(pos1,]]></description>
 </item><item>
-    <title>字符串模板：字典树</title>
-    <link>https://huozhixue.github.io/template-string_trie/</link>
-    <pubDate>Mon, 02 Jan 2023 00:00:00 &#43;0800</pubDate>
+    <title>字符串模板：AC自动机</title>
+    <link>https://huozhixue.github.io/template-string_ac/</link>
+    <pubDate>Tue, 03 Jan 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/template-string_trie/</guid>
-    <description><![CDATA[一般字典树 哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Trie: def __init__(self,n,k): # 插入总长度为 n-1 的字符串，字]]></description>
+    <guid>https://huozhixue.github.io/template-string_ac/</guid>
+    <description><![CDATA[基于类节点 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 class Node: __slots__ = &#39;son&#39;, &#39;fail&#39;, &#39;last&#39;, &#39;sz&#39; def __init__(self): self.son = {} self.fail = self.last = None self.sz = 0 class AC:]]></description>
 </item></channel>
 </rss>

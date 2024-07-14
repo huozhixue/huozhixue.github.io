@@ -1,8 +1,6 @@
 # 字符串模板：字典树
 
-
-## 一般字典树
-### 哈希表
+### 基于哈希表
 
 ```python
 T = lambda: defaultdict(T)
@@ -10,39 +8,43 @@ trie = T()
 for w in words:
 	reduce(dict.__getitem__, w, trie)['#'] = w
 ```
-### 数组
+### 基于类节点
 
-```python []
+```python
+class Node:
+    __slots__ = 'son'
+
+    def __init__(self):
+        self.son = {}
+
 class Trie:
-    def __init__(self,n,k):            # 插入总长度为 n-1 的字符串，字符种类 k
-        self.t = [[0]*n for _ in range(k)]
-        self.i = 0
-        self.f = [False]*n
 
-    def add(self,A):  
-        p = 0
-        for c in A:
-            if not self.t[c][p]:
-                self.i += 1
-                self.t[c][p] = self.i  
-            p = self.t[c][p]
-        self.f[p] = True
+    def __init__(self):
+        self.root = Node()
 
-    def find(self,A):  
-        p = 0
-        for c in A:
-            if not self.t[c][p]:
+    def add(self,s):
+        p = self.root
+        for c in s:
+            if c not in p.son:
+                p.son[c] = Node()
+            p = p.son[c]
+        p.son['#'] = None
+
+    def find(self,s):
+        p = self.root
+        for c in s:
+            if c not in p.son:
                 return False
-            p = self.t[c][p]
-        return self.f[p]
+            p = p.son[c]
+        return True
 ```
 
-## 01 字典树
+###  基于数组（01 字典树）
 
 ```python
 class BitTrie:
     def __init__(self,n,L):                       # 插入总长度 n-1、最长 L 的二进制串
-        self.t = [[0]*n for _ in range(2)]  # 模拟树节点
+        self.t = [[0]*n for _ in range(2)]        # 模拟树节点
         self.i = 0
         self.L = L
         self.s = [0]*n
