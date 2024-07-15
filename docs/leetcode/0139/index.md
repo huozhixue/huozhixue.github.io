@@ -50,26 +50,24 @@
 
 ## 分析
 
-按第一个单词长度递归即可。
+- 按最后一个单词长度递推即可
+- 注意单词长度最多 20，可以剪枝
 
 ## 解答
 
 ```python
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        @cache
-        def dfs(s):
-            if not s:
-                return True
-            for i in range(1,min(len(s),m)+1):
-                if s[:i] in vis and dfs(s[i:]):
-                    return True
-            return False
+        n = len(s)
+        f = [1]+[0]*n
         vis = set(wordDict)
-        m = max(len(w) for w in vis)
-        return dfs(s)
+        for i in range(1,n+1):            
+            for j in range(max(0,i-20),i):
+                if s[j:i] in vis:
+                    f[i] |= f[j]
+        return f[-1]>0
 ```
-46 ms
+31 ms
 
 ## *附加
 
@@ -78,25 +76,23 @@ class Solution:
 ```python
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        T = lambda:defaultdict(T)
+        T = lambda: defaultdict(T)
         trie = T()
         for w in wordDict:
             p = trie
-            for c in w:
-                p=p[c]
+            for c in w[::-1]:
+                p = p[c]
             p['#'] = ''
-        @cache
-        def dfs(i):
-            if i==len(s):
-                return True
+        n = len(s)
+        f = [1]+[0]*n
+        for i in range(1,n+1):         
             p = trie
-            for j in range(i,len(s)):
+            for j in range(i-1,max(0,i-20)-1,-1):
                 if s[j] not in p:
-                    return False
+                    break   
                 p = p[s[j]]
-                if '#' in p and dfs(j+1):
-                    return True
-            return False
-        return dfs(0)
+                if '#' in p:
+                    f[i] |= f[j]
+        return f[-1]>0
 ```
-37 ms
+47 ms

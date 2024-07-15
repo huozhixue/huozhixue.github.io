@@ -1,6 +1,6 @@
 # 字符串模板：AC自动机
 
-### 基于类节点
+### 基于节点类
 
 ```python
 class Node:
@@ -42,9 +42,9 @@ class AC:
         p = self.root
         for c in s:
             while p and c not in p.son:
-                p = p.fail
-            p = p.son[c] if p else self.root
-        return p.sz>0 or (p.last!=None and p.last.sz>0)
+                p = p.fail
+            p = p.son[c] if p else self.root
+        return p.sz>0 or (p.last!=None and p.last.sz>0)
 ```
 
 ### 基于数组

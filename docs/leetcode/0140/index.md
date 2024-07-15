@@ -50,25 +50,22 @@
 
 ## 分析
 
-{{< lc "0139" >}} 升级版，改下递归的返回值即可。
+{{< lc "0139" >}} 升级版，改下递推的值即可。
 
 ## 解答
 
 ```python
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-        @cache
-        def dfs(s):
-            if not s:
-                return ['']
-            res = []
-            for i in range(1,min(len(s),m)+1):
-                if s[:i] in vis:
-                    res.extend(s[:i]+' '+sub if sub else s[:i] for sub in dfs(s[i:]))
-            return res
+        n = len(s)
+        f = [[] for _ in range(n+1)]
+        f[0] = [[]]
         vis = set(wordDict)
-        m = max(len(w) for w in vis)
-        return dfs(s)
+        for i in range(1,n+1):
+            for j in range(max(0,i-10),i):
+                if s[j:i] in vis:
+                    f[i].extend(sub+[s[j:i]] for sub in f[j])
+        return [' '.join(A) for A in f[-1]]
 ```
 37 ms
 

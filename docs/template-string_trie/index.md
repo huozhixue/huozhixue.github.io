@@ -8,7 +8,7 @@ trie = T()
 for w in words:
 	reduce(dict.__getitem__, w, trie)['#'] = w
 ```
-### 基于类节点
+### 基于节点类
 
 ```python
 class Node:
@@ -84,7 +84,8 @@ class BitTrie:
         res = 0
         for j in range(self.L-1, -1, -1):
             bit = (x>>j)&1
-            if self.t[bit^1][p]:
+            q = self.t[bit^1][p]
+            if q and self.s[q]:
                 res |= 1 << j
                 bit ^= 1
             p = self.t[bit][p]

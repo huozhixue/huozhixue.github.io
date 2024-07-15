@@ -85,4 +85,40 @@ class Trie:
 ```
 113 ms
 
+## *附加
 
+也可以写成节点类的形式。
+
+
+```python
+class Node:
+    __slots__ = 'son'
+
+    def __init__(self):
+        self.son = {}
+
+class Trie:
+
+    def __init__(self):
+        self.root = Node()
+
+    def insert(self, word: str) -> None:
+        p = self.root
+        for c in word:
+            if c not in p.son:
+                p.son[c] = Node()
+            p = p.son[c]
+        p.son['#'] = None
+
+    def search(self, word: str) -> bool:
+        return self.startsWith(word+'#')
+
+    def startsWith(self, prefix: str) -> bool:
+        p = self.root
+        for c in prefix:
+            if c not in p.son:
+                return False
+            p = p.son[c]
+        return True
+```
+104 ms

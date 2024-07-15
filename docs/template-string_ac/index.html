@@ -10,7 +10,7 @@
         <title>字符串模板：AC自动机 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-string_ac/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="字符串模板：AC自动机">
-  <meta property="og:description" content="基于类节点 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 class Node: __slots__ = &#39;son&#39;, &#39;fail&#39;, &#39;last&#39;, &#39;sz&#39; def __init__(self): self.son = {} self.fail = self.last = None self.sz = 0 class AC:">
+  <meta property="og:description" content="基于节点类 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 class Node: __slots__ = &#39;son&#39;, &#39;fail&#39;, &#39;last&#39;, &#39;sz&#39; def __init__(self): self.son = {} self.fail = self.last = None self.sz = 0 class AC:">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="字符串模板：AC自动机">
-  <meta name="twitter:description" content="基于类节点 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 class Node: __slots__ = &#39;son&#39;, &#39;fail&#39;, &#39;last&#39;, &#39;sz&#39; def __init__(self): self.son = {} self.fail = self.last = None self.sz = 0 class AC:">
+  <meta name="twitter:description" content="基于节点类 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 class Node: __slots__ = &#39;son&#39;, &#39;fail&#39;, &#39;last&#39;, &#39;sz&#39; def __init__(self): self.son = {} self.fail = self.last = None self.sz = 0 class AC:">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-string_ac/" /><link rel="prev" href="https://huozhixue.github.io/template-string_trie/" /><link rel="next" href="https://huozhixue.github.io/template-string_sa/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -127,13 +127,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#基于类节点">基于类节点</a></li>
+        <li><a href="#基于节点类">基于节点类</a></li>
         <li><a href="#基于数组">基于数组</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h3 id="基于类节点">基于类节点</h3>
+            </div><div class="content" id="content"><h3 id="基于节点类">基于节点类</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -219,9 +219,9 @@
 </span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">son</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">fail</span>
-</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">son</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">if</span> <span class="n">p</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">p</span><span class="o">.</span><span class="n">sz</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">last</span><span class="o">!=</span><span class="kc">None</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">sz</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">fail</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">son</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">if</span> <span class="n">p</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">p</span><span class="o">.</span><span class="n">sz</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">last</span><span class="o">!=</span><span class="kc">None</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">sz</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="基于数组">基于数组</h3>

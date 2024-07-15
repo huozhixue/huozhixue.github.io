@@ -69,50 +69,15 @@ class Solution:
 - 然后对于每个数，查找最大的异或结果，依然是试填法
 	- 假如第 k 位为 bit，bit^1 在字典树中，那么该位可以取 1，并且树中往 bit^1 走
 	- 否则该位取 0，字典树中往 bit 走
-
-
-```python
-class Solution:
-    def findMaximumXOR(self, nums: List[int]) -> int:
-        def maxxor(x):
-            res = 0
-            p = trie
-            for j in range(L-1,-1,-1):
-                bit = (x>>j)&1
-                if bit^1 in p:
-                    bit ^= 1
-                    res |= 1<<j
-                p = p[bit]
-            return res
-
-        def add(x):
-            p = trie
-            for j in range(L-1,-1,-1):
-                bit = (x>>j)&1
-                p = p[bit]
-
-        L = max(nums).bit_length()
-        T = lambda: defaultdict(T)
-        trie = T()
-        res = 0
-        for x in nums:
-            res = max(res,maxxor(x))
-            add(x)
-        return res
-```
-5764 ms
-
-### #3
-
-还可以用数组模拟 01 字典树，优化时间。
+-  01 字典树用数组形式可以优化时间
 
 
 ## 解答
 
 ```python
 class BitTrie:
-    def __init__(self,n,L):                       # 插入 n 个长为 L 的二进制串
-        self.t = [[0]*(n*L+1) for _ in range(2)]  # 模拟树节点
+    def __init__(self,n,L):                       # 插入总长度 n-1、最长 L 的二进制串
+        self.t = [[0]*n for _ in range(2)]        # 模拟树节点
         self.i = 0
         self.L = L
 
@@ -124,7 +89,7 @@ class BitTrie:
                 self.i += 1
                 self.t[bit][p] = self.i  
             p = self.t[bit][p]
-
+            
     def maxxor(self,x):
         p = 0
         res = 0
@@ -136,18 +101,17 @@ class BitTrie:
             p = self.t[bit][p]
         return res
 
-
 class Solution:
     def findMaximumXOR(self, nums: List[int]) -> int:
         L = max(nums).bit_length()
-        trie = BitTrie(len(nums),L)
+        trie = BitTrie(len(nums)*L+1,L)
         res = 0
         for x in nums:
-            res = max(res,trie.maxxor(x))
             trie.add(x)
+            res = max(res,trie.maxxor(x))
         return res
 ```
-3067 ms
+3025 ms
 
 
 

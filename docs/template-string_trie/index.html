@@ -10,7 +10,7 @@
         <title>字符串模板：字典树 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/template-string_trie/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="字符串模板：字典树">
-  <meta property="og:description" content="基于哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 基于类节点 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 class Node: __slots__ = &#39;son&#39; def __init__(self): self.son = {} class Trie: def __init__(self):">
+  <meta property="og:description" content="基于哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 基于节点类 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 class Node: __slots__ = &#39;son&#39; def __init__(self): self.son = {} class Trie: def __init__(self):">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="字符串模板：字典树">
-  <meta name="twitter:description" content="基于哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 基于类节点 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 class Node: __slots__ = &#39;son&#39; def __init__(self): self.son = {} class Trie: def __init__(self):">
+  <meta name="twitter:description" content="基于哈希表 1 2 3 4 T = lambda: defaultdict(T) trie = T() for w in words: reduce(dict.__getitem__, w, trie)[&#39;#&#39;] = w 基于节点类 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 class Node: __slots__ = &#39;son&#39; def __init__(self): self.son = {} class Trie: def __init__(self):">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-string_trie/" /><link rel="prev" href="https://huozhixue.github.io/template-string_match/" /><link rel="next" href="https://huozhixue.github.io/template-string_ac/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/template-string_trie\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  334 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  340 ,
         "url": "https:\/\/huozhixue.github.io\/template-string_trie\/","datePublished": "2023-01-02T00:00:00+08:00","dateModified": "2023-01-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">字符串模板：字典树</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-02">2023-01-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 334 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-02">2023-01-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 340 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-string_trie/" class="leancloud_visitors" data-flag-title="字符串模板：字典树">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -128,7 +128,7 @@
     <li>
       <ul>
         <li><a href="#基于哈希表">基于哈希表</a></li>
-        <li><a href="#基于类节点">基于类节点</a></li>
+        <li><a href="#基于节点类">基于节点类</a></li>
         <li><a href="#基于数组01-字典树">基于数组（01 字典树）</a></li>
       </ul>
     </li>
@@ -149,7 +149,7 @@
 </span></span><span class="line"><span class="cl">	<span class="n">reduce</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">trie</span><span class="p">)[</span><span class="s1">&#39;#&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="基于类节点">基于类节点</h3>
+</div><h3 id="基于节点类">基于节点类</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -258,6 +258,7 @@
 </span><span class="lnt">45
 </span><span class="lnt">46
 </span><span class="lnt">47
+</span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BitTrie</span><span class="p">:</span>
@@ -302,7 +303,8 @@
 </span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">            <span class="n">bit</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;&gt;</span><span class="n">j</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">bit</span><span class="o">^</span><span class="mi">1</span><span class="p">][</span><span class="n">p</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">bit</span><span class="o">^</span><span class="mi">1</span><span class="p">][</span><span class="n">p</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">q</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">s</span><span class="p">[</span><span class="n">q</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">|=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">j</span>
 </span></span><span class="line"><span class="cl">                <span class="n">bit</span> <span class="o">^=</span> <span class="mi">1</span>
 </span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">bit</span><span class="p">][</span><span class="n">p</span><span class="p">]</span>
