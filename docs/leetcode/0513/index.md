@@ -46,12 +46,13 @@
 ## 解答
 
 ```python
-def findBottomLeftValue(self, root: TreeNode) -> int:
-    res, level = None, [root]
-    while level:
-        res = level[0].val
-        level = [child for node in level for child in [node.left, node.right] if child]
-    return res
+class Solution:
+    def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
+        res,Q = root.val,[root]
+        while Q:
+            res = Q[0].val
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res
 ```
-44 ms
+42 ms
 

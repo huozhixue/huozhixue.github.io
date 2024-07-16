@@ -39,25 +39,20 @@
 
 ## 分析
 
-显然当 s[0]==s[-1] 时，可以转为子问题。当 s[0]!=s[-1] 时，发现也可以转为两个子问题。
-
-因此令 dfs(i, j) 代表 s[i:j+1] 的最长回文子序列的长度，即可递归。
-
->这是典型的区间 dp。
+典型的区间 dp，按两端是否选取即可递推。
 
 ## 解答
 
 ```python
-def longestPalindromeSubseq(self, s: str) -> int:
-    @lru_cache(None)
-    def dfs(i, j):
-        if i>=j:
-            return j-i+1
-        if s[i]==s[j]:
-            return 2+dfs(i+1, j-1)
-        return max(dfs(i+1, j), dfs(i, j-1))
-    
-    return dfs(0, len(s)-1)
+class Solution:
+    def longestPalindromeSubseq(self, s: str) -> int:
+        n = len(s)
+        f = [[0]*n for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            f[i][i] = 1
+            for j in range(i+1,n):
+                f[i][j] = 2+f[i+1][j-1] if s[i]==s[j] else max(f[i+1][j],f[i][j-1])
+        return f[0][-1]
 ```
-时间复杂度 O(N^2)，852 ms
+869 ms
 

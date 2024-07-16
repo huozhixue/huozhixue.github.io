@@ -7,34 +7,34 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0515：在每个树行中找最大值（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0515/">
+        <title>0517：超级洗衣机（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0517/">
   <meta property="og:site_name" content="个人博客">
-  <meta property="og:title" content="0515：在每个树行中找最大值（★）">
-  <meta property="og:description" content="力扣第 515 题 题目 给定一棵二叉树的根节点 root ，请找出该二叉树中每一层的最大值。 示例1： 输入: root = [1,3,2,5,3,null,9] 输出: [1,3,9] 示例2： 输入: root = [1,2,3] 输出: [1,3] 提示： 二叉树">
+  <meta property="og:title" content="0517：超级洗衣机（★★）">
+  <meta property="og:description" content="力扣第 517 题 题目 假设有 n 台超级洗衣机放在同一排上。开始的时候，每台洗衣机内可能有一定量的衣服，也可能是空的。 在每一步操作中，你可以选择任意 m (1">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
-    <meta property="article:published_time" content="2016-05-29T00:00:00+08:00">
-    <meta property="article:modified_time" content="2016-05-29T00:00:00+08:00">
+    <meta property="article:published_time" content="2016-05-31T00:00:00+08:00">
+    <meta property="article:modified_time" content="2016-05-31T00:00:00+08:00">
     <meta property="og:image" content="https://huozhixue.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
-  <meta name="twitter:title" content="0515：在每个树行中找最大值（★）">
-  <meta name="twitter:description" content="力扣第 515 题 题目 给定一棵二叉树的根节点 root ，请找出该二叉树中每一层的最大值。 示例1： 输入: root = [1,3,2,5,3,null,9] 输出: [1,3,9] 示例2： 输入: root = [1,2,3] 输出: [1,3] 提示： 二叉树">
+  <meta name="twitter:title" content="0517：超级洗衣机（★★）">
+  <meta name="twitter:description" content="力扣第 517 题 题目 假设有 n 台超级洗衣机放在同一排上。开始的时候，每台洗衣机内可能有一定量的衣服，也可能是空的。 在每一步操作中，你可以选择任意 m (1">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0515/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0514/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0516/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0517/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0516/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0518/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0515：在每个树行中找最大值（★）",
+        "headline": "0517：超级洗衣机（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0515\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  149 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0515\/","datePublished": "2016-05-29T00:00:00+08:00","dateModified": "2016-05-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0517\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  461 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0517\/","datePublished": "2016-05-31T00:00:00+08:00","dateModified": "2016-05-31T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -111,10 +111,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0515：在每个树行中找最大值（★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0517：超级洗衣机（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-29">2016-05-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 149 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0515/" class="leancloud_visitors" data-flag-title="0515：在每个树行中找最大值（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-31">2016-05-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 461 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0517/" class="leancloud_visitors" data-flag-title="0517：超级洗衣机（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -130,61 +130,93 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-largest-value-in-each-tree-row/" target="_blank" rel="noopener noreffer">力扣第 515 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/super-washing-machines/" target="_blank" rel="noopener noreffer">力扣第 517 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一棵二叉树的根节点 <code>root</code> ，请找出该二叉树中每一层的最大值。</p>
-<p><strong>示例1：</strong></p>
-<p><img alt="" src="https://assets.leetcode.com/uploads/2020/08/21/largest_e1.jpg" style="height: 172px; width: 300px;" /></p>
+<p>假设有 <code>n</code><strong> </strong>台超级洗衣机放在同一排上。开始的时候，每台洗衣机内可能有一定量的衣服，也可能是空的。</p>
+<p>在每一步操作中，你可以选择任意 <code>m</code> (<code>1 &lt;= m &lt;= n</code>) 台洗衣机，与此同时将每台洗衣机的一件衣服送到相邻的一台洗衣机。</p>
+<p>给定一个整数数组 <code>machines</code> 代表从左至右每台洗衣机中的衣物数量，请给出能让所有洗衣机中剩下的衣物的数量相等的 <strong>最少的操作步数 </strong>。如果不能使每台洗衣机中衣物的数量相等，则返回 <code>-1</code> 。</p>
+<p><strong>示例 1：</strong></p>
 <pre>
-<strong>输入: </strong>root = [1,3,2,5,3,null,9]
-<strong>输出: </strong>[1,3,9]
+<strong>输入：</strong>machines = [1,0,5]
+<strong>输出：</strong>3
+<strong>解释：</strong>
+第一步:    1     0 &lt;-- 5    =&gt;    1     1     4
+第二步:    1 &lt;-- 1 &lt;-- 4    =&gt;    2     1     3
+第三步:    2     1 &lt;-- 3    =&gt;    2     2     2
 </pre>
-<p><strong>示例2：</strong></p>
+<p><strong>示例 2：</strong></p>
 <pre>
-<strong>输入: </strong>root = [1,2,3]
-<strong>输出: </strong>[1,3]
+<strong>输入：</strong>machines = [0,3,0]
+<strong>输出：</strong>2
+<strong>解释：</strong>
+第一步:    0 &lt;-- 3     0    =&gt;    1     2     0
+第二步:    1     2 --&gt; 0    =&gt;    1     1     1
+</pre>
+<p><strong>示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>machines = [0,2,0]
+<strong>输出：</strong>-1
+<strong>解释：</strong>
+不可能让所有三个洗衣机同时剩下相同数量的衣物。
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li>二叉树的节点个数的范围是 <code>[0,10<sup>4</sup>]</code></li>
-<li><meta charset="UTF-8" /><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li>
+<li><code>n == machines.length</code></li>
+<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>
+<li><code>0 &lt;= machines[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>层序遍历并取最大值即可。</p>
+<p>由于转移可以同时进行，因此计算每台洗衣机需要往外转移的数量，取最大即可。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">largestValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">,</span><span class="n">Q</span> <span class="o">=</span> <span class="p">[],[</span><span class="n">root</span><span class="p">]</span> <span class="k">if</span> <span class="n">root</span> <span class="k">else</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">val</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">Q</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Q</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">Q</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">left</span><span class="p">,</span><span class="n">u</span><span class="o">.</span><span class="n">right</span><span class="p">]</span> <span class="k">if</span> <span class="n">c</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findMinMoves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">machines</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">machines</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">machines</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">q</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">machines</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">a</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">q</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">t</span> <span class="o">+=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">            <span class="n">b</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="o">-</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>60 ms</p>
+</div><p>52 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-05-29</span>
+                <span>更新于 2016-05-31</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0515/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0517/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -193,14 +225,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91/">树</a>,&nbsp;<a href="/leetcode_tags/dfs/">Dfs</a>,&nbsp;<a href="/leetcode_tags/bfs/">Bfs</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0516/" class="prev" rel="prev" title="0516：最长回文子序列（★）"><i class="fas fa-angle-left fa-fw"></i>0516：最长回文子序列（★）</a>
-            <a href="/leetcode/0514/" class="next" rel="next" title="0514：自由之路（★★）">0514：自由之路（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0518/" class="prev" rel="prev" title="0518：零钱兑换 II（★）"><i class="fas fa-angle-left fa-fw"></i>0518：零钱兑换 II（★）</a>
+            <a href="/leetcode/0516/" class="next" rel="next" title="0516：最长回文子序列（★）">0516：最长回文子序列（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

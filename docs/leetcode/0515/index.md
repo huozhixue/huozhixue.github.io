@@ -44,11 +44,12 @@
 ## 解答
 
 ```python
-def largestValues(self, root: TreeNode) -> List[int]:
-    res, level = [], [root] if root else []
-    while level:
-        res.append(max(node.val for node in level))
-        level = [child for node in level for child in [node.left, node.right] if child]
-    return res
+class Solution:
+    def largestValues(self, root: Optional[TreeNode]) -> List[int]:
+        res,Q = [],[root] if root else []
+        while Q:
+            res.append(max(u.val for u in Q))
+            Q = [c for u in Q for c in [u.left,u.right] if c]
+        return res
 ```
 60 ms

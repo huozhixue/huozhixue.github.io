@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0514\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  718 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  738 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0514\/","datePublished": "2016-05-28T00:00:00+08:00","dateModified": "2016-05-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0514：自由之路（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-28">2016-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 718 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-28">2016-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 738 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0514/" class="leancloud_visitors" data-flag-title="0514：自由之路（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,7 +125,12 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a></li>
+    <li><a href="#分析">分析</a>
+      <ul>
+        <li><a href="#1">#1</a></li>
+        <li><a href="#2">#2</a></li>
+      </ul>
+    </li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -165,10 +170,51 @@
 <li><strong>保证</strong> 字符串 <code>key</code> 一定可以由字符串  <code>ring</code> 旋转拼出</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>先按顺/逆时针找到第一个 key[0] 后，可以转为递归子问题。</p>
-<p>那么令 dfs(i, j) 代表当 ring[i] 对齐北方时，拼写 key[j:] 的最少步数，即可递推。</p>
-<p>要找与 ring[i] 最近的 key[j] 位置，考虑保存 ring 中每个字符的位置列表（递增的），
-然后可以二分查找离 i 最近的某字符位置，节省时间。</p>
+<h3 id="1">#1</h3>
+<p>按转到哪个位置递推即可，只需要顺/逆时针找第一个即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findRotateSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ring</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ring</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="n">inf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                <span class="n">r</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">ring</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">!=</span><span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">n</span>
+</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">r</span><span class="p">],</span><span class="mi">1</span><span class="o">+</span><span class="n">w</span><span class="o">+</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">ring</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">!=</span><span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">l</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">n</span>
+</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">l</span><span class="p">],</span><span class="mi">1</span><span class="o">+</span><span class="n">w</span><span class="o">+</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">l</span><span class="p">)</span><span class="o">%</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">g</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>114 ms</p>
+<h3 id="2">#2</h3>
+<p>可以预先保存下标列表，二分查找最近的下标。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -186,22 +232,28 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findRotateSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ring</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pos</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">pos</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="o">+</span><span class="nb">min</span><span class="p">((</span><span class="n">i</span><span class="o">-</span><span class="n">left</span><span class="p">)</span><span class="o">%</span><span class="n">n</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">right</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="n">n</span><span class="o">+</span><span class="n">dfs</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">d</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ring</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ring</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">char</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findRotateSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ring</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ring</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ring</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="n">inf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                <span class="n">pos</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">pos</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">r</span><span class="p">],</span><span class="mi">1</span><span class="o">+</span><span class="n">w</span><span class="o">+</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">l</span><span class="p">],</span><span class="mi">1</span><span class="o">+</span><span class="n">w</span><span class="o">+</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">l</span><span class="p">)</span><span class="o">%</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">g</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>72 ms</p>

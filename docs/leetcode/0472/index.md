@@ -42,7 +42,7 @@
 ## 分析
 
 
-类似 {{< lc "0139" >}}，可以按第一个单词长度递归。
+类似 {{< lc "0139" >}}，按第一个单词长度递归即可。
 
 ## 解答
 
@@ -60,37 +60,3 @@ class Solution:
         return [w for w in words if dfs(w)]
 ```
 148 ms
-
-## *附加
-
-同样的，可以用字典树来查找。
-
-```python
-class Solution:
-    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
-        T = lambda: defaultdict(T)
-        trie = T()
-        res = []
-        for w in sorted(words,key=len):
-            @cache
-            def dfs(i):
-                if i==len(w):
-                    return True
-                p = trie
-                for j in range(i,len(w)):
-                    if w[j] not in p:
-                        return False
-                    p = p[w[j]]
-                    if '#' in p and dfs(j+1):
-                        return True
-                return False
-            if dfs(0):
-                res.append(w)
-            else:
-                p = trie
-                for c in w:
-                    p = p[c]
-                p['#'] = {}
-        return res
-```
-540 ms

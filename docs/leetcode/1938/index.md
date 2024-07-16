@@ -49,12 +49,9 @@
 
 ## 分析
 
-类似 {{< lc "1707" >}}，只不过限制条件从数组上界变为了树的路径。
-考虑遍历树的节点 node 时动态维护哈希表或字典树，即可回答 node 对应的查询。
-
-注意动态维护过程中不仅有添加，还有删除，因此需要维护前缀的计数。
-
-这里用更简单的哈希表方法。
+- 类似 {{< lc "1707" >}}，限制条件从值上界变为了树的路径
+- 考虑遍历树并动态维护哈希表或字典树即可
+- 注意动态维护过程中不仅有添加，还有删除，因此需要维护前缀的计数
 
 ## 解答
 
@@ -62,12 +59,10 @@
 class Solution:
     def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
         n = len(parents)
-        root = 0
+        root = parents.index(-1)
         g = [[] for _ in range(n)]
         for u,v in enumerate(parents):
-            if v==-1:
-                root = u
-            else:
+            if v!=-1:
                 g[v].append(u)
         L = max(n-1,max(x for _,x in queries)).bit_length()
         d = defaultdict(list)
@@ -75,7 +70,14 @@ class Solution:
             d[u].append((i,x))
         T = [defaultdict(int) for _ in range(L)]
         res = [0]*len(queries)
-        def dfs(u):
+        sk = [root]
+        while sk:
+            u = sk.pop()
+            if isinstance(u,str):
+                u = int(u)
+                for j in range(L):
+                    T[j][u>>j] -= 1
+                continue
             for j in range(L):
                 T[j][u>>j] += 1
             for i,x in d[u]:
@@ -84,15 +86,11 @@ class Solution:
                     y <<= 1
                     y += T[j][(y+1)^(x>>j)]>0
                 res[i] = y
-            for v in g[u]:
-                dfs(v)
-            for j in range(L):
-                T[j][u>>j] -= 1
-        dfs(root)
+            sk.append(str(u))
+            sk.extend(g[u])
         return res
 ```
-
-2778 ms
+2392 ms
 
 ## *附加
 
@@ -100,11 +98,11 @@ class Solution:
 
 ```python
 class BitTrie:
-    def __init__(self,n,L):                       # 插入 n 个长为 L 的二进制串
-        self.t = [[0]*(n*L+1) for _ in range(2)]  # 模拟树节点
+    def __init__(self,n,L):                       # 插入总长度 n-1、最长 L 的二进制串
+        self.t = [[0]*n for _ in range(2)]        # 模拟树节点
         self.i = 0
         self.L = L
-        self.s = [0]*(n*L+1)
+        self.s = [0]*n
 
     def add(self, x):
         p = 0
@@ -135,7 +133,6 @@ class BitTrie:
             p = self.t[bit][p]
         return res
 
-
 class Solution:
     def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
         n = len(parents)
@@ -145,20 +142,23 @@ class Solution:
             if v!=-1:
                 g[v].append(u)
         L = max(n-1,max(x for _,x in queries)).bit_length()
+        trie = BitTrie(n*L+1,L)
         d = defaultdict(list)
         for i,(u,x) in enumerate(queries):
             d[u].append((i,x))
-        trie = BitTrie(n,L)
         res = [0]*len(queries)
-        def dfs(u):
+        sk = [root]
+        while sk:
+            u = sk.pop()
+            if isinstance(u,str):
+                trie.remove(int(u))
+                continue
             trie.add(u)
             for i,x in d[u]:
                 res[i] = trie.maxxor(x)
-            for v in g[u]:
-                dfs(v)
-            trie.remove(u)
-        dfs(root)
-        return res 
+            sk.append(str(u))
+            sk.extend(g[u])
+        return res
 ```
 
-2778 ms
+2744 ms

@@ -42,70 +42,81 @@
 
 ## 分析
 
-基于 {{< lc "0421" >}} 可知，先构建二进制前缀的哈希表或字典树，
-即可在 31 步内求得 x 与 nums 中元素的最大异或值。
-
-但本题限制了每轮 nums 的范围，只能取不超过 mi 的元素，所以固定的哈希表或字典树不可行。
-
-有个巧妙的想法是将 nums 排序，在动态地构建哈希表或字典树的过程中，
-便得到了任意 mi 所对应的哈希表或字典树。
-
-注意到这种方法得到的 queries 的答案并不是按 queries 的顺序依次得到的。这被称为离线查询。
-
-这里用哈希表方法，更简单。
+-  {{< lc "0421" >}} 升级版，区别是只查询 <=m 的元素
+- 一种常用的方法是将查询和元素都排序，保证整个查询过程中元素只加不减
+- 在这个过程中，动态构建哈希表或字典树，即转为 {{< lc "0421" >}} 
 
 ## 解答
 
 ```python
-def maximizeXor(self, nums: List[int], queries: List[List[int]]) -> List[int]:
-    def find(x):
-        ans = 0
-        for j in range(30, -1, -1):
-            ans <<= 1
-            ans += int((ans+1)^(x>>j) in A[j])
-        return ans
-
-    nums = sorted(set(nums))
-    queries = sorted((m, idx, x) for idx, (x, m) in enumerate(queries))
-    A = [set() for _ in range(31)]
-    res, i = [0] * len(queries), 0
-    for m, idx, x in queries:
-        while i < len(nums) and nums[i] <= m:
-            for j in range(31):
-                A[j].add(nums[i] >> j)
-            i += 1
-        res[idx] = -1 if i==0 else find(x)
-    return res
+class Solution:
+    def maximizeXor(self, nums: List[int], queries: List[List[int]]) -> List[int]:
+        L = max(nums+[x for x,_ in queries]).bit_length()
+        T = [set() for _ in range(L)]
+        nums.sort()
+        j = 0
+        res = [-1]*len(queries)
+        for i,(x,m) in sorted(enumerate(queries),key=lambda p:p[1][1]):
+            while j<len(nums) and nums[j]<=m:
+                for k in range(L):
+                    T[k].add(nums[j]>>k)
+                j += 1
+            if j:
+                y = 0
+                for k in range(L-1,-1,-1):
+                    y <<= 1
+                    y += (y+1)^(x>>k) in T[k]
+                res[i] = y
+        return res
 ```
-2632 ms
+1565 ms
 
 ## *附加
 
 字典树写法。
 
 ```python
-def maximizeXor(self, nums: List[int], queries: List[List[int]]) -> List[int]:
-    def find(x):
-        ans, p = '', trie
-        for bit in bin(x)[2:].zfill(31):
-            bit_rev = str(int(bit)^1)
-            ans += '1' if bit_rev in p else '0'
-            p = p[bit_rev] if bit_rev in p else p[bit]
-        return int(ans, 2)
+class BitTrie:
+    def __init__(self,n,L):                       # 插入总长度 n-1、最长 L 的二进制串
+        self.t = [[0]*n for _ in range(2)]        # 模拟树节点
+        self.i = 0
+        self.L = L
 
-    nums = sorted(set(nums))
-    queries = sorted((m, idx, x) for idx, (x, m) in enumerate(queries))
-    T = lambda: defaultdict(T)
-    trie = T()
-    res, i = [0] * len(queries), 0
-    for m, idx, x in queries:
-        while i < len(nums) and nums[i] <= m:
-            val = bin(nums[i])[2:].zfill(31)
-            reduce(dict.__getitem__, val, trie)
-            i += 1
-        res[idx] = -1 if i==0 else find(x)
-    return res
+    def add(self, x):
+        p = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if not self.t[bit][p]:
+                self.i += 1
+                self.t[bit][p] = self.i  
+            p = self.t[bit][p]
+
+    def maxxor(self,x):
+        p = 0
+        res = 0
+        for j in range(self.L-1, -1, -1):
+            bit = (x>>j)&1
+            if self.t[bit^1][p]:
+                res |= 1 << j
+                bit ^= 1
+            p = self.t[bit][p]
+        return res
+
+class Solution:
+    def maximizeXor(self, nums: List[int], queries: List[List[int]]) -> List[int]:
+        L = max(nums+[x for x,_ in queries]).bit_length()
+        trie = BitTrie(len(nums)*L+1,L)
+        nums.sort()
+        j = 0
+        res = [-1]*len(queries)
+        for i,(x,m) in sorted(enumerate(queries),key=lambda p:p[1][1]):
+            while j<len(nums) and nums[j]<=m:
+                trie.add(nums[j])
+                j += 1
+            if j:
+                res[i] = trie.maxxor(x)
+        return res
 ```
-4564 ms
+1753 ms
 
 

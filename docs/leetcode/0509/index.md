@@ -70,6 +70,8 @@ class Solution:
 
 ## *附加
 
+可以用矩阵快速幂优化时间。
+
 ```python
 class Solution:
     def fib(self, n: int) -> int:

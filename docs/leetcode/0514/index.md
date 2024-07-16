@@ -55,30 +55,53 @@
 
 
 ## 分析
+### #1
 
-先按顺/逆时针找到第一个 key[0] 后，可以转为递归子问题。
+按转到哪个位置递推即可，只需要顺/逆时针找第一个即可。
 
-那么令 dfs(i, j) 代表当 ring[i] 对齐北方时，拼写 key[j:] 的最少步数，即可递推。
+```python
+class Solution:
+    def findRotateSteps(self, ring: str, key: str) -> int:
+        n = len(ring)
+        f = {0:0}
+        for c in key:
+            g = defaultdict(lambda:inf)
+            for i,w in f.items():
+                r = i
+                while ring[r]!=c:
+                    r = (r+1)%n
+                g[r] = min(g[r],1+w+(r-i)%n)
+                l = i
+                while ring[l]!=c:
+                    l = (l-1)%n
+                g[l] = min(g[l],1+w+(i-l)%n)
+            f = g
+        return min(f.values())
+```
+114 ms
 
-要找与 ring[i] 最近的 key[j] 位置，考虑保存 ring 中每个字符的位置列表（递增的），
-然后可以二分查找离 i 最近的某字符位置，节省时间。
+### #2
 
+可以预先保存下标列表，二分查找最近的下标。
 ## 解答
 
 ```python
-def findRotateSteps(self, ring: str, key: str) -> int:
-    @lru_cache(None)
-    def dfs(i, j):
-        if j == len(key):
-            return 0
-        A = d[key[j]]
-        pos = bisect_left(A, i)
-        left, right = A[pos-1], A[pos % len(A)]
-        return 1+min((i-left)%n+dfs(left, j+1), (right-i)%n+dfs(right, j+1))
-
-    d, n = defaultdict(list), len(ring)
-    for i, char in enumerate(ring):
-        d[char].append(i)
-    return dfs(0, 0)
+class Solution:
+    def findRotateSteps(self, ring: str, key: str) -> int:
+        n = len(ring)
+        d = defaultdict(list)
+        for i,c in enumerate(ring):
+            d[c].append(i)
+        f = {0:0}
+        for c in key:
+            A = d[c]
+            g = defaultdict(lambda:inf)
+            for i,w in f.items():
+                pos = bisect_left(A,i)
+                l,r = A[pos-1],A[pos%len(A)]
+                g[r] = min(g[r],1+w+(r-i)%n)
+                g[l] = min(g[l],1+w+(i-l)%n)
+            f = g
+        return min(f.values())
 ```
 72 ms
