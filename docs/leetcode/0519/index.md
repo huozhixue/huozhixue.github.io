@@ -49,43 +49,10 @@ solution.flip();  // 返回 [2, 0]，此时返回 [0,0]、[1,0] 和 [2,0] 的概
 
 ## 分析
 
-### #1
+- 调用次数最多 1000，可以考虑暴力拒绝采样
+- 一个更优的方法是类似 {{< lc "0380" >}} 的想法，将随机到的下标交换到末尾弹出
+	- 由于值域太大，因此考虑用哈希表维护交换过的下标，其它的无需维护
 
-调用次数最多 1000，所以可以考虑暴力法。维护值为 1 的下标集合，每轮拒绝采样即可。
-
-```python
-class Solution:
-
-    def __init__(self, m: int, n: int):
-        self.m = m
-        self.n = n
-        self.vis = set()
-
-    def flip(self) -> List[int]:
-        while True:
-            i = random.randint(0, self.m-1)
-            j = random.randint(0, self.n-1)
-            if (i, j) not in self.vis:
-                self.vis.add((i, j))
-                return [i, j]
-
-    def reset(self) -> None:
-        self.vis = set()
-```
-时间复杂度 O(K^2) （K 为调用次数），76 ms
-
-### #2
-
-还有个巧妙的方法是类似 {{< lc "0710" >}}，将返回过的下标映射为连续区间，从而方便随机。
-
-具体来说：
-    
-    设数组 A=list(range(m*n))，将 (i, j) 看作是 A 的下标 i*n+j
-    设已经选过了 cnt 个下标，并且都交换到了 A[:cnt]
-    用哈希表 d 维护 A[cnt:] 中经过了交换的数
-    那么调用 flip 时
-        随机一个 >=cnt 的下标 y，A[y]=d.get(y,y)，转回二维坐标 (i,j) 即是结果
-        更新 d[y] = d.get(cnt, cnt)，代表 A[y] 和 A[cnt] 进行了交换
 
 ## 解答
 
@@ -95,18 +62,18 @@ class Solution:
     def __init__(self, m: int, n: int):
         self.m = m
         self.n = n
-        self.cnt = 0
+        self.s = m*n
         self.d = {}
 
     def flip(self) -> List[int]:
-        y = random.randint(self.cnt, self.m*self.n-1)
-        x = self.d.get(y, y)
-        self.d[y] = self.d.get(self.cnt, self.cnt)
-        self.cnt += 1
-        return [x // self.n, x % self.n]
-        
+        x = random.randrange(self.s)
+        res = self.d.get(x,x)
+        self.s -= 1
+        self.d[x] = self.d.get(self.s,self.s)
+        return divmod(res,self.n)
+
     def reset(self) -> None:
-        self.cnt = 0
-        self.d = {}
+        self.s = self.m*self.n
+        self.d.clear()
 ```
-56 ms
+47 ms

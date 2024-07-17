@@ -35,18 +35,26 @@
 
 ## 分析
 
-假如将 0 都替换为 -1，那么就是找和为 0 的子数组。
-
-求任意子数组的和，容易想到前缀和。得到前缀和数组 pre 后，就是求距离最远的相同数，用哈希表即可。
+- 假如将 0 都替换为 -1，那么就是找和为 0 的子数组
+- 子数组的和容易想到前缀，问题转为求相等的前缀和的最长距离，用哈希表即可
 
 
 ## 解答
 
 ```python
-def findMaxLength(self, nums: List[int]) -> int:
-    d, pre = {}, accumulate([0]+nums, lambda x, y: x+(y if y==1 else -1))
-    return max(i-d.setdefault(val, i) for i, val in enumerate(pre))
+class Solution:
+    def findMaxLength(self, nums: List[int]) -> int:
+        d = {0:-1}
+        s = 0
+        res = 0
+        for i,x in enumerate(nums):
+            s += 1 if x else -1
+            if s in d:
+                res = max(res,i-d[s])
+            else:
+                d[s] = i
+        return res
 ```
 
-212 ms
+145 ms
 

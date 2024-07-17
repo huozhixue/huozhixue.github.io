@@ -48,24 +48,22 @@
 
 ## 分析
 
-假设最后一个数是 x，满足 x%n==0 或 n%x==0，
-那么剩下的转为子问题：求集合 set(range(1,n+1))-{x} 中构造优美排列的个数。
-
-所以令 dfs(A) 代表集合 A 构造的优美排列个数，即可递归。
-
-为了方便，可以将集合状态压缩为一个数。
+- 按最后选的数即可递推
+- 要表示可选数的集合，用状态压缩。
 
 ## 解答
 
 ```python
-def countArrangement(self, n: int) -> int:
-    dp = [1]+[0]*((1<<n)-1)
-    for st in range(1<<n):
-        idx = bin(st).count('1')+1
-        for x in range(n):
-            if not st&(1<<x) and ((x+1)%idx==0 or idx%(x+1)==0):
-                dp[st|(1<<x)] += dp[st]
-    return dp[-1]
+class Solution:
+    def countArrangement(self, n: int) -> int:
+        f = [0]*(1<<n)
+        f[0] = 1
+        for st in range(1,1<<n):
+            i = st.bit_count()
+            for j in range(n):
+                if st&1<<j and ((j+1)%i==0 or i%(j+1)==0):
+                    f[st] += f[st^1<<j]
+        return f[-1]
 ```
-160 ms
+109 ms
 

@@ -55,23 +55,22 @@
 
 ## 分析
 
-类似 0560 ，不过改成了总和为 k 的倍数。那么前缀和改为模 k 的余数即可。
-
-注意 k 为 0 的特殊情况。
-
+- 子数组和容易想到前缀和
+- 问题即是找两个前缀关于 k 同余，用哈希表即可
 
 ## 解答
 
 ```python
-def checkSubarraySum(self, nums: List[int], k: int) -> bool:
-	s, d = 0, {}
-	for i, num in enumerate(nums):
-		d[s] = d.get(s, i)
-		s = (s+num) % k if k else s+num
-		if s in d and d[s] < i:
-			return True
-	return False
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        d = {0:-1}
+        s = 0
+        for i,x in enumerate(nums):
+            s = (s+x)%k
+            if s in d and d[s]+2<=i:
+                return True
+            d.setdefault(s,i)
+        return False
 ```
-
-时间复杂度 O(N)，44 ms
+88 ms
 
