@@ -69,22 +69,19 @@ solution.pickIndex(); // 返回 0，返回下标 0，返回该下标概率为 1/
 
 ## 分析
 
-等价于变为数组 A = [0]*w[0]+[1]*w[1]+...，然后随机取一个值。
-
-反过来，可以随机取 A 的索引值，求出对应的数即可，不需要实际构造出 A。
-
-具体求对应的数容易想到前缀和数组，然后二分查找即可。
-
+- 每个下标映射到连续区间
+- 从总区间随机选个数，二分判断属于哪个区间即可
 ## 解答
 
 ```python
 class Solution:
 
     def __init__(self, w: List[int]):
-        self.A = list(accumulate(w))
+        self.p = list(accumulate([0]+w))
+
 
     def pickIndex(self) -> int:
-        pos = random.randint(0, self.A[-1]-1)
-        return bisect_right(self.A, pos)
+        x = randrange(self.p[-1])
+        return bisect_right(self.p,x)-1
 ```
-224 ms
+135 ms
