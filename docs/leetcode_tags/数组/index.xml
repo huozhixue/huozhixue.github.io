@@ -3,7 +3,28 @@
         <title>数组 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/</link>
         <description>数组 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+    <title>3108：带权图里旅途的最小代价（2108 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3108/</link>
+    <pubDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3108/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 4 题 题目 给你一个 n 个节点的带权无向图，节点编号为 0 到 n - 1 。 给你一个整数 n 和一个数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui 和 vi 之间有一]]></description>
+</item><item>
+    <title>3107：使数组中位数等于 K 的最少操作数（1604 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3107/</link>
+    <pubDate>Sun, 07 Apr 2024 10:50:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3107/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 3 题 题目 给你一个整数数组 nums 和一个 非负 整数 k 。一次操作中，你可以选择任一元素 加 1 或者减 1 。 请你返回将 nums 中位数 变为 k 所需要的 最少]]></description>
+</item><item>
+    <title>3105：最长的严格递增或递减子数组（1217 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3105/</link>
+    <pubDate>Sun, 07 Apr 2024 10:30:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3105/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 1 题 题目 给你一个整数数组 nums 。 返回数组 nums 中 严格递增 或 严格递减 的最长非空子数组的长度。 示例 1： 输入：nums = [1,4,3,3,2] 输出：2 解释： nums]]></description>
+</item><item>
     <title>2960：统计已测试设备（1169 分）</title>
     <link>https://huozhixue.github.io/leetcode/2960/</link>
     <pubDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</pubDate>
@@ -52,26 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2732/</guid>
     <description><![CDATA[力扣第 106 场双周赛第 4 题 题目 给你一个下标从 0 开始大小为 m x n 的二进制矩阵 grid 。 从原矩阵中选出若干行构成一个行的 非空 子集，如果子集中任何一列的和至]]></description>
-</item><item>
-    <title>2707：字符串中的额外字符（1735 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2707/</link>
-    <pubDate>Sat, 27 May 2023 22:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2707/</guid>
-    <description><![CDATA[力扣第 105 场双周赛第 2 题 题目 给你一个下标从 0 开始的字符串 s 和一个单词字典 dictionary 。你需要将 s 分割成若干个 互不重叠 的子字符串，每个子字符串都在 dictionary 中出现]]></description>
-</item><item>
-    <title>2658：网格图中鱼的最大数目（1489 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2658/</link>
-    <pubDate>Sat, 29 Apr 2023 22:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2658/</guid>
-    <description><![CDATA[力扣第 103 场双周赛第 3 题 题目 给你一个下标从 0 开始大小为 m x n 的二维整数数组 grid ，其中下标在 (r, c) 处的整数表示： 如果 grid[r][c] = 0 ，那么它是一块 陆地 。 如果 grid[r][c]]]></description>
-</item><item>
-    <title>2585：获得分数的方法数（1909 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2585/</link>
-    <pubDate>Sun, 05 Mar 2023 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2585/</guid>
-    <description><![CDATA[力扣第 335 场周赛第 4 题 题目 考试中有 n 种类型的题目。给你一个整数 target 和一个下标从 0 开始的二维整数数组 types ，其中 types[i] = [counti, marksi] 表示第 i 种类型的题目有 counti 道，每]]></description>
 </item></channel>
 </rss>
