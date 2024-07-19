@@ -53,6 +53,10 @@ browserHistory.back(7);                   // 你原本在浏览 &quot;google.com
 </ul>
 
 
+**相似问题：**
+- [2254：设计视频共享平台](/leetcode/2254)
+
+
 ## 分析
 
 数组存储，维护当前下标，模拟即可。

@@ -77,6 +77,10 @@ t.getInheritanceOrder(); // 返回 ["king", "andy", "matthew", "alex", "asha", "
 </ul>
 
 
+**相似问题：**
+- [1993：树上的操作（1861 分）](/leetcode/1993)
+
+
 ## 分析
 
 - getInheritanceOrder() 相当于多叉树的前序遍历

@@ -49,6 +49,10 @@
 </ul>
 
 
+**相似问题：**
+- [0050：Pow(x, n)](/leetcode/0050)
+
+
 ## 分析
 
 根据 $\begin{aligned} a^{b*10+c}=(a^{b})^{10}*a^{c}\end{aligned}$，递推即可。

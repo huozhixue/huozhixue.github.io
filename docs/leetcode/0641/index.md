@@ -56,6 +56,11 @@ circularDeque.getFront();				// 返回 4
 </ul>
 
 
+**相似问题：**
+- [0622：设计循环队列](/leetcode/0622)
+- [1670：设计前中后队列（1610 分）](/leetcode/1670)
+
+
 ## 分析
 
 类似 {{< lc "0622" >}} ，增加 insertFront() 和 deleteLast() 即可。

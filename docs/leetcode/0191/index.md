@@ -5,7 +5,7 @@
 
 ## 题目
 
-<p>编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中 <span data-keyword="set-bit">设置位</span> 的个数（也被称为<a href="https://baike.baidu.com/item/%E6%B1%89%E6%98%8E%E9%87%8D%E9%87%8F" target="_blank">汉明重量</a>）。</p>
+<p>编写一个函数，获取一个正整数的二进制形式并返回其二进制表达式中 <span data-keyword="set-bit">设置位</span> 的个数（也被称为<a href="https://baike.baidu.com/item/%E6%B1%89%E6%98%8E%E9%87%8D%E9%87%8F" target="_blank">汉明重量</a>）。</p>
 
 
 
@@ -50,6 +50,16 @@
 <ul>
 <li>如果多次调用这个函数，你将如何优化你的算法？</li>
 </ul>
+
+
+**相似问题：**
+- [0190：颠倒二进制位](/leetcode/0190)
+- [0231：2 的幂](/leetcode/0231)
+- [0338：比特位计数](/leetcode/0338)
+- [0401：二进制手表](/leetcode/0401)
+- [0461：汉明距离](/leetcode/0461)
+- [0693：交替位二进制数](/leetcode/0693)
+- [0762：二进制表示中质数个计算置位（1383 分）](/leetcode/0762)
 
 
 ## 分析

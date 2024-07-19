@@ -10,7 +10,7 @@
         <title>0648：单词替换（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0648/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0648：单词替换（★）">
-  <meta property="og:description" content="力扣第 648 题 题目 在英语中，我们有一个叫做 词根(root) 的概念，可以词根 后面 添加其他一些词组成另一个较长的单词——我们称这个词为 继承词 (suc">
+  <meta property="og:description" content="力扣第 648 题 题目 在英语中，我们有一个叫做 词根(root) 的概念，可以词根 后面 添加其他一些词组成另一个较长的单词——我们称这个词为 衍生词 (der">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0648：单词替换（★）">
-  <meta name="twitter:description" content="力扣第 648 题 题目 在英语中，我们有一个叫做 词根(root) 的概念，可以词根 后面 添加其他一些词组成另一个较长的单词——我们称这个词为 继承词 (suc">
+  <meta name="twitter:description" content="力扣第 648 题 题目 在英语中，我们有一个叫做 词根(root) 的概念，可以词根 后面 添加其他一些词组成另一个较长的单词——我们称这个词为 衍生词 (der">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0648/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0647/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0650/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0648\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  529 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  548 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0648\/","datePublished": "2016-10-09T00:00:00+08:00","dateModified": "2016-10-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0648：单词替换（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-09">2016-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 529 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-09">2016-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 548 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0648/" class="leancloud_visitors" data-flag-title="0648：单词替换（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,8 +133,8 @@
 <p><u><strong><a href="https://leetcode.cn/problems/replace-words/" target="_blank" rel="noopener noreffer">力扣第 648 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>在英语中，我们有一个叫做 <strong>词根</strong>(root) 的概念，可以词根 <strong>后面 </strong>添加其他一些词组成另一个较长的单词——我们称这个词为 <strong>继承词</strong> (successor)。例如，词根 <code>help</code>，跟随着 <strong>继承</strong>词 <code>"ful"</code>，可以形成新的单词 <code>"helpful"</code>。</p>
-<p>现在，给定一个由许多 <strong>词根 </strong>组成的词典 <code>dictionary</code> 和一个用空格分隔单词形成的句子 <code>sentence</code>。你需要将句子中的所有 <strong>继承词 </strong>用 <strong>词根 </strong>替换掉。如果 <strong>继承词 </strong>有许多可以形成它的 <strong>词根</strong>，则用 <strong>最短 </strong>的 <strong>词根</strong> 替换它。</p>
+<p>在英语中，我们有一个叫做 <strong>词根</strong>(root) 的概念，可以词根 <strong>后面 </strong>添加其他一些词组成另一个较长的单词——我们称这个词为 <strong>衍生词</strong> (<strong>derivative</strong>)。例如，词根 <code>help</code>，跟随着 <strong>继承</strong>词 <code>"ful"</code>，可以形成新的单词 <code>"helpful"</code>。</p>
+<p>现在，给定一个由许多 <strong>词根 </strong>组成的词典 <code>dictionary</code> 和一个用空格分隔单词形成的句子 <code>sentence</code>。你需要将句子中的所有 <strong>衍生词 </strong>用 <strong>词根 </strong>替换掉。如果 <strong>衍生词 </strong>有许多可以形成它的 <strong>词根</strong>，则用 <strong>最短 </strong>的 <strong>词根</strong> 替换它。</p>
 <p>你需要输出替换之后的句子。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
@@ -157,6 +157,10 @@
 <li><code>sentence</code> 中每个单词的长度在范围 <code>[1, 1000]</code> 内。</li>
 <li><code>sentence</code> 中单词之间由一个空格隔开。</li>
 <li><code>sentence</code> 没有前导或尾随空格。</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0208" rel="">0208：实现 Trie (前缀树)</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>容易想到用前缀树，先将词根插入，并在末尾用 &lsquo;#&rsquo; 标记。

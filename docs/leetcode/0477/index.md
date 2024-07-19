@@ -39,6 +39,11 @@ HammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 
 </ul>
 
 
+**相似问题：**
+- [0461：汉明距离](/leetcode/0461)
+- [3153：所有数对中数位不同之和（1645 分）](/leetcode/3153)
+
+
 ## 分析
 
 - 可以用贡献法，计算每个二进制位上贡献的距离

@@ -46,6 +46,8 @@ recentCounter.ping(3002);  // requests = [1, <strong>100</strong>, <strong>3001<
 </ul>
 
 
+
+
 ## 分析
 
 维护一个队列，将小于 t-3000 的元素弹出即可。

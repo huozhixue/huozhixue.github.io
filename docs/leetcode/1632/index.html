@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1632\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  838 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  883 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1632\/","datePublished": "2020-10-25T11:00:00+08:00","dateModified": "2020-10-25T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1632：矩阵转换后的秩（2529 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-25">2020-10-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 838 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-25">2020-10-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 883 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1632/" class="leancloud_visitors" data-flag-title="1632：矩阵转换后的秩（2529 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -182,6 +182,11 @@ matrix[1][1] 的秩为 3 ，因为 matrix[1][1] > matrix[0][1]， matrix[1][1] >
 <li><code>n == matrix[i].length</code></li>
 <li><code>1 <= m, n <= 500</code></li>
 <li><code>-10<sup>9</sup> <= matrix[row][col] <= 10<sup>9</sup></code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/1331" rel="">1331：数组序号转换（1355 分）</a></li>
+<li><a href="/leetcode/1998" rel="">1998：数组的最大公因数排序（2429 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>先考虑简化情形：没有相同的元素。那么显然最小的元素的秩为 1，第二小的元素则要考虑是否和最小元素同行或同列。

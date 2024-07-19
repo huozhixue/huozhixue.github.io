@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/2183\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  414 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  496 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/2183\/","datePublished": "2022-02-20T11:00:00+08:00","dateModified": "2022-02-20T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">2183：统计可以被 K 整除的下标对数目（2246 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-20">2022-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 414 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-20">2022-02-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 496 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/2183/" class="leancloud_visitors" data-flag-title="2183：统计可以被 K 整除的下标对数目（2246 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -156,6 +156,13 @@
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
 <li><code>1 &lt;= nums[i], k &lt;= 10<sup>5</sup></code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/2198" rel="">2198：单因数三元组</a></li>
+<li><a href="/leetcode/1497" rel="">1497：检查数组对是否可以被 k 整除（1787 分）</a></li>
+<li><a href="/leetcode/3164" rel="">3164：优质数对的总数 II（1777 分）</a></li>
+<li><a href="/leetcode/3162" rel="">3162：优质数对的总数 I（1168 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>遍历所有下标对时间复杂度高。注意到 nums[i] 重要的是和 k 的公共因子，假如将 nums[i] 替换为 nums[i] 和 k 的最大公约数，

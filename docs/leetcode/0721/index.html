@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0721\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1119 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1154 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0721\/","datePublished": "2016-12-21T00:00:00+08:00","dateModified": "2016-12-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0721：账户合并（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-21">2016-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1119 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-21">2016-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1154 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0721/" class="leancloud_visitors" data-flag-title="0721：账户合并（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -158,6 +158,12 @@
 <li><code>1 &lt;= accounts[i][j].length &lt;= 30</code></li>
 <li><code>accounts[i][0]</code> 由英文字母组成</li>
 <li><code>accounts[i][j] (for j &gt; 0)</code> 是有效的邮箱地址</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0684" rel="">0684：冗余连接</a></li>
+<li><a href="/leetcode/0734" rel="">0734：句子相似性</a></li>
+<li><a href="/leetcode/0737" rel="">0737：句子相似性 II</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>容易想到用并查集。如果账户 i 和 j 有共同邮箱，将 i 和 j 连通，最终每个连通子图即代表一个人。具体实现：</p>

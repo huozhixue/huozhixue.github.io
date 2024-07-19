@@ -73,6 +73,12 @@ public List&lt;Node&gt; neighbors;
 </ul>
 
 
+**相似问题：**
+- [0138：随机链表的复制](/leetcode/0138)
+- [1485：克隆含随机指针的二叉树](/leetcode/1485)
+- [1490：克隆 N 叉树](/leetcode/1490)
+
+
 ## 分析
 
 ### #1

@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0785\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  618 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  646 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0785\/","datePublished": "2017-02-23T00:00:00+08:00","dateModified": "2017-02-23T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0785：判断二分图（1624 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-23">2017-02-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 618 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-23">2017-02-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 646 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0785/" class="leancloud_visitors" data-flag-title="0785：判断二分图（1624 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -163,6 +163,10 @@
 <li><code>graph[u]</code> 不会包含 <code>u</code></li>
 <li><code>graph[u]</code> 的所有值 <strong>互不相同</strong></li>
 <li>如果 <code>graph[u]</code> 包含 <code>v</code>，那么 <code>graph[v]</code> 也会包含 <code>u</code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/2493" rel="">2493：将节点分成尽可能多的组（2415 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>分组问题，想到用并查集。对于每个顶点 u，将其所有相邻顶点分到一组。如果 u 和某个相邻顶点在同一组，就不是二分图。</p>

@@ -10,7 +10,7 @@
         <title>1095：山脉数组中查找目标值（1827 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/1095/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="1095：山脉数组中查找目标值（1827 分）">
-  <meta property="og:description" content="力扣第 142 场周赛第 3 题 题目 （这是一个 交互式问题 ） 给你一个 山脉数组 mountainArr，请你返回能够使得 mountainArr.get(index) 等于 target 最小 的下标 index 值。 如果不存在这样">
+  <meta property="og:description" content="力扣第 142 场周赛第 3 题 题目 （这是一个 交互式问题 ） 你可以将一个数组 arr 称为 山脉数组 当且仅当： arr.length &gt;= 3 存在一些 0 &lt; i &lt; arr.length - 1 的 i 使得： arr[0] &lt; arr[1] &lt; ... &lt; arr[i -">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="1095：山脉数组中查找目标值（1827 分）">
-  <meta name="twitter:description" content="力扣第 142 场周赛第 3 题 题目 （这是一个 交互式问题 ） 给你一个 山脉数组 mountainArr，请你返回能够使得 mountainArr.get(index) 等于 target 最小 的下标 index 值。 如果不存在这样">
+  <meta name="twitter:description" content="力扣第 142 场周赛第 3 题 题目 （这是一个 交互式问题 ） 你可以将一个数组 arr 称为 山脉数组 当且仅当： arr.length &gt;= 3 存在一些 0 &lt; i &lt; arr.length - 1 的 i 使得： arr[0] &lt; arr[1] &lt; ... &lt; arr[i -">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/1095/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1091/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1104/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1095\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  633 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  549 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1095\/","datePublished": "2019-06-23T10:50:00+08:00","dateModified": "2019-06-23T10:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1095：山脉数组中查找目标值（1827 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-06-23">2019-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 633 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-06-23">2019-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 549 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1095/" class="leancloud_visitors" data-flag-title="1095：山脉数组中查找目标值（1827 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -134,39 +134,47 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>（这是一个 <strong>交互式问题 </strong>）</p>
-<p>给你一个 <strong>山脉数组</strong> <code>mountainArr</code>，请你返回能够使得 <code>mountainArr.get(index)</code> <strong>等于</strong> <code>target</code> <strong>最小</strong> 的下标 <code>index</code> 值。</p>
-<p>如果不存在这样的下标 <code>index</code>，就请返回 <code>-1</code>。</p>
-<p>何为山脉数组？如果数组 <code>A</code> 是一个山脉数组的话，那它满足如下条件：</p>
-<p><strong>首先</strong>，<code>A.length &gt;= 3</code></p>
-<p><strong>其次</strong>，在 <code>0 &lt; i &lt; A.length - 1</code> 条件下，存在 <code>i</code> 使得：</p>
+<p>你可以将一个数组 <code>arr</code> 称为 <strong>山脉数组 </strong>当且仅当：</p>
 <ul>
-<li><code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i]</code></li>
-<li><code>A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code></li>
-</ul>
-<p>你将 <strong>不能直接访问该山脉数组</strong>，必须通过 <code>MountainArray</code> 接口来获取数据：</p>
+<li><code>arr.length &gt;= 3</code></li>
+<li>存在一些 <code>0 &lt; i &lt; arr.length - 1</code> 的 <code>i</code> 使得：
 <ul>
-<li><code>MountainArray.get(k)</code> - 会返回数组中索引为<code>k</code> 的元素（下标从 0 开始）</li>
-<li><code>MountainArray.length()</code> - 会返回该数组的长度</li>
+<li><code>arr[0] &lt; arr[1] &lt; ... &lt; arr[i - 1] &lt; arr[i]</code></li>
+<li><code>arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</code></li>
 </ul>
-<p><strong>注意：</strong></p>
-<p>对 <code>MountainArray.get</code> 发起超过 <code>100</code> 次调用的提交将被视为错误答案。此外，任何试图规避判题系统的解决方案都将会导致比赛资格被取消。</p>
-<p>为了帮助大家更好地理解交互式问题，我们准备了一个样例 &ldquo;<strong>答案</strong>&rdquo;：<a href="https://leetcode-cn.com/playground/RKhe3ave" target="_blank">https://leetcode-cn.com/playground/RKhe3ave</a>，请注意这 <strong>不是一个正确答案</strong>。</p>
+</li>
+</ul>
+<p>给定一个山脉数组 <code>mountainArr</code> ，返回 <strong>最小</strong> 的 <code>index</code> 使得 <code>mountainArr.get(index) == target</code>。如果不存在这样的 <code>index</code>，返回 <code>-1</code> 。</p>
+<p><strong>你无法直接访问山脉数组</strong>。你只能使用 <code>MountainArray</code> 接口来访问数组：</p>
+<ul>
+<li><code>MountainArray.get(k)</code> 返回数组中下标为 <code>k</code> 的元素（从 0 开始）。</li>
+<li><code>MountainArray.length()</code> 返回数组的长度。</li>
+</ul>
+<p>调用 <code>MountainArray.get</code> 超过 <code>100</code> 次的提交会被判定为错误答案。此外，任何试图绕过在线评测的解决方案都将导致取消资格。</p>
 <ol>
 </ol>
 <p><strong>示例 1：</strong></p>
-<pre><strong>输入：</strong>array = [1,2,3,4,5,3,1], target = 3
+<pre>
+<strong>输入：</strong>array = [1,2,3,4,5,3,1], target = 3
 <strong>输出：</strong>2
 <strong>解释：</strong>3 在数组中出现了两次，下标分别为 2 和 5，我们返回最小的下标 2。</pre>
 <p><strong>示例 2：</strong></p>
-<pre><strong>输入：</strong>array = [0,1,2,4,2,1], target = 3
+<pre>
+<strong>输入：</strong>array = [0,1,2,4,2,1], target = 3
 <strong>输出：</strong>-1
 <strong>解释：</strong>3 在数组中没有出现，返回 -1。
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>3 &lt;= mountain_arr.length() &lt;= 10000</code></li>
-<li><code>0 &lt;= target &lt;= 10^9</code></li>
-<li><code>0 &lt;= mountain_arr.get(index) &lt;= 10^9</code></li>
+<li><code>3 &lt;= mountain_arr.length() &lt;= 10<sup>4</sup></code></li>
+<li><code>0 &lt;= target &lt;= 10<sup>9</sup></code></li>
+<li><code>0 &lt;= mountain_arr.get(index) &lt;= 10<sup>9</sup></code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0852" rel="">0852：山脉数组的峰顶索引（1181 分）</a></li>
+<li><a href="/leetcode/1671" rel="">1671：得到山形数组的最少删除次数（1912 分）</a></li>
+<li><a href="/leetcode/2100" rel="">2100：适合野炊的日子（1702 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>可以先二分查找到山顶坐标 mid（第一个满足 A[i]&gt;A[i+1] 的 i)，然后 [0, mid], [mid, n-1] 区间都是单调的，

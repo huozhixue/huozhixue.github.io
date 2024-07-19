@@ -18,14 +18,14 @@
 <p><strong>示例 1：</strong></p>
 
 <pre>
-<strong>输入：</strong>nums = [2<code>,5,6,0,0,1,2]</code>, target = 0
+<strong>输入：</strong>nums = <code>[2,5,6,0,0,1,2]</code>, target = 0
 <strong>输出：</strong>true
 </pre>
 
 <p><strong>示例 2：</strong></p>
 
 <pre>
-<strong>输入：</strong>nums = [2<code>,5,6,0,0,1,2]</code>, target = 3
+<strong>输入：</strong>nums = <code>[2,5,6,0,0,1,2]</code>, target = 3
 <strong>输出：</strong>false</pre>
 
 
@@ -44,11 +44,14 @@
 <p><strong>进阶：</strong></p>
 
 <ul>
-<li>这是 <a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/description/">搜索旋转排序数组</a> 的延伸题目，本题中的 <code>nums</code>  可能包含重复元素。</li>
-<li>这会影响到程序的时间复杂度吗？会有怎样的影响，为什么？</li>
+<li>此题与 <a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/description/">搜索旋转排序数组</a> 相似，但本题中的 <code>nums</code>  可能包含 <strong>重复</strong> 元素。这会影响到程序的时间复杂度吗？会有怎样的影响，为什么？</li>
 </ul>
 
 
+
+
+**相似问题：**
+- [0033：搜索旋转排序数组](/leetcode/0033)
 
 
 ## 分析

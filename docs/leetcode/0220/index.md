@@ -51,6 +51,11 @@ abs(nums[i] - nums[j]) &lt;= valueDiff --&gt; abs(1 - 1) &lt;= 0
 </ul>
 
 
+**相似问题：**
+- [0217：存在重复元素](/leetcode/0217)
+- [0219：存在重复元素 II](/leetcode/0219)
+
+
 ## 分析
 
 ### #1

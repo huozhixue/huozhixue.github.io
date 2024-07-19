@@ -91,6 +91,10 @@ cdata <strong>不</strong>是 <strong>&quot;&lt;![CDATA[&lt;div&gt;]&gt;]]&gt;]]
 </ol>
 
 
+**相似问题：**
+- [0616：给字符串添加加粗标签](/leetcode/0616)
+
+
 ## 分析
 
 显然用正则比较方便。

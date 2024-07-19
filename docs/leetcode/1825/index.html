@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1825\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  802 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  852 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1825\/","datePublished": "2021-04-11T11:00:00+08:00","dateModified": "2021-04-11T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1825：求出 MK 平均值（2395 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-11">2021-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 802 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-11">2021-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 852 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1825/" class="leancloud_visitors" data-flag-title="1825：求出 MK 平均值（2395 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -176,6 +176,12 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
 <li><code>1 &lt;= k*2 &lt; m</code></li>
 <li><code>1 &lt;= num &lt;= 10<sup>5</sup></code></li>
 <li><code>addElement</code> 与 <code>calculateMKAverage</code> 总操作次数不超过 <code>10<sup>5</sup></code> 次。</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0295" rel="">0295：数据流的中位数</a></li>
+<li><a href="/leetcode/0703" rel="">0703：数据流中的第 K 大元素</a></li>
+<li><a href="/leetcode/2102" rel="">2102：序列顺序查询（2158 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>考虑维护一个有序集合 sl，并动态维护 s=sum(sl[k:-k])。</p>

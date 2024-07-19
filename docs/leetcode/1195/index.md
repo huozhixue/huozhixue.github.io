@@ -46,6 +46,11 @@ public void number(printNumber) { ... }      // only output the numbers
 
 
 
+**相似问题：**
+- [0412：Fizz Buzz](/leetcode/0412)
+- [1116：打印零与奇偶数](/leetcode/1116)
+
+
 ## 分析
 
 典型的并发问题，可以用互斥锁解决。

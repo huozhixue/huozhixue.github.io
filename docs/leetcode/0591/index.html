@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0591\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1340 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1360 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0591\/","datePublished": "2016-08-13T00:00:00+08:00","dateModified": "2016-08-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0591：标签验证器（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-08-13">2016-08-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1340 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-08-13">2016-08-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1360 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0591/" class="leancloud_visitors" data-flag-title="0591：标签验证器（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -210,6 +210,10 @@ cdata <strong>不</strong>是 <strong>&quot;&lt;![CDATA[&lt;div&gt;]&gt;]]&gt;]]
 <ol>
 <li>为简明起见，你可以假设输入的代码（包括提到的<strong>任意字符</strong>）只包含<code>数字</code>, <font color="#c7254e" face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="background-color:#f9f2f4; font-size:12.6px">字母</span></font>, <code>&#39;&lt;&#39;</code>,<code>&#39;&gt;&#39;</code>,<code>&#39;/&#39;</code>,<code>&#39;!&#39;</code>,<code>&#39;[&#39;</code>,<code>&#39;]&#39;</code>和<code>&#39; &#39;</code>。</li>
 </ol>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0616" rel="">0616：给字符串添加加粗标签</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>显然用正则比较方便。</p>
 <p>首先，代码最外层必须是合法的闭合标签。然后里面的 TAG_CONTENT 去除 cdata 以后，出现的 &lsquo;&lt;&rsquo; 必然对应了闭合标签。

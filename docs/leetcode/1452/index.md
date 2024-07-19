@@ -48,6 +48,8 @@ favoriteCompanies[3]=[&quot;google&quot;] 是 favoriteCompanies[0]=[&quot;leetco
 </ul>
 
 
+
+
 ## 分析
 
 暴力判断即可。

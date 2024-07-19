@@ -5,11 +5,11 @@
 
 ## 题目
 
-<p>给你一个整数数组 <code>nums</code>，返回 <em>数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积</em> 。</p>
+<p>给你一个整数数组 <code>nums</code>，返回 数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积 。</p>
 
 <p>题目数据 <strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在  <strong>32 位</strong> 整数范围内。</p>
 
-<p>请 <strong>不要使用除法，</strong>且在 <code>O(<em>n</em>)</code> 时间复杂度内完成此题。</p>
+<p>请 <strong>不要使用除法，</strong>且在 <code>O(n)</code> 时间复杂度内完成此题。</p>
 
 
 
@@ -40,6 +40,14 @@
 
 
 <p><strong>进阶：</strong>你可以在 <code>O(1)</code> 的额外空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组 <strong>不被视为 </strong>额外空间。）</p>
+
+
+**相似问题：**
+- [0042：接雨水](/leetcode/0042)
+- [0152：乘积最大子数组](/leetcode/0152)
+- [0265：粉刷房子 II](/leetcode/0265)
+- [2163：删除元素后和的最小差值（2225 分）](/leetcode/2163)
+- [2906：构造乘积矩阵（2074 分）](/leetcode/2906)
 
 
 ## 分析

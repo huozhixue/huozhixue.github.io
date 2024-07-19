@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0724\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  573 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  663 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0724\/","datePublished": "2016-12-24T00:00:00+08:00","dateModified": "2016-12-24T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0724：寻找数组的中心下标</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-24">2016-12-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 573 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-24">2016-12-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 663 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0724/" class="leancloud_visitors" data-flag-title="0724：寻找数组的中心下标">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -166,6 +166,14 @@
 <li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
 <p><strong>注意：</strong>本题与主站 1991 题相同：<a href="https://leetcode-cn.com/problems/find-the-middle-index-in-array/" target="_blank">https://leetcode-cn.com/problems/find-the-middle-index-in-array/</a></p>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0560" rel="">0560：和为 K 的子数组</a></li>
+<li><a href="/leetcode/1991" rel="">1991：找到数组的中间位置（1302 分）</a></li>
+<li><a href="/leetcode/2270" rel="">2270：分割数组的方案数（1334 分）</a></li>
+<li><a href="/leetcode/2219" rel="">2219：数组的最大总分</a></li>
+<li><a href="/leetcode/2574" rel="">2574：左右元素和的差值（1206 分）</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>对于中心索引 i，sum(nums[:i])==sum(nums[i+1:])，等价于
 sum(nums[:i])*2+nums[i]==sum(nums)。所以遍历 i 判断是否符合即可。</p>

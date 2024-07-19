@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0713\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  326 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  440 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0713\/","datePublished": "2016-12-13T00:00:00+08:00","dateModified": "2016-12-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0713：乘积小于 K 的子数组（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-13">2016-12-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 326 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-13">2016-12-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 440 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0713/" class="leancloud_visitors" data-flag-title="0713：乘积小于 K 的子数组（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -150,6 +150,15 @@
 <li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
 <li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
 <li><code>0 &lt;= k &lt;= 10<sup>6</sup></code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0152" rel="">0152：乘积最大子数组</a></li>
+<li><a href="/leetcode/0325" rel="">0325：和等于 k 的最长子数组长度</a></li>
+<li><a href="/leetcode/0560" rel="">0560：和为 K 的子数组</a></li>
+<li><a href="/leetcode/1099" rel="">1099：小于 K 的两数之和（1245 分）</a></li>
+<li><a href="/leetcode/2110" rel="">2110：股票平滑下跌阶段的数目（1408 分）</a></li>
+<li><a href="/leetcode/2302" rel="">2302：统计得分小于 K 的子数组数目（1808 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>遍历每个位置 j 作为结尾，找符合条件的最长子数组 [i, j]，即找到 j-i+1 个。</p>

@@ -5,9 +5,9 @@
 
 ## 题目
 
-<p>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code> 整除的（连续、非空） <strong>子数组</strong> 的数目。</p>
+<p>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code> 整除的非空 <strong>子数组</strong> 的数目。</p>
 
-<p><strong>子数组</strong> 是数组的 <strong>连续</strong> 部分。</p>
+<p><strong>子数组</strong> 是数组中 <strong>连续</strong> 的部分。</p>
 
 
 
@@ -37,6 +37,14 @@
 <li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 <li><code>2 &lt;= k &lt;= 10<sup>4</sup></code></li>
 </ul>
+
+
+**相似问题：**
+- [0560：和为 K 的子数组](/leetcode/0560)
+- [1590：使数组和能被 P 整除（2038 分）](/leetcode/1590)
+- [2364：统计坏数对的数目（1622 分）](/leetcode/2364)
+- [2575：找出字符串的可整除数组（1541 分）](/leetcode/2575)
+- [2845：统计趣味子数组的数目（2073 分）](/leetcode/2845)
 
 
 ## 分析

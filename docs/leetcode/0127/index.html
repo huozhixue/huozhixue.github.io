@@ -10,7 +10,7 @@
         <title>0127：单词接龙（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0127/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0127：单词接龙（★★）">
-  <meta property="og:description" content="力扣第 127 题 题目 字典 wordList 中从单词 beginWord 和 endWord 的 转换序列 是一个按下述规格形成的序列 beginWord -&gt; s1 -&gt; s2 -&gt; ... -&gt; sk： 每一对相邻的单词只差一个字母。 对于 1 &lt;= i &lt;= k 时，">
+  <meta property="og:description" content="力扣第 127 题 题目 字典 wordList 中从单词 beginWord 到 endWord 的 转换序列 是一个按下述规格形成的序列 beginWord -&gt; s1 -&gt; s2 -&gt; ... -&gt; sk： 每一对相邻的单词只差一个字母。 对于 1 &lt;= i &lt;= k 时，">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0127：单词接龙（★★）">
-  <meta name="twitter:description" content="力扣第 127 题 题目 字典 wordList 中从单词 beginWord 和 endWord 的 转换序列 是一个按下述规格形成的序列 beginWord -&gt; s1 -&gt; s2 -&gt; ... -&gt; sk： 每一对相邻的单词只差一个字母。 对于 1 &lt;= i &lt;= k 时，">
+  <meta name="twitter:description" content="力扣第 127 题 题目 字典 wordList 中从单词 beginWord 到 endWord 的 转换序列 是一个按下述规格形成的序列 beginWord -&gt; s1 -&gt; s2 -&gt; ... -&gt; sk： 每一对相邻的单词只差一个字母。 对于 1 &lt;= i &lt;= k 时，">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0127/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0126/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0128/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0127\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  476 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  527 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0127\/","datePublished": "2015-05-07T00:00:00+08:00","dateModified": "2015-05-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0127：单词接龙（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-07">2015-05-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 476 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0127/" class="leancloud_visitors" data-flag-title="0127：单词接龙（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-07">2015-05-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 527 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0127/" class="leancloud_visitors" data-flag-title="0127：单词接龙（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,7 +133,7 @@
 <p><u><strong><a href="https://leetcode.cn/problems/word-ladder/" target="_blank" rel="noopener noreffer">力扣第 127 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>字典 <code>wordList</code> 中从单词 <code>beginWord</code><em> </em>和 <code>endWord</code> 的 <strong>转换序列 </strong>是一个按下述规格形成的序列<meta charset="UTF-8" /> <code>beginWord -&gt; s<sub>1</sub> -&gt; s<sub>2</sub> -&gt; ... -&gt; s<sub>k</sub></code>：</p>
+<p>字典 <code>wordList</code> 中从单词 <code>beginWord</code><em> </em>到 <code>endWord</code> 的 <strong>转换序列 </strong>是一个按下述规格形成的序列<meta charset="UTF-8" /> <code>beginWord -&gt; s<sub>1</sub> -&gt; s<sub>2</sub> -&gt; ... -&gt; s<sub>k</sub></code>：</p>
 <ul>
 <li>每一对相邻的单词只差一个字母。</li>
 <li><meta charset="UTF-8" /> 对于 <code>1 &lt;= i &lt;= k</code> 时，每个<meta charset="UTF-8" /> <code>s<sub>i</sub></code> 都在<meta charset="UTF-8" /> <code>wordList</code> 中。注意， <code>beginWord</code><em> </em>不需要在<meta charset="UTF-8" /> <code>wordList</code> 中。<meta charset="UTF-8" /></li>
@@ -160,6 +160,12 @@
 <li><code>beginWord</code>、<code>endWord</code> 和 <code>wordList[i]</code> 由小写英文字母组成</li>
 <li><code>beginWord != endWord</code></li>
 <li><code>wordList</code> 中的所有字符串 <strong>互不相同</strong></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0126" rel="">0126：单词接龙 II</a></li>
+<li><a href="/leetcode/0433" rel="">0433：最小基因变化</a></li>
+<li><a href="/leetcode/2452" rel="">2452：距离字典两次编辑以内的单词（1459 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <ul>

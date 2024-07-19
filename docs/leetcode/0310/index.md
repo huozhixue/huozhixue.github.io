@@ -47,6 +47,14 @@
 </ul>
 
 
+**相似问题：**
+- [0207：课程表](/leetcode/0207)
+- [0210：课程表 II](/leetcode/0210)
+- [2603：收集树中金币（2711 分）](/leetcode/2603)
+- [3067：在带权树网络中统计可连接服务器对数目（1908 分）](/leetcode/3067)
+- [3203：合并两棵树后的最小直径（2266 分）](/leetcode/3203)
+
+
 ## 分析
 
 可以用拓扑排序，一层层去掉叶子，最里面的一层即是所求。证明见 [力扣](https://leetcode.cn/problems/minimum-height-trees/solutions/1395249/zui-xiao-gao-du-shu-by-leetcode-solution-6v6f/)

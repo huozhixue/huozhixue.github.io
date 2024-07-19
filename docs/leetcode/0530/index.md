@@ -39,6 +39,10 @@
 <p><strong>注意：</strong>本题与 783 <a href="https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/">https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/</a> 相同</p>
 
 
+**相似问题：**
+- [0532：数组中的 k-diff 数对](/leetcode/0532)
+
+
 ## 分析
 
 最简单的就是遍历得到数组，排序后求相邻间隔的最小值。

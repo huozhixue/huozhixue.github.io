@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0209\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  319 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  456 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0209\/","datePublished": "2015-07-28T00:00:00+08:00","dateModified": "2015-07-28T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0209：长度最小的子数组（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-28">2015-07-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 319 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-07-28">2015-07-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 456 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0209/" class="leancloud_visitors" data-flag-title="0209：长度最小的子数组（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -160,6 +160,16 @@
 <p><strong>进阶：</strong></p>
 <ul>
 <li>如果你已经实现<em> </em><code>O(n)</code> 时间复杂度的解法, 请尝试设计一个 <code>O(n log(n))</code> 时间复杂度的解法。</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0076" rel="">0076：最小覆盖子串</a></li>
+<li><a href="/leetcode/0325" rel="">0325：和等于 k 的最长子数组长度</a></li>
+<li><a href="/leetcode/0718" rel="">0718：最长重复子数组</a></li>
+<li><a href="/leetcode/1658" rel="">1658：将 x 减到 0 的最小操作数（1817 分）</a></li>
+<li><a href="/leetcode/2090" rel="">2090：半径为 k 的子数组平均值（1358 分）</a></li>
+<li><a href="/leetcode/2233" rel="">2233：K 次增加后的最大乘积（1685 分）</a></li>
+<li><a href="/leetcode/3095" rel="">3095：或值至少 K 的最短子数组 I（1368 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>遍历每个位置 j 作为结尾，找符合条件的最短子串 [i, j] ，发现是滑动窗口。</p>

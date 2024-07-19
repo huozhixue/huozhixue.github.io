@@ -10,7 +10,7 @@
         <title>0974：和可被 K 整除的子数组（1675 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0974/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0974：和可被 K 整除的子数组（1675 分）">
-  <meta property="og:description" content="力扣第 119 场周赛第 3 题 题目 给定一个整数数组 nums 和一个整数 k ，返回其中元素之和可被 k 整除的（连续、非空） 子数组 的数目。 子数组 是数组的 连续 部分。 示例">
+  <meta property="og:description" content="力扣第 119 场周赛第 3 题 题目 给定一个整数数组 nums 和一个整数 k ，返回其中元素之和可被 k 整除的非空 子数组 的数目。 子数组 是数组中 连续 的部分。 示例 1： 输入">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0974：和可被 K 整除的子数组（1675 分）">
-  <meta name="twitter:description" content="力扣第 119 场周赛第 3 题 题目 给定一个整数数组 nums 和一个整数 k ，返回其中元素之和可被 k 整除的（连续、非空） 子数组 的数目。 子数组 是数组的 连续 部分。 示例">
+  <meta name="twitter:description" content="力扣第 119 场周赛第 3 题 题目 给定一个整数数组 nums 和一个整数 k ，返回其中元素之和可被 k 整除的非空 子数组 的数目。 子数组 是数组中 连续 的部分。 示例 1： 输入">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0974/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0973/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0975/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0974\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  237 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  336 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0974\/","datePublished": "2019-01-13T10:50:00+08:00","dateModified": "2019-01-13T10:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0974：和可被 K 整除的子数组（1675 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-01-13">2019-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 237 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-01-13">2019-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 336 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0974/" class="leancloud_visitors" data-flag-title="0974：和可被 K 整除的子数组（1675 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,8 +133,8 @@
 <p><u><strong><a href="https://leetcode.cn/problems/subarray-sums-divisible-by-k/" target="_blank" rel="noopener noreffer">力扣第 119 场周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code> 整除的（连续、非空） <strong>子数组</strong> 的数目。</p>
-<p><strong>子数组</strong> 是数组的 <strong>连续</strong> 部分。</p>
+<p>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code> 整除的非空 <strong>子数组</strong> 的数目。</p>
+<p><strong>子数组</strong> 是数组中 <strong>连续</strong> 的部分。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>nums = [4,5,0,-2,-3,1], k = 5
@@ -153,6 +153,14 @@
 <li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
 <li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 <li><code>2 &lt;= k &lt;= 10<sup>4</sup></code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0560" rel="">0560：和为 K 的子数组</a></li>
+<li><a href="/leetcode/1590" rel="">1590：使数组和能被 P 整除（2038 分）</a></li>
+<li><a href="/leetcode/2364" rel="">2364：统计坏数对的数目（1622 分）</a></li>
+<li><a href="/leetcode/2575" rel="">2575：找出字符串的可整除数组（1541 分）</a></li>
+<li><a href="/leetcode/2845" rel="">2845：统计趣味子数组的数目（2073 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>类似 0523 和 0560 ，用哈希表保存前缀和的个数即可。</p>

@@ -61,6 +61,12 @@ skiplist.search(1);   // 返回 false，1 已被擦除
 </ul>
 
 
+**相似问题：**
+- [0705：设计哈希集合](/leetcode/0705)
+- [0706：设计哈希映射](/leetcode/0706)
+- [0707：设计链表](/leetcode/0707)
+
+
 ## 分析
 
 [:(far fa-hand-point-right fa-fw):跳表教程](//www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf)

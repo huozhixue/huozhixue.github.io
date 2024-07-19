@@ -68,6 +68,14 @@
 <p><strong>注意：</strong>本题与主站 724 题相同：<a href="https://leetcode-cn.com/problems/find-pivot-index/" target="_blank">https://leetcode-cn.com/problems/find-pivot-index/</a></p>
 
 
+**相似问题：**
+- [0724：寻找数组的中心下标](/leetcode/0724)
+- [1013：将数组分成和相等的三个部分（1378 分）](/leetcode/1013)
+- [2270：分割数组的方案数（1334 分）](/leetcode/2270)
+- [2219：数组的最大总分](/leetcode/2219)
+- [2574：左右元素和的差值（1206 分）](/leetcode/2574)
+
+
 ## 分析
 
 遍历找到第一个满足 sum(nums[:i])*2+nums[i] == sum(nums) 的 i 即可。

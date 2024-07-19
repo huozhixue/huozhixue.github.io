@@ -10,7 +10,7 @@
         <title>0091：解码方法（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0091/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0091：解码方法（★）">
-  <meta property="og:description" content="力扣第 91 题 题目 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ： &#39;A&#39; -&gt; &#34;1&#34; &#39;B&#39; -&gt; &#34;2&#34; ... &#39;Z&#39; -&gt; &#34;26&#34; 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回">
+  <meta property="og:description" content="力扣第 91 题 题目 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ： &#34;1&#34; -&gt; &#39;A&#39; &#34;2&#34; -&gt; &#39;B&#39; ... &#34;25&#34; -&gt; &#39;Y&#39; &#34;26&#34; -&gt; &#39;Z&#39; 然而，在 解码 已编码的消息时，你意识到有许多不同的方式来解">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0091：解码方法（★）">
-  <meta name="twitter:description" content="力扣第 91 题 题目 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ： &#39;A&#39; -&gt; &#34;1&#34; &#39;B&#39; -&gt; &#34;2&#34; ... &#39;Z&#39; -&gt; &#34;26&#34; 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回">
+  <meta name="twitter:description" content="力扣第 91 题 题目 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ： &#34;1&#34; -&gt; &#39;A&#39; &#34;2&#34; -&gt; &#39;B&#39; ... &#34;25&#34; -&gt; &#39;Y&#39; &#34;26&#34; -&gt; &#39;Z&#39; 然而，在 解码 已编码的消息时，你意识到有许多不同的方式来解">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0091/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0090/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0092/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0091\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  443 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  545 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0091\/","datePublished": "2015-04-01T00:00:00+08:00","dateModified": "2015-04-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0091：解码方法（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-04-01">2015-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 443 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0091/" class="leancloud_visitors" data-flag-title="0091：解码方法（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-04-01">2015-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 545 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0091/" class="leancloud_visitors" data-flag-title="0091：解码方法（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -134,18 +134,20 @@
 </blockquote>
 <h2 id="题目">题目</h2>
 <p>一条包含字母 <code>A-Z</code> 的消息通过以下映射进行了 <strong>编码</strong> ：</p>
-<pre>
-'A' -&gt; "1"
-'B' -&gt; "2"
-...
-'Z' -&gt; "26"</pre>
-<p>要 <strong>解码</strong> 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。例如，<code>"11106"</code> 可以映射为：</p>
+<p><code>"1" -&gt; 'A'<br />
+"2" -&gt; 'B'<br />
+...<br />
+"25" -&gt; 'Y'<br />
+"26" -&gt; 'Z'</code></p>
+<p>然而，在 <strong>解码</strong> 已编码的消息时，你意识到有许多不同的方式来解码，因为有些编码被包含在其它编码当中（<code>"2"</code> 和 <code>"5"</code> 与 <code>"25"</code>）。</p>
+<p>例如，<code>"11106"</code> 可以映射为：</p>
 <ul>
-<li><code>"AAJF"</code> ，将消息分组为 <code>(1 1 10 6)</code></li>
-<li><code>"KJF"</code> ，将消息分组为 <code>(11 10 6)</code></li>
+<li><code>"AAJF"</code> ，将消息分组为 <code>(1, 1, 10, 6)</code></li>
+<li><code>"KJF"</code> ，将消息分组为 <code>(11, 10, 6)</code></li>
+<li>消息不能分组为  <code>(1, 11, 06)</code> ，因为 <code>"06"</code> 不是一个合法编码（只有 "6" 是合法的）。</li>
 </ul>
-<p>注意，消息不能分组为  <code>(1 11 06)</code> ，因为 <code>"06"</code> 不能映射为 <code>"F"</code> ，这是由于 <code>"6"</code> 和 <code>"06"</code> 在映射中并不等价。</p>
-<p>给你一个只含数字的 <strong>非空 </strong>字符串 <code>s</code> ，请计算并返回 <strong>解码</strong> 方法的 <strong>总数</strong> 。</p>
+<p>注意，可能存在无法解码的字符串。</p>
+<p>给你一个只含数字的 <strong>非空 </strong>字符串 <code>s</code> ，请计算并返回 <strong>解码</strong> 方法的 <strong>总数</strong> 。如果没有合法的方式解码整个字符串，返回 <code>0</code>。</p>
 <p>题目数据保证答案肯定是一个 <strong>32 位</strong> 的整数。</p>
 <p><strong>示例 1：</strong></p>
 <pre>
@@ -169,6 +171,12 @@
 <ul>
 <li><code>1 &lt;= s.length &lt;= 100</code></li>
 <li><code>s</code> 只包含数字，并且可能包含前导零。</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0639" rel="">0639：解码方法 II</a></li>
+<li><a href="/leetcode/1977" rel="">1977：划分数字的方案数（2817 分）</a></li>
+<li><a href="/leetcode/2266" rel="">2266：统计打字方案数（1856 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <ul>

@@ -58,6 +58,14 @@
 <p><strong>注意：</strong>本题与主站 1991 题相同：<a href="https://leetcode-cn.com/problems/find-the-middle-index-in-array/" target="_blank">https://leetcode-cn.com/problems/find-the-middle-index-in-array/</a></p>
 
 
+**相似问题：**
+- [0560：和为 K 的子数组](/leetcode/0560)
+- [1991：找到数组的中间位置（1302 分）](/leetcode/1991)
+- [2270：分割数组的方案数（1334 分）](/leetcode/2270)
+- [2219：数组的最大总分](/leetcode/2219)
+- [2574：左右元素和的差值（1206 分）](/leetcode/2574)
+
+
 ## 分析
 
 对于中心索引 i，sum(nums[:i])==sum(nums[i+1:])，等价于 

@@ -76,6 +76,10 @@ Department 表:
 <strong>解释：</strong>Max 和 Jim 在 IT 部门的工资都是最高的，Henry 在销售部的工资最高。</pre>
 
 
+**相似问题：**
+- [1112：每位学生的最高成绩](/leetcode/1112)
+
+
 ## 分析
 
 先按部门分组得到每个组的最大工资，并作为临时表，然后与 Employee、Department 按部门 id 连接并判断员工工资是否为最大工资即可。

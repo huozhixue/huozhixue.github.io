@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1991\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  476 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  572 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1991\/","datePublished": "2021-09-04T22:30:00+08:00","dateModified": "2021-09-04T22:30:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1991：找到数组的中间位置（1302 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-04">2021-09-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 476 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1991/" class="leancloud_visitors" data-flag-title="1991：找到数组的中间位置（1302 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-04">2021-09-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 572 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1991/" class="leancloud_visitors" data-flag-title="1991：找到数组的中间位置（1302 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -174,6 +174,14 @@
 <li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
 <p><strong>注意：</strong>本题与主站 724 题相同：<a href="https://leetcode-cn.com/problems/find-pivot-index/" target="_blank">https://leetcode-cn.com/problems/find-pivot-index/</a></p>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0724" rel="">0724：寻找数组的中心下标</a></li>
+<li><a href="/leetcode/1013" rel="">1013：将数组分成和相等的三个部分（1378 分）</a></li>
+<li><a href="/leetcode/2270" rel="">2270：分割数组的方案数（1334 分）</a></li>
+<li><a href="/leetcode/2219" rel="">2219：数组的最大总分</a></li>
+<li><a href="/leetcode/2574" rel="">2574：左右元素和的差值（1206 分）</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>遍历找到第一个满足 sum(nums[:i])*2+nums[i] == sum(nums) 的 i 即可。</p>
 <h2 id="解答">解答</h2>

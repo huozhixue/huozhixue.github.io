@@ -47,6 +47,8 @@
 <p><strong>注意：</strong>本题与 1009 <a href="https://leetcode-cn.com/problems/complement-of-base-10-integer/">https://leetcode-cn.com/problems/complement-of-base-10-integer/</a> 相同</p>
 
 
+
+
 ## 分析
 
 用二进制位数相同且全是 1 的数减去 num 即可。

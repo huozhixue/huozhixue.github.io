@@ -10,7 +10,7 @@
         <title>0130：被围绕的区域（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0130/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0130：被围绕的区域（★）">
-  <meta property="og:description" content="力扣第 130 题 题目 给你一个 m x n 的矩阵 board ，由若干字符 ‘X’ 和 ‘O’ ，找到所有被 ‘X’ 围绕的区域，并将这些区域里所有的 ‘O’ 用 ‘X’ 填充。 示例 1： 输入：board = [[&#34;X&#34;,&#34;X&#34;,&#34;X&#34;,&#34;X&#34;],[&#34;X&#34;,&#34;O&#34;,&#34;O&#34;,&#34;X&#34;],[&#34;X&#34;,&#34;X&#34;,&#34;O&#34;,&#34;X&#34;],[&#34;X&#34;,&#34;O&#34;,&#34;X&#34;,&#34;X&#34;]]">
+  <meta property="og:description" content="力扣第 130 题 题目 给你一个 m x n 的矩阵 board ，由若干字符 &#39;X&#39; 和 &#39;O&#39; 组成，捕获 所有 被围绕的区域： 连接：一个单元格与水平或垂直方向上相邻的单元格连接。 区域：">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0130：被围绕的区域（★）">
-  <meta name="twitter:description" content="力扣第 130 题 题目 给你一个 m x n 的矩阵 board ，由若干字符 ‘X’ 和 ‘O’ ，找到所有被 ‘X’ 围绕的区域，并将这些区域里所有的 ‘O’ 用 ‘X’ 填充。 示例 1： 输入：board = [[&#34;X&#34;,&#34;X&#34;,&#34;X&#34;,&#34;X&#34;],[&#34;X&#34;,&#34;O&#34;,&#34;O&#34;,&#34;X&#34;],[&#34;X&#34;,&#34;X&#34;,&#34;O&#34;,&#34;X&#34;],[&#34;X&#34;,&#34;O&#34;,&#34;X&#34;,&#34;X&#34;]]">
+  <meta name="twitter:description" content="力扣第 130 题 题目 给你一个 m x n 的矩阵 board ，由若干字符 &#39;X&#39; 和 &#39;O&#39; 组成，捕获 所有 被围绕的区域： 连接：一个单元格与水平或垂直方向上相邻的单元格连接。 区域：">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0130/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0129/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0131/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0130\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  475 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  539 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0130\/","datePublished": "2015-05-10T00:00:00+08:00","dateModified": "2015-05-10T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0130：被围绕的区域（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-10">2015-05-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 475 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0130/" class="leancloud_visitors" data-flag-title="0130：被围绕的区域（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-10">2015-05-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 539 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0130/" class="leancloud_visitors" data-flag-title="0130：被围绕的区域（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,30 +133,42 @@
 <p><u><strong><a href="https://leetcode.cn/problems/surrounded-regions/" target="_blank" rel="noopener noreffer">力扣第 130 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个 <code>m x n</code> 的矩阵 <code>board</code> ，由若干字符 <code>&lsquo;X&rsquo;</code> 和 <code>&lsquo;O&rsquo;</code> ，找到所有被 <code>&lsquo;X&rsquo;</code> 围绕的区域，并将这些区域里所有的 <code>&lsquo;O&rsquo;</code> 用 <code>&lsquo;X&rsquo;</code> 填充。</p>
+<p>给你一个 <code>m x n</code> 的矩阵 <code>board</code> ，由若干字符 <code>'X'</code> 和 <code>'O'</code> 组成，<strong>捕获</strong> 所有 <strong>被围绕的区域</strong>：</p>
+<ul>
+<li><strong>连接：</strong>一个单元格与水平或垂直方向上相邻的单元格连接。</li>
+<li><strong>区域：连接所有 </strong><code>'O'</code> 的单元格来形成一个区域。</li>
+<li><strong>围绕：</strong>如果您可以用 <code>'X'</code> 单元格 <strong>连接这个区域</strong>，并且区域中没有任何单元格位于 <code>board</code> 边缘，则该区域被 <code>'X'</code> 单元格围绕。</li>
+</ul>
+<p>通过将输入矩阵 <code>board</code> 中的所有 <code>'O'</code> 替换为 <code>'X'</code> 来 <strong>捕获被围绕的区域</strong>。</p>
 <div class="original__bRMd">
 <div>
-<p><strong>示例 1：</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/xogrid.jpg" style="width: 550px; height: 237px;" />
-<pre>
-<strong>输入：</strong>board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
-<strong>输出：</strong>[["X","X","X","X"],["X","X","X","X"],["X","X","X","X"],["X","O","X","X"]]
-<strong>解释：</strong>被围绕的区间不会存在于边界上，换句话说，任何边界上的 <code>'O'</code> 都不会被填充为 <code>'X'</code>。 任何不在边界上，或不与边界上的 <code>'O'</code> 相连的 <code>'O'</code> 最终都会被填充为 <code>'X'</code>。如果两个元素在水平或垂直方向相邻，则称它们是“相连”的。
-</pre>
-<p><strong>示例 2：</strong></p>
-<pre>
-<strong>输入：</strong>board = [["X"]]
-<strong>输出：</strong>[["X"]]
-</pre>
+<p><strong class="example">示例 1：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]</span></p>
+<p><b>输出：</b><span class="example-io">[["X","X","X","X"],["X","X","X","X"],["X","X","X","X"],["X","O","X","X"]]</span></p>
+<p><strong>解释：</strong></p>
+<img alt="" src="https://pic.leetcode.cn/1718167191-XNjUTG-image.png" style="width: 367px; height: 158px;" />
+<p>在上图中，底部的区域没有被捕获，因为它在 board 的边缘并且不能被围绕。</p>
+</div>
+<p><strong class="example">示例 2：</strong></p>
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">board = [["X"]]</span></p>
+<p><strong>输出：</strong><span class="example-io">[["X"]]</span></p>
+</div>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>m == board.length</code></li>
 <li><code>n == board[i].length</code></li>
-<li><code>1 <= m, n <= 200</code></li>
+<li><code>1 &lt;= m, n &lt;= 200</code></li>
 <li><code>board[i][j]</code> 为 <code>'X'</code> 或 <code>'O'</code></li>
 </ul>
 </div>
 </div>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0200" rel="">0200：岛屿数量</a></li>
+<li><a href="/leetcode/0286" rel="">0286：墙与门</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <ul>
 <li>只有与边界连通的 &lsquo;O&rsquo; 才不会被填充</li>

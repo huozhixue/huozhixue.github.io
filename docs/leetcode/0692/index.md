@@ -45,6 +45,14 @@
 <p><strong>进阶：</strong>尝试以 <code>O(n log k)</code> 时间复杂度和 <code>O(n)</code> 空间复杂度解决。</p>
 
 
+**相似问题：**
+- [0347：前 K 个高频元素](/leetcode/0347)
+- [0973：最接近原点的 K 个点（1213 分）](/leetcode/0973)
+- [1772：按受欢迎程度排列功能](/leetcode/1772)
+- [2284：最多单词数的发件人（1346 分）](/leetcode/2284)
+- [2341：数组能形成多少数对（1184 分）](/leetcode/2341)
+
+
 ## 分析
 
 Counter 计数后，用 sort 或者 heapq.nsmallest 即可。

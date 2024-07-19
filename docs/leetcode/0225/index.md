@@ -60,6 +60,10 @@ myStack.empty(); // 返回 False
 <p><strong>进阶：</strong>你能否仅用一个队列来实现栈。</p>
 
 
+**相似问题：**
+- [0232：用栈实现队列](/leetcode/0232)
+
+
 ## 分析
 
 

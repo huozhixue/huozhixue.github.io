@@ -61,6 +61,10 @@ public void third() { print("third"); }
 </ul>
 
 
+**相似问题：**
+- [1115：交替打印 FooBar](/leetcode/1115)
+
+
 ## 分析
 
 典型的并发问题，最常用的是互斥锁。

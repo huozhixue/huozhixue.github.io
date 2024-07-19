@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0238\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  344 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  420 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0238\/","datePublished": "2015-08-26T00:00:00+08:00","dateModified": "2015-08-26T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0238：除自身以外数组的乘积（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-26">2015-08-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 344 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-08-26">2015-08-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 420 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0238/" class="leancloud_visitors" data-flag-title="0238：除自身以外数组的乘积（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,9 +133,9 @@
 <p><u><strong><a href="https://leetcode.cn/problems/product-of-array-except-self/" target="_blank" rel="noopener noreffer">力扣第 238 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code>，返回 <em>数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积</em> 。</p>
+<p>给你一个整数数组 <code>nums</code>，返回 数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积 。</p>
 <p>题目数据 <strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在  <strong>32 位</strong> 整数范围内。</p>
-<p>请 <strong>不要使用除法，</strong>且在 <code>O(<em>n</em>)</code> 时间复杂度内完成此题。</p>
+<p>请 <strong>不要使用除法，</strong>且在 <code>O(n)</code> 时间复杂度内完成此题。</p>
 <p><strong>示例 1:</strong></p>
 <pre>
 <strong>输入:</strong> nums = <code>[1,2,3,4]</code>
@@ -153,6 +153,14 @@
 <li><strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在  <strong>32 位</strong> 整数范围内</li>
 </ul>
 <p><strong>进阶：</strong>你可以在 <code>O(1)</code> 的额外空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组 <strong>不被视为 </strong>额外空间。）</p>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0042" rel="">0042：接雨水</a></li>
+<li><a href="/leetcode/0152" rel="">0152：乘积最大子数组</a></li>
+<li><a href="/leetcode/0265" rel="">0265：粉刷房子 II</a></li>
+<li><a href="/leetcode/2163" rel="">2163：删除元素后和的最小差值（2225 分）</a></li>
+<li><a href="/leetcode/2906" rel="">2906：构造乘积矩阵（2074 分）</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <ul>
 <li>要求不用除法，只能求出前缀乘和后缀乘，再相乘。</li>

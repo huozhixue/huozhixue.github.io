@@ -5,7 +5,7 @@
 
 ## 题目
 
-<p>字典 <code>wordList</code> 中从单词 <code>beginWord</code><em> </em>和 <code>endWord</code> 的 <strong>转换序列 </strong>是一个按下述规格形成的序列<meta charset="UTF-8" /> <code>beginWord -&gt; s<sub>1</sub> -&gt; s<sub>2</sub> -&gt; ... -&gt; s<sub>k</sub></code>：</p>
+<p>字典 <code>wordList</code> 中从单词 <code>beginWord</code><em> </em>到 <code>endWord</code> 的 <strong>转换序列 </strong>是一个按下述规格形成的序列<meta charset="UTF-8" /> <code>beginWord -&gt; s<sub>1</sub> -&gt; s<sub>2</sub> -&gt; ... -&gt; s<sub>k</sub></code>：</p>
 
 <ul>
 <li>每一对相邻的单词只差一个字母。</li>
@@ -44,6 +44,12 @@
 <li><code>beginWord != endWord</code></li>
 <li><code>wordList</code> 中的所有字符串 <strong>互不相同</strong></li>
 </ul>
+
+
+**相似问题：**
+- [0126：单词接龙 II](/leetcode/0126)
+- [0433：最小基因变化](/leetcode/0433)
+- [2452：距离字典两次编辑以内的单词（1459 分）](/leetcode/2452)
 
 
 ## 分析

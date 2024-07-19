@@ -36,6 +36,10 @@
 <p><strong>注意：</strong>该题与 1081 <a href="https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters">https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters</a> 相同</p>
 
 
+**相似问题：**
+- [2030：含特定字母的最小子序列（2561 分）](/leetcode/2030)
+
+
 ## 分析
 
 - 要字典序最小，遍历时考虑贪心

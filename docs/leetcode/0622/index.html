@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0622\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  659 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  696 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0622\/","datePublished": "2016-09-13T00:00:00+08:00","dateModified": "2016-09-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0622：设计循环队列（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-09-13">2016-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 659 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-09-13">2016-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 696 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0622/" class="leancloud_visitors" data-flag-title="0622：设计循环队列（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -161,6 +161,11 @@ circularQueue.Rear();  // 返回 4</pre>
 <li>所有的值都在 0 至 1000 的范围内；</li>
 <li>操作数将在 1 至 1000 的范围内；</li>
 <li>请不要使用内置的队列库。</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0641" rel="">0641：设计循环双端队列</a></li>
+<li><a href="/leetcode/1670" rel="">1670：设计前中后队列（1610 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>循环队列用数组实现即可。注意一个长为 k 的循环队列，当队列为空或已满时，队首队尾的指针相同，无法区分。

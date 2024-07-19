@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1334\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  585 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  604 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1334\/","datePublished": "2020-01-26T10:50:00+08:00","dateModified": "2020-01-26T10:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1334：阈值距离内邻居最少的城市（1854 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-26">2020-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 585 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-26">2020-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 604 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1334/" class="leancloud_visitors" data-flag-title="1334：阈值距离内邻居最少的城市（1854 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,8 +133,8 @@
 <p><u><strong><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/" target="_blank" rel="noopener noreffer">力扣第 173 场周赛第 3 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>有 <code>n</code> 个城市，按从 <code>0</code> 到 <code>n-1</code> 编号。给你一个边数组 <code>edges</code>，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> 代表 <code>from<sub>i</sub></code> 和 <code>to<sub>i</sub></code><sub> </sub>两个城市之间的双向加权边，距离阈值是一个整数 <code>distanceThreshold</code>。</p>
-<p>返回能通过某些路径到达其他城市数目最少、且路径距离 <strong>最大</strong> 为 <code>distanceThreshold</code> 的城市。如果有多个这样的城市，则返回编号最大的城市。</p>
+<p>有 <code>n</code> 个城市，按从 <code>0</code> 到 <code>n-1</code> 编号。给你一个边数组 <code>edges</code>，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> 代表 <code>from<sub>i</sub></code> 和 <code>to<sub>i</sub></code><sub> </sub>两个城市之间的双向加权边，距离阈值是一个整数 <code>distanceThreshold</code>。</p>
+<p>返回在路径距离限制为 <code>distanceThreshold</code> 以内可到达城市最少的城市。如果有多个这样的城市，则返回编号最大的城市。</p>
 <p>注意，连接城市 <em><strong>i</strong></em> 和 <em><strong>j</strong></em> 的路径的距离等于沿该路径的所有边的权重之和。</p>
 <p><strong>示例 1：</strong></p>
 <p><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/26/find_the_city_01.png" style="height: 225px; width: 300px;" /></p>
@@ -143,10 +143,10 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>城市分布图如上。
 每个城市阈值距离 distanceThreshold = 4 内的邻居城市分别是：
-城市 0 -> [城市 1, 城市 2]
-城市 1 -> [城市 0, 城市 2, 城市 3]
-城市 2 -> [城市 0, 城市 1, 城市 3]
-城市 3 -> [城市 1, 城市 2]
+城市 0 -&gt; [城市 1, 城市 2]
+城市 1 -&gt; [城市 0, 城市 2, 城市 3]
+城市 2 -&gt; [城市 0, 城市 1, 城市 3]
+城市 3 -&gt; [城市 1, 城市 2]
 城市 0 和 3 在阈值距离 4 以内都有 2 个邻居城市，但是我们必须返回城市 3，因为它的编号最大。
 </pre>
 <p><strong>示例 2：</strong></p>
@@ -156,21 +156,25 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>城市分布图如上。
 每个城市阈值距离 distanceThreshold = 2 内的邻居城市分别是：
-城市 0 -> [城市 1]
-城市 1 -> [城市 0, 城市 4]
-城市 2 -> [城市 3, 城市 4]
-城市 3 -> [城市 2, 城市 4]
-城市 4 -> [城市 1, 城市 2, 城市 3]
+城市 0 -&gt; [城市 1]
+城市 1 -&gt; [城市 0, 城市 4]
+城市 2 -&gt; [城市 3, 城市 4]
+城市 3 -&gt; [城市 2, 城市 4]
+城市 4 -&gt; [城市 1, 城市 2, 城市 3]
 城市 0 在阈值距离 2 以内只有 1 个邻居城市。
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>2 <= n <= 100</code></li>
-<li><code>1 <= edges.length <= n * (n - 1) / 2</code></li>
+<li><code>2 &lt;= n &lt;= 100</code></li>
+<li><code>1 &lt;= edges.length &lt;= n * (n - 1) / 2</code></li>
 <li><code>edges[i].length == 3</code></li>
-<li><code>0 <= from<sub>i</sub> < to<sub>i</sub> < n</code></li>
-<li><code>1 <= weight<sub>i</sub>, distanceThreshold <= 10^4</code></li>
-<li>所有 <code>(from<sub>i</sub>, to<sub>i</sub>)</code> 都是不同的。</li>
+<li><code>0 &lt;= from<sub>i</sub> &lt; to<sub>i</sub> &lt; n</code></li>
+<li><code>1 &lt;= weight<sub>i</sub>, distanceThreshold &lt;= 10^4</code></li>
+<li>所有 <code>(from<sub>i</sub>, to<sub>i</sub>)</code> 都是不同的。</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/2045" rel="">2045：到达目的地的第二短时间（2201 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>典型的最短路问题，可以直接用 floyd 算法。</p>

@@ -76,6 +76,10 @@ Address表:
 addressId = 1 包含了 personId = 2 的地址信息。</pre>
 
 
+**相似问题：**
+- [0577：员工奖金](/leetcode/0577)
+
+
 ## 分析
 
 左连接即可。

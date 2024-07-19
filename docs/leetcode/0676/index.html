@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0676\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  618 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  649 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0676\/","datePublished": "2016-11-06T00:00:00+08:00","dateModified": "2016-11-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0676：实现一个魔法字典（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-06">2016-11-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 618 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-06">2016-11-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 649 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0676/" class="leancloud_visitors" data-flag-title="0676：实现一个魔法字典（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -173,6 +173,11 @@ magicDictionary.search("leetcoded"); // 返回 False
 </div>
 </div>
 </div>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0208" rel="">0208：实现 Trie (前缀树)</a></li>
+<li><a href="/leetcode/0720" rel="">0720：词典中最长的单词</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>因为单词的长度较短且只含小写字母，所以可以遍历所有能转换得到的单词，判断是否在字典中即可。</p>
 <p>还有个巧妙的想法，可以将单词的某一位改为 &lsquo;.&rsquo; 作为单词的 key。

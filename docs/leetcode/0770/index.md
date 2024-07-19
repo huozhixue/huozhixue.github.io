@@ -84,6 +84,11 @@ evalvars = ["e", "temperature"], evalints = [1, 12]
 </ul>
 
 
+**相似问题：**
+- [0736：Lisp 语法解析](/leetcode/0736)
+- [0772：基本计算器 III](/leetcode/0772)
+
+
 ## 分析
 
 本质上是多项式的计算。为了方便，考虑用 Counter() 存储变量和系数。

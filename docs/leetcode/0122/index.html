@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0122\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  471 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  571 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0122\/","datePublished": "2015-05-02T00:00:00+08:00","dateModified": "2015-05-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0122：买卖股票的最佳时机 II（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-02">2015-05-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 471 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0122/" class="leancloud_visitors" data-flag-title="0122：买卖股票的最佳时机 II（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-05-02">2015-05-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 571 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0122/" class="leancloud_visitors" data-flag-title="0122：买卖股票的最佳时机 II（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -140,24 +140,33 @@
 <pre>
 <strong>输入：</strong>prices = [7,1,5,3,6,4]
 <strong>输出：</strong>7
-<strong>解释：</strong>在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4 。
-随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6 - 3 = 3 。
-总利润为 4 + 3 = 7 。</pre>
+<strong>解释：</strong>在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4。
+随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6 - 3 = 3。
+最大总利润为 4 + 3 = 7 。</pre>
 <p><strong>示例 2：</strong></p>
 <pre>
 <strong>输入：</strong>prices = [1,2,3,4,5]
 <strong>输出：</strong>4
-<strong>解释：</strong>在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4 。
-总利润为 4 。</pre>
+<strong>解释：</strong>在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4。
+最大总利润为 4 。</pre>
 <p><strong>示例 3：</strong></p>
 <pre>
 <strong>输入：</strong>prices = [7,6,4,3,1]
 <strong>输出：</strong>0
-<strong>解释：</strong>在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0 。</pre>
+<strong>解释：</strong>在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0。</pre>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= prices.length &lt;= 3 * 10<sup>4</sup></code></li>
 <li><code>0 &lt;= prices[i] &lt;= 10<sup>4</sup></code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0121" rel="">0121：买卖股票的最佳时机</a></li>
+<li><a href="/leetcode/0123" rel="">0123：买卖股票的最佳时机 III</a></li>
+<li><a href="/leetcode/0188" rel="">0188：买卖股票的最佳时机 IV</a></li>
+<li><a href="/leetcode/0309" rel="">0309：买卖股票的最佳时机含冷冻期</a></li>
+<li><a href="/leetcode/0714" rel="">0714：买卖股票的最佳时机含手续费</a></li>
+<li><a href="/leetcode/2291" rel="">2291：最大股票收益</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0121" title="0121" rel="noopener noreferrer">0121</a> 变形，区别在于可以多次买卖，dp[i][0] 可以由dp[i-1][1] 递推。</p>

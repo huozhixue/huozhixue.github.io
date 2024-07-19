@@ -10,7 +10,7 @@
         <title>0523：连续的子数组和（★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0523/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0523：连续的子数组和（★）">
-  <meta property="og:description" content="力扣第 523 题 题目 给你一个整数数组 nums 和一个整数 k ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组： 子数组大小 至少为 2 ，且 子数组元素">
+  <meta property="og:description" content="力扣第 523 题 题目 给你一个整数数组 nums 和一个整数 k ，如果 nums 有一个 好的子数组 返回 true ，否则返回 false： 一个 好的子数组 是： 长度 至少为 2 ，且 子数组元素">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0523：连续的子数组和（★）">
-  <meta name="twitter:description" content="力扣第 523 题 题目 给你一个整数数组 nums 和一个整数 k ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组： 子数组大小 至少为 2 ，且 子数组元素">
+  <meta name="twitter:description" content="力扣第 523 题 题目 给你一个整数数组 nums 和一个整数 k ，如果 nums 有一个 好的子数组 返回 true ，否则返回 false： 一个 好的子数组 是： 长度 至少为 2 ，且 子数组元素">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0523/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0522/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0524/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0523\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  393 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  479 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0523\/","datePublished": "2016-06-06T00:00:00+08:00","dateModified": "2016-06-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0523：连续的子数组和（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-06-06">2016-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 393 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-06-06">2016-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 479 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0523/" class="leancloud_visitors" data-flag-title="0523：连续的子数组和（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,13 +133,17 @@
 <p><u><strong><a href="https://leetcode.cn/problems/continuous-subarray-sum/" target="_blank" rel="noopener noreffer">力扣第 523 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组：</p>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，如果 <code>nums</code> 有一个 <strong>好的子数组</strong> 返回 <code>true</code> ，否则返回 <code>false</code>：</p>
+<p>一个 <strong>好的子数组</strong> 是：</p>
 <ul>
-<li>子数组大小 <strong>至少为 2</strong> ，且</li>
+<li>长度 <strong>至少为 2</strong> ，且</li>
 <li>子数组元素总和为 <code>k</code> 的倍数。</li>
 </ul>
-<p>如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-<p>如果存在一个整数 <code>n</code> ，令整数 <code>x</code> 符合 <code>x = n * k</code> ，则称 <code>x</code> 是 <code>k</code> 的一个倍数。<code>0</code> 始终视为 <code>k</code> 的一个倍数。</p>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><strong>子数组</strong> 是数组中 <strong>连续</strong> 的部分。</li>
+<li>如果存在一个整数 <code>n</code> ，令整数 <code>x</code> 符合 <code>x = n * k</code> ，则称 <code>x</code> 是 <code>k</code> 的一个倍数。<code>0</code> <strong>始终</strong> 视为 <code>k</code> 的一个倍数。</li>
+</ul>
 <p><strong>示例 1：</strong></p>
 <pre>
 <strong>输入：</strong>nums = [23<u>,2,4</u>,6,7], k = 6
@@ -159,10 +163,17 @@
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 <= nums.length <= 10<sup>5</sup></code></li>
-<li><code>0 <= nums[i] <= 10<sup>9</sup></code></li>
-<li><code>0 <= sum(nums[i]) <= 2<sup>31</sup> - 1</code></li>
-<li><code>1 <= k <= 2<sup>31</sup> - 1</code></li>
+<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+<li><code>0 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+<li><code>0 &lt;= sum(nums[i]) &lt;= 2<sup>31</sup> - 1</code></li>
+<li><code>1 &lt;= k &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0560" rel="">0560：和为 K 的子数组</a></li>
+<li><a href="/leetcode/2009" rel="">2009：使数组连续的最少操作数（2084 分）</a></li>
+<li><a href="/leetcode/2121" rel="">2121：相同元素的间隔之和（1760 分）</a></li>
+<li><a href="/leetcode/2772" rel="">2772：使数组中的所有元素都等于零（2029 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <ul>

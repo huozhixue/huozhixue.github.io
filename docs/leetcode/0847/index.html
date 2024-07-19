@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0847\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  487 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  513 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0847\/","datePublished": "2018-06-03T10:00:00+08:00","dateModified": "2018-06-03T10:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0847：访问所有节点的最短路径（2200 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-06-03">2018-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 487 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0847/" class="leancloud_visitors" data-flag-title="0847：访问所有节点的最短路径（2200 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-06-03">2018-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 513 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0847/" class="leancloud_visitors" data-flag-title="0847：访问所有节点的最短路径（2200 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -159,6 +159,10 @@
 <li><code>graph[i]</code> 不包含 <code>i</code></li>
 <li>如果 <code>graph[a]</code> 包含 <code>b</code> ，那么 <code>graph[b]</code> 也包含 <code>a</code></li>
 <li>输入的图总是连通图</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/3149" rel="">3149：找出分数最低的排列（2641 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p>遍历时关心的状态其实是 (节点 u, 访问过的节点集合 s) 二元组。那么类似 <a href="/leetcode/0787" title="0787" rel="noopener noreferrer">0787</a>，可以构造新图。</p>

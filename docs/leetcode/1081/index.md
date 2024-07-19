@@ -36,6 +36,10 @@
 <p><strong>注意：</strong>该题与 316 <a href="https://leetcode.cn/problems/remove-duplicate-letters/">https://leetcode.cn/problems/remove-duplicate-letters/</a> 相同</p>
 
 
+**相似问题：**
+- [1673：找出最具竞争力的子序列（1802 分）](/leetcode/1673)
+
+
 ## 分析
 
 

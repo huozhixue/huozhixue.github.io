@@ -52,6 +52,8 @@ Employee 表:
 <strong>解释:</strong> Joe 是唯一挣得比经理多的雇员。</pre>
 
 
+
+
 ## 分析
 
 自连接并判断即可。

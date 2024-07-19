@@ -10,7 +10,7 @@
         <title>0262：行程和用户（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:url" content="https://huozhixue.github.io/leetcode/0262/">
   <meta property="og:site_name" content="个人博客">
   <meta property="og:title" content="0262：行程和用户（★★）">
-  <meta property="og:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | &#43;-------------&#43;----------&#43; id 是这张表的主键（具有唯一值的列）">
+  <meta property="og:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | varchar | &#43;-------------&#43;----------&#43; id 是这张表的主键（具有唯一值的列）">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="leetcode">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://huozhixue.github.io/logo.png">
   <meta name="twitter:title" content="0262：行程和用户（★★）">
-  <meta name="twitter:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | date | &#43;-------------&#43;----------&#43; id 是这张表的主键（具有唯一值的列）">
+  <meta name="twitter:description" content="力扣第 262 题 题目 表：Trips &#43;-------------&#43;----------&#43; | Column Name | Type | &#43;-------------&#43;----------&#43; | id | int | | client_id | int | | driver_id | int | | city_id | int | | status | enum | | request_at | varchar | &#43;-------------&#43;----------&#43; id 是这张表的主键（具有唯一值的列）">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/leetcode/0262/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0261/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0263/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0262\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1151 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1204 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0262\/","datePublished": "2015-09-19T00:00:00+08:00","dateModified": "2015-09-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0262：行程和用户（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-19">2015-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1151 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-19">2015-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1204 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0262/" class="leancloud_visitors" data-flag-title="0262：行程和用户（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -145,7 +145,7 @@
 | driver_id   | int      |
 | city_id     | int      |
 | status      | enum     |
-| request_at  | date     |
+| request_at  | varchar  |
 +-------------+----------+
 id 是这张表的主键（具有唯一值的列）。
 这张表中存所有出租车的行程信息。每段行程有唯一 id ，其中 client_id 和 driver_id 是 Users 表中 users_id 的外键。
@@ -230,6 +230,12 @@ Users 表：
 </pre>
 </div>
 </div>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/1635" rel="">1635：Hopper 公司查询 I</a></li>
+<li><a href="/leetcode/1645" rel="">1645：Hopper 公司查询 II</a></li>
+<li><a href="/leetcode/1651" rel="">1651：Hopper 公司查询 III</a></li>
+</ul>
 <h2 id="分析">分析</h2>
 <p>先通过连接筛出非禁止用户的请求，然后按日期分组，求每组的取消率即可。</p>
 <h2 id="解答">解答</h2>

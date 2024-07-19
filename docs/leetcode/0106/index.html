@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0106\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  249 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  274 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0106\/","datePublished": "2015-04-16T00:00:00+08:00","dateModified": "2015-04-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0106：从中序与后序遍历序列构造二叉树（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-04-16">2015-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 249 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-04-16">2015-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 274 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0106/" class="leancloud_visitors" data-flag-title="0106：从中序与后序遍历序列构造二叉树（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -154,6 +154,10 @@
 <li><code>postorder</code> 中每一个值都在 <code>inorder</code> 中</li>
 <li><code>inorder</code> <strong>保证</strong>是树的中序遍历</li>
 <li><code>postorder</code> <strong>保证</strong>是树的后序遍历</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0105" rel="">0105：从前序与中序遍历序列构造二叉树</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <p><a href="/leetcode/0105" title="0105" rel="noopener noreferrer">0105</a> 变形，只是从找 preorder[0] 变成了找 postorder[-1]。</p>
