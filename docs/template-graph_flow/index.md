@@ -10,7 +10,7 @@ class Dinic:
         self.h = {}                         # h 是图中每个 u 离源点 s 的距离
         self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
 
-    def add(self,u,v,c):
+    def add(self,u,v,c):                    # 顶点 u 和 v 连边，容量 c
         self.g[u].append([v,len(self.g[v]),c])
         self.g[v].append([u,len(self.g[u])-1,0])
 
@@ -59,7 +59,7 @@ class Dinic:
         self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
         self.vis = set()
 
-    def add(self,u,v,c,w):
+    def add(self,u,v,c,w):                  # 顶点 u 和 v 连边，容量 c，费用 w
         self.g[u].append([v,len(self.g[v]),c,w])
         self.g[v].append([u,len(self.g[u])-1,0,-w])
 

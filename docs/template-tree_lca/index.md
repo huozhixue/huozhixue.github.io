@@ -21,7 +21,7 @@ class LCA:
                     sk.append(v,u)
                     self.f[v][0] = u
                     self.D[v] = self.D[u]+1
-        for i in range(m):
+        for i in range(m-1):
             for u in range(n):
                 p = self.f[u][i]
                 if p!=-1:
