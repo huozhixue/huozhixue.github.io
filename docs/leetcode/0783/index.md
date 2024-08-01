@@ -55,16 +55,18 @@
 ## 解答
 
 ```python
-def minDiffInBST(self, root: TreeNode) -> int:
-	res = float('inf')
-	stack, pre = [root], float('-inf')
-	while stack:
-		node = stack.pop()
-		if isinstance(node, int):
-			res, pre = min(res, node - pre), node
-		elif node:
-			stack.extend([node.right, node.val, node.left])
-	return res
+class Solution:
+    def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
+        res,pre = inf,-inf
+        sk = [root]
+        while sk:
+            u = sk.pop()
+            if isinstance(u,int):
+                res = min(res,u-pre)
+                pre = u
+            elif u:
+                sk.extend([u.right,u.val,u.left])
+        return res
 ```
 
 40 ms

@@ -45,23 +45,23 @@
 
 ## 分析
 
-最简单的就是遍历得到数组，排序后求相邻间隔的最小值。
-
-因为本题是二叉搜索树，所以直接中序遍历即可。
+中序遍历求最小相邻间隔即可。
 
 ## 解答
 
 ```python
-def getMinimumDifference(self, root: TreeNode) -> int:
-	res = float('inf')
-	stack, pre = [root], float('-inf')
-	while stack:
-		node = stack.pop()
-		if isinstance(node, int):
-			res, pre = min(res, node-pre), node
-		elif node:
-			stack.extend([node.right, node.val, node.left])
-	return res
+class Solution:
+    def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
+        res,pre = inf,-inf
+        sk = [root]
+        while sk:
+            u = sk.pop()
+            if isinstance(u,int):
+                res = min(res,u-pre)
+                pre = u
+            elif u:
+                sk.extend([u.right,u.val,u.left])
+        return res
 ```
 
-68 ms
+56 ms

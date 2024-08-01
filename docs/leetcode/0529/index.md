@@ -66,60 +66,37 @@
 
 ## 分析
 
-### #1
 
-如果点到地雷了，直接改为 'X' 返回。否则，每一步应该计算相邻地雷的个数，为零就改为 'B' 递归遍历所有相邻的空方块，
-不为零就改为数字。
-
-可以用 dfs 解决。注意递归时判断相邻方块是否是空方块，避免重复计算。
-
-```python
-def updateBoard(self, board: List[List[str]], click: List[int]) -> List[List[str]]:
-	def dfs(i, j):
-		cnt = sum(0<=x<m and 0<=y<n and board[x][y]=='M' for x, y in product([i-1, i, i+1], [j-1, j, j+1]))
-		if cnt:
-			board[i][j] = str(cnt)
-		else:
-			board[i][j] = 'B'
-			for x, y in product([i-1, i, i+1], [j-1, j, j+1]):
-				if 0<=x<m and 0<=y<n and board[x][y] == 'E':
-					dfs(x, y)
-
-	m, n, (i, j) = len(board), len(board[0]), click
-	if board[i][j] == 'M':
-		board[i][j] = 'X'
-	else:
-		dfs(i, j)
-	return board
-```
-
-196 ms
-
-### #2
-
-也可以用 bfs。注意每次将空方块加入队列时就应该标记一下，避免重复添加。
+- 如果点到地雷了，直接改为 'X' 返回
+- 否则，每一步应该计算相邻地雷的个数
+	- 为零就改为 'B' 递归遍历所有相邻的空方块，
+	- 不为零就改为数字
+- 可以用 dfs 解决，也可以用 bfs
+	- 用 bfs 注意入队时就应该标记，避免重复添加
 
 ## 解答
 
 ```python
-def updateBoard(self, board: List[List[str]], click: List[int]) -> List[List[str]]:
-	m, n, (i, j) = len(board), len(board[0]), click
-	if board[i][j] == 'M':
-		board[i][j] = 'X'
-	else:
-		queue = deque([(i, j)])
-		while queue:
-			i, j = queue.popleft()
-			cnt = sum(0<=x<m and 0<=y<n and board[x][y]=='M' for x, y in product([i-1, i, i+1], [j-1, j, j+1]))
-			if cnt:
-				board[i][j] = str(cnt)
-			else:
-				board[i][j] = 'B'
-				for x, y in product([i-1, i, i+1], [j-1, j, j+1]):
-					if 0<=x<m and 0<=y<n and board[x][y] == 'E':
-						queue.append((x,y))
-						board[x][y] = '0'
-	return board
+class Solution:
+    def updateBoard(self, board: List[List[str]], click: List[int]) -> List[List[str]]:
+        B,(i,j) = board,click
+        m, n = len(B),len(B[0])
+        if B[i][j] == 'M':
+            B[i][j] = 'X'
+            return B
+        B[i][j] = 'B'
+        Q = deque([(i,j)])
+        while Q:
+            i,j = Q.popleft()
+            A = [(x,y) for x in range(i-1,i+2) for y in range(j-1,j+2) if 0<=x<m and 0<=y<n]
+            cnt = sum(B[x][y]=='M' for x,y in A)
+            if cnt:
+                B[i][j] = str(cnt)
+            else:
+                for x,y in A:
+                    if B[x][y] == 'E':
+                        Q.append((x,y))
+                        B[x][y] = 'B'
+        return B
 ```
-
-184 ms
+46 ms
