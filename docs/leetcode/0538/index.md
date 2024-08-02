@@ -66,15 +66,17 @@
 ## 解答
 
 ```python
-def convertBST(self, root: TreeNode) -> TreeNode:
-    stack, pre = [(root, 0)], 0
-    while stack:
-        node, flag = stack.pop()
-        if flag:
-            node.val += pre
-            pre = node.val
-        elif node:
-            stack.extend([(node.left, 0), (node, 1), (node.right, 0)])
-    return root
+class Solution:
+    def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        sk = [(root,0)] if root else []
+        s = 0
+        while sk:
+            u,c = sk.pop()
+            if c:
+                s += u.val
+                u.val = s
+            elif u:
+                sk.extend([(u.left,0),(u,1),(u.right,0)])
+        return root
 ```
-80 ms
+49 ms

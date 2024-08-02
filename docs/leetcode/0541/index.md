@@ -52,8 +52,12 @@
 ## 解答
 
 ```python
-def reverseStr(self, s: str, k: int) -> str:
-	return ''.join(s[i:i+k][::-1] + s[i+k:i+2*k] for i in range(0, len(s), 2*k))
+class Solution:
+    def reverseStr(self, s: str, k: int) -> str:
+        A = list(s)
+        for i in range(0,len(A),k*2):
+            A[i:i+k] = A[i:i+k][::-1]
+        return ''.join(A)
 ```
 
 40 ms

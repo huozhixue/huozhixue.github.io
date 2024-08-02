@@ -58,11 +58,11 @@ string ans = obj.decode(tiny); // 返回解密后得到的原本的 URL 。
 ```python
 class Codec:
     def __init__(self):
-        self.t = 0
+        self.i = 0
         self.d = {}
 
     def encode(self, longUrl: str) -> str:
-        shortUrl = '//tinyurl.com/%d' % self.t
+        shortUrl = '//tinyurl.com/%d' % self.i
         self.d[shortUrl] = longUrl
         return shortUrl
 
