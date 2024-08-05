@@ -45,23 +45,23 @@
 
 ## 分析
 
-假设路径经过根节点 root，那么最大长度是 （终点为 root.left 的最大路径长度 + 终点为 root.right 的最大路径长度 + 2）。
-
-为了递归，令辅助函数 help(node) 同时返回 node 的直径长度、向上的终点为 node 的最大路径长度。
-
-再注意下边界条件即可。
+- 递归返回节点的高度
+- 递归过程中，根据左右子树的高度，即可求出经过该节点的最长路径
 
 ## 解答
 
 ```python
-def diameterOfBinaryTree(self, root: TreeNode) -> int:
-	def help(node):
-		if not node:
-			return -1, -1
-		l0, l1 = help(node.left)
-		r0, r1 = help(node.right)
-		return max(l0, r0, l1+r1+2), 1+max(l1, r1)
-	return help(root)[0]
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        def dfs(u):
+            if not u:
+                return 0
+            l,r = dfs(u.left),dfs(u.right)
+            self.res = max(self.res,l+r)
+            return max(l,r)+1
+        self.res = 0
+        dfs(root)
+        return self.res
 ```
 
-52 ms
+51 ms

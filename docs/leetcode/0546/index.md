@@ -57,41 +57,57 @@
 
 ## 分析
 
-显然初始连续的盒子最后是一起移除的，考虑将连续段合并，得到元素为 (颜色，连续段长度) 的数组 A。
-- 考虑元素 A[-1]，它要么单独移除，要么和前面颜色相同的元素一起移除
-- 假如 A[-1] 单独移除，显然转为递归子问题
-- 假如 A[-1] 和 A[i] 一起移除
-    - 必然先移除了 A[i+1:-1] 部分，这部分即是子问题
-    - 然后将 A[-1] 的长度累加到 A[i] 上，剩下的也是子问题
+### #1
+- 考虑最后一个盒子，只有两种情况
+	- 单独移除
+	- 和前面的某个 boxes[k] 一起移除
+		- 必然先移除了 [k+1:-1] 部分，转为递归子问题
+		- 然后将 boxes[-1] 加到 boxes[k] 后面，转为递归子问题
+- 为了方便递归，令 dfs(i,j,x) 代表区间 [i,j] 且跟了 x 个 boxes[j] 的最大得分
 
-因此令 dfs(A) 代表数组 A 的最大积分，即可递归。 
+
+```python
+class Solution:
+    def removeBoxes(self, boxes: List[int]) -> int:
+        @cache
+        def dfs(i,j,x):
+            if i>j:
+                return 0
+            res = (x+1)*(x+1)+dfs(i,j-1,0)
+            for k in range(i,j):
+                if boxes[k]==boxes[j]:
+                    res = max(res,dfs(i,k,x+1)+dfs(k+1,j-1,0))
+            return res
+        n = len(boxes)
+        return dfs(0,n-1,0)
+```
+4595 ms
+
+### #2
+
+- 显然初始连续的盒子应该一起移除
+- 考虑将连续段合并，得到元素为 (颜色，连续段长度) 的数组 A
+- 在数组 A 上进行递归，可以节省时间
 
 ## 解答
 
 ```python
-def removeBoxes(self, boxes: List[int]) -> int:
-    @lru_cache(None)
-    def dfs(A):
-        if not A:
-            return 0
-        c, k = A[-1]
-        res = dfs(A[:-1])+k**2
-        for i in range(len(A)-2):
-            if A[i][0]==c:
-                B = A[:i]+((c, A[i][1]+k),)
-                res = max(res, dfs(B)+dfs(A[i+1:-1]))
-        return res
+class Solution:
+    def removeBoxes(self, boxes: List[int]) -> int:
+        @cache
+        def dfs(i,j,x):
+            if i>j:
+                return 0
+            x += A[j][1]
+            res = x*x+dfs(i,j-1,0)
+            for k in range(i,j):
+                if A[k][0]==A[j][0]:
+                    res = max(res,dfs(i,k,x)+dfs(k+1,j-1,0))
+            return res
 
-    A = tuple((x, len(list(g))) for x, g in groupby(boxes))
-    return dfs(A)
+        A = [(c,len(list(g))) for c,g in groupby(boxes)]
+        n = len(A)
+        return dfs(0,n-1,0)
 ```
-364 ms
+576 ms
 
-## *附加
-
-时间复杂度分析：
-- 注意到递归时只会对区间数组的末尾进行修改，因此可以改写成一般的区间 dp 形式
-    - 令 dfs(i, j, k) 代表 A[i:j+1] 且 A[j] 额外加了 k 的最大积分，即可递归
-    - 显然 k 小于 n，因此一般的区间 dp 写法的时间复杂度是 O(N^4)
-- 直接递归区间数组的形式，有切片操作，所以时间复杂度更高
-- 但因为本题的数值范围很小，一般会存在重复的区间数组，所以直接递归区间数组的实际时间更快

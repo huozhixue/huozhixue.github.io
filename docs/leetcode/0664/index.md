@@ -48,32 +48,52 @@
 
 ## 分析
 
-显然连续相同的字符最后是一起打印的，考虑将连续相同的字符合并得到 s'，节省时间。
-- 考虑字符 s[-1]，它要么单独打印，要么和前面相同的字符一起打印
-- 假如 s[-1] 单独打印，显然转为递归子问题
-- 假如 s[-1] 和 s[i] 一起打印
-    - 先打印了 s[:i+1] 部分，顺便将 s[-1] 一起打印了
-    - 然后打印 s[i+1:-1] 部分
-    - 这两部分都是递归子问题
+### #1
 
-因此令 dfs(s) 代表打印 s 的最小次数，即可递归。 
+- 考虑最后一个字符 s[-1]，只有两种情况
+	- 单独移除
+	- 和前面的某个 s[k] 一起移除
+		- 必然先移除了 s[k+1:-1] 部分，转为递归子问题
+		- 然后移除 s[:k+1]，也转为递归子问题
+- 令 dfs(i,j) 代表 s[i:j] 的最少次数，递归即可
+
+```python
+class Solution:
+    def strangePrinter(self, s: str) -> int:
+        @cache
+        def dfs(i,j):
+            if i>j:
+                return 0
+            res = 1+dfs(i,j-1)
+            for k in range(i,j):
+                if s[k]==s[j]:
+                    res = min(res,dfs(i,k)+dfs(k+1,j-1))
+            return res
+        return dfs(0,len(s)-1)
+```
+337 ms
+
+### #2
+- 显然连续相同的字符最后是一起打印的
+- 考虑将连续相同的字符合并得到 A，节省时间。
 
 ## 解答
 
 ```python
-def strangePrinter(self, s: str) -> int:
-    @lru_cache(None)
-    def dfs(s):
-        if not s:
-            return 0
-        res = 1+dfs(s[:-1])
-        for i in range(len(s)-2):
-            if s[i]==s[-1]:
-                res = min(res, dfs(s[:i+1])+dfs(s[i+1:-1]))
-        return res
-    s = ''.join(key for key, _ in groupby(s))
-    return dfs(s)
+class Solution:
+    def strangePrinter(self, s: str) -> int:
+        @cache
+        def dfs(i,j):
+            if i>j:
+                return 0
+            res = 1+dfs(i,j-1)
+            for k in range(i,j):
+                if A[k]==A[j]:
+                    res = min(res,dfs(i,k)+dfs(k+1,j-1))
+            return res
+        A = [c for c,_ in groupby(s)]
+        return dfs(0,len(A)-1)
 ```
-272 ms
+258 ms
  
 
