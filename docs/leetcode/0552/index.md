@@ -63,54 +63,44 @@
 
 ## 分析
 
-最后一个字符有三种情况：
-- 假如为 'A'，那么前面不能再有 'A'
-- 假如为 'L'，那么前两个字符不能都为 'L'
-- 假如为 'P'，前面的是子问题
-
-那么令 dp[i][j][k] 代表
-- 长度 i
-- 有 j 个'A'
-- 末尾有 k 个连续 'L'
-
-条件下的数量，即可递归。最后 sum(dp[n][0])+sum(dp[n][1]) 即为所求。
-
-还可以用滚动数组优化。并且因为 j 和 k 的范围很小，可以合并为一维数组。
+- 按最后一个字符递推
+- 令 f[i][j][k] 代表长度 i，有 j 个 'A' 且末尾 k 个连续 'L' 的个数，即可递推
+- 可以用滚动数组优化掉 i，还可以将 j 和 k 合并为一维
 
 ## 解答
 
 ```python
-def checkRecord(self, n: int) -> int:
-    mod = 10**9+7
-    dp = [1]+[0]*5
-    for i in range(1, n+1):
-        dp = [sum(dp[:3])%mod, dp[0], dp[1], sum(dp)%mod, dp[3], dp[4]]
-    return sum(dp)%mod
+class Solution:
+    def checkRecord(self, n: int) -> int:
+        mod = 10**9+7
+        f = [1,0,0,0,0,0]
+        for _ in range(n):
+            f = [sum(f[:3])%mod,f[0],f[1],sum(f)%mod,f[3],f[4]]
+        return sum(f)%mod
 ```
-772 ms
+550 ms
 
 ## *附加
 
-这是完全的线性递推关系，因此可以用矩阵快速幂优化。
-
-注意在矩阵乘法时也取模即可。
+- 这是完全的线性递推关系，还可以用矩阵快速幂优化
 
 ```python
-def checkRecord(self, n: int) -> int:
-    def mpow(mat, n):
-        res = mat
-        for bit in bin(n)[3:]:
-            res = res*res%mod
-            if bit=='1':
-                res = res*mat%mod
-        return res
+class Solution:
+    def checkRecord(self, n: int) -> int:
+        def mpow(mat, n):
+            res = mat
+            for i in range(n.bit_length()-2,-1,-1):
+                res = res*res%mod
+                if n&1<<i:
+                    res = res*mat%mod
+            return res
 
-    import numpy as np
-    mod = 10**9+7
-    A = np.mat([[1,1,1,0,0,0],[1,0,0,0,0,0],[0,1,0,0,0,0],
-    [1,1,1,1,1,1],[0,0,0,1,0,0],[0,0,0,0,1,0]])
-    dp = np.mat([[1],[0],[0],[0],[0],[0]])
-    dp = mpow(A, n)*dp
-    return int(np.sum(dp)%mod)
+        import numpy as np
+        mod = 10**9+7
+        A = np.asmatrix([[1,1,1,0,0,0],[1,0,0,0,0,0],[0,1,0,0,0,0],
+                        [1,1,1,1,1,1],[0,0,0,1,0,0],[0,0,0,0,1,0]])
+        f = np.asmatrix([[1],[0],[0],[0],[0],[0]])
+        f = mpow(A,n)*f
+        return int(np.sum(f)%mod)
 ```
-100 ms
+86 ms

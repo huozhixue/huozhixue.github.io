@@ -46,13 +46,19 @@
 
 ## 分析
 
-显然找一条穿过边缘最多的垂线（除了墙边）即可。于是记录每行的边缘位置（横坐标 y），找到对应了最多行的位置即可。
-
+- 显然找一条穿过边缘最多的垂线（除了墙边）即可，用哈希计数
 ## 解答
 
 ```python
-def leastBricks(self, wall: List[List[int]]) -> int:
-	return len(wall) - (max(Counter([y for row in wall for y in accumulate(row[:-1])]).values() or [0]))
+class Solution:
+    def leastBricks(self, wall: List[List[int]]) -> int:
+        d = defaultdict(int)
+        for row in wall:
+            s = 0
+            for x in row[:-1]:
+                s += x
+                d[s] += 1
+        return len(wall)-max(d.values(),default=0)
 ```
-60 ms
+64 ms
 

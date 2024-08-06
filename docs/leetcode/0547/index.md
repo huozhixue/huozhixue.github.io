@@ -58,27 +58,28 @@
 
 ## 分析
 
-即是求无向图的连通分量数，可以通过遍历求解，bfs 和 dfs 都可以。
-
-不过一般这类问题用并查集，更直观。
+- 即是求无向图的连通分量数
+- bfs 或 dfs 遍历求解即可，更一般的方法是用并查集
 
 ## 解答
 
 ```python
-def findCircleNum(self, isConnected: List[List[int]]) -> int:
-    def find(x):
-        if f[x] != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        def find(x):
+            if f[x]!=x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(x, y):
-        f[find(x)] = find(y)
-
-    n = len(isConnected)
-    f = list(range(n))
-    for i, j in product(range(n), range(n)):
-        if isConnected[i][j]:
-            union(i, j)
-    return sum(f[i] == i for i in range(n))
+        def union(x,y):
+            f[find(x)] = find(y)
+            
+        n = len(isConnected)
+        f = list(range(n))
+        for i in range(n):
+            for j in range(n):
+                if isConnected[i][j]:
+                    union(i,j)
+        return sum(find(i)==i for i in range(n))
 ```
-188 ms
+80 ms

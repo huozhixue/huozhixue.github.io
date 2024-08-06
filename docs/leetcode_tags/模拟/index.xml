@@ -3,13 +3,27 @@
         <title>模拟 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%A8%A1%E6%8B%9F/</link>
         <description>模拟 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%A8%A1%E6%8B%9F/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Dec 2023 10:40:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%A8%A1%E6%8B%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>2961：双模幂运算（1450 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2961/</link>
+    <pubDate>Sun, 10 Dec 2023 10:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2961/</guid>
+    <description><![CDATA[力扣第 375 场周赛第 2 题 题目 给你一个下标从 0 开始的二维数组 variables ，其中 variables[i] = [ai, bi, ci, mi]，以及一个整数 target 。 如果满足以下公式，则下标 i 是 好下标： 0 &lt;= i &lt;]]></description>
+</item><item>
     <title>2960：统计已测试设备（1169 分）</title>
     <link>https://huozhixue.github.io/leetcode/2960/</link>
     <pubDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2960/</guid>
     <description><![CDATA[力扣第 375 场周赛第 1 题 题目 给你一个长度为 n 、下标从 0 开始的整数数组 batteryPercentages ，表示 n 个设备的电池百分比。 你的任务是按照顺序测试每个设备 i，执行以下测试]]></description>
+</item><item>
+    <title>2766：重新放置石块（1613 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2766/</link>
+    <pubDate>Sat, 08 Jul 2023 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2766/</guid>
+    <description><![CDATA[力扣第 108 场双周赛第 2 题 题目 给你一个下标从 0 开始的整数数组 nums ，表示一些石块的初始位置。再给你两个长度 相等 下标从 0 开始的整数数组 moveFrom 和 moveTo 。 在 moveFrom.length 次操]]></description>
 </item><item>
     <title>2739：总行驶距离（1262 分）</title>
     <link>https://huozhixue.github.io/leetcode/2739/</link>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1518/</guid>
     <description><![CDATA[力扣第 198 场周赛第 1 题 题目 超市正在促销，你可以用 numExchange 个空水瓶从超市兑换一瓶水。最开始，你一共购入了 numBottles 瓶水。 如果喝掉了水瓶中的水，那么水瓶就会变成]]></description>
-</item><item>
-    <title>1441：用栈操作构建数组（1180 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1441/</link>
-    <pubDate>Sun, 10 May 2020 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1441/</guid>
-    <description><![CDATA[力扣第 188 场周赛第 1 题 题目 给你一个数组 target 和一个整数 n。每次迭代，需要从 list = { 1 , 2 , 3 ..., n } 中依次读取一个数字。 请使用下述操作来构建目标数组 target]]></description>
-</item><item>
-    <title>1324：竖直打印单词（1328 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1324/</link>
-    <pubDate>Sun, 19 Jan 2020 10:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1324/</guid>
-    <description><![CDATA[力扣第 172 场周赛第 2 题 题目 给你一个字符串 s。请你按照单词在 s 中的出现顺序将它们全部竖直返回。 单词应该以字符串列表的形式返回，必要时用空格补位，]]></description>
 </item></channel>
 </rss>

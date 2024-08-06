@@ -76,24 +76,25 @@
 
 ## 分析
 
-既然保证了操作总是有效的，那么直接基于栈顶计算即可。
+栈模拟即可。
 
 ## 解答
 
 ```python
-def calPoints(self, ops: List[str]) -> int:
-	stack = []
-	for op in ops:
-		if op == '+':
-			stack.append(stack[-2]+stack[-1])
-		elif op == 'D':
-			stack.append(stack[-1]*2)
-		elif op == 'C':
-			stack.pop()
-		else:
-			stack.append(int(op))
-	return sum(stack)
+class Solution:
+    def calPoints(self, operations: List[str]) -> int:
+        sk = []
+        for c in operations:
+            if c=='+':
+                sk.append(sk[-2]+sk[-1])
+            elif c=='D':
+                sk.append(sk[-1]*2)
+            elif c=='C':
+                sk.pop()
+            else:
+                sk.append(int(c))
+        return sum(sk)
 ```
 
-44 ms
+57 ms
 

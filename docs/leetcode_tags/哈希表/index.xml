@@ -3,7 +3,21 @@
         <title>哈希表 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
         <description>哈希表 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 May 2024 22:40:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>3143：正方形中的最多点数（1696 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3143/</link>
+    <pubDate>Sat, 11 May 2024 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3143/</guid>
+    <description><![CDATA[力扣第 130 场双周赛第 2 题 题目 给你一个二维数组 points 和一个字符串 s ，其中 points[i] 表示第 i 个点的坐标，s[i] 表示第 i 个点的 标签 。 如果一个正方形的中心在 (0, 0)]]></description>
+</item><item>
+    <title>3128：直角三角形（1540 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3128/</link>
+    <pubDate>Sat, 27 Apr 2024 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3128/</guid>
+    <description><![CDATA[力扣第 129 场双周赛第 2 题 题目 给你一个二维 boolean 矩阵 grid 。 请你返回使用 grid 中的 3 个元素可以构建的 直角三角形 数目，且满足 3 个元素值 都 为 1 。 注意： 如果 grid 中 3]]></description>
+</item><item>
     <title>2902：和带限制的子多重集合的数目（2758 分）</title>
     <link>https://huozhixue.github.io/leetcode/2902/</link>
     <pubDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</pubDate>
@@ -17,6 +31,13 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2813/</guid>
     <description><![CDATA[力扣第 357 场周赛第 4 题 题目 给你一个长度为 n 的二维整数数组 items 和一个整数 k 。 items[i] = [profiti, categoryi]，其中 profiti 和 categoryi 分别表示第 i 个项目的利润和类别。]]></description>
+</item><item>
+    <title>2766：重新放置石块（1613 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2766/</link>
+    <pubDate>Sat, 08 Jul 2023 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2766/</guid>
+    <description><![CDATA[力扣第 108 场双周赛第 2 题 题目 给你一个下标从 0 开始的整数数组 nums ，表示一些石块的初始位置。再给你两个长度 相等 下标从 0 开始的整数数组 moveFrom 和 moveTo 。 在 moveFrom.length 次操]]></description>
 </item><item>
     <title>2748：美丽下标对的数目（1301 分）</title>
     <link>https://huozhixue.github.io/leetcode/2748/</link>
@@ -52,26 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2367/</guid>
     <description><![CDATA[力扣第 305 场周赛第 1 题 题目 给你一个下标从 0 开始、严格递增 的整数数组 nums 和一个正整数 diff 。如果满足下述全部条件，则三元组 (i, j, k) 就是一个 算术三元组 ： i]]></description>
-</item><item>
-    <title>2266：统计打字方案数（1856 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2266/</link>
-    <pubDate>Sun, 08 May 2022 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2266/</guid>
-    <description><![CDATA[力扣第 292 场周赛第 3 题 题目 Alice 在给 Bob 用手机打字。数字到字母的 对应 如下图所示。 为了 打出 一个字母，Alice 需要 按 对应字母 i 次，i 是该字母在这个按键]]></description>
-</item><item>
-    <title>2115：从给定原材料中找到所有可以做出的菜（1678 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2115/</link>
-    <pubDate>Sat, 25 Dec 2021 22:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2115/</guid>
-    <description><![CDATA[力扣第 68 场双周赛第 2 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ，如果你有它 所有 的原材料 ingredients[i] ，那]]></description>
-</item><item>
-    <title>2009：使数组连续的最少操作数（2084 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2009/</link>
-    <pubDate>Sat, 18 Sep 2021 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2009/</guid>
-    <description><![CDATA[力扣第 61 场双周赛第 4 题 题目 给你一个整数数组 nums 。每一次操作中，你可以将 nums 中 任意 一个元素替换成 任意 整数。 如果 nums 满足以下条件，那么它是 连续的 ： nums 中]]></description>
 </item></channel>
 </rss>

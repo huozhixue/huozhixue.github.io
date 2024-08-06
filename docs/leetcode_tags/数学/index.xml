@@ -3,7 +3,21 @@
         <title>数学 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E5%AD%A6/</link>
         <description>数学 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Jun 2023 10:30:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Apr 2024 22:40:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>3128：直角三角形（1540 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3128/</link>
+    <pubDate>Sat, 27 Apr 2024 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3128/</guid>
+    <description><![CDATA[力扣第 129 场双周赛第 2 题 题目 给你一个二维 boolean 矩阵 grid 。 请你返回使用 grid 中的 3 个元素可以构建的 直角三角形 数目，且满足 3 个元素值 都 为 1 。 注意： 如果 grid 中 3]]></description>
+</item><item>
+    <title>2961：双模幂运算（1450 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2961/</link>
+    <pubDate>Sun, 10 Dec 2023 10:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2961/</guid>
+    <description><![CDATA[力扣第 375 场周赛第 2 题 题目 给你一个下标从 0 开始的二维数组 variables ，其中 variables[i] = [ai, bi, ci, mi]，以及一个整数 target 。 如果满足以下公式，则下标 i 是 好下标： 0 &lt;= i &lt;]]></description>
+</item><item>
     <title>2748：美丽下标对的数目（1301 分）</title>
     <link>https://huozhixue.github.io/leetcode/2748/</link>
     <pubDate>Sun, 25 Jun 2023 10:30:00 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2001/</guid>
     <description><![CDATA[力扣第 258 场周赛第 2 题 题目 用一个下标从 0 开始的二维整数数组 rectangles 来表示 n 个矩形，其中 rectangles[i] = [widthi, heighti] 表示第 i 个矩形的宽度和高度。 如果两个矩形 i 和 j（i &lt; j]]></description>
-</item><item>
-    <title>1998：数组的最大公因数排序（2429 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1998/</link>
-    <pubDate>Sun, 05 Sep 2021 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1998/</guid>
-    <description><![CDATA[力扣第 257 场周赛第 4 题 题目 给你一个整数数组 nums ，你可以在 nums 上执行下述操作 任意次 ： 如果 gcd(nums[i], nums[j]) &gt; 1 ，交换 nums[i] 和 nums[j] 的位置。其中 gcd(nums[i], nums[j]) 是 nums[i] 和 nums[j] 的最大公因数。 如]]></description>
-</item><item>
-    <title>1994：好子集的数目（2464 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1994/</link>
-    <pubDate>Sat, 04 Sep 2021 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1994/</guid>
-    <description><![CDATA[力扣第 60 场双周赛第 4 题 题目 给你一个整数数组 nums 。如果 nums 的一个子集中，所有元素的乘积可以表示为一个或多个 互不相同的质数 的乘积，那么我们称它为 好子]]></description>
 </item></channel>
 </rss>

@@ -42,15 +42,15 @@
 
 ## 分析
 
-按空格分开得到单词列表，分别反转后再用空格拼接起来即可。
+模拟即可。
 
 
 ## 解答
 
 ```python
-def reverseWords(self, s: str) -> str:
-	return ' '.join(sub[::-1] for sub in s.split(' '))
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(a[::-1] for a in s.split())
 ```
-
 32 ms
 
