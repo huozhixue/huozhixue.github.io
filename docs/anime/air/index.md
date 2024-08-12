@@ -59,7 +59,7 @@
 
 ## 配乐
 
-{{< music auto="https://y.qq.com/n/yqq/album/002Uflih088lIb.html" >}}
+{{< music auto="https://music.163.com/#/album?id=2735762" >}}
 
 ## MAD
 

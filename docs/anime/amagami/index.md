@@ -28,11 +28,14 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 圣诞之吻SS | 2010-07-01 | 26 | [bilibili](https://www.bilibili.com/bangumi/play/ep14688)  |
-| 2 | 圣诞之吻SS+ plus | 2012-01-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss816)  |
+|     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                      |
+| :-- | :----------- | :--------- | :---- | :-------------------------------------------------------- |
+| 1   | 圣诞之吻SS       | 2010-07-01 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ep14688) |
+| 2   | 圣诞之吻SS+ plus | 2012-01-05 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ss816)   |
 
+## 配乐
+
+{{< music  auto="https://music.163.com/#/album?id=35124982" >}}
 
 ## MAD
 

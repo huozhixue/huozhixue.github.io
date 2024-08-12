@@ -39,6 +39,10 @@
 | 6   | 水星领航员 The CREPUSCOLO  | 2021-03-05 | 1     | [keke9](https://www.keke9.app/play/178979-4-187820.html) |
 | 7   | 水星领航员 The BENEDIZIONE | 2021-12-03 | 1     | [keke9](https://www.keke9.app/play/118157-4-150470.html) |
 
+## 配乐
+
+{{< media auto="music/aria" >}}
+
 ## MAD
 
 {{< media  "BV1px411c7gt-BV1ex411P7xv-BV1Ns41127wg" 

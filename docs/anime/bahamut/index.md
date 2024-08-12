@@ -28,10 +28,10 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 | 巴哈姆特之怒 GENESIS | 2014-10-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep102752)  |
-| 2 | 巴哈姆特之怒 VIRGIN SOUL | 2017-04-07 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ss5968)  |
+|     | 系列名                | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :----------------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | 巴哈姆特之怒 GENESIS     | 2014-10-06 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep102752) |
+| 2   | 巴哈姆特之怒 VIRGIN SOUL | 2017-04-07 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ss5968)   |
 
 
 
