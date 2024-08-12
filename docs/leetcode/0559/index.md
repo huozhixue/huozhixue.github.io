@@ -48,9 +48,9 @@
 
 ## 分析
 
-### #1
+层序遍历记录有多少层即可。
 
-类似 {{< lc "0104" >}} ，可以层序遍历，记录有多少层即可。
+## 解答
 
 ```python
 def maxDepth(self, root: 'Node') -> int:
@@ -62,18 +62,6 @@ def maxDepth(self, root: 'Node') -> int:
 		level = [child for node in level for child in node.children]
 	return D
 ```
-
-44 ms
-
-### #2
-
-也可以用递归。
-
-## 解答
-
-```python
-def maxDepth(self, root: 'Node') -> int:
-	return 0 if not root else (1 if not root.children else max(map(self.maxDepth, root.children)) + 1)```
 
 52 ms
 

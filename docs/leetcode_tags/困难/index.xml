@@ -3,13 +3,27 @@
         <title>困难 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/</link>
         <description>困难 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Apr 2024 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E5%9B%B0%E9%9A%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>3130：找出所有稳定的二进制数组 II（2824 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3130/</link>
+    <pubDate>Sat, 27 Apr 2024 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3130/</guid>
+    <description><![CDATA[力扣第 129 场双周赛第 4 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
+</item><item>
     <title>3108：带权图里旅途的最小代价（2108 分）</title>
     <link>https://huozhixue.github.io/leetcode/3108/</link>
     <pubDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3108/</guid>
     <description><![CDATA[力扣第 392 场周赛第 4 题 题目 给你一个 n 个节点的带权无向图，节点编号为 0 到 n - 1 。 给你一个整数 n 和一个数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui 和 vi 之间有一]]></description>
+</item><item>
+    <title>2940：找到 Alice 和 Bob 可以相遇的建筑（2327 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2940/</link>
+    <pubDate>Sun, 19 Nov 2023 11:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2940/</guid>
+    <description><![CDATA[力扣第 372 场周赛第 4 题 题目 给你一个下标从 0 开始的正整数数组 heights ，其中 heights[i] 表示第 i 栋建筑的高度。 如果一个人在建筑 i ，且存在 i &lt; j 的建筑 j 满足 heights[i] &lt; heights[j] ，]]></description>
 </item><item>
     <title>2902：和带限制的子多重集合的数目（2758 分）</title>
     <link>https://huozhixue.github.io/leetcode/2902/</link>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2584/</guid>
     <description><![CDATA[力扣第 335 场周赛第 3 题 题目 给你一个长度为 n 的整数数组 nums ，下标从 0 开始。 如果在下标 i 处 分割 数组，其中 0 &lt;= i &lt;= n - 2 ，使前 i + 1 个元素的乘积和剩余]]></description>
-</item><item>
-    <title>2398：预算内的最多机器人数目（1917 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2398/</link>
-    <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2398/</guid>
-    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
-</item><item>
-    <title>2360：图中的最长环（1897 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2360/</link>
-    <pubDate>Sun, 31 Jul 2022 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2360/</guid>
-    <description><![CDATA[力扣第 304 场周赛第 4 题 题目 给你一个 n 个节点的 有向图 ，节点编号为 0 到 n - 1 ，其中每个节点 至多 有一条出边。 图用一个大小为 n 下标从 0 开始的数组 edges 表示]]></description>
 </item></channel>
 </rss>

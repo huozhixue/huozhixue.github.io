@@ -64,12 +64,30 @@ magicDictionary.search("leetcoded"); // 返回 False
 
 ## 分析
 
-因为单词的长度较短且只含小写字母，所以可以遍历所有能转换得到的单词，判断是否在字典中即可。
+### #1
 
-还有个巧妙的想法，可以将单词的某一位改为 '.' 作为单词的 key。
-例如 hit 的 key 为 '.it'、'h.t'、'hi.'。
+可以直接模拟。
 
-那么先将字典中的单词按所有的 key 存在哈希表中，查询时找 key 相同且不同的单词即可。
+```python
+class MagicDictionary:
+
+    def __init__(self):
+        self.A = []
+
+    def buildDict(self, dictionary: List[str]) -> None:
+        self.A = dictionary
+
+    def search(self, searchWord: str) -> bool:
+        for a in self.A:
+            if len(a)==len(searchWord):
+                if sum(x!=y for x,y in zip(a,searchWord))==1:
+                    return True
+        return False
+```
+141 ms
+### #2
+
+还可以用字典树优化查找。
 
 ## 解答
 
@@ -77,19 +95,25 @@ magicDictionary.search("leetcoded"); // 返回 False
 class MagicDictionary:
 
     def __init__(self):
-        self.d = defaultdict(set)
+        T = lambda: defaultdict(T)
+        self.trie = T()
 
     def buildDict(self, dictionary: List[str]) -> None:
-        for word in dictionary:
-            for i in range(len(word)):
-                key = word[:i] + '.' + word[i+1:]
-                self.d[key].add(word)
+        for w in dictionary:
+            p = self.trie
+            for c in w:
+                p = p[c]
+            p['#'] = ''
 
     def search(self, searchWord: str) -> bool:
-        for i in range(len(searchWord)):
-            key = searchWord[:i] + '.' + searchWord[i+1:]
-            if key in self.d and (len(self.d[key]) > 1 or searchWord not in self.d[key]):
-                return True
-        return False
+        def dfs(i,p,k):
+            if i==len(searchWord):
+                return k==1 and '#' in p
+            for c in p:
+                k2 = k+(c!=searchWord[i])
+                if k2<=1 and dfs(i+1,p[c],k2):
+                    return True
+            return False
+        return dfs(0,self.trie,0)
 ```
-192 ms
+158 ms
