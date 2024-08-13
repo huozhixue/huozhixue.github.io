@@ -1,7 +1,10 @@
 # 轻拍翻转小魔女
 
 
+> <u>**[轻拍翻转小魔女](http://bgm.tv/subject/174584)**</u>，又名：フリップフラッパーズ、Flip Flappers
+
 ## 简介
+
 
 对你而言，世界是怎样的呢——。
 获得了打开大门的钥匙的两位女主人公，帕皮卡和可可娜。
@@ -11,22 +14,22 @@
 当两人陷入危机之时，“耳之碎片”发出光芒，而她们也因此变身了。
 
 **制作人员：**
-- 导演：押山清高
-- 脚本：绫奈由仁子、久弥直树、关根步美
-- 分镜：榎户骏、出合小都美、新留俊哉
+- 导演：[押山清高](http://bgm.tv/person/12593)
+- 脚本：[绫奈由仁子](http://bgm.tv/person/7345)、[久弥直树](http://bgm.tv/person/6717)、[关根步美](http://bgm.tv/person/15945)
+- 分镜：[五味伸介](http://bgm.tv/person/26848)、[竹下良平](http://bgm.tv/person/25407)、[出合小都美](http://bgm.tv/person/15844)、[柳沼和良](http://bgm.tv/person/11359)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 帕皮卡 | Papika | 女 | M・A・O |
-| 2 | 可可娜 | Kokona | 女 | 髙橋ミナミ |
-| 3 | 雅雅卡 | Yayaka | 女 | 大橋彩香 |
-| 4 | 索尔特 | Soruto | 男 | 津田健次郎 |
-| 5 | 托托 | Toto | 男 | 井上沙香 |
-| 6 | 优优 | Yuyu | 女 | 歳納愛梨 |
-| 7 | 希达卡 | 日高、Shidaka | 男 | 福島潤 |
-| 8 | 小百合 | Sayuri | 女 | 日笠陽子 |
+| 1 | [帕皮卡](http://bgm.tv/character/39748) | Papika | 女 | [M・A・O](http://bgm.tv/person/10887) |
+| 2 | [可可娜](http://bgm.tv/character/39749) | Kokona | 女 | [髙橋ミナミ](http://bgm.tv/person/10757) |
+| 3 | [雅雅卡](http://bgm.tv/character/44165) | Yayaka | 女 | [大橋彩香](http://bgm.tv/person/7609) |
+| 4 | [索尔特](http://bgm.tv/character/44166) | Soruto | 男 | [津田健次郎](http://bgm.tv/person/3977) |
+| 5 | [托托](http://bgm.tv/character/44167) | Toto | 男 | [井上沙香](http://bgm.tv/person/24770) |
+| 6 | [优优](http://bgm.tv/character/44169) | Yuyu | 女 | [歳納愛梨](http://bgm.tv/person/24771) |
+| 7 | [希达卡](http://bgm.tv/character/44172) | 日高、Shidaka | 男 | [福島潤](http://bgm.tv/person/7757) |
+| 8 | [小百合](http://bgm.tv/character/44173) | Sayuri | 女 | [日笠陽子](http://bgm.tv/person/5119) |
 
 {{< slide "e8/15/39748_crt_2BnB0,8d/cc/39749_crt_x0X82,fe/e6/44165_crt_D3N56,9a/a6/44166_crt_VyXt2,28/de/44167_crt_OyG44,d1/ed/44169_crt_Qi1l6,8e/db/44172_crt_mJ0h9,cb/4e/44173_crt_WpMN1" >}}
 
@@ -34,7 +37,7 @@
 
 |     | 系列名     | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------ | :--------- | :---- | :------------------------------------------------------ |
-| 1   | 轻拍翻转小魔女 | 2016-10-06 | 13    | [keke9](https://www.keke9.app/play/22687-4-173707.html) |
+| 1   |[轻拍翻转小魔女](https://bgm.tv/subject/174584)| 2016-10-06 | 13    | [keke9](https://www.keke9.app/play/22687-4-173707.html) |
 
 ## MAD
 

@@ -1,7 +1,10 @@
 # 寒蝉鸣泣之时
 
 
+> <u>**[寒蝉鸣泣之时](http://bgm.tv/subject/289)**</u>，又名：ひぐらしのなく頃に、秋蝉鸣泣之时、higurashi no naku koro ni、When They Cry
+
 ## 简介
+
 
 昭和58年的夏天，白天蝉的喧闹与傍晚茅蜩的合唱仿佛在欢迎今年早夏来临的6月，回荡在雏见泽。
 雏见泽是远离都会的深山中的一个穷乡僻壤。
@@ -13,42 +16,40 @@
 只有茅蜩的鸣叫声一点未变，在雏见泽预告着早夏的来临。
 
 **制作人员：**
-- 原作：龙骑士07、07th Expansion
-- 导演：今千秋
-- 脚本：中濑理香、川濑敏文
-- 分镜：开祐二、原田峰文、名村英敏、葛谷直行
+- 原作：[龙骑士07](http://bgm.tv/person/2962)、[07th Expansion](http://bgm.tv/person/2963)
+- 导演：[今千秋](http://bgm.tv/person/2964)
+- 脚本：[中濑理香](http://bgm.tv/person/2728)、[川濑敏文](http://bgm.tv/person/267)
+- 分镜：[开祐二](http://bgm.tv/person/27133)、[原田峰文](http://bgm.tv/person/3251)、[名村英敏](http://bgm.tv/person/21329)、[葛谷直行](http://bgm.tv/person/3246)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 前原圭一 | 越后屋、K、前原 圭一、まえばら けいいち、Maebara Keiichi | 男 | 保志総一朗 |
-| 2 | 龙宫礼奈 | 龙宫蕾娜、龙宫怜奈、竜宮レナ/竜宮礼奈、りゅうぐう れな/りゅうぐう れいな、Ryuuguu Rena/Ryuuguu Reina | 女 | 中原麻衣 |
-| 3 | 园崎魅音 | そのざき みおん、Sonozaki Mion | 女 | ゆきのさつき |
-| 4 | 北条沙都子 | 北条 沙都子、ほうじょう さとこ、Houjou Satoko | 女 | かないみか |
-| 5 | 古手梨花 | 咪啪、ふるでりか、Furude Rika、魔法少女 御社神梨花 | 女 | 田村ゆかり |
-| 6 | 园崎诗音 | そのざき しおん、Sonozaki Shion | 女 | ゆきのさつき |
-| 7 | 大石藏人 | 大石 蔵人、おおいし くらうど、Ooishi Kuraudo | 男 | 茶風林 |
-| 8 | 富竹次郎 | 富竹 ジロウ、とみたけ ジロウ、Tomitake Jirou | 男 | 大川透 |
+| 1 | [前原圭一](http://bgm.tv/character/2820) | 越后屋、K、前原 圭一、まえばら けいいち、Maebara Keiichi | 男 | [保志総一朗](http://bgm.tv/person/3884) |
+| 2 | [龙宫礼奈](http://bgm.tv/character/3182) | 龙宫蕾娜、龙宫怜奈、竜宮レナ/竜宮礼奈、りゅうぐう れな/りゅうぐう れいな、Ryuuguu Rena/Ryuuguu Reina | 女 | [中原麻衣](http://bgm.tv/person/4145) |
+| 3 | [园崎魅音](http://bgm.tv/character/2427) | そのざき みおん、Sonozaki Mion | 女 | [ゆきのさつき](http://bgm.tv/person/3821) |
+| 4 | [北条沙都子](http://bgm.tv/character/3188) | 北条 沙都子、ほうじょう さとこ、Houjou Satoko | 女 | [かないみか](http://bgm.tv/person/3896) |
+| 5 | [古手梨花](http://bgm.tv/character/3187) | 咪啪、ふるでりか、Furude Rika、魔法少女 御社神梨花 | 女 | [田村ゆかり](http://bgm.tv/person/3965) |
+| 6 | [园崎诗音](http://bgm.tv/character/3186) | そのざき しおん、Sonozaki Shion | 女 | [ゆきのさつき](http://bgm.tv/person/3821) |
+| 7 | [大石藏人](http://bgm.tv/character/3191) | 大石 蔵人、おおいし くらうど、Ooishi Kuraudo | 男 | [茶風林](http://bgm.tv/person/4046) |
+| 8 | [富竹次郎](http://bgm.tv/character/3192) | 富竹 ジロウ、とみたけ ジロウ、Tomitake Jirou | 男 | [大川透](http://bgm.tv/person/4131) |
 
 {{< slide "3d/00/2820_crt_N8vMx,46/c8/3182_crt_inI0Y,4c/d6/2427_crt_Xap2T,6e/26/3188_crt_3vvIg,43/cb/3187_crt_STt12,9b/69/3186_crt_Le3aS,f0/23/3191_crt_anidb,76/6e/3192_crt_anidb" >}}
-
-
 
 ## 系列
 
 |     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   | 寒蝉鸣泣之时   | 2006-04-04 | 26    | [keke9](https://www.keke9.app/play/28315-4-249067.html) |
-| 2   | 寒蝉鸣泣之时 解 | 2007-07-05 | 24    | [keke9](https://www.keke9.app/play/28280-4-248470.html) |
-| 3   | 寒蝉鸣泣之时 业 | 2020-10-01 | 24    | [keke9](https://www.keke9.app/play/28316-4-249094.html) |
-| 4   | 寒蝉鸣泣之时 卒 | 2021-07-01 | 15    | [keke9](https://www.keke9.app/play/28317-4-249118.html) |
+| 1   |[寒蝉鸣泣之时](https://bgm.tv/subject/289)| 2006-04-04 | 26    | [keke9](https://www.keke9.app/play/28315-4-249067.html) |
+| 2   |[寒蝉鸣泣之时 解](https://bgm.tv/subject/288)| 2007-07-05 | 24    | [keke9](https://www.keke9.app/play/28280-4-248470.html) |
+| 3   |[寒蝉鸣泣之时 业](https://bgm.tv/subject/297969)| 2020-10-01 | 24    | [keke9](https://www.keke9.app/play/28316-4-249094.html) |
+| 4   |[寒蝉鸣泣之时 卒](https://bgm.tv/subject/331033)| 2021-07-01 | 15    | [keke9](https://www.keke9.app/play/28317-4-249118.html) |
 
 <!--
 
 ## 配乐
 
-{{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
+{{< media  >}}
 
 -->
 

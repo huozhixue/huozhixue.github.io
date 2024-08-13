@@ -1,7 +1,10 @@
 # Promare
 
 
+> <u>**[普罗米亚](http://bgm.tv/subject/218713)**</u>，又名：プロメア、普羅米亞、烈焰救火隊、Promare
+
 ## 简介
+
 
 世界大燃烧——全世界的一半化为了焦土。引发了这未曾有过的事态的是，突然变异而诞生的能够操纵火焰的人种“燃烧者”的出现。
 在那之后过去了30年——有着攻击性的一部分自称“疯狂燃烧者”的燃烧者，再度对世界发动了攻击。
@@ -9,22 +12,22 @@
 炽热灵魂的激烈冲撞，两人的战斗的结末是。
 
 **制作人员：**
-- 原作：中岛一基、TRIGGER
-- 导演：今石洋之
-- 分镜：小仓陈利、石崎寿夫、小松田大全、吉成曜
+- 原作：[TRIGGER](http://bgm.tv/person/8008)、[中岛一基](http://bgm.tv/person/1757)
+- 导演：[今石洋之](http://bgm.tv/person/1755)
+- 分镜：[吉成曜](http://bgm.tv/person/9752)、[大冢雅彦](http://bgm.tv/person/760)、[摩砂雪](http://bgm.tv/person/254)、[小松田大全](http://bgm.tv/person/15478)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 加洛·提莫斯 | Galo Thymos | 男 | 松山ケンイチ |
-| 2 | 里欧·弗提亚 | Lio Fotia | 男 | 早乙女太一 |
-| 3 | 艾娜·阿尔德比特 | Aina Ardebit | 女 | 佐倉綾音 |
-| 4 | 露琪亚·菲克斯 | Lucia Fex | 女 | 新谷真弓 |
-| 5 | 瓦里斯·特拉斯 | Varys Truss | 男 | 稲田徹 |
-| 6 | 雷米·普古纳 | Remi Puguna | 男 | 吉野裕行 |
-| 7 | 伊格尼斯·艾克斯 | Ignis Ex | 男 | 小山力也 |
-| 8 | 维尼 | Vinny |  | ケンドーコバヤシ |
+| 1 | [加洛·提莫斯](http://bgm.tv/character/64637) | Galo Thymos | 男 | [松山ケンイチ](http://bgm.tv/person/4816) |
+| 2 | [里欧·弗提亚](http://bgm.tv/character/69803) | Lio Fotia | 男 | [早乙女太一](http://bgm.tv/person/34520) |
+| 3 | [艾娜·阿尔德比特](http://bgm.tv/character/67789) | Aina Ardebit | 女 | [佐倉綾音](http://bgm.tv/person/5745) |
+| 4 | [露琪亚·菲克斯](http://bgm.tv/character/68019) | Lucia Fex | 女 | [新谷真弓](http://bgm.tv/person/4318) |
+| 5 | [瓦里斯·特拉斯](http://bgm.tv/character/68020) | Varys Truss | 男 | [稲田徹](http://bgm.tv/person/4373) |
+| 6 | [雷米·普古纳](http://bgm.tv/character/68021) | Remi Puguna | 男 | [吉野裕行](http://bgm.tv/person/3955) |
+| 7 | [伊格尼斯·艾克斯](http://bgm.tv/character/68065) | Ignis Ex | 男 | [小山力也](http://bgm.tv/person/4130) |
+| 8 | [维尼](http://bgm.tv/character/69799) | Vinny |  | [ケンドーコバヤシ](http://bgm.tv/person/27933) |
 
 {{< slide "47/a1/64637_crt_6jGT6,b7/48/69803_crt_jcBCj,d1/e3/67789_crt_pprDp,77/3e/68019_crt_AR7Gc,0b/c2/68020_crt_YqCgH,3d/2e/68021_crt_K88kd,fc/2a/68065_crt_uk00d,c1/be/69799_crt_JYzUg" >}}
 
@@ -32,7 +35,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | Promare | 2019-05-24 | 111m | [bilibili](https://www.bilibili.com/bangumi/play/ss38790)   |
+| 1 |[Promare](https://bgm.tv/subject/218713)| 2019-05-24 | 111m | [bilibili](https://www.bilibili.com/bangumi/play/ss38790)   |
 
 
 ## MAD

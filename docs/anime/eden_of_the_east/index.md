@@ -1,7 +1,10 @@
 # 东之伊甸
 
 
+> <u>**[东之伊甸](http://bgm.tv/subject/1451)**</u>，又名：東のエデン、Eden of The East
+
 ## 简介
+
 
 2010年11月22日（星期一）
 日本各地被投下了10枚导弹，然而却出现了没有一人牺牲的局面，人们称此次事件为“愚蠢的星期一”，并很快地被人们所淡忘。
@@ -11,22 +14,22 @@
 
 
 **制作人员：**
-- 原作：神山健治
-- 脚本：冈田俊平、佐藤大、菅正太郎、伊藤千寻、福岛直浩
-- 分镜：柿本广大
+- 原作：[神山健治](http://bgm.tv/person/660)
+- 脚本：[伊藤千寻](http://bgm.tv/person/3481)、[菅正太郎](http://bgm.tv/person/3337)、[佐藤大](http://bgm.tv/person/921)、[福岛直浩](http://bgm.tv/person/13341)、[冈田俊平](http://bgm.tv/person/23433)
+- 分镜：[笹木信作](http://bgm.tv/person/14792)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 泷泽朗 | 滝沢 朗、たきざわ あきら、Takizawa Akira | 男 | 木村良平 |
-| 2 | 森美咲 | 森美 咲、もりみ さき、Morimi Saki | 女 | 早見沙織 |
-| 3 | 大杉智 | 大杉 智、おおすぎ さとし、Oosugi Satoshi | 男 | 江口拓也 |
-| 4 | 平泽一臣 | 平澤一臣、ひらさわ かずおみ、Hirasawa Kazuomi | 男 | 川原元幸 |
-| 5 | 葛原未来 | 葛原 みくる、かつはら みくる、Katsuhara Mikuru、みっちょん | 女 | 齋藤彩夏 |
-| 6 | 阿姐 | おネエ、Onee | 女 | 斉藤貴美子 |
-| 7 | 春日晴男 | 春日 晴男、かすが はるお、Kasuga Haruo |  | 田谷隼 |
-| 8 | 森美朝子 | 森美 朝子、もりみ あさこ、Morimi Asako | 女 | 松谷彼哉 |
+| 1 | [泷泽朗](http://bgm.tv/character/689) | 滝沢 朗、たきざわ あきら、Takizawa Akira | 男 | [木村良平](http://bgm.tv/person/4994) |
+| 2 | [森美咲](http://bgm.tv/character/690) | 森美 咲、もりみ さき、Morimi Saki | 女 | [早見沙織](http://bgm.tv/person/4895) |
+| 3 | [大杉智](http://bgm.tv/character/691) | 大杉 智、おおすぎ さとし、Oosugi Satoshi | 男 | [江口拓也](http://bgm.tv/person/5872) |
+| 4 | [平泽一臣](http://bgm.tv/character/692) | 平澤一臣、ひらさわ かずおみ、Hirasawa Kazuomi | 男 | [川原元幸](http://bgm.tv/person/5090) |
+| 5 | [葛原未来](http://bgm.tv/character/693) | 葛原 みくる、かつはら みくる、Katsuhara Mikuru、みっちょん | 女 | [齋藤彩夏](http://bgm.tv/person/3950) |
+| 6 | [阿姐](http://bgm.tv/character/694) | おネエ、Onee | 女 | [斉藤貴美子](http://bgm.tv/person/4517) |
+| 7 | [春日晴男](http://bgm.tv/character/695) | 春日 晴男、かすが はるお、Kasuga Haruo |  | [田谷隼](http://bgm.tv/person/27085) |
+| 8 | [森美朝子](http://bgm.tv/character/696) | 森美 朝子、もりみ あさこ、Morimi Asako | 女 | [松谷彼哉](http://bgm.tv/person/4804) |
 
 {{< slide "07/a9/689_mjxma,c0/6d/690_sl6rb,10/a5/691_JVE5V,e5/55/692_9O8e0,53/e3/693_dMI99,54/87/694_11m6L,e4/bb/695_XXrGf,0c/b9/696_wuu7c" >}}
 
@@ -34,7 +37,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 东之伊甸 | 2009-04-09 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ss2674)  |
+| 1 |[东之伊甸](https://bgm.tv/subject/1451)| 2009-04-09 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ss2674)  |
 
 
 

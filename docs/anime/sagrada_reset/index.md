@@ -1,7 +1,10 @@
 # 重启咲良田
 
 
+> <u>**[重启咲良田](http://bgm.tv/subject/193378)**</u>，又名：サクラダリセット、咲良田重置、SAGRADA RESET
+
 ## 简介
+
 
 半数居民都拥有特殊能力的街道，咲良田。在负责监视能力者的“管理局”管理下，居民过着和平的生活。“想要消去眼前之人的泪水”、“想要将声音传达给某人”。伴随着这种温柔而又细微的“愿望”，这条街道的能力诞生了。
 拥有能够回想起过去体验过的全部记忆的“记忆保持”能力的浅井惠，以及拥有“最大能够将世界倒带3天”的“重启”能力的春埼美空。她自身也受到“重启”的影响而失去了记忆，但通过与决不会忘记任何事情的惠齐心协力，两人得以将过去重来，并改变现在——
@@ -10,23 +13,23 @@
 为了消除在过去发生的“悲哀”，少年与少女穿越时间，前去改变世界——
 
 **制作人员：**
-- 原作：河野裕
-- 导演：川面真也
-- 脚本：高山克彦
-- 分镜：吉田泰三、西田正义、大脊户聪、藤本次朗、佐山圣子
+- 原作：[河野裕](http://bgm.tv/person/21002)
+- 导演：[川面真也](http://bgm.tv/person/7866)
+- 脚本：[高山克彦](http://bgm.tv/person/907)
+- 分镜：[佐佐木勅嘉](http://bgm.tv/person/20242)、[坂田纯一](http://bgm.tv/person/306)、[木宫茂](http://bgm.tv/person/2181)、[津田尚克](http://bgm.tv/person/9095)、[山崎雄太](http://bgm.tv/person/25589)、[西森章](http://bgm.tv/person/1349)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 浅井惠 | 浅井 ケイ、あさい ケイ、Asai Kei | 男 | 石川界人 |
-| 2 | 春埼美空 | 春埼 美空、はるき みそら、Haruki Misora | 女 | 花澤香菜 |
-| 3 | 相麻堇 | 相麻 菫、そうま すみれ、Souma Sumire | 女 | 悠木碧 |
-| 4 | 仓川真理 | Kurakawa Mari | 女 | 久野美咲 |
-| 5 | 中野智树 | 中野 智樹、なかの ともき、Nakano Tomoki | 男 | 江口拓也 |
-| 6 | 皆实未来 | 皆実 未来、みなみ みらい、Minami Mirai | 女 | 山田悠希 |
-| 7 | 村濑阳香 | 村瀬 陽香、むらせ ようか、Murase Youka | 女 | 牧野由依 |
-| 8 | 野之尾盛夏 | 野ノ尾 盛夏、ののお せいか、Nonoo Seika | 女 | 三澤紗千香 |
+| 1 | [浅井惠](http://bgm.tv/character/46580) | 浅井 ケイ、あさい ケイ、Asai Kei | 男 | [石川界人](http://bgm.tv/person/9953) |
+| 2 | [春埼美空](http://bgm.tv/character/46581) | 春埼 美空、はるき みそら、Haruki Misora | 女 | [花澤香菜](http://bgm.tv/person/4765) |
+| 3 | [相麻堇](http://bgm.tv/character/46582) | 相麻 菫、そうま すみれ、Souma Sumire | 女 | [悠木碧](http://bgm.tv/person/5076) |
+| 4 | [仓川真理](http://bgm.tv/character/53080) | Kurakawa Mari | 女 | [久野美咲](http://bgm.tv/person/11523) |
+| 5 | [中野智树](http://bgm.tv/character/46589) | 中野 智樹、なかの ともき、Nakano Tomoki | 男 | [江口拓也](http://bgm.tv/person/5872) |
+| 6 | [皆实未来](http://bgm.tv/character/46590) | 皆実 未来、みなみ みらい、Minami Mirai | 女 | [山田悠希](http://bgm.tv/person/13226) |
+| 7 | [村濑阳香](http://bgm.tv/character/46583) | 村瀬 陽香、むらせ ようか、Murase Youka | 女 | [牧野由依](http://bgm.tv/person/4703) |
+| 8 | [野之尾盛夏](http://bgm.tv/character/46588) | 野ノ尾 盛夏、ののお せいか、Nonoo Seika | 女 | [三澤紗千香](http://bgm.tv/person/5142) |
 
 {{< slide "ff/e8/46580_crt_CZfw0,42/77/46581_crt_bG5uw,1f/be/46582_crt_cvos0,4c/e1/53080_crt_fz77k,f8/0b/46589_crt_zMkU4,20/22/46590_crt_02AC2,68/2a/46583_crt_a4Jjl,f7/c6/46588_crt_o7S1q" >}}
 
@@ -34,7 +37,7 @@
 
 |     | 系列名   | 首播时间       | 话数/时长 | 观看地址                                                       |
 |:----|:------|:-----------|:------|:-----------------------------------------------------------|
-| 1   | 重启咲良田 | 2017-04-05 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep306577) |
+| 1   |[重启咲良田](https://bgm.tv/subject/193378)| 2017-04-05 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep306577) |
 
 ## MAD
 

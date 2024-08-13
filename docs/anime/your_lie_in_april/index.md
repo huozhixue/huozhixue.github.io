@@ -1,28 +1,31 @@
 # 四月是你的谎言
 
 
+> <u>**[四月是你的谎言](http://bgm.tv/subject/100444)**</u>，又名：四月は君の嘘、Your lie in April
+
 ## 简介
+
 
 有马公生的母亲一心想把有马培育成举世闻名的钢琴家，而有马也不负母亲的期望，在念小学时就赢得许多钢琴比赛的大奖。11岁的秋天，有马的母亲过世，从此他再也听不见自己弹奏的钢琴声，沮丧的他也只好放弃演奏，但在14岁那年，经由儿时玩伴的介绍，有马认识了小提琴手宫园薰，并被薰的自由奔放吸引，没想到薰竟开口邀请公生在比赛时担任她的伴奏…
 
 **制作人员：**
-- 原作：新川直司
-- 导演：石黑恭平
-- 脚本：吉冈孝夫
-- 分镜：神户守、石滨真史、柴山智隆、仓田绫子、黑木美幸、后藤圭二
+- 原作：[新川直司](http://bgm.tv/person/9243)
+- 导演：[石黑恭平](http://bgm.tv/person/14365)
+- 脚本：[吉冈孝夫](http://bgm.tv/person/1140)
+- 分镜：[井端义秀](http://bgm.tv/person/14831)、[仓田绫子](http://bgm.tv/person/332)、[黑木美幸](http://bgm.tv/person/20236)、[石井俊匡](http://bgm.tv/person/21139)、[神户守](http://bgm.tv/person/1047)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 有马公生 | 有馬 公生、ありま こうせい、arima kousei、有马公主 | 男 | 花江夏樹 |
-| 2 | 宫园薰 | 宫园香织、みやぞの かをり、Miyazono Kaori | 女 | 種田梨沙 |
-| 3 | 泽部椿 | 澤部 椿、さわべ つばき、Sawabe Tsubaki | 女 | 佐倉綾音 |
-| 4 | 渡亮太 | 渡 亮太、わたり りょうた、watari ryouta | 男 | 逢坂良太 |
-| 5 | 相座武士 | 相座 武士、あいざ たけし、aiza takeshi | 男 | 梶裕貴 |
-| 6 | 井川绘见 | 井川 絵見、いがわ えみ、igawa emi | 女 | 早見沙織 |
-| 7 | 有马早希 | 有馬 早希、ありま さき、Arima Saki | 女 | 能登麻美子 |
-| 8 | 相座凪 | あいざ なぎ、Aiza Nagi | 女 | 茅野愛衣 |
+| 1 | [有马公生](http://bgm.tv/character/26002) | 有馬 公生、ありま こうせい、arima kousei、有马公主 | 男 | [花江夏樹](http://bgm.tv/person/7772) |
+| 2 | [宫园薰](http://bgm.tv/character/26003) | 宫园香织、みやぞの かをり、Miyazono Kaori | 女 | [種田梨沙](http://bgm.tv/person/8138) |
+| 3 | [泽部椿](http://bgm.tv/character/26004) | 澤部 椿、さわべ つばき、Sawabe Tsubaki | 女 | [佐倉綾音](http://bgm.tv/person/5745) |
+| 4 | [渡亮太](http://bgm.tv/character/26005) | 渡 亮太、わたり りょうた、watari ryouta | 男 | [逢坂良太](http://bgm.tv/person/7385) |
+| 5 | [相座武士](http://bgm.tv/character/26006) | 相座 武士、あいざ たけし、aiza takeshi | 男 | [梶裕貴](http://bgm.tv/person/5209) |
+| 6 | [井川绘见](http://bgm.tv/character/26007) | 井川 絵見、いがわ えみ、igawa emi | 女 | [早見沙織](http://bgm.tv/person/4895) |
+| 7 | [有马早希](http://bgm.tv/character/28250) | 有馬 早希、ありま さき、Arima Saki | 女 | [能登麻美子](http://bgm.tv/person/3827) |
+| 8 | [相座凪](http://bgm.tv/character/28784) | あいざ なぎ、Aiza Nagi | 女 | [茅野愛衣](http://bgm.tv/person/5847) |
 
 {{< slide "b1/0c/26002_crt_56rQg,63/77/26003_crt_jv644,ff/b5/26004_crt_4SQQq,36/89/26005_crt_58ipl,b4/2c/26006_crt_uMYud,24/56/26007_crt_I97ij,74/65/28250_crt_ga2hi,04/5e/28784_crt_ZK8km" >}}
 
@@ -30,8 +33,8 @@
 
 |     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                      |
 |:----|:------------|:-----------|:------|:----------------------------------------------------------|
-| 1   | 四月是你的谎言     | 2014-10-09 | 22    | [bilibili](https://www.bilibili.com/bangumi/play/ep80016) |
-| 2   | 四月是你的谎言 OAD | 2015-05-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3423)  |
+| 1   |[四月是你的谎言](https://bgm.tv/subject/100444)| 2014-10-09 | 22    | [bilibili](https://www.bilibili.com/bangumi/play/ep80016) |
+| 2   |[四月是你的谎言 OAD](https://bgm.tv/subject/115980)| 2015-05-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3423)  |
 
 
 ## MAD

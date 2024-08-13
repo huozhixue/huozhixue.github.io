@@ -1,28 +1,31 @@
 # 机器人笔记
 
 
+> <u>**[机器人笔记](http://bgm.tv/subject/37673)**</u>，又名：ROBOTICS;NOTES、ロボティクス・ノーツ、ロボティクス;ノーツ、机械学报告
+
 ## 简介
+
 
 时代背景设定在世界变动率为“1.048596%”的2019年。在这样一个机器人已经普遍实用化的未来，种子岛中央高校的“机器人研究部”正面临废部危机，而仅有的两名部员之一——八汐海翔就算面临着这样的情况，仍旧对“机器人研究部”感到兴趣盎然，并且依旧热衷于机器人格斗游戏。而另一位一根筋的废材部长瀬乃宮秋穂为了避免被废部，正在以“完成巨型机器人”为目标奋斗着。然而某天，海翔发现了一份名为“君岛报告”的A.R.笔记。在这份笔记里面，记录着名为君岛安科的人将会把整个世界都卷进来的大阴谋。
 
 **制作人员：**
-- 原作：美吉斯、志仓千代丸
-- 导演：野村和也
-- 脚本：花田十辉、横谷昌宏、根元岁三
-- 分镜：木村延景、泽井幸次、小松田大全
+- 原作：[美吉斯](http://bgm.tv/person/7946)、[志仓千代丸](http://bgm.tv/person/417)
+- 导演：[野村和也](http://bgm.tv/person/9860)
+- 脚本：[花田十辉](http://bgm.tv/person/262)、[横谷昌宏](http://bgm.tv/person/3296)、[根元岁三](http://bgm.tv/person/2661)
+- 分镜：[林直孝（动画人）](http://bgm.tv/person/14726)、[山本秀世](http://bgm.tv/person/11876)、[小松田大全](http://bgm.tv/person/15478)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 八汐海翔 | 八汐 海翔、やしお かいと、Yashio Kaito | 男 | 木村良平 |
-| 2 | 濑乃宫秋穗 | せのみや あきほ、Senomiya Akiho | 女 | 南條愛乃 |
-| 3 | 日高昴 | ひだか すばる、Hidaka Subaru | 男 | 細谷佳正 |
-| 4 | 神代芙拉 | 古郡こな、ふるごおり こな、神代 フラウ、こうじろ ふらう、Koujiro Furau、コナちゃん | 女 | 名塚佳織 |
-| 5 | 大德淳和 | 大徳 淳和、だいとく じゅんな、Daitoku Junna | 女 | 徳井青空 |
-| 6 | 爱理 | 愛理、あいり、Airi | 女 | 釘宮理恵 |
-| 7 | 濑乃宫美纱希 | 瀬乃宮 みさ希、せのみや みさき、Senomiya Misaki | 女 | 井上喜久子 |
-| 8 | 濑乃宫健一郎 | 瀬乃宮 健一郎、せのみや けんいちろう、Senomiya Kenichirō | 男 | 小山武宏 |
+| 1 | [八汐海翔](http://bgm.tv/character/17256) | 八汐 海翔、やしお かいと、Yashio Kaito | 男 | [木村良平](http://bgm.tv/person/4994) |
+| 2 | [濑乃宫秋穗](http://bgm.tv/character/17257) | せのみや あきほ、Senomiya Akiho | 女 | [南條愛乃](http://bgm.tv/person/4792) |
+| 3 | [日高昴](http://bgm.tv/character/17258) | ひだか すばる、Hidaka Subaru | 男 | [細谷佳正](http://bgm.tv/person/4982) |
+| 4 | [神代芙拉](http://bgm.tv/character/17259) | 古郡こな、ふるごおり こな、神代 フラウ、こうじろ ふらう、Koujiro Furau、コナちゃん | 女 | [名塚佳織](http://bgm.tv/person/3922) |
+| 5 | [大德淳和](http://bgm.tv/character/17260) | 大徳 淳和、だいとく じゅんな、Daitoku Junna | 女 | [徳井青空](http://bgm.tv/person/7278) |
+| 6 | [爱理](http://bgm.tv/character/17261) | 愛理、あいり、Airi | 女 | [釘宮理恵](http://bgm.tv/person/3936) |
+| 7 | [濑乃宫美纱希](http://bgm.tv/character/17688) | 瀬乃宮 みさ希、せのみや みさき、Senomiya Misaki | 女 | [井上喜久子](http://bgm.tv/person/3945) |
+| 8 | [濑乃宫健一郎](http://bgm.tv/character/17690) | 瀬乃宮 健一郎、せのみや けんいちろう、Senomiya Kenichirō | 男 | [小山武宏](http://bgm.tv/person/5335) |
 
 {{< slide "15/e0/17256_crt_rQnBq,19/ea/17257_crt_o5lb5,9d/12/17258_crt_q2N1F,98/8a/17259_crt_vhtt4,e1/c9/17260_crt_YfdS7,7c/91/17261_crt_c8zcP,94/b5/17688_crt_LCfl5,7e/27/17690_crt_oMCgM" >}}
 
@@ -30,7 +33,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 机器人笔记 | 2012-10-11 | 22 | [bilibili](https://www.bilibili.com/bangumi/play/ep388137)  |
+| 1 |[机器人笔记](https://bgm.tv/subject/37673)| 2012-10-11 | 22 | [bilibili](https://www.bilibili.com/bangumi/play/ep388137)  |
 
 
 

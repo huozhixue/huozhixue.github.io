@@ -1,34 +1,44 @@
 # 猫和老鼠
 
 
+> <u>**[猫和老鼠](http://bgm.tv/subject/25961)**</u>，又名：Tom and Jerry、Tom and Jerry (1960s packaged show)、猫和老鼠 电视播放版、湯姆貓與傑利鼠
+
 ## 简介
 
-《猫和老鼠》（Tom and Jerry）是米高梅电影公司于1939年制作的一部动画，该片由威廉·汉纳、约瑟夫·巴伯拉编写，弗雷德·昆比制作，首部剧集《甜蜜的家》于1940年2月10日在美国首播。
 
-《猫和老鼠》以闹剧为特色，描绘了一对水火不容的冤家：汤姆和杰瑞猫鼠之间的战争，片中的汤姆经常使用狡诈的诡计来对付杰瑞，而杰瑞则时常利用汤姆诡计中的漏洞逃脱他的迫害并给予报复。
+Tom and Jerry is an American animated series of short films created in 1940 by William Hanna and Joseph Barbera. It centers on a rivalry between its two main characters, Tom Cat and Jerry Mouse, and many recurring characters, based around slapstick comedy.
+
+In its original run, Hanna and Barbera produced 114 Tom and Jerry shorts for Metro-Goldwyn-Mayer from 1940 to 1957. During this time, they won seven Academy Awards for Animated Short Film, tying for first place with Walt Disney's Silly Symphonies with the most awards in the category. After the MGM cartoon studio closed in 1957, MGM revived the series with Gene Deitch directing an additional 13 Tom and Jerry shorts for Rembrandt Films from 1960 to 1962. Tom and Jerry then became the highest-grossing animated short film series of that time, overtaking Looney Tunes. Chuck Jones then produced another 34 shorts with Sib-Tower 12 Productions between 1963 and 1967. Two more shorts were produced, The Mansion Cat in 2001 and The Karate Guard in 2005, for a total of 163 shorts. Various shorts have been released for home media since the 1990s.
+
+A number of spin-offs have been made, including the television series The Tom and Jerry Show (1975–77), The Tom and Jerry Comedy Show (1980–82), Tom & Jerry Kids (1990–94), Tom and Jerry Tales (2006–08), and The Tom and Jerry Show (2014-present). The first feature-length film based on the series, Tom and Jerry: The Movie, was released in 1992 before ten direct-to-video films were produced between 2002 and 2013.
+
+Numerous Tom and Jerry shorts have been subject to controversy, mainly over racial stereotypes which involves the portrayal of the recurring black character Mammy Two Shoes and characters appearing in blackface. Other controversial themes include cannibalism and the glamorization of smoking.
 
 **制作人员：**
-- 导演：威廉·汉纳、约瑟夫·巴伯拉
-- 音乐：斯科特·布拉德利
-- 製作：华纳兄弟动画
+- 导演：[威廉·汉纳](http://bgm.tv/person/49038)、[约瑟夫·巴伯拉](http://bgm.tv/person/49033)
+- 音乐：[斯科特·布拉德利](http://bgm.tv/person/33212)
+- 製作：[华纳兄弟动画](http://bgm.tv/person/13957)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 汤姆 | Jasper、Thomas、Tom、汤姆猫 | 男猫 | William Hanna |
-| 2 | 杰瑞 | Jerry、Jinx、杰瑞鼠 | 男鼠 |  |
-| 3 | 斯派克 |  | 雄 |  |
-| 4 | 泰克 |  | 雄 |  |
-| 5 | 泰菲 | 塔菲、尼布斯、Nibbles Mouse | 雄 |  |
+| 1 | [汤姆](http://bgm.tv/character/14401) | Jasper、Thomas、Tom、汤姆猫 | 雄 | [William Hanna](http://bgm.tv/person/49038) |
+| 2 | [杰瑞](http://bgm.tv/character/14402) | Jerry、Jinx、杰瑞鼠 | 雄 |  |
+| 3 | [斯派克](http://bgm.tv/character/24335) |  | 雄 |  |
+| 4 | [泰菲](http://bgm.tv/character/115800) | 塔菲、尼布斯、Nibbles Mouse | 雄 |  |
+| 5 | [夸克](http://bgm.tv/character/127388) | 小鸭子 |  |  |
+| 6 | [可可](http://bgm.tv/character/127393) | 布谷 |  |  |
+| 7 | [乔治](http://bgm.tv/character/127382) |  | 雄 |  |
+| 8 | [布奇](http://bgm.tv/character/127384) |  | 雄 |  |
 
-{{< slide "61/bb/14401_crt_JciHA,64/d1/14402_crt_1BReR,d5/0e/24335_crt_0jUOo,d5/31/111735_crt_t7K9o,52/e4/115800_crt_W7l8L" >}}
+{{< slide "61/bb/14401_crt_QQIw6,64/d1/14402_crt_kflHE,d5/0e/24335_crt_i26WP,52/e4/115800_crt_W7l8L,ce/d7/127388_crt_R6EEr,d5/9d/127393_crt_61Dl6,38/63/127382_crt_H3UHX,1d/12/127384_crt_TMzu9" >}}
 
 ## 系列
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 猫和老鼠 | 1940-02-10 | 164 | [下方](#id-1)  |
+| 1 |[猫和老鼠](https://bgm.tv/subject/25961)| 1940-02-10 | 164 | [下方](#id-1)  |
 
 {{< media auto="tv/tom_and_jerry" >}}
 

@@ -1,7 +1,10 @@
 # 烟花
 
 
+> <u>**[烟花](http://bgm.tv/subject/200704)**</u>，又名：打ち上げ花火、下から見るか？横から見るか？、Fireworks、Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?、烟花、应该和谁看、升空的焰火，从下面看还是从侧面看？
+
 ## 简介
+
 
 暑假，某个海边小镇。在烟花晚会之前，热热闹闹的聊着“升空的烟花从侧面看是圆的？还是平的？”这样的话题的同班同学。
 与此同时，典道暗恋着的荠，因为荠的母亲的再婚对象已确定所以要转学了。
@@ -15,24 +18,24 @@
 一次又一次被重复的一天，荠与典道的命运会……？
 
 **制作人员：**
-- 原作：岩井俊二
-- 导演：武内宣之
-- 脚本：大根仁
-- 演出：铃木利正、宫本幸裕、城所圣明、塚田拓郎
-- 音乐：神前晓
+- 原作：[岩井俊二](http://bgm.tv/person/15860)
+- 导演：[武内宣之](http://bgm.tv/person/734)
+- 脚本：[大根仁](http://bgm.tv/person/26069)
+- 演出：[宫本幸裕](http://bgm.tv/person/3646)、[城所圣明](http://bgm.tv/person/15283)、[塚田拓郎](http://bgm.tv/person/22694)、[铃木利正](http://bgm.tv/person/3675)
+- 音乐：[神前晓](http://bgm.tv/person/3287)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 及川荠 | 及川奈砂、及川 なずな、おいかわ なずな、Oikawa Nazuna、及川菜津奈 | 女 | 広瀬すず |
-| 2 | 岛田典道 |  | 男 | 菅田将暉 |
-| 3 | 安昙祐介 |  | 男 | 宮野真守 |
-| 4 | 纯一 |  | 男 | 浅沼晋太郎 |
-| 5 | 和弘 |  | 男 | 豊永利行 |
-| 6 | 稔 |  | 男 | 梶裕貴 |
-| 7 | 荠母亲的再婚对象 | 奈砂母亲的再婚对象 | 男 | 三木眞一郎 |
-| 8 | 三浦老师 |  | 女 | 花澤香菜 |
+| 1 | [及川荠](http://bgm.tv/character/49053) | 及川奈砂、及川 なずな、おいかわ なずな、Oikawa Nazuna、及川菜津奈 | 女 | [広瀬すず](http://bgm.tv/person/21607) |
+| 2 | [岛田典道](http://bgm.tv/character/49054) |  | 男 | [菅田将暉](http://bgm.tv/person/23093) |
+| 3 | [安昙祐介](http://bgm.tv/character/49055) |  | 男 | [宮野真守](http://bgm.tv/person/4697) |
+| 4 | [纯一](http://bgm.tv/character/62737) |  | 男 | [浅沼晋太郎](http://bgm.tv/person/4779) |
+| 5 | [和弘](http://bgm.tv/character/62740) |  | 男 | [豊永利行](http://bgm.tv/person/4729) |
+| 6 | [稔](http://bgm.tv/character/62738) |  | 男 | [梶裕貴](http://bgm.tv/person/5209) |
+| 7 | [荠母亲的再婚对象](http://bgm.tv/character/62746) | 奈砂母亲的再婚对象 | 男 | [三木眞一郎](http://bgm.tv/person/4101) |
+| 8 | [三浦老师](http://bgm.tv/character/62733) |  | 女 | [花澤香菜](http://bgm.tv/person/4765) |
 
 {{< slide "cb/fc/49053_crt_Bbshj,1d/2f/49054_crt_1XpzA,02/b9/49055_crt_56MhS,d8/03/62737_crt_Cmm4x,07/de/62740_crt_906X6,6c/01/62738_crt_9jI1R,3f/22/62746_crt_MhZp7,cf/cf/62733_crt_8lQln" >}}
 
@@ -40,7 +43,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 烟花 | 2017-08-18 | 01:30:00 | [bilibili](https://www.bilibili.com/bangumi/play/ep312079)  |
+| 1 |[烟花](https://bgm.tv/subject/200704)| 2017-08-18 | 01:30:00 | [bilibili](https://www.bilibili.com/bangumi/play/ep312079)  |
 
 
 ## MAD

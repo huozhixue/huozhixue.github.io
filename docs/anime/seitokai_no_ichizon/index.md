@@ -1,7 +1,10 @@
 # 学生会的一己之见
 
 
+> <u>**[学生会的一己之见](http://bgm.tv/subject/2567)**</u>，又名：生徒会の一存、Seitokai no Ichizon、生徒会の一存 碧陽学園生徒会議事録、碧阳学园学生会议事录、学生会的一存
+
 ## 简介
+
 
 在私立碧阳学园。学生会成员的选举，有一套特殊的制度。
 不举行一般的选举，只是单纯地用《人气投票》来选取学生会成员。
@@ -19,23 +22,23 @@ LOLI娘学生会会长・樱野真红。
 最终，杉崎能过上理想的后宫生活么？
 
 **制作人员：**
-- 原作：葵关南、狗神煌
-- 导演：佐藤卓哉
-- 脚本：花田十辉
-- 分镜：柳泽哲也、福田道生、小岛正士、渡边哲哉、加藤敏幸
+- 原作：[狗神煌](http://bgm.tv/person/5854)、[葵关南](http://bgm.tv/person/7471)
+- 导演：[佐藤卓哉](http://bgm.tv/person/200)
+- 脚本：[花田十辉](http://bgm.tv/person/262)
+- 分镜：[福田道生](http://bgm.tv/person/2610)、[高本宣弘](http://bgm.tv/person/451)、[柳泽哲也](http://bgm.tv/person/1098)、[金崎贵臣](http://bgm.tv/person/3101)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 杉崎键 | 杉崎 鍵、すぎさき けん、Sugisaki Ken | 男 | 近藤隆 |
-| 2 | 樱野栗梦 | さくらの くりむ、Sakurano Kurimu | 女 | 本多真梨子 |
-| 3 | 红叶知弦 | 紅葉知弦、あかば ちづる、Akaba Chizuru | 女 | 斉藤佑圭 |
-| 4 | 椎名深夏 | しいな みなつ、Shiina Minatsu | 女 | 富樫美鈴 |
-| 5 | 椎名真冬 | 椎名真冬、しいな まふゆ、Shiina Mafuyu | 女 | 堀中優希 |
-| 6 | 藤堂莉莉西亚 | 藤堂リリシア、とうどう リリシア、Toudou Lilicia | 女 | 能登麻美子 |
-| 7 | 真仪琉纱鸟 | 真儀瑠紗鳥、Magiru Satori | 女 | 小菅真美 |
-| 8 | 中目黑善树 | 中目黒 善樹、なかめぐろ よしき、Nakameguro Yoshiki | 男 | 山本和臣 |
+| 1 | [杉崎键](http://bgm.tv/character/501) | 杉崎 鍵、すぎさき けん、Sugisaki Ken | 男 | [近藤隆](http://bgm.tv/person/4265) |
+| 2 | [樱野栗梦](http://bgm.tv/character/502) | さくらの くりむ、Sakurano Kurimu | 女 | [本多真梨子](http://bgm.tv/person/5203) |
+| 3 | [红叶知弦](http://bgm.tv/character/503) | 紅葉知弦、あかば ちづる、Akaba Chizuru | 女 | [斉藤佑圭](http://bgm.tv/person/5158) |
+| 4 | [椎名深夏](http://bgm.tv/character/504) | しいな みなつ、Shiina Minatsu | 女 | [富樫美鈴](http://bgm.tv/person/5182) |
+| 5 | [椎名真冬](http://bgm.tv/character/505) | 椎名真冬、しいな まふゆ、Shiina Mafuyu | 女 | [堀中優希](http://bgm.tv/person/5157) |
+| 6 | [藤堂莉莉西亚](http://bgm.tv/character/506) | 藤堂リリシア、とうどう リリシア、Toudou Lilicia | 女 | [能登麻美子](http://bgm.tv/person/3827) |
+| 7 | [真仪琉纱鸟](http://bgm.tv/character/507) | 真儀瑠紗鳥、Magiru Satori | 女 | [小菅真美](http://bgm.tv/person/5156) |
+| 8 | [中目黑善树](http://bgm.tv/character/508) | 中目黒 善樹、なかめぐろ よしき、Nakameguro Yoshiki | 男 | [山本和臣](http://bgm.tv/person/5155) |
 
 {{< slide "80/94/501_crt_4j44p,3d/77/1336_CY3yC,d9/74/503_crt_C0850,05/31/1338_DdKBz,d1/0e/1339_sjhGB,2a/c0/506_crt_ly5o3,df/8d/507_crt_yAQs3,55/ef/508_crt_SPFW4" >}}
 
@@ -43,8 +46,8 @@ LOLI娘学生会会长・樱野真红。
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 学生会的一己之见 | 2009-10-02 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss631)  |
-| 2 | 学生会的一己之见 Lv.2 | 2013-01-09 | 10 | [bilibili](https://www.bilibili.com/bangumi/play/ss632)  |
+| 1 |[学生会的一己之见](https://bgm.tv/subject/2567)| 2009-10-02 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss631)  |
+| 2 |[学生会的一己之见 Lv.2](https://bgm.tv/subject/48289)| 2013-01-09 | 10 | [bilibili](https://www.bilibili.com/bangumi/play/ss632)  |
 
 
 ## MAD

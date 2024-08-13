@@ -1,7 +1,10 @@
 # 天使之卵
 
 
+> <u>**[天使之卵](http://bgm.tv/subject/4188)**</u>，又名：天使のたまご、Tenshi no tamago、Angel's Egg
+
 ## 简介
+
 
 “天使之卵”架构在一个充满阴影和灰暗色彩的超现实主义世界中，剧情的主角是两个没有提及名字的少年与少女。
 
@@ -14,17 +17,19 @@
 少女表现得很生气并紧跟着已经离开的少年。最后少女沉入了溪谷中死去，她口中吐出来的气泡最后都化作了一颗颗的蛋。
 
 **制作人员：**
-- 原作：天野喜孝、押井守
-- 音乐：菅野由弘
-- 美术监督：小林七郎
-- 色彩设计：保田道世
+- 导演：[押井守](http://bgm.tv/person/1287)
+- 音乐：[菅野由弘](http://bgm.tv/person/16198)
+- 人物原案：[天野喜孝](http://bgm.tv/person/1601)
+- 构图：[小林七郎](http://bgm.tv/person/6333)
+- 色彩设计：[保田道世](http://bgm.tv/person/1510)
+- 作画监督：[名仓靖博](http://bgm.tv/person/1459)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 少女 | 少女、Shoujo | 女 | 兵藤まこ |
-| 2 | 少年 |  | 男 | 根津甚八 |
+| 1 | [少女](http://bgm.tv/character/10411) | 少女、Shoujo | 女 | [兵藤まこ](http://bgm.tv/person/3870) |
+| 2 | [少年](http://bgm.tv/character/119225) |  | 男 | [根津甚八](http://bgm.tv/person/49012) |
 
 {{< slide "2d/5b/10411_crt_anidb,35/55/119225_crt_q7Oci" >}}
 
@@ -32,7 +37,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 天使之卵 | 1985-12-22 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss5582)  |
+| 1 |[天使之卵](https://bgm.tv/subject/4188)| 1985-12-22 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss5582)  |
 
 
 

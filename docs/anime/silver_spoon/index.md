@@ -1,28 +1,31 @@
 # 银之匙 Silver Spoon
 
 
+> <u>**[银之匙 Silver Spoon](http://bgm.tv/subject/59664)**</u>，又名：銀の匙 Silver Spoon、白银之匙、銀之匙 Silver Spoon、银勺子
+
 ## 简介
+
 
 大虾夷农业高等学校（通称：虾夷农高）是一所坐落于北海道的农业高中，校内学生多为以将从事农业当作目标的农家子女。这所拥有在全日本所有高中中最多的占地面积，被北海道壮丽的大自然和乡村风情环抱的虾夷农高，在新学年里迎来了一位特殊的学生——八轩勇吾。这位来自城市、毕业于升学初中的文弱学生，因发现在一年级的同学中只有他自己找不到明确的人生目标而开始焦躁不安。自此，写作“就读于农高的每一天”、读作“在青春岁月中找寻自己的梦想”的八轩勇吾的高中生活开始了。
 
 **制作人员：**
-- 原作：荒川弘
-- 导演：伊藤智彦
-- 脚本：岸本卓
-- 分镜：许平康、柴山智隆、村山靖、室井康雄、藤森一真、冈村天斋
+- 原作：[荒川弘](http://bgm.tv/person/1427)
+- 导演：[伊藤智彦](http://bgm.tv/person/3213)
+- 脚本：[岸本卓](http://bgm.tv/person/10520)
+- 分镜：[藤森一真](http://bgm.tv/person/14793)、[柴山智隆](http://bgm.tv/person/21180)、[室井康雄](http://bgm.tv/person/12231)、[出合小都美](http://bgm.tv/person/15844)、[许平康](http://bgm.tv/person/26764)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 八轩勇吾 | 八軒 勇吾、はちけん ゆうご、Hachiken Yuugo、ハチ | 男 | 木村良平 |
-| 2 | 御影秋 | 御影亚季、御影亚纪、みかげ アキ、Mikage Aki | 女 | 三宅麻理恵 |
-| 3 | 驹场一郎 | 駒場 一郎、こまば いちろう、Komaba Ichirou | 男 | 櫻井トオル |
-| 4 | 常盘惠次 | 常盤 恵次、ときわ けいじ、Tokiwa Keiji | 男 | 庄司将之 |
-| 5 | 稻田多摩子 | 稲田 多摩子、いなだ たまこ、Inada Tamako、タマコ / 鸡蛋子 | 女 | 高垣彩陽 |
-| 6 | 相川进之介 | 相川 進之介、あいかわ   しんのすけ、Aikawa  Shinnosike | 男 | 島﨑信長 |
-| 7 | 吉野真由美 | 吉野 まゆみ、よしの まゆみ、Yoshino Mayumi | 女 | 井澤詩織 |
-| 8 | 八轩慎吾 | 八軒慎吾、はちけん しんご | 男 | 小西克幸 |
+| 1 | [八轩勇吾](http://bgm.tv/character/19783) | 八軒 勇吾、はちけん ゆうご、Hachiken Yuugo、ハチ | 男 | [木村良平](http://bgm.tv/person/4994) |
+| 2 | [御影秋](http://bgm.tv/character/19784) | 御影亚季、御影亚纪、みかげ アキ、Mikage Aki | 女 | [三宅麻理恵](http://bgm.tv/person/6846) |
+| 3 | [驹场一郎](http://bgm.tv/character/19785) | 駒場 一郎、こまば いちろう、Komaba Ichirou | 男 | [櫻井トオル](http://bgm.tv/person/10525) |
+| 4 | [常盘惠次](http://bgm.tv/character/19786) | 常盤 恵次、ときわ けいじ、Tokiwa Keiji | 男 | [庄司将之](http://bgm.tv/person/5028) |
+| 5 | [稻田多摩子](http://bgm.tv/character/19787) | 稲田 多摩子、いなだ たまこ、Inada Tamako、タマコ / 鸡蛋子 | 女 | [高垣彩陽](http://bgm.tv/person/4757) |
+| 6 | [相川进之介](http://bgm.tv/character/19788) | 相川 進之介、あいかわ   しんのすけ、Aikawa  Shinnosike | 男 | [島﨑信長](http://bgm.tv/person/7392) |
+| 7 | [吉野真由美](http://bgm.tv/character/21011) | 吉野 まゆみ、よしの まゆみ、Yoshino Mayumi | 女 | [井澤詩織](http://bgm.tv/person/5642) |
+| 8 | [八轩慎吾](http://bgm.tv/character/21012) | 八軒慎吾、はちけん しんご | 男 | [小西克幸](http://bgm.tv/person/3861) |
 
 {{< slide "90/03/19783_crt_qRBBl,a4/eb/19784_crt_ayRhR,bd/c5/19785_crt_Ep1ZE,d8/5d/19786_crt_08P90,83/8a/19787_crt_l28lf,65/cd/19788_crt_ZLPCe,a7/26/21011_crt_YyurL,94/52/21012_crt_Yqawf" >}}
 
@@ -30,8 +33,8 @@
 
 |     | 系列名                  | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------------------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   | 银之匙 Silver Spoon     | 2013-07-11 | 11    | [keke9](https://www.keke9.app/play/21480-4-150926.html) |
-| 2   | 银之匙 Silver Spoon 第二季 | 2014-01-09 | 11    | [keke9](https://www.keke9.app/play/21476-4-150889.html) |
+| 1   |[银之匙 Silver Spoon](https://bgm.tv/subject/59664)| 2013-07-11 | 11    | [keke9](https://www.keke9.app/play/21480-4-150926.html) |
+| 2   |[银之匙 Silver Spoon 第二季](https://bgm.tv/subject/77480)| 2014-01-09 | 11    | [keke9](https://www.keke9.app/play/21476-4-150889.html) |
 
 ## MAD
 

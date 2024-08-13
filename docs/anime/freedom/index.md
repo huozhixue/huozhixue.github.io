@@ -1,7 +1,10 @@
 # FREEDOM
 
 
+> <u>**[FREEDOM](http://bgm.tv/subject/4192)**</u>，又名：自由、自由计划、フリーダム、FREEDOM-PROJECT
+
 ## 简介
+
 
 以人类移居月球的23世纪为舞台。传言地球已经灭亡，在称为“科学技术研究的自由”与“往地球出国的自由”都被夺走的伊甸（EDEN）的月球共和国上，描写少年们追求真正自由的故事。
 
@@ -10,20 +13,20 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
 本计划的世界舞台是以日清食品的合味道杯面与大友克洋的“FREEDOM：自由”为主题，拍摄全10支的广告系列，并制作全6集+1集后续篇的OVA动画。动画会先在Yahoo!动画上作网上播放，其后会以标题“FREEDOM”作DVD发售。
 
 **制作人员：**
-- 导演：森田修平
-- 脚本：野村祐一、佐藤大、千叶克彦
-- 分镜：片山一良、安藤裕章、远藤广隆、松井仁之
+- 导演：[森田修平](http://bgm.tv/person/2471)
+- 脚本：[野村祐一](http://bgm.tv/person/9240)、[佐藤大](http://bgm.tv/person/921)、[千叶克彦](http://bgm.tv/person/525)
+- 分镜：[远藤广隆](http://bgm.tv/person/12042)、[片山一良](http://bgm.tv/person/197)、[松井仁之](http://bgm.tv/person/621)、[安藤裕章](http://bgm.tv/person/2258)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | タケル | タケル、Takeru | 男 | 浪川大輔 |
-| 2 | 和马 |  | 男 | 森久保祥太郎 |
-| 3 | ビス | ビス、Bis | 男 | 山口勝平 |
-| 4 | アラン | アラン、Aran | 男 | 加藤精三 |
-| 5 | 泰那 |  | 男 | 桐本拓哉 |
-| 6 | Junk屋的大叔 |  | 男 | 松本大 |
+| 1 | [タケル](http://bgm.tv/character/9428) | タケル、Takeru | 男 | [浪川大輔](http://bgm.tv/person/4254) |
+| 2 | [和马](http://bgm.tv/character/11984) |  | 男 | [森久保祥太郎](http://bgm.tv/person/4166) |
+| 3 | [ビス](http://bgm.tv/character/9431) | ビス、Bis | 男 | [山口勝平](http://bgm.tv/person/3900) |
+| 4 | [アラン](http://bgm.tv/character/9432) | アラン、Aran | 男 | [加藤精三](http://bgm.tv/person/4555) |
+| 5 | [泰那](http://bgm.tv/character/11987) |  | 男 | [桐本拓哉](http://bgm.tv/person/4347) |
+| 6 | [Junk屋的大叔](http://bgm.tv/character/11994) |  | 男 | [松本大](http://bgm.tv/person/4344) |
 
 {{< slide "31/d7/9428_crt_anidb,40/db/11984_crt_RlEUS,7f/9b/9431_crt_anidb,f3/93/9432_crt_anidb,58/79/11987_crt_ix8C6,41/b2/11994_crt_33479" >}}
 
@@ -31,7 +34,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
 
 |     | 系列名     | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :------ | :--------- | :---- | :------------------------------------------------------- |
-| 1   | FREEDOM | 2006-11-24 | 7     | [keke9](https://www.keke9.app/play/219943-2-436401.html) |
+| 1   |[FREEDOM](https://bgm.tv/subject/4192)| 2006-11-24 | 7     | [keke9](https://www.keke9.app/play/219943-2-436401.html) |
 
 
 

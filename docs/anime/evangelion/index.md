@@ -1,7 +1,10 @@
 # 新世纪福音战士
 
 
+> <u>**[新世纪福音战士](http://bgm.tv/subject/265)**</u>，又名：新世紀エヴァンゲリオン、New Century Evangelion、新世纪天鹰战士、2000天鹰战士、EVA、天鹰战士、Neon Genesis Evangelion、Shin Seiki Evangerion
+
 ## 简介
+
 
 2000年，一个科学探险队在南极洲针对被称作“第一使徒”亚当的“光之巨人”进行探险。在对其进行接触实验时，“光之巨人”自毁，从而发生了“第二次冲击”，进而导致世界大战。最后，人类人口减半，地轴偏转、气候改变。根据对“第二次冲击”的调查，联合国在日本箱根成立人工进化研究所（即 GEHIRN）从事EVA（指机器人）的发展研究，后GEHIRN利用在人工进化研究所下方发现的巨大空洞建造了总部。
 另一方面，联合国下属秘密组织SEELE为了使人类进化，开始实行人类补完计划，就是将所有人的灵魂汇集在一起，通过中和每个人的AT力场，使每个人回归LCL之海。
@@ -10,37 +13,37 @@
 Director's Cut版本的第21～24集由剧场版《Death》篇剪辑而成，收录在20周年纪念版的蓝光中。
 
 **制作人员：**
-- 原作：GAINAX
-- 导演：庵野秀明
-- 脚本：山口宏、萨川昭夫、矶光雄、榎户洋司、樋口真嗣
-- 分镜：佐藤顺一
+- 原作：[GAINAX](http://bgm.tv/person/93)
+- 导演：[庵野秀明](http://bgm.tv/person/94)
+- 脚本：[山口宏](http://bgm.tv/person/335)、[萨川昭夫](http://bgm.tv/person/22038)、[樋口真嗣](http://bgm.tv/person/2150)、[榎户洋司](http://bgm.tv/person/411)、[矶光雄](http://bgm.tv/person/3147)
+- 分镜：[佐藤顺一](http://bgm.tv/person/456)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 碇真嗣 | 碇真治、いかり　しんじ、Ikari Shinji、笨蛋真嗣（バガシンジ），小鬼真嗣（ガキシンジ，剧场版Q） | 男 | 緒方恵美 |
-| 2 | 绫波丽 | 绫波零、あやなみ レイ、Ayanami Rei | 女 | 林原めぐみ |
-| 3 | 惣流·明日香·兰格雷 | Soryu Asuka Langley、そうりゅう・アスカ・ラングレー、Sōryū Asuka Rangurē、香香、式波・アスカ・ラングレー、式波·明日香·兰格雷、Shikinami Asuka Langley、しきなみ・アスカ・ラングレー、Shikinami Asuka Rangurē | 女 | 宮村優子 |
-| 4 | 葛城美里 | 葛城ミサト、かつらぎ ミサト、Katsuragi Misato | 女 | 三石琴乃 |
-| 5 | 伊吹摩耶 | 伊吹玛亚、伊吹マヤ、Ibuki Maya、伊吹玛雅 | 女 | 長沢美樹 |
-| 6 | 加持良治 | Рёдзи Кадзи、加持リョウジ、Kaji Ryouji | 男 | 山寺宏一 |
-| 7 | 冬月耕造 | 冬月コウゾウ、ふゆつき　こうぞう、Fuyutsuki Kouzou | 男 | 清川元夢 |
-| 8 | 相田剑介 | 相田健介、相田ケンスケ、あいだ ケンスケ、Aida Kensuke | 男 | 岩永哲哉 |
+| 1 | [碇真嗣](http://bgm.tv/character/302) | 碇真治、いかり　しんじ、Ikari Shinji、笨蛋真嗣（バガシンジ），小鬼真嗣（ガキシンジ，剧场版Q），わんこ君（真希波限定） | 男 | [緒方恵美](http://bgm.tv/person/4054) |
+| 2 | [绫波丽](http://bgm.tv/character/303) | 绫波零、あやなみ レイ、Ayanami Rei | 女 | [林原めぐみ](http://bgm.tv/person/3919) |
+| 3 | [惣流·明日香·兰格雷](http://bgm.tv/character/304) | Soryu Asuka Langley、そうりゅう・アスカ・ラングレー、Sōryū Asuka Rangurē、香香、式波・アスカ・ラングレー、式波·明日香·兰格雷、Shikinami Asuka Langley、しきなみ・アスカ・ラングレー、Shikinami Asuka Rangurē | 女 | [宮村優子](http://bgm.tv/person/3972) |
+| 4 | [葛城美里](http://bgm.tv/character/5088) | 葛城ミサト、かつらぎ ミサト、Katsuragi Misato | 女 | [三石琴乃](http://bgm.tv/person/3918) |
+| 5 | [伊吹摩耶](http://bgm.tv/character/6380) | 伊吹玛亚、伊吹マヤ、Ibuki Maya、伊吹玛雅 | 女 | [長沢美樹](http://bgm.tv/person/3913) |
+| 6 | [加持良治](http://bgm.tv/character/7144) | Рёдзи Кадзи、加持リョウジ、Kaji Ryouji | 男 | [山寺宏一](http://bgm.tv/person/3914) |
+| 7 | [冬月耕造](http://bgm.tv/character/7378) | 冬月コウゾウ、ふゆつき　こうぞう、Fuyutsuki Kouzou | 男 | [清川元夢](http://bgm.tv/person/3915) |
+| 8 | [相田剑介](http://bgm.tv/character/7379) | 相田健介、相田ケンスケ、あいだ ケンスケ、Aida Kensuke | 男 | [岩永哲哉](http://bgm.tv/person/3917) |
 
-{{< slide "e1/af/302_crt_ce4yO,c6/36/303_crt_IslZT,d5/f7/304_crt_q6Bs8,04/fc/5088_crt_anidb,2f/63/6380_crt_anidb,38/0a/7144_crt_anidb,b6/cf/7378_crt_anidb,44/2b/7379_crt_anidb" >}}
+{{< slide "e1/af/302_crt_ce4yO,c6/36/303_crt_9USuE,d5/f7/304_crt_q6Bs8,04/fc/5088_crt_anidb,2f/63/6380_crt_anidb,38/0a/7144_crt_anidb,b6/cf/7378_crt_anidb,44/2b/7379_crt_anidb" >}}
 
 ## 系列
 
 |     | 系列名                 | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :------------------ | :--------- | :---- | :------------------------------------------------------- |
-| 1   | 新世纪福音战士             | 1995-10-04 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss1635) |
-| 2   | 新世纪福音战士剧场版 死与新生     | 1997-03-15 | 2     | [bilibili](https://www.bilibili.com/bangumi/play/ss1637) |
-| 3   | 新世纪福音战士剧场版 Air/真心为你 | 1997-07-19 | 2     | [bilibili](https://www.bilibili.com/bangumi/play/ss1630) |
-| 4   | 福音战士新剧场版：序          | 2007-09-01 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1638) |
-| 5   | 福音战士新剧场版：破          | 2009-06-27 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1639) |
-| 6   | 福音战士新剧场版：Q          | 2012-11-17 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1640) |
-| 7   | 新・福音战士剧场版：终         | 2021-03-08 | 1     | [keke9](https://www.keke9.app/play/179831-4-272154.html) |
+| 1   |[新世纪福音战士](https://bgm.tv/subject/265)| 1995-10-04 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss1635) |
+| 2   |[新世纪福音战士剧场版 死与新生](https://bgm.tv/subject/6048)| 1997-03-15 | 2     | [bilibili](https://www.bilibili.com/bangumi/play/ss1637) |
+| 3   |[新世纪福音战士剧场版 Air/真心为你](https://bgm.tv/subject/6049)| 1997-07-19 | 2     | [bilibili](https://www.bilibili.com/bangumi/play/ss1630) |
+| 4   |[福音战士新剧场版：序](https://bgm.tv/subject/772)| 2007-09-01 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1638) |
+| 5   |[福音战士新剧场版：破](https://bgm.tv/subject/3302)| 2009-06-27 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1639) |
+| 6   |[福音战士新剧场版：Q](https://bgm.tv/subject/22505)| 2012-11-17 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1640) |
+| 7   |[新・福音战士剧场版：终](https://bgm.tv/subject/29883)| 2021-03-08 | 1     | [keke9](https://www.keke9.app/play/179831-4-272154.html) |
 
 ## 配乐
 

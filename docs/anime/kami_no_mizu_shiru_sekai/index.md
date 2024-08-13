@@ -1,30 +1,33 @@
 # 只有神知道的世界
 
 
+> <u>**[只有神知道的世界](http://bgm.tv/subject/5976)**</u>，又名：神のみぞ知るセカイ、機神追女攻略、神之境界
+
 ## 简介
+
 
 舞岛学园的桂木桂马是个喜欢玩恋爱模拟游戏——也就是Galgame——的高中生。他有着无论怎样的女性（限定Galgame中的二次元可攻略角色）都能攻略的技巧，在游戏界中被称为“攻陷之神”；而他本人也比谁都深爱着这些二次元美少女们。
 
 某日，桂马意外地与恶魔订下契约，眼前出现了一位从遥远的地狱来到这里的恶魔少女艾鲁西。她的目的是拜托桂马帮忙捕获从地狱逃走的“驱魂”。驱魂会躲藏在女性的内心空隙，而填满内心空隙、赶出驱魂的其中一个方法就是“恋爱”。在不履行契约就会身首异处的威胁下，二次元的攻陷之神开始了未曾挑战过的三次元女性攻略之路。
 
 **制作人员：**
-- 原作：若木民喜
-- 导演：高柳滋仁
-- 脚本：高桥龙也、仓田英之
-- 分镜：熨斗谷充孝、望月智充、小森秀人、佐藤光敏
+- 原作：[若木民喜](http://bgm.tv/person/7029)
+- 导演：[高柳滋仁](http://bgm.tv/person/1189)
+- 脚本：[高桥龙也](http://bgm.tv/person/6718)、[仓田英之](http://bgm.tv/person/375)
+- 分镜：[曾我准](http://bgm.tv/person/17533)、[冈佳广](http://bgm.tv/person/13111)、[望月智充](http://bgm.tv/person/581)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 桂木桂马 | かつらぎ けいま、Katsuragi Keima | 男 | 下野紘 |
-| 2 | 中川奏音 | 中川花音、中川嘉音、中川加侬、Kanon Nakagawa、なかがわ かのん、Nakagawa Kanon | 女 | 東山奈央 |
-| 3 | 高原步美 | たかはら あゆみ、takahara ayumi | 女 | 竹達彩奈 |
-| 4 | 汐宫栞 | 汐宫刊、しおみや しおり、shiomiya shiori | 女 | 花澤香菜 |
-| 5 | 青山美生 | あおやま みお | 女 | 悠木碧 |
-| 6 | 艾利由西亚·D·鲁德·伊玛 | 艾鲁西、Elsea De Lute Irma、エルシィ | 女 | 伊藤かな恵 |
-| 7 | 飞鸟空 | あすか そら | 女 | 櫻井智 |
-| 8 | 桂木麻里 | Mari Katsuragi、かつらぎ まり | 女 | 柚木涼香 |
+| 1 | [桂木桂马](http://bgm.tv/character/780) | かつらぎ けいま、Katsuragi Keima | 男 | [下野紘](http://bgm.tv/person/4262) |
+| 2 | [中川奏音](http://bgm.tv/character/11259) | 中川花音、中川嘉音、中川加侬、Kanon Nakagawa、なかがわ かのん、Nakagawa Kanon | 女 | [東山奈央](http://bgm.tv/person/6010) |
+| 3 | [高原步美](http://bgm.tv/character/11258) | たかはら あゆみ、takahara ayumi | 女 | [竹達彩奈](http://bgm.tv/person/5228) |
+| 4 | [汐宫栞](http://bgm.tv/character/11260) | 汐宫刊、しおみや しおり、shiomiya shiori | 女 | [花澤香菜](http://bgm.tv/person/4765) |
+| 5 | [青山美生](http://bgm.tv/character/11227) | あおやま みお | 女 | [悠木碧](http://bgm.tv/person/5076) |
+| 6 | [艾利由西亚·D·鲁德·伊玛](http://bgm.tv/character/11257) | 艾鲁西、Elsea De Lute Irma、エルシィ | 女 | [伊藤かな恵](http://bgm.tv/person/4949) |
+| 7 | [飞鸟空](http://bgm.tv/character/11261) | あすか そら | 女 | [櫻井智](http://bgm.tv/person/5954) |
+| 8 | [桂木麻里](http://bgm.tv/character/17176) | Mari Katsuragi、かつらぎ まり | 女 | [柚木涼香](http://bgm.tv/person/4007) |
 
 {{< slide "e5/33/780_crt_FtRvo,00/1c/11259_crt_2G1CU,34/18/11258_crt_Z8cUx,26/9a/11260_crt_S2LC1,b6/c5/11227_crt_v52dn,56/a2/11257_crt_ZbdIO,73/4b/11261_crt_oFYOB,61/16/17176_crt_r8vFA" >}}
 
@@ -32,10 +35,10 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :----------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   | 只有神知道的世界     | 2010-10-06 | 12    | [keke9](https://www.keke9.app/play/22423-4-169243.html)  |
-| 2   | 只有神知道的世界II   | 2011-04-11 | 12    | [keke9](https://www.keke9.app/play/22422-4-169231.html)  |
-| 3   | 只有神知道的世界 天理篇 | 2012-10-18 | 2     | [bilibili](https://www.bilibili.com/video/BV12s41157JV)  |
-| 4   | 只有神知道的世界 女神篇 | 2013-07-08 | 12    | [keke9](https://www.keke9.app/play/168061-2-342764.html) |
+| 1   |[只有神知道的世界](https://bgm.tv/subject/5976)| 2010-10-06 | 12    | [keke9](https://www.keke9.app/play/22423-4-169243.html)  |
+| 2   |[只有神知道的世界II](https://bgm.tv/subject/10739)| 2011-04-11 | 12    | [keke9](https://www.keke9.app/play/22422-4-169231.html)  |
+| 3   |[只有神知道的世界 天理篇](https://bgm.tv/subject/46014)| 2012-10-18 | 2     | [bilibili](https://www.bilibili.com/video/BV12s41157JV)  |
+| 4   |[只有神知道的世界 女神篇](https://bgm.tv/subject/56112)| 2013-07-08 | 12    | [keke9](https://www.keke9.app/play/168061-2-342764.html) |
 
 ## MAD
 

@@ -1,7 +1,10 @@
 # 星之声
 
 
+> <u>**[星之声](http://bgm.tv/subject/1936)**</u>，又名：ほしのこえ、The voices of a distant star
+
 ## 简介
+
 
 2039年时，人类火星调查队在火星的塔尔西斯高地上发现了异文明的遗迹，但却被突然出现的异生命体攻击而全军覆没。于是为了对抗被命名为塔尔西斯（Tarsian）人的异生命体的威胁，联合国组成了联合国宇宙军。
 
@@ -10,16 +13,16 @@
 终于，美加子抵达了距离地球8.7光年的半人马座α星系中的一颗行星。在那里，美加子传送了费时8.7年才能到达地球的手机短信给寺尾升。在随后进行的与塔而西斯人的战斗中，联合国军几乎全军覆没，但美加子幸存。
 
 **制作人员：**
-- 原作：新海诚
-- 音乐：天门
-- 主题歌演出：みずさわゆうき
+- 原作：[新海诚](http://bgm.tv/person/2064)
+- 音乐：[天门](http://bgm.tv/person/2065)
+- 主题歌演出：[みずさわゆうき](http://bgm.tv/person/14627)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 寺尾升 | Terao Noboru、寺尾 昇、てらお のぼる、Terao Noboru | 男 | 新海誠 |
-| 2 | 长峰美加子 | 長峰美加子、Nagamine Mikako | 女 | 篠原美香 |
+| 1 | [寺尾升](http://bgm.tv/character/27785) | Terao Noboru、寺尾 昇、てらお のぼる、Terao Noboru | 男 | [新海誠](http://bgm.tv/person/2064) |
+| 2 | [长峰美加子](http://bgm.tv/character/2766) | 長峰美加子、Nagamine Mikako | 女 | [篠原美香](http://bgm.tv/person/4527) |
 
 {{< slide "71/be/27785_crt_uuuH8,04/5c/2766_crt_anidb" >}}
 
@@ -27,7 +30,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 星之声 | 2002-02-02 | 00:24:30 | [bilibili](https://www.bilibili.com/bangumi/play/ss2544)  |
+| 1 |[星之声](https://bgm.tv/subject/1936)| 2002-02-02 | 00:24:30 | [bilibili](https://www.bilibili.com/bangumi/play/ss2544)  |
 
 
 

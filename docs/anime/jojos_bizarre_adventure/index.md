@@ -1,7 +1,10 @@
 # JOJO的奇妙冒险
 
 
+> <u>**[JOJO的奇妙冒险](http://bgm.tv/subject/43558)**</u>，又名：ジョジョの奇妙な冒険
+
 ## 简介
+
 
 在古代墨西哥繁盛一时的太阳的子民阿兹特克，他们流传着一枚奇妙的「石鬼面」。那是一枚奇迹的面具，能让人拥有一种力量，能获得永远的生命并成为真正的掌控者。然而从某个时候开始，就从历史中消失了踪影。
 
@@ -10,37 +13,37 @@
 以及在1938年的美国，乔纳森·乔斯达的孙子——乔瑟夫·乔斯达长大成人后的故事。为了守护他重视的人们，与苏醒的超级生物柱之男不停的战斗。
 
 **制作人员：**
-- 原作：荒木飞吕彦
-- 导演：津田尚克
-- 脚本：笔安一幸、小林靖子、猪爪慎一
-- 分镜：泷泽敏文、阿部雅司、铃木健一、加藤敏幸
+- 原作：[荒木飞吕彦](http://bgm.tv/person/1308)
+- 导演：[津田尚克](http://bgm.tv/person/9095)
+- 脚本：[笔安一幸](http://bgm.tv/person/3358)、[猪爪慎一](http://bgm.tv/person/3353)、[小林靖子](http://bgm.tv/person/345)
+- 分镜：[泷泽敏文](http://bgm.tv/person/849)、[三泽伸](http://bgm.tv/person/1051)、[米田光宏](http://bgm.tv/person/2021)、[大脊户聪](http://bgm.tv/person/11042)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 乔纳森·乔斯达 | ジョナサン・ジョースター、Jonathan Joestar、jojo | 男 | 興津和幸 |
-| 2 | 迪奥·布兰多 | 迪奥、DIO（3部）、Dio Brando、ディオ・ブランドー、屌爷，屌·不懒惰 | 男 | 子安武人 |
-| 3 | 乔瑟夫·乔斯达 | ジョセフ・ジョースター、Joseph Joestar、jojo | 男 | 杉田智和 |
-| 4 | 西撒·安东尼奥·齐佩利 | Caesar Antonio Zeppeli | 男 | 佐藤拓也 |
-| 5 | 艾莉娜·班魯多 | Erina Pendleton | 女 | 川澄綾子 |
-| 6 | 莉莎莉莎 | エリザベス・ジョースター、伊丽莎白·乔斯达、Lisa Lisa | 女 | 田中敦子 |
-| 7 | 罗伯特·E·O·史比特瓦根 | Robert Edward O Speedwagon | 男 | 上田燿司 |
-| 8 | 威廉·A·齐佩利 | 威尔·A·齐贝利、Will A. Zeppeli | 男 | 塩屋翼 |
+| 1 | [乔纳森·乔斯达](http://bgm.tv/character/3319) | ジョナサン・ジョースター、Jonathan Joestar、jojo | 男 | [興津和幸](http://bgm.tv/person/5007) |
+| 2 | [迪奥·布兰多](http://bgm.tv/character/17601) | 迪奥、DIO（3部）、Dio Brando、ディオ・ブランドー、屌爷，屌·不懒惰 | 男 | [子安武人](http://bgm.tv/person/1096) |
+| 3 | [乔瑟夫·乔斯达](http://bgm.tv/character/879) | ジョセフ・ジョースター、Joseph Joestar、jojo | 男 | [杉田智和](http://bgm.tv/person/4513) |
+| 4 | [西撒·安东尼奥·齐佩利](http://bgm.tv/character/18561) | Caesar Antonio Zeppeli | 男 | [佐藤拓也](http://bgm.tv/person/5151) |
+| 5 | [艾莉娜·班魯多](http://bgm.tv/character/17781) | Erina Pendleton | 女 | [川澄綾子](http://bgm.tv/person/740) |
+| 6 | [莉莎莉莎](http://bgm.tv/character/18742) | エリザベス・ジョースター、伊丽莎白·乔斯达、Lisa Lisa | 女 | [田中敦子](http://bgm.tv/person/3873) |
+| 7 | [罗伯特·E·O·史比特瓦根](http://bgm.tv/character/17645) | Robert Edward O Speedwagon | 男 | [上田燿司](http://bgm.tv/person/4920) |
+| 8 | [威廉·A·齐佩利](http://bgm.tv/character/17780) | 威尔·A·齐贝利、Will A. Zeppeli | 男 | [塩屋翼](http://bgm.tv/person/1452) |
 
-{{< slide "69/9a/3319_crt_2XP3w,42/ae/17601_crt_9eQRN,32/fb/879_crt_8LVcM,f4/14/18561_crt_lfyrz,c3/a0/17781_crt_1cpvs,78/e1/18742_crt_f8852,98/14/17645_crt_r2ErK,49/6f/17780_crt_tF43Z" >}}
+{{< slide "69/9a/3319_crt_2XP3w,42/ae/17601_crt_9eQRN,32/fb/879_crt_8LVcM,f4/14/18561_crt_lfyrz,c3/a0/17781_crt_3FpRR,78/e1/18742_crt_f8852,98/14/17645_crt_KCBr8,49/6f/17780_crt_tF43Z" >}}
 
 ## 系列
 
 |     | 系列名                  | 首播时间       | 话数/时长 | 观看地址                                                       |
 |:----|:---------------------|:-----------|:------|:-----------------------------------------------------------|
-| 1   | JOJO的奇妙冒险            | 2012-10-05 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss4334)   |
-| 2   | JOJO的奇妙冒险 星尘斗士       | 2014-04-04 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ss4185)   |
-| 3   | JOJO的奇妙冒险 星尘斗士 埃及篇   | 2015-01-09 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ss4213)   |
-| 4   | JOJO的奇妙冒险 不灭钻石       | 2016-04-01 | 39    | [bilibili](https://www.bilibili.com/bangumi/play/ss5398)   |
-| 5   | JOJO的奇妙冒险 黄金之风       | 2018-10-05 | 39    | [bilibili](https://www.bilibili.com/bangumi/play/ss25681)  |
-| 6   | JOJO的奇妙冒险 石之海        | 2022-01-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss39431)  |
-| 7   | JOJO的奇妙冒险 石之海 Part.2 | 2022-10-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep674949) |
+| 1   |[JOJO的奇妙冒险](https://bgm.tv/subject/43558)| 2012-10-05 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss4334)   |
+| 2   |[JOJO的奇妙冒险 星尘斗士](https://bgm.tv/subject/85631)| 2014-04-04 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ss4185)   |
+| 3   |[JOJO的奇妙冒险 星尘斗士 埃及篇](https://bgm.tv/subject/113292)| 2015-01-09 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ss4213)   |
+| 4   |[JOJO的奇妙冒险 不灭钻石](https://bgm.tv/subject/150490)| 2016-04-01 | 39    | [bilibili](https://www.bilibili.com/bangumi/play/ss5398)   |
+| 5   |[JOJO的奇妙冒险 黄金之风](https://bgm.tv/subject/235128)| 2018-10-05 | 39    | [bilibili](https://www.bilibili.com/bangumi/play/ss25681)  |
+| 6   |[JOJO的奇妙冒险 石之海](https://bgm.tv/subject/332261)| 2022-01-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss39431)  |
+| 7   |[JOJO的奇妙冒险 石之海 Part.2](https://bgm.tv/subject/375913)| 2022-10-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep674949) |
 
 ## MAD
 

@@ -1,7 +1,10 @@
 # 崖上的波妞
 
 
+> <u>**[崖上的波妞](http://bgm.tv/subject/313)**</u>，又名：崖の上のポニョ、Ponyo、悬崖上的金鱼姬、悬崖上的金鱼公主、崖上の波兒
+
 ## 简介
+
 
 5 岁的宗介生长在海边小城,他的家就在临海的悬崖上。一天,宗介捡到了一个被海浪冲上岸的废玻璃瓶,里面有条受困的小金鱼。小金鱼名叫波尼,她是人鱼女王的女儿,偷偷驾着水母溜出来玩的时候撞进了瓶子里。宗介把波尼带回了自己家,养在塑料盆里。波尼在宗介家过得很愉快,她很喜欢宗介,宗介也喜欢她。然而,快乐的日子很快就过去了。
 
@@ -10,31 +13,33 @@
 海边小城被淹没了,波尼没想到自己的美好愿望竟然招来了这样的大祸。她能挽救宗介么?
 
 **制作人员：**
-- 原作：宫崎骏
-- 音乐：久石让
-- 美术监督：吉田昇
-- 色彩设计：保田道世
-- 作画监督：近藤胜也、山下明彦
+- 原作：[宫崎骏](http://bgm.tv/person/1040)
+- 音乐：[久石让](http://bgm.tv/person/1638)
+- 美术监督：[吉田昇](http://bgm.tv/person/15473)
+- 色彩设计：[保田道世](http://bgm.tv/person/1510)
+- 作画监督：[近藤胜也](http://bgm.tv/person/2109)、[山下明彦](http://bgm.tv/person/1417)
+- 原画：[田中敦子（动画人）](http://bgm.tv/person/11679)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 波妞 | Ponyo | 女 | 神月柚莉愛 |
-| 2 | 宗介 | 宗介、Sousuke | 男 | 土井洋輝 |
-| 3 | 理莎 |  | 女 | 山口智子 |
-| 4 | 耕一 | 耕一、Kouichi | 男 | 長嶋一茂 |
-| 5 | 藤本 | フジモト、Fujimoto | 男 | 所ジョージ |
-| 6 | 时 | トキ、Toki | 女 | 吉行和子 |
-| 7 | 波妞的妹妹们 | ポニョのいもうと達、Ponyo no Imouto-tachi | 女 | 矢野顕子 |
+| 1 | [波妞](http://bgm.tv/character/9970) | Ponyo | 女 | [神月柚莉愛](http://bgm.tv/person/46914) |
+| 2 | [宗介](http://bgm.tv/character/9624) | 宗介、Sousuke | 男 | [土井洋輝](http://bgm.tv/person/4925) |
+| 3 | [曼玛莲](http://bgm.tv/character/160970) | 珂藍曼瑪蓮 |  | [天海祐希](http://bgm.tv/person/23834) |
+| 4 | [理莎](http://bgm.tv/character/38293) |  | 女 | [山口智子](http://bgm.tv/person/21207) |
+| 5 | [耕一](http://bgm.tv/character/9625) | 耕一、Kouichi | 男 | [長嶋一茂](http://bgm.tv/person/4924) |
+| 6 | [藤本](http://bgm.tv/character/9623) | フジモト、Fujimoto | 男 | [所ジョージ](http://bgm.tv/person/4926) |
+| 7 | [时](http://bgm.tv/character/9626) | トキ、Toki | 女 | [吉行和子](http://bgm.tv/person/4923) |
+| 8 | [波妞的妹妹们](http://bgm.tv/character/9627) | ポニョのいもうと達、Ponyo no Imouto-tachi | 女 | [矢野顕子](http://bgm.tv/person/2134) |
 
-{{< slide "93/b9/9970_crt_sSfu3,26/49/9624_crt_anidb,bd/04/38293_crt_UgK53,a3/30/9625_crt_anidb,3d/41/9623_crt_anidb,64/9d/9626_crt_anidb,2e/97/9627_crt_anidb" >}}
+{{< slide "93/b9/9970_crt_sSfu3,26/49/9624_crt_anidb,88/32/160970_crt_w35Pg,bd/04/38293_crt_UgK53,a3/30/9625_crt_anidb,3d/41/9623_crt_anidb,64/9d/9626_crt_anidb,2e/97/9627_crt_anidb" >}}
 
 ## 系列
 
 |     | 系列名   | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :---- | :--------- | :---- | :------------------------------------------------------ |
-| 1   | 崖上的波妞 | 2008-07-19 | 1     | [keke9](https://www.keke9.app/play/178057-4-99713.html) |
+| 1   |[崖上的波妞](https://bgm.tv/subject/313)| 2008-07-19 | 1     | [keke9](https://www.keke9.app/play/178057-4-99713.html) |
 
 
 

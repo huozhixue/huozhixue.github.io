@@ -1,7 +1,10 @@
 # 大草原上的小老鼠
 
 
+> <u>**[大草原上的小老鼠](http://bgm.tv/subject/25711)**</u>，又名：Small rat of the big steppe
+
 ## 简介
+
 
 是中美合拍和出品的长达五十二集，它描写了生活在大草原上的一群拟人化了的可爱小老鼠，他们热爱自然，热爱劳动，具有温馨、活泼、幽默的儿童情趣。《大草原上的小老鼠》是根据斯坦芬·考斯克罗姆和罗宾·詹姆士的同名小说改编的，并由中美合拍和出品的五十二集的长篇动画片，它主要描写了生活在大草原上几位动物伙伴们的趣事。
 
@@ -21,7 +24,10 @@
 小蝙蝠－小方
 其他 莫茜小姐 帕克先生 帕克太太
 
-
+**制作人员：**
+- 导演：[陆成法](http://bgm.tv/person/38824)、[顾建国](http://bgm.tv/person/22336)、[姚光华](http://bgm.tv/person/60504)、[严定宪](http://bgm.tv/person/15678)、[林文肖](http://bgm.tv/person/15680)
+- 美术监督：[曲建方](http://bgm.tv/person/22220)
+- 剪辑：[李开基](http://bgm.tv/person/42014)、[肖淮海](http://bgm.tv/person/41548)
 
 
 
@@ -29,19 +35,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 大草原上的小老鼠 | 1996-01-01 | 52 | [bilibili](https://www.bilibili.com/bangumi/play/ep335774) |
+| 1 |[大草原上的小老鼠](https://bgm.tv/subject/25711)| 1996-01-01 | 52 | [bilibili](https://www.bilibili.com/bangumi/play/ep335774) |
 
-<!--
 
-## 配乐
-
-{{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
-
-## MAD
-
-{{< media auto="mad/small_rat_of_the_big_steppe" >}}
-
--->
 
 
 

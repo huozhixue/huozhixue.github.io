@@ -1,24 +1,27 @@
 # AURA ～魔龙院光牙最后的战斗～
 
 
+> <u>**[AURA ～魔龙院光牙最后的战斗～](http://bgm.tv/subject/43310)**</u>，又名：AURA 〜魔竜院光牙最後の闘い〜
+
 ## 简介
+
 
 刚升上高中一年级的佐藤一郎，某天在晚上潜入学校拿东西时，遇见了身穿蓝色斗篷，拿着金属杖的美少女。自从遇到她之后，佐藤期望的平稳学生生活渐渐的离他而去。
 
 **制作人员：**
-- 原作：田中罗密欧
-- 导演：岸诚二
-- 脚本：熊谷纯
-- 分镜：田口智久、斋藤久
-- 演出：西本由纪夫、小坂春女
-- 音乐：大岛满
+- 原作：[田中罗密欧](http://bgm.tv/person/6149)
+- 导演：[岸诚二](http://bgm.tv/person/1656)
+- 脚本：[熊谷纯](http://bgm.tv/person/9215)
+- 分镜：[田口智久](http://bgm.tv/person/12248)、[斋藤久](http://bgm.tv/person/3486)
+- 演出：[西本由纪夫](http://bgm.tv/person/1447)、[小坂春女](http://bgm.tv/person/1092)
+- 音乐：[大岛满](http://bgm.tv/person/457)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 佐藤一郎 | Men's佐藤、魔龙院光牙、佐藤 一郎、さとう いちろう | 男 | 島﨑信長 |
-| 2 | 佐藤良子 | 佐藤　良子、さとう　りょうこ、Satou Ryouko | 女 | 花澤香菜 |
+| 1 | [佐藤一郎](http://bgm.tv/character/27087) | Men's佐藤、魔龙院光牙、佐藤 一郎、さとう いちろう | 男 | [島﨑信長](http://bgm.tv/person/7392) |
+| 2 | [佐藤良子](http://bgm.tv/character/18001) | 佐藤　良子、さとう　りょうこ、Satou Ryouko | 女 | [花澤香菜](http://bgm.tv/person/4765) |
 
 {{< slide "ec/f3/27087_crt_cR4J5,63/fe/18001_crt_PGPNJ" >}}
 
@@ -26,7 +29,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | AURA ～魔龙院光牙最后的战斗～ | 2013-04-13 | 83m | [bilibili](https://www.bilibili.com/bangumi/play/ss4422)  |
+| 1 |[AURA ～魔龙院光牙最后的战斗～](https://bgm.tv/subject/43310)| 2013-04-13 | 83m | [bilibili](https://www.bilibili.com/bangumi/play/ss4422)  |
 
 
 ## MAD

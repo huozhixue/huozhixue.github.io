@@ -1,7 +1,10 @@
 # 小林家的龙女仆
 
 
+> <u>**[小林家的龙女仆](http://bgm.tv/subject/179949)**</u>，又名：小林さんちのメイドラゴン、小林家的妹抖龙、小林家的女仆龙、Miss Kobayashi's Dragon Maid
+
 ## 简介
+
 
 在单身的辛苦OL小林身边突然出现的女仆装束的美少女托尔。
 长着角和尾巴的她的身姿正是所谓的龙娘。
@@ -10,23 +13,23 @@
 龙娘与人类之间基本上很温暖、偶尔有些黑暗的异种族间交流喜剧！！
 
 **制作人员：**
-- 原作：酷教信徒
-- 导演：武本康弘
-- 脚本：西川昌志、山田由香、志茂文彦
-- 分镜：木上益治、石原立也、山田尚子
+- 原作：[酷教信徒](http://bgm.tv/person/14815)
+- 导演：[武本康弘](http://bgm.tv/person/669)
+- 脚本：[西川昌志](http://bgm.tv/person/26792)、[山田由香](http://bgm.tv/person/2883)、[志茂文彦](http://bgm.tv/person/63)
+- 分镜：[石立太一](http://bgm.tv/person/11258)、[石原立也](http://bgm.tv/person/1913)、[木上益治](http://bgm.tv/person/2227)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 小林小姐 | 小林、こばやし、Kobayashi | 女 | 田村睦心 |
-| 2 | 托尔 | 朵露、小林托尔、Tohru、小林 トール、こばやし トール、Kobayashi Tōru | 女 | 桑原由気 |
-| 3 | 康娜卡姆依 | 小林康娜(小林 カンナ,こばやし カンナ,Kobayashi Kanna)、神奈神威、阿澄雷神、カンナカムイ、Kanna Kamui | 女 | 長縄まりあ |
-| 4 | 艾露玛 | 艾尔玛、艾玛、上井艾露玛、上井艾尔玛、上井艾玛、Joui Elma、上井エルマ、じょうい エルマ、Jōi Eruma | 女 | 高田憂希 |
-| 5 | 露科亚 | 露可亚、尔科亚、ルコア、Rukoa、Lucoa、魁札尔科亚特尔、Quetzalcohuātl、ケツァルコアトル、Ketsarukoatoru | 女 | 髙橋ミナミ |
-| 6 | 法夫纳 | 大山猛、おおやま たけし、Ōyama Takeshi、Takeshi Ooyama、法芙尼尔、Fafnir、ファフニール、Fafunīru | 男 | 小野大輔 |
-| 7 | 泷谷真 | たきや まこと、Takiya Makoto | 男 | 中村悠一 |
-| 8 | 才川莉子 | さいかわ りこ、Saikawa Riko | 女 | 加藤英美里 |
+| 1 | [小林小姐](http://bgm.tv/character/47658) | 小林、こばやし、Kobayashi | 女 | [田村睦心](http://bgm.tv/person/5636) |
+| 2 | [托尔](http://bgm.tv/character/47659) | 朵露、小林托尔、Tohru、小林 トール、こばやし トール、Kobayashi Tōru | 女 | [桑原由気](http://bgm.tv/person/15292) |
+| 3 | [康娜卡姆依](http://bgm.tv/character/47695) | 小林康娜(小林 カンナ,こばやし カンナ,Kobayashi Kanna)、神奈神威、阿澄雷神、カンナカムイ、Kanna Kamui | 女 | [長縄まりあ](http://bgm.tv/person/14918) |
+| 4 | [艾露玛](http://bgm.tv/character/47696) | 艾尔玛、艾玛、上井艾露玛、上井艾尔玛、上井艾玛、Joui Elma、上井エルマ、じょうい エルマ、Jōi Eruma | 女 | [高田憂希](http://bgm.tv/person/18087) |
+| 5 | [露科亚](http://bgm.tv/character/47697) | 露可亚、尔科亚、ルコア、Rukoa、Lucoa、魁札尔科亚特尔、Quetzalcohuātl、ケツァルコアトル、Ketsarukoatoru | 女 | [髙橋ミナミ](http://bgm.tv/person/10757) |
+| 6 | [法夫纳](http://bgm.tv/character/49563) | 大山猛、おおやま たけし、Ōyama Takeshi、Takeshi Ooyama、法芙尼尔、Fafnir、ファフニール、Fafunīru | 男 | [小野大輔](http://bgm.tv/person/4456) |
+| 7 | [泷谷真](http://bgm.tv/character/49564) | たきや まこと、Takiya Makoto | 男 | [中村悠一](http://bgm.tv/person/4724) |
+| 8 | [才川莉子](http://bgm.tv/character/49589) | さいかわ りこ、Saikawa Riko | 女 | [加藤英美里](http://bgm.tv/person/4850) |
 
 {{< slide "f1/f2/47658_crt_8111x,5b/17/47659_crt_FptD2,82/d4/47695_crt_aQs9c,04/55/47696_crt_A46QL,e2/1a/47697_crt_1m6jt,d2/22/49563_crt_tpJev,dd/02/49564_crt_19K9d,57/6d/49589_crt_0N04C" >}}
 
@@ -34,8 +37,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 小林家的龙女仆 | 2017-01-11 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep98603)  |
-| 2 | 小林家的龙女仆S | 2021-07-07 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss38921)  |
+| 1 |[小林家的龙女仆](https://bgm.tv/subject/179949)| 2017-01-11 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep98603)  |
+| 2 |[小林家的龙女仆S](https://bgm.tv/subject/274234)| 2021-07-07 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss38921)  |
 
 
 

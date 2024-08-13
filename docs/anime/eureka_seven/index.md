@@ -1,7 +1,10 @@
 # 交响诗篇
 
 
+> <u>**[交响诗篇](http://bgm.tv/subject/1266)**</u>，又名：交響詩篇エウレカセブン、E7、Eureka Seven
+
 ## 简介
+
 
 兰顿·萨斯顿（Renton Thurston）是一名看似普通的十四岁少年，他的父亲（阿德洛克·萨斯顿）是一名军队的研究人员，在第一次“爱之夏”之中牺牲自己拯救了地球而被世人称为英雄。然而兰顿对自己和作为机械工程师的祖父相依为命的生活现状却十分不满，流行的运动“滑空”（Lifting）成了他打发时间的唯一爱好。他最大的梦想是有一天能够加入传奇滑空天才霍兰德（Holland）的组织“月光洲”（Gekkostate），成为和他一样出色的滑空选手。可是他的祖父（阿克赛尔．萨斯顿）却希望他成为一名出色的机械工程师，继承家业。
 
@@ -12,22 +15,22 @@
 
 
 **制作人员：**
-- 原作：骨头社
-- 导演：京田知己
-- 脚本：清水惠、佐藤大、野村祐一、菅正太郎、大河内一楼、大野木宽、小中千昭
+- 原作：[骨头社](http://bgm.tv/person/44)
+- 导演：[京田知己](http://bgm.tv/person/2183)
+- 脚本：[清水惠](http://bgm.tv/person/9242)、[菅正太郎](http://bgm.tv/person/3337)、[大野木宽](http://bgm.tv/person/381)、[佐藤大](http://bgm.tv/person/921)、[大河内一楼](http://bgm.tv/person/389)、[野村祐一](http://bgm.tv/person/9240)、[小中千昭](http://bgm.tv/person/133)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 兰顿·萨斯顿 | 顿爷、レントン・サーストン、Renton Thurston | 男 | 三瓶由布子 |
-| 2 | 优莱卡 | エウレカ・サーストン、艾蕾卡、Eureka | 女 | 名塚佳織 |
-| 3 | 安妮莫奈 | 石井・風花・アネモネ、石井·风花·安妮莫奈、アネモネ、Anemone | 女 | 小清水亜美 |
-| 4 | 塔荷 | タルホ・ノヴァク、タルホ・ユーキ、Talho Yuuki | 女 | 根谷美智子 |
-| 5 | 霍兰德·诺瓦克 | ホランド・ノヴァク、Holland Novak | 男 | 藤原啓治 |
-| 6 | 杜伊·诺瓦克 | デューイ・ノヴァク、Dewey Novak | 男 | 辻谷耕史 |
-| 7 | 多米尼克·索莱尔 | Dominic Sorel | 男 | 山崎樹範 |
-| 8 | 梅蒂儿 | メーテル、Maeter | 女 | 木川絵理子 |
+| 1 | [兰顿·萨斯顿](http://bgm.tv/character/3797) | 顿爷、レントン・サーストン、Renton Thurston | 男 | [三瓶由布子](http://bgm.tv/person/4667) |
+| 2 | [优莱卡](http://bgm.tv/character/13282) | エウレカ・サーストン、艾蕾卡、Eureka | 女 | [名塚佳織](http://bgm.tv/person/3922) |
+| 3 | [安妮莫奈](http://bgm.tv/character/3796) | 石井・風花・アネモネ、石井·风花·安妮莫奈、アネモネ、Anemone | 女 | [小清水亜美](http://bgm.tv/person/4474) |
+| 4 | [塔荷](http://bgm.tv/character/3798) | タルホ・ノヴァク、タルホ・ユーキ、Talho Yuuki | 女 | [根谷美智子](http://bgm.tv/person/3893) |
+| 5 | [霍兰德·诺瓦克](http://bgm.tv/character/3819) | ホランド・ノヴァク、Holland Novak | 男 | [藤原啓治](http://bgm.tv/person/4016) |
+| 6 | [杜伊·诺瓦克](http://bgm.tv/character/3835) | デューイ・ノヴァク、Dewey Novak | 男 | [辻谷耕史](http://bgm.tv/person/1327) |
+| 7 | [多米尼克·索莱尔](http://bgm.tv/character/13295) | Dominic Sorel | 男 | [山崎樹範](http://bgm.tv/person/7554) |
+| 8 | [梅蒂儿](http://bgm.tv/character/3816) | メーテル、Maeter | 女 | [木川絵理子](http://bgm.tv/person/4668) |
 
 {{< slide "27/2f/3797_crt_02Z0C,8b/f1/13282_crt_K1g56,c2/02/3796_crt_ZYOA4,fe/72/3798_crt_hmMvM,35/96/3819_crt_lfLgL,1c/66/3835_crt_anidb,bc/67/13295_crt_Kff2J,1f/57/3816_crt_64Mwa" >}}
 
@@ -35,7 +38,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 交响诗篇 | 2005-04-17 | 50 | [bilibili](https://www.bilibili.com/bangumi/play/ep14126)  |
+| 1 |[交响诗篇](https://bgm.tv/subject/1266)| 2005-04-17 | 50 | [bilibili](https://www.bilibili.com/bangumi/play/ep14126)  |
 
 
 ## MAD

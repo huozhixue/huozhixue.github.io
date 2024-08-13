@@ -1,7 +1,10 @@
 # 小糊涂神
 
 
+> <u>**[小糊涂神](http://bgm.tv/subject/25715)**</u>
+
 ## 简介
+
 
 小糊涂神是中央电视台在1998年制作的一部动画片。最初是在中央电视台第一频道的动画城节目中播出，该片获得中国大陆的第十七届大众电视金鹰奖。动画片中的主要人物有小宝、小糊涂神、老糊涂神、老老糊涂神、大魔包。
 
@@ -13,19 +16,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 小糊涂神 | 1998-01-01 | 81 | [bilibili](https://www.bilibili.com/video/BV1TW411r7Lh/) |
+| 1 |[小糊涂神](https://bgm.tv/subject/25715)| 1998-01-01 | 81 | [bilibili](https://www.bilibili.com/video/BV1TW411r7Lh/) |
 
-<!--
-
-## 配乐
-
-{{< music auto="https://y.qq.com/n/yqq/album/.html" >}}
-
-## MAD
-
-{{< media auto="mad/xiao_hu_tu_shen" >}}
-
--->
 
 
 

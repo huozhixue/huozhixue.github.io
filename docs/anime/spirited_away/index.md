@@ -1,7 +1,10 @@
 # 千与千寻
 
 
+> <u>**[千与千寻](http://bgm.tv/subject/311)**</u>，又名：千と千尋の神隠し、千与千寻的神隐、神隱少女、Spirited Away、Sen to Chihiro no Kamikakushi
+
 ## 简介
+
 
 年仅10岁的荻野千尋是一个看起来非常普通的四年级小学生，她随父母搬家来到一个陌生的城镇准备开始一个全新的生活。然而，因为途中迷路，她和父母误闯入了一个人类不应该进入的灵异小镇。小镇的主管是当地一家叫“油屋”的澡堂的巫婆：湯婆婆；而“油屋”则是为服侍日本八百万天神洗澡的地方。镇上有一条规定，在镇上凡是没有工作的人，都要被变成猪被吃掉。
 
@@ -12,32 +15,32 @@
 简介来源于：http://zh.wikipedia.org/wiki/%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB
 
 **制作人员：**
-- 原作：宫崎骏
-- 音乐：久石让
-- 美术监督：武重洋二
-- 色彩设计：保田道世
-- 作画监督：高坂希太郎、安藤雅司、贺川爱
+- 原作：[宫崎骏](http://bgm.tv/person/1040)
+- 音乐：[久石让](http://bgm.tv/person/1638)
+- 美术监督：[武重洋二](http://bgm.tv/person/11682)
+- 色彩设计：[保田道世](http://bgm.tv/person/1510)
+- 作画监督：[安藤雅司](http://bgm.tv/person/1592)、[高坂希太郎](http://bgm.tv/person/1665)、[片塰满则](http://bgm.tv/person/32036)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 白 | 白龙／赈早见琥珀主、Kohaku River、饒速水小白主、ニギハヤミコハクヌシ、Nigihayami Kohaku Nushi | 男 | 入野自由 |
-| 2 | 荻野千寻 | Ogino Chihiro | 女 | 柊瑠美 |
-| 3 | 锅炉爷爷 | 釜爺、Kamajii | 男 | 菅原文太 |
-| 4 | リン | Lin、リン、Rin | 女 | 玉井夕海 |
-| 5 | 荻野悠子 | おぎの ゆうこ | 女 | 沢口靖子 |
-| 6 | 坊 | ぼう | 男 | 神木隆之介 |
-| 7 | 无脸男 | カオナシ |  | 中村彰男 |
-| 8 | 汤婆婆 | ゆばば | 女 | 夏木マリ |
+| 1 | [荻野千寻](http://bgm.tv/character/13299) | Ogino Chihiro、荻野千尋、おぎの ちひろ、Ogino Chihiro | 女 | [柊瑠美](http://bgm.tv/person/26940) |
+| 2 | [白龙](http://bgm.tv/character/8258) | Kohaku River、赈早见琥珀主、小白、Haku、饒速水小白主、ニギハヤミコハクヌシ、Nigihayami Kohaku Nushi | 男 | [入野自由](http://bgm.tv/person/4258) |
+| 3 | [锅炉爷爷](http://bgm.tv/character/8259) | 釜爺、Kamajii | 男 | [菅原文太](http://bgm.tv/person/4530) |
+| 4 | [小玲](http://bgm.tv/character/8260) | Lin、リン、Rin | 女 | [玉井夕海](http://bgm.tv/person/4529) |
+| 5 | [荻野悠子](http://bgm.tv/character/42557) | おぎの ゆうこ | 女 | [沢口靖子](http://bgm.tv/person/24067) |
+| 6 | [坊宝宝](http://bgm.tv/character/70724) | Boh、坊、ぼう、Bou | 男 | [神木隆之介](http://bgm.tv/person/10972) |
+| 7 | [无脸男](http://bgm.tv/character/110488) | No Face、カオナシ、Kaonashi |  | [中村彰男](http://bgm.tv/person/5583) |
+| 8 | [钱婆婆](http://bgm.tv/character/110489) | ぜにーば | 女 | [夏木マリ](http://bgm.tv/person/15626) |
 
-{{< slide "10/fe/8258_crt_anidb,a8/ff/13299_crt_P28Hh,51/f4/8259_crt_anidb,a7/3d/8260_crt_anidb,d3/67/42557_crt_299G2,48/24/70724_crt_BBS0p,67/6c/110488_crt_E0y7Y,48/14/110490_crt_PcjHS" >}}
+{{< slide "a8/ff/13299_crt_P28Hh,71/59/8258_crt_4N4V0,51/f4/8259_crt_anidb,a7/3d/8260_crt_anidb,d3/67/42557_crt_299G2,48/24/70724_crt_BBS0p,67/6c/110488_crt_E0y7Y,9b/21/110489_crt_lqBxO" >}}
 
 ## 系列
 
 |     | 系列名  | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :--- | :--------- | :---- | :------------------------------------------------------- |
-| 1   | 千与千寻 | 2001-07-20 | 124m  | [keke9](https://www.keke9.app/play/189748-4-210449.html) |
+| 1   |[千与千寻](https://bgm.tv/subject/311)| 2001-07-20 | 124m  | [keke9](https://www.keke9.app/play/189748-4-210449.html) |
 
 
 

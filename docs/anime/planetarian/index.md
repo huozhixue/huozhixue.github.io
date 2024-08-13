@@ -1,7 +1,10 @@
 # 星之梦
 
 
+> <u>**[星之梦](http://bgm.tv/subject/176518)**</u>，又名：planetarian～ちいさなほしのゆめ～、プラネタリアン
+
 ## 简介
+
 
 在封印的都市中被废弃的天象馆，误入其中的男人所见到的机器人少女，那是被繁星所引导的奇迹的物语。
 那是世界大战之后不再降雨的世界。受到细菌武器的影响，而被人们抛弃了的最危险的城市【封印都市】。在某个百货商场的天文馆中，有一个机器人少女。她的名字是“星野梦美”。她是天文馆的解说员，1年之中只有7日运行的损坏的机器人。就这样，少女在这30年间始终相信着会有某个人到访天文馆，一个人在这个没有其他人的世界等待着。然后，在第三十个年头醒来的那天，她的面前出现了一个男人。
@@ -12,17 +15,17 @@
 奇迹就这样发生了……
 
 **制作人员：**
-- 原作：Key
-- 导演：津田尚克
-- 脚本：安川正吾
-- 分镜：中山胜一、町谷俊辅
+- 原作：[Key](http://bgm.tv/person/47)
+- 导演：[津田尚克](http://bgm.tv/person/9095)
+- 脚本：[安川正吾](http://bgm.tv/person/10229)
+- 分镜：[町谷俊辅](http://bgm.tv/person/21169)、[中山胜一](http://bgm.tv/person/2764)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 星野梦美 | ほしのゆめみ、Hoshino yumemi | 女 | すずきけいこ |
-| 2 | 废墟猎人 | 星の人、くずや、Kuzuya | 男 | 小野大輔 |
+| 1 | [星野梦美](http://bgm.tv/character/12280) | ほしのゆめみ、Hoshino yumemi | 女 | [すずきけいこ](http://bgm.tv/person/6275) |
+| 2 | [废墟猎人](http://bgm.tv/character/40550) | 星の人、くずや、Kuzuya | 男 | [小野大輔](http://bgm.tv/person/4456) |
 
 {{< slide "6e/d8/12280_crt_0jj8a,8e/7f/40550_crt_7J89J" >}}
 
@@ -30,9 +33,9 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 星之梦 | 2016-07-07 | 5 | [bilibili](https://www.bilibili.com/bangumi/play/ep90842)  |
-| 2 | 星之梦～星之人～ | 2016-09-03 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep102180)  |
-| 3 | 星之梦～雪圏球～ | 2021-08-25 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep415972)  |
+| 1 |[星之梦](https://bgm.tv/subject/176518)| 2016-07-07 | 5 | [bilibili](https://www.bilibili.com/bangumi/play/ep90842)  |
+| 2 |[星之梦～星之人～](https://bgm.tv/subject/178884)| 2016-09-03 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep102180)  |
+| 3 |[星之梦～雪圏球～](https://bgm.tv/subject/295090)| 2021-08-25 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep415972)  |
 
 
 ## MAD

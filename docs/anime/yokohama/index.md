@@ -1,7 +1,10 @@
 # 横滨购物纪行
 
 
+> <u>**[横滨购物纪行](http://bgm.tv/subject/9713)**</u>，又名：ヨコハマ買い出し紀行、横滨出行购物记、横滨办货纪行、恋恋横滨
+
 ## 简介
+
 
 第一部OVA由株式会社亚细亚堂制作，由安浓高志导演，1998年5月及12月以VHS和镭射影碟形式发售。剧情选择性地讲述单行本一至三册，包括阿尔法与菜心的邂逅，以及阿尔法遭到雷击并被医生治愈的事情。后来本OVA又以DVD形式重新推出。
 在大海已经淹没了大部分陆地的时代，在横滨以西的悬崖的附近人迹稀少的小路旁有一家名叫“COFFEE A”的小咖啡店。店里有一名可爱的女店员，她叫初濑野阿尔法，是这家店主买的A7M2型机器人。阿尔法除了身体是机器成分构成而且不能摄取动物蛋白质以外，其他地方都与年青的人类女孩子没有分别。她可以像人类一样思维和行动，只是有时感觉会比人类更敏锐。
@@ -10,24 +13,24 @@
 机器人阿尔法的生命中没有时间，她的生活一样非常平静，只是偶尔去横滨买买东西。
 
 **制作人员：**
-- 原作：芦奈野仁
-- 导演：安浓高志
-- 音乐：GONTITI
-- 人物设定：山形厚史
-- 美术监督：吉原俊一郎
-- 色彩设计：小针裕子
-- 作画监督：关根昌之
+- 原作：[芦奈野仁](http://bgm.tv/person/879)
+- 导演：[安浓高志](http://bgm.tv/person/742)
+- 音乐：[GONTITI](http://bgm.tv/person/6342)
+- 人物设定：[山形厚史](http://bgm.tv/person/880)
+- 美术监督：[吉原俊一郎](http://bgm.tv/person/6337)
+- 色彩设计：[小针裕子](http://bgm.tv/person/6339)
+- 作画监督：[关根昌之](http://bgm.tv/person/951)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 阿尔法 | 初濑野阿尔法、Alpha Hatsuseno、初瀬野アルファ、はつせの アルファ、Hatsuseno Arufa | 女 | 椎名へきる |
-| 2 | 高广 | タカヒロ、Takahiro | 男 | 陶山章央 |
-| 3 | 菜心 | 鹰津菜心、Kokone Takatsu、鷹津ココネ、たかつ ココネ、Takatsu Kokone、鹰津这儿 | 女 | 中川亜紀子 |
-| 4 | 大叔 | Ojisan | 男 | 陶山章央 |
-| 5 | 医生 | 子海石先生、こうみいし せんせい、Koumiishi Sensei | 女 | 杉田郁子 |
-| 6 | 運転手 | Untenshu、運転手 | 男 | 岡和男 |
+| 1 | [阿尔法](http://bgm.tv/character/9046) | 初濑野阿尔法、Alpha Hatsuseno、初瀬野アルファ、はつせの アルファ、Hatsuseno Arufa | 女 | [椎名へきる](http://bgm.tv/person/4203) |
+| 2 | [高广](http://bgm.tv/character/9048) | タカヒロ、Takahiro | 男 | [陶山章央](http://bgm.tv/person/4221) |
+| 3 | [菜心](http://bgm.tv/character/12259) | 鹰津菜心、Kokone Takatsu、鷹津ココネ、たかつ ココネ、Takatsu Kokone、鹰津这儿 | 女 | [中川亜紀子](http://bgm.tv/person/4325) |
+| 4 | [大叔](http://bgm.tv/character/119950) | Ojisan | 男 | [陶山章央](http://bgm.tv/person/4221) |
+| 5 | [医生](http://bgm.tv/character/119951) | 子海石先生、こうみいし せんせい、Koumiishi Sensei | 女 | [杉田郁子](http://bgm.tv/person/5511) |
+| 6 | [運転手](http://bgm.tv/character/9047) | Untenshu、運転手 | 男 | [岡和男](http://bgm.tv/person/4222) |
 
 {{< slide "ed/e9/9046_crt_PdB4R,f8/22/9048_crt_59ZPP,83/c1/12259_crt_XQmMm,db/a5/119950_crt_J1mHp,3d/1e/119951_crt_JjLuq,84/56/9047_crt_anidb" >}}
 
@@ -35,8 +38,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | 横滨购物纪行 | 1998-05-21 | 2 | [bilibili](https://www.bilibili.com/video/BV1dx411U7xg)  |
-| 2 | 横滨购物纪行 -Quiet Country Cafe- | 2002-12-18 | 2 | [bilibili](https://www.bilibili.com/video/BV1dx411U7x3/)  |
+| 1 |[横滨购物纪行](https://bgm.tv/subject/9713)| 1998-05-21 | 2 | [bilibili](https://www.bilibili.com/video/BV1dx411U7xg)  |
+| 2 |[横滨购物纪行 -Quiet Country Cafe-](https://bgm.tv/subject/14684)| 2002-12-18 | 2 | [bilibili](https://www.bilibili.com/video/BV1dx411U7x3/)  |
 
 
 

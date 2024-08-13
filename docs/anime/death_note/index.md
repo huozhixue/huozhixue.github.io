@@ -1,32 +1,34 @@
 # 死亡笔记
 
 
+> <u>**[死亡笔记](http://bgm.tv/subject/1773)**</u>，又名：DEATH NOTE、デスノート
+
 ## 简介
+
 
 高三生夜神月意外捡到一本名《DEATH NOTE》的笔记本，并且发现只要写下想要杀死的人的名字，就会变成现实。
 月开始利用死亡笔记制裁那些他认为该死的人。接着，笔记的原主人：死神也以旁观者的姿态出现在月面前。
 另一方面越来越多的罪犯离奇死亡事件引起了各国政府的关注，在国际刑事警察机构会议（ICPO）上他们委托神秘人士L来调查此事。社会上则称这个神秘的杀手为“基拉”，不同的人有不同的反应。
 到底谁才是正义的一方，谁又会取得最后的胜利呢？一场斗智斗勇的较量就此展开……
 
-
 **制作人员：**
-- 原作：小畑健、大场鸫
-- 导演：荒木哲郎
-- 脚本：小林靖子、伊藤智彦、井上敏树、米村正二
-- 分镜：笹木信作、山本沙代
+- 原作：[小畑健](http://bgm.tv/person/314)、[大场鸫](http://bgm.tv/person/3211)
+- 导演：[荒木哲郎](http://bgm.tv/person/3212)
+- 脚本：[小林靖子](http://bgm.tv/person/345)、[米村正二](http://bgm.tv/person/571)、[井上敏树](http://bgm.tv/person/386)、[伊藤智彦](http://bgm.tv/person/3213)
+- 分镜：[山本沙代](http://bgm.tv/person/3563)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 夜神月 | やがみ ライト、Yagami Light、Kami | 男 | 宮野真守 |
-| 2 | L | 流河旱树、龙崎、艾尔·罗莱特、L Lawliet、エル・ローライト、erurouraito | 男 | 山口勝平 |
-| 3 | 琉克 | 流愚、流克、Ryuk | 男 | 中村獅童 |
-| 4 | 弥海砂 | Misa Amane、あまね みさ | 女 | 平野綾 |
-| 5 | 尼亚 | N、Nate River、ネイト・リバー、Near | 男 | 日髙のり子 |
-| 6 | 梅洛 | M、Mihael Keehl、ミハエル・ケール、Mello | 男 | 佐々木望 |
-| 7 | 魅上照 | みかみ てる、Mikami Teru | 男 | 松風雅也 |
-| 8 | 高田清美 |  | 女 | 坂本真綾 |
+| 1 | [夜神月](http://bgm.tv/character/2215) | やがみ ライト、Yagami Light、Kami；キラ（奇樂） | 男 | [宮野真守](http://bgm.tv/person/4697) |
+| 2 | [L](http://bgm.tv/character/16684) | 流河旱树、龙崎、艾尔·罗莱特、L Lawliet、エル・ローライト、erurouraito | 男 | [山口勝平](http://bgm.tv/person/3900) |
+| 3 | [琉克](http://bgm.tv/character/16685) | 流愚、流克、Ryuk | 男 | [中村獅童](http://bgm.tv/person/6541) |
+| 4 | [弥海砂](http://bgm.tv/character/15993) | Misa Amane、あまね みさ | 女 | [平野綾](http://bgm.tv/person/4158) |
+| 5 | [尼亚](http://bgm.tv/character/25862) | N、Nate River、ネイト・リバー、Near | 男 | [日髙のり子](http://bgm.tv/person/4024) |
+| 6 | [梅洛](http://bgm.tv/character/2219) | M、Mihael Keehl、ミハエル・ケール、Mello | 男 | [佐々木望](http://bgm.tv/person/4188) |
+| 7 | [魅上照](http://bgm.tv/character/2222) | みかみ てる、Mikami Teru | 男 | [松風雅也](http://bgm.tv/person/4758) |
+| 8 | [高田清美](http://bgm.tv/character/33485) |  | 女 | [坂本真綾](http://bgm.tv/person/3877) |
 
 {{< slide "bd/36/2215_crt_nWAZZ,fc/07/16684_crt_3Vfi9,43/8f/16685_crt_4x93X,40/ea/15993_crt_n0B4G,3a/84/25862_crt_ZBVBD,09/d2/2219_crt_Ntq8M,93/4b/2222_crt_anidb,f8/3c/33485_crt_5XNrw" >}}
 
@@ -34,7 +36,7 @@
 
 |     | 系列名  | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :--- | :--------- | :---- | :------------------------------------------------------- |
-| 1   | 死亡笔记 | 2006-10-04 | 37    | [keke9](https://www.keke9.app/play/183110-4-250623.html) |
+| 1   |[死亡笔记](https://bgm.tv/subject/1773)| 2006-10-04 | 37    | [keke9](https://www.keke9.app/play/183110-4-250623.html) |
 
 
 ## MAD

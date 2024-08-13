@@ -1,7 +1,10 @@
 # 草莓100%
 
 
+> <u>**[草莓100%](http://bgm.tv/subject/1415)**</u>，又名：いちご100%、草莓百分百
+
 ## 简介
+
 
 国中三年级的学生真中淳平，有一天在学校的屋顶上，偶然目击了一名美少女的“草莓内裤”。于是真中便不断的寻找当初见到的那位美少女是谁。那个美少女的名字是东城绫，然而真中却误以为那位美少女是学生偶像西野司，从此便开始了他们不可思议的关系。
 
@@ -12,29 +15,28 @@
 这个故事，就是在这样的背景下，东城、西野、北大路，以及一个年纪小的青梅竹马南户，为了争夺真中所产生的一场恋爱大混战。
 
 **制作人员：**
-- 原作：河下水希
-- 导演：关田修
-- 脚本：林政宏、中村龙、笔安一幸、浦畑达彦
-- 分镜：五月女有作、高桥丈夫
+- 原作：[河下水希](http://bgm.tv/person/2818)
+- 导演：[关田修](http://bgm.tv/person/1001)
+- 脚本：[林政宏](http://bgm.tv/person/22425)、[中村龙](http://bgm.tv/person/22424)、[笔安一幸](http://bgm.tv/person/3358)、[浦畑达彦](http://bgm.tv/person/233)
+- 分镜：[五月女有作](http://bgm.tv/person/1396)、[高桥丈夫](http://bgm.tv/person/1611)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 真中淳平 | まなか じゅんぺい、Manaka Junpei | 男 | 斎賀みつき |
-| 2 | 东城绫 | 東城綾、とうじょう あや、Toujou Aya | 女 | 能登麻美子 |
-| 3 | 西野司 | Nishino Tsukasa、西野つかさ、にしの つかさ | 女 | 豊口めぐみ |
-| 4 | 北大路五月 | 北大路さつき、きたおじ　さつき、Kitaooji Satsuki | 女 | 小林沙苗 |
-| 5 | 南户唯 | みなみと ゆい | 女 | 水樹奈々 |
-| 6 | Ichigo Pantsu Iseijin | Ichigo Pantsu Iseijin |  |  |
+| 1 | [真中淳平](http://bgm.tv/character/7486) | 真中 淳平、まなか じゅんぺい、Manaka Junpei | 男 | [斎賀みつき](http://bgm.tv/person/3924) |
+| 2 | [东城绫](http://bgm.tv/character/7487) | 東城 綾、とうじょう あや、Toujou Aya | 女 | [能登麻美子](http://bgm.tv/person/3827) |
+| 3 | [西野司](http://bgm.tv/character/7489) | 西野 つかさ、にしの つかさ、Nishino Tsukasa | 女 | [豊口めぐみ](http://bgm.tv/person/3866) |
+| 4 | [北大路五月](http://bgm.tv/character/7490) | 北大路 さつき、きたおじ さつき、Kitaooji Satsuki | 女 | [小林沙苗](http://bgm.tv/person/4428) |
+| 5 | [南户唯](http://bgm.tv/character/67271) | 南戸 唯、みなみと ゆい、Minamito Yui | 女 | [水樹奈々](http://bgm.tv/person/1) |
 
-{{< slide "30/54/7486_crt_anidb,26/39/7487_crt_anidb,bd/d5/7489_crt_Dkc1F,8d/d3/7490_crt_m1lRV,03/a6/67271_crt_00Y60,42/da/7876_crt_anidb" >}}
+{{< slide "30/54/7486_crt_anidb,26/39/7487_crt_anidb,bd/d5/7489_crt_Dkc1F,8d/d3/7490_crt_m1lRV,03/a6/67271_crt_00Y60" >}}
 
 ## 系列
 
 |     | 系列名    | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :----- | :--------- | :---- | :------------------------------------------------------ |
-| 1   | 草莓100% | 2005-04-05 | 12    | [keke9](https://www.keke9.app/play/28493-4-250608.html) |
+| 1   |[草莓100%](https://bgm.tv/subject/1415)| 2005-04-05 | 12    | [keke9](https://www.keke9.app/play/28493-4-250608.html) |
 
 
 

@@ -1,7 +1,10 @@
 # HAL
 
 
+> <u>**[HAL](http://bgm.tv/subject/56849)**</u>，又名：ハル、Haru、春、京都爱情故事
+
 ## 简介
+
 
 「为了让来未回想起活着的感觉，我成为了人类。」
 春和来未过着平淡而幸福的生活。本以为会一直这样下去，突如其来的飞机事故却打破了这一切。
@@ -14,20 +17,20 @@
 
 
 **制作人员：**
-- 导演：牧原亮太郎
-- 脚本：木皿泉
-- 演出：德土大介、初见浩一
-- 音乐：大岛满
-- 人物原案：咲坂伊绪
-- 人物设定：北田胜彦
+- 导演：[牧原亮太郎](http://bgm.tv/person/12505)
+- 脚本：[木皿泉](http://bgm.tv/person/13314)
+- 演出：[德土大介](http://bgm.tv/person/13365)、[初见浩一](http://bgm.tv/person/2219)
+- 音乐：[大岛满](http://bgm.tv/person/457)
+- 人物原案：[咲坂伊绪](http://bgm.tv/person/9608)
+- 人物设定：[北田胜彦](http://bgm.tv/person/12610)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 春 |  | 男 | 細谷佳正 |
-| 2 | 来未 | 胡桃 | 女 | 日笠陽子 |
-| 3 | 龙 |  | 男 | 宮野真守 |
+| 1 | [春](http://bgm.tv/character/50694) |  | 男 | [細谷佳正](http://bgm.tv/person/4982) |
+| 2 | [来未](http://bgm.tv/character/50695) | 胡桃 | 女 | [日笠陽子](http://bgm.tv/person/5119) |
+| 3 | [龙](http://bgm.tv/character/50696) |  | 男 | [宮野真守](http://bgm.tv/person/4697) |
 
 {{< slide "f4/db/50694_crt_a79cq,06/ad/50695_crt_DW5NU,6e/34/50696_crt_Ey6ay" >}}
 
@@ -35,7 +38,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 | HAL | 2013-06-08 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep425720)  |
+| 1 |[HAL](https://bgm.tv/subject/56849)| 2013-06-08 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep425720)  |
 
 
 
