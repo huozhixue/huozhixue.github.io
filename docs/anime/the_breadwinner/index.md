@@ -5,13 +5,9 @@
 
 ## 简介
 
-Eleven-year-old Parvana lives with her family in a one room apartment in Kabul, Afghanistan, which is under Taliban rule. When her father is arrested without warning for being an intellectual, Parvana's mother is left alone to care for their three children. Banned from going out in public without a man, Parvana’s mother risks arrest herself as she travels to the local prison and demands her husband’s release, only to end up being beaten and turned away.
+塔利班残酷统治下的阿富汗，平民百姓尤其是女性过着水深火热犹如地狱一般的生活。倔强的小女孩帕瓦娜（莎拉·乔德利 Saara Chaudry 配音）随父亲（Ali Rizvi Badshah 配音）外出挣钱养家，不仅目睹了父亲被昔日的学生辱骂羞辱，更和家人目击了父亲遭到非法逮捕的一幕。家中有病弱的母亲、成年的姐姐以及嗷嗷待哺的弟弟，年幼的帕瓦娜只能剪去秀发，伪装成男孩走出家门，踏上生死未卜的养家之路。在此过程中，她遇到了同样扮成男孩的昔日伙伴，也与一名沉默魁梧的塔利班分子成为朋友。当战争的阴影再度逼近时，帕瓦娜想方设法要找到下落不明的父亲，将他带回家中……  
 
-As the family becomes desperate for food, Parvana must cut off her hair and disguise herself as a boy so that she can venture out in public and become the breadwinner for her family.  She meets a girl named Shauzia who is also dressed as a boy for the same reason.  Shauzia teaches Parvana how to earn money on the streets of Kabul and Parvana is a quick study.
-
-With her newfound friend and freedom, Parvana gains confidence in herself and takes on the responsibility of feeding her family. She also weaves a fantastical story to keep her family’s spirits up while they await their father’s return. The story is about a young boy named Sulayman who must travel a great distance and complete three trials in order to defeat a giant elephant who is terrorizing his land.
-
-After Parvana narrowly escapes being discovered as a girl, her mother reveals she has arranged a marriage for Parvana’s sister, Soraya, and that the family is moving to Mazar.  Parvana begs her mother to delay their departure for one more day, so she can attempt to connect with her father. As war encroaches on Kabul and with all the resolve she has left, Parvana treks to the prison and, with the help of a sympathetic Talib guard, works to free her father once and for all.
+本片根据黛博拉·艾里斯的同名小说改编。
 
 **制作人员：**
 - 制片人：[Angelina Jolie](https://bgm.tv/person/33502)

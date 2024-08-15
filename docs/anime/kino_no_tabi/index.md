@@ -7,9 +7,9 @@
 
 旅行者奇诺（Kino）骑着她那会说话的摩托车汉密斯（Hermes）到各个国家旅行，在每个国家奇诺都只停留三天，在她体会了该国家人民的文化、风俗之后，她便离开并前往另一个国家……
 
-　　--世界は美しくなんかない　そして それ故に 美しい--
-　　--The World Is Not Beautiful,Therefore It Is--
-　　--这个世界并不美丽，然而，又因此而美丽--
+--世界は美しくなんかない　そして それ故に 美しい--
+--The World Is Not Beautiful,Therefore It Is--
+--这个世界并不美丽，然而，又因此而美丽--
 
 **制作人员：**
 - 动画制作：[A・C・G・T](https://bgm.tv/person/6093)

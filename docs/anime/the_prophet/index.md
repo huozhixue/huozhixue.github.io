@@ -5,7 +5,7 @@
 
 ## 简介
 
-Inspired by the classic book by Kahlil Gibran, The Prophet is an animated feature film, with 'chapters' from animation directors from around the world.
+这部动画片根据卡里·纪伯伦的同名作品改编，每一部分由不同导演执导，其中包括《狮子王》导演罗杰·阿勒斯和《海洋之歌》导演汤姆·摩尔，声优云集连姆·尼森、塞尔玛·海耶克、奎文赞妮·瓦利斯等。
 
 
 

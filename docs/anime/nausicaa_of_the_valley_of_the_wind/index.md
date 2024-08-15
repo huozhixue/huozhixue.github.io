@@ -15,8 +15,6 @@
 
 最後，娜烏西卡掉落腐海，到達腐海的底部，發現了腐海的秘密。腐海把污染的大地淨化，過程中會產生有毒的瘴氣。被淨化後的地底有著乾淨的空氣和水源，而王蟲則是守護腐海的生物。故事的尾聲當培吉特餘黨拿小王蟲來誘使王蟲群攻擊風之谷，企圖從多魯美奇亞人手中奪回巨神兵之際，娜烏西卡解救了小王蟲，以身為盾來制止王蟲群的憤怒衝擊而犧牲。冷靜下來的王蟲群以特殊能力救活娜烏西卡。在晨陽中，娜烏西卡站立在王蟲們的觸鬚所構成的金色草原上快樂地舞動，印證了古老的傳說--藍衣人在金色的草原帶來了希望。
 
-http://zh.wikipedia.org/wiki/%E9%A3%8E%E4%B9%8B%E8%B0%B7
-
 **制作人员：**
 - 制片人：[高畑勲](https://bgm.tv/person/1506)
 - 原画：[高坂希太郎](https://bgm.tv/person/1665)、[金田伊功](https://bgm.tv/person/2653)、[なかむらたかし](https://bgm.tv/person/1113)、[賀川愛](https://bgm.tv/person/2068)、[渡部高志](https://bgm.tv/person/172)、[小田部羊一](https://bgm.tv/person/887)、[鍋島修](https://bgm.tv/person/1066)、[庵野秀明](https://bgm.tv/person/94)、[二木真希子](https://bgm.tv/person/11680)、[小原秀一](https://bgm.tv/person/2045)、[小林一幸](https://bgm.tv/person/1794)、[才田俊次](https://bgm.tv/person/2175)

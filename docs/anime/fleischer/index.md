@@ -5,7 +5,9 @@
 
 ## 简介
 
-Betty Boop (with dog's ears) is entertainer in a restaurant for dogs; a waiter joins the floor show to the neglect of patrons.
+在30年代，美国动画有两大对立的阵营，西海岸（好莱坞）风格的迪士尼，东海岸（纽约）风格的弗莱舍（后来并入派拉蒙公司）。 
+
+本合集收录弗莱舍早期代表性的动画短片，从 1930《Dizzy Dishes》 到 1934《poor cinderella》。
 
 
 

@@ -7,7 +7,7 @@
 
 偶像，是女孩子们一直以来的憧憬。但能站在顶点的，只有仅仅数人。13位少女，就此经她们所属的事务所“765 Prodution”，跨进了那个充满竞争的世界……出道约半年，事务所来了一位全新的制作人。他跟少女们都下定决心，向顶级偶像之路进发…… 本作是由『A-1 Pictures』改编同名游戏于2011年7月制作的最新版动画，讲述了『765production』所属的偶像们活跃与成长的物语。
 
-　　2011年1月10日，在“The Idolm@ster 2 765pro H@ppiness New Ye@r P@rty!! 2011”的现场活动中，隆重地隆动地宣布了一个使所有fans非常雀跃的消息——「THE IDOLM@STER(偶像大师)」的动画化计划正式启动了! 那时虽然已经宣布了动画化，但是以什么媒传播放则还没有公布，再次TV动画，还是直接剧场版，还是只推出OVA? 这些疑问都在最新一号的「Megami杂志 3月号」上得以解答了，「THE IDOLM@STER」TV动画化正式决定!!
+2011年1月10日，在“The Idolm@ster 2 765pro H@ppiness New Ye@r P@rty!! 2011”的现场活动中，隆重地隆动地宣布了一个使所有fans非常雀跃的消息——「THE IDOLM@STER(偶像大师)」的动画化计划正式启动了! 那时虽然已经宣布了动画化，但是以什么媒传播放则还没有公布，再次TV动画，还是直接剧场版，还是只推出OVA? 这些疑问都在最新一号的「Megami杂志 3月号」上得以解答了，「THE IDOLM@STER」TV动画化正式决定!!
 
 **制作人员：**
 - 作画监督助理：[柴田由香](https://bgm.tv/person/3780)、[松尾祐輔](https://bgm.tv/person/8178)、[赤井俊文](https://bgm.tv/person/7825)、[近岡直](https://bgm.tv/person/3633)、[川上哲也](https://bgm.tv/person/3515)、[錦織敦史](https://bgm.tv/person/3223)、[伊藤祐毅](https://bgm.tv/person/9871)、[飯塚晴子](https://bgm.tv/person/3313)、[林勇雄](https://bgm.tv/person/12787)

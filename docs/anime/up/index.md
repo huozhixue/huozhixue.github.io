@@ -13,8 +13,6 @@
 
 本片荣获第82届奥斯卡最佳动画长片、最佳配乐2项大奖。
 
-简介来自 豆瓣（https://movie.douban.com/subject/2129039/）。
-
 **制作人员：**
 - 导演：[Pete Docter](https://bgm.tv/person/15531)
 - 原案：[Pete Docter](https://bgm.tv/person/15531)

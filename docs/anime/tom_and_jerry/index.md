@@ -5,13 +5,12 @@
 
 ## 简介
 
-Tom and Jerry is an American animated series of short films created in 1940 by William Hanna and Joseph Barbera. It centers on a rivalry between its two main characters, Tom Cat and Jerry Mouse, and many recurring characters, based around slapstick comedy.
+《猫和老鼠》（Tom and Jerry）是米高梅电影公司于1939年制作的一部动画，该片由威廉·汉纳、约瑟夫·巴伯拉编写，
+弗雷德·昆比制作，首部剧集《甜蜜的家》于1940年2月10日在美国首播。
 
-In its original run, Hanna and Barbera produced 114 Tom and Jerry shorts for Metro-Goldwyn-Mayer from 1940 to 1957. During this time, they won seven Academy Awards for Animated Short Film, tying for first place with Walt Disney's Silly Symphonies with the most awards in the category. After the MGM cartoon studio closed in 1957, MGM revived the series with Gene Deitch directing an additional 13 Tom and Jerry shorts for Rembrandt Films from 1960 to 1962. Tom and Jerry then became the highest-grossing animated short film series of that time, overtaking Looney Tunes. Chuck Jones then produced another 34 shorts with Sib-Tower 12 Productions between 1963 and 1967. Two more shorts were produced, The Mansion Cat in 2001 and The Karate Guard in 2005, for a total of 163 shorts. Various shorts have been released for home media since the 1990s.
 
-A number of spin-offs have been made, including the television series The Tom and Jerry Show (1975–77), The Tom and Jerry Comedy Show (1980–82), Tom & Jerry Kids (1990–94), Tom and Jerry Tales (2006–08), and The Tom and Jerry Show (2014-present). The first feature-length film based on the series, Tom and Jerry: The Movie, was released in 1992 before ten direct-to-video films were produced between 2002 and 2013.
-
-Numerous Tom and Jerry shorts have been subject to controversy, mainly over racial stereotypes which involves the portrayal of the recurring black character Mammy Two Shoes and characters appearing in blackface. Other controversial themes include cannibalism and the glamorization of smoking.
+《猫和老鼠》以闹剧为特色，描绘了一对水火不容的冤家：汤姆和杰瑞猫鼠之间的战争，片中的汤姆经常使用狡诈的诡计来对付杰瑞，
+而杰瑞则时常利用汤姆诡计中的漏洞逃脱他的迫害并给予报复。
 
 **制作人员：**
 - 脚本：[Joseph Barbera](https://bgm.tv/person/49033)、[William Hanna](https://bgm.tv/person/49038)
