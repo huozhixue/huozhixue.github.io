@@ -1,18 +1,17 @@
 # 白雪公主和七个小矮人
 
 
-> <u>**[白雪公主和七个小矮人](http://bgm.tv/subject/36226)**</u>，又名：Snow White and the Seven Dwarfs、白雪公主、雪姑七友
+> <u>**[白雪公主和七个小矮人](https://bgm.tv/subject/36226)**</u>，又名：Snow White and the Seven Dwarfs、白雪公主、雪姑七友
 
 ## 简介
-
 
 白雪公主原本是世界上最幸福的人，可惜当她母后逝去，父王娶了她继母后，这一切都改变了。恶毒的继母处处为难白雪公主，当她父王也死后，白雪公主过得更艰难了。这天，皇后从魔镜中得知世上最美的人不是自己而是白雪公主后，气急败坏的她下令武士将她带到森林处决了，好心的武士放走了白雪公主。夜晚，森林里的七个小矮人收留了无家可归的白雪公主。当皇后得知白雪公主还没死时，气急败坏的她决定亲自出马将白雪公主害死。第二天，她化妆成了一个老婆婆，带着毒苹果往森林深处走去。
 
 **制作人员：**
-- 导演：[宾·沙普斯坦](http://bgm.tv/person/45886)
-- 原画：[杨左匋](http://bgm.tv/person/33272)
-- 製作：[迪士尼电影公司](http://bgm.tv/person/6816)
-- 动画制作：[华特·迪士尼动画工作室](http://bgm.tv/person/13956)
+- 原画：[Cy Young](https://bgm.tv/person/33272)
+- 製作：[Walt Disney Pictures](https://bgm.tv/person/6816)
+- 动画制作：[Walt Disney Animation Studios](https://bgm.tv/person/13956)
+- 导演：[Ben Sharpsteen](https://bgm.tv/person/45886)
 
 
 

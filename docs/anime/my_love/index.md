@@ -1,15 +1,14 @@
 # 春之觉醒
 
 
-> <u>**[春之觉醒](http://bgm.tv/subject/36338)**</u>，又名：Моя любовь、初恋、Moya lyubov、My Love
+> <u>**[春之觉醒](https://bgm.tv/subject/36338)**</u>，又名：Моя любовь、初恋、Moya lyubov、My Love
 
 ## 简介
 
 
 
-
 **制作人员：**
-- 导演：[亚历山大·康斯坦丁诺维奇·彼德洛夫](http://bgm.tv/person/16201)
+- 导演：[Александр Константинович Петров](https://bgm.tv/person/16201)
 
 
 

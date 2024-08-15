@@ -1,10 +1,9 @@
 # 侵略！乌贼娘
 
 
-> <u>**[侵略！乌贼娘](http://bgm.tv/subject/7842)**</u>，又名：侵略!イカ娘、Invasion! Squid Girl、Shinryaku! Ika Musume
+> <u>**[侵略！乌贼娘](https://bgm.tv/subject/7842)**</u>，又名：侵略!イカ娘、Invasion! Squid Girl、Shinryaku! Ika Musume
 
 ## 简介
-
 
 为了征服持续污染海洋的人类，乌贼娘从深海来到了陆地。但是，原定为第一个侵略据点的海之家“LEMON”却被她破坏了，为了赚取修理费，她只能开始干活。连经营LEMON的相泽姐妹都无法压制的乌贼娘，是否能迎来征服人类的一天呢……
 
@@ -35,23 +34,41 @@ CAST：
 辛蒂：生天目仁美
 
 **制作人员：**
-- 原作：[安部真弘](http://bgm.tv/person/7064)
-- 导演：[水岛努](http://bgm.tv/person/623)
-- 脚本：[满仲劝](http://bgm.tv/person/12528)、[国泽真理子](http://bgm.tv/person/3715)、[横手美智子](http://bgm.tv/person/337)
-- 分镜：[东出太](http://bgm.tv/person/929)、[大和直道](http://bgm.tv/person/13485)
+- 制作协力：[セイバーワークス](https://bgm.tv/person/43768)
+- OP・ED 分镜：[追崎史敏](https://bgm.tv/person/1165)
+- 音乐制作：[ランティス](https://bgm.tv/person/57)
+- 音响：[グロービジョン](https://bgm.tv/person/25182)
+- 音响监督：[若林和弘](https://bgm.tv/person/564)
+- 企画：[小原充](https://bgm.tv/person/2694)、[井上俊次](https://bgm.tv/person/963)
+- 原画：[谷口淳一郎](https://bgm.tv/person/3063)、[一居一平](https://bgm.tv/person/19478)、[齊田博之](https://bgm.tv/person/10771)、[満仲勧](https://bgm.tv/person/12528)、[井出直美](https://bgm.tv/person/9092)、[松本麻友子](https://bgm.tv/person/10189)、[林隆文](https://bgm.tv/person/15414)、[安野将人](https://bgm.tv/person/13084)、[大橋学](https://bgm.tv/person/2951)、[追崎史敏](https://bgm.tv/person/1165)、[松尾祐輔](https://bgm.tv/person/8178)、[平牧大輔](https://bgm.tv/person/13069)
+- 剪辑：[西山茂](https://bgm.tv/person/6004)、[REAL-T](https://bgm.tv/person/46772)
+- 作画监督：[本多美乃](https://bgm.tv/person/22696)、[井出直美](https://bgm.tv/person/9092)、[松本麻友子](https://bgm.tv/person/10189)、[松尾祐輔](https://bgm.tv/person/8178)
+- 系列构成：[横手美智子](https://bgm.tv/person/337)
+- 道具设计：[井出直美](https://bgm.tv/person/9092)
+- 音乐：[菊谷知樹](https://bgm.tv/person/3267)
+- 演出：[水島努](https://bgm.tv/person/623)、[山本靖貴](https://bgm.tv/person/3681)、[ヤマトナオミチ](https://bgm.tv/person/13485)、[津田尚克](https://bgm.tv/person/9095)、[満仲勧](https://bgm.tv/person/12528)、[平牧大輔](https://bgm.tv/person/13069)
+- 分镜：[水島努](https://bgm.tv/person/623)、[ヤマトナオミチ](https://bgm.tv/person/13485)、[山本靖貴](https://bgm.tv/person/3681)、[満仲勧](https://bgm.tv/person/12528)、[津田尚克](https://bgm.tv/person/9095)
+- 脚本：[横手美智子](https://bgm.tv/person/337)、[水島努](https://bgm.tv/person/623)、[國澤真理子](https://bgm.tv/person/3715)、[満仲勧](https://bgm.tv/person/12528)
+- 导演：[水島努](https://bgm.tv/person/623)
+- 原作：[安部真弘](https://bgm.tv/person/7064)
+- 音乐制作人：[伊藤善之](https://bgm.tv/person/52)
+- 动画制作：[diomedéa](https://bgm.tv/person/7690)
+- 摄影：[旭プロダクション](https://bgm.tv/person/6065)
+- 3DCG：[旭プロダクション](https://bgm.tv/person/6065)
+- 特效：[旭プロダクション](https://bgm.tv/person/6065)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [乌贼娘](http://bgm.tv/character/11566) | イカむすめ、Ika Musume、一个牧师妹 |  | [金元寿子](http://bgm.tv/person/5941) |
-| 2 | [相泽荣子](http://bgm.tv/character/14236) | あいざわ えいこ、Aizawa Eiko | 女 | [藤村歩](http://bgm.tv/person/4783) |
-| 3 | [相泽千鹤](http://bgm.tv/character/14237) | あいざわ ちづる、Aizawa Chizuru | 女 | [田中理恵](http://bgm.tv/person/3862) |
-| 4 | [相泽武](http://bgm.tv/character/14238) | あいざわ たける、Aizawa Takeru | 男 | [大谷美貴](http://bgm.tv/person/4481) |
-| 5 | [长月早苗](http://bgm.tv/character/14239) | ながつき さなえ、Nagatsuki Sanae | 女 | [伊藤かな恵](http://bgm.tv/person/4949) |
-| 6 | [岚山悟郎](http://bgm.tv/character/14240) | あらしやま ごろう、Arashiyama Gorou | 男 | [中村悠一](http://bgm.tv/person/4724) |
-| 7 | [齐藤渚](http://bgm.tv/character/14241) | さいとう なぎさ、Saito Nagisa | 女 | [片岡あづさ](http://bgm.tv/person/6026) |
-| 8 | [辛迪·坎贝尔](http://bgm.tv/character/14242) | Cindy Cambell | 女 | [生天目仁美](http://bgm.tv/person/4394) |
+| 1 | [乌贼娘](https://bgm.tv/character/11566) | イカむすめ、イカむすめ、Ika Musume、一个牧师妹 |  | [金元寿子](https://bgm.tv/person/5941) |
+| 2 | [相泽荣子](https://bgm.tv/character/14236) | 相沢栄子、あいざわ えいこ、Aizawa Eiko | 女 | [藤村歩](https://bgm.tv/person/4783) |
+| 3 | [相泽千鹤](https://bgm.tv/character/14237) | 相沢千鶴、あいざわ ちづる、Aizawa Chizuru | 女 | [田中理恵](https://bgm.tv/person/3862) |
+| 4 | [相泽武](https://bgm.tv/character/14238) | 相沢たける、あいざわ たける、Aizawa Takeru | 男 | [大谷美貴](https://bgm.tv/person/4481) |
+| 5 | [长月早苗](https://bgm.tv/character/14239) | 長月早苗、ながつき さなえ、Nagatsuki Sanae | 女 | [伊藤かな恵](https://bgm.tv/person/4949) |
+| 6 | [岚山悟郎](https://bgm.tv/character/14240) | 嵐山悟郎、あらしやま ごろう、Arashiyama Gorou | 男 | [中村悠一](https://bgm.tv/person/4724) |
+| 7 | [齐藤渚](https://bgm.tv/character/14241) | 斉藤渚、さいとう なぎさ、Saito Nagisa | 女 | [片岡あづさ](https://bgm.tv/person/6026) |
+| 8 | [辛迪·坎贝尔](https://bgm.tv/character/14242) | シンディー・キャンベル、Cindy Cambell | 女 | [生天目仁美](https://bgm.tv/person/4394) |
 
 {{< slide "66/54/11566_crt_748g8,5d/99/14236_crt_GRvml,a5/c8/14237_crt_37kbl,63/d6/14238_crt_Gg3a4,08/e9/14239_crt_Xfh8h,f7/c7/14240_crt_k4jS5,c3/fd/14241_crt_Zq1Ow,9a/e9/14242_crt_la8ol" >}}
 

@@ -1,41 +1,51 @@
 # Fate/stay night
 
 
+> <u>**[Fate/stay night](https://bgm.tv/subject/935)**</u>，又名：FSN、命运守护夜、フェイト/ステイナイト
+
 ## 简介
 
 《Fate/stay night》是TYPE-MOON开发并最早于2004年1月30日在PC平台上发售的文字冒险游戏，也是TYPE-MOON公司商业化后初次亮相的作品，是Fate的系列作品之一。
 
 **制作人员：**
-- 开发：型月
-- 发行：Notes.
-- 剧本：奈须蘑菇
-- 音乐：芳贺敬太、永田大祐、石川敏
-- 主题歌作曲：NUMBER 201
-- 主题歌演出：M.H.
-- 原画：武内崇
+- 动画制作：[タツノコプロ](https://bgm.tv/person/696)、[ufotable](https://bgm.tv/person/3059)
+- 原画：[武内崇](https://bgm.tv/person/1467)
+- 音乐：[石川敏](https://bgm.tv/person/30860)、[永田大祐](https://bgm.tv/person/30859)、[芳賀敬太](https://bgm.tv/person/30856)
+- 剧本：[奈須きのこ](https://bgm.tv/person/1466)
+- 发行：[ノーツ](https://bgm.tv/person/3348)
+- 开发：[TYPE-MOON](https://bgm.tv/person/1465)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 卫宫士郎 | 衛宮 士郎、えみや しろう、Emiya Shirou | 男 | 野田順子 |
-| 2 | 阿尔托莉雅·潘德拉贡 | Saber、呆毛王、吾王、青王、骑士王、棉被王、亚瑟王、蓝Saber、元祖Saber、Altria Pendragon、セイバー | 女 | 川澄綾子 |
-| 3 | 远坂凛 | Rin Tohsaka、遠坂 凛、とおさか りん、Tohsaka Rin | 女 | 植田佳奈 |
-| 4 | 间桐樱 | まとうさくら、Matou Sakura | 女 | 下屋則子 |
-| 5 | 伊莉雅斯菲尔·冯·爱因兹贝伦 | 伊莉雅丝菲尔·冯·爱因兹贝伦、伊莉亚丝菲尔·冯·艾因兹贝伦、依莉雅苏菲尔·冯·爱因兹贝伦、伊莉雅、Illyasviel von Einzbern、イリヤ | 女 | 門脇舞以 |
-| 6 | 卫宫 | 红茶，红A，阿茶，背影侠、英灵卫宫、Emiya、英霊エミヤ、Archer、Faker | 男 | 諏訪部順一 |
-| 7 | 言峰绮礼 | 言峰 綺礼、ことみね きれい、Kotomine Kirei、麻婆神父 | 男 | 中田譲治 |
-| 8 | 美杜莎 | ライダー / Rider、Medusa、Μέδουσα | 女 | 浅川悠 |
+| 1 | [阿尔托莉雅·潘德拉贡](https://bgm.tv/character/273) | アルトリア・ペンドラゴン、Saber、呆毛王、吾王、青王、骑士王、棉被王、亚瑟王、蓝Saber、元祖Saber、Altria Pendragon、セイバー | 女 | [川澄綾子](https://bgm.tv/person/740) |
+| 2 | [卫宫士郎](https://bgm.tv/character/3214) | 衛宮士郎、衛宮 士郎、えみや しろう、Emiya Shirou | 男 | [野田順子](https://bgm.tv/person/3905)、[杉山紀彰](https://bgm.tv/person/4578) |
+| 3 | [间桐樱](https://bgm.tv/character/3215) | 間桐桜、まとうさくら、Matou Sakura | 女 | [下屋則子](https://bgm.tv/person/4471) |
+| 4 | [远坂凛](https://bgm.tv/character/10596) | 遠坂凛、Rin Tohsaka、遠坂 凛、とおさか りん、Tohsaka Rin | 女 | [植田佳奈](https://bgm.tv/person/4263) |
+| 5 | [吉尔伽美什](https://bgm.tv/character/1227) | ギルガメッシュ、Gilgamesh、金皮卡、金闪闪、金A、英雄王、AUO | 男 | [関智一](https://bgm.tv/person/3868) |
+| 6 | [卫宫](https://bgm.tv/character/3216) | エミヤ、红茶，红A，阿茶，背影侠、英灵卫宫、Emiya、英霊エミヤ、Archer、Faker | 男 | [諏訪部順一](https://bgm.tv/person/3864) |
+| 7 | [美狄亚](https://bgm.tv/character/3217) | メディア、Μήδεια、Medea、C妈 | 女 | [田中敦子](https://bgm.tv/person/3873) |
+| 8 | [伊莉雅斯菲尔·冯·爱因兹贝伦](https://bgm.tv/character/3218) | イリヤスフィール・フォン・アインツベルン、伊莉雅丝菲尔·冯·爱因兹贝伦、伊莉亚丝菲尔·冯·艾因兹贝伦、依莉雅苏菲尔·冯·爱因兹贝伦、伊莉雅、Illyasviel von Einzbern、イリヤ | 女 | [門脇舞以](https://bgm.tv/person/4402) |
 
-{{< slide "5a/ca/3214_crt_8GtBn,7d/58/273_crt_N99A0,79/f0/10596_crt_fB4fJ,cf/a0/3215_crt_DODOm,4b/c1/3218_crt_uuwa4,12/a1/3216_crt_OMAL4,d5/96/3220_crt_0bm1O,7a/a1/12262_crt_Ub110" >}}
+{{< slide "7d/58/273_crt_N99A0,5a/ca/3214_crt_8GtBn,cf/a0/3215_crt_DODOm,79/f0/10596_crt_J4h2w,db/ca/1227_crt_Dq9kZ,12/a1/3216_crt_OMAL4,fa/ec/3217_crt_m14ek,4b/c1/3218_crt_uuwa4" >}}
 
 ## 系列
 
-|     | 系列名             | 发行时间       |
-|:----|:----------------|:-----------|
-| 1   | Fate/stay night | 2004-01-30 |
+|     |   系列名   |   发行时间  |
+|:---   |:------  |:----      |
+| 1 | [Fate/stay night](https://bgm.tv/subject/935) | 2004-01-30 |
 
+<!--
 
 ## 配乐
 
-{{< music auto="https://y.qq.com/n/yqq/album/004W1B411h8xMn.html" >}}
+{{< media ""
+""
+"music">}}
+
+## MAD
+
+{{< media auto="mad/fate_stay_night" >}}
+
+-->

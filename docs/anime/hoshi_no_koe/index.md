@@ -1,10 +1,9 @@
 # 星之声
 
 
-> <u>**[星之声](http://bgm.tv/subject/1936)**</u>，又名：ほしのこえ、The voices of a distant star
+> <u>**[星之声](https://bgm.tv/subject/1936)**</u>，又名：ほしのこえ、The voices of a distant star
 
 ## 简介
-
 
 2039年时，人类火星调查队在火星的塔尔西斯高地上发现了异文明的遗迹，但却被突然出现的异生命体攻击而全军覆没。于是为了对抗被命名为塔尔西斯（Tarsian）人的异生命体的威胁，联合国组成了联合国宇宙军。
 
@@ -13,18 +12,27 @@
 终于，美加子抵达了距离地球8.7光年的半人马座α星系中的一颗行星。在那里，美加子传送了费时8.7年才能到达地球的手机短信给寺尾升。在随后进行的与塔而西斯人的战斗中，联合国军几乎全军覆没，但美加子幸存。
 
 **制作人员：**
-- 原作：[新海诚](http://bgm.tv/person/2064)
-- 音乐：[天门](http://bgm.tv/person/2065)
-- 主题歌演出：[みずさわゆうき](http://bgm.tv/person/14627)
+- 制作：[新海誠](https://bgm.tv/person/2064)
+- 音效：[パストラル・サウンド](https://bgm.tv/person/20096)
+- 原案：[新海誠](https://bgm.tv/person/2064)
+- 人物设定：[新海誠](https://bgm.tv/person/2064)
+- 音乐：[天門](https://bgm.tv/person/2065)
+- 分镜：[新海誠](https://bgm.tv/person/2064)
+- 脚本：[新海誠](https://bgm.tv/person/2064)
+- 导演：[新海誠](https://bgm.tv/person/2064)
+- 原作：[新海誠](https://bgm.tv/person/2064)
+- 主题歌作曲：[天門](https://bgm.tv/person/2065)
+- 主题歌演出：[みずさわゆうき](https://bgm.tv/person/14627)
+- 动画制作：[CoMix Wave Films](https://bgm.tv/person/2153)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [寺尾升](http://bgm.tv/character/27785) | Terao Noboru、寺尾 昇、てらお のぼる、Terao Noboru | 男 | [新海誠](http://bgm.tv/person/2064) |
-| 2 | [长峰美加子](http://bgm.tv/character/2766) | 長峰美加子、Nagamine Mikako | 女 | [篠原美香](http://bgm.tv/person/4527) |
+| 1 | [长峰美加子](https://bgm.tv/character/2766) | 長峰美加子、長峰美加子、Nagamine Mikako | 女 | [篠原美香](https://bgm.tv/person/4527)、[武藤寿美](https://bgm.tv/person/4589) |
+| 2 | [寺尾升](https://bgm.tv/character/27785) | 寺尾昇、Terao Noboru、寺尾 昇、てらお のぼる、Terao Noboru | 男 | [新海誠](https://bgm.tv/person/2064)、[鈴木千尋](https://bgm.tv/person/3903) |
 
-{{< slide "71/be/27785_crt_uuuH8,04/5c/2766_crt_anidb" >}}
+{{< slide "04/5c/2766_crt_anidb,71/be/27785_crt_uuuH8" >}}
 
 ## 系列
 

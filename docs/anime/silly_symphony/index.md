@@ -1,10 +1,9 @@
 # 迪士尼糊涂交响曲
 
 
-> <u>**[骷髅舞](http://bgm.tv/subject/136879)**</u>，又名：The Skeleton Dance、骨骼的舞蹈
+> <u>**[骷髅舞](https://bgm.tv/subject/136879)**</u>，又名：The Skeleton Dance、骨骼的舞蹈
 
 ## 简介
-
 
 本片是“糊涂交响曲”系列的第一部短片，背景曲目主要根据圣桑的《骷髅之舞（Danse Macabre）》改编。
 

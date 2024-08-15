@@ -1,6 +1,8 @@
 # 水仙
 
 
+> <u>**[水仙](https://bgm.tv/subject/1167)**</u>，又名：narcissu、ナルキッソス
+
 ## 简介
 
 男主角，一个正常的20岁男子，在考到驾驶执照那天,身体突然不适  
@@ -12,32 +14,40 @@
 故事就这样开始
 
 **制作人员：**
-- 开发：ステージなな
-- 剧本：片冈智
-- 音乐：矢野雅士、Dreaming Rabbit、Elements Garden、Barbarian On The Groove、猫野こめっと、Ebi、上松范康
+- 原画：[MITAONSYA](https://bgm.tv/person/41160)
+- 剧本：[片岡とも](https://bgm.tv/person/5756)
+- 音乐：[Barbarian On The Groove](https://bgm.tv/person/5998)、[Elements Garden](https://bgm.tv/person/3619)、[矢野雅士](https://bgm.tv/person/37127)、[SENTIVE](https://bgm.tv/person/11443)、[上松範康](https://bgm.tv/person/3064)
+- 开发：[ステージなな](https://bgm.tv/person/36211)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | 筱原姬子 | 篠原 姫子、しのはら ひめこ、shinohara himeko、姬子、ひめこ | 女 | やなせなつみ |
-| 2 | 佐仓濑津美 | 佐倉 瀬津美、さくら せつみ、Sakura Setsumi、セツミ | 女 | 綾川りの |
-| 3 | 筱原千寻 | 篠原 千尋、千尋、ちひろ | 女 | 後藤邑子 |
-| 4 | 昭岛优花 | 昭島 優花、優花、ゆか | 女 | 岩居由希子 |
-| 5 | 小女孩 |  | 女 | 能登麻美子 |
+| 1 | [佐仓濑津美](https://bgm.tv/character/12258) | 佐倉瀬津美、佐倉 瀬津美、さくら せつみ、Sakura Setsumi、セツミ | 女 | [綾川りの](https://bgm.tv/person/6323) |
+| 2 | [阿东优](https://bgm.tv/character/52676) | 阿東優 | 男 |  |
 
-{{< slide "a4/9d/13783_crt_1I8pD,0b/f5/12258_crt_Ai9BX,53/46/13898_crt_5uusn,b5/67/13897_crt_nCWPx,e3/6f/13900_crt_GUhu8" >}}
-
+{{< slide "0b/f5/12258_crt_Ai9BX,37/90/52676_crt_knckR" >}}
 
 ## 系列
 
 |     |   系列名   |   发行时间  |
 |:---   |:------  |:----      |
-| 1 | 水仙 | 2005-08-01 |
-| 2 | 水仙2 | 2007-05-16 |
+| 1 | [水仙](http://bgm.tv/subject/1167) | 2005-08-01 |
+| 2 | [水仙2](http://bgm.tv/subject/1168) | 2007-05-16 |
 
+<!--
 
 ## 配乐
 
-{{< music auto="https://y.qq.com/n/yqq/album/002aUoom0UgOh5.html" >}}
+{{< media ""
+""
+"music">}}
+
+## MAD
+
+{{< media auto="mad/narcissu" >}}
+
+-->
+
+
 

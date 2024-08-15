@@ -1,10 +1,9 @@
 # 镜花缘
 
 
-> <u>**[镜花缘](http://bgm.tv/subject/111317)**</u>
+> <u>**[镜花缘](https://bgm.tv/subject/111317)**</u>
 
 ## 简介
-
 
 唐武皇时期，秀才唐敖科举失意，心怀抑郁。在妻兄林之洋的邀请下，他随船队出海经商，四海巡游。造访了君子国、女儿国、大人国、两面国、无肠国、穿胸国等民俗各异的国家，一路发生许多刺激和有趣的事情。
 
@@ -13,13 +12,11 @@
 简介来自豆瓣
 
 **制作人员：**
-- 导演：[邹勤](http://bgm.tv/person/22359)、[胡兆洪](http://bgm.tv/person/22327)
-- 脚本：[王大为](http://bgm.tv/person/64946)
-- 背景美术：[袁炽昌](http://bgm.tv/person/40633)
-- 剪辑：[莫普忠](http://bgm.tv/person/40592)
-- 录音：[施林虎](http://bgm.tv/person/65574)
-- 配音监督：[韦启昌](http://bgm.tv/person/65055)
-- 制作：[上海美术电影制片厂有限公司](http://bgm.tv/person/7499)
+- 导演：[邹勤](https://bgm.tv/person/22359)、[胡兆洪](https://bgm.tv/person/22327)
+- 制作：[上海美术电影制片厂](https://bgm.tv/person/7499)
+- 脚本：[邹勤](https://bgm.tv/person/22359)
+- 剪辑：[莫普忠](https://bgm.tv/person/40592)
+- 背景美术：[袁炽昌](https://bgm.tv/person/40633)
 
 
 

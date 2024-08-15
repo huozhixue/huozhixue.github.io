@@ -1,10 +1,9 @@
 # 大力水手
 
 
-> <u>**[大力水手](http://bgm.tv/subject/136905)**</u>，又名：Popeye the Sailor with Betty Boop、Popeye the Sailor
+> <u>**[大力水手](https://bgm.tv/subject/136905)**</u>，又名：Popeye the Sailor with Betty Boop、Popeye the Sailor
 
 ## 简介
-
 
 大力水手的首部动画短片。
 “动画的世纪·100部作品”第90名。
@@ -15,7 +14,7 @@
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [大力水手](http://bgm.tv/character/85907) | Popeye、普派、波派、波佩、波比、波派、ポパイ | 男 |  |
+| 1 | [大力水手](https://bgm.tv/character/85907) | Popeye the Sailor、Popeye、普派、波派、波佩、波比、波派、ポパイ | 男 |  |
 
 {{< slide "7f/c0/85907_crt_57oVl" >}}
 

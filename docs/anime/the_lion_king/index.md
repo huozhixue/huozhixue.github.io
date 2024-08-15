@@ -1,10 +1,9 @@
 # 狮子王
 
 
-> <u>**[狮子王](http://bgm.tv/subject/22985)**</u>，又名：The Lion King、獅子王、The Lion King 3D、狮子王3D
+> <u>**[狮子王](https://bgm.tv/subject/22985)**</u>，又名：The Lion King、獅子王、The Lion King 3D、狮子王3D
 
 ## 简介
-
 
 辛巴是狮子王国的小王子，他的父亲穆法沙是一个威严的国王。然而叔叔刀疤却对穆法沙的王位觊觎已久。
 
@@ -15,18 +14,18 @@
 简介来自豆瓣（https://movie.douban.com/subject/1301753/）。
 
 **制作人员：**
-- 导演：[罗杰·艾勒斯](http://bgm.tv/person/15529)
-- 音乐：[汉斯·季默](http://bgm.tv/person/10496)
-- 製作：[迪士尼电影公司](http://bgm.tv/person/6816)
-- 特效：[克里斯托弗·詹金斯](http://bgm.tv/person/47216)
-- 动画制作：[华特·迪士尼动画工作室](http://bgm.tv/person/13956)
+- 音乐：[Hans Zimmer](https://bgm.tv/person/10496)
+- 导演：[Roger Allers](https://bgm.tv/person/15529)
+- 动画制作：[Walt Disney Animation Studios](https://bgm.tv/person/13956)
+- 製作：[Walt Disney Pictures](https://bgm.tv/person/6816)
+- 特效：[Christopher Jenkins](https://bgm.tv/person/47216)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [沙祖](http://bgm.tv/character/85887) |  | 雄 | [Rowan Atkinson](http://bgm.tv/person/33334) |
-| 2 | [刀疤](http://bgm.tv/character/148728) |  | 雄 | [Jeremy Irons](http://bgm.tv/person/59243) |
+| 1 | [沙祖](https://bgm.tv/character/85887) | Zazu | 雄 | [Rowan Atkinson](https://bgm.tv/person/33334) |
+| 2 | [刀疤](https://bgm.tv/character/148728) | Scar | 雄 | [Jeremy Irons](https://bgm.tv/person/59243) |
 
 {{< slide "23/c9/85887_crt_ZYQnN,76/25/148728_crt_eLEpd" >}}
 

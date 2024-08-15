@@ -1,10 +1,9 @@
 # 弗莱舍早期动画短片
 
 
-> <u>**[食色迷魂记](http://bgm.tv/subject/318272)**</u>，又名：Dizzy Dishes
+> <u>**[食色迷魂记](https://bgm.tv/subject/318272)**</u>，又名：Dizzy Dishes
 
 ## 简介
-
 
 Betty Boop (with dog's ears) is entertainer in a restaurant for dogs; a waiter joins the floor show to the neglect of patrons.
 

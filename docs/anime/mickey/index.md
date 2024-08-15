@@ -1,10 +1,9 @@
 # 米老鼠的黑白动画片生涯
 
 
-> <u>**[汽船威利号](http://bgm.tv/subject/113650)**</u>，又名：Steamboat Willie
+> <u>**[汽船威利号](https://bgm.tv/subject/113650)**</u>，又名：Steamboat Willie
 
 ## 简介
-
 
 《汽船威利号》（Steamboat Willie）是华特迪士尼全球第一出有声的动画片，动画片的主角是著名的米奇老鼠。此影片于1928年11月18日在纽约79街殖民大戏院（Colony Theater）上映，米老鼠的生日便定为了那天。
 
@@ -12,14 +11,14 @@
 
 
 **制作人员：**
-- 製作：[迪士尼电影公司](http://bgm.tv/person/6816)
-- 动画制作：[华特·迪士尼动画工作室](http://bgm.tv/person/13956)
+- 动画制作：[Walt Disney Animation Studios](https://bgm.tv/person/13956)
+- 製作：[Walt Disney Pictures](https://bgm.tv/person/6816)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [米奇老鼠](http://bgm.tv/character/131623) | 米老鼠 | 男 |  |
+| 1 | [米奇老鼠](https://bgm.tv/character/131623) | Mickey Mouse、米老鼠 | 男 |  |
 
 {{< slide "bb/16/131623_crt_7Kg9w" >}}
 

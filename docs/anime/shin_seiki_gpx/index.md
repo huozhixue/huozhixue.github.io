@@ -1,33 +1,44 @@
 # 高智能方程式
 
 
-> <u>**[高智能方程式](http://bgm.tv/subject/1954)**</u>，又名：新世紀GPXサイバーフォーミュラ、閃電霹靂車、新世纪GPX
+> <u>**[高智能方程式](https://bgm.tv/subject/1954)**</u>，又名：新世紀GPXサイバーフォーミュラ、閃電霹靂車、新世纪GPX
 
 ## 简介
-
 
 故事发生于2015年，配以电脑为导航系统的赛车比赛-Cyber Formula，取代了F1（一级方程式）成为21世纪世界最高水平的赛车赛事。主角风见隼人在护送父亲生前设计的赛车“阿斯拉”（ASURADA，有少数翻译为“雷神”）到日本富士冈赛车场途中受到不知名的攻击，危急之下被迫驾驶“阿斯拉”，却因此被系统记录为唯一赛车手，从此展开了闪电霹雳车史上最年轻的冠军传说。
 
 **制作人员：**
-- 原作：[矢立肇](http://bgm.tv/person/99)
-- 导演：[福田己津央](http://bgm.tv/person/707)
-- 脚本：[伊东恒久](http://bgm.tv/person/1502)、[岛田满](http://bgm.tv/person/1027)、[高桥义昌](http://bgm.tv/person/2976)、[星山博之](http://bgm.tv/person/1056)
-- 分镜：[松浦锭平](http://bgm.tv/person/1473)、[西村聪](http://bgm.tv/person/211)
+- 原画：[後藤雅巳](https://bgm.tv/person/11371)、[石野聡](https://bgm.tv/person/114)、[木村貴宏](https://bgm.tv/person/419)
+- 机械设定：[河森正治](https://bgm.tv/person/253)
+- 作画监督：[山根理宏](https://bgm.tv/person/6058)、[吉松孝博](https://bgm.tv/person/213)
+- 系列构成：[星山博之](https://bgm.tv/person/1056)
+- 人物原案：[猪股むつみ](https://bgm.tv/person/840)
+- 音乐：[大谷幸](https://bgm.tv/person/234)
+- 演出：[福田己津央](https://bgm.tv/person/707)、[三家本泰美](https://bgm.tv/person/14069)、[赤根和樹](https://bgm.tv/person/560)、[西村聡](https://bgm.tv/person/211)
+- 动画制作：[サンライズ](https://bgm.tv/person/189)
+- 分镜：[西村聡](https://bgm.tv/person/211)、[福田己津央](https://bgm.tv/person/707)、[冨永恒雄](https://bgm.tv/person/1288)、[赤根和樹](https://bgm.tv/person/560)、[金澤勝眞](https://bgm.tv/person/2066)、[高橋資祐](https://bgm.tv/person/2281)
+- 脚本：[福田己津央](https://bgm.tv/person/707)、[星山博之](https://bgm.tv/person/1056)、[伊東恒久](https://bgm.tv/person/1502)、[島田満](https://bgm.tv/person/1027)
+- 导演：[福田己津央](https://bgm.tv/person/707)
+- OP・ED 分镜：[富野由悠季](https://bgm.tv/person/613)、[福田己津央](https://bgm.tv/person/707)
+- 人物设定：[吉松孝博](https://bgm.tv/person/213)
+- 音响监督：[藤野貞義](https://bgm.tv/person/178)
+- 企画：[サンライズ](https://bgm.tv/person/189)
+- 制片人：[吉井孝幸](https://bgm.tv/person/2155)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [风见准人](http://bgm.tv/character/9064) | 風見ハヤト、かざみ　はやと、Kazami Hayato | 男 | [金丸淳一](http://bgm.tv/person/4629) |
-| 2 | [菅生明日香](http://bgm.tv/character/9066) | 菅生 あすか、すごう あすか、Sugou Asuka | 女 | [三石琴乃](http://bgm.tv/person/3918) |
-| 3 | [阿斯拉达](http://bgm.tv/character/37539) | Asurada |  | [小野健一](http://bgm.tv/person/4561) |
-| 4 | [布里德·加贺](http://bgm.tv/character/9068) | 加贺城太郎、ブリード 加賀 (加賀城太郎)、かが じょうたろう、Kaga Joutarou | 男 | [関俊彦](http://bgm.tv/person/3854) |
-| 5 | [菅生修](http://bgm.tv/character/9069) | Sugou Osamu、菅生修 | 男 | [速水奨](http://bgm.tv/person/3898) |
-| 6 | [新条直辉](http://bgm.tv/character/9070) | 新条直輝、しんじょう なおき、Shinjou Naoki | 男 | [緑川光](http://bgm.tv/person/3967) |
-| 7 | [カール・リヒター・フォン・ランドル](http://bgm.tv/character/9071) | カール・リヒター・フォン・ランドル、|Karl Richter von Randoll | 男 | [松岡洋子](http://bgm.tv/person/4472) |
-| 8 | [牧伸介](http://bgm.tv/character/9088) | Maki Shinsuke、牧伸介 | 男 | [竹村拓](http://bgm.tv/person/4501) |
+| 1 | [风见准人](https://bgm.tv/character/9064) | 風見ハヤト、風見ハヤト、かざみ　はやと、Kazami Hayato | 男 | [金丸淳一](https://bgm.tv/person/4629) |
+| 2 | [菅生明日香](https://bgm.tv/character/9066) | 菅生あすか、菅生 あすか、すごう あすか、Sugou Asuka | 女 | [三石琴乃](https://bgm.tv/person/3918) |
+| 3 | [阿斯拉达](https://bgm.tv/character/37539) | アスラーダ、Asurada |  | [小野健一](https://bgm.tv/person/4561) |
+| 4 | [ベガ](https://bgm.tv/character/9065) | Vega | 女 |  |
+| 5 | [布里德·加贺](https://bgm.tv/character/9068) | ブリード加賀 (加賀城太郎)、加贺城太郎、ブリード 加賀 (加賀城太郎)、かが じょうたろう、Kaga Joutarou | 男 | [関俊彦](https://bgm.tv/person/3854) |
+| 6 | [菅生修](https://bgm.tv/character/9069) | Sugou Osamu | 男 | [速水奨](https://bgm.tv/person/3898) |
+| 7 | [新条直辉](https://bgm.tv/character/9070) | 新条直輝、新条直輝、しんじょう なおき、Shinjou Naoki | 男 | [緑川光](https://bgm.tv/person/3967) |
+| 8 | [カール・リヒター・フォン・ランドル](https://bgm.tv/character/9071) | Karl Richter von Randoll | 男 | [松岡洋子](https://bgm.tv/person/4472) |
 
-{{< slide "6e/3a/9064_crt_anidb,8a/16/9066_crt_lkkd0,46/ea/37539_crt_XsAXB,5f/5d/9068_crt_anidb,8a/47/9069_crt_anidb,78/06/9070_crt_anidb,42/71/9071_crt_anidb,3f/ef/9088_crt_anidb" >}}
+{{< slide "6e/3a/9064_crt_anidb,8a/16/9066_crt_lkkd0,46/ea/37539_crt_XsAXB,b9/b7/9065_crt_anidb,5f/5d/9068_crt_anidb,8a/47/9069_crt_anidb,78/06/9070_crt_anidb,42/71/9071_crt_anidb" >}}
 
 ## 系列
 

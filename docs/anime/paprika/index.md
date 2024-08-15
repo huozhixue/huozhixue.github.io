@@ -1,10 +1,9 @@
 # 红辣椒
 
 
-> <u>**[红辣椒](http://bgm.tv/subject/841)**</u>，又名：パプリカ、Paprika、梦侦探、盗梦侦探
+> <u>**[红辣椒](https://bgm.tv/subject/841)**</u>，又名：パプリカ、Paprika、梦侦探、盗梦侦探
 
 ## 简介
-
 
 29岁的千叶敦子博士是一个非常有魅力的美女，同时她还是一位谦逊有礼的精神治疗医师，专门研究这项领域中的一些边缘学科。最近，她所在的实验室发明了一种名叫PT的全新心理疾病治疗方法，通过一种非常厉害的装置“DC-MINI”，从梦境中寻找隐藏在患者潜意识中的心理疾病的病根，然后有针对性地进行治疗。“DC-MINI”是由实验室的同事、出类拔萃的科学家时田浩作博士开发研制出来的，他是一个不善交际，只对食物感兴趣的书呆子。但是，这个装置只能在会使用它的人手里，才能发挥正面的功效，如果落入别有用心的人手中，就会造成破坏性的影响，因为它不但可以帮助修复人类潜意识的心灵创伤，还能通过梦境来操纵一个处在睡梦中的人的记忆和行为。
 在“DC-MINI”的帮助下，千叶敦子拥有了一个分身——18岁的梦侦探“红辣椒”，她勇敢无畏、做事干净果断，几次在梦境中给患者的治疗起了决定性的作用。然而最怕什么来什么，还在实验阶段的“DC-MINI”其中的三台被偷了，随着装置一起失踪的还有时田浩作博士的助手冰室启，这使敦子有理由怀疑绝非巧合。
@@ -12,25 +11,46 @@
 实验室的主席岛寅太郎也开始不断受到古怪梦境的侵袭，甚至演变成要用自杀了结自己的一生……敦子决定亲自调查这一连串神秘事件的真相，时田浩作T恤上的一个图案给了敦子灵感，让她找到了冰室启所在的位置，化身为“红辣椒”钻进了他的梦中，然而“红辣椒”发现，冰室启也不过是个受人摆布的傀儡。由于岛寅太郎一直处在睡梦中无法醒来，已经濒临死亡，敦子决定铤而走险，以“红辣椒”身份进入岛寅太郎开始变得混沌的梦境之中，终于发现了幕后真正的黑手，原来就是他们实验室的另一位管理人乾精次郎。这时，梦境的力量大到已经扩展到现实中，黑暗开始吞噬整个世界，乾精次郎的化身，强大的“黑暗君主”也从梦境中跨越到现实中。而“红辣椒”也从梦中走出来与敦子并肩战斗……
 
 **制作人员：**
-- 原作：[筒井康隆](http://bgm.tv/person/3072)
-- 导演：[今敏](http://bgm.tv/person/1313)
-- 脚本：[水上清资](http://bgm.tv/person/20)
-- 音乐：[平泽进](http://bgm.tv/person/355)
-- 人物设定：[安藤雅司](http://bgm.tv/person/1592)
-- 美术监督：[池信孝](http://bgm.tv/person/14089)、[东地和生](http://bgm.tv/person/11896)
-- 色彩设计：[桥本贤](http://bgm.tv/person/2073)
+- 作画监督助理：[井上俊之](https://bgm.tv/person/2177)、[三原三千夫](https://bgm.tv/person/805)
+- 动画制片人：[豊田智紀](https://bgm.tv/person/49645)
+- 摄影：[奈良井昌幸](https://bgm.tv/person/29685)
+- 动画制作：[MADHOUSE](https://bgm.tv/person/603)
+- 友情協力：[東地和生](https://bgm.tv/person/11896)
+- 制片人：[丸田順悟](https://bgm.tv/person/49008)、[滝山雅夫](https://bgm.tv/person/1239)
+- 补间动画：[京極義昭](https://bgm.tv/person/14472)、[本間晃](https://bgm.tv/person/11790)
+- 音效：[倉橋静男](https://bgm.tv/person/6076)
+- 音响：[テクノサウンド](https://bgm.tv/person/23711)
+- 音响监督：[三間雅文](https://bgm.tv/person/42)
+- 製作：[MADHOUSE](https://bgm.tv/person/603)、[ソニー・ピクチャーズ エンタテインメント](https://bgm.tv/person/2259)
+- 录音：[アオイスタジオ](https://bgm.tv/person/32105)
+- 宣传：[ソニー・ピクチャーズ エンタテインメント](https://bgm.tv/person/2259)
+- 企画：[丸山正雄](https://bgm.tv/person/914)
+- 主题歌作词：[平沢進](https://bgm.tv/person/355)
+- 主题歌作曲：[平沢進](https://bgm.tv/person/355)
+- 主题歌编曲：[平沢進](https://bgm.tv/person/355)
+- 动画检查：[阿比留隆彦](https://bgm.tv/person/29435)
+- 原画：[沖浦啓之](https://bgm.tv/person/2061)、[江口寿志](https://bgm.tv/person/2090)、[村田充範](https://bgm.tv/person/39711)、[板津匡覧](https://bgm.tv/person/11989)、[安藤雅司](https://bgm.tv/person/1592)、[三原三千夫](https://bgm.tv/person/805)、[井上俊之](https://bgm.tv/person/2177)、[橋本晋治](https://bgm.tv/person/11390)、[小西賢一](https://bgm.tv/person/2176)
+- 作画监督：[安藤雅司](https://bgm.tv/person/1592)
+- 色彩设计：[橋本賢](https://bgm.tv/person/2073)
+- 美术监督：[東地和生](https://bgm.tv/person/11896)、[池信孝](https://bgm.tv/person/14089)
+- 人物设定：[安藤雅司](https://bgm.tv/person/1592)
+- 制作管理：[橋本健太郎](https://bgm.tv/person/47509)
+- 音乐：[平沢進](https://bgm.tv/person/355)
+- 脚本：[今敏](https://bgm.tv/person/1313)
+- 导演：[今敏](https://bgm.tv/person/1313)
+- 原作：[筒井康隆](https://bgm.tv/person/3072)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [千叶敦子](http://bgm.tv/character/22143) | ちば あつこ | 女 | [林原めぐみ](http://bgm.tv/person/3919) |
-| 2 | [岛寅太郎](http://bgm.tv/character/126146) | しま とらたろう | 男 | [堀勝之祐](http://bgm.tv/person/4261) |
-| 3 | [时田浩作](http://bgm.tv/character/126147) | ときた こうさく | 男 | [古谷徹](http://bgm.tv/person/4095) |
-| 4 | [粉川利美](http://bgm.tv/character/126148) | こながわ としみ | 男 | [大塚明夫](http://bgm.tv/person/3832) |
-| 5 | [乾精次郎](http://bgm.tv/character/126149) | いぬい せいじろう | 男 | [江守徹](http://bgm.tv/person/29213) |
-| 6 | [小山内守雄](http://bgm.tv/character/126150) | おさない もりお | 男 | [山寺宏一](http://bgm.tv/person/3914) |
-| 7 | [红辣椒](http://bgm.tv/character/126153) |  | 女 | [林原めぐみ](http://bgm.tv/person/3919) |
+| 1 | [千叶敦子](https://bgm.tv/character/22143) | 千葉敦子、ちば あつこ | 女 | [林原めぐみ](https://bgm.tv/person/3919) |
+| 2 | [岛寅太郎](https://bgm.tv/character/126146) | 島寅太郎、しま とらたろう | 男 | [堀勝之祐](https://bgm.tv/person/4261) |
+| 3 | [时田浩作](https://bgm.tv/character/126147) | 時田浩作、ときた こうさく | 男 | [古谷徹](https://bgm.tv/person/4095) |
+| 4 | [粉川利美](https://bgm.tv/character/126148) | こながわ としみ | 男 | [大塚明夫](https://bgm.tv/person/3832) |
+| 5 | [乾精次郎](https://bgm.tv/character/126149) | いぬい せいじろう | 男 | [江守徹](https://bgm.tv/person/29213) |
+| 6 | [小山内守雄](https://bgm.tv/character/126150) | おさない もりお | 男 | [山寺宏一](https://bgm.tv/person/3914) |
+| 7 | [红辣椒](https://bgm.tv/character/126153) | パプリカ | 女 | [林原めぐみ](https://bgm.tv/person/3919) |
 
 {{< slide "2a/b2/22143_crt_G6c6c,48/dd/126146_crt_bLPFL,64/8a/126147_crt_p1wrp,e2/80/126148_crt_xDdJz,0b/b1/126149_crt_0ULXu,b9/5d/126150_crt_y53f5,c8/16/126153_crt_JFNQg" >}}
 

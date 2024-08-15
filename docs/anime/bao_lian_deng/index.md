@@ -1,10 +1,9 @@
 # 宝莲灯
 
 
-> <u>**[宝莲灯](http://bgm.tv/subject/3849)**</u>，又名：Lotus Lantern
+> <u>**[宝莲灯](https://bgm.tv/subject/3849)**</u>，又名：Lotus Lantern
 
 ## 简介
-
 
 《宝莲灯》是上海美术电影制片厂继《大闹天宫》、《哪咤闹海》、《天书奇谭》、《金猴降妖》之后于1999年摄制并公映的一部改编自中国神话《宝莲灯》的长篇动画电影。该片总投资1200万元人民币，其剧本、人物造型、背景设计等项目都经过了反复的推敲与修改而创造出来的动画作品。曾经海外各国等地区外购了该片，现有日语、粤语、英语等国语言上映与发行。
 
@@ -13,25 +12,30 @@
 在寻母的征途中，沉香经历了重重磨难，最终成为了一个英勇的少年，并拜孙悟空为师。之后在嘎妹与她的部落族人的帮助下利用二郎神的神像练就一把神斧，最后结合宝莲灯的神力击败了二郎神，最终用神斧将华山劈开把母亲从华山底下解救出来的感人故事。
 
 **制作人员：**
-- 导演：[常光希](http://bgm.tv/person/15679)
-- 脚本：[王大为](http://bgm.tv/person/64946)
-- 音乐：[王永吉](http://bgm.tv/person/38736)、[董为杰](http://bgm.tv/person/22430)、[金复载](http://bgm.tv/person/19177)
-- 人物设定：[陈联运](http://bgm.tv/person/59989)
-- 美术监督：[秦一真](http://bgm.tv/person/22191)
-- 作画监督：[姚光华](http://bgm.tv/person/60504)
-- 原画：[施屹](http://bgm.tv/person/22333)
+- 主题歌作词：[刘欢](https://bgm.tv/person/16975)
+- 特效：[阎善春](https://bgm.tv/person/22273)
+- 摄影：[钱金熙](https://bgm.tv/person/22356)、[唐益楚](https://bgm.tv/person/22263)、[蒋友毅](https://bgm.tv/person/22256)、[金志成](https://bgm.tv/person/22235)
+- 制作：[上海美术电影制片厂](https://bgm.tv/person/7499)
+- 音乐：[金复载](https://bgm.tv/person/19177)、[王永吉](https://bgm.tv/person/38736)、[董为杰](https://bgm.tv/person/22430)
+- 导演：[常光希](https://bgm.tv/person/15679)
+- 美术监督：[秦一真](https://bgm.tv/person/22191)
+- 主题歌演出：[張家輝](https://bgm.tv/person/16414)、[容祖兒](https://bgm.tv/person/17478)、[刘欢](https://bgm.tv/person/16975)
+- 剪辑：[龚黎民](https://bgm.tv/person/40631)
+- 插入歌演出：[李玟](https://bgm.tv/person/22442)
+- 作画监督：[姚光华](https://bgm.tv/person/60504)
+- 原画：[沈如东](https://bgm.tv/person/65044)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [沉香](http://bgm.tv/character/39515) |  | 男 | [杨硕](http://bgm.tv/person/22443) |
-| 2 | [三圣母](http://bgm.tv/character/39516) |  | 女 | [徐帆](http://bgm.tv/person/19692) |
-| 3 | [二郎神](http://bgm.tv/character/39517) | 杨戬、显圣二郎真君、清源妙道真君 | 男 | [姜文](http://bgm.tv/person/22444) |
-| 4 | [孙悟空（上美版）](http://bgm.tv/character/11864) | 斗战胜佛、齐天大圣、花果山美猴王、孙行者、Monkey King、孫悟空、そん ごくう、Son Gokuu、猴哥，弼马温，大师兄，心猿，太乙散仙 | 雄（男） | [陈佩斯](http://bgm.tv/person/17856) |
-| 5 | [嘎妹](http://bgm.tv/character/39518) |  | 女 | [宁静](http://bgm.tv/person/16730) |
-| 6 | [土地爷](http://bgm.tv/character/39519) |  | 男 | [崔杰](http://bgm.tv/person/22445) |
-| 7 | [假道士](http://bgm.tv/character/39520) |  | 男 | [梁天](http://bgm.tv/person/22446) |
+| 1 | [沉香](https://bgm.tv/character/39515) |  | 男 | [杨硕](https://bgm.tv/person/22443) |
+| 2 | [三圣母](https://bgm.tv/character/39516) |  | 女 | [徐帆](https://bgm.tv/person/19692) |
+| 3 | [二郎神](https://bgm.tv/character/39517) | 杨戬、显圣二郎真君、清源妙道真君 | 男 | [姜文](https://bgm.tv/person/22444) |
+| 4 | [孙悟空（上美版）](https://bgm.tv/character/11864) | 孙悟空、斗战胜佛、齐天大圣、花果山美猴王、孙行者、Monkey King、孫悟空、そん ごくう、Son Gokuu、猴哥，弼马温，大师兄，心猿，太乙散仙 | 雄（男） | [陈佩斯](https://bgm.tv/person/17856) |
+| 5 | [嘎妹](https://bgm.tv/character/39518) |  | 女 | [宁静](https://bgm.tv/person/16730) |
+| 6 | [土地爷](https://bgm.tv/character/39519) |  | 男 | [崔杰](https://bgm.tv/person/22445) |
+| 7 | [假道士](https://bgm.tv/character/39520) |  | 男 | [梁天](https://bgm.tv/person/22446) |
 
 {{< slide "3f/07/39515_crt_txI89,63/93/39516_crt_FzU9l,ec/0b/39517_crt_58oaO,66/aa/11864_crt_W0033,2c/5f/39518_crt_HW9su,5a/c1/39519_crt_8k2qh,d8/fc/39520_crt_VgbCB" >}}
 

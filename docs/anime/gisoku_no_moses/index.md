@@ -1,10 +1,9 @@
 # 義足のMoses
 
 
-> <u>**[義足のMoses](http://bgm.tv/subject/404781)**</u>
+> <u>**[義足のMoses](https://bgm.tv/subject/404781)**</u>
 
 ## 简介
-
 
 When a ghost girl with no legs spots a pair of disembodied tap shoes dancing to Moses Supposes from Singin' in the Rain, she joins in, gleefully providing a body to accompany their fancy footwork.
 

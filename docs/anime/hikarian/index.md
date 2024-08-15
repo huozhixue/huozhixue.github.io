@@ -1,18 +1,22 @@
 # 铁胆火车侠
 
 
-> <u>**[铁胆火车侠](http://bgm.tv/subject/8412)**</u>，又名：超特急ヒカリアン、電光快車俠、鐵膽火車俠、正義の超特急 ヒカリアン JAPAN HIKARIAN RAILROAD
+> <u>**[铁胆火车侠](https://bgm.tv/subject/8412)**</u>，又名：超特急ヒカリアン、電光快車俠、鐵膽火車俠、正義の超特急 ヒカリアン JAPAN HIKARIAN RAILROAD
 
 ## 简介
-
 
 从宇宙的彼方Bratcher星而来的拥有黑暗能源的三人组快速魔头号、黑暗使者号、马虎恶魔号到达地球，将能源附身于蒸汽机车之上获得了拥有自我意识且可以变身的机体，为了实现“把世界变成漆黑一片”（OVA是以征服地球为目标的恶作剧）的目的，决定首先要把日本作为中心展开他们的“黑暗大作战”。为了阻止这一野心，正义的铁胆火车侠从Hikarian行星追赶而来，把作为各自能源起源的电力与容易被采用的新干线铁道车辆相融合，也有靠引擎和蒸汽机关电力发电的登场人物（电车·铁路机车）存在。
 穿过路线之外时候的变形，各自在地球上的生活，铁胆火车侠与他们最大的敌人银色魔头号不断的进行战斗。地球人为了支援铁胆火车侠而开设了日本ヒカリアン鉄道（JHR）与铁道公司，平时处理着一些不是铁胆火车侠的新干线电车的旅客输送任务。
 
 **制作人员：**
-- 导演：[新田义方](http://bgm.tv/person/1926)、[广川集一](http://bgm.tv/person/1264)
-- 脚本：[越智一裕](http://bgm.tv/person/537)
-- 分镜：[早川启二](http://bgm.tv/person/2456)、[山田浩之](http://bgm.tv/person/26043)、[石堂宏之](http://bgm.tv/person/16249)、[冈野幸男](http://bgm.tv/person/3366)、[筱崎康行](http://bgm.tv/person/19945)
+- 音乐：[林有三](https://bgm.tv/person/748)
+- 系列构成：[井上敏樹](https://bgm.tv/person/386)
+- 导演：[新田義方](https://bgm.tv/person/1926)
+- 作画监督：[金田伊功](https://bgm.tv/person/2653)、[越智一裕](https://bgm.tv/person/537)
+- 分镜：[越智一裕](https://bgm.tv/person/537)、[早川啓二](https://bgm.tv/person/2456)、[金田伊功](https://bgm.tv/person/2653)
+- 演出：[越智一裕](https://bgm.tv/person/537)、[早川啓二](https://bgm.tv/person/2456)、[金田伊功](https://bgm.tv/person/2653)
+- 脚本：[越智一裕](https://bgm.tv/person/537)
+- 原画：[越智一裕](https://bgm.tv/person/537)、[林隆文](https://bgm.tv/person/15414)
 
 
 

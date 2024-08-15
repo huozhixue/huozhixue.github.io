@@ -1,10 +1,9 @@
 # 飞屋环游记
 
 
-> <u>**[飞屋环游记](http://bgm.tv/subject/11602)**</u>，又名：UP、飞屋历险记、沖天救兵、天外奇蹟
+> <u>**[飞屋环游记](https://bgm.tv/subject/11602)**</u>，又名：UP、飞屋历险记、沖天救兵、天外奇蹟
 
 ## 简介
-
 
 小男孩卡尔（Carl Fredricksen）怀揣着对于冒险的热爱偶遇假小子艾丽（Ellie），而艾丽把整个屋子当成一艘大飞船游戏居然使他对这个女孩子有些着迷，相同的爱好最终使两个人成为了一生的爱侣。
 
@@ -17,11 +16,13 @@
 简介来自 豆瓣（https://movie.douban.com/subject/2129039/）。
 
 **制作人员：**
-- 导演：[彼特·道格特](http://bgm.tv/person/15531)
-- 音乐：[迈克·吉亚奇诺](http://bgm.tv/person/22009)
-- 製作：[迪士尼电影公司](http://bgm.tv/person/6816)
-- 执行制片人：[安德鲁·斯坦顿](http://bgm.tv/person/13972)
-- 动画制作：[皮克斯动画工作室](http://bgm.tv/person/7960)
+- 导演：[Pete Docter](https://bgm.tv/person/15531)
+- 原案：[Pete Docter](https://bgm.tv/person/15531)
+- 脚本：[Pete Docter](https://bgm.tv/person/15531)
+- 製作：[Walt Disney Pictures](https://bgm.tv/person/6816)
+- 执行制片人：[Andrew Stanton](https://bgm.tv/person/13972)
+- 动画制作：[Pixar Animation Studios](https://bgm.tv/person/7960)
+- 音乐：[Michael Giacchino](https://bgm.tv/person/22009)
 
 
 

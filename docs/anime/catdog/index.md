@@ -1,10 +1,9 @@
 # 猫狗
 
 
-> <u>**[猫狗](http://bgm.tv/subject/37411)**</u>，又名：Catdog、catdog
+> <u>**[猫狗](https://bgm.tv/subject/37411)**</u>，又名：Catdog、catdog
 
 ## 简介
-
 
 这部动画片讲述了发生在猫、狗杂交动物“猫狗”发生的故事。由于情况特殊，猫狗经常受到骚扰。如暴徒团伙Greaser Dogs、蓝色小老鼠及邻居温斯洛。
 
@@ -13,7 +12,7 @@
 动画片围绕拥有同一身体，性格不同但却是最好的朋友和兄弟的猫和狗展开。猫十分有教养，而狗爱闹、追逐垃圾车、追车、做很多猫不想参与的事情。
 
 **制作人员：**
-- 动画制作：[尼克乐恩动画工作室](http://bgm.tv/person/64113)
+- 动画制作：[Nickelodeon Animation Studio](https://bgm.tv/person/64113)
 
 
 

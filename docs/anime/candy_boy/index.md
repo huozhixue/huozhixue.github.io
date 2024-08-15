@@ -1,29 +1,29 @@
 # 糖果男孩
 
 
-> <u>**[糖果男孩](http://bgm.tv/subject/2829)**</u>，又名：Candy boy、Candy boy
+> <u>**[糖果男孩](https://bgm.tv/subject/2829)**</u>，又名：Candy boy、Candy boy
 
 ## 简介
 
-
 关于孪生姐妹之间超过亲情以上的暧昧关系，以及两姐妹在一个学妹的出现所产生的隔阂。剧中樱井雪乃和樱井奏是双胞胎。在同学的渲染下，奏误会雪乃对学妹神山咲夜产生情愫，进而疏远和雪乃的关系。雪乃察觉奏对自己的冷漠，大胆向奏告白示爱，两姐妹终于认清对方是自己的最爱。
-Candy☆Boy的续集“Candy boy”由2008年5月2日开始在NICONICO动画频道以网络影像型式播放，每话约长15分钟，全7话。
+　　Candy☆Boy的续集“Candy boy”由2008年5月2日开始在NICONICO动画频道以网络影像型式播放，每话约长15分钟，全7话。
 
 **制作人员：**
-- 导演：[星川孝文](http://bgm.tv/person/13137)
-- 脚本：[铃木雅词](http://bgm.tv/person/2746)
-- 人物设定：[波部崇](http://bgm.tv/person/12785)、[梅津行则](http://bgm.tv/person/11623)
-- 美术监督：[宫本实生](http://bgm.tv/person/11702)
+- 原画：[奥田陽介](https://bgm.tv/person/12757)、[黒田結花](https://bgm.tv/person/14580)
+- 摄影监督：[加藤友宜](https://bgm.tv/person/11828)
+- 作画监督：[合田浩章](https://bgm.tv/person/54)、[日下部智津子](https://bgm.tv/person/3190)
+- 背景美术：[大久保錦一](https://bgm.tv/person/39110)
+- 动画制作：[AIC](https://bgm.tv/person/402)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [樱井雪乃](http://bgm.tv/character/11130) | さくらい ゆきの、Sakurai Yukino | 女 | [柚木涼香](http://bgm.tv/person/4007) |
-| 2 | [樱井奏](http://bgm.tv/character/11131) | さくらい かなで、Sakurai Kanade | 女 | [生天目仁美](http://bgm.tv/person/4394) |
-| 3 | [神山咲夜](http://bgm.tv/character/14399) | かみやま さくや、Kamiyama Sakuya | 女 | [加藤英美里](http://bgm.tv/person/4850) |
-| 4 | [樱井雫](http://bgm.tv/character/14400) | さくらい しずく、Sakurai Shizuku | 女 | [小林ゆう](http://bgm.tv/person/4398) |
-| 5 | [广播](http://bgm.tv/character/28115) | アナウンサー、Announcer、播音员、Announce |  | [太田哲治](http://bgm.tv/person/5477) |
+| 1 | [樱井雪乃](https://bgm.tv/character/11130) | 櫻井雪乃、さくらい ゆきの、Sakurai Yukino | 女 | [柚木涼香](https://bgm.tv/person/4007) |
+| 2 | [樱井奏](https://bgm.tv/character/11131) | 櫻井奏、さくらい かなで、Sakurai Kanade | 女 | [生天目仁美](https://bgm.tv/person/4394) |
+| 3 | [神山咲夜](https://bgm.tv/character/14399) | かみやま さくや、Kamiyama Sakuya | 女 | [加藤英美里](https://bgm.tv/person/4850) |
+| 4 | [樱井雫](https://bgm.tv/character/14400) | 櫻井雫、さくらい しずく、Sakurai Shizuku | 女 | [小林ゆう](https://bgm.tv/person/4398) |
+| 5 | [广播](https://bgm.tv/character/28115) | アナウンス、アナウンサー、Announcer、播音员、Announce |  | [太田哲治](https://bgm.tv/person/5477) |
 
 {{< slide "7d/21/11130_crt_X2w2f,65/ac/11131_crt_wZx6N,15/c8/14399_crt_SraVR,3f/ba/14400_crt_WoSuE,70/d8/28115_crt_vL10O" >}}
 

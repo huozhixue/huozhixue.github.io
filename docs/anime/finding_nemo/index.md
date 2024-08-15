@@ -1,17 +1,17 @@
 # 海底总动员
 
 
-> <u>**[海底总动员](http://bgm.tv/subject/25075)**</u>，又名：Finding Nemo、Finding Nemo 3D、海底总动员3D、寻找尼莫、海底奇兵
+> <u>**[海底总动员](https://bgm.tv/subject/25075)**</u>，又名：Finding Nemo、Finding Nemo 3D、海底总动员3D、寻找尼莫、海底奇兵
 
 ## 简介
-
 
 在澳洲大堡礁的深海中，小丑鱼爸爸玛林和儿子尼莫简单幸福的生活着，可是爸爸做事常常畏首畏尾，是个胆小鬼，尼莫觉得爸爸很不勇敢，甚至有点看不起自己的爸爸。小尼莫却天不怕地不怕，跟同伴们去水面玩耍的时候，竟然被渔网捞了起来，辗转被卖到一家牙医诊所。玛林对儿子的生死未卜感到十分的担忧，就算平时不能大胆行事，为了儿子也要勇敢豁出去了。可是在路上遇到了很多艰难与恐惧，令他十分胆怯。幸好他遇到了好心的多瑞，一路与他作伴。父子俩都遇到了很多热心的帮助，最终都能重逢，玛林也从此成为儿子以及大家心中的英雄。
 
 **制作人员：**
-- 导演：[安德鲁·斯坦顿](http://bgm.tv/person/13972)
-- 製作：[迪士尼电影公司](http://bgm.tv/person/6816)
-- 动画制作：[皮克斯动画工作室](http://bgm.tv/person/7960)
+- 脚本：[Andrew Stanton](https://bgm.tv/person/13972)
+- 导演：[Andrew Stanton](https://bgm.tv/person/13972)
+- 製作：[Walt Disney Pictures](https://bgm.tv/person/6816)
+- 动画制作：[Pixar Animation Studios](https://bgm.tv/person/7960)
 
 
 

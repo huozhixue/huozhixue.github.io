@@ -1,10 +1,9 @@
 # 兽娘动物园
 
 
-> <u>**[兽娘动物园](http://bgm.tv/subject/176478)**</u>，又名：けものフレンズ、动物朋友、萌兽之友、动物好友、兽娘小伙伴
+> <u>**[兽娘动物园](https://bgm.tv/subject/176478)**</u>，又名：けものフレンズ、动物朋友、萌兽之友、动物好友、兽娘小伙伴
 
 ## 简介
-
 
 《动物朋友》是由“动物朋友企划”（famima.com、东京电视台、KADOKAWA、胜利娱乐、Crunchyroll SC动画基金、AT-X、SYS、人脉、Age Global Networks、Just Production、DOCOMO动画商城、武士道）发起的跨媒体企划。该企划最初的产品是由总部位于东京的游戏公司Nexon在2015年开发的手机游戏。以游戏中的兽娘为主角的漫画《动物朋友 -欢迎来到加帕里公园！-》则于同年5月至2017年1月在《月刊少年Ace》连载。《Keroro军曹》的作者吉崎观音是该企划的概念设计和角色设计者。
 
@@ -24,26 +23,41 @@
 帰路を目指すための旅路が始まるかと思いきや、アニマルガールたちも加わって、大冒険になっちゃった！?
 
 **制作人员：**
-- 原作：[けものフレンズプロジェクト](http://bgm.tv/person/30847)
-- 导演：[达纪](http://bgm.tv/person/26629)
-- 音乐：[立山秋航](http://bgm.tv/person/12727)
-- 人物原案：[吉崎观音](http://bgm.tv/person/429)
-- 美术监督：[白水优子](http://bgm.tv/person/28025)
+- OP・ED 分镜：[たつき](https://bgm.tv/person/26629)
+- 动画制作：[ヤオヨロズ](https://bgm.tv/person/19310)
+- 友情協力：[田辺茂範](https://bgm.tv/person/26628)
+- 制片人：[工藤大丈](https://bgm.tv/person/18957)、[細谷伸之](https://bgm.tv/person/29714)
+- 动画制片人：[福原慶匡](https://bgm.tv/person/28267)
+- 音响：[青二プロダクション](https://bgm.tv/person/49587)
+- 音响监督：[阿部信行](https://bgm.tv/person/23001)
+- 主题歌演出：[みゆはん](https://bgm.tv/person/27286)
+- 主题歌作词：[みゆはん](https://bgm.tv/person/27286)、[大石昌良](https://bgm.tv/person/15364)
+- 主题歌作曲：[大石昌良](https://bgm.tv/person/15364)、[みゆはん](https://bgm.tv/person/27286)
+- 主题歌编曲：[大石昌良](https://bgm.tv/person/15364)
+- 剪辑：[ヤオヨロズ](https://bgm.tv/person/19310)
+- 摄影监督：[石山智之](https://bgm.tv/person/28026)
+- 系列构成：[たつき](https://bgm.tv/person/26629)
+- 人物原案：[吉崎観音](https://bgm.tv/person/429)
+- 音乐：[立山秋航](https://bgm.tv/person/12727)
+- 演出：[たつき](https://bgm.tv/person/26629)
+- 分镜：[たつき](https://bgm.tv/person/26629)
+- 脚本：[たつき](https://bgm.tv/person/26629)
+- 导演：[たつき](https://bgm.tv/person/26629)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [薮猫](http://bgm.tv/character/50824) | Serval、Sābaru、Leptailurus serval |  | [野中藍](http://bgm.tv/person/4371) |
-| 2 | [包](http://bgm.tv/character/50026) | 小包、卡邦、背包、小鞄、Kaban、鞄 | 女 | [内田彩](http://bgm.tv/person/5136) |
-| 3 | [幸运兽](http://bgm.tv/character/52430) | Lackey beast、ボス、老大、Lucky Beast、幸運の獣、らっきーびーすと、ラッキーさん |  | [？？？](http://bgm.tv/person/13698) |
-| 4 | [耳廓狐](http://bgm.tv/character/51063) | Vulpes zerda、Fennec、Fenekku |  | [本宮佳奈](http://bgm.tv/person/27049) |
-| 5 | [浣熊](http://bgm.tv/character/51064) | Procyon lotor、Common raccoon、Araiguma |  | [小野早稀](http://bgm.tv/person/15470) |
-| 6 | [巴布亚企鹅](http://bgm.tv/character/51065) | 金图企鹅、Gentoo penguin、Jentsūpengin、Pygoscelis papua |  | [田村響華](http://bgm.tv/person/27050) |
-| 7 | [洪堡企鹅](http://bgm.tv/character/51066) | 汉波德企鹅、Humboldt penguin、Funborutopengin、Spheniscus humboldti |  | [築田行子](http://bgm.tv/person/27051) |
-| 8 | [跳岩企鹅](http://bgm.tv/character/51067) | Eudyptes chrysocome、Rockhopper penguin、Iwatobipengin |  | [相羽あいな](http://bgm.tv/person/25428) |
+| 1 | [包](https://bgm.tv/character/50026) | かばん、小包、卡邦、背包、小鞄、Kaban、鞄 | 女 | [内田彩](https://bgm.tv/person/5136) |
+| 2 | [薮猫](https://bgm.tv/character/50824) | サーバル、Serval、Sābaru、Leptailurus serval |  | [野中藍](https://bgm.tv/person/4371)、[尾崎由香](https://bgm.tv/person/26815) |
+| 3 | [幸运兽](https://bgm.tv/character/52430) | ラッキービースト、Lackey beast、ボス、老大、Lucky Beast、幸運の獣、らっきーびーすと、ラッキーさん |  | [？？？](https://bgm.tv/person/13698) |
+| 4 | [河马](https://bgm.tv/character/51062) | カバ、Hippopotamus amphibius、Hippopotamus、Kaba |  | [照井春佳](https://bgm.tv/person/13177) |
+| 5 | [耳廓狐](https://bgm.tv/character/51063) | フェネック、Vulpes zerda、Fennec、Fenekku |  | [本宮佳奈](https://bgm.tv/person/27049) |
+| 6 | [浣熊](https://bgm.tv/character/51064) | アライグマ、Procyon lotor、Common raccoon、Araiguma |  | [小野早稀](https://bgm.tv/person/15470) |
+| 7 | [巴布亚企鹅](https://bgm.tv/character/51065) | ジェンツーペンギン、金图企鹅、Gentoo penguin、Jentsūpengin、Pygoscelis papua |  | [田村響華](https://bgm.tv/person/27050) |
+| 8 | [洪堡企鹅](https://bgm.tv/character/51066) | フンボルトペンギン、汉波德企鹅、Humboldt penguin、Funborutopengin、Spheniscus humboldti |  | [築田行子](https://bgm.tv/person/27051) |
 
-{{< slide "e1/48/50824_crt_wNv36,6b/db/50026_crt_aTGZ3,5b/80/52430_crt_COygy,ef/1d/51063_crt_e5Qn1,e9/cf/51064_crt_rlH1H,61/51/51065_crt_bSHIY,87/b7/51066_crt_cc4CC,00/fd/51067_crt_a8rRw" >}}
+{{< slide "6b/db/50026_crt_aTGZ3,e1/48/50824_crt_wNv36,5b/80/52430_crt_COygy,52/f1/51062_crt_404ED,ef/1d/51063_crt_e5Qn1,e9/cf/51064_crt_rlH1H,61/51/51065_crt_bSHIY,87/b7/51066_crt_cc4CC" >}}
 
 ## 系列
 

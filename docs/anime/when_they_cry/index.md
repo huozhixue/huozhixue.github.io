@@ -1,10 +1,9 @@
 # 寒蝉鸣泣之时
 
 
-> <u>**[寒蝉鸣泣之时](http://bgm.tv/subject/289)**</u>，又名：ひぐらしのなく頃に、秋蝉鸣泣之时、higurashi no naku koro ni、When They Cry
+> <u>**[寒蝉鸣泣之时](https://bgm.tv/subject/289)**</u>，又名：ひぐらしのなく頃に、秋蝉鸣泣之时、higurashi no naku koro ni、When They Cry
 
 ## 简介
-
 
 昭和58年的夏天，白天蝉的喧闹与傍晚茅蜩的合唱仿佛在欢迎今年早夏来临的6月，回荡在雏见泽。
 雏见泽是远离都会的深山中的一个穷乡僻壤。
@@ -16,25 +15,41 @@
 只有茅蜩的鸣叫声一点未变，在雏见泽预告着早夏的来临。
 
 **制作人员：**
-- 原作：[龙骑士07](http://bgm.tv/person/2962)、[07th Expansion](http://bgm.tv/person/2963)
-- 导演：[今千秋](http://bgm.tv/person/2964)
-- 脚本：[中濑理香](http://bgm.tv/person/2728)、[川濑敏文](http://bgm.tv/person/267)
-- 分镜：[开祐二](http://bgm.tv/person/27133)、[原田峰文](http://bgm.tv/person/3251)、[名村英敏](http://bgm.tv/person/21329)、[葛谷直行](http://bgm.tv/person/3246)
+- OP・ED 分镜：[わたなべひろし](https://bgm.tv/person/329)、[今千秋](https://bgm.tv/person/2964)
+- 音乐制作：[フロンティアワークス](https://bgm.tv/person/1495)
+- 制片人：[浦崎宣光](https://bgm.tv/person/13569)
+- 音响监督：[郷田ほづみ](https://bgm.tv/person/1555)
+- 动画制作：[スタジオディーン](https://bgm.tv/person/181)
+- 企画：[川村明廣](https://bgm.tv/person/238)
+- 主题歌演出：[片霧烈火](https://bgm.tv/person/5893)、[島みやえい子](https://bgm.tv/person/6463)
+- 主题歌作词：[島みやえい子](https://bgm.tv/person/6463)
+- 主题歌作曲：[中沢伴行](https://bgm.tv/person/6403)
+- 主题歌编曲：[中沢伴行](https://bgm.tv/person/6403)、[高瀬一矢](https://bgm.tv/person/6402)
+- 背景美术：[スタジオパインウッド](https://bgm.tv/person/36664)、[スタジオカノン](https://bgm.tv/person/36854)、[大久保錦一](https://bgm.tv/person/39110)
+- 原画：[渡辺明夫](https://bgm.tv/person/6009)、[吉田徹](https://bgm.tv/person/418)、[沼田誠也](https://bgm.tv/person/3447)、[秋谷有紀恵](https://bgm.tv/person/14377)、[新井淳](https://bgm.tv/person/12576)、[飯野まこと](https://bgm.tv/person/18772)、[中西和也](https://bgm.tv/person/32387)
+- 作画监督：[沼田誠也](https://bgm.tv/person/3447)、[谷口守泰](https://bgm.tv/person/1560)
+- 系列构成：[川瀬敏文](https://bgm.tv/person/267)
+- 演出：[今千秋](https://bgm.tv/person/2964)
+- 音乐：[川井憲次](https://bgm.tv/person/67)
+- 分镜：[わたなべひろし](https://bgm.tv/person/329)、[今千秋](https://bgm.tv/person/2964)、[飯島正勝](https://bgm.tv/person/2233)
+- 脚本：[川瀬敏文](https://bgm.tv/person/267)、[中瀬理香](https://bgm.tv/person/2728)
+- 导演：[今千秋](https://bgm.tv/person/2964)
+- 原作：[竜騎士07](https://bgm.tv/person/2962)、[07th Expansion](https://bgm.tv/person/2963)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [前原圭一](http://bgm.tv/character/2820) | 越后屋、K、前原 圭一、まえばら けいいち、Maebara Keiichi | 男 | [保志総一朗](http://bgm.tv/person/3884) |
-| 2 | [龙宫礼奈](http://bgm.tv/character/3182) | 龙宫蕾娜、龙宫怜奈、竜宮レナ/竜宮礼奈、りゅうぐう れな/りゅうぐう れいな、Ryuuguu Rena/Ryuuguu Reina | 女 | [中原麻衣](http://bgm.tv/person/4145) |
-| 3 | [园崎魅音](http://bgm.tv/character/2427) | そのざき みおん、Sonozaki Mion | 女 | [ゆきのさつき](http://bgm.tv/person/3821) |
-| 4 | [北条沙都子](http://bgm.tv/character/3188) | 北条 沙都子、ほうじょう さとこ、Houjou Satoko | 女 | [かないみか](http://bgm.tv/person/3896) |
-| 5 | [古手梨花](http://bgm.tv/character/3187) | 咪啪、ふるでりか、Furude Rika、魔法少女 御社神梨花 | 女 | [田村ゆかり](http://bgm.tv/person/3965) |
-| 6 | [园崎诗音](http://bgm.tv/character/3186) | そのざき しおん、Sonozaki Shion | 女 | [ゆきのさつき](http://bgm.tv/person/3821) |
-| 7 | [大石藏人](http://bgm.tv/character/3191) | 大石 蔵人、おおいし くらうど、Ooishi Kuraudo | 男 | [茶風林](http://bgm.tv/person/4046) |
-| 8 | [富竹次郎](http://bgm.tv/character/3192) | 富竹 ジロウ、とみたけ ジロウ、Tomitake Jirou | 男 | [大川透](http://bgm.tv/person/4131) |
+| 1 | [园崎魅音](https://bgm.tv/character/2427) | 園崎魅音、そのざき みおん、Sonozaki Mion | 女 | [ゆきのさつき](https://bgm.tv/person/3821) |
+| 2 | [前原圭一](https://bgm.tv/character/2820) | 越后屋、K、前原 圭一、まえばら けいいち、Maebara Keiichi | 男 | [保志総一朗](https://bgm.tv/person/3884) |
+| 3 | [龙宫礼奈](https://bgm.tv/character/3182) | 竜宮レナ、龙宫蕾娜、龙宫怜奈、竜宮レナ/竜宮礼奈、りゅうぐう れな/りゅうぐう れいな、Ryuuguu Rena/Ryuuguu Reina | 女 | [中原麻衣](https://bgm.tv/person/4145) |
+| 4 | [园崎诗音](https://bgm.tv/character/3186) | 園崎詩音、そのざき しおん、Sonozaki Shion | 女 | [ゆきのさつき](https://bgm.tv/person/3821) |
+| 5 | [古手梨花](https://bgm.tv/character/3187) | 咪啪、ふるでりか、Furude Rika、魔法少女 御社神梨花 | 女 | [田村ゆかり](https://bgm.tv/person/3965) |
+| 6 | [北条沙都子](https://bgm.tv/character/3188) | 北条 沙都子、ほうじょう さとこ、Houjou Satoko | 女 | [かないみか](https://bgm.tv/person/3896) |
+| 7 | [北条悟史](https://bgm.tv/character/3190) | ほうじょうさとし、Houjou Satoshi | 男 | [小林ゆう](https://bgm.tv/person/4398) |
+| 8 | [大石藏人](https://bgm.tv/character/3191) | 大石蔵人、大石 蔵人、おおいし くらうど、Ooishi Kuraudo | 男 | [茶風林](https://bgm.tv/person/4046) |
 
-{{< slide "3d/00/2820_crt_N8vMx,46/c8/3182_crt_inI0Y,4c/d6/2427_crt_Xap2T,6e/26/3188_crt_3vvIg,43/cb/3187_crt_STt12,9b/69/3186_crt_Le3aS,f0/23/3191_crt_anidb,76/6e/3192_crt_anidb" >}}
+{{< slide "4c/d6/2427_crt_Xap2T,3d/00/2820_crt_N8vMx,46/c8/3182_crt_inI0Y,9b/69/3186_crt_Le3aS,43/cb/3187_crt_STt12,6e/26/3188_crt_3vvIg,d6/d4/3190_crt_aGZFn,f0/23/3191_crt_anidb" >}}
 
 ## 系列
 

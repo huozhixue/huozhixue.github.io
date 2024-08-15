@@ -1,10 +1,9 @@
 # 米老鼠的彩色动画片生涯
 
 
-> <u>**[乐团音乐会](http://bgm.tv/subject/135176)**</u>，又名：The Band Concert、Banda del concierto, La
+> <u>**[乐团音乐会](https://bgm.tv/subject/135176)**</u>，又名：The Band Concert、Banda del concierto, La
 
 ## 简介
-
 
 米奇正在领导一个音乐会的威廉告诉序曲,但他不断打乱了冰淇淋供应商唐纳德,使用好像有无数的长笛演奏中的火鸡。 唐纳德放弃后,一只蜜蜂出现,导致自己的破坏。 乐队然后到达风暴序列,天气也开始回升,龙卷风来了,但他们继续玩
 

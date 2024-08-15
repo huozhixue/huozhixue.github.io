@@ -1,10 +1,9 @@
 # 猫和老鼠
 
 
-> <u>**[猫和老鼠](http://bgm.tv/subject/25961)**</u>，又名：Tom and Jerry、Tom and Jerry (1960s packaged show)、猫和老鼠 电视播放版、湯姆貓與傑利鼠
+> <u>**[猫和老鼠](https://bgm.tv/subject/25961)**</u>，又名：Tom and Jerry、Tom and Jerry (1960s packaged show)、猫和老鼠 电视播放版、湯姆貓與傑利鼠
 
 ## 简介
-
 
 Tom and Jerry is an American animated series of short films created in 1940 by William Hanna and Joseph Barbera. It centers on a rivalry between its two main characters, Tom Cat and Jerry Mouse, and many recurring characters, based around slapstick comedy.
 
@@ -15,24 +14,26 @@ A number of spin-offs have been made, including the television series The Tom an
 Numerous Tom and Jerry shorts have been subject to controversy, mainly over racial stereotypes which involves the portrayal of the recurring black character Mammy Two Shoes and characters appearing in blackface. Other controversial themes include cannibalism and the glamorization of smoking.
 
 **制作人员：**
-- 导演：[威廉·汉纳](http://bgm.tv/person/49038)、[约瑟夫·巴伯拉](http://bgm.tv/person/49033)
-- 音乐：[斯科特·布拉德利](http://bgm.tv/person/33212)
-- 製作：[华纳兄弟动画](http://bgm.tv/person/13957)
+- 脚本：[Joseph Barbera](https://bgm.tv/person/49033)、[William Hanna](https://bgm.tv/person/49038)
+- 音乐：[Scott Bradley](https://bgm.tv/person/33212)
+- 製作：[Warner Bros. Animation](https://bgm.tv/person/13957)
+- 导演：[Joseph Barbera](https://bgm.tv/person/49033)、[William Hanna](https://bgm.tv/person/49038)
+- 制片人：[Joseph Barbera](https://bgm.tv/person/49033)、[William Hanna](https://bgm.tv/person/49038)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [汤姆](http://bgm.tv/character/14401) | Jasper、Thomas、Tom、汤姆猫 | 雄 | [William Hanna](http://bgm.tv/person/49038) |
-| 2 | [杰瑞](http://bgm.tv/character/14402) | Jerry、Jinx、杰瑞鼠 | 雄 |  |
-| 3 | [斯派克](http://bgm.tv/character/24335) |  | 雄 |  |
-| 4 | [泰菲](http://bgm.tv/character/115800) | 塔菲、尼布斯、Nibbles Mouse | 雄 |  |
-| 5 | [夸克](http://bgm.tv/character/127388) | 小鸭子 |  |  |
-| 6 | [可可](http://bgm.tv/character/127393) | 布谷 |  |  |
-| 7 | [乔治](http://bgm.tv/character/127382) |  | 雄 |  |
-| 8 | [布奇](http://bgm.tv/character/127384) |  | 雄 |  |
+| 1 | [汤姆](https://bgm.tv/character/14401) | Tom Cat、Jasper、Thomas、Tom、汤姆猫 | 雄 | [William Hanna](https://bgm.tv/person/49038) |
+| 2 | [杰瑞](https://bgm.tv/character/14402) | Jerry Mouse、Jerry、Jinx、杰瑞鼠 | 雄 |  |
+| 3 | [斯派克](https://bgm.tv/character/24335) | Spike Bulldog | 雄 |  |
+| 4 | [泰克](https://bgm.tv/character/111735) | Tyke Bulldog | 雄 |  |
+| 5 | [泰菲](https://bgm.tv/character/115800) | Tuffy、塔菲、尼布斯、Nibbles Mouse | 雄 |  |
+| 6 | [乔治](https://bgm.tv/character/127382) | George Cat | 雄 |  |
+| 7 | [两只鞋太太](https://bgm.tv/character/127383) | Mammy Two-Shoes | 女 |  |
+| 8 | [布奇](https://bgm.tv/character/127384) | Butch the Cat | 雄 |  |
 
-{{< slide "61/bb/14401_crt_QQIw6,64/d1/14402_crt_kflHE,d5/0e/24335_crt_i26WP,52/e4/115800_crt_W7l8L,ce/d7/127388_crt_R6EEr,d5/9d/127393_crt_61Dl6,38/63/127382_crt_H3UHX,1d/12/127384_crt_TMzu9" >}}
+{{< slide "61/bb/14401_crt_QQIw6,64/d1/14402_crt_kflHE,d5/0e/24335_crt_i26WP,d5/31/111735_crt_t7K9o,52/e4/115800_crt_W7l8L,38/63/127382_crt_H3UHX,bb/5a/127383_crt_TKaqm,1d/12/127384_crt_TMzu9" >}}
 
 ## 系列
 

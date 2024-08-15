@@ -1,35 +1,52 @@
 # sola
 
 
-> <u>**[sola](http://bgm.tv/subject/798)**</u>
+> <u>**[sola](https://bgm.tv/subject/798)**</u>
 
 ## 简介
-
 
 森宫依人是个喜爱着天空的普通高中一年级学生。石月真名是个活泼开朗的少女，同时也是依人的同学。真名的妹妹小依是小学二年级的学生，但因为身体状况不是很好，所以一直在一家可以看到大海的医院中住院。在这家医院中，小依遇到了依人的姐姐，名为森宫苍乃的女孩。
 这一天，是苍乃的生日，依人和真名一起去医院探望苍乃和小依，四个人愉快的嬉戏着。此时，神秘男子辻堂刚史与身着歌特萝莉服装的少女神河茧子在为了一个目的的共同旅行中来到了这个小镇。
 少女四方茉莉在街道的教会中独自地生活。在某日的凌晨四点，在美丽的海滨自然公园中，茉莉与正准备拍摄天空照片的依人偶然相遇了。少年与少女的相遇，拉开了不思议事件的序幕……
 
 **制作人员：**
-- 原作：[久弥直树](http://bgm.tv/person/6717)
-- 导演：[小林智树](http://bgm.tv/person/2904)
-- 脚本：[上江洲诚](http://bgm.tv/person/1599)、[花田十辉](http://bgm.tv/person/262)、[杉原研二](http://bgm.tv/person/13891)
-- 分镜：[小野胜巳](http://bgm.tv/person/3206)、[西村博昭](http://bgm.tv/person/26660)、[山崎光惠](http://bgm.tv/person/8482)
+- 制片人：[永谷敬之](https://bgm.tv/person/12021)、[井上俊次](https://bgm.tv/person/963)
+- 插入歌演出：[Ceui](https://bgm.tv/person/6141)
+- 主题歌演出：[Ceui](https://bgm.tv/person/6141)、[結城アイラ](https://bgm.tv/person/5873)
+- 主题歌作词：[畑亜貴](https://bgm.tv/person/7329)
+- 主题歌作曲：[大久保薫](https://bgm.tv/person/3455)
+- 原案：[久弥直樹](https://bgm.tv/person/6717)
+- 原画：[田村正文](https://bgm.tv/person/12608)
+- 音乐：[藤間仁](https://bgm.tv/person/2749)
+- 作画监督：[古賀誠](https://bgm.tv/person/1191)、[田村正文](https://bgm.tv/person/12608)
+- 系列构成：[花田十輝](https://bgm.tv/person/262)
+- 人物原案：[七尾奈留](https://bgm.tv/person/1341)
+- 演出：[長岡義孝](https://bgm.tv/person/26852)、[山﨑みつえ](https://bgm.tv/person/8482)、[小林智樹](https://bgm.tv/person/2904)
+- 分镜：[山﨑みつえ](https://bgm.tv/person/8482)、[小野勝巳](https://bgm.tv/person/3206)、[松尾衡](https://bgm.tv/person/2567)、[小林智樹](https://bgm.tv/person/2904)
+- 脚本：[久弥直樹](https://bgm.tv/person/6717)、[花田十輝](https://bgm.tv/person/262)、[上江洲誠](https://bgm.tv/person/1599)
+- 总作画监督：[古賀誠](https://bgm.tv/person/1191)
+- 原作：[久弥直樹](https://bgm.tv/person/6717)
+- OP・ED 分镜：[山﨑みつえ](https://bgm.tv/person/8482)
+- 动画制作：[ノーマッド](https://bgm.tv/person/3118)
+- 人物设定：[古賀誠](https://bgm.tv/person/1191)
+- 导演：[小林智樹](https://bgm.tv/person/2904)
+- 音响监督：[明田川仁](https://bgm.tv/person/477)
+- 背景美术：[J.C.STAFF](https://bgm.tv/person/390)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [森宫依人](http://bgm.tv/character/629) | 森宮 依人、もりみや よりと、Morimiya Yorito | 男 | [岡本信彦](http://bgm.tv/person/4950) |
-| 2 | [四方茉莉](http://bgm.tv/character/628) | しほう まつり、Shihou Matsuri | 女 | [能登麻美子](http://bgm.tv/person/3827) |
-| 3 | [森宫苍乃](http://bgm.tv/character/630) | 森宮 蒼乃、もりみや あおの、Morimiya Aono | 女 | [中原麻衣](http://bgm.tv/person/4145) |
-| 4 | [石月真名](http://bgm.tv/character/631) | 石月 真名、いしづき まな、Ishizuki Mana | 女 | [本多陽子](http://bgm.tv/person/4903) |
-| 5 | [石月小依](http://bgm.tv/character/632) | 石月 こより、いしづき こより、Ishizuki Koyori | 女 | [清水愛](http://bgm.tv/person/4064) |
-| 6 | [辻堂刚史](http://bgm.tv/character/633) | 辻堂 剛史、つじどう たけし、Tsujidou Takeshi | 男 | [藤原啓治](http://bgm.tv/person/4016) |
-| 7 | [神河茧子](http://bgm.tv/character/11724) | かみかわ まゆこ、Kamikawa Mayuko | 女 | [金田朋子](http://bgm.tv/person/3886) |
-| 8 | [佐仓纱绘](http://bgm.tv/character/635) | 佐倉 紗絵、さくら さえ、Sakura Sae | 女 | [小清水亜美](http://bgm.tv/person/4474) |
+| 1 | [四方茉莉](https://bgm.tv/character/628) | しほう まつり、Shihou Matsuri | 女 | [能登麻美子](https://bgm.tv/person/3827) |
+| 2 | [森宫依人](https://bgm.tv/character/629) | 森宮依人、森宮 依人、もりみや よりと、Morimiya Yorito | 男 | [岡本信彦](https://bgm.tv/person/4950) |
+| 3 | [森宫苍乃](https://bgm.tv/character/630) | 森宮蒼乃、森宮 蒼乃、もりみや あおの、Morimiya Aono | 女 | [中原麻衣](https://bgm.tv/person/4145) |
+| 4 | [石月真名](https://bgm.tv/character/631) | 石月 真名、いしづき まな、Ishizuki Mana | 女 | [本多陽子](https://bgm.tv/person/4903) |
+| 5 | [石月小依](https://bgm.tv/character/632) | 石月こより、石月 こより、いしづき こより、Ishizuki Koyori | 女 | [清水愛](https://bgm.tv/person/4064) |
+| 6 | [辻堂刚史](https://bgm.tv/character/633) | 辻堂剛史、辻堂 剛史、つじどう たけし、Tsujidou Takeshi | 男 | [藤原啓治](https://bgm.tv/person/4016)、[三瓶由布子](https://bgm.tv/person/4667) |
+| 7 | [佐仓纱绘](https://bgm.tv/character/635) | 佐倉紗絵、佐倉 紗絵、さくら さえ、Sakura Sae | 女 | [小清水亜美](https://bgm.tv/person/4474) |
+| 8 | [上原塔子](https://bgm.tv/character/636) | 上原 塔子、うえばら とうこ、Uebara Touko | 女 | [小野涼子](https://bgm.tv/person/4727) |
 
-{{< slide "05/1e/629_6EnmE,42/e7/628_uW5zj,9c/c1/630_UcG11,b7/bb/631_Ax1bR,ab/d8/632_Dx14j,26/dd/633_42Fb8,c7/25/11724_crt_1NW1E,81/2d/635_crt_ZcBAT" >}}
+{{< slide "42/e7/628_uW5zj,05/1e/629_6EnmE,9c/c1/630_UcG11,b7/bb/631_Ax1bR,ab/d8/632_Dx14j,26/dd/633_42Fb8,81/2d/635_crt_ZcBAT,7d/14/636_crt_NTTR1" >}}
 
 ## 系列
 

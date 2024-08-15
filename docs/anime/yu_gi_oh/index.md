@@ -1,34 +1,40 @@
 # 游戏王
 
 
-> <u>**[游戏王](http://bgm.tv/subject/12344)**</u>，又名：遊☆戯☆王、Yu-Gi-Oh!、游戏王朝日版、遊☆戯☆王 (アニメ第1作)
+> <u>**[游戏王](https://bgm.tv/subject/12344)**</u>，又名：遊☆戯☆王、Yu-Gi-Oh!、游戏王朝日版、遊☆戯☆王 (アニメ第1作)
 
 ## 简介
-
 
 《游戏王》动画版，首先于1998年在日本的朝日电视台播放，共有27集，同漫画初期一样讲述“黑暗游戏（闇のゲーム）”的故事为主。
 
 **制作人员：**
-- 原作：[高桥和希](http://bgm.tv/person/1116)
-- 导演：[角铜博之](http://bgm.tv/person/631)
-- 脚本：[千叶克彦](http://bgm.tv/person/525)、[小林靖子](http://bgm.tv/person/345)、[金卷兼一](http://bgm.tv/person/333)、[井上敏树](http://bgm.tv/person/386)
-- 分镜：[高岛大辅](http://bgm.tv/person/17470)
-- 演出：[铃木吉男](http://bgm.tv/person/21711)
+- 主题歌演出：[FIELD OF VIEW](https://bgm.tv/person/32013)、[WANDS](https://bgm.tv/person/12954)
+- 主题歌作词：[小松未歩](https://bgm.tv/person/5750)、[坂井泉水](https://bgm.tv/person/32035)
+- 主题歌作曲：[大野愛果](https://bgm.tv/person/13305)、[小松未歩](https://bgm.tv/person/5750)
+- 原画：[進藤満尾](https://bgm.tv/person/2787)、[青山充](https://bgm.tv/person/1951)、[福井智子](https://bgm.tv/person/55140)
+- 演出：[角銅博之](https://bgm.tv/person/631)、[新田義方](https://bgm.tv/person/1926)、[早川啓二](https://bgm.tv/person/2456)
+- 作画监督：[本橋秀之](https://bgm.tv/person/287)
+- 系列构成：[井上敏樹](https://bgm.tv/person/386)
+- 人物设定：[姫野美智](https://bgm.tv/person/555)、[荒木伸吾](https://bgm.tv/person/556)
+- 脚本：[井上敏樹](https://bgm.tv/person/386)、[小林靖子](https://bgm.tv/person/345)
+- 原作：[高橋和希](https://bgm.tv/person/1116)
+- 动画制作：[東映アニメーション](https://bgm.tv/person/3045)
+- 导演：[角銅博之](https://bgm.tv/person/631)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [暗游戏 / 亚图姆](http://bgm.tv/character/7454) | Yami Yugi / Atem、やみゆうぎ / アテム、Yami Yugi / Atemu、王样 | 男 | [緒方恵美](http://bgm.tv/person/4054) |
-| 2 | [本田广](http://bgm.tv/character/7637) | 本田ヒロト、ほんだ ヒロト、Honda Hiroto | 男 | [置鮎龍太郎](http://bgm.tv/person/3976) |
-| 3 | [城之内克也](http://bgm.tv/character/7638) | Joey Wheeler、城之内 克也、じょうのうち かつや、Jōnouchi Katsuya、凡骨 | 男 | [森川智之](http://bgm.tv/person/3822) |
-| 4 | [真崎杏子](http://bgm.tv/character/7639) | Téa Gardner、真崎 杏子、まざき あんず、Mazaki Anzu | 女 | [かかずゆみ](http://bgm.tv/person/4097) |
-| 5 | [武藤游戏](http://bgm.tv/character/18160) | 表游戏、海星、むとうゆうぎ、Mutou Yuugi、Aibo | 男 | [緒方恵美](http://bgm.tv/person/4054) |
-| 6 | [海马濑人](http://bgm.tv/character/18161) | Seto Kaiba、海馬 瀬人、かいば せと、Kaiba Seto、社长 | 男 | [緑川光](http://bgm.tv/person/3967) |
-| 7 | [野坂美穗](http://bgm.tv/character/54092) | 野坂美宝、Miho Nosaka、のさかミホ | 女 | [ゆかな](http://bgm.tv/person/3824) |
-| 8 | [暗貘良](http://bgm.tv/character/88526) | 暗貘、yami Bakura、yami Ryou、兔耳大魔王 | 男 | [カシワクラツトム](http://bgm.tv/person/123) |
+| 1 | [暗游戏 / 亚图姆](https://bgm.tv/character/7454) | 闇遊戯 / アテム、Yami Yugi / Atem、やみゆうぎ / アテム、Yami Yugi / Atemu、王样 | 男 | [緒方恵美](https://bgm.tv/person/4054) |
+| 2 | [本田广](https://bgm.tv/character/7637) | 本田ヒロト、本田ヒロト、ほんだ ヒロト、Honda Hiroto | 男 | [置鮎龍太郎](https://bgm.tv/person/3976) |
+| 3 | [城之内克也](https://bgm.tv/character/7638) | Joey Wheeler、城之内 克也、じょうのうち かつや、Jōnouchi Katsuya、凡骨 | 男 | [森川智之](https://bgm.tv/person/3822) |
+| 4 | [真崎杏子](https://bgm.tv/character/7639) | Téa Gardner、真崎 杏子、まざき あんず、Mazaki Anzu | 女 | [かかずゆみ](https://bgm.tv/person/4097) |
+| 5 | [武藤游戏](https://bgm.tv/character/18160) | 武藤遊戯、表游戏、海星、むとうゆうぎ、Mutou Yuugi、Aibo | 男 | [緒方恵美](https://bgm.tv/person/4054) |
+| 6 | [海马濑人](https://bgm.tv/character/18161) | 海馬瀬人、Seto Kaiba、海馬 瀬人、かいば せと、Kaiba Seto、社长 | 男 | [緑川光](https://bgm.tv/person/3967)、[佐藤智恵](https://bgm.tv/person/5312) |
+| 7 | [黑魔导女孩](https://bgm.tv/character/36641) | ブラック・マジシャン・ガール、黑魔導女孩、Dark Magician Girl、dmg，bmg | 女 |  |
+| 8 | [野坂美穗](https://bgm.tv/character/54092) | 野坂ミホ、野坂美宝、Miho Nosaka、のさかミホ | 女 | [ゆかな](https://bgm.tv/person/3824) |
 
-{{< slide "62/c2/7454_crt_ImfL5,61/77/7637_crt_3j1T1,77/02/7638_crt_39duN,33/2f/7639_crt_Wuen5,6a/57/18160_crt_i0MM0,b3/4b/18161_crt_0w60l,84/cb/54092_crt_bZ860,aa/fe/88526_crt_6422h" >}}
+{{< slide "62/c2/7454_crt_ImfL5,61/77/7637_crt_3j1T1,77/02/7638_crt_39duN,33/2f/7639_crt_Wuen5,6a/57/18160_crt_i0MM0,b3/4b/18161_crt_0w60l,88/05/36641_crt_goGkf,84/cb/54092_crt_bZ860" >}}
 
 ## 系列
 

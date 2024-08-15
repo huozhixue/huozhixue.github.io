@@ -1,30 +1,29 @@
 # 瑞克和莫蒂
 
 
-> <u>**[瑞克和莫蒂 第一季](http://bgm.tv/subject/93377)**</u>，又名：Rick and Morty Season 1、瑞克与莫蒂 第一季、瑞奇和莫迪 第一季、R&amp;M  Season 1
+> <u>**[瑞克和莫蒂 第一季](https://bgm.tv/subject/93377)**</u>，又名：Rick and Morty Season 1、瑞克与莫蒂 第一季、瑞奇和莫迪 第一季、R&amp;M  Season 1
 
 ## 简介
-
 
 天才兼疯子科学家Rick在失踪多年后突然回到女儿Beth的身边，并且在她的车库里搞了一个科学实验室。Rick有一把“传送门枪”，可以穿越到宇宙的各个次元。孙子Morty莫名其妙就成了他的助手，经常被拖进他的自制太空船内，跟他一同开展各种疯狂刺激的宇宙冒险。女儿女婿对他的疯狂行为感到不满，却又对这个天才科学家无可奈何。
 
 **制作人员：**
-- 导演：[丹 哈蒙](http://bgm.tv/person/27171)、[贾斯汀·罗伊兰](http://bgm.tv/person/27170)
-- 脚本：[麦克·麦克马汉](http://bgm.tv/person/33703)、[汤姆·考夫曼](http://bgm.tv/person/33709)、[瑞安·里德利](http://bgm.tv/person/33693)
-- 演出：[杰夫·迈尔斯](http://bgm.tv/person/33695)、[约翰·赖斯](http://bgm.tv/person/33694)
+- 导演：[Dan Harmon](https://bgm.tv/person/27171)、[Justin Roiland](https://bgm.tv/person/27170)
+- 脚本：[Justin Roiland](https://bgm.tv/person/27170)、[Dan Harmon](https://bgm.tv/person/27171)、[Ryan Ridley](https://bgm.tv/person/33693)、[Mike McMahan](https://bgm.tv/person/33703)、[Tom Kauffman](https://bgm.tv/person/33709)
+- 演出：[Justin Roiland](https://bgm.tv/person/27170)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [瑞克·桑切斯](http://bgm.tv/character/51183) | Rick Sanchez、Rick | 男 | [Justin Roiland](http://bgm.tv/person/27170) |
-| 2 | [莫蒂·史密斯](http://bgm.tv/character/51192) | Morty Smith、Morty | 男 | [Justin Roiland](http://bgm.tv/person/27170) |
-| 3 | [贝丝·史密斯](http://bgm.tv/character/54488) | Beth Sanchez、Beth Smith、Beth | 女 | [Sarah Chalke](http://bgm.tv/person/29204) |
-| 4 | [杰里·史密斯](http://bgm.tv/character/54489) | Jerry Smith、Jerry | 男 | [Chris Parnell](http://bgm.tv/person/29205) |
-| 5 | [萨默·史密斯](http://bgm.tv/character/54490) | Summer Smith、Summer | 女 | [Spencer Grammer](http://bgm.tv/person/25091) |
-| 6 | [Jessica](http://bgm.tv/character/109407) |  | 女 |  |
-| 7 | [Frank Palicky](http://bgm.tv/character/109408) |  | 男 |  |
-| 8 | [Brad](http://bgm.tv/character/109409) |  | 男 |  |
+| 1 | [瑞克·桑切斯](https://bgm.tv/character/51183) | Rick Sanchez、Rick Sanchez、Rick | 男 | [Justin Roiland](https://bgm.tv/person/27170) |
+| 2 | [莫蒂·史密斯](https://bgm.tv/character/51192) | Morty Smith、Morty Smith、Morty | 男 | [Justin Roiland](https://bgm.tv/person/27170) |
+| 3 | [贝丝·史密斯](https://bgm.tv/character/54488) | Beth Smith、Beth Sanchez、Beth Smith、Beth | 女 | [Sarah Chalke](https://bgm.tv/person/29204) |
+| 4 | [杰里·史密斯](https://bgm.tv/character/54489) | Jerry Smith、Jerry Smith、Jerry | 男 | [Chris Parnell](https://bgm.tv/person/29205) |
+| 5 | [萨默·史密斯](https://bgm.tv/character/54490) | Summer Smith、Summer Smith、Summer | 女 | [Spencer Grammer](https://bgm.tv/person/25091) |
+| 6 | [Jessica](https://bgm.tv/character/109407) |  | 女 |  |
+| 7 | [Frank Palicky](https://bgm.tv/character/109408) |  | 男 |  |
+| 8 | [Brad](https://bgm.tv/character/109409) |  | 男 |  |
 
 {{< slide "7a/12/51183_crt_Rwra7,8e/c6/51192_crt_3igGy,1e/31/54488_crt_RjsJa,12/9d/54489_crt_rCc76,9e/f2/54490_crt_CSsiJ,62/bd/109407_crt_j1m0M,26/20/109408_crt_sXpn9,3f/36/109409_crt_E3R99" >}}
 

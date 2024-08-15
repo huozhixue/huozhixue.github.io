@@ -1,26 +1,26 @@
 # 莫莫
 
 
-> <u>**[莫莫](http://bgm.tv/subject/14511)**</u>
+> <u>**[莫莫](https://bgm.tv/subject/14511)**</u>
 
 ## 简介
-
 
 在一个人心越来越冷漠的架空未来世界里，每个人都一边怀念着过去温暖的人心，一边扔弃着自己温暖的心。城市在过去分为很多块，不同的城市里的人们所拥有最多的品德特质也不同，但是在架空的未来世界里，所有的城市都越来越相近，人们都像一块冰冷的钢铁。因为莫莫的到来，人们才渐渐找回了被层层面具所掩盖的自我。
 
 **制作人员：**
-- 製作：[重庆视美动画艺术有限责任公司](http://bgm.tv/person/35513)
-- 动画制作：[重庆漫想族文化传播有限公司](http://bgm.tv/person/6807)
+- 动画制作：[漫想族文化](https://bgm.tv/person/6807)
+- 製作：[视美动画](https://bgm.tv/person/35513)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [小原](http://bgm.tv/character/13302) |  | 女 | [山新](http://bgm.tv/person/7269) |
-| 2 | [莫莫](http://bgm.tv/character/13300) |  |  |  |
-| 3 | [阿其](http://bgm.tv/character/13301) |  |  |  |
+| 1 | [莫莫](https://bgm.tv/character/13300) |  |  |  |
+| 2 | [阿其](https://bgm.tv/character/13301) |  |  |  |
+| 3 | [小原](https://bgm.tv/character/13302) |  | 女 | [山新](https://bgm.tv/person/7269) |
+| 4 | [图缪缪](https://bgm.tv/character/13303) |  |  |  |
 
-{{< slide "b0/d5/13302_crt_W8DW8,13/52/13300_crt_x5KX0,42/c4/13301_crt_Q8c5S" >}}
+{{< slide "13/52/13300_crt_x5KX0,42/c4/13301_crt_Q8c5S,b0/d5/13302_crt_W8DW8,71/d4/13303_crt_Ee4H3" >}}
 
 ## 系列
 

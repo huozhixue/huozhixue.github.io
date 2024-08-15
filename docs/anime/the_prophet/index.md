@@ -1,12 +1,11 @@
 # 先知
 
 
-> <u>**[先知](http://bgm.tv/subject/161364)**</u>，又名：Kahlil Gibran's The Prophet、The Prophet
+> <u>**[先知](https://bgm.tv/subject/161364)**</u>，又名：Kahlil Gibran's The Prophet、The Prophet
 
 ## 简介
 
-
-Inspired by the classic book by Kahlil Gibran, The Prophet is an animated feature film, with "chapters" from animation directors from around the world.
+Inspired by the classic book by Kahlil Gibran, The Prophet is an animated feature film, with 'chapters' from animation directors from around the world.
 
 
 

@@ -1,29 +1,24 @@
 # 快要坏掉的八音盒
 
 
-> <u>**[快要坏掉的八音盒](http://bgm.tv/subject/3806)**</u>，又名：こわれかけのオルゴール
+> <u>**[快要坏掉的八音盒](https://bgm.tv/subject/3806)**</u>，又名：こわれかけのオルゴール
 
 ## 简介
-
 
 《快要坏掉的八音盒》是日本同人动画。由《萌单》的插画师POP所在的社团「ElectromagneticWave」制作，在2008年冬C75 上发售了带有PV（DVD）的预告版手册。2009年夏的C76是预告版手册，同年冬的C77发售了完成版DVD和完成版手册。
 影片内容：
 西元2039年夏，以稍微远离都市的小镇为舞台。失去记忆的人形机器人和失去家人的主人公，以受过伤害的两个人濒临毁坏的虚幻时间为主题的一篇短小的而温馨的故事。
 
 **制作人员：**
-- 导演：[川口敬一郎](http://bgm.tv/person/3086)
-- 脚本：[猪爪慎一](http://bgm.tv/person/3353)
-- 人物原案：[POP](http://bgm.tv/person/5851)
-- 人物设定：[西尾公伯](http://bgm.tv/person/2907)
-- 原画：[登坂晋](http://bgm.tv/person/11714)、[川崎美穗](http://bgm.tv/person/50321)
-- 特效：[福田直征](http://bgm.tv/person/52482)
+- 人物原案：[POP](https://bgm.tv/person/5851)
+- 导演：[川口敬一郎](https://bgm.tv/person/3086)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [小花](http://bgm.tv/character/21058) | フラワー | 女 | [浅野真澄](http://bgm.tv/person/3841) |
-| 2 | [九路敬一郎](http://bgm.tv/character/21059) | ケイイチロウ | 男 | [柿原徹也](http://bgm.tv/person/4782) |
+| 1 | [小花](https://bgm.tv/character/21058) | ふらわー、フラワー | 女 | [浅野真澄](https://bgm.tv/person/3841) |
+| 2 | [九路敬一郎](https://bgm.tv/character/21059) | ケイイチロウ | 男 | [柿原徹也](https://bgm.tv/person/4782) |
 
 {{< slide "08/28/21058_crt_dn5yZ,f5/b4/21059_crt_C59ht" >}}
 

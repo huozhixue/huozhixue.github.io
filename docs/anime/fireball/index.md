@@ -1,26 +1,23 @@
 # 火球
 
 
-> <u>**[火球](http://bgm.tv/subject/3515)**</u>，又名：ファイアボール、Fireball
+> <u>**[火球](https://bgm.tv/subject/3515)**</u>，又名：ファイアボール、Fireball
 
 ## 简介
-
 
 在遥远的未来，一颗普通的行星上——
 由于人类的抵抗，机器人的贵族政治正走向灭亡。
 在与世隔绝的住宅中，两位机器人——Flügel公爵的女儿Drossel，及其管家Gedächtnis，展开了琐碎的“日常”对话。
 
 **制作人员：**
-- 导演：[荒川航](http://bgm.tv/person/27057)
-- 製作：[华特·迪士尼日本](http://bgm.tv/person/50996)、[迪士尼电影公司](http://bgm.tv/person/6816)
-- CG 导演：[渡边诚之](http://bgm.tv/person/27056)
+- 製作：[Walt Disney Pictures](https://bgm.tv/person/6816)、[ウォルト・ディズニー・ジャパン](https://bgm.tv/person/50996)
 
 ## 角色
 
 |     |   角色名   |   别名  | 性别 |  配音  |
 |:--- |:------  |:----      |:---  |:--   |
-| 1 | [ゲデヒトニス](http://bgm.tv/character/6009) | |Gedächtnis、ゲデヒトニス、Gedachtnis | 男 | [大川透](http://bgm.tv/person/4131) |
-| 2 | [多罗丝赛露](http://bgm.tv/character/12456) | Drossel von Flügel、大小姐 | 女 | [川庄美雪](http://bgm.tv/person/5077) |
+| 1 | [ゲデヒトニス](https://bgm.tv/character/6009) | Gedächtnis、Gedachtnis | 男 | [大川透](https://bgm.tv/person/4131) |
+| 2 | [多罗丝赛露](https://bgm.tv/character/12456) | ドロッセル・フォン・フリューゲル、Drossel von Flügel、大小姐 | 女 | [川庄美雪](https://bgm.tv/person/5077) |
 
 {{< slide "37/d7/6009_crt_anidb,a8/c1/12456_crt_UJsjY" >}}
 
