@@ -113,74 +113,54 @@
                     window.config.typeit.data = {"id-1":["id-1"]};
                 </script></h2><div class="links"><a href="https://github.com/huozhixue" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw"></i></a><a href="https://leetcode-cn.com/u/IanCN" title="leetcode" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/leetcode.min.svg"></i></a><a href="https://space.bilibili.com/577315" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/bilibili.min.svg"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template/">算法模板</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-01-01">2024-01-01</time></span></div><div class="content">1 字符串 字符串匹配：kmp、mancher、z函数、滚动哈希 字典树 后缀数组 2 位运算 位运算 3 链表 链表 4 栈 计算器 5 块 块状数组 6 贪心 贪心 7 数学 数学</div><div class="post-footer">
-        <a href="/template/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-dp/">dp模板</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-01">2023-06-01</time></span></div><div class="content">数位dp 1 2 3 4 5 6 7 8 9 10 11 @cache def dfs(i,st,bd): if i==len(s): return st res = 0 cur = int(s[i]) up = cur if bd else 9 for x in range(up+1): res += dfs(i+1,st+(x==1),bd and x==cur) return res s = str(n)</div><div class="post-footer">
-        <a href="/template-dp/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-graph_flow/">图模板：网络流</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-05-04">2023-05-04</time></span></div><div class="content">1 最大流 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 class Dinic: def __init__(self,): self.g = defaultdict(list) # g 是图中每个 u 对应的 v 列表 self.h =</div><div class="post-footer">
-        <a href="/template-graph_flow/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-graph_match/">图模板：图匹配</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-05-03">2023-05-03</time></span></div><div class="content">二分图 最大匹配 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def hgr(g): # g 是二分图中每个 x 对应的 y 列表 def find(x): for y in g[x]: if y not in vis: vis.add(y) if y not in d or find(d[y]): d[y]=x return True return False res,vis,d = 0,set(),{} for x in g:</div><div class="post-footer">
-        <a href="/template-graph_match/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-graph_topo/">图模板：拓扑排序</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-05-02">2023-05-02</time></span></div><div class="content">博弈反推 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Q = deque(res) # res[u]：终态 u 的胜负结果 while Q: u = Q.popleft() if u==start: # start：初始态 return res[u] for v in nxt[u]: if v in res: continue if v[-1]==res[u]: res[v]</div><div class="post-footer">
-        <a href="/template-graph_topo/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-graph_shortest/">图模板：最短路</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-05-01">2023-05-01</time></span></div><div class="content">1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w+w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u</div><div class="post-footer">
-        <a href="/template-graph_shortest/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-tree_odt/">树模板：珂朵莉树</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-04-06">2023-04-06</time></span></div><div class="content">珂朵莉树 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class ODT: def __init__(self,): from sortedcontainers import SortedList self.sl = SortedList() def update(self,l,r,x): s, e = l, r pos = self.sl.bisect_right((r+2,))-1 while pos&gt;=0 and self.sl[pos][1]&gt;=l-1: a, b, y = self.sl.pop(pos) if y==x: s, e = min(s, a), max(e, b) else: if b&gt;r: self.sl.add((r+1,b,y)) if a&lt;l: self.sl.add((a,l-1,y)) pos</div><div class="post-footer">
-        <a href="/template-tree_odt/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-tree_seg/">树模板：线段树</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-04-05">2023-04-05</time></span></div><div class="content">线段树 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 class Seg: def __init__(self, n, A=None): self.n = n self.t</div><div class="post-footer">
-        <a href="/template-tree_seg/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-tree_bit/">树模板：树状数组</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-04-04">2023-04-04</time></span></div><div class="content">1 区间和 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class BIT: def __init__(self, n): self.n = n+1 self.t = [0]*(n+1) def update(self, i, x): i += 1 while i&lt;self.n: self.t[i] += x i += i&amp;-i def get(self, i): res, i = 0, i+1 while i: res += self.t[i] i &amp;= i-1 return res 2 区间最大</div><div class="post-footer">
-        <a href="/template-tree_bit/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/template-tree_st/">树模板：st表</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-04-03">2023-04-03</time></span></div><div class="content">ST 表（静态区间最值） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): dp = A[:] self.st = st = [dp] j, N = 1, len(dp) while 2*j&lt;=N: dp = [func(dp[i],dp[i+j]) for i in range(N-2*j+1)] st.append(dp) j &lt;&lt;= 1 self.func = func def query(self,l,r): j = (r-l+1).bit_length()-1 return self.func(self.st[j][l],self.st[j][r-(1&lt;&lt;j)+1])</div><div class="post-footer">
-        <a href="/template-tree_st/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div></div>
-</article><ul class="pagination"><li class="page-item active">
-                    <span class="page-link">
-                        <a href="/">1</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/2/">2</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/3/">3</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/page/6/">6</a>
-                    </span>
-                </li></ul></div></div>
+        <a href="/nlp-bert_family/">后 BERT 时代小结</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-06-21">2020-06-21</time></span></div><div class="content"><p>2018年10月，Google 发布 BERT 模型，然后 BERT 横扫了 NLP 的各个任务：
+文本分类、序列标注、文本摘要、信息检索、问答系统、阅读理解等等。</p></div><div class="post-footer">
+        <a href="/nlp-bert_family/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/nlp/">Nlp</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/hugo-shortcodes/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="//hugoloveit.com/zh-cn/theme-documentation-extended-shortcodes/featured-image-preview.jpg"
+        data-srcset="//hugoloveit.com/zh-cn/theme-documentation-extended-shortcodes/featured-image-preview.jpg, //hugoloveit.com/zh-cn/theme-documentation-extended-shortcodes/featured-image-preview.jpg 1.5x, //hugoloveit.com/zh-cn/theme-documentation-extended-shortcodes/featured-image-preview.jpg 2x"
+        data-sizes="auto"
+        alt="//hugoloveit.com/zh-cn/theme-documentation-extended-shortcodes/featured-image-preview.jpg"
+        title="LoveIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode." /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/hugo-shortcodes/">博客 - Shortcodes</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-03-15">2020-03-15</time></span></div><div class="content"><p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.</p></div><div class="post-footer">
+        <a href="/hugo-shortcodes/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/hugo-content/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="//hugoloveit.com/zh-cn/theme-documentation-content/featured-image.jpg"
+        data-srcset="//hugoloveit.com/zh-cn/theme-documentation-content/featured-image.jpg, //hugoloveit.com/zh-cn/theme-documentation-content/featured-image.jpg 1.5x, //hugoloveit.com/zh-cn/theme-documentation-content/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="//hugoloveit.com/zh-cn/theme-documentation-content/featured-image.jpg"
+        title="了解如何在 LoveIt 主题中快速, 直观地创建和组织内容." /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/hugo-content/">博客 - 内容</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-03-10">2020-03-10</time></span></div><div class="content"><p>了解如何在 <strong>LoveIt</strong> 主题中快速, 直观地创建和组织内容.</p></div><div class="post-footer">
+        <a href="/hugo-content/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/hugo-basics/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="//hugoloveit.com/zh-cn/theme-documentation-basics/featured-image.jpg"
+        data-srcset="//hugoloveit.com/zh-cn/theme-documentation-basics/featured-image.jpg, //hugoloveit.com/zh-cn/theme-documentation-basics/featured-image.jpg 1.5x, //hugoloveit.com/zh-cn/theme-documentation-basics/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="//hugoloveit.com/zh-cn/theme-documentation-basics/featured-image.jpg"
+        title="//hugoloveit.com/zh-cn/theme-documentation-basics/featured-image.jpg" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/hugo-basics/">博客 - 基本概念</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2020-03-06">2020-03-06</time></span></div><div class="content"><p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p></div><div class="post-footer">
+        <a href="/hugo-basics/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div></div>
+</article></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.132.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
