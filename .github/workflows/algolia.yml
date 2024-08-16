@@ -14,7 +14,7 @@ jobs:
               with:
                 fetch-depth: 0
             - uses: guzhongren/algolia-docsearch-upload-action@v2.0.0
-              with:
+              env:
                 APPLICATION_ID: ${{secrets.ALGOLIA_APP_ID}}
                 ADMIN_API_KEY: ${{secrets.ALGOLIA_ADMIN_KEY}}
                 INDEX_NAME: ${{secrets.ALGOLIA_INDEX_NAME}}
