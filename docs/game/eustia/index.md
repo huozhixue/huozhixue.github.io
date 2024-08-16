@@ -75,8 +75,8 @@
 
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=67126"
+"PC游戏《秽翼的尤斯蒂娅》OST"
 "music">}}
 
 

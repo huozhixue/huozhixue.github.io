@@ -42,15 +42,12 @@
 |:---   |:------  |:----      |
 | 1 | [eden* They were only two, on the planet.](http://bgm.tv/subject/2288) | 2009-09-18 |
 
-<!--
 
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=49716"
+"eden*原声集"
 "music">}}
-
--->
 
 
 ## MAD
