@@ -71,8 +71,8 @@ LeMU的壁墙被深海的水压无情地迫挤
 
 ## 配乐
 
-{{< media "https://music.163.com/#/album?id=496764"
-"DC/PS2游戏《时空轮回》原声集"
+{{< media "https://music.163.com/#/album?id=496764-https://music.163.com/#/album?id=3263799"
+"DC/PS2游戏《时空轮回》原声集,时空轮回 原声集（XBOX新版）"
 "music">}}
 
 

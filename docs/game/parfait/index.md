@@ -41,19 +41,13 @@
 |:---   |:------  |:----      |
 | 1 | [女仆咖啡帕露菲](http://bgm.tv/subject/846) | 2005-03-25 |
 
-<!--
-
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=172826871"
+"PSV游戏《女仆咖啡帕露菲》原声带 & 重制版原声带"
 "music">}}
 
-## MAD
 
-{{< media auto="mad/parfait" >}}
-
--->
 
 
 

@@ -36,14 +36,13 @@
 |     |   系列名   |   发行时间  |
 |:---   |:------  |:----      |
 | 1 | [ISLAND](http://bgm.tv/subject/150191) | 2016-04-28 |
-
-<!--
-
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=34700141"
+"ISLAND 原声集"
 "music">}}
+
+<!--
 
 ## MAD
 

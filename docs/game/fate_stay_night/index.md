@@ -36,13 +36,14 @@
 |:---   |:------  |:----      |
 | 1 | [Fate/stay night](https://bgm.tv/subject/935) | 2004-01-30 |
 
-<!--
-
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=3367070-https://music.163.com/#/album?id=2915183"
+"命运守护夜 原声,命运之夜：新星 原声集"
 "music">}}
+
+
+<!--
 
 ## MAD
 
