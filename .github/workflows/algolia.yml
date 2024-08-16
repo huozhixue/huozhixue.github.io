@@ -13,9 +13,9 @@ jobs:
             - uses: actions/checkout@v2
               with:
                 fetch-depth: 0
-            - uses: rxrw/algolia-index-uploader@v1
+            - uses: wangchucheng/algolia-uploader@master
               with:
-                algolia_index_id: ${{secrets.ALGOLIA_APP_ID}}
-                algolia_index_admin_key: ${{secrets.ALGOLIA_ADMIN_KEY}}
-                algolia_index_name: ${{secrets.ALGOLIA_INDEX_NAME}}
-                index_path: ${{secrets.ALGOLIA_INDEX_FILE}}
+                app_id: ${{secrets.ALGOLIA_APP_ID}}
+                admin_key: ${{secrets.ALGOLIA_ADMIN_KEY}}
+                index_name: ${{secrets.ALGOLIA_INDEX_NAME}}
+                index_file_path: ${{secrets.ALGOLIA_INDEX_FILE}}
