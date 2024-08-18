@@ -648,7 +648,7 @@ class Theme {
             player = `<meting-js auto="${curData[0]}" list-max-height="263px" order="random"></meting-js>`;
         }
 		else {
-			player = `<div class="bilibili"><iframe src="${curData[0]}" high_quality="1" scrolling="no" border="0" autoplay="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-same-origin allow-scripts"></iframe></div>`;
+			player = `<div class="bilibili"><iframe src="${curData[0]}" high_quality="1" scrolling="no" border="0"  frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-same-origin allow-scripts"></iframe></div>`;
 		};
         $media.insertAdjacentHTML('beforeEnd', player);
     }

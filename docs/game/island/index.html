@@ -257,7 +257,7 @@
 			let raw = url = urls[i];
 			if (url.substr(0, 2) == 'BV') {
 				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
-				url = "https://player.bilibili.com/player.html?high_quality=1&bvid=" + url;
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
 			}
 			else if (url.substr(0, 4) != 'http' ) {
 				if (url.substr(0, 3) == 'id_'){
@@ -297,7 +297,7 @@
 			let raw = url = pair[0];
 			if (url.substr(0, 2) == 'BV') {
 				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
-				url = "https://player.bilibili.com/player.html?bvid=" + url;
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
 			}
 			else if (url.substr(0, 4) != 'http' ) {
 				if (url.substr(0, 3) == 'id_'){
