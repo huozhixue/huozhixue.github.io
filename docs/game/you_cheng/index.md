@@ -48,19 +48,14 @@
 |:---   |:------  |:----      |
 | 1 | [天地劫序传：幽城幻剑录](http://bgm.tv/subject/6278) | 2001-11-18 |
 
-<!--
+
 
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=7212"
+"幽城幻剑录配乐集：千阙幻渺煌律"
 "music">}}
 
-## MAD
-
-{{< media auto="mad/you_cheng" >}}
-
--->
 
 
 

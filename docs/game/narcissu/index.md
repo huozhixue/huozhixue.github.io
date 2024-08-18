@@ -36,13 +36,14 @@
 | 1 | [水仙](http://bgm.tv/subject/1167) | 2005-08-01 |
 | 2 | [水仙2](http://bgm.tv/subject/1168) | 2007-05-16 |
 
-<!--
-
 ## 配乐
 
-{{< media ""
-""
+{{< media "https://music.163.com/#/album?id=496123-https://music.163.com/#/album?id=495466"
+"水仙,游戏《水仙2》OST"
 "music">}}
+
+<!--
+
 
 ## MAD
 

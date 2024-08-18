@@ -17,11 +17,18 @@
 
 ## 角色
 
-|     |   角色名   |   别名  | 性别 |  配音  |
-|:--- |:------  |:----      |:---  |:--   |
+|  | 角色名 | 别名 | 性别 | 配音 |
+| :--- | :--- | :--- | :--- | :--- |
 | 1 | [莉娜·因巴斯](https://bgm.tv/character/104) | リナ・インバース、Лина Инверс、Lina Inverse | 女 |  |
+| 2 | [小小](https://bgm.tv/character/30902) | Tiny、山岭巨人、山岭 |  |  |
+| 3 | [撼地者](https://bgm.tv/character/30903) | Earthshaker、撼地神牛、小牛、老牛、神牛、ES |  |  |
+| 4 | [斯温](https://bgm.tv/character/30904) | Sven、流浪剑客、流浪、真男人、SV |  |  |
+| 5 | [昆卡](https://bgm.tv/character/30905) | Kunkka、船长、海军上将 |  |  |
+| 6 | [兽王](https://bgm.tv/character/30906) | Beastmaster、卡洛克、BM |  |  |
+| 7 | [龙骑士](https://bgm.tv/character/30907) | Dragon Knight、Davion、达维安、DK |  |  |
+| 8 | [发条技师](https://bgm.tv/character/30908) | Clockwerk、发条、天宇技师、瑞托崔普、RattleTrap |  |  |
 
-{{< slide "7b/a6/104_crt_bHSVe" >}}
+{{< slide "7b/a6/104_crt_bHSVe,63/0c/30902_crt_Wg7gh,c5/eb/30903_crt_rm9mL,31/79/30904_crt_gs2s5,63/c0/30905_crt_yPyZB,9b/85/30906_crt_1zJ8Z,1a/78/30907_crt_hSH8K,86/76/30908_crt_BR923" >}}
 
 ## 系列
 

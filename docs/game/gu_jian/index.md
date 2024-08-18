@@ -52,4 +52,4 @@
 {{< media auto="music/gu_jian" >}}
 ## MAD
 
-{{< media "BV16x411F7jW-BV1DW411m7G2" "幻梦【古剑奇谭同人MV】【二次修正版】,[古剑奇谭MV]归梦(方兰生)（原画）"  >}}
+{{< media auto="mad/gu_jian"  >}}
