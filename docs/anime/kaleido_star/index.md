@@ -75,6 +75,9 @@
 | 3   |[百变之星 不死鸟传说 ～蕾拉・汉密尔顿物语～](https://bgm.tv/subject/37063)| 2006-01-27 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3778)  |
 | 4   |[百变之星 妙啊！妙！](https://bgm.tv/subject/37065)| 2006-09-27 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3779)  |
 
+## 配乐
+
+{{< media auto="music/kaleido_star" >}}
 ## MAD
 
 {{< media  "BV1cx411F7Pa" 

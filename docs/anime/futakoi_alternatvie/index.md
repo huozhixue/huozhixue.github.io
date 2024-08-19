@@ -58,6 +58,9 @@
 |:----|:---------------|:-----------|:------|:----------------------------------------------------------|
 | 1   |[双恋 Alternative](https://bgm.tv/subject/2643)| 2005-04-06 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep41823) |
 
-## MAD
 
-{{< media   >}}
+## 配乐
+
+{{< media   "https://music.163.com/#/album?id=70409-https://music.163.com/#/album?id=70391" 
+"TV动画《双恋 Alternative》原声带1,TV动画《双恋 Alternative》原声带2" 
+"music" >}}
