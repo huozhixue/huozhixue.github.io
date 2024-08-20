@@ -61,7 +61,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[来自新世界](https://bgm.tv/subject/37785)| 2012-09-28 | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ep29284)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2865010-https://music.163.com/#/album?id=2393305-https://music.163.com/#/album?id=2671497"
+"新世界より 特典 オリジナルサウンドトラックCD1,新世界より Vol. 4 特典オリジナルサウンドトラックCD 2,新世界より オリジナルサウンドトラック３" 
+"music" >}}
 ## MAD
 
 {{< media  "BV1ys411Z7TW-BV1Zx411N7Db-BV1Gs411f7BD" 

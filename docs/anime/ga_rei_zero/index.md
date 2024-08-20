@@ -58,7 +58,11 @@
 | :-- | :---- | :--------- | :---- | :------------------------------------------------------ |
 | 1   |[食灵-零-](https://bgm.tv/subject/885)| 2008-10-05 | 12    | [keke9](https://www.keke9.app/play/23861-4-187157.html) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=494717-https://music.163.com/#/album?id=50365"
+"喰霊-零-イメージソング集 百合ームコロッケ,GAREI-ZERO-5"
+"music" >}}
 ## MAD
 
 {{< media  "BV1rs411S7VQ" 

@@ -67,6 +67,11 @@
 | 7   |[Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm](https://bgm.tv/subject/193373)| 2019-06-14 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss28400)  |
 | 8   |[剧场版 Fate/kaleid liner 魔法少女☆伊莉雅 Licht 无名的少女](https://bgm.tv/subject/227263)| 2021-08-27 | 1     | [keke9](https://www.keke9.app/play/179201-4-209569.html)   |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2674177"
+"TV动画《魔法少女☆伊莉雅》原声集" 
+"music" >}}
 
 ## MAD
 

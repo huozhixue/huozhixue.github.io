@@ -61,6 +61,12 @@
 | 7   |[剧场版 Fate/stay night [Heaven's Feel] III.spring song](https://bgm.tv/subject/175600)| 2020-08-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss45303)             |
 | 8   |[卫宫家今天的饭](https://bgm.tv/subject/234349)| 2017-12-31 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep165004) |
 
+
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=43410-https://music.163.com/#/album?id=2094379"
+"TV动画《命运之夜》原声集1,TV动画《命运之夜》原声集2" 
+"music" >}}
 ## MAD
 
 {{< media auto="mad/fate_stay_night" >}}

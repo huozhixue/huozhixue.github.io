@@ -60,14 +60,14 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[GIRLS BAND CRY](https://bgm.tv/subject/431767)| 2024-04-05 | 13 | [keke9](https://www.keke9.app/play/229071-32-295329.html)  |
 
-<!--
 
 ## 配乐
 
-{{< media >}}
+{{< media "https://music.163.com/#/playlist?id=8690743677"
+"Girls Band Cry/哭泣少女乐队|原声集"
+"music" >}}
 
 
--->
 
 
 ## MAD

@@ -45,6 +45,11 @@
 
 {{< slide "56/2f/1230_crt_So9Nl,a2/5c/1231_crt_en3mZ,42/1c/1232_crt_2O23k,bf/c0/1233_crt_XuRmx,20/e5/1234_crt_3dBKs,cf/e7/4765_crt_anidb,9a/be/4766_crt_anidb,23/eb/22350_crt_R4s4v" >}}
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=38272112"
+"学美向前冲! 原声带&印象专辑2" 
+"music" >}}
 ## 系列
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |

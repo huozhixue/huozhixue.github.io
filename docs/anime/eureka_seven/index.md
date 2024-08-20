@@ -69,7 +69,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[交响诗篇](https://bgm.tv/subject/1266)| 2005-04-17 | 50 | [bilibili](https://www.bilibili.com/bangumi/play/ep14126)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=48418-https://music.163.com/#/album?id=48407"
+"交响诗篇 OST1,交响诗篇 OST2" 
+"music" >}}
 ## MAD
 
 {{< media  "BV1Sx411c7sw-BV1ts411m73A" 

@@ -8,9 +8,11 @@
 梦。
 我做着一个悠远而长久的梦。
 从很久以前就一直在做着这个梦；
+
 在梦中我凝望四季的街道，
 期望与永远不会到来的人再度见面，
 找寻连自己也早已忘却的遗失的东西。
+
 多少时间、多少岁月从我身边流逝而过，
 在无尽的黑夜中，一直、一直都在孤单地等待着——
 等待着最后那必将到来的黎明。
@@ -64,7 +66,11 @@
 | 1   |[Kanon](https://bgm.tv/subject/274)| 2006-10-05 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep25593)    |
 | 2   |[Kanon 东映版](https://bgm.tv/subject/1077)| 2002-01-30 | 13    | [bilibili](https://www.bilibili.com/video/BV1Xs41117XN?p=25) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2394316" 
+"PC游戏《Kanon！雪之少女》原声带"
+"music">}}
 ## MAD
 
 {{< media  "BV1Ux411c7Rt-BV17x411N7WU-BV1Gx411w7yp" 

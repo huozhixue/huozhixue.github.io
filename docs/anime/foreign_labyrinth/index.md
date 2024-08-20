@@ -56,4 +56,8 @@
 | 1 |[异国迷宫的十字路口](https://bgm.tv/subject/10261)| 2011-07-03 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep85077)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=75595"
+"异国迷宫的十字路口" 
+"music" >}} 

@@ -28,6 +28,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[深海](https://bgm.tv/subject/151101)| 2023-01-22 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep741421)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=2895810725" 
+"电影｜国漫 深海｜原声带收录" 
+"music" >}}
 
 ## MAD
 

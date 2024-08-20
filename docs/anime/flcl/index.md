@@ -59,6 +59,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[FLCL](https://bgm.tv/subject/822)| 2000-04-26 | 6 | [bilibili](https://www.bilibili.com/bangumi/play/ss2988)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=497000"
+"OVA《特别的她 FLCL》原声集1" 
+"music" >}}
 
 ## MAD
 

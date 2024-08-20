@@ -57,7 +57,11 @@
 | 4 |[全金属狂潮 The Second Raid OVA 战队长悠闲的一天](https://bgm.tv/subject/2689)| 2006-05-26 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss3572)  |
 | 5 |[全金属狂潮 Invisible Victory](https://bgm.tv/subject/150246)| 2018-04-13 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss23852)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=47822-https://music.163.com/#/album?id=47768"
+"全金属狂潮!(Full Metal Panic!)原声1,全金属狂潮Fumoffu原声带" 
+"music" >}}
 ## MAD
 
 {{< media  "BV15x411F7ce" 

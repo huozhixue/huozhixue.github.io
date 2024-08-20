@@ -61,6 +61,11 @@
 | 1 |[科学小飞侠Crowds](https://bgm.tv/subject/69494)| 2013-07-12 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep9700)  |
 | 2 |[科学小飞侠Crowds insight](https://bgm.tv/subject/86721)| 2015-07-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss2612)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2652782" 
+"TV动画《科学小飞侠Crowds》原声集" 
+"music" >}}
 
 ## MAD
 

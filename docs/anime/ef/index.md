@@ -60,7 +60,11 @@
 | 1 |[悠久之翼](https://bgm.tv/subject/799)| 2007-10-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss1181)  |
 | 2 |[悠久之翼2](https://bgm.tv/subject/1029)| 2008-10-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss1182)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=49749"
+"PC游戏《悠久之翼》原声带" 
+"music" >}}
 ## MAD
 
 {{< media  "BV1Cx411F7mk-BV1As411Z7WT" 

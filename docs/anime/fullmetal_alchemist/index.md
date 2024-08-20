@@ -63,7 +63,9 @@
 | 3   |[钢之炼金术师 FULLMETAL ALCHEMIST](https://bgm.tv/subject/1428)| 2009-04-05 | 64    | [keke9](https://www.keke9.app/play/26894-4-228764.html)  |
 | 4   |[钢之炼金术师 叹息之丘的圣星](https://bgm.tv/subject/10799)| 2011-07-02 | 1     | [keke9](https://www.keke9.app/play/179060-4-196292.html) |
 
+## 配乐
 
+{{< media auto="music/fullmetal_alchemist" >}}
 ## MAD
 
 {{< media  "BV1xs411o7vj-BV1ux411c7Vw"

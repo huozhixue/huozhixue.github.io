@@ -47,7 +47,11 @@
 | :-- | :---- | :--------- | :---- | :---------------------------------------------- |
 | 1   |[妖精的旋律](https://bgm.tv/subject/536)| 2004-07-25 | 14    | [agedm](http://www.agedm.org/play/20040001/1/1) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2391031"
+"TV动画《妖精的旋律》蓝光BOX特典原声集" 
+"music" >}}
 ## MAD
 
 {{< media  "BV1xs411Z7zW-BV1XE411D7UL" 

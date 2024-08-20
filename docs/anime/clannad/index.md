@@ -61,6 +61,11 @@
 | 3 |[CLANNAD ～AFTER STORY～](https://bgm.tv/subject/876)| 2008-10-02 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ss1178)                                          |
 | 4 |[CLANNAD ～AFTER STORY～另一个世界 杏篇](https://bgm.tv/subject/37874)| 2009-05-24 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss1180)                                          |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2083842-https://music.163.com/#/album?id=74758-https://music.163.com/#/album?id=57768" 
+"游戏《CLANNAD》原声带,メグメル〜cuckool mix 2007〜 / だんご大家族,時を刻む唄／TORCH"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/clannad"  >}}
