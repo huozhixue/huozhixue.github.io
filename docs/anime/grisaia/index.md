@@ -71,4 +71,8 @@
 | 3   |[灰色的乐园](https://bgm.tv/subject/130234)| 2015-04-19 | 10    | [keke9](https://www.keke9.app/play/28242-4-248202.html)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=493201-https://music.163.com/#/album?id=70829"
+"PC游戏《灰色的果实》片尾曲&原声集,PC/PSP/NS游戏《灰色的迷宫》主题曲&原声集" 
+"music" >}}

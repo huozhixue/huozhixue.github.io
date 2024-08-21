@@ -57,5 +57,9 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[灰羽联盟](https://bgm.tv/subject/893)| 2002-10-09 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss2074)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=46938"
+"灰羽联盟" 
+"music" >}}
 

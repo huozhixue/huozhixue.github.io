@@ -62,7 +62,11 @@
 | 1 |[飞跃巅峰！](https://bgm.tv/subject/769)| 1988-10-07 | 6 | [bilibili](https://www.bilibili.com/video/BV1ab411a7us)  |
 | 2 |[飞跃巅峰2！](https://bgm.tv/subject/768)| 2004-11-26 | 6 | [bilibili](https://www.bilibili.com/video/BV1kW411p7Xh)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=127822244-https://music.163.com/#/album?id=49891"
+"飞跃颠峰 原声带,飞跃颠峰2 OST" 
+"music" >}}
 ## MAD
 
 {{< media  "BV1Dx411F7D1&p=119-BV1ps411f7i1"
