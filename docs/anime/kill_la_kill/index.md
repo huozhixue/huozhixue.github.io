@@ -68,6 +68,13 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[斩服少女](https://bgm.tv/subject/72941)| 2013-10-03 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep7911)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2732474"
+"动画《斩服少女》原声带" 
+"music" >}}
+
+## MAD
 
 {{< media  "BV1vx411T7V4-BV1Js411Z7xX-BV14s411Z7MH"
 "【kill la kill 】超燃！最喜欢的一首op,“直到最后一滴血为止”,【MAD】Kill la Kill × 吊带袜天使Op parody (ver.PSG)"  >}}

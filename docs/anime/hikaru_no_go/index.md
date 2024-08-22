@@ -48,7 +48,11 @@
 | 1   |[棋魂](https://bgm.tv/subject/605)| 2001-10-10 | 75    | [keke9](https://www.keke9.app/play/26151-4-216072.html) |
 | 2   |[棋魂特别篇 迈向北斗杯之路](https://bgm.tv/subject/36271)| 2004-01-03 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ax41157HN) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=50536-https://music.163.com/#/album?id=50533"
+"棋TV动画《棋魂》音乐集1,TV动画《棋魂》音乐集2"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Yx411P7d4-BV1is411o7gx-BV1ux411P7Su"

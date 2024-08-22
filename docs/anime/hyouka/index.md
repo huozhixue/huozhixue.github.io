@@ -63,6 +63,11 @@
 |:----|:----------|:-----------|:------|:----------------------------------------------------------|
 | 1   |[冰菓](https://bgm.tv/subject/27364)| 2012-04-22 | 22    | [bilibili](https://www.bilibili.com/bangumi/play/ep84776) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=26696113"
+"冰菓 OST OP ED全收录"
+"music" >}}
 
 ## MAD
 

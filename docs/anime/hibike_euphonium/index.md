@@ -61,6 +61,11 @@
 | 3   |[莉兹与青鸟](https://bgm.tv/subject/216371)| 2018-04-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1et411r7RT/)            |
 | 4   |[剧场版 吹响！悠风号～誓言的终章～](https://bgm.tv/subject/216372)| 2019-04-19 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss28951) |
 
+##  配乐
+
+{{< media "https://music.163.com/#/album?id=3177130" 
+"TV动画《 吹响! 上低音号》OST专辑" 
+"music"  >}}
 
 ## MAD
 

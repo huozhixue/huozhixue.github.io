@@ -48,4 +48,8 @@
 |     |                    |            |       |                                                           |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3190941-https://music.163.com/#/album?id=493367"
+"TV动画《Heart Catch 光之美少女!》原声带1：Precure Sound Forte Wave!!,动画《Heart Catch 光之美少女!》原声带 Vol.2" 
+"music" >}}

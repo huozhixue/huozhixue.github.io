@@ -57,4 +57,8 @@
 | 3 |[轻音少女 剧场版](https://bgm.tv/subject/12426)| 2011-12-03 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss1175)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2084828"
+"TV动画《轻音少女！》原声集" 
+"music" >}}

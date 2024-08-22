@@ -50,5 +50,9 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[浪客剑心 追忆篇](https://bgm.tv/subject/1728)| 1999-02-20 | 4 | [bilibili](https://www.bilibili.com/bangumi/play/ss3578)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=41002"
+"OVA动画《浪客剑心 -明治剑客浪漫谭- 追忆篇》原声带"
+"music" >}}
 

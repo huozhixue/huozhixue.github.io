@@ -58,6 +58,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[坂道上的阿波罗](https://bgm.tv/subject/29426)| 2012-04-12 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep13875)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=55629-https://music.163.com/#/album?id=55605"
+"TV动画《坂道上的阿波罗》原声带1,TV动画《坂道上的阿波罗》原声带2"
+"music" >}}
 
 ## MAD
 

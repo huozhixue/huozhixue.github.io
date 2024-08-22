@@ -58,7 +58,11 @@
 |:----|:------|:-----------|:------|:-----------------------------------------------------------|
 | 1   |[兽娘动物园](https://bgm.tv/subject/176478)| 2017-01-10 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep100603) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=35589043"
+"动画《兽娘动物园》原声带"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Xx411D7Ns-BV1Kx411s7Qb-BV1rx411473A-BV1ax411k7RH" 

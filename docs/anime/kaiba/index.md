@@ -52,3 +52,8 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[海马](https://bgm.tv/subject/1625)| 2008-04-10 | 12 | [bilibili](https://www.bilibili.com/video/BV12x411r7KL)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2848130"
+"TV动画《海马》原声带"
+"music" >}}

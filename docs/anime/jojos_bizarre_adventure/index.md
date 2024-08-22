@@ -69,6 +69,11 @@
 | 6   |[JOJO的奇妙冒险 石之海](https://bgm.tv/subject/332261)| 2022-01-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss39431)  |
 | 7   |[JOJO的奇妙冒险 石之海 Part.2](https://bgm.tv/subject/375913)| 2022-10-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep674949) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2401438-https://music.163.com/#/album?id=2450674"
+"TV动画《JOJO的奇妙冒险 战斗潮流》原声集1,TV动画《JOJO的奇妙冒险 战斗潮流》原声集2" 
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/jojos_bizarre_adventure"  >}}

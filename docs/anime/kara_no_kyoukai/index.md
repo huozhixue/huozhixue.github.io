@@ -82,6 +82,11 @@
 | 8   |[剧场版 空之境界 终章 空之境界](https://bgm.tv/subject/11629)| 2010-12-18 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ls411H752) |
 | 9   |[剧场版 空之境界 未来福音](https://bgm.tv/subject/43581)| 2013-09-28 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ps411H7n1) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=381390469"
+"《空之境界》精选音乐集" 
+"music" >}}
 
 ## MAD
 

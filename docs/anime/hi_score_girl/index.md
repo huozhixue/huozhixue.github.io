@@ -63,6 +63,11 @@
 | 2   |[高分少女 EXTRA STAGE](https://bgm.tv/subject/262277)| 2019-03-20 | 3     | [keke9](https://www.keke9.app/play/23847-4-186964.html)    |
 | 3   |[高分少女 第二季](https://bgm.tv/subject/278569)| 2019-10-25 | 9     | [bilibili](https://www.bilibili.com/bangumi/play/ep288534) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=75071017-https://music.163.com/#/album?id=124989568" 
+"TV动画《高分少女》原声带,TV动画《高分少女2》原声带" 
+"music" >}}
 ## MAD
 
 {{< media  "BV1Es411P7N5-BV1jt411f7Mb"

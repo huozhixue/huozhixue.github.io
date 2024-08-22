@@ -59,6 +59,11 @@
 | 6   |[犬夜叉 红莲之蓬莱岛](https://bgm.tv/subject/19392)| 2004-12-23 | 1     | [keke9](https://www.keke9.app/play/179389-4-223382.html)   |
 | 7   |[犬夜叉 黑色铁碎牙](https://bgm.tv/subject/18615)| 2008-07-30 | 1     | [keke9](https://www.keke9.app/play/181312-4-506925.html)   |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=50570"
+"犬夜叉 音楽撰集"
+"music" >}}
 
 ## MAD
 

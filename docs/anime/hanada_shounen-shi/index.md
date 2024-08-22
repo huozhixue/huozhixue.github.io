@@ -36,4 +36,8 @@
 | 1 |[花田少年史](https://bgm.tv/subject/8748)| 2002-10-01 | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ep72523)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=496683"
+"TV动画《花田少年史》原声带" 
+"music" >}}

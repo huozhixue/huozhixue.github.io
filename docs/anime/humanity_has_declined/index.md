@@ -57,6 +57,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[人类衰退之后](https://bgm.tv/subject/26449)| 2012-07-01 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep12747)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2422415"
+"TV动画《人类衰退之后》原声集" 
+"music" >}}
 
 ## MAD
 

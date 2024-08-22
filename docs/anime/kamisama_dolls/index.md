@@ -53,4 +53,8 @@
 | 1 |[神样DOLLS](https://bgm.tv/subject/12333)| 2011-07-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep16233)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=492851"
+"TV动画《神样DOLLS》原声集" 
+"music" >}}

@@ -34,6 +34,11 @@
 
 {{< slide "04/5c/2766_crt_anidb,71/be/27785_crt_uuuH8" >}}
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2082646"
+"星之声"
+"music" >}}
 ## 系列
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |

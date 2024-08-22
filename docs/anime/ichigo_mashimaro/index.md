@@ -55,4 +55,8 @@
 | 1 |[草莓棉花糖](https://bgm.tv/subject/284)| 2005-07-14 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss1856)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=496068"
+"TV动画《草莓棉花糖》原声带" 
+"music" >}}

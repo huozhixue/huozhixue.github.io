@@ -53,4 +53,8 @@
 | 1 |[无限的未知](https://bgm.tv/subject/1937)| 1999-10-06 | 26 | [bilibili](https://www.bilibili.com/bangumi/play/ss2208)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=497095-https://music.163.com/#/album?id=35590379"
+"无限的未知 原声1,无限的未知 原声2"
+"music" >}}
