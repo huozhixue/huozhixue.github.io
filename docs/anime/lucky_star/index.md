@@ -56,6 +56,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[幸运星](https://bgm.tv/subject/276)| 2007-04-08 | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ep35595)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=553370632"
+"《らき☆すた》幸运星动画原声大碟全集" 
+"music" >}}
 
 ## MAD
 

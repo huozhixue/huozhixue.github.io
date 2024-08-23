@@ -40,6 +40,11 @@
 
 {{< slide "d8/d3/1755_z6OtP,ce/fa/1756_TqnTm,d2/cd/1757_i7Y6n,13/d7/4730_crt_anidb,09/6f/4731_crt_anidb,8f/91/4732_crt_U35go,90/17/4733_crt_anidb,37/3e/4734_crt_anidb" >}}
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=34407206"
+"TV动画《恋爱情结》音乐集" 
+"music" >}}
 ## 系列
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |

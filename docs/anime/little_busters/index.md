@@ -68,6 +68,11 @@
 | 2 |[Little Busters! 〜Refrain〜](https://bgm.tv/subject/69484)| 2013-10-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss3570)  |
 | 3 |[Little Busters! EX](https://bgm.tv/subject/83737)| 2014-01-29 | 8 | [bilibili](https://www.bilibili.com/bangumi/play/ss3571)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2384008"
+"游戏《Little Busters！》原声带"
+"music" >}}
 
 ## MAD
 
