@@ -70,7 +70,7 @@
 ## 配乐
 
 {{< media "https://music.163.com/#/album?id=45451" 
-"Angel Beats" 
+"TV动画《天使的心跳!》原声带" 
 "music" >}}
 
 ## MAD

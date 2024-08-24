@@ -53,7 +53,11 @@
 | 2 |[星之梦～星之人～](https://bgm.tv/subject/178884)| 2016-09-03 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep102180)  |
 | 3 |[星之梦～雪圏球～](https://bgm.tv/subject/295090)| 2021-08-25 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ep415972)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2083839"
+"PC游戏《星之梦》OST"
+"music" >}}
 ## MAD
 
 {{< media  "BV1kx411w7xX" 

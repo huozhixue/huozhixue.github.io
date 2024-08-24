@@ -54,6 +54,11 @@
 | 2   |[火影忍者疾风传](https://bgm.tv/subject/2782)| 2007-02-15 | 500   | [keke9](https://www.keke9.app/detail/58631.html)        |
 | 3   |[火影忍者 剧场版 博人传](https://bgm.tv/subject/120191)| 2015-08-07 | 1     | [keke9](https://www.keke9.app/play/59527-4-449702.html) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=628107418"
+"火影忍者 角色专属、经典战役、感人场面BGM"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/naruto"  >}}

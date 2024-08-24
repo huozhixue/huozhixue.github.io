@@ -52,4 +52,8 @@
 |:----|:------|:-----------|:------|:-----------------------------------------------------------|
 | 1   |[失落的歌谣](https://bgm.tv/subject/205310)| 2018-03-31 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep199625) |
 
-        
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=73702622"
+"TV动画《LOST SONG》原声带"
+"music" >}}

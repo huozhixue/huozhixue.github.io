@@ -55,5 +55,10 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[魔动王](https://bgm.tv/subject/5467)| 1989-04-07 | 41 | [bilibili](https://www.bilibili.com/video/BV1ft411X7q6)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=449832968"
+"【✔】光能使者 魔动王BGM"
+"music" >}}
 
 

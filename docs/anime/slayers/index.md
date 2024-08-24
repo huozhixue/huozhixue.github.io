@@ -45,4 +45,8 @@
 | 3 |[秀逗魔导士TRY](https://bgm.tv/subject/2097)| 1997-04-04 | 26 | [bilibili](https://www.bilibili.com/bangumi/play/ss1114)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=397993315-https://music.163.com/#/album?id=35108055"
+"秀逗魔导士（魔剑美神） OP&ED合集,秀逗魔导士（魔剑美神）原声1 Excellent!莉娜.因巴斯今天也要出发"
+"music" >}}

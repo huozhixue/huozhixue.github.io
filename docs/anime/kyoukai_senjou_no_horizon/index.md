@@ -57,8 +57,14 @@
 | 2   | [境界线上的地平线 第二季](https://bgm.tv/subject/29307)               | 2012-07-07 | 13    | [keke9](https://www.keke9.app/play/29895-4-266446.html)   |
 | 3   | [境界线上的地平线 Blu-ray BOX 特典动画](https://bgm.tv/subject/259874) | 2018-12-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1ut411r7LE)   |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2393379-https://music.163.com/#/album?id=2623036"
+"TV动画《境界上的地平线》主题曲&主要BGM集,TV动画《境界线上的地平线》原声带1"
+"music" >}}
 ## MAD
 
 {{< media  "BV17x411K7WA-BV1ax411F7e1"
 "【境界线MAD】Horizon Ⅰ- 境界线上的地平线,境界线上的地平线～Save you from anything～【完成】"  >}}
+
+

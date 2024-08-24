@@ -60,6 +60,11 @@
 |:----|:------|:-----------|:------|:-----------------------------------------------------------|
 | 1   |[重启咲良田](https://bgm.tv/subject/193378)| 2017-04-05 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep306577) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=78422011"
+"TV动画《重启咲良田》原声带"
+"music" >}}
 ## MAD
 
 {{< media "BV15s411p7jF"

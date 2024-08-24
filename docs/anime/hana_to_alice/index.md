@@ -41,4 +41,8 @@
 | 1   |[花与爱丽丝杀人事件](https://bgm.tv/subject/115732)| 2015-02-20 | 1     | [keke9](https://www.keke9.app/play/179143-4-203010.html) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3139228"
+"动画电影《花与爱丽丝杀人事件》原声带"
+"music" >}}

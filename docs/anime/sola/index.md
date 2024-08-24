@@ -56,8 +56,12 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[sola](https://bgm.tv/subject/798)| 2007-04-06 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep102457)  |
 
+## 配乐
 
-MAD
+{{< media "https://music.163.com/#/album?id=495441"
+"动画《sola》原声带"
+"music" >}}
+## MAD
 
 {{< media  "BV1sK4y1R7ry-BV1Xx411F7cv-BV1zx411w7da-BV1Js411Z7At" 
 "【SOLA】I can see the sky,【AMV】 SOLA---天空的梦,【SOLA】相片的寂寞,【Sola】 向着光的方向" >}}

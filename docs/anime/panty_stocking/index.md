@@ -70,4 +70,8 @@
 | 1   |[吊带袜天使](https://bgm.tv/subject/8402)| 2010-10-01 | 13    | [keke9](https://www.keke9.app/play/28920-4-254671.html) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=493321"
+"TV动画《吊带袜天使》原声集" 
+"music" >}}

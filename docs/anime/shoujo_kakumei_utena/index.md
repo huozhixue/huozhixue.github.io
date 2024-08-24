@@ -66,7 +66,11 @@
 | 1   |[少女革命](https://bgm.tv/subject/1453)| 1997-04-02 | 39    | [bilibili](https://www.bilibili.com/bangumi/play/ep50861) |
 | 2   |[少女革命剧场版 思春期默示录](https://bgm.tv/subject/1891)| 1999-08-14 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss2493)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=497283"
+"少女革命ウテナ 絶対进化革命前夜"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Y4411k7X1-BV1tx411F7n3-BV1kx411K7Kz-BV1Sx411r7Eg" 

@@ -58,6 +58,11 @@
 | 1   |[狼与香辛料](https://bgm.tv/subject/282)| 2008-01-08 | 13    | [keke9](https://www.keke9.app/play/28345-4-249741.html)   |
 | 2   |[狼与香辛料 第二季](https://bgm.tv/subject/1512)| 2009-07-08 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep34818) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2422620-https://music.163.com/#/album?id=51156"
+"TV动画《狼与香辛料》原声集,TV动画《狼与香辛料2》原声集"
+"music" >}}
 
 ## MAD
 

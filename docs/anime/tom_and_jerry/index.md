@@ -42,6 +42,12 @@
 
 {{< media auto="tv/tom_and_jerry" >}}
 
+
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=200922"
+"《猫和老鼠》＆特克斯·艾弗里动画作品 原声合集 第1卷"
+"music" >}}
 ## MAD
 
 {{< media  "BV1bs41167gs-BV1ip4y1z714-BV1as411z7qC_2"

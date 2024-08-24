@@ -54,4 +54,8 @@
 | 1 |[不可思议的教室](https://bgm.tv/subject/1617)| 2005-07-03 | 26 | [bilibili](https://www.bilibili.com/video/BV1Kx411w7ja)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=42266"
+"TV动画《嬉皮笑园》原声带"
+"music" >}}

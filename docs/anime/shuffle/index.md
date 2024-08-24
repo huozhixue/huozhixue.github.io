@@ -57,4 +57,8 @@
 | 1 |[SHUFFLE!](https://bgm.tv/subject/2937)| 2005-07-07 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ss3319)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=495481"
+"TV动画《SHUFFLE! MEMORIES》原声集"
+"music" >}}

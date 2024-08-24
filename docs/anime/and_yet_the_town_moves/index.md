@@ -59,4 +59,8 @@
 | 1 |[女仆咖啡厅](https://bgm.tv/subject/7883)| 2010-10-07 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss992)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=79794"
+"TVアニメ“それでも町は廻っている”オリジナルサウンドトラック“GO ROUND&ROUND IN THE TOWN!”"
+"music" >}}

@@ -61,7 +61,11 @@
 | 1   |[命运石之门](https://bgm.tv/subject/10380)| 2011-04-06 | 25    | [keke9](https://www.keke9.app/play/22431-4-169307.html)  |
 | 2   |[命运石之门 负荷领域的既视感](https://bgm.tv/subject/23119)| 2013-04-20 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3467) |
 | 3   |[命运石之门 0](https://bgm.tv/subject/129807)| 2018-04-11 | 24    | [keke9](https://www.keke9.app/play/21791-4-157626.html)  |
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=752799182"
+"命运石之门BGM精选"
+"music" >}}
 
 ## MAD
 

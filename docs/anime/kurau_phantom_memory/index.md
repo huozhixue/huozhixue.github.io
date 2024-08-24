@@ -61,5 +61,10 @@ rynax给女孩起名为クリスマス（Christmas），两人相互陪伴下开
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[库拉乌 幻之记忆](https://bgm.tv/subject/4140)| 2004-06-24 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep40104)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=80989-https://music.163.com/#/album?id=80971"
+"TV动画《库拉乌-幻之记忆》原声带1,TV动画《库拉乌-幻之记忆》原声带2"
+"music" >}}
 
 

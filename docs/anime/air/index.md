@@ -83,7 +83,7 @@
 ## 配乐
 
 {{< media "https://music.163.com/#/album?id=2735762" 
-"air"
+"游戏《AIR》OST"
 "music" >}}
 
 ## MAD

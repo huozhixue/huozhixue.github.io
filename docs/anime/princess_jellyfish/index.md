@@ -47,4 +47,8 @@
 | 1 |[海月姬](https://bgm.tv/subject/6811)| 2010-10-14 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ss995)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=50704"
+"TV动画《海月姬》原声带"
+"music" >}}

@@ -82,7 +82,11 @@
 | 7   |[进击的巨人 最终季 完结篇 前篇](https://bgm.tv/subject/376739)| 2023-03-03 | 61m   | [keke9](https://www.keke9.app/play/212061-4-362350.html) |
 | 8   |[进击的巨人 最终季 完结篇 后篇](https://bgm.tv/subject/415779)| 2023-11-04 | 85m   | [keke9](https://www.keke9.app/play/214026-4-523770.html) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=7348930222"
+"進擊の巨人全四季OP/ED超燃的神插曲原声合集"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/shingeki_no_kyojin"  >}}

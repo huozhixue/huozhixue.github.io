@@ -53,7 +53,11 @@
 | 2 |[蔷薇少女 梦之终结](https://bgm.tv/subject/1026)| 2005-10-20 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss523)  |
 | 3 |[新蔷薇少女](https://bgm.tv/subject/69942)| 2013-07-04 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss525)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=45448"
+"TV动画《蔷薇少女》原声集"
+"music" >}}
 ## MAD
 
 {{< media  "BV1yx411N7Vc"

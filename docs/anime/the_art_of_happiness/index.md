@@ -18,4 +18,8 @@
 | 1   |[寻找隐世快乐](https://bgm.tv/subject/121476)| 2013-11-21 | 1     | [dailymotion](https://www.dailymotion.com/video/x8zddjm) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3076353"
+"L'arte della felicità"
+"music" >}}

@@ -29,4 +29,8 @@
 | 1 |[虹色萤火虫～永远的暑假～](https://bgm.tv/subject/33068)| 2012-05-19 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss4540)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=45678"
+"动画电影《虹色萤火虫～永远的暑假～》原声带"
+"music" >}}

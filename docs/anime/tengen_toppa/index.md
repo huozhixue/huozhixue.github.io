@@ -67,6 +67,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[天元突破 红莲螺岩](https://bgm.tv/subject/770)| 2007-04-01 | 27 | [bilibili](https://www.bilibili.com/bangumi/play/ep268739)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=40914"
+"天元突破-红莲之眼音曲集"
+"music" >}}
 
 ## MAD
 

@@ -51,4 +51,8 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[恋爱情结](https://bgm.tv/subject/2940)| 2007-04-07 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep92785)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=34407206"
+"TV动画《恋爱情结》音乐集"
+"music" >}}

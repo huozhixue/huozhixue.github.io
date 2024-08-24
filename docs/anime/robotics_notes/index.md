@@ -58,4 +58,8 @@
 | 1 |[机器人笔记](https://bgm.tv/subject/37673)| 2012-10-11 | 22 | [bilibili](https://www.bilibili.com/bangumi/play/ep388137)  |
 
 
+## 配乐
 
+{{<media "https://music.163.com/#/album?id=2448194"
+"TV动画《机器人笔记》原声集1"
+"music" >}}

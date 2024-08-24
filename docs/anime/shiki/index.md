@@ -47,4 +47,8 @@
 | 1   |[尸鬼](https://bgm.tv/subject/5653)| 2010-07-08 | 22    | [keke9](https://www.keke9.app/play/26944-4-229976.html) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=49941"
+"TV动画《尸鬼》原声集"
+"music" >}}

@@ -58,6 +58,11 @@
 | :-- | :------------------------- | :--------- | :---- | :------------------------------------------------------- |
 | 1   |[BanG Dream! It's MyGO!!!!!](https://bgm.tv/subject/428735)| 2023-06-29 | 13    | [keke9](https://www.keke9.app/play/173689-2-341298.html) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=8620867849"
+"BanG Dream! It's MyGO!!!!!"
+"music" >}}
 
 ## MAD
 

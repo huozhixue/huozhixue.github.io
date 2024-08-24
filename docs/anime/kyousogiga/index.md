@@ -48,4 +48,8 @@
 | 1   |[京骚戏画](https://bgm.tv/subject/79114)| 2013-10-02 | 13    | [keke9](https://www.keke9.app/play/29353-4-260435.html) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2709173"
+"TV动画《京骚戏画》原声集"
+"music" >}}

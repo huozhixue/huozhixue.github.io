@@ -62,7 +62,11 @@
 | 3   |[天才麻将少女 全国篇](https://bgm.tv/subject/52606)| 2014-01-05 | 13    | [keke9](https://www.keke9.app/play/20535-4-139328.html) |
 | 4   |[咲日和 OAD](https://bgm.tv/subject/114197)| 2015-07-25 | 1     | [bilibili](https://www.bilibili.com/video/BV1ws411m7H6) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=50502"
+"天才麻将少女"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/saki" >}}

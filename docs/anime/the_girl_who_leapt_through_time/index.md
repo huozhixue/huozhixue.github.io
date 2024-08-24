@@ -56,7 +56,9 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[穿越时空的少女](https://bgm.tv/subject/242)| 2006-07-15 | 01:38:00 | [bilibili](https://www.bilibili.com/bangumi/play/ep65786)  |
 
+## 配乐
 
+[穿越时空的少女Original Sound](https://www.bilibili.com/video/BV17W411A7Ud)
 ## MAD
 
 {{< media  "BV1Ax411w7QX"

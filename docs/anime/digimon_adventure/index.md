@@ -58,6 +58,11 @@
 | 6   |[数码宝贝大冒险 我们的战争游戏!](https://bgm.tv/subject/3134)| 2000-03-04 | 1     | [acfun](https://www.acfun.cn/v/ac4928038_2)              |
 | 7   |[数码宝贝X进化](https://bgm.tv/subject/3141)| 2005-01-03 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ms411h7dD)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2915087"
+""
+"music" >}}
 
 ## MAD
 

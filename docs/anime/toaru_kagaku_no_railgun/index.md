@@ -75,7 +75,11 @@
 | 4   |[某科学的超电磁炮S OVA](https://bgm.tv/subject/97197)| 2014-03-27 | 1     | [bilibili](https://www.bilibili.com/video/BV1Gx411z7QZ)    |
 | 5   |[某科学的超电磁炮T](https://bgm.tv/subject/262940)| 2020-01-10 | 25    | [bilibili](https://www.bilibili.com/bangumi/play/ep307247) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=2417199608"
+"某科学的超电磁炮‖免费歌曲收录"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/toaru_kagaku_no_railgun"  >}}

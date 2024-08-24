@@ -54,7 +54,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[便·当](https://bgm.tv/subject/19540)| 2011-10-08 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep15525)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2664034"
+"TV动画《便当》原声集"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Ux411F7Ns"

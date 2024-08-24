@@ -61,4 +61,8 @@
 | 5   |[食戟之灵 豪之皿](https://bgm.tv/subject/296820)| 2020-04-10 | 13    | [keke9](https://www.keke9.app/play/22882-4-176639.html)    |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3263883-https://music.163.com/#/album?id=3426195"
+"TV动画《食戟之灵》原声集1,食戟之灵 原声带2"
+"music" >}}

@@ -55,6 +55,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[魔王勇者](https://bgm.tv/subject/43197)| 2013-01-04 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep8244)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2422161-https://music.163.com/#/album?id=2422162"
+"TV动画《魔王勇者》原声集1,TV动画《魔王勇者》原声集2"
+"music" >}}
 
 
 ## MAD

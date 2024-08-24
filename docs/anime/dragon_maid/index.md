@@ -53,7 +53,11 @@
 | 2 |[小林家的龙女仆S](https://bgm.tv/subject/274234)| 2021-07-07 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss38921)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=35338513"
+"TV动画『小林家的龙女仆』原声带"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Tx411J7iA-BV1nx41177fj-BV1pW41157QN" 

@@ -52,6 +52,11 @@
 | 8   |[魔法少女奈叶 Reflection](https://bgm.tv/subject/68284)| 2017-07-22 | 1     | [bilibili](https://www.bilibili.com/video/BV1AW411T7eP)    |
 | 9   |[魔法少女奈叶 Detonation](https://bgm.tv/subject/220403)| 2018-10-19 | 1     | [bilibili](https://www.bilibili.com/video/BV1Zy4y1b7r2?t=6057.0) |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=13651808"
+"魔炮永恒！《魔法少女奈叶》全系列主题曲"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/mahou_shoujo_lyrical_nanoha"  >}}

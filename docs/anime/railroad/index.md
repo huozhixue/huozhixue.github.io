@@ -36,6 +36,10 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[银河铁道之夜](https://bgm.tv/subject/19208)| 1985-07-13 | 01:47:58 | [bilibili](https://www.bilibili.com/bangumi/play/ss3041)  |
 | 2 |[银河铁道之夜](https://bgm.tv/subject/25400)| 2006-06-17 | 48:21 | [bilibili](https://www.bilibili.com/bangumi/play/ss3053)  |
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=44015"
+"银河鉄道の夜 サウンドトラック"
+"music" >}}
 
 

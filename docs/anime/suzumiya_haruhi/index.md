@@ -63,7 +63,11 @@
 | 2 |[凉宫春日的忧郁 2009](https://bgm.tv/subject/1606)| 2009-04-02 | 28 | [bilibili](https://www.bilibili.com/bangumi/play/ss1057)  |
 | 3 |[凉宫春日的消失](https://bgm.tv/subject/3375)| 2010-02-06 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss2809)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=34768451"
+"凉宫春日的完奏~系列动画完全原声集"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/suzumiya_haruhi"  >}}

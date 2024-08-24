@@ -59,7 +59,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[云之彼端，约定的地方](https://bgm.tv/subject/1707)| 2004-11-20 | 01:30:21 | [bilibili](https://www.bilibili.com/bangumi/play/ss2545)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=49801"
+"动画电影《云之彼端, 约定的地方》原声带"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Ks411Z7WM" 

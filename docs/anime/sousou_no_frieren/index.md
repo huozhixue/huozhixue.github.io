@@ -73,7 +73,11 @@
 | 1 |[葬送的芙莉莲](https://bgm.tv/subject/400602)| 2023-09-29 | 28 | [bilibili](https://www.bilibili.com/bangumi/play/ss46089)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=192570585"
+""
+"music" >}}
 ## MAD
 
 {{< media "BV1c3411K7Mt-BV14r421b7Q5" 

@@ -61,7 +61,11 @@
 | 2 |[Love Live! 第二季](https://bgm.tv/subject/75989)| 2014-04-06 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss3071)  |
 | 3 |[Love Live! 学园偶像 电影](https://bgm.tv/subject/107199)| 2015-06-13 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss35182)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2437694"
+"TV动画《Love Live!》原声带"
+"music" >}}
 ## MAD
 
 {{< media  "BV11x411K7yo"

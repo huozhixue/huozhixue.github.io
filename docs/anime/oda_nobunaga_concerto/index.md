@@ -41,4 +41,8 @@
 | 1   |[信长协奏曲](https://bgm.tv/subject/103671)| 2014-07-11 | 10    | [bilibili](https://www.bilibili.com/bangumi/play/ep270770) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3119274"
+"TV动画《信长协奏曲》原声带"
+"music" >}}

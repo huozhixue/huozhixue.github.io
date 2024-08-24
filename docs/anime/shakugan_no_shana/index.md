@@ -66,6 +66,11 @@
 | 6   |[灼眼的夏娜 Final](https://bgm.tv/subject/18631)| 2011-10-07 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ss1603)  |
 | 7   |[灼眼的夏娜炭](https://bgm.tv/subject/5109)| 2006-01-25 | 15    | [bilibili](https://www.bilibili.com/bangumi/play/ss4949)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/playlist?id=36669714"
+"灼眼的夏娜op/ed/主题曲集"
+"music" >}}
 ## MAD
 
 {{< media auto="mad/shakugan_no_shana" >}}

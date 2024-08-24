@@ -53,4 +53,8 @@
 | 1 |[空中秋千](https://bgm.tv/subject/2531)| 2009-10-15 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ep21198)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=45283"
+"空中秋千"
+"music" >}}

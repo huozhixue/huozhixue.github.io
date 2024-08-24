@@ -58,7 +58,11 @@
 | 3   |[天降之物 计时的悲伤女神](https://bgm.tv/subject/12576)| 2011-06-25 | 1     | [keke9](https://www.keke9.app/play/23472-4-183404.html)   |
 | 4   |[天降之物Final 永远的我的鸟笼](https://bgm.tv/subject/86445)| 2014-04-26 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ep17501) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=494065-https://music.163.com/#/album?id=493352"
+"天降之物第一季 背景音乐集,天降之物第二季 背景音乐集"
+"music" >}}
 ## MAD
 
 {{< media auto="mad/sora_no_otoshimono"  >}}

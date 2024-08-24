@@ -60,4 +60,8 @@
 | 1 |[TARI TARI](https://bgm.tv/subject/37137)| 2012-07-01 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep13551)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2643013"
+"TV动画《心之旋律》歌曲&原声集"
+"music" >}}

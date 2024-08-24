@@ -59,4 +59,8 @@
 | 1   |[寄生兽 生命的准则](https://bgm.tv/subject/88433)| 2014-10-08 | 24    | [keke9](https://www.keke9.app/play/28276-4-248439.html) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3081486"
+"动画《寄生兽 生命的准则》原声带"
+"music" >}}

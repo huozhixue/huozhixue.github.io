@@ -75,7 +75,11 @@
 | 1   |[偶像大师](https://bgm.tv/subject/11577)| 2011-07-07 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss2684) |
 | 2   |[偶像大师 闪耀祭典](https://bgm.tv/subject/52707)| 2012-10-25 | 3     | [bilibili](https://www.bilibili.com/bangumi/play/ss4455) |
 | 3   |[偶像大师 剧场版 向着光辉的彼岸！](https://bgm.tv/subject/64172)| 2014-01-25 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss2685) |
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=2244852157-https://music.163.com/#/album?id=2759047"
+"偶像大师765本家动画歌曲合集,剧场版偶像大师《辉きの向こう侧へ》主题歌"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/the_idolmaster"  >}}

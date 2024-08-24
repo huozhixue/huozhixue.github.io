@@ -72,7 +72,11 @@
 | 3   |[鬼灭之刃 游郭篇](https://bgm.tv/subject/328195)| 2021-12-05 | 11    | [bilibili](https://www.bilibili.com/bangumi/play/ss39433)  |
 | 4   |[鬼灭之刃 刀匠村篇](https://bgm.tv/subject/369768)| 2023-04-09 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ep752432)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=3131060649"
+"鬼灭之刃精选歌单ost"
+"music" >}}
 ## MAD
 
 {{< media auto="mad/kimetsu_no_yaiba" >}}

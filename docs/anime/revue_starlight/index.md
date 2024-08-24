@@ -67,9 +67,13 @@
 | 1   |[少女☆歌剧 Revue Starlight](https://bgm.tv/subject/214265)| 2018-07-12 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep232367) |
 | 2   |[剧场版 少女☆歌剧 Revue Starlight](https://bgm.tv/subject/294135)| 2021-06-04 | 1     | [keke9](https://www.keke9.app/play/95429-4-223377.html)    |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=72383717-https://music.163.com/#/album?id=73837093"
+"少女☆歌剧 Revue Starlight 剧中曲专辑Vol.1 La Revue de Matinée,少女☆歌剧 Revue Starlight 剧中曲专辑Vol.2 La Revue de Soirée"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/revue_starlight" >}}
 
-        
+

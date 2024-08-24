@@ -30,9 +30,7 @@
 
 ## 配乐
 
-{{< media "https://music.163.com/#/playlist?id=2895810725" 
-"电影｜国漫 深海｜原声带收录" 
-"music" >}}
+[《深海》原声大碟·OST·无损音质，国产动画粒子水墨风](https://www.bilibili.com/video/BV1K3411R7HX)
 
 ## MAD
 

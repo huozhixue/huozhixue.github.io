@@ -64,6 +64,11 @@
 | 3   |[虫师 续章](https://bgm.tv/subject/92705)| 2014-04-04 | 21    | [keke9](https://www.keke9.app/play/20509-4-139111.html)   |
 | 4   |[虫师 特别篇 铃之雫](https://bgm.tv/subject/106207)| 2015-05-16 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss2648)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=45312-https://music.163.com/#/album?id=45304"
+"「蟲師」オリジナルサウンドトラック 蟲音(むしのね) 前,「蟲師」オリジナルサウンドトラック 蟲音(むしのね) 後"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/mushishi"  >}}

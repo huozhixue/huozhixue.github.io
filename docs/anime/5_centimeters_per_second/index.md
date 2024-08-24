@@ -57,7 +57,7 @@
 
 ## 配乐
 
-{{< media "https://music.163.com/#/album?id=49790"  "电影原声带" "music" >}}
+{{< media "https://music.163.com/#/album?id=49790"  "剧场动画《秒速五厘米》电影原声带" "music" >}}
 
 ## MAD
 

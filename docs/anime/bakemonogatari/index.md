@@ -80,6 +80,11 @@
 | 12  |[伤物语II 热血篇](https://bgm.tv/subject/148036)| 2016-08-19 | 1     | [keke9](https://www.keke9.app/play/179533-4-233849.html)      |
 | 13  |[伤物语III 冷血篇](https://bgm.tv/subject/148037)| 2017-01-06 | 1     | [keke9](https://www.keke9.app/play/27175-4-233848.html)       |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=44589"
+"化物語音楽全集 Songs&Soundtracks"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/bakemonogatari"  >}}

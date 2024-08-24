@@ -63,7 +63,11 @@
 | 2 |[歌牌情缘2](https://bgm.tv/subject/41568)| 2013-01-11 | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ss617)  |
 | 3 |[歌牌情缘3](https://bgm.tv/subject/238815)| 2019-10-22 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ss28584)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=50872-https://music.163.com/#/album?id=50863-https://music.163.com/#/album?id=2422164"
+"花牌情缘,花牌情缘原声2,TV动画《花牌情缘2》原声集"
+"music" >}}
 
 ## MAD
 

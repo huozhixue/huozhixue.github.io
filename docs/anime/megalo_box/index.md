@@ -53,7 +53,11 @@
 | 1 |[MEGALO BOX](https://bgm.tv/subject/227718)| 2018-04-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep199945)  |
 | 2 |[NOMAD MEGALO BOX 2](https://bgm.tv/subject/294836)| 2021-04-04 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss38234)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=71614764"
+"TV动画《Megalobox》原声带"
+"music" >}}
 
 ## MAD
 

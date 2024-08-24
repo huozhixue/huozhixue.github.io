@@ -60,4 +60,8 @@
 | 1 |[我自己；你自己](https://bgm.tv/subject/306)| 2007-10-02 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss1338)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=87076"
+"PS2游戏《我自己；你自己》原声集"
+"music" >}}

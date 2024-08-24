@@ -75,7 +75,11 @@
 | 1   |[魔法少女小圆](https://bgm.tv/subject/9717)| 2011-01-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep63470) |
 | 2   |[剧场版 魔法少女小圆 [新篇] 叛逆的物语](https://bgm.tv/subject/44693)| 2013-10-26 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss27063) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=31083004"
+"魔法少女小圆 OST OP ED 全收录"
+"music" >}}
 ## MAD
 
 {{< media  auto="mad/puella_magi_madoka_magica"  >}}

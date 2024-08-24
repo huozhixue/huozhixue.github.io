@@ -61,7 +61,11 @@
 | 2   |[希德尼娅的骑士 第九惑星战役](https://bgm.tv/subject/105255)| 2015-04-10 | 12    | [bilibili](https://www.bilibili.com/video/BV1Vs411D79y)   |
 | 3   |[希德尼娅的骑士 编织爱的行星](https://bgm.tv/subject/217285)| 2021-06-04 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ep776258)            |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2884330"
+"希德尼亚的骑士 原声"
+"music" >}}
 ## MAD
 
 {{< media  "BV1Ws411U7PX-BV1vs411q7GU" 

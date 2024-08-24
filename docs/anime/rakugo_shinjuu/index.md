@@ -56,7 +56,11 @@
 | 1   |[昭和元禄落语心中](https://bgm.tv/subject/119394)| 2016-01-08 | 13    | [keke9](https://www.keke9.app/play/29566-4-261984.html) |
 | 2   |[昭和元禄落语心中 -助六再临篇-](https://bgm.tv/subject/176615)| 2017-01-06 | 12    | [keke9](https://www.keke9.app/play/29565-4-261972.html) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/playlist?id=576743436"
+"原声bgm | 昭和元禄落語心中"
+"music" >}}
 ## MAD
 
 {{< media  "BV1GW411s7mY" 

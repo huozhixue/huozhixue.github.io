@@ -51,3 +51,9 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[红线](https://bgm.tv/subject/8726)| 2010-10-09 | 1 | [bilibili](https://www.bilibili.com/video/BV1js411y7x6)  |
+
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2085170"
+"动画电影《超时空甩尾》原声带"
+"music" >}}
