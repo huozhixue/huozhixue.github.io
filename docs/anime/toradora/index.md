@@ -64,6 +64,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[龙与虎](https://bgm.tv/subject/909)| 2008-10-01 | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ss1672)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=2922641"
+"TV动画《龙与虎!》原声集补充盘"
+"music" >}}
 
 ## MAD
 

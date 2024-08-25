@@ -66,7 +66,11 @@
 | 2 |[Re：从零开始的异世界生活 第二季](https://bgm.tv/subject/278826)| 2020-07-08 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss33802)  |
 | 3 |[Re：从零开始的异世界生活 第二季 后半部分](https://bgm.tv/subject/316247)| 2021-01-06 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep373924)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=34943430"
+"动画《Re:从零开始的异世界生活》原声带"
+"music" >}}
 ## MAD
 
 {{< media  "BV1us411t7id-BV14s411t7R7-BV1Wa4y1Y7Ei"

@@ -65,7 +65,11 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[真实之泪](https://bgm.tv/subject/309)| 2008-01-05 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep75640)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2505539"
+"TV动画《真实之泪》5周年纪念CD-BOX"
+"music" >}}
 ## MAD
 
 {{< media  "BV1vx411w765-BV1jx411c7tR"

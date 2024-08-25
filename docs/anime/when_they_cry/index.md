@@ -63,13 +63,12 @@
 | 3   |[寒蝉鸣泣之时 业](https://bgm.tv/subject/297969)| 2020-10-01 | 24    | [keke9](https://www.keke9.app/play/28316-4-249094.html) |
 | 4   |[寒蝉鸣泣之时 卒](https://bgm.tv/subject/331033)| 2021-07-01 | 15    | [keke9](https://www.keke9.app/play/28317-4-249118.html) |
 
-<!--
-
 ## 配乐
 
-{{< media  >}}
+{{< media  "https://music.163.com/#/album?id=43401-https://music.163.com/#/album?id=43374"
+"TV动画《寒蝉鸣泣之时》原声带1,寒蝉鸣泣之时 Original Soundtrack 2"
+"music" >}}
 
--->
 
 
 ## MAD

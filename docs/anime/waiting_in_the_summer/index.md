@@ -78,7 +78,6 @@
 | 2 |[在盛夏等待 特别篇](https://bgm.tv/subject/100450)| 2014-08-29 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss3837)  |
 
 
-
 ## MAD
 
 {{< media  "BV1yx411F7VR" 

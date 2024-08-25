@@ -69,6 +69,12 @@
 | 2   |[紫罗兰永恒花园 外传 - 永远与自动手记人偶 -](https://bgm.tv/subject/280837)| 2019-09-06 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss31779)  |
 | 3   |[剧场版 紫罗兰永恒花园](https://bgm.tv/subject/242216)| 2020-09-18 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss40028)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=38033243"
+"动画《紫罗兰永恒花园》原声带"
+"music" >}}
+
 ## MAD
 
 {{< media auto="mad/violet_evergarden"  >}}

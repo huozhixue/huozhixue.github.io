@@ -63,5 +63,9 @@
 | 2   |[为美好的世界献上祝福！ 第二季](https://bgm.tv/subject/174043)| 2017-01-11 | 10    | [keke9](https://www.keke9.app/play/23145-4-178602.html)   |
 | 3   |[电影 为美好的世界献上祝福！红传说](https://bgm.tv/subject/220631)| 2019-08-30 | 1     | [keke9](https://www.keke9.app/play/179413-34-248706.html) |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=34589087"
+"TV动画《为美好的世界献上祝福》原声集"
+"music" >}}
 

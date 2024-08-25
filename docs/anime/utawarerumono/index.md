@@ -57,4 +57,8 @@
 | 3   |[传颂之物 二人的白皇](https://bgm.tv/subject/293008)| 2022-07-02 | 28    | [bilibili](https://www.bilibili.com/bangumi/play/ss42104) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=52415-https://music.163.com/#/album?id=34590514"
+"传颂之物,游戏&动画《传颂之物 虚伪的假面》原声带" 
+"music" >}}

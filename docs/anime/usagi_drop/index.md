@@ -55,7 +55,11 @@
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[白兔糖](https://bgm.tv/subject/10843)| 2011-07-07 | 11 | [bilibili](https://www.bilibili.com/bangumi/play/ep68948)  |
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=45259"
+"《白兔糖(动画)》原声带"
+"music" >}}
 
 ## MAD
 
