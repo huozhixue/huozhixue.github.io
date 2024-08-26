@@ -54,4 +54,8 @@
 | 1   |[天空之城](https://bgm.tv/subject/298)| 1986-08-02 | 124m  | [keke9](https://www.keke9.app/play/22122-4-163064.html) |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=42967"
+"动画《天空之城》原声带"
+"music" >}}

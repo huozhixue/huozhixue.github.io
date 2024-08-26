@@ -47,18 +47,21 @@
 ## 解答
 
 ```python
-def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
-    s = sum(nums)
-    if s%k:
-        return False
-    n, t = len(nums), s//k
-    dp = [0]+[-1]*((1<<n)-1)
-    for st in range(1<<n):
-        if dp[st]>=0:
-            for i in range(n):
-                if not st&(1<<i) and dp[st]+nums[i]<=t:
-                    dp[st|(1<<i)] = (dp[st]+nums[i])%t
-    return dp[-1]==0
+class Solution:
+    def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
+        s = sum(nums)
+        if s % k:
+            return False
+        s //= k
+        n = len(nums)
+        f = [-1]*(1<<n)
+        f[0] = 0
+        for st in range(1<<n):
+            if f[st]>=0:
+                for i,x in enumerate(nums):
+                    if not st&(1<<i) and f[st]+x<=s:
+                        f[st|(1<<i)] = (f[st]+x)%s
+        return f[-1] == 0
 ```
-1572 ms
+1281 ms
 

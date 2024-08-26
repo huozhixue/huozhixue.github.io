@@ -64,7 +64,11 @@
 | 6   |[摇曳百合、](https://bgm.tv/subject/243787)| 2019-11-13 | 1     | [keke9](https://www.keke9.app/play/29056-4-256591.html)     |     |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=39391231"
+"摇曳百合 原声带"
+"music" >}}
 ## MAD
 
 {{< media  "BV1bx411w7C7-BV1ys411977Q"

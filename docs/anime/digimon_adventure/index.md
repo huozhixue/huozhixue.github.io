@@ -61,7 +61,7 @@
 ## 配乐
 
 {{< media "https://music.163.com/#/album?id=2915087"
-""
+"TV动画《数码宝贝大冒险》音乐集1"
 "music" >}}
 
 ## MAD

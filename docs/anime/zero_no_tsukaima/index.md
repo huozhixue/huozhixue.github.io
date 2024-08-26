@@ -61,7 +61,11 @@
 | 3 |[零之使魔 三美姬的轮舞](https://bgm.tv/subject/763)| 2008-07-06 | 12 | [bilibili](https://www.bilibili.com/video/BV1is411V7Eh/)  |
 | 4 |[零之使魔F](https://bgm.tv/subject/25823)| 2012-01-07 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss821)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=2744002-https://music.163.com/#/album?id=2743112"
+"零之使魔原声集,TVアニメ「ゼロの使い魔~双月の騎士~」サウンドトラック"
+"music" >}}
 ## MAD
 
 {{< media  "BV1as411Z7eG" 

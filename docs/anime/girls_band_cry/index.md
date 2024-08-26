@@ -68,8 +68,6 @@
 "music" >}}
 
 
-
-
 ## MAD
 
 {{< media auto="mad/girls_band_cry" >}}

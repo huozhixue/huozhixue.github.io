@@ -62,6 +62,11 @@
 | 1   |[四月是你的谎言](https://bgm.tv/subject/100444)| 2014-10-09 | 22    | [bilibili](https://www.bilibili.com/bangumi/play/ep80016) |
 | 2   |[四月是你的谎言 OAD](https://bgm.tv/subject/115980)| 2015-05-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss3423)  |
 
+## 配乐
+
+{{< media "https://music.163.com/#/album?id=3124538-https://music.163.com/#/album?id=3154535"
+"TV动画《四月是你的谎言》原声带 Vol.1,TV动画《四月是你的谎言》第4卷 特典CD"
+"music" >}}
 
 ## MAD
 

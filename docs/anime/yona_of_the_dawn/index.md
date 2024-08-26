@@ -50,4 +50,8 @@
 | 1 |[拂晓的尤娜](https://bgm.tv/subject/107474)| 2014-10-07 | 24 | [bilibili](https://www.bilibili.com/bangumi/play/ep80042)  |
 
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3109577"
+"TV动画《拂晓的尤娜》原声带"
+"music" >}}

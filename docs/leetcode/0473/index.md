@@ -46,24 +46,24 @@
 
 - 显然当总长度不是 4 的倍数时为假
 - 否则，令 f[st] 代表集合 st 的火柴能否拼成若干个完整边，且剩下的长度小于边长，即可递推
-- 为了方便，符合条件时，令 f[st] 直接返回还没拼的长度，否则赋 inf
+- 为了方便，符合条件时，令 f[st] 直接返回还没拼的长度，否则赋 -1
 ## 解答
 
 ```python
 class Solution:
     def makesquare(self, matchsticks: List[int]) -> bool:
         s = sum(matchsticks)
-        if s%4:
+        if s % 4:
             return False
         s //= 4
         n = len(matchsticks)
-        f = [inf]*(1<<n)
+        f = [-1]*(1<<n)
         f[0] = 0
-        for st in range(1,1<<n):
-            for i,x in enumerate(matchsticks):
-                if st&1<<i and x+f[st^1<<i]<=s:
-                    f[st] = (x+f[st^1<<i])%s
-                    break
-        return f[-1]==0
+        for st in range(1<<n):
+            if f[st]>=0:
+                for i,x in enumerate(matchsticks):
+                    if not st&(1<<i) and f[st]+x<=s:
+                        f[st|(1<<i)] = (f[st]+x)%s
+        return f[-1] == 0
 ```
-1602 ms
+1703 ms

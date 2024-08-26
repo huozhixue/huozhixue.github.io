@@ -50,7 +50,11 @@ Leaf社於1998年發售的18X美少女PC用AVG「WHITE ALBUM」，就當時來�
 | 1 |[白色相簿](https://bgm.tv/subject/993)| 2009-01-03 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep19341)  |
 | 2 |[白色相簿 下半编章](https://bgm.tv/subject/2586)| 2009-10-02 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss2987)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=3044121"
+"动画《白色相簿》原声带"
+"music" >}}
 ## MAD
 
 {{< media "BV1xx411U7Gs"  "shogonodo - Fireflies" >}}

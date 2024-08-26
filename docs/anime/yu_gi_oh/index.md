@@ -45,7 +45,11 @@
 | 3 |[游戏王－怪兽之决斗GX](https://bgm.tv/subject/3711)| 2004-10-06 | 180 | [bilibili](https://www.bilibili.com/video/BV1Kx41137ET)  |
 | 4 |[游戏王5D's](https://bgm.tv/subject/1609)| 2008-04-02 | 154 | [bilibili](https://www.bilibili.com/video/BV1hx411j7zV/)  |
 
+## 配乐
 
+{{< media "https://music.163.com/#/album?id=497011-https://music.163.com/#/album?id=496962"
+"游戏王第一部(决斗者王国篇)原声集1,游戏王第一部(决斗者王国篇)原声集2"
+"music" >}}
 ## MAD
 
 {{< media  "BV1qx411F7Z1-BV1yK4y1b7dU-BV1u441117jN"
