@@ -24,7 +24,7 @@
   <meta name="twitter:description" content="力扣第 564 题 题目 给定一个表示整数的字符串 n ，返回与它最近的回文整数（不包括自身）。如果不止一个，返回较小的那个。 “最近的”定义为两个整数差的绝">
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0564/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0563/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0567/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0564/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0563/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0565/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0564\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  684 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  448 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0564\/","datePublished": "2016-07-17T00:00:00+08:00","dateModified": "2016-07-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -113,8 +113,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0564：寻找最近的回文数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-07-17">2016-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 684 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0564/" class="leancloud_visitors" data-flag-title="0564：寻找最近的回文数（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-07-17">2016-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 448 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0564/" class="leancloud_visitors" data-flag-title="0564：寻找最近的回文数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -159,21 +159,30 @@
 <li><a href="/leetcode/1842" rel="">1842：下个由相同数字构成的回文串</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>显然用暴力法太耗时了，考虑直接构造的方法。</p>
-<p>尝试几次发现可以用固定前半并镜像的方法得到一个相近的回文数。
-例如 356，固定住 35 并镜像得到 353，又如 6482 固定住 64 并镜像得到 6446。
-这样得到的回文数和原数的差必然在 $10^{len(n)//2}$ 以内，所以暴力法要遍历 $O(\sqrt N)$ 次。</p>
-<p>但这并不一定是最近的，比如说 731 最近的应该是 727 而不是 737 ，399 最近的应该是 404 而不是 393。</p>
-<p>也就是说，设 n 的前半为 half，以 half 镜像得到的不一定是最近的。但分别以 half-1、half、half+1 镜像的三个数中，必然有一个是所求结果。
-因此可以直接构造三个数，再排序得到结果。</p>
-<p>注意当 n 的位数是奇数和是偶数的两种情况下，取 half 和 half 镜像的操作有区别。可以先用 flag 标志奇偶性，方便操作。</p>
-<p>另外当 half-1、half+1 和 half 的位数不同时，要特别处理：</p>
-<pre><code>比如 999 的 half 是 99，half+1 是 100，应该变为 10
-
-比如 1000 的 half 是 10，half-1 是 9，应该变为 99
-
-特别的，10 的 half 是 1，half-1 是 0，应该变为 9
-</code></pre>
+<ul>
+<li>回文数一般考虑用前半镜像的方法
+<ul>
+<li>例如 356，固定住 35 并镜像得到 353，6482 固定住 64 并镜像得到 6446</li>
+</ul>
+</li>
+<li>设 n 的前半为 h，以 h-1、h、h+1 镜像的三个数中，必然有一个是所求结果</li>
+<li>注意有两种镜像方式，需要和原来的 n 保持一致
+<ul>
+<li>例如 h=35，可以镜像为 353 或 3553</li>
+</ul>
+</li>
+<li>还有两种特殊情况
+<ul>
+<li>h+1 进位了
+<ul>
+<li>比如 999 的 h 是 99，h+1 镜像不对</li>
+<li>此时可以直接构造结果为 1001</li>
+</ul>
+</li>
+<li>h-1 退位了，比如 100 的 h 是 10，同理可以直接构造结果为 99</li>
+</ul>
+</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -185,19 +194,21 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nearestPalindromic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">half</span><span class="p">,</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">n</span><span class="p">[:(</span><span class="n">L</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">],</span> <span class="n">L</span> <span class="o">%</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">	<span class="n">h1</span><span class="p">,</span> <span class="n">h2</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">half</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">half</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">a</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">h1</span><span class="p">[</span><span class="o">-</span><span class="n">flag</span><span class="o">-</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">h1</span><span class="o">!=</span><span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">half</span><span class="p">)</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">L</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">b</span> <span class="o">=</span> <span class="n">half</span> <span class="o">+</span> <span class="n">half</span><span class="p">[</span><span class="o">-</span><span class="n">flag</span><span class="o">-</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">	<span class="n">c</span> <span class="o">=</span> <span class="n">h2</span> <span class="o">+</span> <span class="n">h2</span><span class="p">[</span><span class="o">-</span><span class="n">flag</span><span class="o">-</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">half</span><span class="p">)</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">L</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">min</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">],</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">nearestPalindromic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">q</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[:</span><span class="n">q</span><span class="o">+</span><span class="n">r</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">h</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">r</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">h</span><span class="o">==</span><span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">q</span><span class="o">+</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">h</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">h</span><span class="o">-</span><span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">r</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">m</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">h</span><span class="o">==</span><span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">q</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">h</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">h</span><span class="o">+</span><span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">r</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">min</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">],</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="ow">or</span> <span class="n">inf</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>32 ms</p>
+</div><p>38 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -223,7 +234,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0567/" class="prev" rel="prev" title="0567：字符串的排列（★）"><i class="fas fa-angle-left fa-fw"></i>0567：字符串的排列（★）</a>
+    <div class="post-nav"><a href="/leetcode/0565/" class="prev" rel="prev" title="0565：数组嵌套（★）"><i class="fas fa-angle-left fa-fw"></i>0565：数组嵌套（★）</a>
             <a href="/leetcode/0563/" class="next" rel="next" title="0563：二叉树的坡度">0563：二叉树的坡度<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
@@ -233,7 +244,7 @@
                 window.config.data['valine'] = {"valine":{"appId":"A8FBH0dQFe6KhMO2bSl9VenP-gzGzoHsz","appKey":"PKTz50I8k8AbXtE3dKA50Qpp","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}}.valine;
             </script></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.133.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.133.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

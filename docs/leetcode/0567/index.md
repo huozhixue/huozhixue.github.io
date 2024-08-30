@@ -48,18 +48,25 @@
 ## 解答
 
 ```python
-def checkInclusion(self, s1: str, s2: str) -> bool:
-    ct, ct0, k = Counter(), Counter(s1), len(s1)
-    for j, char in enumerate(s2):
-        ct[char] += 1
-        if j >= k:
-            ct[s2[j-k]] -= 1
-            if ct[s2[j-k]] == 0:
-                del ct[s2[j-k]]
-        if j >= k-1 and ct == ct0:
-            return True
-    return False
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        m = len(s1)
+        ct0 = Counter(s1)
+        ct = defaultdict(int)
+        valid = 0
+        for j,c in enumerate(s2):
+            ct[c] += 1
+            if ct[c]==ct0[c]:
+                valid += 1
+            if j>=m:
+                old = s2[j-m]
+                if ct[old]==ct0[old]:
+                    valid -= 1
+                ct[old] -= 1
+            if valid==len(ct0):
+                return True
+        return False
 ```
 
-96 ms
+55 ms
 

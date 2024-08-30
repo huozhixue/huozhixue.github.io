@@ -45,40 +45,30 @@
 
 ## 分析
 
-显然用暴力法太耗时了，考虑直接构造的方法。
-
-尝试几次发现可以用固定前半并镜像的方法得到一个相近的回文数。
-例如 356，固定住 35 并镜像得到 353，又如 6482 固定住 64 并镜像得到 6446。
-这样得到的回文数和原数的差必然在 $10^{len(n)//2}$ 以内，所以暴力法要遍历 $O(\sqrt N)$ 次。
-
-但这并不一定是最近的，比如说 731 最近的应该是 727 而不是 737 ，399 最近的应该是 404 而不是 393。 
-
-也就是说，设 n 的前半为 half，以 half 镜像得到的不一定是最近的。但分别以 half-1、half、half+1 镜像的三个数中，必然有一个是所求结果。
-因此可以直接构造三个数，再排序得到结果。
-
-注意当 n 的位数是奇数和是偶数的两种情况下，取 half 和 half 镜像的操作有区别。可以先用 flag 标志奇偶性，方便操作。
-
-另外当 half-1、half+1 和 half 的位数不同时，要特别处理：
-
-	比如 999 的 half 是 99，half+1 是 100，应该变为 10
-	
-	比如 1000 的 half 是 10，half-1 是 9，应该变为 99
-	
-	特别的，10 的 half 是 1，half-1 是 0，应该变为 9
+- 回文数一般考虑用前半镜像的方法
+	- 例如 356，固定住 35 并镜像得到 353，6482 固定住 64 并镜像得到 6446
+- 设 n 的前半为 h，以 h-1、h、h+1 镜像的三个数中，必然有一个是所求结果
+- 注意有两种镜像方式，需要和原来的 n 保持一致
+	- 例如 h=35，可以镜像为 353 或 3553
+- 还有两种特殊情况
+	- h+1 进位了
+		- 比如 999 的 h 是 99，h+1 镜像不对
+		- 此时可以直接构造结果为 1001
+	- h-1 退位了，比如 100 的 h 是 10，同理可以直接构造结果为 99
 
 
 ## 解答
 
 ```python
-def nearestPalindromic(self, n: str) -> str:
-	L = len(n)
-	half, flag = n[:(L+1)//2], L % 2
-	h1, h2 = str(int(half)-1), str(int(half)+1)
-	a = h1 + h1[-flag-1::-1] if h1!='0' and len(h1)==len(half) else str(10**(L-1)-1)
-	b = half + half[-flag-1::-1]
-	c = h2 + h2[-flag-1::-1] if len(h2)==len(half) else str(10**L+1)
-	return min([a, b, c],key=lambda x:abs(int(x)-int(n)) or float('inf'))
+class Solution:
+    def nearestPalindromic(self, n: str) -> str:
+        m = len(n)
+        q,r = divmod(m,2)
+        h = int(n[:q+r])
+        b = str(h)+str(h)[-1-r::-1]
+        a = str(pow(10,m-1)-1) if h==pow(10,q+r-1) else str(h-1)+str(h-1)[-1-r::-1]
+        c = str(pow(10,m)+1) if h==pow(10,q+r)-1 else str(h+1)+str(h+1)[-1-r::-1]
+        return min([a,b,c],key=lambda x:abs(int(x)-int(n)) or inf)
 ```
-
-32 ms
+38 ms
 

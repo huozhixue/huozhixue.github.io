@@ -49,41 +49,20 @@
 
 ## 分析
 
-### #1
-
-求任意子数组的和，容易想到前缀和。
-得到前缀和数组 pre 后，就是找 i < j 使得 pre[j]-pre[i]==k。
-
-查找定值容易想到哈希表，遍历时边存边查即可。
-
-```python
-def subarraySum(self, nums: List[int], k: int) -> int:
-	pre = list(accumulate([0]+nums))
-	res, ct = 0, Counter()
-	for val in pre:
-		res += ct[val-k]
-		ct[val] += 1
-	return res
-```
-
-116 ms
-
-### #2
-
-也可以合并为一趟解决。
-
-
+- 求任意子数组的和，容易想到前缀和
+- 得到前缀和数组 P，问题即是找 P 的两个元素使其差为 k
+- 遍历用哈希表计数即可
 ## 解答
 
 ```python
-def subarraySum(self, nums: List[int], k: int) -> int:
-	res, pre, ct = 0, 0, Counter([0])
-	for val in nums:
-		pre += val
-		res += ct[pre-k]
-		ct[pre] += 1
-	return res
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        res = 0
+        ct = defaultdict(int)
+        for x in accumulate([0]+nums):
+            res += ct[x-k]
+            ct[x] += 1
+        return res
 ```
-
-116 ms
+92 ms
 

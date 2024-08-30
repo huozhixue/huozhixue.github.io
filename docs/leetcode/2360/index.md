@@ -56,11 +56,9 @@
 
 ## 分析
 
+### #1
+
 出度最多为1，是内向基环树森林，可以用拓扑排序去掉树枝，遍历剩下的环即可。
-
-
-## 解答
-
 
 ```python
 class Solution:
@@ -91,3 +89,28 @@ class Solution:
 ```
 177 ms
 
+### #2
+
+- 一种更简单的写法是从每个节点 u 出发，遍历直到遇到已访问节点 v
+- 假如 v 在此次遍历的路径中，说明发现了一个新的环，可定位环长
+## 解答
+
+
+
+```python
+class Solution:
+    def longestCycle(self, edges: List[int]) -> int:
+        n = len(edges)
+        vis = [0]*n
+        res = -1
+        for u in range(n):
+            A = []
+            while u>=0 and not vis[u]:
+                A.append(u)
+                vis[u]=1
+                u = edges[u]
+            if u in A:
+                res = max(res,len(A)-A.index(u))
+        return res
+```
+147 ms

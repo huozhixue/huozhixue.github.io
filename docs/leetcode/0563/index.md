@@ -63,20 +63,22 @@
 
 ## 分析
 
-令辅助函数 help(node) 同时返回整个树 node 的坡度、node 的节点之和，即可递归。
-
+令 dfs(u) 返回节点 u 的和，递归时计算每个节点的坡度即可。
 ## 解答
 
 ```python
-def findTilt(self, root: TreeNode) -> int:
-	def help(node):
-		if not node:
-			return 0, 0
-		l0, l1 = help(node.left)
-		r0, r1 = help(node.right)
-		return l0+r0+abs(l1-r1), node.val+l1+r1
-	return help(root)[0]
+class Solution:
+    def findTilt(self, root: Optional[TreeNode]) -> int:
+        def dfs(u):
+            if not u:
+                return 0
+            l,r = dfs(u.left),dfs(u.right)
+            self.res += abs(l-r)
+            return l+r+u.val
+        self.res = 0
+        dfs(root)
+        return self.res
 ```
 
-60 ms
+59 ms
 

@@ -53,15 +53,14 @@
 ## 解答
 
 ```python
-def maxDepth(self, root: 'Node') -> int:
-	if not root:
-		return 0
-	D, level = 0, [root]
-	while level:
-		D += 1
-		level = [child for node in level for child in node.children]
-	return D
+class Solution:
+    def maxDepth(self, root: 'Node') -> int:
+        res,Q = 0,[root] if root else []
+        while Q:
+            Q = [v for u in Q for v in u.children]
+            res += 1
+        return res
 ```
 
-52 ms
+50 ms
 

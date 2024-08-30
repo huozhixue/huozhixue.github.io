@@ -55,7 +55,6 @@
 
 ## MAD
 
-{{< media  "BV1Ex411w712-BV1dx411c7Ns-BV1Rx411T7Hg-BV1Qs411f7kX" 
-"只有神知道的世界,【MAD】因为我是活在二次元的女孩,【误解向】一直很安静●重置版【神大人X艾露西】,【神大人】人间的天使没有翅膀，属于你的微小幸福" >}}
+{{< media  auto="mad/kami_no_mizu_shiru_sekai" >}}
 
 

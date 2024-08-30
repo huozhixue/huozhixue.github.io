@@ -56,10 +56,7 @@
 ## 分析
 
 
-  {{< lc "2360" >}} 升级版
-  - 先拓扑排序去掉树枝
-  - 遍历剩下的环，每个节点的答案即是环长
-  - 再递归得到树枝节点的答案即可
+ {{< lc "2360" >}} 升级版，可以用拓扑排序，可以用更简单的依次遍历。
 
 ## 解答
 
@@ -67,35 +64,24 @@
 class Solution:
     def countVisitedNodes(self, edges: List[int]) -> List[int]:
         n = len(edges)
-        ind = [0]*n
-        for u in edges:
-            ind[u]+=1
-        Q = deque(u for u in range(n) if ind[u]==0)
-        while Q:
-            u = Q.popleft()
-            v = edges[u]
-            ind[v] -= 1
-            if ind[v]==0:
-                Q.append(v)
+        vis = [0]*n
         res = [0]*n
         for u in range(n):
-            if ind[u]:
-                w = 0
-                while ind[u]:
-                    ind[u] = 0
-                    u = edges[u]
-                    w += 1
-                for _ in range(w):
-                    res[u] = w
-                    u = edges[u]
-        def dfs(u):
-            res[u] = res[u] or dfs(edges[u])+1
-            return res[u]
-        for u in range(n):
-            dfs(u)
+            A = []
+            while not vis[u]:
+                A.append(u)
+                vis[u] = 1
+                u = edges[u]
+            if u in A:
+                i = A.index(u)
+                for a in A[i:]:
+                    res[a] = len(A)-i
+                A = A[:i]
+            for i,a in enumerate(A[::-1]):
+                res[a] = res[u]+i+1
         return res
 ```
-392 ms
+404 ms
 
 
 

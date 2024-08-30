@@ -49,20 +49,20 @@
 
 ## 分析
 
-直觉来说应该把最小的两个数分在一起，剩下的依此类推。不过还是要证明一下。
-
-假设最小的两个数是 $a_i、a_j$ 并且没有分在一起，那么其中两对是 $(a_i, x)、(a_j, y)$，这两对总和即为 $a_i+a_j$。那么把这两对改为
-$(a_i, a_j)、(x, y)$，总和变为 $min(a_i,a_j)+min(x,y)$，显然增大了。
-
-因此要使总和最大，最小的两个数必然分在一起，剩下的是递归子问题也同理。
+- 直觉来说应该把最小的两个数分在一起，剩下的依此类推
+- 证明一下
+	- 假设最小的两个数是 $a_i、a_j$ 并且没有分在一起，对应的两对是 $(a_i, x)、(a_j, y)$
+	- 把这两对改为 $(a_i, a_j)、(x, y)$，总和从 $a_i+a_j$  变为 $min(a_i,a_j)+min(x,y)$，显然增大了
+	- 因此最小的两个数必然分在一起，剩下的同理
 
 
 ## 解答
 
 ```python
-def arrayPairSum(self, nums: List[int]) -> int:
-	return sum(sorted(nums)[::2])
+class Solution:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        return sum(sorted(nums)[::2])
 ```
 
-76 ms
+61 ms
 

@@ -56,15 +56,15 @@
 
 ## 分析
 
-妹妹分到 x = len(candyType) // 2 个糖果，若糖果种类足够多，显然 x 即是结果。
-若糖果种类 y 小于 x，那么妹妹就只能分到 y 种。
+取糖果种类和 n//2 的较小值即可。
 
 ## 解答
 
 ```python
-def distributeCandies(self, candyType: List[int]) -> int:
-	return min(len(candyType)//2, len(set(candyType)))
+class Solution:
+    def distributeCandies(self, candyType: List[int]) -> int:
+        return min(len(candyType)//2,len(set(candyType)))
 ```
 
-92 ms
+80 ms
 
