@@ -52,42 +52,23 @@
 
 ## 分析
 
-### #1
 
-先写出递归算法，显然，将每个子树的后序遍历、根节点拼接起来即可。
-
-```python
-def postorder(self, root: 'Node') -> List[int]:
-	if not root:
-		return []
-	res = []
-	if root.children:
-		for child in root.children:
-			res.extend(self.postorder(child))
-	return res + [root.val]
-```
-
-52 ms
-
-### #2
-
-迭代算法和 0144 类似，注意入栈顺序是 [节点值，子树的反序]。
+和 {{< lc "0145" >}} 二叉树遍历类似，注意入栈顺序即可。
 
 ## 解答
 
 ```python
-def postorder(self, root: 'Node') -> List[int]:
-	res, stack = [], [root]
-	while stack:
-		node = stack.pop()
-		if isinstance(node, int):
-			res.append(node)
-		elif node:
-			stack.append(node.val)
-			if node.children:
-				stack.extend(node.children[::-1])
-	return res
+class Solution:
+    def postorder(self, root: 'Node') -> List[int]:
+        res,sk = [],[root] if root else []
+        while sk:
+            u = sk.pop()
+            if isinstance(u,int):
+                res.append(u)
+            else:
+                sk.extend([u.val]+u.children[::-1])
+        return res
 ```
 
-56 ms
+42 ms
 

@@ -44,22 +44,22 @@
 
 ## 分析
 
-按第一步的移动方向即可转为递归子问题。
+按第一步移动方向即可递归。
 
 ## 解答
 
 ```python
-def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
-    @lru_cache(None)
-    def dfs(i, j, k):
-        if not 0<=i<m or not 0<=j<n:
-            return 1
-        if k==0:
-            return 0
-        return sum(dfs(x, y, k-1) for x,y in [(i+1, j),(i-1,j),(i,j+1),(i,j-1)])%mod
-    
-    mod = 10**9+7
-    return dfs(startRow, startColumn, maxMove)
+class Solution:
+    def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
+        @cache
+        def dfs(i,j,k):
+            if not (0<=i<m and 0<=j<n):
+                return 1
+            if k==0:
+                return 0
+            return sum(dfs(x,y,k-1) for x,y in [(i,j+1),(i+1,j),(i-1,j),(i,j-1)])%mod
+        mod = 10**9+7
+        return dfs(startRow,startColumn,maxMove)
 ```
-148 ms
+113 ms
 

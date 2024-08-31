@@ -51,40 +51,19 @@
 
 ## 分析
 
-### #1
-
-先写出递归算法，显然，将根节点、每个子树的前序遍历拼接起来即可。
-
-```python
-def preorder(self, root: 'Node') -> List[int]:
-	if not root:
-		return []
-	res = [root.val]
-	if root.children:
-		for child in root.children:
-			res.extend(self.preorder(child))
-	return res
-```
-
-56 ms
-
-### #2
-
-迭代算法和 0144 类似，注意入栈顺序是子树的反序。
+和 {{< lc "0144" >}} 二叉树遍历类似，注意入栈顺序即可。
 
 ## 解答
 
 ```python
-def preorder(self, root: 'Node') -> List[int]:
-	res, stack = [], [root]
-	while stack:
-		node = stack.pop()
-		if node:
-			res.append(node.val)
-			if node.children:
-				stack.extend(node.children[::-1])
-	return res
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        res,sk = [],[root] if root else []
+        while sk:
+            u = sk.pop()
+            res.append(u.val)
+            sk.extend(u.children[::-1])
+        return res
 ```
-
-52 ms
+49 ms
 

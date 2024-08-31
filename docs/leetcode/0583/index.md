@@ -46,23 +46,45 @@
 
 ## 分析
 
-显然用动态规划即可，可以用滚动数组优化。
+### #1 
 
+按末尾是否删除递推即可。
+
+```python
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        m,n = len(word1),len(word2)
+        f = [list(range(n+1)) for _ in range(m+1)]
+        for i in range(1,m+1):
+            f[i][0] = i
+            for j in range(1,n+1):
+                if word1[i-1]==word2[j-1]:
+                    f[i][j] = f[i-1][j-1]
+                else:
+                    f[i][j] = 1+min(f[i-1][j],f[i][j-1])
+        return f[-1][-1]
+```
+175 ms
+
+### #2
+
+还可以用滚动数组优化空间。
 ## 解答
 
 ```python
-def minDistance(self, word1: str, word2: str) -> int:
-    m, n = len(word1), len(word2)
-    dp = list(range(n+1))
-    for char in word1:
-        prev = dp[:]
-        dp[0] += 1
-        for j in range(1, n+1):
-            if word2[j-1]==char:
-                dp[j] = prev[j-1]
-            else:
-                dp[j] = 1+min(prev[j], dp[j-1])
-    return dp[-1]
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        m,n = len(word1),len(word2)
+        f = list(range(n+1))
+        for c in word1:
+            g = f[:]
+            f[0] += 1
+            for j in range(1,n+1):
+                if c==word2[j-1]:
+                    f[j] = g[j-1]
+                else:
+                    f[j] = 1+min(g[j],f[j-1])
+        return f[-1]
 ```
-244 ms
+143 ms
 
