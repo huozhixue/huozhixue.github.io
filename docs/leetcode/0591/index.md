@@ -97,30 +97,32 @@ cdata <strong>不</strong>是 <strong>&quot;&lt;![CDATA[&lt;div&gt;]&gt;]]&gt;]]
 
 ## 分析
 
-显然用正则比较方便。
-
-首先，代码最外层必须是合法的闭合标签。然后里面的 TAG_CONTENT 去除 cdata 以后，出现的 '<' 必然对应了闭合标签。
-循环去除最里层的合法闭合标签，不存在 '<' 就合法了。具体表达式：
-
-	合法的 TAG_NAME				'[A-Z]{1,9}'
-	最外层是合法的闭合标签		r'^<([A-Z]{1,9})>(.*?)</\1>$'
-	合法的 cdata				r'<!\[CDATA\[.*?\]\]>'
-	最里层的合法闭合标签		r'<([A-Z]{1,9})>[^<]*</\1>'
-	
+- 考虑用栈模拟标签的匹配
+- 首先验证首位是否合法匹配的标签，提取中间部分
+- 然后跳过所有 cdata
+- 接着就提取每个起始标签和结束标签，用栈维护匹配
+- 除了合法标签外，遇到 '<'，直接返回 False
+- 最后栈空即合法
 
 ## 解答
 
 ```python
-def isValid(self, code: str) -> bool:
-	tmp = re.match(r'<([A-Z]{1,9})>(.*?)</\1>$', code)
-	if not tmp:
-		return False
-	code = re.sub(r'<!\[CDATA\[.*?\]\]>', '', tmp.group(2))
-	n = 1
-	while n:
-		code, n = re.subn(r'<([A-Z]{1,9})>[^<]*</\1>', '', code)
-	return '<' not in code
+class Solution:
+    def isValid(self, code: str) -> bool:
+        tmp = re.match(r'<([A-Z]{1,9})>(.*?)</\1>$',code)
+        if not tmp:
+            return False
+        code = tmp.group(2)
+        sk = []
+        for cdata,l,r,c in re.findall('(<!\[CDATA\[.*?\]\]>)|<([A-Z]{1,9})>|</([A-Z]{1,9})>|(<)',code):
+            if l:
+                sk.append(l)
+            elif r:
+                if not sk or sk.pop()!=r:
+                    return False
+            elif c:
+                return False
+        return not sk
 ```
-
-44 ms
+37 ms
 
