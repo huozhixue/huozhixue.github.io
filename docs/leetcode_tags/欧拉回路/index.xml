@@ -9,20 +9,34 @@
     <pubDate>Sun, 05 Dec 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2097/</guid>
-    <description><![CDATA[力扣第 270 场周赛第 4 题 题目 给你一个下标从 0 开始的二维整数数组 pairs ，其中 pairs[i] = [starti, endi] 。如果 pairs 的一个重新排列，满足对每一个下标 i （ 1 &lt;= i &lt; pairs.length ）都有 endi-1 == starti]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/valid-arrangement-of-pairs/" target="_blank" rel="noopener noreffer">力扣第 270 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的二维整数数组 <code>pairs</code> ，其中 <code>pairs[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 。如果 <code>pairs</code> 的一个重新排列，满足对每一个下标 <code>i</code> （ <code>1 &lt;= i &lt; pairs.length</code> ）都有 <code>end<sub>i-1</sub> == start<sub>i</sub></code><sub> </sub>，那么我们就认为这个重新排列是 <code>pairs</code> 的一个 <strong>合法重新排列</strong> 。</p>]]></description>
 </item><item>
     <title>0753：破解保险箱（2273 分）</title>
     <link>https://huozhixue.github.io/leetcode/0753/</link>
     <pubDate>Sun, 22 Jan 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0753/</guid>
-    <description><![CDATA[力扣第 753 题 题目 有一个需要密码才能打开的保险箱。密码是 n 位数, 密码的每一位都是范围 [0, k - 1] 中的一个数字。 保险箱有一种特殊的密码校验方法，你可以]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/cracking-the-safe/" target="_blank" rel="noopener noreffer">力扣第 753 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有一个需要密码才能打开的保险箱。密码是 <code>n</code> 位数, 密码的每一位都是范围 <code>[0, k - 1]</code> 中的一个数字。</p>
+<p>保险箱有一种特殊的密码校验方法，你可以随意输入密码序列，保险箱会自动记住 <strong>最后 <code>n</code> 位输入</strong> ，如果匹配，则能够打开保险箱。</p>]]></description>
 </item><item>
     <title>0332：重新安排行程（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0332/</link>
     <pubDate>Sat, 28 Nov 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0332/</guid>
-    <description><![CDATA[力扣第 332 题 题目 给你一份航线列表 tickets ，其中 tickets[i] = [fromi, toi] 表示飞机出发和降落的机场地点。请你对该行程进行重新规划排序。 所有这些机票都属于一个从 JFK（肯]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/reconstruct-itinerary/" target="_blank" rel="noopener noreffer">力扣第 332 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一份航线列表 <code>tickets</code> ，其中 <code>tickets[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> 表示飞机出发和降落的机场地点。请你对该行程进行重新规划排序。</p>
+<p>所有这些机票都属于一个从 <code>JFK</code>（肯尼迪国际机场）出发的先生，所以该行程必须从 <code>JFK</code> 开始。如果存在多种有效的行程，请你按字典排序返回最小的行程组合。</p>]]></description>
 </item></channel>
 </rss>

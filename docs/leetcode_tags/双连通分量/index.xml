@@ -9,6 +9,10 @@
     <pubDate>Sun, 15 Sep 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1192/</guid>
-    <description><![CDATA[力扣第 154 场周赛第 4 题 题目 力扣数据中心有 n 台服务器，分别按从 0 到 n-1 的方式进行了编号。它们之间以 服务器到服务器 的形式相互连接组成了一个内部集群，]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/critical-connections-in-a-network/" target="_blank" rel="noopener noreffer">力扣第 154 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>力扣数据中心有 <code>n</code> 台服务器，分别按从 <code>0</code> 到 <code>n-1</code> 的方式进行了编号。它们之间以 <strong>服务器到服务器</strong> 的形式相互连接组成了一个内部集群，连接是无向的。用  <code>connections</code> 表示集群网络，<code>connections[i] = [a, b]</code> 表示服务器 <code>a</code> 和 <code>b</code> 之间形成连接。任何服务器都可以直接或者间接地通过网络到达任何其他服务器。</p>]]></description>
 </item></channel>
 </rss>

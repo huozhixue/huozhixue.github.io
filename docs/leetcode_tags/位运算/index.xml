@@ -9,69 +9,112 @@
     <pubDate>Sun, 28 Apr 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3133/</guid>
-    <description><![CDATA[力扣第 395 场周赛第 3 题 题目 给你两个整数 n 和 x 。你需要构造一个长度为 n 的 正整数 数组 nums ，对于所有 0 &lt;= i &lt; n - 1 ，满足 nums[i + 1] 大于 nums[i] ，并且数组 nums 中所有]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-array-end/" target="_blank" rel="noopener noreffer">力扣第 395 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个整数 <code>n</code> 和 <code>x</code> 。你需要构造一个长度为 <code>n</code> 的 <strong>正整数 </strong>数组 <code>nums</code> ，对于所有 <code>0 &lt;= i &lt; n - 1</code> ，满足 <code>nums[i + 1]</code><strong> 大于 </strong><code>nums[i]</code> ，并且数组 <code>nums</code> 中所有元素的按位 <code>AND</code> 运算结果为 <code>x</code> 。</p>]]></description>
 </item><item>
     <title>3108：带权图里旅途的最小代价（2108 分）</title>
     <link>https://huozhixue.github.io/leetcode/3108/</link>
     <pubDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3108/</guid>
-    <description><![CDATA[力扣第 392 场周赛第 4 题 题目 给你一个 n 个节点的带权无向图，节点编号为 0 到 n - 1 。 给你一个整数 n 和一个数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui 和 vi 之间有一]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/" target="_blank" rel="noopener noreffer">力扣第 392 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个节点的带权无向图，节点编号为 <code>0</code> 到 <code>n - 1</code> 。</p>
+<p>给你一个整数 <code>n</code> 和一个数组 <code>edges</code> ，其中 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>]</code> 表示节点 <code>u<sub>i</sub></code> 和 <code>v<sub>i</sub></code> 之间有一条权值为 <code>w<sub>i</sub></code> 的无向边。</p>]]></description>
 </item><item>
     <title>3007：价值和小于等于 K 的最大数字（2258 分）</title>
     <link>https://huozhixue.github.io/leetcode/3007/</link>
     <pubDate>Sun, 14 Jan 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3007/</guid>
-    <description><![CDATA[力扣第 380 场周赛第 3 题 题目 给你一个整数 k 和一个整数 x 。整数 num 的价值是它的二进制表示中在 x，2x，3x 等位置处 设置位 的数目（从最低有效位开始）。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/" target="_blank" rel="noopener noreffer">力扣第 380 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>k</code> 和一个整数 <code>x</code> 。整数 <code>num</code> 的价值是它的二进制表示中在 <code>x</code>，<code>2x</code>，<code>3x</code> 等位置处 <strong><span data-keyword="set-bit">设置位</span></strong> 的数目（从最低有效位开始）。下面的表格包含了如何计算价值的例子。</p>]]></description>
 </item><item>
     <title>2732：找到矩阵中的好子集（2239 分）</title>
     <link>https://huozhixue.github.io/leetcode/2732/</link>
     <pubDate>Sat, 10 Jun 2023 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2732/</guid>
-    <description><![CDATA[力扣第 106 场双周赛第 4 题 题目 给你一个下标从 0 开始大小为 m x n 的二进制矩阵 grid 。 从原矩阵中选出若干行构成一个行的 非空 子集，如果子集中任何一列的和至]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-a-good-subset-of-the-matrix/" target="_blank" rel="noopener noreffer">力扣第 106 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始大小为 <code>m x n</code> 的二进制矩阵 <code>grid</code> 。</p>
+<p>从原矩阵中选出若干行构成一个行的 <strong>非空 </strong>子集，如果子集中任何一列的和至多为子集大小的一半，那么我们称这个子集是 <strong>好子集</strong>。</p>]]></description>
 </item><item>
     <title>2708：一个小组的最大实力值（1502 分）</title>
     <link>https://huozhixue.github.io/leetcode/2708/</link>
     <pubDate>Sat, 27 May 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2708/</guid>
-    <description><![CDATA[力扣第 105 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 非空 小组]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/" target="_blank" rel="noopener noreffer">力扣第 105 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 <strong>非空</strong> 小组，且这个小组的 <strong>实力值</strong> 最大，如果这个小组里的学生下标为 <code>i<sub>0</sub></code>, <code>i<sub>1</sub></code>, <code>i<sub>2</sub></code>, ... , <code>i<sub>k</sub></code> ，那么这个小组的实力值定义为 <code>nums[i<sub>0</sub>] * nums[i<sub>1</sub>] * nums[i<sub>2</sub>] * ... * nums[i<sub>k</sub>​]</code> 。</p>]]></description>
 </item><item>
     <title>2002：两个回文子序列长度的最大乘积（1869 分）</title>
     <link>https://huozhixue.github.io/leetcode/2002/</link>
     <pubDate>Sun, 12 Sep 2021 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2002/</guid>
-    <description><![CDATA[力扣第 258 场周赛第 3 题 题目 给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。两个子序列在原字符串中如果没有任何相同下]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串 <code>s</code> ，请你找到 <code>s</code> 中两个 <strong>不相交回文子序列</strong> ，使得它们长度的 <strong>乘积最大</strong> 。两个子序列在原字符串中如果没有任何相同下标的字符，则它们是 <strong>不相交</strong> 的。</p>]]></description>
 </item><item>
     <title>1994：好子集的数目（2464 分）</title>
     <link>https://huozhixue.github.io/leetcode/1994/</link>
     <pubDate>Sat, 04 Sep 2021 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1994/</guid>
-    <description><![CDATA[力扣第 60 场双周赛第 4 题 题目 给你一个整数数组 nums 。如果 nums 的一个子集中，所有元素的乘积可以表示为一个或多个 互不相同的质数 的乘积，那么我们称它为 好子]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/the-number-of-good-subsets/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 。如果 <code>nums</code> 的一个子集中，所有元素的乘积可以表示为一个或多个 <strong>互不相同的质数</strong> 的乘积，那么我们称它为 <strong>好子集</strong> 。</p>]]></description>
 </item><item>
     <title>1938：查询最大基因差（2502 分）</title>
     <link>https://huozhixue.github.io/leetcode/1938/</link>
     <pubDate>Sun, 18 Jul 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1938/</guid>
-    <description><![CDATA[力扣第 250 场周赛第 4 题 题目 给你一棵 n 个节点的有根树，节点编号从 0 到 n - 1 。每个节点的编号表示这个节点的 独一无二的基因值 （也就是说节点 x 的基因值]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-genetic-difference-query/" target="_blank" rel="noopener noreffer">力扣第 250 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵 <code>n</code> 个节点的有根树，节点编号从 <code>0</code> 到 <code>n - 1</code> 。每个节点的编号表示这个节点的 <strong>独一无二的基因值</strong> （也就是说节点 <code>x</code> 的基因值为 <code>x</code>）。两个基因值的 <strong>基因差</strong> 是两者的 <strong>异或和</strong> 。给你整数数组 <code>parents</code> ，其中 <code>parents[i]</code> 是节点 <code>i</code> 的父节点。如果节点 <code>x</code> 是树的 <strong>根</strong> ，那么 <code>parents[x] == -1</code> 。</p>]]></description>
 </item><item>
     <title>1707：与数组中元素的最大异或值（2358 分）</title>
     <link>https://huozhixue.github.io/leetcode/1707/</link>
     <pubDate>Sun, 27 Dec 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1707/</guid>
-    <description><![CDATA[力扣第 221 场周赛第 4 题 题目 给你一个由非负整数组成的数组 nums 。另有一个查询数组 queries ，其中 queries[i] = [xi, mi] 。 第 i 个查询的答案是 xi 和任何 nums 数组中不超过 mi 的元素按]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-xor-with-an-element-from-array/" target="_blank" rel="noopener noreffer">力扣第 221 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个由非负整数组成的数组 <code>nums</code> 。另有一个查询数组 <code>queries</code> ，其中 <code>queries[i] = [x<sub>i</sub>, m<sub>i</sub>]</code> 。</p>
+<p>第 <code>i</code> 个查询的答案是 <code>x<sub>i</sub></code> 和任何 <code>nums</code> 数组中不超过 <code>m<sub>i</sub></code> 的元素按位异或（<code>XOR</code>）得到的最大值。换句话说，答案是 <code>max(nums[j] XOR x<sub>i</sub>)</code> ，其中所有 <code>j</code> 均满足 <code>nums[j] &lt;= m<sub>i</sub></code> 。如果 <code>nums</code> 中的所有元素都大于 <code>m<sub>i</sub></code>，最终答案就是 <code>-1</code> 。</p>]]></description>
 </item><item>
     <title>1461：检查一个字符串是否包含所有长度为 K 的二进制子串（1504 分）</title>
     <link>https://huozhixue.github.io/leetcode/1461/</link>
     <pubDate>Sat, 30 May 2020 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1461/</guid>
-    <description><![CDATA[力扣第 27 场双周赛第 2 题 题目 给你一个二进制字符串 s 和一个整数 k 。如果所有长度为 k 的二进制字符串都是 s 的子串，请返回 true ，否则请返回 false 。 示例 1： 输]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/" target="_blank" rel="noopener noreffer">力扣第 27 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个二进制字符串 <code>s</code> 和一个整数 <code>k</code> 。如果所有长度为 <code>k</code> 的二进制字符串都是 <code>s</code> 的子串，请返回 <code>true</code> ，否则请返回 <code>false</code> 。</p>]]></description>
 </item></channel>
 </rss>

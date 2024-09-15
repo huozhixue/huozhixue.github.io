@@ -9,69 +9,199 @@
     <pubDate>Fri, 09 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0618/</guid>
-    <description><![CDATA[力扣第 618 题 题目 表： student +-------------+---------+ | Column Name | Type | +-------------+---------+ | name | varchar | | continent | varchar | +-------------+---------+ 该表没有主键。它可能包含重复的行。 该表的每一行表示学生的名字和他们来自的大陆。 一所]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/students-report-by-geography/" target="_blank" rel="noopener noreffer">力扣第 618 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>表： <code>student</code> </p>
+<pre>
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| name        | varchar |
+| continent   | varchar |
++-------------+---------+
+该表没有主键。它可能包含重复的行。
+该表的每一行表示学生的名字和他们来自的大陆。
+</pre>
+<p>一所学校有来自亚洲、欧洲和美洲的学生。</p>]]></description>
 </item><item>
     <title>0615：平均工资：部门与公司比较（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0615/</link>
     <pubDate>Tue, 06 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0615/</guid>
-    <description><![CDATA[力扣第 615 题 题目 给如下两个表，写一个查询语句，求出在每一个工资发放日，每个部门的平均工资与公司的平均工资的比较结果 （高 / 低 / 相同）。 表： salary | id]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/average-salary-departments-vs-company/" target="_blank" rel="noopener noreffer">力扣第 615 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给如下两个表，写一个查询语句，求出在每一个工资发放日，每个部门的平均工资与公司的平均工资的比较结果 （高 / 低 / 相同）。</p>]]></description>
 </item><item>
     <title>0614：二级关注者（★）</title>
     <link>https://huozhixue.github.io/leetcode/0614/</link>
     <pubDate>Mon, 05 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0614/</guid>
-    <description><![CDATA[力扣第 614 题 题目 在 facebook 中，表 follow 会有 2 个字段： followee, follower ，分别表示被关注者和关注者。 请写一个 sql 查询语句，对每一个关注者，查询关注他的关注者的数目。 比方说]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/second-degree-follower/" target="_blank" rel="noopener noreffer">力扣第 614 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>在 facebook 中，表 <code>follow</code> 会有 2 个字段： <strong>followee</strong>, <strong>follower</strong> ，分别表示被关注者和关注者。</p>
+<p>请写一个 sql 查询语句，对每一个关注者，查询关注他的关注者的数目。</p>]]></description>
 </item><item>
     <title>0613：直线上的最近距离</title>
     <link>https://huozhixue.github.io/leetcode/0613/</link>
     <pubDate>Sun, 04 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0613/</guid>
-    <description><![CDATA[力扣第 613 题 题目 表 point 保存了一些点在 x 轴上的坐标，这些坐标都是整数。 写一个查询语句，找到这些点中最近两个点之间的距离。 | x | |-----| | -1 | | 0 | | 2 |]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/shortest-distance-in-a-line/" target="_blank" rel="noopener noreffer">力扣第 613 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>表 <code>point</code> 保存了一些点在 x 轴上的坐标，这些坐标都是整数。</p>
+<p>写一个查询语句，找到这些点中最近两个点之间的距离。</p>
+<pre>| x   |
+|-----|
+| -1  |
+| 0   |
+| 2   |
+</pre>
+<p>最近距离显然是 &#39;1&#39; ，是点 &#39;-1&#39; 和 &#39;0&#39; 之间的距离。所以输出应该如下：</p>]]></description>
 </item><item>
     <title>0612：平面上的最近距离（★）</title>
     <link>https://huozhixue.github.io/leetcode/0612/</link>
     <pubDate>Sat, 03 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0612/</guid>
-    <description><![CDATA[力扣第 612 题 题目 Point2D 表： +-------------+------+ | Column Name | Type | +-------------+------+ | x | int | | y | int | +-------------+------+ (x, y) 是这张表的主键 这张表的每一行表示 X-Y 平面上一个点的位置 p1(x1, y1) 和 p2(x2, y2) 这两点之间的距离]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/shortest-distance-in-a-plane/" target="_blank" rel="noopener noreffer">力扣第 612 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><code>Point2D</code> 表：</p>
+<div class="original__bRMd">
+<div>
+<pre>
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| x           | int  |
+| y           | int  |
++-------------+------+
+(x, y) 是这张表的主键
+这张表的每一行表示 X-Y 平面上一个点的位置
+</pre>
+<p><code>p<sub>1</sub>(x<sub>1</sub>, y<sub>1</sub>)</code> 和 <code>p<sub>2</sub>(x<sub>2</sub>, y<sub>2</sub>)</code> 这两点之间的距离是 <code>sqrt((x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>)</code> 。</p>]]></description>
 </item><item>
     <title>0603：连续空余座位</title>
     <link>https://huozhixue.github.io/leetcode/0603/</link>
     <pubDate>Thu, 25 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0603/</guid>
-    <description><![CDATA[力扣第 603 题 题目 表: Cinema +-------------+------+ | Column Name | Type | +-------------+------+ | seat_id | int | | free | bool | +-------------+------+ Seat_id是该表的自动递增主键列。 该表的每一行表示第i个座位是否空闲。1表示空]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/consecutive-available-seats/" target="_blank" rel="noopener noreffer">力扣第 603 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>表: <code>Cinema</code></p>
+<pre>
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| seat_id     | int  |
+| free        | bool |
++-------------+------+
+Seat_id是该表的自动递增主键列。
+该表的每一行表示第i个座位是否空闲。1表示空闲，0表示被占用。</pre>
+<p>编写一个SQL查询来报告电影院所有连续可用的座位。</p>]]></description>
 </item><item>
     <title>0597：好友申请 I：总体通过率</title>
     <link>https://huozhixue.github.io/leetcode/0597/</link>
     <pubDate>Fri, 19 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0597/</guid>
-    <description><![CDATA[力扣第 597 题 题目 表：FriendRequest +----------------+---------+ | Column Name | Type | +----------------+---------+ | sender_id | int | | send_to_id | int | | request_date | date | +----------------+---------+ 此表没有主键，它可能包含重复项。 该表包含发送请求]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/friend-requests-i-overall-acceptance-rate/" target="_blank" rel="noopener noreffer">力扣第 597 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>表：<code>FriendRequest</code></p>
+<pre>
++----------------+---------+
+| Column Name    | Type    |
++----------------+---------+
+| sender_id      | int     |
+| send_to_id     | int     |
+| request_date   | date    |
++----------------+---------+
+此表没有主键，它可能包含重复项。
+该表包含发送请求的用户的 ID ，接受请求的用户的 ID 以及请求的日期。
+</pre>
+<p>表：<code>RequestAccepted</code></p>]]></description>
 </item><item>
     <title>0580：统计各专业学生人数（★）</title>
     <link>https://huozhixue.github.io/leetcode/0580/</link>
     <pubDate>Tue, 02 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0580/</guid>
-    <description><![CDATA[力扣第 580 题 题目 表: Student +--------------+---------+ | Column Name | Type | +--------------+---------+ | student_id | int | | student_name | varchar | | gender | varchar | | dept_id | int | +--------------+---------+ Student_id是该表的主键。 dept_id是Depart]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-student-number-in-departments/" target="_blank" rel="noopener noreffer">力扣第 580 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>表: <code>Student</code></p>
+<pre>
++--------------+---------+
+| Column Name  | Type    |
++--------------+---------+
+| student_id   | int     |
+| student_name | varchar |
+| gender       | varchar |
+| dept_id      | int     |
++--------------+---------+
+Student_id是该表的主键。
+dept_id是Department表中dept_id的外键。
+该表的每一行都表示学生的姓名、性别和所属系的id。
+</pre>
+<p>表: <code>Department</code></p>]]></description>
 </item><item>
     <title>0579：查询员工的累计薪水（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0579/</link>
     <pubDate>Mon, 01 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0579/</guid>
-    <description><![CDATA[力扣第 579 题 题目 Employee 表保存了一年内的薪水信息。 请你编写 SQL 语句，对于每个员工，查询他除最近一个月（即最大月）之外，剩下每个月的近三个月的累计薪水（]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-cumulative-salary-of-an-employee/" target="_blank" rel="noopener noreffer">力扣第 579 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><strong>Employee</strong> 表保存了一年内的薪水信息。</p>
+<p>请你编写 SQL 语句，对于每个员工，查询他除最近一个月（即最大月）之外，剩下每个月的近三个月的累计薪水（不足三个月也要计算）。</p>]]></description>
 </item><item>
     <title>0578：查询回答率最高的问题（★）</title>
     <link>https://huozhixue.github.io/leetcode/0578/</link>
     <pubDate>Sun, 31 Jul 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0578/</guid>
-    <description><![CDATA[力扣第 578 题 题目 SurveyLog 表： +-------------+------+ | Column Name | Type | +-------------+------+ | id | int | | action | ENUM | | question_id | int | | answer_id | int | | q_num | int | | timestamp | int | +-------------+------+ 这张表没有主键，其中可能包含重复项。 action 是一]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/get-highest-answer-rate-question/" target="_blank" rel="noopener noreffer">力扣第 578 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><code>SurveyLog</code> 表：</p>
+<div class="original__bRMd">
+<div>
+<pre>
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| id          | int  |
+| action      | ENUM |
+| question_id | int  |
+| answer_id   | int  |
+| q_num       | int  |
+| timestamp   | int  |
++-------------+------+
+这张表没有主键，其中可能包含重复项。
+action 是一个 ENUM 数据，可以是 "show"、"answer" 或者 "skip" 。
+这张表的每一行表示：ID = id 的用户对 question_id 的问题在 timestamp 时间进行了 action 操作。
+如果用户对应的操作是 "answer" ，answer_id 将会是对应答案的 id ，否则，值为 null 。
+q_num 是该问题在当前会话中的数字顺序。
+</pre>
+<p><strong>回答率</strong> 是指：同一问题编号中回答次数占显示次数的比率。</p>]]></description>
 </item></channel>
 </rss>

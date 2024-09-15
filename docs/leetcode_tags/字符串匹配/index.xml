@@ -9,69 +9,122 @@
     <pubDate>Sat, 20 Feb 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1764/</guid>
-    <description><![CDATA[力扣第 46 场双周赛第 2 题 题目 给你一个长度为 n 的二维整数数组 groups ，同时给你一个整数数组 nums 。 你是否可以从 nums 中选出 n 个 不相交 的子数组，使得第 i 个子数组]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/" target="_blank" rel="noopener noreffer">力扣第 46 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个长度为 <code>n</code> 的二维整数数组 <code>groups</code> ，同时给你一个整数数组 <code>nums</code> 。</p>
+<p>你是否可以从 <code>nums</code> 中选出 <code>n</code> 个 <strong>不相交</strong> 的子数组，使得第 <code>i</code> 个子数组与 <code>groups[i]</code> （下标从 <strong>0</strong> 开始）完全相同，且如果 <code>i > 0</code> ，那么第 <code>(i-1)</code> 个子数组在 <code>nums</code> 中出现的位置在第 <code>i</code> 个子数组前面。（也就是说，这些子数组在 <code>nums</code> 中出现的顺序需要与 <code>groups</code> 顺序相同）</p>]]></description>
 </item><item>
     <title>1668：最大重复子字符串（1395 分）</title>
     <link>https://huozhixue.github.io/leetcode/1668/</link>
     <pubDate>Sat, 28 Nov 2020 22:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1668/</guid>
-    <description><![CDATA[力扣第 40 场双周赛第 1 题 题目 给你一个字符串 sequence ，如果字符串 word 连续重复 k 次形成的字符串是 sequence 的一个子字符串，那么单词 word 的 重复值为 k 。单词 word 的 最大重复]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-repeating-substring/" target="_blank" rel="noopener noreffer">力扣第 40 场双周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串 <code>sequence</code> ，如果字符串 <code>word</code> 连续重复 <code>k</code> 次形成的字符串是 <code>sequence</code> 的一个子字符串，那么单词 <code>word</code> 的 <strong>重复值为 <code>k</code></strong><strong> </strong>。单词 <code>word</code> 的 <strong>最</strong><strong>大重复值</strong> 是单词 <code>word</code> 在 <code>sequence</code> 中最大的重复值。如果 <code>word</code> 不是 <code>sequence</code> 的子串，那么重复值 <code>k</code> 为 <code>0</code> 。</p>]]></description>
 </item><item>
     <title>1455：检查单词是否为句中其他单词的前缀（1125 分）</title>
     <link>https://huozhixue.github.io/leetcode/1455/</link>
     <pubDate>Sun, 24 May 2020 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1455/</guid>
-    <description><![CDATA[力扣第 190 场周赛第 1 题 题目 给你一个字符串 sentence 作为句子并指定检索词为 searchWord ，其中句子由若干用 单个空格 分隔的单词组成。请你检查检索词 searchWord 是否为句子 sentence 中任意]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/" target="_blank" rel="noopener noreffer">力扣第 190 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串 <code>sentence</code> 作为句子并指定检索词为 <code>searchWord</code> ，其中句子由若干用 <strong>单个空格</strong> 分隔的单词组成。请你检查检索词 <code>searchWord</code> 是否为句子 <code>sentence</code> 中任意单词的前缀。</p>]]></description>
 </item><item>
     <title>1408：数组中的字符串匹配（1223 分）</title>
     <link>https://huozhixue.github.io/leetcode/1408/</link>
     <pubDate>Sun, 12 Apr 2020 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1408/</guid>
-    <description><![CDATA[力扣第 184 场周赛第 1 题 题目 给你一个字符串数组 words ，数组中的每个字符串都可以看作是一个单词。请你按 任意 顺序返回 words 中是其他单词的子字符串的所有单词。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/string-matching-in-an-array/" target="_blank" rel="noopener noreffer">力扣第 184 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串数组 <code>words</code> ，数组中的每个字符串都可以看作是一个单词。请你按 <strong>任意</strong> 顺序返回 <code>words</code> 中是其他单词的子字符串的所有单词。</p>]]></description>
 </item><item>
     <title>1392：最长快乐前缀（1876 分）</title>
     <link>https://huozhixue.github.io/leetcode/1392/</link>
     <pubDate>Sun, 22 Mar 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1392/</guid>
-    <description><![CDATA[力扣第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-happy-prefix/" target="_blank" rel="noopener noreffer">力扣第 181 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><strong>「快乐前缀」</strong> 是在原字符串中既是 <strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
+<p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串<meta charset="UTF-8" /> <code>""</code> 。</p>]]></description>
 </item><item>
     <title>1023：驼峰式匹配（1537 分）</title>
     <link>https://huozhixue.github.io/leetcode/1023/</link>
     <pubDate>Sun, 07 Apr 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1023/</guid>
-    <description><![CDATA[力扣第 131 场周赛第 3 题 题目 给你一个字符串数组 queries，和一个表示模式的字符串 pattern，请你返回一个布尔数组 answer 。只有在待查项 queries[i] 与模式]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/camelcase-matching/" target="_blank" rel="noopener noreffer">力扣第 131 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串数组 <code>queries</code>，和一个表示模式的字符串 <code>pattern</code>，请你返回一个布尔数组 <code>answer</code> 。只有在待查项 <code>queries[i]</code> 与模式串 <code>pattern</code> 匹配时， <code>answer[i]</code> 才为 <code>true</code>，否则为 <code>false</code>。</p>]]></description>
 </item><item>
     <title>0796：旋转字符串（1167 分）</title>
     <link>https://huozhixue.github.io/leetcode/0796/</link>
     <pubDate>Mon, 06 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0796/</guid>
-    <description><![CDATA[力扣第 796 题 题目 给定两个字符串, s 和 goal。如果在若干次旋转操作之后，s 能变成 goal ，那么返回 true 。 s 的 旋转操作 就是将 s 最左边的字符移动到最右边。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/rotate-string/" target="_blank" rel="noopener noreffer">力扣第 796 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定两个字符串, <code>s</code> 和 <code>goal</code>。如果在若干次旋转操作之后，<code>s</code> 能变成 <code>goal</code> ，那么返回 <code>true</code> 。</p>
+<p><code>s</code> 的 <strong>旋转操作</strong> 就是将 <code>s</code> 最左边的字符移动到最右边。 </p>]]></description>
 </item><item>
     <title>0686：重复叠加字符串匹配（★）</title>
     <link>https://huozhixue.github.io/leetcode/0686/</link>
     <pubDate>Wed, 16 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0686/</guid>
-    <description><![CDATA[力扣第 686 题 题目 给定两个字符串 a 和 b，寻找重复叠加字符串 a 的最小次数，使得字符串 b 成为叠加后的字符串 a 的子串，如果不存在则返回 -1。 注意：字符]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/repeated-string-match/" target="_blank" rel="noopener noreffer">力扣第 686 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定两个字符串 <code>a</code> 和 <code>b</code>，寻找重复叠加字符串 <code>a</code> 的最小次数，使得字符串 <code>b</code> 成为叠加后的字符串 <code>a</code> 的子串，如果不存在则返回 <code>-1</code>。</p>]]></description>
 </item><item>
     <title>0572：另一棵树的子树</title>
     <link>https://huozhixue.github.io/leetcode/0572/</link>
     <pubDate>Mon, 25 Jul 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0572/</guid>
-    <description><![CDATA[力扣第 572 题 题目 给你两棵二叉树 root 和 subRoot 。检验 root 中是否包含和 subRoot 具有相同结构和节点值的子树。如果存在，返回 true ；否则，返回 false 。 二叉树 tree 的一棵子树包括 tree]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/subtree-of-another-tree/" target="_blank" rel="noopener noreffer">力扣第 572 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<div class="original__bRMd">
+<div>
+<p>给你两棵二叉树 <code>root</code> 和 <code>subRoot</code> 。检验 <code>root</code> 中是否包含和 <code>subRoot</code> 具有相同结构和节点值的子树。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p>二叉树 <code>tree</code> 的一棵子树包括 <code>tree</code> 的某个节点和这个节点的所有后代节点。<code>tree</code> 也可以看做它自身的一棵子树。</p>]]></description>
 </item><item>
     <title>0459：重复的子字符串</title>
     <link>https://huozhixue.github.io/leetcode/0459/</link>
     <pubDate>Sun, 03 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0459/</guid>
-    <description><![CDATA[力扣第 459 题 题目 给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。 示例 1: 输入: s = "abab" 输出: true 解释: 可由子串 "ab" 重复两次构成。 示]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/repeated-substring-pattern/" target="_blank" rel="noopener noreffer">力扣第 459 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个非空的字符串<meta charset="UTF-8" /> <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入:</strong> s = "abab"
+<strong>输出:</strong> true
+<strong>解释:</strong> 可由子串 "ab" 重复两次构成。
+</pre>
+<p><strong>示例 2:</strong></p>]]></description>
 </item></channel>
 </rss>

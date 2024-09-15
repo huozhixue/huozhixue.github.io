@@ -9,69 +9,116 @@
     <pubDate>Sat, 29 Apr 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2658/</guid>
-    <description><![CDATA[力扣第 103 场双周赛第 3 题 题目 给你一个下标从 0 开始大小为 m x n 的二维整数数组 grid ，其中下标在 (r, c) 处的整数表示： 如果 grid[r][c] = 0 ，那么它是一块 陆地 。 如果 grid[r][c]]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 103 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始大小为 <code>m x n</code> 的二维整数数组 <code>grid</code> ，其中下标在 <code>(r, c)</code> 处的整数表示：</p>
+<ul>
+<li>如果 <code>grid[r][c] = 0</code> ，那么它是一块 <strong>陆地</strong> 。</li>
+<li>如果 <code>grid[r][c] &gt; 0</code> ，那么它是一块 <strong>水域</strong> ，且包含 <code>grid[r][c]</code> 条鱼。</li>
+</ul>
+<p>一位渔夫可以从任意 <strong>水域</strong> 格子 <code>(r, c)</code> 出发，然后执行以下操作任意次：</p>]]></description>
 </item><item>
     <title>2385：感染二叉树需要的总时间（1711 分）</title>
     <link>https://huozhixue.github.io/leetcode/2385/</link>
     <pubDate>Sun, 21 Aug 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2385/</guid>
-    <description><![CDATA[力扣第 307 场周赛第 3 题 题目 给你一棵二叉树的根节点 root ，二叉树中节点的值 互不相同 。另给你一个整数 start 。在第 0 分钟，感染 将会从值为 start 的节点开始爆发。 每]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/" target="_blank" rel="noopener noreffer">力扣第 307 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵二叉树的根节点 <code>root</code> ，二叉树中节点的值 <strong>互不相同</strong> 。另给你一个整数 <code>start</code> 。在第 <code>0</code> 分钟，<strong>感染</strong> 将会从值为 <code>start</code> 的节点开始爆发。</p>]]></description>
 </item><item>
     <title>2360：图中的最长环（1897 分）</title>
     <link>https://huozhixue.github.io/leetcode/2360/</link>
     <pubDate>Sun, 31 Jul 2022 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2360/</guid>
-    <description><![CDATA[力扣第 304 场周赛第 4 题 题目 给你一个 n 个节点的 有向图 ，节点编号为 0 到 n - 1 ，其中每个节点 至多 有一条出边。 图用一个大小为 n 下标从 0 开始的数组 edges 表示]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/" target="_blank" rel="noopener noreffer">力扣第 304 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个节点的 <b>有向图</b> ，节点编号为 <code>0</code> 到 <code>n - 1</code> ，其中每个节点 <strong>至多</strong> 有一条出边。</p>
+<p>图用一个大小为 <code>n</code> 下标从<strong> 0</strong> 开始的数组 <code>edges</code> 表示，节点 <code>i</code> 到节点 <code>edges[i]</code> 之间有一条有向边。如果节点 <code>i</code> 没有出边，那么 <code>edges[i] == -1</code> 。</p>]]></description>
 </item><item>
     <title>2192：有向无环图中一个节点的所有祖先（1787 分）</title>
     <link>https://huozhixue.github.io/leetcode/2192/</link>
     <pubDate>Sat, 05 Mar 2022 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2192/</guid>
-    <description><![CDATA[力扣第 73 场双周赛第 3 题 题目 给你一个正整数 n ，它表示一个 有向无环图 中节点的数目，节点编号为 0 到 n - 1 （包括两者）。 给你一个二维整数数组 edges ，其中]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/" target="_blank" rel="noopener noreffer">力扣第 73 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个正整数 <code>n</code> ，它表示一个 <strong>有向无环图</strong> 中节点的数目，节点编号为 <code>0</code> 到 <code>n - 1</code> （包括两者）。</p>
+<p>给你一个二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> 表示图中一条从 <code>from<sub>i</sub></code> 到 <code>to<sub>i</sub></code> 的单向边。</p>]]></description>
 </item><item>
     <title>2127：参加会议的最多员工数（2449 分）</title>
     <link>https://huozhixue.github.io/leetcode/2127/</link>
     <pubDate>Sun, 02 Jan 2022 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2127/</guid>
-    <description><![CDATA[力扣第 274 场周赛第 4 题 题目 一个公司准备组织一场会议，邀请名单上有 n 位员工。公司准备了一张 圆形 的桌子，可以坐下 任意数目 的员工。 员工编号为 0 到 n -]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/" target="_blank" rel="noopener noreffer">力扣第 274 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>一个公司准备组织一场会议，邀请名单上有 <code>n</code> 位员工。公司准备了一张 <strong>圆形</strong> 的桌子，可以坐下 <strong>任意数目</strong> 的员工。</p>]]></description>
 </item><item>
     <title>2097：合法重新排列数对（2650 分）</title>
     <link>https://huozhixue.github.io/leetcode/2097/</link>
     <pubDate>Sun, 05 Dec 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2097/</guid>
-    <description><![CDATA[力扣第 270 场周赛第 4 题 题目 给你一个下标从 0 开始的二维整数数组 pairs ，其中 pairs[i] = [starti, endi] 。如果 pairs 的一个重新排列，满足对每一个下标 i （ 1 &lt;= i &lt; pairs.length ）都有 endi-1 == starti]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/valid-arrangement-of-pairs/" target="_blank" rel="noopener noreffer">力扣第 270 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的二维整数数组 <code>pairs</code> ，其中 <code>pairs[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 。如果 <code>pairs</code> 的一个重新排列，满足对每一个下标 <code>i</code> （ <code>1 &lt;= i &lt; pairs.length</code> ）都有 <code>end<sub>i-1</sub> == start<sub>i</sub></code><sub> </sub>，那么我们就认为这个重新排列是 <code>pairs</code> 的一个 <strong>合法重新排列</strong> 。</p>]]></description>
 </item><item>
     <title>2003：每棵子树内缺失的最小基因值（2415 分）</title>
     <link>https://huozhixue.github.io/leetcode/2003/</link>
     <pubDate>Sun, 12 Sep 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2003/</guid>
-    <description><![CDATA[力扣第 258 场周赛第 4 题 题目 有一棵根节点为 0 的 家族树 ，总共包含 n 个节点，节点编号为 0 到 n - 1 。给你一个下标从 0 开始的整数数组 parents ，其中 parents[i] 是节点 i 的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有一棵根节点为 <code>0</code> 的 <strong>家族树</strong> ，总共包含 <code>n</code> 个节点，节点编号为 <code>0</code> 到 <code>n - 1</code> 。给你一个下标从 <strong>0</strong> 开始的整数数组 <code>parents</code> ，其中 <code>parents[i]</code> 是节点 <code>i</code> 的父节点。由于节点 <code>0</code> 是 <strong>根</strong> ，所以 <code>parents[0] == -1</code> 。</p>]]></description>
 </item><item>
     <title>1993：树上的操作（1861 分）</title>
     <link>https://huozhixue.github.io/leetcode/1993/</link>
     <pubDate>Sat, 04 Sep 2021 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1993/</guid>
-    <description><![CDATA[力扣第 60 场双周赛第 3 题 题目 给你一棵 n 个节点的树，编号从 0 到 n - 1 ，以父节点数组 parent 的形式给出，其中 parent[i] 是第 i 个节点的父节点。树的根节点为 0 号节点]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/operations-on-tree/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵 <code>n</code> 个节点的树，编号从 <code>0</code> 到 <code>n - 1</code> ，以父节点数组 <code>parent</code> 的形式给出，其中 <code>parent[i]</code> 是第 <code>i</code> 个节点的父节点。树的根节点为 <code>0</code> 号节点，所以 <code>parent[0] = -1</code> ，因为它没有父节点。你想要设计一个数据结构实现树里面对节点的加锁，解锁和升级操作。</p>]]></description>
 </item><item>
     <title>1992：找到所有的农场组（1539 分）</title>
     <link>https://huozhixue.github.io/leetcode/1992/</link>
     <pubDate>Sat, 04 Sep 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1992/</guid>
-    <description><![CDATA[力扣第 60 场双周赛第 2 题 题目 给你一个下标从 0 开始，大小为 m x n 的二进制矩阵 land ，其中 0 表示一单位的森林土地，1 表示一单位的农场土地。 为了让农场保]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-all-groups-of-farmland/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始，大小为 <code>m x n</code> 的二进制矩阵 <code>land</code> ，其中 <code>0</code> 表示一单位的森林土地，<code>1</code> 表示一单位的农场土地。</p>]]></description>
 </item><item>
     <title>1766：互质树（2231 分）</title>
     <link>https://huozhixue.github.io/leetcode/1766/</link>
     <pubDate>Sat, 20 Feb 2021 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1766/</guid>
-    <description><![CDATA[力扣第 46 场双周赛第 4 题 题目 给你一个 n 个节点的树（也就是一个无环连通无向图），节点编号从 0 到 n - 1 ，且恰好有 n - 1 条边，每个节点有一个值。树的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/tree-of-coprimes/" target="_blank" rel="noopener noreffer">力扣第 46 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个节点的树（也就是一个无环连通无向图），节点编号从 <code>0</code> 到 <code>n - 1</code> ，且恰好有 <code>n - 1</code> 条边，每个节点有一个值。树的 <strong>根节点</strong> 为 0 号点。</p>]]></description>
 </item></channel>
 </rss>

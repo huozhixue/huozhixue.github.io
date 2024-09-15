@@ -9,69 +9,120 @@
     <pubDate>Sun, 21 Aug 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2385/</guid>
-    <description><![CDATA[力扣第 307 场周赛第 3 题 题目 给你一棵二叉树的根节点 root ，二叉树中节点的值 互不相同 。另给你一个整数 start 。在第 0 分钟，感染 将会从值为 start 的节点开始爆发。 每]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/" target="_blank" rel="noopener noreffer">力扣第 307 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵二叉树的根节点 <code>root</code> ，二叉树中节点的值 <strong>互不相同</strong> 。另给你一个整数 <code>start</code> 。在第 <code>0</code> 分钟，<strong>感染</strong> 将会从值为 <code>start</code> 的节点开始爆发。</p>]]></description>
 </item><item>
     <title>1457：二叉树中的伪回文路径（1405 分）</title>
     <link>https://huozhixue.github.io/leetcode/1457/</link>
     <pubDate>Sun, 24 May 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1457/</guid>
-    <description><![CDATA[力扣第 190 场周赛第 3 题 题目 给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「伪回文」的，当它满足：路径经过的所有节点值的排列中]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 190 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「<strong>伪回文</strong>」的，当它满足：路径经过的所有节点值的排列中，存在一个回文序列。</p>]]></description>
 </item><item>
     <title>1104：二叉树寻路（1544 分）</title>
     <link>https://huozhixue.github.io/leetcode/1104/</link>
     <pubDate>Sun, 30 Jun 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1104/</guid>
-    <description><![CDATA[力扣第 143 场周赛第 2 题 题目 在一棵无限的二叉树上，每个节点都有两个子节点，树中的节点 逐行 依次按 &ldquo;之&rdquo; 字形进行标记。 如下图]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/path-in-zigzag-labelled-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 143 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>在一棵无限的二叉树上，每个节点都有两个子节点，树中的节点 <strong>逐行</strong> 依次按 &ldquo;之&rdquo; 字形进行标记。</p>]]></description>
 </item><item>
     <title>1080：根到叶路径上的不足节点（1804 分）</title>
     <link>https://huozhixue.github.io/leetcode/1080/</link>
     <pubDate>Sun, 09 Jun 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1080/</guid>
-    <description><![CDATA[力扣第 140 场周赛第 3 题 题目 给你二叉树的根节点 root 和一个整数 limit ，请你同时删除树中所有 不足节点 ，并返回最终二叉树的根节点。 假如通过节点 node 的每种可能的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/insufficient-nodes-in-root-to-leaf-paths/" target="_blank" rel="noopener noreffer">力扣第 140 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你二叉树的根节点 <code>root</code> 和一个整数 <code>limit</code> ，请你同时删除树中所有 <strong>不足节点 </strong>，并返回最终二叉树的根节点。</p>
+<p>假如通过节点 <code>node</code> 的每种可能的 “根-叶” 路径上值的总和全都小于给定的 <code>limit</code>，则该节点被称之为<strong> 不足节点 </strong>，需要被删除。</p>]]></description>
 </item><item>
     <title>1038：从二叉搜索树到更大和树（1374 分）</title>
     <link>https://huozhixue.github.io/leetcode/1038/</link>
     <pubDate>Sun, 05 May 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1038/</guid>
-    <description><![CDATA[力扣第 135 场周赛第 2 题 题目 给定一个二叉搜索树 root (BST)，请将它的每个节点的值替换成树中大于或者等于该节点值的所有节点值之和。 提醒一下， 二叉搜]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/" target="_blank" rel="noopener noreffer">力扣第 135 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">给定一个二叉搜索树</font></span></span></span></span> <code>root</code> (BST)<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">，请将它的每个</font></span></span></span></span>节点<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">的值替换成树中大于或者等于该</font></span></span></span></span>节点<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">值的所有</font></span></span></span></span>节点<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">值之和。</font></span></span></span></span></p>
+<p>提醒一下， <em>二叉搜索树</em> 满足下列约束条件：</p>
+<ul>
+<li>节点的左子树仅包含键<strong> 小于 </strong>节点键的节点。</li>
+<li>节点的右子树仅包含键<strong> 大于</strong> 节点键的节点。</li>
+<li>左右子树也必须是二叉搜索树。</li>
+</ul>
+<p><strong>示例 1：</strong></p>]]></description>
 </item><item>
     <title>1028：从先序遍历还原二叉树（1797 分）</title>
     <link>https://huozhixue.github.io/leetcode/1028/</link>
     <pubDate>Sun, 14 Apr 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1028/</guid>
-    <description><![CDATA[力扣第 132 场周赛第 4 题 题目 我们从二叉树的根节点 root 开始进行深度优先搜索。 在遍历中的每个节点处，我们输出 D 条短划线（其中 D 是该节点的深度），然后输]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/recover-a-tree-from-preorder-traversal/" target="_blank" rel="noopener noreffer">力扣第 132 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>我们从二叉树的根节点 <code>root</code> 开始进行深度优先搜索。</p>
+<p>在遍历中的每个节点处，我们输出 <code>D</code> 条短划线（其中 <code>D</code> 是该节点的深度），然后输出该节点的值。（<em>如果节点的深度为 <code>D</code>，则其直接子节点的深度为 <code>D + 1</code>。根节点的深度为 <code>0</code>）。</em></p>]]></description>
 </item><item>
     <title>1026：节点与其祖先之间的最大差值（1446 分）</title>
     <link>https://huozhixue.github.io/leetcode/1026/</link>
     <pubDate>Sun, 14 Apr 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1026/</guid>
-    <description><![CDATA[力扣第 132 场周赛第 2 题 题目 给定二叉树的根节点 root，找出存在于 不同 节点 A 和 B 之间的最大值 V，其中 V = |A.val - B.val|，且 A 是 B 的祖先。 （如果]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-difference-between-node-and-ancestor/" target="_blank" rel="noopener noreffer">力扣第 132 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定二叉树的根节点 <code>root</code>，找出存在于 <strong>不同</strong> 节点 <code>A</code> 和 <code>B</code> 之间的最大值 <code>V</code>，其中 <code>V = |A.val - B.val|</code>，且 <code>A</code> 是 <code>B</code> 的祖先。</p>]]></description>
 </item><item>
     <title>0894：所有可能的真二叉树（1784 分）</title>
     <link>https://huozhixue.github.io/leetcode/0894/</link>
     <pubDate>Sun, 26 Aug 2018 09:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0894/</guid>
-    <description><![CDATA[力扣第 99 场周赛第 3 题 题目 给你一个整数 n ，请你找出所有可能含 n 个节点的 真二叉树 ，并以列表形式返回。答案中每棵树的每个节点都必须符合 Node.val == 0 。 答案]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/all-possible-full-binary-trees/" target="_blank" rel="noopener noreffer">力扣第 99 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>n</code> ，请你找出所有可能含 <code>n</code> 个节点的 <strong>真二叉树</strong> ，并以列表形式返回。答案中每棵树的每个节点都必须符合 <code>Node.val == 0</code> 。</p>]]></description>
 </item><item>
     <title>0889：根据前序和后序遍历构造二叉树（1731 分）</title>
     <link>https://huozhixue.github.io/leetcode/0889/</link>
     <pubDate>Sun, 19 Aug 2018 09:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0889/</guid>
-    <description><![CDATA[力扣第 98 场周赛第 3 题 题目 给定两个整数数组，preorder 和 postorder ，其中 preorder 是一个具有 无重复 值的二叉树的前序遍历，postorder 是同一棵树的后]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/" target="_blank" rel="noopener noreffer">力扣第 98 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定两个整数数组，<code>preorder</code> 和 <code>postorder</code> ，其中 <code>preorder</code> 是一个具有 <strong>无重复</strong> 值的二叉树的前序遍历，<code>postorder</code> 是同一棵树的后序遍历，重构并返回二叉树。</p>]]></description>
 </item><item>
     <title>0872：叶子相似的树（1287 分）</title>
     <link>https://huozhixue.github.io/leetcode/0872/</link>
     <pubDate>Sun, 22 Jul 2018 09:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0872/</guid>
-    <description><![CDATA[力扣第 94 场周赛第 1 题 题目 请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。 举个例子，如上图所示，给定一棵叶值序]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/leaf-similar-trees/" target="_blank" rel="noopener noreffer">力扣第 94 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 <strong>叶值序列 </strong>。</p>
+<p></p>
+<p>举个例子，如上图所示，给定一棵叶值序列为 <code>(6, 7, 4, 9, 8)</code> 的树。</p>]]></description>
 </item></channel>
 </rss>

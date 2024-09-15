@@ -9,69 +9,119 @@
     <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2398/</guid>
-    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-robots-within-budget/" target="_blank" rel="noopener noreffer">力扣第 86 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你有 <code>n</code> 个机器人，给你两个下标从 <strong>0</strong> 开始的整数数组 <code>chargeTimes</code> 和 <code>runningCosts</code> ，两者长度都为 <code>n</code> 。第 <code>i</code> 个机器人充电时间为 <code>chargeTimes[i]</code> 单位时间，花费 <code>runningCosts[i]</code> 单位时间运行。再给你一个整数 <code>budget</code> 。</p>]]></description>
 </item><item>
     <title>1825：求出 MK 平均值（2395 分）</title>
     <link>https://huozhixue.github.io/leetcode/1825/</link>
     <pubDate>Sun, 11 Apr 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1825/</guid>
-    <description><![CDATA[力扣第 236 场周赛第 4 题 题目 给你两个整数 m 和 k ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 MK 平均值 。 MK 平均值 按照如下步骤]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/finding-mk-average/" target="_blank" rel="noopener noreffer">力扣第 236 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个整数 <code>m</code> 和 <code>k</code> ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 <b>MK 平均值</b> 。</p>
+<p><strong>MK 平均值</strong> 按照如下步骤计算：</p>]]></description>
 </item><item>
     <title>1823：找出游戏的获胜者（1412 分）</title>
     <link>https://huozhixue.github.io/leetcode/1823/</link>
     <pubDate>Sun, 11 Apr 2021 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1823/</guid>
-    <description><![CDATA[力扣第 236 场周赛第 2 题 题目 共有 n 名小伙伴一起做游戏。小伙伴们围成一圈，按 顺时针顺序 从 1 到 n 编号。确切地说，从第 i 名小伙伴顺时针移动一位会到达第]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-the-winner-of-the-circular-game/" target="_blank" rel="noopener noreffer">力扣第 236 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>共有 <code>n</code> 名小伙伴一起做游戏。小伙伴们围成一圈，按 <strong>顺时针顺序</strong> 从 <code>1</code> 到 <code>n</code> 编号。确切地说，从第 <code>i</code> 名小伙伴顺时针移动一位会到达第 <code>(i+1)</code> 名小伙伴的位置，其中 <code>1 &lt;= i &lt; n</code> ，从第 <code>n</code> 名小伙伴顺时针移动一位会回到第 <code>1</code> 名小伙伴的位置。</p>]]></description>
 </item><item>
     <title>1696：跳跃游戏 VI（1954 分）</title>
     <link>https://huozhixue.github.io/leetcode/1696/</link>
     <pubDate>Sun, 20 Dec 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1696/</guid>
-    <description><![CDATA[力扣第 220 场周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums 和一个整数 k 。 一开始你在下标 0 处。每一步，你最多可以往前跳 k 步，但你不能跳出数组的边]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/jump-game-vi/" target="_blank" rel="noopener noreffer">力扣第 220 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
+<p>一开始你在下标 <code>0</code> 处。每一步，你最多可以往前跳 <code>k</code> 步，但你不能跳出数组的边界。也就是说，你可以从下标 <code>i</code> 跳到 <code>[i + 1， min(n - 1, i + k)]</code> <strong>包含</strong> 两个端点的任意位置。</p>]]></description>
 </item><item>
     <title>1499：满足不等式的最大值（2456 分）</title>
     <link>https://huozhixue.github.io/leetcode/1499/</link>
     <pubDate>Sun, 28 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1499/</guid>
-    <description><![CDATA[力扣第 195 场周赛第 4 题 题目 给你一个数组 points 和一个整数 k 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 points[i] = [xi,]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/max-value-of-equation/" target="_blank" rel="noopener noreffer">力扣第 195 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个数组 <code>points</code> 和一个整数 <code>k</code> 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> ，并且在 <code>1 &lt;= i &lt; j &lt;= points.length</code> 的前提下， <code>x<sub>i</sub> &lt; x<sub>j</sub></code> 总成立。</p>]]></description>
 </item><item>
     <title>1438：绝对差不超过限制的最长连续子数组（1672 分）</title>
     <link>https://huozhixue.github.io/leetcode/1438/</link>
     <pubDate>Sun, 03 May 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1438/</guid>
-    <description><![CDATA[力扣第 187 场周赛第 3 题 题目 给你一个整数数组 nums ，和一个表示限制的整数 limit，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/" target="_blank" rel="noopener noreffer">力扣第 187 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> ，和一个表示限制的整数 <code>limit</code>，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对差必须小于或者等于 <code>limit</code><em> 。</em></p>]]></description>
 </item><item>
     <title>1425：带限制的子序列和（2032 分）</title>
     <link>https://huozhixue.github.io/leetcode/1425/</link>
     <pubDate>Sun, 26 Apr 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1425/</guid>
-    <description><![CDATA[力扣第 186 场周赛第 4 题 题目 给你一个整数数组 nums 和一个整数 k ，请你返回 非空 子序列元素和的最大值，子序列需要满足：子序列中每两个 相邻 的整数 nums[i] 和 nums[j] ，它]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/constrained-subsequence-sum/" target="_blank" rel="noopener noreffer">力扣第 186 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回 <strong>非空</strong> 子序列元素和的最大值，子序列需要满足：子序列中每两个 <strong>相邻</strong> 的整数 <code>nums[i]</code> 和 <code>nums[j]</code> ，它们在原数组中的下标 <code>i</code> 和 <code>j</code> 满足 <code>i &lt; j</code> 且 <code>j - i &lt;= k</code> 。</p>]]></description>
 </item><item>
     <title>0950：按递增顺序显示卡牌（1686 分）</title>
     <link>https://huozhixue.github.io/leetcode/0950/</link>
     <pubDate>Sun, 02 Dec 2018 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0950/</guid>
-    <description><![CDATA[力扣第 113 场周赛第 3 题 题目 牌组中的每张卡牌都对应有一个唯一的整数。你可以按你想要的顺序对这套卡片进行排序。 最初，这些卡牌在牌组里是正面朝下的（]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/reveal-cards-in-increasing-order/" target="_blank" rel="noopener noreffer">力扣第 113 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>牌组中的每张卡牌都对应有一个唯一的整数。你可以按你想要的顺序对这套卡片进行排序。</p>
+<p>最初，这些卡牌在牌组里是正面朝下的（即，未显示状态）。</p>]]></description>
 </item><item>
     <title>0933：最近的请求次数（1337 分）</title>
     <link>https://huozhixue.github.io/leetcode/0933/</link>
     <pubDate>Sun, 04 Nov 2018 09:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0933/</guid>
-    <description><![CDATA[力扣第 109 场周赛第 1 题 题目 写一个 RecentCounter 类来计算特定时间范围内最近的请求。 请你实现 RecentCounter 类： RecentCounter() 初始化计数器，请求数为 0 。 int ping(int t) 在时间 t 添加一个新请求，其]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-recent-calls/" target="_blank" rel="noopener noreffer">力扣第 109 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>写一个 <code>RecentCounter</code> 类来计算特定时间范围内最近的请求。</p>
+<p>请你实现 <code>RecentCounter</code> 类：</p>
+<ul>
+<li><code>RecentCounter()</code> 初始化计数器，请求数为 0 。</li>
+<li><code>int ping(int t)</code> 在时间 <code>t</code> 添加一个新请求，其中 <code>t</code> 表示以毫秒为单位的某个时间，并返回过去 <code>3000</code> 毫秒内发生的所有请求数（包括新请求）。确切地说，返回在 <code>[t-3000, t]</code> 内发生的请求数。</li>
+</ul>
+<p><strong>保证</strong> 每次对 <code>ping</code> 的调用都使用比之前更大的 <code>t</code> 值。</p>]]></description>
 </item><item>
     <title>0918：环形子数组的最大和（1777 分）</title>
     <link>https://huozhixue.github.io/leetcode/0918/</link>
     <pubDate>Sun, 07 Oct 2018 09:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0918/</guid>
-    <description><![CDATA[力扣第 105 场周赛第 2 题 题目 给定一个长度为 n 的环形整数数组 nums ，返回 nums 的非空 子数组 的最大可能和 。 环形数组 意味着数组的末端将会与开头相连呈环状。形式]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-sum-circular-subarray/" target="_blank" rel="noopener noreffer">力扣第 105 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个长度为 <code>n</code> 的<strong>环形整数数组</strong> <code>nums</code> ，返回<em> <code>nums</code> 的非空 <strong>子数组</strong> 的最大可能和 </em>。</p>
+<p><strong>环形数组</strong><em> </em>意味着数组的末端将会与开头相连呈环状。形式上， <code>nums[i]</code> 的下一个元素是 <code>nums[(i + 1) % n]</code> ， <code>nums[i]</code> 的前一个元素是 <code>nums[(i - 1 + n) % n]</code> 。</p>]]></description>
 </item></channel>
 </rss>

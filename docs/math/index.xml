@@ -9,6 +9,37 @@
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/math/20240710/</guid>
-    <description><![CDATA[题目 实数 a,b 满足 $ab+\sqrt{ab+1}+\sqrt{a^2+b}·\sqrt{b^2+a}=0$，求 $a\sqrt{b^2+a}+b\sqrt{a^2+b}$ 的值。 解答 1、先求 a、b 范围 易知]]></description>
+    <description><![CDATA[<h2 id="题目">题目</h2>
+<p>实数 a,b 满足 $ab+\sqrt{ab+1}+\sqrt{a^2+b}·\sqrt{b^2+a}=0$，求 $a\sqrt{b^2+a}+b\sqrt{a^2+b}$ 的值。</p>
+<h2 id="解答">解答</h2>
+<h5 id="1先求-ab-范围">1、先求 a、b 范围</h5>
+<ul>
+<li>易知 ab&lt;=0，代入可知 a、b 不为 0，所以 ab&lt;0</li>
+<li>a、b 对称，不妨设 a&lt;b，便有 $a&lt;0&lt;b$</li>
+<li>为了方便，令 $x=-a&gt;0，y=b&gt;0$，原等式变为  $$ -xy+ \sqrt{1-xy}+\sqrt{(x^2+y)(y^2-x)}=0 &hellip;&hellip;&hellip;&hellip;.(1)$$要求的是 $$ y\sqrt{x^2+y}-x\sqrt{y^x-x}，即 \sqrt{x^2y^2+y^3}-\sqrt{x^2y^2-x^3} &hellip;&hellip;..(2) $$</li>
+</ul>
+<h5 id="2展开配方">2、展开配方</h5>
+<ul>
+<li>(1) 式变形得：$$ \sqrt{(x^2+y)(y^2-x)} = xy- \sqrt{1-xy} &hellip;&hellip;&hellip;(3) $$</li>
+<li>两边平方并消除得：$$ x^3-y^3+1=2xy\sqrt{1-xy}$$</li>
+<li>再次平方并消除得：$$ x^6-2x^3y^3+y^6+2x^3-2y^3+1=4x^2y^2-4x^3y^3 &hellip;&hellip;&hellip;..(4)$$</li>
+<li>(4) 式两边同时加上 $4x^3y^3+4y^3$ 得：$$ x^6+2x^3y^3+y^6+2x^3+2y^3+1=4(x^2y^2+y^3) $$
+配方得： $$(x^3+y^3+1)^2=4(x^2y^2+y^3) &hellip;&hellip;..(5)$$</li>
+<li>同理，(4)式两边同时加上 $4x^3y^3-4x^3$，并配方 $$(x^3+y^3-1)^2=4(x^2y^2-x^3) &hellip;&hellip;&hellip;(6)$$</li>
+</ul>
+<h5 id="3开方">3、开方</h5>
+<ul>
+<li>最后来证明 $x^3+y^3&gt;=1$</li>
+<li>首先由 (1) 式可知 $x&lt;=y^2，xy&lt;=1$
+<ul>
+<li>故 $x^3&lt;=x^2y^2&lt;=1,x&lt;=1$</li>
+<li>故 $y&gt;=\sqrt x&gt;=x^2$</li>
+</ul>
+</li>
+<li>由 (3) 式可知  $xy- \sqrt{1-xy}&gt;=0$，消除根号得：$$ x^2y^2+xy&gt;=1$$</li>
+<li>又有 $$x^3+y^3-x^2y^2-xy=(y-x^2)(y^2-x)&gt;=0$$</li>
+<li>故 $$x^3+y^3&gt;=x^2y^2+xy&gt;=1$$</li>
+<li>将 (5)、(6) 式开方相减即得 (2) 式结果为 1</li>
+</ul>]]></description>
 </item></channel>
 </rss>

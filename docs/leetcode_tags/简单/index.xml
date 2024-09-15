@@ -9,69 +9,115 @@
     <pubDate>Sun, 19 May 2024 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3151/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 1 题 题目 如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 特殊数组 。 Aging 有一个整数数组 nums。如果 nums 是一]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/special-array-i/" target="_blank" rel="noopener noreffer">力扣第 398 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 <strong>特殊数组</strong> 。</p>
+<p>Aging 有一个整数数组 <code>nums</code>。如果 <code>nums</code> 是一个 <strong>特殊数组</strong> ，返回 <code>true</code>，否则返回 <code>false</code>。</p>]]></description>
 </item><item>
     <title>3146：两个字符串的排列差（1152 分）</title>
     <link>https://huozhixue.github.io/leetcode/3146/</link>
     <pubDate>Sun, 12 May 2024 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3146/</guid>
-    <description><![CDATA[力扣第 397 场周赛第 1 题 题目 给你两个字符串 s 和 t，每个字符串中的字符都不重复，且 t 是 s 的一个排列。 排列差 定义为 s 和 t 中每个字符在两个字符串中位置]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/permutation-difference-between-two-strings/" target="_blank" rel="noopener noreffer">力扣第 397 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个字符串 <code>s</code> 和 <code>t</code>，每个字符串中的字符都不重复，且 <code>t</code> 是 <code>s</code> 的一个排列。</p>
+<p><strong>排列差</strong> 定义为 <code>s</code> 和 <code>t</code> 中每个字符在两个字符串中位置的绝对差值之和。</p>]]></description>
 </item><item>
     <title>3131：找出与数组相加的整数 I（1160 分）</title>
     <link>https://huozhixue.github.io/leetcode/3131/</link>
     <pubDate>Sun, 28 Apr 2024 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3131/</guid>
-    <description><![CDATA[力扣第 395 场周赛第 1 题 题目 给你两个长度相等的数组 nums1 和 nums2。 数组 nums1 中的每个元素都与变量 x 所表示的整数相加。如果 x 为负数，则表现为元素值的减]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-the-integer-added-to-array-i/" target="_blank" rel="noopener noreffer">力扣第 395 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个长度相等的数组 <code>nums1</code> 和 <code>nums2</code>。</p>
+<p>数组 <code>nums1</code> 中的每个元素都与变量 <code>x</code> 所表示的整数相加。如果 <code>x</code> 为负数，则表现为元素值的减少。</p>]]></description>
 </item><item>
     <title>3105：最长的严格递增或递减子数组（1217 分）</title>
     <link>https://huozhixue.github.io/leetcode/3105/</link>
     <pubDate>Sun, 07 Apr 2024 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3105/</guid>
-    <description><![CDATA[力扣第 392 场周赛第 1 题 题目 给你一个整数数组 nums 。 返回数组 nums 中 严格递增 或 严格递减 的最长非空子数组的长度。 示例 1： 输入：nums = [1,4,3,3,2] 输出：2 解释： nums]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/" target="_blank" rel="noopener noreffer">力扣第 392 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 。</p>
+<p>返回数组 <code>nums</code> 中 <strong><span data-keyword="strictly-increasing-array">严格递增</span></strong> 或 <strong><span data-keyword="strictly-decreasing-array">严格递减</span> </strong>的最长非空子数组的长度。</p>]]></description>
 </item><item>
     <title>2960：统计已测试设备（1169 分）</title>
     <link>https://huozhixue.github.io/leetcode/2960/</link>
     <pubDate>Sun, 10 Dec 2023 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2960/</guid>
-    <description><![CDATA[力扣第 375 场周赛第 1 题 题目 给你一个长度为 n 、下标从 0 开始的整数数组 batteryPercentages ，表示 n 个设备的电池百分比。 你的任务是按照顺序测试每个设备 i，执行以下测试]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-tested-devices-after-test-operations/" target="_blank" rel="noopener noreffer">力扣第 375 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个长度为 <code>n</code> 、下标从<strong> 0 </strong>开始的整数数组 <code>batteryPercentages</code> ，表示 <code>n</code> 个设备的电池百分比。</p>
+<p>你的任务是按照顺序测试每个设备 <code>i</code>，执行以下测试操作：</p>]]></description>
 </item><item>
     <title>2748：美丽下标对的数目（1301 分）</title>
     <link>https://huozhixue.github.io/leetcode/2748/</link>
     <pubDate>Sun, 25 Jun 2023 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2748/</guid>
-    <description><![CDATA[力扣第 351 场周赛第 1 题 题目 给你一个下标从 0 开始的整数数组 nums 。如果下标对 i、j 满足 0 ≤ i &lt; j &lt; nums.length ，如果 nums[i] 的 第一个数字 和 nums[j] 的 最后一个数字 互质 ，则认]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-beautiful-pairs/" target="_blank" rel="noopener noreffer">力扣第 351 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 。如果下标对 <code>i</code>、<code>j</code> 满足 <code>0 ≤ i &lt; j &lt; nums.length</code> ，如果 <code>nums[i]</code> 的 <strong>第一个数字</strong> 和 <code>nums[j]</code> 的 <strong>最后一个数字</strong> <strong>互质</strong> ，则认为 <code>nums[i]</code> 和 <code>nums[j]</code> 是一组 <strong>美丽下标对</strong> 。</p>]]></description>
 </item><item>
     <title>2739：总行驶距离（1262 分）</title>
     <link>https://huozhixue.github.io/leetcode/2739/</link>
     <pubDate>Sun, 18 Jun 2023 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2739/</guid>
-    <description><![CDATA[力扣第 350 场周赛第 1 题 题目 卡车有两个油箱。给你两个整数，mainTank 表示主油箱中的燃料（以升为单位），additionalTank 表示副油]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/total-distance-traveled/" target="_blank" rel="noopener noreffer">力扣第 350 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>卡车有两个油箱。给你两个整数，<code>mainTank</code> 表示主油箱中的燃料（以升为单位），<code>additionalTank</code> 表示副油箱中的燃料（以升为单位）。</p>]]></description>
 </item><item>
     <title>2427：公因子的数目（1172 分）</title>
     <link>https://huozhixue.github.io/leetcode/2427/</link>
     <pubDate>Sun, 02 Oct 2022 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2427/</guid>
-    <description><![CDATA[力扣第 313 场周赛第 1 题 题目 给你两个正整数 a 和 b ，返回 a 和 b 的 公 因子的数目。 如果 x 可以同时整除 a 和 b ，则认为 x 是 a 和 b 的一个 公因子 。 示例 1： 输入]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-common-factors/" target="_blank" rel="noopener noreffer">力扣第 313 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个正整数 <code>a</code> 和 <code>b</code> ，返回 <code>a</code> 和 <code>b</code> 的 <strong>公</strong> 因子的数目。</p>
+<p>如果 <code>x</code> 可以同时整除 <code>a</code> 和 <code>b</code> ，则认为 <code>x</code> 是 <code>a</code> 和 <code>b</code> 的一个 <strong>公因子</strong> 。</p>]]></description>
 </item><item>
     <title>2367：算术三元组的数目（1203 分）</title>
     <link>https://huozhixue.github.io/leetcode/2367/</link>
     <pubDate>Sun, 07 Aug 2022 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2367/</guid>
-    <description><![CDATA[力扣第 305 场周赛第 1 题 题目 给你一个下标从 0 开始、严格递增 的整数数组 nums 和一个正整数 diff 。如果满足下述全部条件，则三元组 (i, j, k) 就是一个 算术三元组 ： i]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-arithmetic-triplets/" target="_blank" rel="noopener noreffer">力扣第 305 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始、<strong>严格递增</strong> 的整数数组 <code>nums</code> 和一个正整数 <code>diff</code> 。如果满足下述全部条件，则三元组 <code>(i, j, k)</code> 就是一个 <strong>算术三元组</strong> ：</p>]]></description>
 </item><item>
     <title>2000：反转单词前缀（1199 分）</title>
     <link>https://huozhixue.github.io/leetcode/2000/</link>
     <pubDate>Sun, 12 Sep 2021 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2000/</guid>
-    <description><![CDATA[力扣第 258 场周赛第 1 题 题目 给你一个下标从 0 开始的字符串 word 和一个字符 ch 。找出 ch 第一次出现的下标 i ，反转 word 中从下标 0 开始、直到下标 i 结束（含下标 i]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/reverse-prefix-of-word/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>word</code> 和一个字符 <code>ch</code> 。找出 <code>ch</code> 第一次出现的下标 <code>i</code> ，<strong>反转 </strong><code>word</code> 中从下标 <code>0</code> 开始、直到下标 <code>i</code> 结束（含下标 <code>i</code> ）的那段字符。如果 <code>word</code> 中不存在字符 <code>ch</code> ，则无需进行任何操作。</p>]]></description>
 </item></channel>
 </rss>

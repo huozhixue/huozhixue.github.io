@@ -9,20 +9,47 @@
     <pubDate>Sun, 14 Jan 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3007/</guid>
-    <description><![CDATA[力扣第 380 场周赛第 3 题 题目 给你一个整数 k 和一个整数 x 。整数 num 的价值是它的二进制表示中在 x，2x，3x 等位置处 设置位 的数目（从最低有效位开始）。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/" target="_blank" rel="noopener noreffer">力扣第 380 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>k</code> 和一个整数 <code>x</code> 。整数 <code>num</code> 的价值是它的二进制表示中在 <code>x</code>，<code>2x</code>，<code>3x</code> 等位置处 <strong><span data-keyword="set-bit">设置位</span></strong> 的数目（从最低有效位开始）。下面的表格包含了如何计算价值的例子。</p>]]></description>
 </item><item>
     <title>0440：字典序的第K小数字（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0440/</link>
     <pubDate>Tue, 15 Mar 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0440/</guid>
-    <description><![CDATA[力扣第 440 题 题目 给定整数 n 和 k，返回 [1, n] 中字典序第 k 小的数字。 示例 1: 输入: n = 13, k = 2 输出: 10 解释: 字典序的排列是 [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/k-th-smallest-in-lexicographical-order/" target="_blank" rel="noopener noreffer">力扣第 440 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定整数 <code>n</code> 和 <code>k</code>，返回  <code>[1, n]</code> 中字典序第 <code>k</code> 小的数字。</p>
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入: </strong>n = 13, k = 2
+<strong>输出: </strong>10
+<strong>解释: </strong>字典序的排列是 [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]，所以第二小的数字是 10。
+</pre>
+<p><strong>示例 2:</strong></p>]]></description>
 </item><item>
     <title>0421：数组中两个数的最大异或值（★）</title>
     <link>https://huozhixue.github.io/leetcode/0421/</link>
     <pubDate>Thu, 25 Feb 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0421/</guid>
-    <description><![CDATA[力扣第 421 题 题目 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，其中 0 ≤ i ≤ j &lt; n 。 示例 1： 输入：nums = [3,10,5,25,2,8] 输出：28 解释：最大运算结果是 5 XOR]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank" rel="noopener noreffer">力扣第 421 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> ，返回<em> </em><code>nums[i] XOR nums[j]</code> 的最大运算结果，其中 <code>0 ≤ i ≤ j &lt; n</code> 。</p>
+<div class="original__bRMd">
+<div>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [3,10,5,25,2,8]
+<strong>输出：</strong>28
+<strong>解释：</strong>最大运算结果是 5 XOR 25 = 28.</pre>
+<p><strong>示例 2：</strong></p>]]></description>
 </item></channel>
 </rss>

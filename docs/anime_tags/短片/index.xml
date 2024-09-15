@@ -9,69 +9,507 @@
     <pubDate>Fri, 12 Nov 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/summer_ghost/</guid>
-    <description><![CDATA[夏日幽灵，又名：サマーゴースト、夏日幻魂、Summer Ghost 简介 「都市传说中的年轻女性幽灵“夏日幻魂”，谣传只有在夏天烟花绽放时才会出现。马上就]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/328674" target="_blank" rel="noopener noreffer">夏日幽灵</a></strong></u>，又名：サマーゴースト、夏日幻魂、Summer Ghost</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>「都市传说中的年轻女性幽灵“夏日幻魂”，谣传只有在夏天烟花绽放时才会出现。马上就要面临升学考试的高三生杉崎友也，通过网络认识了因校园种姓制度而烦恼不已的春川葵，以及受病痛所苦的小林凉。无法朝向希望中的人生之路前进的友也、找不到居身之所的葵、耀眼的未来突然被封闭的凉，他们各自怀有必须见到“夏日幻魂”的理由。</p>]]></description>
 </item><item>
     <title>2019 年终盘点</title>
     <link>https://huozhixue.github.io/anime/2019/</link>
     <pubDate>Tue, 31 Dec 2019 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/2019/</guid>
-    <description><![CDATA[2019 动画年终盘点，包括 MAD、短片、音乐等 MAD 单素材 多素材 短片 原创 同人]]></description>
+    <description><![CDATA[<p>2019 动画年终盘点，包括 MAD、短片、音乐等</p>
+<div class="media" id="id-1" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1EJ411b71H-BV1D541147iF".split(/-/);
+		var titles = "19分钟看完2019年日本动画,[TV2] 中二电视台2019年金鸡排奖颁奖典礼".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-1"] = data;
+	</script>
+<h2 id="mad">MAD</h2>
+<h3 id="单素材">单素材</h3>
+<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2019",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-2"] = data;
+	</script>
+<h3 id="多素材">多素材</h3>
+<div class="media" id="id-3" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2019_1",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-3"] = data;
+	</script>
+<h2 id="短片">短片</h2>
+<h3 id="原创">原创</h3>
+<div class="media" id="id-4" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-4" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1Yb411v7eN-BV1xb411e7PB-BV1Yb411V7w2".split(/-/);
+		var titles = "【短篇动画】去往你的身旁~太阳雨~(丸井 X 东宝 X Orange制作)【F宅/1080P+】,僕らまだアンダーグラウンド - Eve MV,【Resh个人动画】Crimson Alpine".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-4"] = data;
+	</script>
+<h3 id="同人">同人</h3>
+<div class="media" id="id-5" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-5" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1mb411r7sb-BV1gb411K7Lo-BV19J411K74n-BV1rE41197S9".split(/-/);
+		var titles = "【脑洞/乱入】2019动漫贺年乱入,【脑洞/误解】龙套与齐木楠雄的相遇,【耗时近千小时！每月电费上千！】新人自制攻壳机动队Title开场设计,【定格动画】童年回忆大乱斗！".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-5"] = data;
+	</script>]]></description>
 </item><item>
     <title>2018 年终盘点</title>
     <link>https://huozhixue.github.io/anime/2018/</link>
     <pubDate>Mon, 31 Dec 2018 22:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/2018/</guid>
-    <description><![CDATA[2018 动画年终盘点，包括 MAD、短片、音乐等 MAD 单素材 多素材 短片]]></description>
+    <description><![CDATA[<p>2018 动画年终盘点，包括 MAD、短片、音乐等</p>
+<div class="media" id="id-1" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1ht411r7vr-BV1jt411W7sb-BV1Ct411W7jP-BV1Nt411H71g".split(/-/);
+		var titles = "18分钟看完2018年动画,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P1）,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P2）,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P3）".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-1"] = data;
+	</script>
+<h2 id="mad">MAD</h2>
+<h3 id="单素材">单素材</h3>
+<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2018",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-2"] = data;
+	</script>
+<h3 id="多素材">多素材</h3>
+<div class="media" id="id-3" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2018_1",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-3"] = data;
+	</script>
+<h2 id="短片">短片</h2>
+<div class="media" id="id-4" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-4" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1Rs411V75T".split(/-/);
+		var titles = "【脑洞/乱入】齐木楠雄VS埼玉老师1：神魔相遇".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-4"] = data;
+	</script>]]></description>
 </item><item>
     <title>日本动画（人）博览会</title>
     <link>https://huozhixue.github.io/anime/japan_animator_expo/</link>
     <pubDate>Fri, 07 Nov 2014 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/japan_animator_expo/</guid>
-    <description><![CDATA[日本动画（人）博览会，又名：日本アニメ（ーター）見本市、Nihon Anima(tor) Mihon`ichi、日本动画人博览会、Japan Anima(tor)’]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/116370" target="_blank" rel="noopener noreffer">日本动画（人）博览会</a></strong></u>，又名：日本アニメ（ーター）見本市、Nihon Anima(tor) Mihon`ichi、日本动画人博览会、Japan Anima(tor)’s Exhibition</p>]]></description>
 </item><item>
     <title>阳光中的青时雨</title>
     <link>https://huozhixue.github.io/anime/hinata_no_aoshigure/</link>
     <pubDate>Sat, 09 Nov 2013 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/hinata_no_aoshigure/</guid>
-    <description><![CDATA[阳光中的青时雨，又名：陽なたのアオシグレ、戀愛飛翔 简介 内向的小学4年级日向喜欢着班上的人气女孩时雨。两人拥有着共同的爱好——饲养学校的小鸟。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/84521" target="_blank" rel="noopener noreffer">阳光中的青时雨</a></strong></u>，又名：陽なたのアオシグレ、戀愛飛翔</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>内向的小学4年级日向喜欢着班上的人气女孩时雨。两人拥有着共同的爱好——饲养学校的小鸟。一次偶然的机会，日向和时雨开始有了接触，渐渐拉近了距离。内向的日向也在心中默默地描绘着两人共处的美妙情景。然而，时雨转校的消息传来。悲伤降临的日向的内心世界变得暗淡下来。</p>]]></description>
 </item><item>
     <title>義足のMoses</title>
     <link>https://huozhixue.github.io/anime/gisoku_no_moses/</link>
     <pubDate>Sun, 15 Sep 2013 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/gisoku_no_moses/</guid>
-    <description><![CDATA[義足のMoses 简介 When a ghost girl with no legs spots a pair of disembodied tap shoes dancing to Moses Supposes from Singin&rsquo; in the Rain, she joins in, gleefully providing a body to accompany their fancy footwork. 系列 系列名 首播时间 话数/时长 观看地址 1 義足のMos]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/404781" target="_blank" rel="noopener noreffer">義足のMoses</a></strong></u></p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>When a ghost girl with no legs spots a pair of disembodied tap shoes dancing to Moses Supposes from Singin&rsquo; in the Rain, she joins in, gleefully providing a body to accompany their fancy footwork.</p>
+<h2 id="系列">系列</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">系列名</th>
+          <th style="text-align: left">首播时间</th>
+          <th style="text-align: left">话数/时长</th>
+          <th style="text-align: left">观看地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left"><a href="https://bgm.tv/subject/404781" target="_blank" rel="noopener noreffer">義足のMoses</a></td>
+          <td style="text-align: left">2013-09-15</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left"><a href="https://www.bilibili.com/video/BV1Zs411f7es" target="_blank" rel="noopener noreffer">bilibili</a></td>
+      </tr>
+  </tbody>
+</table>]]></description>
 </item><item>
     <title>快要坏掉的八音盒</title>
     <link>https://huozhixue.github.io/anime/kowarekake/</link>
     <pubDate>Tue, 29 Dec 2009 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/kowarekake/</guid>
-    <description><![CDATA[快要坏掉的八音盒，又名：こわれかけのオルゴール 简介 《快要坏掉的八音盒》是日本同人动画。由《萌单》的插画师POP所在的社团「Electroma]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/3806" target="_blank" rel="noopener noreffer">快要坏掉的八音盒</a></strong></u>，又名：こわれかけのオルゴール</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>《快要坏掉的八音盒》是日本同人动画。由《萌单》的插画师POP所在的社团「ElectromagneticWave」制作，在2008年冬C75 上发售了带有PV（DVD）的预告版手册。2009年夏的C76是预告版手册，同年冬的C77发售了完成版DVD和完成版手册。</p>]]></description>
 </item><item>
     <title>东方同人</title>
     <link>https://huozhixue.github.io/anime/touhou_project/</link>
     <pubDate>Tue, 30 Dec 2008 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/touhou_project/</guid>
-    <description><![CDATA[东方梦想夏乡，又名：東方夢想夏郷、Musou Kakyou -A Summer Day&rsquo;s Dream- 简介 《夢想夏郷》是以时音为首的同人社团“舞风”独立制作的東方Project二次同人动画]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/1171" target="_blank" rel="noopener noreffer">东方梦想夏乡</a></strong></u>，又名：東方夢想夏郷、Musou Kakyou -A Summer Day&rsquo;s Dream-</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>《夢想夏郷》是以时音为首的同人社团“舞风”独立制作的東方Project二次同人动画。</p>]]></description>
 </item><item>
     <title>死或生VS最终幻想</title>
     <link>https://huozhixue.github.io/anime/dead_fantasy/</link>
     <pubDate>Mon, 15 Oct 2007 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/dead_fantasy/</guid>
-    <description><![CDATA[死或生VS最终幻想，又名：DEAD FANTASY、DOA VS FF 同人 简介 《Dead Fantasy》是由已故美籍亚裔动画制作师Monty Oum制作]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/75898" target="_blank" rel="noopener noreffer">死或生VS最终幻想</a></strong></u>，又名：DEAD FANTASY、DOA VS FF 同人</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>《Dead Fantasy》是由已故美籍亚裔动画制作师Monty Oum制作的系列同人3D动画， 片中角色主要来自角色扮演游戏《最终幻想》和格斗游戏《死或生》，
+本作品的名称也正来源于《Dead Or Alive》第一个单词和《Final Fantasy》的最后一个单词。
+《Dead Fantasy》第一集发布于2007年10月15日，之后以“极其缓慢”的速度推出续集。</p>]]></description>
 </item><item>
     <title>NHK15个动画短片</title>
     <link>https://huozhixue.github.io/anime/ani_kuri_15/</link>
     <pubDate>Mon, 07 May 2007 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/ani_kuri_15/</guid>
-    <description><![CDATA[NHK15个动画短片，又名：アニ＊クリ15、15名动画人、AniKuri15、NHK anikuri15 简介 Ani Kuri 15 是由创作《攻壳机动队剧场版 无罪》的押井守，《]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/4193" target="_blank" rel="noopener noreffer">NHK15个动画短片</a></strong></u>，又名：アニ＊クリ15、15名动画人、AniKuri15、NHK anikuri15</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>Ani Kuri 15 是由创作《攻壳机动队剧场版 无罪》的押井守，《红辣椒》的今敏，《恶童》的Michael L.Arias等，日本在世界上引以为傲的动画创作者们与NHK共同制作的1分钟原创动画的企画。</p>]]></description>
 </item></channel>
 </rss>

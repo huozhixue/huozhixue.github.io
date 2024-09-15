@@ -9,27 +9,49 @@
     <pubDate>Thu, 02 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0519/</guid>
-    <description><![CDATA[力扣第 519 题 题目 给你一个 m x n 的二元矩阵 matrix ，且所有值被初始化为 0 。请你设计一个算法，随机选取一个满足 matrix[i][j] == 0 的下标 (i, j) ，并将它的值变为 1 。所有满]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/random-flip-matrix/" target="_blank" rel="noopener noreffer">力扣第 519 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>m x n</code> 的二元矩阵 <code>matrix</code> ，且所有值被初始化为 <code>0</code> 。请你设计一个算法，随机选取一个满足 <code>matrix[i][j] == 0</code> 的下标 <code>(i, j)</code> ，并将它的值变为 <code>1</code> 。所有满足 <code>matrix[i][j] == 0</code> 的下标 <code>(i, j)</code> 被选取的概率应当均等。</p>]]></description>
 </item><item>
     <title>0497：非重叠矩形中的随机点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0497/</link>
     <pubDate>Wed, 11 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0497/</guid>
-    <description><![CDATA[力扣第 497 题 题目 给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角点。设计一]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/" target="_blank" rel="noopener noreffer">力扣第 497 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个由非重叠的轴对齐矩形的数组 <code>rects</code> ，其中 <code>rects[i] = [ai, bi, xi, yi]</code> 表示 <code>(ai, bi)</code> 是第 <code>i</code> 个矩形的左下角点，<code>(xi, yi)</code> 是第 <code>i</code> 个矩形的右上角点。设计一个算法来随机挑选一个被某一矩形覆盖的整数点。矩形周长上的点也算做是被矩形覆盖。所有满足要求的点必须等概率被返回。</p>]]></description>
 </item><item>
     <title>0398：随机数索引（★）</title>
     <link>https://huozhixue.github.io/leetcode/0398/</link>
     <pubDate>Tue, 02 Feb 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0398/</guid>
-    <description><![CDATA[力扣第 398 题 题目 给你一个可能含有 重复元素 的整数数组 nums ，请你随机输出给定的目标数字 target 的索引。你可以假设给定的数字一定存在于数组中。 实现 Solution 类： Solution(int[] nums)]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/random-pick-index/" target="_blank" rel="noopener noreffer">力扣第 398 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个可能含有 <strong>重复元素</strong> 的整数数组 <code>nums</code> ，请你随机输出给定的目标数字 <code>target</code> 的索引。你可以假设给定的数字一定存在于数组中。</p>]]></description>
 </item><item>
     <title>0382：链表随机节点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0382/</link>
     <pubDate>Sun, 17 Jan 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0382/</guid>
-    <description><![CDATA[力扣第 382 题 题目 给你一个单链表，随机选择链表的一个节点，并返回相应的节点值。每个节点 被选中的概率一样 。 实现 Solution 类： Solution(ListNode head) 使用整数数组初始化对象。 int]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/linked-list-random-node/" target="_blank" rel="noopener noreffer">力扣第 382 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个单链表，随机选择链表的一个节点，并返回相应的节点值。每个节点<strong> 被选中的概率一样</strong> 。</p>
+<p>实现 <code>Solution</code> 类：</p>
+<ul>
+<li><code>Solution(ListNode head)</code> 使用整数数组初始化对象。</li>
+<li><code>int getRandom()</code> 从链表中随机选择一个节点并返回该节点的值。链表中所有节点被选中的概率相等。</li>
+</ul>
+<p><strong>示例：</strong></p>]]></description>
 </item></channel>
 </rss>

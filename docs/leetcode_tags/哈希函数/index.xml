@@ -9,69 +9,144 @@
     <pubDate>Sun, 30 Jan 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2156/</guid>
-    <description><![CDATA[力扣第 278 场周赛第 3 题 题目 给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算： hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + ... + val(s[k-1]) * pk-1) mod m.]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-substring-with-given-hash-value/" target="_blank" rel="noopener noreffer">力扣第 278 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定整数 <code>p</code> 和 <code>m</code> ，一个长度为 <code>k</code> 且下标从 <strong>0</strong> 开始的字符串 <code>s</code> 的哈希值按照如下函数计算：</p>
+<ul>
+<li><code>hash(s, p, m) = (val(s[0]) * p<sup>0</sup> + val(s[1]) * p<sup>1</sup> + ... + val(s[k-1]) * p<sup>k-1</sup>) mod m</code>.</li>
+</ul>
+<p>其中 <code>val(s[i])</code> 表示 <code>s[i]</code> 在字母表中的下标，从 <code>val('a') = 1</code> 到 <code>val('z') = 26</code> 。</p>]]></description>
 </item><item>
     <title>1923：最长公共子路径（2661 分）</title>
     <link>https://huozhixue.github.io/leetcode/1923/</link>
     <pubDate>Sun, 04 Jul 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1923/</guid>
-    <description><![CDATA[力扣第 248 场周赛第 4 题 题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-common-subpath/" target="_blank" rel="noopener noreffer">力扣第 248 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>一个国家由 <code>n</code> 个编号为 <code>0</code> 到 <code>n - 1</code> 的城市组成。在这个国家里，<strong>每两个</strong> 城市之间都有一条道路连接。</p>
+<p>总共有 <code>m</code> 个编号为 <code>0</code> 到 <code>m - 1</code> 的朋友想在这个国家旅游。他们每一个人的路径都会包含一些城市。每条路径都由一个整数数组表示，每个整数数组表示一个朋友按顺序访问过的城市序列。同一个城市在一条路径中可能 <strong>重复</strong> 出现，但同一个城市在一条路径中不会连续出现。</p>]]></description>
 </item><item>
     <title>1461：检查一个字符串是否包含所有长度为 K 的二进制子串（1504 分）</title>
     <link>https://huozhixue.github.io/leetcode/1461/</link>
     <pubDate>Sat, 30 May 2020 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1461/</guid>
-    <description><![CDATA[力扣第 27 场双周赛第 2 题 题目 给你一个二进制字符串 s 和一个整数 k 。如果所有长度为 k 的二进制字符串都是 s 的子串，请返回 true ，否则请返回 false 。 示例 1： 输]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/" target="_blank" rel="noopener noreffer">力扣第 27 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个二进制字符串 <code>s</code> 和一个整数 <code>k</code> 。如果所有长度为 <code>k</code> 的二进制字符串都是 <code>s</code> 的子串，请返回 <code>true</code> ，否则请返回 <code>false</code> 。</p>]]></description>
 </item><item>
     <title>1392：最长快乐前缀（1876 分）</title>
     <link>https://huozhixue.github.io/leetcode/1392/</link>
     <pubDate>Sun, 22 Mar 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1392/</guid>
-    <description><![CDATA[力扣第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-happy-prefix/" target="_blank" rel="noopener noreffer">力扣第 181 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><strong>「快乐前缀」</strong> 是在原字符串中既是 <strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
+<p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串<meta charset="UTF-8" /> <code>""</code> 。</p>]]></description>
 </item><item>
     <title>1316：不同的循环子字符串（1836 分）</title>
     <link>https://huozhixue.github.io/leetcode/1316/</link>
     <pubDate>Sat, 11 Jan 2020 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1316/</guid>
-    <description><![CDATA[力扣第 17 场双周赛第 4 题 题目 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目： 可以写成某个字符串与其自身相连接的形式（即，可以写]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/distinct-echo-substrings/" target="_blank" rel="noopener noreffer">力扣第 17 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串 <code>text</code> ，请你返回满足下述条件的 <strong>不同</strong> 非空子字符串的数目：</p>
+<ul>
+<li>可以写成某个字符串与其自身相连接的形式（即，可以写为 <code>a + a</code>，其中 <code>a</code> 是某个字符串）。</li>
+</ul>
+<p>例如，<code>abcabc</code> 就是 <code>abc</code> 和它自身连接形成的。</p>]]></description>
 </item><item>
     <title>1044：最长重复子串（2428 分）</title>
     <link>https://huozhixue.github.io/leetcode/1044/</link>
     <pubDate>Sun, 12 May 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1044/</guid>
-    <description><![CDATA[力扣第 136 场周赛第 4 题 题目 给你一个字符串 s ，考虑其所有 重复子串 ：即 s 的（连续）子串，在 s 中出现 2 次或更多次。这些出现之间可能存在重叠。 返回 任意]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-duplicate-substring/" target="_blank" rel="noopener noreffer">力扣第 136 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个字符串 <code>s</code> ，考虑其所有 <em>重复子串</em> ：即 <code>s</code> 的（连续）子串，在 <code>s</code> 中出现 2 次或更多次。这些出现之间可能存在重叠。</p>]]></description>
 </item><item>
     <title>0718：最长重复子数组（★）</title>
     <link>https://huozhixue.github.io/leetcode/0718/</link>
     <pubDate>Sun, 18 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0718/</guid>
-    <description><![CDATA[力扣第 718 题 题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释：长度最长的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/" target="_blank" rel="noopener noreffer">力扣第 718 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给两个整数数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>两个数组中 <strong>公共的</strong> 、长度最长的子数组的长度 </em>。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+<strong>输出：</strong>3
+<strong>解释：</strong>长度最长的公共子数组是 [3,2,1] 。
+</pre>
+<p><strong>示例 2：</strong></p>]]></description>
 </item><item>
     <title>0706：设计哈希映射</title>
     <link>https://huozhixue.github.io/leetcode/0706/</link>
     <pubDate>Tue, 06 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0706/</guid>
-    <description><![CDATA[力扣第 706 题 题目 不使用任何内建的哈希表库设计一个哈希映射（HashMap）。 实现 MyHashMap 类： MyHashMap() 用空映射初始化对象 void put(int key, int value) 向 HashMap 插入一个键值对 (key, value) 。如]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-hashmap/" target="_blank" rel="noopener noreffer">力扣第 706 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>不使用任何内建的哈希表库设计一个哈希映射（HashMap）。</p>
+<p>实现 <code>MyHashMap</code> 类：</p>
+<ul>
+<li><code>MyHashMap()</code> 用空映射初始化对象</li>
+<li><code>void put(int key, int value)</code> 向 HashMap 插入一个键值对 <code>(key, value)</code> 。如果 <code>key</code> 已经存在于映射中，则更新其对应的值 <code>value</code> 。</li>
+<li><code>int get(int key)</code> 返回特定的 <code>key</code> 所映射的 <code>value</code> ；如果映射中不包含 <code>key</code> 的映射，返回 <code>-1</code> 。</li>
+<li><code>void remove(key)</code> 如果映射中存在 <code>key</code> 的映射，则移除 <code>key</code> 和它所对应的 <code>value</code> 。</li>
+</ul>
+<p><strong>示例：</strong></p>]]></description>
 </item><item>
     <title>0705：设计哈希集合</title>
     <link>https://huozhixue.github.io/leetcode/0705/</link>
     <pubDate>Mon, 05 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0705/</guid>
-    <description><![CDATA[力扣第 705 题 题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-hashset/" target="_blank" rel="noopener noreffer">力扣第 705 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
+<p>实现 <code>MyHashSet</code> 类：</p>
+<ul>
+<li><code>void add(key)</code> 向哈希集合中插入值 <code>key</code> 。</li>
+<li><code>bool contains(key)</code> 返回哈希集合中是否存在这个值 <code>key</code> 。</li>
+<li><code>void remove(key)</code> 将给定值 <code>key</code> 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。</li>
+</ul>
+<p><strong>示例：</strong></p>]]></description>
 </item><item>
     <title>0572：另一棵树的子树</title>
     <link>https://huozhixue.github.io/leetcode/0572/</link>
     <pubDate>Mon, 25 Jul 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0572/</guid>
-    <description><![CDATA[力扣第 572 题 题目 给你两棵二叉树 root 和 subRoot 。检验 root 中是否包含和 subRoot 具有相同结构和节点值的子树。如果存在，返回 true ；否则，返回 false 。 二叉树 tree 的一棵子树包括 tree]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/subtree-of-another-tree/" target="_blank" rel="noopener noreffer">力扣第 572 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<div class="original__bRMd">
+<div>
+<p>给你两棵二叉树 <code>root</code> 和 <code>subRoot</code> 。检验 <code>root</code> 中是否包含和 <code>subRoot</code> 具有相同结构和节点值的子树。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p>二叉树 <code>tree</code> 的一棵子树包括 <code>tree</code> 的某个节点和这个节点的所有后代节点。<code>tree</code> 也可以看做它自身的一棵子树。</p>]]></description>
 </item></channel>
 </rss>

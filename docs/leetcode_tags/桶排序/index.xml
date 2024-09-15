@@ -9,41 +9,89 @@
     <pubDate>Thu, 20 Sep 2018 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0912/</guid>
-    <description><![CDATA[力扣第 912 题 题目 给你一个整数数组 nums，请你将该数组升序排列。 示例 1： 输入：nums = [5,2,3,1] 输出：[1,2,3,5] 示例 2： 输入：nums = [5,1,1,2,0,0] 输]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/sort-an-array/" target="_blank" rel="noopener noreffer">力扣第 912 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code>，请你将该数组升序排列。</p>
+<ol>
+</ol>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [5,2,3,1]
+<strong>输出：</strong>[1,2,3,5]
+</pre>
+<p><strong>示例 2：</strong></p>]]></description>
 </item><item>
     <title>0692：前K个高频单词（★）</title>
     <link>https://huozhixue.github.io/leetcode/0692/</link>
     <pubDate>Tue, 22 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0692/</guid>
-    <description><![CDATA[力扣第 692 题 题目 给定一个单词列表 words 和一个整数 k ，返回前 k 个出现次数最多的单词。 返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/top-k-frequent-words/" target="_blank" rel="noopener noreffer">力扣第 692 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个单词列表 <code>words</code> 和一个整数 <code>k</code> ，返回前 <code>k</code><em> </em>个出现次数最多的单词。</p>
+<p>返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出现频率， <strong>按字典顺序</strong> 排序。</p>]]></description>
 </item><item>
     <title>0451：根据字符出现频率排序（★）</title>
     <link>https://huozhixue.github.io/leetcode/0451/</link>
     <pubDate>Sat, 26 Mar 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0451/</guid>
-    <description><![CDATA[力扣第 451 题 题目 给定一个字符串 s ，根据字符出现的 频率 对其进行 降序排序 。一个字符出现的 频率 是它出现在字符串中的次数。 返回 已排序的字符串 。如果有多]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/sort-characters-by-frequency/" target="_blank" rel="noopener noreffer">力扣第 451 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个字符串 <code>s</code> ，根据字符出现的 <strong>频率</strong> 对其进行 <strong>降序排序</strong> 。一个字符出现的 <strong>频率</strong> 是它出现在字符串中的次数。</p>
+<p>返回 <em>已排序的字符串 </em>。如果有多个答案，返回其中任何一个。</p>]]></description>
 </item><item>
     <title>0347：前 K 个高频元素（★）</title>
     <link>https://huozhixue.github.io/leetcode/0347/</link>
     <pubDate>Sun, 13 Dec 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0347/</guid>
-    <description><![CDATA[力扣第 347 题 题目 给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。 示例 1: 输入: nums = [1,1,1,2,2,3], k = 2 输出: [1,2] 示]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/top-k-frequent-elements/" target="_blank" rel="noopener noreffer">力扣第 347 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回其中出现频率前 <code>k</code> 高的元素。你可以按 <strong>任意顺序</strong> 返回答案。</p>
+<p><strong>示例 1:</strong></p>
+<pre>
+<strong>输入: </strong>nums = [1,1,1,2,2,3], k = 2
+<strong>输出: </strong>[1,2]
+</pre>
+<p><strong>示例 2:</strong></p>]]></description>
 </item><item>
     <title>0220：存在重复元素 III（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0220/</link>
     <pubDate>Sat, 08 Aug 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0220/</guid>
-    <description><![CDATA[力扣第 220 题 题目 给你一个整数数组 nums 和两个整数 indexDiff 和 valueDiff 。 找出满足下述条件的下标对 (i, j)： i != j, abs(i - j) &lt;= indexDiff abs(nums[i] - nums[j]) &lt;= valueDiff 如果存在，返回 true ；否则，返回 false 。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/contains-duplicate-iii/" target="_blank" rel="noopener noreffer">力扣第 220 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 和两个整数 <code>indexDiff</code> 和 <code>valueDiff</code> 。</p>
+<p>找出满足下述条件的下标对 <code>(i, j)</code>：</p>
+<ul>
+<li><code>i != j</code>,</li>
+<li><code>abs(i - j) &lt;= indexDiff</code></li>
+<li><code>abs(nums[i] - nums[j]) &lt;= valueDiff</code></li>
+</ul>
+<p>如果存在，返回 <code>true</code><em> ；</em>否则，返回<em> </em><code>false</code><em> </em>。</p>]]></description>
 </item><item>
     <title>0164：最大间距（★）</title>
     <link>https://huozhixue.github.io/leetcode/0164/</link>
     <pubDate>Sat, 13 Jun 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0164/</guid>
-    <description><![CDATA[力扣第 164 题 题目 给定一个无序的数组 nums，返回 数组在排序之后，相邻元素之间最大的差值 。如果数组元素个数小于 2，则返回 0 。 您必须编写一个在「线]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-gap/" target="_blank" rel="noopener noreffer">力扣第 164 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个无序的数组 <code>nums</code>，返回 <em>数组在排序之后，相邻元素之间最大的差值</em> 。如果数组元素个数小于 2，则返回 <code>0</code> 。</p>
+<p>您必须编写一个在「线性时间」内运行并使用「线性额外空间」的算法。</p>]]></description>
 </item></channel>
 </rss>

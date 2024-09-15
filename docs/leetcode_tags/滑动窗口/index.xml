@@ -9,69 +9,122 @@
     <pubDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2902/</guid>
-    <description><![CDATA[力扣第 115 场双周赛第 4 题 题目 给你一个下标从 0 开始的非负整数数组 nums 和两个整数 l 和 r 。 请你返回 nums 中子多重集合的和在闭区间 [l, r] 之间的 子多重集合的数目]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/" target="_blank" rel="noopener noreffer">力扣第 115 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的非负整数数组 <code>nums</code> 和两个整数 <code>l</code> 和 <code>r</code> 。</p>
+<p>请你返回 <code>nums</code> 中子多重集合的和在闭区间 <code>[l, r]</code> 之间的 <strong>子多重集合的数目</strong> 。</p>]]></description>
 </item><item>
     <title>2398：预算内的最多机器人数目（1917 分）</title>
     <link>https://huozhixue.github.io/leetcode/2398/</link>
     <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2398/</guid>
-    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-robots-within-budget/" target="_blank" rel="noopener noreffer">力扣第 86 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你有 <code>n</code> 个机器人，给你两个下标从 <strong>0</strong> 开始的整数数组 <code>chargeTimes</code> 和 <code>runningCosts</code> ，两者长度都为 <code>n</code> 。第 <code>i</code> 个机器人充电时间为 <code>chargeTimes[i]</code> 单位时间，花费 <code>runningCosts[i]</code> 单位时间运行。再给你一个整数 <code>budget</code> 。</p>]]></description>
 </item><item>
     <title>2302：统计得分小于 K 的子数组数目（1808 分）</title>
     <link>https://huozhixue.github.io/leetcode/2302/</link>
     <pubDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2302/</guid>
-    <description><![CDATA[力扣第 80 场双周赛第 4 题 题目 一个数组的 分数 定义为数组之和 乘以 数组的长度。 比方说，[1, 2, 3, 4, 5] 的分数为 (1 + 2 + 3 + 4 + 5) * 5 = 75 。 给你一个正整]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-subarrays-with-score-less-than-k/" target="_blank" rel="noopener noreffer">力扣第 80 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>一个数组的 <strong>分数</strong> 定义为数组之和 <strong>乘以</strong> 数组的长度。</p>
+<ul>
+<li>比方说，<code>[1, 2, 3, 4, 5]</code> 的分数为 <code>(1 + 2 + 3 + 4 + 5) * 5 = 75</code> 。</li>
+</ul>
+<p>给你一个正整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回 <code>nums</code> 中分数 <strong>严格小于 </strong><code>k</code> 的 <strong>非空整数子数组数目</strong>。</p>]]></description>
 </item><item>
     <title>2156：查找给定哈希值的子串（2062 分）</title>
     <link>https://huozhixue.github.io/leetcode/2156/</link>
     <pubDate>Sun, 30 Jan 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2156/</guid>
-    <description><![CDATA[力扣第 278 场周赛第 3 题 题目 给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算： hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + ... + val(s[k-1]) * pk-1) mod m.]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-substring-with-given-hash-value/" target="_blank" rel="noopener noreffer">力扣第 278 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定整数 <code>p</code> 和 <code>m</code> ，一个长度为 <code>k</code> 且下标从 <strong>0</strong> 开始的字符串 <code>s</code> 的哈希值按照如下函数计算：</p>
+<ul>
+<li><code>hash(s, p, m) = (val(s[0]) * p<sup>0</sup> + val(s[1]) * p<sup>1</sup> + ... + val(s[k-1]) * p<sup>k-1</sup>) mod m</code>.</li>
+</ul>
+<p>其中 <code>val(s[i])</code> 表示 <code>s[i]</code> 在字母表中的下标，从 <code>val('a') = 1</code> 到 <code>val('z') = 26</code> 。</p>]]></description>
 </item><item>
     <title>2009：使数组连续的最少操作数（2084 分）</title>
     <link>https://huozhixue.github.io/leetcode/2009/</link>
     <pubDate>Sat, 18 Sep 2021 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2009/</guid>
-    <description><![CDATA[力扣第 61 场双周赛第 4 题 题目 给你一个整数数组 nums 。每一次操作中，你可以将 nums 中 任意 一个元素替换成 任意 整数。 如果 nums 满足以下条件，那么它是 连续的 ： nums 中]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-continuous/" target="_blank" rel="noopener noreffer">力扣第 61 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 。每一次操作中，你可以将 <code>nums</code> 中 <strong>任意</strong> 一个元素替换成 <strong>任意 </strong>整数。</p>
+<p>如果 <code>nums</code> 满足以下条件，那么它是 <strong>连续的</strong> ：</p>]]></description>
 </item><item>
     <title>1696：跳跃游戏 VI（1954 分）</title>
     <link>https://huozhixue.github.io/leetcode/1696/</link>
     <pubDate>Sun, 20 Dec 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1696/</guid>
-    <description><![CDATA[力扣第 220 场周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums 和一个整数 k 。 一开始你在下标 0 处。每一步，你最多可以往前跳 k 步，但你不能跳出数组的边]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/jump-game-vi/" target="_blank" rel="noopener noreffer">力扣第 220 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
+<p>一开始你在下标 <code>0</code> 处。每一步，你最多可以往前跳 <code>k</code> 步，但你不能跳出数组的边界。也就是说，你可以从下标 <code>i</code> 跳到 <code>[i + 1， min(n - 1, i + k)]</code> <strong>包含</strong> 两个端点的任意位置。</p>]]></description>
 </item><item>
     <title>1499：满足不等式的最大值（2456 分）</title>
     <link>https://huozhixue.github.io/leetcode/1499/</link>
     <pubDate>Sun, 28 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1499/</guid>
-    <description><![CDATA[力扣第 195 场周赛第 4 题 题目 给你一个数组 points 和一个整数 k 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 points[i] = [xi,]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/max-value-of-equation/" target="_blank" rel="noopener noreffer">力扣第 195 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个数组 <code>points</code> 和一个整数 <code>k</code> 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> ，并且在 <code>1 &lt;= i &lt; j &lt;= points.length</code> 的前提下， <code>x<sub>i</sub> &lt; x<sub>j</sub></code> 总成立。</p>]]></description>
 </item><item>
     <title>1456：定长子串中元音的最大数目（1263 分）</title>
     <link>https://huozhixue.github.io/leetcode/1456/</link>
     <pubDate>Sun, 24 May 2020 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1456/</guid>
-    <description><![CDATA[力扣第 190 场周赛第 2 题 题目 给你字符串 s 和整数 k 。 请返回字符串 s 中长度为 k 的单个子字符串中可能包含的最大元音字母数。 英文中的 元音字母 为（a, e, i,]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/" target="_blank" rel="noopener noreffer">力扣第 190 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你字符串 <code>s</code> 和整数 <code>k</code> 。</p>
+<p>请返回字符串 <code>s</code> 中长度为 <code>k</code> 的单个子字符串中可能包含的最大元音字母数。</p>
+<p>英文中的 <strong>元音字母 </strong>为（<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>）。</p>]]></description>
 </item><item>
     <title>1438：绝对差不超过限制的最长连续子数组（1672 分）</title>
     <link>https://huozhixue.github.io/leetcode/1438/</link>
     <pubDate>Sun, 03 May 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1438/</guid>
-    <description><![CDATA[力扣第 187 场周赛第 3 题 题目 给你一个整数数组 nums ，和一个表示限制的整数 limit，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/" target="_blank" rel="noopener noreffer">力扣第 187 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> ，和一个表示限制的整数 <code>limit</code>，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对差必须小于或者等于 <code>limit</code><em> 。</em></p>]]></description>
 </item><item>
     <title>1425：带限制的子序列和（2032 分）</title>
     <link>https://huozhixue.github.io/leetcode/1425/</link>
     <pubDate>Sun, 26 Apr 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1425/</guid>
-    <description><![CDATA[力扣第 186 场周赛第 4 题 题目 给你一个整数数组 nums 和一个整数 k ，请你返回 非空 子序列元素和的最大值，子序列需要满足：子序列中每两个 相邻 的整数 nums[i] 和 nums[j] ，它]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/constrained-subsequence-sum/" target="_blank" rel="noopener noreffer">力扣第 186 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回 <strong>非空</strong> 子序列元素和的最大值，子序列需要满足：子序列中每两个 <strong>相邻</strong> 的整数 <code>nums[i]</code> 和 <code>nums[j]</code> ，它们在原数组中的下标 <code>i</code> 和 <code>j</code> 满足 <code>i &lt; j</code> 且 <code>j - i &lt;= k</code> 。</p>]]></description>
 </item></channel>
 </rss>

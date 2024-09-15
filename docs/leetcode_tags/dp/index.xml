@@ -9,69 +9,116 @@
     <pubDate>Sun, 19 May 2024 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3152/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 2 题 题目 如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 特殊数组 。 周洋哥有一个整数数组 nums 和一个二维整数]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/special-array-ii/" target="_blank" rel="noopener noreffer">力扣第 398 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 <strong>特殊数组</strong> 。</p>
+<p>周洋哥有一个整数数组 <code>nums</code> 和一个二维整数矩阵 <code>queries</code>，对于 <code>queries[i] = [from<sub>i</sub>, to<sub>i</sub>]</code>，请你帮助周洋哥检查子数组 <code>nums[from<sub>i</sub>..to<sub>i</sub>]</code> 是不是一个 <strong>特殊数组 </strong>。</p>]]></description>
 </item><item>
     <title>3148：矩阵中的最大得分（1819 分）</title>
     <link>https://huozhixue.github.io/leetcode/3148/</link>
     <pubDate>Sun, 12 May 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3148/</guid>
-    <description><![CDATA[力扣第 397 场周赛第 3 题 题目 给你一个由 正整数 组成、大小为 m x n 的矩阵 grid。你可以从矩阵中的任一单元格移动到另一个位于正下方或正右侧的任意单元]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-difference-score-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 397 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个由 <strong>正整数</strong> 组成、大小为 <code>m x n</code> 的矩阵 <code>grid</code>。你可以从矩阵中的任一单元格移动到另一个位于正下方或正右侧的任意单元格（不必相邻）。从值为 <code>c1</code> 的单元格移动到值为 <code>c2</code> 的单元格的得分为 <code>c2 - c1</code> 。</p>]]></description>
 </item><item>
     <title>3130：找出所有稳定的二进制数组 II（2824 分）</title>
     <link>https://huozhixue.github.io/leetcode/3130/</link>
     <pubDate>Sat, 27 Apr 2024 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3130/</guid>
-    <description><![CDATA[力扣第 129 场双周赛第 4 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii/" target="_blank" rel="noopener noreffer">力扣第 129 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你 3 个正整数 <code>zero</code> ，<code>one</code> 和 <code>limit</code> 。</p>
+<p>一个 <span data-keyword="binary-array">二进制数组</span> <code>arr</code> 如果满足以下条件，那么我们称它是 <strong>稳定的</strong> ：</p>]]></description>
 </item><item>
     <title>3129：找出所有稳定的二进制数组 I（2200 分）</title>
     <link>https://huozhixue.github.io/leetcode/3129/</link>
     <pubDate>Sat, 27 Apr 2024 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3129/</guid>
-    <description><![CDATA[力扣第 129 场双周赛第 3 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i/" target="_blank" rel="noopener noreffer">力扣第 129 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你 3 个正整数 <code>zero</code> ，<code>one</code> 和 <code>limit</code> 。</p>
+<p>一个 <span data-keyword="binary-array">二进制数组</span> <code>arr</code> 如果满足以下条件，那么我们称它是 <strong>稳定的</strong> ：</p>]]></description>
 </item><item>
     <title>3007：价值和小于等于 K 的最大数字（2258 分）</title>
     <link>https://huozhixue.github.io/leetcode/3007/</link>
     <pubDate>Sun, 14 Jan 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3007/</guid>
-    <description><![CDATA[力扣第 380 场周赛第 3 题 题目 给你一个整数 k 和一个整数 x 。整数 num 的价值是它的二进制表示中在 x，2x，3x 等位置处 设置位 的数目（从最低有效位开始）。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/" target="_blank" rel="noopener noreffer">力扣第 380 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>k</code> 和一个整数 <code>x</code> 。整数 <code>num</code> 的价值是它的二进制表示中在 <code>x</code>，<code>2x</code>，<code>3x</code> 等位置处 <strong><span data-keyword="set-bit">设置位</span></strong> 的数目（从最低有效位开始）。下面的表格包含了如何计算价值的例子。</p>]]></description>
 </item><item>
     <title>2915：和为目标值的最长子序列的长度（1658 分）</title>
     <link>https://huozhixue.github.io/leetcode/2915/</link>
     <pubDate>Sat, 28 Oct 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2915/</guid>
-    <description><![CDATA[力扣第 116 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums 和一个整数 target 。 返回和为 target 的 nums 子序列中，子序列 长度的最大值 。如果不存在和为 target 的子序列]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target/" target="_blank" rel="noopener noreffer">力扣第 116 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>target</code> 。</p>
+<p>返回和为 <code>target</code> 的 <code>nums</code> 子序列中，子序列 <strong>长度的最大值 </strong>。如果不存在和为 <code>target</code> 的子序列，返回 <code>-1</code> 。</p>]]></description>
 </item><item>
     <title>2902：和带限制的子多重集合的数目（2758 分）</title>
     <link>https://huozhixue.github.io/leetcode/2902/</link>
     <pubDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2902/</guid>
-    <description><![CDATA[力扣第 115 场双周赛第 4 题 题目 给你一个下标从 0 开始的非负整数数组 nums 和两个整数 l 和 r 。 请你返回 nums 中子多重集合的和在闭区间 [l, r] 之间的 子多重集合的数目]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/" target="_blank" rel="noopener noreffer">力扣第 115 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的非负整数数组 <code>nums</code> 和两个整数 <code>l</code> 和 <code>r</code> 。</p>
+<p>请你返回 <code>nums</code> 中子多重集合的和在闭区间 <code>[l, r]</code> 之间的 <strong>子多重集合的数目</strong> 。</p>]]></description>
 </item><item>
     <title>2876：有向图访问计数（2209 分）</title>
     <link>https://huozhixue.github.io/leetcode/2876/</link>
     <pubDate>Sun, 01 Oct 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2876/</guid>
-    <description><![CDATA[力扣第 365 场周赛第 4 题 题目 现有一个有向图，其中包含 n 个节点，节点编号从 0 到 n - 1 。此外，该图还包含了 n 条有向边。 给你一个下标从 0 开始的数组 edges ，]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/" target="_blank" rel="noopener noreffer">力扣第 365 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>现有一个有向图，其中包含 <code>n</code> 个节点，节点编号从 <code>0</code> 到 <code>n - 1</code> 。此外，该图还包含了 <code>n</code> 条有向边。</p>
+<p>给你一个下标从 <strong>0</strong> 开始的数组 <code>edges</code> ，其中 <code>edges[i]</code> 表示存在一条从节点 <code>i</code> 到节点 <code>edges[i]</code> 的边。</p>]]></description>
 </item><item>
     <title>2786：访问数组中的位置使分数最大（1732 分）</title>
     <link>https://huozhixue.github.io/leetcode/2786/</link>
     <pubDate>Sat, 22 Jul 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2786/</guid>
-    <description><![CDATA[力扣第 109 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums 和一个正整数 x 。 你 一开始 在数组的位置 0 处，你可以按照下述规则访问数组中的其他位置：]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/visit-array-positions-to-maximize-score/" target="_blank" rel="noopener noreffer">力扣第 109 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个正整数 <code>x</code> 。</p>
+<p>你 <strong>一开始</strong> 在数组的位置 <code>0</code> 处，你可以按照下述规则访问数组中的其他位置：</p>]]></description>
 </item><item>
     <title>2708：一个小组的最大实力值（1502 分）</title>
     <link>https://huozhixue.github.io/leetcode/2708/</link>
     <pubDate>Sat, 27 May 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2708/</guid>
-    <description><![CDATA[力扣第 105 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 非空 小组]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/" target="_blank" rel="noopener noreffer">力扣第 105 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 <strong>非空</strong> 小组，且这个小组的 <strong>实力值</strong> 最大，如果这个小组里的学生下标为 <code>i<sub>0</sub></code>, <code>i<sub>1</sub></code>, <code>i<sub>2</sub></code>, ... , <code>i<sub>k</sub></code> ，那么这个小组的实力值定义为 <code>nums[i<sub>0</sub>] * nums[i<sub>1</sub>] * nums[i<sub>2</sub>] * ... * nums[i<sub>k</sub>​]</code> 。</p>]]></description>
 </item></channel>
 </rss>

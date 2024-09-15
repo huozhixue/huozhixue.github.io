@@ -9,69 +9,112 @@
     <pubDate>Sun, 13 Mar 2022 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2203/</guid>
-    <description><![CDATA[力扣第 284 场周赛第 4 题 题目 给你一个整数 n ，它表示一个 带权有向 图的节点数，节点编号为 0 到 n - 1 。 同时给你一个二维整数数组 edges ，其中 edges[i] = [fromi, toi, weighti] ，表示]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/" target="_blank" rel="noopener noreffer">力扣第 284 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>n</code> ，它表示一个 <strong>带权有向</strong> 图的节点数，节点编号为 <code>0</code> 到 <code>n - 1</code> 。</p>
+<p>同时给你一个二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> ，表示从 <code>from<sub>i</sub></code> 到 <code>to<sub>i</sub></code> 有一条边权为 <code>weight<sub>i</sub></code> 的 <strong>有向</strong> 边。</p>]]></description>
 </item><item>
     <title>2045：到达目的地的第二短时间（2201 分）</title>
     <link>https://huozhixue.github.io/leetcode/2045/</link>
     <pubDate>Sun, 17 Oct 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2045/</guid>
-    <description><![CDATA[力扣第 263 场周赛第 4 题 题目 城市用一个 双向连通 图表示，图中有 n 个节点，从 1 到 n 编号（包含 1 和 n）。图中的边用一个二维整数数组 edges 表示，其中每个 edges[i] =]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/second-minimum-time-to-reach-destination/" target="_blank" rel="noopener noreffer">力扣第 263 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>城市用一个 <strong>双向连通</strong> 图表示，图中有 <code>n</code> 个节点，从 <code>1</code> 到 <code>n</code> 编号（包含 <code>1</code> 和 <code>n</code>）。图中的边用一个二维整数数组 <code>edges</code> 表示，其中每个 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> 表示一条节点 <code>u<sub>i</sub></code> 和节点 <code>v<sub>i</sub></code> 之间的双向连通边。每组节点对由 <strong>最多一条</strong> 边连通，顶点不存在连接到自身的边。穿过任意一条边的时间是 <code>time</code> 分钟。</p>]]></description>
 </item><item>
     <title>1976：到达目的地的方案数（2094 分）</title>
     <link>https://huozhixue.github.io/leetcode/1976/</link>
     <pubDate>Sat, 21 Aug 2021 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1976/</guid>
-    <description><![CDATA[力扣第 59 场双周赛第 3 题 题目 你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。输入保证你可以从任意路口出发到达]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/" target="_blank" rel="noopener noreffer">力扣第 59 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你在一个城市里，城市由 <code>n</code> 个路口组成，路口编号为 <code>0</code> 到 <code>n - 1</code> ，某些路口之间有 <strong>双向</strong> 道路。输入保证你可以从任意路口出发到达其他任意路口，且任意两个路口之间最多有一条路。</p>]]></description>
 </item><item>
     <title>1786：从第一个节点出发到最后一个节点的受限路径数（2078 分）</title>
     <link>https://huozhixue.github.io/leetcode/1786/</link>
     <pubDate>Sun, 07 Mar 2021 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1786/</guid>
-    <description><![CDATA[力扣第 231 场周赛第 3 题 题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ，其中每个 edges[i] =]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/" target="_blank" rel="noopener noreffer">力扣第 231 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>现有一个加权无向连通图。给你一个正整数 <code>n</code> ，表示图中有 <code>n</code> 个节点，并按从 <code>1</code> 到 <code>n</code> 给节点编号；另给你一个数组 <code>edges</code> ，其中每个 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>, weight<sub>i</sub>]</code> 表示存在一条位于节点 <code>u<sub>i</sub></code> 和 <code>v<sub>i</sub></code> 之间的边，这条边的权重为 <code>weight<sub>i</sub></code> 。</p>]]></description>
 </item><item>
     <title>1514：概率最大的路径（1846 分）</title>
     <link>https://huozhixue.github.io/leetcode/1514/</link>
     <pubDate>Sun, 12 Jul 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1514/</guid>
-    <description><![CDATA[力扣第 197 场周赛第 3 题 题目 给你一个由 n 个节点（下标从 0 开始）组成的无向加权图，该图由一个描述边的列表组成，其中 edges[i] = [a, b] 表示连接节点 a 和 b 的一条]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/path-with-maximum-probability/" target="_blank" rel="noopener noreffer">力扣第 197 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个由 <code>n</code> 个节点（下标从 0 开始）组成的无向加权图，该图由一个描述边的列表组成，其中 <code>edges[i] = [a, b]</code> 表示连接节点 a 和 b 的一条无向边，且该边遍历成功的概率为 <code>succProb[i]</code> 。</p>]]></description>
 </item><item>
     <title>1368：使网格图至少有一条有效路径的最小代价（2068 分）</title>
     <link>https://huozhixue.github.io/leetcode/1368/</link>
     <pubDate>Sun, 01 Mar 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1368/</guid>
-    <description><![CDATA[力扣第 178 场周赛第 4 题 题目 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况：]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 178 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 m x n 的网格图 <code>grid</code> 。 <code>grid</code> 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 <code>grid[i][j]</code> 中的数字可能为以下几种情况：</p>]]></description>
 </item><item>
     <title>1334：阈值距离内邻居最少的城市（1854 分）</title>
     <link>https://huozhixue.github.io/leetcode/1334/</link>
     <pubDate>Sun, 26 Jan 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1334/</guid>
-    <description><![CDATA[力扣第 173 场周赛第 3 题 题目 有 n 个城市，按从 0 到 n-1 编号。给你一个边数组 edges，其中 edges[i] = [fromi, toi, weighti] 代表 fromi 和 toi 两个城市之间的双向加权边，距离阈值是一]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/" target="_blank" rel="noopener noreffer">力扣第 173 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有 <code>n</code> 个城市，按从 <code>0</code> 到 <code>n-1</code> 编号。给你一个边数组 <code>edges</code>，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> 代表 <code>from<sub>i</sub></code> 和 <code>to<sub>i</sub></code><sub> </sub>两个城市之间的双向加权边，距离阈值是一个整数 <code>distanceThreshold</code>。</p>]]></description>
 </item><item>
     <title>0882：细分图中的可到达节点（2328 分）</title>
     <link>https://huozhixue.github.io/leetcode/0882/</link>
     <pubDate>Sun, 05 Aug 2018 10:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0882/</guid>
-    <description><![CDATA[力扣第 96 场周赛第 4 题 题目 给你一个无向图（原始图），图中有 n 个节点，编号从 0 到 n - 1 。你决定将图中的每条边 细分 为一条节点链，每条边之间的新节点]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/" target="_blank" rel="noopener noreffer">力扣第 96 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个无向图（<strong>原始图</strong>），图中有 <code>n</code> 个节点，编号从 <code>0</code> 到 <code>n - 1</code> 。你决定将图中的每条边 <strong>细分</strong> 为一条节点链，每条边之间的新节点数各不相同。</p>]]></description>
 </item><item>
     <title>0787：K 站中转内最便宜的航班（1786 分）</title>
     <link>https://huozhixue.github.io/leetcode/0787/</link>
     <pubDate>Sat, 25 Feb 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0787/</guid>
-    <description><![CDATA[力扣第 787 题 题目 有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromi, toi, pricei] ，表示该航班都从城市 fromi 开始，以价格 pricei 抵达 toi。 现在给定所有的城市和]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/cheapest-flights-within-k-stops/" target="_blank" rel="noopener noreffer">力扣第 787 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有 <code>n</code> 个城市通过一些航班连接。给你一个数组 <code>flights</code> ，其中 <code>flights[i] = [from<sub>i</sub>, to<sub>i</sub>, price<sub>i</sub>]</code> ，表示该航班都从城市 <code>from<sub>i</sub></code> 开始，以价格 <code>price<sub>i</sub></code> 抵达 <code>to<sub>i</sub></code>。</p>
+<p>现在给定所有的城市和航班，以及出发城市 <code>src</code> 和目的地 <code>dst</code>，你的任务是找到出一条最多经过 <code>k</code> 站中转的路线，使得从 <code>src</code> 到 <code>dst</code> 的 <strong>价格最便宜</strong> ，并返回该价格。 如果不存在这样的路线，则输出 <code>-1</code>。</p>]]></description>
 </item><item>
     <title>0743：网络延迟时间（★）</title>
     <link>https://huozhixue.github.io/leetcode/0743/</link>
     <pubDate>Thu, 12 Jan 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0743/</guid>
-    <description><![CDATA[力扣第 743 题 题目 有 n 个网络节点，标记为 1 到 n。 给你一个列表 times，表示信号经过 有向 边的传递时间。 times[i] = (ui, vi, wi)，其中 ui 是源节点，vi 是目标]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/network-delay-time/" target="_blank" rel="noopener noreffer">力扣第 743 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有 <code>n</code> 个网络节点，标记为 <code>1</code> 到 <code>n</code>。</p>
+<p>给你一个列表 <code>times</code>，表示信号经过 <strong>有向</strong> 边的传递时间。 <code>times[i] = (u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>)</code>，其中 <code>u<sub>i</sub></code> 是源节点，<code>v<sub>i</sub></code> 是目标节点， <code>w<sub>i</sub></code> 是一个信号从源节点传递到目标节点的时间。</p>]]></description>
 </item></channel>
 </rss>

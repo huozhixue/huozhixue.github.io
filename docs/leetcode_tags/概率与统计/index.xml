@@ -9,13 +9,29 @@
     <pubDate>Sat, 18 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0808/</guid>
-    <description><![CDATA[力扣第 808 题 题目 有 A 和 B 两种类型 的汤。一开始每种类型的汤有 n 毫升。有四种分配操作： 提供 100ml 的 汤A 和 0ml 的 汤B 。 提供 75ml 的 汤A 和 25ml 的 汤B 。 提供 50ml 的 汤A]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/soup-servings/" target="_blank" rel="noopener noreffer">力扣第 808 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有 <strong>A 和 B 两种类型 </strong>的汤。一开始每种类型的汤有 <code>n</code> 毫升。有四种分配操作：</p>
+<ol>
+<li>提供 <code>100ml</code> 的 <strong>汤A</strong> 和 <code>0ml</code> 的 <strong>汤B</strong> 。</li>
+<li>提供 <code>75ml</code> 的 <strong>汤A</strong> 和 <code>25ml</code> 的 <strong>汤B</strong> 。</li>
+<li>提供 <code>50ml</code> 的 <strong>汤A</strong> 和 <code>50ml</code> 的 <strong>汤B</strong> 。</li>
+<li>提供 <code>25ml</code> 的 <strong>汤A</strong> 和 <code>75ml</code> 的 <strong>汤B</strong> 。</li>
+</ol>
+<p>当我们把汤分配给某人之后，汤就没有了。每个回合，我们将从四种概率同为 <code>0.25</code> 的操作中进行分配选择。如果汤的剩余量不足以完成某次操作，我们将尽可能分配。当两种类型的汤都分配完时，停止操作。</p>]]></description>
 </item><item>
     <title>0470：用 Rand7() 实现 Rand10()（★）</title>
     <link>https://huozhixue.github.io/leetcode/0470/</link>
     <pubDate>Thu, 14 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0470/</guid>
-    <description><![CDATA[力扣第 470 题 题目 给定方法 rand7 可生成 [1,7] 范围内的均匀随机整数，试写一个方法 rand10 生成 [1,10] 范围内的均匀随机整数。 你只能调用 rand7() 且不能调用其他方法。请不要使用系]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/implement-rand10-using-rand7/" target="_blank" rel="noopener noreffer">力扣第 470 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定方法 <code>rand7</code> 可生成 <code>[1,7]</code> 范围内的均匀随机整数，试写一个方法 <code>rand10</code> 生成 <code>[1,10]</code> 范围内的均匀随机整数。</p>
+<p>你只能调用 <code>rand7()</code> 且不能调用其他方法。请不要使用系统的 <code>Math.random()</code> 方法。</p>]]></description>
 </item></channel>
 </rss>

@@ -9,69 +9,130 @@
     <pubDate>Sun, 07 Jun 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1472/</guid>
-    <description><![CDATA[力扣第 192 场周赛第 3 题 题目 你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-browser-history/" target="_blank" rel="noopener noreffer">力扣第 192 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你有一个只支持单个标签页的 <strong>浏览器</strong> ，最开始你浏览的网页是 <code>homepage</code> ，你可以访问其他的网站 <code>url</code> ，也可以在浏览历史中后退 <code>steps</code> 步或前进 <code>steps</code> 步。</p>]]></description>
 </item><item>
     <title>1206：设计跳表（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1206/</link>
     <pubDate>Wed, 25 Sep 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1206/</guid>
-    <description><![CDATA[力扣第 1206 题 题目 不使用任何库函数，设计一个 跳表 。 跳表 是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-skiplist/" target="_blank" rel="noopener noreffer">力扣第 1206 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>不使用任何库函数，设计一个 <strong>跳表</strong> 。</p>
+<p><strong>跳表</strong> 是在 <code>O(log(n))</code> 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，并且跳表的代码长度相较下更短，其设计思想与链表相似。</p>]]></description>
 </item><item>
     <title>1171：从链表中删去总和值为零的连续节点（1782 分）</title>
     <link>https://huozhixue.github.io/leetcode/1171/</link>
     <pubDate>Sun, 25 Aug 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1171/</guid>
-    <description><![CDATA[力扣第 151 场周赛第 3 题 题目 给你一个链表的头节点 head，请你编写代码，反复删去链表中由 总和 值为 0 的连续节点组成的序列，直到不存在这样的序列为止]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list/" target="_blank" rel="noopener noreffer">力扣第 151 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个链表的头节点 <code>head</code>，请你编写代码，反复删去链表中由 <strong>总和</strong> 值为 <code>0</code> 的连续节点组成的序列，直到不存在这样的序列为止。</p>]]></description>
 </item><item>
     <title>1019：链表中的下一个更大节点（1570 分）</title>
     <link>https://huozhixue.github.io/leetcode/1019/</link>
     <pubDate>Sun, 31 Mar 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1019/</guid>
-    <description><![CDATA[力扣第 130 场周赛第 3 题 题目 给定一个长度为 n 的链表 head 对于列表中的每个节点，查找下一个 更大节点 的值。也就是说，对于每个节点，找到它旁边的第一个节点]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/next-greater-node-in-linked-list/" target="_blank" rel="noopener noreffer">力扣第 130 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个长度为 <code>n</code> 的链表 <code>head</code></p>
+<p>对于列表中的每个节点，查找下一个 <strong>更大节点</strong> 的值。也就是说，对于每个节点，找到它旁边的第一个节点的值，这个节点的值 <strong>严格大于</strong> 它的值。</p>]]></description>
 </item><item>
     <title>0876：链表的中间结点（1231 分）</title>
     <link>https://huozhixue.github.io/leetcode/0876/</link>
     <pubDate>Sun, 29 Jul 2018 09:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0876/</guid>
-    <description><![CDATA[力扣第 95 场周赛第 1 题 题目 给你单链表的头结点 head ，请你找出并返回链表的中间结点。 如果有两个中间结点，则返回第二个中间结点。 示例 1： 输入：head]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/middle-of-the-linked-list/" target="_blank" rel="noopener noreffer">力扣第 95 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你单链表的头结点 <code>head</code> ，请你找出并返回链表的中间结点。</p>
+<p>如果有两个中间结点，则返回第二个中间结点。</p>
+<p><strong class="example">示例 1：</strong></p>]]></description>
 </item><item>
     <title>0817：链表组件（1428 分）</title>
     <link>https://huozhixue.github.io/leetcode/0817/</link>
     <pubDate>Mon, 27 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0817/</guid>
-    <description><![CDATA[力扣第 817 题 题目 给定链表头结点 head，该链表上的每个结点都有一个 唯一的整型值 。同时给定列表 nums，该列表是上述链表中整型值的一个子集。 返回]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/linked-list-components/" target="_blank" rel="noopener noreffer">力扣第 817 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定链表头结点 <code>head</code>，该链表上的每个结点都有一个 <strong>唯一的整型值</strong> 。同时给定列表 <code>nums</code>，该列表是上述链表中整型值的一个子集。</p>]]></description>
 </item><item>
     <title>0725：分隔链表（★）</title>
     <link>https://huozhixue.github.io/leetcode/0725/</link>
     <pubDate>Sun, 25 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0725/</guid>
-    <description><![CDATA[力扣第 725 题 题目 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。 每部分的长度应该尽可能的相等：任意两部分的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/split-linked-list-in-parts/" target="_blank" rel="noopener noreffer">力扣第 725 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个头结点为 <code>head</code> 的单链表和一个整数 <code>k</code> ，请你设计一个算法将链表分隔为 <code>k</code> 个连续的部分。</p>
+<p>每部分的长度应该尽可能的相等：任意两部分的长度差距不能超过 1 。这可能会导致有些部分为 null 。</p>]]></description>
 </item><item>
     <title>0707：设计链表（★）</title>
     <link>https://huozhixue.github.io/leetcode/0707/</link>
     <pubDate>Wed, 07 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0707/</guid>
-    <description><![CDATA[力扣第 707 题 题目 你可以选择使用单链表或者双链表，设计并实现自己的链表。 单链表中的节点应该具备两个属性：val 和 next 。val 是当前节点的值，nex]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-linked-list/" target="_blank" rel="noopener noreffer">力扣第 707 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你可以选择使用单链表或者双链表，设计并实现自己的链表。</p>
+<p>单链表中的节点应该具备两个属性：<code>val</code> 和 <code>next</code> 。<code>val</code> 是当前节点的值，<code>next</code> 是指向下一个节点的指针/引用。</p>]]></description>
 </item><item>
     <title>0706：设计哈希映射</title>
     <link>https://huozhixue.github.io/leetcode/0706/</link>
     <pubDate>Tue, 06 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0706/</guid>
-    <description><![CDATA[力扣第 706 题 题目 不使用任何内建的哈希表库设计一个哈希映射（HashMap）。 实现 MyHashMap 类： MyHashMap() 用空映射初始化对象 void put(int key, int value) 向 HashMap 插入一个键值对 (key, value) 。如]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-hashmap/" target="_blank" rel="noopener noreffer">力扣第 706 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>不使用任何内建的哈希表库设计一个哈希映射（HashMap）。</p>
+<p>实现 <code>MyHashMap</code> 类：</p>
+<ul>
+<li><code>MyHashMap()</code> 用空映射初始化对象</li>
+<li><code>void put(int key, int value)</code> 向 HashMap 插入一个键值对 <code>(key, value)</code> 。如果 <code>key</code> 已经存在于映射中，则更新其对应的值 <code>value</code> 。</li>
+<li><code>int get(int key)</code> 返回特定的 <code>key</code> 所映射的 <code>value</code> ；如果映射中不包含 <code>key</code> 的映射，返回 <code>-1</code> 。</li>
+<li><code>void remove(key)</code> 如果映射中存在 <code>key</code> 的映射，则移除 <code>key</code> 和它所对应的 <code>value</code> 。</li>
+</ul>
+<p><strong>示例：</strong></p>]]></description>
 </item><item>
     <title>0705：设计哈希集合</title>
     <link>https://huozhixue.github.io/leetcode/0705/</link>
     <pubDate>Mon, 05 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0705/</guid>
-    <description><![CDATA[力扣第 705 题 题目 不使用任何内建的哈希表库设计一个哈希集合（HashSet）。 实现 MyHashSet 类： void add(key) 向哈希集合中插入值 key 。 bool contains(key) 返回哈希集合中是否存在这个]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-hashset/" target="_blank" rel="noopener noreffer">力扣第 705 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
+<p>实现 <code>MyHashSet</code> 类：</p>
+<ul>
+<li><code>void add(key)</code> 向哈希集合中插入值 <code>key</code> 。</li>
+<li><code>bool contains(key)</code> 返回哈希集合中是否存在这个值 <code>key</code> 。</li>
+<li><code>void remove(key)</code> 将给定值 <code>key</code> 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。</li>
+</ul>
+<p><strong>示例：</strong></p>]]></description>
 </item></channel>
 </rss>

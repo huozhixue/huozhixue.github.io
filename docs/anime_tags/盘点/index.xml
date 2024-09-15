@@ -9,69 +9,623 @@
     <pubDate>Tue, 31 Dec 2019 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/2019/</guid>
-    <description><![CDATA[2019 动画年终盘点，包括 MAD、短片、音乐等 MAD 单素材 多素材 短片 原创 同人]]></description>
+    <description><![CDATA[<p>2019 动画年终盘点，包括 MAD、短片、音乐等</p>
+<div class="media" id="id-1" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1EJ411b71H-BV1D541147iF".split(/-/);
+		var titles = "19分钟看完2019年日本动画,[TV2] 中二电视台2019年金鸡排奖颁奖典礼".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-1"] = data;
+	</script>
+<h2 id="mad">MAD</h2>
+<h3 id="单素材">单素材</h3>
+<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2019",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-2"] = data;
+	</script>
+<h3 id="多素材">多素材</h3>
+<div class="media" id="id-3" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2019_1",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-3"] = data;
+	</script>
+<h2 id="短片">短片</h2>
+<h3 id="原创">原创</h3>
+<div class="media" id="id-4" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-4" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1Yb411v7eN-BV1xb411e7PB-BV1Yb411V7w2".split(/-/);
+		var titles = "【短篇动画】去往你的身旁~太阳雨~(丸井 X 东宝 X Orange制作)【F宅/1080P+】,僕らまだアンダーグラウンド - Eve MV,【Resh个人动画】Crimson Alpine".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-4"] = data;
+	</script>
+<h3 id="同人">同人</h3>
+<div class="media" id="id-5" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-5" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1mb411r7sb-BV1gb411K7Lo-BV19J411K74n-BV1rE41197S9".split(/-/);
+		var titles = "【脑洞/乱入】2019动漫贺年乱入,【脑洞/误解】龙套与齐木楠雄的相遇,【耗时近千小时！每月电费上千！】新人自制攻壳机动队Title开场设计,【定格动画】童年回忆大乱斗！".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-5"] = data;
+	</script>]]></description>
 </item><item>
     <title>2018 年终盘点</title>
     <link>https://huozhixue.github.io/anime/2018/</link>
     <pubDate>Mon, 31 Dec 2018 22:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/2018/</guid>
-    <description><![CDATA[2018 动画年终盘点，包括 MAD、短片、音乐等 MAD 单素材 多素材 短片]]></description>
+    <description><![CDATA[<p>2018 动画年终盘点，包括 MAD、短片、音乐等</p>
+<div class="media" id="id-1" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-1" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1ht411r7vr-BV1jt411W7sb-BV1Ct411W7jP-BV1Nt411H71g".split(/-/);
+		var titles = "18分钟看完2018年动画,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P1）,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P2）,【TV2】中二电视台2018年GOLDENPANTS颁奖典礼（P3）".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-1"] = data;
+	</script>
+<h2 id="mad">MAD</h2>
+<h3 id="单素材">单素材</h3>
+<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2018",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-2"] = data;
+	</script>
+<h3 id="多素材">多素材</h3>
+<div class="media" id="id-3" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/mad\/2018_1",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-3"] = data;
+	</script>
+<h2 id="短片">短片</h2>
+<div class="media" id="id-4" type="video">
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a href="#id-4" target="_blank" rel="noopener noreferrer"></a>
+		<div></div>
+	</div>
+	<script>
+		var data = [];
+		var urls = "BV1Rs411V75T".split(/-/);
+		var titles = "【脑洞/乱入】齐木楠雄VS埼玉老师1：神魔相遇".split(/,/);
+		for (let i = 0; i < urls.length; i++) {
+			let raw = url = urls[i];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			let title = '#'+(i+1)+' '+titles[i];
+			data.push([url, title, raw]);
+		}
+		window.config.media["id-4"] = data;
+	</script>]]></description>
 </item><item>
     <title>上美动画短片</title>
     <link>https://huozhixue.github.io/anime/shang_mei/</link>
     <pubDate>Sun, 01 Jan 1950 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/shang_mei/</guid>
-    <description><![CDATA[谢谢小花猫，又名：謝謝小花貓 简介 本合集收录上美代表性的动画短片，从 1950《谢谢小花猫》到 1998《雪狐》。 最具代表性的有：1955 神笔、1]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/118531" target="_blank" rel="noopener noreffer">谢谢小花猫</a></strong></u>，又名：謝謝小花貓</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>本合集收录上美代表性的动画短片，从 1950《谢谢小花猫》到 1998《雪狐》。 最具代表性的有：1955 神笔、1955 乌鸦为什么是黑的、1956 骄傲的将军、1958 猪八戒吃西瓜，1960 小蝌蚪找妈妈、1960 聪明的鸭子、1962 没头脑和不高兴、1963 牧笛、1964 半夜鸡叫、1980 雪孩子、1980 三个和尚、1981 九色鹿、1981 猴子捞月、1982 蛐蛐、1983 鹬蚌相争、1988 不射之射、1993 鹿女。</p>]]></description>
 </item><item>
     <title>苏联早期动画短片</title>
     <link>https://huozhixue.github.io/anime/su_lian/</link>
     <pubDate>Thu, 01 Jan 1948 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/su_lian/</guid>
-    <description><![CDATA[七色花，又名：Цветик-семицветик 简介 本合集收录苏联早期代表性的动画短片，从 1948《七色花》到 1985《了不起的沃瓦》。 系列]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/280583" target="_blank" rel="noopener noreffer">七色花</a></strong></u>，又名：Цветик-семицветик</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>本合集收录苏联早期代表性的动画短片，从 1948《七色花》到 1985《了不起的沃瓦》。</p>]]></description>
 </item><item>
     <title>哥伦比亚早期动画短片</title>
     <link>https://huozhixue.github.io/anime/columbia/</link>
     <pubDate>Sun, 11 Nov 1934 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/columbia/</guid>
-    <description><![CDATA[简介 本合集收录哥伦比亚影业早期代表性的动画短片，从 1934《Holiday Land》到 1957《Trees and Jamaica Daddy》。 系列 系列名 首播时]]></description>
+    <description><![CDATA[<h2 id="简介">简介</h2>
+<p>本合集收录哥伦比亚影业早期代表性的动画短片，从 1934《Holiday Land》到 1957《Trees and Jamaica Daddy》。</p>
+<h2 id="系列">系列</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">系列名</th>
+          <th style="text-align: left">首播时间</th>
+          <th style="text-align: left">话数/时长</th>
+          <th style="text-align: left">观看地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">哥伦比亚早期动画短片</td>
+          <td style="text-align: left">1934-11-11</td>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left"><a href="#id-1" rel="">下方</a></td>
+      </tr>
+  </tbody>
+</table>
+<div class="media" id="id-1" type="tv"><input type="text" />
+			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/tv\/columbia",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-1"] = data;
+	</script>]]></description>
 </item><item>
     <title>米高梅早期动画短片</title>
     <link>https://huozhixue.github.io/anime/mgm/</link>
     <pubDate>Sat, 16 Aug 1930 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/mgm/</guid>
-    <description><![CDATA[乳白星路，又名：The Milky Way、银河 简介 本合集收录米高梅早期代表性的动画短片，从 1930《Fiddlesticks》到 1967《The Bear That W]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/132364" target="_blank" rel="noopener noreffer">乳白星路</a></strong></u>，又名：The Milky Way、银河</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>本合集收录米高梅早期代表性的动画短片，从 1930《Fiddlesticks》到 1967《The Bear That Wasn&rsquo;t》。包括两部奥斯卡最佳短片：1940 The Milky Way、1965 The Dot and the Line。</p>]]></description>
 </item><item>
     <title>弗莱舍早期动画短片</title>
     <link>https://huozhixue.github.io/anime/fleischer/</link>
     <pubDate>Sat, 09 Aug 1930 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/fleischer/</guid>
-    <description><![CDATA[食色迷魂记，又名：Dizzy Dishes 简介 在30年代，美国动画有两大对立的阵营，西海岸（好莱坞）风格的迪士尼，东海岸（纽约）风格的弗莱舍（后来并入派]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/318272" target="_blank" rel="noopener noreffer">食色迷魂记</a></strong></u>，又名：Dizzy Dishes</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>在30年代，美国动画有两大对立的阵营，西海岸（好莱坞）风格的迪士尼，东海岸（纽约）风格的弗莱舍（后来并入派拉蒙公司）。</p>]]></description>
 </item><item>
     <title>环球早期动画短片</title>
     <link>https://huozhixue.github.io/anime/universal/</link>
     <pubDate>Mon, 14 Jul 1930 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/universal/</guid>
-    <description><![CDATA[简介 本合集收录环球影业早期代表性的动画短片，从 1930《Spooks》 到 1954 《I&rsquo;m Cold》。 系列 系列名 首播时间 话数/时长 观看地]]></description>
+    <description><![CDATA[<h2 id="简介">简介</h2>
+<p>本合集收录环球影业早期代表性的动画短片，从 1930《Spooks》 到 1954 《I&rsquo;m Cold》。</p>
+<h2 id="系列">系列</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">系列名</th>
+          <th style="text-align: left">首播时间</th>
+          <th style="text-align: left">话数/时长</th>
+          <th style="text-align: left">观看地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">环球早期动画短片</td>
+          <td style="text-align: left">1930-07-14</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left"><a href="#id-1" rel="">下方</a></td>
+      </tr>
+  </tbody>
+</table>
+<div class="media" id="id-1" type="tv"><input type="text" />
+			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+		<a target="_blank"></a>
+		<div></div>
+	</div>
+	<script>
+		var random = "";
+		var data = $.ajax({url: "/tv\/universal",async:false}).responseText.split(/[\n\r]+/);
+		var len = data.length;
+		for (let i = 0; i < len; i++) {
+			let pair = data[i].split(/\t/);
+			let raw = url = pair[0];
+			if (url.substr(0, 2) == 'BV') {
+				raw = "https://www.bilibili.com/video/" + url.replace("&","?");
+				url = "https://player.bilibili.com/player.html?autoplay=0&isOutside=true&bvid=" + url;
+			}
+			else if (url.substr(0, 4) != 'http' ) {
+				if (url.substr(0, 3) == 'id_'){
+					raw = "https://v.youku.com/v_show/" + url + ".html";
+				}
+				else if (url.substr(0, 2) == 'v_'){
+					raw = "https://www.iqiyi.com/" + url + ".html";
+				}
+				else if (url.substr(0, 5) == 'cover'){
+					raw = "https://v.qq.com/x/" + url + ".html";
+				}
+				else {
+					raw = "https:" + url;
+				}
+				url = "https://svip.bljiex.cc/?v=" + raw;
+			};
+			pair[0] = url;
+			pair[1] = '#'+(i+1)+' '+pair[1];
+			pair.push(raw);
+			data[i] = pair;
+		}
+		var t = new Date();
+		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
+		data = data.slice(cur,len).concat(data.slice(0, cur));
+		if (random){
+			for (let i = 1; i < len - 1; i++) {
+				var j = parseInt(i + Math.random() * (len - i));
+				var temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+		window.config.media["id-1"] = data;
+	</script>]]></description>
 </item><item>
     <title>华纳早期动画短片</title>
     <link>https://huozhixue.github.io/anime/warner_bros/</link>
     <pubDate>Sat, 19 Apr 1930 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/warner_bros/</guid>
-    <description><![CDATA[简介 本合集收录华纳早期代表性的动画短片，包括乐一通（Looney Tunes）系列和欢乐旋律（Merrie Melodies）系列。 从 1930 乐一通首]]></description>
+    <description><![CDATA[<h2 id="简介">简介</h2>
+<p>本合集收录华纳早期代表性的动画短片，包括乐一通（Looney Tunes）系列和欢乐旋律（Merrie Melodies）系列。</p>
+<p>从 1930 乐一通首作《Sinkin&rsquo; in the Bathtub》到 1955《One Froggy Evening》。</p>]]></description>
 </item><item>
     <title>动画的世纪·100 部作品</title>
     <link>https://huozhixue.github.io/anime/1908/</link>
     <pubDate>Mon, 17 Aug 1908 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/anime/1908/</guid>
-    <description><![CDATA[幻影集，又名：Fantasmagorie、ファンタスマゴリー 简介 本片是电影史上世界上第一部抽象动画，无声黑白，2006年法国安锡（Annec]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://bgm.tv/subject/80198" target="_blank" rel="noopener noreffer">幻影集</a></strong></u>，又名：Fantasmagorie、ファンタスマゴリー</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>本片是电影史上世界上第一部抽象动画，无声黑白，2006年法国安锡（Annecy）国际动画电影节上，被评为“动画的世纪•100部作品”第二名。
+　　
+本片无情节无主题，不到两分钟的影像里，导演émile Cohl用再简单不过的线条为观众做了多次变形：人变为酒瓶、酒瓶变为花朵、大象变为房子等等，今天看来，想象力也美得让人叫奇。</p>]]></description>
 </item></channel>
 </rss>

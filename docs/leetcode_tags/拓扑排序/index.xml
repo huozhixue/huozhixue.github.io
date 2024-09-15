@@ -9,69 +9,113 @@
     <pubDate>Sun, 31 Jul 2022 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2360/</guid>
-    <description><![CDATA[力扣第 304 场周赛第 4 题 题目 给你一个 n 个节点的 有向图 ，节点编号为 0 到 n - 1 ，其中每个节点 至多 有一条出边。 图用一个大小为 n 下标从 0 开始的数组 edges 表示]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/" target="_blank" rel="noopener noreffer">力扣第 304 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个节点的 <b>有向图</b> ，节点编号为 <code>0</code> 到 <code>n - 1</code> ，其中每个节点 <strong>至多</strong> 有一条出边。</p>
+<p>图用一个大小为 <code>n</code> 下标从<strong> 0</strong> 开始的数组 <code>edges</code> 表示，节点 <code>i</code> 到节点 <code>edges[i]</code> 之间有一条有向边。如果节点 <code>i</code> 没有出边，那么 <code>edges[i] == -1</code> 。</p>]]></description>
 </item><item>
     <title>2192：有向无环图中一个节点的所有祖先（1787 分）</title>
     <link>https://huozhixue.github.io/leetcode/2192/</link>
     <pubDate>Sat, 05 Mar 2022 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2192/</guid>
-    <description><![CDATA[力扣第 73 场双周赛第 3 题 题目 给你一个正整数 n ，它表示一个 有向无环图 中节点的数目，节点编号为 0 到 n - 1 （包括两者）。 给你一个二维整数数组 edges ，其中]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/" target="_blank" rel="noopener noreffer">力扣第 73 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个正整数 <code>n</code> ，它表示一个 <strong>有向无环图</strong> 中节点的数目，节点编号为 <code>0</code> 到 <code>n - 1</code> （包括两者）。</p>
+<p>给你一个二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> 表示图中一条从 <code>from<sub>i</sub></code> 到 <code>to<sub>i</sub></code> 的单向边。</p>]]></description>
 </item><item>
     <title>2127：参加会议的最多员工数（2449 分）</title>
     <link>https://huozhixue.github.io/leetcode/2127/</link>
     <pubDate>Sun, 02 Jan 2022 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2127/</guid>
-    <description><![CDATA[力扣第 274 场周赛第 4 题 题目 一个公司准备组织一场会议，邀请名单上有 n 位员工。公司准备了一张 圆形 的桌子，可以坐下 任意数目 的员工。 员工编号为 0 到 n -]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/" target="_blank" rel="noopener noreffer">力扣第 274 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>一个公司准备组织一场会议，邀请名单上有 <code>n</code> 位员工。公司准备了一张 <strong>圆形</strong> 的桌子，可以坐下 <strong>任意数目</strong> 的员工。</p>]]></description>
 </item><item>
     <title>2115：从给定原材料中找到所有可以做出的菜（1678 分）</title>
     <link>https://huozhixue.github.io/leetcode/2115/</link>
     <pubDate>Sat, 25 Dec 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2115/</guid>
-    <description><![CDATA[力扣第 68 场双周赛第 2 题 题目 你有 n 道不同菜的信息。给你一个字符串数组 recipes 和一个二维字符串数组 ingredients 。第 i 道菜的名字为 recipes[i] ，如果你有它 所有 的原材料 ingredients[i] ，那]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/" target="_blank" rel="noopener noreffer">力扣第 68 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你有 <code>n</code> 道不同菜的信息。给你一个字符串数组 <code>recipes</code> 和一个二维字符串数组 <code>ingredients</code> 。第 <code>i</code> 道菜的名字为 <code>recipes[i]</code> ，如果你有它 <strong>所有</strong> 的原材料 <code>ingredients[i]</code> ，那么你可以 <strong>做出</strong> 这道菜。一道菜的原材料可能是 <strong>另一道</strong> 菜，也就是说 <code>ingredients[i]</code> 可能包含 <code>recipes</code> 中另一个字符串。</p>]]></description>
 </item><item>
     <title>2050：并行课程 III（2084 分）</title>
     <link>https://huozhixue.github.io/leetcode/2050/</link>
     <pubDate>Sun, 24 Oct 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2050/</guid>
-    <description><![CDATA[力扣第 264 场周赛第 4 题 题目 给你一个整数 n ，表示有 n 节课，课程编号从 1 到 n 。同时给你一个二维整数数组 relations ，其中 relations[j] = [prevCoursej, nextCoursej] ，表示课程 prevCoursej 必须在课程 nextCoursej 之前]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/parallel-courses-iii/" target="_blank" rel="noopener noreffer">力扣第 264 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数 <code>n</code> ，表示有 <code>n</code> 节课，课程编号从 <code>1</code> 到 <code>n</code> 。同时给你一个二维整数数组 <code>relations</code> ，其中 <code>relations[j] = [prevCourse<sub>j</sub>, nextCourse<sub>j</sub>]</code> ，表示课程 <code>prevCourse<sub>j</sub></code> 必须在课程 <code>nextCourse<sub>j</sub></code> <strong>之前</strong> 完成（先修课的关系）。同时给你一个下标从 <strong>0</strong> 开始的整数数组 <code>time</code> ，其中 <code>time[i]</code> 表示完成第 <code>(i+1)</code> 门课程需要花费的 <strong>月份</strong> 数。</p>]]></description>
 </item><item>
     <title>1976：到达目的地的方案数（2094 分）</title>
     <link>https://huozhixue.github.io/leetcode/1976/</link>
     <pubDate>Sat, 21 Aug 2021 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1976/</guid>
-    <description><![CDATA[力扣第 59 场双周赛第 3 题 题目 你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。输入保证你可以从任意路口出发到达]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/" target="_blank" rel="noopener noreffer">力扣第 59 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你在一个城市里，城市由 <code>n</code> 个路口组成，路口编号为 <code>0</code> 到 <code>n - 1</code> ，某些路口之间有 <strong>双向</strong> 道路。输入保证你可以从任意路口出发到达其他任意路口，且任意两个路口之间最多有一条路。</p>]]></description>
 </item><item>
     <title>1916：统计为蚁群构筑房间的不同顺序（2486 分）</title>
     <link>https://huozhixue.github.io/leetcode/1916/</link>
     <pubDate>Sun, 27 Jun 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1916/</guid>
-    <description><![CDATA[力扣第 247 场周赛第 4 题 题目 你是一只蚂蚁，负责为蚁群构筑 n 间编号从 0 到 n-1 的新房间。给你一个 下标从 0 开始 且长度为 n 的整数数组 prevRoom 作为扩建计划。其中，]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/" target="_blank" rel="noopener noreffer">力扣第 247 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你是一只蚂蚁，负责为蚁群构筑 <code>n</code> 间编号从 <code>0</code> 到 <code>n-1</code> 的新房间。给你一个 <strong>下标从 0 开始</strong> 且长度为 <code>n</code> 的整数数组 <code>prevRoom</code> 作为扩建计划。其中，<code>prevRoom[i]</code> 表示在构筑房间 <code>i</code> 之前，你必须先构筑房间 <code>prevRoom[i]</code> ，并且这两个房间必须 <strong>直接</strong> 相连。房间 <code>0</code> 已经构筑完成，所以 <code>prevRoom[0] = -1</code> 。扩建计划中还有一条硬性要求，在完成所有房间的构筑之后，从房间 <code>0</code> 可以访问到每个房间。</p>]]></description>
 </item><item>
     <title>1857：有向图中最大颜色值（2312 分）</title>
     <link>https://huozhixue.github.io/leetcode/1857/</link>
     <pubDate>Sun, 09 May 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1857/</guid>
-    <description><![CDATA[力扣第 240 场周赛第 4 题 题目 给你一个 有向图 ，它含有 n 个节点和 m 条边。节点编号从 0 到 n - 1 。 给你一个字符串 colors ，其中 colors[i] 是小写英文字母，表示图中第 i 个]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/" target="_blank" rel="noopener noreffer">力扣第 240 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <strong>有向图</strong> ，它含有 <code>n</code> 个节点和 <code>m</code> 条边。节点编号从 <code>0</code> 到 <code>n - 1</code> 。</p>
+<p>给你一个字符串 <code>colors</code> ，其中 <code>colors[i]</code> 是小写英文字母，表示图中第 <code>i</code> 个节点的 <b>颜色</b> （下标从 <strong>0</strong> 开始）。同时给你一个二维数组 <code>edges</code> ，其中 <code>edges[j] = [a<sub>j</sub>, b<sub>j</sub>]</code> 表示从节点 <code>a<sub>j</sub></code> 到节点 <code>b<sub>j</sub></code><sub> </sub>有一条 <strong>有向边</strong> 。</p>]]></description>
 </item><item>
     <title>1786：从第一个节点出发到最后一个节点的受限路径数（2078 分）</title>
     <link>https://huozhixue.github.io/leetcode/1786/</link>
     <pubDate>Sun, 07 Mar 2021 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1786/</guid>
-    <description><![CDATA[力扣第 231 场周赛第 3 题 题目 现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ，其中每个 edges[i] =]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/" target="_blank" rel="noopener noreffer">力扣第 231 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>现有一个加权无向连通图。给你一个正整数 <code>n</code> ，表示图中有 <code>n</code> 个节点，并按从 <code>1</code> 到 <code>n</code> 给节点编号；另给你一个数组 <code>edges</code> ，其中每个 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>, weight<sub>i</sub>]</code> 表示存在一条位于节点 <code>u<sub>i</sub></code> 和 <code>v<sub>i</sub></code> 之间的边，这条边的权重为 <code>weight<sub>i</sub></code> 。</p>]]></description>
 </item><item>
     <title>1632：矩阵转换后的秩（2529 分）</title>
     <link>https://huozhixue.github.io/leetcode/1632/</link>
     <pubDate>Sun, 25 Oct 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1632/</guid>
-    <description><![CDATA[力扣第 212 场周赛第 4 题 题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/rank-transform-of-a-matrix/" target="_blank" rel="noopener noreffer">力扣第 212 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>m x n</code> 的矩阵 <code>matrix</code> ，请你返回一个新的矩阵<em> </em><code>answer</code> ，其中<em> </em><code>answer[row][col]</code> 是 <code>matrix[row][col]</code> 的秩。</p>
+<p>每个元素的 <b>秩</b> 是一个整数，表示这个元素相对于其他元素的大小关系，它按照如下规则计算：</p>]]></description>
 </item></channel>
 </rss>

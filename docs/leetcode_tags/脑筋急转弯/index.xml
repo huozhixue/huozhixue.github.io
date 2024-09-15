@@ -9,41 +9,77 @@
     <pubDate>Sun, 14 Apr 2019 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1025/</guid>
-    <description><![CDATA[力扣第 132 场周赛第 1 题 题目 爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。 最初，黑板上有一个数字 n 。在每个玩家的回合，玩家需要执行以下操]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/divisor-game/" target="_blank" rel="noopener noreffer">力扣第 132 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。</p>
+<p>最初，黑板上有一个数字 <code>n</code> 。在每个玩家的回合，玩家需要执行以下操作：</p>]]></description>
 </item><item>
     <title>0810：黑板异或游戏（2341 分）</title>
     <link>https://huozhixue.github.io/leetcode/0810/</link>
     <pubDate>Mon, 20 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0810/</guid>
-    <description><![CDATA[力扣第 810 题 题目 黑板上写着一个非负整数数组 nums[i] 。 Alice 和 Bob 轮流从黑板上擦掉一个数字，Alice 先手。如果擦除一个数字后，剩余的所有数字按位异或运算得]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/chalkboard-xor-game/" target="_blank" rel="noopener noreffer">力扣第 810 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>黑板上写着一个非负整数数组 <code>nums[i]</code> 。</p>
+<p>Alice 和 Bob 轮流从黑板上擦掉一个数字，Alice 先手。如果擦除一个数字后，剩余的所有数字按位异或运算得出的结果等于 <code>0</code> 的话，当前玩家游戏失败。 另外，如果只剩一个数字，按位异或运算得到它本身；如果无数字剩余，按位异或运算结果为 <code>0</code>。</p>]]></description>
 </item><item>
     <title>0522：最长特殊序列 II（★）</title>
     <link>https://huozhixue.github.io/leetcode/0522/</link>
     <pubDate>Sun, 05 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0522/</guid>
-    <description><![CDATA[力扣第 522 题 题目 给定字符串列表 strs ，返回其中 最长的特殊序列 的长度。如果最长特殊序列不存在，返回 -1 。 特殊序列 定义如下：该序列为某字符串 独有的子序列]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-uncommon-subsequence-ii/" target="_blank" rel="noopener noreffer">力扣第 522 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定字符串列表 <code>strs</code> ，返回其中 <strong>最长的特殊序列</strong> 的长度。如果最长特殊序列不存在，返回 <code>-1</code> 。</p>
+<p><strong>特殊序列</strong> 定义如下：该序列为某字符串 <strong>独有的子序列（即不能是其他字符串的子序列）</strong>。</p>]]></description>
 </item><item>
     <title>0521：最长特殊序列 Ⅰ</title>
     <link>https://huozhixue.github.io/leetcode/0521/</link>
     <pubDate>Sat, 04 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0521/</guid>
-    <description><![CDATA[力扣第 521 题 题目 给你两个字符串 a 和 b，请返回 这两个字符串中 最长的特殊序列 的长度。如果不存在，则返回 -1 。 「最长特殊序列」 定义如下：该序列为 某字符]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/longest-uncommon-subsequence-i/" target="_blank" rel="noopener noreffer">力扣第 521 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个字符串 <code>a</code> 和 <code>b</code>，请返回 <em>这两个字符串中 <strong>最长的特殊序列</strong> </em> 的长度。如果不存在，则返回 <code>-1</code> 。</p>
+<p><strong>「最长特殊序列」</strong> 定义如下：该序列为 <strong>某字符串独有的最长<span data-keyword="subsequence-array">子序列</span>（即不能是其他字符串的子序列）</strong> 。</p>]]></description>
 </item><item>
     <title>0319：灯泡开关（★）</title>
     <link>https://huozhixue.github.io/leetcode/0319/</link>
     <pubDate>Sun, 15 Nov 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0319/</guid>
-    <description><![CDATA[力扣第 319 题 题目 初始时有 n 个灯泡处于关闭状态。第一轮，你将会打开所有灯泡。接下来的第二轮，你将会每两个灯泡关闭第二个。 第三轮，你每三个灯泡就切]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/bulb-switcher/" target="_blank" rel="noopener noreffer">力扣第 319 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>初始时有 <code>n</code><em> </em>个灯泡处于关闭状态。第一轮，你将会打开所有灯泡。接下来的第二轮，你将会每两个灯泡关闭第二个。</p>
+<p>第三轮，你每三个灯泡就切换第三个灯泡的开关（即，打开变关闭，关闭变打开）。第 <code>i</code> 轮，你每 <code>i</code> 个灯泡就切换第 <code>i</code> 个灯泡的开关。直到第 <code>n</code> 轮，你只需要切换最后一个灯泡的开关。</p>]]></description>
 </item><item>
     <title>0292：Nim 游戏</title>
     <link>https://huozhixue.github.io/leetcode/0292/</link>
     <pubDate>Mon, 19 Oct 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0292/</guid>
-    <description><![CDATA[力扣第 292 题 题目 你和你的朋友，两个人一起玩 Nim 游戏： 桌子上有一堆石头。 你们轮流进行自己的回合， 你作为先手 。 每一回合，轮到的人拿掉 1 - 3 块石头。 拿]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/nim-game/" target="_blank" rel="noopener noreffer">力扣第 292 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你和你的朋友，两个人一起玩 <a href="https://baike.baidu.com/item/Nim游戏/6737105" target="_blank">Nim 游戏</a>：</p>
+<ul>
+<li>桌子上有一堆石头。</li>
+<li>你们轮流进行自己的回合， <strong>你作为先手 </strong>。</li>
+<li>每一回合，轮到的人拿掉 1 - 3 块石头。</li>
+<li>拿掉最后一块石头的人就是获胜者。</li>
+</ul>
+<p>假设你们每一步都是最优解。请编写一个函数，来判断你是否可以在给定石头数量为 <code>n</code> 的情况下赢得游戏。如果可以赢，返回 <code>true</code>；否则，返回 <code>false</code> 。</p>]]></description>
 </item></channel>
 </rss>

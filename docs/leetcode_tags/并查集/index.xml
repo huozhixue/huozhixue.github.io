@@ -9,69 +9,121 @@
     <pubDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3108/</guid>
-    <description><![CDATA[力扣第 392 场周赛第 4 题 题目 给你一个 n 个节点的带权无向图，节点编号为 0 到 n - 1 。 给你一个整数 n 和一个数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui 和 vi 之间有一]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/" target="_blank" rel="noopener noreffer">力扣第 392 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个节点的带权无向图，节点编号为 <code>0</code> 到 <code>n - 1</code> 。</p>
+<p>给你一个整数 <code>n</code> 和一个数组 <code>edges</code> ，其中 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>]</code> 表示节点 <code>u<sub>i</sub></code> 和 <code>v<sub>i</sub></code> 之间有一条权值为 <code>w<sub>i</sub></code> 的无向边。</p>]]></description>
 </item><item>
     <title>2658：网格图中鱼的最大数目（1489 分）</title>
     <link>https://huozhixue.github.io/leetcode/2658/</link>
     <pubDate>Sat, 29 Apr 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2658/</guid>
-    <description><![CDATA[力扣第 103 场双周赛第 3 题 题目 给你一个下标从 0 开始大小为 m x n 的二维整数数组 grid ，其中下标在 (r, c) 处的整数表示： 如果 grid[r][c] = 0 ，那么它是一块 陆地 。 如果 grid[r][c]]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 103 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始大小为 <code>m x n</code> 的二维整数数组 <code>grid</code> ，其中下标在 <code>(r, c)</code> 处的整数表示：</p>
+<ul>
+<li>如果 <code>grid[r][c] = 0</code> ，那么它是一块 <strong>陆地</strong> 。</li>
+<li>如果 <code>grid[r][c] &gt; 0</code> ，那么它是一块 <strong>水域</strong> ，且包含 <code>grid[r][c]</code> 条鱼。</li>
+</ul>
+<p>一位渔夫可以从任意 <strong>水域</strong> 格子 <code>(r, c)</code> 出发，然后执行以下操作任意次：</p>]]></description>
 </item><item>
     <title>2003：每棵子树内缺失的最小基因值（2415 分）</title>
     <link>https://huozhixue.github.io/leetcode/2003/</link>
     <pubDate>Sun, 12 Sep 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2003/</guid>
-    <description><![CDATA[力扣第 258 场周赛第 4 题 题目 有一棵根节点为 0 的 家族树 ，总共包含 n 个节点，节点编号为 0 到 n - 1 。给你一个下标从 0 开始的整数数组 parents ，其中 parents[i] 是节点 i 的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有一棵根节点为 <code>0</code> 的 <strong>家族树</strong> ，总共包含 <code>n</code> 个节点，节点编号为 <code>0</code> 到 <code>n - 1</code> 。给你一个下标从 <strong>0</strong> 开始的整数数组 <code>parents</code> ，其中 <code>parents[i]</code> 是节点 <code>i</code> 的父节点。由于节点 <code>0</code> 是 <strong>根</strong> ，所以 <code>parents[0] == -1</code> 。</p>]]></description>
 </item><item>
     <title>1998：数组的最大公因数排序（2429 分）</title>
     <link>https://huozhixue.github.io/leetcode/1998/</link>
     <pubDate>Sun, 05 Sep 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1998/</guid>
-    <description><![CDATA[力扣第 257 场周赛第 4 题 题目 给你一个整数数组 nums ，你可以在 nums 上执行下述操作 任意次 ： 如果 gcd(nums[i], nums[j]) &gt; 1 ，交换 nums[i] 和 nums[j] 的位置。其中 gcd(nums[i], nums[j]) 是 nums[i] 和 nums[j] 的最大公因数。 如]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/gcd-sort-of-an-array/" target="_blank" rel="noopener noreffer">力扣第 257 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>nums</code> ，你可以在 <code>nums</code> 上执行下述操作 <strong>任意次</strong> ：</p>
+<ul>
+<li>如果 <code>gcd(nums[i], nums[j]) &gt; 1</code> ，交换 <code>nums[i]</code> 和 <code>nums[j]</code> 的位置。其中 <code>gcd(nums[i], nums[j])</code> 是 <code>nums[i]</code> 和 <code>nums[j]</code> 的最大公因数。</li>
+</ul>
+<p>如果能使用上述交换方式将 <code>nums</code> 按 <strong>非递减顺序</strong> 排列，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>]]></description>
 </item><item>
     <title>1632：矩阵转换后的秩（2529 分）</title>
     <link>https://huozhixue.github.io/leetcode/1632/</link>
     <pubDate>Sun, 25 Oct 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1632/</guid>
-    <description><![CDATA[力扣第 212 场周赛第 4 题 题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/rank-transform-of-a-matrix/" target="_blank" rel="noopener noreffer">力扣第 212 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>m x n</code> 的矩阵 <code>matrix</code> ，请你返回一个新的矩阵<em> </em><code>answer</code> ，其中<em> </em><code>answer[row][col]</code> 是 <code>matrix[row][col]</code> 的秩。</p>
+<p>每个元素的 <b>秩</b> 是一个整数，表示这个元素相对于其他元素的大小关系，它按照如下规则计算：</p>]]></description>
 </item><item>
     <title>1627：带阈值的图连通性（2221 分）</title>
     <link>https://huozhixue.github.io/leetcode/1627/</link>
     <pubDate>Sun, 18 Oct 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1627/</guid>
-    <description><![CDATA[力扣第 211 场周赛第 4 题 题目 有 n 座城市，编号从 1 到 n 。编号为 x 和 y 的两座城市直接连通的前提是： x 和 y 的公因数中，至少有一个 严格大于 某个阈值 threshold 。更]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/graph-connectivity-with-threshold/" target="_blank" rel="noopener noreffer">力扣第 211 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>有 <code>n</code> 座城市，编号从 <code>1</code> 到 <code>n</code> 。编号为 <code>x</code> 和 <code>y</code> 的两座城市直接连通的前提是： <code>x</code> 和 <code>y</code> 的公因数中，至少有一个 <strong>严格大于</strong> 某个阈值 <code>threshold</code> 。更正式地说，如果存在整数 <code>z</code> ，且满足以下所有条件，则编号 <code>x</code> 和 <code>y</code> 的城市之间有一条道路：</p>]]></description>
 </item><item>
     <title>1584：连接所有点的最小费用（1857 分）</title>
     <link>https://huozhixue.github.io/leetcode/1584/</link>
     <pubDate>Sun, 13 Sep 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1584/</guid>
-    <description><![CDATA[力扣第 206 场周赛第 3 题 题目 给你一个points 数组，表示 2D 平面上的一些点，其中 points[i] = [xi, yi] 。 连接点 [xi, yi] 和点 [xj, yj] 的费用为它们之间的 曼哈顿距离 ：|xi]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/min-cost-to-connect-all-points/" target="_blank" rel="noopener noreffer">力扣第 206 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个<code>points</code> 数组，表示 2D 平面上的一些点，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 。</p>
+<p>连接点 <code>[x<sub>i</sub>, y<sub>i</sub>]</code> 和点 <code>[x<sub>j</sub>, y<sub>j</sub>]</code> 的费用为它们之间的 <strong>曼哈顿距离</strong> ：<code>|x<sub>i</sub> - x<sub>j</sub>| + |y<sub>i</sub> - y<sub>j</sub>|</code> ，其中 <code>|val|</code> 表示 <code>val</code> 的绝对值。</p>]]></description>
 </item><item>
     <title>1489：找到最小生成树里的关键边和伪关键边（2571 分）</title>
     <link>https://huozhixue.github.io/leetcode/1489/</link>
     <pubDate>Sun, 21 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1489/</guid>
-    <description><![CDATA[力扣第 194 场周赛第 4 题 题目 给你一个 n 个点的带权无向连通图，节点编号为 0 到 n-1 ，同时还有一个数组 edges ，其中 edges[i] = [fromi, toi, weighti] 表示在 fromi 和 toi 节点之间有一条带权无]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/" target="_blank" rel="noopener noreffer">力扣第 194 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个点的带权无向连通图，节点编号为 <code>0</code> 到 <code>n-1</code> ，同时还有一个数组 <code>edges</code> ，其中 <code>edges[i] = [from</code><code><sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> 表示在 <code>from<sub>i</sub></code> 和 <code>to<sub>i</sub></code> 节点之间有一条带权无向边。最小生成树 (MST) 是给定图中边的一个子集，它连接了所有节点且没有环，而且这些边的权值和最小。</p>]]></description>
 </item><item>
     <title>0990：等式方程的可满足性（1638 分）</title>
     <link>https://huozhixue.github.io/leetcode/0990/</link>
     <pubDate>Sun, 10 Feb 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0990/</guid>
-    <description><![CDATA[力扣第 123 场周赛第 2 题 题目 给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4，并采用两种不同的形式之一：&quot;]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/satisfiability-of-equality-equations/" target="_blank" rel="noopener noreffer">力扣第 123 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 <code>equations[i]</code> 的长度为 <code>4</code>，并采用两种不同的形式之一：<code>&quot;a==b&quot;</code> 或 <code>&quot;a!=b&quot;</code>。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。</p>]]></description>
 </item><item>
     <title>0959：由斜杠划分区域（2135 分）</title>
     <link>https://huozhixue.github.io/leetcode/0959/</link>
     <pubDate>Sun, 16 Dec 2018 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0959/</guid>
-    <description><![CDATA[力扣第 115 场周赛第 3 题 题目 在由 1 x 1 方格组成的 n x n 网格 grid 中，每个 1 x 1 方块由 '/'、'\' 或空格构成。这些字符会将方块划分为一些共边的区域。]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/regions-cut-by-slashes/" target="_blank" rel="noopener noreffer">力扣第 115 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>在由 <code>1 x 1</code> 方格组成的 <code>n x n</code> 网格 <code>grid</code> 中，每个 <code>1 x 1</code> 方块由 <code>'/'</code>、<code>'\'</code> 或空格构成。这些字符会将方块划分为一些共边的区域。</p>]]></description>
 </item></channel>
 </rss>

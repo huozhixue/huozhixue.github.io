@@ -9,69 +9,134 @@
     <pubDate>Sun, 28 Apr 2024 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3132/</guid>
-    <description><![CDATA[力扣第 395 场周赛第 2 题 题目 给你两个整数数组 nums1 和 nums2。 从 nums1 中移除两个元素，并且所有其他元素都与变量 x 所表示的整数相加。如果 x 为负数，则表现]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-the-integer-added-to-array-ii/" target="_blank" rel="noopener noreffer">力扣第 395 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个整数数组 <code>nums1</code> 和 <code>nums2</code>。</p>
+<p>从 <code>nums1</code> 中移除两个元素，并且所有其他元素都与变量 <code>x</code> 所表示的整数相加。如果 <code>x</code> 为负数，则表现为元素值的减少。</p>]]></description>
 </item><item>
     <title>2708：一个小组的最大实力值（1502 分）</title>
     <link>https://huozhixue.github.io/leetcode/2708/</link>
     <pubDate>Sat, 27 May 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2708/</guid>
-    <description><![CDATA[力扣第 105 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 非空 小组]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/" target="_blank" rel="noopener noreffer">力扣第 105 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 <strong>非空</strong> 小组，且这个小组的 <strong>实力值</strong> 最大，如果这个小组里的学生下标为 <code>i<sub>0</sub></code>, <code>i<sub>1</sub></code>, <code>i<sub>2</sub></code>, ... , <code>i<sub>k</sub></code> ，那么这个小组的实力值定义为 <code>nums[i<sub>0</sub>] * nums[i<sub>1</sub>] * nums[i<sub>2</sub>] * ... * nums[i<sub>k</sub>​]</code> 。</p>]]></description>
 </item><item>
     <title>2427：公因子的数目（1172 分）</title>
     <link>https://huozhixue.github.io/leetcode/2427/</link>
     <pubDate>Sun, 02 Oct 2022 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2427/</guid>
-    <description><![CDATA[力扣第 313 场周赛第 1 题 题目 给你两个正整数 a 和 b ，返回 a 和 b 的 公 因子的数目。 如果 x 可以同时整除 a 和 b ，则认为 x 是 a 和 b 的一个 公因子 。 示例 1： 输入]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-common-factors/" target="_blank" rel="noopener noreffer">力扣第 313 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你两个正整数 <code>a</code> 和 <code>b</code> ，返回 <code>a</code> 和 <code>b</code> 的 <strong>公</strong> 因子的数目。</p>
+<p>如果 <code>x</code> 可以同时整除 <code>a</code> 和 <code>b</code> ，则认为 <code>x</code> 是 <code>a</code> 和 <code>b</code> 的一个 <strong>公因子</strong> 。</p>]]></description>
 </item><item>
     <title>2367：算术三元组的数目（1203 分）</title>
     <link>https://huozhixue.github.io/leetcode/2367/</link>
     <pubDate>Sun, 07 Aug 2022 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2367/</guid>
-    <description><![CDATA[力扣第 305 场周赛第 1 题 题目 给你一个下标从 0 开始、严格递增 的整数数组 nums 和一个正整数 diff 。如果满足下述全部条件，则三元组 (i, j, k) 就是一个 算术三元组 ： i]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/number-of-arithmetic-triplets/" target="_blank" rel="noopener noreffer">力扣第 305 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始、<strong>严格递增</strong> 的整数数组 <code>nums</code> 和一个正整数 <code>diff</code> 。如果满足下述全部条件，则三元组 <code>(i, j, k)</code> 就是一个 <strong>算术三元组</strong> ：</p>]]></description>
 </item><item>
     <title>1995：统计特殊四元组（1352 分）</title>
     <link>https://huozhixue.github.io/leetcode/1995/</link>
     <pubDate>Sun, 05 Sep 2021 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1995/</guid>
-    <description><![CDATA[力扣第 257 场周赛第 1 题 题目 给你一个 下标从 0 开始 的整数数组 nums ，返回满足下述条件的 不同 四元组 (a, b, c, d) 的 数目 ： nums[a] + nums[b] + nums[c] == nums[d] ，且 a &lt; b &lt; c &lt; d 示例 1]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-special-quadruplets/" target="_blank" rel="noopener noreffer">力扣第 257 场周赛第 1 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <strong>下标从 0 开始</strong> 的整数数组 <code>nums</code> ，返回满足下述条件的 <strong>不同</strong> 四元组 <code>(a, b, c, d)</code> 的 <strong>数目</strong> ：</p>
+<ul>
+<li><code>nums[a] + nums[b] + nums[c] == nums[d]</code> ，且</li>
+<li><code>a &lt; b &lt; c &lt; d</code></li>
+</ul>
+<p><strong>示例 1：</strong></p>]]></description>
 </item><item>
     <title>1291：顺次数（1373 分）</title>
     <link>https://huozhixue.github.io/leetcode/1291/</link>
     <pubDate>Sun, 15 Dec 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1291/</guid>
-    <description><![CDATA[力扣第 167 场周赛第 2 题 题目 我们定义「顺次数」为：每一位上的数字都比前一位上的数字大 1 的整数。 请你返回由 [low, high] 范围内所有顺次数组成的 有序 列表（从小]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/sequential-digits/" target="_blank" rel="noopener noreffer">力扣第 167 场周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>我们定义「顺次数」为：每一位上的数字都比前一位上的数字大 <code>1</code> 的整数。</p>
+<p>请你返回由 <code>[low, high]</code> 范围内所有顺次数组成的 <strong>有序</strong> 列表（从小到大排序）。</p>]]></description>
 </item><item>
     <title>0829：连续整数求和（1694 分）</title>
     <link>https://huozhixue.github.io/leetcode/0829/</link>
     <pubDate>Sun, 06 May 2018 09:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0829/</guid>
-    <description><![CDATA[力扣第 83 场周赛第 3 题 题目 给定一个正整数 n，返回 连续正整数满足所有数字之和为 n 的组数 。 示例 1: 输入: n = 5 输出: 2 解释: 5 = 2 + 3，共有两组连续]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/consecutive-numbers-sum/" target="_blank" rel="noopener noreffer">力扣第 83 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个正整数 <code>n</code>，返回 <em>连续正整数满足所有数字之和为 <code>n</code> 的组数</em> 。 </p>
+<p><strong>示</strong><strong>例 1:</strong></p>
+<pre>
+<strong>输入: </strong>n = 5
+<strong>输出: </strong>2
+<strong>解释: </strong>5 = 2 + 3，共有两组连续整数([5],[2,3])求和后为 5。</pre>
+<p><strong>示例 2:</strong></p>]]></description>
 </item><item>
     <title>0800：相似 RGB 颜色（★）</title>
     <link>https://huozhixue.github.io/leetcode/0800/</link>
     <pubDate>Fri, 10 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0800/</guid>
-    <description><![CDATA[力扣第 800 题 题目 RGB 颜色 "#AABBCC" 可以简写成 "#ABC" 。 例如，"#15c" 其实是 "#1155cc" 的简写。 现在，假如我们分别定义两个颜色 "#ABCDEF" 和 "#UVWXYZ"，则他们的相似度可]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/similar-rgb-color/" target="_blank" rel="noopener noreffer">力扣第 800 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>RGB 颜色 <code>"#AABBCC"</code> 可以简写成 <code>"#ABC"</code> 。</p>
+<ul>
+<li>例如，<code>"#15c"</code> 其实是 <code>"#1155cc"</code> 的简写。</li>
+</ul>
+<p>现在，假如我们分别定义两个颜色 <code>"#ABCDEF"</code> 和 <code>"#UVWXYZ"</code>，则他们的相似度可以通过这个表达式 <code>-(AB - UV)^2 - (CD - WX)^2 - (EF - YZ)^2</code> 来计算。</p>]]></description>
 </item><item>
     <title>0681：最近时刻（★）</title>
     <link>https://huozhixue.github.io/leetcode/0681/</link>
     <pubDate>Fri, 11 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0681/</guid>
-    <description><![CDATA[力扣第 681 题 题目 给定一个形如 "HH:MM" 表示的时刻 time ，利用当前出现过的数字构造下一个距离当前时间最近的时刻。每个出现数字都可以被无限次使用。 你可以认为给]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/next-closest-time/" target="_blank" rel="noopener noreffer">力扣第 681 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定一个形如<meta charset="UTF-8" /> <code>"HH:MM"</code> 表示的时刻<meta charset="UTF-8" /> <code>time</code> ，利用当前出现过的数字构造下一个距离当前时间最近的时刻。每个出现数字都可以被无限次使用。</p>]]></description>
 </item><item>
     <title>0204：计数质数（★）</title>
     <link>https://huozhixue.github.io/leetcode/0204/</link>
     <pubDate>Thu, 23 Jul 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0204/</guid>
-    <description><![CDATA[力扣第 204 题 题目 给定整数 n ，返回 所有小于非负整数 n 的质数的数量 。 示例 1： 输入：n = 10 输出：4 解释：小于 10 的质数一共有 4 个, 它们是 2, 3, 5, 7 。 示例]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/count-primes/" target="_blank" rel="noopener noreffer">力扣第 204 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定整数 <code>n</code> ，返回 <em>所有小于非负整数 <code>n</code> 的质数的数量</em> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre>
+<strong>输入：</strong>n = 10
+<strong>输出：</strong>4
+<strong>解释：</strong>小于 10 的质数一共有 4 个, 它们是 2, 3, 5, 7 。
+</pre>
+<p><strong>示例 2：</strong></p>]]></description>
 </item></channel>
 </rss>

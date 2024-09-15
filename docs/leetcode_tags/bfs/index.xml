@@ -9,69 +9,115 @@
     <pubDate>Sat, 29 Apr 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2658/</guid>
-    <description><![CDATA[力扣第 103 场双周赛第 3 题 题目 给你一个下标从 0 开始大小为 m x n 的二维整数数组 grid ，其中下标在 (r, c) 处的整数表示： 如果 grid[r][c] = 0 ，那么它是一块 陆地 。 如果 grid[r][c]]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 103 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始大小为 <code>m x n</code> 的二维整数数组 <code>grid</code> ，其中下标在 <code>(r, c)</code> 处的整数表示：</p>
+<ul>
+<li>如果 <code>grid[r][c] = 0</code> ，那么它是一块 <strong>陆地</strong> 。</li>
+<li>如果 <code>grid[r][c] &gt; 0</code> ，那么它是一块 <strong>水域</strong> ，且包含 <code>grid[r][c]</code> 条鱼。</li>
+</ul>
+<p>一位渔夫可以从任意 <strong>水域</strong> 格子 <code>(r, c)</code> 出发，然后执行以下操作任意次：</p>]]></description>
 </item><item>
     <title>2385：感染二叉树需要的总时间（1711 分）</title>
     <link>https://huozhixue.github.io/leetcode/2385/</link>
     <pubDate>Sun, 21 Aug 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2385/</guid>
-    <description><![CDATA[力扣第 307 场周赛第 3 题 题目 给你一棵二叉树的根节点 root ，二叉树中节点的值 互不相同 。另给你一个整数 start 。在第 0 分钟，感染 将会从值为 start 的节点开始爆发。 每]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/" target="_blank" rel="noopener noreffer">力扣第 307 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵二叉树的根节点 <code>root</code> ，二叉树中节点的值 <strong>互不相同</strong> 。另给你一个整数 <code>start</code> 。在第 <code>0</code> 分钟，<strong>感染</strong> 将会从值为 <code>start</code> 的节点开始爆发。</p>]]></description>
 </item><item>
     <title>2192：有向无环图中一个节点的所有祖先（1787 分）</title>
     <link>https://huozhixue.github.io/leetcode/2192/</link>
     <pubDate>Sat, 05 Mar 2022 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2192/</guid>
-    <description><![CDATA[力扣第 73 场双周赛第 3 题 题目 给你一个正整数 n ，它表示一个 有向无环图 中节点的数目，节点编号为 0 到 n - 1 （包括两者）。 给你一个二维整数数组 edges ，其中]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/" target="_blank" rel="noopener noreffer">力扣第 73 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个正整数 <code>n</code> ，它表示一个 <strong>有向无环图</strong> 中节点的数目，节点编号为 <code>0</code> 到 <code>n - 1</code> （包括两者）。</p>
+<p>给你一个二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> 表示图中一条从 <code>from<sub>i</sub></code> 到 <code>to<sub>i</sub></code> 的单向边。</p>]]></description>
 </item><item>
     <title>2045：到达目的地的第二短时间（2201 分）</title>
     <link>https://huozhixue.github.io/leetcode/2045/</link>
     <pubDate>Sun, 17 Oct 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2045/</guid>
-    <description><![CDATA[力扣第 263 场周赛第 4 题 题目 城市用一个 双向连通 图表示，图中有 n 个节点，从 1 到 n 编号（包含 1 和 n）。图中的边用一个二维整数数组 edges 表示，其中每个 edges[i] =]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/second-minimum-time-to-reach-destination/" target="_blank" rel="noopener noreffer">力扣第 263 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>城市用一个 <strong>双向连通</strong> 图表示，图中有 <code>n</code> 个节点，从 <code>1</code> 到 <code>n</code> 编号（包含 <code>1</code> 和 <code>n</code>）。图中的边用一个二维整数数组 <code>edges</code> 表示，其中每个 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> 表示一条节点 <code>u<sub>i</sub></code> 和节点 <code>v<sub>i</sub></code> 之间的双向连通边。每组节点对由 <strong>最多一条</strong> 边连通，顶点不存在连接到自身的边。穿过任意一条边的时间是 <code>time</code> 分钟。</p>]]></description>
 </item><item>
     <title>1993：树上的操作（1861 分）</title>
     <link>https://huozhixue.github.io/leetcode/1993/</link>
     <pubDate>Sat, 04 Sep 2021 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1993/</guid>
-    <description><![CDATA[力扣第 60 场双周赛第 3 题 题目 给你一棵 n 个节点的树，编号从 0 到 n - 1 ，以父节点数组 parent 的形式给出，其中 parent[i] 是第 i 个节点的父节点。树的根节点为 0 号节点]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/operations-on-tree/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵 <code>n</code> 个节点的树，编号从 <code>0</code> 到 <code>n - 1</code> ，以父节点数组 <code>parent</code> 的形式给出，其中 <code>parent[i]</code> 是第 <code>i</code> 个节点的父节点。树的根节点为 <code>0</code> 号节点，所以 <code>parent[0] = -1</code> ，因为它没有父节点。你想要设计一个数据结构实现树里面对节点的加锁，解锁和升级操作。</p>]]></description>
 </item><item>
     <title>1992：找到所有的农场组（1539 分）</title>
     <link>https://huozhixue.github.io/leetcode/1992/</link>
     <pubDate>Sat, 04 Sep 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1992/</guid>
-    <description><![CDATA[力扣第 60 场双周赛第 2 题 题目 给你一个下标从 0 开始，大小为 m x n 的二进制矩阵 land ，其中 0 表示一单位的森林土地，1 表示一单位的农场土地。 为了让农场保]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/find-all-groups-of-farmland/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个下标从 <strong>0</strong> 开始，大小为 <code>m x n</code> 的二进制矩阵 <code>land</code> ，其中 <code>0</code> 表示一单位的森林土地，<code>1</code> 表示一单位的农场土地。</p>]]></description>
 </item><item>
     <title>1766：互质树（2231 分）</title>
     <link>https://huozhixue.github.io/leetcode/1766/</link>
     <pubDate>Sat, 20 Feb 2021 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1766/</guid>
-    <description><![CDATA[力扣第 46 场双周赛第 4 题 题目 给你一个 n 个节点的树（也就是一个无环连通无向图），节点编号从 0 到 n - 1 ，且恰好有 n - 1 条边，每个节点有一个值。树的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/tree-of-coprimes/" target="_blank" rel="noopener noreffer">力扣第 46 场双周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个 <code>n</code> 个节点的树（也就是一个无环连通无向图），节点编号从 <code>0</code> 到 <code>n - 1</code> ，且恰好有 <code>n - 1</code> 条边，每个节点有一个值。树的 <strong>根节点</strong> 为 0 号点。</p>]]></description>
 </item><item>
     <title>1568：使陆地分离的最少天数（2208 分）</title>
     <link>https://huozhixue.github.io/leetcode/1568/</link>
     <pubDate>Sun, 30 Aug 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1568/</guid>
-    <description><![CDATA[力扣第 204 场周赛第 3 题 题目 给你一个大小为 m x n ，由若干 0 和 1 组成的二维网格 grid ，其中 1 表示陆地， 0 表示水。岛屿 由水平方向或竖直方向上相邻的 1 （陆]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/" target="_blank" rel="noopener noreffer">力扣第 204 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个大小为 <code>m x n</code> ，由若干 <code>0</code> 和 <code>1</code> 组成的二维网格 <code>grid</code> ，其中 <code>1</code> 表示陆地， <code>0</code> 表示水。<strong>岛屿</strong> 由水平方向或竖直方向上相邻的 <code>1</code> （陆地）连接形成。</p>]]></description>
 </item><item>
     <title>1483：树节点的第 K 个祖先（2115 分）</title>
     <link>https://huozhixue.github.io/leetcode/1483/</link>
     <pubDate>Sun, 14 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1483/</guid>
-    <description><![CDATA[力扣第 193 场周赛第 4 题 题目 给你一棵树，树上有 n 个节点，按从 0 到 n-1 编号。树以父节点数组的形式给出，其中 parent[i] 是节点 i 的父节点。树的根节点是编号为 0 的]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/" target="_blank" rel="noopener noreffer">力扣第 193 场周赛第 4 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一棵树，树上有 <code>n</code> 个节点，按从 <code>0</code> 到 <code>n-1</code> 编号。树以父节点数组的形式给出，其中 <code>parent[i]</code> 是节点 <code>i</code> 的父节点。树的根节点是编号为 <code>0</code> 的节点。</p>]]></description>
 </item><item>
     <title>1466：重新规划路线（1633 分）</title>
     <link>https://huozhixue.github.io/leetcode/1466/</link>
     <pubDate>Sun, 31 May 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1466/</guid>
-    <description><![CDATA[力扣第 191 场周赛第 3 题 题目 n 座城市，从 0 到 n-1 编号，其间共有 n-1 条路线。因此，要想在两座不同城市之间旅行只有唯一一条路线可供选择（路线网形成一颗树]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/" target="_blank" rel="noopener noreffer">力扣第 191 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p><code>n</code> 座城市，从 <code>0</code> 到 <code>n-1</code> 编号，其间共有 <code>n-1</code> 条路线。因此，要想在两座不同城市之间旅行只有唯一一条路线可供选择（路线网形成一颗树）。去年，交通运输部决定重新规划路线，以改变交通拥堵的状况。</p>]]></description>
 </item></channel>
 </rss>

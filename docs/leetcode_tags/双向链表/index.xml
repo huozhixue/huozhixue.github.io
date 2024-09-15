@@ -9,41 +9,91 @@
     <pubDate>Sun, 07 Jun 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1472/</guid>
-    <description><![CDATA[力扣第 192 场周赛第 3 题 题目 你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/design-browser-history/" target="_blank" rel="noopener noreffer">力扣第 192 场周赛第 3 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你有一个只支持单个标签页的 <strong>浏览器</strong> ，最开始你浏览的网页是 <code>homepage</code> ，你可以访问其他的网站 <code>url</code> ，也可以在浏览历史中后退 <code>steps</code> 步或前进 <code>steps</code> 步。</p>]]></description>
 </item><item>
     <title>0460：LFU 缓存（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0460/</link>
     <pubDate>Mon, 04 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0460/</guid>
-    <description><![CDATA[力扣第 460 题 题目 请你为 最不经常使用（LFU）缓存算法设计并实现数据结构。 实现 LFUCache 类： LFUCache(int capacity) - 用数据结构的容量 capacity 初始化对象 int get(int key) - 如果键 key 存在于缓存]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/lfu-cache/" target="_blank" rel="noopener noreffer">力扣第 460 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>请你为 <a href="https://baike.baidu.com/item/%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95">最不经常使用（LFU）</a>缓存算法设计并实现数据结构。</p>
+<p>实现 <code>LFUCache</code> 类：</p>
+<ul>
+<li><code>LFUCache(int capacity)</code> - 用数据结构的容量 <code>capacity</code> 初始化对象</li>
+<li><code>int get(int key)</code> - 如果键 <code>key</code> 存在于缓存中，则获取键的值，否则返回 <code>-1</code> 。</li>
+<li><code>void put(int key, int value)</code> - 如果键 <code>key</code> 已存在，则变更其值；如果键不存在，请插入键值对。当缓存达到其容量 <code>capacity</code> 时，则应该在插入新项之前，移除最不经常使用的项。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，应该去除 <strong>最久未使用</strong> 的键。</li>
+</ul>
+<p>为了确定最不常使用的键，可以为缓存中的每个键维护一个 <strong>使用计数器</strong> 。使用计数最小的键是最久未使用的键。</p>]]></description>
 </item><item>
     <title>0432：全 O(1) 的数据结构（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0432/</link>
     <pubDate>Mon, 07 Mar 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0432/</guid>
-    <description><![CDATA[力扣第 432 题 题目 请你设计一个用于存储字符串计数的数据结构，并能够返回计数最小和最大的字符串。 实现 AllOne 类： AllOne() 初始化数据结构的对象。 inc(String key) 字符串 key 的计]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/all-oone-data-structure/" target="_blank" rel="noopener noreffer">力扣第 432 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>请你设计一个用于存储字符串计数的数据结构，并能够返回计数最小和最大的字符串。</p>
+<p>实现 <code>AllOne</code> 类：</p>
+<ul>
+<li><code>AllOne()</code> 初始化数据结构的对象。</li>
+<li><code>inc(String key)</code> 字符串 <code>key</code> 的计数增加 <code>1</code> 。如果数据结构中尚不存在 <code>key</code> ，那么插入计数为 <code>1</code> 的 <code>key</code> 。</li>
+<li><code>dec(String key)</code> 字符串 <code>key</code> 的计数减少 <code>1</code> 。如果 <code>key</code> 的计数在减少后为 <code>0</code> ，那么需要将这个 <code>key</code> 从数据结构中删除。测试用例保证：在减少计数前，<code>key</code> 存在于数据结构中。</li>
+<li><code>getMaxKey()</code> 返回任意一个计数最大的字符串。如果没有元素存在，返回一个空字符串 <code>""</code> 。</li>
+<li><code>getMinKey()</code> 返回任意一个计数最小的字符串。如果没有元素存在，返回一个空字符串 <code>""</code> 。</li>
+</ul>
+<p><strong>注意：</strong>每个函数都应当满足 <code>O(1)</code> 平均时间复杂度。</p>]]></description>
 </item><item>
     <title>0430：扁平化多级双向链表（★）</title>
     <link>https://huozhixue.github.io/leetcode/0430/</link>
     <pubDate>Sat, 05 Mar 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0430/</guid>
-    <description><![CDATA[力扣第 430 题 题目 你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 子指针 。这个子指针可能指向一个单独的双向链表，也]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/" target="_blank" rel="noopener noreffer">力扣第 430 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 <strong>子指针</strong> 。这个子指针可能指向一个单独的双向链表，也包含这些特殊的节点。这些子列表可以有一个或多个自己的子列表，以此类推，以生成如下面的示例所示的 <strong>多层数据结构</strong> 。</p>]]></description>
 </item><item>
     <title>0426：将二叉搜索树转化为排序的双向链表（★）</title>
     <link>https://huozhixue.github.io/leetcode/0426/</link>
     <pubDate>Tue, 01 Mar 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0426/</guid>
-    <description><![CDATA[力扣第 426 题 题目 将一个 二叉搜索树 就地转化为一个 已排序的双向循环链表 。 对于双向循环列表，你可以将左右孩子指针作为双向循环链表的前驱和后继指针，第]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/" target="_blank" rel="noopener noreffer">力扣第 426 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>将一个 <strong>二叉搜索树</strong> 就地转化为一个 <strong>已排序的双向循环链表</strong> 。</p>
+<p>对于双向循环列表，你可以将左右孩子指针作为双向循环链表的前驱和后继指针，第一个节点的前驱是最后一个节点，最后一个节点的后继是第一个节点。</p>]]></description>
 </item><item>
     <title>0146：LRU 缓存（★）</title>
     <link>https://huozhixue.github.io/leetcode/0146/</link>
     <pubDate>Tue, 26 May 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0146/</guid>
-    <description><![CDATA[力扣第 146 题 题目 请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类： LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在]]></description>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/lru-cache/" target="_blank" rel="noopener noreffer">力扣第 146 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<div class="title__3Vvk">请你设计并实现一个满足  <a href="https://baike.baidu.com/item/LRU" target="_blank">LRU (最近最少使用) 缓存</a> 约束的数据结构。</div>
+<div class="title__3Vvk">实现 <code>LRUCache</code> 类：</div>
+<div class="original__bRMd">
+<div>
+<ul>
+<li><code>LRUCache(int capacity)</code> 以 <strong>正整数</strong> 作为容量 <code>capacity</code> 初始化 LRU 缓存</li>
+<li><code>int get(int key)</code> 如果关键字 <code>key</code> 存在于缓存中，则返回关键字的值，否则返回 <code>-1</code> 。</li>
+<li><code>void put(int key, int value)</code> 如果关键字 <code>key</code> 已经存在，则变更其数据值 <code>value</code> ；如果不存在，则向缓存中插入该组 <code>key-value</code> 。如果插入操作导致关键字数量超过 <code>capacity</code> ，则应该 <strong>逐出</strong> 最久未使用的关键字。</li>
+</ul>
+<p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p>]]></description>
 </item></channel>
 </rss>
