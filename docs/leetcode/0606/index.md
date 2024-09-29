@@ -47,21 +47,25 @@
 
 ## 分析
 
-递归即可。根据左右子树是否为空判断是否省略括号。
-	
+- 分情况递归，根据左右子树是否为空判断是否省略括号
+- 假如右子树非空，左子树不能省略括号
+- 假如右子树为空，可以省略左右子树的括号
 
 ## 解答
 
 ```python
-def tree2str(self, root: TreeNode) -> str:
-    if not root:
-        return ''
-    if not root.left and not root.right:
-        return str(root.val)
-    if not root.right:
-        return '%d(%s)' % (root.val, self.tree2str(root.left))
-    return '%d(%s)(%s)' % (root.val, self.tree2str(root.left), self.tree2str(root.right))
+class Solution:
+    def tree2str(self, root: Optional[TreeNode]) -> str:
+        def dfs(u):
+            if not u:
+                return ''
+            if not u.left and not u.right:
+                return str(u.val)
+            if not u.right:
+                return '%d(%s)'%(u.val,dfs(u.left))
+            return '%d(%s)(%s)'%(u.val,dfs(u.left),dfs(u.right))
+        return dfs(root)
 ```
 
-64 ms
+43 ms
 

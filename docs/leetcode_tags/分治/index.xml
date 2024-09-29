@@ -98,6 +98,18 @@
 </ol>
 <p>返回 <em><code>nums</code> 构建的 </em><strong><em>最大二叉树</em> </strong>。</p>]]></description>
 </item><item>
+    <title>0558：四叉树交集（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0558/</link>
+    <pubDate>Mon, 11 Jul 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0558/</guid>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/logical-or-of-two-binary-grids-represented-as-quad-trees/" target="_blank" rel="noopener noreffer">力扣第 558 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>二进制矩阵中的所有元素不是 <strong>0</strong> 就是 <strong>1 </strong>。</p>
+<p>给你两个四叉树，<code>quadTree1</code> 和 <code>quadTree2</code>。其中 <code>quadTree1</code> 表示一个 <code>n * n</code> 二进制矩阵，而 <code>quadTree2</code> 表示另一个 <code>n * n</code> 二进制矩阵。</p>]]></description>
+</item><item>
     <title>0493：翻转对（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0493/</link>
     <pubDate>Sat, 07 May 2016 00:00:00 &#43;0800</pubDate>
@@ -122,16 +134,5 @@
 <h2 id="题目">题目</h2>
 <p>给你一个 <code>n * n</code> 矩阵 <code>grid</code> ，矩阵由若干 <code>0</code> 和 <code>1</code> 组成。请你用四叉树表示该矩阵 <code>grid</code> 。</p>
 <p>你需要返回能表示矩阵 <code>grid</code> 的 四叉树 的根结点。</p>]]></description>
-</item><item>
-    <title>0395：至少有 K 个重复字符的最长子串（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0395/</link>
-    <pubDate>Sat, 30 Jan 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0395/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/" target="_blank" rel="noopener noreffer">力扣第 395 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> ，请你找出 <code>s</code> 中的最长子串， 要求该子串中的每一字符出现次数都不少于 <code>k</code> 。返回这一子串的长度。</p>]]></description>
 </item></channel>
 </rss>

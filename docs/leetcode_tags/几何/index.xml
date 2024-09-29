@@ -28,6 +28,18 @@
 <p>给定一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示 <strong>X-Y</strong> 平面上的一个点，并且是一个整数 <code>k</code> ，返回离原点 <code>(0,0)</code> 最近的 <code>k</code> 个点。</p>
 <p>这里，平面上两点之间的距离是 <strong>欧几里德距离</strong>（ <code>√(x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup></code> ）。</p>]]></description>
 </item><item>
+    <title>0593：有效的正方形（★）</title>
+    <link>https://huozhixue.github.io/leetcode/0593/</link>
+    <pubDate>Mon, 15 Aug 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0593/</guid>
+    <description><![CDATA[<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/valid-square/" target="_blank" rel="noopener noreffer">力扣第 593 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给定2D空间中四个点的坐标 <code>p1</code>, <code>p2</code>, <code>p3</code> 和 <code>p4</code>，如果这四个点构成一个正方形，则返回 <code>true</code> 。</p>
+<p>点的坐标 <code>p<sub>i</sub></code> 表示为 <code>[xi, yi]</code> 。 <code>输入没有任何顺序</code> 。</p>]]></description>
+</item><item>
     <title>0478：在圆内随机生成点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0478/</link>
     <pubDate>Fri, 22 Apr 2016 00:00:00 &#43;0800</pubDate>

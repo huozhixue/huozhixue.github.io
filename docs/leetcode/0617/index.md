@@ -48,14 +48,13 @@
 ## 解答
 
 ```python
-def mergeTrees(self, root1: TreeNode, root2: TreeNode) -> TreeNode:
-    if not root1:
-        return root2
-    if not root2:
-        return root1
-    return TreeNode(root1.val + root2.val, self.mergeTrees(root1.left, root2.left),
-                    self.mergeTrees(root1.right, root2.right))
+class Solution:
+    def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
+        def dfs(u,v):
+            if not u or not v:
+                return u or v
+            return TreeNode(u.val+v.val,dfs(u.left,v.left),dfs(u.right,v.right))
+        return dfs(root1,root2)
 ```
-
-80 ms
+65 ms
 

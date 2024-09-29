@@ -49,16 +49,16 @@
 
 ## 分析
 
-先统计得到每个数的个数 ct。
-然后遍历数组存在的数 x 作为最小值，如果 x+1 也存在数组中，那么对应的最长和谐子序列长度即为 ct[x] + ct[x+1]。
-	
+- 只需要考虑遍历 x，计算 x 和 x+1 的总个数即可
+- 注意要求最大最小差别正好是 1，所以必须 x 和 x+1 都存在
 
 ## 解答
 
 ```python
-def findLHS(self, nums: List[int]) -> int:
-	ct = Counter(nums)
-	return max(ct[x]+ct[x+1] if ct[x+1] else 0 for x in ct)
+class Solution:
+    def findLHS(self, nums: List[int]) -> int:
+        ct = Counter(nums)
+        return max(ct[x]+ct[x+1] if x+1 in ct else 0 for x in ct)
 ```
-88 ms
+258 ms
 

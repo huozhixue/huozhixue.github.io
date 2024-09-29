@@ -68,7 +68,7 @@
 ```python
 class Solution:
     def findIntegers(self, n: int) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i,st,bd):
             if i==len(s):
                 return 1
@@ -78,9 +78,8 @@ class Solution:
                 if not x&st:
                     res += dfs(i+1,x,bd and x==up)
             return res
-        
         s = bin(n)[2:]
-        return dfs(0,0,True)
+        return dfs(0,0,1)
 ```
-51 ms
+63 ms
 

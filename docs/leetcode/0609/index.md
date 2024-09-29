@@ -71,21 +71,21 @@
 
 ## 分析
 
-按内容将文件分类，返回至少有两个文件的类别即可。
-	
+按内容将文件分组，返回个数大于1的组即可。
 
 ## 解答
 
 ```python
-def findDuplicate(self, paths: List[str]) -> List[List[str]]:
-	d = defaultdict(list)
-	for path in paths:
-		tmp = path.split()
-		for val in tmp[1:]:
-			file, key = val.split('(')
-			d[key].append(tmp[0]+'/'+file)
-	return [v for v in d.values() if len(v) > 1]
+class Solution:
+    def findDuplicate(self, paths: List[str]) -> List[List[str]]:
+        d = defaultdict(list)
+        for p in paths:
+            A = p.split()
+            for a in A[1:]:
+                b,c = a.split('(')
+                d[c[:-1]].append(A[0]+'/'+b)
+        return [A for A in d.values() if len(A)>1]
 ```
 
-72 ms
+60 ms
 
