@@ -47,9 +47,9 @@
 
 |     | 系列名             | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :-------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[苍蓝钢铁的琶音](https://bgm.tv/subject/74663)| 2013-10-07 | 12    | [keke9](https://www.keke9.app/play/20454-4-138667.html)  |
+| 1   |[苍蓝钢铁的琶音](https://bgm.tv/subject/74663)| 2013-10-07 | 12    | [keke1](https://www.keke1.app/play/20454-4-138667.html)  |
 | 2   |[苍蓝钢铁的琶音 DC](https://bgm.tv/subject/107099)| 2015-01-31 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ps41197Qr/) |
-| 3   |[苍蓝钢铁的琶音 Cadenza](https://bgm.tv/subject/107100)| 2015-10-03 | 1     | [keke9](https://www.keke9.app/play/118248-4-265878.html) |
+| 3   |[苍蓝钢铁的琶音 Cadenza](https://bgm.tv/subject/107100)| 2015-10-03 | 1     | [keke1](https://www.keke1.app/play/118248-4-265878.html) |
 
 
 

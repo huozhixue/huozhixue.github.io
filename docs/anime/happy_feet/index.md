@@ -33,8 +33,8 @@
 
 |     | 系列名    | 首播时间       | 话数/时长 | 观看地址                                                  |
 | :-- | :----- | :--------- | :---- | :---------------------------------------------------- |
-| 1   |[快乐的大脚](https://bgm.tv/subject/36067)| 2006-11-17 | 1     | [keke9](https://www.keke9.app/play/5680-4-32967.html) |
-| 2   |[快乐的大脚2](https://bgm.tv/subject/67801)| 2011-11-18 | 1     | [keke9](https://www.keke9.app/play/2039-4-8392.html)  |
+| 1   |[快乐的大脚](https://bgm.tv/subject/36067)| 2006-11-17 | 1     | [keke1](https://www.keke1.app/play/5680-4-32967.html) |
+| 2   |[快乐的大脚2](https://bgm.tv/subject/67801)| 2011-11-18 | 1     | [keke1](https://www.keke1.app/play/2039-4-8392.html)  |
 
 
 

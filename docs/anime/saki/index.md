@@ -57,9 +57,9 @@
 
 |     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :---------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[天才麻将少女](https://bgm.tv/subject/1444)| 2009-04-05 | 25    | [keke9](https://www.keke9.app/play/20155-4-136133.html) |
-| 2   |[天才麻将少女 阿知贺篇](https://bgm.tv/subject/24165)| 2012-04-08 | 16    | [keke9](https://www.keke9.app/play/27085-4-232542.html) |
-| 3   |[天才麻将少女 全国篇](https://bgm.tv/subject/52606)| 2014-01-05 | 13    | [keke9](https://www.keke9.app/play/20535-4-139328.html) |
+| 1   |[天才麻将少女](https://bgm.tv/subject/1444)| 2009-04-05 | 25    | [keke1](https://www.keke1.app/play/20155-4-136133.html) |
+| 2   |[天才麻将少女 阿知贺篇](https://bgm.tv/subject/24165)| 2012-04-08 | 16    | [keke1](https://www.keke1.app/play/27085-4-232542.html) |
+| 3   |[天才麻将少女 全国篇](https://bgm.tv/subject/52606)| 2014-01-05 | 13    | [keke1](https://www.keke1.app/play/20535-4-139328.html) |
 | 4   |[咲日和 OAD](https://bgm.tv/subject/114197)| 2015-07-25 | 1     | [bilibili](https://www.bilibili.com/video/BV1ws411m7H6) |
 
 ## 配乐

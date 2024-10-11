@@ -50,9 +50,9 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :----------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[火影忍者](https://bgm.tv/subject/3425)| 2002-10-03 | 220   | [keke9](https://www.keke9.app/play/26406-4-220036.html) |
-| 2   |[火影忍者疾风传](https://bgm.tv/subject/2782)| 2007-02-15 | 500   | [keke9](https://www.keke9.app/detail/58631.html)        |
-| 3   |[火影忍者 剧场版 博人传](https://bgm.tv/subject/120191)| 2015-08-07 | 1     | [keke9](https://www.keke9.app/play/59527-4-449702.html) |
+| 1   |[火影忍者](https://bgm.tv/subject/3425)| 2002-10-03 | 220   | [keke1](https://www.keke1.app/play/26406-4-220036.html) |
+| 2   |[火影忍者疾风传](https://bgm.tv/subject/2782)| 2007-02-15 | 500   | [keke1](https://www.keke1.app/detail/58631.html)        |
+| 3   |[火影忍者 剧场版 博人传](https://bgm.tv/subject/120191)| 2015-08-07 | 1     | [keke1](https://www.keke1.app/play/59527-4-449702.html) |
 
 ## 配乐
 

@@ -55,7 +55,7 @@
 
 |     | 系列名       | 首播时间       | 话数/时长 | 观看地址                                                       |
 | :-- | :-------- | :--------- | :---- | :--------------------------------------------------------- |
-| 1   |[七大罪](https://bgm.tv/subject/101820)| 2014-10-05 | 24    | [keke9](https://www.keke9.app/play/22314-4-167299.html)    |
+| 1   |[七大罪](https://bgm.tv/subject/101820)| 2014-10-05 | 24    | [keke1](https://www.keke1.app/play/22314-4-167299.html)    |
 | 2   |[七大罪 戒律的复活](https://bgm.tv/subject/192978)| 2018-01-06 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep173378) |
 
 

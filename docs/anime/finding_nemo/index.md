@@ -20,7 +20,7 @@
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :----------- | :--------- | :---- | :-------------------------------------------------------- |
 | 1   |[海底总动员](https://bgm.tv/subject/25075)| 2003-05-30 | 100m  | [bilibili](https://www.bilibili.com/video/BV1BF411N7xD)   |
-| 2   |[海底总动员2：多莉去哪儿](https://bgm.tv/subject/131779)| 2016-06-17 | 93m   | [keke9](https://www.keke9.app/play/181847-31-446330.html) |
+| 2   |[海底总动员2：多莉去哪儿](https://bgm.tv/subject/131779)| 2016-06-17 | 93m   | [keke1](https://www.keke1.app/play/181847-31-446330.html) |
 
 
 

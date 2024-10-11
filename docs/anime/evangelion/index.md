@@ -70,7 +70,7 @@ Director's Cut版本的第21～24集由剧场版《Death》篇剪辑而成，收
 | 4   |[福音战士新剧场版：序](https://bgm.tv/subject/772)| 2007-09-01 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1638) |
 | 5   |[福音战士新剧场版：破](https://bgm.tv/subject/3302)| 2009-06-27 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1639) |
 | 6   |[福音战士新剧场版：Q](https://bgm.tv/subject/22505)| 2012-11-17 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss1640) |
-| 7   |[新・福音战士剧场版：终](https://bgm.tv/subject/29883)| 2021-03-08 | 1     | [keke9](https://www.keke9.app/play/179831-4-272154.html) |
+| 7   |[新・福音战士剧场版：终](https://bgm.tv/subject/29883)| 2021-03-08 | 1     | [keke1](https://www.keke1.app/play/179831-4-272154.html) |
 
 ## 配乐
 

@@ -65,7 +65,7 @@
 |     | 系列名                       | 首播时间       | 话数/时长 | 观看地址                                                       |
 | :-- | :------------------------ | :--------- | :---- | :--------------------------------------------------------- |
 | 1   |[少女☆歌剧 Revue Starlight](https://bgm.tv/subject/214265)| 2018-07-12 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep232367) |
-| 2   |[剧场版 少女☆歌剧 Revue Starlight](https://bgm.tv/subject/294135)| 2021-06-04 | 1     | [keke9](https://www.keke9.app/play/95429-4-223377.html)    |
+| 2   |[剧场版 少女☆歌剧 Revue Starlight](https://bgm.tv/subject/294135)| 2021-06-04 | 1     | [keke1](https://www.keke1.app/play/95429-4-223377.html)    |
 
 ## 配乐
 

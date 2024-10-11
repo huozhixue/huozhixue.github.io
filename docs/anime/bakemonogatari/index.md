@@ -76,9 +76,9 @@
 | 8   |[历物语](https://bgm.tv/subject/146104)| 2016-01-09 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep82995)     |
 | 9   |[终物语（下）](https://bgm.tv/subject/175596)| 2017-08-12 | 7     | [bilibili](https://www.bilibili.com/bangumi/play/ss6345)      |
 | 10  |[续·终物语](https://bgm.tv/subject/233926)| 2018-11-10 | 6     | [bilibili](https://www.bilibili.com/video/BV1e4411b7Nc)       |
-| 11  |[伤物语I 铁血篇](https://bgm.tv/subject/7707)| 2016-01-08 | 1     | [keke9](https://www.keke9.app/play/179534-4-233850.html)      |
-| 12  |[伤物语II 热血篇](https://bgm.tv/subject/148036)| 2016-08-19 | 1     | [keke9](https://www.keke9.app/play/179533-4-233849.html)      |
-| 13  |[伤物语III 冷血篇](https://bgm.tv/subject/148037)| 2017-01-06 | 1     | [keke9](https://www.keke9.app/play/27175-4-233848.html)       |
+| 11  |[伤物语I 铁血篇](https://bgm.tv/subject/7707)| 2016-01-08 | 1     | [keke1](https://www.keke1.app/play/179534-4-233850.html)      |
+| 12  |[伤物语II 热血篇](https://bgm.tv/subject/148036)| 2016-08-19 | 1     | [keke1](https://www.keke1.app/play/179533-4-233849.html)      |
+| 13  |[伤物语III 冷血篇](https://bgm.tv/subject/148037)| 2017-01-06 | 1     | [keke1](https://www.keke1.app/play/27175-4-233848.html)       |
 
 ## 配乐
 

@@ -48,10 +48,10 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :----------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[只有神知道的世界](https://bgm.tv/subject/5976)| 2010-10-06 | 12    | [keke9](https://www.keke9.app/play/22423-4-169243.html)  |
-| 2   |[只有神知道的世界II](https://bgm.tv/subject/10739)| 2011-04-11 | 12    | [keke9](https://www.keke9.app/play/22422-4-169231.html)  |
+| 1   |[只有神知道的世界](https://bgm.tv/subject/5976)| 2010-10-06 | 12    | [keke1](https://www.keke1.app/play/22423-4-169243.html)  |
+| 2   |[只有神知道的世界II](https://bgm.tv/subject/10739)| 2011-04-11 | 12    | [keke1](https://www.keke1.app/play/22422-4-169231.html)  |
 | 3   |[只有神知道的世界 天理篇](https://bgm.tv/subject/46014)| 2012-10-18 | 2     | [bilibili](https://www.bilibili.com/video/BV12s41157JV)  |
-| 4   |[只有神知道的世界 女神篇](https://bgm.tv/subject/56112)| 2013-07-08 | 12    | [keke9](https://www.keke9.app/play/168061-2-342764.html) |
+| 4   |[只有神知道的世界 女神篇](https://bgm.tv/subject/56112)| 2013-07-08 | 12    | [keke1](https://www.keke1.app/play/168061-2-342764.html) |
 
 ## MAD
 

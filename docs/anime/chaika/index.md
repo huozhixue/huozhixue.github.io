@@ -55,8 +55,8 @@
 
 |     | 系列名                   | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :-------------------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[棺姬嘉依卡](https://bgm.tv/subject/85303)| 2014-04-09 | 12    | [keke9](https://www.keke9.app/play/28509-4-250792.html) |
-| 2   |[棺姬嘉依卡 AVENGING BATTLE](https://bgm.tv/subject/104219)| 2014-10-08 | 10    | [keke9](https://www.keke9.app/play/28508-4-250782.html) |
+| 1   |[棺姬嘉依卡](https://bgm.tv/subject/85303)| 2014-04-09 | 12    | [keke1](https://www.keke1.app/play/28509-4-250792.html) |
+| 2   |[棺姬嘉依卡 AVENGING BATTLE](https://bgm.tv/subject/104219)| 2014-10-08 | 10    | [keke1](https://www.keke1.app/play/28508-4-250782.html) |
 
 
 

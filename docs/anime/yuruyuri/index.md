@@ -56,12 +56,12 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                        |     |
 | :-- | :----------- | :--------- | :---- | :---------------------------------------------------------- | --- |
-| 1   |[摇曳百合](https://bgm.tv/subject/14588)| 2011-07-04 | 12    | [keke9](https://www.keke9.app/play/29059-4-256616.html)     |     |
-| 2   |[摇曳百合♪♪](https://bgm.tv/subject/28900)| 2012-07-02 | 12    | [keke9](https://www.keke9.app/play/29058-4-256604.html)     |     |
+| 1   |[摇曳百合](https://bgm.tv/subject/14588)| 2011-07-04 | 12    | [keke1](https://www.keke1.app/play/29059-4-256616.html)     |     |
+| 2   |[摇曳百合♪♪](https://bgm.tv/subject/28900)| 2012-07-02 | 12    | [keke1](https://www.keke1.app/play/29058-4-256604.html)     |     |
 | 3   |[摇曳百合 夏日时光！](https://bgm.tv/subject/99796)| 2015-02-18 | 1     | [bilibili](https://www.bilibili.com/video/BV1UW411c7d7?p=3) |     |
 | 4   |[摇曳百合 夏日时光！+](https://bgm.tv/subject/136311)| 2015-08-20 | 2     | [bilibili](https://www.bilibili.com/video/BV1UW411c7d7)     |     |
-| 5   |[摇曳百合 3☆High!](https://bgm.tv/subject/127573)| 2015-10-05 | 12    | [keke9](https://www.keke9.app/play/29057-4-256592.html)     |     |
-| 6   |[摇曳百合、](https://bgm.tv/subject/243787)| 2019-11-13 | 1     | [keke9](https://www.keke9.app/play/29056-4-256591.html)     |     |
+| 5   |[摇曳百合 3☆High!](https://bgm.tv/subject/127573)| 2015-10-05 | 12    | [keke1](https://www.keke1.app/play/29057-4-256592.html)     |     |
+| 6   |[摇曳百合、](https://bgm.tv/subject/243787)| 2019-11-13 | 1     | [keke1](https://www.keke1.app/play/29056-4-256591.html)     |     |
 
 
 ## 配乐

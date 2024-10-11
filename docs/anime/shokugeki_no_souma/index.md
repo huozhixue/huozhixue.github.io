@@ -57,8 +57,8 @@
 | 1   |[食戟之灵](https://bgm.tv/subject/116461)| 2015-04-03 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep28931)  |
 | 2   |[食戟之灵 贰之皿](https://bgm.tv/subject/160124)| 2016-07-02 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep90818)  |
 | 3   |[食戟之灵 餐之皿](https://bgm.tv/subject/217632)| 2017-10-03 | 24    | [bilibili](https://www.bilibili.com/bangumi/play/ep342461) |
-| 4   |[食戟之灵 神之皿](https://bgm.tv/subject/284546)| 2019-10-11 | 12    | [keke9](https://www.keke9.app/play/22883-4-176652.html)    |
-| 5   |[食戟之灵 豪之皿](https://bgm.tv/subject/296820)| 2020-04-10 | 13    | [keke9](https://www.keke9.app/play/22882-4-176639.html)    |
+| 4   |[食戟之灵 神之皿](https://bgm.tv/subject/284546)| 2019-10-11 | 12    | [keke1](https://www.keke1.app/play/22883-4-176652.html)    |
+| 5   |[食戟之灵 豪之皿](https://bgm.tv/subject/296820)| 2020-04-10 | 13    | [keke1](https://www.keke1.app/play/22882-4-176639.html)    |
 
 
 ## 配乐

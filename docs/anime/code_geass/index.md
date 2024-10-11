@@ -63,8 +63,8 @@
 
 |     | 系列名                 | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------------------ | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[Code Geass 反叛的鲁路修](https://bgm.tv/subject/793)| 2006-10-05 | 25    | [keke9](https://www.keke9.app/play/22150-4-163634.html) |
-| 2   |[Code Geass 反叛的鲁路修R2](https://bgm.tv/subject/8)| 2008-04-06 | 25    | [keke9](https://www.keke9.app/play/22149-4-163609.html) |
+| 1   |[Code Geass 反叛的鲁路修](https://bgm.tv/subject/793)| 2006-10-05 | 25    | [keke1](https://www.keke1.app/play/22150-4-163634.html) |
+| 2   |[Code Geass 反叛的鲁路修R2](https://bgm.tv/subject/8)| 2008-04-06 | 25    | [keke1](https://www.keke1.app/play/22149-4-163609.html) |
 
 ## 配乐
 

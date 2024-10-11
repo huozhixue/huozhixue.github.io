@@ -65,7 +65,7 @@
 
 |     | 系列名                                        | 首播时间       | 话数/时长 | 观看地址                                                                |
 | :-- | :----------------------------------------- | :--------- | :---- | :------------------------------------------------------------------ |
-| 1   |[回转企鹅罐](https://bgm.tv/subject/18624)| 2011-07-07 | 24    | [keke9](https://www.keke9.app/play/20380-4-138338.html)             |
+| 1   |[回转企鹅罐](https://bgm.tv/subject/18624)| 2011-07-07 | 24    | [keke1](https://www.keke1.app/play/20380-4-138338.html)             |
 | 2   |[RE:cycle of the PENGUINDRUM [前篇] 你的列车是生存战略](https://bgm.tv/subject/331946)| 2022-04-29 | 1     | [bilibili](https://www.bilibili.com/video/BV1Zh4y1R7X1/?t=1h10m32s) |
 | 3   |[RE:cycle of the PENGUINDRUM [后篇] 我爱你](https://bgm.tv/subject/379789)| 2022-07-22 | 1     | [bilibili](https://www.bilibili.com/video/BV15k4y1s7s6/?t=1h8m52s)  |
 

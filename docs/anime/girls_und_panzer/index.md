@@ -56,13 +56,13 @@
 
 |     | 系列名               | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :---------------- | :--------- | :---- | :-------------------------------------------------------- |
-| 1   |[少女与战车](https://bgm.tv/subject/40310)| 2012-10-08 | 12    | [keke9](https://www.keke9.app/play/22299-4-167107.html)   |
+| 1   |[少女与战车](https://bgm.tv/subject/40310)| 2012-10-08 | 12    | [keke1](https://www.keke1.app/play/22299-4-167107.html)   |
 | 2   |[少女与战车 这次是真正的安齐奥战！](https://bgm.tv/subject/96130)| 2014-07-05 | 1     | [bilibili](https://www.bilibili.com/video/BV1Qx411b7YG)   |
 | 3   |[少女与战车 剧场版](https://bgm.tv/subject/72266)| 2015-11-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1MT4y1p7G9)   |
 | 4   |[少女与战车 最终章 第1话](https://bgm.tv/subject/191302)| 2017-12-09 | 1     | [bilibili](https://www.bilibili.com/video/BV1sW411g72B)   |
-| 5   |[少女与战车 最终章 第2话](https://bgm.tv/subject/208825)| 2019-06-15 | 1     | [keke9](https://www.keke9.app/play/21138-4-147234.html)   |
-| 6   |[少女与战车 最终章 第3话](https://bgm.tv/subject/208826)| 2021-03-26 | 1     | [keke9](https://www.keke9.app/play/179138-4-202685.html)  |
-| 7   |[少女与战车 最终章 第4话](https://bgm.tv/subject/208827)| 2023-10-06 | 1     | [keke9](https://www.keke9.app/play/228583-36-359737.html) |
+| 5   |[少女与战车 最终章 第2话](https://bgm.tv/subject/208825)| 2019-06-15 | 1     | [keke1](https://www.keke1.app/play/21138-4-147234.html)   |
+| 6   |[少女与战车 最终章 第3话](https://bgm.tv/subject/208826)| 2021-03-26 | 1     | [keke1](https://www.keke1.app/play/179138-4-202685.html)  |
+| 7   |[少女与战车 最终章 第4话](https://bgm.tv/subject/208827)| 2023-10-06 | 1     | [keke1](https://www.keke1.app/play/228583-36-359737.html) |
 
 
 

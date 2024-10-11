@@ -42,7 +42,7 @@
 
 |     | 系列名       | 首播时间       | 话数/时长 | 观看地址                                                                                                            |
 | :-- | :-------- | :--------- | :---- | :-------------------------------------------------------------------------------------------------------------- |
-| 1   |[宇宙骑士BLADE](https://bgm.tv/subject/2481)| 1992-02-18 | 49    | [bilibili](https://www.bilibili.com/video/BV1uW411j7su)、[keke9](https://www.keke9.app/play/26171-4-216325.html) |
+| 1   |[宇宙骑士BLADE](https://bgm.tv/subject/2481)| 1992-02-18 | 49    | [bilibili](https://www.bilibili.com/video/BV1uW411j7su)、[keke1](https://www.keke1.app/play/26171-4-216325.html) |
 
 
 

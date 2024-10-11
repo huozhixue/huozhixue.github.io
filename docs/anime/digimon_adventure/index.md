@@ -50,10 +50,10 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :--------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[数码宝贝大冒险](https://bgm.tv/subject/3128)| 1999-03-07 | 54    | [keke9](https://www.keke9.app/play/59036-34-160543.html) |
-| 2   |[数码宝贝大冒险02](https://bgm.tv/subject/3129)| 2000-04-02 | 50    | [keke9](https://www.keke9.app/play/27475-4-238967.html)  |
-| 3   |[数码宝贝驯兽师之王](https://bgm.tv/subject/3130)| 2001-04-01 | 51    | [keke9](https://www.keke9.app/play/29762-4-263822.html)  |
-| 4   |[数码宝贝无限地带](https://bgm.tv/subject/3131)| 2002-04-07 | 50    | [keke9](https://www.keke9.app/play/59046-31-95410.html)  |
+| 1   |[数码宝贝大冒险](https://bgm.tv/subject/3128)| 1999-03-07 | 54    | [keke1](https://www.keke1.app/play/59036-34-160543.html) |
+| 2   |[数码宝贝大冒险02](https://bgm.tv/subject/3129)| 2000-04-02 | 50    | [keke1](https://www.keke1.app/play/27475-4-238967.html)  |
+| 3   |[数码宝贝驯兽师之王](https://bgm.tv/subject/3130)| 2001-04-01 | 51    | [keke1](https://www.keke1.app/play/29762-4-263822.html)  |
+| 4   |[数码宝贝无限地带](https://bgm.tv/subject/3131)| 2002-04-07 | 50    | [keke1](https://www.keke1.app/play/59046-31-95410.html)  |
 | 5   |[数码宝贝大冒险 滚球兽的诞生](https://bgm.tv/subject/3133)| 1999-03-06 | 1     | [bilibili](https://www.bilibili.com/video/BV1cs411b7mC)  |
 | 6   |[数码宝贝大冒险 我们的战争游戏!](https://bgm.tv/subject/3134)| 2000-03-04 | 1     | [acfun](https://www.acfun.cn/v/ac4928038_2)              |
 | 7   |[数码宝贝X进化](https://bgm.tv/subject/3141)| 2005-01-03 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ms411h7dD)  |

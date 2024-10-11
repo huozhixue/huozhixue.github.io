@@ -58,9 +58,9 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :----------- | :--------- | :---- | :-------------------------------------------------------- |
-| 1   |[来自深渊](https://bgm.tv/subject/203526)| 2017-07-07 | 13    | [keke9](https://www.keke9.app/play/22372-4-168129.html)   |
+| 1   |[来自深渊](https://bgm.tv/subject/203526)| 2017-07-07 | 13    | [keke1](https://www.keke1.app/play/22372-4-168129.html)   |
 | 2   |[来自深渊 深邃的魂之黎明](https://bgm.tv/subject/230914)| 2020-01-17 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss34543) |
-| 3   |[来自深渊 烈日的黄金乡](https://bgm.tv/subject/298477)| 2022-07-06 | 12    | [keke9](https://www.keke9.app/play/27935-4-245219.html)   |
+| 3   |[来自深渊 烈日的黄金乡](https://bgm.tv/subject/298477)| 2022-07-06 | 12    | [keke1](https://www.keke1.app/play/27935-4-245219.html)   |
 
 
 ## MAD

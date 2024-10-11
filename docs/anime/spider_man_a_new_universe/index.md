@@ -37,8 +37,8 @@
 
 |     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[蜘蛛侠：平行宇宙](https://bgm.tv/subject/232067)| 2018-12-14 | 1     | [keke9](https://www.keke9.app/play/23041-4-177679.html)  |
-| 2   |[蜘蛛侠：纵横宇宙](https://bgm.tv/subject/282413)| 2023-06-02 | 1     | [keke9](https://www.keke9.app/play/106146-4-455781.html) |
+| 1   |[蜘蛛侠：平行宇宙](https://bgm.tv/subject/232067)| 2018-12-14 | 1     | [keke1](https://www.keke1.app/play/23041-4-177679.html)  |
+| 2   |[蜘蛛侠：纵横宇宙](https://bgm.tv/subject/282413)| 2023-06-02 | 1     | [keke1](https://www.keke1.app/play/106146-4-455781.html) |
 
 
 ## MAD

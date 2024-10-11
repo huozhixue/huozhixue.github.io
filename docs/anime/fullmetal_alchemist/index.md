@@ -58,10 +58,10 @@
 
 |     | 系列名                        | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :------------------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[钢之炼金术师](https://bgm.tv/subject/315)| 2003-10-04 | 51    | [keke9](https://www.keke9.app/play/26857-4-227909.html)  |
-| 2   |[钢之炼金术师 香巴拉的征服者](https://bgm.tv/subject/1935)| 2005-07-23 | 1     | [keke9](https://www.keke9.app/play/179775-4-265777.html) |
-| 3   |[钢之炼金术师 FULLMETAL ALCHEMIST](https://bgm.tv/subject/1428)| 2009-04-05 | 64    | [keke9](https://www.keke9.app/play/26894-4-228764.html)  |
-| 4   |[钢之炼金术师 叹息之丘的圣星](https://bgm.tv/subject/10799)| 2011-07-02 | 1     | [keke9](https://www.keke9.app/play/179060-4-196292.html) |
+| 1   |[钢之炼金术师](https://bgm.tv/subject/315)| 2003-10-04 | 51    | [keke1](https://www.keke1.app/play/26857-4-227909.html)  |
+| 2   |[钢之炼金术师 香巴拉的征服者](https://bgm.tv/subject/1935)| 2005-07-23 | 1     | [keke1](https://www.keke1.app/play/179775-4-265777.html) |
+| 3   |[钢之炼金术师 FULLMETAL ALCHEMIST](https://bgm.tv/subject/1428)| 2009-04-05 | 64    | [keke1](https://www.keke1.app/play/26894-4-228764.html)  |
+| 4   |[钢之炼金术师 叹息之丘的圣星](https://bgm.tv/subject/10799)| 2011-07-02 | 1     | [keke1](https://www.keke1.app/play/179060-4-196292.html) |
 
 ## 配乐
 

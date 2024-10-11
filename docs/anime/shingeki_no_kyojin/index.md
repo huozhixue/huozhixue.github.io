@@ -73,14 +73,14 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :--------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[进击的巨人](https://bgm.tv/subject/55770)| 2013-04-06 | 25    | [keke9](https://www.keke9.app/play/174851-4-136086.html) |
-| 2   |[进击的巨人 第二季](https://bgm.tv/subject/118335)| 2017-04-01 | 12    | [keke9](https://www.keke9.app/play/156444-4-136074.html) |
-| 3   |[进击的巨人 第三季](https://bgm.tv/subject/217300)| 2018-07-22 | 12    | [keke9](https://www.keke9.app/play/20145-4-136001.html)  |
-| 4   |[进击的巨人 第三季 Part.2](https://bgm.tv/subject/263750)| 2019-04-28 | 10    | [keke9](https://www.keke9.app/play/20145-4-136013.html)  |
-| 5   |[进击的巨人 最终季](https://bgm.tv/subject/285666)| 2020-12-06 | 16    | [keke9](https://www.keke9.app/play/20177-4-136335.html)  |
-| 6   |[进击的巨人 最终季 Part.2](https://bgm.tv/subject/331752)| 2022-01-09 | 12    | [keke9](https://www.keke9.app/play/178572-4-136320.html) |
-| 7   |[进击的巨人 最终季 完结篇 前篇](https://bgm.tv/subject/376739)| 2023-03-03 | 61m   | [keke9](https://www.keke9.app/play/212061-4-362350.html) |
-| 8   |[进击的巨人 最终季 完结篇 后篇](https://bgm.tv/subject/415779)| 2023-11-04 | 85m   | [keke9](https://www.keke9.app/play/214026-4-523770.html) |
+| 1   |[进击的巨人](https://bgm.tv/subject/55770)| 2013-04-06 | 25    | [keke1](https://www.keke1.app/play/174851-4-136086.html) |
+| 2   |[进击的巨人 第二季](https://bgm.tv/subject/118335)| 2017-04-01 | 12    | [keke1](https://www.keke1.app/play/156444-4-136074.html) |
+| 3   |[进击的巨人 第三季](https://bgm.tv/subject/217300)| 2018-07-22 | 12    | [keke1](https://www.keke1.app/play/20145-4-136001.html)  |
+| 4   |[进击的巨人 第三季 Part.2](https://bgm.tv/subject/263750)| 2019-04-28 | 10    | [keke1](https://www.keke1.app/play/20145-4-136013.html)  |
+| 5   |[进击的巨人 最终季](https://bgm.tv/subject/285666)| 2020-12-06 | 16    | [keke1](https://www.keke1.app/play/20177-4-136335.html)  |
+| 6   |[进击的巨人 最终季 Part.2](https://bgm.tv/subject/331752)| 2022-01-09 | 12    | [keke1](https://www.keke1.app/play/178572-4-136320.html) |
+| 7   |[进击的巨人 最终季 完结篇 前篇](https://bgm.tv/subject/376739)| 2023-03-03 | 61m   | [keke1](https://www.keke1.app/play/212061-4-362350.html) |
+| 8   |[进击的巨人 最终季 完结篇 后篇](https://bgm.tv/subject/415779)| 2023-11-04 | 85m   | [keke1](https://www.keke1.app/play/214026-4-523770.html) |
 
 ## 配乐
 

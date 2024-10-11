@@ -52,8 +52,8 @@
 
 |     | 系列名                | 首播时间       | 话数/时长 | 观看地址                                                    |     |
 | :-- | :----------------- | :--------- | :---- | :------------------------------------------------------ | --- |
-| 1   |[这个是僵尸吗？](https://bgm.tv/subject/9774)| 2011-01-10 | 12    | [keke9](https://www.keke9.app/play/22285-4-166970.html) |     |
-| 2   |[这个是僵尸吗？OF THE DEAD](https://bgm.tv/subject/18797)| 2012-04-04 | 10    | [keke9](https://www.keke9.app/play/22284-4-166960.html) |     |
+| 1   |[这个是僵尸吗？](https://bgm.tv/subject/9774)| 2011-01-10 | 12    | [keke1](https://www.keke1.app/play/22285-4-166970.html) |     |
+| 2   |[这个是僵尸吗？OF THE DEAD](https://bgm.tv/subject/18797)| 2012-04-04 | 10    | [keke1](https://www.keke1.app/play/22284-4-166960.html) |     |
 
 
 

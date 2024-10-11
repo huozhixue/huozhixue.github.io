@@ -67,13 +67,13 @@
 
 |     | 系列名                   | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :-------------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[水星领航员](https://bgm.tv/subject/531)| 2005-10-05 | 13    | [keke9](https://www.keke9.app/play/23917-4-187861.html)  |
-| 2   |[水星领航员 第二季](https://bgm.tv/subject/1269)| 2006-04-02 | 26    | [keke9](https://www.keke9.app/play/23916-4-187835.html)  |
-| 3   |[水星领航员 OVA ～ARIETTA～](https://bgm.tv/subject/750)| 2007-09-21 | 1     | [keke9](https://www.keke9.app/play/26145-4-215823.html)  |
-| 4   |[水星领航员 第三季](https://bgm.tv/subject/1270)| 2008-01-07 | 14    | [keke9](https://www.keke9.app/play/23915-4-187821.html)  |
-| 5   |[水星领航员 The AVVENIRE](https://bgm.tv/subject/124341)| 2015-09-26 | 3     | [keke9](https://www.keke9.app/play/23913-4-187817.html)  |
-| 6   |[水星领航员 The CREPUSCOLO](https://bgm.tv/subject/304087)| 2021-03-05 | 1     | [keke9](https://www.keke9.app/play/178979-4-187820.html) |
-| 7   |[水星领航员 The BENEDIZIONE](https://bgm.tv/subject/329948)| 2021-12-03 | 1     | [keke9](https://www.keke9.app/play/118157-4-150470.html) |
+| 1   |[水星领航员](https://bgm.tv/subject/531)| 2005-10-05 | 13    | [keke1](https://www.keke1.app/play/23917-4-187861.html)  |
+| 2   |[水星领航员 第二季](https://bgm.tv/subject/1269)| 2006-04-02 | 26    | [keke1](https://www.keke1.app/play/23916-4-187835.html)  |
+| 3   |[水星领航员 OVA ～ARIETTA～](https://bgm.tv/subject/750)| 2007-09-21 | 1     | [keke1](https://www.keke1.app/play/26145-4-215823.html)  |
+| 4   |[水星领航员 第三季](https://bgm.tv/subject/1270)| 2008-01-07 | 14    | [keke1](https://www.keke1.app/play/23915-4-187821.html)  |
+| 5   |[水星领航员 The AVVENIRE](https://bgm.tv/subject/124341)| 2015-09-26 | 3     | [keke1](https://www.keke1.app/play/23913-4-187817.html)  |
+| 6   |[水星领航员 The CREPUSCOLO](https://bgm.tv/subject/304087)| 2021-03-05 | 1     | [keke1](https://www.keke1.app/play/178979-4-187820.html) |
+| 7   |[水星领航员 The BENEDIZIONE](https://bgm.tv/subject/329948)| 2021-12-03 | 1     | [keke1](https://www.keke1.app/play/118157-4-150470.html) |
 
 ## 配乐
 

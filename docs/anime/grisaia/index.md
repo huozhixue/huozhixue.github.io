@@ -66,9 +66,9 @@
 
 |     | 系列名   | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :---- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[灰色的果实](https://bgm.tv/subject/67376)| 2014-10-05 | 13    | [keke9](https://www.keke9.app/play/28244-4-248217.html)  |
-| 2   |[灰色的迷宫](https://bgm.tv/subject/121187)| 2015-04-12 | 1     | [keke9](https://www.keke9.app/play/196120-4-248200.html) |
-| 3   |[灰色的乐园](https://bgm.tv/subject/130234)| 2015-04-19 | 10    | [keke9](https://www.keke9.app/play/28242-4-248202.html)  |
+| 1   |[灰色的果实](https://bgm.tv/subject/67376)| 2014-10-05 | 13    | [keke1](https://www.keke1.app/play/28244-4-248217.html)  |
+| 2   |[灰色的迷宫](https://bgm.tv/subject/121187)| 2015-04-12 | 1     | [keke1](https://www.keke1.app/play/196120-4-248200.html) |
+| 3   |[灰色的乐园](https://bgm.tv/subject/130234)| 2015-04-19 | 10    | [keke1](https://www.keke1.app/play/28242-4-248202.html)  |
 
 
 ## 配乐

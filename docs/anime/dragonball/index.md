@@ -41,17 +41,17 @@
 
 |     | 系列名                             | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :------------------------------ | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[龙珠](https://bgm.tv/subject/9565)| 1986-02-26 | 153   | [keke9](https://www.keke9.app/play/26128-4-215412.html)  |
-| 2   |[龙珠Z](https://bgm.tv/subject/9005)| 1989-04-26 | 291   | [keke9](https://www.keke9.app/play/26113-4-214865.html)  |
-| 3   |[龙珠GT](https://bgm.tv/subject/9566)| 1996-02-07 | 64    | [keke9](https://www.keke9.app/play/26112-4-214801.html)  |
-| 4   |[龙珠改](https://bgm.tv/subject/2103)| 2009-04-05 | 98    | [keke9](https://www.keke9.app/play/26127-4-215314.html)  |
-| 5   |[龙珠改 魔人布欧篇](https://bgm.tv/subject/97045)| 2014-04-06 | 61    | [keke9](https://www.keke9.app/play/26400-4-219840.html)  |
-| 6   |[龙珠超](https://bgm.tv/subject/132220)| 2015-07-05 | 131   | [keke9](https://www.keke9.app/play/26129-4-215565.html)  |
-| 7   |[龙珠Z 一夫当关的最后决战~挑战弗利萨的Z战士 孙悟空的父亲~](https://bgm.tv/subject/18505)| 1990-10-17 | 1     | [keke9](https://www.keke9.app/play/171521-4-449953.html) |
-| 8   |[龙珠Z・绝望的反抗!!残留的超战士・悟饭和特兰克斯](https://bgm.tv/subject/49000)| 1993-02-24 | 1     | [keke9](https://www.keke9.app/play/30329-4-274457.html)  |
-| 9   |[龙珠剧场版](https://bgm.tv/subject/44936)| 1986-12-20 | 4     | [keke9](https://www.keke9.app/search?os=pc&k=龙珠剧场版)      |
-| 10  |[龙珠Z剧场版](https://bgm.tv/subject/240287)| 1989-07-15 | 17    | [keke9](https://www.keke9.app/search?k=龙珠Z剧场版)           |
-| 11  | 龙珠超 布罗利                         | 2018-12-14 | 1     | [keke9](https://www.keke9.app/play/176611-4-2588.html)   |
+| 1   |[龙珠](https://bgm.tv/subject/9565)| 1986-02-26 | 153   | [keke1](https://www.keke1.app/play/26128-4-215412.html)  |
+| 2   |[龙珠Z](https://bgm.tv/subject/9005)| 1989-04-26 | 291   | [keke1](https://www.keke1.app/play/26113-4-214865.html)  |
+| 3   |[龙珠GT](https://bgm.tv/subject/9566)| 1996-02-07 | 64    | [keke1](https://www.keke1.app/play/26112-4-214801.html)  |
+| 4   |[龙珠改](https://bgm.tv/subject/2103)| 2009-04-05 | 98    | [keke1](https://www.keke1.app/play/26127-4-215314.html)  |
+| 5   |[龙珠改 魔人布欧篇](https://bgm.tv/subject/97045)| 2014-04-06 | 61    | [keke1](https://www.keke1.app/play/26400-4-219840.html)  |
+| 6   |[龙珠超](https://bgm.tv/subject/132220)| 2015-07-05 | 131   | [keke1](https://www.keke1.app/play/26129-4-215565.html)  |
+| 7   |[龙珠Z 一夫当关的最后决战~挑战弗利萨的Z战士 孙悟空的父亲~](https://bgm.tv/subject/18505)| 1990-10-17 | 1     | [keke1](https://www.keke1.app/play/171521-4-449953.html) |
+| 8   |[龙珠Z・绝望的反抗!!残留的超战士・悟饭和特兰克斯](https://bgm.tv/subject/49000)| 1993-02-24 | 1     | [keke1](https://www.keke1.app/play/30329-4-274457.html)  |
+| 9   |[龙珠剧场版](https://bgm.tv/subject/44936)| 1986-12-20 | 4     | [keke1](https://www.keke1.app/search?os=pc&k=龙珠剧场版)      |
+| 10  |[龙珠Z剧场版](https://bgm.tv/subject/240287)| 1989-07-15 | 17    | [keke1](https://www.keke1.app/search?k=龙珠Z剧场版)           |
+| 11  | 龙珠超 布罗利                         | 2018-12-14 | 1     | [keke1](https://www.keke1.app/play/176611-4-2588.html)   |
 
 
 ## MAD

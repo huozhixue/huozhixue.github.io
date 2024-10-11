@@ -54,7 +54,7 @@
 |     | 系列名                                                        | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :--------------------------------------------------------- | :--------- | :---- | :-------------------------------------------------------- |
 | 1   | [境界线上的地平线](https://bgm.tv/subject/12703)                   | 2011-10-01 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep65607) |
-| 2   | [境界线上的地平线 第二季](https://bgm.tv/subject/29307)               | 2012-07-07 | 13    | [keke9](https://www.keke9.app/play/29895-4-266446.html)   |
+| 2   | [境界线上的地平线 第二季](https://bgm.tv/subject/29307)               | 2012-07-07 | 13    | [keke1](https://www.keke1.app/play/29895-4-266446.html)   |
 | 3   | [境界线上的地平线 Blu-ray BOX 特典动画](https://bgm.tv/subject/259874) | 2018-12-21 | 1     | [bilibili](https://www.bilibili.com/video/BV1ut411r7LE)   |
 
 ## 配乐

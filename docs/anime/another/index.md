@@ -65,7 +65,7 @@
 
 |     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :---------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[Another](https://bgm.tv/subject/20851)| 2012-01-09 | 12    | [keke9](https://www.keke9.app/play/27008-4-230960.html)  |
+| 1   |[Another](https://bgm.tv/subject/20851)| 2012-01-09 | 12    | [keke1](https://www.keke1.app/play/27008-4-230960.html)  |
 | 2   |[Another 第0话](https://bgm.tv/subject/24540)| 2012-05-25 | 1     | [bilibili](https://www.bilibili.com/video/BV1ks41157c9/) |
 
 

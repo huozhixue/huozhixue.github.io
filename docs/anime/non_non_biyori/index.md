@@ -62,9 +62,9 @@
 
 |     | 系列名                 | 首播时间       | 话数/时长 | 观看地址                                                       |
 | :-- | :------------------ | :--------- | :---- | :--------------------------------------------------------- |
-| 1   |[悠哉日常大王](https://bgm.tv/subject/78405)| 2013-10-07 | 12    | [keke9](https://www.keke9.app/play/23651-4-183885.html)    |
+| 1   |[悠哉日常大王](https://bgm.tv/subject/78405)| 2013-10-07 | 12    | [keke1](https://www.keke1.app/play/23651-4-183885.html)    |
 | 2   |[悠哉日常大王 OAD](https://bgm.tv/subject/86895)| 2014-07-23 | 1     | [bilibili](https://www.bilibili.com/video/BV1VW411m73w)    |
-| 3   |[悠哉日常大王 Repeat](https://bgm.tv/subject/101442)| 2015-07-06 | 12    | [keke9](https://www.keke9.app/play/23650-4-183873.html)    |
+| 3   |[悠哉日常大王 Repeat](https://bgm.tv/subject/101442)| 2015-07-06 | 12    | [keke1](https://www.keke1.app/play/23650-4-183873.html)    |
 | 4   |[悠哉日常大王 Repeat OAD](https://bgm.tv/subject/165738)| 2016-09-23 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss5567)   |
 | 5   |[剧场版 悠哉日常大王 Vacation](https://bgm.tv/subject/215618)| 2018-08-25 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss26632)  |
 | 6   |[悠哉日常大王 Nonstop](https://bgm.tv/subject/282684)| 2021-01-10 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ep374717) |

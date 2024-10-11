@@ -53,9 +53,9 @@
 
 |     | 系列名               | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :---------------- | :--------- | :---- | :-------------------------------------------------------- |
-| 1   |[天降之物](https://bgm.tv/subject/2617)| 2009-10-04 | 14    | [keke9](https://www.keke9.app/play/23474-4-183417.html)   |
-| 2   |[天降之物f](https://bgm.tv/subject/7150)| 2010-10-01 | 12    | [keke9](https://www.keke9.app/play/23473-4-183405.html)   |
-| 3   |[天降之物 计时的悲伤女神](https://bgm.tv/subject/12576)| 2011-06-25 | 1     | [keke9](https://www.keke9.app/play/23472-4-183404.html)   |
+| 1   |[天降之物](https://bgm.tv/subject/2617)| 2009-10-04 | 14    | [keke1](https://www.keke1.app/play/23474-4-183417.html)   |
+| 2   |[天降之物f](https://bgm.tv/subject/7150)| 2010-10-01 | 12    | [keke1](https://www.keke1.app/play/23473-4-183405.html)   |
+| 3   |[天降之物 计时的悲伤女神](https://bgm.tv/subject/12576)| 2011-06-25 | 1     | [keke1](https://www.keke1.app/play/23472-4-183404.html)   |
 | 4   |[天降之物Final 永远的我的鸟笼](https://bgm.tv/subject/86445)| 2014-04-26 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ep17501) |
 
 ## 配乐

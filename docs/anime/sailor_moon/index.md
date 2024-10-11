@@ -62,11 +62,11 @@
 
 |     | 系列名               | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :---------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[美少女战士](https://bgm.tv/subject/1510)| 1992-03-07 | 46    | [keke9](https://www.keke9.app/play/58692-31-68997.html)  |
-| 2   |[美少女战士R](https://bgm.tv/subject/5428)| 1993-03-06 | 43    | [keke9](https://www.keke9.app/play/58710-31-137503.html) |
-| 3   |[美少女战士S](https://bgm.tv/subject/5432)| 1994-03-19 | 38    | [keke9](https://www.keke9.app/play/58709-12-211626.html) |
-| 4   |[美少女战士SuperS](https://bgm.tv/subject/5433)| 1995-03-04 | 39    | [keke9](https://www.keke9.app/play/58708-31-69043.html)  |
-| 5   |[美少女战士Sailor Stars](https://bgm.tv/subject/5434)| 1996-03-09 | 34    | [keke9](https://www.keke9.app/play/58707-31-137469.html) |
+| 1   |[美少女战士](https://bgm.tv/subject/1510)| 1992-03-07 | 46    | [keke1](https://www.keke1.app/play/58692-31-68997.html)  |
+| 2   |[美少女战士R](https://bgm.tv/subject/5428)| 1993-03-06 | 43    | [keke1](https://www.keke1.app/play/58710-31-137503.html) |
+| 3   |[美少女战士S](https://bgm.tv/subject/5432)| 1994-03-19 | 38    | [keke1](https://www.keke1.app/play/58709-12-211626.html) |
+| 4   |[美少女战士SuperS](https://bgm.tv/subject/5433)| 1995-03-04 | 39    | [keke1](https://www.keke1.app/play/58708-31-69043.html)  |
+| 5   |[美少女战士Sailor Stars](https://bgm.tv/subject/5434)| 1996-03-09 | 34    | [keke1](https://www.keke1.app/play/58707-31-137469.html) |
 
 <!--
 

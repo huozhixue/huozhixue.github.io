@@ -60,8 +60,8 @@
 |     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :---------- | :--------- | :---- | :-------------------------------------------------------- |
 | 1   |[虫师](https://bgm.tv/subject/340)| 2005-10-22 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ep30872) |
-| 2   |[虫师 特別篇 蚀日之翳](https://bgm.tv/subject/88473)| 2014-01-04 | 1     | [keke9](https://www.keke9.app/play/114821-4-202254.html)  |
-| 3   |[虫师 续章](https://bgm.tv/subject/92705)| 2014-04-04 | 21    | [keke9](https://www.keke9.app/play/20509-4-139111.html)   |
+| 2   |[虫师 特別篇 蚀日之翳](https://bgm.tv/subject/88473)| 2014-01-04 | 1     | [keke1](https://www.keke1.app/play/114821-4-202254.html)  |
+| 3   |[虫师 续章](https://bgm.tv/subject/92705)| 2014-04-04 | 21    | [keke1](https://www.keke1.app/play/20509-4-139111.html)   |
 | 4   |[虫师 特别篇 铃之雫](https://bgm.tv/subject/106207)| 2015-05-16 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss2648)  |
 
 ## 配乐

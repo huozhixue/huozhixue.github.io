@@ -70,8 +70,8 @@
 
 |     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[一拳超人](https://bgm.tv/subject/127563)| 2015-10-04 | 12    | [keke9](https://www.keke9.app/play/23426-4-182371.html) |
-| 2   |[一拳超人 第二季](https://bgm.tv/subject/193619)| 2019-04-02 | 12    | [keke9](https://www.keke9.app/play/23422-4-182284.html) |
+| 1   |[一拳超人](https://bgm.tv/subject/127563)| 2015-10-04 | 12    | [keke1](https://www.keke1.app/play/23426-4-182371.html) |
+| 2   |[一拳超人 第二季](https://bgm.tv/subject/193619)| 2019-04-02 | 12    | [keke1](https://www.keke1.app/play/23422-4-182284.html) |
 
 
 ## MAD

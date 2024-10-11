@@ -42,7 +42,7 @@
 
 |  | 系列名 | 首播时间 | 话数/时长 | 观看地址 |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [中华小当家](https://bgm.tv/subject/1934) | 1997-04-27 | 52 | [keke9](https://www.keke9.app/play/29319-4-259825.html) |
+| 1 | [中华小当家](https://bgm.tv/subject/1934) | 1997-04-27 | 52 | [keke1](https://www.keke1.app/play/29319-4-259825.html) |
 
 ## 配乐
 

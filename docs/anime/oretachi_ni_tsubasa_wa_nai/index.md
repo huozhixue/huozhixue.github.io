@@ -52,8 +52,8 @@
 
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :--------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[我们没有翅膀](https://bgm.tv/subject/10213)| 2011-04-03 | 12    | [keke9](https://www.keke9.app/play/24435-4-193784.html) |
-| 2   |[我们没有翅膀 OVA](https://bgm.tv/subject/19322)| 2011-06-26 | 1     | [keke9](https://www.keke9.app/play/24435-4-193796.html) |
+| 1   |[我们没有翅膀](https://bgm.tv/subject/10213)| 2011-04-03 | 12    | [keke1](https://www.keke1.app/play/24435-4-193784.html) |
+| 2   |[我们没有翅膀 OVA](https://bgm.tv/subject/19322)| 2011-06-26 | 1     | [keke1](https://www.keke1.app/play/24435-4-193796.html) |
 
 
 ## MAD

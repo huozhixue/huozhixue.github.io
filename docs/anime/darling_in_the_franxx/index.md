@@ -73,7 +73,7 @@
 
 |     | 系列名                   | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :-------------------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[DARLING in the FRANXX](https://bgm.tv/subject/218711)| 2018-01-13 | 24    | [keke9](https://www.keke9.app/play/22066-4-162313.html) |
+| 1   |[DARLING in the FRANXX](https://bgm.tv/subject/218711)| 2018-01-13 | 24    | [keke1](https://www.keke1.app/play/22066-4-162313.html) |
 
 
 

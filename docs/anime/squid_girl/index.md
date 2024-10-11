@@ -55,8 +55,8 @@
 
 |     | 系列名         | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :---------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[侵略！乌贼娘](https://bgm.tv/subject/7842)| 2010-10-04 | 12    | [keke9](https://www.keke9.app/play/40391-4-375467.html) |
-| 2   |[侵略！？乌贼娘](https://bgm.tv/subject/18004)| 2011-09-27 | 12    | [keke9](https://www.keke9.app/play/22309-4-167227.html) |
+| 1   |[侵略！乌贼娘](https://bgm.tv/subject/7842)| 2010-10-04 | 12    | [keke1](https://www.keke1.app/play/40391-4-375467.html) |
+| 2   |[侵略！？乌贼娘](https://bgm.tv/subject/18004)| 2011-09-27 | 12    | [keke1](https://www.keke1.app/play/22309-4-167227.html) |
 | 3   |[侵略！！乌贼娘 OAD](https://bgm.tv/subject/46703)| 2012-08-08 | 3     | [bilibili](https://www.bilibili.com/video/BV1iW411h7RB) |
 
 

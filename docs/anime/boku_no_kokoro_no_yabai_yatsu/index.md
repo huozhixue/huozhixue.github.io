@@ -58,8 +58,8 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 |[我心里危险的东西](https://bgm.tv/subject/394260)| 2023-04-01 | 12 | [keke9](https://www.keke9.app/play/47268-4-420325.html)  |
-| 2 |[我心里危险的东西 第二季](https://bgm.tv/subject/441795)| 2024-01-06 | 13 | [keke9](https://www.keke9.app/play/215287-4-580832.html)  |
+| 1 |[我心里危险的东西](https://bgm.tv/subject/394260)| 2023-04-01 | 12 | [keke1](https://www.keke1.app/play/47268-4-420325.html)  |
+| 2 |[我心里危险的东西 第二季](https://bgm.tv/subject/441795)| 2024-01-06 | 13 | [keke1](https://www.keke1.app/play/215287-4-580832.html)  |
 
 
 

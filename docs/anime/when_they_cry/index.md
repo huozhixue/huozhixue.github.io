@@ -58,10 +58,10 @@
 
 |     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[寒蝉鸣泣之时](https://bgm.tv/subject/289)| 2006-04-04 | 26    | [keke9](https://www.keke9.app/play/28315-4-249067.html) |
-| 2   |[寒蝉鸣泣之时 解](https://bgm.tv/subject/288)| 2007-07-05 | 24    | [keke9](https://www.keke9.app/play/28280-4-248470.html) |
-| 3   |[寒蝉鸣泣之时 业](https://bgm.tv/subject/297969)| 2020-10-01 | 24    | [keke9](https://www.keke9.app/play/28316-4-249094.html) |
-| 4   |[寒蝉鸣泣之时 卒](https://bgm.tv/subject/331033)| 2021-07-01 | 15    | [keke9](https://www.keke9.app/play/28317-4-249118.html) |
+| 1   |[寒蝉鸣泣之时](https://bgm.tv/subject/289)| 2006-04-04 | 26    | [keke1](https://www.keke1.app/play/28315-4-249067.html) |
+| 2   |[寒蝉鸣泣之时 解](https://bgm.tv/subject/288)| 2007-07-05 | 24    | [keke1](https://www.keke1.app/play/28280-4-248470.html) |
+| 3   |[寒蝉鸣泣之时 业](https://bgm.tv/subject/297969)| 2020-10-01 | 24    | [keke1](https://www.keke1.app/play/28316-4-249094.html) |
+| 4   |[寒蝉鸣泣之时 卒](https://bgm.tv/subject/331033)| 2021-07-01 | 15    | [keke1](https://www.keke1.app/play/28317-4-249118.html) |
 
 ## 配乐
 

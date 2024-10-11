@@ -41,8 +41,8 @@
 
 |     | 系列名      | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[扑杀天使朵库萝](https://bgm.tv/subject/3059)| 2005-03-25 | 8     | [keke9](https://www.keke9.app/play/22276-4-166843.html) |
-| 2   |[扑杀天使朵库萝2](https://bgm.tv/subject/3060)| 2007-08-24 | 4     | [keke9](https://www.keke9.app/play/22315-4-167323.html) |
+| 1   |[扑杀天使朵库萝](https://bgm.tv/subject/3059)| 2005-03-25 | 8     | [keke1](https://www.keke1.app/play/22276-4-166843.html) |
+| 2   |[扑杀天使朵库萝2](https://bgm.tv/subject/3060)| 2007-08-24 | 4     | [keke1](https://www.keke1.app/play/22315-4-167323.html) |
 
 
 

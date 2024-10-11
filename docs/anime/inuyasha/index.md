@@ -56,8 +56,8 @@
 | 3   |[犬夜叉 穿越时空的思念](https://bgm.tv/subject/18617)| 2001-12-15 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42652)  |
 | 4   |[犬夜叉 镜中的梦幻城](https://bgm.tv/subject/19393)| 2002-12-21 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss42653)  |
 | 5   |[犬夜叉 天下霸道之剑](https://bgm.tv/subject/18616)| 2003-12-20 | 1     | [bilibili](https://www.bilibili.com/video/BV1vB4y1B7Pq)    |
-| 6   |[犬夜叉 红莲之蓬莱岛](https://bgm.tv/subject/19392)| 2004-12-23 | 1     | [keke9](https://www.keke9.app/play/179389-4-223382.html)   |
-| 7   |[犬夜叉 黑色铁碎牙](https://bgm.tv/subject/18615)| 2008-07-30 | 1     | [keke9](https://www.keke9.app/play/181312-4-506925.html)   |
+| 6   |[犬夜叉 红莲之蓬莱岛](https://bgm.tv/subject/19392)| 2004-12-23 | 1     | [keke1](https://www.keke1.app/play/179389-4-223382.html)   |
+| 7   |[犬夜叉 黑色铁碎牙](https://bgm.tv/subject/18615)| 2008-07-30 | 1     | [keke1](https://www.keke1.app/play/181312-4-506925.html)   |
 
 ## 配乐
 

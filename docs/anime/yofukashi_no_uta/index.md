@@ -71,7 +71,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 |[彻夜之歌](https://bgm.tv/subject/356774)| 2022-07-07 | 13 | [keke9](https://www.keke9.app/play/21436-4-150503.html)  |
+| 1 |[彻夜之歌](https://bgm.tv/subject/356774)| 2022-07-07 | 13 | [keke1](https://www.keke1.app/play/21436-4-150503.html)  |
 
 
 ## MAD

@@ -42,10 +42,10 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :----------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[圣斗士星矢](https://bgm.tv/subject/4843)| 1986-10-11 | 114   | [keke9](https://www.keke9.app/play/61231-32-122095.html) |
-| 2   |[圣斗士星矢 冥王十二宫编](https://bgm.tv/subject/593)| 2003-01-25 | 13    | [keke9](https://www.keke9.app/play/60356-32-15366.html)  |
-| 3   |[圣斗士星矢 冥界篇 前章](https://bgm.tv/subject/20232)| 2005-12-17 | 6     | [keke9](https://www.keke9.app/play/40821-4-382129.html)  |
-| 4   |[圣斗士星矢 冥界篇 后章](https://bgm.tv/subject/20234)| 2006-12-15 | 6     | [keke9](https://www.keke9.app/detail/40822.html)         |
+| 1   |[圣斗士星矢](https://bgm.tv/subject/4843)| 1986-10-11 | 114   | [keke1](https://www.keke1.app/play/61231-32-122095.html) |
+| 2   |[圣斗士星矢 冥王十二宫编](https://bgm.tv/subject/593)| 2003-01-25 | 13    | [keke1](https://www.keke1.app/play/60356-32-15366.html)  |
+| 3   |[圣斗士星矢 冥界篇 前章](https://bgm.tv/subject/20232)| 2005-12-17 | 6     | [keke1](https://www.keke1.app/play/40821-4-382129.html)  |
+| 4   |[圣斗士星矢 冥界篇 后章](https://bgm.tv/subject/20234)| 2006-12-15 | 6     | [keke1](https://www.keke1.app/detail/40822.html)         |
 
 <!--
 

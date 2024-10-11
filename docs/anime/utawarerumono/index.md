@@ -53,7 +53,7 @@
 |     | 系列名        | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :--------- | :--------- | :---- | :-------------------------------------------------------- |
 | 1   |[传颂之物](https://bgm.tv/subject/1044)| 2006-04-03 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ss1388)  |
-| 2   |[传颂之物 虚伪的假面](https://bgm.tv/subject/136336)| 2015-10-03 | 25    | [keke9](https://www.keke9.app/play/22155-4-163719.html)   |
+| 2   |[传颂之物 虚伪的假面](https://bgm.tv/subject/136336)| 2015-10-03 | 25    | [keke1](https://www.keke1.app/play/22155-4-163719.html)   |
 | 3   |[传颂之物 二人的白皇](https://bgm.tv/subject/293008)| 2022-07-02 | 28    | [bilibili](https://www.bilibili.com/bangumi/play/ss42104) |
 
 

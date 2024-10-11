@@ -58,8 +58,8 @@
 
 |     | 系列名                  | 首播时间       | 话数/时长 | 观看地址                                                    |
 | :-- | :------------------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[银之匙 Silver Spoon](https://bgm.tv/subject/59664)| 2013-07-11 | 11    | [keke9](https://www.keke9.app/play/21480-4-150926.html) |
-| 2   |[银之匙 Silver Spoon 第二季](https://bgm.tv/subject/77480)| 2014-01-09 | 11    | [keke9](https://www.keke9.app/play/21476-4-150889.html) |
+| 1   |[银之匙 Silver Spoon](https://bgm.tv/subject/59664)| 2013-07-11 | 11    | [keke1](https://www.keke1.app/play/21480-4-150926.html) |
+| 2   |[银之匙 Silver Spoon 第二季](https://bgm.tv/subject/77480)| 2014-01-09 | 11    | [keke1](https://www.keke1.app/play/21476-4-150889.html) |
 
 ## MAD
 

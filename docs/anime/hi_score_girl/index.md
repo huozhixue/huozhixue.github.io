@@ -59,8 +59,8 @@
 
 |     | 系列名              | 首播时间       | 话数/时长 | 观看地址                                                       |
 | :-- | :--------------- | :--------- | :---- | :--------------------------------------------------------- |
-| 1   |[高分少女](https://bgm.tv/subject/91205)| 2018-07-13 | 12    | [keke9](https://www.keke9.app/play/23849-4-186976.html)    |
-| 2   |[高分少女 EXTRA STAGE](https://bgm.tv/subject/262277)| 2019-03-20 | 3     | [keke9](https://www.keke9.app/play/23847-4-186964.html)    |
+| 1   |[高分少女](https://bgm.tv/subject/91205)| 2018-07-13 | 12    | [keke1](https://www.keke1.app/play/23849-4-186976.html)    |
+| 2   |[高分少女 EXTRA STAGE](https://bgm.tv/subject/262277)| 2019-03-20 | 3     | [keke1](https://www.keke1.app/play/23847-4-186964.html)    |
 | 3   |[高分少女 第二季](https://bgm.tv/subject/278569)| 2019-10-25 | 9     | [bilibili](https://www.bilibili.com/bangumi/play/ep288534) |
 
 ## 配乐

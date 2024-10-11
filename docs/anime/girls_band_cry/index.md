@@ -58,7 +58,7 @@
 
 |     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
 |:---  |:------    |:----      |:---       |:---  |
-| 1 |[GIRLS BAND CRY](https://bgm.tv/subject/431767)| 2024-04-05 | 13 | [keke9](https://www.keke9.app/play/229071-32-295329.html)  |
+| 1 |[GIRLS BAND CRY](https://bgm.tv/subject/431767)| 2024-04-05 | 13 | [keke1](https://www.keke1.app/play/229071-32-295329.html)  |
 
 
 ## 配乐

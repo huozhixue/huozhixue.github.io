@@ -50,7 +50,7 @@
 |     | 系列名  | 首播时间       | 话数/时长 | 观看地址                                                      |
 | :-- | :--- | :--------- | :---- | :-------------------------------------------------------- |
 | 1   |[现视研](https://bgm.tv/subject/928)| 2004-10-10 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss517)   |
-| 2   |[现视研2](https://bgm.tv/subject/1219)| 2007-10-09 | 12    | [keke9](https://www.keke9.app/play/149656-12-548683.html) |
+| 2   |[现视研2](https://bgm.tv/subject/1219)| 2007-10-09 | 12    | [keke1](https://www.keke1.app/play/149656-12-548683.html) |
 
 
 

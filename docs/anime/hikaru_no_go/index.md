@@ -45,7 +45,7 @@
 
 |     | 系列名           | 首播时间       | 话数/时长 | 观看地址                                                    |
 |:----|:--------------|:-----------|:------|:--------------------------------------------------------|
-| 1   |[棋魂](https://bgm.tv/subject/605)| 2001-10-10 | 75    | [keke9](https://www.keke9.app/play/26151-4-216072.html) |
+| 1   |[棋魂](https://bgm.tv/subject/605)| 2001-10-10 | 75    | [keke1](https://www.keke1.app/play/26151-4-216072.html) |
 | 2   |[棋魂特别篇 迈向北斗杯之路](https://bgm.tv/subject/36271)| 2004-01-03 | 1     | [bilibili](https://www.bilibili.com/video/BV1Ax41157HN) |
 
 ## 配乐

@@ -31,13 +31,13 @@
 
 |     | 系列名       | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :-------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[瑞克和莫蒂 第一季](https://bgm.tv/subject/93377)| 2013-12-02 | 11    | [keke9](https://www.keke9.app/play/26371-4-219002.html)  |
-| 2   |[瑞克和莫蒂 第二季](https://bgm.tv/subject/141530)| 2015-07-26 | 10    | [keke9](https://www.keke9.app/play/26370-4-218992.html)  |
-| 3   |[瑞克和莫蒂 第三季](https://bgm.tv/subject/146457)| 2017-04-01 | 10    | [keke9](https://www.keke9.app/play/26369-4-218982.html)  |
-| 4   |[瑞克和莫蒂 第四季](https://bgm.tv/subject/246238)| 2019-11-10 | 10    | [keke9](https://www.keke9.app/play/26174-4-216438.html)  |
-| 5   |[瑞克和莫蒂 第五季](https://bgm.tv/subject/331936)| 2021-06-20 | 10    | [keke9](https://www.keke9.app/play/26368-4-218972.html)  |
-| 6   |[瑞克和莫蒂 第六季](https://bgm.tv/subject/358934)| 2022-09-04 | 10    | [keke9](https://www.keke9.app/play/20378-4-138321.html)  |
-| 7   |[瑞克和莫蒂 第七季](https://bgm.tv/subject/441140)| 2023-10-15 | 10    | [keke9](https://www.keke9.app/play/196400-4-517346.html) |
+| 1   |[瑞克和莫蒂 第一季](https://bgm.tv/subject/93377)| 2013-12-02 | 11    | [keke1](https://www.keke1.app/play/26371-4-219002.html)  |
+| 2   |[瑞克和莫蒂 第二季](https://bgm.tv/subject/141530)| 2015-07-26 | 10    | [keke1](https://www.keke1.app/play/26370-4-218992.html)  |
+| 3   |[瑞克和莫蒂 第三季](https://bgm.tv/subject/146457)| 2017-04-01 | 10    | [keke1](https://www.keke1.app/play/26369-4-218982.html)  |
+| 4   |[瑞克和莫蒂 第四季](https://bgm.tv/subject/246238)| 2019-11-10 | 10    | [keke1](https://www.keke1.app/play/26174-4-216438.html)  |
+| 5   |[瑞克和莫蒂 第五季](https://bgm.tv/subject/331936)| 2021-06-20 | 10    | [keke1](https://www.keke1.app/play/26368-4-218972.html)  |
+| 6   |[瑞克和莫蒂 第六季](https://bgm.tv/subject/358934)| 2022-09-04 | 10    | [keke1](https://www.keke1.app/play/20378-4-138321.html)  |
+| 7   |[瑞克和莫蒂 第七季](https://bgm.tv/subject/441140)| 2023-10-15 | 10    | [keke1](https://www.keke1.app/play/196400-4-517346.html) |
 
 
 

@@ -66,9 +66,9 @@
 
 |     | 系列名            | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[魔法科高校的劣等生](https://bgm.tv/subject/84872)| 2014-04-05 | 26    | [keke9](https://www.keke9.app/play/28469-4-250452.html)  |
-| 2   |[魔法科高校的劣等生 来访者篇](https://bgm.tv/subject/292233)| 2020-10-03 | 13    | [keke9](https://www.keke9.app/play/28468-4-250439.html)  |
-| 3   |[魔法科高校的劣等生 追忆篇](https://bgm.tv/subject/329436)| 2021-12-31 | 1     | [keke9](https://www.keke9.app/play/208802-31-96599.html) |
+| 1   |[魔法科高校的劣等生](https://bgm.tv/subject/84872)| 2014-04-05 | 26    | [keke1](https://www.keke1.app/play/28469-4-250452.html)  |
+| 2   |[魔法科高校的劣等生 来访者篇](https://bgm.tv/subject/292233)| 2020-10-03 | 13    | [keke1](https://www.keke1.app/play/28468-4-250439.html)  |
+| 3   |[魔法科高校的劣等生 追忆篇](https://bgm.tv/subject/329436)| 2021-12-31 | 1     | [keke1](https://www.keke1.app/play/208802-31-96599.html) |
 
 
 

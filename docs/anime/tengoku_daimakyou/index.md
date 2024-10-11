@@ -72,7 +72,7 @@
 
 |  | 系列名 | 首播时间 | 话数/时长 | 观看地址 |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [天国大魔境](https://bgm.tv/subject/404804) | 2023-04-01 | 13 | [keke9](https://www.keke9.app/play/47254-4-420229.html) |
+| 1 | [天国大魔境](https://bgm.tv/subject/404804) | 2023-04-01 | 13 | [keke1](https://www.keke1.app/play/47254-4-420229.html) |
 
 ## 配乐
 

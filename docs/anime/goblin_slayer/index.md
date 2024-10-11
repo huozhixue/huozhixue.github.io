@@ -56,9 +56,9 @@
 
 |     | 系列名          | 首播时间       | 话数/时长 | 观看地址                                                     |
 | :-- | :----------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   |[哥布林杀手](https://bgm.tv/subject/238006)| 2018-10-06 | 12    | [keke9](https://www.keke9.app/play/28916-4-254620.html)  |
-| 2   |[哥布林杀手：哥布林的王冠](https://bgm.tv/subject/278661)| 2020-02-01 | 1     | [keke9](https://www.keke9.app/play/178807-4-167356.html) |
-| 3   |[哥布林杀手 第二季](https://bgm.tv/subject/326867)| 2023-10-06 | 12    | [keke9](https://www.keke9.app/play/196009-4-514573.html) |
+| 1   |[哥布林杀手](https://bgm.tv/subject/238006)| 2018-10-06 | 12    | [keke1](https://www.keke1.app/play/28916-4-254620.html)  |
+| 2   |[哥布林杀手：哥布林的王冠](https://bgm.tv/subject/278661)| 2020-02-01 | 1     | [keke1](https://www.keke1.app/play/178807-4-167356.html) |
+| 3   |[哥布林杀手 第二季](https://bgm.tv/subject/326867)| 2023-10-06 | 12    | [keke1](https://www.keke1.app/play/196009-4-514573.html) |
 
 
 
