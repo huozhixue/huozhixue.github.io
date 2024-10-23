@@ -9,124 +9,69 @@
     <pubDate>Sat, 27 May 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2708/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/" target="_blank" rel="noopener noreffer">力扣第 105 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 <strong>非空</strong> 小组，且这个小组的 <strong>实力值</strong> 最大，如果这个小组里的学生下标为 <code>i<sub>0</sub></code>, <code>i<sub>1</sub></code>, <code>i<sub>2</sub></code>, ... , <code>i<sub>k</sub></code> ，那么这个小组的实力值定义为 <code>nums[i<sub>0</sub>] * nums[i<sub>1</sub>] * nums[i<sub>2</sub>] * ... * nums[i<sub>k</sub>​]</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 105 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 非空 小组]]></description>
 </item><item>
     <title>2002：两个回文子序列长度的最大乘积（1869 分）</title>
     <link>https://huozhixue.github.io/leetcode/2002/</link>
     <pubDate>Sun, 12 Sep 2021 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2002/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> ，请你找到 <code>s</code> 中两个 <strong>不相交回文子序列</strong> ，使得它们长度的 <strong>乘积最大</strong> 。两个子序列在原字符串中如果没有任何相同下标的字符，则它们是 <strong>不相交</strong> 的。</p>]]></description>
+    <description><![CDATA[力扣第 258 场周赛第 3 题 题目 给你一个字符串 s ，请你找到 s 中两个 不相交回文子序列 ，使得它们长度的 乘积最大 。两个子序列在原字符串中如果没有任何相同下]]></description>
 </item><item>
     <title>0980：不同路径 III（1830 分）</title>
     <link>https://huozhixue.github.io/leetcode/0980/</link>
     <pubDate>Sun, 20 Jan 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0980/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/unique-paths-iii/" target="_blank" rel="noopener noreffer">力扣第 120 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>在二维网格 <code>grid</code> 上，有 4 种类型的方格：</p>
-<ul>
-<li><code>1</code> 表示起始方格。且只有一个起始方格。</li>
-<li><code>2</code> 表示结束方格，且只有一个结束方格。</li>
-<li><code>0</code> 表示我们可以走过的空方格。</li>
-<li><code>-1</code> 表示我们无法跨越的障碍。</li>
-</ul>
-<p>返回在四个方向（上、下、左、右）上行走时，从起始方格到结束方格的不同路径的数目<strong>。</strong></p>]]></description>
+    <description><![CDATA[力扣第 120 场周赛第 4 题 题目 在二维网格 grid 上，有 4 种类型的方格： 1 表示起始方格。且只有一个起始方格。 2 表示结束方格，且只有一个结束方格。 0 表示我们]]></description>
 </item><item>
     <title>0797：所有可能的路径（1382 分）</title>
     <link>https://huozhixue.github.io/leetcode/0797/</link>
     <pubDate>Tue, 07 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0797/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/all-paths-from-source-to-target/" target="_blank" rel="noopener noreffer">力扣第 797 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个有 <code>n</code> 个节点的 <strong>有向无环图（DAG）</strong>，请你找出所有从节点 <code>0</code> 到节点 <code>n-1</code> 的路径并输出（<strong>不要求按特定顺序</strong>）</p>
-<p><meta charset="UTF-8" /> <code>graph[i]</code> 是一个从节点 <code>i</code> 可以访问的所有节点的列表（即从节点 <code>i</code> 到节点 <code>graph[i][j]</code>存在一条有向边）。</p>]]></description>
+    <description><![CDATA[力扣第 797 题 题目 给你一个有 n 个节点的 有向无环图（DAG），请你找出所有从节点 0 到节点 n-1 的路径并输出（不要求按特定顺序） graph[i] 是一个从节点 i 可以访问]]></description>
 </item><item>
     <title>0698：划分为k个相等的子集（★）</title>
     <link>https://huozhixue.github.io/leetcode/0698/</link>
     <pubDate>Mon, 28 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0698/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/" target="_blank" rel="noopener noreffer">力扣第 698 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个整数数组  <code>nums</code> 和一个正整数 <code>k</code>，找出是否有可能把这个数组分成 <code>k</code> 个非空子集，其总和都相等。</p>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 698 题 题目 给定一个整数数组 nums 和一个正整数 k，找出是否有可能把这个数组分成 k 个非空子集，其总和都相等。 示例 1： 输入： nums = [4, 3, 2, 3, 5, 2, 1], k =]]></description>
 </item><item>
     <title>0691：贴纸拼词（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0691/</link>
     <pubDate>Mon, 21 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0691/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/stickers-to-spell-word/" target="_blank" rel="noopener noreffer">力扣第 691 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>我们有 <code>n</code> 种不同的贴纸。每个贴纸上都有一个小写的英文单词。</p>
-<p>您想要拼写出给定的字符串 <code>target</code> ，方法是从收集的贴纸中切割单个字母并重新排列它们。如果你愿意，你可以多次使用每个贴纸，每个贴纸的数量是无限的。</p>]]></description>
+    <description><![CDATA[力扣第 691 题 题目 我们有 n 种不同的贴纸。每个贴纸上都有一个小写的英文单词。 您想要拼写出给定的字符串 target ，方法是从收集的贴纸中切割单个字母并重新排列]]></description>
 </item><item>
     <title>0638：大礼包（★）</title>
     <link>https://huozhixue.github.io/leetcode/0638/</link>
     <pubDate>Thu, 29 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0638/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/shopping-offers/" target="_blank" rel="noopener noreffer">力扣第 638 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>在 LeetCode 商店中， 有 <code>n</code> 件在售的物品。每件物品都有对应的价格。然而，也有一些大礼包，每个大礼包以优惠的价格捆绑销售一组物品。</p>]]></description>
+    <description><![CDATA[力扣第 638 题 题目 在 LeetCode 商店中， 有 n 件在售的物品。每件物品都有对应的价格。然而，也有一些大礼包，每个大礼包以优惠的价格捆绑销售一组物品。 给你一个整]]></description>
 </item><item>
     <title>0526：优美的排列（★）</title>
     <link>https://huozhixue.github.io/leetcode/0526/</link>
     <pubDate>Thu, 09 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0526/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/beautiful-arrangement/" target="_blank" rel="noopener noreffer">力扣第 526 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>假设有从 1 到 n 的 n 个整数。用这些整数构造一个数组 <code>perm</code>（<strong>下标从 1 开始</strong>），只要满足下述条件 <strong>之一</strong> ，该数组就是一个 <strong>优美的排列</strong> ：</p>]]></description>
+    <description><![CDATA[力扣第 526 题 题目 假设有从 1 到 n 的 n 个整数。用这些整数构造一个数组 perm（下标从 1 开始），只要满足下述条件 之一 ，该数组就是一个 优美的排列 ： perm[i] 能]]></description>
 </item><item>
     <title>0494：目标和（★）</title>
     <link>https://huozhixue.github.io/leetcode/0494/</link>
     <pubDate>Sun, 08 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0494/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/target-sum/" target="_blank" rel="noopener noreffer">力扣第 494 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个非负整数数组 <code>nums</code> 和一个整数 <code>target</code> 。</p>
-<p>向数组中的每个整数前添加 <code>'+'</code> 或 <code>'-'</code> ，然后串联起所有整数，可以构造一个 <strong>表达式</strong> ：</p>
-<ul>
-<li>例如，<code>nums = [2, 1]</code> ，可以在 <code>2</code> 之前添加 <code>'+'</code> ，在 <code>1</code> 之前添加 <code>'-'</code> ，然后串联起来得到表达式 <code>"+2-1"</code> 。</li>
-</ul>
-<p>返回可以通过上述方法构造的、运算结果等于 <code>target</code> 的不同 <strong>表达式</strong> 的数目。</p>]]></description>
+    <description><![CDATA[力扣第 494 题 题目 给你一个非负整数数组 nums 和一个整数 target 。 向数组中的每个整数前添加 '+' 或 '-' ，然后串联起所有整数，可以构造一个 表达式 ： 例如，nums = [2,]]></description>
 </item><item>
     <title>0491：非递减子序列（★）</title>
     <link>https://huozhixue.github.io/leetcode/0491/</link>
     <pubDate>Thu, 05 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0491/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/non-decreasing-subsequences/" target="_blank" rel="noopener noreffer">力扣第 491 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> ，找出并返回所有该数组中不同的递增子序列，递增子序列中 <strong>至少有两个元素</strong> 。你可以按 <strong>任意顺序</strong> 返回答案。</p>]]></description>
+    <description><![CDATA[力扣第 491 题 题目 给你一个整数数组 nums ，找出并返回所有该数组中不同的递增子序列，递增子序列中 至少有两个元素 。你可以按 任意顺序 返回答案。 数组中可能含]]></description>
 </item></channel>
 </rss>

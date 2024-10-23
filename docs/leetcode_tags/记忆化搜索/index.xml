@@ -9,120 +9,69 @@
     <pubDate>Sun, 01 Oct 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2876/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/" target="_blank" rel="noopener noreffer">力扣第 365 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>现有一个有向图，其中包含 <code>n</code> 个节点，节点编号从 <code>0</code> 到 <code>n - 1</code> 。此外，该图还包含了 <code>n</code> 条有向边。</p>
-<p>给你一个下标从 <strong>0</strong> 开始的数组 <code>edges</code> ，其中 <code>edges[i]</code> 表示存在一条从节点 <code>i</code> 到节点 <code>edges[i]</code> 的边。</p>]]></description>
+    <description><![CDATA[力扣第 365 场周赛第 4 题 题目 现有一个有向图，其中包含 n 个节点，节点编号从 0 到 n - 1 。此外，该图还包含了 n 条有向边。 给你一个下标从 0 开始的数组 edges ，]]></description>
 </item><item>
     <title>1857：有向图中最大颜色值（2312 分）</title>
     <link>https://huozhixue.github.io/leetcode/1857/</link>
     <pubDate>Sun, 09 May 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1857/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/" target="_blank" rel="noopener noreffer">力扣第 240 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 <strong>有向图</strong> ，它含有 <code>n</code> 个节点和 <code>m</code> 条边。节点编号从 <code>0</code> 到 <code>n - 1</code> 。</p>
-<p>给你一个字符串 <code>colors</code> ，其中 <code>colors[i]</code> 是小写英文字母，表示图中第 <code>i</code> 个节点的 <b>颜色</b> （下标从 <strong>0</strong> 开始）。同时给你一个二维数组 <code>edges</code> ，其中 <code>edges[j] = [a<sub>j</sub>, b<sub>j</sub>]</code> 表示从节点 <code>a<sub>j</sub></code> 到节点 <code>b<sub>j</sub></code><sub> </sub>有一条 <strong>有向边</strong> 。</p>]]></description>
+    <description><![CDATA[力扣第 240 场周赛第 4 题 题目 给你一个 有向图 ，它含有 n 个节点和 m 条边。节点编号从 0 到 n - 1 。 给你一个字符串 colors ，其中 colors[i] 是小写英文字母，表示图中第 i 个]]></description>
 </item><item>
     <title>1553：吃掉 N 个橘子的最少天数（2048 分）</title>
     <link>https://huozhixue.github.io/leetcode/1553/</link>
     <pubDate>Sun, 16 Aug 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1553/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/" target="_blank" rel="noopener noreffer">力扣第 202 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>厨房里总共有 <code>n</code> 个橘子，你决定每一天选择如下方式之一吃这些橘子：</p>
-<ul>
-<li>吃掉一个橘子。</li>
-<li>如果剩余橘子数 <code>n</code> 能被 2 整除，那么你可以吃掉 <code>n/2</code> 个橘子。</li>
-<li>如果剩余橘子数 <code>n</code> 能被 3 整除，那么你可以吃掉 <code>2*(n/3)</code> 个橘子。</li>
-</ul>
-<p>每天你只能从以上 3 种方案中选择一种方案。</p>]]></description>
+    <description><![CDATA[力扣第 202 场周赛第 4 题 题目 厨房里总共有 n 个橘子，你决定每一天选择如下方式之一吃这些橘子： 吃掉一个橘子。 如果剩余橘子数 n 能被 2 整除，那么你可以吃]]></description>
 </item><item>
     <title>0894：所有可能的真二叉树（1784 分）</title>
     <link>https://huozhixue.github.io/leetcode/0894/</link>
     <pubDate>Sun, 26 Aug 2018 09:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0894/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/all-possible-full-binary-trees/" target="_blank" rel="noopener noreffer">力扣第 99 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数 <code>n</code> ，请你找出所有可能含 <code>n</code> 个节点的 <strong>真二叉树</strong> ，并以列表形式返回。答案中每棵树的每个节点都必须符合 <code>Node.val == 0</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 99 场周赛第 3 题 题目 给你一个整数 n ，请你找出所有可能含 n 个节点的 真二叉树 ，并以列表形式返回。答案中每棵树的每个节点都必须符合 Node.val == 0 。 答案]]></description>
 </item><item>
     <title>0698：划分为k个相等的子集（★）</title>
     <link>https://huozhixue.github.io/leetcode/0698/</link>
     <pubDate>Mon, 28 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0698/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/" target="_blank" rel="noopener noreffer">力扣第 698 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个整数数组  <code>nums</code> 和一个正整数 <code>k</code>，找出是否有可能把这个数组分成 <code>k</code> 个非空子集，其总和都相等。</p>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 698 题 题目 给定一个整数数组 nums 和一个正整数 k，找出是否有可能把这个数组分成 k 个非空子集，其总和都相等。 示例 1： 输入： nums = [4, 3, 2, 3, 5, 2, 1], k =]]></description>
 </item><item>
     <title>0638：大礼包（★）</title>
     <link>https://huozhixue.github.io/leetcode/0638/</link>
     <pubDate>Thu, 29 Sep 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0638/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/shopping-offers/" target="_blank" rel="noopener noreffer">力扣第 638 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>在 LeetCode 商店中， 有 <code>n</code> 件在售的物品。每件物品都有对应的价格。然而，也有一些大礼包，每个大礼包以优惠的价格捆绑销售一组物品。</p>]]></description>
+    <description><![CDATA[力扣第 638 题 题目 在 LeetCode 商店中， 有 n 件在售的物品。每件物品都有对应的价格。然而，也有一些大礼包，每个大礼包以优惠的价格捆绑销售一组物品。 给你一个整]]></description>
 </item><item>
     <title>0546：移除盒子（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0546/</link>
     <pubDate>Wed, 29 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0546/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/remove-boxes/" target="_blank" rel="noopener noreffer">力扣第 546 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给出一些不同颜色的盒子<meta charset="UTF-8" /> <code>boxes</code> ，盒子的颜色由不同的正数表示。</p>
-<p>你将经过若干轮操作去去掉盒子，直到所有的盒子都去掉为止。每一轮你可以移除具有相同颜色的连续 <code>k</code> 个盒子（<code>k &gt;= 1</code>），这样一轮之后你将得到 <code>k * k</code> 个积分。</p>]]></description>
+    <description><![CDATA[力扣第 546 题 题目 给出一些不同颜色的盒子 boxes ，盒子的颜色由不同的正数表示。 你将经过若干轮操作去去掉盒子，直到所有的盒子都去掉为止。每一轮你可以移除]]></description>
 </item><item>
     <title>0509：斐波那契数</title>
     <link>https://huozhixue.github.io/leetcode/0509/</link>
     <pubDate>Mon, 23 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0509/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/fibonacci-number/" target="_blank" rel="noopener noreffer">力扣第 509 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p><strong>斐波那契数</strong> （通常用 <code>F(n)</code> 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>]]></description>
+    <description><![CDATA[力扣第 509 题 题目 斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是： F(0) = 0]]></description>
 </item><item>
     <title>0488：祖玛游戏（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0488/</link>
     <pubDate>Mon, 02 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0488/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/zuma-game/" target="_blank" rel="noopener noreffer">力扣第 488 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你正在参与祖玛游戏的一个变种。</p>
-<p>在这个祖玛游戏变体中，桌面上有 <strong>一排</strong> 彩球，每个球的颜色可能是：红色 <code>'R'</code>、黄色 <code>'Y'</code>、蓝色 <code>'B'</code>、绿色 <code>'G'</code> 或白色 <code>'W'</code> 。你的手中也有一些彩球。</p>]]></description>
+    <description><![CDATA[力扣第 488 题 题目 你正在参与祖玛游戏的一个变种。 在这个祖玛游戏变体中，桌面上有 一排 彩球，每个球的颜色可能是：红色 'R'、黄色 'Y'、蓝色 'B'、]]></description>
 </item><item>
     <title>0464：我能赢吗（★）</title>
     <link>https://huozhixue.github.io/leetcode/0464/</link>
     <pubDate>Fri, 08 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0464/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/can-i-win/" target="_blank" rel="noopener noreffer">力扣第 464 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>在 "100 game" 这个游戏中，两名玩家轮流选择从 <code>1</code> 到 <code>10</code> 的任意整数，累计整数和，先使得累计整数和 <strong>达到或超过</strong>  100 的玩家，即为胜者。</p>]]></description>
+    <description><![CDATA[力扣第 464 题 题目 在 "100 game" 这个游戏中，两名玩家轮流选择从 1 到 10 的任意整数，累计整数和，先使得累计整数和 达到或超过 100 的玩家，即为胜者。 如果我们将游戏]]></description>
 </item></channel>
 </rss>

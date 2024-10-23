@@ -9,123 +9,69 @@
     <pubDate>Sat, 07 Sep 2019 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1183/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-ones/" target="_blank" rel="noopener noreffer">力扣第 8 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>现在有一个尺寸为 <code>width * height</code> 的矩阵 <code>M</code>，矩阵中的每个单元格的值不是 <code>0</code> 就是 <code>1</code>。</p>
-<p>而且矩阵 <code>M</code> 中每个大小为 <code>sideLength * sideLength</code> 的 <strong>正方形</strong> 子阵中，<code>1</code> 的数量不得超过 <code>maxOnes</code>。</p>]]></description>
+    <description><![CDATA[力扣第 8 场双周赛第 4 题 题目 现在有一个尺寸为 width * height 的矩阵 M，矩阵中的每个单元格的值不是 0 就是 1。 而且矩阵 M 中每个大小为 sideLength * sideLength 的 正方形 子阵中，1]]></description>
 </item><item>
     <title>1055：形成字符串的最短路径（★）</title>
     <link>https://huozhixue.github.io/leetcode/1055/</link>
     <pubDate>Mon, 20 Nov 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1055/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/shortest-way-to-form-string/" target="_blank" rel="noopener noreffer">力扣第 1055 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>对于任何字符串，我们可以通过删除其中一些字符（也可能不删除）来构造该字符串的 <strong>子序列</strong> 。(例如，<code>“ace”</code> 是 <code>“abcde”</code> 的子序列，而 <code>“aec”</code> 不是)。</p>]]></description>
+    <description><![CDATA[力扣第 1055 题 题目 对于任何字符串，我们可以通过删除其中一些字符（也可能不删除）来构造该字符串的 子序列 。(例如，“ace” 是 “abcde” 的子序列]]></description>
 </item><item>
     <title>0800：相似 RGB 颜色（★）</title>
     <link>https://huozhixue.github.io/leetcode/0800/</link>
     <pubDate>Fri, 10 Mar 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0800/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/similar-rgb-color/" target="_blank" rel="noopener noreffer">力扣第 800 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>RGB 颜色 <code>"#AABBCC"</code> 可以简写成 <code>"#ABC"</code> 。</p>
-<ul>
-<li>例如，<code>"#15c"</code> 其实是 <code>"#1155cc"</code> 的简写。</li>
-</ul>
-<p>现在，假如我们分别定义两个颜色 <code>"#ABCDEF"</code> 和 <code>"#UVWXYZ"</code>，则他们的相似度可以通过这个表达式 <code>-(AB - UV)^2 - (CD - WX)^2 - (EF - YZ)^2</code> 来计算。</p>]]></description>
+    <description><![CDATA[力扣第 800 题 题目 RGB 颜色 "#AABBCC" 可以简写成 "#ABC" 。 例如，"#15c" 其实是 "#1155cc" 的简写。 现在，假如我们分别定义两个颜色 "#ABCDEF" 和 "#UVWXYZ"，则他们的相似度可]]></description>
 </item><item>
     <title>0776：拆分二叉搜索树（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0776/</link>
     <pubDate>Tue, 14 Feb 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0776/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/split-bst/" target="_blank" rel="noopener noreffer">力扣第 776 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵二叉搜索树（BST）的根结点 <code>root</code> 和一个整数 <code>target</code> 。请将该树按要求拆分为两个子树：其中一个子树结点的值都必须小于等于给定的目标值；另一个子树结点的值都必须大于目标值；树中并非一定要存在值为 <code>target</code> 的结点。</p>]]></description>
+    <description><![CDATA[力扣第 776 题 题目 给你一棵二叉搜索树（BST）的根结点 root 和一个整数 target 。请将该树按要求拆分为两个子树：其中一个子树结点的值都必须小于等于给定的目标]]></description>
 </item><item>
     <title>0760：找出变位映射</title>
     <link>https://huozhixue.github.io/leetcode/0760/</link>
     <pubDate>Sun, 29 Jan 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0760/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-anagram-mappings/" target="_blank" rel="noopener noreffer">力扣第 760 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定两个列表 <code>A</code>and <code>B</code>，并且 <code>B</code> 是 <code>A</code> 的变位（即 <code>B</code> 是由 <code>A</code> 中的元素随机排列后组成的新列表）。</p>
-<p>我们希望找出一个从 <code>A</code> 到 <code>B</code> 的索引映射 <code>P</code> 。一个映射 <code>P[i] = j</code> 指的是列表 <code>A</code> 中的第 <code>i</code> 个元素出现于列表 <code>B</code> 中的第 <code>j</code> 个元素上。</p>]]></description>
+    <description><![CDATA[力扣第 760 题 题目 给定两个列表 Aand B，并且 B 是 A 的变位（即 B 是由 A 中的元素随机排列后组成的新列表）。 我们希望找出一个从 A 到 B 的索引映射 P 。一个映射]]></description>
 </item><item>
     <title>0755：倒水（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0755/</link>
     <pubDate>Tue, 24 Jan 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0755/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/pour-water/" target="_blank" rel="noopener noreffer">力扣第 755 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给出一个地形高度图， <code>heights[i]</code> 表示该索引处的高度。每个索引的宽度为 1。在 <code>V</code> 个单位的水落在索引 <code>K</code> 处以后，每个索引位置有多少水？</p>]]></description>
+    <description><![CDATA[力扣第 755 题 题目 给出一个地形高度图， heights[i] 表示该索引处的高度。每个索引的宽度为 1。在 V 个单位的水落在索引 K 处以后，每个索引位置有多少水？ 水最先会在]]></description>
 </item><item>
     <title>0750：角矩形的数量（★）</title>
     <link>https://huozhixue.github.io/leetcode/0750/</link>
     <pubDate>Thu, 19 Jan 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0750/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/number-of-corner-rectangles/" target="_blank" rel="noopener noreffer">力扣第 750 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个只包含 <code>0</code> 和 <code>1</code> 的 <code>m x n</code> 整数矩阵 <code>grid</code> ，返回 <em>其中 「<strong>角矩形 」</strong>的数量</em> 。</p>
-<p>一个<strong>「角矩形」</strong>是由四个不同的在矩阵上的 <code>1</code> 形成的 <strong>轴对齐 </strong>的矩形。注意只有角的位置才需要为 <code>1</code>。</p>]]></description>
+    <description><![CDATA[力扣第 750 题 题目 给定一个只包含 0 和 1 的 m x n 整数矩阵 grid ，返回 其中 「角矩形 」的数量 。 一个「角矩形」是由四个不同的在矩阵上的 1 形成的 轴对齐 的矩形。]]></description>
 </item><item>
     <title>0742：二叉树最近的叶节点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0742/</link>
     <pubDate>Wed, 11 Jan 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0742/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/closest-leaf-in-a-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 742 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个 <strong>每个结点的值互不相同</strong> 的二叉树，和一个目标整数值 <code>k</code>，返回 <em>树中与目标值 <code>k</code>  <strong>最近的叶结点</strong></em> 。 </p>
-<p><strong>与叶结点最近</strong><em> </em>表示在二叉树中到达该叶节点需要行进的边数与到达其它叶结点相比最少。而且，当一个结点没有孩子结点时称其为叶结点。</p>]]></description>
+    <description><![CDATA[力扣第 742 题 题目 给定一个 每个结点的值互不相同 的二叉树，和一个目标整数值 k，返回 树中与目标值 k 最近的叶结点 。 与叶结点最近 表示在二叉树中到达该叶节]]></description>
 </item><item>
     <title>0681：最近时刻（★）</title>
     <link>https://huozhixue.github.io/leetcode/0681/</link>
     <pubDate>Fri, 11 Nov 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0681/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/next-closest-time/" target="_blank" rel="noopener noreffer">力扣第 681 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个形如<meta charset="UTF-8" /> <code>"HH:MM"</code> 表示的时刻<meta charset="UTF-8" /> <code>time</code> ，利用当前出现过的数字构造下一个距离当前时间最近的时刻。每个出现数字都可以被无限次使用。</p>]]></description>
+    <description><![CDATA[力扣第 681 题 题目 给定一个形如 "HH:MM" 表示的时刻 time ，利用当前出现过的数字构造下一个距离当前时间最近的时刻。每个出现数字都可以被无限次使用。 你可以认为给]]></description>
 </item><item>
     <title>0666：路径总和 IV（★）</title>
     <link>https://huozhixue.github.io/leetcode/0666/</link>
     <pubDate>Thu, 27 Oct 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0666/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/path-sum-iv/" target="_blank" rel="noopener noreffer">力扣第 666 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>对于一棵深度小于 <code>5</code> 的树，可以用一组三位十进制整数来表示。对于每个整数：</p>
-<ul>
-<li>百位上的数字表示这个节点的深度 <code>d</code>，<code>1 &lt;= d &lt;= 4</code>。</li>
-<li>十位上的数字表示这个节点在当前层所在的位置 <code>P</code>， <code>1 &lt;= p &lt;= 8</code>。位置编号与一棵满二叉树的位置编号相同。</li>
-<li>个位上的数字表示这个节点的权值 <code>v</code>，<code>0 &lt;= v &lt;= 9</code>。</li>
-</ul>
-<p>给定一个包含三位整数的 <strong>升序 </strong>数组 <code>nums</code> ，表示一棵深度小于 <code>5</code> 的二叉树，请你返回 <em>从根到所有叶子结点的路径之和 </em>。</p>]]></description>
+    <description><![CDATA[力扣第 666 题 题目 对于一棵深度小于 5 的树，可以用一组三位十进制整数来表示。对于每个整数： 百位上的数字表示这个节点的深度 d，1 &lt;= d &lt;= 4。 十位上的数]]></description>
 </item></channel>
 </rss>

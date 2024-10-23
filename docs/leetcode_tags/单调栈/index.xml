@@ -9,121 +9,69 @@
     <pubDate>Sun, 19 Nov 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2940/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/" target="_blank" rel="noopener noreffer">力扣第 372 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始的正整数数组 <code>heights</code> ，其中 <code>heights[i]</code> 表示第 <code>i</code> 栋建筑的高度。</p>
-<p>如果一个人在建筑 <code>i</code> ，且存在 <code>i &lt; j</code> 的建筑 <code>j</code> 满足 <code>heights[i] &lt; heights[j]</code> ，那么这个人可以移动到建筑 <code>j</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 372 场周赛第 4 题 题目 给你一个下标从 0 开始的正整数数组 heights ，其中 heights[i] 表示第 i 栋建筑的高度。 如果一个人在建筑 i ，且存在 i &lt; j 的建筑 j 满足 heights[i] &lt; heights[j] ，]]></description>
 </item><item>
     <title>1996：游戏中弱角色的数量（1860 分）</title>
     <link>https://huozhixue.github.io/leetcode/1996/</link>
     <pubDate>Sun, 05 Sep 2021 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1996/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/the-number-of-weak-characters-in-the-game/" target="_blank" rel="noopener noreffer">力扣第 257 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你正在参加一个多角色游戏，每个角色都有两个主要属性：<strong>攻击</strong> 和 <strong>防御</strong> 。给你一个二维整数数组 <code>properties</code> ，其中 <code>properties[i] = [attack<sub>i</sub>, defense<sub>i</sub>]</code> 表示游戏中第 <code>i</code> 个角色的属性。</p>]]></description>
+    <description><![CDATA[力扣第 257 场周赛第 2 题 题目 你正在参加一个多角色游戏，每个角色都有两个主要属性：攻击 和 防御 。给你一个二维整数数组 properties ，其中 properties[i] = [attacki, defensei] 表示游戏中第 i 个]]></description>
 </item><item>
     <title>1673：找出最具竞争力的子序列（1802 分）</title>
     <link>https://huozhixue.github.io/leetcode/1673/</link>
     <pubDate>Sun, 29 Nov 2020 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1673/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-the-most-competitive-subsequence/" target="_blank" rel="noopener noreffer">力扣第 217 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个正整数 <code>k</code> ，返回长度为 <code>k</code> 且最具 <strong>竞争力</strong> 的<em> </em><code>nums</code> 子序列。</p>
-<p>数组的子序列是从数组中删除一些元素（可能不删除元素）得到的序列。</p>]]></description>
+    <description><![CDATA[力扣第 217 场周赛第 2 题 题目 给你一个整数数组 nums 和一个正整数 k ，返回长度为 k 且最具 竞争力 的 nums 子序列。 数组的子序列是从数组中删除一些元素（可能不删除]]></description>
 </item><item>
     <title>1130：叶值的最小代价生成树（1919 分）</title>
     <link>https://huozhixue.github.io/leetcode/1130/</link>
     <pubDate>Sun, 21 Jul 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1130/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/" target="_blank" rel="noopener noreffer">力扣第 146 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个正整数数组 <code>arr</code>，考虑所有满足以下条件的二叉树：</p>
-<ul>
-<li>每个节点都有 <code>0</code> 个或是 <code>2</code> 个子节点。</li>
-<li>数组 <code>arr</code> 中的值与树的中序遍历中每个叶节点的值一一对应。</li>
-<li>每个非叶节点的值等于其左子树和右子树中叶节点的最大值的乘积。</li>
-</ul>
-<p>在所有这样的二叉树中，返回每个非叶节点的值的最小可能总和。这个和的值是一个 32 位整数。</p>]]></description>
+    <description><![CDATA[力扣第 146 场周赛第 3 题 题目 给你一个正整数数组 arr，考虑所有满足以下条件的二叉树： 每个节点都有 0 个或是 2 个子节点。 数组 arr 中的值与树的中序遍历中]]></description>
 </item><item>
     <title>1124：表现良好的最长时间段（1908 分）</title>
     <link>https://huozhixue.github.io/leetcode/1124/</link>
     <pubDate>Sun, 14 Jul 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1124/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-well-performing-interval/" target="_blank" rel="noopener noreffer">力扣第 145 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一份工作时间表 <code>hours</code>，上面记录着某一位员工每天的工作小时数。</p>
-<p>我们认为当员工一天中的工作小时数大于 <code>8</code> 小时的时候，那么这一天就是「<strong>劳累的一天</strong>」。</p>]]></description>
+    <description><![CDATA[力扣第 145 场周赛第 3 题 题目 给你一份工作时间表 hours，上面记录着某一位员工每天的工作小时数。 我们认为当员工一天中的工作小时数大于 8 小时的时候]]></description>
 </item><item>
     <title>1081：不同字符的最小子序列（2184 分）</title>
     <link>https://huozhixue.github.io/leetcode/1081/</link>
     <pubDate>Sun, 09 Jun 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1081/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/" target="_blank" rel="noopener noreffer">力扣第 140 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>返回 <code>s</code> 字典序最小的<span data-keyword="subsequence-array">子序列</span>，该子序列包含 <code>s</code> 的所有不同字符，且只包含一次。</p>]]></description>
+    <description><![CDATA[力扣第 140 场周赛第 4 题 题目 返回 s 字典序最小的子序列，该子序列包含 s 的所有不同字符，且只包含一次。 示例 1： 输入：s = "bcabc" 输出："abc" 示例 2： 输]]></description>
 </item><item>
     <title>1019：链表中的下一个更大节点（1570 分）</title>
     <link>https://huozhixue.github.io/leetcode/1019/</link>
     <pubDate>Sun, 31 Mar 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1019/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/next-greater-node-in-linked-list/" target="_blank" rel="noopener noreffer">力扣第 130 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个长度为 <code>n</code> 的链表 <code>head</code></p>
-<p>对于列表中的每个节点，查找下一个 <strong>更大节点</strong> 的值。也就是说，对于每个节点，找到它旁边的第一个节点的值，这个节点的值 <strong>严格大于</strong> 它的值。</p>]]></description>
+    <description><![CDATA[力扣第 130 场周赛第 3 题 题目 给定一个长度为 n 的链表 head 对于列表中的每个节点，查找下一个 更大节点 的值。也就是说，对于每个节点，找到它旁边的第一个节点]]></description>
 </item><item>
     <title>0975：奇偶跳（2079 分）</title>
     <link>https://huozhixue.github.io/leetcode/0975/</link>
     <pubDate>Sun, 13 Jan 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0975/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/odd-even-jump/" target="_blank" rel="noopener noreffer">力扣第 119 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个整数数组 <code>A</code>，你可以从某一起始索引出发，跳跃一定次数。在你跳跃的过程中，第 1、3、5... 次跳跃称为奇数跳跃，而第 2、4、6... 次跳跃称为偶数跳跃。</p>]]></description>
+    <description><![CDATA[力扣第 119 场周赛第 4 题 题目 给定一个整数数组 A，你可以从某一起始索引出发，跳跃一定次数。在你跳跃的过程中，第 1、3、5... 次跳跃称为奇数跳跃，]]></description>
 </item><item>
     <title>0962：最大宽度坡（1607 分）</title>
     <link>https://huozhixue.github.io/leetcode/0962/</link>
     <pubDate>Sun, 23 Dec 2018 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0962/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-width-ramp/" target="_blank" rel="noopener noreffer">力扣第 116 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个整数数组 <code>A</code>，<em>坡</em>是元组 <code>(i, j)</code>，其中  <code>i &lt; j</code> 且 <code>A[i] &lt;= A[j]</code>。这样的坡的宽度为 <code>j - i</code>。</p>
-<p>找出 <code>A</code> 中的坡的最大宽度，如果不存在，返回 0 。</p>]]></description>
+    <description><![CDATA[力扣第 116 场周赛第 2 题 题目 给定一个整数数组 A，坡是元组 (i, j)，其中 i &lt; j 且 A[i] &lt;= A[j]。这样的坡的宽度为 j - i。 找出 A 中的坡的最大宽度，如果不]]></description>
 </item><item>
     <title>0907：子数组的最小值之和（1975 分）</title>
     <link>https://huozhixue.github.io/leetcode/0907/</link>
     <pubDate>Sun, 16 Sep 2018 09:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0907/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/sum-of-subarray-minimums/" target="_blank" rel="noopener noreffer">力扣第 102 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个整数数组 <code>arr</code>，找到 <code>min(b)</code> 的总和，其中 <code>b</code> 的范围为 <code>arr</code> 的每个（连续）子数组。</p>
-<p>由于答案可能很大，因此<strong> 返回答案模 <code>10^9 + 7</code></strong> 。</p>]]></description>
+    <description><![CDATA[力扣第 102 场周赛第 3 题 题目 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答案可能很大，因此 返回答案模 10^9 + 7 。]]></description>
 </item></channel>
 </rss>

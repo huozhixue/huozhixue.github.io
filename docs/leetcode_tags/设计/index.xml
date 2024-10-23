@@ -9,129 +9,69 @@
     <pubDate>Sat, 04 Sep 2021 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1993/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/operations-on-tree/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵 <code>n</code> 个节点的树，编号从 <code>0</code> 到 <code>n - 1</code> ，以父节点数组 <code>parent</code> 的形式给出，其中 <code>parent[i]</code> 是第 <code>i</code> 个节点的父节点。树的根节点为 <code>0</code> 号节点，所以 <code>parent[0] = -1</code> ，因为它没有父节点。你想要设计一个数据结构实现树里面对节点的加锁，解锁和升级操作。</p>]]></description>
+    <description><![CDATA[力扣第 60 场双周赛第 3 题 题目 给你一棵 n 个节点的树，编号从 0 到 n - 1 ，以父节点数组 parent 的形式给出，其中 parent[i] 是第 i 个节点的父节点。树的根节点为 0 号节点]]></description>
 </item><item>
     <title>1845：座位预约管理系统（1428 分）</title>
     <link>https://huozhixue.github.io/leetcode/1845/</link>
     <pubDate>Sat, 01 May 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1845/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/seat-reservation-manager/" target="_blank" rel="noopener noreffer">力扣第 51 场双周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>请你设计一个管理 <code>n</code> 个座位预约的系统，座位编号从 <code>1</code> 到 <code>n</code> 。</p>
-<p>请你实现 <code>SeatManager</code> 类：</p>
-<ul>
-<li><code>SeatManager(int n)</code> 初始化一个 <code>SeatManager</code> 对象，它管理从 <code>1</code> 到 <code>n</code> 编号的 <code>n</code> 个座位。所有座位初始都是可预约的。</li>
-<li><code>int reserve()</code> 返回可以预约座位的 <strong>最小编号</strong> ，此座位变为不可预约。</li>
-<li><code>void unreserve(int seatNumber)</code> 将给定编号 <code>seatNumber</code> 对应的座位变成可以预约。</li>
-</ul>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 51 场双周赛第 2 题 题目 请你设计一个管理 n 个座位预约的系统，座位编号从 1 到 n 。 请你实现 SeatManager 类： SeatManager(int n) 初始化一个 SeatManager 对象，它管理从 1 到 n 编号的 n 个]]></description>
 </item><item>
     <title>1825：求出 MK 平均值（2395 分）</title>
     <link>https://huozhixue.github.io/leetcode/1825/</link>
     <pubDate>Sun, 11 Apr 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1825/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/finding-mk-average/" target="_blank" rel="noopener noreffer">力扣第 236 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你两个整数 <code>m</code> 和 <code>k</code> ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 <b>MK 平均值</b> 。</p>
-<p><strong>MK 平均值</strong> 按照如下步骤计算：</p>]]></description>
+    <description><![CDATA[力扣第 236 场周赛第 4 题 题目 给你两个整数 m 和 k ，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 MK 平均值 。 MK 平均值 按照如下步骤]]></description>
 </item><item>
     <title>1600：王位继承顺序（1768 分）</title>
     <link>https://huozhixue.github.io/leetcode/1600/</link>
     <pubDate>Sun, 27 Sep 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1600/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/throne-inheritance/" target="_blank" rel="noopener noreffer">力扣第 208 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>一个王国里住着国王、他的孩子们、他的孙子们等等。每一个时间点，这个家庭里有人出生也有人死亡。</p>
-<p>这个王国有一个明确规定的王位继承顺序，第一继承人总是国王自己。我们定义递归函数 <code>Successor(x, curOrder)</code> ，给定一个人 <code>x</code> 和当前的继承顺序，该函数返回 <code>x</code> 的下一继承人。</p>]]></description>
+    <description><![CDATA[力扣第 208 场周赛第 3 题 题目 一个王国里住着国王、他的孩子们、他的孙子们等等。每一个时间点，这个家庭里有人出生也有人死亡。 这个王国有一个明确规定的]]></description>
 </item><item>
     <title>1483：树节点的第 K 个祖先（2115 分）</title>
     <link>https://huozhixue.github.io/leetcode/1483/</link>
     <pubDate>Sun, 14 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1483/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/" target="_blank" rel="noopener noreffer">力扣第 193 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵树，树上有 <code>n</code> 个节点，按从 <code>0</code> 到 <code>n-1</code> 编号。树以父节点数组的形式给出，其中 <code>parent[i]</code> 是节点 <code>i</code> 的父节点。树的根节点是编号为 <code>0</code> 的节点。</p>]]></description>
+    <description><![CDATA[力扣第 193 场周赛第 4 题 题目 给你一棵树，树上有 n 个节点，按从 0 到 n-1 编号。树以父节点数组的形式给出，其中 parent[i] 是节点 i 的父节点。树的根节点是编号为 0 的]]></description>
 </item><item>
     <title>1472：设计浏览器历史记录（1453 分）</title>
     <link>https://huozhixue.github.io/leetcode/1472/</link>
     <pubDate>Sun, 07 Jun 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1472/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/design-browser-history/" target="_blank" rel="noopener noreffer">力扣第 192 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你有一个只支持单个标签页的 <strong>浏览器</strong> ，最开始你浏览的网页是 <code>homepage</code> ，你可以访问其他的网站 <code>url</code> ，也可以在浏览历史中后退 <code>steps</code> 步或前进 <code>steps</code> 步。</p>]]></description>
+    <description><![CDATA[力扣第 192 场周赛第 3 题 题目 你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps]]></description>
 </item><item>
     <title>1381：设计一个支持增量操作的栈（1285 分）</title>
     <link>https://huozhixue.github.io/leetcode/1381/</link>
     <pubDate>Sun, 15 Mar 2020 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1381/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/design-a-stack-with-increment-operation/" target="_blank" rel="noopener noreffer">力扣第 180 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>请你设计一个支持对其元素进行增量操作的栈。</p>
-<p>实现自定义栈类 <code>CustomStack</code> ：</p>
-<ul>
-<li><code>CustomStack(int maxSize)</code>：用 <code>maxSize</code> 初始化对象，<code>maxSize</code> 是栈中最多能容纳的元素数量。</li>
-<li><code>void push(int x)</code>：如果栈还未增长到 <code>maxSize</code> ，就将 <code>x</code> 添加到栈顶。</li>
-<li><code>int pop()</code>：弹出栈顶元素，并返回栈顶的值，或栈为空时返回 <strong>-1</strong> 。</li>
-<li><code>void inc(int k, int val)</code>：栈底的 <code>k</code> 个元素的值都增加 <code>val</code> 。如果栈中元素总数小于 <code>k</code> ，则栈中的所有元素都增加 <code>val</code> 。</li>
-</ul>
-<p><strong>示例：</strong></p>]]></description>
+    <description><![CDATA[力扣第 180 场周赛第 2 题 题目 请你设计一个支持对其元素进行增量操作的栈。 实现自定义栈类 CustomStack ： CustomStack(int maxSize)：用 maxSize 初始化对象，maxSize 是栈中]]></description>
 </item><item>
     <title>1206：设计跳表（★★）</title>
     <link>https://huozhixue.github.io/leetcode/1206/</link>
     <pubDate>Wed, 25 Sep 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1206/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/design-skiplist/" target="_blank" rel="noopener noreffer">力扣第 1206 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>不使用任何库函数，设计一个 <strong>跳表</strong> 。</p>
-<p><strong>跳表</strong> 是在 <code>O(log(n))</code> 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，并且跳表的代码长度相较下更短，其设计思想与链表相似。</p>]]></description>
+    <description><![CDATA[力扣第 1206 题 题目 不使用任何库函数，设计一个 跳表 。 跳表 是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，]]></description>
 </item><item>
     <title>1172：餐盘栈（2109 分）</title>
     <link>https://huozhixue.github.io/leetcode/1172/</link>
     <pubDate>Sun, 25 Aug 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1172/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/dinner-plate-stacks/" target="_blank" rel="noopener noreffer">力扣第 151 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>我们把无限数量 &infin; 的栈排成一行，按从左到右的次序从 0 开始编号。每个栈的的最大容量 <code>capacity</code> 都相同。</p>
-<p>实现一个叫「餐盘」的类 <code>DinnerPlates</code>：</p>]]></description>
+    <description><![CDATA[力扣第 151 场周赛第 4 题 题目 我们把无限数量 &infin; 的栈排成一行，按从左到右的次序从 0 开始编号。每个栈的的最大容量 capacity 都相同。 实现一个叫「餐盘」的类 Din]]></description>
 </item><item>
     <title>1157：子数组中占绝大多数的元素（2205 分）</title>
     <link>https://huozhixue.github.io/leetcode/1157/</link>
     <pubDate>Sun, 11 Aug 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1157/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/online-majority-element-in-subarray/" target="_blank" rel="noopener noreffer">力扣第 149 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>设计一个数据结构，有效地找到给定子数组的 <strong>多数元素</strong> 。</p>
-<p>子数组的 <strong>多数元素</strong> 是在子数组中出现 <code>threshold</code> 次数或次数以上的元素。</p>]]></description>
+    <description><![CDATA[力扣第 149 场周赛第 4 题 题目 设计一个数据结构，有效地找到给定子数组的 多数元素 。 子数组的 多数元素 是在子数组中出现 threshold 次数或次数以上的元素。 实现 MajorityChecker 类:]]></description>
 </item></channel>
 </rss>

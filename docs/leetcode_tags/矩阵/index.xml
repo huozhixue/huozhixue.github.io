@@ -9,122 +9,69 @@
     <pubDate>Sun, 12 May 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3148/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-difference-score-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 397 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个由 <strong>正整数</strong> 组成、大小为 <code>m x n</code> 的矩阵 <code>grid</code>。你可以从矩阵中的任一单元格移动到另一个位于正下方或正右侧的任意单元格（不必相邻）。从值为 <code>c1</code> 的单元格移动到值为 <code>c2</code> 的单元格的得分为 <code>c2 - c1</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 397 场周赛第 3 题 题目 给你一个由 正整数 组成、大小为 m x n 的矩阵 grid。你可以从矩阵中的任一单元格移动到另一个位于正下方或正右侧的任意单元]]></description>
 </item><item>
     <title>2732：找到矩阵中的好子集（2239 分）</title>
     <link>https://huozhixue.github.io/leetcode/2732/</link>
     <pubDate>Sat, 10 Jun 2023 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2732/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-a-good-subset-of-the-matrix/" target="_blank" rel="noopener noreffer">力扣第 106 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始大小为 <code>m x n</code> 的二进制矩阵 <code>grid</code> 。</p>
-<p>从原矩阵中选出若干行构成一个行的 <strong>非空 </strong>子集，如果子集中任何一列的和至多为子集大小的一半，那么我们称这个子集是 <strong>好子集</strong>。</p>]]></description>
+    <description><![CDATA[力扣第 106 场双周赛第 4 题 题目 给你一个下标从 0 开始大小为 m x n 的二进制矩阵 grid 。 从原矩阵中选出若干行构成一个行的 非空 子集，如果子集中任何一列的和至]]></description>
 </item><item>
     <title>2658：网格图中鱼的最大数目（1489 分）</title>
     <link>https://huozhixue.github.io/leetcode/2658/</link>
     <pubDate>Sat, 29 Apr 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2658/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 103 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始大小为 <code>m x n</code> 的二维整数数组 <code>grid</code> ，其中下标在 <code>(r, c)</code> 处的整数表示：</p>
-<ul>
-<li>如果 <code>grid[r][c] = 0</code> ，那么它是一块 <strong>陆地</strong> 。</li>
-<li>如果 <code>grid[r][c] &gt; 0</code> ，那么它是一块 <strong>水域</strong> ，且包含 <code>grid[r][c]</code> 条鱼。</li>
-</ul>
-<p>一位渔夫可以从任意 <strong>水域</strong> 格子 <code>(r, c)</code> 出发，然后执行以下操作任意次：</p>]]></description>
+    <description><![CDATA[力扣第 103 场双周赛第 3 题 题目 给你一个下标从 0 开始大小为 m x n 的二维整数数组 grid ，其中下标在 (r, c) 处的整数表示： 如果 grid[r][c] = 0 ，那么它是一块 陆地 。 如果 grid[r][c]]]></description>
 </item><item>
     <title>2545：根据第 K 场考试的分数排序（1294 分）</title>
     <link>https://huozhixue.github.io/leetcode/2545/</link>
     <pubDate>Sun, 22 Jan 2023 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2545/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/sort-the-students-by-their-kth-score/" target="_blank" rel="noopener noreffer">力扣第 329 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>班里有 <code>m</code> 位学生，共计划组织 <code>n</code> 场考试。给你一个下标从 <strong>0</strong> 开始、大小为 <code>m x n</code> 的整数矩阵 <code>score</code> ，其中每一行对应一位学生，而 <code>score[i][j]</code> 表示第 <code>i</code> 位学生在第 <code>j</code> 场考试取得的分数。矩阵 <code>score</code> 包含的整数 <strong>互不相同</strong> 。</p>]]></description>
+    <description><![CDATA[力扣第 329 场周赛第 2 题 题目 班里有 m 位学生，共计划组织 n 场考试。给你一个下标从 0 开始、大小为 m x n 的整数矩阵 score ，其中每一行对应一位学生，而 score[i][j] 表示]]></description>
 </item><item>
     <title>1992：找到所有的农场组（1539 分）</title>
     <link>https://huozhixue.github.io/leetcode/1992/</link>
     <pubDate>Sat, 04 Sep 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1992/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-all-groups-of-farmland/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始，大小为 <code>m x n</code> 的二进制矩阵 <code>land</code> ，其中 <code>0</code> 表示一单位的森林土地，<code>1</code> 表示一单位的农场土地。</p>]]></description>
+    <description><![CDATA[力扣第 60 场双周赛第 2 题 题目 给你一个下标从 0 开始，大小为 m x n 的二进制矩阵 land ，其中 0 表示一单位的森林土地，1 表示一单位的农场土地。 为了让农场保]]></description>
 </item><item>
     <title>1632：矩阵转换后的秩（2529 分）</title>
     <link>https://huozhixue.github.io/leetcode/1632/</link>
     <pubDate>Sun, 25 Oct 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1632/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/rank-transform-of-a-matrix/" target="_blank" rel="noopener noreffer">力扣第 212 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 <code>m x n</code> 的矩阵 <code>matrix</code> ，请你返回一个新的矩阵<em> </em><code>answer</code> ，其中<em> </em><code>answer[row][col]</code> 是 <code>matrix[row][col]</code> 的秩。</p>
-<p>每个元素的 <b>秩</b> 是一个整数，表示这个元素相对于其他元素的大小关系，它按照如下规则计算：</p>]]></description>
+    <description><![CDATA[力扣第 212 场周赛第 4 题 题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的]]></description>
 </item><item>
     <title>1591：奇怪的打印机 II（2290 分）</title>
     <link>https://huozhixue.github.io/leetcode/1591/</link>
     <pubDate>Sat, 19 Sep 2020 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1591/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/strange-printer-ii/" target="_blank" rel="noopener noreffer">力扣第 35 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个奇怪的打印机，它有如下两个特殊的打印规则：</p>
-<ul>
-<li>每一次操作时，打印机会用同一种颜色打印一个矩形的形状，每次打印会覆盖矩形对应格子里原本的颜色。</li>
-<li>一旦矩形根据上面的规则使用了一种颜色，那么 <strong>相同的颜色不能再被使用 </strong>。</li>
-</ul>
-<p>给你一个初始没有颜色的 <code>m x n</code> 的矩形 <code>targetGrid</code> ，其中 <code>targetGrid[row][col]</code> 是位置 <code>(row, col)</code> 的颜色。</p>]]></description>
+    <description><![CDATA[力扣第 35 场双周赛第 4 题 题目 给你一个奇怪的打印机，它有如下两个特殊的打印规则： 每一次操作时，打印机会用同一种颜色打印一个矩形的形状，每次打印会]]></description>
 </item><item>
     <title>1568：使陆地分离的最少天数（2208 分）</title>
     <link>https://huozhixue.github.io/leetcode/1568/</link>
     <pubDate>Sun, 30 Aug 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1568/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/" target="_blank" rel="noopener noreffer">力扣第 204 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个大小为 <code>m x n</code> ，由若干 <code>0</code> 和 <code>1</code> 组成的二维网格 <code>grid</code> ，其中 <code>1</code> 表示陆地， <code>0</code> 表示水。<strong>岛屿</strong> 由水平方向或竖直方向上相邻的 <code>1</code> （陆地）连接形成。</p>]]></description>
+    <description><![CDATA[力扣第 204 场周赛第 3 题 题目 给你一个大小为 m x n ，由若干 0 和 1 组成的二维网格 grid ，其中 1 表示陆地， 0 表示水。岛屿 由水平方向或竖直方向上相邻的 1 （陆]]></description>
 </item><item>
     <title>1439：有序矩阵中的第 k 个最小数组和（2133 分）</title>
     <link>https://huozhixue.github.io/leetcode/1439/</link>
     <pubDate>Sun, 03 May 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1439/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/" target="_blank" rel="noopener noreffer">力扣第 187 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 <code>m * n</code> 的矩阵 <code>mat</code>，以及一个整数 <code>k</code> ，矩阵中的每一行都以非递减的顺序排列。</p>
-<p>你可以从每一行中选出 1 个元素形成一个数组。返回所有可能数组中的第 k 个 <strong>最小</strong> 数组和。</p>]]></description>
+    <description><![CDATA[力扣第 187 场周赛第 4 题 题目 给你一个 m * n 的矩阵 mat，以及一个整数 k ，矩阵中的每一行都以非递减的顺序排列。 你可以从每一行中选出 1 个元素形成一个]]></description>
 </item><item>
     <title>1368：使网格图至少有一条有效路径的最小代价（2068 分）</title>
     <link>https://huozhixue.github.io/leetcode/1368/</link>
     <pubDate>Sun, 01 Mar 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1368/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/" target="_blank" rel="noopener noreffer">力扣第 178 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 m x n 的网格图 <code>grid</code> 。 <code>grid</code> 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 <code>grid[i][j]</code> 中的数字可能为以下几种情况：</p>]]></description>
+    <description><![CDATA[力扣第 178 场周赛第 4 题 题目 给你一个 m x n 的网格图 grid 。 grid 中每个格子都有一个数字，对应着从该格子出发下一步走的方向。 grid[i][j] 中的数字可能为以下几种情况：]]></description>
 </item></channel>
 </rss>

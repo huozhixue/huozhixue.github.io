@@ -9,104 +9,41 @@
     <pubDate>Fri, 26 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0604/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/design-compressed-string-iterator/" target="_blank" rel="noopener noreffer">力扣第 604 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>设计并实现一个迭代压缩字符串的数据结构。给定的压缩字符串的形式是，每个字母后面紧跟一个正整数，表示该字母在原始未压缩字符串中出现的次数。</p>]]></description>
+    <description><![CDATA[力扣第 604 题 题目 设计并实现一个迭代压缩字符串的数据结构。给定的压缩字符串的形式是，每个字母后面紧跟一个正整数，表示该字母在原始未压缩字符串中出]]></description>
 </item><item>
     <title>0341：扁平化嵌套列表迭代器（★）</title>
     <link>https://huozhixue.github.io/leetcode/0341/</link>
     <pubDate>Mon, 07 Dec 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0341/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/flatten-nested-list-iterator/" target="_blank" rel="noopener noreffer">力扣第 341 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个嵌套的整数列表 <code>nestedList</code> 。每个元素要么是一个整数，要么是一个列表；该列表的元素也可能是整数或者是其他列表。请你实现一个迭代器将其扁平化，使之能够遍历这个列表中的所有整数。</p>]]></description>
+    <description><![CDATA[力扣第 341 题 题目 给你一个嵌套的整数列表 nestedList 。每个元素要么是一个整数，要么是一个列表；该列表的元素也可能是整数或者是其他列表。请你实现一个迭代器将]]></description>
 </item><item>
     <title>0284：窥视迭代器（★）</title>
     <link>https://huozhixue.github.io/leetcode/0284/</link>
     <pubDate>Sun, 11 Oct 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0284/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/peeking-iterator/" target="_blank" rel="noopener noreffer">力扣第 284 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>请你在设计一个迭代器，在集成现有迭代器拥有的 <code>hasNext</code> 和 <code>next</code> 操作的基础上，还额外支持 <code>peek</code> 操作。</p>
-<p>实现 <code>PeekingIterator</code> 类：</p>
-<ul>
-<li><code>PeekingIterator(Iterator&lt;int&gt; nums)</code> 使用指定整数迭代器 <code>nums</code> 初始化迭代器。</li>
-<li><code>int next()</code> 返回数组中的下一个元素，并将指针移动到下个元素处。</li>
-<li><code>bool hasNext()</code> 如果数组中存在下一个元素，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
-<li><code>int peek()</code> 返回数组中的下一个元素，但 <strong>不</strong> 移动指针。</li>
-</ul>
-<p><strong>注意：</strong>每种语言可能有不同的构造函数和迭代器 <code>Iterator</code>，但均支持 <code>int next()</code> 和 <code>boolean hasNext()</code> 函数。</p>]]></description>
+    <description><![CDATA[力扣第 284 题 题目 请你在设计一个迭代器，在集成现有迭代器拥有的 hasNext 和 next 操作的基础上，还额外支持 peek 操作。 实现 PeekingIterator 类： PeekingIterator(Iterator&lt;int&gt; nums) 使用指定整数迭代器 nums 初始化迭代]]></description>
 </item><item>
     <title>0281：锯齿迭代器（★）</title>
     <link>https://huozhixue.github.io/leetcode/0281/</link>
     <pubDate>Thu, 08 Oct 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0281/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/zigzag-iterator/" target="_blank" rel="noopener noreffer">力扣第 281 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给出两个一维的向量，请你实现一个迭代器，交替返回它们中间的元素。</p>
-<p><strong>示例:</strong></p>
-<pre><strong>输入:</strong>
-v1 = [1,2]
-v2 = [3,4,5,6]
-
-<strong>输出:</strong> <code>[1,3,2,4,5,6]
-
-<strong>解析:</strong></code> 通过连续调用 <em>next</em> 函数直到 <em>hasNext</em> 函数返回 <code>false，</code>
-<em>next</em> 函数返回值的次序应依次为: <code>[1,3,2,4,5,6]。</code></pre>
-<p><strong>拓展：</strong>假如给你 <code>k</code> 个一维向量呢？你的代码在这种情况下的扩展性又会如何呢?</p>]]></description>
+    <description><![CDATA[力扣第 281 题 题目 给出两个一维的向量，请你实现一个迭代器，交替返回它们中间的元素。 示例: 输入: v1 = [1,2] v2 = [3,4,5,6] 输出: [1,3,2,4,5,6] 解析: 通过连续调用 next 函数直到 hasNext]]></description>
 </item><item>
     <title>0251：展开二维向量（★）</title>
     <link>https://huozhixue.github.io/leetcode/0251/</link>
     <pubDate>Tue, 08 Sep 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0251/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/flatten-2d-vector/" target="_blank" rel="noopener noreffer">力扣第 251 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>请设计并实现一个能够展开二维向量的迭代器。该迭代器需要支持 <code>next</code> 和 <code>hasNext</code> 两种操作。</p>
-<p><strong>示例：</strong></p>
-<pre>
-Vector2D iterator = new Vector2D([[1,2],[3],[4]]);
-
-iterator.next(); // 返回 1
-iterator.next(); // 返回 2
-iterator.next(); // 返回 3
-iterator.hasNext(); // 返回 true
-iterator.hasNext(); // 返回 true
-iterator.next(); // 返回 4
-iterator.hasNext(); // 返回 false
-</pre>
-<p><strong>注意：</strong></p>]]></description>
+    <description><![CDATA[力扣第 251 题 题目 请设计并实现一个能够展开二维向量的迭代器。该迭代器需要支持 next 和 hasNext 两种操作。 示例： Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // 返回 1 iterator.next(); // 返回 2 iterator.next(); // 返回 3 iterator.hasNext(); // 返]]></description>
 </item><item>
     <title>0173：二叉搜索树迭代器（★）</title>
     <link>https://huozhixue.github.io/leetcode/0173/</link>
     <pubDate>Mon, 22 Jun 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0173/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/binary-search-tree-iterator/" target="_blank" rel="noopener noreffer">力扣第 173 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>实现一个二叉搜索树迭代器类<code>BSTIterator</code> ，表示一个按中序遍历二叉搜索树（BST）的迭代器：</p>
-<div class="original__bRMd">
-<div>
-<ul>
-<li><code>BSTIterator(TreeNode root)</code> 初始化 <code>BSTIterator</code> 类的一个对象。BST 的根节点 <code>root</code> 会作为构造函数的一部分给出。指针应初始化为一个不存在于 BST 中的数字，且该数字小于 BST 中的任何元素。</li>
-<li><code>boolean hasNext()</code> 如果向指针右侧遍历存在数字，则返回 <code>true</code> ；否则返回 <code>false</code> 。</li>
-<li><code>int next()</code>将指针向右移动，然后返回指针处的数字。</li>
-</ul>
-<p>注意，指针初始化为一个不存在于 BST 中的数字，所以对 <code>next()</code> 的首次调用将返回 BST 中的最小元素。</p>]]></description>
+    <description><![CDATA[力扣第 173 题 题目 实现一个二叉搜索树迭代器类BSTIterator ，表示一个按中序遍历二叉搜索树（BST）的迭代器： BSTIterator(TreeNode root) 初始化 BSTIterator 类的一个对象。B]]></description>
 </item></channel>
 </rss>

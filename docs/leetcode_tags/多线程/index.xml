@@ -9,106 +9,41 @@
     <pubDate>Tue, 15 Oct 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1226/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/the-dining-philosophers/" target="_blank" rel="noopener noreffer">力扣第 1226 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>5 个沉默寡言的哲学家围坐在圆桌前，每人面前一盘意面。叉子放在哲学家之间的桌面上。（5 个哲学家，5 根叉子）</p>
-<p>所有的哲学家都只会在思考和进餐两种行为间交替。哲学家只有同时拿到左边和右边的叉子才能吃到面，而同一根叉子在同一时间只能被一个哲学家使用。每个哲学家吃完面后都需要把叉子放回桌面以供其他哲学家吃面。只要条件允许，哲学家可以拿起左边或者右边的叉子，但在没有同时拿到左右叉子时不能进食。</p>]]></description>
+    <description><![CDATA[力扣第 1226 题 题目 5 个沉默寡言的哲学家围坐在圆桌前，每人面前一盘意面。叉子放在哲学家之间的桌面上。（5 个哲学家，5 根叉子） 所有的哲学家都只会在思]]></description>
 </item><item>
     <title>1195：交替打印字符串（★）</title>
     <link>https://huozhixue.github.io/leetcode/1195/</link>
     <pubDate>Wed, 18 Sep 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1195/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/fizz-buzz-multithreaded/" target="_blank" rel="noopener noreffer">力扣第 1195 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>编写一个可以从 1 到 n 输出代表这个数字的字符串的程序，但是：</p>
-<ul>
-<li>如果这个数字可以被 3 整除，输出 "fizz"。</li>
-<li>如果这个数字可以被 5 整除，输出 "buzz"。</li>
-<li>如果这个数字可以同时被 3 和 5 整除，输出 "fizzbuzz"。</li>
-</ul>
-<p>例如，当 <code>n = 15</code>，输出： <code>1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz</code>。</p>]]></description>
+    <description><![CDATA[力扣第 1195 题 题目 编写一个可以从 1 到 n 输出代表这个数字的字符串的程序，但是： 如果这个数字可以被 3 整除，输出 "fizz"。 如果这个数字可以被 5 整除]]></description>
 </item><item>
     <title>1117：H2O 生成（★）</title>
     <link>https://huozhixue.github.io/leetcode/1117/</link>
     <pubDate>Sat, 13 Jul 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1117/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/building-h2o/" target="_blank" rel="noopener noreffer">力扣第 1117 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>现在有两种线程，氧 <code>oxygen</code> 和氢 <code>hydrogen</code>，你的目标是组织这两种线程来产生水分子。</p>
-<p>存在一个屏障（barrier）使得每个线程必须等候直到一个完整水分子能够被产生出来。</p>]]></description>
+    <description><![CDATA[力扣第 1117 题 题目 现在有两种线程，氧 oxygen 和氢 hydrogen，你的目标是组织这两种线程来产生水分子。 存在一个屏障（barrier）使得每个线程必须]]></description>
 </item><item>
     <title>1116：打印零与奇偶数（★）</title>
     <link>https://huozhixue.github.io/leetcode/1116/</link>
     <pubDate>Fri, 12 Jul 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1116/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/print-zero-even-odd/" target="_blank" rel="noopener noreffer">力扣第 1116 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>现有函数 <code>printNumber</code> 可以用一个整数参数调用，并输出该整数到控制台。</p>
-<ul>
-<li>例如，调用 <code>printNumber(7)</code> 将会输出 <code>7</code> 到控制台。</li>
-</ul>
-<p>给你类 <code>ZeroEvenOdd</code> 的一个实例，该类中有三个函数：<code>zero</code>、<code>even</code> 和 <code>odd</code> 。<code>ZeroEvenOdd</code> 的相同实例将会传递给三个不同线程：</p>]]></description>
+    <description><![CDATA[力扣第 1116 题 题目 现有函数 printNumber 可以用一个整数参数调用，并输出该整数到控制台。 例如，调用 printNumber(7) 将会输出 7 到控制台。 给你类 ZeroEvenOdd 的一个实例，该类中有三个函数：]]></description>
 </item><item>
     <title>1115：交替打印 FooBar（★）</title>
     <link>https://huozhixue.github.io/leetcode/1115/</link>
     <pubDate>Thu, 11 Jul 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1115/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/print-foobar-alternately/" target="_blank" rel="noopener noreffer">力扣第 1115 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个类：</p>
-<pre>
-class FooBar {
-public void foo() {
-for (int i = 0; i &lt; n; i++) {
-print("foo");
-}
-}
-
-public void bar() {
-for (int i = 0; i &lt; n; i++) {
-print("bar");
-}
-}
-}
-</pre>
-<p>两个不同的线程将会共用一个 <code>FooBar</code> 实例：</p>]]></description>
+    <description><![CDATA[力扣第 1115 题 题目 给你一个类： class FooBar { public void foo() { for (int i = 0; i &lt; n; i++) { print("foo"); } } public void bar() { for (int i = 0; i &lt; n; i++) { print("bar"); } } } 两个不同的线程将会共用一个 FooBar 实例： 线程]]></description>
 </item><item>
     <title>1114：按序打印</title>
     <link>https://huozhixue.github.io/leetcode/1114/</link>
     <pubDate>Wed, 10 Jul 2019 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1114/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/print-in-order/" target="_blank" rel="noopener noreffer">力扣第 1114 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个类：</p>
-<pre>
-public class Foo {
-public void first() { print("first"); }
-public void second() { print("second"); }
-public void third() { print("third"); }
-}</pre>
-<p>三个不同的线程 A、B、C 将会共用一个 <code>Foo</code> 实例。</p>
-<ul>
-<li>线程 A 将会调用 <code>first()</code> 方法</li>
-<li>线程 B 将会调用 <code>second()</code> 方法</li>
-<li>线程 C 将会调用 <code>third()</code> 方法</li>
-</ul>
-<p>请设计修改程序，以确保 <code>second()</code> 方法在 <code>first()</code> 方法之后被执行，<code>third()</code> 方法在 <code>second()</code> 方法之后被执行。</p>]]></description>
+    <description><![CDATA[力扣第 1114 题 题目 给你一个类： public class Foo { public void first() { print("first"); } public void second() { print("second"); } public void third() { print("third"); } } 三个不同的线程 A、B、C 将会共用一个 Foo 实例。 线程 A 将会调用 first() 方法 线程]]></description>
 </item></channel>
 </rss>

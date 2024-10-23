@@ -9,122 +9,69 @@
     <pubDate>Sat, 13 Apr 2024 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3111/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-rectangles-to-cover-points/" target="_blank" rel="noopener noreffer">力扣第 128 场双周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个二维整数数组 <code>point</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示二维平面内的一个点。同时给你一个整数 <code>w</code> 。你需要用矩形 <strong>覆盖所有</strong> 点。</p>]]></description>
+    <description><![CDATA[力扣第 128 场双周赛第 2 题 题目 给你一个二维整数数组 point ，其中 points[i] = [xi, yi] 表示二维平面内的一个点。同时给你一个整数 w 。你需要用矩形 覆盖所有 点。 每个矩形的]]></description>
 </item><item>
     <title>3107：使数组中位数等于 K 的最少操作数（1604 分）</title>
     <link>https://huozhixue.github.io/leetcode/3107/</link>
     <pubDate>Sun, 07 Apr 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3107/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-operations-to-make-median-of-array-equal-to-k/" target="_blank" rel="noopener noreffer">力扣第 392 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个 <strong>非负</strong> 整数 <code>k</code> 。一次操作中，你可以选择任一元素 加 <code>1</code> 或者减 <code>1</code> 。</p>
-<p>请你返回将 <code>nums</code> <strong>中位数</strong> 变为 <code>k</code> 所需要的 <strong>最少</strong> 操作次数。</p>]]></description>
+    <description><![CDATA[力扣第 392 场周赛第 3 题 题目 给你一个整数数组 nums 和一个 非负 整数 k 。一次操作中，你可以选择任一元素 加 1 或者减 1 。 请你返回将 nums 中位数 变为 k 所需要的 最少]]></description>
 </item><item>
     <title>3106：满足距离约束且字典序最小的字符串（1515 分）</title>
     <link>https://huozhixue.github.io/leetcode/3106/</link>
     <pubDate>Sun, 07 Apr 2024 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3106/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/lexicographically-smallest-string-after-operations-with-constraint/" target="_blank" rel="noopener noreffer">力扣第 392 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> 。</p>
-<p>定义函数 <code>distance(s<sub>1</sub>, s<sub>2</sub>)</code> ，用于衡量两个长度为 <code>n</code> 的字符串 <code>s<sub>1</sub></code> 和 <code>s<sub>2</sub></code> 之间的距离，即：</p>
-<ul>
-<li>字符 <code>'a'</code> 到 <code>'z'</code> 按 <strong>循环 </strong>顺序排列，对于区间 <code>[0, n - 1]</code> 中的 <code>i</code> ，计算所有「 <code>s<sub>1</sub>[i]</code> 和 <code>s<sub>2</sub>[i]</code> 之间<strong> 最小距离</strong>」的 <strong>和 </strong>。</li>
-</ul>
-<p>例如，<code>distance("ab", "cd") == 4</code> ，且 <code>distance("a", "z") == 1</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 392 场周赛第 2 题 题目 给你一个字符串 s 和一个整数 k 。 定义函数 distance(s1, s2) ，用于衡量两个长度为 n 的字符串 s1 和 s2 之间的距离，即： 字符 'a' 到 'z' 按 循环 顺序排]]></description>
 </item><item>
     <title>2813：子序列最大优雅度（2582 分）</title>
     <link>https://huozhixue.github.io/leetcode/2813/</link>
     <pubDate>Sun, 06 Aug 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2813/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-elegance-of-a-k-length-subsequence/" target="_blank" rel="noopener noreffer">力扣第 357 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个长度为 <code>n</code> 的二维整数数组 <code>items</code> 和一个整数 <code>k</code> 。</p>
-<p><code>items[i] = [profit<sub>i</sub>, category<sub>i</sub>]</code>，其中 <code>profit<sub>i</sub></code> 和 <code>category<sub>i</sub></code> 分别表示第 <code>i</code> 个项目的利润和类别。</p>]]></description>
+    <description><![CDATA[力扣第 357 场周赛第 4 题 题目 给你一个长度为 n 的二维整数数组 items 和一个整数 k 。 items[i] = [profiti, categoryi]，其中 profiti 和 categoryi 分别表示第 i 个项目的利润和类别。]]></description>
 </item><item>
     <title>2708：一个小组的最大实力值（1502 分）</title>
     <link>https://huozhixue.github.io/leetcode/2708/</link>
     <pubDate>Sat, 27 May 2023 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2708/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/" target="_blank" rel="noopener noreffer">力扣第 105 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 <strong>非空</strong> 小组，且这个小组的 <strong>实力值</strong> 最大，如果这个小组里的学生下标为 <code>i<sub>0</sub></code>, <code>i<sub>1</sub></code>, <code>i<sub>2</sub></code>, ... , <code>i<sub>k</sub></code> ，那么这个小组的实力值定义为 <code>nums[i<sub>0</sub>] * nums[i<sub>1</sub>] * nums[i<sub>2</sub>] * ... * nums[i<sub>k</sub>​]</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 105 场双周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums ，它表示一个班级中所有学生在一次考试中的成绩。老师想选出一部分同学组成一个 非空 小组]]></description>
 </item><item>
     <title>2663：字典序最小的美丽字符串（2415 分）</title>
     <link>https://huozhixue.github.io/leetcode/2663/</link>
     <pubDate>Sun, 30 Apr 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2663/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/lexicographically-smallest-beautiful-string/" target="_blank" rel="noopener noreffer">力扣第 343 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>如果一个字符串满足以下条件，则称其为 <strong>美丽字符串</strong> ：</p>
-<ul>
-<li>它由英语小写字母表的前 <code>k</code> 个字母组成。</li>
-<li>它不包含任何长度为 <code>2</code> 或更长的回文子字符串。</li>
-</ul>
-<p>给你一个长度为 <code>n</code> 的美丽字符串 <code>s</code> 和一个正整数 <code>k</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 343 场周赛第 4 题 题目 如果一个字符串满足以下条件，则称其为 美丽字符串 ： 它由英语小写字母表的前 k 个字母组成。 它不包含任何长度为 2 或更长的回文]]></description>
 </item><item>
     <title>1996：游戏中弱角色的数量（1860 分）</title>
     <link>https://huozhixue.github.io/leetcode/1996/</link>
     <pubDate>Sun, 05 Sep 2021 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1996/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/the-number-of-weak-characters-in-the-game/" target="_blank" rel="noopener noreffer">力扣第 257 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你正在参加一个多角色游戏，每个角色都有两个主要属性：<strong>攻击</strong> 和 <strong>防御</strong> 。给你一个二维整数数组 <code>properties</code> ，其中 <code>properties[i] = [attack<sub>i</sub>, defense<sub>i</sub>]</code> 表示游戏中第 <code>i</code> 个角色的属性。</p>]]></description>
+    <description><![CDATA[力扣第 257 场周赛第 2 题 题目 你正在参加一个多角色游戏，每个角色都有两个主要属性：攻击 和 防御 。给你一个二维整数数组 properties ，其中 properties[i] = [attacki, defensei] 表示游戏中第 i 个]]></description>
 </item><item>
     <title>LCP 30：魔塔游戏（★）</title>
     <link>https://huozhixue.github.io/leetcode/lcp30/</link>
     <pubDate>Mon, 05 Apr 2021 03:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/lcp30/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/p0NxJO/" target="_blank" rel="noopener noreffer">力扣第 lcp 30 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>小扣当前位于魔塔游戏第一层，共有 <code>N</code> 个房间，编号为 <code>0 ~ N-1</code>。每个房间的补血道具/怪物对于血量影响记于数组 <code>nums</code>，其中正数表示道具补血数值，即血量增加对应数值；负数表示怪物造成伤害值，即血量减少对应数值；<code>0</code> 表示房间对血量无影响。</p>]]></description>
+    <description><![CDATA[力扣第 lcp 30 题 题目 小扣当前位于魔塔游戏第一层，共有 N 个房间，编号为 0 ~ N-1。每个房间的补血道具/怪物对于血量影响记于数组 nums，其中正数表]]></description>
 </item><item>
     <title>1792：最大平均通过率（1817 分）</title>
     <link>https://huozhixue.github.io/leetcode/1792/</link>
     <pubDate>Sun, 14 Mar 2021 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1792/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-average-pass-ratio/" target="_blank" rel="noopener noreffer">力扣第 232 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>一所学校里有一些班级，每个班级里有一些学生，现在每个班都会进行一场期末考试。给你一个二维数组 <code>classes</code> ，其中 <code>classes[i] = [pass<sub>i</sub>, total<sub>i</sub>]</code> ，表示你提前知道了第 <code>i</code> 个班级总共有 <code>total<sub>i</sub></code> 个学生，其中只有 <code>pass<sub>i</sub></code> 个学生可以通过考试。</p>]]></description>
+    <description><![CDATA[力扣第 232 场周赛第 3 题 题目 一所学校里有一些班级，每个班级里有一些学生，现在每个班都会进行一场期末考试。给你一个二维数组 classes ，其中 classes[i] = [passi, totali] ，表示你]]></description>
 </item><item>
     <title>1764：通过连接另一个数组的子数组得到一个数组（1588 分）</title>
     <link>https://huozhixue.github.io/leetcode/1764/</link>
     <pubDate>Sat, 20 Feb 2021 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1764/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/" target="_blank" rel="noopener noreffer">力扣第 46 场双周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个长度为 <code>n</code> 的二维整数数组 <code>groups</code> ，同时给你一个整数数组 <code>nums</code> 。</p>
-<p>你是否可以从 <code>nums</code> 中选出 <code>n</code> 个 <strong>不相交</strong> 的子数组，使得第 <code>i</code> 个子数组与 <code>groups[i]</code> （下标从 <strong>0</strong> 开始）完全相同，且如果 <code>i > 0</code> ，那么第 <code>(i-1)</code> 个子数组在 <code>nums</code> 中出现的位置在第 <code>i</code> 个子数组前面。（也就是说，这些子数组在 <code>nums</code> 中出现的顺序需要与 <code>groups</code> 顺序相同）</p>]]></description>
+    <description><![CDATA[力扣第 46 场双周赛第 2 题 题目 给你一个长度为 n 的二维整数数组 groups ，同时给你一个整数数组 nums 。 你是否可以从 nums 中选出 n 个 不相交 的子数组，使得第 i 个子数组]]></description>
 </item></channel>
 </rss>

@@ -9,112 +9,69 @@
     <pubDate>Sun, 11 Apr 2021 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1823/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-the-winner-of-the-circular-game/" target="_blank" rel="noopener noreffer">力扣第 236 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>共有 <code>n</code> 名小伙伴一起做游戏。小伙伴们围成一圈，按 <strong>顺时针顺序</strong> 从 <code>1</code> 到 <code>n</code> 编号。确切地说，从第 <code>i</code> 名小伙伴顺时针移动一位会到达第 <code>(i+1)</code> 名小伙伴的位置，其中 <code>1 &lt;= i &lt; n</code> ，从第 <code>n</code> 名小伙伴顺时针移动一位会回到第 <code>1</code> 名小伙伴的位置。</p>]]></description>
+    <description><![CDATA[力扣第 236 场周赛第 2 题 题目 共有 n 名小伙伴一起做游戏。小伙伴们围成一圈，按 顺时针顺序 从 1 到 n 编号。确切地说，从第 i 名小伙伴顺时针移动一位会到达第]]></description>
 </item><item>
     <title>0894：所有可能的真二叉树（1784 分）</title>
     <link>https://huozhixue.github.io/leetcode/0894/</link>
     <pubDate>Sun, 26 Aug 2018 09:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0894/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/all-possible-full-binary-trees/" target="_blank" rel="noopener noreffer">力扣第 99 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数 <code>n</code> ，请你找出所有可能含 <code>n</code> 个节点的 <strong>真二叉树</strong> ，并以列表形式返回。答案中每棵树的每个节点都必须符合 <code>Node.val == 0</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 99 场周赛第 3 题 题目 给你一个整数 n ，请你找出所有可能含 n 个节点的 真二叉树 ，并以列表形式返回。答案中每棵树的每个节点都必须符合 Node.val == 0 。 答案]]></description>
 </item><item>
     <title>0779：第K个语法符号（1571 分）</title>
     <link>https://huozhixue.github.io/leetcode/0779/</link>
     <pubDate>Fri, 17 Feb 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0779/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/k-th-symbol-in-grammar/" target="_blank" rel="noopener noreffer">力扣第 779 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>我们构建了一个包含 <code>n</code> 行( <strong>索引从 1  开始 </strong>)的表。首先在第一行我们写上一个 <code>0</code>。接下来的每一行，将前一行中的<code>0</code>替换为<code>01</code>，<code>1</code>替换为<code>10</code>。</p>]]></description>
+    <description><![CDATA[力扣第 779 题 题目 我们构建了一个包含 n 行( 索引从 1 开始 )的表。首先在第一行我们写上一个 0。接下来的每一行，将前一行中的0替换为01，1替换为10]]></description>
 </item><item>
     <title>0776：拆分二叉搜索树（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0776/</link>
     <pubDate>Tue, 14 Feb 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0776/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/split-bst/" target="_blank" rel="noopener noreffer">力扣第 776 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵二叉搜索树（BST）的根结点 <code>root</code> 和一个整数 <code>target</code> 。请将该树按要求拆分为两个子树：其中一个子树结点的值都必须小于等于给定的目标值；另一个子树结点的值都必须大于目标值；树中并非一定要存在值为 <code>target</code> 的结点。</p>]]></description>
+    <description><![CDATA[力扣第 776 题 题目 给你一棵二叉搜索树（BST）的根结点 root 和一个整数 target 。请将该树按要求拆分为两个子树：其中一个子树结点的值都必须小于等于给定的目标]]></description>
 </item><item>
     <title>0770：基本计算器 IV（2863 分）</title>
     <link>https://huozhixue.github.io/leetcode/0770/</link>
     <pubDate>Wed, 08 Feb 2017 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0770/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/basic-calculator-iv/" target="_blank" rel="noopener noreffer">力扣第 770 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个表达式如 <code>expression = "e + 8 - a + 5"</code> 和一个求值映射，如 <code>{"e": 1}</code>（给定的形式为 <code>evalvars = ["e"]</code> 和 <code>evalints = [1]</code>），返回表示简化表达式的标记列表，例如 <code>["-1*a","14"]</code></p>]]></description>
+    <description><![CDATA[力扣第 770 题 题目 给定一个表达式如 expression = "e + 8 - a + 5" 和一个求值映射，如 {"e": 1}（给定的形式为 evalvars = ["e"] 和 evalints = [1]），返回表示简化表达式的标记列表，例]]></description>
 </item><item>
     <title>0544：输出比赛匹配对（★）</title>
     <link>https://huozhixue.github.io/leetcode/0544/</link>
     <pubDate>Mon, 27 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0544/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/output-contest-matches/" target="_blank" rel="noopener noreffer">力扣第 544 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>在 NBA 季后赛中，我们总是安排较强的队伍对战较弱的队伍，例如用排名第 1 的队伍和第 n 的队伍对决，这是一个可以让比赛更加有趣的好策略。现在，给你 <strong>n </strong>支队伍，你需要以字符串格式输出它们的 <strong>最终 </strong>比赛配对。</p>]]></description>
+    <description><![CDATA[力扣第 544 题 题目 在 NBA 季后赛中，我们总是安排较强的队伍对战较弱的队伍，例如用排名第 1 的队伍和第 n 的队伍对决，这是一个可以让比赛更加有趣的好策略。]]></description>
 </item><item>
     <title>0509：斐波那契数</title>
     <link>https://huozhixue.github.io/leetcode/0509/</link>
     <pubDate>Mon, 23 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0509/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/fibonacci-number/" target="_blank" rel="noopener noreffer">力扣第 509 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p><strong>斐波那契数</strong> （通常用 <code>F(n)</code> 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>]]></description>
+    <description><![CDATA[力扣第 509 题 题目 斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是： F(0) = 0]]></description>
 </item><item>
     <title>0486：预测赢家（★）</title>
     <link>https://huozhixue.github.io/leetcode/0486/</link>
     <pubDate>Sat, 30 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0486/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/predict-the-winner/" target="_blank" rel="noopener noreffer">力扣第 486 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 。玩家 1 和玩家 2 基于这个数组设计了一个游戏。</p>
-<p>玩家 1 和玩家 2 轮流进行自己的回合，玩家 1 先手。开始时，两个玩家的初始分值都是 <code>0</code> 。每一回合，玩家从数组的任意一端取一个数字（即，<code>nums[0]</code> 或 <code>nums[nums.length - 1]</code>），取到的数字将会从数组中移除（数组长度减 <code>1</code> ）。玩家选中的数字将会加到他的得分上。当数组中没有剩余数字可取时，游戏结束。</p>]]></description>
+    <description><![CDATA[力扣第 486 题 题目 给你一个整数数组 nums 。玩家 1 和玩家 2 基于这个数组设计了一个游戏。 玩家 1 和玩家 2 轮流进行自己的回合，玩家 1 先手。开始时，两个玩家的]]></description>
 </item><item>
     <title>0439：三元表达式解析器（★）</title>
     <link>https://huozhixue.github.io/leetcode/0439/</link>
     <pubDate>Mon, 14 Mar 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0439/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/ternary-expression-parser/" target="_blank" rel="noopener noreffer">力扣第 439 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个表示任意嵌套三元表达式的字符串 <code>expression</code> ，求值并返回其结果。</p>
-<p>你可以总是假设给定的表达式是有效的，并且只包含数字， <code>'?'</code> ，  <code>':'</code> ，  <code>'T'</code> 和 <code>'F'</code> ，其中 <code>'T'</code> 为真， <code>'F'</code> 为假。表达式中的所有数字都是 <strong>一位</strong> 数(即在 <strong>[0,9] </strong>范围内)。</p>]]></description>
+    <description><![CDATA[力扣第 439 题 题目 给定一个表示任意嵌套三元表达式的字符串 expression ，求值并返回其结果。 你可以总是假设给定的表达式是有效的，并且只包含数字， '?' ， ':' ， 'T' 和 'F']]></description>
 </item><item>
     <title>0394：字符串解码（★）</title>
     <link>https://huozhixue.github.io/leetcode/0394/</link>
     <pubDate>Fri, 29 Jan 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0394/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/decode-string/" target="_blank" rel="noopener noreffer">力扣第 394 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个经过编码的字符串，返回它解码后的字符串。</p>
-<p>编码规则为: <code>k[encoded_string]</code>，表示其中方括号内部的 <code>encoded_string</code> 正好重复 <code>k</code> 次。注意 <code>k</code> 保证为正整数。</p>]]></description>
+    <description><![CDATA[力扣第 394 题 题目 给定一个经过编码的字符串，返回它解码后的字符串。 编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复]]></description>
 </item></channel>
 </rss>

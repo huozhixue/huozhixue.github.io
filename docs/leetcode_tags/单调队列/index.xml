@@ -9,78 +9,48 @@
     <pubDate>Sun, 20 Dec 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1696/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/jump-game-vi/" target="_blank" rel="noopener noreffer">力扣第 220 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
-<p>一开始你在下标 <code>0</code> 处。每一步，你最多可以往前跳 <code>k</code> 步，但你不能跳出数组的边界。也就是说，你可以从下标 <code>i</code> 跳到 <code>[i + 1， min(n - 1, i + k)]</code> <strong>包含</strong> 两个端点的任意位置。</p>]]></description>
+    <description><![CDATA[力扣第 220 场周赛第 3 题 题目 给你一个下标从 0 开始的整数数组 nums 和一个整数 k 。 一开始你在下标 0 处。每一步，你最多可以往前跳 k 步，但你不能跳出数组的边]]></description>
 </item><item>
     <title>1499：满足不等式的最大值（2456 分）</title>
     <link>https://huozhixue.github.io/leetcode/1499/</link>
     <pubDate>Sun, 28 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1499/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/max-value-of-equation/" target="_blank" rel="noopener noreffer">力扣第 195 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个数组 <code>points</code> 和一个整数 <code>k</code> 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> ，并且在 <code>1 &lt;= i &lt; j &lt;= points.length</code> 的前提下， <code>x<sub>i</sub> &lt; x<sub>j</sub></code> 总成立。</p>]]></description>
+    <description><![CDATA[力扣第 195 场周赛第 4 题 题目 给你一个数组 points 和一个整数 k 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 points[i] = [xi,]]></description>
 </item><item>
     <title>1438：绝对差不超过限制的最长连续子数组（1672 分）</title>
     <link>https://huozhixue.github.io/leetcode/1438/</link>
     <pubDate>Sun, 03 May 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1438/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/" target="_blank" rel="noopener noreffer">力扣第 187 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> ，和一个表示限制的整数 <code>limit</code>，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对差必须小于或者等于 <code>limit</code><em> 。</em></p>]]></description>
+    <description><![CDATA[力扣第 187 场周赛第 3 题 题目 给你一个整数数组 nums ，和一个表示限制的整数 limit，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对]]></description>
 </item><item>
     <title>1425：带限制的子序列和（2032 分）</title>
     <link>https://huozhixue.github.io/leetcode/1425/</link>
     <pubDate>Sun, 26 Apr 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1425/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/constrained-subsequence-sum/" target="_blank" rel="noopener noreffer">力扣第 186 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回 <strong>非空</strong> 子序列元素和的最大值，子序列需要满足：子序列中每两个 <strong>相邻</strong> 的整数 <code>nums[i]</code> 和 <code>nums[j]</code> ，它们在原数组中的下标 <code>i</code> 和 <code>j</code> 满足 <code>i &lt; j</code> 且 <code>j - i &lt;= k</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 186 场周赛第 4 题 题目 给你一个整数数组 nums 和一个整数 k ，请你返回 非空 子序列元素和的最大值，子序列需要满足：子序列中每两个 相邻 的整数 nums[i] 和 nums[j] ，它]]></description>
 </item><item>
     <title>0918：环形子数组的最大和（1777 分）</title>
     <link>https://huozhixue.github.io/leetcode/0918/</link>
     <pubDate>Sun, 07 Oct 2018 09:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0918/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-sum-circular-subarray/" target="_blank" rel="noopener noreffer">力扣第 105 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个长度为 <code>n</code> 的<strong>环形整数数组</strong> <code>nums</code> ，返回<em> <code>nums</code> 的非空 <strong>子数组</strong> 的最大可能和 </em>。</p>
-<p><strong>环形数组</strong><em> </em>意味着数组的末端将会与开头相连呈环状。形式上， <code>nums[i]</code> 的下一个元素是 <code>nums[(i + 1) % n]</code> ， <code>nums[i]</code> 的前一个元素是 <code>nums[(i - 1 + n) % n]</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 105 场周赛第 2 题 题目 给定一个长度为 n 的环形整数数组 nums ，返回 nums 的非空 子数组 的最大可能和 。 环形数组 意味着数组的末端将会与开头相连呈环状。形式]]></description>
 </item><item>
     <title>0862：和至少为 K 的最短子数组（2306 分）</title>
     <link>https://huozhixue.github.io/leetcode/0862/</link>
     <pubDate>Sun, 01 Jul 2018 10:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0862/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/" target="_blank" rel="noopener noreffer">力扣第 91 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，找出 <code>nums</code> 中和至少为 <code>k</code> 的 <strong>最短非空子数组</strong> ，并返回该子数组的长度。如果不存在这样的 <strong>子数组</strong> ，返回 <code>-1</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 91 场周赛第 4 题 题目 给你一个整数数组 nums 和一个整数 k ，找出 nums 中和至少为 k 的 最短非空子数组 ，并返回该子数组的长度。如果不存在这样的 子数组 ，返]]></description>
 </item><item>
     <title>0239：滑动窗口最大值（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0239/</link>
     <pubDate>Thu, 27 Aug 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0239/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/sliding-window-maximum/" target="_blank" rel="noopener noreffer">力扣第 239 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code>，有一个大小为 <code>k</code><em> </em>的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 <code>k</code> 个数字。滑动窗口每次只向右移动一位。</p>]]></description>
+    <description><![CDATA[力扣第 239 题 题目 给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗]]></description>
 </item></channel>
 </rss>

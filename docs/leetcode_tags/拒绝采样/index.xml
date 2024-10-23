@@ -9,28 +9,13 @@
     <pubDate>Fri, 22 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0478/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/generate-random-point-in-a-circle/" target="_blank" rel="noopener noreffer">力扣第 478 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定圆的半径和圆心的位置，实现函数 <code>randPoint</code> ，在圆中产生均匀随机点。</p>
-<p>实现 <code>Solution</code> 类:</p>
-<ul>
-<li><code>Solution(double radius, double x_center, double y_center)</code> 用圆的半径 <code>radius</code> 和圆心的位置<code> (x_center, y_center)</code> 初始化对象</li>
-<li><code>randPoint()</code> 返回圆内的一个随机点。圆周上的一点被认为在圆内。答案作为数组返回 <code>[x, y]</code> 。</li>
-</ul>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 478 题 题目 给定圆的半径和圆心的位置，实现函数 randPoint ，在圆中产生均匀随机点。 实现 Solution 类: Solution(double radius, double x_center, double y_center) 用圆的半径 radius 和圆心的位置 (x_center, y_center) 初始化对象 randPoint() 返回]]></description>
 </item><item>
     <title>0470：用 Rand7() 实现 Rand10()（★）</title>
     <link>https://huozhixue.github.io/leetcode/0470/</link>
     <pubDate>Thu, 14 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0470/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/implement-rand10-using-rand7/" target="_blank" rel="noopener noreffer">力扣第 470 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定方法 <code>rand7</code> 可生成 <code>[1,7]</code> 范围内的均匀随机整数，试写一个方法 <code>rand10</code> 生成 <code>[1,10]</code> 范围内的均匀随机整数。</p>
-<p>你只能调用 <code>rand7()</code> 且不能调用其他方法。请不要使用系统的 <code>Math.random()</code> 方法。</p>]]></description>
+    <description><![CDATA[力扣第 470 题 题目 给定方法 rand7 可生成 [1,7] 范围内的均匀随机整数，试写一个方法 rand10 生成 [1,10] 范围内的均匀随机整数。 你只能调用 rand7() 且不能调用其他方法。请不要使用系]]></description>
 </item></channel>
 </rss>

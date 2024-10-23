@@ -9,138 +9,69 @@
     <pubDate>Sat, 10 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0710/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/random-pick-with-blacklist/" target="_blank" rel="noopener noreffer">力扣第 710 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个整数 <code>n</code> 和一个 <strong>无重复</strong> 黑名单整数数组 <code>blacklist</code> 。设计一种算法，从 <code>[0, n - 1]</code> 范围内的任意整数中选取一个 <strong>未加入 </strong>黑名单 <code>blacklist</code> 的整数。任何在上述范围内且不在黑名单 <code>blacklist</code> 中的整数都应该有 <strong>同等的可能性</strong> 被返回。</p>]]></description>
+    <description><![CDATA[力扣第 710 题 题目 给定一个整数 n 和一个 无重复 黑名单整数数组 blacklist 。设计一种算法，从 [0, n - 1] 范围内的任意整数中选取一个 未加入 黑名单 blacklist 的整数。任何在上述]]></description>
 </item><item>
     <title>0528：按权重随机选择（★）</title>
     <link>https://huozhixue.github.io/leetcode/0528/</link>
     <pubDate>Sat, 11 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0528/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/random-pick-with-weight/" target="_blank" rel="noopener noreffer">力扣第 528 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 <strong>下标从 0 开始</strong> 的正整数数组 <code>w</code> ，其中 <code>w[i]</code> 代表第 <code>i</code> 个下标的权重。</p>
-<p>请你实现一个函数 <code>pickIndex</code> ，它可以 <strong>随机地</strong> 从范围 <code>[0, w.length - 1]</code> 内（含 <code>0</code> 和 <code>w.length - 1</code>）选出并返回一个下标。选取下标 <code>i</code> 的 <strong>概率</strong> 为 <code>w[i] / sum(w)</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 528 题 题目 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex ，它可以 随机地 从范围 [0, w.length - 1] 内（含 0 和 w.length - 1]]></description>
 </item><item>
     <title>0519：随机翻转矩阵（★）</title>
     <link>https://huozhixue.github.io/leetcode/0519/</link>
     <pubDate>Thu, 02 Jun 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0519/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/random-flip-matrix/" target="_blank" rel="noopener noreffer">力扣第 519 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 <code>m x n</code> 的二元矩阵 <code>matrix</code> ，且所有值被初始化为 <code>0</code> 。请你设计一个算法，随机选取一个满足 <code>matrix[i][j] == 0</code> 的下标 <code>(i, j)</code> ，并将它的值变为 <code>1</code> 。所有满足 <code>matrix[i][j] == 0</code> 的下标 <code>(i, j)</code> 被选取的概率应当均等。</p>]]></description>
+    <description><![CDATA[力扣第 519 题 题目 给你一个 m x n 的二元矩阵 matrix ，且所有值被初始化为 0 。请你设计一个算法，随机选取一个满足 matrix[i][j] == 0 的下标 (i, j) ，并将它的值变为 1 。所有满]]></description>
 </item><item>
     <title>0497：非重叠矩形中的随机点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0497/</link>
     <pubDate>Wed, 11 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0497/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/" target="_blank" rel="noopener noreffer">力扣第 497 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个由非重叠的轴对齐矩形的数组 <code>rects</code> ，其中 <code>rects[i] = [ai, bi, xi, yi]</code> 表示 <code>(ai, bi)</code> 是第 <code>i</code> 个矩形的左下角点，<code>(xi, yi)</code> 是第 <code>i</code> 个矩形的右上角点。设计一个算法来随机挑选一个被某一矩形覆盖的整数点。矩形周长上的点也算做是被矩形覆盖。所有满足要求的点必须等概率被返回。</p>]]></description>
+    <description><![CDATA[力扣第 497 题 题目 给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点，(xi, yi) 是第 i 个矩形的右上角点。设计一]]></description>
 </item><item>
     <title>0478：在圆内随机生成点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0478/</link>
     <pubDate>Fri, 22 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0478/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/generate-random-point-in-a-circle/" target="_blank" rel="noopener noreffer">力扣第 478 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定圆的半径和圆心的位置，实现函数 <code>randPoint</code> ，在圆中产生均匀随机点。</p>
-<p>实现 <code>Solution</code> 类:</p>
-<ul>
-<li><code>Solution(double radius, double x_center, double y_center)</code> 用圆的半径 <code>radius</code> 和圆心的位置<code> (x_center, y_center)</code> 初始化对象</li>
-<li><code>randPoint()</code> 返回圆内的一个随机点。圆周上的一点被认为在圆内。答案作为数组返回 <code>[x, y]</code> 。</li>
-</ul>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 478 题 题目 给定圆的半径和圆心的位置，实现函数 randPoint ，在圆中产生均匀随机点。 实现 Solution 类: Solution(double radius, double x_center, double y_center) 用圆的半径 radius 和圆心的位置 (x_center, y_center) 初始化对象 randPoint() 返回]]></description>
 </item><item>
     <title>0470：用 Rand7() 实现 Rand10()（★）</title>
     <link>https://huozhixue.github.io/leetcode/0470/</link>
     <pubDate>Thu, 14 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0470/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/implement-rand10-using-rand7/" target="_blank" rel="noopener noreffer">力扣第 470 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定方法 <code>rand7</code> 可生成 <code>[1,7]</code> 范围内的均匀随机整数，试写一个方法 <code>rand10</code> 生成 <code>[1,10]</code> 范围内的均匀随机整数。</p>
-<p>你只能调用 <code>rand7()</code> 且不能调用其他方法。请不要使用系统的 <code>Math.random()</code> 方法。</p>]]></description>
+    <description><![CDATA[力扣第 470 题 题目 给定方法 rand7 可生成 [1,7] 范围内的均匀随机整数，试写一个方法 rand10 生成 [1,10] 范围内的均匀随机整数。 你只能调用 rand7() 且不能调用其他方法。请不要使用系]]></description>
 </item><item>
     <title>0398：随机数索引（★）</title>
     <link>https://huozhixue.github.io/leetcode/0398/</link>
     <pubDate>Tue, 02 Feb 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0398/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/random-pick-index/" target="_blank" rel="noopener noreffer">力扣第 398 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个可能含有 <strong>重复元素</strong> 的整数数组 <code>nums</code> ，请你随机输出给定的目标数字 <code>target</code> 的索引。你可以假设给定的数字一定存在于数组中。</p>]]></description>
+    <description><![CDATA[力扣第 398 题 题目 给你一个可能含有 重复元素 的整数数组 nums ，请你随机输出给定的目标数字 target 的索引。你可以假设给定的数字一定存在于数组中。 实现 Solution 类： Solution(int[] nums)]]></description>
 </item><item>
     <title>0384：打乱数组（★）</title>
     <link>https://huozhixue.github.io/leetcode/0384/</link>
     <pubDate>Tue, 19 Jan 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0384/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/shuffle-an-array/" target="_blank" rel="noopener noreffer">力扣第 384 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> ，设计算法来打乱一个没有重复元素的数组。打乱后，数组的所有排列应该是 <strong>等可能</strong> 的。</p>
-<p>实现 <code>Solution</code> class:</p>
-<ul>
-<li><code>Solution(int[] nums)</code> 使用整数数组 <code>nums</code> 初始化对象</li>
-<li><code>int[] reset()</code> 重设数组到它的初始状态并返回</li>
-<li><code>int[] shuffle()</code> 返回数组随机打乱后的结果</li>
-</ul>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 384 题 题目 给你一个整数数组 nums ，设计算法来打乱一个没有重复元素的数组。打乱后，数组的所有排列应该是 等可能 的。 实现 Solution class: Solution(int[] nums) 使用整数数组 nums 初始]]></description>
 </item><item>
     <title>0382：链表随机节点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0382/</link>
     <pubDate>Sun, 17 Jan 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0382/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/linked-list-random-node/" target="_blank" rel="noopener noreffer">力扣第 382 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个单链表，随机选择链表的一个节点，并返回相应的节点值。每个节点<strong> 被选中的概率一样</strong> 。</p>
-<p>实现 <code>Solution</code> 类：</p>
-<ul>
-<li><code>Solution(ListNode head)</code> 使用整数数组初始化对象。</li>
-<li><code>int getRandom()</code> 从链表中随机选择一个节点并返回该节点的值。链表中所有节点被选中的概率相等。</li>
-</ul>
-<p><strong>示例：</strong></p>]]></description>
+    <description><![CDATA[力扣第 382 题 题目 给你一个单链表，随机选择链表的一个节点，并返回相应的节点值。每个节点 被选中的概率一样 。 实现 Solution 类： Solution(ListNode head) 使用整数数组初始化对象。 int]]></description>
 </item><item>
     <title>0381：O(1) 时间插入、删除和获取随机元素 - 允许重复（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0381/</link>
     <pubDate>Sat, 16 Jan 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0381/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/" target="_blank" rel="noopener noreffer">力扣第 381 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p><code>RandomizedCollection</code> 是一种包含数字集合(可能是重复的)的数据结构。它应该支持插入和删除特定元素，以及删除随机元素。</p>
-<p>实现 <code>RandomizedCollection</code> 类:</p>
-<ul>
-<li><code>RandomizedCollection()</code>初始化空的 <code>RandomizedCollection</code> 对象。</li>
-<li><code>bool insert(int val)</code> 将一个 <code>val</code> 项插入到集合中，即使该项已经存在。如果该项不存在，则返回 <code>true</code> ，否则返回 <code>false</code> 。</li>
-<li><code>bool remove(int val)</code> 如果存在，从集合中移除一个 <code>val</code> 项。如果该项存在，则返回 <code>true</code> ，否则返回 <code>false</code> 。注意，如果 <code>val</code> 在集合中出现多次，我们只删除其中一个。</li>
-<li><code>int getRandom()</code> 从当前的多个元素集合中返回一个随机元素。每个元素被返回的概率与集合中包含的相同值的数量 <strong>线性相关</strong> 。</li>
-</ul>
-<p>您必须实现类的函数，使每个函数的 <strong>平均</strong> 时间复杂度为 <code>O(1)</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 381 题 题目 RandomizedCollection 是一种包含数字集合(可能是重复的)的数据结构。它应该支持插入和删除特定元素，以及删除随机元素。 实现 RandomizedCollection 类: Randomized]]></description>
 </item></channel>
 </rss>

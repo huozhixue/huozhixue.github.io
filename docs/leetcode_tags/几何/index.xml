@@ -9,119 +9,62 @@
     <pubDate>Sun, 21 Apr 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1030/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/matrix-cells-in-distance-order/" target="_blank" rel="noopener noreffer">力扣第 133 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定四个整数 <code>rows</code> ,   <code>cols</code> ,  <code>rCenter</code> 和 <code>cCenter</code> 。有一个 <code>rows x cols</code> 的矩阵，你在单元格上的坐标是 <code>(rCenter, cCenter)</code> 。</p>
-<p>返回矩阵中的所有单元格的坐标，并按与<em> </em><code>(rCenter, cCenter)</code><em> </em>的 <strong>距离</strong> 从最小到最大的顺序排。你可以按 <strong>任何</strong> 满足此条件的顺序返回答案。</p>]]></description>
+    <description><![CDATA[力扣第 133 场周赛第 2 题 题目 给定四个整数 rows , cols , rCenter 和 cCenter 。有一个 rows x cols 的矩阵，你在单元格上的坐标是 (rCenter, cCenter) 。 返回矩阵中的所有单元格的坐标，并按与 (rCenter, cCenter) 的]]></description>
 </item><item>
     <title>0973：最接近原点的 K 个点（1213 分）</title>
     <link>https://huozhixue.github.io/leetcode/0973/</link>
     <pubDate>Sun, 13 Jan 2019 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0973/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/k-closest-points-to-origin/" target="_blank" rel="noopener noreffer">力扣第 119 场周赛第 1 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示 <strong>X-Y</strong> 平面上的一个点，并且是一个整数 <code>k</code> ，返回离原点 <code>(0,0)</code> 最近的 <code>k</code> 个点。</p>
-<p>这里，平面上两点之间的距离是 <strong>欧几里德距离</strong>（ <code>√(x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup></code> ）。</p>]]></description>
+    <description><![CDATA[力扣第 119 场周赛第 1 题 题目 给定一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点，并且是一个整数 k ，返回离原点 (0,0) 最近的 k 个点。 这里，平面上两点之间的]]></description>
 </item><item>
     <title>0593：有效的正方形（★）</title>
     <link>https://huozhixue.github.io/leetcode/0593/</link>
     <pubDate>Mon, 15 Aug 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0593/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/valid-square/" target="_blank" rel="noopener noreffer">力扣第 593 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定2D空间中四个点的坐标 <code>p1</code>, <code>p2</code>, <code>p3</code> 和 <code>p4</code>，如果这四个点构成一个正方形，则返回 <code>true</code> 。</p>
-<p>点的坐标 <code>p<sub>i</sub></code> 表示为 <code>[xi, yi]</code> 。 <code>输入没有任何顺序</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 593 题 题目 给定2D空间中四个点的坐标 p1, p2, p3 和 p4，如果这四个点构成一个正方形，则返回 true 。 点的坐标 pi 表示为 [xi, yi] 。 输入没有任何顺序 。 一个 有效]]></description>
 </item><item>
     <title>0478：在圆内随机生成点（★）</title>
     <link>https://huozhixue.github.io/leetcode/0478/</link>
     <pubDate>Fri, 22 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0478/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/generate-random-point-in-a-circle/" target="_blank" rel="noopener noreffer">力扣第 478 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定圆的半径和圆心的位置，实现函数 <code>randPoint</code> ，在圆中产生均匀随机点。</p>
-<p>实现 <code>Solution</code> 类:</p>
-<ul>
-<li><code>Solution(double radius, double x_center, double y_center)</code> 用圆的半径 <code>radius</code> 和圆心的位置<code> (x_center, y_center)</code> 初始化对象</li>
-<li><code>randPoint()</code> 返回圆内的一个随机点。圆周上的一点被认为在圆内。答案作为数组返回 <code>[x, y]</code> 。</li>
-</ul>
-<p><strong>示例 1：</strong></p>]]></description>
+    <description><![CDATA[力扣第 478 题 题目 给定圆的半径和圆心的位置，实现函数 randPoint ，在圆中产生均匀随机点。 实现 Solution 类: Solution(double radius, double x_center, double y_center) 用圆的半径 radius 和圆心的位置 (x_center, y_center) 初始化对象 randPoint() 返回]]></description>
 </item><item>
     <title>0469：凸多边形（★）</title>
     <link>https://huozhixue.github.io/leetcode/0469/</link>
     <pubDate>Wed, 13 Apr 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0469/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/convex-polygon/" target="_blank" rel="noopener noreffer">力扣第 469 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定 <strong>X-Y</strong> 平面上的一组点 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 。这些点按顺序连成一个多边形。</p>
-<p>如果该多边形为 <strong>凸</strong> 多边形<a href="https://baike.baidu.com/item/凸多边形/">（凸多边形的定义）</a>则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
-<p>你可以假设由给定点构成的多边形总是一个 简单的多边形<a href="https://baike.baidu.com/item/%E7%AE%80%E5%8D%95%E5%A4%9A%E8%BE%B9%E5%BD%A2">（简单多边形的定义）</a>。换句话说，我们要保证每个顶点处恰好是两条边的汇合点，并且这些边 <strong>互不相交 </strong>。</p>]]></description>
+    <description><![CDATA[力扣第 469 题 题目 给定 X-Y 平面上的一组点 points ，其中 points[i] = [xi, yi] 。这些点按顺序连成一个多边形。 如果该多边形为 凸 多边形（凸多边形的定义）则返回 true ，否则返回 false]]></description>
 </item><item>
     <title>0335：路径交叉（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0335/</link>
     <pubDate>Tue, 01 Dec 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0335/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/self-crossing/" target="_blank" rel="noopener noreffer">力扣第 335 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>distance</code><em> </em>。</p>
-<p>从 <strong>X-Y</strong> 平面上的点 <code>(0,0)</code> 开始，先向北移动 <code>distance[0]</code> 米，然后向西移动 <code>distance[1]</code> 米，向南移动 <code>distance[2]</code> 米，向东移动 <code>distance[3]</code> 米，持续移动。也就是说，每次移动后你的方位会发生逆时针变化。</p>]]></description>
+    <description><![CDATA[力扣第 335 题 题目 给你一个整数数组 distance 。 从 X-Y 平面上的点 (0,0) 开始，先向北移动 distance[0] 米，然后向西移动 distance[1] 米，向南移动 distance[2] 米，向东移动 distance[3] 米，持续移动。也就是说，每]]></description>
 </item><item>
     <title>0223：矩形面积（★）</title>
     <link>https://huozhixue.github.io/leetcode/0223/</link>
     <pubDate>Tue, 11 Aug 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0223/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/rectangle-area/" target="_blank" rel="noopener noreffer">力扣第 223 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你 <strong>二维</strong> 平面上两个 <strong>由直线构成且边与坐标轴平行/垂直</strong> 的矩形，请你计算并返回两个矩形覆盖的总面积。</p>
-<p>每个矩形由其 <strong>左下</strong> 顶点和 <strong>右上</strong> 顶点坐标表示：</p>]]></description>
+    <description><![CDATA[力扣第 223 题 题目 给你 二维 平面上两个 由直线构成且边与坐标轴平行/垂直 的矩形，请你计算并返回两个矩形覆盖的总面积。 每个矩形由其 左下 顶点和 右上 顶点坐]]></description>
 </item><item>
     <title>0149：直线上最多的点数（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0149/</link>
     <pubDate>Fri, 29 May 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0149/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/max-points-on-a-line/" target="_blank" rel="noopener noreffer">力扣第 149 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示 <strong>X-Y</strong> 平面上的一个点。求最多有多少个点在同一条直线上。</p>
-<p><strong>示例 1：</strong></p>
-
-<pre>
-<strong>输入：</strong>points = [[1,1],[2,2],[3,3]]
-<strong>输出：</strong>3
-</pre>
-<p><strong>示例 2：</strong></p>]]></description>
+    <description><![CDATA[力扣第 149 题 题目 给你一个数组 points ，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一个点。求最多有多少个点在同一条直线上。 示例 1： 输入：points = [[1,1],[2,2],[3,3]] 输出：3 示例 2]]></description>
 </item><item>
     <title>0587：安装栅栏（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0587/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0587/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/erect-the-fence/" target="_blank" rel="noopener noreffer">力扣第 587 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个数组 <code>trees</code>，其中 <code>trees[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示树在花园中的位置。</p>
-<p>你被要求用最短长度的绳子把整个花园围起来，因为绳子很贵。只有把 <strong>所有的树都围起来</strong>，花园才围得很好。</p>]]></description>
+    <description><![CDATA[力扣第 587 题 题目 给定一个数组 trees，其中 trees[i] = [xi, yi] 表示树在花园中的位置。 你被要求用最短长度的绳子把整个花园围起来，因为绳子很贵。只有把 所有的]]></description>
 </item></channel>
 </rss>

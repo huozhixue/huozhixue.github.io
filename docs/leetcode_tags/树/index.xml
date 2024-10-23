@@ -9,111 +9,69 @@
     <pubDate>Sun, 21 Aug 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2385/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/" target="_blank" rel="noopener noreffer">力扣第 307 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵二叉树的根节点 <code>root</code> ，二叉树中节点的值 <strong>互不相同</strong> 。另给你一个整数 <code>start</code> 。在第 <code>0</code> 分钟，<strong>感染</strong> 将会从值为 <code>start</code> 的节点开始爆发。</p>]]></description>
+    <description><![CDATA[力扣第 307 场周赛第 3 题 题目 给你一棵二叉树的根节点 root ，二叉树中节点的值 互不相同 。另给你一个整数 start 。在第 0 分钟，感染 将会从值为 start 的节点开始爆发。 每]]></description>
 </item><item>
     <title>2003：每棵子树内缺失的最小基因值（2415 分）</title>
     <link>https://huozhixue.github.io/leetcode/2003/</link>
     <pubDate>Sun, 12 Sep 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2003/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/" target="_blank" rel="noopener noreffer">力扣第 258 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>有一棵根节点为 <code>0</code> 的 <strong>家族树</strong> ，总共包含 <code>n</code> 个节点，节点编号为 <code>0</code> 到 <code>n - 1</code> 。给你一个下标从 <strong>0</strong> 开始的整数数组 <code>parents</code> ，其中 <code>parents[i]</code> 是节点 <code>i</code> 的父节点。由于节点 <code>0</code> 是 <strong>根</strong> ，所以 <code>parents[0] == -1</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 258 场周赛第 4 题 题目 有一棵根节点为 0 的 家族树 ，总共包含 n 个节点，节点编号为 0 到 n - 1 。给你一个下标从 0 开始的整数数组 parents ，其中 parents[i] 是节点 i 的]]></description>
 </item><item>
     <title>1993：树上的操作（1861 分）</title>
     <link>https://huozhixue.github.io/leetcode/1993/</link>
     <pubDate>Sat, 04 Sep 2021 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1993/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/operations-on-tree/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵 <code>n</code> 个节点的树，编号从 <code>0</code> 到 <code>n - 1</code> ，以父节点数组 <code>parent</code> 的形式给出，其中 <code>parent[i]</code> 是第 <code>i</code> 个节点的父节点。树的根节点为 <code>0</code> 号节点，所以 <code>parent[0] = -1</code> ，因为它没有父节点。你想要设计一个数据结构实现树里面对节点的加锁，解锁和升级操作。</p>]]></description>
+    <description><![CDATA[力扣第 60 场双周赛第 3 题 题目 给你一棵 n 个节点的树，编号从 0 到 n - 1 ，以父节点数组 parent 的形式给出，其中 parent[i] 是第 i 个节点的父节点。树的根节点为 0 号节点]]></description>
 </item><item>
     <title>1916：统计为蚁群构筑房间的不同顺序（2486 分）</title>
     <link>https://huozhixue.github.io/leetcode/1916/</link>
     <pubDate>Sun, 27 Jun 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1916/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/" target="_blank" rel="noopener noreffer">力扣第 247 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你是一只蚂蚁，负责为蚁群构筑 <code>n</code> 间编号从 <code>0</code> 到 <code>n-1</code> 的新房间。给你一个 <strong>下标从 0 开始</strong> 且长度为 <code>n</code> 的整数数组 <code>prevRoom</code> 作为扩建计划。其中，<code>prevRoom[i]</code> 表示在构筑房间 <code>i</code> 之前，你必须先构筑房间 <code>prevRoom[i]</code> ，并且这两个房间必须 <strong>直接</strong> 相连。房间 <code>0</code> 已经构筑完成，所以 <code>prevRoom[0] = -1</code> 。扩建计划中还有一条硬性要求，在完成所有房间的构筑之后，从房间 <code>0</code> 可以访问到每个房间。</p>]]></description>
+    <description><![CDATA[力扣第 247 场周赛第 4 题 题目 你是一只蚂蚁，负责为蚁群构筑 n 间编号从 0 到 n-1 的新房间。给你一个 下标从 0 开始 且长度为 n 的整数数组 prevRoom 作为扩建计划。其中，]]></description>
 </item><item>
     <title>1766：互质树（2231 分）</title>
     <link>https://huozhixue.github.io/leetcode/1766/</link>
     <pubDate>Sat, 20 Feb 2021 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1766/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/tree-of-coprimes/" target="_blank" rel="noopener noreffer">力扣第 46 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个 <code>n</code> 个节点的树（也就是一个无环连通无向图），节点编号从 <code>0</code> 到 <code>n - 1</code> ，且恰好有 <code>n - 1</code> 条边，每个节点有一个值。树的 <strong>根节点</strong> 为 0 号点。</p>]]></description>
+    <description><![CDATA[力扣第 46 场双周赛第 4 题 题目 给你一个 n 个节点的树（也就是一个无环连通无向图），节点编号从 0 到 n - 1 ，且恰好有 n - 1 条边，每个节点有一个值。树的]]></description>
 </item><item>
     <title>1600：王位继承顺序（1768 分）</title>
     <link>https://huozhixue.github.io/leetcode/1600/</link>
     <pubDate>Sun, 27 Sep 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1600/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/throne-inheritance/" target="_blank" rel="noopener noreffer">力扣第 208 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>一个王国里住着国王、他的孩子们、他的孙子们等等。每一个时间点，这个家庭里有人出生也有人死亡。</p>
-<p>这个王国有一个明确规定的王位继承顺序，第一继承人总是国王自己。我们定义递归函数 <code>Successor(x, curOrder)</code> ，给定一个人 <code>x</code> 和当前的继承顺序，该函数返回 <code>x</code> 的下一继承人。</p>]]></description>
+    <description><![CDATA[力扣第 208 场周赛第 3 题 题目 一个王国里住着国王、他的孩子们、他的孙子们等等。每一个时间点，这个家庭里有人出生也有人死亡。 这个王国有一个明确规定的]]></description>
 </item><item>
     <title>1483：树节点的第 K 个祖先（2115 分）</title>
     <link>https://huozhixue.github.io/leetcode/1483/</link>
     <pubDate>Sun, 14 Jun 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1483/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/" target="_blank" rel="noopener noreffer">力扣第 193 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵树，树上有 <code>n</code> 个节点，按从 <code>0</code> 到 <code>n-1</code> 编号。树以父节点数组的形式给出，其中 <code>parent[i]</code> 是节点 <code>i</code> 的父节点。树的根节点是编号为 <code>0</code> 的节点。</p>]]></description>
+    <description><![CDATA[力扣第 193 场周赛第 4 题 题目 给你一棵树，树上有 n 个节点，按从 0 到 n-1 编号。树以父节点数组的形式给出，其中 parent[i] 是节点 i 的父节点。树的根节点是编号为 0 的]]></description>
 </item><item>
     <title>1457：二叉树中的伪回文路径（1405 分）</title>
     <link>https://huozhixue.github.io/leetcode/1457/</link>
     <pubDate>Sun, 24 May 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1457/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 190 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「<strong>伪回文</strong>」的，当它满足：路径经过的所有节点值的排列中，存在一个回文序列。</p>]]></description>
+    <description><![CDATA[力扣第 190 场周赛第 3 题 题目 给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「伪回文」的，当它满足：路径经过的所有节点值的排列中]]></description>
 </item><item>
     <title>1104：二叉树寻路（1544 分）</title>
     <link>https://huozhixue.github.io/leetcode/1104/</link>
     <pubDate>Sun, 30 Jun 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1104/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/path-in-zigzag-labelled-binary-tree/" target="_blank" rel="noopener noreffer">力扣第 143 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>在一棵无限的二叉树上，每个节点都有两个子节点，树中的节点 <strong>逐行</strong> 依次按 &ldquo;之&rdquo; 字形进行标记。</p>]]></description>
+    <description><![CDATA[力扣第 143 场周赛第 2 题 题目 在一棵无限的二叉树上，每个节点都有两个子节点，树中的节点 逐行 依次按 &ldquo;之&rdquo; 字形进行标记。 如下图]]></description>
 </item><item>
     <title>1080：根到叶路径上的不足节点（1804 分）</title>
     <link>https://huozhixue.github.io/leetcode/1080/</link>
     <pubDate>Sun, 09 Jun 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1080/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/insufficient-nodes-in-root-to-leaf-paths/" target="_blank" rel="noopener noreffer">力扣第 140 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你二叉树的根节点 <code>root</code> 和一个整数 <code>limit</code> ，请你同时删除树中所有 <strong>不足节点 </strong>，并返回最终二叉树的根节点。</p>
-<p>假如通过节点 <code>node</code> 的每种可能的 “根-叶” 路径上值的总和全都小于给定的 <code>limit</code>，则该节点被称之为<strong> 不足节点 </strong>，需要被删除。</p>]]></description>
+    <description><![CDATA[力扣第 140 场周赛第 3 题 题目 给你二叉树的根节点 root 和一个整数 limit ，请你同时删除树中所有 不足节点 ，并返回最终二叉树的根节点。 假如通过节点 node 的每种可能的]]></description>
 </item></channel>
 </rss>

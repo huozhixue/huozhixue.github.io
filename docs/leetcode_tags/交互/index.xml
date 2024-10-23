@@ -9,102 +9,55 @@
     <pubDate>Sun, 23 Jun 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1095/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-in-mountain-array/" target="_blank" rel="noopener noreffer">力扣第 142 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>（这是一个 <strong>交互式问题 </strong>）</p>
-<p>你可以将一个数组 <code>arr</code> 称为 <strong>山脉数组 </strong>当且仅当：</p>
-<ul>
-<li><code>arr.length &gt;= 3</code></li>
-<li>存在一些 <code>0 &lt; i &lt; arr.length - 1</code> 的 <code>i</code> 使得：
-<ul>
-<li><code>arr[0] &lt; arr[1] &lt; ... &lt; arr[i - 1] &lt; arr[i]</code></li>
-<li><code>arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</code></li>
-</ul>
-</li>
-</ul>
-<p>给定一个山脉数组 <code>mountainArr</code> ，返回 <strong>最小</strong> 的 <code>index</code> 使得 <code>mountainArr.get(index) == target</code>。如果不存在这样的 <code>index</code>，返回 <code>-1</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 142 场周赛第 3 题 题目 （这是一个 交互式问题 ） 你可以将一个数组 arr 称为 山脉数组 当且仅当： arr.length &gt;= 3 存在一些 0 &lt; i &lt; arr.length - 1 的 i 使得： arr[0] &lt; arr[1] &lt; ... &lt; arr[i -]]></description>
 </item><item>
     <title>0843：猜猜这个单词（2077 分）</title>
     <link>https://huozhixue.github.io/leetcode/0843/</link>
     <pubDate>Sun, 27 May 2018 10:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0843/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/guess-the-word/" target="_blank" rel="noopener noreffer">力扣第 86 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个由 <strong>不同</strong> 字符串组成的单词列表 <code>words</code> ，其中 <code>words[i]</code> 长度均为 <code>6</code> 。<code>words</code> 中的一个单词将被选作秘密单词 <code>secret</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 86 场周赛第 4 题 题目 给你一个由 不同 字符串组成的单词列表 words ，其中 words[i] 长度均为 6 。words 中的一个单词将被选作秘密单词 secret 。 另给你一个辅助对象]]></description>
 </item><item>
     <title>0489：扫地机器人（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0489/</link>
     <pubDate>Tue, 03 May 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0489/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/robot-room-cleaner/" target="_blank" rel="noopener noreffer">力扣第 489 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>房间（用格栅表示）中有一个扫地机器人。格栅中的每一个格子有空和障碍物两种可能。</p>
-<p>扫地机器人提供4个API，可以向前进，向左转或者向右转。每次转弯90度。</p>]]></description>
+    <description><![CDATA[力扣第 489 题 题目 房间（用格栅表示）中有一个扫地机器人。格栅中的每一个格子有空和障碍物两种可能。 扫地机器人提供4个API，可以向前进，向左转或者]]></description>
 </item><item>
     <title>0374：猜数字大小</title>
     <link>https://huozhixue.github.io/leetcode/0374/</link>
     <pubDate>Sat, 09 Jan 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0374/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/guess-number-higher-or-lower/" target="_blank" rel="noopener noreffer">力扣第 374 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>我们正在玩猜数字游戏。猜数字游戏的规则如下：</p>
-<p>我会从 <code>1</code> 到 <code>n</code> 随机选择一个数字。 请你猜选出的是哪个数字。</p>
-<p>如果你猜错了，我会告诉你，我选出的数字比你猜测的数字大了还是小了。</p>]]></description>
+    <description><![CDATA[力扣第 374 题 题目 我们正在玩猜数字游戏。猜数字游戏的规则如下： 我会从 1 到 n 随机选择一个数字。 请你猜选出的是哪个数字。 如果你猜错了，我会告诉你，我]]></description>
 </item><item>
     <title>0278：第一个错误的版本</title>
     <link>https://huozhixue.github.io/leetcode/0278/</link>
     <pubDate>Mon, 05 Oct 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0278/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/first-bad-version/" target="_blank" rel="noopener noreffer">力扣第 278 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。</p>]]></description>
+    <description><![CDATA[力扣第 278 题 题目 你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开]]></description>
 </item><item>
     <title>0277：搜寻名人（★）</title>
     <link>https://huozhixue.github.io/leetcode/0277/</link>
     <pubDate>Sun, 04 Oct 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0277/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-the-celebrity/" target="_blank" rel="noopener noreffer">力扣第 277 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>假设你是一个专业的狗仔，参加了一个 <code>n</code> 人派对，其中每个人被从 <code>0</code> 到 <code>n - 1</code> 标号。在这个派对人群当中可能存在一位 “名人”。所谓 “名人” 的定义是：其他所有 <code>n - 1</code> 个人都认识他/她，而他/她并不认识其他任何人。</p>]]></description>
+    <description><![CDATA[力扣第 277 题 题目 假设你是一个专业的狗仔，参加了一个 n 人派对，其中每个人被从 0 到 n - 1 标号。在这个派对人群当中可能存在一位 “名人”。所谓 “名人”]]></description>
 </item><item>
     <title>0158：用 Read4 读取 N 个字符 II（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0158/</link>
     <pubDate>Sun, 07 Jun 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0158/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/read-n-characters-given-read4-ii-call-multiple-times/" target="_blank" rel="noopener noreffer">力扣第 158 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个文件<meta charset="UTF-8" /> <code>file</code> ，并且该文件只能通过给定的 <code>read4</code> 方法来读取，请实现一个方法使其能够使 <code>read</code> 读取 <code>n</code> 个字符。<strong>注意：你的</strong> <strong><code>read</code> 方法可能会被调用多次。</strong></p>]]></description>
+    <description><![CDATA[力扣第 158 题 题目 给你一个文件 file ，并且该文件只能通过给定的 read4 方法来读取，请实现一个方法使其能够使 read 读取 n 个字符。注意：你的 read 方法可能会被调用多次]]></description>
 </item><item>
     <title>0157：用 Read4 读取 N 个字符</title>
     <link>https://huozhixue.github.io/leetcode/0157/</link>
     <pubDate>Sat, 06 Jun 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0157/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/read-n-characters-given-read4/" target="_blank" rel="noopener noreffer">力扣第 157 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个文件，并且该文件只能通过给定的 <code>read4</code> 方法来读取，请实现一个方法使其能够读取 n 个字符。</p>
-<p><strong>read4 方法：</strong></p>]]></description>
+    <description><![CDATA[力扣第 157 题 题目 给你一个文件，并且该文件只能通过给定的 read4 方法来读取，请实现一个方法使其能够读取 n 个字符。 read4 方法： API read4 可以从文件中读取 4 个连续的]]></description>
 </item></channel>
 </rss>

@@ -9,120 +9,69 @@
     <pubDate>Sun, 19 May 2024 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3152/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/special-array-ii/" target="_blank" rel="noopener noreffer">力扣第 398 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 <strong>特殊数组</strong> 。</p>
-<p>周洋哥有一个整数数组 <code>nums</code> 和一个二维整数矩阵 <code>queries</code>，对于 <code>queries[i] = [from<sub>i</sub>, to<sub>i</sub>]</code>，请你帮助周洋哥检查子数组 <code>nums[from<sub>i</sub>..to<sub>i</sub>]</code> 是不是一个 <strong>特殊数组 </strong>。</p>]]></description>
+    <description><![CDATA[力扣第 398 场周赛第 2 题 题目 如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 特殊数组 。 周洋哥有一个整数数组 nums 和一个二维整数]]></description>
 </item><item>
     <title>3130：找出所有稳定的二进制数组 II（2824 分）</title>
     <link>https://huozhixue.github.io/leetcode/3130/</link>
     <pubDate>Sat, 27 Apr 2024 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3130/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii/" target="_blank" rel="noopener noreffer">力扣第 129 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你 3 个正整数 <code>zero</code> ，<code>one</code> 和 <code>limit</code> 。</p>
-<p>一个 <span data-keyword="binary-array">二进制数组</span> <code>arr</code> 如果满足以下条件，那么我们称它是 <strong>稳定的</strong> ：</p>]]></description>
+    <description><![CDATA[力扣第 129 场双周赛第 4 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
 </item><item>
     <title>3129：找出所有稳定的二进制数组 I（2200 分）</title>
     <link>https://huozhixue.github.io/leetcode/3129/</link>
     <pubDate>Sat, 27 Apr 2024 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3129/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i/" target="_blank" rel="noopener noreffer">力扣第 129 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你 3 个正整数 <code>zero</code> ，<code>one</code> 和 <code>limit</code> 。</p>
-<p>一个 <span data-keyword="binary-array">二进制数组</span> <code>arr</code> 如果满足以下条件，那么我们称它是 <strong>稳定的</strong> ：</p>]]></description>
+    <description><![CDATA[力扣第 129 场双周赛第 3 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
 </item><item>
     <title>2398：预算内的最多机器人数目（1917 分）</title>
     <link>https://huozhixue.github.io/leetcode/2398/</link>
     <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2398/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-robots-within-budget/" target="_blank" rel="noopener noreffer">力扣第 86 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你有 <code>n</code> 个机器人，给你两个下标从 <strong>0</strong> 开始的整数数组 <code>chargeTimes</code> 和 <code>runningCosts</code> ，两者长度都为 <code>n</code> 。第 <code>i</code> 个机器人充电时间为 <code>chargeTimes[i]</code> 单位时间，花费 <code>runningCosts[i]</code> 单位时间运行。再给你一个整数 <code>budget</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
 </item><item>
     <title>2302：统计得分小于 K 的子数组数目（1808 分）</title>
     <link>https://huozhixue.github.io/leetcode/2302/</link>
     <pubDate>Sat, 11 Jun 2022 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2302/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/count-subarrays-with-score-less-than-k/" target="_blank" rel="noopener noreffer">力扣第 80 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>一个数组的 <strong>分数</strong> 定义为数组之和 <strong>乘以</strong> 数组的长度。</p>
-<ul>
-<li>比方说，<code>[1, 2, 3, 4, 5]</code> 的分数为 <code>(1 + 2 + 3 + 4 + 5) * 5 = 75</code> 。</li>
-</ul>
-<p>给你一个正整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回 <code>nums</code> 中分数 <strong>严格小于 </strong><code>k</code> 的 <strong>非空整数子数组数目</strong>。</p>]]></description>
+    <description><![CDATA[力扣第 80 场双周赛第 4 题 题目 一个数组的 分数 定义为数组之和 乘以 数组的长度。 比方说，[1, 2, 3, 4, 5] 的分数为 (1 + 2 + 3 + 4 + 5) * 5 = 75 。 给你一个正整]]></description>
 </item><item>
     <title>1991：找到数组的中间位置（1302 分）</title>
     <link>https://huozhixue.github.io/leetcode/1991/</link>
     <pubDate>Sat, 04 Sep 2021 22:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1991/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-the-middle-index-in-array/" target="_blank" rel="noopener noreffer">力扣第 60 场双周赛第 1 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，请你找到 <strong>最左边</strong> 的中间位置 <code>middleIndex</code> （也就是所有可能中间位置下标最小的一个）。</p>]]></description>
+    <description><![CDATA[力扣第 60 场双周赛第 1 题 题目 给你一个下标从 0 开始的整数数组 nums ，请你找到 最左边 的中间位置 middleIndex （也就是所有可能中间位置下标最小的一个）。 中间位置 middleIndex 是]]></description>
 </item><item>
     <title>1423：可获得的最大点数（1573 分）</title>
     <link>https://huozhixue.github.io/leetcode/1423/</link>
     <pubDate>Sun, 26 Apr 2020 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1423/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/" target="_blank" rel="noopener noreffer">力扣第 186 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>几张卡牌<strong> 排成一行</strong>，每张卡牌都有一个对应的点数。点数由整数数组 <code>cardPoints</code> 给出。</p>
-<p>每次行动，你可以从行的开头或者末尾拿一张卡牌，最终你必须正好拿 <code>k</code> 张卡牌。</p>]]></description>
+    <description><![CDATA[力扣第 186 场周赛第 2 题 题目 几张卡牌 排成一行，每张卡牌都有一个对应的点数。点数由整数数组 cardPoints 给出。 每次行动，你可以从行的开头或者末尾拿一张卡牌，最]]></description>
 </item><item>
     <title>1208：尽可能使字符串相等（1496 分）</title>
     <link>https://huozhixue.github.io/leetcode/1208/</link>
     <pubDate>Sun, 29 Sep 2019 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1208/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/get-equal-substrings-within-budget/" target="_blank" rel="noopener noreffer">力扣第 156 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你两个长度相同的字符串，<code>s</code> 和 <code>t</code>。</p>
-<p>将 <code>s</code> 中的第 <code>i</code> 个字符变到 <code>t</code> 中的第 <code>i</code> 个字符需要 <code>|s[i] - t[i]|</code> 的开销（开销可能为 0），也就是两个字符的 ASCII 码值的差的绝对值。</p>]]></description>
+    <description><![CDATA[力扣第 156 场周赛第 2 题 题目 给你两个长度相同的字符串，s 和 t。 将 s 中的第 i 个字符变到 t 中的第 i 个字符需要 |s[i] - t[i]| 的开销（开销可能为 0），也就是两个]]></description>
 </item><item>
     <title>1177：构建回文串检测（1848 分）</title>
     <link>https://huozhixue.github.io/leetcode/1177/</link>
     <pubDate>Sun, 01 Sep 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1177/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/can-make-palindrome-from-substring/" target="_blank" rel="noopener noreffer">力扣第 152 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code>，请你对 <code>s</code> 的子串进行检测。</p>
-<p>每次检测，待检子串都可以表示为 <code>queries[i] = [left, right, k]</code>。我们可以 <strong>重新排列</strong> 子串 <code>s[left], ..., s[right]</code>，并从中选择 <strong>最多</strong> <code>k</code> 项替换成任何小写英文字母。 </p>]]></description>
+    <description><![CDATA[力扣第 152 场周赛第 3 题 题目 给你一个字符串 s，请你对 s 的子串进行检测。 每次检测，待检子串都可以表示为 queries[i] = [left, right, k]。我们可以 重新排列 子串 s[left], ..., s[r]]></description>
 </item><item>
     <title>1124：表现良好的最长时间段（1908 分）</title>
     <link>https://huozhixue.github.io/leetcode/1124/</link>
     <pubDate>Sun, 14 Jul 2019 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1124/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-well-performing-interval/" target="_blank" rel="noopener noreffer">力扣第 145 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一份工作时间表 <code>hours</code>，上面记录着某一位员工每天的工作小时数。</p>
-<p>我们认为当员工一天中的工作小时数大于 <code>8</code> 小时的时候，那么这一天就是「<strong>劳累的一天</strong>」。</p>]]></description>
+    <description><![CDATA[力扣第 145 场周赛第 3 题 题目 给你一份工作时间表 hours，上面记录着某一位员工每天的工作小时数。 我们认为当员工一天中的工作小时数大于 8 小时的时候]]></description>
 </item></channel>
 </rss>

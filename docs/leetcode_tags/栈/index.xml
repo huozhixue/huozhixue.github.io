@@ -9,129 +9,69 @@
     <pubDate>Sun, 19 Nov 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2940/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/" target="_blank" rel="noopener noreffer">力扣第 372 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个下标从 <strong>0</strong> 开始的正整数数组 <code>heights</code> ，其中 <code>heights[i]</code> 表示第 <code>i</code> 栋建筑的高度。</p>
-<p>如果一个人在建筑 <code>i</code> ，且存在 <code>i &lt; j</code> 的建筑 <code>j</code> 满足 <code>heights[i] &lt; heights[j]</code> ，那么这个人可以移动到建筑 <code>j</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 372 场周赛第 4 题 题目 给你一个下标从 0 开始的正整数数组 heights ，其中 heights[i] 表示第 i 栋建筑的高度。 如果一个人在建筑 i ，且存在 i &lt; j 的建筑 j 满足 heights[i] &lt; heights[j] ，]]></description>
 </item><item>
     <title>2813：子序列最大优雅度（2582 分）</title>
     <link>https://huozhixue.github.io/leetcode/2813/</link>
     <pubDate>Sun, 06 Aug 2023 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2813/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-elegance-of-a-k-length-subsequence/" target="_blank" rel="noopener noreffer">力扣第 357 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个长度为 <code>n</code> 的二维整数数组 <code>items</code> 和一个整数 <code>k</code> 。</p>
-<p><code>items[i] = [profit<sub>i</sub>, category<sub>i</sub>]</code>，其中 <code>profit<sub>i</sub></code> 和 <code>category<sub>i</sub></code> 分别表示第 <code>i</code> 个项目的利润和类别。</p>]]></description>
+    <description><![CDATA[力扣第 357 场周赛第 4 题 题目 给你一个长度为 n 的二维整数数组 items 和一个整数 k 。 items[i] = [profiti, categoryi]，其中 profiti 和 categoryi 分别表示第 i 个项目的利润和类别。]]></description>
 </item><item>
     <title>2197：替换数组中的非互质数（2057 分）</title>
     <link>https://huozhixue.github.io/leetcode/2197/</link>
     <pubDate>Sun, 06 Mar 2022 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2197/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/replace-non-coprime-numbers-in-array/" target="_blank" rel="noopener noreffer">力扣第 283 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 。请你对数组执行下述操作：</p>
-<ol>
-<li>从 <code>nums</code> 中找出 <strong>任意</strong> 两个 <strong>相邻</strong> 的 <strong>非互质</strong> 数。</li>
-<li>如果不存在这样的数，<strong>终止</strong> 这一过程。</li>
-<li>否则，删除这两个数，并 <strong>替换</strong> 为它们的 <strong>最小公倍数</strong>（Least Common Multiple，LCM）。</li>
-<li>只要还能找出两个相邻的非互质数就继续 <strong>重复</strong> 这一过程。</li>
-</ol>
-<p>返回修改后得到的 <strong>最终</strong> 数组。可以证明的是，以 <strong>任意</strong> 顺序替换相邻的非互质数都可以得到相同的结果。</p>]]></description>
+    <description><![CDATA[力扣第 283 场周赛第 4 题 题目 给你一个整数数组 nums 。请你对数组执行下述操作： 从 nums 中找出 任意 两个 相邻 的 非互质 数。 如果不存在这样的数，终止 这一过程。 否则]]></description>
 </item><item>
     <title>1996：游戏中弱角色的数量（1860 分）</title>
     <link>https://huozhixue.github.io/leetcode/1996/</link>
     <pubDate>Sun, 05 Sep 2021 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1996/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/the-number-of-weak-characters-in-the-game/" target="_blank" rel="noopener noreffer">力扣第 257 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你正在参加一个多角色游戏，每个角色都有两个主要属性：<strong>攻击</strong> 和 <strong>防御</strong> 。给你一个二维整数数组 <code>properties</code> ，其中 <code>properties[i] = [attack<sub>i</sub>, defense<sub>i</sub>]</code> 表示游戏中第 <code>i</code> 个角色的属性。</p>]]></description>
+    <description><![CDATA[力扣第 257 场周赛第 2 题 题目 你正在参加一个多角色游戏，每个角色都有两个主要属性：攻击 和 防御 。给你一个二维整数数组 properties ，其中 properties[i] = [attacki, defensei] 表示游戏中第 i 个]]></description>
 </item><item>
     <title>1673：找出最具竞争力的子序列（1802 分）</title>
     <link>https://huozhixue.github.io/leetcode/1673/</link>
     <pubDate>Sun, 29 Nov 2020 10:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1673/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-the-most-competitive-subsequence/" target="_blank" rel="noopener noreffer">力扣第 217 场周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个正整数 <code>k</code> ，返回长度为 <code>k</code> 且最具 <strong>竞争力</strong> 的<em> </em><code>nums</code> 子序列。</p>
-<p>数组的子序列是从数组中删除一些元素（可能不删除元素）得到的序列。</p>]]></description>
+    <description><![CDATA[力扣第 217 场周赛第 2 题 题目 给你一个整数数组 nums 和一个正整数 k ，返回长度为 k 且最具 竞争力 的 nums 子序列。 数组的子序列是从数组中删除一些元素（可能不删除]]></description>
 </item><item>
     <title>1614：括号的最大嵌套深度（1322 分）</title>
     <link>https://huozhixue.github.io/leetcode/1614/</link>
     <pubDate>Sun, 11 Oct 2020 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1614/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-nesting-depth-of-the-parentheses/" target="_blank" rel="noopener noreffer">力扣第 210 场周赛第 1 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定 <strong>有效括号字符串</strong> <code>s</code>，返回 <code>s</code> 的 <strong>嵌套深度</strong>。嵌套深度是嵌套括号的 <strong>最大</strong> 数量。</p>
-<p><strong class="example">示例 1：</strong></p>
-<div class="example-block">
-<p><strong>输入：</strong>s = "(1+(2*3)+((<strong>8</strong>)/4))+1"</p>]]></description>
+    <description><![CDATA[力扣第 210 场周赛第 1 题 题目 给定 有效括号字符串 s，返回 s 的 嵌套深度。嵌套深度是嵌套括号的 最大 数量。 示例 1： 输入：s = "(1+(2*3)+((8)/4))+1" 输出：3 解释：数字 8 在嵌套]]></description>
 </item><item>
     <title>1598：文件夹操作日志搜集器（1297 分）</title>
     <link>https://huozhixue.github.io/leetcode/1598/</link>
     <pubDate>Sun, 27 Sep 2020 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1598/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/crawler-log-folder/" target="_blank" rel="noopener noreffer">力扣第 208 场周赛第 1 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>每当用户执行变更文件夹操作时，LeetCode 文件系统都会保存一条日志记录。</p>
-<p>下面给出对变更操作的说明：</p>]]></description>
+    <description><![CDATA[力扣第 208 场周赛第 1 题 题目 每当用户执行变更文件夹操作时，LeetCode 文件系统都会保存一条日志记录。 下面给出对变更操作的说明： &quot;../&quot; ：移动到当前]]></description>
 </item><item>
     <title>1544：整理字符串（1344 分）</title>
     <link>https://huozhixue.github.io/leetcode/1544/</link>
     <pubDate>Sun, 09 Aug 2020 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1544/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/make-the-string-great/" target="_blank" rel="noopener noreffer">力扣第 201 场周赛第 1 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个由大小写英文字母组成的字符串 <code>s</code> 。</p>
-<p>一个整理好的字符串中，两个相邻字符 <code>s[i]</code> 和 <code>s[i+1]</code>，其中 <code>0<= i <= s.length-2</code> ，要满足如下条件:</p>]]></description>
+    <description><![CDATA[力扣第 201 场周赛第 1 题 题目 给你一个由大小写英文字母组成的字符串 s 。 一个整理好的字符串中，两个相邻字符 s[i] 和 s[i+1]，其中 0<= i <= s.length-2 ，要满足如下]]></description>
 </item><item>
     <title>1541：平衡括号字符串的最少插入次数（1759 分）</title>
     <link>https://huozhixue.github.io/leetcode/1541/</link>
     <pubDate>Sat, 08 Aug 2020 22:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1541/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-insertions-to-balance-a-parentheses-string/" target="_blank" rel="noopener noreffer">力扣第 32 场双周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个括号字符串 <code>s</code> ，它只包含字符 <code>&#39;(&#39;</code> 和 <code>&#39;)&#39;</code> 。一个括号字符串被称为平衡的当它满足：</p>
-<ul>
-<li>任何左括号 <code>&#39;(&#39;</code> 必须对应两个连续的右括号 <code>&#39;))&#39;</code> 。</li>
-<li>左括号 <code>&#39;(&#39;</code> 必须在对应的连续两个右括号 <code>&#39;))&#39;</code> 之前。</li>
-</ul>
-<p>比方说 <code>&quot;())&quot;</code>， <code>&quot;())(())))&quot;</code> 和 <code>&quot;(())())))&quot;</code> 都是平衡的， <code>&quot;)()&quot;</code>， <code>&quot;()))&quot;</code> 和 <code>&quot;(()))&quot;</code> 都是不平衡的。</p>]]></description>
+    <description><![CDATA[力扣第 32 场双周赛第 3 题 题目 给你一个括号字符串 s ，它只包含字符 &#39;(&#39; 和 &#39;)&#39; 。一个括号字符串被称为平衡的当它满足： 任何左括号 &#39;(&#39; 必须对应两个连续的右括号]]></description>
 </item><item>
     <title>1472：设计浏览器历史记录（1453 分）</title>
     <link>https://huozhixue.github.io/leetcode/1472/</link>
     <pubDate>Sun, 07 Jun 2020 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1472/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/design-browser-history/" target="_blank" rel="noopener noreffer">力扣第 192 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>你有一个只支持单个标签页的 <strong>浏览器</strong> ，最开始你浏览的网页是 <code>homepage</code> ，你可以访问其他的网站 <code>url</code> ，也可以在浏览历史中后退 <code>steps</code> 步或前进 <code>steps</code> 步。</p>]]></description>
+    <description><![CDATA[力扣第 192 场周赛第 3 题 题目 你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps]]></description>
 </item></channel>
 </rss>

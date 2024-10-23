@@ -28,7 +28,7 @@
 
 |     | 系列名   | 首播时间       | 话数/时长 | 观看地址                                                                         |
 | :-- | :---- | :--------- | :---- | :--------------------------------------------------------------------------- |
-| 1   |[飞天小女警](https://bgm.tv/subject/30627)| 1998-11-18 | 13    | [sflix](https://sflix.to/watch-tv/free-the-powerpuff-girls-hd-38710.8009329) |
+| 1   |[飞天小女警](https://bgm.tv/subject/30627)| 1998-11-18 | 13    | [bilibili](https://www.bilibili.com/video/BV1N8411g7ts),[sflix](https://sflix.to/watch-tv/free-the-powerpuff-girls-hd-38710.8009329) |
 
 
 

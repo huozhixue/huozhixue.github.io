@@ -9,119 +9,62 @@
     <pubDate>Sun, 30 Jan 2022 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2156/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/find-substring-with-given-hash-value/" target="_blank" rel="noopener noreffer">力扣第 278 场周赛第 3 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定整数 <code>p</code> 和 <code>m</code> ，一个长度为 <code>k</code> 且下标从 <strong>0</strong> 开始的字符串 <code>s</code> 的哈希值按照如下函数计算：</p>
-<ul>
-<li><code>hash(s, p, m) = (val(s[0]) * p<sup>0</sup> + val(s[1]) * p<sup>1</sup> + ... + val(s[k-1]) * p<sup>k-1</sup>) mod m</code>.</li>
-</ul>
-<p>其中 <code>val(s[i])</code> 表示 <code>s[i]</code> 在字母表中的下标，从 <code>val('a') = 1</code> 到 <code>val('z') = 26</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 278 场周赛第 3 题 题目 给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算： hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + ... + val(s[k-1]) * pk-1) mod m.]]></description>
 </item><item>
     <title>1923：最长公共子路径（2661 分）</title>
     <link>https://huozhixue.github.io/leetcode/1923/</link>
     <pubDate>Sun, 04 Jul 2021 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1923/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-common-subpath/" target="_blank" rel="noopener noreffer">力扣第 248 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>一个国家由 <code>n</code> 个编号为 <code>0</code> 到 <code>n - 1</code> 的城市组成。在这个国家里，<strong>每两个</strong> 城市之间都有一条道路连接。</p>
-<p>总共有 <code>m</code> 个编号为 <code>0</code> 到 <code>m - 1</code> 的朋友想在这个国家旅游。他们每一个人的路径都会包含一些城市。每条路径都由一个整数数组表示，每个整数数组表示一个朋友按顺序访问过的城市序列。同一个城市在一条路径中可能 <strong>重复</strong> 出现，但同一个城市在一条路径中不会连续出现。</p>]]></description>
+    <description><![CDATA[力扣第 248 场周赛第 4 题 题目 一个国家由 n 个编号为 0 到 n - 1 的城市组成。在这个国家里，每两个 城市之间都有一条道路连接。 总共有 m 个编号为 0 到 m - 1 的]]></description>
 </item><item>
     <title>1461：检查一个字符串是否包含所有长度为 K 的二进制子串（1504 分）</title>
     <link>https://huozhixue.github.io/leetcode/1461/</link>
     <pubDate>Sat, 30 May 2020 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1461/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/check-if-a-string-contains-all-binary-codes-of-size-k/" target="_blank" rel="noopener noreffer">力扣第 27 场双周赛第 2 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个二进制字符串 <code>s</code> 和一个整数 <code>k</code> 。如果所有长度为 <code>k</code> 的二进制字符串都是 <code>s</code> 的子串，请返回 <code>true</code> ，否则请返回 <code>false</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 27 场双周赛第 2 题 题目 给你一个二进制字符串 s 和一个整数 k 。如果所有长度为 k 的二进制字符串都是 s 的子串，请返回 true ，否则请返回 false 。 示例 1： 输]]></description>
 </item><item>
     <title>1392：最长快乐前缀（1876 分）</title>
     <link>https://huozhixue.github.io/leetcode/1392/</link>
     <pubDate>Sun, 22 Mar 2020 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1392/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-happy-prefix/" target="_blank" rel="noopener noreffer">力扣第 181 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p><strong>「快乐前缀」</strong> 是在原字符串中既是 <strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
-<p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串<meta charset="UTF-8" /> <code>""</code> 。</p>]]></description>
+    <description><![CDATA[力扣第 181 场周赛第 4 题 题目 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。 给你一个字符串 s，请你返回它的 最长快乐]]></description>
 </item><item>
     <title>1316：不同的循环子字符串（1836 分）</title>
     <link>https://huozhixue.github.io/leetcode/1316/</link>
     <pubDate>Sat, 11 Jan 2020 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1316/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/distinct-echo-substrings/" target="_blank" rel="noopener noreffer">力扣第 17 场双周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>text</code> ，请你返回满足下述条件的 <strong>不同</strong> 非空子字符串的数目：</p>
-<ul>
-<li>可以写成某个字符串与其自身相连接的形式（即，可以写为 <code>a + a</code>，其中 <code>a</code> 是某个字符串）。</li>
-</ul>
-<p>例如，<code>abcabc</code> 就是 <code>abc</code> 和它自身连接形成的。</p>]]></description>
+    <description><![CDATA[力扣第 17 场双周赛第 4 题 题目 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目： 可以写成某个字符串与其自身相连接的形式（即，可以写]]></description>
 </item><item>
     <title>1044：最长重复子串（2428 分）</title>
     <link>https://huozhixue.github.io/leetcode/1044/</link>
     <pubDate>Sun, 12 May 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1044/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/longest-duplicate-substring/" target="_blank" rel="noopener noreffer">力扣第 136 场周赛第 4 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> ，考虑其所有 <em>重复子串</em> ：即 <code>s</code> 的（连续）子串，在 <code>s</code> 中出现 2 次或更多次。这些出现之间可能存在重叠。</p>]]></description>
+    <description><![CDATA[力扣第 136 场周赛第 4 题 题目 给你一个字符串 s ，考虑其所有 重复子串 ：即 s 的（连续）子串，在 s 中出现 2 次或更多次。这些出现之间可能存在重叠。 返回 任意]]></description>
 </item><item>
     <title>0718：最长重复子数组（★）</title>
     <link>https://huozhixue.github.io/leetcode/0718/</link>
     <pubDate>Sun, 18 Dec 2016 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0718/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/" target="_blank" rel="noopener noreffer">力扣第 718 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给两个整数数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>两个数组中 <strong>公共的</strong> 、长度最长的子数组的长度 </em>。</p>
-<p><strong>示例 1：</strong></p>
-<pre>
-<strong>输入：</strong>nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
-<strong>输出：</strong>3
-<strong>解释：</strong>长度最长的公共子数组是 [3,2,1] 。
-</pre>
-<p><strong>示例 2：</strong></p>]]></description>
+    <description><![CDATA[力扣第 718 题 题目 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。 示例 1： 输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7] 输出：3 解释：长度最长的]]></description>
 </item><item>
     <title>0214：最短回文串（★★）</title>
     <link>https://huozhixue.github.io/leetcode/0214/</link>
     <pubDate>Sun, 02 Aug 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0214/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/shortest-palindrome/" target="_blank" rel="noopener noreffer">力扣第 214 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p>给定一个字符串 <em><strong>s</strong></em>，你可以通过在字符串前面添加字符将其转换为<span data-keyword="palindrome-string">回文串</span>。找到并返回可以用这种方式转换的最短回文串。</p>]]></description>
+    <description><![CDATA[力扣第 214 题 题目 给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可以用这种方式转换的最短回文串。 示例 1： 输入：s =]]></description>
 </item><item>
     <title>0187：重复的DNA序列（★）</title>
     <link>https://huozhixue.github.io/leetcode/0187/</link>
     <pubDate>Mon, 06 Jul 2015 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0187/</guid>
-    <description><![CDATA[<blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/repeated-dna-sequences/" target="_blank" rel="noopener noreffer">力扣第 187 题</a></strong></u></p>
-</blockquote>
-<h2 id="题目">题目</h2>
-<p><strong>DNA序列</strong> 由一系列核苷酸组成，缩写为<meta charset="UTF-8" /> <code>'A'</code>, <code>'C'</code>, <code>'G'</code> 和<meta charset="UTF-8" /> <code>'T'</code>.。</p>
-<ul>
-<li>例如，<meta charset="UTF-8" /><code>"ACGAATTCCG"</code> 是一个 <strong>DNA序列</strong> 。</li>
-</ul>
-<p>在研究 <strong>DNA</strong> 时，识别 DNA 中的重复序列非常有用。</p>]]></description>
+    <description><![CDATA[力扣第 187 题 题目 DNA序列 由一系列核苷酸组成，缩写为 'A', 'C', 'G' 和 'T'.。 例如，"ACGAATTCCG" 是一个 DNA序列 。 在研究 DNA 时，识别 DNA 中的重]]></description>
 </item></channel>
 </rss>
