@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algorithm-segment_tree\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  154 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  281 ,
         "url": "https:\/\/huozhixue.github.io\/algorithm-segment_tree\/","datePublished": "2021-07-21T00:00:00+08:00","dateModified": "2021-07-21T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">力扣总结 数据结构进阶（六）：线段树</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-21">2021-07-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 154 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-21">2021-07-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 281 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algorithm-segment_tree/" class="leancloud_visitors" data-flag-title="力扣总结 数据结构进阶（六）：线段树">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -121,9 +121,10 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-基础">1 基础</a></li>
-    <li><a href="#2-进阶">2 进阶</a></li>
-    <li><a href="#3-挑战">3 挑战</a></li>
+    <li><a href="#1-单点更新区间查询">1 单点更新区间查询</a></li>
+    <li><a href="#2-区间更新区间查询">2 区间更新区间查询</a></li>
+    <li><a href="#3--区间多个信息">3  区间多个信息</a></li>
+    <li><a href="#4-树上二分">4 树上二分</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。</p>
@@ -135,10 +136,31 @@
 最小值、最大值、总和、最大公约数、最小公倍数等。</p>
 </blockquote>
 <p><a href="//zhuanlan.zhihu.com/p/106118909" target="_blank" rel="noopener noreffer"><i class="far fa-hand-point-right fa-fw"></i>详解</a></p>
-<h2 id="1-基础">1 基础</h2>
-<p><a href="/leetcode/0307" title="0307" rel="noopener noreferrer">0307</a> 区域和检索 - 数组可修改</p>
-<h2 id="2-进阶">2 进阶</h2>
-<h2 id="3-挑战">3 挑战</h2>
+<h2 id="1-单点更新区间查询">1 单点更新区间查询</h2>
+<ul>
+<li><a href="/leetcode/0307" title="0307" rel="noopener noreferrer">0307</a> <a href="https://leetcode.cn/problems/range-sum-query-mutable/" target="_blank" rel="noopener noreffer">区域和检索 - 数组可修改</a></li>
+<li><a href="/leetcode/2407" title="2407" rel="noopener noreferrer">2407</a> <a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/" target="_blank" rel="noopener noreffer">最长递增子序列 II</a></li>
+<li><a href="/leetcode/2736" title="2736" rel="noopener noreferrer">2736</a> <a href="https://leetcode.cn/problems/maximum-sum-queries/" target="_blank" rel="noopener noreffer">最大和查询</a></li>
+</ul>
+<h2 id="2-区间更新区间查询">2 区间更新区间查询</h2>
+<ul>
+<li><a href="/leetcode/0699" title="0699" rel="noopener noreferrer">0699</a> <a href="https://leetcode.cn/problems/falling-squares/" target="_blank" rel="noopener noreffer">掉落的方块</a></li>
+<li><a href="/leetcode/0715" title="0715" rel="noopener noreferrer">0715</a> <a href="https://leetcode.cn/problems/range-module/" target="_blank" rel="noopener noreffer">Range 模块</a></li>
+<li><a href="/leetcode/0732" title="0732" rel="noopener noreferrer">0732</a> <a href="https://leetcode.cn/problems/my-calendar-iii/" target="_blank" rel="noopener noreffer">我的日程安排表 III</a></li>
+<li><a href="/leetcode/2276" title="2276" rel="noopener noreferrer">2276</a> <a href="https://leetcode.cn/problems/count-integers-in-intervals/" target="_blank" rel="noopener noreffer">统计区间中的整数数目</a></li>
+<li><a href="/leetcode/2569" title="2569" rel="noopener noreferrer">2569</a> <a href="https://leetcode.cn/problems/handling-sum-queries-after-update/" target="_blank" rel="noopener noreffer">更新数组后处理求和查询</a></li>
+<li><a href="/leetcode/lcp05" title="lcp05" rel="noopener noreferrer">lcp05</a> <a href="https://leetcode.cn/problems/coin-bonus/" target="_blank" rel="noopener noreffer">发 LeetCoin</a></li>
+</ul>
+<h2 id="3--区间多个信息">3  区间多个信息</h2>
+<ul>
+<li><a href="/leetcode/1157" title="1157" rel="noopener noreferrer">1157</a> <a href="https://leetcode.cn/problems/online-majority-element-in-subarray/" target="_blank" rel="noopener noreffer">子数组中占绝大多数的元素</a></li>
+<li><a href="/leetcode/1622" title="1622" rel="noopener noreferrer">1622</a> <a href="https://leetcode.cn/problems/fancy-sequence/" target="_blank" rel="noopener noreffer">奇妙序列</a></li>
+<li><a href="/leetcode/2213" title="2213" rel="noopener noreferrer">2213</a> <a href="https://leetcode.cn/problems/longest-substring-of-one-repeating-character/" target="_blank" rel="noopener noreffer">由单个字符重复的最长子字符串</a></li>
+</ul>
+<h2 id="4-树上二分">4 树上二分</h2>
+<ul>
+<li><a href="/leetcode/2286" title="2286" rel="noopener noreferrer">2286</a> <a href="https://leetcode.cn/problems/booking-concert-tickets-in-groups/" target="_blank" rel="noopener noreffer">以组为单位订音乐会的门票</a></li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
