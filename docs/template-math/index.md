@@ -42,10 +42,15 @@ for i in range(1,ma+1):
 
 ```python
 def mpow(mat, n):
-	res = mat
-	for bit in bin(n)[3:]:
-		res = res*res*(mat if bit=='1' else 1)%mod
-	return res
+    res = mat
+    for i in range(n.bit_length()-2,-1,-1):
+        res = res*res%mod
+        if n&1<<i:
+            res = res*mat%mod
+    return res
+f = np.asmatrix([[],[]])
+A = np.asmatrix([[],[]])
+f = mpow(A,n)*f
 ```
 
 ## 4 爬山法

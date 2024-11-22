@@ -11,7 +11,7 @@ def kmp(s):
 			i = nxt[i]
 		i += 1
 		nxt.append(i)
-	return nxt      # nxt[i]:i-1结尾的最大真前缀长度
+	return nxt[1:]      # nxt[i]:i结尾的最大真前缀长度
 ```
 
 ## 2 manacher
