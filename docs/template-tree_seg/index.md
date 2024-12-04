@@ -70,7 +70,7 @@ def update(a,b,x):
 	for i in range(L-1,0,-1): 
 		down(a>>i)
 		down(b>>i)
-	while a^b^1:
+	while b-a>1:
 		if not a&1: do(a^1,x)
 		if b&1: do(b^1,x)
 		a,b = a>>1,b>>1
@@ -85,7 +85,7 @@ def query(a,b):
 	for i in range(L-1,0,-1): 
 		down(a>>i)
 		down(b>>i)
-	while a^b^1:
+	while b-a>1:
 		if not a&1: res = max(res,t[a^1])
 		if b&1: res=max(res,t[b^1])
 		a,b = a>>1,b>>1
