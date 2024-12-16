@@ -6,6 +6,7 @@
 - [字符串匹配](/template-string_match)：kmp、mancher、z函数、滚动哈希
 - [字典树](/template-string_trie)
 - [后缀数组](/template-string_sa)
+- [AC自动机](/template-string_ac)
 ## 2 位运算
 
 - [位运算](/template-bit)
