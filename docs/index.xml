@@ -95,7 +95,7 @@
     <pubDate>Wed, 01 Mar 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-math/</guid>
-    <description><![CDATA[1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ma = def get_primes(M): f = [1]*M for i in range(2,isqrt(M)+1): if f[i]: f[i*i:M:i] = [0] * ((M-1-i*i)//i+1) return [i for i in range(2,M) if f[i]] primes = get_primes(isqrt(ma)+1) @cache def factor(x): ct = Counter() for p in primes: while x%p==0: x//=p ct[p]]]></description>
+    <description><![CDATA[1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ma = def get_primes(M): f = [1]*M for i in range(2,isqrt(M)+1): if f[i]: f[i*i:M:i] = [0] * ((M-1-i*i)//i+1) return [i for i in range(2,M) if f[i]] primes = get_primes(isqrt(ma)+1) @cache def factor(x): ct = defaultdict(int) for p in primes: while x%p==0: x//=p ct[p]]]></description>
 </item><item>
     <title>贪心模板</title>
     <link>https://huozhixue.github.io/template-greedy/</link>

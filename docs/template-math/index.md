@@ -18,7 +18,7 @@ primes = get_primes(isqrt(ma)+1)
 
 @cache
 def factor(x):
-    ct = Counter()
+    ct = defaultdict(int)
     for p in primes:
         while x%p==0:
             x//=p
@@ -41,16 +41,20 @@ for i in range(1,ma+1):
 ## 3 矩阵幂
 
 ```python
+mod = 10**9+7
+def mul(A,B):
+    return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
 def mpow(mat, n):
     res = mat
     for i in range(n.bit_length()-2,-1,-1):
-        res = res*res%mod
-        if n&1<<i:
-            res = res*mat%mod
+        res = mul(res,res)
+        if n>>i&1:
+            res = mul(res,mat)
     return res
-f = np.asmatrix([[],[]])
-A = np.asmatrix([[],[]])
-f = mpow(A,n)*f
+    
+f = [[],[]]
+A = [[],[]]
+f = mul(mpow(A,n),f)
 ```
 
 ## 4 爬山法
