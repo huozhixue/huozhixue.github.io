@@ -21,6 +21,7 @@
 - [贪心](/template-greedy)
 ## 7 数学
 - [数学](/template-math)
+- [几何](/template-geom)
 ## 8 树
 
 - [并查集](/template-tree_dsu) 
