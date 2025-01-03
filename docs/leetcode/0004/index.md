@@ -60,25 +60,26 @@
 	便定位了中位数
 - 注意到 nums1 和 nums2 都递增，那么只需找到第一个 i 满足
 	- nums2[(m+n)//2-i-1]<=nums1[i]
-- 即可用二分查找
+- 这就是典型的二分查找了
 
 再考虑边界情况：
-- 为了方便，当 m>n 时，交换 nums1、nums2，不需计算二分查找 i 的边界
+- 为了方便，当 m>n 时，交换 nums1、nums2，不需计算 i 的边界
 - m+n 为偶数时，要找到两个中位数取平均
-- 注意 i 和 j 在数组最左/右的边界情况
+- 为了方便处理 i 或 j 在最左/右的情况，在 nums1/nums2 前后添加哨兵
 ## 解答
 
 ```python
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        m, n = len(nums1),len(nums2)
-        if m>n:
-            return self.findMedianSortedArrays(nums2,nums1)
+        A,B = [-inf]+nums1+[inf],[-inf]+nums2+[inf]
+        if len(A)>len(B):
+            A,B = B,A
+        m,n = len(A),len(B)
         k = (m+n)//2
-        i = bisect_left(range(m),1,key=lambda i:nums1[i]>=nums2[k-i-1])
-        a = max(nums1[i-1] if i else -inf,nums2[k-i-1] if k-i else -inf)
-        b = min(nums1[i] if i<m else inf, nums2[k-i] if k-i<n else inf)
+        i = bisect_left(range(m),True,key=lambda i:A[i]>=B[k-i-1])
+        a = max(A[i-1],B[k-i-1])
+        b = min(A[i],B[k-i])
         return b if (m+n)%2 else (a+b)/2
 ```
-时间 $O(log \ min(M,N))$，48 ms
+时间 $O(log \ min(M,N))$，0 ms
 

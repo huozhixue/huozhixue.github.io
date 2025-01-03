@@ -101,8 +101,8 @@ class Solution:
             p = p.next
             lists[i] = lists[i].next
             if lists[i] :
-                heappush(pq,(lists[i] .val,i))
+                heappush(pq,(lists[i].val,i))
         return dum.next
 ```
-55 ms
+55 ms，时间 O(S*logN)
 

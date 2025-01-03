@@ -66,33 +66,12 @@
 
 ## 分析
 
-### #1
 
 - 假设 s2 是 s1 的扰乱字符串，且对应的 s1 的分割点在位置 i，那么有两种情况：
 	- 分割的两部分没有交换：s2[:i] 是 s1[:i] 的扰乱字符串，s2[i:] 是 s1[i:] 的扰乱字符串
 	- 分割开的两部分交换了：s2[-i:] 是 s1[:i] 的扰乱字符串，s2[:-i] 是 s1[i:] 的扰乱字符串
-- 用记忆化递归即可解决
+- 令 dfs(i,j,n) 为 s1[i:i+n] 和 s2[j:j+n] 的匹配情况，用记忆化递归即可解决
 
-```python
-class Solution:
-    def isScramble(self, s1: str, s2: str) -> bool:
-        @cache
-        def dfs(s1,s2):
-            if len(s1)==1:
-                return s1==s2
-            for i in range(1,len(s1)):
-                if dfs(s1[:i],s2[:i]) and dfs(s1[i:],s2[i:]):
-                    return True
-                if dfs(s1[:i],s2[-i:]) and dfs(s1[i:],s2[:-i]):
-                    return True
-            return False
-        return dfs(s1,s2)
-```
-150 ms
-
-### #2
-
-为了省去字符串切片，可以定义 dfs(i,j,n) 为 s1[i:i+n] 和 s2[j:j+n] 的匹配情况。
 ## 解答
 
 ```python

@@ -79,18 +79,18 @@
 ```python
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        res = ' '*(len(s)+1)
-        ct0,ct = Counter(t),Counter()
-        i,valid = 0,0
+        ct,ct2 = Counter(t),defaultdict(int)
+        l,r = 0,inf
+        valid,i = 0,0
         for j,c in enumerate(s):
-            ct[c]+=1
-            if ct[c]==ct0[c]:
-                valid += 1
-            if valid==len(ct0):
-                while ct[s[i]]>ct0[s[i]]:
-                    ct[s[i]]-=1
+            ct2[c] += 1
+            valid += ct2[c]==ct[c]
+            if valid==len(ct):
+                while ct2[s[i]]>ct[s[i]]:
+                    ct2[s[i]] -= 1
                     i += 1
-                res = s[i:j+1] if j-i+1<len(res) else res
-        return res.strip()
+                if j-i<r-l:
+                    l,r = i,j
+        return s[l:r+1] if r<inf else ''
 ```
-120 ms
+67 ms

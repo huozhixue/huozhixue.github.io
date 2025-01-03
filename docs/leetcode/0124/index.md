@@ -57,17 +57,18 @@
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         def dfs(u):
+            nonlocal res
             if not u:
                 return 0
             l = max(0,dfs(u.left))
             r = max(0,dfs(u.right))
-            self.res = max(self.res,l+r+u.val)
+            res = max(res,l+r+u.val)
             return max(l,r)+u.val
-        self.res = -inf
+        res = -inf
         dfs(root)
-        return self.res
+        return res
 ```
-61 ms
+15 ms
 
 
 

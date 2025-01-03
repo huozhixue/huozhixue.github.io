@@ -59,14 +59,14 @@ class Solution:
     def numDistinct(self, s: str, t: str) -> int:
         mod = 10**9+7
         m,n = len(s),len(t)
-        dp = [[1]+[0]*n for _ in range(m+1)]
+        f = [[1]+[0]*n for _ in range(m+1)]
         for i in range(1,m+1):
             for j in range(n+1):
-                dp[i][j] = dp[i-1][j]
+                f[i][j] = f[i-1][j]
                 if j and s[i-1]==t[j-1]:
-                    dp[i][j] += dp[i-1][j-1]
-                    dp[i][j] %= mod
-        return dp[-1][-1]
+                    f[i][j] += f[i-1][j-1]
+                    f[i][j] %= mod
+        return f[-1][-1]
 ```
 401 ms
 
@@ -81,12 +81,12 @@ class Solution:
     def numDistinct(self, s: str, t: str) -> int:
         mod = 10**9+7
         m,n = len(s),len(t)
-        dp = [1]+[0]*n 
-        for i in range(1,m+1):
+        f = [1]+[0]*n 
+        for c in s:
             for j in range(n,0,-1):
-                if s[i-1]==t[j-1]:
-                    dp[j] += dp[j-1]
-                    dp[j] %= mod
-        return dp[-1]
+                if t[j-1]==c:
+                    f[j] += f[j-1]
+                    f[j] %= mod
+        return f[-1]
 ```
-263 ms
+307 ms

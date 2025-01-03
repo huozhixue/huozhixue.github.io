@@ -74,23 +74,21 @@ class Solution:
 ### *附加
 
 还可以用 dp 解决：
-- 令 dp[i] 代表下标 i 结尾的最长有效长度，
-	- 假如 i 是右括号，对应的左括号下标为 j，dp[i]=j-i+1+dp[j-1]
-	- 其它情况下，dp[i]=0
-
-
+- 令 f[i] 代表下标 i 结尾的最长有效长度，
+	- 假如 i 是右括号，对应的左括号下标为 j，f[i]=j-i+1+f[j-1]
+	- 其它情况下，f[i]=0
 
 ```python
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        dp = [0]*len(s)
+        f = [0]*len(s)
         sk = []
         for i,c in enumerate(s):
             if c=='(':
                 sk.append(i)
             elif sk:
                 j = sk.pop()
-                dp[i] = i-j+1+(dp[j-1] if j else 0)
-        return max(dp,default=0)
+                f[i] = i-j+1+(f[j-1] if j else 0)
+        return max(f,default=0)
 ```
 48 ms

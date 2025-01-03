@@ -65,21 +65,26 @@
 		- ' * ' 代表多个，p[-2] 匹配 s[-1] 且 p 匹配 s[:-1]
 	- 否则， p 匹配 s 必然是：
 		- p[-1] 匹配 s[-1] 且 p[:-1] 匹配 s[:-1]
-	- 再考虑 p 是空串的边界即可
+- 可以用滚动数组优化空间
 
 ## 解答
 
 ```python
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-        m,n = len(p),len(s)
-        dp = [[1]+[0]*n for _ in range(m+1)]
-        for i in range(1,m+1):
-            for j in range(n+1):
-                if p[i-1]=='*':
-                    dp[i][j] = dp[i-2][j] or (j and p[i-2] in s[j-1]+'.' and dp[i][j-1])
+        m, n = len(s), len(p)
+        f = [1]+[0]*n
+        for j in range(1,n+1):
+            if p[j-1]=='*':
+                f[j] = f[j-2]
+        for c in s:
+            g = [0]*(n+1)
+            for j in range(1,n+1):
+                if p[j-1]=='*':
+                    g[j] = g[j-2] or (f[j] and p[j-2] in '.'+c)
                 else:
-                    dp[i][j] = j and p[i-1] in s[j-1]+'.' and dp[i-1][j-1]
-        return bool(dp[-1][-1])
+                    g[j] = f[j-1] and p[j-1] in '.'+c
+            f = g
+        return bool(f[-1])
 ```
-50 ms
+3 ms，时间 O(N*M)
