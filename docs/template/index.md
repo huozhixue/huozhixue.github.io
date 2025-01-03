@@ -34,6 +34,7 @@
 
 - [最短路](/template-graph_shortest)
 - [拓扑排序](/template-graph_topo)
+- [连通性](/template-graph_tarjan)：割点、桥、强连通分量、双连通分量
 - [图匹配](/template-graph_match)
 - [网络流](/template-graph_flow)
 

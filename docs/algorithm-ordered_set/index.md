@@ -19,6 +19,8 @@
 > 从表格可知，AVL/红黑树 是一个很平衡的方案，除非要求某项时间 O(1)，否则都是可行的。
 
 > python 中可以直接调用 sortedcontainers.SortedList 来实现 AVL/红黑树。
+> SortedList 可以指定排序的 key
+> 有时还可以用 SortedDict，保存有序的键值
 
 ## 1 基础
 
