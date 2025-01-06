@@ -58,7 +58,7 @@ class Solution:
             if y==0:
                 return (1,0)
             if y<0:
-                return cal(-x,-y)
+                x,y = -x,-y
             a = gcd(x,y)
             return (x//a,y//a)
         res = 0
@@ -68,5 +68,5 @@ class Solution:
             res = max(res,max(ct.values(),default=0)+same)
         return res
 ```
-212 ms
+51 ms
 
