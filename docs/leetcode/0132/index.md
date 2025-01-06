@@ -70,9 +70,9 @@ class Solution:
         for i in range(n-1,-1,-1):
             for j in range(i+1,n):
                 f[i][j] = s[i]==s[j] and f[i+1][j-1]
-        dp = [-1]+[0]*n
+        g = [-1]+[0]*n
         for j in range(1,n+1):
-            dp[j] = 1+min(dp[i] for i in range(j) if f[i][j-1])
-        return dp[-1]
+            g[j] = 1+min(g[i] for i in range(j) if f[i][j-1])
+        return g[-1]
 ```
-714 ms
+738 ms

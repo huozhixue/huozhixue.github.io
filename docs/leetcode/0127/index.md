@@ -63,25 +63,28 @@
 ## 解答
 
 ```python
+@cache
+def gen(w):
+    return [w[:i]+'*'+w[i+1:] for i in range(len(w))]
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         d = defaultdict(list)
         for w in wordList:
-            for i in range(len(w)):
-                d[w[:i]+'*'+w[i+1:]].append(w)
-        Q,vis = deque([(beginWord,1)]), {beginWord}
+            for key in gen(w):
+                d[key].append(w)
+        Q, vis = deque([(beginWord,1)]), {beginWord}
         while Q:
             u,w = Q.popleft()
             if u==endWord:
                 return w
-            for i in range(len(u)):
-                for v in d[u[:i]+'*'+u[i+1:]]:
+            for key in gen(u):
+                for v in d[key]:
                     if v not in vis:
-                        Q.append((v,w+1))
                         vis.add(v)
+                        Q.append((v,w+1))
         return 0
 ```
-119 ms
+83 ms
 
 
 

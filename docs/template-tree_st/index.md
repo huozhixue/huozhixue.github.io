@@ -5,12 +5,12 @@
 ```python
 class ST:
     def __init__(self,A,func=max):
-        dp = A[:]
-        self.st = st = [dp]
-        j, N = 1, len(dp)
+        f = A[:]
+        self.st = st = [f]
+        j, N = 1, len(f)
         while 2*j<=N:
-            dp = [func(dp[i],dp[i+j]) for i in range(N-2*j+1)]
-            st.append(dp)
+            f = [func(f[i],f[i+j]) for i in range(N-2*j+1)]
+            st.append(f)
             j <<= 1
         self.func = func
             

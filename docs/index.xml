@@ -81,7 +81,7 @@
     <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-tree_st/</guid>
-    <description><![CDATA[ST 表（静态区间最值） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): dp = A[:] self.st = st = [dp] j, N = 1, len(dp) while 2*j&lt;=N: dp = [func(dp[i],dp[i+j]) for i in range(N-2*j+1)] st.append(dp) j &lt;&lt;= 1 self.func = func def query(self,l,r): j = (r-l+1).bit_length()-1 return self.func(self.st[j][l],self.st[j][r-(1&lt;&lt;j)+1])]]></description>
+    <description><![CDATA[ST 表（静态区间最值） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): f = A[:] self.st = st = [f] j, N = 1, len(f) while 2*j&lt;=N: f = [func(f[i],f[i+j]) for i in range(N-2*j+1)] st.append(f) j &lt;&lt;= 1 self.func = func def query(self,l,r): j = (r-l+1).bit_length()-1 return self.func(self.st[j][l],self.st[j][r-(1&lt;&lt;j)+1])]]></description>
 </item><item>
     <title>树模板：最近公共祖先</title>
     <link>https://huozhixue.github.io/template-tree_lca/</link>
