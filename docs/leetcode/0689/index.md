@@ -44,6 +44,7 @@
 
 ## 分析
 
+### #1
 令 A[i] 代表 sum(nums[i:i+k])，问题转为求满足 x+k<=y<=z-k 的最大的 A[x]+A[y]+A[z]。
 
 那么遍历 y，求 max(A[:y-k+1])+y+max(A[y+k:]) 即可。
@@ -52,7 +53,7 @@
 
 因为要返回下标位置，所以修改下，令 left 和 right 返回最大值对应的最小下标即可。
 
-## 解答
+
 
 ```python
 def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
@@ -69,3 +70,31 @@ def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
 ```
 80 ms
 
+### #2
+
+- 还有种更通用的能处理 a 个无重叠子数组的最大和的方法
+- 令 f[i][j] 代表 A[:j] 的 i 个无重叠子数组的最大和及其对应下标
+	- 若不选 A[j-1] ，转为 f[i][j-1]
+	- 否则，转为 f[i-1][j-k]
+	- 两者比较即可递推
+## 解答
+
+```python
+class Solution:
+    def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
+        p = list(accumulate([0]+nums))
+        A = [p[i+k]-p[i] for i in range(len(p)-k)]
+        n = len(A)
+        f = [(0,[]) for _ in range(n+1)]
+        for i in range(n):
+            f[i+1] = min(f[i],(-A[i],[i]))
+        for _ in range(2):
+            g = f[:]
+            for i in range(k):
+                f[i] = (inf,[])
+            for i in range(k-1,n):
+                s,ids = g[i-k+1]
+                f[i+1] = min(f[i],(s-A[i],ids+[i]))
+        return f[-1][-1]
+```
+115 ms

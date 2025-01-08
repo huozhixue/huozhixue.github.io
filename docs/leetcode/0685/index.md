@@ -47,45 +47,45 @@
 
 ## 分析
 
-显然有根树等价于 所有节点连通，且只有一个节点入度为 0，其它节点入度都为 1。输入的图有两种情况：
-
-	多余的边指向根节点		图中所有节点的入度都为 1 ，形成一个环，而且去掉环中任意一条边都可以
-	多余的边指向其它节点 v	图中只有节点 v 的入度为 2，应该选择一条指向 v 的边去掉使得剩下的所有节点连通
-	
-因此可以先遍历边，统计入度，若有节点 v 的入度为 2，先用并查集判断删除第二条指向 v 的边是否满足条件，不满足就应该删除第一条。
-
-若没有节点 v 的入度为 2，转为 {{< lc "0684" >}} 。
+- 显然有根树等价于所有节点连通，且只有一个节点入度为 0，其它节点入度都为 1
+- 输入的图有两种情况：
+	- 多余的边指向根节点：所有节点的入度都为 1 ，存在一个环，删除环中任意一条边即可
+	- 多余的边指向其它节点 v：只有节点 v 的入度为 2，应选择一条指向 v 的边删除
+- 因此可以先遍历边，统计入度
+	- 若有节点 v 的入度为 2，遍历指向 v 的边，假如去掉该边不影响连通性，即可删除
+	- 若没有节点 v 的入度为 2，转为 {{< lc "0684" >}} 
 
 ## 解答
 
 ```python
-def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
-    def find(x):
-        if f[x] != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
+        def find(x):
+            if f[x] != x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(x, y):
-        f[find(x)] = find(y)
+        def union(x, y):
+            f[find(x)] = find(y)
 
-    def isvalid(u, v):
-        for x, y in edges:
-            if (x, y) != (u, v):
-                union(x - 1, y - 1)
-        return sum(find(i)==i for i in range(n)) == 1
+        def check(u, v):
+            for x, y in edges:
+                if (x, y) != (u, v):
+                    union(x-1,y-1)
+            return len({find(i) for i in range(n)})==1
 
-    n = len(edges)
-    f, d = list(range(n)), {}
-    for u, v in edges:
-        if v in d:
-            return [u, v] if isvalid(u, v) else [d[v], v]
-        d[v] = u
-    for u, v in edges:
-        if find(u - 1) == find(v - 1):
-            return [u, v]
-        union(u - 1, v - 1)
+        n = len(edges)
+        f, d = list(range(n)), {}
+        for u,v in edges:
+            if v in d:
+                return [u,v] if check(u,v) else [d[v],v]
+            d[v] = u
+        for u,v in edges:
+            if find(u-1)==find(v-1):
+                return [u,v]
+            union(u-1,v-1)
 ```
-36 ms
+7 ms
 
 
 
