@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>LCP 40：心算挑战 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="LCP 40：心算挑战" />
-<meta property="og:description" content="力扣第 LCP 40 题 题目 「力扣挑战赛」心算项目的挑战比赛中，要求选手从 N 张卡牌中选出 cnt 张卡牌，若这 cnt 张卡牌数字总和为偶数，则选手成绩「有效」且得分为" />
+        <title>0668：乘法表中第k小的数（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0668：乘法表中第k小的数（★★）" />
+<meta property="og:description" content="力扣第 668 题 题目 几乎每一个人都用 乘法表。但是你能在乘法表中快速找到第 k 小的数字吗？ 乘法表是大小为 m x n 的一个整数矩阵，其中 mat[i][j] == i * j（下标从 1" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/lcp40/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2015-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2015-01-01T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/0668/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2016-10-29T00:00:00+08:00" />
+<meta property="article:modified_time" content="2016-10-29T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="LCP 40：心算挑战"/>
-<meta name="twitter:description" content="力扣第 LCP 40 题 题目 「力扣挑战赛」心算项目的挑战比赛中，要求选手从 N 张卡牌中选出 cnt 张卡牌，若这 cnt 张卡牌数字总和为偶数，则选手成绩「有效」且得分为"/>
+<meta name="twitter:title" content="0668：乘法表中第k小的数（★★）"/>
+<meta name="twitter:description" content="力扣第 668 题 题目 几乎每一个人都用 乘法表。但是你能在乘法表中快速找到第 k 小的数字吗？ 乘法表是大小为 m x n 的一个整数矩阵，其中 mat[i][j] == i * j（下标从 1"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/lcp40/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%9801.01/" /><link rel="next" href="https://huozhixue.github.io/leetcode/3225/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0668/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0666/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0669/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "LCP 40：心算挑战",
+        "headline": "0668：乘法表中第k小的数（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/lcp40\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  390 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/lcp40\/","datePublished": "2015-01-01T00:00:00+08:00","dateModified": "2015-01-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0668\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  350 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/0668\/","datePublished": "2016-10-29T00:00:00+08:00","dateModified": "2016-10-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">LCP 40：心算挑战</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">0668：乘法表中第k小的数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-01-01">2015-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 390 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/lcp40/" class="leancloud_visitors" data-flag-title="LCP 40：心算挑战">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-10-29">2016-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 350 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0668/" class="leancloud_visitors" data-flag-title="0668：乘法表中第k小的数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -127,75 +127,74 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/uOAnQW/" target="_blank" rel="noopener noreffer">力扣第 LCP 40 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/" target="_blank" rel="noopener noreffer">力扣第 668 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>「力扣挑战赛」心算项目的挑战比赛中，要求选手从 <code>N</code> 张卡牌中选出 <code>cnt</code> 张卡牌，若这 <code>cnt</code> 张卡牌数字总和为偶数，则选手成绩「有效」且得分为 <code>cnt</code> 张卡牌数字总和。
-给定数组 <code>cards</code> 和 <code>cnt</code>，其中 <code>cards[i]</code> 表示第 <code>i</code> 张卡牌上的数字。 请帮参赛选手计算最大的有效得分。若不存在获取有效得分的卡牌方案，则返回 0。</p>
+<p>几乎每一个人都用 <a href="https://baike.baidu.com/item/%E4%B9%98%E6%B3%95%E8%A1%A8">乘法表</a>。但是你能在乘法表中快速找到第 <code>k</code> 小的数字吗？</p>
+<p>乘法表是大小为 <code>m x n</code> 的一个整数矩阵，其中 <code>mat[i][j] == i * j</code>（下标从 <strong>1</strong> 开始）。</p>
+<p>给你三个整数 <code>m</code>、<code>n</code> 和 <code>k</code>，请你在大小为 <code>m x n</code> 的乘法表中，找出并返回第 <code>k</code> 小的数字。</p>
+<div class="original__bRMd">
+<div>
 <p><strong>示例 1：</strong></p>
-<blockquote>
-<p>输入：<code>cards = [1,2,8,9], cnt = 3</code></p>
-<p>输出：<code>18</code></p>
-<p>解释：选择数字为 1、8、9 的这三张卡牌，此时可获得最大的有效得分 1+8+9=18。</p>
-</blockquote>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/05/02/multtable1-grid.jpg" style="width: 500px; height: 254px;" />
+<pre>
+<strong>输入：</strong>m = 3, n = 3, k = 5
+<strong>输出：</strong>3
+<strong>解释：</strong>第 5 小的数字是 3 。
+</pre>
 <p><strong>示例 2：</strong></p>
-<blockquote>
-<p>输入：<code>cards = [3,3,1], cnt = 1</code></p>
-<p>输出：<code>0</code></p>
-<p>解释：不存在获取有效得分的卡牌方案。</p>
-</blockquote>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/05/02/multtable2-grid.jpg" style="width: 493px; height: 293px;" />
+<pre>
+<strong>输入：</strong>m = 2, n = 3, k = 6
+<strong>输出：</strong>6
+<strong>解释：</strong>第 6 小的数字是 6 。
+</pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= cnt &lt;= cards.length &lt;= 10^5</code></li>
-<li><code>1 &lt;= cards[i] &lt;= 1000</code></li>
+<li><code>1 &lt;= m, n &lt;= 3 * 10<sup>4</sup></code></li>
+<li><code>1 &lt;= k &lt;= m * n</code></li>
+</ul>
+</div>
+</div>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0378" rel="">0378：有序矩阵中第 K 小的元素</a></li>
+<li><a href="/leetcode/0719" rel="">0719：找出第 K 小的数对距离</a></li>
+<li><a href="/leetcode/0786" rel="">0786：第 K 个最小的质数分数（2168 分）</a></li>
+<li><a href="/leetcode/2604" rel="">2604：吃掉所有谷子的最短时间</a></li>
+<li><a href="/leetcode/3116" rel="">3116：单面值组合的第 K 小金额（2387 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<ul>
-<li>分为奇偶两组，显然奇数卡牌只能选偶数个</li>
-<li>遍历奇数卡牌的个数 i，偶数卡牌个数 cnt-i，显然都取组内最大的一部分数</li>
-<li>将组内排序并预处理前缀和，即可节省时间</li>
-</ul>
+<p>典型的二分问题，对于数字 x，计算表中 &lt;=x 的个数即可。</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maxmiumScore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cards</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">cnt</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">,</span><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cards</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="k">else</span> <span class="n">B</span>
-</span></span><span class="line"><span class="cl">            <span class="n">C</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">C</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">cnt</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">and</span> <span class="n">cnt</span><span class="o">-</span><span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">B</span><span class="p">[</span><span class="n">cnt</span><span class="o">-</span><span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findKthNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="p">),</span><span class="n">k</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="n">cal</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>562 ms</p>
+</div><p>606 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2015-01-01</span>
+                <span>更新于 2016-10-29</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/lcp40/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/0668/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -204,14 +203,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/3225/" class="prev" rel="prev" title="3225：网格图操作后的最大分数（3027 分）"><i class="fas fa-angle-left fa-fw"></i>3225：网格图操作后的最大分数（3027 分）</a>
-            <a href="/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%9801.01/" class="next" rel="next" title="面试题 01.01：判定字符是否唯一">面试题 01.01：判定字符是否唯一<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/0669/" class="prev" rel="prev" title="0669：修剪二叉搜索树（★）"><i class="fas fa-angle-left fa-fw"></i>0669：修剪二叉搜索树（★）</a>
+            <a href="/leetcode/0666/" class="next" rel="next" title="0666：路径总和 IV（★）">0666：路径总和 IV（★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -97,11 +97,6 @@ class Codec:
 class Codec:
 
     def serialize(self, root):
-        """Encodes a tree to a single string.
-        
-        :type root: TreeNode
-        :rtype: str
-        """
         def dfs(u):
             if not u:
                 return '#'
@@ -109,11 +104,6 @@ class Codec:
         return dfs(root)
             
     def deserialize(self, data):
-        """Decodes your encoded data to tree.
-        
-        :type data: str
-        :rtype: TreeNode
-        """
         def dfs():
             u = Q.popleft()
             if u=='#':

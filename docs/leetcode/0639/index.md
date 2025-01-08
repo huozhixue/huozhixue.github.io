@@ -78,25 +78,27 @@
 
 ## 分析
 
-和 {{< lc "0091" >}} 的区别在于存在 '*' 字符，递推式的系数会不同。
-
-注意到包含 '*' 的单/双字符，所对应的系数是固定的，比如 ' **' 必然对应系数 15，
-因此考虑用哈希表保存对应关系，再递推即可。 
+- 和 {{< lc "0091" >}} 的区别在于存在 '*' 字符，递推式的系数会不同
+- 注意到包含 '*' 的单/双字符，所对应的系数是固定的，比如 ' **' 必然对应系数 15
+- 因此考虑用哈希表保存对应系数，再递推即可
 
 ## 解答
 
 ```python
-def numDecodings(self, s: str) -> int:
-    d1 = {'*': 9, '0': 0}
-    d2 = {'**': 15, '1*':9, '2*':6}
-    for i in range(10):
-        d2['*'+str(i)] = 2 if i<=6 else 1
-    for i in range(10, 27):
-        d2[str(i)] = 1
-    a, b, mod = 0, 1, 10**9+7
-    for i in range(len(s)):
-        a, b = b, (b*d1.get(s[i], 1) + a*d2.get(s[i-1:i+1], 0)) % mod
-    return b
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        mod = 10**9+7
+        d1 = {'*': 9, '0': 0}
+        d2 = {'**': 15, '1*':9, '2*':6}
+        for i in range(10):
+            d2['*'+str(i)] = 2 if i<=6 else 1
+        for i in range(10, 27):
+            d2[str(i)] = 1
+        a, b = 0, 1
+        for i in range(len(s)):
+            a,b = b,b*d1.get(s[i],1)+a*d2.get(s[i-1:i+1],0)
+            b %= mod
+        return b
 ```
-360 ms
+243 ms
 

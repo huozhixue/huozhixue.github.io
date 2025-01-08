@@ -48,9 +48,9 @@
 ## 分析
 
 矩形区域的个数是 $O(M^2N^2)$ 级别，光遍历就会超时了。因此要考虑不完全遍历的方法：
-- 左右边界固定为 <j1,j2> 时，求出每一行 [j1,j2] 的区间和，得到数组 A
+- 左右边界固定为 <i,j> 时，求出每一行 [i,j] 的区间和，得到数组 A
 - 问题转为求 A 中不超过 k 的最大区间和，可以用前缀和+有序集合解决
-- 预先保存每一行的前缀和，即可快速求出每一行 [j1,j2] 的区间和
+- i 固定时，可以递推得到每一行 [i,j] 的区间和
 
 ## 解答
 
@@ -59,14 +59,13 @@ class Solution:
     def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:
         from sortedcontainers import SortedList
         m,n = len(matrix),len(matrix[0])
-        P = [list(accumulate([0]+row)) for row in matrix]
         res = -inf
-        for j1 in range(n):
-            for j2 in range(j1,n):
-                A = [row[j2+1]-row[j1] for row in P]
-                A = list(accumulate([0]+A))
+        for i in range(n):
+            A = [0]*m
+            for j in range(i,n):
+                A = [A[k]+matrix[k][j] for k in range(m)]
                 sl = SortedList()
-                for a in A:
+                for a in accumulate([0]+A):
                     pos = sl.bisect_left(a-k)
                     if pos<len(sl) and a-sl[pos]>res:
                         res = a-sl[pos]

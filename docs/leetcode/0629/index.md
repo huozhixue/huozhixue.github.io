@@ -45,30 +45,44 @@
 
 ## 分析
 
-假设 n 放到位置 idx，那么包含 n 的逆序对有 n-idx-1，然后转为了子问题：1 到 n-1 的排列中恰好 k-(n-idx-1) 个逆序对的个数。
+### #1
+- 先考虑 n 放哪，假如 n 放到位置 i，包含 n 的逆序对有 n-i-1，转为子问题：1 到 n-1 的排列中恰好 k-(n-i-1) 个逆序对的个数
+- n 产生的逆序对个数范围为 [0,n-1]
+- 令 f[i][j] 代表 1 到 i 的排列中恰好 j 个逆序对的个数，即可递推：
+    f[i][j] = sum(f[i-1][j-a] for a in range(i) if j>=a)
+- 显然递推式可以用前缀和优化
+- 还可以用滚动数组将 f 优化为一维数组
 
-因此令 dp[i][j] 代表 1 到 i 的排列中恰好 j 个逆序对的个数，即可递推：
+```python
+class Solution:
+    def kInversePairs(self, n: int, k: int) -> int:
+        mod = 10**9+7
+        f = [1]+[0]*k
+        for i in range(2,n+1):
+            g = list(accumulate(f))
+            for j in range(k+1):
+                f[j] = g[j]-(g[j-i] if j>=i else 0)
+                f[j] %= mod
+        return f[-1]
+```
+303 ms
 
-    dp[i][j] = sum(dp[i-1][j-cnt] for cnt in range(i) if j-cnt>=0)
-    
-但这个时间复杂度会超时。
+### #2
 
-观察发现递推式中其实是 dp[i-1] 的连续区间的和，于是想到用前缀和。
-事先保存 dp[i-1] 的前缀和数组 pre，递推式变为：
-
-    dp[i][j] = pre[j+1]-pre[max(0, j-i+1)]
-    
-还可以用滚动数组将 dp 优化为一维数组。
-
+还可以只用 f 数组，注意遍历顺序即可。
 ## 解答
 
 ```python
-def kInversePairs(self, n: int, k: int) -> int:
-    dp, mod = [1]+[0]*k, 10**9+7
-    for i in range(1, n+1):
-        pre = list(accumulate([0]+dp, lambda x,y:(x+y)%mod))
-        dp = [pre[j+1]-pre[max(0, j-i+1)] for j in range(k+1)]
-    return dp[-1]%mod
+class Solution:
+    def kInversePairs(self, n: int, k: int) -> int:
+        mod = 10**9+7
+        f = [1]+[0]*k
+        for i in range(2,n+1):
+            for j in range(1,k+1):
+                f[j] = (f[j]+f[j-1])%mod
+            for j in range(k,i-1,-1):
+                f[j] = (f[j]-f[j-i])%mod
+        return f[-1]
 ```
-548 ms
+251 ms
 

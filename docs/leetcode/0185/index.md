@@ -98,23 +98,21 @@ Department  表:
 
 ## 分析
 
-{{< lc "0184" >}} 升级版。
-
-可以将每个员工和比自己工资高的连接，将连接数小于 3 的员工返回即可。
-
- 
+- {{< lc "0184" >}} 升级版
+- 分组排序，返回排名<=3 的即可
 ## 解答
 
-```sql
-select b.name as Department, a.name as Employee, a.salary as Salary
-from Employee a
-left join Department b
-on a.departmentId = b.id
-left join Employee c
-on a.departmentId = c.departmentId
-and a.salary < c.salary
-group by a.id
-having count(distinct c.salary)<3
+```python
+import pandas as pd
+
+def top_three_salaries(employee: pd.DataFrame, department: pd.DataFrame) -> pd.DataFrame:
+    E = employee.rename({'name':'Employee','salary':'Salary'},axis=1)
+    g = E.groupby('departmentId')
+    E['rank'] = g['Salary'].rank(method='dense',ascending=False).astype(int)
+    res =  E[E['rank']<=3]
+    D = department.rename({'name':'Department'},axis=1)
+    res = res.merge(D,left_on='departmentId',right_on='id',how='left')
+    return res[['Department','Employee','Salary']]
 ```
 881 ms
 

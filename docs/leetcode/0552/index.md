@@ -85,22 +85,23 @@ class Solution:
 - 这是完全的线性递推关系，还可以用矩阵快速幂优化
 
 ```python
+mod = 10**9+7
+def mul(A,B):
+    return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
+def mpow(mat, n):
+    res = mat
+    for i in range(n.bit_length()-2,-1,-1):
+        res = mul(res,res)
+        if n>>i&1:
+            res = mul(res,mat)
+    return res
+
 class Solution:
     def checkRecord(self, n: int) -> int:
-        def mpow(mat, n):
-            res = mat
-            for i in range(n.bit_length()-2,-1,-1):
-                res = res*res%mod
-                if n&1<<i:
-                    res = res*mat%mod
-            return res
-
-        import numpy as np
-        mod = 10**9+7
-        A = np.asmatrix([[1,1,1,0,0,0],[1,0,0,0,0,0],[0,1,0,0,0,0],
-                        [1,1,1,1,1,1],[0,0,0,1,0,0],[0,0,0,0,1,0]])
-        f = np.asmatrix([[1],[0],[0],[0],[0],[0]])
-        f = mpow(A,n)*f
-        return int(np.sum(f)%mod)
+        A = [[1,1,1,0,0,0],[1,0,0,0,0,0],[0,1,0,0,0,0],
+             [1,1,1,1,1,1],[0,0,0,1,0,0],[0,0,0,0,1,0]]
+        f = [[1],[0],[0],[0],[0],[0]]
+        f = mul(mpow(A,n),f)
+        return sum(a[0] for a in f)%mod
 ```
-86 ms
+19 ms

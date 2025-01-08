@@ -130,15 +130,14 @@ Users 表：
 
 ## 解答
 
-```sql
-select request_at as Day, 
-    round(avg(status!='completed'), 2) as 'Cancellation Rate'
-from Trips a
-inner join Users b
-on a.client_id = b.users_id and b.banned = 'No'
-inner join Users c
-on a.driver_id = c.users_id and c.banned = 'No'
-where request_at between '2013-10-01' and '2013-10-03'
-group by request_at
+```python
+import pandas as pd
+
+def trips_and_users(trips: pd.DataFrame, users: pd.DataFrame) -> pd.DataFrame:
+    ban = users[users['banned']=='Yes']['users_id']
+    res = trips[~trips['client_id'].isin(ban) & ~trips['driver_id'].isin(ban) & (trips['request_at']<='2013-10-03') & (trips['request_at']>='2013-10-01')]
+    res['cancel'] = res['status'] != 'completed'
+    res = res.groupby('request_at')['cancel'].mean().round(2).reset_index()
+    return res.rename({'request_at':'Day','cancel':'Cancellation Rate'},axis=1)
 ```
 574 ms
