@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0726\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  991 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  618 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0726\/","datePublished": "2016-12-26T00:00:00+08:00","dateModified": "2016-12-26T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0726：原子的数量（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-26">2016-12-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 991 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-26">2016-12-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 618 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0726/" class="leancloud_visitors" data-flag-title="0726：原子的数量（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -122,12 +122,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -181,82 +176,10 @@
 <li><a href="/leetcode/0736" rel="">0736：Lisp 语法解析</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>典型的栈问题。数量可能很大，所以考虑栈中不保存字符，而是保存计数字典 Counter()。</p>
-<p>先考虑没有括号的情况。遇到大写字母时，向后提取出原子的名字，再向后提取出数量，累加到 stack[-1] 中即可。</p>
-<p>再考虑有括号的情况。遇到左括号就新加一个 Counter()，用来保存括号内的结果。遇到右括号时就弹出栈顶的 ct，
-然后向后提取出数字 cnt，将 ct 的每个原子数量乘以 cnt，累加到 stack[-1] 中即可。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">countOfAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">formula</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">stack</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">Counter</span><span class="p">()],</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">formula</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">			<span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">			<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">formula</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">				<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">atom</span> <span class="o">=</span> <span class="n">formula</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">			<span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">formula</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">				<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">cnt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">atom</span><span class="p">]</span> <span class="o">+=</span> <span class="n">cnt</span>
-</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">formula</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Counter</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">			<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">ct</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">			<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">formula</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">				<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">cnt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">ct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">				<span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">v</span><span class="o">*</span><span class="n">cnt</span>
-</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">ct</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ct</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cnt</span> <span class="o">=</span> <span class="n">ct</span><span class="p">[</span><span class="n">atom</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span> <span class="o">+=</span> <span class="n">atom</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnt</span> <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>36 ms</p>
-<h3 id="2">#2</h3>
-<p>可以用正则来节省代码。每轮提取 &ldquo;原子名字+数量&rdquo; 或 &ldquo;(&rdquo; 或 &ldquo;)+数量&rdquo;，其它的流程一样。</p>
+<ul>
+<li>典型的栈问题，栈的每层模拟括号的递归，维护计数字典即可</li>
+<li>注意数量只会出现在原子或右括号后面，所以可以正则一起提取，方便处理</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -273,32 +196,24 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">countOfAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">formula</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">stack</span><span class="p">,</span> <span class="n">regex</span> <span class="o">=</span> <span class="p">[</span><span class="n">Counter</span><span class="p">()],</span> <span class="sa">r</span><span class="s2">&#34;([A-Z][a-z]*)(\d*)|(\()|(\))(\d*)&#34;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">atom</span><span class="p">,</span> <span class="n">cnt</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">cnt2</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">formula</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">atom</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		  <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">atom</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cnt</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">left</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		  <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Counter</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">right</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">ct</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">ct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">			  <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">v</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">cnt2</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">ct</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ct</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cnt</span> <span class="o">=</span> <span class="n">ct</span><span class="p">[</span><span class="n">atom</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span> <span class="o">+=</span> <span class="n">atom</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnt</span> <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">countOfAtoms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">formula</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sk</span> <span class="o">=</span> <span class="p">[</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">w1</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w2</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;([A-Z][a-z]*)(\d*)|(\()|(\))(\d*)&#39;</span><span class="p">,</span><span class="n">formula</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">w1</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ct</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">ct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">sk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">v</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">w2</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="o">&gt;</span><span class="mi">1</span> <span class="k">else</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sk</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>28 ms</p>
+</div><p>0 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

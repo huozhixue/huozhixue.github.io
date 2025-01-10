@@ -45,30 +45,27 @@
 ## 分析
 
 ### #1
-令 A[i] 代表 sum(nums[i:i+k])，问题转为求满足 x+k<=y<=z-k 的最大的 A[x]+A[y]+A[z]。
 
-那么遍历 y，求 max(A[:y-k+1])+y+max(A[y+k:]) 即可。
-
-令 left[i] 代表 max(A[:i+1])，right[i] 代表 max(A[i:])，都可以 O(N) 递推得到。
-
-因为要返回下标位置，所以修改下，令 left 和 right 返回最大值对应的最小下标即可。
-
+- 令 A[i] 代表 sum(nums[i:i+k])，问题转为求满足 x+k<=y<=z-k 的最大的 A[x]+A[y]+A[z]
+- 三个数可以采用前后缀分解，预处理 max(A[:i+1]) 和 max(A[i:])，遍历中间的下标即可
+- 注意要求字典序最小，因此前后缀的递推有一点区别
 
 
 ```python
-def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
-    pre = list(accumulate([0]+nums))
-    A = [pre[i+k]-pre[i] for i in range(len(pre)-k)]
-    n = len(A)
-    left, right = list(range(n)), list(range(n))
-    for i in range(1, n):
-        left[i] = i if A[i]>A[left[i-1]] else left[i-1]
-    for i in range(n-2, -1, -1):
-        right[i] = i if A[i]>=A[right[i+1]] else right[i+1]
-    i = max(range(k, n-k), key=lambda i: A[left[i-k]]+A[i]+A[right[i+k]])
-    return [left[i-k], i, right[i+k]]
+class Solution:
+    def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
+        p = list(accumulate([0]+nums))
+        A = [p[i+k]-p[i] for i in range(len(p)-k)]
+        n = len(A)
+        L, R = [0]*n, [n-1]*n
+        for i in range(1,n):
+            L[i] = i if A[i]>A[L[i-1]] else L[i-1]
+        for i in range(n-2,-1,-1):
+            R[i] = i if A[i]>=A[R[i+1]] else R[i+1]
+        i = max(range(k,n-k),key=lambda i:A[L[i-k]]+A[i]+A[R[i+k]])
+        return [L[i-k],i,R[i+k]]
 ```
-80 ms
+47 ms
 
 ### #2
 
@@ -85,16 +82,15 @@ class Solution:
         p = list(accumulate([0]+nums))
         A = [p[i+k]-p[i] for i in range(len(p)-k)]
         n = len(A)
-        f = [(0,[]) for _ in range(n+1)]
-        for i in range(n):
-            f[i+1] = min(f[i],(-A[i],[i]))
+        f = [(inf,[]) for _ in range(n+1)]
+        for i in range(1,n+1):
+            f[i] = min(f[i-1],(-A[i-1],[i-1]))
         for _ in range(2):
-            g = f[:]
-            for i in range(k):
-                f[i] = (inf,[])
-            for i in range(k-1,n):
-                s,ids = g[i-k+1]
-                f[i+1] = min(f[i],(s-A[i],ids+[i]))
+            g = [(inf,[]) for _ in range(n+1)]
+            for i in range(k+1,n+1):
+                s,ids = f[i-k]
+                g[i] = min(g[i-1],(s-A[i-1],ids+[i-1]))
+            f = g
         return f[-1][-1]
 ```
-115 ms
+155 ms

@@ -52,30 +52,61 @@
 
 ## 分析
 
-按 target[0] 由哪个贴纸切割可以转为递归子问题。
+### #1
 
->本质上是完全背包问题
+按 target[0] 选哪个贴纸即可递归，本质上是完全背包问题
+
+
+```python
+class Solution:
+    def minStickers(self, stickers: List[str], target: str) -> int:
+        @cache
+        def dfs(t):
+            if not t:
+                return 0
+            res = inf
+            for ct in A:
+                if t[0] in ct:
+                    s = t
+                    for k,v in ct.items():
+                        s = s.replace(k,'',v)
+                    res = min(res,1+dfs(s))
+            return res
+        A = [Counter(s) for s in stickers]
+        res = dfs(''.join(sorted(target)))
+        return res if res<inf else -1
+```
+76 ms
+
+
+### #2
+
+更通用的做法是存储字符数量的元组，递归过程类似，只是字符串删除变成元组相减。
 
 ## 解答
 
 ```python
-def minStickers(self, stickers: List[str], target: str) -> int:
-    @lru_cache(None)
-    def dfs(t):
-        if not t:
-            return 0
-        res = float('inf')
-        for ct in A:
-            if t[0] in ct:
-                new = t
-                for x in ct:
-                    new = new.replace(x, '', ct[x])
-                res = min(res, 1+dfs(new))
-        return res
-
-    A = [Counter(s) for s in stickers]
-    res = dfs(target)
-    return res if res < float('inf') else -1
+class Solution:
+    def minStickers(self, stickers: List[str], target: str) -> int:
+        @cache
+        def dfs(A):
+            if sum(A)==0:
+                return 0
+            res = inf
+            i = min(i for i,a in enumerate(A) if a>0)
+            for B in S:
+                if B[i]>0:
+                    C = tuple(max(0,a-b) for a,b in zip(A,B))
+                    res = min(res,1+dfs(C))
+            return res
+        ct0 = Counter(target)
+        T = sorted(set(target))
+        A = tuple(ct0[a] for a in T)
+        S = []
+        for s in stickers:
+            ct = Counter(s)
+            S.append([ct[a] for a in T])
+        res = dfs(A)
+        return res if res<inf else -1
 ```
-108 ms
-
+189 ms

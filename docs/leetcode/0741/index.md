@@ -78,21 +78,21 @@
 
 ```python
 class Solution:
-def cherryPickup(self, grid: List[List[int]]) -> int:
-    @lru_cache(None)
-    def dfs(k, i1, i2):
-        if k==0:
-            return grid[0][0]
-        if grid[i1][k-i1] == -1 or grid[i2][k-i2] == -1:
-            return float('-inf')
-        res, cur = float('-inf'), sum(grid[i][k-i] for i in {i1, i2})
-        for x1, x2 in product([i1, i1-1], [i2, i2-1]):
-            if min(x1, k-1-x1, x2, k-1-x2)>=0:
-                res = max(res, cur+dfs(k-1, x1, x2))
-        return res
-    
-    n = len(grid)
-    return max(0, dfs(2*n-2, n-1, n-1))
+	def cherryPickup(self, grid: List[List[int]]) -> int:
+	    @lru_cache(None)
+	    def dfs(k, i1, i2):
+	        if k==0:
+	            return grid[0][0]
+	        if grid[i1][k-i1] == -1 or grid[i2][k-i2] == -1:
+	            return float('-inf')
+	        res, cur = float('-inf'), sum(grid[i][k-i] for i in {i1, i2})
+	        for x1, x2 in product([i1, i1-1], [i2, i2-1]):
+	            if min(x1, k-1-x1, x2, k-1-x2)>=0:
+	                res = max(res, cur+dfs(k-1, x1, x2))
+	        return res
+	    
+	    n = len(grid)
+	    return max(0, dfs(2*n-2, n-1, n-1))
 ```
 1040 ms
 

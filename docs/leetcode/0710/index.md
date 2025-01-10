@@ -60,16 +60,39 @@ solution.pick(); // 返回 4
 
 ## 分析
 
-设数组 A=list(range(n))，要求的即是从 A 中随机选一个不在黑名单中的数。
+### #1
 
-为了方便随机，考虑将黑名单的数都交换到前面。设 m=len(blacklist)，交换完成后从 A[m:] 中随机选一个数即可。
+- 设黑名单长度 m，那么考虑建立 [0,n-m-1] 和不在黑名单中的数的映射
+- 假设 x 映射得到的数是 y，y-x 即是 <=y 的黑名单的个数
+- 那么 y 减去 <=y 的黑名单的个数即是原来的 x，这是递增的
+- 因此给定 x，可以二分查找到 y
+	- 注意为了不定位到黑名单，计算的是 <=y 而不是 <y 的个数
 
-但是 n 很大，直接构造 A 会超时。有个巧妙的想法是 A[m:] 中最多有 m 个数是经过了交换的，其它的就等于下标。
+```python
+class Solution:
 
-那么用哈希表 d 维护 A[m:] 中经过了交换的数，则对于任意 y>=m，A[y]=d.get(y, y)。
-因此随机取 >=m 的下标 y，返回 d.get(y, y) 即可。
+    def __init__(self, n: int, blacklist: List[int]):
+        self.A = sorted(blacklist)
+        self.n = n
+        self.k = n-len(self.A)
 
-具体维护哈希表时，将 （黑名单中 >=m 的数） 和 （[0,m) 中不属于黑名单的数）一一对应即可。
+    def pick(self) -> int:
+        def cal(y):
+            return y-bisect_right(self.A,y)
+
+        x = randrange(self.k)
+        return bisect_left(range(self.n),x,key=cal)
+```
+567 ms
+
+### #2
+
+- 还有种直接建立映射的方法
+- 注意到 n-m 很大，而 m 较小，该映射中大部分数其实是不变的
+- 因此考虑只对变化的数做映射
+	- [0,n-m-1] 范围内要变化的数其实就是该范围内黑名单中的数
+	- 而映射得到的数其实就是 [n-m,n-1] 范围内不在黑名单中的数
+- pick 时，随机选一个 [0,n-m-1] 范围内的数，映射即可 
 
 ## 解答
 
@@ -77,16 +100,16 @@ solution.pick(); // 返回 4
 class Solution:
 
     def __init__(self, n: int, blacklist: List[int]):
-        m, vis = len(blacklist), set(blacklist)
-        B = [y for y in vis if y>=m]
-        A = [x for x in range(m) if x not in vis]
-        self.d = dict(zip(B, A))
-        self.n = n
-        self.m = m
+        m = len(blacklist)
+        vis = set(blacklist)
+        A = [x for x in blacklist if x<n-m]
+        B = [y for y in range(n-m,n) if y not in vis]
+        self.k = n-m
+        self.d = dict(zip(A,B))
 
     def pick(self) -> int:
-        y = random.randint(self.m, self.n-1)
-        return self.d.get(y, y)
+        x = randrange(self.k)
+        return self.d.get(x,x)
 ```
-272 ms
+87 ms
 

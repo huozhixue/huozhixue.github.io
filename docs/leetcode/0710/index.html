@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0710\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  737 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  754 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0710\/","datePublished": "2016-12-10T00:00:00+08:00","dateModified": "2016-12-10T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0710：黑名单中的随机数（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-10">2016-12-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 737 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-10">2016-12-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 754 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0710/" class="leancloud_visitors" data-flag-title="0710：黑名单中的随机数（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -122,7 +122,12 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a></li>
+    <li><a href="#分析">分析</a>
+      <ul>
+        <li><a href="#1">#1</a></li>
+        <li><a href="#2">#2</a></li>
+      </ul>
+    </li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -171,12 +176,62 @@ solution.pick(); // 返回 4
 <li><a href="/leetcode/1980" rel="">1980：找出不同的二进制字符串（1361 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>设数组 A=list(range(n))，要求的即是从 A 中随机选一个不在黑名单中的数。</p>
-<p>为了方便随机，考虑将黑名单的数都交换到前面。设 m=len(blacklist)，交换完成后从 A[m:] 中随机选一个数即可。</p>
-<p>但是 n 很大，直接构造 A 会超时。有个巧妙的想法是 A[m:] 中最多有 m 个数是经过了交换的，其它的就等于下标。</p>
-<p>那么用哈希表 d 维护 A[m:] 中经过了交换的数，则对于任意 y&gt;=m，A[y]=d.get(y, y)。
-因此随机取 &gt;=m 的下标 y，返回 d.get(y, y) 即可。</p>
-<p>具体维护哈希表时，将 （黑名单中 &gt;=m 的数） 和 （[0,m) 中不属于黑名单的数）一一对应即可。</p>
+<h3 id="1">#1</h3>
+<ul>
+<li>设黑名单长度 m，那么考虑建立 [0,n-m-1] 和不在黑名单中的数的映射</li>
+<li>假设 x 映射得到的数是 y，y-x 即是 &lt;=y 的黑名单的个数</li>
+<li>那么 y 减去 &lt;=y 的黑名单的个数即是原来的 x，这是递增的</li>
+<li>因此给定 x，可以二分查找到 y
+<ul>
+<li>注意为了不定位到黑名单，计算的是 &lt;=y 而不是 &lt;y 的个数</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">blacklist</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">blacklist</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">pick</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">y</span><span class="o">-</span><span class="n">bisect_right</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">A</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="n">cal</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>567 ms</p>
+<h3 id="2">#2</h3>
+<ul>
+<li>还有种直接建立映射的方法</li>
+<li>注意到 n-m 很大，而 m 较小，该映射中大部分数其实是不变的</li>
+<li>因此考虑只对变化的数做映射
+<ul>
+<li>[0,n-m-1] 范围内要变化的数其实就是该范围内黑名单中的数</li>
+<li>而映射得到的数其实就是 [n-m,n-1] 范围内不在黑名单中的数</li>
+</ul>
+</li>
+<li>pick 时，随机选一个 [0,n-m-1] 范围内的数，映射即可</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -198,19 +253,19 @@ solution.pick(); // 返回 4
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">blacklist</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span> <span class="n">vis</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">blacklist</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">blacklist</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">vis</span> <span class="k">if</span> <span class="n">y</span><span class="o">&gt;=</span><span class="n">m</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">A</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">m</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">blacklist</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vis</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">blacklist</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">blacklist</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="n">m</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">pick</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>272 ms</p>
+</div><p>87 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

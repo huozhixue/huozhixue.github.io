@@ -39,6 +39,20 @@
     <guid>https://huozhixue.github.io/leetcode/0850/</guid>
     <description><![CDATA[力扣第 88 场周赛第 4 题 题目 给你一个轴对齐的二维数组 rectangles 。 对于 rectangle[i] = [x1, y1, x2, y2]，其中（x1，y1）是矩形 i 左下角的坐标， (xi1, yi1) 是该矩形 左下角 的坐标，]]></description>
 </item><item>
+    <title>0715：Range 模块（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0715/</link>
+    <pubDate>Thu, 15 Dec 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0715/</guid>
+    <description><![CDATA[力扣第 715 题 题目 Range模块是跟踪数字范围的模块。设计一个数据结构来跟踪表示为 半开区间 的范围并查询它们。 半开区间 [left, right) 表示所有 left &lt;= x &lt; right 的实数]]></description>
+</item><item>
+    <title>0699：掉落的方块（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/0699/</link>
+    <pubDate>Tue, 29 Nov 2016 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/0699/</guid>
+    <description><![CDATA[力扣第 699 题 题目 在二维平面上的 x 轴上，放置着一些方块。 给你一个二维整数数组 positions ，其中 positions[i] = [lefti, sideLengthi] 表示：第 i 个方块边长为 sideLengthi ，其左侧边与 x 轴上坐标点 lefti 对]]></description>
+</item><item>
     <title>0673：最长递增子序列的个数（★）</title>
     <link>https://huozhixue.github.io/leetcode/0673/</link>
     <pubDate>Thu, 03 Nov 2016 00:00:00 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0406/</guid>
     <description><![CDATA[力扣第 406 题 题目 假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] = [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好]]></description>
-</item><item>
-    <title>0327：区间和的个数（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0327/</link>
-    <pubDate>Mon, 23 Nov 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0327/</guid>
-    <description><![CDATA[力扣第 327 题 题目 给你一个整数数组 nums 以及两个整数 lower 和 upper 。求数组中，值位于范围 [lower, upper] （包含 lower 和 upper）之内的 区间和的个数 。 区间和 S(i, j) 表示在 nums 中，]]></description>
-</item><item>
-    <title>0315：计算右侧小于当前元素的个数（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0315/</link>
-    <pubDate>Wed, 11 Nov 2015 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0315/</guid>
-    <description><![CDATA[力扣第 315 题 题目 给你一个整数数组 nums ，按要求返回一个新数组 counts 。数组 counts 有该性质： counts[i] 的值是 nums[i] 右侧小于 nums[i] 的元素的数量。 示例 1： 输入：nums = [5,2,6,1] 输出：]]></description>
 </item></channel>
 </rss>

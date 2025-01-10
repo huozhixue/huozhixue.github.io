@@ -74,76 +74,26 @@
 
 ## 分析
 
-### #1
-
-典型的栈问题。数量可能很大，所以考虑栈中不保存字符，而是保存计数字典 Counter()。
-
-先考虑没有括号的情况。遇到大写字母时，向后提取出原子的名字，再向后提取出数量，累加到 stack[-1] 中即可。
-
-再考虑有括号的情况。遇到左括号就新加一个 Counter()，用来保存括号内的结果。遇到右括号时就弹出栈顶的 ct，
-然后向后提取出数字 cnt，将 ct 的每个原子数量乘以 cnt，累加到 stack[-1] 中即可。
-
-```python
-def countOfAtoms(self, formula: str) -> str:
-	stack, i, n = [Counter()], 0, len(formula)
-	while i < n:
-		if formula[i].isupper():
-			j = i
-			i += 1
-			while i < n and formula[i].islower():
-				i += 1
-			atom = formula[j:i]
-			j = i
-			while i < n and formula[i].isdigit():
-				i += 1
-			cnt = int(formula[j:i] or 1)
-			stack[-1][atom] += cnt
-		elif formula[i] == '(':
-			stack.append(Counter())
-			i += 1
-		else:
-			ct = stack.pop()
-			i += 1
-			j = i
-			while i < n and formula[i].isdigit():
-				i += 1
-			cnt = int(formula[j:i] or 1)
-			for k, v in ct.items():
-				stack[-1][k] += v*cnt
-	res, ct = '', stack.pop()
-	for atom in sorted(ct):
-		cnt = ct[atom]
-		res += atom + str(cnt if cnt > 1 else '')
-	return res
-```
-
-36 ms
-
-### #2
-
-可以用正则来节省代码。每轮提取 "原子名字+数量" 或 "(" 或 ")+数量"，其它的流程一样。 
+- 典型的栈问题，栈的每层模拟括号的递归，维护计数字典即可
+- 注意数量只会出现在原子或右括号后面，所以可以正则一起提取，方便处理
 
 ## 解答
 
 ```python
-def countOfAtoms(self, formula: str) -> str:
-	stack, regex = [Counter()], r"([A-Z][a-z]*)(\d*)|(\()|(\))(\d*)"
-	for atom, cnt, left, right, cnt2 in re.findall(regex, formula):
-		if atom:
-		  stack[-1][atom] += int(cnt or 1)
-		elif left:
-		  stack.append(Counter())
-		elif right:
-			ct = stack.pop()
-			for k, v in ct.items():
-			  stack[-1][k] += v * int(cnt2 or 1)
-
-	res, ct = '', stack.pop()
-	for atom in sorted(ct):
-		cnt = ct[atom]
-		res += atom + str(cnt if cnt > 1 else '')
-	return res
+class Solution:
+    def countOfAtoms(self, formula: str) -> str:
+        sk = [defaultdict(int)]
+        for x,w1,l,r,w2 in re.findall('([A-Z][a-z]*)(\d*)|(\()|(\))(\d*)',formula):
+            if x:
+                sk[-1][x] += int(w1 or 1)
+            elif l:
+                sk.append(defaultdict(int))
+            elif r:
+                ct = sk.pop()
+                for k,v in ct.items():
+                    sk[-1][k] += v*int(w2 or 1)
+        return ''.join(k+str(v) if v>1 else k for k,v in sorted(sk[0].items()))
 ```
 
-28 ms
+0 ms
 
