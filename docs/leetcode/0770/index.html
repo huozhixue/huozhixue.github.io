@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="力扣第 770 题 题目 给定一个表达式如 expression = &#34;e &#43; 8 - a &#43; 5&#34; 和一个求值映射，如 {&#34;e&#34;: 1}（给定的形式为 evalvars = [&#34;e&#34;] 和 evalints = [1]），返回表示简化表达式的标记列表，例"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0770/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0768/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0776/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/0770/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0768/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0773/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0770\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1353 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1053 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0770\/","datePublished": "2017-02-08T00:00:00+08:00","dateModified": "2017-02-08T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0770：基本计算器 IV（2863 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-08">2017-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1353 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-02-08">2017-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1053 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0770/" class="leancloud_visitors" data-flag-title="0770：基本计算器 IV（2863 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -124,7 +124,6 @@
     <li><a href="#题目">题目</a></li>
     <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
-    <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -196,101 +195,16 @@ evalvars = ["e", "temperature"], evalints = [1, 12]
 <li><a href="/leetcode/0772" rel="">0772：基本计算器 III</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>本质上是多项式的计算。为了方便，考虑用 Counter() 存储变量和系数。</p>
-<p>为了合并同类项，考虑用变量的有序元组来作为 key。常数项直接用空的元组作为 key。
-比如 5 + a * b + bb * cc 表示为 {(): 5, (a, b): 1, (bb, cc): 1}。</p>
-<p>具体实现时，括号内是 List(Counter) 的形式，先按顺序计算乘法，再按顺序计算加减，得到一个 Counter。
-然后用栈模拟递归即可。</p>
-<p>计算完毕后，所有单项式按 (元组长度, 元组本身) 排序，转为要求的字符串格式即可。</p>
+<ul>
+<li><a href="/leetcode/0224" title="0224" rel="noopener noreferrer">0224</a> 升级版，只是数变成了多项式，考虑用 Counter 保存项和系数</li>
+<li>为了方便合并同类项，用项的有序元组作为 key，常数项直接用空的元组作为 key
+<ul>
+<li>比如 5 + a * b + bb * cc 表示为 {(): 5, (a, b): 1, (bb, cc): 1}</li>
+</ul>
+</li>
+<li>Counter 的加减可以直接调用 update、subtract 方法，相乘需要自己实现</li>
+</ul>
 <h2 id="解答">解答</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">basicCalculatorIV</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expression</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">evalvars</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">evalints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">ct0</span><span class="p">,</span> <span class="n">ct1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">k0</span><span class="p">,</span> <span class="n">k1</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">ct0</span><span class="p">,</span> <span class="n">ct1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">k0</span> <span class="o">+</span> <span class="n">k1</span><span class="p">))]</span> <span class="o">+=</span> <span class="n">ct0</span><span class="p">[</span><span class="n">k0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ct1</span><span class="p">[</span><span class="n">k1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">item</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">stack</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="p">[[]],</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">evalvars</span><span class="p">,</span> <span class="n">evalints</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">left</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">right</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\()|([a-z]+)|(\d+)|([-+*])|(\))&#39;</span><span class="p">,</span> <span class="n">expression</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">left</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="n">var</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Counter</span><span class="p">({():</span> <span class="n">d</span><span class="p">[</span><span class="n">var</span><span class="p">]}</span> <span class="k">if</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">d</span> <span class="k">else</span> <span class="p">{(</span><span class="n">var</span><span class="p">,):</span> <span class="mi">1</span><span class="p">}))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="n">num</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Counter</span><span class="p">({():</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)}))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="n">op</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ct</span> <span class="o">=</span> <span class="n">cal</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ct</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cal</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">),)</span> <span class="o">+</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">res</span> <span class="k">if</span> <span class="n">v</span><span class="p">]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>36 ms</p>
-<h2 id="附加">*附加</h2>
-<p>本题不含正负号，所以和 <a href="/leetcode/0227" title="0227" rel="noopener noreferrer">0227</a> 类似，可以用更通用的方法。
-遍历到某个运算符时，将前面优先级更高的先运算了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -355,7 +269,7 @@ evalvars = ["e", "temperature"], evalints = [1, 12]
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">),)</span><span class="o">+</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">res</span> <span class="k">if</span> <span class="n">v</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>52 ms</p>
+</div><p>7 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -381,7 +295,7 @@ evalvars = ["e", "temperature"], evalints = [1, 12]
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0776/" class="prev" rel="prev" title="0776：拆分二叉搜索树（★★）"><i class="fas fa-angle-left fa-fw"></i>0776：拆分二叉搜索树（★★）</a>
+    <div class="post-nav"><a href="/leetcode/0773/" class="prev" rel="prev" title="0773：滑动谜题（1815 分）"><i class="fas fa-angle-left fa-fw"></i>0773：滑动谜题（1815 分）</a>
             <a href="/leetcode/0768/" class="next" rel="next" title="0768：最多能完成排序的块 II（1787 分）">0768：最多能完成排序的块 II（1787 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

@@ -91,66 +91,15 @@ evalvars = ["e", "temperature"], evalints = [1, 12]
 
 ## 分析
 
-本质上是多项式的计算。为了方便，考虑用 Counter() 存储变量和系数。
 
-为了合并同类项，考虑用变量的有序元组来作为 key。常数项直接用空的元组作为 key。
-比如 5 + a * b + bb * cc 表示为 {(): 5, (a, b): 1, (bb, cc): 1}。
-
-具体实现时，括号内是 List(Counter) 的形式，先按顺序计算乘法，再按顺序计算加减，得到一个 Counter。
-然后用栈模拟递归即可。
-
-计算完毕后，所有单项式按 (元组长度, 元组本身) 排序，转为要求的字符串格式即可。
+- {{< lc "0224" >}} 升级版，只是数变成了多项式，考虑用 Counter 保存项和系数
+- 为了方便合并同类项，用项的有序元组作为 key，常数项直接用空的元组作为 key
+	- 比如 5 + a * b + bb * cc 表示为 {(): 5, (a, b): 1, (bb, cc): 1}
+- Counter 的加减可以直接调用 update、subtract 方法，相乘需要自己实现
 
 ## 解答
 
-```python
-def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
-    def mul(ct0, ct1):
-        res = Counter()
-        for k0, k1 in product(ct0, ct1):
-            res[tuple(sorted(k0 + k1))] += ct0[k0] * ct1[k1]
-        return res
 
-    def cal(A):
-        stack = []
-        for item in A:
-            if isinstance(item, dict) and stack and stack[-1] == '*':
-                stack.pop()
-                stack[-1] = mul(stack[-1], item)
-            else:
-                stack.append(item)
-        res = Counter()
-        for i in range(len(stack)):
-            if isinstance(stack[i], dict):
-                if i and stack[i - 1] == '-':
-                    res.subtract(stack[i])
-                else:
-                    res.update(stack[i])
-        return res
-
-    stack, d = [[]], dict(zip(evalvars, evalints))
-    for left, var, num, op, right in re.findall(r'(\()|([a-z]+)|(\d+)|([-+*])|(\))', expression):
-        if left:
-            stack.append([])
-        elif var:
-            stack[-1].append(Counter({(): d[var]} if var in d else {(var,): 1}))
-        elif num:
-            stack[-1].append(Counter({(): int(num)}))
-        elif op:
-            stack[-1].append(op)
-        else:
-            ct = cal(stack.pop())
-            stack[-1].append(ct)
-    res = sorted(cal(stack[0]).items(), key=lambda x: (-len(x[0]), x[0]))
-    return ['*'.join((str(v),) + k) for k, v in res if v]
-```
-36 ms
-
-## *附加
-
-本题不含正负号，所以和 {{< lc "0227" >}} 类似，可以用更通用的方法。
-遍历到某个运算符时，将前面优先级更高的先运算了。
-	
 ```python
 class Solution:
     def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
@@ -182,4 +131,4 @@ class Solution:
         res = sorted(sk[0].items(), key=lambda x: (-len(x[0]), x[0]))
         return ['*'.join((str(v),)+k) for k,v in res if v]
 ```
-52 ms
+7 ms
