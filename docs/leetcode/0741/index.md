@@ -65,34 +65,27 @@
 
 ## 分析
 
-单程是个很显然的 dp 问题，双程则会互相影响，不能分开求。
+- 注意路径步数是一定的，因此可以看作两个人同时从左上往右下摘樱桃
+- 令 f[i1][j1][i2][j2] 代表两条线路分别到 (i1,j1)、(i2,j2) 位置时的最大值，即可递推
+- 注意 i1+j1=i2+j2，因此可以简化为 f[k][i1][i2] 代表两条线路分别到 (i1,k-i1)、(i2,k-i2) 位置时的最大值
 
-那么考虑一起递推，到 (i,j) 位置的双程的最大值，依赖于上一步两条线路的结尾。
-
-为了递推，令 dfs(i1,j1,i2,j2) 代表两条线路分别到 (i1,j1)、(i2,j2) 位置时的最大值，即可递推。
-
-注意到递推过程中 i1+j1==i2+j2，因此可以简化为 dfs(k, i1, i2) 代表第 k 步
-两条线路分别到 (i1,k-i1)、(i2,k-i2) 位置时的最大值。
-
-## 解答
+## 解答 
 
 ```python
 class Solution:
-	def cherryPickup(self, grid: List[List[int]]) -> int:
-	    @lru_cache(None)
-	    def dfs(k, i1, i2):
-	        if k==0:
-	            return grid[0][0]
-	        if grid[i1][k-i1] == -1 or grid[i2][k-i2] == -1:
-	            return float('-inf')
-	        res, cur = float('-inf'), sum(grid[i][k-i] for i in {i1, i2})
-	        for x1, x2 in product([i1, i1-1], [i2, i2-1]):
-	            if min(x1, k-1-x1, x2, k-1-x2)>=0:
-	                res = max(res, cur+dfs(k-1, x1, x2))
-	        return res
-	    
-	    n = len(grid)
-	    return max(0, dfs(2*n-2, n-1, n-1))
+    def cherryPickup(self, grid: List[List[int]]) -> int:
+        n = len(grid)
+        @cache
+        def dfs(k,i1,i2):
+            if k==n*2-2:
+                return grid[-1][-1]
+            res = -inf
+            cur = sum(grid[x][k-x] for x in {i1,i2})
+            for x1,x2 in product(range(i1,i1+2),range(i2,i2+2)):
+                if k+1-n<x1<=x2<n and grid[x1][k+1-x1]!=-1!=grid[x2][k+1-x2]:
+                    res = max(res,cur+dfs(k+1,x1,x2))
+            return res
+        return max(0,dfs(0,0,0))
 ```
-1040 ms
+537 ms
 

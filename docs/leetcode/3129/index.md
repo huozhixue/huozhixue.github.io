@@ -103,4 +103,4 @@ class Solution:
                 f[i][j][1] = sum(f[i][j-1])-(f[i][j-1-limit][0] if j>limit else 0)
         return sum(f[-1][-1])%mod
 ```
-242 ms
+211 ms

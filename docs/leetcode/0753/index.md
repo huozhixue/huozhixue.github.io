@@ -63,44 +63,47 @@
 
 ## 分析
 
-本题有个非常巧妙的方法。将所有 n-1 位数作为顶点，如果 u 的后 n-2 位和 v 的前 n-2 位相同，就添加一条边 u 指向 v。
-
-那么输入的字符串可以看作是有向图中的一条路径。字符串要覆盖所有密码，等价于图中的路径要经过所有边。
-因此问题转化为求最短的经过所有边的路径。 
-
-该图中所有顶点的入度和出度相同，因此是欧拉图。用 Hierholzer 算法求欧拉回路即可。注意 n==1 的特殊情况。
+- 本题有个非常巧妙的转换方法：
+	- 将所有 n-1 位数作为顶点 u
+	- 对于 a 从 1 到 k-1，v=(u+a)[1:]，添加一条边 u 指向 v，边为 a
+	- 输入的密码序列即可看作是有向图中的一条路径
+	- 要覆盖所有密码，等价于一条经过所有边的路径
+- 该图中所有顶点的入度和出度相同，因此是欧拉图，可以不重复地经过所有边
+- 因此用 Hierholzer 算法求欧拉回路即可
 
 ## 解答
 
 ```python
-def crackSafe(self, n: int, k: int) -> str:
-    def dfs(u):
-        while nxt[u] < k:
-            nxt[u] += 1
-            dfs(u[1:]+str(nxt[u]-1))
-        stack.append(u[-1])
-
-    if n == 1:
-        return ''.join(str(i) for i in range(k))
-    stack, nxt = [], defaultdict(int)
-    dfs('0'*(n-1))
-    return ''.join(stack) + '0'*(n-2)
+class Solution:
+    def crackSafe(self, n: int, k: int) -> str:
+        def dfs(u):
+            while g[u]<k:
+                a = g[u]
+                g[u] += 1
+                dfs((u+str(a))[1:])
+                res.append(str(a))
+        
+        g = defaultdict(int)
+        res = []
+        dfs('0'*(n-1))
+        return ''.join(res)+'0'*(n-1)
 ```
-44 ms
+3 ms
 
 ## *附加
 
-其实只要每次都选最大的后继顶点，就不会遇到死胡同。所以本题还可以直接构造。
+- 其实只要每次都选最大的后继顶点，就不会遇到死胡同，所以可以直接构造
+- 证明见 [一步一步推导出 0ms 解法（贪心构造）](https://leetcode.cn/problems/cracking-the-safe/solutions/275196/yi-bu-yi-bu-tui-dao-chu-0ms-jie-fa-tan-xin-gou-zao/)
 
 ```python
-def crackSafe(self, n: int, k: int) -> str:
-    if n == 1:
-        return ''.join(str(i) for i in range(k))
-    res, nxt = '0' * (n-1), defaultdict(lambda: k-1)
-    for _ in range(k**n):
-        u = res[1-n:]
-        res += str(nxt[u])
-        nxt[u] -= 1
-    return res
+class Solution:
+    def crackSafe(self, n: int, k: int) -> str:
+        res = '0'*(n-1)
+        g = defaultdict(lambda: k-1)
+        for _ in range(k**n):
+            u = res[len(res)+1-n:]
+            res += str(g[u])
+            g[u] -= 1
+        return res
 ```
-40 ms
+3 ms

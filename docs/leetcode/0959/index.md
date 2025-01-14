@@ -58,37 +58,39 @@
 
 ## 分析
 
-区域数量其实就是连通块的数量，考虑用并查集。
-
-'/' 和 '\' 将方格分为四小块，遍历并连通即可。
-
-注意方格 (i, j) 左小块和 (i, j-1) 右小块必然连通，
-方格 (i, j) 上小块和 (i-1, j) 下小块必然连通。
+- 区域数量其实就是连通块的数量，考虑用并查集
+- 注意 '/' 和 '\' 将方格分为四小块，因此考虑对每一小块遍历并连通
+- 注意方格 (i, j) 左小块和 (i, j-1) 右小块必然连通，方格 (i, j) 上小块和 (i-1, j) 下小块必然连通
 
 ## 解答
 
 ```python
-def regionsBySlashes(self, grid: List[str]) -> int:
-    def find(x):
-        if f.setdefault(x, x) != x:
-            f[x] = find(f[x])
-        return f[x]
-    
-    def union(x, y):
-        f[find(x)] = find(y)
-    
-    n, f = len(grid), {}
-    for i, j in product(range(n), range(n)):
-        if i:
-            union((i, j, 0), (i-1, j, 2))
-        if j:
-            union((i, j, 3), (i, j-1, 1))
-        if grid[i][j] != '/':
-            union((i, j, 0), (i, j, 1))
-            union((i, j, 2), (i, j, 3))
-        if grid[i][j] != '\\':
-            union((i, j, 0), (i, j, 3))
-            union((i, j, 1), (i, j, 2))
-    return sum(find(x)==x for x in f)
+class Solution:
+    def regionsBySlashes(self, grid: List[str]) -> int:
+        def find(x):
+            if f[x]!=x:
+                f[x]=find(f[x])
+            return f[x]
+        
+        def union(x,y):
+            f[find(x)]=find(y)
+
+        n = len(grid)
+        f = list(range(n*n*4))
+        for i in range(n):
+            for j in range(n):
+                base = i*n*4+j*4
+                if i:
+                    union(base,base-n*4+2)
+                if j:
+                    union(base+3,base-3)
+                x = grid[i][j]
+                if x!='/':
+                    union(base,base+1)
+                    union(base+2,base+3)
+                if x!='\\':
+                    union(base+1,base+2)
+                    union(base,base+3)
+        return sum(find(i)==i for i in range(n*n*4))
 ```
-228 ms
+81 ms

@@ -49,36 +49,86 @@
 
 ## 分析
 
-不考虑重复的话，就是一般的区间 dp 问题，按序列最外层的字符递推。
+### #1
 
-考虑重复的话要复杂很多。假设最外层字符为 'a'，位置分别为 i、j，那么：
-- [i,j] 范围内最外层为 'b'/'c'/'d' 的不同回文子序列，加上 'a' 后显然是不同的
-- [i,j] 范围内最外层为 'a' 的不同回文子序列，加上 'a' 后也是不同的
-    - 但加/不加 'a' 的两个集合是有很多重复的
-    - 观察发现，加上 'a' 后基本包括了不加 'a' 的集合，除了 'a' 和 'aa'
-    - 两个集合的大小是相同的，因此加/不加 'a' 的合集只比不加 'a' 的集合多 2
+- 典型的区间 dp 问题，考虑按序列最外层的字符递推
+- 假如 s 的首尾都是 'a'
+	- 这对 'a' 可以和 s[1:-1] 的每个序列组成新的序列
+	- 这对 'a' 自身可以组成 'a' 和 'aa'
+	- 注意一样的序列只算一次，要去掉重复的序列
+	- s[1:-1] 每个首尾是 'a' 的序列都在新的序列集合中，都是重复的
+	- 因此 s 的序列个数=s[1:-1]的序列个数*2+2-s[1:-1] 首尾是 'a' 的序列个数
+- 所以考虑将首尾是哪个字符加入状态定义，用 f[i][j][c] 代表 s[i:j+1] 首尾是 c 的序列个数，进行递推
+	- 假如 s[i:j+1] 的首尾都是 c
+		- f[i][j][c] = sum(f[i+1][j-1])+2
+		- 其它字符状态和 f[i+1][j-1] 一样
+	- 否则，假如首尾分别是 a、b
+		- f[i][j][a] = f[i][j-1][a]
+		- f[i][j][b] = f[i+1][j][b]
+		- 其它字符状态和 f[i+1][j-1] 一样
 
-于是令 dp[i][j][x] 代表 [i,j] 范围内最外层为字符 x 的不同回文子序列个数，即可区间递推。
+```python
+class Solution:
+    def countPalindromicSubsequences(self, s: str) -> int:
+        mod = 10**9+7
+        n = len(s)
+        A = [ord(c)-ord('a') for c in s]
+        f = [[[0]*4 for _ in range(n)] for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            f[i][i][A[i]] = 1
+            for j in range(i+1,n):
+                f[i][j] = f[i+1][j-1][:]
+                if A[i]==A[j]:
+                    f[i][j][A[i]] = (sum(f[i+1][j-1])+2)%mod
+                else:
+                    f[i][j][A[i]] = f[i][j-1][A[i]]
+                    f[i][j][A[j]] = f[i+1][j][A[j]]
+        return sum(f[0][-1])%mod
+```
+2452 ms
+### #2
 
-为了方便，可以将 s 的字符都转为整数。
-
+- 还可以优化掉 c 的维度
+- 观察最开始的递推式：
+	- 当 s 首尾是 c 时，s 的序列个数=s[1:-1]的序列个数*2+2-s[1:-1] 首尾是 c 的序列个数
+	- 考虑换种方法计算 s[1:-1] 首尾是 c 的序列个数，即 f[1][n-2][c]
+	- 找到 s[1:-1] 中最左和最右的 c 位置 l、r，f[1][n-2][c] = f[l][r][c]
+	- 而 f[l][r][c] = sum(f[l+1][r-1][c]) + 2
+- 因此，令 g[i][j] 代表 s[i:j+1] 的序列个数，进行递推
+	- 假如 s[i:j+1] 的首尾都是 c
+		- g[i][j] = g[i+1][j-1]*2+2-(g[l+1][r-1]+2)
+		- 注意 l 和 r 不存在时，f[l][r][c] = 0，l 和 r 相等时，f[l][r][c] = 1，要特殊处理
+	- 否则，由容斥可得
+		- g[i][j] = g[i][j-1]+g[i+1][j]-g[i+1][j-1]
+- 最后，考虑怎么预处理 i、j 对应的 l、r
+	- 其实就是保存字符 s[i] 的下/上一个位置
+	- 遍历并维护哈希表即可
 ## 解答
 
 ```python
-def countPalindromicSubsequences(self, s: str) -> int:
-    n, mod = len(s), 10**9+7
-    A = [ord(c)-ord('a') for c in s]
-    dp = [[[0]*4 for _ in range(n)] for _ in range(n)]
-    for j in range(n):
-        dp[j][j][A[j]] = 1
-        for i in range(j-1, -1, -1):
-            dp[i][j] = dp[i+1][j-1][:]
-            if A[i]==A[j]:
-                dp[i][j][A[i]] = (sum(dp[i+1][j-1])+2)%mod
-            else:
-                dp[i][j][A[i]] = dp[i][j-1][A[i]]
-                dp[i][j][A[j]] = dp[i+1][j][A[j]]
-    return sum(dp[0][-1])%mod
+class Solution:
+    def countPalindromicSubsequences(self, s: str) -> int:
+        mod = 10**9+7
+        n = len(s)
+        L,R = [-1]*n,[n]*n
+        d = {}
+        for i,c in enumerate(s):
+            if c in d:
+                L[i] = d[c]
+                R[d[c]] = i
+            d[c] = i
+        g = [[0]*n for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            g[i][i] = 1
+            for j in range(i+1,n):
+                if s[i]==s[j]:
+                    l,r = R[i],L[j]
+                    g[i][j] = g[i+1][j-1]*2+2
+                    g[i][j] -= 0 if l>r else 1 if l==r else g[l+1][r-1]+2
+                else:
+                    g[i][j] = g[i][j-1]+g[i+1][j]-g[i+1][j-1]
+                g[i][j] %= mod
+        return g[0][-1]
 ```
-3408 ms
+570 ms
 
