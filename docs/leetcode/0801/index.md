@@ -58,28 +58,27 @@ A = [1, 3, 5, 7] ， B = [1, 2, 3, 4]
 
 ## 分析
 
-最后一对元素交换/不交换是否有效只与倒数第二对元素的状态有关。
-
-为了方便递推，令：
-- dp[i][0] 代表第 i 对不交换的情况下使前 i 对有效的最小次数
-- dp[i][1] 代表第 i 对交换的情况下使前 i 对有效的最小次数
-
-即可由 dp[i] 递推得到 dp[i+1]。还可以用滚动数组优化。
+- 按最后一对元素是否交换递推，这与倒数第二对元素的状态有关
+- 因此令  f[i][0]/f[i][1] 代表第 i 对不交换/交换状态的最小值，即可递推
+- 可以用滚动数组优化
 
 ## 解答
 
 ```python
-def minSwap(self, nums1: List[int], nums2: List[int]) -> int:
-    n = len(nums1)
-    a, b = 0, 1
-    for i in range(1, n):
-        a2 = b2 = float('inf')
-        if nums1[i]>nums1[i-1] and nums2[i]>nums2[i-1]:
-            a2, b2 = min(a2, a), min(b2, b+1)
-        if nums1[i]>nums2[i-1] and nums2[i]>nums1[i-1]:
-            a2, b2 = min(a2, b), min(b2, a+1)
-        a, b = a2, b2
-    return min(a, b)
+class Solution:
+    def minSwap(self, nums1: List[int], nums2: List[int]) -> int:
+        n = len(nums1)
+        f = [0,1]
+        for i in range(1,n):
+            g = [inf,inf]
+            if nums1[i]>nums1[i-1] and nums2[i]>nums2[i-1]:
+                g[0] = f[0]
+                g[1] = f[1]+1
+            if nums1[i]>nums2[i-1] and nums2[i]>nums1[i-1]:
+                g[0] = min(g[0],f[1])
+                g[1] = min(g[1],f[0]+1)
+            f = g
+        return min(f)
 ```
-312 ms
+99 ms
 
