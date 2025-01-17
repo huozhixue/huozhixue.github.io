@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0810\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  695 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  542 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0810\/","datePublished": "2017-03-20T00:00:00+08:00","dateModified": "2017-03-20T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0810：黑板异或游戏（2341 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-20">2017-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 695 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-20">2017-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 542 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0810/" class="leancloud_visitors" data-flag-title="0810：黑板异或游戏（2341 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -159,34 +159,31 @@ Alice 有两个选择: 擦掉数字 1 或 2。
 <li><code>0 &lt;= nums[i] &lt; 2<sup>16</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>先考虑最终状态，设 f(nums) 代表 nums 所有数字的异或结果，最后一轮没擦之前的数字列表是 A。
-那么胜利条件是 f(A)==0。失败条件则是任选一数字，剩下的异或运算为 0，等价于：</p>
-<pre><code>all(f(A+[a])==0 for a in A)
-
-此时必然有 	f(A*len(A)+[a for a in A]) == 0
-即			f(A*(len(A)+1)) == 0
-
-len(A) 为奇数时式子成立，可能满足失败条件
-len(A) 为偶数时左侧 = f(A)，若 f(A)==0 直接就胜利了，若 f(A)!=0 也不满足失败条件。
-
-因此 len(A) 为偶数时，不可能是最后的失败状态。
-</code></pre>
-<p>那么当 len(nums) 为偶数时，显然每次轮到 Alice 还没擦数字前 len(A) 为偶数，必然不是失败状态。
-要么 Alice 中途获胜，要么最后 Bob 擦完最后一个数字失败。Alice 必胜。</p>
-<p>反过来，当 len(nums) 为奇数时，只要一开始没有获胜，不管 Alice 选什么都转化为上述情形，
-只是轮到 Bob 有必胜策略了。</p>
+<ul>
+<li>考虑失败状态是什么
+<ul>
+<li>设 nums 的异或结果为 a，去掉数 x 后变为 a ^ x，x 等于 a 才会使结果为 0</li>
+<li>任意去掉数字结果都为 0，那么 nums 的数都为 a，且满足 n 个 a 的异或结果为 a</li>
+<li>n 必然是奇数</li>
+</ul>
+</li>
+<li>因此一开始 n 为偶数的话，不可能转到失败状态，必胜</li>
+<li>一开始 n 为奇数的话，除非一开始就胜利，否则必然会到达失败状态</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">xorGame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">^</span><span class="n">y</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">xorGame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">reduce</span><span class="p">(</span><span class="n">xor</span><span class="p">,</span><span class="n">nums</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>80 ms</p>
+</div><p>0 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

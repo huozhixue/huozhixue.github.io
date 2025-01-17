@@ -48,38 +48,44 @@
 
 ## 分析
 
-有点类似 {{< lc "0218" >}}，不过遍历坐标 x 时，要维护的不是高度集合，而是区间集合。
+### #1
 
-每一轮根据当前横坐标 cur_x 、上一轮横坐标 prev_x，上一轮区间集合覆盖的长度 prev_h，
-即可计算出 cur_x 和 prev_x 之间覆盖的面积。然后更新 prev_x 和 prev_h 即可。
-
-## 解答
+- 类似 {{< lc "0218" >}}，不过遍历坐标 x 时，要维护的不是高度集合，而是区间集合
+- 每一轮根据当前横坐标 x 、上一轮横坐标 pre，上一轮区间集合覆盖的长度 h，即可计算出 pre 到 x 的面积
 
 ```python
-def rectangleArea(self, rectangles: List[List[int]]) -> int:
-    def cal(A):
-        res, end = 0, 0
-        for s, e in A:
-            res += max(end, e) - max(s, end)
-            end = max(end, e)
+class Solution:
+    def rectangleArea(self, rectangles: List[List[int]]) -> int:
+        mod = 10**9+7
+        d = defaultdict(list)
+        for x1,y1,x2,y2 in rectangles:
+            d[x1].append((1,y1,y2))
+            d[x2].append((0,y1,y2))
+        def cal(ct):
+            res, r = 0, -inf
+            for a,b in sorted(ct):
+                res += max(0,b-max(a,r))
+                r = max(r,b)
+            return res
+        res = 0
+        ct, pre = defaultdict(int),0
+        for x in sorted(d):
+            res += (x-pre)*cal(ct)
+            res %= mod
+            for flag,y1,y2 in d[x]:
+                if flag:
+                    ct[(y1,y2)] += 1
+                else:
+                    ct[(y1,y2)] -= 1
+                    if not ct[(y1,y2)]:
+                        del ct[(y1,y2)]
+            pre = x
         return res
-
-    from sortedcontainers import SortedList
-    d = defaultdict(list)
-    for x1, y1, x2, y2 in rectangles:
-        d[x1].append((y1, y2, 1))
-        d[x2].append((y1, y2, 0))
-    res, mod = 0, 10**9+7
-    H, prev_x, prev_h = SortedList(), 0, 0
-    for x in sorted(d):
-        res = (res+(x-prev_x)*prev_h)%mod
-        for y1, y2, flag in d[x]:
-            if flag:
-                H.add((y1, y2))
-            else:
-                H.remove((y1, y2))
-        prev_x, prev_h = x, cal(H)
-    return res
 ```
-时间复杂度 O(N^2)，52 ms
+时间复杂度 O(N^2)，15 ms
 
+
+### #2
+
+- 区间集合的情况可以用线段树维护
+## 解答

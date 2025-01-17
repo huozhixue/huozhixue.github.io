@@ -52,30 +52,31 @@
 ## 解答
 
 ```python
-def numSimilarGroups(self, strs: List[str]) -> int:
-    def find(i):
-        if p[i] != i:
-            p[i] = find(p[i])
-        return p[i]
+class Solution:
+    def numSimilarGroups(self, strs: List[str]) -> int:
+        def find(x):
+            if f[x]!=x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(i, j):
-        p[find(i)] = find(j)
+        def union(x,y):
+            f[find(x)] = find(y)
 
-    def is_sim(s1, s2):
-        cnt = 0
-        for x, y in zip(s1, s2):
-            cnt += (x != y)
-            if cnt > 2:
-                return False
-        return True
+        def check(s1,s2):
+            w = 0
+            for x,y in zip(s1,s2):
+                w += (x!=y)
+                if w>2:
+                    return False
+            return True
 
-    n = len(strs)
-    p = list(range(n))
-    for i in range(n):
-        for j in range(i+1, n):
-            if is_sim(strs[i], strs[j]):
-                union(i, j)
-    return sum(p[i]==i for i in range(n))
+        n = len(strs)
+        f = list(range(n))
+        for i in range(n):
+            for j in range(i+1,n):
+                if check(strs[i],strs[j]):
+                    union(i,j)
+        return sum(find(i)==i for i in range(n))
 ```
-276 ms
+155 ms
 

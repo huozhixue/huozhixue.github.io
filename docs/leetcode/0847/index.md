@@ -53,31 +53,26 @@
 
 ## 分析
 
-遍历时关心的状态其实是 (节点 u, 访问过的节点集合 s) 二元组。那么类似 {{< lc "0787" >}}，可以构造新图。
-
-对于原边 <u, v>，从 (u, s) 到 (u, s|{v}) 连有向边，权重 1。
-问题转为在新图中求任意 (u, {u}) 到任意 (v, 所有节点集合) 的最短路。
-
-因为边的权重相等，所以可以用 bfs 解决。具体实现时不需要真的构造出新图。
-
-> 注意 set 类型不能作为哈希的键，因此考虑用状态压缩来表示节点集合。
+- 典型的 bfs，维护状态 <节点 u, 访问过的节点集合 st> 即可
+- 注意 set 类型不能作为哈希的键，将节点集合状态压缩成一个数即可
 
 ## 解答
 
 ```python
-def shortestPathLength(self, graph: List[List[int]]) -> int:
-    n = len(graph)
-    queue = deque([(0, u, 1<<u) for u in range(n)])
-    vis = {(u, 1<<u) for u in range(n)}
-    while queue:
-        w, u, s = queue.popleft()
-        if s == (1<<n)-1:
-            return w
-        for v in graph[u]:
-            s2 = s|(1<<v)
-            if (v, s2) not in vis:
-                vis.add((v, s2))
-                queue.append((w+1, v, s2))
+class Solution:
+    def shortestPathLength(self, graph: List[List[int]]) -> int:
+        n = len(graph)
+        Q = deque([(0,i,1<<i) for i in range(n)])
+        vis = {(i,1<<i) for i in range(n)}
+        while Q:
+            w,i,st = Q.popleft()
+            if st==(1<<n)-1:
+                return w
+            for j in graph[i]:
+                st2 = st|1<<j
+                if (j,st2) not in vis:
+                    vis.add((j,st2))
+                    Q.append((w+1,j,st2))
 ```
-180 ms
+131 ms
 

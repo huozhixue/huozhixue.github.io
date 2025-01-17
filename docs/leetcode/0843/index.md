@@ -67,50 +67,37 @@ master.guess("abcczz") 返回 4 ，因为 "abcczz" 共有 4 个字母匹配。
 
 ## 分析
 
-### #1
 
-可以发现任何方法都不能保证在 10 次内一定猜出来，比如 ['aaaaaa', 'bbbbbb', ... 'zzzzzz'] 26 个单词的列表，
-必须要猜 26 次才能保证猜中。
-
-因此只考虑 match=guess(word) 是有用信息的情况。那么可以通过 match 缩小查找范围 words。
-
-比如示例 1 中，若选择了单词 word='ccbazz'，那么可以根据 guess(word)=3，
-更新 words 为与该单词匹配 3 项的单词列表 ['acckzz']。依此类推，直到猜中。
-
-```python
-def findSecretWord(self, wordlist: List[str], master: 'Master') -> None:
-    words = wordlist
-    for _ in range(10):
-        A = random.choice(words)
-        match = master.guess(A)
-        if match == 6:
-            return
-        words = [B for B in words if sum(a==b for a,b in zip(A, B))==match]
-```
-40 ms
-
-### #2
-
-现在每次随机选单词，有时能 AC 有时不能。考虑能否去掉随机。
-
-显然希望每一步得到的 words 范围更小，也就是选择 A 后更新得到的 words 长度最小。
-但 match 是未知的，所以只能遍历 match 考虑最坏情形。
+- 可以发现任何方法都不能保证在 10 次内一定猜出来
+	- 比如 ['aaaaaa', 'bbbbbb', ... 'zzzzzz'] 26 个单词的列表，必须要猜 26 次才能保证猜中
+- 因此只考虑 x=guess(word) 是有用信息的情况，可以通过 x 缩小查找范围
+	- 比如示例 1 中，若选择了单词 word='ccbazz'，那么可以根据 guess(word)=3，更新 words 为与该单词匹配 3 项的单词列表 ['acckzz']
+- 显然希望每一步得到的查找范围 cands 更小
+	- 先预处理与单词 u 匹配 x 的列表 f[u][x]
+	- 假如选择单词 u，guess 得到结果 x，查找范围变为 cands&f[u][x]
+	- 选择单词 u 的最坏结果即是 g=max(len(cands&f[u][x]) for x in range(6))
+	- 遍历单词，选择 g 最小的单词即可 
 
 
 ## 解答
 
 ```python
-def findSecretWord(self, wordlist: List[str], master: 'Master') -> None:
-    def cal(A):
-        return max(sum(sum(a==b for a,b in zip(A, B))==i for B in words) for i in range(6))
-
-    words = set(wordlist)
-    for _ in range(10):
-        A = min(words, key=cal)
-        match = master.guess(A)
-        if match == 6:
-            return
-        words = [B for B in words if sum(a==b for a,b in zip(A, B))==match]
+class Solution:
+    def findSecretWord(self, words: List[str], master: 'Master') -> None:
+        n = len(words)
+        f = [[set() for _ in range(6)] for _ in range(n)]
+        for i in range(n):
+            for j in range(i+1,n):
+                x = sum(a==b for a,b in zip(words[i],words[j]))
+                f[i][x].add(j)
+                f[j][x].add(i)
+        cands = set(range(n))
+        while True:
+            u = min(cands,key=lambda u:max(len(A&cands) for A in f[u]))
+            x = master.guess(words[u])
+            if x==6:
+                return words[u]
+            cands &= f[u][x]
 ```
-452 ms
+71 ms
 

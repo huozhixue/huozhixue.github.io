@@ -63,40 +63,40 @@
 
 ## 分析
 
-为了方便，考虑节点 0 为根的树形式。显然相邻节点对应的答案有很大联系，考虑递推。
-
-若 u 是 v 的父节点，那么对于任意 v 的子节点 x（包括 v），dist(v,x)=dist(u,x)-1。
-对于其它节点 x （包括 u），dist(v,x)=dist(u,x)+1。
-
-因此令 cnt[v] 代表 v 的子节点个数，则 ans[v]=ans[u]-cnt[v]+(n-cnt[v])。
-
-那么先一遍 dfs 从下往上求出 ans[0] 和 cnt 数组，再一遍 dfs 从上往下即可求出 ans 数组。
+- 典型的换根 dp，通用的方法是先 dfs 一次求出根节点 0 的值，然后再 dfs 一次，根据相邻节点的关系更新其它节点的值
+- 本题中，第一次 dfs 时，求节点 u 到所有子节点的距离之和 f[u]
+	- 除了知道每个子结点 v 的值 f[v] 外，还需要知道 v 的节点个数
+	- 因此维护 sz[u] 表示 u 的节点个数，即可递推
+	- dfs 结束后，f[0] 即是节点 0 的最终值
+- 第二次 dfs 时，假如已知节点 u 的最终值为 g[u]
+	- 对于 u 的子节点 v，v 相比于 u，到 v 的子节点的距离都少了 1，到其它节点的距离都多了 1
+	- 因此可以递推 g[v]=g[u]-sz[v]+n-sz[v]
 
 ## 解答
 
 ```python
-def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
-    def dfs1(u, f):
-        for v in nxt[u]:
-            if v != f:
-                dfs1(v, u)
-                ans[u] += ans[v] + cnt[v]
-                cnt[u] += cnt[v]
-
-    def dfs2(u, f):
-        for v in nxt[u]:
-            if v != f:
-                ans[v] = ans[u] + n - 2 * cnt[v]
-                dfs2(v, u)
-
-    nxt = defaultdict(list)
-    for u, v in edges:
-        nxt[u].append(v)
-        nxt[v].append(u)
-    ans, cnt = [0] * n, [1] * n
-    dfs1(0, -1)
-    dfs2(0, -1)
-    return ans
+class Solution:
+    def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
+        g = [[] for _ in range(n)]
+        for a,b in edges:
+            g[a].append(b)
+            g[b].append(a)
+        res = [0]*n
+        sz = [1]*n
+        def dfs(u,fa):
+            for v in g[u]:
+                if v!=fa:
+                    dfs(v,u)
+                    sz[u] += sz[v]
+                    res[u] += res[v]+sz[v]
+        dfs(0,-1)
+        def dfs(u,fa):
+            for v in g[u]:
+                if v!=fa:
+                    res[v] = res[u]+n-sz[v]-sz[v]
+                    dfs(v,u)
+        dfs(0,-1)
+        return res
 ```
-296 ms
+127 ms
 

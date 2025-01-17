@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0805\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1060 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  875 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0805\/","datePublished": "2017-03-15T00:00:00+08:00","dateModified": "2017-03-15T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0805：数组的均值分割（1982 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-15">2017-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1060 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0805/" class="leancloud_visitors" data-flag-title="0805：数组的均值分割（1982 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-03-15">2017-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 875 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0805/" class="leancloud_visitors" data-flag-title="0805：数组的均值分割（1982 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,10 +126,10 @@
       <ul>
         <li><a href="#1">#1</a></li>
         <li><a href="#2">#2</a></li>
+        <li><a href="#3">#3</a></li>
       </ul>
     </li>
     <li><a href="#解答">解答</a></li>
-    <li><a href="#附加">*附加</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -163,18 +163,20 @@
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>类似 <a href="/leetcode/0416" title="0416" rel="noopener noreferrer">0416</a>，不过分割条件从和相等变成了平均数相等。</p>
-<p>什么情况下两者等价？平均数为 0 的时候。于是有个巧妙的想法：</p>
 <ul>
-<li>将 nums 的数都减去平均数得到新数组 A，问题就等价于将 A 分割为和相等的两部分。</li>
-<li>注意平均数可能为浮点数，为了精确，可以将 nums 的数都先乘以一个合适的 mul 使得平均数为整数。</li>
-<li>转换完成后递推子集和的集合找 0 即可。</li>
+<li>类似 <a href="/leetcode/0416" title="0416" rel="noopener noreferrer">0416</a>，不过分割条件从和相等变成了平均数相等
+<ul>
+<li>设 nums 的平均数是 avg，即是要分割成平均数都为 avg</li>
+<li>考虑将所有数都减去 avg，即变为分割成平均数为 0，等价于和为 0</li>
+<li>由于 avg 可能是浮点数，将所有数再乘以 n 保证是整数即可</li>
 </ul>
-<p>注意不能选取整个 A，因此考虑只遍历 A[:-1]，假如没有得到 0，即非真。证明：</p>
+</li>
+<li>设得到的数组是 A，问题转为求 A一个非空真子集满足和为 0
 <ul>
-<li>假如 A[:-1] 的子集和都不为 0，那么 A[:-1] 的任意真子集 A&rsquo; 的和不等于 sum(A[:-1])（因为 A[:-1]-A&rsquo; 的和不为 0）</li>
-<li>那么 A[-1] 和 A[:-1] 的任意真子集 A&rsquo; 的总和不等于 sum(A)=0</li>
-<li>因此 A 的任意真子集的和不为 0</li>
+<li>类似 <a href="/leetcode/0416" title="0416" rel="noopener noreferrer">0416</a>，递推值的集合即可</li>
+<li>注意必须真子集，考虑只遍历 A[:-1]，因为假如存在分割，必有一边是不含 A[-1] 的</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -190,28 +192,29 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">splitArraySameAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mul</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="n">gcd</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span><span class="o">*</span><span class="n">mul</span><span class="o">-</span><span class="n">mul</span><span class="o">*</span><span class="n">s</span><span class="o">//</span><span class="n">n</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">|=</span> <span class="p">{</span><span class="n">sub</span><span class="o">+</span><span class="n">x</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">res</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">splitArraySameAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span><span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">s</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vis</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vis</span> <span class="o">|=</span> <span class="p">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">vis</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>592 ms</p>
+</div><p>1944 ms</p>
 <h3 id="2">#2</h3>
-<p>还可以类似 <a href="/leetcode/0416" title="0416" rel="noopener noreferrer">0416</a> 的状压优化方法，将集合状态压缩为一个数 state，优化递推时间。</p>
-<p>这里有个问题是集合中有负数，不能压缩到 state 中。一个巧妙的想法是：</p>
+<ul>
+<li>还可以类似 <a href="/leetcode/0416" title="0416" rel="noopener noreferrer">0416</a> ，用状压优化</li>
+<li>有个问题是集合中有负数，不能压缩，一个巧妙的想法是：
 <ul>
 <li>先遍历正数，再遍历负数</li>
-<li>那么遇到某个子集和为负数时，必然已经遍历到负数，那么后面不可能变为 0 了，无需保存</li>
-<li>所以只维护非负数的集合即可，可以压缩为 state</li>
+<li>一旦值为负数，必然已经遍历到负数，后面不可能变为 0 了，无需保存</li>
 </ul>
-<h2 id="解答">解答</h2>
+</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -224,35 +227,40 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">splitArraySameAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mul</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="n">gcd</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span><span class="o">*</span><span class="n">mul</span><span class="o">-</span><span class="n">mul</span><span class="o">*</span><span class="n">s</span><span class="o">//</span><span class="n">n</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">st</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">st</span> <span class="o">|=</span> <span class="p">(</span><span class="n">st</span><span class="o">|</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="k">else</span> <span class="n">st</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">st</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">splitArraySameAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span><span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">s</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">st</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">a</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">st</span> <span class="o">|=</span> <span class="p">(</span><span class="n">st</span><span class="o">|</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">a</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">st</span> <span class="o">|=</span> <span class="n">st</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">st</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>36 ms</p>
-<h2 id="附加">*附加</h2>
-<p>本题还有个经典的优化方法，折半搜索：</p>
+</div><p>11 ms</p>
+<h3 id="3">#3</h3>
 <ul>
-<li>先遍历 A 的前半部分 B=A[:n//2]，得到所有子集和的集合 S</li>
-<li>如果 S 中没有 0，再遍历 A 的后半部分 C=A[n//2:]，得到所有子集和的集合 S2</li>
-<li>如果 S2 中也没有 0，那遍历 S2 中 的 x，判断 -x 是否在 S 中即可。</li>
-</ul>
-<p>注意不能选取整个 A，所以不考虑 x=sum(C) 的情况。证明：</p>
+<li>针对 n 小值域大的情况，更通用的方法是折半搜索</li>
+<li>分别遍历 A 的前/后半部分 B=A[:n//2]、C=A[n//2:]，得到所有子集和的集合 L、R
 <ul>
-<li>C 的子集和都不为 0，那么 C 的任意真子集的和不等于 sum(C)</li>
-<li>因此 x=sum(C) 必然对应整个 C</li>
-<li>B 的子集和都不为 0，那么 B 的任意真子集的和不等于 sum(B)</li>
-<li>因此 -x=sum(B) 必然对应整个 B</li>
+<li>如果 L 或 R 中有 0，即找到 A 的一个子集和为 0</li>
+<li>如果对 R 中的某个 x，存在 -x 在 L 中，即找到一个 A 的子集和为 0</li>
 </ul>
+</li>
+<li>注意要求真子集，考虑只遍历 C[:-1]，因为假如存在分割，必有一边是不含 C[-1] 的</li>
+<li>注意 n=1 时不可能分割，此时 B 为空，C 有一个元素，刚好符合，不用特判</li>
+</ul>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -274,26 +282,26 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">splitArraySameAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mul</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="n">gcd</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span><span class="o">*</span><span class="n">mul</span><span class="o">-</span><span class="n">mul</span><span class="o">*</span><span class="n">s</span><span class="o">//</span><span class="n">n</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">S</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[:</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">S</span> <span class="o">|=</span> <span class="p">{</span><span class="n">sub</span><span class="o">+</span><span class="n">x</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">S</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">    <span class="n">S2</span><span class="p">,</span> <span class="n">rs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">:])</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">:]:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">S2</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">y</span> <span class="o">=</span> <span class="n">sub</span><span class="o">+</span><span class="n">x</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">rs</span> <span class="ow">and</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="o">-</span><span class="n">y</span> <span class="ow">in</span> <span class="n">S</span><span class="p">):</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">splitArraySameAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span><span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">s</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">B</span><span class="p">,</span><span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="p">[:</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">B</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">L</span> <span class="o">|=</span> <span class="p">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">L</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">            <span class="n">S2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="n">R</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">C</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">R</span><span class="o">|</span><span class="p">{</span><span class="mi">0</span><span class="p">}:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">R</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">b</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span> 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>64 ms</p>
+</div><p>31 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

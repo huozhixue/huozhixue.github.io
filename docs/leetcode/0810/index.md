@@ -54,32 +54,19 @@ Alice 有两个选择: 擦掉数字 1 或 2。
 
 ## 分析
 
-先考虑最终状态，设 f(nums) 代表 nums 所有数字的异或结果，最后一轮没擦之前的数字列表是 A。
-那么胜利条件是 f(A)==0。失败条件则是任选一数字，剩下的异或运算为 0，等价于：
-
-	all(f(A+[a])==0 for a in A)
-	
-	此时必然有 	f(A*len(A)+[a for a in A]) == 0
-	即			f(A*(len(A)+1)) == 0
-	
-	len(A) 为奇数时式子成立，可能满足失败条件
-	len(A) 为偶数时左侧 = f(A)，若 f(A)==0 直接就胜利了，若 f(A)!=0 也不满足失败条件。
-	
-	因此 len(A) 为偶数时，不可能是最后的失败状态。
-	
-那么当 len(nums) 为偶数时，显然每次轮到 Alice 还没擦数字前 len(A) 为偶数，必然不是失败状态。
-要么 Alice 中途获胜，要么最后 Bob 擦完最后一个数字失败。Alice 必胜。
-
-反过来，当 len(nums) 为奇数时，只要一开始没有获胜，不管 Alice 选什么都转化为上述情形，
-只是轮到 Bob 有必胜策略了。
-
+- 考虑失败状态是什么
+	- 设 nums 的异或结果为 a，去掉数 x 后变为 a ^ x，x 等于 a 才会使结果为 0
+	- 任意去掉数字结果都为 0，那么 nums 的数都为 a，且满足 n 个 a 的异或结果为 a
+	- n 必然是奇数
+- 因此一开始 n 为偶数的话，不可能转到失败状态，必胜
+- 一开始 n 为奇数的话，除非一开始就胜利，否则必然会到达失败状态
 
 ## 解答
 
 ```python
-def xorGame(self, nums: List[int]) -> bool:
-	return len(nums)%2==0 or reduce(lambda x,y: x^y, nums)==0
+class Solution:
+    def xorGame(self, nums: List[int]) -> bool:
+        return len(nums)%2==0 or reduce(xor,nums)==0
 ```
-
-80 ms
+0 ms
 

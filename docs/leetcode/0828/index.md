@@ -56,32 +56,24 @@
 
 ## 分析
 
-可以对每个字符统计其作为唯一字符的次数。
-
-令 left[i] 代表 s[i] 上一次出现的位置，right[i] 代表 s[i] 下一次出现的位置。
-显然对于 [left[i], right[i]] 范围内包含 s[i] 的子串，s[i] 都是唯一字符。
-这样的子串个数即为 (i-left[i])*(right[i]-i)。
-
-借助哈希表可以一趟得到所有的 left[i] 和 right[i]。
+- 可以用贡献法，统计每个字符作为唯一字符的次数
+- 对字符 s[i]，找到上/下一次出现的位置 l、r，次数即为 (i-l)*(r-i)
+- 找上/下一次出现的位置，用哈希表即可
 
 ## 解答
 
 ```python
-def uniqueLetterString(self, s: str) -> int:
-    n = len(s)
-    left, right = [-1]*n, [n]*n
-    d = {}
-    for i, char in enumerate(s):
-        if char in d:
-            j = d[char]
-            left[i] = j
-            right[j] = i
-        d[char] = i
-    res, mod = 0, 10**9+7
-    for i in range(n):
-        res += (i-left[i])*(right[i]-i)
-        res %= mod
-    return res
+class Solution:
+    def uniqueLetterString(self, s: str) -> int:
+        d = defaultdict(list)
+        for i,c in enumerate(s):
+            d[c].append(i)
+        res, n = 0, len(s)
+        for A in d.values():
+            A = [-1]+A+[n]
+            for i in range(1,len(A)-1):
+                res += (A[i]-A[i-1])*(A[i+1]-A[i])
+        return res
 ```
-236 ms
+141 ms
 

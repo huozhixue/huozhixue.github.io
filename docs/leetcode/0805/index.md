@@ -49,90 +49,82 @@
 
 ### #1
 
-类似 {{< lc "0416" >}}，不过分割条件从和相等变成了平均数相等。
-
-什么情况下两者等价？平均数为 0 的时候。于是有个巧妙的想法：
-- 将 nums 的数都减去平均数得到新数组 A，问题就等价于将 A 分割为和相等的两部分。
-- 注意平均数可能为浮点数，为了精确，可以将 nums 的数都先乘以一个合适的 mul 使得平均数为整数。
-- 转换完成后递推子集和的集合找 0 即可。
-
-注意不能选取整个 A，因此考虑只遍历 A[:-1]，假如没有得到 0，即非真。证明：
-- 假如 A[:-1] 的子集和都不为 0，那么 A[:-1] 的任意真子集 A' 的和不等于 sum(A[:-1])（因为 A[:-1]-A' 的和不为 0）
-- 那么 A[-1] 和 A[:-1] 的任意真子集 A' 的总和不等于 sum(A)=0
-- 因此 A 的任意真子集的和不为 0
-
-
+- 类似 {{< lc "0416" >}}，不过分割条件从和相等变成了平均数相等
+	- 设 nums 的平均数是 avg，即是要分割成平均数都为 avg
+	- 考虑将所有数都减去 avg，即变为分割成平均数为 0，等价于和为 0
+	- 由于 avg 可能是浮点数，将所有数再乘以 n 保证是整数即可
+- 设得到的数组是 A，问题转为求 A一个非空真子集满足和为 0
+	- 类似 {{< lc "0416" >}}，递推值的集合即可
+	- 注意必须真子集，考虑只遍历 A[:-1]，因为假如存在分割，必有一边是不含 A[-1] 的
 
 ```python
-def splitArraySameAverage(self, nums: List[int]) -> bool:
-    n, s = len(nums), sum(nums)
-    mul = n//gcd(n, s)
-    A = [num*mul-mul*s//n for num in nums]
-    res = set()
-    for x in A[:-1]:
-        res |= {sub+x for sub in res|{0}}
-        if 0 in res:
-            return True
-    return False
+class Solution:
+    def splitArraySameAverage(self, nums: List[int]) -> bool:
+        n,s = len(nums),sum(nums)
+        A = [n*x-s for x in nums]
+        vis = set()
+        for a in A[:-1]:
+            vis |= {a+b for b in vis|{0}}
+            if 0 in vis:
+                return True
+        return False
 ```
-592 ms
+1944 ms
 
 ### #2
 
-还可以类似 {{< lc "0416" >}} 的状压优化方法，将集合状态压缩为一个数 state，优化递推时间。
+- 还可以类似 {{< lc "0416" >}} ，用状压优化
+- 有个问题是集合中有负数，不能压缩，一个巧妙的想法是：
+	- 先遍历正数，再遍历负数
+	- 一旦值为负数，必然已经遍历到负数，后面不可能变为 0 了，无需保存
 
-这里有个问题是集合中有负数，不能压缩到 state 中。一个巧妙的想法是：
-- 先遍历正数，再遍历负数
-- 那么遇到某个子集和为负数时，必然已经遍历到负数，那么后面不可能变为 0 了，无需保存
-- 所以只维护非负数的集合即可，可以压缩为 state
+
+```python
+class Solution:
+    def splitArraySameAverage(self, nums: List[int]) -> bool:
+        n,s = len(nums),sum(nums)
+        A = [n*x-s for x in nums]
+        st = 0
+        for a in sorted(A[:-1])[::-1]:
+            if a>=0:
+                st |= (st|1)<<a
+            else:
+                st |= st>>(-a)
+            if st&1:
+                return True
+        return False
+```
+11 ms
+
+### #3
+
+- 针对 n 小值域大的情况，更通用的方法是折半搜索
+- 分别遍历 A 的前/后半部分 B=A[:n//2]、C=A[n//2:]，得到所有子集和的集合 L、R
+	- 如果 L 或 R 中有 0，即找到 A 的一个子集和为 0
+	- 如果对 R 中的某个 x，存在 -x 在 L 中，即找到一个 A 的子集和为 0
+- 注意要求真子集，考虑只遍历 C[:-1]，因为假如存在分割，必有一边是不含 C[-1] 的
+- 注意 n=1 时不可能分割，此时 B 为空，C 有一个元素，刚好符合，不用特判
 
 ## 解答
 
 ```python
-def splitArraySameAverage(self, nums: List[int]) -> bool:
-    n, s = len(nums), sum(nums)
-    mul = n//gcd(n, s)
-    A = [num*mul-mul*s//n for num in nums]
-    st = 0
-    for x in sorted(A[:-1], reverse=True):
-        st |= (st|1)<<x if x>=0 else st>>(-x)
-        if st & 1:
-            return True
-    return False
-```
-36 ms
-
-
-## *附加
-
-本题还有个经典的优化方法，折半搜索：
-- 先遍历 A 的前半部分 B=A[:n//2]，得到所有子集和的集合 S
-- 如果 S 中没有 0，再遍历 A 的后半部分 C=A[n//2:]，得到所有子集和的集合 S2
-- 如果 S2 中也没有 0，那遍历 S2 中 的 x，判断 -x 是否在 S 中即可。
-
-注意不能选取整个 A，所以不考虑 x=sum(C) 的情况。证明：
-- C 的子集和都不为 0，那么 C 的任意真子集的和不等于 sum(C)
-- 因此 x=sum(C) 必然对应整个 C
-- B 的子集和都不为 0，那么 B 的任意真子集的和不等于 sum(B)
-- 因此 -x=sum(B) 必然对应整个 B
-
-```python
-def splitArraySameAverage(self, nums: List[int]) -> bool:
-    n, s = len(nums), sum(nums)
-    mul = n//gcd(n, s)
-    A = [num*mul-mul*s//n for num in nums]
-    S = set()
-    for x in A[:n//2]:
-        S |= {sub+x for sub in S|{0}}
-        if 0 in S:
-            return True
-    S2, rs = set(), sum(A[n//2:])
-    for x in A[n//2:]:
-        for sub in S2|{0}:
-            y = sub+x
-            if y != rs and (y==0 or -y in S):
+class Solution:
+    def splitArraySameAverage(self, nums: List[int]) -> bool:
+        n,s = len(nums),sum(nums)
+        A = [n*x-s for x in nums]
+        B,C = A[:n//2],A[n//2:]
+        L = set()
+        for a in B:
+            L |= {a+b for b in L|{0}}
+            if 0 in L:
                 return True
-            S2.add(y)
-    return False
+        R = set()
+        for a in C[:-1]:
+            for b in R|{0}:
+                R.add(a+b)
+                if a+b==0 or -a-b in L:
+                    return True
+        return False 
 ```
-64 ms
+31 ms
+
