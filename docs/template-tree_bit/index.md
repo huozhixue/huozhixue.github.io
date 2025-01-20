@@ -4,12 +4,12 @@
 ## 1 区间和 
 
 ```python []
-def add(i,x):             # 更新 nums[i-1] 加上 x
+def add(i,x):             # 更新 t[i] 加上 x
 	while i<ma:
 		t[i] += x
 		i += i&-i
 
-def get(i):               # nums[:i] 的和
+def get(i):               # t[:i+1] 的和
 	res = 0
 	while i:
 		res += t[i]
@@ -23,12 +23,12 @@ t = defaultdict(int)
 
 
 ```python []
-def update(i,x):             # 更新 nums[i-1] 为 x
+def update(i,x):             # 更新 t[i] 为 x
 	while i<ma:
 		t[i] = max(t[i],x)
 		i += i&-i
 
-def get(i):               # nums[:i] 的最大值
+def get(i):               # t[:i+1] 的最大值
 	res = 0
 	while i:
 		res = max(res,t[i])

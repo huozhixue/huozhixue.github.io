@@ -48,10 +48,10 @@
 
 ## 分析
 
-### #1
-
 - 类似 {{< lc "0218" >}}，不过遍历坐标 x 时，要维护的不是高度集合，而是区间集合
 - 每一轮根据当前横坐标 x 、上一轮横坐标 pre，上一轮区间集合覆盖的长度 h，即可计算出 pre 到 x 的面积
+
+## 解答
 
 ```python
 class Solution:
@@ -85,7 +85,50 @@ class Solution:
 时间复杂度 O(N^2)，15 ms
 
 
-### #2
+## *附加
 
-- 区间集合的情况可以用线段树维护
-## 解答
+- 本题的区间集合还可以用线段树维护
+- 本题的线段树有两个特殊性
+	- 只查询根节点
+	- 只删除之前添加过的区间
+- 所以可以不用懒标记，只需额外维护区间覆盖的次数 
+
+```python
+class Solution:
+    def rectangleArea(self, rectangles: List[List[int]]) -> int:
+        def up(o,l,r):            
+            if f[o]>0:
+                t[o] = r-l+1
+            elif l==r:
+                t[o] = 0
+            else:
+                t[o] = t[o*2]+t[o*2+1]
+
+        def update(a,b,x,o,l,r):
+            if a<=l and r<=b:
+                f[o] += x
+                up(o,l,r)
+                return 
+            m = (l+r)//2
+            if a<=m: update(a,b,x,o*2,l,m)
+            if m<b: update(a,b,x,o*2+1,m+1,r)
+            up(o,l,r)
+
+        mod = 10**9+7
+        ma = max(max(p) for p in rectangles)
+        d = defaultdict(list)
+        for x1,y1,x2,y2 in rectangles:
+            d[x1].append((1,y1,y2))
+            d[x2].append((-1,y1,y2))
+        t = defaultdict(int)
+        f = defaultdict(int)
+        res,pre = 0,0
+        for x in sorted(d):
+            res += (x-pre)*t[1]
+            res %= mod
+            for add,y1,y2 in d[x]:
+                update(y1,y2-1,add,1,0,ma)
+            pre = x
+        return res
+```
+103 ms

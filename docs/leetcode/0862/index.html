@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0862\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  631 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  495 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0862\/","datePublished": "2018-07-01T10:00:00+08:00","dateModified": "2018-07-01T10:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0862：和至少为 K 的最短子数组（2306 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-07-01">2018-07-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 631 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0862/" class="leancloud_visitors" data-flag-title="0862：和至少为 K 的最短子数组（2306 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-07-01">2018-07-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 495 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0862/" class="leancloud_visitors" data-flag-title="0862：和至少为 K 的最短子数组（2306 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -122,12 +122,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -166,46 +161,25 @@
 <li><a href="/leetcode/3095" rel="">3095：或值至少 K 的最短子数组 I（1368 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>涉及到子数组的和，首先想到前缀和。得到前缀和数组 pre 后，问题转为：
-求最小的 j-i 使得 pre[i]&lt;=pre[j]-K。</p>
-<p>暴力法就是遍历位置 j，在 pre[:j] 中找最大的满足要求的 i。</p>
-<p>注意到如果 x &lt; y 且 pre[x] &gt;= pre[y]，那么 y 比 x 更优，在后面的遍历中都可以排除 x。</p>
-<p>因此可以维护一个严格递增的栈 stack，保存有用的位置和值。
-然后就可以二分查找最大的 i 了。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">shortestSubarray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pre</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">nums</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pre</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pos</span> <span class="o">=</span> <span class="n">bisect_right</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">k</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)))</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">pos</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">stack</span><span class="p">[</span><span class="n">pos</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span> <span class="k">if</span> <span class="n">res</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>时间复杂度 O(N*logN)，728 ms</p>
-<h3 id="2">#2</h3>
-<p>还有个巧妙的想法。对于栈中的 i，当遍历到第一个 j 使得 pre[i]&lt;=pre[j]-K，那么以 i 开头的最短子数组就是
-pre[i:j+1]，可以弹出 i 并更新结果。</p>
-<p>因此，可以维护一个单调队列。</p>
+<ul>
+<li>子数组的和，首先想到前缀和，得到前缀和数组 P 后，问题转为：
+<ul>
+<li>遍历位置 j ，求最大的 i&lt;j 使得 P[i]&lt;=P[j]-k</li>
+</ul>
+</li>
+<li>注意到如果 i2&gt;i1 且 P[i2]&lt;=i1，i2 比 i1 更优，后面的遍历都可以排除 i1
+<ul>
+<li>因此维护一个单调栈，i 递增，P[i] 也递增</li>
+<li>要找的 i 即是最后一个满足 P[i]&lt;=P[j]-k 的 i，可以二分查找</li>
+</ul>
+</li>
+<li>注意到对栈中的 i，遍历到第一个 j 使得 P[i]&lt;=P[j]-k，那么 i 开头的所求最短即是 [i,j]，后面的遍历都可以排除 i
+<ul>
+<li>所以维护了一个单调队列</li>
+<li>弹出 i 时即更新了最佳结果</li>
+</ul>
+</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -219,21 +193,27 @@ pre[i:j+1]，可以弹出 i 并更新结果。</p>
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">shortestSubarray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pre</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">nums</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">queue</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="n">deque</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pre</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">queue</span> <span class="ow">and</span> <span class="n">queue</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">queue</span> <span class="ow">and</span> <span class="n">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">-</span><span class="n">k</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span> <span class="k">if</span> <span class="n">res</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">shortestSubarray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">P</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">nums</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">inf</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">Q</span> <span class="ow">and</span> <span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">x</span><span class="o">-</span><span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">i</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">Q</span> <span class="ow">and</span> <span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Q</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">j</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span> <span class="k">if</span> <span class="n">res</span><span class="o">&lt;</span><span class="n">inf</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(N)，464 ms</p>
+</div><p>239 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

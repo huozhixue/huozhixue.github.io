@@ -82,6 +82,5 @@ class Solution:
             res += 1
         return res
 ```
-
 50 ms
 

@@ -52,48 +52,30 @@
 
 ## 分析
 
-### #1
-
-定义期望单价 = 工人期望工资 / 工作质量，实际单价 = 工人实际工资 / 工作质量。对于任意 K 名工人，按照规则应该有：
-
-	K 名工人的 实际单价 相等
-	每名工人的 实际单价 大于等于 期望单价
-
-因此实际单价最小为 ratio=max(每名工人的期望单价)，这 K 名工人最少花费 ratio * 工作质量总和
-
-显然遍历 K 名工人的集合太费时间，有个巧妙的想法是最终 ratio 必然是某个工人的期望单价，所以可以遍历 ratio。
-而 ratio 固定时，显然应该找期望单价小于等于 ratio 且工作质量最小的工人，使花费最少。
-
-可以先将工人按 ratio 排序，遍历时从前面找工作质量最小的工人即可。
-	
-```python
-def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
-	A = sorted((w/q, q) for q, w in zip(quality, wage))
-	return min(A[i][0] * sum(nsmallest(K, [A[j][1] for j in range(i+1)])) for i in range(K-1, len(A)))
-```
-
-超时了
-
-### #2
-
-显然每次重新求工作质量最小的 K 个工人有很多重复计算，可以用 list 或者大顶堆来维护。
-还可以添加一个变量 s 维护元素之和。
-	
+- 假设两个工人的质量和期望分别是 q1、w1，q2、w2，考虑工资怎么发
+	- 设工资分别是 p1、p2，按题意要满足
+		- p1/q1 = p2/q2
+		- p1>=w1，p2>=w2
+	- 设 a = p1/q1，那么 a>=max(w1/q1,w2/q2)
+	- 因此实际发工资以 w/q 最大的人为准
+- 那么将工人按 w/q 排序，假设以第 i 个人为准，则在前 i 个人中选 k 个 q 最小的即可
+- 维护前 k 个最小的，可以用堆实现
 ## 解答
 
 ```python
-def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
-	A = sorted((w/q, q) for q, w in zip(quality, wage))
-	res, pq, s = float('inf'), [], 0
-	for i in range(len(A)):
-		heappush(pq, -A[i][1])
-		s += A[i][1]
-		if i >= K:
-			s += heappop(pq)
-		if i >= K-1:
-			res = min(res, A[i][0] * s)
-	return res
+class Solution:
+    def mincostToHireWorkers(self, quality: List[int], wage: List[int], k: int) -> float:
+        A = sorted(zip(wage,quality),key=lambda p:p[0]/p[1])
+        res = inf
+        pq,s = [],0
+        for i,(w,q) in enumerate(A):
+            s += q
+            heappush(pq,-q)
+            if i>=k:
+                s += heappop(pq)
+            if i>=k-1:
+                res = min(res,s*w/q)
+        return res
 ```
-
-240 ms
+35 ms
 

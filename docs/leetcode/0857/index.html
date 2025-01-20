@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0857\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  788 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  584 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0857\/","datePublished": "2018-06-24T10:00:00+08:00","dateModified": "2018-06-24T10:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0857：雇佣 K 名工人的最低成本（2259 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-06-24">2018-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 788 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-06-24">2018-06-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 584 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0857/" class="leancloud_visitors" data-flag-title="0857：雇佣 K 名工人的最低成本（2259 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -122,12 +122,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -165,31 +160,22 @@
 <li><a href="/leetcode/2542" rel="">2542：最大子序列的分数（2056 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>定义期望单价 = 工人期望工资 / 工作质量，实际单价 = 工人实际工资 / 工作质量。对于任意 K 名工人，按照规则应该有：</p>
-<pre><code>K 名工人的 实际单价 相等
-每名工人的 实际单价 大于等于 期望单价
-</code></pre>
-<p>因此实际单价最小为 ratio=max(每名工人的期望单价)，这 K 名工人最少花费 ratio * 工作质量总和</p>
-<p>显然遍历 K 名工人的集合太费时间，有个巧妙的想法是最终 ratio 必然是某个工人的期望单价，所以可以遍历 ratio。
-而 ratio 固定时，显然应该找期望单价小于等于 ratio 且工作质量最小的工人，使花费最少。</p>
-<p>可以先将工人按 ratio 排序，遍历时从前面找工作质量最小的工人即可。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mincostToHireWorkers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quality</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">wage</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">K</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">w</span><span class="o">/</span><span class="n">q</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">quality</span><span class="p">,</span> <span class="n">wage</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nsmallest</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>超时了</p>
-<h3 id="2">#2</h3>
-<p>显然每次重新求工作质量最小的 K 个工人有很多重复计算，可以用 list 或者大顶堆来维护。
-还可以添加一个变量 s 维护元素之和。</p>
+<ul>
+<li>假设两个工人的质量和期望分别是 q1、w1，q2、w2，考虑工资怎么发
+<ul>
+<li>设工资分别是 p1、p2，按题意要满足
+<ul>
+<li>p1/q1 = p2/q2</li>
+<li>p1&gt;=w1，p2&gt;=w2</li>
+</ul>
+</li>
+<li>设 a = p1/q1，那么 a&gt;=max(w1/q1,w2/q2)</li>
+<li>因此实际发工资以 w/q 最大的人为准</li>
+</ul>
+</li>
+<li>那么将工人按 w/q 排序，假设以第 i 个人为准，则在前 i 个人中选 k 个 q 最小的即可</li>
+<li>维护前 k 个最小的，可以用堆实现</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -204,22 +190,26 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mincostToHireWorkers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quality</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">wage</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">K</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">w</span><span class="o">/</span><span class="n">q</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">quality</span><span class="p">,</span> <span class="n">wage</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">pq</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="p">[],</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="o">-</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">		<span class="n">s</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">K</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">s</span> <span class="o">+=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">K</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">mincostToHireWorkers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quality</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">wage</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">wage</span><span class="p">,</span><span class="n">quality</span><span class="p">),</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">inf</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pq</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="p">[],</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,(</span><span class="n">w</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s</span> <span class="o">+=</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">            <span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span><span class="o">-</span><span class="n">q</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">i</span><span class="o">&gt;=</span><span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">s</span> <span class="o">+=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">i</span><span class="o">&gt;=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">s</span><span class="o">*</span><span class="n">w</span><span class="o">/</span><span class="n">q</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>240 ms</p>
+</div><p>35 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
