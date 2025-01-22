@@ -63,31 +63,37 @@
 
 ## 分析
 
-将 cnt+1 条新边看作是原边的权重，那么可以用 dijkstra 计算出每个原节点到 0 的距离。
-
-原节点距离不超过 maxMoves 即可倒达，新的细分节点则可以根据最近的原节点来判断。
+- 将 cnt+1 看作是原边的权重，用 dijkstra 即可计算出每个原节点到 0 的距离
+- 原节点距离 <=maxMoves 即可倒达，新的细分节点可以根据最近的原节点来判断
 
 ## 解答
 
 ```python
-def reachableNodes(self, edges: List[List[int]], maxMoves: int, n: int) -> int:
-    nxt = defaultdict(list)
-    for u, v, cnt in edges:
-        nxt[u].append((v, cnt+1))
-        nxt[v].append((u, cnt+1))
-    d, pq = defaultdict(lambda: float('inf')), [(0, 0)]
-    while pq:
-        w, u = heappop(pq)
-        if u in d:
-            continue
-        d[u] = w
-        for v, w2 in nxt[u]:
-            if v not in d:
-                heappush(pq, (w+w2, v))
-    res = sum(d[v]<=maxMoves for v in range(n))
-    for u, v, cnt in edges:
-        res += min(cnt, max(0, maxMoves-d[u])+max(0, maxMoves-d[v]))
-    return res
+class Solution:
+    def reachableNodes(self, edges: List[List[int]], maxMoves: int, n: int) -> int:
+        def dij(u):
+            pq = [(0,u)]
+            d = [inf]*n
+            d[u] = 0
+            while pq:
+                w,u = heappop(pq)
+                for v,w2 in g[u]:
+                    if w+w2<d[v]:
+                        d[v] = w+w2
+                        heappush(pq,(w+w2,v))
+            return d
+
+        ma = maxMoves
+        g = [[] for _ in range(n)]
+        for u,v,w in edges:
+            g[u].append((v,w+1))
+            g[v].append((u,w+1))
+        d = dij(0)
+        res= sum(a<=ma for a in d)
+        for u,v,w in edges:
+            a,b = max(ma-d[u], 0),max(ma-d[v],0)
+            res += min(a+b, w)
+        return res
 ```
-224 ms
+86 ms
 
