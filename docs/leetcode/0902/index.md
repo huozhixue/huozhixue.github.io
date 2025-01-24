@@ -60,64 +60,63 @@
 
 ### #1
 
-求范围内数字满足某种性质的个数，容易想到用数位 dp，令 dfs(pos, state, bound) 代表某个状态下的结果：
-- 遍历到 n 的第 pos 位
-- state 代表前面是否取了数
-- bound 代表前面取的数是否贴着 n 的上界
-
-即可递归。
-
-特别注意，“什么也不取”也被计算了，最后需要减去。
+- 典型的数位 dp，令 dfs(i, st, bd) 代表某个状态下的结果：
+	- 遍历到 n 的第 i 位
+	- st 代表前面是否取了数
+	- bd 代表前面取的数是否贴着 n 的上界
+- 递归即可
 
 ```python
-def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:
-    @lru_cache(None)
-    def dfs(pos, state, bound):
-        if pos==len(s):
-            return 1
-        res, cur = 0, s[pos]
-        for x in digits:
-            if not bound or x<=cur:
-                res += dfs(pos+1, False, bound and x==cur)
-        if state:
-            res += dfs(pos+1, state, False)
-        return res
-    
-    s = str(n)
-    return dfs(0, True, True)-1
+class Solution:
+    def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:
+        @cache
+        def dfs(i,st,bd):
+            if i==len(s):
+                return st
+            res = 0
+            up = s[i] if bd else '9'
+            for x in digits:
+                if x>up:
+                    break
+                res += dfs(i+1,1,bd and x==up)
+            if not st:
+                res += dfs(i+1,0,0)
+            return res
+
+        s = str(n)
+        return dfs(0,0,1)
 ```
-44 ms
+0 ms
 
 ### #2
 
-也可以利用排列组合知识直接分段计算。例如对于 n=7382，digits=["1","3","5","7"]：
-    
-- [0, 1000) 的对应个数：4+4^2+4^3
-- [1000, 7000) 的对应个数：3*4^3     
-- [7000, 7300) 的对应个数：1*4^2
-- [7300, 7380) 的对应个数：4*4
-- [7380, 7382) 的对应个数：0
-
-具体实现时，假设 s=str(n) 的长度为 m：
-- 先计算 0-10^(m-1) 的对应个数
-- 然后遍历 i，在 s[:i] 不变的情况下，求 s[i] 能取的值，即 digits 中比 s[i] 小的值，
-然后求 s[i+1:] 的可能排列个数
-
-> 为了方便，可以先将 n 加 1，变为开区间
+- 也可以利用排列组合知识分段计算
+- 例如对于 n=7382，digits=["1","3","5","7"]：
+	- [0, 1000) 的对应个数：4+4^2+4^3 
+	- [1000, 7000) 的对应个数：3*4^3     
+	- [7000, 7300) 的对应个数：1*4^2 
+	- [7300, 7380) 的对应个数：4*4
+	- [7380, 7382) 的对应个数：0
+- 具体实现时，设 s=str(n) 的长度为 m
+	- 先计算 0 到 10^(m-1) 的对应个数
+	- 遍历 i，固定 s[:i] 不变，求能取的比 s[i] 小的值，再乘以后面的排列个数
+	- 一旦 s[i] 不在 digits 中，就已经统计完毕了
+- 为了方便，可以先将 n 加 1，变为开区间
 
 ## 解答
 
 ```python
-def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:
-    s = str(n+1)
-    m, k = len(s), len(digits)
-    res = (k**m-k)//(k-1) if k>1 else k*(m-1)
-    for i, cur in enumerate(s):
-        cand = [x for x in digits if x<cur]
-        res += len(cand)*pow(k, m-1-i)
-        if cur not in digits:
-            break
-    return res
+class Solution:
+    def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:
+        s = str(n+1)
+        m,k = len(s),len(digits)
+        res = (pow(k,m)-k)//(k-1) if k>1 else k*(m-1)
+        for i,c in enumerate(s):
+            w = sum(x<c for x in digits)
+            res += w*pow(k,m-1-i)
+            if c not in digits:
+                break
+        return res
 ```
-40 ms
+0 ms
 

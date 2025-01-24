@@ -56,35 +56,33 @@ freqStack.pop ();//返回 4 ，因为 4, 5 和 7 出现频率最高，但 4 是�
 
 ## 分析
 
-有点类似 {{< lc "0460" >}} LFU缓存，不过没有 value，也没有查询操作，因此要简单很多。
+- 类似 {{< lc "0460" >}} LFU缓存，不过没有 value，也没有查询操作，要简单很多
+- 字典 ct 保存每个元素的频数，字典 d 保存每个频数对应的元素列表，并维护最大频数 ma 即可
+- 注意本题中相同数值也看作不同元素，比如进了 5 个 1，那么频数从1 到 5 的列表中都有 1，保证按入栈顺序出栈
 
-令字典 freq 保存每个元素的频数，令 d 字典保存每个频数对应的元素列表。push 元素 x 时，freq[x] += 1，d[freq[x]].append(x)。
-显然对于最大频数 maxFreq，d[maxFreq] 中的顺序即是元素最后一次入栈的顺序，所以 pop 时，x = d[maxFreq].pop()，freq[x] -= 1 即可。
-
-可以维护 maxFreq 以节省时间。pop 时，若 d[maxFreq] 为空，则 maxFreq -= 1。
 
 ## 解答
 
 ```python
 class FreqStack:
-
     def __init__(self):
+        self.ct = defaultdict(int)
         self.d = defaultdict(list)
-        self.freq = defaultdict(int)
-        self.maxFreq = 0
+        self.ma = 0
 
     def push(self, val: int) -> None:
-        self.freq[val] += 1
-        self.maxFreq = max(self.maxFreq, self.freq[val])
-        self.d[self.freq[val]].append(val)
+        self.ct[val] += 1
+        w = self.ct[val]
+        self.d[w].append(val)
+        self.ma = max(self.ma,w)
 
     def pop(self) -> int:
-        x = self.d[self.maxFreq].pop()
-        self.freq[x] -= 1
-        if not self.d[self.maxFreq]:
-            self.maxFreq -= 1
-        return x
+        val = self.d[self.ma].pop()
+        if not self.d[self.ma]: 
+            self.ma -= 1
+        self.ct[val] -= 1
+        return val
 ```
 
-284 ms
+78 ms
 
