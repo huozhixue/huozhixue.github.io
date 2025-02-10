@@ -43,7 +43,64 @@
 
 ## 分析
 
+### #1
+
+- 按结尾选哪个字符串即可递归
+- 计算两个字符串重叠长度，也可记忆化
+- 为了方便，可以令 dfs 直接返回最短字符串
+
+```python
+class Solution:
+    def shortestSuperstring(self, words: List[str]) -> str:
+        @cache
+        def cal(a,b):
+            return next(i for i in range(len(b),-1,-1) if a.endswith(b[:i]))
+        @cache
+        def dfs(A,a):
+            if len(A)==1:
+                return a
+            B = tuple(set(A)-{a})
+            return min([dfs(B,b)+a[cal(b,a):] for b in B],key=len)
+        return min([dfs(tuple(words),a) for a in words],key=len)
+```
+1299 ms
+
+### #2
+
+- 更通用的方法是先递推最短长度，再根据转移过程得到对应的字符串
+- 令 f[st][i] 代表集合 st 且以 i 结尾的最短长度
+- 预处理 g[i][j] 代表 words[i] 接 words[j] 的重叠长度
+- 令 rf[st][i]=j 代表 f[st][i] 由 f[st^1<<i][j] 转移而来
 ## 解答
 
 
-
+```python
+class Solution:
+    def shortestSuperstring(self, words: List[str]) -> str:
+        def cal(a,b):
+            return next(i for i in range(len(b),-1,-1) if a.endswith(b[:i]))
+        n = len(words)
+        g = [[cal(a,b) for b in words] for a in words]
+        f = [[inf]*n for _ in range(1<<n)]
+        rf = [[0]*n for _ in range(1<<n)]
+        for st in range(1,1<<n):
+            for i in range(n):
+                if st>>i&1:
+                    w = len(words[i])
+                    st2 = st^1<<i
+                    if not st2:
+                        f[st][i] = w
+                    else:
+                        j = min(range(n),key=lambda j:f[st2][j]+w-g[j][i])
+                        f[st][i] = f[st2][j]+w-g[j][i]
+                        rf[st][i] = j
+        st = (1<<n)-1
+        i = min(range(n),key=lambda i:f[-1][i])
+        res = words[i]
+        while st.bit_count()>1:
+            j = rf[st][i]
+            res = words[j]+res[g[j][i]:]
+            st,i = st^1<<i,j
+        return res
+```
+587 ms
