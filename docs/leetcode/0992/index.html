@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0992\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  891 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  541 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0992\/","datePublished": "2019-02-10T11:00:00+08:00","dateModified": "2019-02-10T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0992：K 个不同整数的子数组（2210 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-02-10">2019-02-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 891 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-02-10">2019-02-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 541 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0992/" class="leancloud_visitors" data-flag-title="0992：K 个不同整数的子数组（2210 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -122,12 +122,7 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#分析">分析</a>
-      <ul>
-        <li><a href="#1">#1</a></li>
-        <li><a href="#2">#2</a></li>
-      </ul>
-    </li>
+    <li><a href="#分析">分析</a></li>
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
@@ -169,55 +164,11 @@
 <li><a href="/leetcode/2799" rel="">2799：统计完全子数组的数目（1397 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<h3 id="1">#1</h3>
-<p>有个巧妙的想法是找到含最多 K 个不同整数的子数组个数，再找到含最多 K-1 个不同正数的子数组个数，相减即为所求。</p>
-<p>对于转化后的问题，可以遍历结尾位置 j，找到满足条件的最小开头位置 i，得到以 j 结尾的子数组个数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">subarraysWithKDistinct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">K</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span><span class="p">,</span> <span class="n">ct</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Counter</span><span class="p">(),</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">			<span class="n">ct</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">ct</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">K</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">ct</span><span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="n">ct</span><span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">					<span class="n">ct</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">				<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">res</span> <span class="o">+=</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">help</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">K</span><span class="p">)</span> <span class="o">-</span> <span class="n">help</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">K</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>592 ms</p>
-<h3 id="2">#2</h3>
-<p>也可以一次遍历解决。遍历结尾位置 j，找到满足条件的开头位置范围 [l,r)，则以 j 结尾的子数组个数是 r-l 。</p>
-<p>假设已知位置 j 对应的开头位置范围是 [l,r)，那么：</p>
-<pre><code>if l&lt;=i&lt;r:		len(set(A[i:j]))==K
-elif i==r:		len(set(A[i:j]))==K-1
-</code></pre>
-<p>显然 set(A[r:j]) 比 set(A[l:j]) 少的就是 A[r-1]。</p>
-<p>对于结尾位置 j+1，有三种情况：</p>
-<pre><code>if len(set(A[r:j+1]))==K-1：新加的元素在 set(A[l:j]) 和 set(A[r:j]) 中，不影响 l 和 r
-elif A[j]==A[r-1]：			新加的元素在 set(A[l:j] 中但不在set(A[r:j]) 中，右移 r 直到 len(set(A[r:j+1]))==K-1
-else：						新加的元素不在两个集合中，l 变为 r，右移 r 直到 len(set(A[r:j+1]))==K-1
-</code></pre>
-<p>因此，可以用双指针一趟解决。</p>
+<ul>
+<li>恰好型窗口计数的一种常用方法是转为两个至多/少型窗口计数的差</li>
+<li>本题可以求 f(k) 代表最多 k 个不同整数的子数组个数，用滑动窗口容易求解</li>
+<li>答案即是 f(k)-f(k-1)</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -235,25 +186,27 @@ else：						新加的元素不在两个集合中，l 变为 r，右移 r 直到
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">subarraysWithKDistinct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">K</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">ct</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">ct</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ct</span><span class="p">)</span><span class="o">==</span><span class="n">K</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">r</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">!=</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">l</span> <span class="o">=</span> <span class="n">r</span>
-</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">ct</span><span class="p">)</span><span class="o">==</span><span class="n">K</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">ct</span><span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]]</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="n">ct</span><span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">					<span class="n">ct</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">				<span class="n">r</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span> <span class="o">+=</span> <span class="n">r</span><span class="o">-</span><span class="n">l</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">subarraysWithKDistinct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ct</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ct</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">ct</span><span class="p">)</span><span class="o">&gt;</span><span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">ct</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="ow">not</span> <span class="n">ct</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">del</span> <span class="n">ct</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">cal</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="n">cal</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>456 ms</p>
+</div><p>154 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

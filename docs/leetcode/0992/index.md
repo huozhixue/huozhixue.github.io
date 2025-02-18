@@ -55,67 +55,28 @@
 
 ## 分析
 
-### #1
-
-有个巧妙的想法是找到含最多 K 个不同整数的子数组个数，再找到含最多 K-1 个不同正数的子数组个数，相减即为所求。
-
-对于转化后的问题，可以遍历结尾位置 j，找到满足条件的最小开头位置 i，得到以 j 结尾的子数组个数。
-
-```python
-def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-	def help(A, K):
-		res, ct, i = 0, Counter(), 0
-		for j, num in enumerate(A):
-			ct[num] += 1
-			while len(ct) > K:
-				ct[A[i]] -= 1
-				if ct[A[i]] == 0:
-					ct.pop(A[i])
-				i += 1
-			res += j-i+1
-		return res
-	return help(A, K) - help(A, K-1)
-```
-
-592 ms
-
-
-### #2
-
-也可以一次遍历解决。遍历结尾位置 j，找到满足条件的开头位置范围 [l,r)，则以 j 结尾的子数组个数是 r-l 。
-
-假设已知位置 j 对应的开头位置范围是 [l,r)，那么：
-
-	if l<=i<r:		len(set(A[i:j]))==K
-	elif i==r:		len(set(A[i:j]))==K-1
-
-显然 set(A[r:j]) 比 set(A[l:j]) 少的就是 A[r-1]。
-
-对于结尾位置 j+1，有三种情况：
-
-	if len(set(A[r:j+1]))==K-1：新加的元素在 set(A[l:j]) 和 set(A[r:j]) 中，不影响 l 和 r
-	elif A[j]==A[r-1]：			新加的元素在 set(A[l:j] 中但不在set(A[r:j]) 中，右移 r 直到 len(set(A[r:j+1]))==K-1
-	else：						新加的元素不在两个集合中，l 变为 r，右移 r 直到 len(set(A[r:j+1]))==K-1
-
-因此，可以用双指针一趟解决。
+- 恰好型窗口计数的一种常用方法是转为两个至多/少型窗口计数的差
+- 本题可以求 f(k) 代表最多 k 个不同整数的子数组个数，用滑动窗口容易求解
+- 答案即是 f(k)-f(k-1)
 
 ## 解答
 
 ```python
-def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-	ct, res, l, r = Counter(), 0, 0, 0
-	for num in A:
-		ct[num] += 1
-		if len(ct)==K:
-			if r and num != A[r-1]:
-				l = r
-			while len(ct)==K:
-				ct[A[r]] -= 1
-				if ct[A[r]]==0:
-					ct.pop(A[r])
-				r += 1
-		res += r-l
-	return res
+class Solution:
+    def subarraysWithKDistinct(self, nums: List[int], k: int) -> int:
+        def cal(k):
+            res, i, ct = 0,0, defaultdict(int)
+            for j,x in enumerate(nums):
+                ct[x] += 1
+                while len(ct)>k:
+                    ct[nums[i]] -= 1
+                    if not ct[nums[i]]:
+                        del ct[nums[i]]
+                    i += 1
+                res += j-i+1
+            return res
+
+        return cal(k)-cal(k-1)
 ```
 
-456 ms
+154 ms
