@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1028\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  585 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  578 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1028\/","datePublished": "2019-04-14T11:00:00+08:00","dateModified": "2019-04-14T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1028：从先序遍历还原二叉树（1797 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-14">2019-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 585 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-14">2019-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 578 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1028/" class="leancloud_visitors" data-flag-title="1028：从先序遍历还原二叉树（1797 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -155,17 +155,20 @@
 <li>每个节点的值介于 <code>1</code> 和 <code>10 ^ 9</code> 之间。</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>先正则提取出每个节点的值和深度，然后模拟：</p>
 <ul>
-<li>遍历时，假如当前节点刚好比上个节点的深度大 1
+<li>先正则提取出每个节点的值和深度，然后遍历
 <ul>
-<li>显然当前节点即为上个节点的子节点，应该接到上个节点的下面</li>
+<li>假如上个节点比当前节点的深度小 1
+<ul>
+<li>当前节点即为上个节点的子节点，应该接到上个节点的下面</li>
 <li>如果上个节点还没有左子树，就接到左边，否则接到右边</li>
 </ul>
 </li>
-<li>否则，去掉上个节点直到找到深度比当前节点深度大 1 的节点，转为上一步</li>
+<li>否则，去掉上个节点直到找到比当前节点深度小 1 的节点，转为上一步</li>
 </ul>
-<p>这个过程显然可以用栈。</p>
+</li>
+<li>可以用栈模拟整个过程</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -183,25 +186,29 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">recoverFromPreorder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">traversal</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">w</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(\-*)(\d+)&#39;</span><span class="p">,</span> <span class="n">traversal</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">w</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">),</span><span class="n">TreeNode</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">!=</span><span class="n">w</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">stack</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">y</span> <span class="o">=</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="ow">not</span> <span class="n">y</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">y</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">			<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">y</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">stack</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">recoverFromPreorder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">traversal</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sk</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">h</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(-*)(\d+)&#39;</span><span class="p">,</span><span class="n">traversal</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">h</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">u</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">sk</span> <span class="ow">and</span> <span class="n">sk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">h</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">sk</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">fa</span> <span class="o">=</span> <span class="n">sk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">fa</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">fa</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">u</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">fa</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">u</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">h</span><span class="p">,</span><span class="n">u</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">sk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>40 ms</p>
+</div><p>4 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

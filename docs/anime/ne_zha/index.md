@@ -18,11 +18,24 @@
 - 音效：[王冲](https://bgm.tv/person/66061)
 - 执行制片人：[张元强](https://bgm.tv/person/66260)
 
+## 角色
 
+|     |   角色名   |   别名  | 性别 |  配音  |
+|:--- |:------  |:----      |:---  |:--   |
+| 1 | [哪吒](https://bgm.tv/character/170357) | 魔童、魔丸、小爷 | 男 | [囧森瑟夫](https://bgm.tv/person/61826)、[吕艳婷](https://bgm.tv/person/71438) |
+| 2 | [敖丙](https://bgm.tv/character/170358) | 东海三太子 | 男 | [瀚墨](https://bgm.tv/person/70565) |
+| 3 | [殷夫人](https://bgm.tv/character/171396) |  | 女 | [绿绮](https://bgm.tv/person/61820) |
+| 4 | [李靖](https://bgm.tv/character/171397) |  | 男 | [陈浩](https://bgm.tv/person/7273) |
+| 5 | [太乙真人](https://bgm.tv/character/171398) |  | 男 |  |
+| 6 | [申公豹](https://bgm.tv/character/171399) |  | 男 |  |
+| 7 | [敖光](https://bgm.tv/character/171400) |  | 男 |  |
+| 8 | [敖闰](https://bgm.tv/character/171401) |  | 女 |  |
 
+{{< slide "7c/e7/170357_crt_Q2erU,6d/ee/170358_crt_2JOZw,f5/15/171396_crt_Sf603,dd/c6/171397_crt_b68Uu,4b/21/171398_crt_UDud3,4d/fb/171399_crt_XR8pR,52/cd/171400_crt_20CM0,1a/ed/171401_crt_L74nl" >}}
 ## 系列
 
-|     | 系列名     | 首播时间       | 话数/时长    | 观看地址                                                  |
-| :-- | :------ | :--------- | :------- | :---------------------------------------------------- |
-| 1   |[哪吒之魔童降世](https://bgm.tv/subject/231261)| 2019-07-26 | 01:49:59 | [keke1](https://www.keke1.app/play/9294-4-57496.html) |
+|     | 系列名                                      | 首播时间       | 话数/时长 | 观看地址                                                                                                        |
+| :-- | :--------------------------------------- | :--------- | :---- | :---------------------------------------------------------------------------------------------------------- |
+| 1   | [哪吒之魔童降世](https://bgm.tv/subject/231261) | 2019-07-26 | 110分钟 | [keke1](https://www.keke1.app/play/9294-4-57496.html)                                                       |
+| 2   | [哪吒之魔童闹海](https://bgm.tv/subject/383308) | 2025-01-29 | 144分钟 | [bilibili](https://search.bilibili.com/all?keyword=哪吒之魔童闹海)、[keke1](https://www.keke1.app/search?k=哪吒之魔童闹海) |
 

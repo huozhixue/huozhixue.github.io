@@ -53,31 +53,32 @@
 
 ## 分析
 
-先正则提取出每个节点的值和深度，然后模拟：
-- 遍历时，假如当前节点刚好比上个节点的深度大 1
-	- 显然当前节点即为上个节点的子节点，应该接到上个节点的下面
-	- 如果上个节点还没有左子树，就接到左边，否则接到右边
-- 否则，去掉上个节点直到找到深度比当前节点深度大 1 的节点，转为上一步
-
-这个过程显然可以用栈。
+- 先正则提取出每个节点的值和深度，然后遍历
+	- 假如上个节点比当前节点的深度小 1
+		- 当前节点即为上个节点的子节点，应该接到上个节点的下面
+		- 如果上个节点还没有左子树，就接到左边，否则接到右边
+	- 否则，去掉上个节点直到找到比当前节点深度小 1 的节点，转为上一步
+- 可以用栈模拟整个过程
 
 ## 解答
 
 
 ```python
-def recoverFromPreorder(self, traversal: str) -> Optional[TreeNode]:
-	stack = []
-	for w,x in re.findall('(\-*)(\d+)', traversal):
-		w,x = len(w),TreeNode(int(x))
-		while stack and stack[-1][1]!=w-1:
-			stack.pop()
-		if stack:
-			y = stack[-1][0]
-			if not y.left:
-				y.left = x
-			else:
-				y.right = x
-		stack.append((x,w))
-	return stack[0][0]
+class Solution:
+    def recoverFromPreorder(self, traversal: str) -> Optional[TreeNode]:
+        sk = []
+        for h,x in re.findall('(-*)(\d+)',traversal):
+            h,x = len(h),int(x)
+            u = TreeNode(x)
+            while sk and sk[-1][0]>=h:
+                sk.pop()
+            if sk:
+                fa = sk[-1][1]
+                if fa.left:
+                    fa.right = u
+                else:
+                    fa.left = u
+            sk.append((h,u))
+        return sk[0][1]
 ```
-40 ms
+4 ms
