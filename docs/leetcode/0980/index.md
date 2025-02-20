@@ -64,33 +64,36 @@
 
 ## 分析
 
-显然应该用 dfs。先记录下空方格加结束方格的个数 cnt，然后从起始方格开始深度遍历。
-遍历时标记走过的方格以免重复，当到达结束方格且经过方格个数为 cnt 时即为所求。
+
+典型的状压 dp，令 dfs(st,i,j) 代表还没通过的集合是 st，当前在方格 (i,j) 情况下的路径数目，即可递归 
 
 ## 解答
 
 ```python
-def uniquePathsIII(self, grid: List[List[int]]) -> int:
-	def dfs(i, j, cnt):
-		if grid[i][j] == 5 and cnt==0:
-			self.res += 1
-		for x, y in [(i-1,j),(i+1,j),(i,j-1),(i,j+1)]:
-			if 0<=x<m and 0<=y<n and grid[x][y] in [0, 2]:
-				grid[x][y] += 3
-				dfs(x,y,cnt-1)
-				grid[x][y] -= 3
-
-	m, n = len(grid), len(grid[0])
-	i0, j0, cnt = 0, 0, 0
-	for i in range(m):
-		for j in range(n):
-			if grid[i][j] == 1:
-				i0, j0 = i, j
-			elif grid[i][j] in [0, 2]:
-				cnt += 1
-	self.res = 0
-	dfs(i0, j0, cnt)
-	return self.res
+class Solution:
+    def uniquePathsIII(self, grid: List[List[int]]) -> int:
+        m,n = len(grid),len(grid[0])
+        st,si,sj = 0,0,0
+        for i,row in enumerate(grid):
+            for j,x in enumerate(row):
+                if x in [0,2]:
+                    st |= 1<<(i*n+j)
+                elif x==1:
+                    si,sj = i,j
+        @cache
+        def dfs(st,i,j):
+            if grid[i][j]==2:
+                return st==0
+            res = 0
+            for x,y in [(i+1,j),(i,j+1),(i-1,j),(i,j-1)]:
+                if 0<=x<m and 0<=y<n and st&1<<(x*n+y):
+                    res += dfs(st^1<<(x*n+y),x,y)
+            return res
+        return dfs(st,si,sj)
 ```
+15 ms
 
-72 ms
+## *附加
+
+还有更优的插头 dp 方法，入门学习见 [【算法】插头 dp——从入门到跳楼 ——litble](https://www.mina.moe/archives/4217)
+

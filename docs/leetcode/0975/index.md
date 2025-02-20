@@ -80,77 +80,62 @@
 
 ### #1
 
-显然每个位置的奇数跳和偶数跳都是确定的，考虑先求出来。
-
-奇数跳是先在 i 右边找到最接近的较大值，再从中选最接近的位置。
-容易想到，可以维护一个有序列表 tmp，将位置 [i+1, n-1] 按 (值 A[x] 升序、位置 x 升序）排序，然后二分查找第一个大于等于 A[i] 的位置 tmp[pos] 即可。
-找到后，将 i 插入到 tmp 的 pos 处即可维护 tmp。
-
-同理，对于偶数跳，维护 tmp 将位置 [i+1, n-1] 按 (值 A[x] 升序、位置 x 降序）排序，然后二分查找最后一个小于等于 A[i] 的位置 tmp[pos]。
-将 i 插入到 tmp 的 pos+1 处即可维护 tmp。
-
-得到两个数组 odd 和 even 后（找不到的置为 n），就可以递推得到每个位置能否跳到末尾了。令 dp[i][0] 代表从 i 位置先奇数跳能否到达末尾，
-dp[i][1] 代表从 i 位置先偶数跳能否到达末尾，状态转移方程为：
-
-	if i == n:		dp[i] = [False, False]
-	elif i == n-1:	dp[i] = [True, True]
-	else:			dp[i][0] = dp[odd[i]][1], dp[i][1] = dp[even[i]][0]
-
+- 显然每个位置的奇数跳和偶数跳都是确定的，考虑先求出来
+- 奇数跳是在 arr[i] 右边找最接近的较大值，考虑维护一个 arr[i+1:] 的有序集合，二分查找
+	- 由于相同值还要考虑下标，因此有序集合里保存 (值,下标) 二元组，找第一个 >=arr[i] 的下标即可
+- 偶数跳可以将 arr 的值都取负，就跟求奇数跳一样了
+- 确定了奇/偶数跳的转移，用 dp 递推每个位置能否达到末尾即可
 
 ```python
-def oddEvenJumps(self, arr: List[int]) -> int:
-	n = len(arr)
-	odd, tmp = [n] * n, []
-	self.__class__.__getitem__ = lambda self, x: arr[tmp[x]] >= arr[i]
-	for i in range(n-1, -1, -1):
-		pos = bisect_left(self, True, 0, len(tmp))
-		odd[i] = tmp[pos] if pos != len(tmp) else n
-		tmp.insert(pos, i)
-	even, tmp = [n] * n, []
-	self.__class__.__getitem__ = lambda self, x: arr[tmp[x]] > arr[i]
-	for i in range(n-1, -1, -1):
-		pos = bisect_left(self, True, 0, len(tmp))
-		even[i] = tmp[pos-1] if pos else n
-		tmp.insert(pos, i)
-	dp = [[i == n-1]*2 for i in range(n+1)]
-	for i in range(n-2, -1, - 1):
-		dp[i][0] = dp[odd[i]][1]
-		dp[i][1] = dp[even[i]][0]
-	return sum(dp[i][0] for i in range(n))
+class Solution:
+    def oddEvenJumps(self, arr: List[int]) -> int:
+        from sortedcontainers import SortedList
+        n = len(arr)
+
+        def get(arr):
+            sl = SortedList()
+            A = [n]*n
+            for i in range(n-1,-1,-1):
+                pos = sl.bisect_left((arr[i],))
+                A[i] = sl[pos][1] if pos<len(sl) else n
+                sl.add((arr[i],i))
+            return A
+        A,B = get(arr),get([-x for x in arr])
+        f = [[0,0] for _ in range(n+1)]
+        f[n-1] = [1,1]
+        for i in range(n-2,-1,-1):
+            f[i] = [f[A[i]][1],f[B[i]][0]]
+        return sum(a for a,_ in f)
 ```
 
-960 ms
+572 ms
 
 ### #2
 
-求奇数跳和偶数跳有个巧妙的单调栈解法。
-
-先将位置 [0, n-1] 按 (值 A[x] 升序、位置 x 升序）排序得到 tmp，那么奇数跳就是求每个元素 在 tmp 中的下一个更大元素。
-同理，将位置 [0, n-1] 按 (值 A[x] 降序、位置 x 升序）排序得到 tmp，那么偶数跳就是求每个元素 在 tmp 中的下一个更大元素。
-
-找下一个更大元素，即是单调栈的典型应用，类似 {{< lc "0739" >}}。
-
+- 求奇/偶数跳的转移还有个巧妙的单调栈解法
+- 将 arr 的下标按值排序得到 H，那么下标 i 右边第一个大于 i 的下标 j 即是满足 >= arr[i] 的最小值
+- 求下一个更大元素即是经典的单调栈问题
 
 ## 解答
 
 ```python
-def oddEvenJumps(self, arr: List[int]) -> int:
-	def nxt(A):
-		res, stack = [n] * n, []
-		for i in A:
-			while stack and stack[-1] < i:
-				res[stack.pop()] = i
-			stack.append(i)
-		return res
+class Solution:
+    def oddEvenJumps(self, arr: List[int]) -> int:
+        n = len(arr)
 
-	n = len(arr)
-	odd = nxt(sorted(range(n), key=lambda i: arr[i]))
-	even = nxt(sorted(range(n), key=lambda i: -arr[i]))
-	dp = [[i == n-1]*2 for i in range(n+1)]
-	for i in range(n-2, -1, - 1):
-		dp[i][0] = dp[odd[i]][1]
-		dp[i][1] = dp[even[i]][0]
-	return sum(dp[i][0] for i in range(n))
+        def get(arr):
+            A,sk = [n]*n,[]
+            for x in sorted(range(n),key=lambda i:arr[i]):
+                while sk and sk[-1]<x:
+                    A[sk.pop()] = x
+                sk.append(x)
+            return A
+        A,B = get(arr),get([-x for x in arr])
+        f = [[0,0] for _ in range(n+1)]
+        f[n-1] = [1,1]
+        for i in range(n-2,-1,-1):
+            f[i] = [f[A[i]][1],f[B[i]][0]]
+        return sum(a for a,_ in f)
 ```
 
-200 ms
+91 ms
