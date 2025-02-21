@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0980\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  575 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1709 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0980\/","datePublished": "2019-01-20T11:00:00+08:00","dateModified": "2019-01-20T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0980：不同路径 III（1830 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-01-20">2019-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 575 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0980/" class="leancloud_visitors" data-flag-title="0980：不同路径 III（1830 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-01-20">2019-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1709 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/leetcode/0980/" class="leancloud_visitors" data-flag-title="0980：不同路径 III（1830 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -223,6 +223,207 @@
 </div><p>15 ms</p>
 <h2 id="附加">*附加</h2>
 <p>还有更优的插头 dp 方法，入门学习见 <a href="https://www.mina.moe/archives/4217" target="_blank" rel="noopener noreffer">【算法】插头 dp——从入门到跳楼 ——litble</a></p>
+<ul>
+<li>先理清算回路且无障碍的做法
+<ul>
+<li>维护长 n+1 的轮廓线上的插头状态，0,1,2 分别代表无/左/右插头
+<ul>
+<li>轮廓线之前的格子形成若干条道路，每条道路必然有左右端点，即是对应的左右插头</li>
+</ul>
+</li>
+<li>因为是回路，每个格子必然刚好两个插头</li>
+<li>设左侧和上侧的插头状态分别是 a,b
+<ul>
+<li>若 a=b=0，右侧和下侧需要添加插头
+<ul>
+<li>根据定义，下侧的是左插头 1，右侧的是右插头 2</li>
+<li>新的轮廓线状态即是将 a,b 原位置改为 1 和 2</li>
+<li>注意若越界了，该状态不合法，因为不满足刚好两个插头</li>
+</ul>
+</li>
+<li>若 a=0,b=1，需要添加一个插头
+<ul>
+<li>若右侧添加，则轮廓线状态不变</li>
+<li>若下侧添加，新的轮廓线状态即是将 a,b 原位置改为 1 和 0</li>
+<li>同样注意不能越界</li>
+</ul>
+</li>
+<li>a,b 中有一个为 0 的其它情况同理</li>
+<li>若 a=b=1，不需要添加插头了
+<ul>
+<li>注意 a 和 b 所属的两条道路经过当前格子合并成一条了</li>
+<li>那么两条道路中靠左的那个右插头 k，是新的道路的左插头</li>
+<li>因此需要找到位置 k，改为 1，得到新的轮廓线状态</li>
+<li>找左/右插头的匹配位置，类似于括号匹配，用栈即可</li>
+</ul>
+</li>
+<li>a=b=2 同理</li>
+<li>若 a=2,b=1，两条道路合并，且轮廓线状态不变</li>
+<li>若 a=1,b=2，注意一旦合并，就形成回路了
+<ul>
+<li>因此只有最后一个格子可以合并，这里也得到最终结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>有障碍的情况需要注意两点
+<ul>
+<li>遍历到障碍格子时，只有 a=b=0 才是合法的，并且不添加插头，轮廓线状态不变</li>
+<li>提前找到最后一个非障碍格子，只有这个格子可以合并成回路，并得到最终结果</li>
+</ul>
+</li>
+<li>本题固定了起始和结束格子，而不是回路，需要特殊处理
+<ul>
+<li>考虑新加一个插头状态 3 代表和起始/结束格子相连</li>
+<li>注意起始/结束格子只能有 1 个插头，空格子依然 2 个插头</li>
+<li>那么对于空格子
+<ul>
+<li>若 a=b=3，合并成满足要求的道路，同样的，只有最后一个非障碍格子可以合并</li>
+<li>若 a=0,b=3，和 a=0,b=1 的情况相同处理即可</li>
+<li>若 a=1,b=3，合并后要将 a 所属道路的右插头改为 3</li>
+<li>a,b 中有一个为 3 的其它情况同理</li>
+</ul>
+</li>
+<li>对于起始/结束格子
+<ul>
+<li>若 a=0,b=3，合并成满足要求的道路，同样的，只有最后一个非障碍格子可以合并</li>
+<li>若 a=b=0，右侧或下侧添加一个插头，注意状态为 3</li>
+<li>若 a=0,b=1，将 b 所属道路的右插头改为 3</li>
+<li>其它情况同理，注意 a 和 b 至少一个为 0，因为只能有 1 个插头</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">uniquePathsIII</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">st</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">,</span><span class="n">sk</span> <span class="o">=</span> <span class="p">{},[]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">st</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">c</span><span class="o">==</span><span class="s1">&#39;1&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">sk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s1">&#39;2&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">j</span> <span class="o">=</span> <span class="n">sk</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span><span class="p">,</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">d</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">grid</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">grid</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ei</span><span class="p">,</span><span class="n">ej</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span><span class="mi">1</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ei</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span><span class="n">w</span> <span class="k">for</span> <span class="n">st</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ej</span> <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="n">ei</span> <span class="k">else</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">g</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">st</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">d</span> <span class="o">=</span> <span class="n">pair</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">x</span><span class="o">==-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="o">==</span><span class="s1">&#39;0&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">elif</span> <span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="o">==</span><span class="s1">&#39;0&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">m</span> <span class="ow">and</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;12&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">elif</span> <span class="s1">&#39;0&#39;</span> <span class="ow">in</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">m</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">st</span> <span class="o">=</span> <span class="n">st</span><span class="p">[:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;00&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="s1">&#39;2&#39;</span> <span class="ow">and</span> <span class="n">b</span><span class="o">==</span><span class="s1">&#39;1&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">elif</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="o">!=</span><span class="s1">&#39;3&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">k</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="s1">&#39;1&#39;</span> <span class="k">else</span> <span class="nb">max</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">elif</span> <span class="s1">&#39;3&#39;</span> <span class="ow">in</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="ow">and</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">!=</span><span class="s1">&#39;33&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">k</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="s1">&#39;3&#39;</span> <span class="k">else</span> <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;3&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="o">==</span><span class="s1">&#39;0&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">m</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;30&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;03&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span> 
+</span></span><span class="line"><span class="cl">                        <span class="k">elif</span> <span class="s1">&#39;3&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="ow">and</span> <span class="s1">&#39;0&#39;</span> <span class="ow">in</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">st</span> <span class="o">=</span> <span class="n">st</span><span class="p">[:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;00&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">k</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="s1">&#39;0&#39;</span> <span class="k">else</span> <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;3&#39;</span><span class="o">+</span><span class="n">st</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">:]]</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span> <span class="o">=</span> <span class="n">g</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="n">ei</span><span class="p">][</span><span class="n">ej</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;33&#39;</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;030&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">f</span> <span class="k">if</span> <span class="n">st</span><span class="p">[</span><span class="n">ej</span><span class="p">:</span><span class="n">ej</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="ow">in</span> <span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>0 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
