@@ -48,22 +48,119 @@
 
 ## 分析
 
+### #1 dp
+
  {{< lc "0123" >}} 升级版，从 2 次变成了 k 次，最后可以优化为 2*k 个参数。
-			
-## 解答
 
 ```python
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
-        dp = [0 if i%2 else -inf for i in range(2*k)]
+        f = [0 if i%2 else -inf for i in range(2*k)]
         for x in prices:
-            dp = [max(dp[i],(dp[i-1] if i else 0)+(x if i%2 else -x)) for i in range(2*k)]
-        return dp[-1]
+            f = [max(f[i],(f[i-1] if i else 0)+(x if i%2 else -x)) for i in range(2*k)]
+        return f[-1]
 ```
-110 ms
+63 ms
 
+### #2 反悔贪心
+
+还有种贪心的思路
+- 首先，最佳策略的交易必然是波底买入，波顶卖出，否则移动到最近的波底/顶，利润更高
+- 因此可以只考虑波底/顶的点，得到一个 [底、顶、底、顶、...、底、顶] 的序列 B，不妨设为 $a_0b_0a_1b_1...a_mb_m，a_i/b_i$ 是第 i 个波底/顶的值，共 m 对
+- 假如 m<=k，全选即可
+- 假如 m>k，需要从 B 中删除 m-k 对相邻的底/顶（保证剩下的是同样形式的序列），即是删若干对 $a_ib_i$ 或 $b_ia_{i+1}$
+	- 删 $a_ib_i$ 减少的即是 $b_i-a_i$，删 $b_ia_{i+1}$，减少的即是 $b_i-a_{i+1}$，所以问题等价于删若干对相邻的元素，其绝对差之和最小
+	- 令 $C[i]=abs(B[i+1]-B[i])$ 得到序列 C，那么问题等价于从 C 中选若干个不相邻的项，其和最小
+- 这个问题可以用反悔贪心解决，类似问题 [1388. 3n 块披萨](https://leetcode.cn/problems/pizza-with-3n-slices/description/) 的 [双向链表贪心算法，时间复杂度O(nlogn)](https://leetcode.cn/problems/pizza-with-3n-slices/solutions/163281/shuang-xiang-lian-biao-tan-xin-suan-fa-shi-jian-fu/)
+	- 简单的写法是每次选最小的 C[i]，将 C[i-1:i+2] 替换为 C[i-1]+C[i+1]-C[i]
+	- 为了方便，C 首尾加一个 inf 的哨兵，就不用特殊处理首尾
+
+
+```Python []
+class Solution:
+    def maxProfit(self, k: int, prices: List[int]) -> int:
+        A = [inf]+[c for c,_ in groupby(prices)]+[-inf]
+        B = []
+        for i in range(1,len(A)-1):
+            if (A[i]<min(A[i-1],A[i+1])) or (A[i]>max(A[i-1],A[i+1])):
+                B.append(A[i])
+        s = sum(B[i+1]-B[i] for i in range(0,len(B),2))
+        C = [inf]+[abs(a-b) for a,b in pairwise(B)]+[inf]
+        for _ in range(len(B)//2-k):
+            i = C.index(min(C))
+            s -= C[i]
+            x = C[i-1]+C[i+1]-C[i]
+            C[i-1:i+2] = [x]
+        return s
+```
+
+$O(N^2)$，7 ms
+
+### #3 堆+双向链表优化
+
+- 还可以参照 [双向链表贪心算法，时间复杂度O(nlogn)](https://leetcode.cn/problems/pizza-with-3n-slices/solutions/163281/shuang-xiang-lian-biao-tan-xin-suan-fa-shi-jian-fu/) 的写法，用堆+双向链表优化
+- python 可以用数组 L 和 R 模拟双向链表
+
+## 解答
+
+```python []
+class Solution:
+    def maxProfit(self, k: int, prices: List[int]) -> int:
+        A = [inf]+[c for c,_ in groupby(prices)]+[-inf]
+        B = []
+        for i in range(1,len(A)-1):
+            if (A[i]<min(A[i-1],A[i+1])) or (A[i]>max(A[i-1],A[i+1])):
+                B.append(A[i])
+        s = sum(B[i+1]-B[i] for i in range(0,len(B),2))
+        C = [inf]+[abs(a-b) for a,b in pairwise(B)]+[inf]
+        n = len(C)
+        L = [n-1]+list(range(n-1))
+        R = list(range(1,n))+[0]
+        pq = sorted((x,i) for i,x in enumerate(C))
+        vis = [0]*n
+        for _ in range(len(B)//2-k):
+            while vis[pq[0][1]]:
+                heappop(pq)
+            x,i = heappop(pq)
+            s -= x
+            a,b = L[i],R[i]
+            vis[a] = vis[b] = 1
+            l,r = L[a],R[b]
+            L[i],R[i] = l,r
+            R[l] = L[r] = i
+            C[i] = C[a]+C[b]-x
+            heappush(pq,(C[i],i))
+        return s
+```
+
+$O(N*logN)$，3 ms
 
 ## *附加
 
-还可以采用 [wqs二分](https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/solutions/1351896/wqs-er-fen-on-log-n-by-zerotrac2-cp7j/)。
+还可以用 wqs 二分
+- 注意上述的贪心过程中每轮选的最小的 C[i]，故添加的新值 C[i-1]+C[i+1]-C[i]>=C[i]，因此每轮选的值是递增的
+- 因此符合 wqs 二分的条件
+- wqs 二分详见 [一种基于 wqs 二分的优秀做法](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/solutions/536396/yi-chong-ji-yu-wqs-er-fen-de-you-xiu-zuo-x36r/)
 
+```python []
+class Solution:
+    def maxProfit(self, k: int, prices: List[int]) -> int:
+        A = [c for c,_ in groupby(prices)]
+        l, r = 0, max(A)
+        res = 0
+        while l<=r:
+            mid = (l+r)//2
+            a,b,aw,bw = -inf,0,0,0
+            for x in A:
+                if b-x-mid>a:
+                    a,aw = b-x-mid,bw+1
+                if a+x>b:
+                    b,bw = a+x,aw
+            if bw<=k:
+                res = b+k*mid
+                r = mid-1
+            else:
+                l = mid+1
+        return res
+```
+$O(N*logM)$，0 ms

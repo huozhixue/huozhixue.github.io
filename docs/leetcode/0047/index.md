@@ -45,8 +45,34 @@
 
 ## 分析 
 
- {{< lc "0046" >}} 升级版，用计数器标记还未选的数即可。
+### #1
 
+  {{< lc "0046" >}} 升级版，一种通用的的方法是将 nums 先排序，然后相同数只考虑第一个。
+
+```python
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        def dfs():
+            if len(path) == len(nums):
+                res.append(path[:])
+                return
+            for i, x in enumerate(nums):
+                if x<inf and not (i and nums[i-1]==x):
+                    nums[i]=inf
+                    path.append(x)
+                    dfs()
+                    path.pop()
+                    nums[i]=x
+                    
+        nums.sort()
+        res, path = [], []
+        dfs()
+        return res
+```
+7 ms
+### #2
+ 
+ 还可以遍历计数器，相同的数也只会考虑一次。
 
 ## 解答
 
@@ -70,5 +96,5 @@ class Solution:
         dfs()
         return res
 ```
-49 ms
+7 ms
 

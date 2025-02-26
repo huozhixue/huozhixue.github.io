@@ -69,38 +69,72 @@
 
 ## 分析
 
-显然若基因值 1 不在树中，所有 ans 都为 1。
-若基因值 1 在树中，对应的节点为 x，那么除了 x 和 x 的所有祖先，其它的 ans 都为 1。
+### #1
 
-然后可以递推 x 和 x 的祖先的 ans。
-设 y 是 x 的父节点，那么从 ans[x] 遍历找到第一个不存在于 y 的子树的基因集合内的正整数即为 ans[y]。
+- 暴力的做法是直接得到子树的值集合，然后找最小的缺失值 x
+- 注意到节点 u 对应的 x 必然 >= 其子节点 v 对应的 x
+- 因此，令 dfs(u) 返回 u 的值集合和对应的 x，即可递推
+- 合并值集合采用启发式合并，保证时间不会退化到 O(N^2)
 
-在求 y 的子树的基因集合时，x 的子树无需再遍历。因此求基因集合的操作总共是 O(N) 时间。
+```python
+class Solution:
+    def smallestMissingValueSubtree(self, parents: List[int], nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = [1]*n
+        if 1 not in nums:
+            return res
+        g = [[] for _ in range(n)]
+        for v in range(1,n):
+            g[parents[v]].append(v)
 
-递推 x 和 x 的祖先的 ans 时，ans 是递增的，因此遍历求 ans 的操作总共是 O(S) 时间（本题数据范围 S 等于节点个数范围 N)
+        def dfs(u):
+            vis = {nums[u]}
+            for v in g[u]:
+                cvis,x = dfs(v)
+                res[u] = max(res[u],x)
+                if len(cvis)>len(vis):
+                    vis,cvis = cvis,vis
+                vis.update(cvis)
+            while res[u] in vis:
+                res[u] += 1
+            return vis,res[u]
+        dfs(0)
+        return res
+```
+488 ms
 
+### #2
 
+- 还可以直接观察性质
+- 显然若 1 不在树中，所有 res 都为 1
+- 若 1 对应的节点为 i，那么除了 i 和 i 的祖先，其它的 res 都为 1
+- 然后递推 i 往上一直到根节点，维护值集合即可
 ## 解答
 
 ```python
-def smallestMissingValueSubtree(self, parents: List[int], nums: List[int]) -> List[int]:
-    n = len(nums)
-    if 1 not in nums:
-        return [1] * n
-    nxt = defaultdict(list)
-    for v, u in enumerate(parents):
-        nxt[u].append(v)
-    i = nums.index(1)
-    ans, vis, cur = [1]*n, set(), 1
-    while i != -1:
-        queue = [i]
-        while queue:
-            vis |= {nums[u] for u in queue}
-            queue = [v for u in queue for v in nxt[u] if nums[v] not in vis]
-        while cur in vis:
-            cur += 1
-        ans[i] = cur
-        i = parents[i]
-    return ans
+class Solution:
+    def smallestMissingValueSubtree(self, parents: List[int], nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = [1]*n
+        if 1 not in nums:
+            return res
+        g = [[] for _ in range(n)]
+        for v in range(1,n):
+            g[parents[v]].append(v)
+        i = nums.index(1)        
+        vis,x = set(),2
+        
+        def dfs(u):
+            vis.add(nums[u])
+            for v in g[u]:
+                if nums[v] not in vis:
+                    dfs(v)
+        while i>=0:
+            dfs(i)
+            while x in vis:
+                x += 1
+            res[i] = x
+            i = parents[i]
+        return res
 ```
-时间复杂度 O(N)，520 ms
+254 ms

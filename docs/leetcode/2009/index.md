@@ -67,23 +67,22 @@
 ## 分析
 
 - 连续数组显然就是排序后等差1的数组
-- 假设得到的连续数组 A 是 range(x-n+1,x+1)，这 n 个数中，已存在于 nums 中的元素无需更改，剩下的即是操作数
-- 将nums去重，问题即转为找一个 x，使得 nums 在 [x-n+1,x] 区间内的元素最多
-- 这就是个典型的滑窗问题了，用双指针即可
+- 问题等价于找 x，使得 nums 和 [x-n+1,x] 区间的重叠元素最多
+- 这是典型的滑窗问题，用双指针即可
+	- 注意 nums 要去重，因为相同元素只能算一次
 
 ## 解答
-
 ```python
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         n = len(nums)
-        nums = sorted(set(nums))
-        res = i = 0
-        for j,x in enumerate(nums):
-            while nums[i]<=x-n:
+        A = sorted(set(nums))
+        res,i = 0,0
+        for j,x in enumerate(A):
+            while A[i]<=x-n:
                 i += 1
             res = max(res,j-i+1)
         return n-res
 ```
-189 ms
+154 ms
 
