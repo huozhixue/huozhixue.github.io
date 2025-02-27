@@ -69,24 +69,21 @@
 
 ## 分析
 
-可以先二分查找到山顶坐标 mid（第一个满足 A[i]>A[i+1] 的 i)，然后 [0, mid], [mid, n-1] 区间都是单调的，
-可以分别二分查找 target。
+- 先二分查找到山顶坐标 i，即第一个满足 A[i]>A[i+1] 的 i
+- 然后 [0, i], [i, n-1] 区间都是单调的，分别二分查找 target 即可
 
 ## 解答
 
 ```python
-def findInMountainArray(self, target: int, mountain_arr: 'MountainArray') -> int:
-    n = mountain_arr.length()
-    self.__class__.__getitem__ = lambda self, i: mountain_arr.get(i)>mountain_arr.get(i+1)
-    mid = bisect_left(self, True, 1, n-2)
-    self.__class__.__getitem__ = lambda self, i: mountain_arr.get(i)>=target
-    i = bisect_left(self, True, 0, mid)
-    if mountain_arr.get(i) == target:
-        return i
-    self.__class__.__getitem__ = lambda self, i: mountain_arr.get(i)<=target
-    j = bisect_left(self, True, mid, n-1)
-    if mountain_arr.get(j) == target:
-        return j
-    return -1
+class Solution:
+    def findInMountainArray(self, target: int, mountainArr: 'MountainArray') -> int:
+        A = mountainArr
+        n = A.length()
+        i = bisect_left(range(n-1),True,key=lambda i:A.get(i)>A.get(i+1))
+        j = bisect_left(range(i),True,key=lambda j:A.get(j)>=target)
+        if A.get(j)==target:
+            return j
+        k = bisect_left(range(n-1),True,i,key=lambda k:A.get(k)<=target)
+        return k if A.get(k)==target else -1
 ```
-32 ms
+48 ms
