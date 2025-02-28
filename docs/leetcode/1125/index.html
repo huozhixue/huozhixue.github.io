@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1130：叶值的最小代价生成树（1919 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1130：叶值的最小代价生成树（1919 分）" />
-<meta property="og:description" content="力扣第 146 场周赛第 3 题 题目 给你一个正整数数组 arr，考虑所有满足以下条件的二叉树： 每个节点都有 0 个或是 2 个子节点。 数组 arr 中的值与树的中序遍历中" />
+        <title>1125：最小的必要团队（2250 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1125：最小的必要团队（2250 分）" />
+<meta property="og:description" content="力扣第 145 场周赛第 4 题 题目 作为项目经理，你规划了一份需求的技能清单 req_skills，并打算从备选人员名单 people 中选出些人组成一个「必要团队」（" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/1130/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2019-07-21T10:50:00+08:00" />
-<meta property="article:modified_time" content="2019-07-21T10:50:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/1125/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2019-07-14T11:00:00+08:00" />
+<meta property="article:modified_time" content="2019-07-14T11:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="1130：叶值的最小代价生成树（1919 分）"/>
-<meta name="twitter:description" content="力扣第 146 场周赛第 3 题 题目 给你一个正整数数组 arr，考虑所有满足以下条件的二叉树： 每个节点都有 0 个或是 2 个子节点。 数组 arr 中的值与树的中序遍历中"/>
+<meta name="twitter:title" content="1125：最小的必要团队（2250 分）"/>
+<meta name="twitter:description" content="力扣第 145 场周赛第 4 题 题目 作为项目经理，你规划了一份需求的技能清单 req_skills，并打算从备选人员名单 people 中选出些人组成一个「必要团队」（"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1130/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1125/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1140/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1125/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1124/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1130/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1130：叶值的最小代价生成树（1919 分）",
+        "headline": "1125：最小的必要团队（2250 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1130\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  753 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/1130\/","datePublished": "2019-07-21T10:50:00+08:00","dateModified": "2019-07-21T10:50:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1125\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  726 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1125\/","datePublished": "2019-07-14T11:00:00+08:00","dateModified": "2019-07-14T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1130：叶值的最小代价生成树（1919 分）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1125：最小的必要团队（2250 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-07-21">2019-07-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 753 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1130/" class="leancloud_visitors" data-flag-title="1130：叶值的最小代价生成树（1919 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-07-14">2019-07-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 726 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1125/" class="leancloud_visitors" data-flag-title="1125：最小的必要团队（2250 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -132,69 +132,92 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/" target="_blank" rel="noopener noreffer">力扣第 146 场周赛第 3 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/smallest-sufficient-team/" target="_blank" rel="noopener noreffer">力扣第 145 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个正整数数组 <code>arr</code>，考虑所有满足以下条件的二叉树：</p>
+<p>作为项目经理，你规划了一份需求的技能清单 <code>req_skills</code>，并打算从备选人员名单 <code>people</code> 中选出些人组成一个「必要团队」（ 编号为 <code>i</code> 的备选人员 <code>people[i]</code> 含有一份该备选人员掌握的技能列表）。</p>
+<p>所谓「必要团队」，就是在这个团队中，对于所需求的技能列表 <code>req_skills</code> 中列出的每项技能，团队中至少有一名成员已经掌握。可以用每个人的编号来表示团队中的成员：</p>
 <ul>
-<li>每个节点都有 <code>0</code> 个或是 <code>2</code> 个子节点。</li>
-<li>数组 <code>arr</code> 中的值与树的中序遍历中每个叶节点的值一一对应。</li>
-<li>每个非叶节点的值等于其左子树和右子树中叶节点的最大值的乘积。</li>
+<li>例如，团队 <code>team = [0, 1, 3]</code> 表示掌握技能分别为 <code>people[0]</code>，<code>people[1]</code>，和 <code>people[3]</code> 的备选人员。</li>
 </ul>
-<p>在所有这样的二叉树中，返回每个非叶节点的值的最小可能总和。这个和的值是一个 32 位整数。</p>
-<p>如果一个节点有 0 个子节点，那么该节点为叶节点。</p>
+<p>请你返回 <strong>任一</strong> 规模最小的必要团队，团队成员用人员编号表示。你可以按 <strong>任意顺序</strong> 返回答案，题目数据保证答案存在。</p>
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/08/10/tree1.jpg" style="width: 500px; height: 169px;" />
 <pre>
-<strong>输入：</strong>arr = [6,2,4]
-<strong>输出：</strong>32
-<strong>解释：</strong>有两种可能的树，第一种的非叶节点的总和为 36 ，第二种非叶节点的总和为 32 。
+<strong>输入：</strong>req_skills = ["java","nodejs","reactjs"], people = [["java"],["nodejs"],["nodejs","reactjs"]]
+<strong>输出：</strong>[0,2]
 </pre>
-<p><strong>示例 2：</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/08/10/tree2.jpg" style="width: 224px; height: 145px;" />
+<p><strong>示例 2：</strong></p>
 <pre>
-<strong>输入：</strong>arr = [4,11]
-<strong>输出：</strong>44
+<strong>输入：</strong>req_skills = ["algorithms","math","java","reactjs","csharp","aws"], people = [["algorithms","math","java"],["algorithms","math","reactjs"],["java","csharp","aws"],["reactjs","csharp"],["csharp","math"],["aws","java"]]
+<strong>输出：</strong>[1,2]
 </pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>2 &lt;= arr.length &lt;= 40</code></li>
-<li><code>1 &lt;= arr[i] &lt;= 15</code></li>
-<li>答案保证是一个 32 位带符号整数，即小于 <code>2<sup>31</sup></code> 。</li>
+<li><code>1 <= req_skills.length <= 16</code></li>
+<li><code>1 <= req_skills[i].length <= 16</code></li>
+<li><code>req_skills[i]</code> 由小写英文字母组成</li>
+<li><code>req_skills</code> 中的所有字符串 <strong>互不相同</strong></li>
+<li><code>1 <= people.length <= 60</code></li>
+<li><code>0 <= people[i].length <= 16</code></li>
+<li><code>1 <= people[i][j].length <= 16</code></li>
+<li><code>people[i][j]</code> 由小写英文字母组成</li>
+<li><code>people[i]</code> 中的所有字符串 <strong>互不相同</strong></li>
+<li><code>people[i]</code> 中的每个技能是 <code>req_skills</code> 中的技能</li>
+<li>题目数据保证「必要团队」一定存在</li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/1994" rel="">1994：好子集的数目（2464 分）</a></li>
+<li><a href="/leetcode/1986" rel="">1986：完成任务的最少工作时间段（1995 分）</a></li>
+<li><a href="/leetcode/2397" rel="">2397：被列覆盖的最多行数（1718 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>数据规模很小，考虑直接递归。满足条件的二叉树必然是以 arr[:i] 为左子树，arr[i:] 为右子树。
-并且如果 len(arr) &gt; 1，左子树和右子树都至少有一个节点。</p>
-<p>因此遍历位置 0&lt;i&lt;len(arr)，根节点的值为 max(arr[:i]) * max(arr[i:])，剩下的即为递归子问题。</p>
+<ul>
+<li>典型的状压 dp</li>
+<li>令 f(i,st) 代表 peope[:i] 掌握技能集合 st 的最小团队集合，即可递推</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mctFromLeafValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">help</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="n">help</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">k</span><span class="p">])</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">:</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">help</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">smallestSufficientTeam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req_skills</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">people</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">req_skills</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">A</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">people</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">st0</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">.</span><span class="n">bit_count</span><span class="p">()</span><span class="o">==</span><span class="n">m</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">                <span class="n">st2</span> <span class="o">=</span> <span class="n">st</span><span class="o">|</span><span class="n">st0</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">.</span><span class="n">bit_count</span><span class="p">()</span><span class="o">&lt;</span><span class="n">f</span><span class="p">[</span><span class="n">st2</span><span class="p">]</span><span class="o">.</span><span class="n">bit_count</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">st2</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">|</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="n">i</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>296 ms</p>
+</div><p>455 ms</p>
 <h3 id="2">#2</h3>
-<p>本题有个很巧妙的单调栈解法。</p>
-<p>本题可以等价于一个数组问题：每一轮从 arr 中选择两个相邻的数，得到一个乘积，并删除较小的那个数，直到数组长度小于 2，求最小的乘积之和。</p>
-<p>如果存在 arr[i-1] &gt;= arr[i] &lt;= arr[i+1]，最终 arr[i] 必然是要被删除的（或者等价于 arr[i] 被删除）。
-假设最优方略是在删除了 arr[i-1] 或 arr[i+1] 之后才删除的 arr[i]，arr[i] 相邻的两个数会相等或更大。那么改成先删除 arr[i]，不会比最优方案差。</p>
-<p>因此遇到 arr[i-1] &gt;= arr[i] &lt;= arr[i+1] 时，即可先将 arr[i] 删除，这正符合单调栈的过程。</p>
-<p>注意最后栈中可能还剩余元素，显然应该反向删除。</p>
+<ul>
+<li>还可以令 f、g 分别代表最小团队的大小和集合，节省 bit_count() 的时间</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -209,33 +232,45 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mctFromLeafValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">res</span><span class="p">,</span> <span class="n">stack</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">num</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">x</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">			<span class="n">y</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">num</span><span class="p">)</span> <span class="k">if</span> <span class="n">stack</span> <span class="k">else</span> <span class="n">num</span>
-</span></span><span class="line"><span class="cl">			<span class="n">res</span> <span class="o">+=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span> <span class="o">+=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="o">*</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">smallestSufficientTeam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req_skills</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">people</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">req_skills</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">g</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">A</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">people</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">st0</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">==</span><span class="n">m</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">                <span class="n">st2</span> <span class="o">=</span> <span class="n">st</span><span class="o">|</span><span class="n">st0</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">&lt;</span><span class="n">f</span><span class="p">[</span><span class="n">st2</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">st2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">st</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">st2</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">|</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="n">i</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>48 ms</p>
+</div><p>236 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2019-07-21</span>
+                <span>更新于 2019-07-14</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/1130/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/1125/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -244,14 +279,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%88/">栈</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">状态压缩</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1140/" class="prev" rel="prev" title="1140：石子游戏 II（2034 分）"><i class="fas fa-angle-left fa-fw"></i>1140：石子游戏 II（2034 分）</a>
-            <a href="/leetcode/1125/" class="next" rel="next" title="1125：最小的必要团队（2250 分）">1125：最小的必要团队（2250 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1130/" class="prev" rel="prev" title="1130：叶值的最小代价生成树（1919 分）"><i class="fas fa-angle-left fa-fw"></i>1130：叶值的最小代价生成树（1919 分）</a>
+            <a href="/leetcode/1124/" class="next" rel="next" title="1124：表现良好的最长时间段（1908 分）">1124：表现良好的最长时间段（1908 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
