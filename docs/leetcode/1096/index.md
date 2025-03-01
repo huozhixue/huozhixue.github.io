@@ -20,7 +20,7 @@
 <li>当两个或多个表达式并列，以逗号分隔，我们取这些表达式中元素的并集。<code>R({e_1,e_2,...}) = R(e_1) ∪ R(e_2) ∪ ...</code>
 <ul>
 <li>例如，表达式 <code>"{a,b,c}"</code> 表示字符串 <code>"a","b","c"</code>。</li>
-<li>而表达式 <code>"{{a,b},{b,c}}"</code> 也可以表示字符串 <code>"a","b","c"</code>。</li>
+<li>而表达式 <code>"{ {a,b},{b,c} }"</code> 也可以表示字符串 <code>"a","b","c"</code>。</li>
 </ul>
 </li>
 <li>要是两个或多个表达式相接，中间没有隔开时，我们从这些表达式中各取一个元素依次连接形成字符串。<code>R(e_1 + e_2) = {a + b for (a, b) in R(e_1) × R(e_2)}</code>
@@ -51,7 +51,7 @@
 <p><strong>示例 2：</strong></p>
 
 <pre>
-<strong>输入：</strong>expression = "{{a,z},a{b,c},{ab,z}}"
+<strong>输入：</strong>expression = "{ {a,z},a{b,c},{ab,z} }"
 <strong>输出：</strong>["a","ab","ac","z"]
 <strong>解释：</strong>输出中 <strong>不应 </strong>出现重复的组合结果。
 </pre>
