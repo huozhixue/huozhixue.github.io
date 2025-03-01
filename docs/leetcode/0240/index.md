@@ -94,7 +94,7 @@ class Solution:
         m, n = len(matrix), len(matrix[0])
         return dfs(0,0,m-1,n-1)
 ```
-时间 $O(log(M*N))$，159 ms
+时间 $O(\sqrt{M*N})$，159 ms
 
 
 
