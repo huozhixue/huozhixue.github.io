@@ -78,12 +78,10 @@ class Solution:
             x,y = s[(i+a)%n],s[(j+a)%n]
             if x==y:
                 a += 1
+            elif x>y:
+                i,j,a = j,max(i+a,j)+1,0
             else:
-                i,j = (i+a+1,j) if x>y else (i,j+a+1)
-                if i==j:
-                    i += 1
-                a = 0
-        i = min(i, j)
+                j,a = j+a+1,0
         return s[i:]+s[:i]
 ```
 0 ms
