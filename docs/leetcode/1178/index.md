@@ -53,50 +53,30 @@ puzzles = ["aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"]
 
 ## 分析
 
-### #1
 
-先试试暴力解法，对每个 puzzle，遍历每个 word 判断是否满足条件即可。
-
-```python
-def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-	res, words = [], [set(word) for word in words]
-	for puzzle in puzzles:
-		puz = set(puzzle)
-		cnt = sum(puzzle[0] in word and puz >= word for word in words)
-		res.append(cnt)
-	return res
-```
-
-果然超时了
-
-### #2
-
-puzzles 和 words 可能的个数太多了，全部遍历很耗时，考虑限制搜索范围。
-
-	可以直接把 key=''.join(sorted(set(word))) 作为表示 word 的唯一 key，保存在哈希表。
-
-	那么 word 可以作为 puzzle 的谜底，等价于 word 的 key 是 puzzle 的某个含有 puzzle[0] 的子序列的 key。
-
-	因此对于某个 puzzle，遍历含有 puzzle[0] 的子序列 sub，累计 key 相同的 word 个数即可。
-
-生成字符串的所有子序列类似于 0078 ，可以递推得到。
-
+找 puzzle 包含第一个字母的子集即可
 
 ## 解答
 
 
 ```python
-def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-	res, d = [], defaultdict(int)
-	gen_key = lambda x: ''.join(sorted(x))
-	for word in words:
-		d[gen_key(set(word))] += 1
-	for puzzle in puzzles:
-		subs = [puzzle[0]]
-		for char in puzzle[1:]:
-			subs += [sub+char for sub in subs]
-		res.append(sum(d[gen_key(sub)] for sub in subs))
-	return res
+class Solution:
+    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
+        d = defaultdict(int)
+        for w in words:
+            st = sum(1<<(ord(c)-ord('a')) for c in set(w))
+            d[st] += 1
+        res = []
+        for p in puzzles:
+            st = sum(1<<(ord(c)-ord('a')) for c in p[1:])
+            c = 1<<(ord(p[0])-ord('a'))
+            s = d[st|c]
+            y = st
+            while y:
+                y = (y-1)&st
+                s += d[y|c]
+            res.append(s)
+        return res
 ```
 
-760 ms
+383 ms

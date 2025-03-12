@@ -72,7 +72,6 @@ skiplist.search(1);   // 返回 false，1 已被擦除
 - [:(far fa-hand-point-right fa-fw):跳表教程](//www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf)
 - 为了方便，可以将叠在一起的看成是一个节点。
 
-
 ## 解答
 
 ```python

@@ -77,21 +77,57 @@ D.pop()            // 返回 -1。仍然没有栈。
 
 ## 分析
 
-考虑用数组 A 动态维护所有栈的信息（保证末尾是非空栈），那么 pop 时：
+### #1 有序集合
 
-    若 len(A[-1]) > 1，直接 pop A[-1] 即可
-    若 len(A[-1]) == 1，pop A[-1] 并去掉末尾所有空栈
-    每个非末尾的空栈至少对应了一个 push 和 popAtStack 操作
-    因此平摊下来 pop 时间复杂度 O(1)
+- 最简单的就是维护两个有序集合
+	- nfull 维护没有满的栈
+	- nvoid 维护非空的栈
+- push 和 pop 时更新两个有序集合即可
+- 由于 nfull 只有添加和删除最值的操作，可以用堆
 
-然后为了方便 push，考虑用堆 pq 维护没有满的栈下标集合，那么：
+```python
+class DinnerPlates:
 
-    若 pq 空或 pq[0]>=len(A)
-        说明 A 中的栈的都满了，末尾添加一个栈并 push
-    否则
-        得到没有满的最小下标 i=pq[0]，往 A[i] push
+    def __init__(self, capacity: int):
+        from sortedcontainers import SortedList
+        self.ca = capacity
+        self.A = []
+        self.nfull = []
+        self.nvoid = SortedList()
 
-> 注意在所有操作中都要维护 pq，不过去掉空栈时可以采用延迟删除的技巧，从而节省时间。
+    def push(self, val: int) -> None:
+        if self.nfull:
+            i = heappop(self.nfull)
+        else:
+            i = len(self.A)
+            self.A.append([])
+        self.A[i].append(val)
+        if len(self.A[i])<self.ca:
+            heappush(self.nfull,i)
+        if len(self.A[i])==1:
+            self.nvoid.add(i)
+
+    def pop(self) -> int:
+        if not self.nvoid:
+            return -1
+        return self.popAtStack(self.nvoid[-1])
+
+    def popAtStack(self, index: int) -> int:
+        if not (0<=index<len(self.A) and self.A[index]):
+            return -1
+        x = self.A[index].pop()
+        if len(self.A[index])==self.ca-1:
+            heappush(self.nfull,index)
+        if not self.A[index]:
+            self.nvoid.remove(index)
+        return x
+```
+480 ms
+### #2 堆
+
+
+- 还可以注意维护数组 A，保证末尾非空，那么无需维护 nvoid
+- 此时 nfull 采用懒删除即可
 
 ## 解答
 
@@ -99,32 +135,35 @@ D.pop()            // 返回 -1。仍然没有栈。
 class DinnerPlates:
 
     def __init__(self, capacity: int):
-        self.size = capacity
-        self.pq = []
+        self.ma = capacity
         self.A = []
+        self.nfull = []
 
     def push(self, val: int) -> None:
-        if not self.pq or self.pq[0] >= len(self.A):
-            self.A.append([val])
-            self.pq = [len(self.A)-1] if self.size > 1 else []
+        nfull,A = self.nfull,self.A
+        if not nfull or nfull[0]>=len(A):
+            nfull.clear()
+            i = len(A)
+            A.append([])
         else:
-            i = self.pq[0]
-            self.A[i].append(val)
-            if len(self.A[i]) == self.size:
-                heappop(self.pq)
+            i = heappop(nfull)
+        A[i].append(val)
+        if len(A[i])<self.ma:
+            heappush(nfull, i)
 
     def pop(self) -> int:
-        return -1 if not self.A else self.popAtStack(len(self.A)-1)
+        return self.popAtStack(len(self.A)-1)
 
     def popAtStack(self, index: int) -> int:
-        if index >= len(self.A) or not self.A[index]:
+        nfull,A = self.nfull,self.A
+        if not (0<=index<len(A) and A[index]):
             return -1
-        val = self.A[index].pop()
-        if len(self.A[index]) == self.size - 1:
-            heappush(self.pq, index)
-        while self.A and not self.A[-1]:
-            self.A.pop()
-        return val
+        x = A[index].pop()
+        if len(A[index])==self.ma-1:
+            heappush(nfull,index)
+        while A and not A[-1]:
+            A.pop()
+        return x
 ```
-时间复杂度 O(N*logN)，648 ms
+176 ms
 
