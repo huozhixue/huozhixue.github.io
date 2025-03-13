@@ -46,30 +46,32 @@
 
 ## 分析
 
-[tarjan](https://zhuanlan.zhihu.com/p/101923309) 算法模版题，求无向图的桥。
+[tarjan](https://zhuanlan.zhihu.com/p/101923309) 算法模版题，求无向图的桥
 
 ## 解答
 
 ```python
-def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
-    def tarjan(p, fa):
-        dfn[p] = low[p] = self.t = self.t+1
-        for q in nxt[p]:
-            if q not in dfn:
-                tarjan(q, p)
-                low[p] = min(low[p], low[q])
-                if low[q] > dfn[p]:
-                    bridge.append([p, q])
-            elif q != fa:
-                low[p] = min(low[p], dfn[q])
-    
-    nxt = defaultdict(list)
-    for a, b in connections:
-        nxt[a].append(b)
-        nxt[b].append(a)
-    bridge, dfn, low, self.t = [], {}, {}, 0
-    tarjan(0, None)
-    return bridge
+class Solution:
+    def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
+        def tarjan(u,fa):
+            nonlocal t
+            dfn[u]=low[u]=t=t+1
+            for v in g[u]:
+                if not dfn[v]:
+                    tarjan(v,u)
+                    low[u] = min(low[u],low[v])
+                    if low[v]>dfn[u]:
+                        bridge.append([u,v])
+                elif v!=fa:
+                    low[u] = min(low[u],dfn[v])
+        g = [[] for _ in range(n)]
+        for u,v in connections:
+            g[u].append(v)
+            g[v].append(u)
+        dfn,low,t = [0]*n,[0]*n,0
+        bridge = []
+        tarjan(0,-1)
+        return bridge
 ```
-620 ms
+348 ms
 

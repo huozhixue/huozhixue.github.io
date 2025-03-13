@@ -54,57 +54,51 @@
 
 ## 分析
 
-将依赖关系看作有向边，显然是一个拓扑排序问题。
-
-同一小组的必须相邻，那么可以将小组也看作顶点，小组间要满足拓扑顺序。
-小组排好后，每个小组内部也要满足拓扑顺序。因此要用双层拓扑排序。
-
-具体来说：
-1. 预处理：
+- 将依赖关系看作有向边，显然是一个拓扑排序问题
+	- 同一小组的必须相邻，将小组看作顶点，小组间要满足拓扑顺序
+	- 小组排好后，每个小组内部也要满足拓扑顺序
+- 具体实现时
     - 将不属于任何小组的项目分给一个单独的虚拟小组，方便统一解决
-2. 建图：
-    - 对每个小组建立虚拟顶点，将项目顶点分给对应的小组
-    - 将边分为组间边和组内边，并且组内边分给对应的小组
-3. 双层拓扑：
-    - 根据小组虚拟顶点和组间边对小组进行拓扑排序
-    - 按拓扑顺序遍历小组，根据小组内的项目顶点和边进行拓扑排序
+    - 将小组看作顶点，建图，并将组内边分给对应的小组
+    - 先对小组顶点拓扑排序，再根据小组内的点和边拓扑排序即可
 
 ## 解答
 
 ```python
-def sortItems(self, n: int, m: int, group: List[int], beforeItems: List[List[int]]) -> List[int]:
-    def topo(V, E):
-        nxt, indeg = defaultdict(list), defaultdict(int)
-        for u, v in E:
-            nxt[u].append(v)
-            indeg[v] += 1
-        res, queue = [], deque(u for u in V if indeg[u]==0)
-        while queue:
-            u = queue.popleft()
-            res.append(u)
-            for v in nxt[u]:
-                indeg[v] -= 1
-                if indeg[v] == 0:
-                    queue.append(v)
-        return res
+class Solution:
+    def sortItems(self, n: int, m: int, group: List[int], beforeItems: List[List[int]]) -> List[int]:
+        def topo(V, E):
+            g, deg = defaultdict(list), defaultdict(int)
+            for u,v in E:
+                g[u].append(v)
+                deg[v] += 1
+            res, Q = [], deque(u for u in V if deg[u]==0)
+            while Q:
+                u = Q.popleft()
+                res.append(u)
+                for v in g[u]:
+                    deg[v] -= 1
+                    if deg[v] == 0:
+                        Q.append(v)
+            return res if len(res)==len(V) else []
 
-    M = m
-    for i in range(n):
-        if group[i] == -1:
-            group[i] = M
-            M += 1
-    out_V, in_V = list(range(M)), defaultdict(list)
-    for i in range(n):
-        in_V[group[i]].append(i)
-    out_E, in_E = [], defaultdict(list)
-    for v in range(n):
-        for u in beforeItems[v]:
-            if group[u] == group[v]:
-                in_E[group[u]].append([u, v])
-            else:
-                out_E.append([group[u], group[v]])
-    res = [v for g in topo(out_V, out_E) for v in topo(in_V[g], d_E[g])]
-    return res if len(res)==n else []
+        M = m
+        for i in range(n):
+            if group[i] == -1:
+                group[i] = M
+                M += 1
+        outV, inV = set(group), defaultdict(list)
+        for i in range(n):
+            inV[group[i]].append(i)
+        outE, inE = [], defaultdict(list)
+        for v in range(n):
+            for u in beforeItems[v]:
+                if group[u] == group[v]:
+                    inE[group[u]].append([u, v])
+                else:
+                    outE.append([group[u], group[v]])
+        res = [v for g in topo(outV, outE) for v in topo(inV[g], inE[g])]
+        return res if len(res)==n else []
 ```
-204 ms
+135 ms
 
