@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>0730：统计不同回文子序列（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="0730：统计不同回文子序列（★★）" />
-<meta property="og:description" content="力扣第 730 题 题目 给你一个字符串 s ，返回 s 中不同的非空回文子序列个数 。由于答案可能很大，请返回对 109 &#43; 7 取余 的结果。 字符串的子序列可以经由字符串删" />
+        <title>1220：统计元音字母序列的数目（1729 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1220：统计元音字母序列的数目（1729 分）" />
+<meta property="og:description" content="力扣第 157 场周赛第 4 题 题目 给你一个整数 n，请你帮忙统计一下我们可以按下述规则形成多少个长度为 n 的字符串： 字符串中的每个字符都应当是小写元音字母" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/0730/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2016-12-30T00:00:00+08:00" />
-<meta property="article:modified_time" content="2016-12-30T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/1220/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2019-10-06T11:00:00+08:00" />
+<meta property="article:modified_time" content="2019-10-06T11:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="0730：统计不同回文子序列（★★）"/>
-<meta name="twitter:description" content="力扣第 730 题 题目 给你一个字符串 s ，返回 s 中不同的非空回文子序列个数 。由于答案可能很大，请返回对 109 &#43; 7 取余 的结果。 字符串的子序列可以经由字符串删"/>
+<meta name="twitter:title" content="1220：统计元音字母序列的数目（1729 分）"/>
+<meta name="twitter:description" content="力扣第 157 场周赛第 4 题 题目 给你一个整数 n，请你帮忙统计一下我们可以按下述规则形成多少个长度为 n 的字符串： 字符串中的每个字符都应当是小写元音字母"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/0730/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/0726/" /><link rel="next" href="https://huozhixue.github.io/leetcode/0732/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1220/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1210/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1222/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "0730：统计不同回文子序列（★★）",
+        "headline": "1220：统计元音字母序列的数目（1729 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/0730\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1012 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/0730\/","datePublished": "2016-12-30T00:00:00+08:00","dateModified": "2016-12-30T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1220\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  525 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1220\/","datePublished": "2019-10-06T11:00:00+08:00","dateModified": "2019-10-06T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">0730：统计不同回文子序列（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1220：统计元音字母序列的数目（1729 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-30">2016-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1012 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0730/" class="leancloud_visitors" data-flag-title="0730：统计不同回文子序列（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-10-06">2019-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 525 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1220/" class="leancloud_visitors" data-flag-title="1220：统计元音字母序列的数目（1729 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -132,139 +132,66 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/" target="_blank" rel="noopener noreffer">力扣第 730 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/count-vowels-permutation/" target="_blank" rel="noopener noreffer">力扣第 157 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个字符串 <code>s</code> ，返回 <code>s</code> 中不同的非空回文子序列个数 。由于答案可能很大，请返回对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 的结果。</p>
-<p>字符串的子序列可以经由字符串删除 0 个或多个字符获得。</p>
-<p>如果一个序列与它反转后的序列一致，那么它是回文序列。</p>
-<p>如果存在某个 <code>i</code> , 满足 <code>a<sub>i</sub> != b<sub>i</sub></code><sub> </sub>，则两个序列 <code>a<sub>1</sub>, a<sub>2</sub>, ...</code> 和 <code>b<sub>1</sub>, b<sub>2</sub>, ...</code> 不同。</p>
+<p>给你一个整数 <code>n</code>，请你帮忙统计一下我们可以按下述规则形成多少个长度为 <code>n</code> 的字符串：</p>
+<ul>
+<li>字符串中的每个字符都应当是小写元音字母（<code>&#39;a&#39;</code>, <code>&#39;e&#39;</code>, <code>&#39;i&#39;</code>, <code>&#39;o&#39;</code>, <code>&#39;u&#39;</code>）</li>
+<li>每个元音 <code>&#39;a&#39;</code> 后面都只能跟着 <code>&#39;e&#39;</code></li>
+<li>每个元音 <code>&#39;e&#39;</code> 后面只能跟着 <code>&#39;a&#39;</code> 或者是 <code>&#39;i&#39;</code></li>
+<li>每个元音 <code>&#39;i&#39;</code> 后面 <strong>不能</strong> 再跟着另一个 <code>&#39;i&#39;</code></li>
+<li>每个元音 <code>&#39;o&#39;</code> 后面只能跟着 <code>&#39;i&#39;</code> 或者是 <code>&#39;u&#39;</code></li>
+<li>每个元音 <code>&#39;u&#39;</code> 后面只能跟着 <code>&#39;a&#39;</code></li>
+</ul>
+<p>由于答案可能会很大，所以请你返回 模 <code>10^9 + 7</code> 之后的结果。</p>
 <p><strong>示例 1：</strong></p>
-<pre>
-<strong>输入：</strong>s = 'bccb'
-<strong>输出：</strong>6
-<strong>解释：</strong>6 个不同的非空回文子字符序列分别为：'b', 'c', 'bb', 'cc', 'bcb', 'bccb'。
-注意：'bcb' 虽然出现两次但仅计数一次。
+<pre><strong>输入：</strong>n = 1
+<strong>输出：</strong>5
+<strong>解释：</strong>所有可能的字符串分别是：&quot;a&quot;, &quot;e&quot;, &quot;i&quot; , &quot;o&quot; 和 &quot;u&quot;。
 </pre>
 <p><strong>示例 2：</strong></p>
-<pre>
-<strong>输入：</strong>s = 'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
-<strong>输出：</strong>104860361
-<strong>解释：</strong>共有 3104860382 个不同的非空回文子序列，104860361 是对 10<sup>9</sup> + 7 取余后的值。
+<pre><strong>输入：</strong>n = 2
+<strong>输出：</strong>10
+<strong>解释：</strong>所有可能的字符串分别是：&quot;ae&quot;, &quot;ea&quot;, &quot;ei&quot;, &quot;ia&quot;, &quot;ie&quot;, &quot;io&quot;, &quot;iu&quot;, &quot;oi&quot;, &quot;ou&quot; 和 &quot;ua&quot;。
 </pre>
+<p><strong>示例 3：</strong></p>
+<pre><strong>输入：</strong>n = 5
+<strong>输出：</strong>68</pre>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= s.length &lt;= 1000</code></li>
-<li><code>s[i]</code> 仅包含 <code>'a'</code>, <code>'b'</code>, <code>'c'</code> 或 <code>'d'</code> </li>
+<li><code>1 &lt;= n &lt;= 2 * 10^4</code></li>
 </ul>
 <p><strong>相似问题：</strong></p>
 <ul>
-<li><a href="/leetcode/0516" rel="">0516：最长回文子序列</a></li>
-<li><a href="/leetcode/2484" rel="">2484：统计回文子序列数目（2223 分）</a></li>
+<li><a href="/leetcode/2930" rel="">2930：重新排列后包含指定子字符串的字符串数目（2227 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<ul>
-<li>典型的区间 dp 问题，考虑按序列最外层的字符递推</li>
-<li>假如 s 的首尾都是 &lsquo;a&rsquo;
-<ul>
-<li>这对 &lsquo;a&rsquo; 可以和 s[1:-1] 的每个序列组成新的序列</li>
-<li>这对 &lsquo;a&rsquo; 自身可以组成 &lsquo;a&rsquo; 和 &lsquo;aa&rsquo;</li>
-<li>注意一样的序列只算一次，要去掉重复的序列</li>
-<li>s[1:-1] 每个首尾是 &lsquo;a&rsquo; 的序列都在新的序列集合中，都是重复的</li>
-<li>因此 s 的序列个数=s[1:-1]的序列个数*2+2-s[1:-1] 首尾是 &lsquo;a&rsquo; 的序列个数</li>
-</ul>
-</li>
-<li>所以考虑将首尾是哪个字符加入状态定义，用 f[i][j][c] 代表 s[i:j+1] 首尾是 c 的序列个数，进行递推
-<ul>
-<li>假如 s[i:j+1] 的首尾都是 c
-<ul>
-<li>f[i][j][c] = sum(f[i+1][j-1])+2</li>
-<li>其它字符状态和 f[i+1][j-1] 一样</li>
-</ul>
-</li>
-<li>否则，假如首尾分别是 a、b
-<ul>
-<li>f[i][j][a] = f[i][j-1][a]</li>
-<li>f[i][j][b] = f[i+1][j][b]</li>
-<li>其它字符状态和 f[i+1][j-1] 一样</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>递推即可</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">countPalindromicSubsequences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">countVowelPermutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
-</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">][:]</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">u</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">u</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">,(</span><span class="n">a</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">,(</span><span class="n">e</span><span class="o">+</span><span class="n">o</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">,</span><span class="n">i</span><span class="p">,(</span><span class="n">i</span><span class="o">+</span><span class="n">o</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">o</span><span class="o">+</span><span class="n">u</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>2452 ms</p>
+</div><p>71 ms</p>
 <h3 id="2">#2</h3>
-<ul>
-<li>还可以优化掉 c 的维度</li>
-<li>观察最开始的递推式：
-<ul>
-<li>当 s 首尾是 c 时，s 的序列个数=s[1:-1]的序列个数*2+2-s[1:-1] 首尾是 c 的序列个数</li>
-<li>考虑换种方法计算 s[1:-1] 首尾是 c 的序列个数，即 f[1][n-2][c]</li>
-<li>找到 s[1:-1] 中最左和最右的 c 位置 l、r，f[1][n-2][c] = f[l][r][c]</li>
-<li>而 f[l][r][c] = sum(f[l+1][r-1][c]) + 2</li>
-</ul>
-</li>
-<li>因此，令 g[i][j] 代表 s[i:j+1] 的序列个数，进行递推
-<ul>
-<li>假如 s[i:j+1] 的首尾都是 c
-<ul>
-<li>g[i][j] = g[i+1][j-1]*2+2-(g[l+1][r-1]+2)</li>
-<li>注意 l 和 r 不存在时，f[l][r][c] = 0，l 和 r 相等时，f[l][r][c] = 1，要特殊处理</li>
-</ul>
-</li>
-<li>否则，由容斥可得
-<ul>
-<li>g[i][j] = g[i][j-1]+g[i+1][j]-g[i+1][j-1]</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>最后，考虑怎么预处理 i、j 对应的 l、r
-<ul>
-<li>其实就是保存字符 s[i] 的下/上一个位置</li>
-<li>遍历并维护哈希表即可</li>
-</ul>
-</li>
-</ul>
+<p>还可以用矩阵幂优化</p>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -285,51 +212,39 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">countPalindromicSubsequences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
-</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,[</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                <span class="n">R</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">        <span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">l</span><span class="o">&gt;</span><span class="n">r</span> <span class="k">else</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">l</span><span class="o">==</span><span class="n">r</span> <span class="k">else</span> <span class="n">g</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">%=</span> <span class="n">mod</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[[</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">))</span><span class="o">%</span><span class="n">mod</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">B</span><span class="p">)]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mpow</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">mat</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">i</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">mat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">countVowelPermutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">mpow</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">f</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span> <span class="k">else</span> <span class="n">f</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">f</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>570 ms</p>
+</div><p>15 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2016-12-30</span>
+                <span>更新于 2019-10-06</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/0730/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/1220/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -338,14 +253,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E4%BC%98%E5%8C%96/">优化</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82/">矩阵快速幂</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/0732/" class="prev" rel="prev" title="0732：我的日程安排表 III（★★）"><i class="fas fa-angle-left fa-fw"></i>0732：我的日程安排表 III（★★）</a>
-            <a href="/leetcode/0726/" class="next" rel="next" title="0726：原子的数量（★★）">0726：原子的数量（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1222/" class="prev" rel="prev" title="1222：可以攻击国王的皇后（1391 分）"><i class="fas fa-angle-left fa-fw"></i>1222：可以攻击国王的皇后（1391 分）</a>
+            <a href="/leetcode/1210/" class="next" rel="next" title="1210：穿过迷宫的最少移动次数（2022 分）">1210：穿过迷宫的最少移动次数（2022 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

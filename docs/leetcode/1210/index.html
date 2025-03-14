@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1206：设计跳表（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1206：设计跳表（★★）" />
-<meta property="og:description" content="力扣第 1206 题 题目 不使用任何库函数，设计一个 跳表 。 跳表 是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，" />
+        <title>1210：穿过迷宫的最少移动次数（2022 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1210：穿过迷宫的最少移动次数（2022 分）" />
+<meta property="og:description" content="力扣第 156 场周赛第 4 题 题目 你还记得那条风靡全球的贪吃蛇吗？ 我们在一个 n*n 的网格上构建了新的迷宫地图，蛇的长度为 2，也就是说它会占去两个单元格。蛇" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/1206/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2019-09-25T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-09-25T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/1210/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2019-09-29T11:00:00+08:00" />
+<meta property="article:modified_time" content="2019-09-29T11:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="1206：设计跳表（★★）"/>
-<meta name="twitter:description" content="力扣第 1206 题 题目 不使用任何库函数，设计一个 跳表 。 跳表 是在 O(log(n)) 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，"/>
+<meta name="twitter:title" content="1210：穿过迷宫的最少移动次数（2022 分）"/>
+<meta name="twitter:description" content="力扣第 156 场周赛第 4 题 题目 你还记得那条风靡全球的贪吃蛇吗？ 我们在一个 n*n 的网格上构建了新的迷宫地图，蛇的长度为 2，也就是说它会占去两个单元格。蛇"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1206/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1203/" /><link rel="next" href="https://huozhixue.github.io/leetcode/lcp04/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1210/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1209/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1220/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1206：设计跳表（★★）",
+        "headline": "1210：穿过迷宫的最少移动次数（2022 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1206\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  782 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/1206\/","datePublished": "2019-09-25T00:00:00+08:00","dateModified": "2019-09-25T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1210\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  619 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/1210\/","datePublished": "2019-09-29T11:00:00+08:00","dateModified": "2019-09-29T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1206：设计跳表（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">1210：穿过迷宫的最少移动次数（2022 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-09-25">2019-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 782 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1206/" class="leancloud_visitors" data-flag-title="1206：设计跳表（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-09-29">2019-09-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 619 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1210/" class="leancloud_visitors" data-flag-title="1210：穿过迷宫的最少移动次数（2022 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -127,57 +127,53 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/design-skiplist/" target="_blank" rel="noopener noreffer">力扣第 1206 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/" target="_blank" rel="noopener noreffer">力扣第 156 场周赛第 4 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>不使用任何库函数，设计一个 <strong>跳表</strong> 。</p>
-<p><strong>跳表</strong> 是在 <code>O(log(n))</code> 时间内完成增加、删除、搜索操作的数据结构。跳表相比于树堆与红黑树，其功能与性能相当，并且跳表的代码长度相较下更短，其设计思想与链表相似。</p>
-<p>例如，一个跳表包含 <code>[30, 40, 50, 60, 70, 90]</code> ，然后增加 <code>80</code>、<code>45</code> 到跳表中，以下图的方式操作：</p>
-<p><img alt="" src="https://pic.leetcode.cn/1702370216-mKQcTt-1506_skiplist.gif" style="width: 500px; height: 173px;" /></p>
-<p>跳表中有很多层，每一层是一个短的链表。在第一层的作用下，增加、删除和搜索操作的时间复杂度不超过 <code>O(n)</code>。跳表的每一个操作的平均时间复杂度是 <code>O(log(n))</code>，空间复杂度是 <code>O(n)</code>。</p>
-<p>了解更多 : <a href="https://oi-wiki.org/ds/skiplist/" target="_blank">https://oi-wiki.org/ds/skiplist/</a></p>
-<p>在本题中，你的设计应该要包含这些函数：</p>
+<p>你还记得那条风靡全球的贪吃蛇吗？</p>
+<p>我们在一个 <code>n*n</code> 的网格上构建了新的迷宫地图，蛇的长度为 2，也就是说它会占去两个单元格。蛇会从左上角（<code>(0, 0)</code> 和 <code>(0, 1)</code>）开始移动。我们用 <code>0</code> 表示空单元格，用 1 表示障碍物。蛇需要移动到迷宫的右下角（<code>(n-1, n-2)</code> 和 <code>(n-1, n-1)</code>）。</p>
+<p>每次移动，蛇可以这样走：</p>
 <ul>
-<li><code>bool search(int target)</code> : 返回target是否存在于跳表中。</li>
-<li><code>void add(int num)</code>: 插入一个元素到跳表。</li>
-<li><code>bool erase(int num)</code>: 在跳表中删除一个值，如果 <code>num</code> 不存在，直接返回false. 如果存在多个 <code>num</code> ，删除其中任意一个即可。</li>
+<li>如果没有障碍，则向右移动一个单元格。并仍然保持身体的水平／竖直状态。</li>
+<li>如果没有障碍，则向下移动一个单元格。并仍然保持身体的水平／竖直状态。</li>
+<li>如果它处于水平状态并且其下面的两个单元都是空的，就顺时针旋转 90 度。蛇从（<code>(r, c)</code>、<code>(r, c+1)</code>）移动到 （<code>(r, c)</code>、<code>(r+1, c)</code>）。<br>
+<img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/28/image-2.png" style="height: 134px; width: 300px;"></li>
+<li>如果它处于竖直状态并且其右面的两个单元都是空的，就逆时针旋转 90 度。蛇从（<code>(r, c)</code>、<code>(r+1, c)</code>）移动到（<code>(r, c)</code>、<code>(r, c+1)</code>）。<br>
+<img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/28/image-1.png" style="height: 121px; width: 300px;"></li>
 </ul>
-<p>注意，跳表中可能存在多个相同的值，你的代码需要处理这种情况。</p>
-<p><strong>示例 1:</strong></p>
-<pre>
-<b>输入</b>
-["Skiplist", "add", "add", "add", "search", "add", "search", "erase", "erase", "search"]
-[[], [1], [2], [3], [0], [4], [1], [0], [1], [1]]
-<strong>输出</strong>
-[null, null, null, null, false, null, true, false, true, false]
-
-<strong>解释</strong>
-Skiplist skiplist = new Skiplist();
-skiplist.add(1);
-skiplist.add(2);
-skiplist.add(3);
-skiplist.search(0);   // 返回 false
-skiplist.add(4);
-skiplist.search(1);   // 返回 true
-skiplist.erase(0);    // 返回 false，0 不在跳表中
-skiplist.erase(1);    // 返回 true
-skiplist.search(1);   // 返回 false，1 已被擦除
+<p>返回蛇抵达目的地所需的最少移动次数。</p>
+<p>如果无法到达目的地，请返回 <code>-1</code>。</p>
+<p><strong>示例 1：</strong></p>
+<p><strong><img alt="" src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/28/image.png" style="height: 439px; width: 400px;"></strong></p>
+<pre><strong>输入：</strong>grid = [[0,0,0,0,0,1],
+[1,1,0,0,1,0],
+[0,0,0,0,1,1],
+[0,0,1,0,1,0],
+[0,1,1,0,0,0],
+[0,1,1,0,0,0]]
+<strong>输出：</strong>11
+<strong>解释：
+</strong>一种可能的解决方案是 [右, 右, 顺时针旋转, 右, 下, 下, 下, 下, 逆时针旋转, 右, 下]。
 </pre>
-<p><strong>提示:</strong></p>
+<p><strong>示例 2：</strong></p>
+<pre><strong>输入：</strong>grid = [[0,0,1,1,1,1],
+[0,0,0,0,1,1],
+[1,1,0,0,0,1],
+[1,1,1,0,0,1],
+[1,1,1,0,0,1],
+[1,1,1,0,0,0]]
+<strong>输出：</strong>9
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li><code>0 &lt;= num, target &lt;= 2 * 10<sup>4</sup></code></li>
-<li>调用<code>search</code>, <code>add</code>,  <code>erase</code>操作次数不大于 <code>5 * 10<sup>4</sup></code> </li>
-</ul>
-<p><strong>相似问题：</strong></p>
-<ul>
-<li><a href="/leetcode/0705" rel="">0705：设计哈希集合</a></li>
-<li><a href="/leetcode/0706" rel="">0706：设计哈希映射</a></li>
-<li><a href="/leetcode/0707" rel="">0707：设计链表</a></li>
+<li><code>2 &lt;= n &lt;= 100</code></li>
+<li><code>0 &lt;= grid[i][j] &lt;= 1</code></li>
+<li>蛇保证从空单元格开始出发。</li>
 </ul>
 <h2 id="分析">分析</h2>
 <ul>
-<li><a href="//www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf" target="_blank" rel="noopener noreffer"><i class="far fa-hand-point-right fa-fw"></i>跳表教程</a></li>
-<li>为了方便，可以将叠在一起的看成是一个节点。</li>
+<li>典型的 bfs，注意每种移动是否合法即可</li>
+<li>用 (i,j,0/1) 代表蛇尾在格子 (i,j) 且处于水平/竖直状态</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -197,117 +193,37 @@ skiplist.search(1);   // 返回 false，1 已被擦除
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">maxH</span> <span class="o">=</span> <span class="mi">16</span>
-</span></span><span class="line"><span class="cl"><span class="n">prob</span> <span class="o">=</span> <span class="mf">0.5</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">random_level</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">h</span><span class="o">&lt;</span><span class="n">maxH</span> <span class="ow">and</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&lt;</span><span class="n">prob</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">h</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">h</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="vm">__slots__</span> <span class="o">=</span> <span class="s1">&#39;val&#39;</span><span class="p">,</span> <span class="s1">&#39;nxt&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">maxH</span><span class="o">=</span><span class="n">maxH</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">nxt</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="n">maxH</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Skiplist</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">H</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">jump</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">]</span><span class="o">*</span><span class="n">maxH</span>
-</span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">p</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">val</span><span class="o">&lt;</span><span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">jump</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">jump</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="o">==</span><span class="n">target</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">jump</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">h</span> <span class="o">=</span> <span class="n">random_level</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">H</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">new</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">new</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">jump</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">jump</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">erase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">jump</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="n">jump</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">p</span><span class="o">.</span><span class="n">val</span> <span class="o">!=</span> <span class="n">num</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">jump</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">p</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="k">break</span>
-</span></span><span class="line"><span class="cl">            <span class="n">jump</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="o">&gt;</span><span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">nxt</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">H</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minimumMoves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Q</span><span class="p">,</span> <span class="n">vis</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]),</span> <span class="p">{(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">w</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">p</span><span class="p">)</span><span class="o">==</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">q</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">p</span><span class="p">),(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">),(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">p</span><span class="o">^</span><span class="mi">1</span><span class="p">)]:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x2</span><span class="p">,</span><span class="n">y2</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">if</span> <span class="n">q</span> <span class="k">else</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">x2</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="mi">0</span><span class="o">&lt;=</span><span class="n">y2</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="o">==</span><span class="n">grid</span><span class="p">[</span><span class="n">x2</span><span class="p">][</span><span class="n">y2</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vis</span> <span class="ow">and</span> <span class="p">(</span><span class="n">q</span><span class="o">==</span><span class="n">p</span> <span class="ow">or</span> <span class="n">grid</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">w</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">q</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">vis</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">q</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>60 ms</p>
+</div><p>99 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2019-09-25</span>
+                <span>更新于 2019-09-29</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/1206/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/1210/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -316,14 +232,14 @@ skiplist.search(1);   // 返回 false，1 已被擦除
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E9%93%BE%E8%A1%A8/">链表</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/bfs/">bfs</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E7%9F%A9%E9%98%B5/">矩阵</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/lcp04/" class="prev" rel="prev" title="LCP 04：覆盖（★★）"><i class="fas fa-angle-left fa-fw"></i>LCP 04：覆盖（★★）</a>
-            <a href="/leetcode/1203/" class="next" rel="next" title="1203：项目管理（2418 分）">1203：项目管理（2418 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/1220/" class="prev" rel="prev" title="1220：统计元音字母序列的数目（1729 分）"><i class="fas fa-angle-left fa-fw"></i>1220：统计元音字母序列的数目（1729 分）</a>
+            <a href="/leetcode/1209/" class="next" rel="next" title="1209：删除字符串中的所有相邻重复项 II（1541 分）">1209：删除字符串中的所有相邻重复项 II（1541 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

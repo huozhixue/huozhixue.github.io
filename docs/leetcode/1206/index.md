@@ -75,54 +75,61 @@ skiplist.search(1);   // 返回 false，1 已被擦除
 ## 解答
 
 ```python
-class Node:
+maxH = 16
+prob = 0.5
 
-    def __init__(self, val, nxt=[]):
+def random_level() -> int:
+    h = 1
+    while h<maxH and random.random()<prob:
+        h += 1
+    return h
+
+class Node:
+    __slots__ = 'val', 'nxt'
+
+    def __init__(self, val: int, maxH=maxH):
         self.val = val
-        self.nxt = nxt
+        self.nxt = [None]*maxH
 
 class Skiplist:
-
     def __init__(self):
-        self.tail = Node(float('inf'))
-        self.head = Node(-float('inf'), [self.tail])
-        self.H = 0 
+        self.head = Node(-1)
+        self.H = 0
+    
+    def get(self,x):
+        jump = [self.head]*maxH
+        p = self.head
+        for i in range(self.H-1,-1,-1):
+            while p.nxt[i] and p.nxt[i].val<x:
+                p = p.nxt[i]
+            jump[i] = p
+        return jump
 
     def search(self, target: int) -> bool:
-        cur = self.head
-        for h in range(self.H, -1, -1):
-            while cur.nxt[h].val <= target:
-                cur = cur.nxt[h]
-        return cur.val == target
+        p = self.get(target)[0].nxt[0]
+        return bool(p) and p.val==target
 
     def add(self, num: int) -> None:
-        cur, path = self.head, [None] * (self.H+1)
-        for h in range(self.H, -1, -1):
-            while cur.nxt[h].val <= num:
-                cur = cur.nxt[h]
-            path[h] = cur
-        node = Node(num, [path[0].nxt[0]])
-        path[0].nxt[0] = node
-        h = 1
-        while random.random() > 0.5:
-            if h > self.H:
-                self.head.nxt.append(node)
-                node.nxt.append(self.tail)
-                self.H += 1
-            else:
-                node.nxt.append(path[h].nxt[h])
-                path[h].nxt[h] = node
-            h += 1
+        jump = self.get(num)
+        h = random_level()
+        self.H = max(self.H, h)
+        new = Node(num,h)
+        for i in range(h):
+            new.nxt[i] = jump[i].nxt[i]
+            jump[i].nxt[i] = new
 
     def erase(self, num: int) -> bool:
-        cur, flag = self.head, False
-        for h in range(self.H, -1, -1):
-            while cur.nxt[h].val < num:
-                cur = cur.nxt[h]
-            if cur.nxt[h].val == num:
-                flag = True
-                cur.nxt[h] = cur.nxt[h].nxt[h]
-        return flag
+        jump = self.get(num)
+        p = jump[0].nxt[0]
+        if not p or p.val != num:
+            return False
+        for i in range(self.H):
+            if jump[i].nxt[i] != p:
+                break
+            jump[i].nxt[i] = p.nxt[i]
+        while self.H>1 and not self.head.nxt[self.H-1]:
+            self.H -= 1
+        return True
 ```
-232 ms
+60 ms
 
