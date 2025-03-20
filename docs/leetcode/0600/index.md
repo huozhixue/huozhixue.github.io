@@ -56,14 +56,14 @@
 
 ## 分析
 
-- 典型的数位 dp 问题
+### #1
+
+典型的数位 dp 问题
 - 令 dfs(i, st, bd) 代表某个状态下的结果：
 	- 遍历到 n 的第 i 位
 	- 前面一个数是 st
 	- bd 代表是否贴着 n 的上界
 - 即可递归
-	
-## 解答
 
 ```python
 class Solution:
@@ -81,5 +81,35 @@ class Solution:
         s = bin(n)[2:]
         return dfs(0,0,1)
 ```
-63 ms
+15 ms
+### #2
 
+本题的数位 dp 还有种更优的写法
+- 只记忆化非上界的状态，并令 i 代表还剩 i 位
+- 这样的状态的结果跟 n 无关，可以通用
+- 其实就是分段计数中，把每一段的结果记忆化了
+
+注意一定要先判断状态的结果跟 n 无关，memo 才可以通用
+
+## 解答
+```python
+memo = {}
+class Solution:
+    def findIntegers(self, n: int) -> int:
+        def dfs(i,st,bd):
+            if i<0:
+                return 1
+            if not bd and (i,st) in memo:
+                return memo[(i,st)]
+            res = 0
+            up = int(s[i]) if bd else 1
+            for x in range(up+1):
+                if not x&st:
+                    res += dfs(i-1,x,bd and x==up)
+            if not bd:
+                memo[(i,st)] = res
+            return res
+        s = bin(n)[2:][::-1]
+        return dfs(len(s)-1,0,1)
+```
+0 ms

@@ -65,7 +65,7 @@ class Solution:
         s = str(n)
         return dfs(0,0,True)
 ```
-48 ms
+0 ms
 
 
 ### #2
@@ -90,30 +90,5 @@ class Solution:
             x *= 10
         return res
 ```
-33 ms
+0 ms
 
-
-## *附加
-
-- 数位 dp 也可以写成递推形式
-- 令 f[(st,bd)] 代表某个状态下的个数
-	- 前面取的数中有 st 个 1
-	- bd 代表前面取的数是否贴着 n 的上界
-- 遍历时递推维护 f，最后再计算每个状态的个数乘以 st 即可
-
-
-```python
-class Solution:
-    def countDigitOne(self, n: int) -> int:
-        f = defaultdict(int)
-        f[(0,1)] = 1
-        for c in map(int,str(n)):
-            g = defaultdict(int)
-            for (st,bd),w in f.items():
-                up = c if bd else 9
-                for x in range(up+1):
-                    g[(st+(x==1),bd and x==c)] += w
-            f = g
-        return sum(st*w for (st,_),w in f.items())
-```
-33 ms

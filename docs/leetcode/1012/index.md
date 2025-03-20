@@ -68,11 +68,37 @@ class Solution:
         s = str(n)
         return n+1-dfs(0,0,1)
 ```
-278 ms
+207 ms
 
 ### #2
 
-- 还可以利用排列组合知识直接分段计算，例如对于 n=8382：
+本题还可以用 memo 通用的写法
+
+```python
+memo = {}
+class Solution:
+    def numDupDigitsAtMostN(self, n: int) -> int:
+        def dfs(i,st,bd):
+            if i<0:
+                return 1
+            if not bd and (i,st) in memo:
+                return memo[(i,st)]
+            res = 0
+            up = int(s[i]) if bd else 9
+            for x in range(up+1):
+                if not st>>x&1:
+                    res += dfs(i-1,0 if st==x==0 else st|1<<x,bd and x==up)
+            if not bd:
+                memo[(i,st)] = res
+            return res
+        s = str(n)[::-1]
+        return n+1-dfs(len(s)-1,0,1)
+```
+7 ms
+
+### #3
+
+- 还可以直接分段计算，例如对于 n=8382：
 	- [0, 1000) 的数字不重复的个数：9*(A(9,0)+A(9,1)+A(9,2))  
 	- [1000, 8000) 的对应个数：7*A(9,3)     
 	- [8000, 8300) 的对应个数：3*A(8,2)
