@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="力扣第 17 场双周赛第 4 题 题目 给你一个字符串 text ，请你返回满足下述条件的 不同 非空子字符串的数目： 可以写成某个字符串与其自身相连接的形式（即，可以写"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1316/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1311/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1317/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/1316/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1312/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1317/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1316\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  447 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  341 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1316\/","datePublished": "2020-01-11T23:00:00+08:00","dateModified": "2020-01-11T23:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1316：不同的循环子字符串（1836 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-11">2020-01-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 447 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-11">2020-01-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 341 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1316/" class="leancloud_visitors" data-flag-title="1316：不同的循环子字符串（1836 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -155,12 +155,10 @@
 <li><a href="/leetcode/2156" rel="">2156：查找给定哈希值的子串（2062 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>暴力法就是直接遍历 i 和 L 判断 text[i:i+L] 和 text[i+L:i+2*L] 是否相等。</p>
-<p>要优化判断子串相等的时间，容易想到用滚动哈希。</p>
-<p>可以先求出 text 所有前缀的哈希值，然后类似前缀和，可以快速得到任一子串的哈希值。</p>
-<blockquote>
-<p>元素种类最多 26，窗口种类最多 2*10^6 级别，因此考虑 base 取 31，mod 取 10^13+37</p>
-</blockquote>
+<ul>
+<li>遍历子串，判断是否符合，并用哈希表去重即可</li>
+<li>判断符合可以用 lcp</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -175,30 +173,22 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">distinctEchoSubstrings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">base</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">13</span><span class="o">+</span><span class="mi">37</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pre</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">w</span> <span class="o">=</span> <span class="n">pre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">base</span><span class="o">+</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">)</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span> <span class="o">%</span> <span class="n">mod</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(),</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">bL</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">mod</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">L</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">w1</span> <span class="o">=</span> <span class="p">(</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">L</span><span class="p">]</span><span class="o">-</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">bL</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
-</span></span><span class="line"><span class="cl">            <span class="n">w2</span> <span class="o">=</span> <span class="p">(</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">L</span><span class="p">]</span><span class="o">-</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">L</span><span class="p">]</span><span class="o">*</span><span class="n">bL</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">w1</span> <span class="o">==</span> <span class="n">w2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">w1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">distinctEchoSubstrings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">text</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">else</span> <span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>2760 ms</p>
+</div><p>1295 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -218,14 +208,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>,&nbsp;<a href="/leetcode_tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>,&nbsp;<a href="/leetcode_tags/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>,&nbsp;<a href="/leetcode_tags/%E6%BB%9A%E5%8A%A8%E5%93%88%E5%B8%8C/">滚动哈希</a>,&nbsp;<a href="/leetcode_tags/%E4%BC%98%E5%8C%96/">优化</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/leetcode/1317/" class="prev" rel="prev" title="1317：将整数转换为两个无零整数的和（1277 分）"><i class="fas fa-angle-left fa-fw"></i>1317：将整数转换为两个无零整数的和（1277 分）</a>
-            <a href="/leetcode/1311/" class="next" rel="next" title="1311：获取你好友已观看的视频（1652 分）">1311：获取你好友已观看的视频（1652 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/leetcode/1312/" class="next" rel="next" title="1312：让字符串成为回文串的最少插入次数（1786 分）">1312：让字符串成为回文串的最少插入次数（1786 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

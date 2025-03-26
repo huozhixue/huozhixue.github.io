@@ -57,91 +57,48 @@
 
 ### #1
 
-和系列的前两题相比，不能遍历前缀回文子串了，只能遍历每一个位置，但还是能用递归。
-
-对每个位置 i ，分别计算 s[:i] 变成回文的最少修改数、s[i:] 分割 k-1 个回文子串的最少修改数，取和的最小值即可。
-
+- 按最后一个子串的长度，即可递推
+- 子串变回文的修改次数可以预处理，节省时间
+- 还可以用滚动数组优化
 ```python
-@lru_cache(None)
-def palindromePartition(self, s: str, k: int) -> int:
-	cost = lambda s: sum(s[i] != s[-1-i] for i in range(len(s)//2))
-	if k == 1 or len(s) == 1:
-		return cost(s)
-	return min(cost(s[:i+1]) + self.palindromePartition(s[i+1:], k-1) for i in range(len(s)-1))
+class Solution:
+    def palindromePartition(self, s: str, k: int) -> int:
+        n = len(s)
+        w = [[0]*n for _ in range(n)]
+        for i in range(n-2,-1,-1):
+            for j in range(i+1,n):
+                w[i][j] = w[i+1][j-1]+(s[i]!=s[j])
+        f = [0]+[inf]*n
+        for a in range(1,k+1):
+            g = [inf]*(n+1)
+            for i in range(a,n+1):
+                g[i] = min(f[j]+w[j][i-1] for j in range(i))
+            f = g
+        return f[-1]
 ```
-
-956 ms，空间占得较多
+59 ms
 
 ### #2
 
-可以改写成动态规划了。用 dp[i][k] 表示 s 的后缀子串 s[i:] 分成 k 个回文子串的最少分割数，状态转移方程为：
-	
-	if k==1: 		dp[i][k] = cost(s[i:])
-	elif n-i<k: 	dp[i][k] = float('inf')
-	else: 			dp[i][k] = min(cost(s[i:j+1])+dp[j+1][k-1] for j in range(i, n-k+1))
-
-```python
-def palindromePartition(self, s: str, k: int) -> int:
-	cost = lambda s: sum(s[i] != s[-1-i] for i in range(len(s)//2))
-	n = len(s)
-	dp = [[float('inf')]*(k+1) for _ in range(n)]
-	for i in range(n-1, -1, -1):
-		dp[i][1] = cost(s[i:])
-		for K in range(2, k+1):
-			for j in range(i, n-K+1):
-				dp[i][K] = min(dp[i][K], cost(s[i:j+1])+dp[j+1][K-1])
-	return dp[0][k]
-```
-
-时间复杂度 O(N^3*k)，980 ms
-
-### #3
-
-可以预先保存 s 所有子串的 cost 值，节省时间。
-
-```python
-def palindromePartition(self, s: str, k: int) -> int:
-	cost = lambda s: sum(s[i] != s[-1-i] for i in range(len(s)//2))
-	n = len(s)
-	costs = [[cost(s[l:r+1]) for r in range(n)] for l in range(n)]
-	dp = [[float('inf')]*(k+1) for _ in range(n)]
-	for i in range(n-1, -1, -1):
-		dp[i][1] = costs[i][n-1]
-		for K in range(2, k+1):
-			for j in range(i, n-K+1):
-				dp[i][K] = min(dp[i][K], costs[i][j]+dp[j+1][K-1])
-	return dp[0][k]
-```
-
-时间复杂度 O(N^3)，196 ms
-
-### #4
-
-cost 的计算也可以用动态规划，状态转移方程为：
-	
-	if l>=r:			costs[l][r] = 0
-	elif s[l]==s[r]:	costs[l][r] = costs[l+1][r-1]
-	else:				osts[l][r] = costs[l+1][r-1] + 1
-
+- 还可以在 f 上倒序递推，省去 g 数组
+- 注意 a 对应的 f 值，只需要计算 f[a:]，节省时间
 ## 解答
 
 ```python
-def palindromePartition(self, s: str, k: int) -> int:
-	n = len(s)
-	costs = [[0]*n for _ in range(n)]
-	for span in range(1, n):
-		for l in range(n-span):
-			r = l+span
-			costs[l][r] = costs[l+1][r-1]+(0 if s[l]==s[r] else 1)
-	dp = [[float('inf')]*(k+1) for _ in range(n)]
-	for i in range(n-1, -1, -1):
-		dp[i][1] = costs[i][n-1]
-		for K in range(2, k+1):
-			for j in range(i, n-K+1):
-				dp[i][K] = min(dp[i][K], costs[i][j]+dp[j+1][K-1])
-	return dp[0][k]
+class Solution:
+    def palindromePartition(self, s: str, k: int) -> int:
+        n = len(s)
+        w = [[0]*n for _ in range(n)]
+        for i in range(n-2,-1,-1):
+            for j in range(i+1,n):
+                w[i][j] = w[i+1][j-1]+(s[i]!=s[j])
+        f = [0]+[inf]*n
+        for a in range(1,k+1):
+            for i in range(n,a-1,-1):
+                f[i] = min(f[j]+w[j][i-1] for j in range(a-1,i))
+        return f[-1]
 ```
 
-时间复杂度 O(N^2*k)，152 ms
+31 ms
 
 

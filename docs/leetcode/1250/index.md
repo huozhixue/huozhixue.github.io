@@ -53,8 +53,9 @@
 ## 解答
 
 ```python
-def isGoodArray(self, nums: List[int]) -> bool:
-    return reduce(gcd, nums)==1
+class Solution:
+    def isGoodArray(self, nums: List[int]) -> bool:
+        return reduce(gcd,nums)==1
 ```
-56 ms
+7 ms
 

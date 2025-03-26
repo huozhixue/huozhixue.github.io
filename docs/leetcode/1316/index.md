@@ -45,33 +45,24 @@
 
 ## 分析
 
-暴力法就是直接遍历 i 和 L 判断 text[i:i+L] 和 text[i+L:i+2*L] 是否相等。
-
-要优化判断子串相等的时间，容易想到用滚动哈希。
-
-可以先求出 text 所有前缀的哈希值，然后类似前缀和，可以快速得到任一子串的哈希值。 
-
-> 元素种类最多 26，窗口种类最多 2*10^6 级别，因此考虑 base 取 31，mod 取 10^13+37
+- 遍历子串，判断是否符合，并用哈希表去重即可
+- 判断符合可以用 lcp 
 
 ## 解答
 
 ```python
-def distinctEchoSubstrings(self, text: str) -> int:
-    base, mod = 31, 10**13+37
-    pre = [0]
-    for char in text:
-        w = pre[-1]*base+ord(char)-ord('a')+1
-        pre.append(w % mod)
-    res, n = set(), len(text)
-    for L in range(1, n//2+1):
-        bL = pow(base, L, mod)
-        for i in range(n-2*L+1):
-            w1 = (pre[i+L]-pre[i]*bL)%mod
-            w2 = (pre[i+2*L]-pre[i+L]*bL)%mod
-            if w1 == w2:
-                res.add(w1)
-    return len(res)
+class Solution:
+    def distinctEchoSubstrings(self, text: str) -> int:
+        n = len(text)
+        f = [[0]*(n+1) for _ in range(n)]
+        res = set()
+        for i in range(n-2,-1,-1):
+            for j in range(i+1,n):
+                f[i][j] = 0 if text[i]!=text[j] else 1+f[i+1][j+1] 
+                if f[i][j]>=j-i:
+                    res.add(text[i:j])
+        return len(res)
 ```
-2760 ms
+1295 ms
 
 
