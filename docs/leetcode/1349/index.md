@@ -123,8 +123,41 @@ class Solution:
 	- 按列的奇偶分成两部分，边只存在两部分之间
 - 那么题目所求的即是最大独立集，即是 n-最大匹配
 - 二分图最大匹配可以用匈牙利算法，也可以转网络流模型用 dinic 算法
+- 本题数据很小，采用匈牙利算法
 
 ## 解答
 
 
+```python
+def hgr(g):            # g 是二分图中每个 x 对应的 y 列表
+    def find(x):
+        for y in g[x]:
+            if y not in vis:
+                vis.add(y)
+                if y not in d or find(d[y]):
+                    d[y]=x
+                    return True
+        return False
+    res,vis,d = 0,set(),{}
+    for x in g:
+        res += find(x)
+        vis.clear()
+    return res
 
+class Solution:
+    def maxStudents(self, seats: List[List[str]]) -> int:
+        m,n = len(seats),len(seats[0])
+        res = 0
+        g = defaultdict(list)
+        for i,j in product(range(m),range(n)):
+            if seats[i][j]=='.':
+                res += 1
+                for x,y in [(i,j-1),(i-1,j-1),(i-1,j+1)]:
+                    if 0<=x<m and 0<=y<n and seats[x][y]=='.':
+                        if j&1:
+                            g[i*n+j].append(x*n+y)
+                        else:
+                            g[x*n+y].append(i*n+j)
+        return res-hgr(g)
+```
+0 ms
