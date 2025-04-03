@@ -82,30 +82,33 @@
 
 ## 分析
 
-将每个格子看作顶点，相邻格子的路径看作边，如果边的方向顺着数字，看作权重 0，否则权重 1。
-
-那么就是典型的最短路问题，用 dijkstra 或者 01bfs 即可。
-
+- 相邻格子按是否需要修改看作代价 0 和 1，即是典型的最短路问题
+- 由于代价只有 01，可以用 01bfs
+	- 01bfs 和 dijkstra 的区别仅在于一个用队列，一个用堆
 ## 解答
 
 ```python
-def minCost(self, grid: List[List[int]]) -> int:
-	m, n = len(grid), len(grid[0])
-	Q, d = deque([(0, 0, 0)]), {}
-	while Q:
-		i, j, w = Q.popleft()
-		if (i,j)==(m-1,n-1):
-			return w
-		if (i, j) in d:
-			continue
-		d[(i,j)] = w
-		for x, y, k in [(i, j+1, 1), (i, j-1, 2), (i+1, j, 3), (i-1, j, 4)]:
-			if 0<=x<m and 0<=y<n and (x, y) not in d:
-				if grid[i][j]==k:
-					Q.appendleft((x,y,w))
-				else:
-					Q.append((x,y,w+1))
+class Solution:
+    def minCost(self, grid: List[List[int]]) -> int:
+        m, n = len(grid), len(grid[0])
+        Q = deque([(0, 0, 0)])
+        d = defaultdict(lambda:inf)
+        while Q:
+            w,i,j = Q.popleft()
+            if (i,j)==(m-1,n-1):
+                return w
+            if w>d[(i,j)]:
+                continue
+            for x,y,p in [(i,j+1,1),(i,j-1,2),(i+1,j,3),(i-1,j,4)]:
+                if 0<=x<m and 0<=y<n:
+                    if grid[i][j]==p:
+                        if w<d[(x,y)]:
+                            d[(x,y)] = w
+                            Q.appendleft((w,x,y))
+                    elif w+1<d[(x,y)]:
+                        d[(x,y)] = w+1
+                        Q.append((w+1,x,y))
 ```
-180 ms
+151 ms
 
 
