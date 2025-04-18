@@ -75,17 +75,16 @@
 class Solution:
     def cherryPickup(self, grid: List[List[int]]) -> int:
         n = len(grid)
-        @cache
-        def dfs(k,i1,i2):
-            if k==n*2-2:
-                return grid[-1][-1]
-            res = -inf
-            cur = sum(grid[x][k-x] for x in {i1,i2})
-            for x1,x2 in product(range(i1,i1+2),range(i2,i2+2)):
-                if k+1-n<x1<=x2<n and grid[x1][k+1-x1]!=-1!=grid[x2][k+1-x2]:
-                    res = max(res,cur+dfs(k+1,x1,x2))
-            return res
-        return max(0,dfs(0,0,0))
+        f = {(0,0):grid[0][0]}
+        for k in range(1,n*2-1):
+            g = defaultdict(int)
+            for (i1,i2),w in f.items():
+                for x1,x2 in product(range(i1,i1+2),range(i2,i2+2)):
+                    if k-n<x1<=x2<n and grid[x1][k-x1]!=-1!=grid[x2][k-x2]:
+                        w2 = w+sum(grid[x][k-x] for x in {x1,x2})
+                        g[(x1,x2)] = max(g[(x1,x2)],w2)
+            f = g
+        return max(f.values(),default=0)
 ```
-537 ms
+605 ms
 

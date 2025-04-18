@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>字符串模板：字符串匹配 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="字符串模板：字符串匹配" />
-<meta property="og:description" content="1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, i = [-1], -1 for c in s: while i&gt;=0 and s[i]!=c: i = nxt[i] i &#43;= 1 nxt.append(i) return nxt[1:] # nxt[i]:i结尾的最大真前缀长度 2 manacher 1 2 3 4 5 6 7 8 9 10 11 12 13 def manacher(s):" />
+<meta property="og:description" content="1 kmp 1 2 3 4 5 6 7 8 9 def kmp(s): n = len(s) pi,j = [0]*n,0 for i in range(1,n): while j&gt;0 and s[i]!=s[j]: j = pi[j-1] j &#43;= s[i]==s[j] pi[i] = j return pi # pi[i]:i结尾的最大真前缀长度 2 manacher 1 2 3 4 5 6 7 8 9 10 11 12" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/template-string_match/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-01T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="字符串模板：字符串匹配"/>
-<meta name="twitter:description" content="1 kmp 1 2 3 4 5 6 7 8 def kmp(s): nxt, i = [-1], -1 for c in s: while i&gt;=0 and s[i]!=c: i = nxt[i] i &#43;= 1 nxt.append(i) return nxt[1:] # nxt[i]:i结尾的最大真前缀长度 2 manacher 1 2 3 4 5 6 7 8 9 10 11 12 13 def manacher(s):"/>
+<meta name="twitter:description" content="1 kmp 1 2 3 4 5 6 7 8 9 def kmp(s): n = len(s) pi,j = [0]*n,0 for i in range(1,n): while j&gt;0 and s[i]!=s[j]: j = pi[j-1] j &#43;= s[i]==s[j] pi[i] = j return pi # pi[i]:i结尾的最大真前缀长度 2 manacher 1 2 3 4 5 6 7 8 9 10 11 12"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-string_match/" /><link rel="prev" href="https://huozhixue.github.io/algorithm-segment_tree/" /><link rel="next" href="https://huozhixue.github.io/template-string_trie/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/template-string_match\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  245 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  248 ,
         "url": "https:\/\/huozhixue.github.io\/template-string_match\/","datePublished": "2023-01-01T00:00:00+08:00","dateModified": "2023-01-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">字符串模板：字符串匹配</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-01">2023-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 245 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-01">2023-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 248 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-string_match/" class="leancloud_visitors" data-flag-title="字符串模板：字符串匹配">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -138,16 +138,18 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">kmp</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">nxt</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">c</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">i</span> <span class="o">=</span> <span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">		<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">		<span class="n">nxt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">nxt</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>      <span class="c1"># nxt[i]:i结尾的最大真前缀长度</span>
+</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pi</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">=</span> <span class="n">pi</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">+=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pi</span>              <span class="c1"># pi[i]:i结尾的最大真前缀长度</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="2-manacher">2 manacher</h2>

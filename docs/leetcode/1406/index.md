@@ -65,23 +65,48 @@
 
 ## 分析
 
-典型的博弈问题，注意从头开始选，递推时要反着推。
+### #1
+
+- 为了方便，将石子反序得到 A
+- 令 f(i) 代表 A[:i] 玩游戏，先取的人最佳策略下和另一个人的分差，按取几堆递推即可
+
+```python
+class Solution:
+    def stoneGameIII(self, stoneValue: List[int]) -> str:
+        A = stoneValue[::-1]
+        n = len(A)
+        p = list(accumulate([0]+A))
+        f = [0]*(n+1)
+        for i in range(1,n+1):
+            f[i] = max(p[i]-p[j]-f[j] for j in range(max(0,i-3),i))
+        return 'Alice' if f[-1]>0 else 'Bob' if f[-1]<0 else 'Tie'
+```
+895 ms
+
+### #2
+
+- 注意到递推式实际上是求一个区间内 p[j]+f[j] 的最小值
+- 可以用单调队列维护滑动窗口最小值
 
 ## 解答
 
 ```python
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
-        n = len(stoneValue)
-        f = [-inf]*n+[0]
-        for i in range(n-1,-1,-1):
-            s = 0
-            for j in range(i,min(i+3,n)):
-                s += stoneValue[j]
-                f[i] = max(f[i],s-f[j+1])
-        return 'Alice' if f[0]>0 else 'Bob' if f[0]<0 else 'Tie'
+        A = stoneValue[::-1]
+        n = len(A)
+        p = list(accumulate([0]+A))
+        f = [0]*(n+1)
+        Q = deque([(0,0)])
+        for i in range(1,n+1):
+            if Q and Q[0][0]<i-3:
+                Q.popleft()
+            f[i] = p[i]-Q[0][1]
+            while Q and Q[-1][1]>=p[i]+f[i]:
+                Q.pop()
+            Q.append((i,p[i]+f[i]))
+        return 'Alice' if f[-1]>0 else 'Bob' if f[-1]<0 else 'Tie'
 ```
-
-878 ms
+344 ms
 
 

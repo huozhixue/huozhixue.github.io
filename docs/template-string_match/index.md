@@ -5,13 +5,14 @@
 
 ```python
 def kmp(s):
-	nxt, i = [-1], -1
-	for c in s:
-		while i>=0 and s[i]!=c:
-			i = nxt[i]
-		i += 1
-		nxt.append(i)
-	return nxt[1:]      # nxt[i]:i结尾的最大真前缀长度
+    n = len(s)
+    pi,j = [0]*n,0
+    for i in range(1,n):
+        while j>0 and s[i]!=s[j]:
+            j = pi[j-1]
+        j += s[i]==s[j]
+        pi[i] = j
+    return pi              # pi[i]:i结尾的最大真前缀长度
 ```
 
 ## 2 manacher

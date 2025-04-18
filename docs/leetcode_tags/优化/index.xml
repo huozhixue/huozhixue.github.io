@@ -3,7 +3,28 @@
         <title>优化 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E4%BC%98%E5%8C%96/</link>
         <description>优化 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 Mar 2020 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BC%98%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 May 2020 11:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BC%98%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+    <title>1444：切披萨的方案数（2126 分）</title>
+    <link>https://huozhixue.github.io/leetcode/1444/</link>
+    <pubDate>Sun, 10 May 2020 11:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1444/</guid>
+    <description><![CDATA[力扣第 188 场周赛第 4 题 题目 给你一个 rows x cols 大小的矩形披萨和一个整数 k ，矩形包含两种字符： &#39;A&#39; （表示苹果）和 &#39;.&#39; （表示空白格子）。你需要切披萨 k-1 次，得]]></description>
+</item><item>
+    <title>1416：恢复数组（1919 分）</title>
+    <link>https://huozhixue.github.io/leetcode/1416/</link>
+    <pubDate>Sat, 18 Apr 2020 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1416/</guid>
+    <description><![CDATA[力扣第 24 场双周赛第 4 题 题目 某个程序本来应该输出一个整数数组。但是这个程序忘记输出空格了以致输出了一个数字字符串，我们所知道的信息只有：数组中]]></description>
+</item><item>
+    <title>1411：给 N x 3 网格图涂色的方案数（1844 分）</title>
+    <link>https://huozhixue.github.io/leetcode/1411/</link>
+    <pubDate>Sun, 12 Apr 2020 11:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1411/</guid>
+    <description><![CDATA[力扣第 184 场周赛第 4 题 题目 你有一个 n x 3 的网格图 grid ，你需要用 红，黄，绿 三种颜色之一给每一个格子上色，且确保相邻格子颜色不同（也就是有相同水平边]]></description>
+</item><item>
     <title>1388：3n 块披萨（2409 分）</title>
     <link>https://huozhixue.github.io/leetcode/1388/</link>
     <pubDate>Sat, 21 Mar 2020 23:00:00 &#43;0800</pubDate>
@@ -52,26 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0980/</guid>
     <description><![CDATA[力扣第 120 场周赛第 4 题 题目 在二维网格 grid 上，有 4 种类型的方格： 1 表示起始方格。且只有一个起始方格。 2 表示结束方格，且只有一个结束方格。 0 表示我们]]></description>
-</item><item>
-    <title>0920：播放列表的数量（2399 分）</title>
-    <link>https://huozhixue.github.io/leetcode/0920/</link>
-    <pubDate>Sun, 07 Oct 2018 10:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0920/</guid>
-    <description><![CDATA[力扣第 105 场周赛第 4 题 题目 你的音乐播放器里有 n 首不同的歌，在旅途中，你计划听 goal 首歌（不一定不同，即，允许歌曲重复）。你将会按如下规则创建播放列]]></description>
-</item><item>
-    <title>0887：鸡蛋掉落（2376 分）</title>
-    <link>https://huozhixue.github.io/leetcode/0887/</link>
-    <pubDate>Sun, 12 Aug 2018 10:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0887/</guid>
-    <description><![CDATA[力扣第 97 场周赛第 4 题 题目 给你 k 枚相同的鸡蛋，并可以使用一栋从第 1 层到第 n 层共有 n 层楼的建筑。 已知存在楼层 f ，满足 0 <= f <= n ，任何从 高于 f 的楼]]></description>
-</item><item>
-    <title>0864：获取所有钥匙的最短路径（2258 分）</title>
-    <link>https://huozhixue.github.io/leetcode/0864/</link>
-    <pubDate>Sun, 08 Jul 2018 10:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0864/</guid>
-    <description><![CDATA[力扣第 92 场周赛第 4 题 题目 给定一个二维网格 grid ，其中： '.' 代表一个空房间 '#' 代表一堵墙 '@' 是起点 小写字母代表钥匙 大写字母代表锁 我们从起点开始出发，一次]]></description>
 </item></channel>
 </rss>

@@ -58,40 +58,49 @@
 
 ### #1
 
-类似 {{< lc "0373" >}}，只不过从两行推广到了 m 行。
-
-显然直接遍历所有可能非常耗时，注意到 k 很小，有个巧妙的想法是逐步求解。
-
-由前 i 行的前 k 个最小数组和，可以递推求前 i+1 行的前 k 个最小数组和。递推到前 m 行即可。
+- 类似 {{< lc "0373" >}}，只不过从两行推广到了 m 行
+- 同样可以用多路归并，每次出堆后，遍历每行下标加 1 并入堆即可
 
 ```python
-def kthSmallest(self, mat: List[List[int]], k: int) -> int:
-	return reduce(lambda x, y: nsmallest(k, map(sum, product(x, y))), mat)[-1]
+class Solution:
+    def kthSmallest(self, mat: List[List[int]], k: int) -> int:
+        m, n = len(mat), len(mat[0])
+        pq = [(sum(row[0] for row in mat),(0,)*m)]
+        vis = {(0,)*m}
+        for _ in range(k-1):
+            w,u = heappop(pq)
+            for i in range(m):
+                if u[i]+1<n:
+                    v = u[:i]+(u[i]+1,)+u[i+1:]
+                    if v not in vis:
+                        vis.add(v)
+                        heappush(pq,(w-mat[i][u[i]]+mat[i][u[i]+1],v))
+        return pq[0][0]
 ```
-
-304 ms
+69 ms
 
 ### #2
 
-也可以用归并排序的方法，每次取最小的数组和，遍历 m 维坐标的每一维，将该维增 1 后的坐标添加到候选中即可。
-为了防止重复添加，可以用 set 记录下。
+- 也有类似的不用 vis 的去重方法
+- 遍历 i，如果前面的下标都为 0，才将下标 i 加 1 并入堆
 
 ## 解答
 
 ```python
-def kthSmallest(self, mat: List[List[int]], k: int) -> int:
-	m, n = len(mat), len(mat[0])
-	pq, vis = [(sum(mat[i][0] for i in range(m)), (0,)*m)], {(0,)*m}
-	for _ in range(k-1):
-		s, p = heappop(pq)
-		for i in range(m):
-			new_p = p[:i] + (p[i]+1,) + p[i + 1:]
-			if p[i]+1 < n and new_p not in vis:
-				vis.add(new_p)
-				heappush(pq, (s-mat[i][p[i]]+mat[i][p[i]+1], new_p))
-	return pq[0][0]
+class Solution:
+    def kthSmallest(self, mat: List[List[int]], k: int) -> int:
+        m, n = len(mat), len(mat[0])
+        pq = [(sum(row[0] for row in mat),(0,)*m)]
+        for _ in range(k-1):
+            w,u = heappop(pq)
+            for i in range(m):
+                if u[i]+1<n:
+                    v = u[:i]+(u[i]+1,)+u[i+1:]
+                    heappush(pq, (w-mat[i][u[i]]+mat[i][u[i]+1],v))
+                if u[i]:
+                    break
+        return pq[0][0]
 ```
-
-128 ms
+19 ms
 
 

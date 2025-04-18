@@ -75,18 +75,30 @@
 
 ## 分析
 
-可以当作完全背包问题，注意大的数字放前面即可。
-
+- 显然越长的越大，按第一个选什么数字可以递推出最长长度
+- 假如第一个选若干个数字都能达到最长长度，选最大的即可
+- 因此递推时，保存最大的转移数字，最后再反向跑一趟生成即可
 ## 解答
 
 
 ```python
 class Solution:
     def largestNumber(self, cost: List[int], target: int) -> str:
-        f = ['']+['0']*target
-        for i,x in enumerate(cost):
-            for j in range(x,target+1):
-                if f[j-x]!='0':
-                    f[j] = max(str(i+1)+f[j-x],f[j],key=len)
-        return f[-1]
+        f = [0]+[-inf]*target
+        rf = [-1]*(target+1)
+        for i in range(1,target+1):
+            for j,c in enumerate(cost):
+                if c<=i and f[i-c]+1>=f[i]:
+                    f[i] = f[i-c]+1
+                    rf[i] = j
+        if f[-1]<0:
+            return '0'
+        res = []
+        i = target
+        while i:
+            j = rf[i]
+            res.append(str(j+1))
+            i -= cost[j]
+        return ''.join(res)
 ```
+69 ms
