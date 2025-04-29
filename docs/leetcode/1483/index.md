@@ -67,18 +67,17 @@ class TreeAncestor:
 
     def __init__(self, n: int, parent: List[int]):
         m = n.bit_length()-1
-        self.f = [[p]+[-1]*m for p in parent]
+        self.f = f = [[p]+[-1]*m for p in parent]
         for i in range(m):
             for u in range(n):
-                p = self.f[u][i]
+                p = f[u][i]
                 if p!=-1:
-                    self.f[u][i+1] = self.f[p][i]
-
+                    f[u][i+1] = f[p][i]
 
     def getKthAncestor(self, node: int, k: int) -> int:
         for i in range(k.bit_length()):
-            if node!=-1 and k&(1<<i):
+            if node!=-1 and k>>i&1:
                 node = self.f[node][i]
         return node
 ```
-488 ms
+313 ms

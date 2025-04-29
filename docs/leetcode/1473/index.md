@@ -76,26 +76,60 @@
 
 ## 分析
 
-用辅助函数 help(i, j, t) 表示对 houses[i:] 涂色且 houses[i] 涂成颜色 j，恰好组成 t 个社区的最小花费。
-若不可能则返回正无穷，便可以写出递推式。
+- 令 f(i,j,k) 代表 house[:j+1] 涂色且以颜色 k 结尾，刚好 i 个街区的最小花费
+- 要么 j 单独一个社区，转为 f(i-1,j-1,非k的颜色)
+- 要么 j 和前面的颜色相同，转为 f(i,j-1,k)
+- 注意若 house[j]>0，k!=house[j] 是不合法的
+- 若 house[j]=0，需要加上 cost[j][k-1]
 
+### #1
+
+```python
+class Solution:
+    def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+        f = [[inf]*(n+1) for _ in range(m+1)]
+        f[0] = [0]*(n+1)
+        for i in range(1,target+1):
+            g = [[inf]*(n+1) for _ in range(m+1)]
+            for j in range(i,m+1):
+                c = houses[j-1]
+                for k in range(1,n+1):
+                    s = g[j-1][k]
+                    for a in range(n+1):
+                        if a!=k:
+                            s = min(s,f[j-1][a])
+                    w = cost[j-1][k-1] if c==0 else 0 if c==k else inf
+                    g[j][k] = s+w
+            f = g
+        res = min(f[-1])
+        return res if res<inf else -1
+```
+1007 ms
+
+### #2
+
+- 求 min(f[j-1][a]),a!=k 可以预处理 f[j-1] 的最小值和次小值，即可快速得到
 ## 解答
 
 ```python
-def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-    @lru_cache(None)
-    def help(i, j, t):
-        if houses[i] not in [0, j] or t < 1:
-            return float('inf')
-        c = cost[i][j - 1] if houses[i] == 0 else 0
-        if i == m - 1:
-            return c if t == 1 else float('inf')
-        return c + min(help(i + 1, k, t - (k != j)) for k in range(1, n + 1))
-
-    res = min(help(0, j, target) for j in range(1, n + 1))
-    return res if res < float('inf') else -1
+class Solution:
+    def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+        f = [[inf]*(n+1) for _ in range(m+1)]
+        f[0] = [0]*(n+1)
+        for i in range(1,target+1):
+            g = [[inf]*(n+1) for _ in range(m+1)]
+            for j in range(i,m+1):
+                c = houses[j-1]
+                x,y = nsmallest(2,f[j-1])
+                for k in range(1,n+1):
+                    s = min(g[j-1][k],y if f[j-1][k]==x else x)
+                    w = cost[j-1][k-1] if c==0 else 0 if c==k else inf
+                    g[j][k] = s+w
+            f = g
+        res = min(f[-1])
+        return res if res<inf else -1
 ```
 
-1312 ms
+159 ms
 
 
