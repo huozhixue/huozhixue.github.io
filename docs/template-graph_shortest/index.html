@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/template-graph_shortest/" /><link rel="prev" href="https://huozhixue.github.io/template-tree_odt/" /><link rel="next" href="https://huozhixue.github.io/template-graph_topo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/template-graph_shortest/" /><link rel="prev" href="https://huozhixue.github.io/template-tree_divide/" /><link rel="next" href="https://huozhixue.github.io/template-graph_topo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -294,7 +294,7 @@
     </div>
 
     <div class="post-nav"><a href="/template-graph_topo/" class="prev" rel="prev" title="图模板：拓扑排序"><i class="fas fa-angle-left fa-fw"></i>图模板：拓扑排序</a>
-            <a href="/template-tree_odt/" class="next" rel="next" title="树模板：珂朵莉树">树模板：珂朵莉树<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/template-tree_divide/" class="next" rel="next" title="树模板：点分治">树模板：点分治<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
