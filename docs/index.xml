@@ -60,7 +60,7 @@
     <pubDate>Fri, 07 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-tree_divide/</guid>
-    <description><![CDATA[点分治 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 def dvd(u): def cal(u): pass def dfs(u,fa): sz[u],w[u] = 1,0 sub.append(u) for v in g[u]: if v!=fa and not vis[v]: h[v] = h[u]+1 dfs(v,u) sz[u] += sz[v] w[u]]]></description>
+    <description><![CDATA[点分治 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 def dvd(u): def cal(core): pass def dfs(u,fa): sz[u] = 1 w[u] = 0 A.append(u) for v in g[u]: if v!=fa and not vis[v]: dfs(v,u) sz[u] += sz[v] w[u] = max(w[u],sz[v]) A = [] dfs(u,-1)]]></description>
 </item><item>
     <title>树模板：珂朵莉树</title>
     <link>https://huozhixue.github.io/template-tree_odt/</link>
