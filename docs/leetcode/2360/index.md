@@ -64,28 +64,27 @@
 class Solution:
     def longestCycle(self, edges: List[int]) -> int:
         n = len(edges)
-        ind = [0]*n
-        for u in edges:
-            if u>=0:
-                ind[u] += 1
-        Q = deque(u for u in range(n) if ind[u]==0)
+        deg = [0]*n
+        for u,v in enumerate(edges):
+            if v!=-1:
+                deg[v] += 1
+        Q = deque(u for u in range(n) if deg[u]==0)
         while Q:
             u = Q.popleft()
-            v =edges[u]
-            if v>=0:
-                ind[v] -= 1
-                if ind[v]==0:
+            v = edges[u]
+            if v!=-1:
+                deg[v] -= 1
+                if deg[v]==0:
                     Q.append(v)
-        res = -1
+        res = 0
         for u in range(n):
-            if ind[u]:
-                w = 0
-                while ind[u]:
-                    ind[u]=0
-                    u=edges[u]
-                    w += 1
-                res = max(res,w)
-        return res
+            c = 0
+            while deg[u]:
+                deg[u] = 0
+                u = edges[u]
+                c += 1
+                res = max(res,c)
+        return res if res else -1
 ```
 177 ms
 
@@ -113,4 +112,4 @@ class Solution:
                 res = max(res,len(A)-A.index(u))
         return res
 ```
-147 ms
+124 ms
