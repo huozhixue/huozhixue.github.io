@@ -3,6 +3,8 @@
 
 ## 1 kmp
 
+- [前缀函数与 KMP 算法](https://oi.wiki/string/kmp/)
+
 ```python
 def kmp(s):
     n = len(s)
@@ -16,6 +18,8 @@ def kmp(s):
 ```
 
 ## 2 manacher
+
+- [Manacher](https://oi.wiki/string/manacher/)
 
 ```python
 def manacher(s):
@@ -35,6 +39,8 @@ def manacher(s):
 
 ## 3 z 函数
 
+- [Z 函数（扩展 KMP）](https://oi.wiki/string/z-func/)
+
 ```python
 def zfunc(s):
 	n = len(s)
@@ -48,6 +54,8 @@ def zfunc(s):
 ```
 
 ## 4 滚动哈希
+
+- [字符串哈希](https://oi.wiki/string/hash/)
 
 ```python
 ## 滚动哈希

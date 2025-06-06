@@ -1,5 +1,7 @@
 # 字符串模板：字典树
 
+
+- [字典树 (Trie)](https://oi.wiki/string/trie/)
 ### 基于哈希表
 
 ```python

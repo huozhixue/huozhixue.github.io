@@ -1,5 +1,7 @@
 # 字符串模板：AC自动机
 
+
+- [AC自动机](https://oi.wiki/string/ac-automaton/)
 ### 基于节点类
 
 ```python

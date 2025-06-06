@@ -1,5 +1,6 @@
 # 字符串模板：后缀数组
 
+- [后缀数组](https://oi.wiki/string/sa/)
 ##  后缀数组
 
 ```python
