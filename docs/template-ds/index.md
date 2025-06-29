@@ -102,120 +102,239 @@ class ST:
 ```
 
 ## 树状数组
-```python []
-def add(i,x):             # 更新 t[i] 加上 x
-	while i<ma:
-		t[i] += x
-		i += i&-i
+```python
+class BIT:
+    def __init__(self, n, t):
+        self.n = n
+        self.t = t
 
-def get(i):               # t[:i+1] 的和
-	res = 0
-	while i:
-		res += t[i]
-		i &= i-1
-	return res
+    def update(self, i, x):
+        while i<self.n:
+            self.t[i] += x
+            i += i&-i
 
-ma = len(nums)+1
-t = defaultdict(int)
+    def get(self, i):
+        res = 0
+        while i:
+            res += self.t[i]
+            i &= i-1
+        return res
+n = len(nums)
+bit = BIT(n+1,[0]*(n+1))
+for i,x in enumerate(nums,1):
+	bit.update(i,x)
 ```
 
 ## 线段树
 
-###  递归式
+###  递归式 单点更新
 
-```python
-def build(o,l,r):
-	if l==r:
-		t[o] = A[l]
-		return
-	m = (l+r)//2
-	build(o*2,l,m)
-	build(o*2+1,m+1,r)
-	t[o] = max(t[o*2],t[o*2+1])
+```python []
+class Seg:
+    def __init__(self, t):             
+        self.t = t
 
-def do(o,x):            # 收到更新信息 x 后，树节点和懒标记的具体操作
-	t[o] = max(t[o],x)
-	f[o] = max(f[o],x)
+    def merge(self,a,b):                  
+        return a+b
+    
+    def up(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
 
-def down(o):
-	if f[o]:
-		do(o*2,f[o])
-		do(o*2+1,f[o])
-		f[o] = 0
+    def build(self,A,o,l,r):
+        if l==r:
+            self.t[o] = A[l]
+            return
+        m = (l+r)//2
+        self.build(A,o*2,l,m)
+        self.build(A,o*2+1,m+1,r)
+        self.up(o)
 
-def update(a,b,x,o,l,r):
-	if a<=l and r<=b:
-		do(o,x)
-		return 
-	m = (l+r)//2
-	down(o)
-	if a<=m: update(a,b,x,o*2,l,m)
-	if m<b: update(a,b,x,o*2+1,m+1,r)
-	t[o] = max(t[o*2],t[o*2+1])
+    def update(self,a,x,o,l,r):
+        if l==r:
+            self.t[o] = x
+            return
+        m = (l+r)//2
+        if a<=m: self.update(a,x,o*2,l,m)
+        else: self.update(a,x,o*2+1,m+1,r)
+        self.up(o)
 
-def query(a,b,o,l,r):
-	if a<=l and r<=b:
-		return t[o]
-	m = (l+r)//2
-	down(o)
-	res = 0
-	if a<=m: res = query(a,b,o*2,l,m)
-	if m<b: res = max(res,query(a,b,o*2+1,m+1,r))
-	return res
-
-t = [0]*n*4                 # 树节点，维护区间信息
-f = [0]*n*4                 # 懒标记，注意让初始值代表无标记
+    def query(self,a,b,o,l,r):
+        if a<=l and r<=b:
+            return self.t[o]
+        m = (l+r)//2
+        res = 0
+        if a<=m: res = self.query(a,b,o*2,l,m)
+        if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
+        return res
+        
+n = len(nums)
+N = 1<<n.bit_length()
+seg = Seg([0]*N*2)
+seg.build(nums,1,0,n-1)
 ```
 
+### 递归式 区间更新（lazy）
 
-### 迭代式（zkw）
 
 ```python
-def build(A):
-	t[N:N+len(A)] = A 
-	for a in range(N-1,0,-1):
-		t[a] = max(t[a*2],t[a*2+1])
-		
-def do(o,x):
-	t[o] = max(t[o],x)
-	f[o] = max(f[o],x)
+class Seg:
+    def __init__(self,t,f):
+        self.t = t
+        self.f = f
 
-def down(o):
-	if f[o]:
-		do(o*2,f[o])
-		do(o*2+1,f[o])
-		f[o] = 0
+    def merge(self,a,b):           
+        return a+b
+    
+    def up(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
 
-def update(a,b,x):
-	a,b = a+N-1,b+N+1
-	for i in range(L-1,0,-1): 
-		down(a>>i)
-		down(b>>i)
-	while b-a>1:
-		if not a&1: do(a^1,x)
-		if b&1: do(b^1,x)
-		a,b = a>>1,b>>1
-		t[a] = max(t[a*2],t[a*2+1])
-		t[b] = max(t[b*2],t[b*2+1])
-	while a:
-		t[a] = max(t[a*2],t[a*2+1])
-		a >>= 1
+    def apply(self,o,x):            
+        self.t[o] = x
+        self.f[o] = x
 
-def query(a,b):
-	res,a,b = 0,a+N-1,b+N+1
-	for i in range(L-1,0,-1): 
-		down(a>>i)
-		down(b>>i)
-	while b-a>1:
-		if not a&1: res = max(res,t[a^1])
-		if b&1: res=max(res,t[b^1])
-		a,b = a>>1,b>>1
-	return res
+    def build(self,A,o,l,r):
+        if l==r:
+            self.t[o] = A[l]
+            return
+        m = (l+r)//2
+        self.build(A,o*2,l,m)
+        self.build(A,o*2+1,m+1,r)
+        self.up(o)
 
-L = (ma+1).bit_length()
-N = 1<<L
-t = [0]*N*2
-f = [0]*N*2
+    def down(self,o):
+        if self.f[o] != self.f[0]:
+            self.apply(o*2,self.f[o])
+            self.apply(o*2+1,self.f[o])
+            self.f[o] = self.f[0]
+
+    def update(self,a,b,x,o,l,r):
+        if a<=l and r<=b:
+            self.apply(o,x)
+            return
+        self.down(o)
+        m = (l+r)//2
+        if a<=m: self.update(a,b,x,o*2,l,m)
+        if m<b: self.update(a,b,x,o*2+1,m+1,r)
+        self.up(o)
+        
+    def query(self,a,b,o,l,r):
+        if a<=l and r<=b:
+            return self.t[o]
+        self.down(o)
+        res = 0
+        m = (l+r)//2
+        if a<=m: res = self.query(a,b,o*2,l,m)
+        if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
+        return res
+
+n = len(nums)
+N = 1<<n.bit_length()
+seg = Seg([0]*N*2,[0]*N*2)
+seg.build(nums,1,0,n-1)
+```
+
+### 迭代式 单点更新
+
+```python
+class Seg:
+    def __init__(self,N,t):  
+        self.N = N           
+        self.t = t
+
+    def merge(self,a,b):                # 区间信息怎么合并的   
+        return a+b
+    
+    def up(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+
+    def build(self,A):
+        self.t[self.N+1:self.N+1+len(A)] = A
+        for o in range(self.N-1,0,-1):
+            self.up(o)
+
+    def update(self,a,x):
+        a += self.N
+        self.t[a] = x
+        while a>>1:
+            a >>= 1
+            self.up(a)
+
+    def query(self,a,b):
+        res,a,b = 0,a+self.N-1,b+self.N+1
+        while b-a>1:  
+            if not a&1: res = self.merge(res,self.t[a^1])  
+            if b&1: res = self.merge(res,self.t[b^1])  
+            a,b = a>>1,b>>1  
+        return res  
+        
+n = len(nums)
+N = 1<<(n+1).bit_length()
+seg = Seg(N,[0]*N*2)
+seg.build(nums)
+```
+
+### 迭代式 区间更新 （lazy）
+
+```python
+class Seg:
+    def __init__(self,N,t,f):
+        self.L = N.bit_length()-1
+        self.N = N
+        self.t = t
+        self.f = f
+
+    def merge(self,a,b):           
+        return a+b
+    
+    def up(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+
+    def apply(self,o,x):            
+        self.t[o] = x
+        self.f[o] = x
+
+    def build(self,A):
+        self.t[self.N+1:self.N+1+len(A)] = A
+        for o in range(self.N-1,0,-1):
+            self.up(o)
+
+    def down(self,o):
+        if self.f[o] != self.f[0]:
+            self.apply(o*2,self.f[o])
+            self.apply(o*2+1,self.f[o])
+            self.f[o] = self.f[0]
+
+    def update(self,a,b,x):
+        a,b = a+self.N-1,b+self.N+1  
+        for i in range(self.L-1,0,-1):  
+            self.down(a>>i)  
+            self.down(b>>i)  
+        while a^b^1:  
+            if not a&1: self.apply(a^1,x)  
+            if b&1: self.apply(b^1,x)  
+            a,b = a>>1,b>>1  
+            self.up(a)  
+            self.up(b)  
+        while a>>1:
+            a >>= 1
+            self.up(a)
+
+    def query(self,a,b):
+        a,b = a+self.N-1,b+self.N+1  
+        for i in range(self.L-1,0,-1):  
+            self.down(a>>i)  
+            self.down(b>>i)  
+        res = 0
+        while a^b^1:  
+            if not a&1: res = self.merge(res,self.t[a^1])
+            if b&1: res = self.merge(res,self.t[b^1])
+            a,b = a>>1,b>>1  
+        return res
+
+n = len(nums)
+N = 1<<(n+1).bit_length()   
+seg = Seg(N,[0]*N*2,[0]*N*2)
+seg.build(nums)
 ```
 
 
