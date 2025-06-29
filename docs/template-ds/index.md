@@ -131,8 +131,8 @@ for i,x in enumerate(nums,1):
 
 ```python []
 class Seg:
-    def __init__(self, t):             
-        self.t = t
+    def __init__(self, N):             
+        self.t = [0]*N*2
 
     def merge(self,a,b):                  
         return a+b
@@ -169,7 +169,7 @@ class Seg:
         
 n = len(nums)
 N = 1<<n.bit_length()
-seg = Seg([0]*N*2)
+seg = Seg(N)
 seg.build(nums,1,0,n-1)
 ```
 
@@ -178,9 +178,9 @@ seg.build(nums,1,0,n-1)
 
 ```python
 class Seg:
-    def __init__(self,t,f):
-        self.t = t
-        self.f = f
+    def __init__(self,N):
+        self.t = [0]*N*2
+        self.f = [0]*N*2
 
     def merge(self,a,b):           
         return a+b
@@ -229,7 +229,7 @@ class Seg:
 
 n = len(nums)
 N = 1<<n.bit_length()
-seg = Seg([0]*N*2,[0]*N*2)
+seg = Seg(N)
 seg.build(nums,1,0,n-1)
 ```
 
@@ -237,9 +237,9 @@ seg.build(nums,1,0,n-1)
 
 ```python
 class Seg:
-    def __init__(self,N,t):  
+    def __init__(self,N):  
         self.N = N           
-        self.t = t
+        self.t = [0]*N*2
 
     def merge(self,a,b):                # 区间信息怎么合并的   
         return a+b
@@ -269,7 +269,7 @@ class Seg:
         
 n = len(nums)
 N = 1<<(n+1).bit_length()
-seg = Seg(N,[0]*N*2)
+seg = Seg(N)
 seg.build(nums)
 ```
 
@@ -277,11 +277,11 @@ seg.build(nums)
 
 ```python
 class Seg:
-    def __init__(self,N,t,f):
+    def __init__(self,N):
         self.L = N.bit_length()-1
         self.N = N
-        self.t = t
-        self.f = f
+        self.t = [0]*N*2
+        self.f = [0]*N*2
 
     def merge(self,a,b):           
         return a+b
@@ -333,7 +333,7 @@ class Seg:
 
 n = len(nums)
 N = 1<<(n+1).bit_length()   
-seg = Seg(N,[0]*N*2,[0]*N*2)
+seg = Seg(N)
 seg.build(nums)
 ```
 
