@@ -38,6 +38,31 @@ def reverse(head):
 	return head
 ```
 
+### 双向链表
+
+```python
+class Node:
+    # 提高访问属性的速度，并节省内存
+    __slots__ = 'pre', 'nxt', 'key', 'val'
+
+    def __init__(self, key=0, val=0):
+        self.key = key
+        self.val = val
+        self.pre = self
+        self.nxt = self
+
+    def insert(self,x):
+        q = self.nxt
+        self.nxt = x
+        x.pre = self
+        x.nxt = q
+        q.pre = x
+    
+    def remove(self,):
+        self.pre.nxt = self.nxt
+        self.nxt.pre = self.pre
+```
+
 ## 栈
 
 ###  计算器

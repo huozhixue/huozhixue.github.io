@@ -82,35 +82,36 @@ class LFUCache:
     def __init__(self, capacity: int):
         from sortedcontainers import SortedList
         self.sl = SortedList()
-        self.m = capacity
-        self.t = 0
         self.d = {}
-
+        self.k = capacity
+        self.t = 0
+        
     def get(self, key: int) -> int:
         if key not in self.d:
             return -1
-        w,t,x = self.d[key]
+        w,t,val = self.d[key]
         self.sl.remove((w,t,key))
-        self.sl.add((w+1,self.t,key))
-        self.d[key] = (w+1,self.t,x)
         self.t += 1
-        return x
+        self.d[key] = (w+1,self.t,val)
+        self.sl.add((w+1,self.t,key))
+        return val
 
     def put(self, key: int, value: int) -> None:
-        if key in self.d:
-            w,t,_ = self.d[key]
-            self.sl.remove((w,t,key))
-            self.sl.add((w+1,self.t,key))
-            self.d[key] = (w+1,self.t,value)
-        else:
-            if len(self.sl)==self.m:
-                _,_,x = self.sl.pop(0)
-                self.d.pop(x)
-            self.sl.add((1,self.t,key))
+        if key not in self.d:
+            if len(self.d)==self.k:
+                x = self.sl.pop(0)[-1]
+                del self.d[x]
+            self.t += 1
             self.d[key] = (1,self.t,value)
+            self.sl.add((1,self.t,key))
+            return
+        w,t,_ = self.d[key]
+        self.sl.remove((w,t,key))
         self.t += 1
+        self.d[key] = (w+1,self.t,value)
+        self.sl.add((w+1,self.t,key))
 ```
-553 ms
+284 ms
 
 ### #2
 
@@ -121,8 +122,6 @@ class LFUCache:
 	- get 或 put 时，若已有 key，则 minw 不变或加 1
 	- put 新 key 时，minw 变为 1
 - 其它模拟即可
-
-## 解答
 
 ```python
 class LFUCache:
@@ -161,4 +160,74 @@ class LFUCache:
             self.ct[key] = 1
             self.minw= 1
 ```
-382 ms
+168 ms
+
+### #3 
+
+更通用的双向链表写法
+
+## 解答
+
+```python
+class Node:
+    # 提高访问属性的速度，并节省内存
+    __slots__ = 'pre', 'nxt', 'key', 'val', 'w'
+
+    def __init__(self, key=0, val=0):
+        self.key = key
+        self.val = val
+        self.pre = self
+        self.nxt = self
+        self.w = 1
+
+    def insert(self,x):
+        q = self.nxt
+        self.nxt = x
+        x.pre = self
+        x.nxt = q
+        q.pre = x
+    
+    def remove(self,):
+        self.pre.nxt = self.nxt
+        self.nxt.pre = self.pre
+
+
+class LFUCache:
+
+    def __init__(self, capacity: int):
+        self.c = capacity
+        self.map = {}
+        self.d = defaultdict(lambda: Node())
+        self.miw = 0
+
+    def update(self,node):
+        w = node.w
+        node.remove()
+        if self.d[w].pre==self.d[w] and w==self.miw:
+            self.miw += 1
+        self.d[w+1].insert(node)
+        node.w += 1
+        
+    def get(self, key: int) -> int:
+        if key not in self.map:
+            return -1
+        node = self.map[key]
+        self.update(node)
+        return node.val
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.map:
+            node = self.map[key]
+            self.update(node)
+            node.val = value
+            return
+        if len(self.map)==self.c:
+            dum = self.d[self.miw]
+            p = dum.pre
+            del self.map[p.key]
+            p.remove()
+        self.map[key] = node = Node(key,value)
+        self.d[1].insert(node)
+        self.miw = 1
+```
+148 ms

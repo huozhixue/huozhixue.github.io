@@ -105,14 +105,13 @@ class LRUCache:
         self.d[key] = (self.t,value)
         self.t += 1
 ```
-578 ms
+368 ms
 
 ### #2
 
 - 要求 O(1) 时间完成 put() 和 get()，可以用双向链表+哈希表来实现
 -  python 可以用 OrderedDict 方便地实现
 
-## 解答
 
 ```python
 class LRUCache:
@@ -134,5 +133,64 @@ class LRUCache:
             self.d.popitem(last=False)
         self.d[key] = value
 ```
-382 ms
+90 ms
 
+### #3 
+
+更通用的双向链表写法
+
+## 解答
+
+```python
+class Node:
+    # 提高访问属性的速度，并节省内存
+    __slots__ = 'pre', 'nxt', 'key', 'val'
+
+    def __init__(self, key=0, val=0):
+        self.key = key
+        self.val = val
+        self.pre = self
+        self.nxt = self
+
+    def insert(self,x):
+        q = self.nxt
+        self.nxt = x
+        x.pre = self
+        x.nxt = q
+        q.pre = x
+    
+    def remove(self,):
+        self.pre.nxt = self.nxt
+        self.nxt.pre = self.pre
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.c = capacity
+        self.dum = Node()
+        self.d = {}
+    
+    def update(self,node):
+        node.remove()
+        self.dum.insert(node)
+
+    def get(self, key: int) -> int:
+        if key not in self.d:
+            return -1
+        node = self.d[key]
+        self.update(node)
+        return node.val
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.d:
+            node = self.d[key]
+            self.update(node)
+            node.val = value
+            return
+        if len(self.d)==self.c:
+            p = self.dum.pre
+            del self.d[p.key]
+            p.remove()
+        self.d[key] = node = Node(key,value)
+        self.dum.insert(node)
+```
+104 ms
