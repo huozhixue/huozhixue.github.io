@@ -73,3 +73,23 @@ class Solution:
         return f(k+1)-f(k)
 ```
 4 ms
+
+## *附加
+
+还可以优化为 O(logk)：[数学推导 O((logk)^2) 的二分查找法与 O(logk) 的 5 进制贪心法](https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function/solutions/1780702/by-vclip-9quy/?envType=problem-list-v2&envId=0kfBxmwK)
+
+```python
+class Solution:
+    def preimageSizeFZF(self, k: int) -> int:
+        p = 1
+        while (p*5-1)//4<=k:
+            p *= 5
+        while k:
+            q,k = divmod(k,(p-1)//4)
+            if q>=5:
+                return 0
+            p //= 5
+        return 5
+```
+0 ms
+

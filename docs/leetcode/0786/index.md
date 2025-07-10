@@ -61,17 +61,19 @@
 类似 {{< lc "0378" >}}。
 
 ```python
-def kthSmallestPrimeFraction(self, arr: List[int], k: int) -> List[int]:
-	n = len(arr)
-	pq = [(arr[i]/arr[-1], i, n-1) for i in range(min(n-1, k))]
-	for _ in range(k-1):
-		_, i, j = heappop(pq)
-		if j-1 > i:
-			heappush(pq, (arr[i]/arr[j-1], i, j-1))
-	return [arr[pq[0][1]], arr[pq[0][2]]]
+class Solution:
+    def kthSmallestPrimeFraction(self, arr: List[int], k: int) -> List[int]:
+        n = len(arr)
+        pq = [(x/arr[-1],i,n-1) for i,x in enumerate(arr)]
+        for _ in range(k-1):
+            _,i,j = heappop(pq)
+            if i<j-1:
+                heappush(pq,(arr[i]/arr[j-1],i,j-1))
+        _,i,j = heappop(pq)
+        return [arr[i],arr[j]]
 ```
 
-940 ms
+638 ms
 
 
 ### #2
@@ -81,8 +83,28 @@ def kthSmallestPrimeFraction(self, arr: List[int], k: int) -> List[int]:
 ## 解答
 
 ```python
-
+class Solution:
+    def kthSmallestPrimeFraction(self, arr: List[int], k: int) -> List[int]:
+        n = len(arr)
+        l, r = 0.0, 1.0
+        while True:
+            mid = (l+r)/2
+            s,i = 0,0
+            x,y = 0,1
+            for j in range(1,n):
+                while arr[i]/arr[j]<mid:
+                    i += 1
+                    if arr[i-1]*y>arr[j]*x:
+                        x, y = arr[i-1], arr[j]
+                s += i
+            if s == k:
+                return [x, y]
+            if s < k:
+                l = mid
+            else:
+                r = mid
 ```
+11 ms
 
 
 
