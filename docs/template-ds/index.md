@@ -93,18 +93,31 @@ def cal(s: str) -> int:
 ## 并查集
 
 ```python
-def find(x):
-	if f[x]!=x:
-		f[x] = find(f[x])
-	return f[x]
-
-def union(x,y):
-	fx, fy = find(x),find(y)
-	if fx != fy:
-		if sz[fx]>sz[fy]:
-			fx, fy = fy, fx
-		f[fx] = fy
-		sz[fy] += sz[fx]
+class DSU:
+    def __init__(self,n):
+        self.f = list(range(n))
+        self.sz = [1]*n
+        self.cc = n
+    
+    def find(self,x):
+        f,y = self.f,x
+        while f[y]!=y:
+            y = f[y]
+        while f[x]!=y:
+            f[x],x = y,f[x]
+        return y
+    
+    def union(self,x,y):
+        f,sz = self.f,self.sz
+        fx,fy = self.find(x),self.find(y)
+        if fx==fy:
+            return False
+        if sz[fx]>sz[fy]:
+            fx,fy = fy,fx
+        f[fx] = fy
+        sz[fy] += sz[fx]
+        self.cc -= 1
+        return True
 ```
 
 ## st 表
