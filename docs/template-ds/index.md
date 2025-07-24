@@ -142,9 +142,10 @@ class ST:
 ## 树状数组
 ```python
 class BIT:
-    def __init__(self, n, t):
+    def __init__(self, n):
         self.n = n
-        self.t = t
+        self.t = [0]*n
+        self.L = n.bit_length()
 
     def update(self, i, x):
         while i<self.n:
@@ -157,8 +158,17 @@ class BIT:
             res += self.t[i]
             i &= i-1
         return res
+    
+    def kth(self, k):
+        x,s = 0,0
+        for i in range(self.L-1,-1,-1):
+            y = x|1<<i
+            if y<self.n and s+self.t[y]<=k:
+                x,s = y,s+self.t[y]
+        return x+1
+        
 n = len(nums)
-bit = BIT(n+1,[0]*(n+1))
+bit = BIT(n+1)
 for i,x in enumerate(nums,1):
 	bit.update(i,x)
 ```
