@@ -58,7 +58,7 @@
     <pubDate>Sun, 02 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-math_algebra/</guid>
-    <description><![CDATA[矩阵快速幂 1 2 3 4 5 6 7 8 9 10 11 12 13 14 mod = 10**9+7 def mul(A,B): return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A] def mpow(mat, n): res = mat for i in range(n.bit_length()-2,-1,-1): res = mul(res,res) if n&gt;&gt;i&amp;1: res = mul(res,mat) return res f = [[],[]] A = [[],[]] f = mul(mpow(A,n),f)]]></description>
+    <description><![CDATA[矩阵快速幂 1 2 3 4 5 6 7 8 9 10 11 12 13 14 mod = 10**9+7 def mul(A,B): return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A] def mpow(mat, n): res = mat for i in range(n.bit_length()-2,-1,-1): res = mul(res,res) if n&gt;&gt;i&amp;1: res = mul(res,mat) return res f = [[],[]] A = [[],[]] f = mul(mpow(A,n),f) 快速变]]></description>
 </item><item>
     <title>数学模板：数论</title>
     <link>https://huozhixue.github.io/template-math_number/</link>
