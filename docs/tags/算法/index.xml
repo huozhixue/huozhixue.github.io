@@ -65,7 +65,7 @@
     <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-math_number/</guid>
-    <description><![CDATA[1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 M = f = [0]*2+[1]*(M-2) for i in range(2,isqrt(M)+1): if f[i]: f[i*i:M:i] = [0]*((M-1-i*i)//i+1) primes = [i for i in range(M) if f[i]] @cache def factor(x): ct = defaultdict(int) for p in primes: while x%p==0: x//=p ct[p] += 1 if x&gt;1: ct[x] += 1 return ct 2]]></description>
+    <description><![CDATA[1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 M = f = [0]*2+[1]*(M-2) for i in range(2,isqrt(M)+1): if f[i]: f[i*i:M:i] = [0]*((M-1-i*i)//i+1) primes = [i for i in range(M) if f[i]] @cache def factor(x): ct = defaultdict(int) for p in primes: if p*p&gt;x: break while x%p==0: x//=p ct[p] += 1 if x&gt;1: ct[x]]]></description>
 </item><item>
     <title>图模板：网络流</title>
     <link>https://huozhixue.github.io/template-graph_flow/</link>

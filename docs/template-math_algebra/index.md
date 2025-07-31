@@ -25,15 +25,14 @@ f = mul(mpow(A,n),f)
 
 ### fft
 
-```python []
+```python
 I = complex(0,1)
 
-def fft(A,N,sgn):
+def fft(A,N,sgn=1):
     L = N.bit_length()-1
     rev = [0]*N
     for i in range(N):
-        rev[i] = (rev[i >> 1] >> 1) | ((i&1)<<(L-1))
-        j = rev[i]
+        j = rev[i] = (rev[i >> 1] >> 1) | (i&1)*(N>>1)
         if i<j:
             A[i],A[j] = A[j],A[i]
     for i in range(L):
@@ -45,11 +44,97 @@ def fft(A,N,sgn):
                 x,y = A[k],A[k+a]*w
                 A[k],A[k+a] = x+y,x-y
                 w *= step
+    if sgn==-1:
+        for i,x in enumerate(A):
+            A[i] = int(x.real/N+0.1)
+```
 
-def convolve(A,B,N):
-    fft(A,N,1)
-    fft(B,N,1)
-    C = [a*b for a,b in zip(A,B)]
-    fft(C,N,-1)
-    return [int(x.real/N+0.1) for x in C]
+### ntt
+
+```python []
+mod = 998244353
+G = 3
+
+def ntt(A,N,sgn=1):
+    L = N.bit_length()-1
+    rev = [0]*N
+    for i in range(N):
+        j = rev[i] = (rev[i >> 1] >> 1) | (i&1)*(N>>1)
+        if i<j:
+            A[i],A[j] = A[j],A[i]
+    for i in range(L):
+        a = 1<<i
+        step = pow(G,(mod-1)//(a*2)*sgn+mod-1,mod)  
+        for j in range(0,N,a*2):
+            w = 1
+            for k in range(j,j+a):
+                x,y = A[k],A[k+a]*w%mod
+                A[k],A[k+a] = (x+y)%mod,(x-y)%mod
+                w = w*step%mod
+    if sgn==-1:
+        inv = pow(N,-1,mod)
+        for i,x in enumerate(A):
+            A[i] = x*inv%mod
+```
+
+### fwt
+
+##### 或运算
+
+```python []
+def fwt(A,N,sgn=1):     # 逆变换 sgn=-1
+    L = N.bit_length()-1
+    for i in range(L):
+        a = 1<<i
+        for j in range(0,N,a*2):
+            for k in range(j,j+a):
+                A[k+a] += A[k]*sgn
+```
+##### 与运算
+
+```python []
+def fwt(A,N,sgn=1):     # 逆变换 sgn=-1
+    L = N.bit_length()-1
+    for i in range(L):
+        a = 1<<i
+        for j in range(0,N,a*2):
+            for k in range(j,j+a):
+                A[k] += A[k+a]*sgn
+```
+
+##### 异或运算
+
+```python []
+def fwt(A,N,sgn=1):     # 逆变换 sgn=2
+    L = N.bit_length()-1
+    for i in range(L):
+        a = 1<<i
+        for j in range(0,N,a*2):
+            for k in range(j,j+a):
+	            x,y = A[k],A[k+a]
+	            A[k],A[k+a] = (x+y)>>sgn,(x-y)>>sgn
+```
+## 线性基
+
+```python []
+class XorBasis:
+    def __init__(self, n):
+        self.b = [0] * n
+
+    def insert(self, x):
+        b = self.b
+        while x:
+            i = x.bit_length() - 1  # x 的最高位
+            if b[i] == 0:  # x 和之前的基是线性无关的
+                b[i] = x  # 新增一个基，最高位为 i
+                return
+            x ^= b[i]  # 保证基的最高位是互不相同的
+
+    def max_xor(self) -> int:
+        b = self.b
+        res = 0
+        for i in range(len(b) - 1, -1, -1):
+            if res ^ b[i] > res:
+                res ^= b[i]
+        return res
 ```

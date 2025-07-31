@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>数学模板：数论 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数学模板：数论" />
-<meta property="og:description" content="1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 M = f = [0]*2&#43;[1]*(M-2) for i in range(2,isqrt(M)&#43;1): if f[i]: f[i*i:M:i] = [0]*((M-1-i*i)//i&#43;1) primes = [i for i in range(M) if f[i]] @cache def factor(x): ct = defaultdict(int) for p in primes: while x%p==0: x//=p ct[p] &#43;= 1 if x&gt;1: ct[x] &#43;= 1 return ct 2" />
+<meta property="og:description" content="1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 M = f = [0]*2&#43;[1]*(M-2) for i in range(2,isqrt(M)&#43;1): if f[i]: f[i*i:M:i] = [0]*((M-1-i*i)//i&#43;1) primes = [i for i in range(M) if f[i]] @cache def factor(x): ct = defaultdict(int) for p in primes: if p*p&gt;x: break while x%p==0: x//=p ct[p] &#43;= 1 if x&gt;1: ct[x]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/template-math_number/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-04-01T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="数学模板：数论"/>
-<meta name="twitter:description" content="1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 M = f = [0]*2&#43;[1]*(M-2) for i in range(2,isqrt(M)&#43;1): if f[i]: f[i*i:M:i] = [0]*((M-1-i*i)//i&#43;1) primes = [i for i in range(M) if f[i]] @cache def factor(x): ct = defaultdict(int) for p in primes: while x%p==0: x//=p ct[p] &#43;= 1 if x&gt;1: ct[x] &#43;= 1 return ct 2"/>
+<meta name="twitter:description" content="1 质因数分解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 M = f = [0]*2&#43;[1]*(M-2) for i in range(2,isqrt(M)&#43;1): if f[i]: f[i*i:M:i] = [0]*((M-1-i*i)//i&#43;1) primes = [i for i in range(M) if f[i]] @cache def factor(x): ct = defaultdict(int) for p in primes: if p*p&gt;x: break while x%p==0: x//=p ct[p] &#43;= 1 if x&gt;1: ct[x]"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-math_number/" /><link rel="prev" href="https://huozhixue.github.io/template-graph_flow/" /><link rel="next" href="https://huozhixue.github.io/template-math_algebra/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/template-math_number\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  215 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  105 ,
         "url": "https:\/\/huozhixue.github.io\/template-math_number\/","datePublished": "2023-04-01T00:00:00+08:00","dateModified": "2023-04-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数学模板：数论</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-01">2023-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 215 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-01">2023-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 105 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-math_number/" class="leancloud_visitors" data-flag-title="数学模板：数论">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -123,8 +123,6 @@
   <ul>
     <li><a href="#1-质因数分解">1 质因数分解</a></li>
     <li><a href="#2-乘法逆元">2 乘法逆元</a></li>
-    <li><a href="#3-矩阵幂">3 矩阵幂</a></li>
-    <li><a href="#4-爬山法">4 爬山法</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="1-质因数分解">1 质因数分解</h2>
@@ -147,6 +145,8 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">M</span> <span class="o">=</span> 
@@ -160,6 +160,8 @@
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">factor</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">ct</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	    <span class="k">if</span> <span class="n">p</span><span class="o">*</span><span class="n">p</span><span class="o">&gt;</span><span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		    <span class="k">break</span>
 </span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">x</span><span class="o">%</span><span class="n">p</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="n">x</span><span class="o">//=</span><span class="n">p</span>
 </span></span><span class="line"><span class="cl">            <span class="n">ct</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -185,70 +187,6 @@
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">ma</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">i</span><span class="o">%</span><span class="n">mod</span>
 </span></span><span class="line"><span class="cl">    <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">mod</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="3-矩阵幂">3 矩阵幂</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[[</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">))</span><span class="o">%</span><span class="n">mod</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">B</span><span class="p">)]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mpow</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">mat</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">res</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">i</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">mat</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="p">[[],[]]</span>
-</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="o">=</span> <span class="p">[[],[]]</span>
-</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">mpow</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">n</span><span class="p">),</span><span class="n">f</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="4-爬山法">4 爬山法</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">climb</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">cal</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">eps</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">step</span> <span class="o">&gt;</span> <span class="n">eps</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)),[</span><span class="n">step</span><span class="p">,</span><span class="o">-</span><span class="n">step</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">			<span class="n">p2</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">+</span><span class="n">w</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">cal</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">cal</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">				<span class="n">p</span> <span class="o">=</span> <span class="n">p2</span>
-</span></span><span class="line"><span class="cl">				<span class="k">break</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">step</span> <span class="o">*=</span> <span class="mf">0.5</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">p</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
