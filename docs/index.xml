@@ -60,7 +60,7 @@
     <pubDate>Sun, 02 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-math_algebra/</guid>
-    <description><![CDATA[矩阵快速幂 1 2 3 4 5 6 7 8 9 10 11 12 13 14 mod = 10**9+7 def mul(A,B): return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A] def mpow(mat, n): res = mat for i in range(n.bit_length()-2,-1,-1): res = mul(res,res) if n&gt;&gt;i&amp;1: res = mul(res,mat) return res f = [[],[]] A = [[],[]] f = mul(mpow(A,n),f) 快速变]]></description>
+    <description><![CDATA[矩阵快速幂 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 mod = 10**9+7 def mul(A,B): return [[sum(a*b%mod for a,b in zip(r,c))%mod for c in zip(*B)] for r in A] N,M = 0,0 f = [[0] for _ in range(N)] for i in range(N): f[i][0] = 0 g = [] g0 = [[0]*N]]></description>
 </item><item>
     <title>数学模板：数论</title>
     <link>https://huozhixue.github.io/template-math_number/</link>
@@ -123,7 +123,7 @@
     <pubDate>Thu, 05 Jan 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-string_sa/</guid>
-    <description><![CDATA[后缀数组 后缀数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 def]]></description>
+    <description><![CDATA[后缀数组 后缀数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62]]></description>
 </item><item>
     <title>字符串模板：AC自动机</title>
     <link>https://huozhixue.github.io/template-string_ac/</link>
@@ -144,6 +144,6 @@
     <pubDate>Mon, 02 Jan 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-string_minimal/</guid>
-    <description><![CDATA[最小表示法 1 2 3 4 5 6 7 8 9 10 11 n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i]]]></description>
+    <description><![CDATA[最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i]]]></description>
 </item></channel>
 </rss>

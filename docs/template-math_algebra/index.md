@@ -6,18 +6,27 @@
 ```python
 mod = 10**9+7
 def mul(A,B):
-    return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
-def mpow(mat, n):
-    res = mat
-    for i in range(n.bit_length()-2,-1,-1):
-        res = mul(res,res)
-        if n>>i&1:
-            res = mul(res,mat)
-    return res
-    
-f = [[],[]]
-A = [[],[]]
-f = mul(mpow(A,n),f)
+    return [[sum(a*b%mod for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
+
+N,M = 0,0
+f = [[0] for _ in range(N)]
+for i in range(N):
+    f[i][0] = 0
+g = []
+g0 = [[0]*N for _ in range(N)]
+for i in range(N):
+    for j in range(N):
+        g0[i][j] = 0
+for _ in range(M):
+    g.append(g0)
+    g0 = mul(g0,g0)
+
+def mpow(f,n):
+    while n:
+        i = n.bit_length()-1
+        f = mul(g[i],f)
+        n ^= 1<<i
+    return sum(a[0] for a in f)%mod
 ```
 
 
@@ -26,6 +35,7 @@ f = mul(mpow(A,n),f)
 ### fft
 
 ```python
+import math
 I = complex(0,1)
 
 def fft(A,N,sgn=1):
