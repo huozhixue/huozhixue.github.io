@@ -159,17 +159,22 @@ class BIT:
             i &= i-1
         return res
     
+    def query(self,l,r):
+        return self.get(r)-self.get(l-1)
+    
     def kth(self, k):
-        x,s = 0,0
+        x = 0
         for i in range(self.L-1,-1,-1):
             y = x|1<<i
-            if y<self.n and s+self.t[y]<=k:
-                x,s = y,s+self.t[y]
+            if y<self.n and self.t[y]<k:
+                x = y
+                k -= self.t[y]
         return x+1
-        
-n = len(nums)
+
+A = []
+n = len(A)
 bit = BIT(n+1)
-for i,x in enumerate(nums,1):
+for i,x in enumerate(A,1):
 	bit.update(i,x)
 ```
 
@@ -215,10 +220,10 @@ class Seg:
         if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
         return res
         
-n = len(nums)
+n = len(A)
 N = 1<<n.bit_length()
 seg = Seg(N)
-seg.build(nums,1,0,n-1)
+seg.build(A,1,0,n-1)
 ```
 
 ### 递归式 区间更新（lazy）
@@ -275,10 +280,10 @@ class Seg:
         if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
         return res
 
-n = len(nums)
+n = len(A)
 N = 1<<n.bit_length()
 seg = Seg(N)
-seg.build(nums,1,0,n-1)
+seg.build(A,1,0,n-1)
 ```
 
 ### 迭代式 单点更新
@@ -308,17 +313,59 @@ class Seg:
             self.up(a)
 
     def query(self,a,b):
-        res,a,b = 0,a+self.N-1,b+self.N+1
-        while b-a>1:  
-            if not a&1: res = self.merge(res,self.t[a^1])  
-            if b&1: res = self.merge(res,self.t[b^1])  
+        a,b = a+self.N-1,b+self.N+1
+        lres,rres = 0,0
+        while a^b^1:  
+            if not a&1: lres = self.merge(lres,self.t[a^1])  
+            if b&1: rres = self.merge(self.t[b^1],rres)  
             a,b = a>>1,b>>1  
-        return res  
-        
-n = len(nums)
+        return self.merge(lres,rres)  
+    
+    def find_right(self,a,func):
+        a += self.N
+        lres = 0
+        while True:
+            while not a&1:
+                a >>= 1
+            tmp = self.merge(lres,self.t[a])
+            if func(tmp):
+                while a<self.N:
+                    a <<= 1
+                    tmp2 = self.merge(lres,self.t[a])
+                    if not func(tmp2):
+                        lres = tmp2
+                        a += 1
+                return a-self.N
+            if a&(a+1)==0:
+                return self.N
+            lres = tmp
+            a += 1
+
+    def find_left(self,b,func):
+        b += self.N
+        rres = 0
+        while True:
+            while b>1 and b&1:
+                b >>= 1
+            tmp = self.merge(self.t[b],rres)
+            if func(tmp):
+                while b<self.N:
+                    b = 2*b+1
+                    tmp2 = self.merge(self.t[b],rres)
+                    if not func(tmp2):
+                        rres = tmp2
+                        b -= 1
+                return b-self.N
+            if b&(b-1)==0:
+                return -1
+            rres = tmp
+            b -= 1
+
+A = []
+n = len(A)
 N = 1<<(n+1).bit_length()
 seg = Seg(N)
-seg.build(nums)
+seg.build(A)
 ```
 
 ### 迭代式 区间更新 （lazy）
@@ -354,7 +401,7 @@ class Seg:
 
     def update(self,a,b,x):
         a,b = a+self.N-1,b+self.N+1  
-        for i in range(self.L-1,0,-1):  
+        for i in range(self.L,0,-1):  
             self.down(a>>i)  
             self.down(b>>i)  
         while a^b^1:  
@@ -369,20 +416,67 @@ class Seg:
 
     def query(self,a,b):
         a,b = a+self.N-1,b+self.N+1  
-        for i in range(self.L-1,0,-1):  
+        for i in range(self.L,0,-1):  
             self.down(a>>i)  
             self.down(b>>i)  
-        res = 0
+        lres,rres = 0,0
         while a^b^1:  
-            if not a&1: res = self.merge(res,self.t[a^1])
-            if b&1: res = self.merge(res,self.t[b^1])
+            if not a&1: lres = self.merge(lres,self.t[a^1])
+            if b&1: rres = self.merge(self.t[b^1],rres)
             a,b = a>>1,b>>1  
-        return res
+        return self.merge(lres,rres)
+    
+    def find_right(self,a,func):
+        a += self.N
+        lres = 0
+        for i in range(self.L,0,-1):  
+            self.down(a>>i) 
+        while True:
+            while not a&1:
+                a >>= 1
+            tmp = self.merge(lres,self.t[a])
+            if func(tmp):
+                while a<self.N:
+                    self.down(a)
+                    a <<= 1
+                    tmp2 = self.merge(lres,self.t[a])
+                    if not func(tmp2):
+                        lres = tmp2
+                        a += 1
+                return a-self.N
+            if a&(a+1)==0:
+                return self.N
+            lres = tmp
+            a += 1
 
-n = len(nums)
+    def find_left(self,b,func):
+        b += self.N
+        rres = 0
+        for i in range(self.L,0,-1):  
+            self.down(b>>i) 
+        while True:
+            while b>1 and b&1:
+                b >>= 1
+            tmp = self.merge(self.t[b],rres)
+            if func(tmp):
+                while b<self.N:
+                    self.down(b)
+                    b = 2*b+1
+                    tmp2 = self.merge(self.t[b],rres)
+                    if not func(tmp2):
+                        rres = tmp2
+                        b -= 1
+                return b-self.N
+            if b&(b-1)==0:
+                return -1
+            rres = tmp
+            b -= 1
+
+A = []
+n = len(A)
 N = 1<<(n+1).bit_length()   
 seg = Seg(N)
-seg.build(nums)
+seg.build(A)
 ```
 
 
