@@ -3,21 +3,7 @@
         <title>中等 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E4%B8%AD%E7%AD%89/</link>
         <description>中等 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 19 May 2024 10:50:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%B8%AD%E7%AD%89/" rel="self" type="application/rss+xml" /><item>
-    <title>3153：所有数对中数位不同之和（1645 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3153/</link>
-    <pubDate>Sun, 19 May 2024 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3153/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 3 题 题目 你有一个数组 nums ，它只包含 正 整数，所有正整数的数位长度都 相同 。 两个整数的 数位不同 指的是两个整数 相同 位置上不同数字的数目]]></description>
-</item><item>
-    <title>3152：特殊数组 II（1523 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3152/</link>
-    <pubDate>Sun, 19 May 2024 10:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3152/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 2 题 题目 如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 特殊数组 。 周洋哥有一个整数数组 nums 和一个二维整数]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 12 May 2024 10:50:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%B8%AD%E7%AD%89/" rel="self" type="application/rss+xml" /><item>
     <title>3148：矩阵中的最大得分（1819 分）</title>
     <link>https://huozhixue.github.io/leetcode/3148/</link>
     <pubDate>Sun, 12 May 2024 10:50:00 &#43;0800</pubDate>
@@ -32,26 +18,12 @@
     <guid>https://huozhixue.github.io/leetcode/3143/</guid>
     <description><![CDATA[力扣第 130 场双周赛第 2 题 题目 给你一个二维数组 points 和一个字符串 s ，其中 points[i] 表示第 i 个点的坐标，s[i] 表示第 i 个点的 标签 。 如果一个正方形的中心在 (0, 0)]]></description>
 </item><item>
-    <title>3137：K 周期字符串需要的最少操作次数（1491 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3137/</link>
-    <pubDate>Sun, 05 May 2024 10:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3137/</guid>
-    <description><![CDATA[力扣第 396 场周赛第 2 题 题目 给你一个长度为 n 的字符串 word 和一个整数 k ，其中 k 是 n 的因数。 在一次操作中，你可以选择任意两个下标 i 和 j，其中 0 &lt;= i, j &lt;]]></description>
-</item><item>
     <title>3133：数组最后一个元素的最小值（1934 分）</title>
     <link>https://huozhixue.github.io/leetcode/3133/</link>
     <pubDate>Sun, 28 Apr 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3133/</guid>
     <description><![CDATA[力扣第 395 场周赛第 3 题 题目 给你两个整数 n 和 x 。你需要构造一个长度为 n 的 正整数 数组 nums ，对于所有 0 &lt;= i &lt; n - 1 ，满足 nums[i + 1] 大于 nums[i] ，并且数组 nums 中所有]]></description>
-</item><item>
-    <title>3132：找出与数组相加的整数 II（1620 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3132/</link>
-    <pubDate>Sun, 28 Apr 2024 10:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3132/</guid>
-    <description><![CDATA[力扣第 395 场周赛第 2 题 题目 给你两个整数数组 nums1 和 nums2。 从 nums1 中移除两个元素，并且所有其他元素都与变量 x 所表示的整数相加。如果 x 为负数，则表现]]></description>
 </item><item>
     <title>3129：找出所有稳定的二进制数组 I（2200 分）</title>
     <link>https://huozhixue.github.io/leetcode/3129/</link>
@@ -60,18 +32,46 @@
     <guid>https://huozhixue.github.io/leetcode/3129/</guid>
     <description><![CDATA[力扣第 129 场双周赛第 3 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
 </item><item>
-    <title>3128：直角三角形（1540 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3128/</link>
-    <pubDate>Sat, 27 Apr 2024 22:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3128/</guid>
-    <description><![CDATA[力扣第 129 场双周赛第 2 题 题目 给你一个二维 boolean 矩阵 grid 。 请你返回使用 grid 中的 3 个元素可以构建的 直角三角形 数目，且满足 3 个元素值 都 为 1 。 注意： 如果 grid 中 3]]></description>
-</item><item>
     <title>3111：覆盖所有点的最少矩形数目（1401 分）</title>
     <link>https://huozhixue.github.io/leetcode/3111/</link>
     <pubDate>Sat, 13 Apr 2024 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3111/</guid>
     <description><![CDATA[力扣第 128 场双周赛第 2 题 题目 给你一个二维整数数组 point ，其中 points[i] = [xi, yi] 表示二维平面内的一个点。同时给你一个整数 w 。你需要用矩形 覆盖所有 点。 每个矩形的]]></description>
+</item><item>
+    <title>3107：使数组中位数等于 K 的最少操作数（1604 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3107/</link>
+    <pubDate>Sun, 07 Apr 2024 10:50:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3107/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 3 题 题目 给你一个整数数组 nums 和一个 非负 整数 k 。一次操作中，你可以选择任一元素 加 1 或者减 1 。 请你返回将 nums 中位数 变为 k 所需要的 最少]]></description>
+</item><item>
+    <title>3106：满足距离约束且字典序最小的字符串（1515 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3106/</link>
+    <pubDate>Sun, 07 Apr 2024 10:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3106/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 2 题 题目 给你一个字符串 s 和一个整数 k 。 定义函数 distance(s1, s2) ，用于衡量两个长度为 n 的字符串 s1 和 s2 之间的距离，即： 字符 'a' 到 'z' 按 循环 顺序排]]></description>
+</item><item>
+    <title>3007：价值和小于等于 K 的最大数字（2258 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3007/</link>
+    <pubDate>Sun, 14 Jan 2024 10:50:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3007/</guid>
+    <description><![CDATA[力扣第 380 场周赛第 3 题 题目 给你一个整数 k 和一个整数 x 。整数 num 的价值是它的二进制表示中在 x，2x，3x 等位置处 设置位 的数目（从最低有效位开始）。]]></description>
+</item><item>
+    <title>2967：使数组成为等数数组的最小代价（2116 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2967/</link>
+    <pubDate>Sun, 17 Dec 2023 10:50:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2967/</guid>
+    <description><![CDATA[力扣第 376 场周赛第 3 题 题目 给你一个长度为 n 下标从 0 开始的整数数组 nums 。 你可以对 nums 执行特殊操作 任意次 （也可以 0 次）。每一次特殊操作中，你需要 按顺序]]></description>
+</item><item>
+    <title>2961：双模幂运算（1450 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2961/</link>
+    <pubDate>Sun, 10 Dec 2023 10:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2961/</guid>
+    <description><![CDATA[力扣第 375 场周赛第 2 题 题目 给你一个下标从 0 开始的二维数组 variables ，其中 variables[i] = [ai, bi, ci, mi]，以及一个整数 target 。 如果满足以下公式，则下标 i 是 好下标： 0 &lt;= i &lt;]]></description>
 </item></channel>
 </rss>

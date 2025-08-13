@@ -3,7 +3,14 @@
         <title>数组 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/</link>
         <description>数组 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 12 Apr 2025 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 May 2025 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%95%B0%E7%BB%84/" rel="self" type="application/rss+xml" /><item>
+    <title>3544：子树反转和（2544 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3544/</link>
+    <pubDate>Sat, 10 May 2025 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3544/</guid>
+    <description><![CDATA[力扣第 156 场双周赛第 4 题 题目 给你一棵以节点 0 为根节点包含 n 个节点的无向树，节点编号从 0 到 n - 1。该树由长度为 n - 1 的二维整数数组 edges 表示，其中 edges[i]]]></description>
+</item><item>
     <title>3515：带权树中的最短路径（2312 分）</title>
     <link>https://huozhixue.github.io/leetcode/3515/</link>
     <pubDate>Sat, 12 Apr 2025 23:00:00 &#43;0800</pubDate>
@@ -17,27 +24,6 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3225/</guid>
     <description><![CDATA[力扣第 135 场双周赛第 4 题 题目 给你一个大小为 n x n 的二维矩阵 grid ，一开始所有格子都是白色的。一次操作中，你可以选择任意下标为 (i, j) 的格子，并将第 j 列]]></description>
-</item><item>
-    <title>3153：所有数对中数位不同之和（1645 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3153/</link>
-    <pubDate>Sun, 19 May 2024 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3153/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 3 题 题目 你有一个数组 nums ，它只包含 正 整数，所有正整数的数位长度都 相同 。 两个整数的 数位不同 指的是两个整数 相同 位置上不同数字的数目]]></description>
-</item><item>
-    <title>3152：特殊数组 II（1523 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3152/</link>
-    <pubDate>Sun, 19 May 2024 10:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3152/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 2 题 题目 如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 特殊数组 。 周洋哥有一个整数数组 nums 和一个二维整数]]></description>
-</item><item>
-    <title>3151：特殊数组 I（1152 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3151/</link>
-    <pubDate>Sun, 19 May 2024 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3151/</guid>
-    <description><![CDATA[力扣第 398 场周赛第 1 题 题目 如果数组的每一对相邻元素都是两个奇偶性不同的数字，则该数组被认为是一个 特殊数组 。 Aging 有一个整数数组 nums。如果 nums 是一]]></description>
 </item><item>
     <title>3148：矩阵中的最大得分（1819 分）</title>
     <link>https://huozhixue.github.io/leetcode/3148/</link>
@@ -53,25 +39,39 @@
     <guid>https://huozhixue.github.io/leetcode/3143/</guid>
     <description><![CDATA[力扣第 130 场双周赛第 2 题 题目 给你一个二维数组 points 和一个字符串 s ，其中 points[i] 表示第 i 个点的坐标，s[i] 表示第 i 个点的 标签 。 如果一个正方形的中心在 (0, 0)]]></description>
 </item><item>
-    <title>3132：找出与数组相加的整数 II（1620 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3132/</link>
-    <pubDate>Sun, 28 Apr 2024 10:40:00 &#43;0800</pubDate>
+    <title>3111：覆盖所有点的最少矩形数目（1401 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3111/</link>
+    <pubDate>Sat, 13 Apr 2024 22:40:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3132/</guid>
-    <description><![CDATA[力扣第 395 场周赛第 2 题 题目 给你两个整数数组 nums1 和 nums2。 从 nums1 中移除两个元素，并且所有其他元素都与变量 x 所表示的整数相加。如果 x 为负数，则表现]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3111/</guid>
+    <description><![CDATA[力扣第 128 场双周赛第 2 题 题目 给你一个二维整数数组 point ，其中 points[i] = [xi, yi] 表示二维平面内的一个点。同时给你一个整数 w 。你需要用矩形 覆盖所有 点。 每个矩形的]]></description>
 </item><item>
-    <title>3131：找出与数组相加的整数 I（1160 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3131/</link>
-    <pubDate>Sun, 28 Apr 2024 10:30:00 &#43;0800</pubDate>
+    <title>3108：带权图里旅途的最小代价（2108 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3108/</link>
+    <pubDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3131/</guid>
-    <description><![CDATA[力扣第 395 场周赛第 1 题 题目 给你两个长度相等的数组 nums1 和 nums2。 数组 nums1 中的每个元素都与变量 x 所表示的整数相加。如果 x 为负数，则表现为元素值的减]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3108/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 4 题 题目 给你一个 n 个节点的带权无向图，节点编号为 0 到 n - 1 。 给你一个整数 n 和一个数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui 和 vi 之间有一]]></description>
 </item><item>
-    <title>3128：直角三角形（1540 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3128/</link>
-    <pubDate>Sat, 27 Apr 2024 22:40:00 &#43;0800</pubDate>
+    <title>3107：使数组中位数等于 K 的最少操作数（1604 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3107/</link>
+    <pubDate>Sun, 07 Apr 2024 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3128/</guid>
-    <description><![CDATA[力扣第 129 场双周赛第 2 题 题目 给你一个二维 boolean 矩阵 grid 。 请你返回使用 grid 中的 3 个元素可以构建的 直角三角形 数目，且满足 3 个元素值 都 为 1 。 注意： 如果 grid 中 3]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3107/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 3 题 题目 给你一个整数数组 nums 和一个 非负 整数 k 。一次操作中，你可以选择任一元素 加 1 或者减 1 。 请你返回将 nums 中位数 变为 k 所需要的 最少]]></description>
+</item><item>
+    <title>3105：最长的严格递增或递减子数组（1217 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3105/</link>
+    <pubDate>Sun, 07 Apr 2024 10:30:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3105/</guid>
+    <description><![CDATA[力扣第 392 场周赛第 1 题 题目 给你一个整数数组 nums 。 返回数组 nums 中 严格递增 或 严格递减 的最长非空子数组的长度。 示例 1： 输入：nums = [1,4,3,3,2] 输出：2 解释： nums]]></description>
+</item><item>
+    <title>2967：使数组成为等数数组的最小代价（2116 分）</title>
+    <link>https://huozhixue.github.io/leetcode/2967/</link>
+    <pubDate>Sun, 17 Dec 2023 10:50:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2967/</guid>
+    <description><![CDATA[力扣第 376 场周赛第 3 题 题目 给你一个长度为 n 下标从 0 开始的整数数组 nums 。 你可以对 nums 执行特殊操作 任意次 （也可以 0 次）。每一次特殊操作中，你需要 按顺序]]></description>
 </item></channel>
 </rss>
