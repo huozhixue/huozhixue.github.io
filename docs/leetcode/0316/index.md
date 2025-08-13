@@ -53,14 +53,20 @@
 ```python
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
-        d = {c:i for i,c in enumerate(s)}
-        sk,vis = [],set()
-        for i,c in enumerate(s):
-            if c not in vis:
-                while sk and sk[-1]>c and d[sk[-1]]>i:
-                    vis.remove(sk.pop())
-                sk.append(c)
-                vis.add(c)
-        return ''.join(sk)
+        A = [ord(c)-ord('a') for c in s]
+        ct = [0]*26
+        for a in A:
+            ct[a] += 1
+        vis = [0]*26
+        sk = []
+        for a in A:
+            ct[a] -= 1
+            if vis[a]:
+                continue
+            while sk and sk[-1]>a and ct[sk[-1]]:
+                vis[sk.pop()] = 0
+            vis[a] = 1
+            sk.append(a)
+        return ''.join(chr(a+ord('a')) for a in sk)
 ```
-32 ms
+0 ms
