@@ -9,23 +9,25 @@
 n = len(edges)+1
 m = n.bit_length()
 g = [[] for _ in range(n)]
-for u,v in edges: 
-	g[u].append(v)
-	g[v].append(u)
+for u,v,w in edges: 
+	g[u].append((v,w))
+	g[v].append((u,w))
 D = [0]*n
+W = [0]*n
 f = [[-1]*m for _ in range(n)]
-sk = [(0,-1)]
+sk = [0]
 while sk:
-	u,fa = sk.pop()
+	u = sk.pop()
 	for i in range(m-1):
 		p = f[u][i]
 		if p!=-1:
 			f[u][i+1] = f[p][i]
-	for v in g[u]:
-		if v!=fa:
-			sk.append((v,u))
+	for v,w in g[u]:
+		if v!=f[u][0]:
+			sk.append(v)
 			f[v][0] = u
 			D[v] = D[u]+1
+			W[v] = W[u]+w
 
 def lca(x,y):    
 	if D[x]>D[y]:
