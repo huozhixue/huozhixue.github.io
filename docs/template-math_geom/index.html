@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>数学模板：计算几何 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数学模板：计算几何" />
-<meta property="og:description" content="1 圆 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 def in_circle(x,y,r,x1,y1): # 点 (x1,y1) 是否在园内 return (x1-x)*(x1-x)&#43;(y1-y)*(y1-y)&lt;=r*r def cross_v(x,y,r,x1,y1,y2): # 线段 (x1,y1)-(x1,y2) 是否与圆（内）相交 if y&lt;y1: return in_circle(x,y,r,x1,y1) if y&gt;y2: return in_circle(x,y,r,x1,y2) return abs(x1-x)&lt;=r def cross_h(x,y,r,x1,y1,x2): # 线段 (x1,y1)-(x2,y1) 是否与圆（内）相交" />
+<meta property="og:description" content="向量 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 from math import atan2 def dot(u,v): return u[0]*v[0]&#43;u[1]*v[1] def cross(u,v): # 逆正顺负 return u[0]*v[1]-u[1]*v[0] def qua(u): # 所在象限 return (u[1]&lt;0)&lt;&lt;1 | (u[0]&lt;0)^(u[1]&lt;0) def psort(A): # 极角排序 A.sort(key=lambda p: atan2(p[1],p[0])) a = [dot(u,v),cross(u,v)] # 向量夹角再用向量表示 直" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/template-math_geom/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-04-05T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="数学模板：计算几何"/>
-<meta name="twitter:description" content="1 圆 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 def in_circle(x,y,r,x1,y1): # 点 (x1,y1) 是否在园内 return (x1-x)*(x1-x)&#43;(y1-y)*(y1-y)&lt;=r*r def cross_v(x,y,r,x1,y1,y2): # 线段 (x1,y1)-(x1,y2) 是否与圆（内）相交 if y&lt;y1: return in_circle(x,y,r,x1,y1) if y&gt;y2: return in_circle(x,y,r,x1,y2) return abs(x1-x)&lt;=r def cross_h(x,y,r,x1,y1,x2): # 线段 (x1,y1)-(x2,y1) 是否与圆（内）相交"/>
+<meta name="twitter:description" content="向量 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 from math import atan2 def dot(u,v): return u[0]*v[0]&#43;u[1]*v[1] def cross(u,v): # 逆正顺负 return u[0]*v[1]-u[1]*v[0] def qua(u): # 所在象限 return (u[1]&lt;0)&lt;&lt;1 | (u[0]&lt;0)^(u[1]&lt;0) def psort(A): # 极角排序 A.sort(key=lambda p: atan2(p[1],p[0])) a = [dot(u,v),cross(u,v)] # 向量夹角再用向量表示 直"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/template-math_geom/" /><link rel="prev" href="https://huozhixue.github.io/template-math_rand/" /><link rel="next" href="https://huozhixue.github.io/template-dp_number/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/template-math_geom\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  80 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  179 ,
         "url": "https:\/\/huozhixue.github.io\/template-math_geom\/","datePublished": "2023-04-05T00:00:00+08:00","dateModified": "2023-04-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数学模板：计算几何</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-05">2023-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 80 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-05">2023-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 179 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-math_geom/" class="leancloud_visitors" data-flag-title="数学模板：计算几何">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -121,10 +121,62 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-圆">1 圆</a></li>
+    <li><a href="#向量">向量</a></li>
+    <li><a href="#直线">直线</a></li>
+    <li><a href="#圆">圆</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="1-圆">1 圆</h2>
+            </div><div class="content" id="content"><h2 id="向量">向量</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">atan2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">cross</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>  <span class="c1"># 逆正顺负</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">qua</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>      <span class="c1"># 所在象限</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">1</span> <span class="o">|</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">psort</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>    <span class="c1"># 极角排序</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">atan2</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">dot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">),</span><span class="n">cross</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)]</span>   <span class="c1"># 向量夹角再用向量表示</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="直线">直线</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 用点向式表示，即线上某点+方向向量</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">inter</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>             <span class="c1"># 求两线交点</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="圆">圆</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

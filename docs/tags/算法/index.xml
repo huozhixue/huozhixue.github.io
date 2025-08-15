@@ -37,7 +37,7 @@
     <pubDate>Wed, 05 Apr 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-math_geom/</guid>
-    <description><![CDATA[1 圆 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 def in_circle(x,y,r,x1,y1): # 点 (x1,y1) 是否在园内 return (x1-x)*(x1-x)+(y1-y)*(y1-y)&lt;=r*r def cross_v(x,y,r,x1,y1,y2): # 线段 (x1,y1)-(x1,y2) 是否与圆（内）相交 if y&lt;y1: return in_circle(x,y,r,x1,y1) if y&gt;y2: return in_circle(x,y,r,x1,y2) return abs(x1-x)&lt;=r def cross_h(x,y,r,x1,y1,x2): # 线段 (x1,y1)-(x2,y1) 是否与圆（内）相交]]></description>
+    <description><![CDATA[向量 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 from math import atan2 def dot(u,v): return u[0]*v[0]+u[1]*v[1] def cross(u,v): # 逆正顺负 return u[0]*v[1]-u[1]*v[0] def qua(u): # 所在象限 return (u[1]&lt;0)&lt;&lt;1 | (u[0]&lt;0)^(u[1]&lt;0) def psort(A): # 极角排序 A.sort(key=lambda p: atan2(p[1],p[0])) a = [dot(u,v),cross(u,v)] # 向量夹角再用向量表示 直]]></description>
 </item><item>
     <title>数学模板：随机化</title>
     <link>https://huozhixue.github.io/template-math_rand/</link>

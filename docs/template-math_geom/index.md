@@ -1,7 +1,36 @@
 # 数学模板：计算几何
 
 
-## 1 圆
+## 向量
+
+```python []
+from math import atan2
+
+def dot(u,v):
+    return u[0]*v[0]+u[1]*v[1]
+
+def cross(u,v):  # 逆正顺负
+    return u[0]*v[1]-u[1]*v[0]
+
+def qua(u):      # 所在象限
+    return (u[1]<0)<<1 | (u[0]<0)^(u[1]<0)
+
+def psort(A):    # 极角排序
+    A.sort(key=lambda p: atan2(p[1],p[0]))
+
+a = [dot(u,v),cross(u,v)]   # 向量夹角再用向量表示
+```
+
+## 直线
+
+```python []
+# 用点向式表示，即线上某点+方向向量
+
+def inter(L1,L2):             # 求两线交点
+
+```
+
+##  圆
 
 ```python []
 def in_circle(x,y,r,x1,y1):                     # 点 (x1,y1) 是否在园内 
