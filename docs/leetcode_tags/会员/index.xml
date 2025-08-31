@@ -3,7 +3,42 @@
         <title>会员 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E4%BC%9A%E5%91%98/</link>
         <description>会员 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 07 Sep 2019 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BC%9A%E5%91%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 May 2025 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BC%9A%E5%91%98/" rel="self" type="application/rss+xml" /><item>
+    <title>3549：两个多项式相乘（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3549/</link>
+    <pubDate>Thu, 15 May 2025 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3549/</guid>
+    <description><![CDATA[力扣第 3549 题 题目 给定两个整数数组 poly1 和 poly2，其中每个数组中下标 i 的元素表示多项式中 xi 的系数。 设 A(x) 和 B(x) 分别是 poly1 和 poly2 表示的多项式。 返回一个长度]]></description>
+</item><item>
+    <title>2714：找到 K 次跨越的最短路径（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2714/</link>
+    <pubDate>Mon, 29 May 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2714/</guid>
+    <description><![CDATA[力扣第 2714 题 题目 现给定一个正整数 n ，它表示一个 索引从 0 开始的无向带权连接图 的节点数，以及一个 索引从 0 开始的二维数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui]]></description>
+</item><item>
+    <title>2702：使数字变为非正数的最小操作次数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2702/</link>
+    <pubDate>Wed, 24 May 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2702/</guid>
+    <description><![CDATA[力扣第 2702 题 题目 给定一个 下标从0开始 的整数数组 nums，以及两个整数 x 和 y。在每一次操作中，你需要选择一个满足条件 0 &lt;= i &lt; nums.length 的下标 i ，并执行以]]></description>
+</item><item>
+    <title>2613：美数对（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2613/</link>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2613/</guid>
+    <description><![CDATA[力扣第 2613 题 题目 给定两个长度相同的 下标从 0 开始 的整数数组 nums1 和 nums2 ，如果 |nums1[i] - nums1[j]| + |nums2[i] - nums2[j]| 在所有可能的下标对中是最小的，其中 i &lt; j ，则称下标对 (i,j) 为 美 数]]></description>
+</item><item>
+    <title>2123：使矩阵中的 1 互不相邻的最小操作数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2123/</link>
+    <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2123/</guid>
+    <description><![CDATA[力扣第 2123 题 题目 给你一个 下标从 0 开始 的矩阵 grid。每次操作，你可以把 grid 中的 一个 1 变成 0 。 如果一个矩阵中，没有 1 与其它的 1 四连通（也就是说所有]]></description>
+</item><item>
     <title>1183：矩阵中 1 的最大数量（★★★）</title>
     <link>https://huozhixue.github.io/leetcode/1183/</link>
     <pubDate>Sat, 07 Sep 2019 23:00:00 &#43;0800</pubDate>
@@ -38,40 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/0760/</guid>
     <description><![CDATA[力扣第 760 题 题目 给定两个列表 Aand B，并且 B 是 A 的变位（即 B 是由 A 中的元素随机排列后组成的新列表）。 我们希望找出一个从 A 到 B 的索引映射 P 。一个映射]]></description>
-</item><item>
-    <title>0755：倒水（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/0755/</link>
-    <pubDate>Tue, 24 Jan 2017 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0755/</guid>
-    <description><![CDATA[力扣第 755 题 题目 给出一个地形高度图， heights[i] 表示该索引处的高度。每个索引的宽度为 1。在 V 个单位的水落在索引 K 处以后，每个索引位置有多少水？ 水最先会在]]></description>
-</item><item>
-    <title>0750：角矩形的数量（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0750/</link>
-    <pubDate>Thu, 19 Jan 2017 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0750/</guid>
-    <description><![CDATA[力扣第 750 题 题目 给定一个只包含 0 和 1 的 m x n 整数矩阵 grid ，返回 其中 「角矩形 」的数量 。 一个「角矩形」是由四个不同的在矩阵上的 1 形成的 轴对齐 的矩形。]]></description>
-</item><item>
-    <title>0742：二叉树最近的叶节点（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0742/</link>
-    <pubDate>Wed, 11 Jan 2017 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0742/</guid>
-    <description><![CDATA[力扣第 742 题 题目 给定一个 每个结点的值互不相同 的二叉树，和一个目标整数值 k，返回 树中与目标值 k 最近的叶结点 。 与叶结点最近 表示在二叉树中到达该叶节]]></description>
-</item><item>
-    <title>0681：最近时刻（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0681/</link>
-    <pubDate>Fri, 11 Nov 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0681/</guid>
-    <description><![CDATA[力扣第 681 题 题目 给定一个形如 "HH:MM" 表示的时刻 time ，利用当前出现过的数字构造下一个距离当前时间最近的时刻。每个出现数字都可以被无限次使用。 你可以认为给]]></description>
-</item><item>
-    <title>0666：路径总和 IV（★）</title>
-    <link>https://huozhixue.github.io/leetcode/0666/</link>
-    <pubDate>Thu, 27 Oct 2016 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/0666/</guid>
-    <description><![CDATA[力扣第 666 题 题目 对于一棵深度小于 5 的树，可以用一组三位十进制整数来表示。对于每个整数： 百位上的数字表示这个节点的深度 d，1 &lt;= d &lt;= 4。 十位上的数]]></description>
 </item></channel>
 </rss>

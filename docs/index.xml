@@ -74,7 +74,7 @@
     <pubDate>Mon, 06 Mar 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/template-graph_flow/</guid>
-    <description><![CDATA[1 最大流 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 class Dinic: def __init__(self,): self.g = defaultdict(list) # g 是图中每个 u 对应的 v 列表 self.h =]]></description>
+    <description><![CDATA[1 最大流 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 class Dinic: def __init__(self,): self.g = defaultdict(list) # g 是图中每个]]></description>
 </item><item>
     <title>图模板：图匹配</title>
     <link>https://huozhixue.github.io/template-graph_match/</link>

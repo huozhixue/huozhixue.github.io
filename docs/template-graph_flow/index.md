@@ -15,9 +15,8 @@ class Dinic:
         self.g[v].append([u,len(self.g[u])-1,0])
 
     def bfs(self,s,t):
-        self.p.clear()
-        self.h.clear()
-        self.h[s]=0
+        self.h = {s:0}
+        self.p = defaultdict(int)
         Q = deque([s])
         while Q:
             u = Q.popleft()
@@ -37,6 +36,16 @@ class Dinic:
                 a = self.dfs(v,t,min(flow,c))
                 flow -= a
                 self.g[u][i][-1]-=a
+                self.g[v][j][-1]+=a
+                res += a
+            self.p[u] += 1
+        return res
+
+    def cal(self,s,t):
+        res = 0
+        while self.bfs(s,t):
+            res += self.dfs(s,t,inf)
+        return res         self.g[u][i][-1]-=a
                 self.g[v][j][-1]+=a
                 res += a
             self.p[u] += 1
