@@ -11,12 +11,26 @@
     <guid>https://huozhixue.github.io/leetcode/3549/</guid>
     <description><![CDATA[力扣第 3549 题 题目 给定两个整数数组 poly1 和 poly2，其中每个数组中下标 i 的元素表示多项式中 xi 的系数。 设 A(x) 和 B(x) 分别是 poly1 和 poly2 表示的多项式。 返回一个长度]]></description>
 </item><item>
+    <title>3506：查找消除细菌菌株所需时间（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3506/</link>
+    <pubDate>Sun, 06 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3506/</guid>
+    <description><![CDATA[力扣第 3506 题 题目 给定一个整数数组 timeReq 和一个整数 splitTime。 在人体微观世界中，免疫系统面临着一项非凡的挑战：对抗快速繁殖的细菌群落，这对身]]></description>
+</item><item>
     <title>3463：判断操作后字符串中的数字是否相等 II（2286 分）</title>
     <link>https://huozhixue.github.io/leetcode/3463/</link>
     <pubDate>Sun, 23 Feb 2025 10:50:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3463/</guid>
     <description><![CDATA[力扣第 438 场周赛第 3 题 题目 给你一个由数字组成的字符串 s 。重复执行以下操作，直到字符串恰好包含 两个 数字： 创建一个名为 zorflendex 的变量，在函数中间存储输入]]></description>
+</item><item>
+    <title>3009：折线图上的最大交点数量（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3009/</link>
+    <pubDate>Tue, 16 Jan 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3009/</guid>
+    <description><![CDATA[力扣第 3009 题 题目 有一条由 n 个点连接而成的折线图。给定一个 下标从 1 开始 的整数数组 y，第 k 个点的坐标是 (k, y[k])。图中没有水平线，即没有两个相邻]]></description>
 </item><item>
     <title>2967：使数组成为等数数组的最小代价（2116 分）</title>
     <link>https://huozhixue.github.io/leetcode/2967/</link>
@@ -32,46 +46,32 @@
     <guid>https://huozhixue.github.io/leetcode/2961/</guid>
     <description><![CDATA[力扣第 375 场周赛第 2 题 题目 给你一个下标从 0 开始的二维数组 variables ，其中 variables[i] = [ai, bi, ci, mi]，以及一个整数 target 。 如果满足以下公式，则下标 i 是 好下标： 0 &lt;= i &lt;]]></description>
 </item><item>
+    <title>2927：给小朋友们分糖果 III（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2927/</link>
+    <pubDate>Mon, 06 Nov 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2927/</guid>
+    <description><![CDATA[力扣第 2927 题 题目 你被给定两个正整数 n 和 limit。 返回 在每个孩子得到不超过 limit 个糖果的情况下，将 n 个糖果分发给 3 个孩子的 总方法数。 示例 1: 输入：n]]></description>
+</item><item>
+    <title>2912：在网格上移动到目的地的方法数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2912/</link>
+    <pubDate>Mon, 23 Oct 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2912/</guid>
+    <description><![CDATA[力扣第 2912 题 题目 给定两个整数 n 和 m，它们表示一个 下标从 1 开始 的网格的大小。还给定一个整数 k，以及两个 下标从 1 开始 的整数数组 source 和 dest。这两个]]></description>
+</item><item>
+    <title>2868：单词游戏（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2868/</link>
+    <pubDate>Mon, 25 Sep 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2868/</guid>
+    <description><![CDATA[力扣第 2868 题 题目 Alice 和 Bob 分别拥有一个 按字典序排序 的字符串数组，分别命名为 a 和 b。 他们正在玩一个单词游戏，遵循以下规则： 每一轮，当前玩家应该从他的]]></description>
+</item><item>
     <title>2748：美丽下标对的数目（1301 分）</title>
     <link>https://huozhixue.github.io/leetcode/2748/</link>
     <pubDate>Sun, 25 Jun 2023 10:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2748/</guid>
     <description><![CDATA[力扣第 351 场周赛第 1 题 题目 给你一个下标从 0 开始的整数数组 nums 。如果下标对 i、j 满足 0 ≤ i &lt; j &lt; nums.length ，如果 nums[i] 的 第一个数字 和 nums[j] 的 最后一个数字 互质 ，则认]]></description>
-</item><item>
-    <title>2739：总行驶距离（1262 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2739/</link>
-    <pubDate>Sun, 18 Jun 2023 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2739/</guid>
-    <description><![CDATA[力扣第 350 场周赛第 1 题 题目 卡车有两个油箱。给你两个整数，mainTank 表示主油箱中的燃料（以升为单位），additionalTank 表示副油]]></description>
-</item><item>
-    <title>2613：美数对（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2613/</link>
-    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2613/</guid>
-    <description><![CDATA[力扣第 2613 题 题目 给定两个长度相同的 下标从 0 开始 的整数数组 nums1 和 nums2 ，如果 |nums1[i] - nums1[j]| + |nums2[i] - nums2[j]| 在所有可能的下标对中是最小的，其中 i &lt; j ，则称下标对 (i,j) 为 美 数]]></description>
-</item><item>
-    <title>2584：分割数组使乘积互质（2159 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2584/</link>
-    <pubDate>Sun, 05 Mar 2023 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2584/</guid>
-    <description><![CDATA[力扣第 335 场周赛第 3 题 题目 给你一个长度为 n 的整数数组 nums ，下标从 0 开始。 如果在下标 i 处 分割 数组，其中 0 &lt;= i &lt;= n - 2 ，使前 i + 1 个元素的乘积和剩余]]></description>
-</item><item>
-    <title>2427：公因子的数目（1172 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2427/</link>
-    <pubDate>Sun, 02 Oct 2022 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2427/</guid>
-    <description><![CDATA[力扣第 313 场周赛第 1 题 题目 给你两个正整数 a 和 b ，返回 a 和 b 的 公 因子的数目。 如果 x 可以同时整除 a 和 b ，则认为 x 是 a 和 b 的一个 公因子 。 示例 1： 输入]]></description>
-</item><item>
-    <title>2266：统计打字方案数（1856 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2266/</link>
-    <pubDate>Sun, 08 May 2022 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2266/</guid>
-    <description><![CDATA[力扣第 292 场周赛第 3 题 题目 Alice 在给 Bob 用手机打字。数字到字母的 对应 如下图所示。 为了 打出 一个字母，Alice 需要 按 对应字母 i 次，i 是该字母在这个按键]]></description>
 </item></channel>
 </rss>

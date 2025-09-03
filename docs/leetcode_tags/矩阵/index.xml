@@ -3,7 +3,14 @@
         <title>矩阵 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E7%9F%A9%E9%98%B5/</link>
         <description>矩阵 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 20 Jul 2024 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E7%9F%A9%E9%98%B5/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 20 Nov 2024 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E7%9F%A9%E9%98%B5/" rel="self" type="application/rss+xml" /><item>
+    <title>3359：查找最大元素不超过 K 的有序子矩阵（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3359/</link>
+    <pubDate>Wed, 20 Nov 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3359/</guid>
+    <description><![CDATA[力扣第 3359 题 题目 给定一个大小为 m x n 的二维矩阵 grid。同时给定一个 非负整数 k。 返回满足下列条件的 grid 的子矩阵数量： 子矩阵中最大的元素 小于等于 k]]></description>
+</item><item>
     <title>3225：网格图操作后的最大分数（3027 分）</title>
     <link>https://huozhixue.github.io/leetcode/3225/</link>
     <pubDate>Sat, 20 Jul 2024 00:00:00 &#43;0800</pubDate>
@@ -17,6 +24,13 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3148/</guid>
     <description><![CDATA[力扣第 397 场周赛第 3 题 题目 给你一个由 正整数 组成、大小为 m x n 的矩阵 grid。你可以从矩阵中的任一单元格移动到另一个位于正下方或正右侧的任意单元]]></description>
+</item><item>
+    <title>2814：避免淹死并到达目的地的最短时间（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2814/</link>
+    <pubDate>Mon, 07 Aug 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2814/</guid>
+    <description><![CDATA[力扣第 2814 题 题目 现给定一个 n * m 的索引从 0 开始的二维字符串网格 land，目前你站在为 "S" 的单元格上，你需要到达为 "D" 的单元格。在这片区域上还有另外]]></description>
 </item><item>
     <title>2732：找到矩阵中的好子集（2239 分）</title>
     <link>https://huozhixue.github.io/leetcode/2732/</link>
@@ -39,6 +53,13 @@
     <guid>https://huozhixue.github.io/leetcode/2545/</guid>
     <description><![CDATA[力扣第 329 场周赛第 2 题 题目 班里有 m 位学生，共计划组织 n 场考试。给你一个下标从 0 开始、大小为 m x n 的整数矩阵 score ，其中每一行对应一位学生，而 score[i][j] 表示]]></description>
 </item><item>
+    <title>2371：最小化网格中的最大值（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2371/</link>
+    <pubDate>Thu, 11 Aug 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2371/</guid>
+    <description><![CDATA[力扣第 2371 题 题目 给定一个包含 不同 正整数的 m × n 整数矩阵 grid。 必须将矩阵中的每一个整数替换为正整数，且满足以下条件: 在替换之后，同行或同列中]]></description>
+</item><item>
     <title>2123：使矩阵中的 1 互不相邻的最小操作数（★★）</title>
     <link>https://huozhixue.github.io/leetcode/2123/</link>
     <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0800</pubDate>
@@ -52,26 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1992/</guid>
     <description><![CDATA[力扣第 60 场双周赛第 2 题 题目 给你一个下标从 0 开始，大小为 m x n 的二进制矩阵 land ，其中 0 表示一单位的森林土地，1 表示一单位的农场土地。 为了让农场保]]></description>
-</item><item>
-    <title>1728：猫和老鼠 II（2849 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1728/</link>
-    <pubDate>Sun, 17 Jan 2021 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1728/</guid>
-    <description><![CDATA[力扣第 224 场周赛第 4 题 题目 一只猫和一只老鼠在玩一个叫做猫和老鼠的游戏。 它们所处的环境设定是一个 rows x cols 的方格 grid ，其中每个格子可能是一堵墙、一块地]]></description>
-</item><item>
-    <title>1632：矩阵转换后的秩（2529 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1632/</link>
-    <pubDate>Sun, 25 Oct 2020 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1632/</guid>
-    <description><![CDATA[力扣第 212 场周赛第 4 题 题目 给你一个 m x n 的矩阵 matrix ，请你返回一个新的矩阵 answer ，其中 answer[row][col] 是 matrix[row][col] 的秩。 每个元素的 秩 是一个整数，表示这个元素相对于其他元素的]]></description>
-</item><item>
-    <title>1591：奇怪的打印机 II（2290 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1591/</link>
-    <pubDate>Sat, 19 Sep 2020 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1591/</guid>
-    <description><![CDATA[力扣第 35 场双周赛第 4 题 题目 给你一个奇怪的打印机，它有如下两个特殊的打印规则： 每一次操作时，打印机会用同一种颜色打印一个矩形的形状，每次打印会]]></description>
 </item></channel>
 </rss>

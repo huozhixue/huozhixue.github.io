@@ -25,6 +25,13 @@
     <guid>https://huozhixue.github.io/leetcode/3515/</guid>
     <description><![CDATA[力扣第 154 场双周赛第 4 题 题目 给你一个整数 n 和一个以节点 1 为根的无向带权树，该树包含 n 个编号从 1 到 n 的节点。它由一个长度为 n - 1 的二维数组 edges 表示]]></description>
 </item><item>
+    <title>3506：查找消除细菌菌株所需时间（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3506/</link>
+    <pubDate>Sun, 06 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3506/</guid>
+    <description><![CDATA[力扣第 3506 题 题目 给定一个整数数组 timeReq 和一个整数 splitTime。 在人体微观世界中，免疫系统面临着一项非凡的挑战：对抗快速繁殖的细菌群落，这对身]]></description>
+</item><item>
     <title>3500：将数组分割为子数组的最小代价（2569 分）</title>
     <link>https://huozhixue.github.io/leetcode/3500/</link>
     <pubDate>Sat, 29 Mar 2025 22:50:00 &#43;0800</pubDate>
@@ -46,32 +53,25 @@
     <guid>https://huozhixue.github.io/leetcode/3369/</guid>
     <description><![CDATA[力扣第 3369 题 题目 设计一个数据结构来跟踪它其中的值，并回答一些有关其平均值、中位数和众数的询问。 实现 StatisticsTracker 类。 StatisticsTracker()]]></description>
 </item><item>
-    <title>3231：要删除的递增子序列的最小数量（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/3231/</link>
-    <pubDate>Fri, 26 Jul 2024 00:00:00 &#43;0800</pubDate>
+    <title>3359：查找最大元素不超过 K 的有序子矩阵（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3359/</link>
+    <pubDate>Wed, 20 Nov 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3231/</guid>
-    <description><![CDATA[力扣第 3231 题 题目 给定一个整数数组 nums，你可以执行任意次下面的操作： 从数组删除一个 严格递增 的 子序列。 您的任务是找到使数组为 空 所需的 最小 操作数]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3359/</guid>
+    <description><![CDATA[力扣第 3359 题 题目 给定一个大小为 m x n 的二维矩阵 grid。同时给定一个 非负整数 k。 返回满足下列条件的 grid 的子矩阵数量： 子矩阵中最大的元素 小于等于 k]]></description>
 </item><item>
-    <title>3225：网格图操作后的最大分数（3027 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3225/</link>
-    <pubDate>Sat, 20 Jul 2024 00:00:00 &#43;0800</pubDate>
+    <title>3329：字符至少出现 K 次的子字符串 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3329/</link>
+    <pubDate>Fri, 25 Oct 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3225/</guid>
-    <description><![CDATA[力扣第 135 场双周赛第 4 题 题目 给你一个大小为 n x n 的二维矩阵 grid ，一开始所有格子都是白色的。一次操作中，你可以选择任意下标为 (i, j) 的格子，并将第 j 列]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3329/</guid>
+    <description><![CDATA[力扣第 3329 题 题目 给你一个字符串 s 和一个整数 k，在 s 的所有 子字符串 中，请你统计并返回 至少有一个 字符 至少出现 k 次的子字符串总数。 示例 1： 输入： s =]]></description>
 </item><item>
-    <title>3130：找出所有稳定的二进制数组 II（2824 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3130/</link>
-    <pubDate>Sat, 27 Apr 2024 23:00:00 &#43;0800</pubDate>
+    <title>3299：连续子序列的和（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3299/</link>
+    <pubDate>Fri, 27 Sep 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3130/</guid>
-    <description><![CDATA[力扣第 129 场双周赛第 4 题 题目 给你 3 个正整数 zero ，one 和 limit 。 一个 二进制数组 arr 如果满足以下条件，那么我们称它是 稳定的 ： 0 在 arr 中出现次数 恰好 为 zero 。 1]]></description>
-</item><item>
-    <title>3108：带权图里旅途的最小代价（2108 分）</title>
-    <link>https://huozhixue.github.io/leetcode/3108/</link>
-    <pubDate>Sun, 07 Apr 2024 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3108/</guid>
-    <description><![CDATA[力扣第 392 场周赛第 4 题 题目 给你一个 n 个节点的带权无向图，节点编号为 0 到 n - 1 。 给你一个整数 n 和一个数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui 和 vi 之间有一]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3299/</guid>
+    <description><![CDATA[力扣第 3299 题 题目 如果一个长度为 n 的数组 arr 符合下面其中一个条件，可以称它 连续： 对于所有的 1 &lt;= i &lt; n，arr[i] - arr[i - 1] == 1。 对于所有的 1 &lt;= i &lt;]]></description>
 </item></channel>
 </rss>

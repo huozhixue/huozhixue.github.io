@@ -11,12 +11,40 @@
     <guid>https://huozhixue.github.io/leetcode/3549/</guid>
     <description><![CDATA[力扣第 3549 题 题目 给定两个整数数组 poly1 和 poly2，其中每个数组中下标 i 的元素表示多项式中 xi 的系数。 设 A(x) 和 B(x) 分别是 poly1 和 poly2 表示的多项式。 返回一个长度]]></description>
 </item><item>
+    <title>3506：查找消除细菌菌株所需时间（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3506/</link>
+    <pubDate>Sun, 06 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3506/</guid>
+    <description><![CDATA[力扣第 3506 题 题目 给定一个整数数组 timeReq 和一个整数 splitTime。 在人体微观世界中，免疫系统面临着一项非凡的挑战：对抗快速繁殖的细菌群落，这对身]]></description>
+</item><item>
     <title>3369：设计数组统计跟踪器（★★）</title>
     <link>https://huozhixue.github.io/leetcode/3369/</link>
     <pubDate>Sat, 30 Nov 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3369/</guid>
     <description><![CDATA[力扣第 3369 题 题目 设计一个数据结构来跟踪它其中的值，并回答一些有关其平均值、中位数和众数的询问。 实现 StatisticsTracker 类。 StatisticsTracker()]]></description>
+</item><item>
+    <title>3359：查找最大元素不超过 K 的有序子矩阵（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3359/</link>
+    <pubDate>Wed, 20 Nov 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3359/</guid>
+    <description><![CDATA[力扣第 3359 题 题目 给定一个大小为 m x n 的二维矩阵 grid。同时给定一个 非负整数 k。 返回满足下列条件的 grid 的子矩阵数量： 子矩阵中最大的元素 小于等于 k]]></description>
+</item><item>
+    <title>3329：字符至少出现 K 次的子字符串 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3329/</link>
+    <pubDate>Fri, 25 Oct 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3329/</guid>
+    <description><![CDATA[力扣第 3329 题 题目 给你一个字符串 s 和一个整数 k，在 s 的所有 子字符串 中，请你统计并返回 至少有一个 字符 至少出现 k 次的子字符串总数。 示例 1： 输入： s =]]></description>
+</item><item>
+    <title>3299：连续子序列的和（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3299/</link>
+    <pubDate>Fri, 27 Sep 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3299/</guid>
+    <description><![CDATA[力扣第 3299 题 题目 如果一个长度为 n 的数组 arr 符合下面其中一个条件，可以称它 连续： 对于所有的 1 &lt;= i &lt; n，arr[i] - arr[i - 1] == 1。 对于所有的 1 &lt;= i &lt;]]></description>
 </item><item>
     <title>3231：要删除的递增子序列的最小数量（★★）</title>
     <link>https://huozhixue.github.io/leetcode/3231/</link>
@@ -32,46 +60,18 @@
     <guid>https://huozhixue.github.io/leetcode/3104/</guid>
     <description><![CDATA[力扣第 3104 题 题目 给定字符串 s，你需要找到 s 的 最长自包含 子串 的长度。 如果 s 的一个子串 t 满足 t != s 且 t 中的每一个字符在 s 的剩余部分都不存在，则被称]]></description>
 </item><item>
-    <title>2714：找到 K 次跨越的最短路径（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2714/</link>
-    <pubDate>Mon, 29 May 2023 00:00:00 &#43;0800</pubDate>
+    <title>3037：在无限流中寻找模式 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3037/</link>
+    <pubDate>Wed, 14 Feb 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2714/</guid>
-    <description><![CDATA[力扣第 2714 题 题目 现给定一个正整数 n ，它表示一个 索引从 0 开始的无向带权连接图 的节点数，以及一个 索引从 0 开始的二维数组 edges ，其中 edges[i] = [ui, vi, wi] 表示节点 ui]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3037/</guid>
+    <description><![CDATA[力扣第 3037 题 题目 给定一个二进制数组 pattern 和一个类 InfiniteStream 的对象 stream 表示一个下标从 0 开始的二进制位无限流。 类 InfiniteStream 包含下列函数： int next()：从流中读取 一个 二]]></description>
 </item><item>
-    <title>2702：使数字变为非正数的最小操作次数（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2702/</link>
-    <pubDate>Wed, 24 May 2023 00:00:00 &#43;0800</pubDate>
+    <title>3009：折线图上的最大交点数量（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3009/</link>
+    <pubDate>Tue, 16 Jan 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2702/</guid>
-    <description><![CDATA[力扣第 2702 题 题目 给定一个 下标从0开始 的整数数组 nums，以及两个整数 x 和 y。在每一次操作中，你需要选择一个满足条件 0 &lt;= i &lt; nums.length 的下标 i ，并执行以]]></description>
-</item><item>
-    <title>2613：美数对（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2613/</link>
-    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2613/</guid>
-    <description><![CDATA[力扣第 2613 题 题目 给定两个长度相同的 下标从 0 开始 的整数数组 nums1 和 nums2 ，如果 |nums1[i] - nums1[j]| + |nums2[i] - nums2[j]| 在所有可能的下标对中是最小的，其中 i &lt; j ，则称下标对 (i,j) 为 美 数]]></description>
-</item><item>
-    <title>2123：使矩阵中的 1 互不相邻的最小操作数（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2123/</link>
-    <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2123/</guid>
-    <description><![CDATA[力扣第 2123 题 题目 给你一个 下标从 0 开始 的矩阵 grid。每次操作，你可以把 grid 中的 一个 1 变成 0 。 如果一个矩阵中，没有 1 与其它的 1 四连通（也就是说所有]]></description>
-</item><item>
-    <title>1183：矩阵中 1 的最大数量（★★★）</title>
-    <link>https://huozhixue.github.io/leetcode/1183/</link>
-    <pubDate>Sat, 07 Sep 2019 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1183/</guid>
-    <description><![CDATA[力扣第 8 场双周赛第 4 题 题目 现在有一个尺寸为 width * height 的矩阵 M，矩阵中的每个单元格的值不是 0 就是 1。 而且矩阵 M 中每个大小为 sideLength * sideLength 的 正方形 子阵中，1]]></description>
-</item><item>
-    <title>1055：形成字符串的最短路径（★）</title>
-    <link>https://huozhixue.github.io/leetcode/1055/</link>
-    <pubDate>Mon, 27 May 2019 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1055/</guid>
-    <description><![CDATA[力扣第 1055 题 题目 对于任何字符串，我们可以通过删除其中一些字符（也可能不删除）来构造该字符串的 子序列 。(例如，“ace” 是 “abcde” 的子序列]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3009/</guid>
+    <description><![CDATA[力扣第 3009 题 题目 有一条由 n 个点连接而成的折线图。给定一个 下标从 1 开始 的整数数组 y，第 k 个点的坐标是 (k, y[k])。图中没有水平线，即没有两个相邻]]></description>
 </item></channel>
 </rss>

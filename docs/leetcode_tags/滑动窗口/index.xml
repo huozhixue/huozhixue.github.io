@@ -3,13 +3,34 @@
         <title>滑动窗口 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
         <description>滑动窗口 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Oct 2024 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>3329：字符至少出现 K 次的子字符串 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3329/</link>
+    <pubDate>Fri, 25 Oct 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3329/</guid>
+    <description><![CDATA[力扣第 3329 题 题目 给你一个字符串 s 和一个整数 k，在 s 的所有 子字符串 中，请你统计并返回 至少有一个 字符 至少出现 k 次的子字符串总数。 示例 1： 输入： s =]]></description>
+</item><item>
+    <title>3037：在无限流中寻找模式 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3037/</link>
+    <pubDate>Wed, 14 Feb 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3037/</guid>
+    <description><![CDATA[力扣第 3037 题 题目 给定一个二进制数组 pattern 和一个类 InfiniteStream 的对象 stream 表示一个下标从 0 开始的二进制位无限流。 类 InfiniteStream 包含下列函数： int next()：从流中读取 一个 二]]></description>
+</item><item>
     <title>2902：和带限制的子多重集合的数目（2758 分）</title>
     <link>https://huozhixue.github.io/leetcode/2902/</link>
     <pubDate>Sat, 14 Oct 2023 23:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/2902/</guid>
     <description><![CDATA[力扣第 115 场双周赛第 4 题 题目 给你一个下标从 0 开始的非负整数数组 nums 和两个整数 l 和 r 。 请你返回 nums 中子多重集合的和在闭区间 [l, r] 之间的 子多重集合的数目]]></description>
+</item><item>
+    <title>2524：子数组的最大频率分数（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2524/</link>
+    <pubDate>Tue, 03 Jan 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2524/</guid>
+    <description><![CDATA[力扣第 2524 题 题目 给定一个整数数组 nums 和一个 正 整数 k 。 数组的 频率得分 是数组中 不同 值的 幂次 之和，并将和对 109 + 7 取模。 例如，数组 [5,4,5,7,4,4] 的频率得分为 (43 + 52 +]]></description>
 </item><item>
     <title>2398：预算内的最多机器人数目（1917 分）</title>
     <link>https://huozhixue.github.io/leetcode/2398/</link>
@@ -52,26 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1499/</guid>
     <description><![CDATA[力扣第 195 场周赛第 4 题 题目 给你一个数组 points 和一个整数 k 。数组中每个元素都表示二维平面上的点的坐标，并按照横坐标 x 的值从小到大排序。也就是说 points[i] = [xi,]]></description>
-</item><item>
-    <title>1456：定长子串中元音的最大数目（1263 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1456/</link>
-    <pubDate>Sun, 24 May 2020 10:40:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1456/</guid>
-    <description><![CDATA[力扣第 190 场周赛第 2 题 题目 给你字符串 s 和整数 k 。 请返回字符串 s 中长度为 k 的单个子字符串中可能包含的最大元音字母数。 英文中的 元音字母 为（a, e, i,]]></description>
-</item><item>
-    <title>1438：绝对差不超过限制的最长连续子数组（1672 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1438/</link>
-    <pubDate>Sun, 03 May 2020 10:50:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1438/</guid>
-    <description><![CDATA[力扣第 187 场周赛第 3 题 题目 给你一个整数数组 nums ，和一个表示限制的整数 limit，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对]]></description>
-</item><item>
-    <title>1425：带限制的子序列和（2032 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1425/</link>
-    <pubDate>Sun, 26 Apr 2020 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1425/</guid>
-    <description><![CDATA[力扣第 186 场周赛第 4 题 题目 给你一个整数数组 nums 和一个整数 k ，请你返回 非空 子序列元素和的最大值，子序列需要满足：子序列中每两个 相邻 的整数 nums[i] 和 nums[j] ，它]]></description>
 </item></channel>
 </rss>

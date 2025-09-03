@@ -50,7 +50,40 @@
 
 ## 分析
 
+- [平面最近点对-非分治算法](https://oi.wiki/geometry/nearest-points/#%E9%9D%9E%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95)
+
 ## 解答
 
 
-
+```python
+from sortedcontainers import SortedList
+class Solution:
+    def beautifulPair(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        n = len(nums1)
+        A = [(nums1[i],nums2[i],i) for i in range(n)]
+        res = [inf,n,n]
+        d = {}
+        for a,b,i in A:
+            if (a,b) in d:
+                res = min(res,[0,d[(a,b)],i])
+            d[(a,b)] = i
+        if res[0]==0:
+            return res[1:]
+        A.sort()
+        sl = SortedList()
+        l = 0
+        for x,y,j in A:
+            mi = res[0]
+            while x-A[l][0]>mi:
+                x2,y2,i = A[l]
+                sl.remove((y2,x2,i))
+                l += 1
+            a = sl.bisect_left((y-mi,))
+            b = sl.bisect_left((y+mi+1,))
+            for y2,x2,i in sl[a:b]:
+                w = abs(x2-x)+abs(y2-y)
+                res = min(res,[w]+sorted([i,j]))
+            sl.add((y,x,j))
+        return res[1:]
+```
+111 ms
