@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>3009：折线图上的最大交点数量（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="3009：折线图上的最大交点数量（★★）" />
-<meta property="og:description" content="力扣第 3009 题 题目 有一条由 n 个点连接而成的折线图。给定一个 下标从 1 开始 的整数数组 y，第 k 个点的坐标是 (k, y[k])。图中没有水平线，即没有两个相邻" />
+        <title>3018：可处理的最大删除操作数 I（★★） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="3018：可处理的最大删除操作数 I（★★）" />
+<meta property="og:description" content="力扣第 3018 题 题目 给定一个下标 从 0 开始 的数组 nums 和一个下标 从 0 开始 的数组 queries。 你可以在开始时执行以下操作 最多一次： 用 nums 的 子序列 替换 num" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/3009/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2024-01-16T00:00:00+08:00" />
-<meta property="article:modified_time" content="2024-01-16T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/3018/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2024-01-25T00:00:00+08:00" />
+<meta property="article:modified_time" content="2024-01-25T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="3009：折线图上的最大交点数量（★★）"/>
-<meta name="twitter:description" content="力扣第 3009 题 题目 有一条由 n 个点连接而成的折线图。给定一个 下标从 1 开始 的整数数组 y，第 k 个点的坐标是 (k, y[k])。图中没有水平线，即没有两个相邻"/>
+<meta name="twitter:title" content="3018：可处理的最大删除操作数 I（★★）"/>
+<meta name="twitter:description" content="力扣第 3018 题 题目 给定一个下标 从 0 开始 的数组 nums 和一个下标 从 0 开始 的数组 queries。 你可以在开始时执行以下操作 最多一次： 用 nums 的 子序列 替换 num"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/3009/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/3007/" /><link rel="next" href="https://huozhixue.github.io/leetcode/3018/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/3018/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/3009/" /><link rel="next" href="https://huozhixue.github.io/leetcode/3037/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "3009：折线图上的最大交点数量（★★）",
+        "headline": "3018：可处理的最大删除操作数 I（★★）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/3009\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  514 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/3009\/","datePublished": "2024-01-16T00:00:00+08:00","dateModified": "2024-01-16T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/3018\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  930 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/3018\/","datePublished": "2024-01-25T00:00:00+08:00","dateModified": "2024-01-25T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">3009：折线图上的最大交点数量（★★）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">3018：可处理的最大删除操作数 I（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-16">2024-01-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 514 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/3009/" class="leancloud_visitors" data-flag-title="3009：折线图上的最大交点数量（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-25">2024-01-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 930 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/3018/" class="leancloud_visitors" data-flag-title="3018：可处理的最大删除操作数 I（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -127,36 +127,68 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-intersections-on-the-chart/" target="_blank" rel="noopener noreffer">力扣第 3009 题</a></strong></u></p>
+<p><u><strong><a href="https://leetcode.cn/problems/maximum-number-of-removal-queries-that-can-be-processed-i/" target="_blank" rel="noopener noreffer">力扣第 3018 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>有一条由 <code>n</code> 个点连接而成的折线图。给定一个 <strong>下标从 1 开始 </strong>的整数数组 <code>y</code>，第 <code>k</code> 个点的坐标是 <code>(k, y[k])</code>。图中没有水平线，即没有两个相邻的点有相同的 y 坐标。</p>
-<p>假设在图中任意画一条无限长的水平线。请返回这条水平线与折线相交的最多交点数。</p>
+<p>给定一个下标 <strong>从 0 开始</strong> 的数组 <code>nums</code> 和一个下标 <strong>从</strong> <strong>0 开始 </strong>的数组 <code>queries</code>。</p>
+<p>你可以在开始时执行以下操作 <strong>最多一次</strong>：</p>
+<ul>
+<li>用 <code>nums</code> 的 <span data-keyword="subsequence-array">子序列</span> 替换 <code>nums</code>。</li>
+</ul>
+<p>我们以给定的<code>queries</code>顺序处理查询；对于<code>queries[i]</code>，我们执行以下操作：</p>
+<ul>
+<li>如果 <code>nums</code> 的第一个 <strong>和</strong> 最后一个元素 <strong>小于</strong> <code>queries[i]</code>，则查询处理 <strong>结束</strong>。</li>
+<li>否则，从 <code>nums</code> 选择第一个 <strong>或</strong> 最后一个元素，要求其<strong>大于或等于</strong> <code>queries[i]</code>，然后将其从 <code>nums</code> 中 <strong>删除</strong>。</li>
+</ul>
+<p>返回通过以最佳方式执行该操作可以处理的 <strong>最多 </strong>次数。</p>
 <p><strong class="example">示例 1：</strong></p>
-<strong><a href="https://assets.leetcode.com/static_assets/others/20231208-020549.jpeg"><img alt="" src="https://assets.leetcode.com/static_assets/others/20231208-020549.jpeg" style="padding: 10px; background: rgb(255, 255, 255); border-radius: 0.5rem; height: 217px; width: 600px;" /></a></strong>
 <pre>
-<b>输入：</b>y = [1,2,1,2,1,3,2]
-<b>输出：</b>5
-<b>解释：</b>如上图所示，水平线 y = 1.5 与折线相交了 5 次（用红叉表示）。水平线 y = 2 与折线相交了 4 次（用红叉表示）。可以证明没有其他水平线可以与折线有超过 5 个点相交。因此，答案是 5。
+<strong>输入：</strong>nums = [1,2,3,4,5], queries = [1,2,3,4,6]
+<strong>输出：</strong>4
+<strong>解释：</strong>我们不执行任何操作，并按如下方式处理查询：
+1- 我们选择并移除 nums[0]，因为 1 &lt;= 1，那么 nums 就变成 [2,3,4,5]。
+2- 我们选择并移除 nums[0]，因为 2 &lt;= 2，那么 nums 就变成 [3,4,5]。
+3- 我们选择并移除 nums[0]，因为 3 &lt;= 3，那么 nums 就变成 [4,5]。
+4- 我们选择并移除 nums[0]，因为 4 &lt;= 4，那么 nums 就变成 [5]。
+5- 我们不能从 nums 中选择任何元素，因为它们不大于或等于 5。
+因此，答案为 4。
+可以看出，我们不能处理超过 4 个查询。
 </pre>
 <p><strong class="example">示例 2：</strong></p>
-<strong><img alt="" src="https://assets.leetcode.com/static_assets/others/20231208-020557.jpeg" style="padding: 10px; background: rgb(255, 255, 255); border-radius: 0.5rem; width: 400px; height: 404px;" /></strong>
 <pre>
-<b>输入：</b>y = [2,1,3,4,5]
-<b>输出：</b>2
-<b>解释：</b>如上图所示，水平线 y=1.5 与折线相交了 2 次（用红叉表示）。水平线 y=2 与折线相交了 2 次（用红叉表示）。可以证明没有其他水平线可以与折线有超过 2 个点相交。因此，答案是 2。
+<strong>输入：</strong>nums = [2,3,2], queries = [2,2,3]
+<b>输出：</b>3
+<strong>解释：</strong>我们不做任何操作，按如下方式处理查询：
+1- 我们选择并移除 nums[0]，因为 2 &lt;= 2，那么 nums 就变成 [3,2]。
+2- 我们选择并移除 nums[1]，因为 2 &lt;= 2，那么 nums 就变成 [3]。
+3- 我们选择并移除 nums[0]，因为 3 &lt;= 3，那么 nums 就变成 []。
+因此，答案为 3。
+可以看出，我们不能处理超过 3 个查询。
 </pre>
-<p><b>提示：</b></p>
+<p><strong class="example">示例 3：</strong></p>
+<pre>
+<strong>输入：</strong>nums = [3,4,3], queries = [4,3,2]
+<strong>输出：</strong>2
+<strong>解释：</strong>首先，我们用 nums 的子序列 [4,3] 替换 nums。
+然后，我们可以按如下方式处理查询：
+1- 我们选择并移除 nums[0]，因为 4 &lt;= 4，那么 nums 就变成 [3]。
+2- 我们选择并移除 nums[0]，因为 3 &lt;= 3，那么 nums 就变成 []。
+3- 我们无法处理更多查询，因为 nums 为空。
+因此，答案为 2。
+可以看出，我们不能处理超过 2 个查询。
+</pre>
+<p><strong>提示：</strong></p>
 <ul>
-<li><code>2 &lt;= y.length &lt;= 10<sup>5</sup></code></li>
-<li><code>1 &lt;= y[i] &lt;= 10<sup>9</sup></code></li>
-<li>对于范围 <code>[1, n - 1]</code> 内的所有 <code>i</code>，都有 <code>y[i] != y[i + 1]</code></li>
+<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
+<li><code>1 &lt;= queries.length &lt;= 1000</code></li>
+<li><code>1 &lt;= nums[i], queries[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 <h2 id="分析">分析</h2>
 <ul>
-<li>由于最优的线可能在两点之间，不为整数，考虑将所有 y 坐标乘 2，保证最优线为整数</li>
-<li>然后可以用差分，从 y1 到 y2 的折线，等同于将区间 [y1,y2] 加 1</li>
-<li>注意不能重复统计，比如连续的 y1,y2,y3 的折线，y2 不能加两次</li>
+<li>为了方便，令 A=nums, B=A[::-1]</li>
+<li>令 f[i][j] 代表用 A[:i] 和 B[:j] 能处理的最大次数</li>
+<li>按最后由谁处理即可递推</li>
+<li>注意保证 i+j&lt;=n</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -176,37 +208,41 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maxIntersectionCount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">y</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="n">pairwise</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="k">else</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">):</span> 
-</span></span><span class="line"><span class="cl">            <span class="n">s</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maximumProcessableQueries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">queries</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">queries</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">,</span><span class="n">B</span> <span class="o">=</span> <span class="n">nums</span><span class="p">,</span><span class="n">nums</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">queries</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">j</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">b</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">b</span><span class="o">+</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">queries</span><span class="p">[</span><span class="n">b</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">m</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">m</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">sub</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">f</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>579 ms</p>
+</div><p>3458 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-01-16</span>
+                <span>更新于 2024-01-25</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/3009/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/3018/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -215,14 +251,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>,&nbsp;<a href="/leetcode_tags/%E5%87%A0%E4%BD%95/">几何</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E5%AD%A6/">数学</a>,&nbsp;<a href="/leetcode_tags/%E5%B7%AE%E5%88%86/">差分</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%BC%9A%E5%91%98/">会员</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/3018/" class="prev" rel="prev" title="3018：可处理的最大删除操作数 I（★★）"><i class="fas fa-angle-left fa-fw"></i>3018：可处理的最大删除操作数 I（★★）</a>
-            <a href="/leetcode/3007/" class="next" rel="next" title="3007：价值和小于等于 K 的最大数字（2258 分）">3007：价值和小于等于 K 的最大数字（2258 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/3037/" class="prev" rel="prev" title="3037：在无限流中寻找模式 II（★★）"><i class="fas fa-angle-left fa-fw"></i>3037：在无限流中寻找模式 II（★★）</a>
+            <a href="/leetcode/3009/" class="next" rel="next" title="3009：折线图上的最大交点数量（★★）">3009：折线图上的最大交点数量（★★）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
