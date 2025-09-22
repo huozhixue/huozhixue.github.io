@@ -63,20 +63,20 @@ numArray.sumRange(0, 2); // 返回 1 + 2 + 5 = 8
 {{< lc "0303" >}} 升级版，单点更新+区间查询，可以用树状数组。
 
 ## 解答
+
 ```python
 class BIT:
     def __init__(self, n):
-        self.n = n+1
-        self.t = [0]*(n+1)
+        self.n = n
+        self.t = [0]*n
 
-    def update(self, i, x):
-        i += 1
+    def modify(self,i,x):
         while i<self.n:
             self.t[i] += x
-            i += i&(-i)
+            i += i&-i
 
     def get(self, i):
-        res, i = 0, i+1
+        res = 0
         while i:
             res += self.t[i]
             i &= i-1
@@ -85,20 +85,21 @@ class BIT:
 class NumArray:
 
     def __init__(self, nums: List[int]):
-        self.nums = nums
-        self.tree = BIT(len(nums))
+        n = len(nums)
+        self.bit = BIT(n+1)
         for i,x in enumerate(nums):
-            self.tree.update(i,x)
-
+            self.bit.modify(i+1,x)
+        self.nums = nums
+        
     def update(self, index: int, val: int) -> None:
         add = val-self.nums[index]
+        self.bit.modify(index+1,add)
         self.nums[index] = val
-        self.tree.update(index,add)
-
+        
     def sumRange(self, left: int, right: int) -> int:
-        return self.tree.get(right)-self.tree.get(left-1)
+        return self.bit.get(right+1)-self.bit.get(left)
 ```
-682 ms
+443 ms
 
 ## *附加
 

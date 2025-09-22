@@ -219,106 +219,118 @@ for a in range(m):
 
 ```python []
 class Seg:
-    def __init__(self, N):             
-        self.t = [0]*N*2
+    def __init__(self,n):
+        N = 1<<n.bit_length()
+        self.t = [0]*N*2  
+        self.n = n
 
-    def merge(self,a,b):                  
-        return a+b
-    
-    def up(self,o):
-        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+    def apply(self,o,x):       
+        self.t[o] = x
 
-    def build(self,A,o,l,r):
+    def merge(self,a,b):           
+        return max(a,b)
+
+    def build(self,A,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if l==r:
-            self.t[o] = A[l]
+            self.apply(o,A[l])
             return
         m = (l+r)//2
         self.build(A,o*2,l,m)
         self.build(A,o*2+1,m+1,r)
-        self.up(o)
+        self.pull(o)
 
-    def update(self,a,x,o,l,r):
+    def pull(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+
+    def modify(self,a,x,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if l==r:
-            self.t[o] = x
+            self.apply(o,x)
             return
         m = (l+r)//2
-        if a<=m: self.update(a,x,o*2,l,m)
-        else: self.update(a,x,o*2+1,m+1,r)
-        self.up(o)
-
-    def query(self,a,b,o,l,r):
+        if a<=m: self.modify(a,x,o*2,l,m)
+        else: self.modify(a,x,o*2+1,m+1,r)
+        self.pull(o)
+        
+    def query(self,a,b,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if a<=l and r<=b:
             return self.t[o]
+        res = self.t[0]
         m = (l+r)//2
-        res = 0
         if a<=m: res = self.query(a,b,o*2,l,m)
         if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
         return res
-        
+
+A = []
 n = len(A)
-N = 1<<n.bit_length()
-seg = Seg(N)
-seg.build(A,1,0,n-1)
+seg = Seg(n)
+seg.build(A)
 ```
 
 ### 递归式 区间更新（lazy）
 
-
 ```python
 class Seg:
-    def __init__(self,N):
+    def __init__(self,n):
+        N = 1<<n.bit_length()
         self.t = [0]*N*2
         self.f = [0]*N*2
-
-    def merge(self,a,b):           
-        return a+b
-    
-    def up(self,o):
-        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+        self.n = n
 
     def apply(self,o,x):            
         self.t[o] = x
         self.f[o] = x
 
-    def build(self,A,o,l,r):
+    def merge(self,a,b):           
+        return max(a,b)
+
+    def build(self,A,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if l==r:
-            self.t[o] = A[l]
+            self.apply(o,A[l])
             return
         m = (l+r)//2
         self.build(A,o*2,l,m)
         self.build(A,o*2+1,m+1,r)
-        self.up(o)
+        self.pull(o)
+    
+    def pull(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
 
-    def down(self,o):
+    def push(self,o):
         if self.f[o] != self.f[0]:
             self.apply(o*2,self.f[o])
             self.apply(o*2+1,self.f[o])
             self.f[o] = self.f[0]
 
-    def update(self,a,b,x,o,l,r):
+    def modify(self,a,b,x,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if a<=l and r<=b:
             self.apply(o,x)
             return
-        self.down(o)
+        self.push(o)
         m = (l+r)//2
-        if a<=m: self.update(a,b,x,o*2,l,m)
-        if m<b: self.update(a,b,x,o*2+1,m+1,r)
-        self.up(o)
+        if a<=m: self.modify(a,b,x,o*2,l,m)
+        if m<b: self.modify(a,b,x,o*2+1,m+1,r)
+        self.pull(o)
         
-    def query(self,a,b,o,l,r):
+    def query(self,a,b,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if a<=l and r<=b:
             return self.t[o]
-        self.down(o)
-        res = 0
+        self.push(o)
+        res = self.t[0]
         m = (l+r)//2
         if a<=m: res = self.query(a,b,o*2,l,m)
         if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
         return res
 
+A = []
 n = len(A)
-N = 1<<n.bit_length()
-seg = Seg(N)
-seg.build(A,1,0,n-1)
+seg = Seg(n)
+seg.build(A)
 ```
 
 ### 迭代式 单点更新
