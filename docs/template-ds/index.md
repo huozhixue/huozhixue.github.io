@@ -289,7 +289,7 @@ class Seg:
     def build(self,A,o=1,l=0,r=None):
         r = self.n-1 if r is None else r
         if l==r:
-            self.apply(o,A[l])
+            self.t[o] = A[l]
             return
         m = (l+r)//2
         self.build(A,o*2,l,m)

@@ -58,133 +58,108 @@ rangeModule.queryRange(16, 17); 返回 true （尽管执行了删除操作，区
 
 ### #1
 
-区间修改，区间查询，典型的线段树应用
+- 区间修改，区间查询，典型的线段树应用
+- 值域很大且在线查询，只能用动态开点
 
 ```python
+class Seg:
+    def __init__(self,n):
+        self.t = defaultdict(int)
+        self.f = defaultdict(lambda:-1)
+        self.n = n
+
+    def apply(self,o,x):            
+        self.t[o] = x
+        self.f[o] = x
+
+    def merge(self,a,b):           
+        return a&b
+
+    def pull(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+
+    def push(self,o):
+        if self.f[o] != self.f[0]:
+            self.apply(o*2,self.f[o])
+            self.apply(o*2+1,self.f[o])
+            self.f[o] = self.f[0]
+
+    def modify(self,a,b,x,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if a<=l and r<=b:
+            self.apply(o,x)
+            return
+        self.push(o)
+        m = (l+r)//2
+        if a<=m: self.modify(a,b,x,o*2,l,m)
+        if m<b: self.modify(a,b,x,o*2+1,m+1,r)
+        self.pull(o)
+        
+    def query(self,a,b,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if a<=l and r<=b:
+            return self.t[o]
+        self.push(o)
+        res = 1
+        m = (l+r)//2
+        if a<=m: res = self.query(a,b,o*2,l,m)
+        if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
+        return bool(res)
+
 class RangeModule:
 
     def __init__(self):
-        self.t = defaultdict(int)
-        self.f = defaultdict(lambda:-1)
-    
-    def do(self,o,x):
-        self.t[o] = x
-        self.f[o] = x
-    
-    def down(self,o):
-        if self.f[o]!=-1:
-            self.do(o*2,self.f[o])
-            self.do(o*2+1,self.f[o])
-            self.f[o] = -1
-
-    def update(self,a,b,x,o,l,r):
-        if a<=l and r<=b:
-            self.do(o,x)
-            return 
-        m = (l+r)//2
-        self.down(o)
-        if a<=m: self.update(a,b,x,o*2,l,m)
-        if m<b: self.update(a,b,x,o*2+1,m+1,r)
-        self.t[o] = self.t[o*2]&self.t[o*2+1]
-
-    def query(self,a,b,o,l,r):
-        if a<=l and r<=b:
-            return self.t[o]
-        m = (l+r)//2
-        self.down(o)
-        res = 1
-        if a<=m: res &= self.query(a,b,o*2,l,m)
-        if m<b: res &= self.query(a,b,o*2+1,m+1,r)
-        return res
+        self.seg = Seg(10**9+1)
 
     def addRange(self, left: int, right: int) -> None:
-        self.update(left,right-1,1,1,1,10**9)
-        
+        self.seg.modify(left,right-1,1)
+
     def queryRange(self, left: int, right: int) -> bool:
-        return bool(self.query(left,right-1,1,1,10**9))
-        
+        return self.seg.query(left,right-1)
+
     def removeRange(self, left: int, right: int) -> None:
-        self.update(left,right-1,0,1,1,10**9)
+        self.seg.modify(left,right-1,0)
 ```
-4460 ms
+4806 ms
 
 ### #2
 
-- 类似 {{< lc "0699" >}}，可以用有序集合维护高度的轮廓线
-- 注意连续的相同高度的线段必须合并，保证查询只需要 logN 的时间
-
-```python
-class RangeModule:
-
-    def __init__(self):
-        from sortedcontainers import SortedList
-        self.sl = SortedList()
-
-    def addRange(self, left: int, right: int) -> None:
-        sl = self.sl
-        i = sl.bisect_left((left,))
-        j = sl.bisect_left((right+1,))
-        if j==len(sl) or sl[j][1]==1:
-            sl.add((right,0))
-        del sl[i:j]
-        if i==0 or sl[i-1][1]==0:
-            sl.add((left,1))
-
-    def queryRange(self, left: int, right: int) -> bool:
-        sl = self.sl
-        i = sl.bisect_left((left+1,))-1
-        return i>=0 and sl[i][1]==1 and sl[i+1][0]>=right
-        
-    def removeRange(self, left: int, right: int) -> None:
-        sl = self.sl
-        i = sl.bisect_left((left,))
-        j = sl.bisect_left((right+1,))
-        if j<len(sl) and sl[j][1]==0:
-            sl.add((right,1))
-        del sl[i:j]
-        if i and sl[i-1][1]==1:
-            sl.add((left,0))
-```
-183 ms
-
-### #3
-
-- 因为本题高度只能是 0 或 1，所以直接根据下标的奇偶性即可判断
-- 集合中的偶数下标代表 1 的开始，奇数下标代表 0 的开始，无需保存高度
+- 类似 {{< lc "0699" >}}，可以用珂朵莉树
 
 ## 解答
 
 
 ```python
+def split(sl,x):
+    i = sl.bisect_left((x,))
+    if i<len(sl) and sl[i][0]==x:
+        return i
+    l,r,v = sl.pop(i-1)
+    sl.add((l,x-1,v))
+    sl.add((x,r,v))
+    return i
+
+def update(sl,l,r,x):
+    i,j = split(sl,l),split(sl,r+1)
+    for k in range(j-1,i-1,-1):
+        sl.pop(k)
+    sl.add((l,r,x))
+
 class RangeModule:
 
     def __init__(self):
         from sortedcontainers import SortedList
-        self.sl = SortedList()
-
+        self.sl = SortedList([(1,10**9,0)])
+        
     def addRange(self, left: int, right: int) -> None:
-        sl = self.sl
-        i = sl.bisect_left(left)
-        j = sl.bisect_left(right+1)
-        if j%2==0:
-            sl.add(right)
-        del sl[i:j]
-        if i%2==0:
-            sl.add(left)
-
+        update(self.sl,left,right-1,1)
+        
     def queryRange(self, left: int, right: int) -> bool:
         sl = self.sl
-        i = sl.bisect_left(left+1)-1
-        return i%2==0 and sl[i+1]>=right
+        i,j = split(sl,left),split(sl,right)
+        return all(sl[k][2]==1 for k in range(i,j))
 
     def removeRange(self, left: int, right: int) -> None:
-        sl = self.sl
-        i = sl.bisect_left(left)
-        j = sl.bisect_left(right+1)
-        if j%2 and j<len(sl):
-            sl.add(right)
-        del sl[i:j]
-        if i%2:
-            sl.add(left)
+        update(self.sl,left,right-1,0)
 ```
-108 ms
+754 ms

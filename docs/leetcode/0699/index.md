@@ -61,69 +61,76 @@
 ### #1
 
 - 需要区间修改、区间查询，是线段树的典型应用
-- 值域范围较大，需要动态开点
+- 值域范围较大，需要离散化
 - 维护区间最大值即可
 
 
 ```python
+class Seg:
+    def __init__(self,n):
+        N = 1<<n.bit_length()
+        self.t = [0]*N*2
+        self.f = [0]*N*2
+        self.n = n
+
+    def apply(self,o,x):            
+        self.t[o] = x
+        self.f[o] = x
+
+    def merge(self,a,b):           
+        return max(a,b)
+
+    def pull(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+
+    def push(self,o):
+        if self.f[o] != self.f[0]:
+            self.apply(o*2,self.f[o])
+            self.apply(o*2+1,self.f[o])
+            self.f[o] = self.f[0]
+
+    def modify(self,a,b,x,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if a<=l and r<=b:
+            self.apply(o,x)
+            return
+        self.push(o)
+        m = (l+r)//2
+        if a<=m: self.modify(a,b,x,o*2,l,m)
+        if m<b: self.modify(a,b,x,o*2+1,m+1,r)
+        self.pull(o)
+        
+    def query(self,a,b,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
+        if a<=l and r<=b:
+            return self.t[o]
+        self.push(o)
+        res = 0
+        m = (l+r)//2
+        if a<=m: res = self.query(a,b,o*2,l,m)
+        if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
+        return res
+
 class Solution:
     def fallingSquares(self, positions: List[List[int]]) -> List[int]:
-        def do(o,x):
-            t[o] = max(t[o],x)
-            f[o] = max(f[o],x)
-
-        def down(o):
-            if f[o]:
-                do(o*2,f[o])
-                do(o*2+1,f[o])
-                f[o] = 0
-
-        def update(a,b,x,o,l,r):
-            if a<=l and r<=b:
-                do(o,x)
-                return 
-            m = (l+r)//2
-            down(o)
-            if a<=m: update(a,b,x,o*2,l,m)
-            if m<b: update(a,b,x,o*2+1,m+1,r)
-            t[o] = max(t[o*2],t[o*2+1])
-        
-        def query(a,b,o,l,r):
-            if a<=l and r<=b:
-                return t[o]
-            m = (l+r)//2
-            down(o)
-            res = 0
-            if a<=m: res = query(a,b,o*2,l,m)
-            if m<b: res = max(res,query(a,b,o*2+1,m+1,r))
-            return res
-
-        m = max(l+w-1 for l,w in positions)
-        t = defaultdict(int)
-        f = defaultdict(int)
+        A = sorted({x for l,w in positions for x in [l,l+w-1]})
+        d = {x:i for i,x in enumerate(A)}
+        n = len(A)
+        seg = Seg(n)
         res = []
         for l,w in positions:
             r = l+w-1
-            x = w+query(l,r,1,1,m)
-            update(l,r,x,1,1,m)
-            res.append(t[1])
+            l,r = d[l],d[r]
+            x = w+seg.query(l,r)
+            seg.modify(l,r,x)
+            res.append(seg.t[1])
         return res
 ```
-854 ms
+110 ms
 
 ### #2
 
-- 由于每次区间查询完都会将整个区间重置为一个数，所以也可以用有序集合
-- 令有序集合维护高度的轮廓线，即每一段的起点和高度
-- 新加入方块 [l,r] 时
-	- 先二分找到覆盖的高度线段范围 [i,j]，i 为最后一个起点 <=l 的线段，j 为最后一个起点 <=r 的线段
-	- 遍历得到范围内的最大高度 h，l 处的高度应该变为 h+w
-	- r+1 处的高度有两种情况：
-		- 若 r+1 是线段 j+1 的起点，保持不变
-		- 否则，应该改为 j 线段的高度
-	- 起点在 [l,r] 范围内的线段都应该删除，特别注意：
-		- [i+1,j] 的线段都应删除，i 线段则需要按起点判断是否删除
-		- 删除和添加都会导致有序集合的下标变化，要注意处理，最好删除前先处理 r+1 处的高度，然后从后往前删，保证要处理的下标不变
+区间赋相同值的操作，还可以用珂朵莉树
 
 ## 解答
 
@@ -131,22 +138,27 @@ class Solution:
 class Solution:
     def fallingSquares(self, positions: List[List[int]]) -> List[int]:
         from sortedcontainers import SortedList
-        sl = SortedList([(0,0)])
+        def split(x):
+            i = sl.bisect_left((x,))
+            if i<len(sl) and sl[i][0]==x:
+                return i
+            l,r,v = sl.pop(i-1)
+            sl.add((l,x-1,v))
+            sl.add((x,r,v))
+            return i
+
+        sl = SortedList([(0,10**9,0)])
         res,ma = [],0
         for l,w in positions:
             r = l+w-1
-            i = sl.bisect_left((l+1,))-1
-            j = sl.bisect_left((r+1,))-1
-            if j+1==len(sl) or sl[j+1][0]>r+1:
-                sl.add((r+1,sl[j][1]))
-            h = sl[i][1]
-            for k in range(j,i,-1):
-                h = max(h,sl.pop(k)[1])
-            if sl[i][0]==l:
-                sl.pop(i)
-            sl.add((l,h+w))
+            i = split(l)
+            j = split(r+1)
+            h = 0
+            for k in range(j-1,i-1,-1):
+                h = max(h,sl.pop(k)[2])
+            sl.add((l,r,h+w))
             ma = max(ma,h+w)
             res.append(ma)
         return res
 ```
-39 ms
+63 ms

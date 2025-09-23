@@ -55,7 +55,7 @@ myCalendarThree.book(25, 55); // 返回 3
 
 ## 分析
 
-### #1
+### #1 
 
 查询次数较小，可以直接用差分。
 
@@ -74,39 +74,83 @@ class MyCalendarThree:
 
 ### #2
 
-更通用的是线段树，区间修改并查询。
+也可以用珂朵莉树
+
+```python
+from sortedcontainers import SortedList
+def split(sl,x):
+    i = sl.bisect_left((x,))
+    if i<len(sl) and sl[i][0]==x:
+        return i
+    l,r,v = sl.pop(i-1)
+    sl.add((l,x-1,v))
+    sl.add((x,r,v))
+    return i
+    
+class MyCalendarThree:
+
+    def __init__(self):
+        self.sl = SortedList([(0,10**9,0)])
+        self.s = 0
+        
+    def book(self, startTime: int, endTime: int) -> int:
+        sl = self.sl
+        i,j = split(sl,startTime),split(sl,endTime)
+        for k in range(j-1,i-1,-1):
+            l,r,v = sl.pop(k)
+            sl.add((l,r,v+1))
+            self.s = max(self.s,v+1)
+        return self.s
+```
+204 ms
+
+### #3
+
+- 更通用的是线段树，区间修改并查询
+- 值域很大且在线，只能用动态开点
 ## 解答
 
 
 ```python
-class MyCalendarThree:
-
-    def __init__(self):
+class Seg:
+    def __init__(self,n):
         self.t = defaultdict(int)
         self.f = defaultdict(int)
-    
-    def do(self,o,x):
+        self.n = n
+
+    def apply(self,o,x):            
         self.t[o] += x
         self.f[o] += x
-    
-    def down(self,o):
-        if self.f[o]!=0:
-            self.do(o*2,self.f[o])
-            self.do(o*2+1,self.f[o])
-            self.f[o] = 0
 
-    def update(self,a,b,x,o,l,r):
+    def merge(self,a,b):           
+        return max(a,b)
+
+    def pull(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
+
+    def push(self,o):
+        if self.f[o] != self.f[0]:
+            self.apply(o*2,self.f[o])
+            self.apply(o*2+1,self.f[o])
+            self.f[o] = self.f[0]
+
+    def modify(self,a,b,x,o=1,l=0,r=None):
+        r = self.n-1 if r is None else r
         if a<=l and r<=b:
-            self.do(o,x)
-            return 
+            self.apply(o,x)
+            return
+        self.push(o)
         m = (l+r)//2
-        self.down(o)
-        if a<=m: self.update(a,b,x,o*2,l,m)
-        if m<b: self.update(a,b,x,o*2+1,m+1,r)
-        self.t[o] = max(self.t[o*2],self.t[o*2+1])
+        if a<=m: self.modify(a,b,x,o*2,l,m)
+        if m<b: self.modify(a,b,x,o*2+1,m+1,r)
+        self.pull(o)
+    
+class MyCalendarThree:
+    def __init__(self):
+        self.seg = Seg(10**9+1)
 
-    def book(self, startTime: int, endTime: int) -> int:
-        self.update(startTime,endTime-1,1,1,0,10**9)
-        return self.t[1]
+    def book(self, start: int, end: int) -> int:
+        self.seg.modify(start,end-1,1)
+        return self.seg.t[1]
 ```
-841 ms
+809 ms

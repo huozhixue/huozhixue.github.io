@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0715\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  949 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  795 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0715\/","datePublished": "2016-12-15T00:00:00+08:00","dateModified": "2016-12-15T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0715：Range 模块（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-15">2016-12-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 949 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-15">2016-12-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 795 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0715/" class="leancloud_visitors" data-flag-title="0715：Range 模块（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,7 +126,6 @@
       <ul>
         <li><a href="#1">#1</a></li>
         <li><a href="#2">#2</a></li>
-        <li><a href="#3">#3</a></li>
       </ul>
     </li>
     <li><a href="#解答">解答</a></li>
@@ -174,7 +173,10 @@ rangeModule.queryRange(16, 17); 返回 true （尽管执行了删除操作，区
 </ul>
 <h2 id="分析">分析</h2>
 <h3 id="1">#1</h3>
-<p>区间修改，区间查询，典型的线段树应用</p>
+<ul>
+<li>区间修改，区间查询，典型的线段树应用</li>
+<li>值域很大且在线查询，只能用动态开点</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -221,131 +223,84 @@ rangeModule.queryRange(16, 17); 返回 true （尽管执行了删除操作，区
 </span><span class="lnt">42
 </span><span class="lnt">43
 </span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">RangeModule</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Seg</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">do</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>            
 </span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
 </span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">down</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>           
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">pull</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">o</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">modify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">o</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">r</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">l</span> <span class="ow">and</span> <span class="n">r</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">o</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> 
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">o</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="o">&lt;</span><span class="n">b</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">]</span><span class="o">&amp;</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="o">&lt;</span><span class="n">b</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">o</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">r</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">l</span> <span class="ow">and</span> <span class="n">r</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">o</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">:</span> <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="o">&lt;</span><span class="n">b</span><span class="p">:</span> <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">:</span> <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="o">&lt;</span><span class="n">b</span><span class="p">:</span> <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">o</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">addRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">queryRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">removeRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>4460 ms</p>
-<h3 id="2">#2</h3>
-<ul>
-<li>类似 <a href="/leetcode/0699" title="0699" rel="noopener noreferrer">0699</a>，可以用有序集合维护高度的轮廓线</li>
-<li>注意连续的相同高度的线段必须合并，保证查询只需要 logN 的时间</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">RangeModule</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">RangeModule</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="kn">from</span> <span class="nn">sortedcontainers</span> <span class="kn">import</span> <span class="n">SortedList</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">sl</span> <span class="o">=</span> <span class="n">SortedList</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">seg</span> <span class="o">=</span> <span class="n">Seg</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">addRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">left</span><span class="p">,))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">right</span><span class="o">+</span><span class="mi">1</span><span class="p">,))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">sl</span><span class="p">)</span> <span class="ow">or</span> <span class="n">sl</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">right</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">del</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">left</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">seg</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">queryRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">left</span><span class="o">+</span><span class="mi">1</span><span class="p">,))</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">right</span>
-</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">seg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">removeRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">left</span><span class="p">,))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">right</span><span class="o">+</span><span class="mi">1</span><span class="p">,))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">sl</span><span class="p">)</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">right</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="k">del</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">left</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">seg</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>183 ms</p>
-<h3 id="3">#3</h3>
+</div><p>4806 ms</p>
+<h3 id="2">#2</h3>
 <ul>
-<li>因为本题高度只能是 0 或 1，所以直接根据下标的奇偶性即可判断</li>
-<li>集合中的偶数下标代表 1 的开始，奇数下标代表 0 的开始，无需保存高度</li>
+<li>类似 <a href="/leetcode/0699" title="0699" rel="noopener noreferrer">0699</a>，可以用珂朵莉树</li>
 </ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
@@ -380,41 +335,43 @@ rangeModule.queryRange(16, 17); 返回 true （尽管执行了删除操作，区
 </span><span class="lnt">28
 </span><span class="lnt">29
 </span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">RangeModule</span><span class="p">:</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">((</span><span class="n">x</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">sl</span><span class="p">)</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">l</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="n">l</span><span class="p">),</span><span class="n">split</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sl</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">RangeModule</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="kn">from</span> <span class="nn">sortedcontainers</span> <span class="kn">import</span> <span class="n">SortedList</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">sl</span> <span class="o">=</span> <span class="n">SortedList</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">sl</span> <span class="o">=</span> <span class="n">SortedList</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">)])</span>
+</span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">addRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">right</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">del</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sl</span><span class="p">,</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">queryRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">right</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="n">left</span><span class="p">),</span><span class="n">split</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span><span class="n">right</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">sl</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">removeRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sl</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">bisect_left</span><span class="p">(</span><span class="n">right</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span><span class="o">%</span><span class="mi">2</span> <span class="ow">and</span> <span class="n">j</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">sl</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">del</span> <span class="n">sl</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sl</span><span class="p">,</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>108 ms</p>
+</div><p>754 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -434,7 +391,7 @@ rangeModule.queryRange(16, 17); 返回 true （尽管执行了删除操作，区
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">有序集合</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E8%AE%BE%E8%AE%A1/">设计</a>,&nbsp;<a href="/leetcode_tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">有序集合</a>,&nbsp;<a href="/leetcode_tags/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/">珂朵莉树</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
