@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>字符串模板：字符串匹配 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="字符串模板：字符串匹配" />
-<meta property="og:description" content="1 kmp 前缀函数与 KMP 算法 1 2 3 4 5 6 7 8 9 def kmp(s): n = len(s) pi,j = [0]*n,0 for i in range(1,n): while j&gt;0 and s[i]!=s[j]: j = pi[j-1] j &#43;= s[i]==s[j] pi[i] = j return pi # pi[i]:i结尾的最大真前缀长度 2 manacher Manacher 1 2 3" />
+        <title>算法（一）：位运算 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（一）：位运算" />
+<meta property="og:description" content="位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。 很多位运算的问题" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/template-string_match/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-01-01T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/algo-bit/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-01-01T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="字符串模板：字符串匹配"/>
-<meta name="twitter:description" content="1 kmp 前缀函数与 KMP 算法 1 2 3 4 5 6 7 8 9 def kmp(s): n = len(s) pi,j = [0]*n,0 for i in range(1,n): while j&gt;0 and s[i]!=s[j]: j = pi[j-1] j &#43;= s[i]==s[j] pi[i] = j return pi # pi[i]:i结尾的最大真前缀长度 2 manacher Manacher 1 2 3"/>
+<meta name="twitter:title" content="算法（一）：位运算"/>
+<meta name="twitter:description" content="位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。 很多位运算的问题"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/template-string_match/" /><link rel="prev" href="https://huozhixue.github.io/ds-graph/" /><link rel="next" href="https://huozhixue.github.io/template-string_minimal/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-bit/" /><link rel="prev" href="https://huozhixue.github.io/nlp-bert_family/" /><link rel="next" href="https://huozhixue.github.io/algo-sort/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "字符串模板：字符串匹配",
+        "headline": "算法（一）：位运算",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/template-string_match\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  272 ,
-        "url": "https:\/\/huozhixue.github.io\/template-string_match\/","datePublished": "2023-01-01T00:00:00+08:00","dateModified": "2023-01-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/algo-bit\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  152 ,
+        "url": "https:\/\/huozhixue.github.io\/algo-bit\/","datePublished": "2021-01-01T00:00:00+08:00","dateModified": "2021-01-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">字符串模板：字符串匹配</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（一）：位运算</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-01">2023-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 272 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-string_match/" class="leancloud_visitors" data-flag-title="字符串模板：字符串匹配">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-01">2021-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 152 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-bit/" class="leancloud_visitors" data-flag-title="算法（一）：位运算">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,143 +121,39 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-kmp">1 kmp</a></li>
-    <li><a href="#2-manacher">2 manacher</a></li>
-    <li><a href="#3-z-函数">3 z 函数</a></li>
-    <li><a href="#4-滚动哈希">4 滚动哈希</a></li>
+    <li><a href="#1-基础">1 基础</a></li>
+    <li><a href="#2-进阶">2 进阶</a></li>
+    <li><a href="#3-挑战">3 挑战</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="1-kmp">1 kmp</h2>
+            </div><div class="content" id="content"><p>位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）。</p>
+<p>很多位运算的问题具有较强的技巧性，需要很熟悉各个位运算符的性质。</p>
+<h2 id="1-基础">1 基础</h2>
 <ul>
-<li><a href="https://oi.wiki/string/kmp/" target="_blank" rel="noopener noreffer">前缀函数与 KMP 算法</a></li>
+<li><a href="/leetcode/0136" title="0136" rel="noopener noreferrer">0136</a> 只出现一次的数字</li>
+<li><a href="/leetcode/0191" title="0191" rel="noopener noreferrer">0191</a> 位1的个数</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">kmp</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pi</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">=</span> <span class="n">pi</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">+=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pi</span>              <span class="c1"># pi[i]:i结尾的最大真前缀长度</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="2-manacher">2 manacher</h2>
+<h2 id="2-进阶">2 进阶</h2>
 <ul>
-<li><a href="https://oi.wiki/string/manacher/" target="_blank" rel="noopener noreffer">Manacher</a></li>
+<li><a href="/leetcode/0201" title="0201" rel="noopener noreferrer">0201</a> 数字范围按位与</li>
+<li><a href="/leetcode/0260" title="0260" rel="noopener noreferrer">0260</a> 只出现一次的数字 III</li>
+<li><a href="/leetcode/0338" title="0338" rel="noopener noreferrer">0338</a> 比特位计数</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">manacher</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">	<span class="n">mid</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">a</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">mid</span><span class="o">-</span><span class="n">i</span><span class="p">],</span> <span class="n">r</span><span class="o">-</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">r</span><span class="o">&gt;</span><span class="n">i</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">i</span><span class="o">-</span><span class="n">a</span> <span class="ow">and</span> <span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="p">],</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="o">&gt;</span><span class="n">r</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">mid</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">a</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">B</span>       <span class="c1"># B[i]:i结尾的最大回文子串长度（奇数）</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="3-z-函数">3 z 函数</h2>
+<h2 id="3-挑战">3 挑战</h2>
 <ul>
-<li><a href="https://oi.wiki/string/z-func/" target="_blank" rel="noopener noreffer">Z 函数（扩展 KMP）</a></li>
+<li><a href="/leetcode/0137" title="0137" rel="noopener noreferrer">0137</a> 只出现一次的数字 II</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">zfunc</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">l</span><span class="p">],</span><span class="n">r</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">			<span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">z</span>      <span class="c1"># z[i]:lcp(后缀i,后缀0) </span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="4-滚动哈希">4 滚动哈希</h2>
-<ul>
-<li><a href="https://oi.wiki/string/hash/" target="_blank" rel="noopener noreffer">字符串哈希</a></li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## 滚动哈希</span>
-</span></span><span class="line"><span class="cl"><span class="n">base</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">11</span><span class="o">+</span><span class="mi">13</span>
-</span></span><span class="line"><span class="cl"><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">B</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">base</span><span class="o">%</span><span class="n">mod</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">gen</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">,</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:(</span><span class="n">a</span><span class="o">*</span><span class="n">base</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">pre</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">pre</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">%</span><span class="n">mod</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></div><div class="post-footer" id="post-footer">
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-01-01</span>
+                <span>更新于 2021-01-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/template-string_match/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/algo-bit/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -272,8 +168,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/template-string_minimal/" class="prev" rel="prev" title="字符串模板：最小表示法"><i class="fas fa-angle-left fa-fw"></i>字符串模板：最小表示法</a>
-            <a href="/ds-graph/" class="next" rel="next" title="数据结构（八）：图">数据结构（八）：图<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/algo-sort/" class="prev" rel="prev" title="算法（二）：排序"><i class="fas fa-angle-left fa-fw"></i>算法（二）：排序</a>
+            <a href="/nlp-bert_family/" class="next" rel="next" title="后 BERT 时代小结">后 BERT 时代小结<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

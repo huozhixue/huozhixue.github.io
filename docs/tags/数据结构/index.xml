@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数据结构 - 标签 - 个人博客</title>
+        <link>https://huozhixue.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <description>数据结构 - 标签 - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jan 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="self" type="application/rss+xml" /><item>
+    <title>数据结构（八）：图</title>
+    <link>https://huozhixue.github.io/ds-graph/</link>
+    <pubDate>Sat, 15 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-graph/</guid>
+    <description><![CDATA[图是一种比树形结构更复杂的非线性数据结构 树形结构中的结点是一对多的关系，且有明显的层次关系 图中的顶点是多对多的关系，无明显的层次关系。 按顶点]]></description>
+</item><item>
+    <title>数据结构（六）：树</title>
+    <link>https://huozhixue.github.io/ds-tree/</link>
+    <pubDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-tree/</guid>
+    <description><![CDATA[树是一种非线性的数据结构，本质是节点的有限集。其定义是递归的： 有且仅有一个特定的称为根（root）的节点 当节点数量 &gt; 1 时，其余节点可分为若干]]></description>
+</item><item>
+    <title>数据结构（五）：栈与队列</title>
+    <link>https://huozhixue.github.io/ds-stack/</link>
+    <pubDate>Sun, 09 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-stack/</guid>
+    <description><![CDATA[栈是一个后入先出的数据结构，插入和删除都在末尾进行。python 中一般直接用 list 表示。 队列是一个先入先出的数据结构，插入在末尾，删除在开头。p]]></description>
+</item><item>
+    <title>数据结构（四）：哈希表</title>
+    <link>https://huozhixue.github.io/ds-hash/</link>
+    <pubDate>Fri, 07 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-hash/</guid>
+    <description><![CDATA[哈希表是针对查询，空间换时间的一种数据结构，一般能够在 O(1) 时间内插入、查询、删除元素， 但不能通过下标访问元素。 哈希表分为哈希集合和哈希映射，哈]]></description>
+</item><item>
+    <title>数据结构（三）：字符串</title>
+    <link>https://huozhixue.github.io/ds-string/</link>
+    <pubDate>Wed, 05 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-string/</guid>
+    <description><![CDATA[字符串和数组很相似，具有索引，且元素在内存中是连续存储的。不同的是： 字符串更关心整体或子串，而非单个元素。 字符串可以整体比较，还可以按字典序]]></description>
+</item><item>
+    <title>数据结构（二）：链表</title>
+    <link>https://huozhixue.github.io/ds-linked_list/</link>
+    <pubDate>Mon, 03 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-linked_list/</guid>
+    <description><![CDATA[链表和数组是最基本的数据结构，是其他数据结构的基础。 链表和数组都是线性结构，但在内存中，数组的元素是连续的，而链表不是。 所以链表是把一些分离]]></description>
+</item><item>
+    <title>数据结构（一）：数组</title>
+    <link>https://huozhixue.github.io/ds-array/</link>
+    <pubDate>Sat, 01 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-array/</guid>
+    <description><![CDATA[链表和数组是最基本的数据结构，是其他数据结构的基础。 数组和链表的区别 数组和链表都是线性数据结构，区别在于数组具有索引，数组中的元素在内存中是]]></description>
+</item></channel>
+</rss>

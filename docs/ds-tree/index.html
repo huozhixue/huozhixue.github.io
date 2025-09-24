@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>字符串模板：字符串匹配 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="字符串模板：字符串匹配" />
-<meta property="og:description" content="1 kmp 前缀函数与 KMP 算法 1 2 3 4 5 6 7 8 9 def kmp(s): n = len(s) pi,j = [0]*n,0 for i in range(1,n): while j&gt;0 and s[i]!=s[j]: j = pi[j-1] j &#43;= s[i]==s[j] pi[i] = j return pi # pi[i]:i结尾的最大真前缀长度 2 manacher Manacher 1 2 3" />
+        <title>数据结构（六）：树 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（六）：树" />
+<meta property="og:description" content="树是一种非线性的数据结构，本质是节点的有限集。其定义是递归的： 有且仅有一个特定的称为根（root）的节点 当节点数量 &gt; 1 时，其余节点可分为若干" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/template-string_match/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-01-01T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/ds-tree/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-11T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-01-11T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="字符串模板：字符串匹配"/>
-<meta name="twitter:description" content="1 kmp 前缀函数与 KMP 算法 1 2 3 4 5 6 7 8 9 def kmp(s): n = len(s) pi,j = [0]*n,0 for i in range(1,n): while j&gt;0 and s[i]!=s[j]: j = pi[j-1] j &#43;= s[i]==s[j] pi[i] = j return pi # pi[i]:i结尾的最大真前缀长度 2 manacher Manacher 1 2 3"/>
+<meta name="twitter:title" content="数据结构（六）：树"/>
+<meta name="twitter:description" content="树是一种非线性的数据结构，本质是节点的有限集。其定义是递归的： 有且仅有一个特定的称为根（root）的节点 当节点数量 &gt; 1 时，其余节点可分为若干"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/template-string_match/" /><link rel="prev" href="https://huozhixue.github.io/ds-graph/" /><link rel="next" href="https://huozhixue.github.io/template-string_minimal/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/ds-tree/" /><link rel="prev" href="https://huozhixue.github.io/ds-stack/" /><link rel="next" href="https://huozhixue.github.io/ds-heap/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "字符串模板：字符串匹配",
+        "headline": "数据结构（六）：树",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/template-string_match\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  272 ,
-        "url": "https:\/\/huozhixue.github.io\/template-string_match\/","datePublished": "2023-01-01T00:00:00+08:00","dateModified": "2023-01-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/ds-tree\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  620 ,
+        "url": "https:\/\/huozhixue.github.io\/ds-tree\/","datePublished": "2022-01-11T00:00:00+08:00","dateModified": "2022-01-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">字符串模板：字符串匹配</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（六）：树</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-01">2023-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 272 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-string_match/" class="leancloud_visitors" data-flag-title="字符串模板：字符串匹配">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-11">2022-01-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 620 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/ds-tree/" class="leancloud_visitors" data-flag-title="数据结构（六）：树">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,143 +121,120 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-kmp">1 kmp</a></li>
-    <li><a href="#2-manacher">2 manacher</a></li>
-    <li><a href="#3-z-函数">3 z 函数</a></li>
-    <li><a href="#4-滚动哈希">4 滚动哈希</a></li>
+    <li><a href="#1-基础">1 基础</a>
+      <ul>
+        <li><a href="#11-遍历">1.1 遍历</a></li>
+        <li><a href="#12-递归">1.2 递归</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-进阶">2 进阶</a>
+      <ul>
+        <li><a href="#21-遍历">2.1 遍历</a></li>
+        <li><a href="#22-递归">2.2 递归</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-挑战">3 挑战</a></li>
+    <li><a href="#4-二叉搜索树">*4 二叉搜索树</a>
+      <ul>
+        <li><a href="#41-基础">4.1 基础</a></li>
+        <li><a href="#42-进阶">4.2 进阶</a></li>
+        <li><a href="#43-挑战">4.3 挑战</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-树哈希">*5 树哈希</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="1-kmp">1 kmp</h2>
+            </div><div class="content" id="content"><p>树是一种非线性的数据结构，本质是节点的有限集。其定义是递归的：</p>
 <ul>
-<li><a href="https://oi.wiki/string/kmp/" target="_blank" rel="noopener noreffer">前缀函数与 KMP 算法</a></li>
+<li>有且仅有一个特定的称为根（root）的节点</li>
+<li>当节点数量 &gt; 1 时，其余节点可分为若干个互不相交的有限集，其中每个集合也可以看作一颗树，称之为根的子树。</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">kmp</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pi</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">=</span> <span class="n">pi</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">+=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pi</span>              <span class="c1"># pi[i]:i结尾的最大真前缀长度</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="2-manacher">2 manacher</h2>
+<blockquote>
+<p>从图的观点来看，树也可视为一个拥有 N 个节点和 N-1 条边的一个有向无环图。</p>
+</blockquote>
+<p>树的应用非常广泛，也常和其它数据结构和算法有联系，尤其是递归。</p>
+<h2 id="1-基础">1 基础</h2>
+<h3 id="11-遍历">1.1 遍历</h3>
 <ul>
-<li><a href="https://oi.wiki/string/manacher/" target="_blank" rel="noopener noreffer">Manacher</a></li>
+<li><a href="/leetcode/0094" title="0094" rel="noopener noreferrer">0094</a> 二叉树的中序遍历</li>
+<li><a href="/leetcode/0103" title="0103" rel="noopener noreferrer">0103</a> 二叉树的锯齿形层序遍历</li>
+<li><a href="/leetcode/0144" title="0144" rel="noopener noreferrer">0144</a> 二叉树的前序遍历</li>
+<li><a href="/leetcode/0145" title="0145" rel="noopener noreferrer">0145</a> 二叉树的后序遍历</li>
+<li><a href="/leetcode/0872" title="0872" rel="noopener noreferrer">0872</a> 叶子相似的树</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">manacher</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">	<span class="n">mid</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">a</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">mid</span><span class="o">-</span><span class="n">i</span><span class="p">],</span> <span class="n">r</span><span class="o">-</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">r</span><span class="o">&gt;</span><span class="n">i</span> <span class="k">else</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">i</span><span class="o">-</span><span class="n">a</span> <span class="ow">and</span> <span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">			<span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="p">],</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="n">a</span><span class="o">&gt;</span><span class="n">r</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">mid</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">a</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">B</span>       <span class="c1"># B[i]:i结尾的最大回文子串长度（奇数）</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="3-z-函数">3 z 函数</h2>
+<h3 id="12-递归">1.2 递归</h3>
 <ul>
-<li><a href="https://oi.wiki/string/z-func/" target="_blank" rel="noopener noreffer">Z 函数（扩展 KMP）</a></li>
+<li><a href="/leetcode/0101" title="0101" rel="noopener noreferrer">0101</a> 对称二叉树</li>
+<li><a href="/leetcode/0226" title="0226" rel="noopener noreferrer">0226</a> 翻转二叉树</li>
+<li><a href="/leetcode/0508" title="0508" rel="noopener noreferrer">0508</a> 出现次数最多的子树元素和</li>
+<li><a href="/leetcode/0606" title="0606" rel="noopener noreferrer">0606</a> 根据二叉树创建字符串</li>
+<li><a href="/leetcode/0671" title="0671" rel="noopener noreferrer">0671</a> 二叉树中第二小的节点</li>
+<li><a href="/leetcode/0814" title="0814" rel="noopener noreferrer">0814</a> 二叉树剪枝</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">zfunc</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">l</span><span class="p">],</span><span class="n">r</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">n</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">			<span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">z</span>      <span class="c1"># z[i]:lcp(后缀i,后缀0) </span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="4-滚动哈希">4 滚动哈希</h2>
+<h2 id="2-进阶">2 进阶</h2>
+<h3 id="21-遍历">2.1 遍历</h3>
 <ul>
-<li><a href="https://oi.wiki/string/hash/" target="_blank" rel="noopener noreffer">字符串哈希</a></li>
+<li><a href="/leetcode/0112" title="0112" rel="noopener noreferrer">0112</a> 路径总和</li>
+<li><a href="/leetcode/0113" title="0113" rel="noopener noreferrer">0113</a> 路径总和 II</li>
+<li><a href="/leetcode/0116" title="0116" rel="noopener noreferrer">0116</a> 填充每个节点的下一个右侧节点指针</li>
+<li><a href="/leetcode/0117" title="0117" rel="noopener noreferrer">0117</a> 填充每个节点的下一个右侧节点指针 II</li>
+<li><a href="/leetcode/0655" title="0655" rel="noopener noreferrer">0655</a> 输出二叉树</li>
+<li><a href="/leetcode/0662" title="0662" rel="noopener noreferrer">0662</a> 二叉树最大宽度</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## 滚动哈希</span>
-</span></span><span class="line"><span class="cl"><span class="n">base</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">11</span><span class="o">+</span><span class="mi">13</span>
-</span></span><span class="line"><span class="cl"><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">B</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">base</span><span class="o">%</span><span class="n">mod</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">gen</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">,</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:(</span><span class="n">a</span><span class="o">*</span><span class="n">base</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">pre</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">pre</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">pre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">%</span><span class="n">mod</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></div><div class="post-footer" id="post-footer">
+<h3 id="22-递归">2.2 递归</h3>
+<ul>
+<li><a href="/leetcode/0106" title="0106" rel="noopener noreferrer">0106</a> 从中序与后序遍历序列构造二叉树</li>
+<li><a href="/leetcode/0110" title="0110" rel="noopener noreferrer">0110</a> 平衡二叉树</li>
+<li><a href="/leetcode/0124" title="0124" rel="noopener noreferrer">0124</a> 二叉树中的最大路径和</li>
+<li><a href="/leetcode/0236" title="0236" rel="noopener noreferrer">0236</a> 二叉树的最近公共祖先</li>
+<li><a href="/leetcode/0337" title="0337" rel="noopener noreferrer">0337</a> 打家劫舍 III</li>
+</ul>
+<h2 id="3-挑战">3 挑战</h2>
+<ul>
+<li><a href="/leetcode/0834" title="0834" rel="noopener noreferrer">0834</a> 树中距离之和</li>
+<li><a href="/leetcode/0889" title="0889" rel="noopener noreferrer">0889</a> 根据前序和后序遍历构造二叉树</li>
+</ul>
+<h2 id="4-二叉搜索树">*4 二叉搜索树</h2>
+<h3 id="41-基础">4.1 基础</h3>
+<ul>
+<li><a href="/leetcode/0098" title="0098" rel="noopener noreferrer">0098</a> 验证二叉搜索树</li>
+<li><a href="/leetcode/0108" title="0108" rel="noopener noreferrer">0108</a> 将有序数组转换为二叉搜索树</li>
+<li><a href="/leetcode/0173" title="0173" rel="noopener noreferrer">0173</a> 二叉搜索树迭代器</li>
+<li><a href="/leetcode/0235" title="0235" rel="noopener noreferrer">0235</a> 二叉搜索树的最近公共祖先</li>
+<li><a href="/leetcode/0669" title="0669" rel="noopener noreferrer">0669</a> 修剪二叉搜索树</li>
+<li><a href="/leetcode/0701" title="0701" rel="noopener noreferrer">0701</a> 二叉搜索树中的插入操作</li>
+</ul>
+<h3 id="42-进阶">4.2 进阶</h3>
+<ul>
+<li><a href="/leetcode/0096" title="0096" rel="noopener noreferrer">0096</a> 不同的二叉搜索树</li>
+<li><a href="/leetcode/0095" title="0095" rel="noopener noreferrer">0095</a> 不同的二叉搜索树 II</li>
+<li><a href="/leetcode/0450" title="0450" rel="noopener noreferrer">0450</a> 删除二叉搜索树中的节点</li>
+<li><a href="/leetcode/0501" title="0501" rel="noopener noreferrer">0501</a> 二叉搜索树中的众数</li>
+<li><a href="/leetcode/0530" title="0530" rel="noopener noreferrer">0530</a> 二叉搜索树的最小绝对差</li>
+<li><a href="/leetcode/0538" title="0538" rel="noopener noreferrer">0538</a> 把二叉搜索树转换为累加树</li>
+</ul>
+<h3 id="43-挑战">4.3 挑战</h3>
+<ul>
+<li><a href="/leetcode/0099" title="0099" rel="noopener noreferrer">0099</a> 恢复二叉搜索树</li>
+</ul>
+<h2 id="5-树哈希">*5 树哈希</h2>
+<ul>
+<li><a href="/leetcode/0297" title="0297" rel="noopener noreferrer">0297</a> 二叉树的序列化与反序列化</li>
+<li><a href="/leetcode/0449" title="0449" rel="noopener noreferrer">0449</a> 序列化和反序列化二叉搜索树</li>
+<li><a href="/leetcode/0572" title="0572" rel="noopener noreferrer">0572</a> 另一个树的子树</li>
+<li><a href="/leetcode/0652" title="0652" rel="noopener noreferrer">0652</a> 寻找重复的子树</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-01-01</span>
+                <span>更新于 2022-01-11</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/template-string_match/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/ds-tree/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -266,14 +243,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/template-string_minimal/" class="prev" rel="prev" title="字符串模板：最小表示法"><i class="fas fa-angle-left fa-fw"></i>字符串模板：最小表示法</a>
-            <a href="/ds-graph/" class="next" rel="next" title="数据结构（八）：图">数据结构（八）：图<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/ds-heap/" class="prev" rel="prev" title="数据结构（七）：堆"><i class="fas fa-angle-left fa-fw"></i>数据结构（七）：堆</a>
+            <a href="/ds-stack/" class="next" rel="next" title="数据结构（五）：栈与队列">数据结构（五）：栈与队列<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
