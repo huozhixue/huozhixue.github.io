@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta name="referrer" content="no-referrer" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>算法（零）：基础 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（零）：基础" />
+<meta property="og:description" content="#1 位运算与进位制 位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;） 很" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://huozhixue.github.io/algo-basic/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-01-01T00:00:00+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+
+<meta name="twitter:title" content="算法（零）：基础"/>
+<meta name="twitter:description" content="#1 位运算与进位制 位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;） 很"/>
+<meta name="application-name" content="个人博客">
+<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/algo-basic/" /><link rel="prev" href="https://huozhixue.github.io/nlp-bert_family/" /><link rel="next" href="https://huozhixue.github.io/algo-bit/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "算法（零）：基础",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/huozhixue.github.io\/algo-basic\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  2833 ,
+        "url": "https:\/\/huozhixue.github.io\/algo-basic\/","datePublished": "2021-01-01T00:00:00+08:00","dateModified": "2021-01-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Ian"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/contest/"> 竞赛 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/anime/" title="">动画</a><a class="menu-item" href="/game/" title="">游戏</a><a class="menu-item" href="/leetcode/" title="">力扣</a><a class="menu-item" href="/contest/" title="">竞赛</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
+            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" ></meting-js>
+            <main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（零）：基础</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-01">2021-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2833 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/algo-basic/" class="leancloud_visitors" data-flag-title="算法（零）：基础">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-位运算与进位制">#1 位运算与进位制</a></li>
+    <li><a href="#2-排序">#2 排序</a></li>
+    <li><a href="#3--递归与分治">#3  递归与分治</a></li>
+    <li><a href="#4-dfs与bfs">#4 dfs与bfs</a></li>
+    <li><a href="#5-双指针与滑动窗口">#5 双指针与滑动窗口</a></li>
+    <li><a href="#6-二分与倍增">#6 二分与倍增</a></li>
+    <li><a href="#7-前缀和与差分">#7 前缀和与差分</a></li>
+    <li><a href="#8-贪心与构造">#8 贪心与构造</a></li>
+    <li><a href="#9-dp">#9 dp</a></li>
+    <li><a href="#10-数学">#10 数学</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-位运算与进位制">#1 位运算与进位制</h2>
+<ul>
+<li>
+<p>位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;）</p>
+</li>
+<li>
+<p>很多位运算的问题具有较强的技巧性，需要很熟悉各个位运算符的性质</p>
+</li>
+<li>
+<p><a href="/leetcode/0136" title="0136" rel="noopener noreferrer">0136</a> 只出现一次的数字</p>
+</li>
+<li>
+<p><a href="/leetcode/0191" title="0191" rel="noopener noreferrer">0191</a> 位1的个数</p>
+</li>
+<li>
+<p><a href="/leetcode/0201" title="0201" rel="noopener noreferrer">0201</a> 数字范围按位与</p>
+</li>
+<li>
+<p><a href="/leetcode/0260" title="0260" rel="noopener noreferrer">0260</a> 只出现一次的数字 III</p>
+</li>
+<li>
+<p><a href="/leetcode/0338" title="0338" rel="noopener noreferrer">0338</a> 比特位计数</p>
+</li>
+<li>
+<p><a href="/leetcode/0137" title="0137" rel="noopener noreferrer">0137</a> 只出现一次的数字 II</p>
+</li>
+</ul>
+<h2 id="2-排序">#2 排序</h2>
+<ul>
+<li>最常用的是快速排序、归并排序、堆排序，其思想也不仅应用在排序中</li>
+<li>特别的，当数据范围相对于数据规模较小时，计数排序可能更快。而桶排序的应用较为灵活，能巧妙地解决一些问题。</li>
+<li>解决很多数组问题时，都可以先排序。比如取不重复元组的问题，通用方法是：
+<ul>
+<li>先排序，然后每轮取元素时，相同的数跳过，即可保证元组不重复</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>python 中一般直接调用 sort 函数来排序，采用的是 TimSort算法，一种结合了归并排序和插入排序的混合排序算法。</p>
+</blockquote>
+<ul>
+<li><a href="/leetcode/0021" title="0021" rel="noopener noreferrer">0021</a> 合并两个有序链表</li>
+<li><a href="/leetcode/0506" title="0506" rel="noopener noreferrer">0506</a>  相对名次</li>
+<li><a href="/leetcode/0912" title="0912" rel="noopener noreferrer">0912</a>  排序数组</li>
+<li><a href="/leetcode/1030" title="1030" rel="noopener noreferrer">1030</a>  距离顺序排列矩阵单元格</li>
+<li><a href="/leetcode/0023" title="0023" rel="noopener noreferrer">0023</a> 合并K个升序链表</li>
+<li><a href="/leetcode/0147" title="0147" rel="noopener noreferrer">0147</a> 对链表进行插入排序</li>
+<li><a href="/leetcode/0148" title="0148" rel="noopener noreferrer">0148</a> 排序链表</li>
+<li><a href="/leetcode/0274" title="0274" rel="noopener noreferrer">0274</a> H 指数</li>
+<li><a href="/leetcode/0853" title="0853" rel="noopener noreferrer">0853</a> 车队</li>
+<li><a href="/leetcode/0179" title="0179" rel="noopener noreferrer">0179</a> 最大数</li>
+<li><a href="/leetcode/0215" title="0215" rel="noopener noreferrer">0215</a> 数组中的第K个最大元素</li>
+<li><a href="/leetcode/0164" title="0164" rel="noopener noreferrer">0164</a> 最大间距</li>
+<li><a href="/leetcode/0220" title="0220" rel="noopener noreferrer">0220</a> 存在重复元素 III</li>
+</ul>
+<h2 id="3--递归与分治">#3  递归与分治</h2>
+<ul>
+<li>递归是指函数自己调用自己的语法现象</li>
+<li>一般递归用于将问题不断转化为规模更小的子问题，直到变为可以直接求解的最简单子问题。这也就是分治法的思想。</li>
+</ul>
+<blockquote>
+<p>递归是自顶向下的，思考逻辑比较自然直接，但有时递归层数太多会爆栈。
+所以还需要掌握非递归的写法，也就是自底向上的递推写法。</p>
+</blockquote>
+<ul>
+<li><a href="/leetcode/0050" title="0050" rel="noopener noreferrer">0050</a>  Pow(x, n)</li>
+<li><a href="/leetcode/0078" title="0078" rel="noopener noreferrer">0078</a>  子集</li>
+<li><a href="/leetcode/0779" title="0779" rel="noopener noreferrer">0779</a>  第K个语法符号</li>
+<li><a href="/leetcode/0060" title="0060" rel="noopener noreferrer">0060</a>  排列序列</li>
+<li><a href="/leetcode/0301" title="0301" rel="noopener noreferrer">0301</a>  删除无效的括号</li>
+<li><a href="/leetcode/0372" title="0372" rel="noopener noreferrer">0372</a>  超级次方</li>
+<li><a href="/leetcode/0390" title="0390" rel="noopener noreferrer">0390</a>  消除游戏</li>
+<li><a href="/leetcode/0395" title="0395" rel="noopener noreferrer">0395</a>  至少有 K 个重复字符的最长子串</li>
+<li><a href="/leetcode/0273" title="0273" rel="noopener noreferrer">0273</a>  整数转换英文表示</li>
+<li><a href="/leetcode/1823" title="1823" rel="noopener noreferrer">1823</a>  找出游戏的获胜者</li>
+</ul>
+<h2 id="4-dfs与bfs">#4 dfs与bfs</h2>
+<ul>
+<li>
+<p>dfs（深度优先搜索算法）和 bfs（广度优先搜索算法）都是图形搜索方法，</p>
+</li>
+<li>
+<p>不同的在于 dfs 先尽可能深的搜索一个分支，再尝试别的路径，而 bfs 按离起点的距离一层层搜索。</p>
+</li>
+<li>
+<p>dfs 常借助递归实现，而 bfs 常借助队列实现。</p>
+</li>
+<li>
+<p>dfs 的思想就是回溯，是一种暴力通用解法。有时可以提前判断分支不满足要求，提前返回，被称为剪枝。</p>
+</li>
+<li>
+<p><a href="/leetcode/0022" title="0022" rel="noopener noreferrer">0022</a> 括号生成</p>
+</li>
+<li>
+<p><a href="/leetcode/0045" title="0045" rel="noopener noreferrer">0045</a> 跳跃游戏 II</p>
+</li>
+<li>
+<p><a href="/leetcode/0078" title="0078" rel="noopener noreferrer">0078</a> 子集</p>
+</li>
+<li>
+<p><a href="/leetcode/0386" title="0386" rel="noopener noreferrer">0386</a> 字典序排数</p>
+</li>
+<li>
+<p><a href="/leetcode/0051" title="0051" rel="noopener noreferrer">0051</a> N 皇后</p>
+</li>
+<li>
+<p><a href="/leetcode/0079" title="0079" rel="noopener noreferrer">0079</a> 单词搜索</p>
+</li>
+<li>
+<p><a href="/leetcode/0093" title="0093" rel="noopener noreferrer">0093</a> 复原IP地址</p>
+</li>
+<li>
+<p><a href="/leetcode/0401" title="0401" rel="noopener noreferrer">0401</a> 二进制手表</p>
+</li>
+<li>
+<p><a href="/leetcode/0994" title="0994" rel="noopener noreferrer">0994</a> 腐烂的橘子</p>
+</li>
+<li>
+<p><a href="/leetcode/0037" title="0037" rel="noopener noreferrer">0037</a> 解数独</p>
+</li>
+<li>
+<p><a href="/leetcode/0127" title="0127" rel="noopener noreferrer">0127</a> 单词接龙</p>
+</li>
+<li>
+<p><a href="/leetcode/0529" title="0529" rel="noopener noreferrer">0529</a> 扫雷游戏</p>
+</li>
+</ul>
+<h2 id="5-双指针与滑动窗口">#5 双指针与滑动窗口</h2>
+<ul>
+<li>
+<p>双指针算法一般指两个指针在数组上相向移动来解决问题的算法。</p>
+</li>
+<li>
+<p>双指针算法常应用在具有某种有序性质的问题上，本质上是一种减少了搜索范围的贪心。</p>
+</li>
+<li>
+<p>广义来说，用两个变量在线性结构上遍历来解决问题的方法都可以归为双指针算法。比如链表上的快慢指针、部分滑动窗口问题。</p>
+</li>
+<li>
+<p>用双指针来解决滑动窗口问题时，两个指针同向移动，常应用在某种限制条件下的窗口最值问题。</p>
+</li>
+<li>
+<p><a href="/leetcode/0003" title="0003" rel="noopener noreferrer">0003</a>  无重复字符的最长子串</p>
+</li>
+<li>
+<p><a href="/leetcode/0167" title="0167" rel="noopener noreferrer">0167</a>  两数之和 II - 输入有序数组</p>
+</li>
+<li>
+<p><a href="/leetcode/0209" title="0209" rel="noopener noreferrer">0209</a>  长度最小的子数组</p>
+</li>
+<li>
+<p><a href="/leetcode/0345" title="0345" rel="noopener noreferrer">0345</a>  反转字符串中的元音字母</p>
+</li>
+<li>
+<p><a href="/leetcode/0643" title="0643" rel="noopener noreferrer">0643</a>  子数组最大平均数 I</p>
+</li>
+<li>
+<p><a href="/leetcode/0011" title="0011" rel="noopener noreferrer">0011</a>  盛最多水的容器</p>
+</li>
+<li>
+<p><a href="/leetcode/0016" title="0016" rel="noopener noreferrer">0016</a>  最接近的三数之和</p>
+</li>
+<li>
+<p><a href="/leetcode/0424" title="0424" rel="noopener noreferrer">0424</a>  替换后的最长重复字符</p>
+</li>
+<li>
+<p><a href="/leetcode/0438" title="0438" rel="noopener noreferrer">0438</a>  找到字符串中所有字母异位词</p>
+</li>
+<li>
+<p><a href="/leetcode/0713" title="0713" rel="noopener noreferrer">0713</a>  乘积小于K的子数组</p>
+</li>
+<li>
+<p><a href="/leetcode/0030" title="0030" rel="noopener noreferrer">0030</a>  串联所有单词的子串</p>
+</li>
+<li>
+<p><a href="/leetcode/0042" title="0042" rel="noopener noreferrer">0042</a>  接雨水</p>
+</li>
+<li>
+<p><a href="/leetcode/0076" title="0076" rel="noopener noreferrer">0076</a>  最小覆盖子串</p>
+</li>
+<li>
+<p><a href="/leetcode/0992" title="0992" rel="noopener noreferrer">0992</a>  K 个不同整数的子数组</p>
+</li>
+</ul>
+<h2 id="6-二分与倍增">#6 二分与倍增</h2>
+<ul>
+<li>二分查找是一种针对有序集合的高效查找算法，时间复杂度为 O(logN)</li>
+<li>二分查找每一轮通过检查中间元素，将查找范围缩小一半</li>
+<li>python 中可以直接调用 bisect 来实现二分查找</li>
+</ul>
+<blockquote>
+<p>有时中间元素的判定较为复杂，不是直接比较，可以用 bisect 的 key 实现</p>
+</blockquote>
+<ul>
+<li><a href="/leetcode/0034" title="0034" rel="noopener noreferrer">0034</a>  在排序数组中查找元素的第一个和最后一个位置</li>
+<li><a href="/leetcode/0069" title="0069" rel="noopener noreferrer">0069</a>  x 的平方根</li>
+<li><a href="/leetcode/0074" title="0074" rel="noopener noreferrer">0074</a>  搜索二维矩阵</li>
+<li><a href="/leetcode/0278" title="0278" rel="noopener noreferrer">0278</a>  第一个错误的版本</li>
+<li><a href="/leetcode/0374" title="0374" rel="noopener noreferrer">0374</a>  猜数字大小</li>
+<li><a href="/leetcode/0033" title="0033" rel="noopener noreferrer">0033</a>  搜索旋转排序数组</li>
+<li><a href="/leetcode/0081" title="0081" rel="noopener noreferrer">0081</a>  搜索旋转排序数组 II</li>
+<li><a href="/leetcode/0153" title="0153" rel="noopener noreferrer">0153</a>  寻找旋转排序数组中的最小值</li>
+<li><a href="/leetcode/0154" title="0154" rel="noopener noreferrer">0154</a>  寻找旋转排序数组中的最小值 II</li>
+<li><a href="/leetcode/0162" title="0162" rel="noopener noreferrer">0162</a>  寻找峰值</li>
+<li><a href="/leetcode/0222" title="0222" rel="noopener noreferrer">0222</a>  完全二叉树的节点个数</li>
+<li><a href="/leetcode/0004" title="0004" rel="noopener noreferrer">0004</a>  寻找两个正序数组的中位数</li>
+<li><a href="/leetcode/0209" title="0209" rel="noopener noreferrer">0209</a>  长度最小的子数组</li>
+</ul>
+<h2 id="7-前缀和与差分">#7 前缀和与差分</h2>
+<ul>
+<li>
+<p>前缀和是一种常用的解决区间查询问题的算法。</p>
+</li>
+<li>
+<p>当数组固定时，根据前缀和即可在 O(1) 时间查询任意区间的和。</p>
+</li>
+<li>
+<p><a href="/leetcode/0303" title="0303" rel="noopener noreferrer">0303</a> 区域和检索 - 数组不可变</p>
+</li>
+<li>
+<p><a href="/leetcode/0134" title="0134" rel="noopener noreferrer">0134</a> 加油站</p>
+</li>
+<li>
+<p><a href="/leetcode/0304" title="0304" rel="noopener noreferrer">0304</a> 二维区域和检索 - 矩阵不可变</p>
+</li>
+</ul>
+<h2 id="8-贪心与构造">#8 贪心与构造</h2>
+<ul>
+<li>
+<p>贪心算法是一种高效的搜索方法。在每一步，都选择当前最好的分支，最终即能得到最优解。</p>
+</li>
+<li>
+<p>能用贪心算法解决的问题，对于贪心正确性的证明往往更加复杂。因此很多时候需要依赖一定的直觉才能想到贪心策略，即先构造后证明。</p>
+</li>
+<li>
+<p>而有些不能用贪心解决的问题，如果对用例的考虑不够周全，容易错误地采用贪心策略。因此使用贪心一定要慎重。</p>
+</li>
+<li>
+<p><a href="/leetcode/0502" title="0502" rel="noopener noreferrer">0502</a> IPO</p>
+</li>
+<li>
+<p><a href="/leetcode/0871" title="0871" rel="noopener noreferrer">0871</a> 最低加油次数</p>
+</li>
+<li>
+<p><a href="/leetcode/1642" title="1642" rel="noopener noreferrer">1642</a> 可以到达的最远建筑</p>
+</li>
+<li>
+<p><a href="/leetcode/1792" title="1792" rel="noopener noreferrer">1792</a> 最大平均通过率</p>
+</li>
+<li>
+<p><a href="/leetcode/0402" title="0402" rel="noopener noreferrer">0402</a> 移掉K位数字</p>
+</li>
+<li>
+<p><a href="/leetcode/0406" title="0406" rel="noopener noreferrer">0406</a> 根据身高重建队列</p>
+</li>
+<li>
+<p><a href="/leetcode/1705" title="1705" rel="noopener noreferrer">1705</a> 吃苹果的最大数目</p>
+</li>
+<li>
+<p><a href="/leetcode/0316" title="0316" rel="noopener noreferrer">0316</a> 去除重复字母</p>
+</li>
+<li>
+<p><a href="/leetcode/0321" title="0321" rel="noopener noreferrer">0321</a> 拼接最大数</p>
+</li>
+</ul>
+<h2 id="9-dp">#9 dp</h2>
+<ul>
+<li>动态规划是一种特殊的递归，适用于有重叠子问题的场景</li>
+<li>动态规划也有递归和非递归两种形式。递归形式的动态规划也叫记忆化递归。</li>
+</ul>
+<blockquote>
+<p>python 在递归函数上加一个 @lru_cache(None) 的装饰器即可实现记忆化递归。非递归形式一般初始化一个 k（动态参数个数）维的数组保存子问题的结果。</p>
+<p>递归层数太多时容易爆栈，用非递归形式更好。但有时所求问题只会用到稀疏的子问题，此时用递归形式更节省时间。</p>
+</blockquote>
+<ul>
+<li><a href="/leetcode/0062" title="0062" rel="noopener noreferrer">0062</a> 不同路径</li>
+<li><a href="/leetcode/0070" title="0070" rel="noopener noreferrer">0070</a> 爬楼梯</li>
+<li><a href="/leetcode/0096" title="0096" rel="noopener noreferrer">0096</a> 不同的二叉搜索树</li>
+<li><a href="/leetcode/0279" title="0279" rel="noopener noreferrer">0279</a> 完全平方数</li>
+<li><a href="/leetcode/0397" title="0397" rel="noopener noreferrer">0397</a> 整数替换</li>
+<li><a href="/leetcode/0509" title="0509" rel="noopener noreferrer">0509</a> 斐波那契数</li>
+<li><a href="/leetcode/0338" title="0338" rel="noopener noreferrer">0338</a> 比特位计数</li>
+<li><a href="/leetcode/0343" title="0343" rel="noopener noreferrer">0343</a> 整数拆分</li>
+<li><a href="/leetcode/0790" title="0790" rel="noopener noreferrer">0790</a> 多米诺和托米诺平铺</li>
+<li><a href="/leetcode/0552" title="0552" rel="noopener noreferrer">0552</a> 学生出勤记录 II</li>
+<li><a href="/leetcode/0005" title="0005" rel="noopener noreferrer">0005</a> 最长回文子串</li>
+<li><a href="/leetcode/0135" title="0135" rel="noopener noreferrer">0135</a> 分发糖果</li>
+<li><a href="/leetcode/0264" title="0264" rel="noopener noreferrer">0264</a> 丑数 II</li>
+<li><a href="/leetcode/0053" title="0053" rel="noopener noreferrer">0053</a> 最大子序和</li>
+<li><a href="/leetcode/0152" title="0152" rel="noopener noreferrer">0152</a> 乘积最大子数组</li>
+<li><a href="/leetcode/0413" title="0413" rel="noopener noreferrer">0413</a> 等差数列划分</li>
+<li><a href="/leetcode/0467" title="0467" rel="noopener noreferrer">0467</a> 环绕字符串中唯一的子字符串</li>
+<li><a href="/leetcode/0689" title="0689" rel="noopener noreferrer">0689</a> 三个无重叠子数组的最大和</li>
+<li><a href="/leetcode/0329" title="0329" rel="noopener noreferrer">0329</a> 矩阵中的最长递增路径</li>
+<li><a href="/leetcode/0576" title="0576" rel="noopener noreferrer">0576</a> 出界的路径数</li>
+<li><a href="/leetcode/0688" title="0688" rel="noopener noreferrer">0688</a> 骑士在棋盘上的概率</li>
+<li><a href="/leetcode/0764" title="0764" rel="noopener noreferrer">0764</a> 最大加号标志</li>
+<li><a href="/leetcode/0174" title="0174" rel="noopener noreferrer">0174</a> 地下城游戏</li>
+<li><a href="/leetcode/0221" title="0221" rel="noopener noreferrer">0221</a> 最大正方形</li>
+<li><a href="/leetcode/0741" title="0741" rel="noopener noreferrer">0741</a> 摘樱桃</li>
+<li><a href="/leetcode/0005" title="0005" rel="noopener noreferrer">0005</a> 最长回文子串</li>
+<li><a href="/leetcode/0516" title="0516" rel="noopener noreferrer">0516</a> 最长回文子序列</li>
+<li><a href="/leetcode/0087" title="0087" rel="noopener noreferrer">0087</a> 扰乱字符串</li>
+<li><a href="/leetcode/0664" title="0664" rel="noopener noreferrer">0664</a> 奇怪的打印机</li>
+<li><a href="/leetcode/0312" title="0312" rel="noopener noreferrer">0312</a> 戳气球</li>
+<li><a href="/leetcode/0375" title="0375" rel="noopener noreferrer">0375</a> 猜数字大小 II</li>
+<li><a href="/leetcode/0546" title="0546" rel="noopener noreferrer">0546</a> 移除盒子</li>
+<li><a href="/leetcode/0730" title="0730" rel="noopener noreferrer">0730</a> 统计不同回文子序列
+子序列</li>
+<li><a href="/leetcode/0300" title="0300" rel="noopener noreferrer">0300</a> 最长递增子序列</li>
+<li><a href="/leetcode/0354" title="0354" rel="noopener noreferrer">0354</a> 俄罗斯套娃信封问题</li>
+<li><a href="/leetcode/0368" title="0368" rel="noopener noreferrer">0368</a> 最大整除子集</li>
+<li><a href="/leetcode/0376" title="0376" rel="noopener noreferrer">0376</a> 摆动序列</li>
+<li><a href="/leetcode/0673" title="0673" rel="noopener noreferrer">0673</a> 最长递增子序列的个数
+股票</li>
+<li><a href="/leetcode/0121" title="0121" rel="noopener noreferrer">0121</a> 买卖股票的最佳时机</li>
+<li><a href="/leetcode/0122" title="0122" rel="noopener noreferrer">0122</a> 买卖股票的最佳时机 II</li>
+<li><a href="/leetcode/0123" title="0123" rel="noopener noreferrer">0123</a> 买卖股票的最佳时机 III</li>
+<li><a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a> 买卖股票的最佳时机 IV</li>
+<li><a href="/leetcode/0309" title="0309" rel="noopener noreferrer">0309</a> 最佳买卖股票时机含冷冻期</li>
+<li><a href="/leetcode/0714" title="0714" rel="noopener noreferrer">0714</a> 买卖股票的最佳时机含手续费
+背包</li>
+<li><a href="/leetcode/0474" title="0474" rel="noopener noreferrer">0474</a> 一和零</li>
+<li><a href="/leetcode/0518" title="0518" rel="noopener noreferrer">0518</a> 零钱兑换 II</li>
+<li><a href="/leetcode/0638" title="0638" rel="noopener noreferrer">0638</a> 大礼包</li>
+<li><a href="/leetcode/0691" title="0691" rel="noopener noreferrer">0691</a> 贴纸拼词</li>
+</ul>
+<p>状压</p>
+<ul>
+<li><a href="/leetcode/0416" title="0416" rel="noopener noreferrer">0416</a> 分割等和子集</li>
+<li><a href="/leetcode/0473" title="0473" rel="noopener noreferrer">0473</a> 火柴拼正方形</li>
+<li><a href="/leetcode/0526" title="0526" rel="noopener noreferrer">0526</a> 优美的排列</li>
+<li><a href="/leetcode/0698" title="0698" rel="noopener noreferrer">0698</a> 划分为k个相等的子集</li>
+<li><a href="/leetcode/0805" title="0805" rel="noopener noreferrer">0805</a> 数组的均值分割</li>
+</ul>
+<p>优化</p>
+<ul>
+<li><a href="/leetcode/0808" title="0808" rel="noopener noreferrer">0808</a> 分汤</li>
+<li><a href="/leetcode/0629" title="0629" rel="noopener noreferrer">0629</a> K个逆序对数组</li>
+<li><a href="/leetcode/0813" title="0813" rel="noopener noreferrer">0813</a> 最大平均值和的分组</li>
+<li><a href="/leetcode/0514" title="0514" rel="noopener noreferrer">0514</a> 自由之路</li>
+<li><a href="/leetcode/0264" title="0264" rel="noopener noreferrer">0264</a> 丑数 II</li>
+<li><a href="/leetcode/0300" title="0300" rel="noopener noreferrer">0300</a> 最长递增子序列</li>
+<li><a href="/leetcode/0313" title="0313" rel="noopener noreferrer">0313</a> 超级丑数</li>
+<li><a href="/leetcode/0673" title="0673" rel="noopener noreferrer">0673</a> 最长递增子序列的个数</li>
+<li><a href="/leetcode/0805" title="0805" rel="noopener noreferrer">0805</a> 数组的均值分割</li>
+</ul>
+<h2 id="10-数学">#10 数学</h2>
+<ul>
+<li>
+<p>一些问题涉及到数学的代数知识：</p>
+<ul>
+<li>基础的四则运算、平方开根、进制转换等</li>
+<li>排列组合、概率统计</li>
+<li>数论知识，包括质数、同余、因式分解、乘法逆元等</li>
+</ul>
+</li>
+<li>
+<p>一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。</p>
+</li>
+<li>
+<p><a href="/leetcode/0007" title="0007" rel="noopener noreferrer">0007</a> 整数反转</p>
+</li>
+<li>
+<p><a href="/leetcode/0050" title="0050" rel="noopener noreferrer">0050</a> Pow(x, n)</p>
+</li>
+<li>
+<p><a href="/leetcode/0069" title="0069" rel="noopener noreferrer">0069</a> x 的平方根</p>
+</li>
+<li>
+<p><a href="/leetcode/0102" title="0102" rel="noopener noreferrer">0102</a> 整数转罗马数字</p>
+</li>
+<li>
+<p><a href="/leetcode/0171" title="0171" rel="noopener noreferrer">0171</a> Excel 表列序号</p>
+</li>
+<li>
+<p><a href="/leetcode/0029" title="0029" rel="noopener noreferrer">0029</a> 两数相除</p>
+</li>
+<li>
+<p><a href="/leetcode/0043" title="0043" rel="noopener noreferrer">0043</a> 字符串相乘</p>
+</li>
+<li>
+<p><a href="/leetcode/0168" title="0168" rel="noopener noreferrer">0168</a> Excel 表列名称</p>
+</li>
+<li>
+<p><a href="/leetcode/0202" title="0202" rel="noopener noreferrer">0202</a> 快乐数</p>
+</li>
+<li>
+<p><a href="/leetcode/0367" title="0367" rel="noopener noreferrer">0367</a> 有效的完全平方数</p>
+</li>
+<li>
+<p><a href="/leetcode/0400" title="0400" rel="noopener noreferrer">0400</a> 第 N 位数字</p>
+</li>
+<li>
+<p><a href="/leetcode/0829" title="0829" rel="noopener noreferrer">0829</a> 连续整数求和</p>
+</li>
+<li>
+<p><a href="/leetcode/0166" title="0166" rel="noopener noreferrer">0166</a> 分数到小数</p>
+</li>
+<li>
+<p><a href="/leetcode/0169" title="0169" rel="noopener noreferrer">0169</a> 多数元素</p>
+</li>
+<li>
+<p><a href="/leetcode/0229" title="0229" rel="noopener noreferrer">0229</a> 求众数 II</p>
+</li>
+<li>
+<p><a href="/leetcode/0273" title="0273" rel="noopener noreferrer">0273</a> 整数转换英文表示</p>
+</li>
+<li>
+<p><a href="/leetcode/0343" title="0343" rel="noopener noreferrer">0343</a> 整数拆分</p>
+</li>
+</ul>
+<p>排列组合</p>
+<ul>
+<li><a href="/leetcode/0062" title="0062" rel="noopener noreferrer">0062</a> 不同路径</li>
+<li><a href="/leetcode/0119" title="0119" rel="noopener noreferrer">0119</a> 杨辉三角 II</li>
+<li><a href="/leetcode/0357" title="0357" rel="noopener noreferrer">0357</a> 计算各个位数不同的数字个数</li>
+<li><a href="/leetcode/0060" title="0060" rel="noopener noreferrer">0060</a> 排列序列</li>
+<li><a href="/leetcode/0096" title="0096" rel="noopener noreferrer">0096</a> 不同的二叉搜索树</li>
+<li><a href="/leetcode/0902" title="0902" rel="noopener noreferrer">0902</a> 最大为 N 的数字组合</li>
+<li><a href="/leetcode/1012" title="1012" rel="noopener noreferrer">1012</a> 至少有 1 位重复的数字</li>
+<li><a href="/leetcode/1916" title="1916" rel="noopener noreferrer">1916</a> 统计为蚁群构筑房间的不同顺序
+概率统计</li>
+<li><a href="/leetcode/0382" title="0382" rel="noopener noreferrer">0382</a> 链表随机节点</li>
+<li><a href="/leetcode/0384" title="0384" rel="noopener noreferrer">0384</a> 打乱数组</li>
+<li><a href="/leetcode/0398" title="0398" rel="noopener noreferrer">0398</a> 随机数索引</li>
+<li><a href="/leetcode/0470" title="0470" rel="noopener noreferrer">0470</a> 用 Rand7() 实现 Rand10()</li>
+<li><a href="/leetcode/0478" title="0478" rel="noopener noreferrer">0478</a> 在圆内随机生成点
+数论</li>
+<li><a href="/leetcode/0172" title="0172" rel="noopener noreferrer">0172</a> 阶乘后的零</li>
+<li><a href="/leetcode/0231" title="0231" rel="noopener noreferrer">0231</a> 2 的幂</li>
+<li><a href="/leetcode/0258" title="0258" rel="noopener noreferrer">0258</a> 各位相加</li>
+<li><a href="/leetcode/0263" title="0263" rel="noopener noreferrer">0263</a> 丑数</li>
+<li><a href="/leetcode/0914" title="0914" rel="noopener noreferrer">0914</a> 卡牌分组</li>
+<li><a href="/leetcode/1250" title="1250" rel="noopener noreferrer">1250</a> 检查「好数组」</li>
+<li><a href="/leetcode/0204" title="0204" rel="noopener noreferrer">0204</a> 计数质数</li>
+<li><a href="/leetcode/0279" title="0279" rel="noopener noreferrer">0279</a> 完全平方数</li>
+<li><a href="/leetcode/0319" title="0319" rel="noopener noreferrer">0319</a> 灯泡开关</li>
+<li><a href="/leetcode/0365" title="0365" rel="noopener noreferrer">0365</a> 水壶问题</li>
+<li><a href="/leetcode/0650" title="0650" rel="noopener noreferrer">0650</a> 只有两个键的键盘</li>
+<li><a href="/leetcode/0866" title="0866" rel="noopener noreferrer">0866</a> 回文素数</li>
+<li><a href="/leetcode/1819" title="1819" rel="noopener noreferrer">1819</a> 序列中不同最大公约数的数目</li>
+<li><a href="/leetcode/2183" title="2183" rel="noopener noreferrer">2183</a> 统计可以被 K 整除的下标对数目
+几何</li>
+<li><a href="/leetcode/0223" title="0223" rel="noopener noreferrer">0223</a> 矩形面积</li>
+<li><a href="/leetcode/0149" title="0149" rel="noopener noreferrer">0149</a> 直线上最多的点数</li>
+<li><a href="/leetcode/0335" title="0335" rel="noopener noreferrer">0335</a> 路径交叉
+扫描线</li>
+<li><a href="/leetcode/0218" title="0218" rel="noopener noreferrer">0218</a> 天际线问题</li>
+<li><a href="/leetcode/0391" title="0391" rel="noopener noreferrer">0391</a> 完美矩形</li>
+<li><a href="/leetcode/0850" title="0850" rel="noopener noreferrer">0850</a> 矩形面积 II</li>
+<li><a href="/leetcode/1851" title="1851" rel="noopener noreferrer">1851</a> 包含每个查询的最小区间</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-01-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/algo-basic/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/algo-bit/" class="prev" rel="prev" title="算法（一）：位运算"><i class="fas fa-angle-left fa-fw"></i>算法（一）：位运算</a>
+            <a href="/nlp-bert_family/" class="next" rel="next" title="后 BERT 时代小结">后 BERT 时代小结<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript>
+            <script>
+                window.config.data['valine'] = {"valine":{"appId":"A8FBH0dQFe6KhMO2bSl9VenP-gzGzoHsz","appKey":"PKTz50I8k8AbXtE3dKA50Qpp","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}}.valine;
+            </script></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.106.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/mapbox-gl/mapbox-gl.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/abbangumi/abbangumi.css"><link rel="stylesheet" href="/lib/flexslider/flexslider.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/echarts/echarts.min.js"></script><script type="text/javascript" src="/lib/echarts/macarons.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl-language.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/flexslider/jquery.flexslider.js"></script><link rel="stylesheet" href="/css/index.css">
+<script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"valine":{"appId":"A8FBH0dQFe6KhMO2bSl9VenP-gzGzoHsz","appKey":"PKTz50I8k8AbXtE3dKA50Qpp","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"mapbox":{"RTLTextPlugin":"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js","accessToken":"pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"JV81838M8P","algoliaIndex":"blog","algoliaSearchKey":"ca1b2e648cc573a011423af837810e7b","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
+<script src="/js/jquery.pjax.min.js"></script>
+<script src="/js/autoload.js"></script>
+<script src="/js/theme.js"></script></body>
+</html>
