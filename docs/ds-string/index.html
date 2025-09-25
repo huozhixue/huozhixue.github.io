@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>数据结构（三）：字符串 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（三）：字符串" />
-<meta property="og:description" content="字符串和数组很相似，具有索引，且元素在内存中是连续存储的。不同的是： 字符串更关心整体或子串，而非单个元素。 字符串可以整体比较，还可以按字典序" />
+        <title>数据结构（二）：字符串 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（二）：字符串" />
+<meta property="og:description" content="#1 字符串匹配 滚动哈希是一种针对固定长度的滑动窗口的哈希方法 滚动哈希递推求得相邻窗口的哈希值 一般采用 Rabin-Karp 算法来实现滚动哈希。核心思想就是将窗口 W" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/ds-string/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-05T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-01-05T00:00:00+08:00" />
+<meta property="article:published_time" content="2022-03-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-03-01T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="数据结构（三）：字符串"/>
-<meta name="twitter:description" content="字符串和数组很相似，具有索引，且元素在内存中是连续存储的。不同的是： 字符串更关心整体或子串，而非单个元素。 字符串可以整体比较，还可以按字典序"/>
+<meta name="twitter:title" content="数据结构（二）：字符串"/>
+<meta name="twitter:description" content="#1 字符串匹配 滚动哈希是一种针对固定长度的滑动窗口的哈希方法 滚动哈希递推求得相邻窗口的哈希值 一般采用 Rabin-Karp 算法来实现滚动哈希。核心思想就是将窗口 W"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/ds-string/" /><link rel="prev" href="https://huozhixue.github.io/ds-linked_list/" /><link rel="next" href="https://huozhixue.github.io/ds-hash/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/ds-string/" /><link rel="prev" href="https://huozhixue.github.io/ds-linked/" /><link rel="next" href="https://huozhixue.github.io/ds-stack/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "数据结构（三）：字符串",
+        "headline": "数据结构（二）：字符串",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/ds-string\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  330 ,
-        "url": "https:\/\/huozhixue.github.io\/ds-string\/","datePublished": "2022-01-05T00:00:00+08:00","dateModified": "2022-01-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  400 ,
+        "url": "https:\/\/huozhixue.github.io\/ds-string\/","datePublished": "2022-03-01T00:00:00+08:00","dateModified": "2022-03-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（三）：字符串</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（二）：字符串</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-05">2022-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 330 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-string/" class="leancloud_visitors" data-flag-title="数据结构（三）：字符串">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-01">2022-03-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 400 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-string/" class="leancloud_visitors" data-flag-title="数据结构（二）：字符串">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,69 +121,61 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-基础">1 基础</a></li>
-    <li><a href="#2-进阶">2 进阶</a></li>
-    <li><a href="#3-挑战">3 挑战</a></li>
-    <li><a href="#4-正则表达式">4 正则表达式</a></li>
-    <li><a href="#5-字符串匹配">*5 字符串匹配</a></li>
+    <li><a href="#1-字符串匹配">#1 字符串匹配</a></li>
+    <li><a href="#字典树">字典树</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>字符串和数组很相似，具有索引，且元素在内存中是连续存储的。不同的是：</p>
+            </div><div class="content" id="content"><h2 id="1-字符串匹配">#1 字符串匹配</h2>
 <ul>
-<li>字符串更关心整体或子串，而非单个元素。</li>
-<li>字符串可以整体比较，还可以按字典序等来排序。</li>
+<li>滚动哈希是一种针对固定长度的滑动窗口的哈希方法</li>
+<li>滚动哈希递推求得相邻窗口的哈希值</li>
+<li>一般采用 Rabin-Karp 算法来实现滚动哈希。核心思想就是将窗口 W 看作是一个 base 进制的数：
+$$hash(W)=\sum_{i=0}^{|W|-1}base^{|W|-(i+1)}*W[i]$$</li>
+<li>base 取一个大于元素范围的数，该 base 进制的数就唯一对应一个窗口。</li>
 </ul>
 <blockquote>
-<p>python 中的字符串是不可变的，不能直接修改、添加、删除元素，而应该用切片。</p>
+<p>特别注意，当哈希值很大必须要取模时，为了尽量避免哈希冲突，base 取一个大于 <strong>元素种数</strong> 的 <strong>质数</strong>，而mod 应该取一个大于 <strong>窗口种数^2</strong> 的 <strong>质数</strong>。</p>
 </blockquote>
-<p>经典的问题有：</p>
 <ul>
-<li>字符串匹配，常用 KMP算法、正则表达式。</li>
-<li>回文串，常用 Manacher 算法。</li>
-</ul>
-<blockquote>
-<p>额外的，还常用 <a href="/algorithm-trie" rel="">字典树</a> 解决多字符串匹配问题，这里暂不涉及</p>
-</blockquote>
-<h2 id="1-基础">1 基础</h2>
-<ul>
-<li><a href="/leetcode/0009" title="0009" rel="noopener noreferrer">0009</a> 回文数</li>
-<li><a href="/leetcode/0165" title="0165" rel="noopener noreferrer">0165</a> 比较版本号</li>
-<li><a href="/leetcode/0392" title="0392" rel="noopener noreferrer">0392</a> 判断子序列</li>
-<li><a href="/leetcode/0831" title="0831" rel="noopener noreferrer">0831</a> 隐藏个人信息</li>
-<li><a href="/leetcode/1169" title="1169" rel="noopener noreferrer">1169</a> 查询无效交易</li>
-</ul>
-<h2 id="2-进阶">2 进阶</h2>
-<ul>
-<li><a href="/leetcode/0068" title="0068" rel="noopener noreferrer">0068</a> 文本左右对齐</li>
-<li><a href="/leetcode/0393" title="0393" rel="noopener noreferrer">0393</a> UTF-8 编码验证</li>
-<li><a href="/leetcode/0459" title="0459" rel="noopener noreferrer">0459</a> 重复的子字符串</li>
-<li><a href="/leetcode/0686" title="0686" rel="noopener noreferrer">0686</a> 重复叠加字符串匹配</li>
-<li><a href="/leetcode/0833" title="0833" rel="noopener noreferrer">0833</a> 字符串中的查找与替换</li>
-</ul>
-<h2 id="3-挑战">3 挑战</h2>
-<ul>
-<li><a href="/leetcode/0564" title="0564" rel="noopener noreferrer">0564</a> 寻找最近的回文数</li>
-<li><a href="/leetcode/0866" title="0866" rel="noopener noreferrer">0866</a> 回文素数</li>
-</ul>
-<h2 id="4-正则表达式">4 正则表达式</h2>
-<ul>
+<li><a href="/leetcode/0187" title="0187" rel="noopener noreferrer">0187</a> 重复的DNA序列</li>
+<li><a href="/leetcode/0718" title="0718" rel="noopener noreferrer">0718</a> 最长重复子数组</li>
+<li><a href="/leetcode/1392" title="1392" rel="noopener noreferrer">1392</a> 最长快乐前缀</li>
+<li><a href="/leetcode/1044" title="1044" rel="noopener noreferrer">1044</a> 最长重复子串</li>
+<li><a href="/leetcode/1316" title="1316" rel="noopener noreferrer">1316</a> 不同的循环子字符串</li>
+<li><a href="/leetcode/1923" title="1923" rel="noopener noreferrer">1923</a> 最长公共子路径
+正则</li>
 <li><a href="/leetcode/0008" title="0008" rel="noopener noreferrer">0008</a> 字符串转换整数 (atoi)</li>
 <li><a href="/leetcode/0044" title="0044" rel="noopener noreferrer">0044</a> 通配符匹配</li>
 <li><a href="/leetcode/0065" title="0065" rel="noopener noreferrer">0065</a> 有效数字</li>
-<li><a href="/leetcode/1023" title="1023" rel="noopener noreferrer">1023</a> 驼峰式匹配</li>
-</ul>
-<h2 id="5-字符串匹配">*5 字符串匹配</h2>
-<ul>
+<li><a href="/leetcode/1023" title="1023" rel="noopener noreferrer">1023</a> 驼峰式匹配
+kmp</li>
 <li><a href="/leetcode/0005" title="0005" rel="noopener noreferrer">0005</a> 最长回文子串</li>
 <li><a href="/leetcode/0028" title="0028" rel="noopener noreferrer">0028</a> 实现 strStr()</li>
 <li><a href="/leetcode/0214" title="0214" rel="noopener noreferrer">0214</a> 最短回文串</li>
 <li><a href="/leetcode/1392" title="1392" rel="noopener noreferrer">1392</a> 最长快乐前缀</li>
 </ul>
+<h2 id="字典树">字典树</h2>
+<ul>
+<li>字典树，又叫前缀树，是一种 N 叉树，用于高效地存储、查找字符串前缀。</li>
+</ul>
+<blockquote>
+<p>python 中可以用 defaultdict 来实现。</p>
+</blockquote>
+<ul>
+<li><a href="/leetcode/0208" title="0208" rel="noopener noreferrer">0208</a> 实现 Trie (前缀树)</li>
+<li><a href="/leetcode/0648" title="0648" rel="noopener noreferrer">0648</a> 单词替换</li>
+<li><a href="/leetcode/0211" title="0211" rel="noopener noreferrer">0211</a> 添加与搜索单词 - 数据结构设计</li>
+<li><a href="/leetcode/0677" title="0677" rel="noopener noreferrer">0677</a> 键值映射</li>
+<li><a href="/leetcode/0212" title="0212" rel="noopener noreferrer">0212</a> 单词搜索 II</li>
+<li><a href="/leetcode/0421" title="0421" rel="noopener noreferrer">0421</a> 数组中两个数的最大异或值</li>
+<li><a href="/leetcode/1707" title="1707" rel="noopener noreferrer">1707</a> 与数组中元素的最大异或值</li>
+<li><a href="/leetcode/1938" title="1938" rel="noopener noreferrer">1938</a> 查询最大基因差</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-01-05</span>
+                <span>更新于 2022-03-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -204,8 +196,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/ds-hash/" class="prev" rel="prev" title="数据结构（四）：哈希表"><i class="fas fa-angle-left fa-fw"></i>数据结构（四）：哈希表</a>
-            <a href="/ds-linked_list/" class="next" rel="next" title="数据结构（二）：链表">数据结构（二）：链表<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/ds-stack/" class="prev" rel="prev" title="数据结构（三）：栈与队列"><i class="fas fa-angle-left fa-fw"></i>数据结构（三）：栈与队列</a>
+            <a href="/ds-linked/" class="next" rel="next" title="数据结构（一）：链表">数据结构（一）：链表<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

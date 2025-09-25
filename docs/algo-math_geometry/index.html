@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>力扣总结 数据结构进阶（二）：有序集合 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="力扣总结 数据结构进阶（二）：有序集合" />
-<meta property="og:description" content="很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N)" />
+        <title>算法（十一）：几何 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（十一）：几何" />
+<meta property="og:description" content="一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。 相关的算法有 扫描线算法 等。 0223 矩形面积 0149 直线上最多的点数 0335 路径交叉 扫描线 0218 天际线问题 0391 完" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/algorithm-ordered_set/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-11T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-06-11T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/algo-math_geometry/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-11T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-02-11T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="力扣总结 数据结构进阶（二）：有序集合"/>
-<meta name="twitter:description" content="很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N)"/>
+<meta name="twitter:title" content="算法（十一）：几何"/>
+<meta name="twitter:description" content="一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。 相关的算法有 扫描线算法 等。 0223 矩形面积 0149 直线上最多的点数 0335 路径交叉 扫描线 0218 天际线问题 0391 完"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/algorithm-ordered_set/" /><link rel="prev" href="https://huozhixue.github.io/algorithm-monotonic_stack/" /><link rel="next" href="https://huozhixue.github.io/algorithm-union_find/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-math_geometry/" /><link rel="prev" href="https://huozhixue.github.io/algo-math_algebra/" /><link rel="next" href="https://huozhixue.github.io/ds-basic/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "力扣总结 数据结构进阶（二）：有序集合",
+        "headline": "算法（十一）：几何",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/algorithm-ordered_set\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  344 ,
-        "url": "https:\/\/huozhixue.github.io\/algorithm-ordered_set\/","datePublished": "2021-06-11T00:00:00+08:00","dateModified": "2021-06-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/algo-math_geometry\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  91 ,
+        "url": "https:\/\/huozhixue.github.io\/algo-math_geometry\/","datePublished": "2021-02-11T00:00:00+08:00","dateModified": "2021-02-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">力扣总结 数据结构进阶（二）：有序集合</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（十一）：几何</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-11">2021-06-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 344 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algorithm-ordered_set/" class="leancloud_visitors" data-flag-title="力扣总结 数据结构进阶（二）：有序集合">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-11">2021-02-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 91 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-math_geometry/" class="leancloud_visitors" data-flag-title="算法（十一）：几何">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,107 +119,30 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-基础">1 基础</a></li>
-    <li><a href="#2-进阶">2 进阶</a></li>
-    <li><a href="#3-挑战">3 挑战</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>访问</th>
-<th>搜索</th>
-<th>插入</th>
-<th>删除</th>
-<th>访问最值</th>
-<th>插入最值</th>
-<th>删除最值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数组 list</td>
-<td>O(1)</td>
-<td>O(logN)</td>
-<td>O(N)</td>
-<td>O(N)</td>
-<td>O(1)</td>
-<td>O(1)</td>
-<td>O(1)</td>
-</tr>
-<tr>
-<td>队列 deque</td>
-<td>O(N)</td>
-<td>O(N)</td>
-<td>O(N)</td>
-<td>O(N)</td>
-<td>O(1)</td>
-<td>O(1)</td>
-<td>O(1)</td>
-</tr>
-<tr>
-<td>堆  heapq</td>
-<td>O(N)</td>
-<td>O(N)</td>
-<td>O(logN)</td>
-<td>O(N)</td>
-<td>O(1)</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-</tr>
-<tr>
-<td>AVL/红黑树</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-<td>O(logN)</td>
-</tr>
-</tbody>
-</table>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>一些问题涉及到数学的几何知识，包括斜率、面积、凸包等。</p>
+<p>相关的算法有 扫描线算法 等。</p>
 <ul>
-<li>若只需搜索操作，用 <a href="/algorithm-array" rel="">数组</a> 即可。</li>
-<li>若只需最值相关的操作，用 <a href="/algorithm-stack" rel="">栈/队列</a> 即可。
-一些问题可以用进阶的技巧 <a href="/algorithm-monotonic_stack" rel="">单调栈/队列</a> ，使得只需要操作最值。</li>
-<li>如果插入时可能无序，但只删除某一边的最值，考虑用 <a href="/algorithm-heap" rel="">堆</a> 。</li>
-<li>如果插入和删除都无序，考虑用 AVL/红黑树。</li>
-</ul>
-<blockquote>
-<p>从表格可知，AVL/红黑树 是一个很平衡的方案，除非要求某项时间 O(1)，否则都是可行的。</p>
-</blockquote>
-<blockquote>
-<p>python 中可以直接调用 sortedcontainers.SortedList 来实现 AVL/红黑树。
-SortedList 可以指定排序的 key
-有时还可以用 SortedDict，保存有序的键值</p>
-</blockquote>
-<h2 id="1-基础">1 基础</h2>
-<ul>
-<li><a href="/leetcode/0239" title="0239" rel="noopener noreferrer">0239</a> 滑动窗口最大值</li>
-<li><a href="/leetcode/0295" title="0295" rel="noopener noreferrer">0295</a> 数据流的中位数</li>
-</ul>
-<h2 id="2-进阶">2 进阶</h2>
-<ul>
+<li><a href="/leetcode/0223" title="0223" rel="noopener noreferrer">0223</a> 矩形面积</li>
+<li><a href="/leetcode/0149" title="0149" rel="noopener noreferrer">0149</a> 直线上最多的点数</li>
+<li><a href="/leetcode/0335" title="0335" rel="noopener noreferrer">0335</a> 路径交叉
+扫描线</li>
 <li><a href="/leetcode/0218" title="0218" rel="noopener noreferrer">0218</a> 天际线问题</li>
-<li><a href="/leetcode/0220" title="0220" rel="noopener noreferrer">0220</a> 存在重复元素 III</li>
+<li><a href="/leetcode/0391" title="0391" rel="noopener noreferrer">0391</a> 完美矩形</li>
+<li><a href="/leetcode/0850" title="0850" rel="noopener noreferrer">0850</a> 矩形面积 II</li>
+<li><a href="/leetcode/1851" title="1851" rel="noopener noreferrer">1851</a> 包含每个查询的最小区间</li>
 </ul>
-<h2 id="3-挑战">3 挑战</h2>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-06-11</span>
+                <span>更新于 2021-02-11</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/algorithm-ordered_set/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/algo-math_geometry/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -234,8 +157,8 @@ SortedList 可以指定排序的 key
         </section>
     </div>
 
-    <div class="post-nav"><a href="/algorithm-union_find/" class="prev" rel="prev" title="力扣总结 数据结构进阶（三）：并查集"><i class="fas fa-angle-left fa-fw"></i>力扣总结 数据结构进阶（三）：并查集</a>
-            <a href="/algorithm-monotonic_stack/" class="next" rel="next" title="力扣总结 数据结构进阶（一）：单调栈和单调队列">力扣总结 数据结构进阶（一）：单调栈和单调队列<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/ds-basic/" class="prev" rel="prev" title="数据结构（零）：基础"><i class="fas fa-angle-left fa-fw"></i>数据结构（零）：基础</a>
+            <a href="/algo-math_algebra/" class="next" rel="next" title="算法（十）：代数">算法（十）：代数<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>数据结构（七）：堆 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（七）：堆" />
-<meta property="og:description" content="堆 是一种特别的完全二叉树，每一个节点的值都大于等于或小于等于其孩子节点的值。 堆可以在 O(logN) 时间内插入元素、删除根节点，在 O(1) 时间获得最大值或最小值" />
+        <title>数据结构（九）：线段树 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（九）：线段树" />
+<meta property="og:description" content="线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。 相比于 前缀和 和 树状数组， 线段树更复杂，也更通用。 线段树可以区间修改、" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/ds-heap/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-13T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-01-13T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/ds-segtree/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-10-01T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="数据结构（七）：堆"/>
-<meta name="twitter:description" content="堆 是一种特别的完全二叉树，每一个节点的值都大于等于或小于等于其孩子节点的值。 堆可以在 O(logN) 时间内插入元素、删除根节点，在 O(1) 时间获得最大值或最小值"/>
+<meta name="twitter:title" content="数据结构（九）：线段树"/>
+<meta name="twitter:description" content="线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。 相比于 前缀和 和 树状数组， 线段树更复杂，也更通用。 线段树可以区间修改、"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/ds-heap/" /><link rel="prev" href="https://huozhixue.github.io/ds-tree/" /><link rel="next" href="https://huozhixue.github.io/ds-graph/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/ds-segtree/" /><link rel="prev" href="https://huozhixue.github.io/ds-fenwick/" /><link rel="next" href="https://huozhixue.github.io/template-string_match/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "数据结构（七）：堆",
+        "headline": "数据结构（九）：线段树",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/ds-heap\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  305 ,
-        "url": "https:\/\/huozhixue.github.io\/ds-heap\/","datePublished": "2022-01-13T00:00:00+08:00","dateModified": "2022-01-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/ds-segtree\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  281 ,
+        "url": "https:\/\/huozhixue.github.io\/ds-segtree\/","datePublished": "2022-10-01T00:00:00+08:00","dateModified": "2022-10-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（七）：堆</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（九）：线段树</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-13">2022-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 305 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-heap/" class="leancloud_visitors" data-flag-title="数据结构（七）：堆">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-01">2022-10-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 281 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-segtree/" class="leancloud_visitors" data-flag-title="数据结构（九）：线段树">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,71 +121,57 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-基础">1 基础</a>
-      <ul>
-        <li><a href="#11-设计">1.1 设计</a></li>
-        <li><a href="#12-应用">1.2 应用</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-进阶">2 进阶</a>
-      <ul>
-        <li><a href="#21-设计">2.1 设计</a></li>
-        <li><a href="#22-应用">2.2 应用</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-挑战">3 挑战</a></li>
+    <li><a href="#1-单点更新区间查询">1 单点更新区间查询</a></li>
+    <li><a href="#2-区间更新区间查询">2 区间更新区间查询</a></li>
+    <li><a href="#3--区间多个信息">3  区间多个信息</a></li>
+    <li><a href="#4-树上二分">4 树上二分</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>堆 是一种特别的完全二叉树，每一个节点的值都大于等于或小于等于其孩子节点的值。</p>
-<p>堆可以在 O(logN) 时间内插入元素、删除根节点，在 O(1) 时间获得最大值或最小值。一般用于有序弹出元素的场景。</p>
+            </div><div class="content" id="content"><p>线段树（Segment Tree）是一种二叉树形数据结构。多用于区间查询。</p>
+<p>相比于 <a href="/algorithm-prefix_sum" rel="">前缀和</a> 和
+<a href="/algorithm-binary_indexed_tree" rel="">树状数组</a>，
+线段树更复杂，也更通用。</p>
 <blockquote>
-<p>python 中一般直接用内置库 heapq 表示（list 实现的），默认是小顶堆，即堆顶元素是最小值。</p>
+<p>线段树可以区间修改、区间查询。而且线段树不仅能维护区间的和，还可以维护区间的
+最小值、最大值、总和、最大公约数、最小公倍数等。</p>
 </blockquote>
-<blockquote>
-<p>额外地，图里面有个重要的 dijkstra 算法常借助堆实现，这里先不涉及。</p>
-</blockquote>
-<h2 id="1-基础">1 基础</h2>
-<h3 id="11-设计">1.1 设计</h3>
+<p><a href="//zhuanlan.zhihu.com/p/106118909" target="_blank" rel="noopener noreffer"><i class="far fa-hand-point-right fa-fw"></i>详解</a></p>
+<h2 id="1-单点更新区间查询">1 单点更新区间查询</h2>
 <ul>
-<li><a href="/leetcode/0703" title="0703" rel="noopener noreferrer">0703</a> 数据流中的第 K 大元素</li>
-<li><a href="/leetcode/1845" title="1845" rel="noopener noreferrer">1845</a> 座位预约管理系统</li>
+<li><a href="/leetcode/0307" title="0307" rel="noopener noreferrer">0307</a> <a href="https://leetcode.cn/problems/range-sum-query-mutable/" target="_blank" rel="noopener noreffer">区域和检索 - 数组可修改</a></li>
+<li><a href="/leetcode/2407" title="2407" rel="noopener noreferrer">2407</a> <a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/" target="_blank" rel="noopener noreffer">最长递增子序列 II</a></li>
+<li><a href="/leetcode/2736" title="2736" rel="noopener noreferrer">2736</a> <a href="https://leetcode.cn/problems/maximum-sum-queries/" target="_blank" rel="noopener noreffer">最大和查询</a></li>
 </ul>
-<h3 id="12-应用">1.2 应用</h3>
+<h2 id="2-区间更新区间查询">2 区间更新区间查询</h2>
 <ul>
-<li><a href="/leetcode/0023" title="0023" rel="noopener noreferrer">0023</a> 合并K个升序链表</li>
-<li><a href="/leetcode/0692" title="0692" rel="noopener noreferrer">0692</a> 前K个高频单词</li>
-<li><a href="/leetcode/1046" title="1046" rel="noopener noreferrer">1046</a> 最后一块石头的重量</li>
+<li><a href="/leetcode/0699" title="0699" rel="noopener noreferrer">0699</a> <a href="https://leetcode.cn/problems/falling-squares/" target="_blank" rel="noopener noreffer">掉落的方块</a></li>
+<li><a href="/leetcode/0715" title="0715" rel="noopener noreferrer">0715</a> <a href="https://leetcode.cn/problems/range-module/" target="_blank" rel="noopener noreffer">Range 模块</a></li>
+<li><a href="/leetcode/0732" title="0732" rel="noopener noreferrer">0732</a> <a href="https://leetcode.cn/problems/my-calendar-iii/" target="_blank" rel="noopener noreffer">我的日程安排表 III</a></li>
+<li><a href="/leetcode/2276" title="2276" rel="noopener noreferrer">2276</a> <a href="https://leetcode.cn/problems/count-integers-in-intervals/" target="_blank" rel="noopener noreffer">统计区间中的整数数目</a></li>
+<li><a href="/leetcode/2569" title="2569" rel="noopener noreferrer">2569</a> <a href="https://leetcode.cn/problems/handling-sum-queries-after-update/" target="_blank" rel="noopener noreffer">更新数组后处理求和查询</a></li>
+<li><a href="/leetcode/lcp05" title="lcp05" rel="noopener noreferrer">lcp05</a> <a href="https://leetcode.cn/problems/coin-bonus/" target="_blank" rel="noopener noreffer">发 LeetCoin</a></li>
 </ul>
-<h2 id="2-进阶">2 进阶</h2>
-<h3 id="21-设计">2.1 设计</h3>
+<h2 id="3--区间多个信息">3  区间多个信息</h2>
 <ul>
-<li><a href="/leetcode/0295" title="0295" rel="noopener noreferrer">0295</a> 数据流的中位数</li>
-<li><a href="/leetcode/0355" title="0355" rel="noopener noreferrer">0355</a> 设计推特</li>
+<li><a href="/leetcode/1157" title="1157" rel="noopener noreferrer">1157</a> <a href="https://leetcode.cn/problems/online-majority-element-in-subarray/" target="_blank" rel="noopener noreffer">子数组中占绝大多数的元素</a></li>
+<li><a href="/leetcode/1622" title="1622" rel="noopener noreferrer">1622</a> <a href="https://leetcode.cn/problems/fancy-sequence/" target="_blank" rel="noopener noreffer">奇妙序列</a></li>
+<li><a href="/leetcode/2213" title="2213" rel="noopener noreferrer">2213</a> <a href="https://leetcode.cn/problems/longest-substring-of-one-repeating-character/" target="_blank" rel="noopener noreffer">由单个字符重复的最长子字符串</a></li>
 </ul>
-<h3 id="22-应用">2.2 应用</h3>
+<h2 id="4-树上二分">4 树上二分</h2>
 <ul>
-<li><a href="/leetcode/0373" title="0373" rel="noopener noreferrer">0373</a> 查找和最小的 K 对数字</li>
-<li><a href="/leetcode/0786" title="0786" rel="noopener noreferrer">0786</a> 第 K 个最小的素数分数</li>
-<li><a href="/leetcode/1801" title="1801" rel="noopener noreferrer">1801</a> 积压订单中的订单总数</li>
-<li><a href="/leetcode/1834" title="1834" rel="noopener noreferrer">1834</a> 单线程 CPU</li>
-</ul>
-<h2 id="3-挑战">3 挑战</h2>
-<ul>
-<li><a href="/leetcode/0407" title="0407" rel="noopener noreferrer">0407</a> 接雨水 II</li>
-<li><a href="/leetcode/0857" title="0857" rel="noopener noreferrer">0857</a> 雇佣 K 名工人的最低成本</li>
-<li><a href="/leetcode/1439" title="1439" rel="noopener noreferrer">1439</a> 有序矩阵中的第 k 个最小数组和</li>
+<li><a href="/leetcode/2286" title="2286" rel="noopener noreferrer">2286</a> <a href="https://leetcode.cn/problems/booking-concert-tickets-in-groups/" target="_blank" rel="noopener noreffer">以组为单位订音乐会的门票</a></li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-01-13</span>
+                <span>更新于 2022-10-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/ds-heap/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/ds-segtree/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -200,8 +186,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/ds-graph/" class="prev" rel="prev" title="数据结构（八）：图"><i class="fas fa-angle-left fa-fw"></i>数据结构（八）：图</a>
-            <a href="/ds-tree/" class="next" rel="next" title="数据结构（六）：树">数据结构（六）：树<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/template-string_match/" class="prev" rel="prev" title="字符串模板：字符串匹配"><i class="fas fa-angle-left fa-fw"></i>字符串模板：字符串匹配</a>
+            <a href="/ds-fenwick/" class="next" rel="next" title="数据结构（八）：树状数组">数据结构（八）：树状数组<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

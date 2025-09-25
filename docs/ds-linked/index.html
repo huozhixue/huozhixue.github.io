@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>力扣总结 数据结构进阶（五）：树状数组 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="力扣总结 数据结构进阶（五）：树状数组" />
-<meta property="og:description" content="树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。 是一种解决动态数组区间查询问题的算法。 最简单的树状数组支持两种操作，" />
+        <title>数据结构（一）：链表 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（一）：链表" />
+<meta property="og:description" content="双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重复 0432 全 O(1) 的数据结构 0460 LFU 缓存" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/algorithm-binary_indexed_tree/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-11T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-07-11T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/ds-linked/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-02-01T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="力扣总结 数据结构进阶（五）：树状数组"/>
-<meta name="twitter:description" content="树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。 是一种解决动态数组区间查询问题的算法。 最简单的树状数组支持两种操作，"/>
+<meta name="twitter:title" content="数据结构（一）：链表"/>
+<meta name="twitter:description" content="双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重复 0432 全 O(1) 的数据结构 0460 LFU 缓存"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/algorithm-binary_indexed_tree/" /><link rel="prev" href="https://huozhixue.github.io/algorithm-trie/" /><link rel="next" href="https://huozhixue.github.io/algorithm-segment_tree/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/ds-linked/" /><link rel="prev" href="https://huozhixue.github.io/ds-basic/" /><link rel="next" href="https://huozhixue.github.io/ds-string/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "力扣总结 数据结构进阶（五）：树状数组",
+        "headline": "数据结构（一）：链表",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/algorithm-binary_indexed_tree\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  177 ,
-        "url": "https:\/\/huozhixue.github.io\/algorithm-binary_indexed_tree\/","datePublished": "2021-07-11T00:00:00+08:00","dateModified": "2021-07-11T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/ds-linked\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  60 ,
+        "url": "https:\/\/huozhixue.github.io\/ds-linked\/","datePublished": "2022-02-01T00:00:00+08:00","dateModified": "2022-02-01T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">力扣总结 数据结构进阶（五）：树状数组</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（一）：链表</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-11">2021-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 177 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algorithm-binary_indexed_tree/" class="leancloud_visitors" data-flag-title="力扣总结 数据结构进阶（五）：树状数组">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-01">2022-02-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 60 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-linked/" class="leancloud_visitors" data-flag-title="数据结构（一）：链表">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,38 +121,28 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-基础">1 基础</a></li>
-    <li><a href="#2-进阶">2 进阶</a></li>
-    <li><a href="#3-挑战">3 挑战</a></li>
+    <li><a href="#双向链表">双向链表</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。
-是一种解决动态数组区间查询问题的算法。</p>
-<p>最简单的树状数组支持两种操作，都能在 O(logN) 时间完成：</p>
+            </div><div class="content" id="content"><h2 id="双向链表">双向链表</h2>
 <ul>
-<li>单点修改：更改数组中一个元素的值</li>
-<li>区间查询：查询一个区间内所有元素的和</li>
+<li><a href="/leetcode/0146" title="0146" rel="noopener noreferrer">0146</a> LRU 缓存机制</li>
+<li><a href="/leetcode/0380" title="0380" rel="noopener noreferrer">0380</a> 常数时间插入、删除和获取随机元素</li>
+<li><a href="/leetcode/0381" title="0381" rel="noopener noreferrer">0381</a> O(1) 时间插入、删除和获取随机元素 - 允许重复</li>
+<li><a href="/leetcode/0432" title="0432" rel="noopener noreferrer">0432</a> 全 O(1) 的数据结构</li>
+<li><a href="/leetcode/0460" title="0460" rel="noopener noreferrer">0460</a> LFU 缓存</li>
 </ul>
-<p><a href="//zhuanlan.zhihu.com/p/93795692" target="_blank" rel="noopener noreffer"><i class="far fa-hand-point-right fa-fw"></i>详解</a></p>
-<blockquote>
-<p>如果是区间修改，则考虑更通用的 <a href="/algorithm-segment_tree" rel="">线段树</a> 方法。</p>
-</blockquote>
-<h2 id="1-基础">1 基础</h2>
-<p><a href="/leetcode/0307" title="0307" rel="noopener noreferrer">0307</a> 区域和检索 - 数组可修改</p>
-<h2 id="2-进阶">2 进阶</h2>
-<p><a href="/leetcode/0308" title="0308" rel="noopener noreferrer">0308</a> 二维区域和检索 - 可变</p>
-<h2 id="3-挑战">3 挑战</h2>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-07-11</span>
+                <span>更新于 2022-02-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/algorithm-binary_indexed_tree/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/ds-linked/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -161,14 +151,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/algorithm-segment_tree/" class="prev" rel="prev" title="力扣总结 数据结构进阶（六）：线段树"><i class="fas fa-angle-left fa-fw"></i>力扣总结 数据结构进阶（六）：线段树</a>
-            <a href="/algorithm-trie/" class="next" rel="next" title="力扣总结 数据结构进阶（四）：字典树">力扣总结 数据结构进阶（四）：字典树<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/ds-string/" class="prev" rel="prev" title="数据结构（二）：字符串"><i class="fas fa-angle-left fa-fw"></i>数据结构（二）：字符串</a>
+            <a href="/ds-basic/" class="next" rel="next" title="数据结构（零）：基础">数据结构（零）：基础<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
