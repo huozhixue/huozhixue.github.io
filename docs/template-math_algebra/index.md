@@ -71,7 +71,7 @@ def fft(A,N,sgn=1):
                 w *= step
     if sgn==-1:
         for i,x in enumerate(A):
-            A[i] = int(x.real/N+0.1)
+            A[i] = round(x.real/N)
 ```
 
 ### ntt
