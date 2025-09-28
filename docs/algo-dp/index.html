@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>算法（二）：动态规划 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（二）：动态规划" />
-<meta property="og:description" content="矩阵快速幂 数位 dp 0233 数字 1 的个数 0600 不含连续1的非负整数 0788 旋转数字 dp 优化" />
+        <title>算法（三）：动态规划 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（三）：动态规划" />
+<meta property="og:description" content="对称性 矩阵快速幂 排列 dp 0903 DI 序列的有效排列 数位 dp 0233 数字 1 的个数 0600 不含连续1的非负整数 0788 旋转数字 1397 找到所有好字符串 （2666分） 概率 dp 1227 飞机座位" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-dp/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-05T00:00:00+08:00" />
@@ -17,20 +17,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="算法（二）：动态规划"/>
-<meta name="twitter:description" content="矩阵快速幂 数位 dp 0233 数字 1 的个数 0600 不含连续1的非负整数 0788 旋转数字 dp 优化"/>
+<meta name="twitter:title" content="算法（三）：动态规划"/>
+<meta name="twitter:description" content="对称性 矩阵快速幂 排列 dp 0903 DI 序列的有效排列 数位 dp 0233 数字 1 的个数 0600 不含连续1的非负整数 0788 旋转数字 1397 找到所有好字符串 （2666分） 概率 dp 1227 飞机座位"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/algo-dp/" /><link rel="prev" href="https://huozhixue.github.io/algo-bit/" /><link rel="next" href="https://huozhixue.github.io/algo-math_geometry/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-dp/" /><link rel="prev" href="https://huozhixue.github.io/algo-binary/" /><link rel="next" href="https://huozhixue.github.io/algo-greedy/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "算法（二）：动态规划",
+        "headline": "算法（三）：动态规划",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-dp\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  34 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  77 ,
         "url": "https:\/\/huozhixue.github.io\/algo-dp\/","datePublished": "2021-01-05T00:00:00+08:00","dateModified": "2021-01-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">算法（二）：动态规划</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（三）：动态规划</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-05">2021-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 34 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-dp/" class="leancloud_visitors" data-flag-title="算法（二）：动态规划">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-05">2021-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 77 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-dp/" class="leancloud_visitors" data-flag-title="算法（三）：动态规划">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,17 +121,30 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#对称性">对称性</a></li>
     <li><a href="#矩阵快速幂">矩阵快速幂</a></li>
+    <li><a href="#排列-dp">排列 dp</a></li>
     <li><a href="#数位-dp">数位 dp</a></li>
+    <li><a href="#概率-dp">概率 dp</a></li>
     <li><a href="#dp-优化">dp 优化</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="矩阵快速幂">矩阵快速幂</h2>
+            </div><div class="content" id="content"><h2 id="对称性">对称性</h2>
+<h2 id="矩阵快速幂">矩阵快速幂</h2>
+<h2 id="排列-dp">排列 dp</h2>
+<ul>
+<li><a href="/leetcode/0903" title="0903" rel="noopener noreferrer">0903</a> <a href="https://leetcode.cn/problems/valid-permutations-for-di-sequence/" target="_blank" rel="noopener noreffer">DI 序列的有效排列</a></li>
+</ul>
 <h2 id="数位-dp">数位 dp</h2>
 <ul>
 <li><a href="/leetcode/0233" title="0233" rel="noopener noreferrer">0233</a> 数字 1 的个数</li>
 <li><a href="/leetcode/0600" title="0600" rel="noopener noreferrer">0600</a> 不含连续1的非负整数</li>
 <li><a href="/leetcode/0788" title="0788" rel="noopener noreferrer">0788</a> 旋转数字</li>
+<li><a href="/leetcode/1397" title="1397" rel="noopener noreferrer">1397</a> <a href="https://leetcode.cn/contest/weekly-contest-182/problems/find-all-good-strings/" target="_blank" rel="noopener noreffer">找到所有好字符串</a> （2666分）</li>
+</ul>
+<h2 id="概率-dp">概率 dp</h2>
+<ul>
+<li><a href="/leetcode/1227" title="1227" rel="noopener noreferrer">1227</a> <a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/" target="_blank" rel="noopener noreffer">飞机座位分配概率</a></li>
 </ul>
 <h2 id="dp-优化">dp 优化</h2>
 </div><div class="post-footer" id="post-footer">
@@ -159,8 +172,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/algo-math_geometry/" class="prev" rel="prev" title="算法（五）：几何"><i class="fas fa-angle-left fa-fw"></i>算法（五）：几何</a>
-            <a href="/algo-bit/" class="next" rel="next" title="算法（一）：位运算">算法（一）：位运算<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/algo-greedy/" class="prev" rel="prev" title="算法（四）：贪心与构造"><i class="fas fa-angle-left fa-fw"></i>算法（四）：贪心与构造</a>
+            <a href="/algo-binary/" class="next" rel="next" title="算法（二）：二分">算法（二）：二分<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

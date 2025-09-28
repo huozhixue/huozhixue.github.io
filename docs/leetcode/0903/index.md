@@ -72,7 +72,6 @@
 
 ## 解答
 
-
 ```python
 class Solution:
     def numPermsDISequence(self, s: str) -> int:
@@ -80,10 +79,10 @@ class Solution:
         f = [1]
         for c in s:
             if c=='I':
-                f = list(accumulate([0]+f))
+                g = [0]+list(accumulate(f))
             else:
-                f = list(accumulate([0]+f[::-1]))[::-1]
-            f = [a%mod for a in f]
+                g = list(accumulate(f[::-1]))[::-1]+[0]
+            f = [x%mod for x in g]
         return sum(f)%mod
 ```
-7 ms
+11 ms

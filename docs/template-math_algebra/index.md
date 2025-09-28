@@ -6,13 +6,13 @@
 ```python
 mod = 10**9+7
 def mul(A,B):
-    return [[sum(a*b%mod for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
-def mpow(mat,n):
-    res = mat
-    for i in range(n.bit_length()-2,-1,-1):
-        res = mul(res,res)
-        if n>>i&1:
-            res = mul(res,mat)
+    return [[sum(a*b for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
+def mpow(g,n,f):
+    res = f
+    while n:
+        res = mul(g,res) if n&1 else res
+        g = mul(g,g)
+        n >>= 1
     return res
 ```
 
@@ -36,7 +36,7 @@ for _ in range(M):
     g.append(g0)
     g0 = mul(g0,g0)
 
-def mpow(f,n):
+def mpow(g,n,f):
     while n:
         i = n.bit_length()-1
         f = mul(g[i],f)

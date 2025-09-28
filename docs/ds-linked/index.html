@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>数据结构（一）：链表 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（一）：链表" />
-<meta property="og:description" content="双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重复 0432 全 O(1) 的数据结构 0460 LFU 缓存" />
+<meta property="og:description" content="链表 3244 新增道路查询后的最短距离 II （2270 分） 双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/ds-linked/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-03T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="数据结构（一）：链表"/>
-<meta name="twitter:description" content="双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重复 0432 全 O(1) 的数据结构 0460 LFU 缓存"/>
+<meta name="twitter:description" content="链表 3244 新增道路查询后的最短距离 II （2270 分） 双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/ds-linked/" /><link rel="prev" href="https://huozhixue.github.io/ds-basic/" /><link rel="next" href="https://huozhixue.github.io/ds-string/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/ds-linked\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  60 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  83 ,
         "url": "https:\/\/huozhixue.github.io\/ds-linked\/","datePublished": "2022-01-03T00:00:00+08:00","dateModified": "2022-01-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（一）：链表</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-03">2022-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 60 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-03">2022-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 83 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-linked/" class="leancloud_visitors" data-flag-title="数据结构（一）：链表">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -121,10 +121,15 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#链表">链表</a></li>
     <li><a href="#双向链表">双向链表</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="双向链表">双向链表</h2>
+            </div><div class="content" id="content"><h2 id="链表">链表</h2>
+<ul>
+<li><a href="/leetcode/3244" title="3244" rel="noopener noreferrer">3244</a> <a href="https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-ii/" target="_blank" rel="noopener noreffer">新增道路查询后的最短距离 II</a> （2270 分）</li>
+</ul>
+<h2 id="双向链表">双向链表</h2>
 <ul>
 <li><a href="/leetcode/0146" title="0146" rel="noopener noreferrer">0146</a> LRU 缓存机制</li>
 <li><a href="/leetcode/0380" title="0380" rel="noopener noreferrer">0380</a> 常数时间插入、删除和获取随机元素</li>

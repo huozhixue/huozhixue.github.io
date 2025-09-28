@@ -16,4 +16,5 @@
 - {{< lc "0307" >}} 区域和检索 - 数组可修改
 - {{< lc "0308" >}} 二维区域和检索 - 可变
 
-
+dp+树状数组
+- {{< lc "0673" >}} [最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/)

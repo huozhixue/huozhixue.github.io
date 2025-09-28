@@ -134,6 +134,7 @@
 - {{< lc "0303" >}} 区域和检索 - 数组不可变
 - {{< lc "0134" >}} 加油站
 - {{< lc "0304" >}} 二维区域和检索 - 矩阵不可变
+- {{< lc "1277" >}} [统计全为 1 的正方形子矩阵](https://leetcode.cn/problems/count-square-submatrices-with-all-ones/)
 
 ## #8 贪心与构造
 
