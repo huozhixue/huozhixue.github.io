@@ -57,7 +57,8 @@
 - {{< lc "0395" >}}  至少有 K 个重复字符的最长子串
 - {{< lc "0273" >}}  整数转换英文表示
 - {{< lc "1823" >}}  找出游戏的获胜者
-
+约瑟夫环
+- {{< lc "lcr187" >}} [破冰游戏](https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/)
 ## #4 dfs与bfs
 
 -  dfs（深度优先搜索算法）和 bfs（广度优先搜索算法）都是图形搜索方法，
