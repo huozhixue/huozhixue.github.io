@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>算法（二）：二分 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（二）：二分" />
-<meta property="og:description" content="统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分" />
+        <title>算法（二）：二分与倍增 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（二）：二分与倍增" />
+<meta property="og:description" content="统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): f = A[:] self.st = st = [f] j, N = 1, len(f) while 2*j&lt;=N: f = [func(f[i],f[i&#43;j]) for" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-binary/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-04T00:00:00+08:00" />
@@ -17,20 +17,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="算法（二）：二分"/>
-<meta name="twitter:description" content="统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分"/>
+<meta name="twitter:title" content="算法（二）：二分与倍增"/>
+<meta name="twitter:description" content="统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): f = A[:] self.st = st = [f] j, N = 1, len(f) while 2*j&lt;=N: f = [func(f[i],f[i&#43;j]) for"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/algo-binary/" /><link rel="prev" href="https://huozhixue.github.io/algo-bit/" /><link rel="next" href="https://huozhixue.github.io/algo-dp/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-binary/" /><link rel="prev" href="https://huozhixue.github.io/algo-bit/" /><link rel="next" href="https://huozhixue.github.io/algo-divide/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "算法（二）：二分",
+        "headline": "算法（二）：二分与倍增",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-binary\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  31 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  87 ,
         "url": "https:\/\/huozhixue.github.io\/algo-binary\/","datePublished": "2021-01-04T00:00:00+08:00","dateModified": "2021-01-04T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">算法（二）：二分</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（二）：二分与倍增</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-04">2021-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 31 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-binary/" class="leancloud_visitors" data-flag-title="算法（二）：二分">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-04">2021-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 87 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-binary/" class="leancloud_visitors" data-flag-title="算法（二）：二分与倍增">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,16 +121,50 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#统计二分">统计二分</a></li>
-    <li><a href="#答案二分">答案二分</a></li>
+    <li><a href="#倍增">倍增</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="统计二分">统计二分</h2>
+            </div><div class="content" id="content"><p>统计二分</p>
 <ul>
-<li><a href="/leetcode/3261" title="3261" rel="noopener noreferrer">3261</a> <a href="https://leetcode.cn/contest/weekly-contest-411/problems/count-substrings-that-satisfy-k-constraint-ii/" target="_blank" rel="noopener noreffer">统计满足 K 约束的子字符串数量 II</a> （2659 分）</li>
+<li><a href="/leetcode/3261" title="3261" rel="noopener noreferrer">3261</a> <a href="https://leetcode.cn/contest/weekly-contest-411/problems/count-substrings-that-satisfy-k-constraint-ii/" target="_blank" rel="noopener noreffer">统计满足 K 约束的子字符串数量 II</a> （2659 分）
+答案二分</li>
 </ul>
-<h2 id="答案二分">答案二分</h2>
-</div><div class="post-footer" id="post-footer">
+<h2 id="倍增">倍增</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ST</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">func</span><span class="o">=</span><span class="nb">max</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="n">A</span><span class="p">[:]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">st</span> <span class="o">=</span> <span class="n">st</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="mi">2</span><span class="o">*</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">st</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">l</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">r</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -155,7 +189,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/algo-dp/" class="prev" rel="prev" title="算法（三）：动态规划"><i class="fas fa-angle-left fa-fw"></i>算法（三）：动态规划</a>
+    <div class="post-nav"><a href="/algo-divide/" class="prev" rel="prev" title="算法（三）：分治"><i class="fas fa-angle-left fa-fw"></i>算法（三）：分治</a>
             <a href="/algo-bit/" class="next" rel="next" title="算法（一）：位运算">算法（一）：位运算<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

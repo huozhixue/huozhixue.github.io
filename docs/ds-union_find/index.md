@@ -1,17 +1,34 @@
 # 数据结构（七）：并查集
 
+- 并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构，专门用于 动态处理 不相交集合的「查询」与「合并」问题
 
-并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构，
-专门用于 动态处理 不相交集合的「查询」与「合并」问题。
-- 查询（Find），查询图中的两个顶点是不是在同一个集合中。
-注意：并查集只回答两个顶点之间是否有一条路径连接，而不回答怎么连接。
-- 合并（Union），将两个不相交集合进行合并。
-
-并查集常常和图相关，比如「最小生成树」算法。
-
-> 能用并查集的问题一般都可以用 [bfs/dfs](/algorithm-dfs_bfs)，但是并查集更简洁直观，而且一般更节省时间。
-
-
+```python
+class DSU:
+    def __init__(self,n):
+        self.f = list(range(n))
+        self.sz = [1]*n
+        self.cc = n
+    
+    def find(self,x):
+        f,y = self.f,x
+        while f[y]!=y:
+            y = f[y]
+        while f[x]!=y:
+            f[x],x = y,f[x]
+        return y
+    
+    def union(self,x,y):
+        f,sz = self.f,self.sz
+        fx,fy = self.find(x),self.find(y)
+        if fx==fy:
+            return False
+        if sz[fx]>sz[fy]:
+            fx,fy = fy,fx
+        f[fx] = fy
+        sz[fy] += sz[fx]
+        self.cc -= 1
+        return True
+```
 
 - {{< lc "0200" >}} 岛屿数量
 - {{< lc "0547" >}} 省份数量

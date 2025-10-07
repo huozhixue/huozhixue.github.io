@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>算法（七）：技巧 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（七）：技巧" />
-<meta property="og:description" content="根号 不同种类 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 无向图定向 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 1761" />
+        <title>算法（九）：技巧 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（九）：技巧" />
+<meta property="og:description" content="增量 遍历统计时考虑只计算增量，节省时间 1830 使字符串有序的最少操作次数 （2620分） 2484 统计回文子序列数目 3395 唯一中间众数子序列 I log trick" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-trick/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-13T00:00:00+08:00" />
@@ -17,20 +17,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="算法（七）：技巧"/>
-<meta name="twitter:description" content="根号 不同种类 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 无向图定向 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 1761"/>
+<meta name="twitter:title" content="算法（九）：技巧"/>
+<meta name="twitter:description" content="增量 遍历统计时考虑只计算增量，节省时间 1830 使字符串有序的最少操作次数 （2620分） 2484 统计回文子序列数目 3395 唯一中间众数子序列 I log trick"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/algo-trick/" /><link rel="prev" href="https://huozhixue.github.io/algo-math_geometry/" /><link rel="next" href="https://huozhixue.github.io/ds-basic/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-trick/" /><link rel="prev" href="https://huozhixue.github.io/algo-math_geometry/" /><link rel="next" href="https://huozhixue.github.io/algo-sqrt/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "算法（七）：技巧",
+        "headline": "算法（九）：技巧",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-trick\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  155 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  63 ,
         "url": "https:\/\/huozhixue.github.io\/algo-trick\/","datePublished": "2021-01-13T00:00:00+08:00","dateModified": "2021-01-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">算法（七）：技巧</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（九）：技巧</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-13">2021-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 155 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-trick/" class="leancloud_visitors" data-flag-title="算法（七）：技巧">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-13">2021-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 63 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-trick/" class="leancloud_visitors" data-flag-title="算法（九）：技巧">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,40 +121,18 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#根号">根号</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#不同种类">不同种类</a></li>
-            <li><a href="#无向图定向">无向图定向</a></li>
-            <li><a href="#根号分治">根号分治</a></li>
-            <li><a href="#块状数组">块状数组</a></li>
-            <li><a href="#莫队">莫队</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
     <li><a href="#增量">增量</a></li>
+    <li><a href="#log-trick">log trick</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="根号">根号</h2>
-<h4 id="不同种类">不同种类</h4>
-<p>总和为 n 的若干个数，最多只有 $\sqrt n$   种</p>
-<h4 id="无向图定向">无向图定向</h4>
-<p>将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$</p>
-<ul>
-<li><a href="/leetcode/1761" title="1761" rel="noopener noreferrer">1761</a> <a href="https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/" target="_blank" rel="noopener noreffer">一个图中连通三元组的最小度数</a></li>
-</ul>
-<h4 id="根号分治">根号分治</h4>
-<h4 id="块状数组">块状数组</h4>
-<h4 id="莫队">莫队</h4>
-<h2 id="增量">增量</h2>
+            </div><div class="content" id="content"><h2 id="增量">增量</h2>
 <p>遍历统计时考虑只计算增量，节省时间</p>
 <ul>
 <li><a href="/leetcode/1830" title="1830" rel="noopener noreferrer">1830</a> <a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted/" target="_blank" rel="noopener noreffer">使字符串有序的最少操作次数</a> （2620分）</li>
 <li><a href="/leetcode/2484" title="2484" rel="noopener noreferrer">2484</a> <a href="https://leetcode.cn/problems/count-palindromic-subsequences/" target="_blank" rel="noopener noreffer">统计回文子序列数目</a></li>
 <li><a href="/leetcode/3395" title="3395" rel="noopener noreferrer">3395</a> <a href="https://leetcode.cn/problems/subsequences-with-a-unique-middle-mode-i/" target="_blank" rel="noopener noreffer">唯一中间众数子序列 I</a></li>
 </ul>
+<h2 id="log-trick">log trick</h2>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -180,8 +158,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/ds-basic/" class="prev" rel="prev" title="数据结构（零）：基础"><i class="fas fa-angle-left fa-fw"></i>数据结构（零）：基础</a>
-            <a href="/algo-math_geometry/" class="next" rel="next" title="算法（六）：几何">算法（六）：几何<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/algo-sqrt/" class="prev" rel="prev" title="算法（八）：根号思想"><i class="fas fa-angle-left fa-fw"></i>算法（八）：根号思想</a>
+            <a href="/algo-math_geometry/" class="next" rel="next" title="算法（七）：几何">算法（七）：几何<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

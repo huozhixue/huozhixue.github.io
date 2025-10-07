@@ -7,8 +7,8 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>算法（五）：代数 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（五）：代数" />
-<meta property="og:description" content="代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1830 使字符串有序的最少操作次数 （2620分）" />
+        <title>算法（六）：代数 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（六）：代数" />
+<meta property="og:description" content="代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return []" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-math_algebra/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-09T00:00:00+08:00" />
@@ -17,20 +17,20 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="算法（五）：代数"/>
-<meta name="twitter:description" content="代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1830 使字符串有序的最少操作次数 （2620分）"/>
+<meta name="twitter:title" content="算法（六）：代数"/>
+<meta name="twitter:description" content="代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return []"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algo-math_algebra/" /><link rel="prev" href="https://huozhixue.github.io/algo-greedy/" /><link rel="next" href="https://huozhixue.github.io/algo-math_geometry/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "算法（五）：代数",
+        "headline": "算法（六）：代数",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-math_algebra\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  46 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  845 ,
         "url": "https:\/\/huozhixue.github.io\/algo-math_algebra\/","datePublished": "2021-01-09T00:00:00+08:00","dateModified": "2021-01-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">算法（五）：代数</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（六）：代数</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-09">2021-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 46 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-math_algebra/" class="leancloud_visitors" data-flag-title="算法（五）：代数">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-09">2021-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 845 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/algo-math_algebra/" class="leancloud_visitors" data-flag-title="算法（六）：代数">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -123,6 +123,11 @@
   <ul>
     <li><a href="#代数">代数</a></li>
     <li><a href="#组合">组合</a></li>
+    <li><a href="#数论">数论</a></li>
+    <li><a href="#随机化">随机化</a></li>
+    <li><a href="#线性代数">线性代数</a></li>
+    <li><a href="#多项式与生成函数">多项式与生成函数</a></li>
+    <li><a href="#博弈">博弈</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="代数">代数</h2>
@@ -130,10 +135,413 @@
 <li><a href="/leetcode/1130" title="1130" rel="noopener noreferrer">1130</a> <a href="https://leetcode.cn/problems/reverse-subarray-to-maximize-array-value/" target="_blank" rel="noopener noreffer">翻转子数组得到最大的数组值</a> （2482分）</li>
 </ul>
 <h2 id="组合">组合</h2>
-<ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 下一个排列</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nxt</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">j</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">A</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><a href="/leetcode/1830" title="1830" rel="noopener noreferrer">1830</a> <a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted/" target="_blank" rel="noopener noreffer">使字符串有序的最少操作次数</a> （2620分）</li>
 </ul>
-</div><div class="post-footer" id="post-footer">
+<h2 id="数论">数论</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 质因数分解</span>
+</span></span><span class="line"><span class="cl"><span class="n">M</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">isqrt</span><span class="p">(</span><span class="n">M</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">:</span><span class="n">M</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">((</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">//</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@cache</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">factor</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ct</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	    <span class="k">if</span> <span class="n">p</span><span class="o">*</span><span class="n">p</span><span class="o">&gt;</span><span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		    <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">x</span><span class="o">%</span><span class="n">p</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span><span class="o">//=</span><span class="n">p</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ct</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ct</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ct</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 乘法逆元</span>
+</span></span><span class="line"><span class="cl"><span class="n">ma</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
+</span></span><span class="line"><span class="cl"><span class="n">fac</span><span class="p">,</span> <span class="n">inv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ma</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ma</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">ma</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">i</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">mod</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="随机化">随机化</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 爬山法</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">climb</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">cal</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">eps</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">step</span> <span class="o">&gt;</span> <span class="n">eps</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)),[</span><span class="n">step</span><span class="p">,</span><span class="o">-</span><span class="n">step</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">			<span class="n">p2</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">+</span><span class="n">w</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">cal</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">cal</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">				<span class="n">p</span> <span class="o">=</span> <span class="n">p2</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">step</span> <span class="o">*=</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">p</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="线性代数">线性代数</h2>
+<ul>
+<li>线性基</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 线性基</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">XorBasis</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># x 的最高位</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># x 和之前的基是线性无关的</span>
+</span></span><span class="line"><span class="cl">                <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>  <span class="c1"># 新增一个基，最高位为 i</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">^=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># 保证基的最高位是互不相同的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">max_xor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">res</span> <span class="o">^</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">res</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">^=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="多项式与生成函数">多项式与生成函数</h2>
+<ul>
+<li>快速变换：fft、ntt、fwt</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># fft</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="n">I</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rev</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">N</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">rev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">rev</span><span class="p">[</span><span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">i</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="n">step</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span><span class="o">**</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">a</span><span class="o">*</span><span class="n">sgn</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>    
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="n">w</span>
+</span></span><span class="line"><span class="cl">                <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">                <span class="n">w</span> <span class="o">*=</span> <span class="n">step</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">sgn</span><span class="o">==-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">real</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ntt</span>
+</span></span><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">998244353</span>
+</span></span><span class="line"><span class="cl"><span class="n">G</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">ntt</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rev</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">N</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span> <span class="o">=</span> <span class="n">rev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">rev</span><span class="p">[</span><span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">i</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="n">step</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">G</span><span class="p">,(</span><span class="n">mod</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sgn</span><span class="o">+</span><span class="n">mod</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">mod</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="n">w</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">                <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">,(</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">                <span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">step</span><span class="o">%</span><span class="n">mod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">sgn</span><span class="o">==-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inv</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">mod</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">inv</span><span class="o">%</span><span class="n">mod</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># fwt 或</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fwt</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>     <span class="c1"># 逆变换 sgn=-1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">sgn</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># fwt 与</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fwt</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>     <span class="c1"># 逆变换 sgn=-1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="n">sgn</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># fwt 异或</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fwt</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>     <span class="c1"># 逆变换 sgn=2</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	            <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	            <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="n">sgn</span><span class="p">,(</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="n">sgn</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="博弈">博弈</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 博弈 拓扑反推</span>
+</span></span><span class="line"><span class="cl"><span class="n">Q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>                  <span class="c1"># res[u]：终态 u 的胜负结果</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">u</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">u</span><span class="o">==</span><span class="n">start</span><span class="p">:</span>                <span class="c1"># start：初始态</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="k">continue</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">res</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">deg</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">-=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">deg</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">				<span class="n">res</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">u</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">				<span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -158,8 +566,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/algo-math_geometry/" class="prev" rel="prev" title="算法（六）：几何"><i class="fas fa-angle-left fa-fw"></i>算法（六）：几何</a>
-            <a href="/algo-greedy/" class="next" rel="next" title="算法（四）：贪心与构造">算法（四）：贪心与构造<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/algo-math_geometry/" class="prev" rel="prev" title="算法（七）：几何"><i class="fas fa-angle-left fa-fw"></i>算法（七）：几何</a>
+            <a href="/algo-greedy/" class="next" rel="next" title="算法（五）：贪心与构造">算法（五）：贪心与构造<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

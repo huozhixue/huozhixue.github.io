@@ -9,21 +9,21 @@
     <pubDate>Mon, 17 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-fenwick/</guid>
-    <description><![CDATA[树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。 是一种解决动态数组区间查询问题的算法。 最简单的树状数组支持两种操作，]]></description>
+    <description><![CDATA[算法学习笔记(2) : 树状数组 树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树，支持单点修改和区间查询 1 2 3 4 5 6 7 8 9]]></description>
 </item><item>
     <title>数据结构（七）：并查集</title>
     <link>https://huozhixue.github.io/ds-union_find/</link>
     <pubDate>Sat, 15 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-union_find/</guid>
-    <description><![CDATA[并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构， 专门用于 动态处理 不相交集合的「查询」与「合并]]></description>
+    <description><![CDATA[并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构，专门用于 动态处理 不相交集合的「查询」与「合并]]></description>
 </item><item>
     <title>数据结构（六）：有序集合</title>
     <link>https://huozhixue.github.io/ds-ordered_set/</link>
     <pubDate>Thu, 13 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-ordered_set/</guid>
-    <description><![CDATA[很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构。 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N)]]></description>
+    <description><![CDATA[很多问题需要维护一个有序的集合，根据操作不同，可以选择更优的数据结构 访问 搜索 插入 删除 访问最值 插入最值 删除最值 数组 list O(1) O(logN) O(N) O(N) O(1) O(1) O(1) 队列 deque O(N) O(N) O(N)]]></description>
 </item><item>
     <title>数据结构（五）：图</title>
     <link>https://huozhixue.github.io/ds-graph/</link>
@@ -37,28 +37,28 @@
     <pubDate>Sun, 09 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-tree/</guid>
-    <description><![CDATA[#1 树哈希 0297 二叉树的序列化与反序列化 0449 序列化和反序列化二叉搜索树 0572 另一个树的子树 0652 寻找重复的子树]]></description>
+    <description><![CDATA[树哈希 0297 二叉树的序列化与反序列化 0449 序列化和反序列化二叉搜索树 0572 另一个树的子树 0652 寻找重复的子树 lca 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]]></description>
 </item><item>
     <title>数据结构（三）：栈与队列</title>
     <link>https://huozhixue.github.io/ds-stack/</link>
     <pubDate>Fri, 07 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-stack/</guid>
-    <description><![CDATA[栈 0716 最大栈 语法分析 0385 迷你语法分析器 0394 字符串解码 0636 函数的独占时间 0735 行星碰撞 0880 索引处的解码字符串 计算器 0224 基本计算器 0227 基本计算器 II 0726 原子的数量 0770 基]]></description>
+    <description><![CDATA[栈 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 计算器 def cal(s: str) -&gt; int: func = {&#39;+&#39;:int.__add__,&#39;-&#39;:int.__sub__,&#39;*&#39;:int.__mul__,&#39;/&#39;:lambda x,y:x//y} pro = dict(zip(&#39;+-*/(&#39;,&#39;11223&#39;)) sk,ops = [],[] for x,op in re.findall(&#39;(\d+)|([-+*/()])&#39;,s+&#39;+&#39;): if x: sk.append(int(x)) elif op==&#39;(&#39;: ops.append(op) elif op==&#39;)&#39;: while ops[-1] != &#39;(&#39;: b,a = sk.pop(),sk.pop() sk.append(func[ops.pop()](a,b)) ops.pop() else: while ops and pro[ops[-1]]&lt;=pro[op]: b,a = sk.pop(),sk.pop()]]></description>
 </item><item>
     <title>数据结构（二）：字符串</title>
     <link>https://huozhixue.github.io/ds-string/</link>
     <pubDate>Wed, 05 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-string/</guid>
-    <description><![CDATA[#1 字符串匹配 滚动哈希是一种针对固定长度的滑动窗口的哈希方法 滚动哈希递推求得相邻窗口的哈希值 一般采用 Rabin-Karp 算法来实现滚动哈希。核心思想就是将窗口 W]]></description>
+    <description><![CDATA[最小表示法 最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i] 字符串匹配 前缀函数与 KMP 算法 Manacher Z]]></description>
 </item><item>
     <title>数据结构（一）：链表</title>
     <link>https://huozhixue.github.io/ds-linked/</link>
     <pubDate>Mon, 03 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-linked/</guid>
-    <description><![CDATA[链表 3244 新增道路查询后的最短距离 II （2270 分） 双向链表 0146 LRU 缓存机制 0380 常数时间插入、删除和获取随机元素 0381 O(1) 时间插入、删除和获取随机元素 - 允许重]]></description>
+    <description><![CDATA[1 2 3 4 5 6 7 8 9 # 反转链表 def reverse(head): tail = head while tail and tail.next: tmp = tail.next tail.next = tmp.next tmp.next = head head = tmp return head 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 双向链表 class Node: # 提高访问]]></description>
 </item><item>
     <title>数据结构（零）：基础</title>
     <link>https://huozhixue.github.io/ds-basic/</link>

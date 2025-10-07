@@ -1,17 +1,45 @@
 # 数据结构（八）：树状数组
 
+- [算法学习笔记(2) : 树状数组](https://zhuanlan.zhihu.com/p/93795692)
+- 树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树，支持单点修改和区间查询
 
-树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树。
-是一种解决动态数组区间查询问题的算法。
+```python
+class BIT:
+    def __init__(self, n):
+        self.n = n
+        self.t = [0]*n
+        self.L = n.bit_length()
 
-最简单的树状数组支持两种操作，都能在 O(logN) 时间完成：
-- 单点修改：更改数组中一个元素的值
-- 区间查询：查询一个区间内所有元素的和
+    def update(self, i, x):
+        while i<self.n:
+            self.t[i] += x
+            i += i&-i
 
-[:(far fa-hand-point-right fa-fw):详解](//zhuanlan.zhihu.com/p/93795692)
+    def get(self, i):
+        res = 0
+        while i:
+            res += self.t[i]
+            i &= i-1
+        return res
+    
+    def query(self,l,r):
+        return self.get(r)-self.get(l-1)
+    
+    def kth(self, k):
+        x = 0
+        for i in range(self.L-1,-1,-1):
+            y = x|1<<i
+            if y<self.n and self.t[y]<k:
+                x = y
+                k -= self.t[y]
+        return x+1
 
-> 如果是区间修改，则考虑更通用的 [线段树](/algorithm-segment_tree) 方法。
-
+A = []
+n = len(A)
+bit = BIT(n+1)
+for i,x in enumerate(A,1):
+	bit.update(i,x)
+```
 
 - {{< lc "0307" >}} 区域和检索 - 数组可修改
 - {{< lc "0308" >}} 二维区域和检索 - 可变

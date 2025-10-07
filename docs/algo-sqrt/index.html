@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>图模板：最短路 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="图模板：最短路" />
-<meta property="og:description" content="1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u" />
+        <title>算法（八）：根号思想 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（八）：根号思想" />
+<meta property="og:description" content="根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 分块思想" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/template-graph_shortest/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-03T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-03-03T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/algo-sqrt/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-13T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-01-13T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="图模板：最短路"/>
-<meta name="twitter:description" content="1 dijkstra 1 2 3 4 5 6 7 8 9 10 11 12 13 def dij(g,s): pq,d = [(0,s)], [inf]*n d[s] = 0 while pq: w,u = heappop(pq) if w&gt;d[u]: continue for v,w2 in g[u]: nw = w&#43;w2 if nw&lt;d[v]: d[v] = nw heappush(pq, (nw,v)) return d 1 2 3 4 5 6 7 8 9 def dij(g,s): Q, d = set(range(n)), [inf]*n d[s] = 0 while Q: u"/>
+<meta name="twitter:title" content="算法（八）：根号思想"/>
+<meta name="twitter:description" content="根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 分块思想"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/template-graph_shortest/" /><link rel="prev" href="https://huozhixue.github.io/template-graph_cycle/" /><link rel="next" href="https://huozhixue.github.io/template-graph_tarjan/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-sqrt/" /><link rel="prev" href="https://huozhixue.github.io/algo-trick/" /><link rel="next" href="https://huozhixue.github.io/ds-basic/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "图模板：最短路",
+        "headline": "算法（八）：根号思想",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/template-graph_shortest\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  226 ,
-        "url": "https:\/\/huozhixue.github.io\/template-graph_shortest\/","datePublished": "2023-03-03T00:00:00+08:00","dateModified": "2023-03-03T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/algo-sqrt\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  202 ,
+        "url": "https:\/\/huozhixue.github.io\/algo-sqrt\/","datePublished": "2021-01-13T00:00:00+08:00","dateModified": "2021-01-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">图模板：最短路</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（八）：根号思想</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-03">2023-03-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 226 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-graph_shortest/" class="leancloud_visitors" data-flag-title="图模板：最短路">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-13">2021-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 202 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-sqrt/" class="leancloud_visitors" data-flag-title="算法（八）：根号思想">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,121 +119,21 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-dijkstra">1 dijkstra</a></li>
-    <li><a href="#2-floyd">2 floyd</a></li>
-    <li><a href="#3-bellman-ford">3 Bellman-Ford</a></li>
-    <li><a href="#4-spfa">4 spfa</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="1-dijkstra">1 dijkstra</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dij</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">pq</span><span class="p">,</span><span class="n">d</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">)],</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">pq</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">w</span><span class="p">,</span><span class="n">u</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">pq</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">w</span><span class="o">&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">continue</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">v</span><span class="p">,</span><span class="n">w2</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">nw</span> <span class="o">=</span> <span class="n">w</span><span class="o">+</span><span class="n">w2</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">nw</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">nw</span>
-</span></span><span class="line"><span class="cl">				<span class="n">heappush</span><span class="p">(</span><span class="n">pq</span><span class="p">,</span> <span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">d</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dij</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">Q</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">u</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="n">Q</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">Q</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="2-floyd">2 floyd</h2>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><ul>
+<li>根号分治</li>
+<li>根号限制
 <ul>
-<li><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solutions/2525946/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/" target="_blank" rel="noopener noreffer">带你发明 Floyd 算法：从记忆化搜索到递推</a></li>
+<li>总和为 n 的若干个数，最多只有 $\sqrt n$   种</li>
+<li>将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="3-bellman-ford">3 Bellman-Ford</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">BF</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">				<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span>
-</span></span><span class="line"><span class="cl">				<span class="n">flag</span> <span class="o">=</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="k">break</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">d</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="4-spfa">4 spfa</h2>
+</li>
+<li>分块思想：
+<ul>
+<li>块状数组、 莫队</li>
+</ul>
+</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -250,35 +150,72 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">spfa</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">    <span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="p">,</span> <span class="n">vis</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="n">s</span><span class="p">]),</span> <span class="p">{</span><span class="n">s</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">u</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="n">vis</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">vis</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">d</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 块状数组</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">isqrt</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">]</span><span class="o">==</span><span class="p">[</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="o">+</span><span class="n">sq</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="o">+</span><span class="n">sq</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">f</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">l</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">    <span class="n">B</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="o">+</span><span class="n">sq</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">l</span><span class="o">//</span><span class="n">sq</span><span class="p">,</span><span class="n">r</span><span class="o">//</span><span class="n">sq</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="o">+</span><span class="n">sq</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">apply</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="o">*</span><span class="n">sq</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">sq</span> <span class="o">=</span> <span class="n">isqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="n">sq</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">B</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="o">+</span><span class="n">sq</span><span class="p">])</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><ul>
+<li><a href="/leetcode/1761" title="1761" rel="noopener noreferrer">1761</a> <a href="https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/" target="_blank" rel="noopener noreffer">一个图中连通三元组的最小度数</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-03-03</span>
+                <span>更新于 2021-01-13</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/template-graph_shortest/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/algo-sqrt/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -293,8 +230,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/template-graph_tarjan/" class="prev" rel="prev" title="图模板：连通性"><i class="fas fa-angle-left fa-fw"></i>图模板：连通性</a>
-            <a href="/template-graph_cycle/" class="next" rel="next" title="图模板：环问题">图模板：环问题<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/ds-basic/" class="prev" rel="prev" title="数据结构（零）：基础"><i class="fas fa-angle-left fa-fw"></i>数据结构（零）：基础</a>
+            <a href="/algo-trick/" class="next" rel="next" title="算法（九）：技巧">算法（九）：技巧<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

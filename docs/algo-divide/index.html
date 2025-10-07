@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>图模板：图匹配 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="图模板：图匹配" />
-<meta property="og:description" content="二分图 最大匹配 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def hgr(g): # g 是二分图中每个 x 对应的 y 列表 def find(x): for y in g[x]: if y not in vis: vis.add(y) if y not in d or find(d[y]): d[y]=x return True return False res,vis,d = 0,set(),{} for x in g:" />
+        <title>算法（三）：分治 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（三）：分治" />
+<meta property="og:description" content="cdq 分治" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/template-graph_match/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-05T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-03-05T00:00:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/algo-divide/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-05T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-01-05T00:00:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="图模板：图匹配"/>
-<meta name="twitter:description" content="二分图 最大匹配 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def hgr(g): # g 是二分图中每个 x 对应的 y 列表 def find(x): for y in g[x]: if y not in vis: vis.add(y) if y not in d or find(d[y]): d[y]=x return True return False res,vis,d = 0,set(),{} for x in g:"/>
+<meta name="twitter:title" content="算法（三）：分治"/>
+<meta name="twitter:description" content="cdq 分治"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/template-graph_match/" /><link rel="prev" href="https://huozhixue.github.io/template-graph_tarjan/" /><link rel="next" href="https://huozhixue.github.io/template-graph_flow/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/algo-divide/" /><link rel="prev" href="https://huozhixue.github.io/algo-binary/" /><link rel="next" href="https://huozhixue.github.io/algo-dp/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "图模板：图匹配",
+        "headline": "算法（三）：分治",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/template-graph_match\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  224 ,
-        "url": "https:\/\/huozhixue.github.io\/template-graph_match\/","datePublished": "2023-03-05T00:00:00+08:00","dateModified": "2023-03-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/algo-divide\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  3 ,
+        "url": "https:\/\/huozhixue.github.io\/algo-divide\/","datePublished": "2021-01-05T00:00:00+08:00","dateModified": "2021-01-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">图模板：图匹配</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">算法（三）：分治</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-05">2023-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 224 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/template-graph_match/" class="leancloud_visitors" data-flag-title="图模板：图匹配">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-05">2021-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-divide/" class="leancloud_visitors" data-flag-title="算法（三）：分治">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -121,148 +121,21 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#二分图">二分图</a>
-      <ul>
-        <li><a href="#最大匹配">最大匹配</a></li>
-        <li><a href="#最大权完美匹配">最大权完美匹配</a></li>
-      </ul>
-    </li>
+    <li><a href="#cdq-分治">cdq 分治</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="二分图">二分图</h2>
-<h3 id="最大匹配">最大匹配</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hgr</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>            <span class="c1"># g 是二分图中每个 x 对应的 y 列表</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vis</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">vis</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span> <span class="ow">or</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">=</span><span class="n">x</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span><span class="n">vis</span><span class="p">,</span><span class="n">d</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="nb">set</span><span class="p">(),{}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">+=</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">vis</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="最大权完美匹配">最大权完美匹配</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">km</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>                   <span class="c1"># g 是 n-n 完全二分图的权值</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> 
-</span></span><span class="line"><span class="cl">        <span class="n">slack</span> <span class="o">=</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="n">vis</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">pre</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">=</span><span class="n">nj</span><span class="o">=-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">delta</span> <span class="o">=</span> <span class="n">inf</span>
-</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">vis</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="kc">True</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">vis</span><span class="p">[</span><span class="n">y</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">continue</span>
-</span></span><span class="line"><span class="cl">                <span class="n">tmp</span><span class="o">=</span><span class="n">lx</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">+</span><span class="n">ly</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">-</span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">slack</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">&gt;</span><span class="n">tmp</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">slack</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">=</span><span class="n">tmp</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">pre</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">=</span><span class="n">j</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">slack</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">&lt;</span><span class="n">delta</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">delta</span><span class="o">=</span><span class="n">slack</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">nj</span> <span class="o">=</span> <span class="n">y</span>
-</span></span><span class="line"><span class="cl">            <span class="n">lx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-=</span><span class="n">delta</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">vis</span><span class="p">[</span><span class="n">y</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">lx</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">]]</span><span class="o">-=</span><span class="n">delta</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">ly</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">+=</span><span class="n">delta</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">slack</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">-=</span><span class="n">delta</span>
-</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">=</span> <span class="n">nj</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">j</span><span class="o">!=-</span><span class="mi">1</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">pre</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">j</span><span class="o">=</span><span class="n">pre</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">lx</span> <span class="o">=</span> <span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">g</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ly</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">bfs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">]][</span><span class="n">y</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><h2 id="cdq-分治">cdq 分治</h2>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-03-05</span>
+                <span>更新于 2021-01-05</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/template-graph_match/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/algo-divide/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -277,8 +150,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/template-graph_flow/" class="prev" rel="prev" title="图模板：网络流"><i class="fas fa-angle-left fa-fw"></i>图模板：网络流</a>
-            <a href="/template-graph_tarjan/" class="next" rel="next" title="图模板：连通性">图模板：连通性<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/algo-dp/" class="prev" rel="prev" title="算法（四）：动态规划"><i class="fas fa-angle-left fa-fw"></i>算法（四）：动态规划</a>
+            <a href="/algo-binary/" class="next" rel="next" title="算法（二）：二分与倍增">算法（二）：二分与倍增<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
