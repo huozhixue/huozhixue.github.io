@@ -1,126 +1,105 @@
-# 数据结构（九）：线段树
+# 数据结构（八）：区间信息
 
-- [算法学习笔记(14): 线段树](https://zhuanlan.zhihu.com/p/106118909)
-- 线段树（Segment Tree）是一种二叉树形数据结构，支持区间修改和区间查询。
+- 区间静态查询：前缀和、st 表、莫队、猫树
+- 区间修改+最终查询：差分
+- 单点修改、区间查询：树状数组
+- 区间修改、区间查询：线段树、块状数组
+
 
 ```python []
-#  递归式 单点更新
-class Seg:
-    def __init__(self,n):
-        N = 1<<n.bit_length()
-        self.t = [0]*N*2  
-        self.n = n
+# 块状数组
+from math import isqrt
+def apply(a,l,r,x):
+    if [l,r]==[a*sq,a*sq+sq-1]:
+        f[a] += x
+        return
+    for i in range(a*sq,min(n,a*sq+sq)):
+        A[i] += f[a]
+        if l<=i<=r:
+            A[i] += x
+    B[a] = set(A[a*sq:a*sq+sq])
+    f[a] = 0
 
-    def apply(self,o,x):       
-        self.t[o] = x
-
-    def merge(self,a,b):           
-        return max(a,b)
-
-    def build(self,A,o=1,l=0,r=None):
-        r = self.n-1 if r is None else r
-        if l==r:
-            self.apply(o,A[l])
-            return
-        m = (l+r)//2
-        self.build(A,o*2,l,m)
-        self.build(A,o*2+1,m+1,r)
-        self.pull(o)
-
-    def pull(self,o):
-        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
-
-    def modify(self,a,x,o=1,l=0,r=None):
-        r = self.n-1 if r is None else r
-        if l==r:
-            self.apply(o,x)
-            return
-        m = (l+r)//2
-        if a<=m: self.modify(a,x,o*2,l,m)
-        else: self.modify(a,x,o*2+1,m+1,r)
-        self.pull(o)
-        
-    def query(self,a,b,o=1,l=0,r=None):
-        r = self.n-1 if r is None else r
-        if a<=l and r<=b:
-            return self.t[o]
-        res = self.t[0]
-        m = (l+r)//2
-        if a<=m: res = self.query(a,b,o*2,l,m)
-        if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
-        return res
+def update(l,r,x):
+    a,b = l//sq,r//sq
+    if a==b:
+        apply(a,l,r,x)
+    else:
+        apply(a,l,a*sq+sq-1,x)
+        apply(b,b*sq,r,x)
+        for i in range(a+1,b):
+            f[i] += x
 
 A = []
 n = len(A)
-seg = Seg(n)
-seg.build(A)
+sq = isqrt(n)
+m = (n-1)//sq+1
+B = [0]*m
+f = [0]*m
+for a in range(m):
+    B[a] = set(A[a*sq:a*sq+sq])
 ```
 
 ```python
-# 递归式 区间更新（lazy）
-class Seg:
-    def __init__(self,n):
-        N = 1<<n.bit_length()
-        self.t = [0]*N*2
-        self.f = [0]*N*2
+# st 表
+class ST:
+    def __init__(self,A,func=max):
+        f = A[:]
+        self.st = st = [f]
+        j, N = 1, len(f)
+        while 2*j<=N:
+            f = [func(f[i],f[i+j]) for i in range(N-2*j+1)]
+            st.append(f)
+            j <<= 1
+        self.func = func
+            
+    def query(self,l,r):
+        j = (r-l+1).bit_length()-1
+        return self.func(self.st[j][l],self.st[j][r-(1<<j)+1])
+```
+
+```python
+#树状数组
+class BIT:
+    def __init__(self, n):
         self.n = n
+        self.t = [0]*n
+        self.L = n.bit_length()
 
-    def apply(self,o,x):            
-        self.t[o] = x
-        self.f[o] = x
+    def update(self, i, x):
+        while i<self.n:
+            self.t[i] += x
+            i += i&-i
 
-    def merge(self,a,b):           
-        return max(a,b)
-
-    def build(self,A,o=1,l=0,r=None):
-        r = self.n-1 if r is None else r
-        if l==r:
-            self.t[o] = A[l]
-            return
-        m = (l+r)//2
-        self.build(A,o*2,l,m)
-        self.build(A,o*2+1,m+1,r)
-        self.pull(o)
+    def get(self, i):
+        res = 0
+        while i:
+            res += self.t[i]
+            i &= i-1
+        return res
     
-    def pull(self,o):
-        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
-
-    def push(self,o):
-        if self.f[o] != self.f[0]:
-            self.apply(o*2,self.f[o])
-            self.apply(o*2+1,self.f[o])
-            self.f[o] = self.f[0]
-
-    def modify(self,a,b,x,o=1,l=0,r=None):
-        r = self.n-1 if r is None else r
-        if a<=l and r<=b:
-            self.apply(o,x)
-            return
-        self.push(o)
-        m = (l+r)//2
-        if a<=m: self.modify(a,b,x,o*2,l,m)
-        if m<b: self.modify(a,b,x,o*2+1,m+1,r)
-        self.pull(o)
-        
-    def query(self,a,b,o=1,l=0,r=None):
-        r = self.n-1 if r is None else r
-        if a<=l and r<=b:
-            return self.t[o]
-        self.push(o)
-        res = self.t[0]
-        m = (l+r)//2
-        if a<=m: res = self.query(a,b,o*2,l,m)
-        if m<b: res = self.merge(res,self.query(a,b,o*2+1,m+1,r))
-        return res
+    def query(self,l,r):
+        return self.get(r)-self.get(l-1)
+    
+    def kth(self, k):
+        x = 0
+        for i in range(self.L-1,-1,-1):
+            y = x|1<<i
+            if y<self.n and self.t[y]<k:
+                x = y
+                k -= self.t[y]
+        return x+1
 
 A = []
 n = len(A)
-seg = Seg(n)
-seg.build(A)
+bit = BIT(n+1)
+for i,x in enumerate(A,1):
+	bit.update(i,x)
 ```
 
-```python
-# 迭代式 单点更新
+
+```python []
+#  线段树 单点修改
 class Seg:
     def __init__(self,n):  
         self.N = N = 1<<n.bit_length()         
@@ -128,14 +107,14 @@ class Seg:
 
     def merge(self,a,b):                # 区间信息怎么合并的   
         return a+b
-    
-    def pull(self,o):
-        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
 
     def build(self,A):
         self.t[self.N:self.N+len(A)] = A
         for o in range(self.N-1,0,-1):
             self.pull(o)
+
+    def pull(self,o):
+        self.t[o] = self.merge(self.t[o*2],self.t[o*2+1])
 
     def modify(self,a,x):
         a += self.N
@@ -152,6 +131,28 @@ class Seg:
             if b&1: rres = self.merge(self.t[b^1],rres)  
             a,b = a>>1,b>>1  
         return self.merge(lres,rres)  
+    
+    # 递归式修改
+    def _modify(self,a,x,o=1,l=0,r=None):
+        r = self.N-1 if r is None else r
+        if l==r:
+            self.t[o] = x
+            return
+        m = (l+r)//2
+        if a<=m: self._modify(a,x,o*2,l,m)
+        else: self._modify(a,x,o*2+1,m+1,r)
+        self.pull(o)
+    
+    # 递归式查询
+    def _query(self,a,b,o=1,l=0,r=None):
+        r = self.N-1 if r is None else r
+        if a<=l and r<=b:
+            return self.t[o]
+        res = self.t[0]
+        m = (l+r)//2
+        if a<=m: res = self._query(a,b,o*2,l,m)
+        if m<b: res = self.merge(res,self._query(a,b,o*2+1,m+1,r))
+        return res
     
     def find_first(self,a,func):
         a += self.N
@@ -200,7 +201,7 @@ seg.build(A)
 ```
 
 ```python
-# 迭代式 区间更新 （lazy）
+# lazy 线段树 区间修改
 class Seg:
     def __init__(self,n):
         self.L = n.bit_length()
@@ -256,6 +257,30 @@ class Seg:
             a,b = a>>1,b>>1  
         return self.merge(lres,rres)
     
+    # 递归式修改
+    def _modify(self,a,b,x,o=1,l=0,r=None):
+        r = self.N-1 if r is None else r
+        if a<=l and r<=b:
+            self.apply(o,x)
+            return
+        self.push(o)
+        m = (l+r)//2
+        if a<=m: self._modify(a,b,x,o*2,l,m)
+        if m<b: self._modify(a,b,x,o*2+1,m+1,r)
+        self.pull(o)
+    
+    # 递归式查询
+    def _query(self,a,b,o=1,l=0,r=None):
+        r = self.N-1 if r is None else r
+        if a<=l and r<=b:
+            return self.t[o]
+        self.push(o)
+        res = self.t[0]
+        m = (l+r)//2
+        if a<=m: res = self._query(a,b,o*2,l,m)
+        if m<b: res = self.merge(res,self._query(a,b,o*2+1,m+1,r))
+        return res
+    
     def find_first(self,a,func):
         a += self.N
         lres = 0
@@ -308,12 +333,14 @@ seg = Seg(n)
 seg.build(A)
 ```
 
-单点更新
+单点修改
 - {{< lc "0307" >}} [区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable/)
+- {{< lc "0308" >}} 二维区域和检索 - 可变
 - {{< lc "2407" >}} [最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/)
 - {{< lc "2736" >}} [最大和查询](https://leetcode.cn/problems/maximum-sum-queries/)
+- {{< lc "0673" >}} [最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/)
 
-区间更新
+区间修改
 - {{< lc "0699" >}} [掉落的方块](https://leetcode.cn/problems/falling-squares/)
 - {{< lc "0715" >}} [Range 模块](https://leetcode.cn/problems/range-module/)
 - {{< lc "0732" >}} [我的日程安排表 III](https://leetcode.cn/problems/my-calendar-iii/)

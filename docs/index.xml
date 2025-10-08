@@ -6,19 +6,12 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 09 Sep 2025 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://huozhixue.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>数据结构（九）：线段树</title>
-    <link>https://huozhixue.github.io/ds-segtree/</link>
-    <pubDate>Wed, 19 Jan 2022 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/ds-segtree/</guid>
-    <description><![CDATA[算法学习笔记(14): 线段树 线段树（Segment Tree）是一种二叉树形数据结构，支持区间修改和区间查询。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]]></description>
-</item><item>
-    <title>数据结构（八）：树状数组</title>
-    <link>https://huozhixue.github.io/ds-fenwick/</link>
+    <title>数据结构（八）：区间信息</title>
+    <link>https://huozhixue.github.io/ds-interval/</link>
     <pubDate>Mon, 17 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/ds-fenwick/</guid>
-    <description><![CDATA[算法学习笔记(2) : 树状数组 树状数组或二叉索引树（Binary Indexed Tree），又以其发明者命名为 Fenwick 树，支持单点修改和区间查询 1 2 3 4 5 6 7 8 9]]></description>
+    <guid>https://huozhixue.github.io/ds-interval/</guid>
+    <description><![CDATA[区间静态查询：前缀和、st 表、莫队、猫树 区间修改+最终查询：差分 单点修改、区间查询：树状数组 区间修改、区间查询：线段树、块状数组 1 2 3 4 5 6]]></description>
 </item><item>
     <title>数据结构（七）：并查集</title>
     <link>https://huozhixue.github.io/ds-union_find/</link>
@@ -76,19 +69,12 @@
     <guid>https://huozhixue.github.io/ds-basic/</guid>
     <description><![CDATA[#1 链表与数组 链表和数组是最基本的数据结构，是其他数据结构的基础 数组和链表的区别 数组和链表都是线性数据结构，区别在于数组具有索引，数组中的元素]]></description>
 </item><item>
-    <title>算法（八）：根号思想</title>
-    <link>https://huozhixue.github.io/algo-sqrt/</link>
-    <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algo-sqrt/</guid>
-    <description><![CDATA[根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 分块思想]]></description>
-</item><item>
-    <title>算法（九）：技巧</title>
+    <title>算法（八）：技巧</title>
     <link>https://huozhixue.github.io/algo-trick/</link>
     <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-trick/</guid>
-    <description><![CDATA[增量 遍历统计时考虑只计算增量，节省时间 1830 使字符串有序的最少操作次数 （2620分） 2484 统计回文子序列数目 3395 唯一中间众数子序列 I log trick]]></description>
+    <description><![CDATA[根号 根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 分块]]></description>
 </item><item>
     <title>算法（七）：几何</title>
     <link>https://huozhixue.github.io/algo-math_geometry/</link>
@@ -130,7 +116,7 @@
     <pubDate>Mon, 04 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-binary/</guid>
-    <description><![CDATA[统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): f = A[:] self.st = st = [f] j, N = 1, len(f) while 2*j&lt;=N: f = [func(f[i],f[i+j]) for]]></description>
+    <description><![CDATA[统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增]]></description>
 </item><item>
     <title>算法（一）：位运算</title>
     <link>https://huozhixue.github.io/algo-bit/</link>
@@ -145,5 +131,24 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-basic/</guid>
     <description><![CDATA[#1 位运算与进位制 位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;） 很]]></description>
+</item><item>
+    <title>后 BERT 时代小结</title>
+    <link>https://huozhixue.github.io/nlp-bert_family/</link>
+    <pubDate>Sun, 21 Jun 2020 17:49:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/nlp-bert_family/</guid>
+    <description><![CDATA[<p>2018年10月，Google 发布 BERT 模型，然后 BERT 横扫了 NLP 的各个任务：
+文本分类、序列标注、文本摘要、信息检索、问答系统、阅读理解等等。</p>
+<p>到如今，BERT 及其变种几乎一统了 NLU（Natural Language Understanding，自然语言理解）领域，
+只有 GPT 模型依托 NLG（Natural Language Generation，自然语言生成）领域能与之周旋。
+而细究下来，GPT 与 BERT 的结构其实只有一处不同。</p>
+<p>不夸张地说，这是属于 BERT 的时代。因此，本文对 BERT 及其之后的发展作一个粗略的小结，以供参考。</p>]]></description>
+</item><item>
+    <title>博客 - Shortcodes</title>
+    <link>https://huozhixue.github.io/hugo-shortcodes/</link>
+    <pubDate>Sun, 15 Mar 2020 16:29:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/hugo-shortcodes/</guid>
+    <description><![CDATA[<p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.</p>]]></description>
 </item></channel>
 </rss>

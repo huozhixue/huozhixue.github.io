@@ -3,27 +3,13 @@
         <title>算法 - 标签 - 个人博客</title>
         <link>https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 19 Jan 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
-    <title>数据结构（九）：线段树</title>
-    <link>https://huozhixue.github.io/ds-segtree/</link>
-    <pubDate>Wed, 19 Jan 2022 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/ds-segtree/</guid>
-    <description><![CDATA[算法学习笔记(14): 线段树 线段树（Segment Tree）是一种二叉树形数据结构，支持区间修改和区间查询。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]]></description>
-</item><item>
-    <title>算法（八）：根号思想</title>
-    <link>https://huozhixue.github.io/algo-sqrt/</link>
-    <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algo-sqrt/</guid>
-    <description><![CDATA[根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 分块思想]]></description>
-</item><item>
-    <title>算法（九）：技巧</title>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>算法（八）：技巧</title>
     <link>https://huozhixue.github.io/algo-trick/</link>
     <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-trick/</guid>
-    <description><![CDATA[增量 遍历统计时考虑只计算增量，节省时间 1830 使字符串有序的最少操作次数 （2620分） 2484 统计回文子序列数目 3395 唯一中间众数子序列 I log trick]]></description>
+    <description><![CDATA[根号 根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将边的方向定为从度数小的点连向度数大的点（度数相等可以比较标号），边的出度最多 $O(\sqrt m)$ 分块]]></description>
 </item><item>
     <title>算法（七）：几何</title>
     <link>https://huozhixue.github.io/algo-math_geometry/</link>
@@ -65,7 +51,7 @@
     <pubDate>Mon, 04 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-binary/</guid>
-    <description><![CDATA[统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增 1 2 3 4 5 6 7 8 9 10 11 12 13 14 class ST: def __init__(self,A,func=max): f = A[:] self.st = st = [f] j, N = 1, len(f) while 2*j&lt;=N: f = [func(f[i],f[i+j]) for]]></description>
+    <description><![CDATA[统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增]]></description>
 </item><item>
     <title>算法（一）：位运算</title>
     <link>https://huozhixue.github.io/algo-bit/</link>
@@ -73,5 +59,12 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-bit/</guid>
     <description><![CDATA[子集 算法学习笔记(75): Gosper&rsquo;s Hack 1 2 3 4 y = st # 生成所有子集 while y: # 处理子集 y y = (y-1)&amp;st 1 2 3 4 5 6 7 8 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成所有 k 元子集 while st&lt;ma: # 处理子集 st lb]]></description>
+</item><item>
+    <title>算法（零）：基础</title>
+    <link>https://huozhixue.github.io/algo-basic/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algo-basic/</guid>
+    <description><![CDATA[#1 位运算与进位制 位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;） 很]]></description>
 </item></channel>
 </rss>
