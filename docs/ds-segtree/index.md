@@ -312,6 +312,7 @@ seg.build(A)
 - {{< lc "0307" >}} [区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable/)
 - {{< lc "2407" >}} [最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/)
 - {{< lc "2736" >}} [最大和查询](https://leetcode.cn/problems/maximum-sum-queries/)
+
 区间更新
 - {{< lc "0699" >}} [掉落的方块](https://leetcode.cn/problems/falling-squares/)
 - {{< lc "0715" >}} [Range 模块](https://leetcode.cn/problems/range-module/)
@@ -319,10 +320,12 @@ seg.build(A)
 - {{< lc "2276" >}} [统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals/)
 - {{< lc "2569" >}} [更新数组后处理求和查询](https://leetcode.cn/problems/handling-sum-queries-after-update/)
 - {{< lc "lcp05" >}} [发 LeetCoin](https://leetcode.cn/problems/coin-bonus/)
+
 区间多个信息
 - {{< lc "1157" >}} [子数组中占绝大多数的元素](https://leetcode.cn/problems/online-majority-element-in-subarray/)
 - {{< lc "1622" >}} [奇妙序列](https://leetcode.cn/problems/fancy-sequence/)
 - {{< lc "2213" >}} [由单个字符重复的最长子字符串](https://leetcode.cn/problems/longest-substring-of-one-repeating-character/)
+
 树上二分
 - {{< lc "2286" >}} [以组为单位订音乐会的门票](https://leetcode.cn/problems/booking-concert-tickets-in-groups/)
 

@@ -215,6 +215,7 @@ class SortedList:
         return 'SortedList({0})'.format(list(self))
 ```
 
+例题
 - {{< lc "0239" >}} 滑动窗口最大值
 - {{< lc "0295" >}} 数据流的中位数
 - {{< lc "0218" >}} 天际线问题
