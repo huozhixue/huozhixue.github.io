@@ -215,6 +215,29 @@ class SortedList:
         return 'SortedList({0})'.format(list(self))
 ```
 
+```python []
+# ODT 珂朵莉树
+sl = SortedList()
+def split(sl,x):
+    i = sl.bisect_left((x,))
+    if i<len(sl) and sl[i][0]==x:
+        return i
+    l,r,v = sl.pop(i-1)
+    sl.add((l,x-1,v))
+    sl.add((x,r,v))
+    return i
+
+def update(sl,l,r,x):
+    i,j = split(sl,l),split(sl,r+1)
+    for k in range(j-1,i-1,-1):
+        sl.pop(k)
+    if i<len(sl) and sl[i][2]==x:
+        r = sl.pop(i)[1]
+    if i>0 and sl[i-1][2]==x:
+        l = sl.pop(i-1)[0]
+    sl.add((l,r,x))
+```
+
 例题
 - {{< lc "0239" >}} 滑动窗口最大值
 - {{< lc "0295" >}} 数据流的中位数
