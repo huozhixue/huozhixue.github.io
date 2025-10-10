@@ -10,12 +10,9 @@ class DSU:
         self.cc = n
     
     def find(self,x):
-        f,y = self.f,x
-        while f[y]!=y:
-            y = f[y]
-        while f[x]!=y:
-            f[x],x = y,f[x]
-        return y
+        if self.f[x]!=x:
+            self.f[x] = self.find(self.f[x])
+        return self.f[x]
     
     def union(self,x,y):
         f,sz = self.f,self.sz
