@@ -18,6 +18,34 @@
     <guid>https://huozhixue.github.io/leetcode/3506/</guid>
     <description><![CDATA[力扣第 3506 题 题目 给定一个整数数组 timeReq 和一个整数 splitTime。 在人体微观世界中，免疫系统面临着一项非凡的挑战：对抗快速繁殖的细菌群落，这对身]]></description>
 </item><item>
+    <title>3416：唯一中间众数子序列 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3416/</link>
+    <pubDate>Sat, 11 Jan 2025 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3416/</guid>
+    <description><![CDATA[力扣第 3416 题 题目 给你一个整数数组 nums ，请你求出 nums 中大小为 5 的 子序列 的数目，它是 唯一中间众数序列 。 由于答案可能很大，请你将答案对 109 + 7 取余 后返回。]]></description>
+</item><item>
+    <title>3406：从盒子中找出字典序最大的字符串 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3406/</link>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3406/</guid>
+    <description><![CDATA[力扣第 3406 题 题目 给你一个字符串 word 和一个整数 numFriends。 Alice 正在为她的 numFriends 位朋友组织一个游戏。游戏分为多个回合，在每一回合中： word 被分割成 numFriends]]></description>
+</item><item>
+    <title>3385：破解锁的最少时间 II（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3385/</link>
+    <pubDate>Wed, 11 Dec 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3385/</guid>
+    <description><![CDATA[力扣第 3385 题 题目 Bob 被困在了一个地窖里，他需要破解 n 个锁才能逃出地窖，每一个锁都需要一定的 能量 才能打开。每一个锁需要的能量存放在一个数组 strength 里，其]]></description>
+</item><item>
+    <title>3383：施法所需最低符文数量（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3383/</link>
+    <pubDate>Mon, 09 Dec 2024 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3383/</guid>
+    <description><![CDATA[力扣第 3383 题 题目 Alice 刚刚从巫师学校毕业，并且希望施展一个魔法咒语来庆祝。魔法咒语包含某些需要集中魔力的焦点，其中一些焦点含有作为咒语能量源的魔法]]></description>
+</item><item>
     <title>3369：设计数组统计跟踪器（★★）</title>
     <link>https://huozhixue.github.io/leetcode/3369/</link>
     <pubDate>Sat, 30 Nov 2024 00:00:00 &#43;0800</pubDate>
@@ -39,39 +67,11 @@
     <guid>https://huozhixue.github.io/leetcode/3329/</guid>
     <description><![CDATA[力扣第 3329 题 题目 给你一个字符串 s 和一个整数 k，在 s 的所有 子字符串 中，请你统计并返回 至少有一个 字符 至少出现 k 次的子字符串总数。 示例 1： 输入： s =]]></description>
 </item><item>
-    <title>3299：连续子序列的和（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/3299/</link>
-    <pubDate>Fri, 27 Sep 2024 00:00:00 &#43;0800</pubDate>
+    <title>3313：查找树中最后标记的节点（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/3313/</link>
+    <pubDate>Sat, 12 Oct 2024 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3299/</guid>
-    <description><![CDATA[力扣第 3299 题 题目 如果一个长度为 n 的数组 arr 符合下面其中一个条件，可以称它 连续： 对于所有的 1 &lt;= i &lt; n，arr[i] - arr[i - 1] == 1。 对于所有的 1 &lt;= i &lt;]]></description>
-</item><item>
-    <title>3231：要删除的递增子序列的最小数量（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/3231/</link>
-    <pubDate>Fri, 26 Jul 2024 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3231/</guid>
-    <description><![CDATA[力扣第 3231 题 题目 给定一个整数数组 nums，你可以执行任意次下面的操作： 从数组删除一个 严格递增 的 子序列。 您的任务是找到使数组为 空 所需的 最小 操作数]]></description>
-</item><item>
-    <title>3104：查找最长的自包含子串（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/3104/</link>
-    <pubDate>Sat, 06 Apr 2024 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3104/</guid>
-    <description><![CDATA[力扣第 3104 题 题目 给定字符串 s，你需要找到 s 的 最长自包含 子串 的长度。 如果 s 的一个子串 t 满足 t != s 且 t 中的每一个字符在 s 的剩余部分都不存在，则被称]]></description>
-</item><item>
-    <title>3037：在无限流中寻找模式 II（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/3037/</link>
-    <pubDate>Wed, 14 Feb 2024 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3037/</guid>
-    <description><![CDATA[力扣第 3037 题 题目 给定一个二进制数组 pattern 和一个类 InfiniteStream 的对象 stream 表示一个下标从 0 开始的二进制位无限流。 类 InfiniteStream 包含下列函数： int next()：从流中读取 一个 二]]></description>
-</item><item>
-    <title>3018：可处理的最大删除操作数 I（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/3018/</link>
-    <pubDate>Thu, 25 Jan 2024 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/3018/</guid>
-    <description><![CDATA[力扣第 3018 题 题目 给定一个下标 从 0 开始 的数组 nums 和一个下标 从 0 开始 的数组 queries。 你可以在开始时执行以下操作 最多一次： 用 nums 的 子序列 替换 num]]></description>
+    <guid>https://huozhixue.github.io/leetcode/3313/</guid>
+    <description><![CDATA[力扣第 3313 题 题目 有一棵有 n 个节点，编号从 0 到 n - 1 的 无向 树。给定一个长度为 n - 1 的整数数组 edges，其中 edges[i] = [ui, vi] 表示树中的 ui 和 vi 之间有一条边]]></description>
 </item></channel>
 </rss>

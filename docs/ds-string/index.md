@@ -143,52 +143,51 @@ class Trie:
 ```python
 # 01字典树，基于数组
 class BitTrie:
-    def __init__(self,n,L):                       # 插入总长度 n-1、最长 L 的二进制串
-        self.t = [[0]*n for _ in range(2)]        # 模拟树节点
-        self.i = 0
+    def __init__(self,n,L):                       # 插入总长度 n、最长 L 的二进制串
+        self.t = [[0]*(n+1) for _ in range(2)]        
+        self.s = [0]*(n+1)
         self.L = L
-        self.s = [0]*n
+        self.i = 0
 
     def add(self, x):
         p = 0
         for j in range(self.L-1, -1, -1):
-            bit = (x>>j)&1
-            if not self.t[bit][p]:
-                self.i += 1
-                self.t[bit][p] = self.i  
-            p = self.t[bit][p]
+            b = (x>>j)&1
+            if not self.t[b][p]:
+                self.t[b][p] = self.i = self.i+1
+            p = self.t[b][p]
             self.s[p] += 1
             
     def remove(self,x):
         p = 0
         for j in range(self.L-1,-1,-1):
-            bit = (x>>j)&1
-            p = self.t[bit][p]
-            self.s[p]-=1
-        
-    def lowxor(self, x, high):
-        res = 0
-        p = 0
-        for j in range(self.L-1, -1, -1):
-            bit = (x>>j)&1
-            h = (high>>j)&1
-            if h:
-                res += self.s[self.t[bit][p]]
-            if not self.t[bit^h][p]:
-                return res
-            p = self.t[bit^h][p]
-        return res
+            b = (x>>j)&1
+            p = self.t[b][p]
+            self.s[p] -= 1
 
-    def maxxor(self,x):
-        p = 0
+    def maxxor(self,x):             # 树中与 x 异或的最大值
         res = 0
+        p = 0
         for j in range(self.L-1, -1, -1):
-            bit = (x>>j)&1
-            q = self.t[bit^1][p]
+            b = (x>>j)&1
+            q = self.t[b^1][p]
             if q and self.s[q]:
                 res |= 1 << j
-                bit ^= 1
-            p = self.t[bit][p]
+                b ^= 1
+            p = self.t[b][p]
+        return res
+    
+    def lowxor(self, x, high):       # 树中与 x 异或小于 high 的个数
+        res = 0
+        p = 0
+        for j in range(self.L-1, -1, -1):
+            b = (x>>j)&1
+            h = (high>>j)&1
+            if h:
+                res += self.s[self.t[b][p]]
+            if not self.t[b^h][p]:
+                return res
+            p = self.t[b^h][p]
         return res
 ```
 

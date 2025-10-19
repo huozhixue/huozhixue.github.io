@@ -54,24 +54,26 @@
 class Solution:
     def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
         def tarjan(u,fa):
-            nonlocal t
-            dfn[u]=low[u]=t=t+1
+            nonlocal i
+            dfn[u] = low[u] = i = i+1
             for v in g[u]:
                 if not dfn[v]:
                     tarjan(v,u)
-                    low[u] = min(low[u],low[v])
+                    low[u] = min(low[u], low[v])
                     if low[v]>dfn[u]:
                         bridge.append([u,v])
                 elif v!=fa:
-                    low[u] = min(low[u],dfn[v])
+                    low[u] = min(low[u], dfn[v])
+        
         g = [[] for _ in range(n)]
         for u,v in connections:
             g[u].append(v)
             g[v].append(u)
-        dfn,low,t = [0]*n,[0]*n,0
+        dfn,low = [0]*n,[0]*n
         bridge = []
+        i = 0
         tarjan(0,-1)
         return bridge
 ```
-348 ms
+235 ms
 

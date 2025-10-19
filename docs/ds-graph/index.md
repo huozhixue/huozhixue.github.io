@@ -134,96 +134,130 @@ for u in range(n):
 - {{< lc "0753" >}} 破解保险箱
 - {{< lc "2097" >}} 合法重新排列数对
 
-##  割点和桥
+##  连通分量/割点/桥
+
 
 ```python
-# 割点
-def tarjan(u,root):
-	nonlocal t
-	dfn[u]=low[u]=t=t+1
-	s = 0
-	for v in g[u]:
-		if not dfn[v]:
-			tarjan(v,0)
-			low[u] = min(low[u],low[v])
-			s += low[v]>=dfn[u]
-		else:
-			low[u] = min(low[u],dfn[v])
-	cut[u] = s>root
-dfn,low,t = [0]*n,[0]*n,0
-cut = [0]*n
-tarjan(0,1)
-```
+# 有向图强连通分量，非递归 tarjan
+# 有向图强连通分量，非递归 tarjan
+def SCC(g,n):
+    def tarjan(u):
+        nonlocal i,j
+        dq = [u]
+        while dq:
+            u = dq.pop()
+            if p[u]==0:
+                dfn[u] = low[u] = i = i+1
+                sk.append(u)
+            if p[u]<len(g[u]):
+                dq.append(u)
+                v = g[u][p[u]]
+                if not dfn[v]:
+                    fa[v] = u
+                    dq.append(v)
+                elif not scc[v]:
+                    low[u] = min(low[u],dfn[v])
+                p[u] += 1
+            else:
+                x = fa[u]
+                if x!=-1:
+                    low[x] = min(low[x],low[u])
+                if low[u]==dfn[u]:
+                    j += 1
+                    while sk[-1]!=u:
+                        scc[sk.pop()] = j
+                    scc[sk.pop()] = j
 
-```python
-# 桥
-def tarjan(u,fa):
-	nonlocal t
-	dfn[u]=low[u]=t=t+1
-	for v in g[u]:
-		if not dfn[v]:
-			tarjan(v,u)
-			low[u] = min(low[u],low[v])
-			if low[v]>dfn[u]:
-				bridge.append([u,v])
-		elif v!=fa:
-			low[u] = min(low[u],dfn[v])
-dfn,low,t = [0]*n,[0]*n,0
-bridge = []
-tarjan(0,-1)
-```
-
-```python
-# 强连通分量、边双连通分量
-def tarjan(u,fa):
-	nonlocal t,i
-	dfn[u]=low[u]=t=t+1
-	sk.append(u)
-	vis[u] = 1
-	for v in g[u]:
-		if not dfn[v]:
-			tarjan(v,u)
-			low[u] = min(low[u],low[v])
-		elif v!=fa and vis[v]:
-			low[u] = min(low[u],dfn[v])
-	if low[u]==dfn[u]:
-		i += 1
-		v = -1
-		while v!=u:
-			v = sk.pop()
-			vis[v] = 0
-			scc[v] = i
-dfn,low,vis,sk = [0]*n,[0]*n,[0]*n,[]
-t,i = 0,0
-scc = []
-tarjan(0,-1)
+    dfn,low= [0]*n,[0]*n
+    fa,p = [-1]*n,[0]*n
+    scc,sk = [0]*n,[]
+    i,j = 0,0
+    for u in range(n):
+        if not dfn[u]:
+            tarjan(u)
+    return scc
 ```
 
 ```python []
-# 点双连通分量
-def tarjan(u,root):
-	if root and not g[u]:
-		dcc.append([u])
-	nonlocal t
-	dfn[u]=low[u]=t=t+1
-	sk.append(u)
-	s = 0
-	for v in g[u]:
-		if not dfn[v]:
-			tarjan(v,0)
-			low[u] = min(low[u],low[v])
-			if low[v]>=dfn[u]:
-				s += 1
-				dcc.append([])
-				while sk[-1]!=v:
-					dcc[-1].append(sk.pop())
-				dcc[-1].extend([sk.pop(),u])
-		else:
-			low[u] = min(low[u],dfn[v])
-	cut[u] = s>root
-dfn,low,sk,t = [0]*n,[0]*n,[],0
-dcc,cut = [],[0]*n
-tarjan(0,1)
+# 无向图的桥和边双连通分量，非递归 tarjan
+def BCC(g,n):
+    def tarjan(u):
+        nonlocal i,j
+        dq = [u]
+        while dq:
+            u = dq.pop()
+            if p[u]==0:
+                dfn[u] = low[u] = i = i+1
+                sk.append(u)
+            if p[u]<len(g[u]):
+                dq.append(u)
+                v = g[u][p[u]]
+                if not dfn[v]:
+                    fa[v] = u
+                    dq.append(v)
+                elif v!=fa[u]:
+                    low[u] = min(low[u],dfn[v])
+                p[u] += 1
+            else:
+                x = fa[u]
+                if x!=-1:
+                    low[x] = min(low[x],low[u])
+                    if low[u]>dfn[x]:
+                        bridge.append([x,u])
+                if low[u]==dfn[u]:
+                    j += 1
+                    while sk[-1]!=u:
+                        bcc[sk.pop()] = j
+                    bcc[sk.pop()] = j
+    dfn,low = [0]*n,[0]*n
+    fa,p = [-1]*n,[0]*n
+    bridge = []
+    bcc,sk = [0]*n,[]
+    i,j = 0,0
+    tarjan(0)
+    return bridge,bcc
+```
+
+```python []
+# 无向图的割点和点双连通分量，非递归 tarjan
+def DCC(g,n):
+    def tarjan(root):
+        nonlocal i
+        if not g[root]:
+            dcc.append([root])
+        dq = [root]
+        while dq:
+            u = dq.pop()
+            if p[u]==0:
+                dfn[u] = low[u] = i = i+1
+                sk.append(u)
+            if p[u]<len(g[u]):
+                dq.append(u)
+                v = g[u][p[u]]
+                if not dfn[v]:
+                    fa[v] = u
+                    dq.append(v)
+                else:
+                    low[u] = min(low[u],dfn[v])
+                p[u] += 1
+            else:
+                x = fa[u]
+                if x!=-1:
+                    low[x] = min(low[x],low[u])
+                    if low[u]>=dfn[x]:
+                        s[x] += 1
+                        dcc.append([])
+                        while sk[-1]!=u:
+                            dcc[-1].append(sk.pop())
+                        dcc[-1].extend([sk.pop(),x])
+                cut[u] = s[u]>(u==root)
+    dfn,low = [0]*n,[0]*n
+    fa,p = [-1]*n,[0]*n
+    s,cut = [0]*n,[0]*n
+    dcc,sk = [],[]
+    i = 0
+    tarjan(0)
+    return cut,dcc
 ```
 
 - {{< lc "1192" >}} 查找集群内的「关键连接」
@@ -237,58 +271,59 @@ tarjan(0,1)
 
 ```python
 # 二分图最大匹配，匈牙利
-def hgr(g):            # g 是二分图中每个 x 对应的 y 列表
-    def find(x):
-        for y in g[x]:
-            if y not in vis:
-                vis.add(y)
-                if y not in d or find(d[y]):
-                    d[y]=x
+def KM(g,n):            # 注意 g 包括二分图每个点，但只包含单向边
+    def find(u):
+        for v in g[u]:
+            if not vis[v]:
+                vis[v] = 1
+                if d[v]==-1 or find(d[v]):
+                    d[v] = u
                     return True
         return False
-    res,vis,d = 0,set(),{}
-    for x in g:
-        res += find(x)
-        vis.clear()
+    res = 0
+    d = [-1]*n
+    for u in range(n):
+        vis = [0]*n
+        res += find(u)
     return res
 ```
 
 ```python
 # 二分图最大权完美匹配，匈牙利
-def km(g):                   # g 是 n-n 完全二分图的权值
+inf = 10**20
+def KM(g,n):                   # g 是 n-n 完全二分图的权值
     def bfs(i): 
         slack = [inf]*n
         vis = [0]*(n+1)
         pre = [-1]*n
-        j=nj=-1
+        j = nj =-1
         d[j] = i
-        while d[j]!=-1:
+        while d[j] != -1:
             delta = inf
             x = d[j]
-            vis[j]=True
+            vis[j] = 1
             for y in range(n):
                 if vis[y]:
                     continue
-                tmp=lx[x]+ly[y]-g[x][y]
-                if slack[y]>tmp:
-                    slack[y]=tmp
-                    pre[y]=j
-                if slack[y]<delta:
-                    delta=slack[y]
+                tmp = lx[x]+ly[y]-g[x][y]
+                if slack[y] > tmp:
+                    slack[y] = tmp
+                    pre[y] = j
+                if slack[y] < delta:
+                    delta = slack[y]
                     nj = y
-            lx[i]-=delta
+            lx[i] -= delta
             for y in range(n):
                 if vis[y]:
-                    lx[d[y]]-=delta
-                    ly[y]+=delta
+                    lx[d[y]] -= delta
+                    ly[y] += delta
                 else:
-                    slack[y]-=delta
+                    slack[y] -= delta
             j = nj
         while j!=-1:
-            d[j]=d[pre[j]]
-            j=pre[j]
+            d[j] = d[pre[j]]
+            j = pre[j]
 
-    n = len(g)
     d = [-1]*(n+1)
     lx = [max(row) for row in g]
     ly = [0]*n
@@ -305,110 +340,124 @@ def km(g):                   # g 是 n-n 完全二分图的权值
 
 
 ```python
-# 最大流
-class Dinic:
-    def __init__(self,):
-        self.g = defaultdict(list)          # g 是图中每个 u 对应的 v 列表
-        self.h = {}                         # h 是图中每个 u 离源点 s 的距离
-        self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
+# 最大流 dinic
+from collections import deque
+inf = 10**20
+class MF:
+    def __init__(self,N):
+        self.g = [[] for _ in range(N)]          # g 是图中每个 u 对应的 v 列表
+        self.d = [inf]*N                         # d 是图中每个 u 离源点 s 的最小距离
+        self.p = [0]*N                           # p 是当前弧优化，跳过已增广的边
+        self.N = N
 
-    def add(self,u,v,c):                    # 顶点 u 和 v 连边，容量 c
+    def add(self,u,v,c):                         # 顶点 u 和 v 连边，容量 c
         self.g[u].append([v,len(self.g[v]),c])
         self.g[v].append([u,len(self.g[u])-1,0])
 
-    def bfs(self,s,t):
-        self.h = {s:0}
-        self.p = defaultdict(int)
-        Q = deque([s])
-        while Q:
-            u = Q.popleft()
+    def bfs(self,s,t):                           # bfs 得到层次图
+        self.d = [inf]*self.N
+        self.d[s] = 0
+        dq = deque([s])
+        while dq:
+            u = dq.popleft()
             for v,_,c in self.g[u]:
-                if v not in self.h and c>0:
-                    Q.append(v)
-                    self.h[v]=self.h[u]+1
-        return t in self.h
+                if c>0 and self.d[v]==inf:
+                    dq.append(v)
+                    self.d[v]=self.d[u]+1
+        return self.d[t]<inf
 
-    def dfs(self,u,t,flow):
+    def dfs(self,u,t,flow):                     # dfs 得到阻塞流，多路增广+当前弧优化
         if u==t:
             return flow
         res = 0
         for i in range(self.p[u],len(self.g[u])):
+            self.p[u] += 1
             v,j,c = self.g[u][i]
-            if self.h[v]==self.h[u]+1 and c>0:
+            if c>0 and self.d[v]==self.d[u]+1:
                 a = self.dfs(v,t,min(flow,c))
                 flow -= a
-                self.g[u][i][-1]-=a
-                self.g[v][j][-1]+=a
+                self.g[u][i][-1] -= a
+                self.g[v][j][-1] += a
                 res += a
-            self.p[u] += 1
+            if flow==0:
+                break
         return res
 
-    def cal(self,s,t):
+    def cal(self,s,t):                         # 重复增广，计算最大流
         res = 0
         while self.bfs(s,t):
+            self.p = [0]*self.N
             res += self.dfs(s,t,inf)
-        return res         self.g[u][i][-1]-=a
-                self.g[v][j][-1]+=a
-                res += a
-            self.p[u] += 1
-        return res
-
-    def cal(self,s,t):
-        res = 0
-        while self.bfs(s,t):
-            res += self.dfs(s,t,inf)
-        return res
+        return res   
 ```
 
 ```python
-# 最小费用最大流
-class Dinic:
-    def __init__(self,):
-        self.g = defaultdict(list)          # g 是图中每个 u 对应的 v 列表
-        self.h = defaultdict(lambda:inf)    # h 是图中每个 u 离源点 s 的距离
-        self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
-        self.vis = set()
+# 最小费用最大流，EK+dijkstra
+from collections import deque
+from heapq import heappush,heappop
+inf = 10**20
+class MCMF:
+    def __init__(self,N):
+        self.g = [[] for _ in range(N)]        # g 是图中每个 u 对应的 v 列表
+        self.h = [inf]*N                       # h 是源点 s 到图中每个 u 的势能
+        self.d = [inf]*N                       # d 是图中每个 u 离源点 s 的最小费用距离
+        self.flow = [0]*N                      # EK 找增广路时，维护经过每个 u 的流量
+        self.fa = [-1]*N                       # EK 找增广路时，维护每个 u 的流量来源
+        self.N = N
 
-    def add(self,u,v,c,w):                  # 顶点 u 和 v 连边，容量 c，费用 w
+    def add(self,u,v,c,w):                     # 顶点 u 和 v 连边，容量 c，费用 w
         self.g[u].append([v,len(self.g[v]),c,w])
         self.g[v].append([u,len(self.g[u])-1,0,-w])
-
-    def spfa(self,s,t):
-        self.h.clear()
-        self.h[s]=0
-        Q, vis = deque([s]), {s}
-        while Q:
-            u = Q.popleft()
-            vis.remove(u)
+    
+    def spfa(self,s):                          # 预处理源点 s 到图中每个 u 的势能
+        self.h[s] = 0
+        dq = deque([s])
+        inq = [0]*self.N
+        inq[s] = 1
+        while dq:
+            u = dq.popleft()
+            inq[u] = 0
             for v,_,c,w in self.g[u]:
                 if c>0 and self.h[u]+w<self.h[v]:
                     self.h[v] = self.h[u]+w
-                    if v not in vis:
-                        vis.add(v)
-                        Q.append(v)
-        return self.h[t]<inf
+                    if not inq[v]:
+                        inq[v] = 1
+                        dq.append(v)
 
-    def dfs(self,u,t,flow):
-        if u==t:
-            return flow
-        self.vis.add(u)
-        res = 0
-        for i in range(self.p[u],len(self.g[u])):
-            v,j,c,w = self.g[u][i]
-            if c>0 and v not in self.vis and self.h[v]==self.h[u]+w:
-                a = self.dfs(v,t,min(flow,c))
-                flow -= a
-                self.g[u][i][2]-=a
-                self.g[v][j][2]+=a
-                res += a
-            self.p[u] += 1
-        self.vis.remove(u)
-        return res
+    def dij(self,s,t):                        # 找单位费用最小的增广路，每条边的费用经过势能转换
+        self.d = [inf]*self.N
+        self.d[s] = 0
+        self.flow[s] = inf
+        pq = [(0,s)]
+        while pq:
+            w,u = heappop(pq)
+            if w>self.d[u]:
+                continue
+            for v,j,c,w2 in self.g[u]:
+                nw = w+w2+self.h[u]-self.h[v]
+                if c>0 and nw<self.d[v]:
+                    self.d[v] = nw
+                    self.fa[v] = j
+                    self.flow[v] = min(self.flow[u],c)
+                    heappush(pq,(nw,v))
+        return self.d[t]<inf
 
-    def cal(self,s,t):
+    def cal(self,s,t):                        # 重复增广，维护势能
         res = 0
-        while self.spfa(s,t):
-            res += self.dfs(s,t,inf)*self.h[t]
-            self.p.clear()
+        self.spfa(s)
+        while self.dij(s,t):
+            a = self.flow[t]
+            v = t
+            while v!=s:
+                j = self.fa[v]
+                u,i,_,_ = self.g[v][j]
+                self.g[u][i][2] -= a
+                self.g[v][j][2] += a
+                v = u
+            for u in range(self.N):
+                self.h[u] += self.d[u]
+            res += a*self.h[t]
         return res
 ```
+
+
