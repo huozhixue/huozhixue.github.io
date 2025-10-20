@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>数据结构（八）：区间信息 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="数据结构（八）：区间信息" />
-<meta property="og:description" content="区间静态查询：前缀和、st 表、莫队、猫树 区间修改&#43;最终查询：差分 单点修改、区间查询：树状数组 区间修改、区间查询：线段树、块状数组 1 2 3 4 5 6" />
+<meta property="og:description" content="区间静态查询：前缀和、st 表、莫队、猫树 区间修改&#43;最终查询：差分 单点修改、区间查询：树状数组 区间修改、区间查询：线段树、块状数组 块状数组 1 2" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/ds-interval/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-17T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="数据结构（八）：区间信息"/>
-<meta name="twitter:description" content="区间静态查询：前缀和、st 表、莫队、猫树 区间修改&#43;最终查询：差分 单点修改、区间查询：树状数组 区间修改、区间查询：线段树、块状数组 1 2 3 4 5 6"/>
+<meta name="twitter:description" content="区间静态查询：前缀和、st 表、莫队、猫树 区间修改&#43;最终查询：差分 单点修改、区间查询：树状数组 区间修改、区间查询：线段树、块状数组 块状数组 1 2"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/ds-interval/" /><link rel="prev" href="https://huozhixue.github.io/ds-union_find/" /><link rel="next" href="https://huozhixue.github.io/graph-flow/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/ds-interval\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  1344 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  1625 ,
         "url": "https:\/\/huozhixue.github.io\/ds-interval\/","datePublished": "2022-01-17T00:00:00+08:00","dateModified": "2022-01-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（八）：区间信息</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-17">2022-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1344 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/ds-interval/" class="leancloud_visitors" data-flag-title="数据结构（八）：区间信息">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-17">2022-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1625 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/ds-interval/" class="leancloud_visitors" data-flag-title="数据结构（八）：区间信息">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -119,13 +119,31 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#块状数组">块状数组</a></li>
+            <li><a href="#st-表">st 表</a></li>
+            <li><a href="#树状数组">树状数组</a></li>
+            <li><a href="#线段树-单点修改">线段树 单点修改</a></li>
+            <li><a href="#lazy-线段树-区间修改">lazy 线段树 区间修改</a></li>
+            <li><a href="#无旋-treap">无旋 treap</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
             </div><div class="content" id="content"><ul>
 <li>区间静态查询：前缀和、st 表、莫队、猫树</li>
 <li>区间修改+最终查询：差分</li>
 <li>单点修改、区间查询：树状数组</li>
 <li>区间修改、区间查询：线段树、块状数组</li>
 </ul>
+<h4 id="块状数组">块状数组</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -194,7 +212,8 @@
 </span></span><span class="line"><span class="cl">    <span class="n">B</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="p">:</span><span class="n">a</span><span class="o">*</span><span class="n">sq</span><span class="o">+</span><span class="n">sq</span><span class="p">])</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><h4 id="st-表">st 表</h4>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -230,7 +249,8 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">l</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">st</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">r</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><h4 id="树状数组">树状数组</h4>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -308,7 +328,8 @@
 </span></span><span class="line"><span class="cl">	<span class="n">bit</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><h4 id="线段树-单点修改">线段树 单点修改</h4>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -512,7 +533,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">seg</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><h4 id="lazy-线段树-区间修改">lazy 线段树 区间修改</h4>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
@@ -805,7 +827,128 @@
 <ul>
 <li><a href="/leetcode/2286" title="2286" rel="noopener noreferrer">2286</a> <a href="https://leetcode.cn/problems/booking-concert-tickets-in-groups/" target="_blank" rel="noopener noreffer">以组为单位订音乐会的门票</a></li>
 </ul>
-</div><div class="post-footer" id="post-footer">
+<h4 id="无旋-treap">无旋 treap</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 无旋 treap</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;prio&#39;</span><span class="p">,</span><span class="s1">&#39;sz&#39;</span><span class="p">,</span><span class="s1">&#39;val&#39;</span><span class="p">,</span><span class="s1">&#39;xo&#39;</span><span class="p">,</span><span class="s1">&#39;rev&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">l</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">prio</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">sz</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">xo</span> <span class="o">=</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">rev</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pull</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>                    <span class="c1"># 结构改变后更新信息</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span><span class="o">.</span><span class="n">sz</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span><span class="o">.</span><span class="n">xo</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">val</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">sz</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">sz</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">xo</span> <span class="o">^=</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">xo</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">sz</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">sz</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">xo</span> <span class="o">^=</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">xo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>                    <span class="c1"># 下传懒标记</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">t</span> <span class="ow">and</span> <span class="n">t</span><span class="o">.</span><span class="n">rev</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">rev</span> <span class="o">^=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">rev</span> <span class="o">^=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">rev</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>                 <span class="c1"># 按前k个节点/剩余节点拆分</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">t</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">push</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lsz</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="o">.</span><span class="n">sz</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">l</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">lsz</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">l</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">l</span> <span class="o">=</span> <span class="n">R</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pull</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">L</span><span class="p">,</span><span class="n">t</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">r</span><span class="p">,</span><span class="n">k</span><span class="o">-</span><span class="n">lsz</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">t</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">L</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pull</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">t</span><span class="p">,</span><span class="n">R</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>                 <span class="c1"># 合并，u中最大值小于v中最小值</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">u</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">v</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">u</span> <span class="ow">or</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">prio</span><span class="o">&lt;</span><span class="n">v</span><span class="o">.</span><span class="n">prio</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">push</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">u</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pull</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">u</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">push</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="o">.</span><span class="n">l</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="o">.</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pull</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">v</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

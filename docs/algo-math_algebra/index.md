@@ -3,6 +3,14 @@
 
 ## 代数
 
+高精度运算
+```python []
+# 四舍五入
+from decimal import Decimal, ROUND_HALF_UP
+def myround(x):
+    return Decimal(x).quantize(Decimal('.00'), rounding=ROUND_HALF_UP)
+```
+
 - {{< lc "1130" >}} [翻转子数组得到最大的数组值](https://leetcode.cn/problems/reverse-subarray-to-maximize-array-value/) （2482分）
 
 ## 组合

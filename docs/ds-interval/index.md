@@ -5,7 +5,7 @@
 - 单点修改、区间查询：树状数组
 - 区间修改、区间查询：线段树、块状数组
 
-
+#### 块状数组
 ```python []
 # 块状数组
 from math import isqrt
@@ -40,6 +40,8 @@ for a in range(m):
     B[a] = set(A[a*sq:a*sq+sq])
 ```
 
+#### st 表
+
 ```python
 # st 表
 class ST:
@@ -57,6 +59,8 @@ class ST:
         j = (r-l+1).bit_length()-1
         return self.func(self.st[j][l],self.st[j][r-(1<<j)+1])
 ```
+
+#### 树状数组
 
 ```python
 #树状数组
@@ -97,6 +101,7 @@ for i,x in enumerate(A,1):
 	bit.update(i,x)
 ```
 
+####  线段树 单点修改
 
 ```python []
 #  线段树 单点修改
@@ -199,6 +204,8 @@ n = len(A)
 seg = Seg(n)
 seg.build(A)
 ```
+
+#### lazy 线段树 区间修改
 
 ```python
 # lazy 线段树 区间修改
@@ -357,3 +364,64 @@ seg.build(A)
 - {{< lc "2286" >}} [以组为单位订音乐会的门票](https://leetcode.cn/problems/booking-concert-tickets-in-groups/)
 
 
+#### 无旋 treap 
+
+```python []
+# 无旋 treap
+class Node:
+    __slots__ = ('l','r','prio','sz','val','xo','rev')
+    def __init__(self, v):
+        self.l = self.r = None
+        self.prio = random.randrange(1 << 30)
+        self.sz = 1
+        self.val = v
+        self.xo = v
+        self.rev = 0
+
+def pull(t):                    # 结构改变后更新信息
+    t.sz = 1
+    t.xo = t.val
+    if t.l:
+        t.sz += t.l.sz
+        t.xo ^= t.l.xo
+    if t.r:
+        t.sz += t.r.sz
+        t.xo ^= t.r.xo
+
+def push(t):                    # 下传懒标记
+    if t and t.rev:
+        t.l, t.r = t.r, t.l
+        if t.l: t.l.rev ^= 1
+        if t.r: t.r.rev ^= 1
+        t.rev = 0
+
+def split(t,k):                 # 按前k个节点/剩余节点拆分
+    if not t:
+        return None,None
+    push(t)
+    lsz = t.l.sz if t.l else 0
+    if lsz >= k:
+        L,R = split(t.l,k)
+        t.l = R
+        pull(t)
+        return L,t
+    else:
+        L,R = split(t.r,k-lsz-1)
+        t.r = L
+        pull(t)
+        return t,R
+
+def merge(u,v):                 # 合并，u中最大值小于v中最小值
+    if not u or not v:
+        return u or v
+    if u.prio<v.prio:
+        push(u)
+        u.r = merge(u.r, v)
+        pull(u)
+        return u
+    else:
+        push(v)
+        v.l = merge(u,v.l)
+        pull(v)
+        return v
+```

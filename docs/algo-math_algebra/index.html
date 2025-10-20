@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>算法（六）：代数 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（六）：代数" />
-<meta property="og:description" content="代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return []" />
+<meta property="og:description" content="代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-math_algebra/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-09T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="算法（六）：代数"/>
-<meta name="twitter:description" content="代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return []"/>
+<meta name="twitter:description" content="代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algo-math_algebra/" /><link rel="prev" href="https://huozhixue.github.io/algo-greedy/" /><link rel="next" href="https://huozhixue.github.io/algo-math_geometry/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-math_algebra\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  845 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  869 ,
         "url": "https:\/\/huozhixue.github.io\/algo-math_algebra\/","datePublished": "2021-01-09T00:00:00+08:00","dateModified": "2021-01-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（六）：代数</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-09">2021-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 845 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-09">2021-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 869 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/algo-math_algebra/" class="leancloud_visitors" data-flag-title="算法（六）：代数">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -131,7 +131,22 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="代数">代数</h2>
-<ul>
+<p>高精度运算</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 四舍五入</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span><span class="p">,</span> <span class="n">ROUND_HALF_UP</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">myround</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Decimal</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">quantize</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;.00&#39;</span><span class="p">),</span> <span class="n">rounding</span><span class="o">=</span><span class="n">ROUND_HALF_UP</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><a href="/leetcode/1130" title="1130" rel="noopener noreferrer">1130</a> <a href="https://leetcode.cn/problems/reverse-subarray-to-maximize-array-value/" target="_blank" rel="noopener noreffer">翻转子数组得到最大的数组值</a> （2482分）</li>
 </ul>
 <h2 id="组合">组合</h2>

@@ -30,7 +30,7 @@
     <pubDate>Sat, 09 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-math_algebra/</guid>
-    <description><![CDATA[代数 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i+1]: i -= 1 if i &lt; 0: return []]]></description>
+    <description><![CDATA[代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def]]></description>
 </item><item>
     <title>算法（五）：贪心与构造</title>
     <link>https://huozhixue.github.io/algo-greedy/</link>

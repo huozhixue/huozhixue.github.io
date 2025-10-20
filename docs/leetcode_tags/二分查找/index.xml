@@ -53,6 +53,13 @@
     <guid>https://huozhixue.github.io/leetcode/3007/</guid>
     <description><![CDATA[力扣第 380 场周赛第 3 题 题目 给你一个整数 k 和一个整数 x 。整数 num 的价值是它的二进制表示中在 x，2x，3x 等位置处 设置位 的数目（从最低有效位开始）。]]></description>
 </item><item>
+    <title>2941：子数组的最大 GCD-Sum（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2941/</link>
+    <pubDate>Mon, 20 Nov 2023 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/2941/</guid>
+    <description><![CDATA[力扣第 2941 题 题目 给定一个整数数组 nums 和一个整数 k. 数组 a 的 gcd-sum 计算方法如下： 设 s 为 a 的所有元素的和。 设 g 为 a 的所有元素的 最大公约数。 a 的 gcd-sum 等于 s * g.]]></description>
+</item><item>
     <title>2940：找到 Alice 和 Bob 可以相遇的建筑（2327 分）</title>
     <link>https://huozhixue.github.io/leetcode/2940/</link>
     <pubDate>Sun, 19 Nov 2023 11:00:00 &#43;0800</pubDate>
@@ -60,18 +67,11 @@
     <guid>https://huozhixue.github.io/leetcode/2940/</guid>
     <description><![CDATA[力扣第 372 场周赛第 4 题 题目 给你一个下标从 0 开始的正整数数组 heights ，其中 heights[i] 表示第 i 栋建筑的高度。 如果一个人在建筑 i ，且存在 i &lt; j 的建筑 j 满足 heights[i] &lt; heights[j] ，]]></description>
 </item><item>
-    <title>2702：使数字变为非正数的最小操作次数（★★）</title>
-    <link>https://huozhixue.github.io/leetcode/2702/</link>
-    <pubDate>Wed, 24 May 2023 00:00:00 &#43;0800</pubDate>
+    <title>2819：购买巧克力后的最小相对损失（★★）</title>
+    <link>https://huozhixue.github.io/leetcode/2819/</link>
+    <pubDate>Mon, 14 Aug 2023 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2702/</guid>
-    <description><![CDATA[力扣第 2702 题 题目 给定一个 下标从0开始 的整数数组 nums，以及两个整数 x 和 y。在每一次操作中，你需要选择一个满足条件 0 &lt;= i &lt; nums.length 的下标 i ，并执行以]]></description>
-</item><item>
-    <title>2398：预算内的最多机器人数目（1917 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2398/</link>
-    <pubDate>Sat, 03 Sep 2022 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2398/</guid>
-    <description><![CDATA[力扣第 86 场双周赛第 4 题 题目 你有 n 个机器人，给你两个下标从 0 开始的整数数组 chargeTimes 和 runningCosts ，两者长度都为 n 。第 i 个机器人充电时间为 chargeTimes[i] 单位时间，花费 runningCosts[i] 单位]]></description>
+    <guid>https://huozhixue.github.io/leetcode/2819/</guid>
+    <description><![CDATA[力扣第 2819 题 题目 现给定一个整数数组 prices，表示巧克力的价格；以及一个二维整数数组 queries，其中 queries[i] = [ki, mi]。 Alice 和 Bob 去买巧克力，Al]]></description>
 </item></channel>
 </rss>
