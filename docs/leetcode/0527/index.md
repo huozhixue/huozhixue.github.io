@@ -99,34 +99,3 @@ class Solution:
         return [res[w] for w in words]
 ```
 68 ms
-
-## *附加
-
-还可以用 trie 树来找最长相同前缀 L。先将同组的单词都加入 trie 树，并保存前缀的个数。然后搜索单词时，找到第一个计数为 1 的前缀即可。
-
-```python
-class Solution:
-    def wordsAbbreviation(self, words: List[str]) -> List[str]:
-        d = defaultdict(list)
-        for w in words:
-            key = w[0]+str(len(w)-2)+w[-1] if len(w)>3 else w
-            d[key].append(w)
-        T = lambda: defaultdict(T)
-        res = {}
-        for A in d.values():
-            trie = T()
-            for w in A:
-                p = trie
-                for c in w:
-                    p = p[c]
-                    p['#'] = p.get('#',0)+1
-            for w in A:
-                p = trie
-                for i,c in enumerate(w):
-                    p = p[c]
-                    if p['#']==1:
-                        res[w] = w[:i+1]+str(len(w)-i-2)+w[-1] if len(w)>i+3 else w
-                        break
-        return [res[w] for w in words]
-```
-352 ms

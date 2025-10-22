@@ -64,6 +64,7 @@ col = 3
 ## 解答
 
 ```python
+class Solution:
     def cleanRoom(self, robot):
         def dfs(i, j, dx, dy):
             robot.clean()

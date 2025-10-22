@@ -52,25 +52,22 @@
 
 ## 分析
 
-{{< lc "0256" >}} 升级版。同样令 dp[i][j] 代表第 i 个房子刷成 j 颜色时，前 i 个房子所需的最低成本，即可递推。
-
-$$dp[i][j] = costs[i][j]+min(dp[i-1][:j]+dp[i-1][j+1:])$$
-
-令 left[j] 代表 min(dp[i-1][:j])，right[j] 代表 min(dp[i-1][j+1:])，left，right 数组可以一趟得到。
-
-因为 dp[i] 只依赖于 dp[i-1]，所以还可以优化为一维数组。
+- {{< lc "0256" >}} 升级版
+- 按最后房子的颜色即可递推
+- 相邻颜色不能相等，就保存前一个房子的最小值和次小值，选择即可
 
 ## 解答
 
 ```python
-def minCostII(self, costs: List[List[int]]) -> int:
-    n, k = len(costs), len(costs[0])
-    dp = [0]*k
-    for row in costs:
-        left = list(accumulate([inf]+dp[:-1], min))
-        right = list(accumulate([inf]+dp[:0:-1], min))[::-1]
-        dp = [x+min(l, r) for x,l,r in zip(row, left, right)]
-    return min(dp)
+class Solution:
+    def minCostII(self, costs: List[List[int]]) -> int:
+        n, k = len(costs), len(costs[0])
+        f = [0]*k
+        for A in costs:
+            m1,m2 = nsmallest(2,f)
+            for j in range(k):
+                f[j] = A[j] + (m2 if f[j]==m1 else m1)
+        return min(f)
 ```
-52 ms
+11 ms
 

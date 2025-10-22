@@ -61,69 +61,74 @@
 ## 解答
 
 ```python
-class Dinic:
-    def __init__(self,):
-        self.g = defaultdict(list)          # g 是图中每个 u 对应的 v 列表
-        self.h = {}                         # h 是图中每个 u 离源点 s 的距离
-        self.p = defaultdict(int)           # p 是当前弧优化，跳过已增广的边
+# 最大流 dinic
+class MF:
+    def __init__(self,N):
+        self.g = [[] for _ in range(N)]          # g 是图中每个 u 对应的 v 列表
+        self.d = [inf]*N                         # d 是图中每个 u 离源点 s 的最小距离
+        self.p = [0]*N                           # p 是当前弧优化，跳过已增广的边
+        self.N = N
 
-    def add(self,u,v,c):                    # 顶点 u 和 v 连边，容量 c
+    def add(self,u,v,c):                         # 顶点 u 和 v 连边，容量 c
         self.g[u].append([v,len(self.g[v]),c])
         self.g[v].append([u,len(self.g[u])-1,0])
 
-    def bfs(self,s,t):
-        self.h = {s:0}
-        self.p = defaultdict(int)
-        Q = deque([s])
-        while Q:
-            u = Q.popleft()
+    def bfs(self,s,t):                           # bfs 得到层次图
+        self.d = [inf]*self.N
+        self.d[s] = 0
+        dq = deque([s])
+        while dq:
+            u = dq.popleft()
             for v,_,c in self.g[u]:
-                if v not in self.h and c>0:
-                    Q.append(v)
-                    self.h[v]=self.h[u]+1
-        return t in self.h
+                if c>0 and self.d[v]==inf:
+                    dq.append(v)
+                    self.d[v]=self.d[u]+1
+        return self.d[t]<inf
 
-    def dfs(self,u,t,flow):
+    def dfs(self,u,t,flow):                     # dfs 得到阻塞流，多路增广+当前弧优化
         if u==t:
             return flow
         res = 0
         for i in range(self.p[u],len(self.g[u])):
+            self.p[u] += 1
             v,j,c = self.g[u][i]
-            if self.h[v]==self.h[u]+1 and c>0:
+            if c>0 and self.d[v]==self.d[u]+1:
                 a = self.dfs(v,t,min(flow,c))
                 flow -= a
-                self.g[u][i][-1]-=a
-                self.g[v][j][-1]+=a
+                self.g[u][i][-1] -= a
+                self.g[v][j][-1] += a
                 res += a
-            self.p[u] += 1
+            if flow==0:
+                break
         return res
 
-    def cal(self,s,t):
+    def cal(self,s,t):                         # 重复增广，计算最大流
         res = 0
         while self.bfs(s,t):
+            self.p = [0]*self.N
             res += self.dfs(s,t,inf)
-        return res
+        return res   
 
 class Solution:
     def minimumOperations(self, grid: List[List[int]]) -> int:
         m,n = len(grid),len(grid[0])
-        dic = Dinic()
         s,t = m*n,m*n+1
+        mf = MF(m*n+2)
         for i in range(m):
             for j in range(n):
                 if grid[i][j]==1:
                     u = i*n+j
                     if (i+j)%2:
-                        dic.add(s,u,1)
+                        mf.add(s,u,1)
                     else:
-                        dic.add(u,t,1)
+                        mf.add(u,t,1)
                     for x,y in [(i-1,j),(i,j-1)]:
                         if 0<=x<m and 0<=y<n and grid[x][y]==1:
                             v = x*n+y
                             if (i+j)%2:
-                                dic.add(u,v,1)
+                                mf.add(u,v,1)
                             else:
-                                dic.add(v,u,1)
-        return dic.cal(s,t)
+                                mf.add(v,u,1)
+        return mf.cal(s,t)
 ```
-3463 ms
+1622 ms

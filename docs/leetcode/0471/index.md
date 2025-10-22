@@ -80,16 +80,17 @@
 ## 解答
 
 ```python
-def encode(self, s: str) -> str:
-	n = len(s)
-	dp = [['']*n for _ in range(n)]
-	for i in range(n-1, -1, -1):
-		for j in range(i, n):
-			dp[i][j] = ss = s[i:j+1]
-			x = (ss+ss).find(ss, 1)
-			dp[i][j] = min(dp[i][j], str(len(ss)//x)+'['+dp[i][i+x-1]+']', key=len)
-			for k in range(i+1, j):
-				dp[i][j] = min(dp[i][j], dp[i][k]+dp[k+1][j], key=len)
-	return dp[0][-1]
+class Solution:
+    def encode(self, s: str) -> str:
+        n = len(s)
+        dp = [['']*n for _ in range(n)]
+        for i in range(n-1, -1, -1):
+            for j in range(i, n):
+                dp[i][j] = ss = s[i:j+1]
+                x = (ss+ss).find(ss, 1)
+                dp[i][j] = min(dp[i][j], str(len(ss)//x)+'['+dp[i][i+x-1]+']', key=len)
+                for k in range(i+1, j):
+                    dp[i][j] = min(dp[i][j], dp[i][k]+dp[k+1][j], key=len)
+        return dp[0][-1]
 ```
 304 ms

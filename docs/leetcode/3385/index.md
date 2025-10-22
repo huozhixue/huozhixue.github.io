@@ -171,76 +171,144 @@
 
 ## 分析
 
+### #1
 - 看作 n 个锁和开锁顺序 [0,n-1] 之间的二分图，问题转为求二分图最大权完美匹配
-- 可以用匈牙利算法，也可以用最小费用最大流
+- 可以用最小费用最大流
 
+```python
+# 最小费用最大流，EK+dijkstra
+class MCMF:
+    def __init__(self,N):
+        self.g = [[] for _ in range(N)]        # g 是图中每个 u 对应的 v 列表
+        self.h = [inf]*N                       # h 是源点 s 到图中每个 u 的势能
+        self.d = [inf]*N                       # d 是图中每个 u 离源点 s 的最小费用距离
+        self.flow = [0]*N                      # EK 找增广路时，维护经过每个 u 的流量
+        self.fa = [-1]*N                       # EK 找增广路时，维护每个 u 的流量来源
+        self.N = N
+
+    def add(self,u,v,c,w):                     # 顶点 u 和 v 连边，容量 c，费用 w
+        self.g[u].append([v,len(self.g[v]),c,w])
+        self.g[v].append([u,len(self.g[u])-1,0,-w])
+    
+    def spfa(self,s):                          # 预处理源点 s 到图中每个 u 的势能
+        self.h[s] = 0
+        dq = deque([s])
+        inq = [0]*self.N
+        inq[s] = 1
+        while dq:
+            u = dq.popleft()
+            inq[u] = 0
+            for v,_,c,w in self.g[u]:
+                if c>0 and self.h[u]+w<self.h[v]:
+                    self.h[v] = self.h[u]+w
+                    if not inq[v]:
+                        inq[v] = 1
+                        dq.append(v)
+
+    def dij(self,s,t):                        # 找单位费用最小的增广路，每条边的费用经过势能转换
+        self.d = [inf]*self.N
+        self.d[s] = 0
+        self.flow[s] = inf
+        pq = [(0,s)]
+        while pq:
+            w,u = heappop(pq)
+            if w>self.d[u]:
+                continue
+            for v,j,c,w2 in self.g[u]:
+                nw = w+w2+self.h[u]-self.h[v]
+                if c>0 and nw<self.d[v]:
+                    self.d[v] = nw
+                    self.fa[v] = j
+                    self.flow[v] = min(self.flow[u],c)
+                    heappush(pq,(nw,v))
+        return self.d[t]<inf
+
+    def cal(self,s,t):                        # 重复增广，维护势能
+        res = 0
+        self.spfa(s)
+        while self.dij(s,t):
+            a = self.flow[t]
+            v = t
+            while v!=s:
+                j = self.fa[v]
+                u,i,_,_ = self.g[v][j]
+                self.g[u][i][2] -= a
+                self.g[v][j][2] += a
+                v = u
+            for u in range(self.N):
+                self.h[u] += self.d[u]
+            res += a*self.h[t]
+        return res
+
+class Solution:
+    def findMinimumTime(self, strength: List[int]) -> int:
+        n = len(strength)
+        mcmf = MCMF(n*2+2)
+        s,t = n*2,n*2+1
+        for i,a in enumerate(strength):
+            mcmf.add(s,i,1,0)
+            mcmf.add(i+n,t,1,0)
+            for j in range(n):
+                mcmf.add(i,j+n,1,(a-1)//(j+1)+1)
+        return mcmf.cal(s,t)
+```
+2411 ms
+### #2
+
+- 用匈牙利算法更快
 ## 解答
 
 
 ```python
-# 最小费用最大流
-class Dinic:
-    def __init__(self,N):
-        self.g = [[] for _ in range(N)]          # g 是图中每个 u 对应的 v 列表
-        self.h = [inf]*N                        # h 是图中每个 u 离源点 s 的距离
-        self.p = [0]*N              # p 是当前弧优化，跳过已增广的边
-        self.vis = [0]*N
-        self.N = N
+# 二分图最大权完美匹配，匈牙利
+def KM(g,n):                   # g 是 n-n 完全二分图的权值
+    def bfs(i): 
+        slack = [inf]*n
+        vis = [0]*(n+1)
+        pre = [-1]*n
+        j = nj =-1
+        d[j] = i
+        while d[j] != -1:
+            delta = inf
+            x = d[j]
+            vis[j] = 1
+            for y in range(n):
+                if vis[y]:
+                    continue
+                tmp = lx[x]+ly[y]-g[x][y]
+                if slack[y] > tmp:
+                    slack[y] = tmp
+                    pre[y] = j
+                if slack[y] < delta:
+                    delta = slack[y]
+                    nj = y
+            lx[i] -= delta
+            for y in range(n):
+                if vis[y]:
+                    lx[d[y]] -= delta
+                    ly[y] += delta
+                else:
+                    slack[y] -= delta
+            j = nj
+        while j!=-1:
+            d[j] = d[pre[j]]
+            j = pre[j]
 
-    def add(self,u,v,c,w):                  # 顶点 u 和 v 连边，容量 c，费用 w
-        self.g[u].append([v,len(self.g[v]),c,w])
-        self.g[v].append([u,len(self.g[u])-1,0,-w])
-
-    def spfa(self,s,t):
-        self.h = [inf]*self.N
-        self.h[s]=0
-        Q, vis = deque([s]), {s}
-        while Q:
-            u = Q.popleft()
-            vis.remove(u)
-            for v,_,c,w in self.g[u]:
-                if c>0 and self.h[u]+w<self.h[v]:
-                    self.h[v] = self.h[u]+w
-                    if v not in vis:
-                        vis.add(v)
-                        Q.append(v)
-        return self.h[t]<inf
-
-    def dfs(self,u,t,flow):
-        if u==t:
-            return flow
-        self.vis[u] = 1
-        res = 0
-        for i in range(self.p[u],len(self.g[u])):
-            v,j,c,w = self.g[u][i]
-            if c>0 and not self.vis[v] and self.h[v]==self.h[u]+w:
-                a = self.dfs(v,t,min(flow,c))
-                flow -= a
-                self.g[u][i][2]-=a
-                self.g[v][j][2]+=a
-                res += a
-            self.p[u] += 1
-        self.vis[u] = 0
-        return res
-
-    def cal(self,s,t):
-        res = 0
-        while self.spfa(s,t):
-            res += self.dfs(s,t,inf)*self.h[t]
-            self.p = [0]*self.N
-        return res
+    d = [-1]*(n+1)
+    lx = [max(row) for row in g]
+    ly = [0]*n
+    for i in range(n):
+        bfs(i)
+    return sum(g[d[y]][y] for y in range(n))
 
 
 class Solution:
     def findMinimumTime(self, strength: List[int]) -> int:
         n = len(strength)
-        dinic = Dinic(n*2+2)
-        s,t = n*2,n*2+1
+        g = [[0]*n for _ in range(n)]
         for i,a in enumerate(strength):
-            dinic.add(s,i,1,0)
-            dinic.add(i+n,t,1,0)
             for j in range(n):
-                dinic.add(i,j+n,1,(a-1)//(j+1)+1)
-        return dinic.cal(s,t)
+                g[i][j] = -((a-1)//(j+1)+1)
+        return -KM(g,n)
 ```
-8310 ms
+399 ms

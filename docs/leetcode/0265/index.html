@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0265\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  521 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  427 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0265\/","datePublished": "2015-09-22T00:00:00+08:00","dateModified": "2015-09-22T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0265：粉刷房子 II（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-22">2015-09-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 521 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0265/" class="leancloud_visitors" data-flag-title="0265：粉刷房子 II（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-09-22">2015-09-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 427 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0265/" class="leancloud_visitors" data-flag-title="0265：粉刷房子 II（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -158,10 +158,11 @@
 </ul>
 <p><strong>进阶：</strong>您能否在 <code>O(nk)</code> 的时间复杂度下解决此问题？</p>
 <h2 id="分析">分析</h2>
-<p><a href="/leetcode/0256" title="0256" rel="noopener noreferrer">0256</a> 升级版。同样令 dp[i][j] 代表第 i 个房子刷成 j 颜色时，前 i 个房子所需的最低成本，即可递推。</p>
-<p>$$dp[i][j] = costs[i][j]+min(dp[i-1][:j]+dp[i-1][j+1:])$$</p>
-<p>令 left[j] 代表 min(dp[i-1][:j])，right[j] 代表 min(dp[i-1][j+1:])，left，right 数组可以一趟得到。</p>
-<p>因为 dp[i] 只依赖于 dp[i-1]，所以还可以优化为一维数组。</p>
+<ul>
+<li><a href="/leetcode/0256" title="0256" rel="noopener noreferrer">0256</a> 升级版</li>
+<li>按最后房子的颜色即可递推</li>
+<li>相邻颜色不能相等，就保存前一个房子的最小值和次小值，选择即可</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -173,19 +174,21 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">minCostII</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">costs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">costs</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">costs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">k</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">costs</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">left</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="n">inf</span><span class="p">]</span><span class="o">+</span><span class="n">dp</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">min</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">right</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">([</span><span class="n">inf</span><span class="p">]</span><span class="o">+</span><span class="n">dp</span><span class="p">[:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">min</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="nb">min</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minCostII</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">costs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">costs</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">costs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">A</span> <span class="ow">in</span> <span class="n">costs</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m1</span><span class="p">,</span><span class="n">m2</span> <span class="o">=</span> <span class="n">nsmallest</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">m2</span> <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">m1</span> <span class="k">else</span> <span class="n">m1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>52 ms</p>
+</div><p>11 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

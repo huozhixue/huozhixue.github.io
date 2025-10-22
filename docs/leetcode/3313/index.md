@@ -88,10 +88,8 @@
 
 ## 分析
 
+### #1
 - 典型的换根dp，同时保存最远的节点即可
-
-## 解答
-
 
 ```python
 # dfs序预处理树
@@ -132,3 +130,39 @@ class Solution:
         return [p[1] for p in f]
 ```
 2082 ms
+
+
+### #2
+
+- 也可以先两次 bfs 找到直径的两个端点 u、v
+- 树上任意节点距离最远的必然是 u、v 其中之一，比较即可
+
+## 解答
+
+```python
+class Solution:
+    def lastMarkedNodes(self, edges: List[List[int]]) -> List[int]:
+        n = len(edges)+1
+        g = [[] for _ in range(n)]
+        for u,v in edges:
+            g[u].append(v)
+            g[v].append(u)
+        def bfs(u):
+            d = [-1]*n
+            d[u] = 0
+            dq = deque([u])
+            while dq:
+                u = dq.popleft()
+                for v in g[u]:
+                    if d[v]==-1:
+                        d[v] = d[u]+1
+                        dq.append(v)
+            return d
+        d = bfs(0)
+        u = d.index(max(d))
+        d2 = bfs(u)
+        v = d2.index(max(d2))
+        d3 = bfs(v)
+        return [max((d2[x],u),(d3[x],v))[1] for x in range(n)]
+```
+522 ms

@@ -53,33 +53,49 @@
 
 ## 分析
 
-典型的并查集，维护并查集的块的个数即可。
+- 并查集模板
+- 由于只关心陆地，所以加入陆地时才初始化 f 值和 cc 值
 
 ## 解答
 
 ```python
-def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
-    def find(x):
-        if f.setdefault(x, x) != x:
-            f[x] = find(f[x])
-        return f[x]
+class DSU:
+    def __init__(self,n):
+        self.f = [-1]*n
+        self.sz = [1]*n
+        self.cc = 0
+    
+    def find(self,x):
+        if self.f[x]!=x:
+            self.f[x] = self.find(self.f[x])
+        return self.f[x]
+    
+    def union(self,x,y):
+        f,sz = self.f,self.sz
+        fx,fy = self.find(x),self.find(y)
+        if fx==fy:
+            return False
+        if sz[fx]>sz[fy]:
+            fx,fy = fy,fx
+        f[fx] = fy
+        sz[fy] += sz[fx]
+        self.cc -= 1
+        return True
 
-    def union(x, y):
-        fx, fy = find(x), find(y)
-        if fx != fy:
-            f[fx] = fy
-            self.cnt -= 1
-
-    res, f, self.cnt = [], {}, 0
-    for i, j in positions:
-        if (i, j) not in f:
-            f[(i, j)] = (i, j)
-            self.cnt += 1
-            for x, y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-                if (x, y) in f:
-                    union((x, y), (i, j))
-        res.append(self.cnt)
-    return res
+class Solution:
+    def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
+        dsu = DSU(m*n)
+        res = []
+        for i,j in positions:
+            u = i*n+j
+            if dsu.f[u]==-1:
+                dsu.f[u] = u
+                dsu.cc += 1
+            for x,y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
+                if 0<=x<m and 0<=y<n and dsu.f[x*n+y]!=-1:
+                    dsu.union(u,x*n+y)
+            res.append(dsu.cc)
+        return res
 ```
-252 ms
+66 ms
 

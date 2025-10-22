@@ -49,14 +49,15 @@
 ## 解答
 
 ```python
-def closestKValues(self, root: TreeNode, target: float, k: int) -> List[int]:
-    A, stack = [], [root]
-    while stack:
-        p = stack.pop()
-        if p:
-            A.append(p.val)
-            stack.extend([p.right, p.left])
-    return nsmallest(k, A, key=lambda x: abs(x-target))
+class Solution:
+    def closestKValues(self, root: TreeNode, target: float, k: int) -> List[int]:
+        A, sk = [], [root]
+        while sk:
+            p = sk.pop()
+            if p:
+                A.append(p.val)
+                sk.extend([p.right, p.left])
+        return nsmallest(k,A,key=lambda x: abs(x-target))
 ```
-48 ms
+4 ms
 

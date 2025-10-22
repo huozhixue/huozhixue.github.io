@@ -55,37 +55,36 @@
 
 ## 分析
 
-根据相邻单词的比较，可以得到一些字母的大小关系。
-
-将字母看作顶点，大小关系看作有向边，即转为拓扑排序问题。
-
-注意词典可能本身排序就错误，此时应该直接返回空字符串。
+- 根据相邻单词的比较，可以得到字母的大小关系
+- 将字母看作顶点，大小关系看作有向边，即转为拓扑排序问题
+- 注意词典可能本身排序就错误，此时应该直接返回空字符串
 
 
 ## 解答
 
 ```python
-def alienOrder(self, words: List[str]) -> str:
-    nxt, indeg = defaultdict(list), defaultdict(int)
-    for w1, w2 in pairwise(words):
-        if w1 != w2 and w1.startswith(w2):
-            return ''
-        for a,b in zip(w1, w2):
-            if a!=b:
-                nxt[a].append(b)
-                indeg[b] += 1
-                break
-    A = {c for w in words for c in w}
-    Q = deque(u for u in A if indeg[u]==0)
-    res = ''
-    while Q:
-        u = Q.popleft()
-        res += u
-        for v in nxt[u]:
-            indeg[v] -= 1
-            if indeg[v] == 0:
-                Q.append(v)
-    return res if len(res)==len(A) else ''
+class Solution:
+    def alienOrder(self, words: List[str]) -> str:
+        g, deg = defaultdict(list), defaultdict(int)
+        for w1, w2 in pairwise(words):
+            if w1 != w2 and w1.startswith(w2):
+                return ''
+            for a, b in zip(w1, w2):
+                if a != b:
+                    g[a].append(b) 
+                    deg[b] += 1
+                    break
+        A = {c for w in words for c in w}
+        dq = deque(u for u in A if deg[u]==0)
+        res = ''
+        while dq:
+            u = dq.popleft()
+            res += u
+            for v in g[u]:
+                deg[v] -= 1
+                if deg[v] == 0:
+                    dq.append(v)
+        return res if len(res) == len(A) else ''
 ```
-32 ms
+0 ms
 

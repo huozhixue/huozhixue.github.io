@@ -41,22 +41,54 @@
 
 ## 分析
 
-{{< lc "0247" >}} 升级版，递推得到所有不超过 high 长度的中心对称数，判断是否在范围内即可。
-
-注意最外层为 0 的不能计数。
+- 令 cal(s) 返回 [0,s] 范围的对称数
+	- s 长度 m，则所有长度<m 的对称数都 <s，令 f[n] 代表长度<=n的对称数个数，可以递推得到 
+	- 再考虑长度 m 的数，考虑 s 的前一半（包括中心）t
+	- 先考虑第一位就比 t 小的数，后面的数可以任取（只要保证是对称数）
+	- 然后考虑第一位和 t 相同，第二位比 t 小的数，同理统计
+	- 依此类推，需要注意两点
+		- 假如某位不是对称数字，直接退出
+		- 非中心数可以选择 0,1,6,8,9，中心数只能选择 0,1,8
+	- 最后再判断前一半和 t 完全相同的对称数是否小于 s 即可
+- 结果就是 cal(high)-cal(low)，如果 low 是对称数，再加 1 即可
 
 ## 解答
 
 ```python
-def strobogrammaticInRange(self, low: str, high: str) -> int:
-    n, low, high = len(high), int(low), int(high)
-    dp = [[] for _ in range(n+1)]
-    dp[0], dp[1] = [''], ['0', '1', '8']
-    res = sum(low<=int(x)<=high for x in dp[1])
-    for i in range(2, n+1):
-        dp[i] = [a+sub+b for sub in dp[i-2] for a,b in zip('1689', '1986')]
-        res += sum(low<=int(x)<=high for x in dp[i])
-        dp[i].extend(['0'+sub+'0' for sub in dp[i-2]])
+f,g = [0]*16,[0]*16
+g[0] = 1
+f[1] = g[1] = 3
+for i in range(2,16):
+    f[i] = f[i-1]+g[i-2]*4
+    g[i] = g[i-2]*5
+
+A = [0,1,6,8,9]
+B = [0,1,8]
+d = dict(zip('01689','01986'))
+
+def gen(s):
+    return ''.join([d.get(c,'*') for c in s][::-1])
+
+def cal(s):
+    m = len(s)
+    q,r = divmod(m,2)
+    res = f[m-1]
+    for i in range(q):
+        x = int(s[i])
+        w = bisect_left(A,x)
+        res += (w if i else w-1)*pow(5,q-1-i)*pow(3,r)
+        if x not in A:
+            return res
+    if r:
+        x = int(s[q])
+        res += bisect_left(B,x)
+        res += x in B and s[:q+r]+gen(s[:q])<=s
+    else:
+        x = int(s[q-1])
+        res += s[:q]+gen(s[:q])<=s
     return res
+
+class Solution:
+    def strobogrammaticInRange(self, low: str, high: str) -> int:
+        return cal(high)-cal(low)+(gen(low)==low)
 ```
-128 ms

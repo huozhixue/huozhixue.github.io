@@ -49,11 +49,12 @@
 ## 解答
 
 ```python
-def minTotalDistance(self, grid: List[List[int]]) -> int:
-    def cal(grid):
-        A = [i for i, row in enumerate(grid) for val in row if val==1]
-        half = len(A) // 2
-        return sum(A[-half:])-sum(A[:half])
-    return cal(grid)+cal(zip(*grid))
+class Solution:
+    def minTotalDistance(self, grid: List[List[int]]) -> int:
+        def cal(grid):
+            A = [i for i,row in enumerate(grid) for x in row if x==1]
+            mid = A[len(A)//2]
+            return sum(abs(a-mid) for a in A)
+        return cal(grid)+cal(list(zip(*grid)))
 ```
-40 ms
+11 ms

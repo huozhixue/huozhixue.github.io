@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0317\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  541 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  537 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0317\/","datePublished": "2015-11-13T00:00:00+08:00","dateModified": "2015-11-13T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0317：离建筑物最近的距离（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-13">2015-11-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 541 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2015-11-13">2015-11-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 537 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0317/" class="leancloud_visitors" data-flag-title="0317：离建筑物最近的距离（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -168,9 +168,10 @@
 <li><code>grid</code> 中 <strong>至少</strong> 有 <strong>一幢</strong> 建筑</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>典型的 bfs。从每个建筑开始遍历，求得空地到每个建筑的距离，总和最小的空地即为所求。</p>
-<p>遍历时，注意记录空地能到达的建筑个数，若小于总建筑个数，则不符合要求</p>
 <ul>
+<li>典型的 bfs</li>
+<li>从每个建筑开始遍历，求得空地到每个建筑的距离，总和最小的空地即为所求</li>
+<li>遍历时，注意记录空地能到达的建筑个数，若小于总建筑个数，则不符合要求</li>
 <li>可以直接用grid 记录，为了与障碍区分，可以记录为负数</li>
 </ul>
 <h2 id="解答">解答</h2>
