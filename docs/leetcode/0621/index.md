@@ -82,7 +82,7 @@ class Solution:
             t += 1
         return t
 ```
-200 ms
+129 ms
 
 ### #2 构造
 
@@ -95,8 +95,7 @@ class Solution:
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         A = list(Counter(tasks).values())
-        ma = max(A)
-        w = A.count(ma)
-        return max(len(tasks),(ma-1)*(n+1)+w)
+        a = max(A)
+        return max(len(tasks),(a-1)*(n+1)+A.count(a))
 ```
-64 ms
+22 ms

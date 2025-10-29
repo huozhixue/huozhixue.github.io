@@ -1,0 +1,55 @@
+# 0660：移除 9（★★）
+
+
+> <u>**[力扣第 660 题](https://leetcode.cn/problems/remove-9/)**</u>
+
+## 题目
+
+<p>从 <code>1</code> 开始，移除包含数字 <code>9</code> 的所有整数，例如 <code>9</code>，<code>19</code>，<code>29</code>，……</p>
+
+<p>这样就获得了一个新的整数数列：<code>1</code>，<code>2</code>，<code>3</code>，<code>4</code>，<code>5</code>，<code>6</code>，<code>7</code>，<code>8</code>，<code>10</code>，<code>11</code>，……</p>
+
+<p>给你一个整数 <code>n</code>，请你返回新数列中第 <code>n</code> 个数字是多少（下标从 <strong>1</strong> 开始）。</p>
+
+
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 9
+<strong>输出：</strong>10
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>n = 10
+<strong>输出：</strong>11
+</pre>
+
+
+
+<p><strong>提示：</strong></p>
+
+<ul>
+<li><code>1 &lt;= n &lt;= 8 * 10<sup>8</sup></code></li>
+</ul>
+
+
+## 分析
+
+- 等价于转为 9 进制
+
+## 解答
+
+```python
+class Solution:
+    def newInteger(self, n: int) -> int:
+        res = ''
+        while n:
+            res = str(n%9)+res
+            n //= 9
+        return int(res)
+```
+
+0 ms

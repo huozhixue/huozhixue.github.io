@@ -77,23 +77,30 @@
 ```python
 class Solution:
     def findShortestWay(self, maze: List[List[int]], ball: List[int], hole: List[int]) -> str:
-        m, n = len(maze), len(maze[0])
-        d, pq = {}, [(0, '', ball[0], ball[1])]
+        def push(w,path,i,j):
+            if (w,path)<d[i][j]:
+                d[i][j] = (w,path)
+                heappush(pq,(w,path,i,j))
+        m,n = len(maze),len(maze[0])
+        i,j = ball
+        d = [[(inf,'') for _ in range(n)] for _ in range(m)]
+        d[i][j] = (0,'')
+        pq = [(0,'',i,j)]
         while pq:
-            w, path, i, j = heappop(pq)
-            if (i, j) in d:
+            w,path,i,j = heappop(pq)
+            if (w,path)>d[i][j]:
                 continue
-            if [i, j] == hole:
+            if [i,j] == hole:
                 return path
-            d[(i, j)] = w
-            for dx, dy, p in [(-1, 0, 'u'), (1, 0, 'd'), (0, -1, 'l'), (0, 1, 'r')]:
-                x, y, w2 = i, j, w
-                while 0 <= x + dx < m and 0 <= y + dy < n and maze[x + dx][y + dy] == 0:
-                    x, y, w2 = x + dx, y + dy, w2 + 1
-                    if [x, y] == hole:
-                        heappush(pq, (w2, path+p, x, y))
-                if (x, y) not in d:
-                    heappush(pq, (w2, path+p, x, y))
+            for dx,dy,p in [(-1,0,'u'),(1,0,'d'),(0,-1,'l'),(0,1,'r')]:
+                x,y,w2 = i,j,w
+                while 0<=x+dx<m and 0<=y+dy<n and maze[x+dx][y+dy]==0:
+                    x,y,w2 = x+dx,y+dy,w2+1
+                    if [x,y] == hole:
+                        push(w2,path+p,x,y)
+                        break
+                else:
+                    push(w2,path+p,x,y)
         return 'impossible'
 ```
-36 ms
+3 ms
