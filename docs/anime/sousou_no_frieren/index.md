@@ -76,7 +76,7 @@
 ## 配乐
 
 {{< media "https://music.163.com/#/album?id=192570585"
-""
+"TV动画《葬送的芙莉莲》原声带"
 "music" >}}
 ## MAD
 
