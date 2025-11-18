@@ -71,32 +71,59 @@
 
 ## 分析
 
+### #1
+
 典型的最小生成树问题，按费用排序，依次判断是否添加边即可。
 
+
+```python
+class Solution:
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        def find(x):
+            if f[x] != x:
+                f[x] = find(f[x])
+            return f[x]
+
+        def union(x, y):
+            f[find(x)] = find(y)
+        
+        def cal(p1, p2):
+            return abs(p1[0]-p2[0])+abs(p1[1]-p2[1])
+
+        n = len(points)
+        A = [[cal(points[i], points[j]), i, j] for i in range(n) for j in range(i+1, n)]
+        res, f = 0, list(range(n))
+        for w, i, j in sorted(A):
+            if find(i) != find(j):
+                union(i, j)
+                res += w
+        return res
+```
+2375 ms
+
+### #2
+
+也可以用 prime 算法
 ## 解答
 
 ```python
-def minCostConnectPoints(self, points: List[List[int]]) -> int:
-    def find(x):
-        if f[x] != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        def cal(p1, p2):
+            return abs(p1[0]-p2[0])+abs(p1[1]-p2[1])
 
-    def union(x, y):
-        f[find(x)] = find(y)
-    
-    def cal(p1, p2):
-        return abs(p1[0]-p2[0])+abs(p1[1]-p2[1])
-
-    n = len(points)
-    A = [[cal(points[i], points[j]), i, j] for i in range(n) for j in range(i+1, n)]
-    res, f = 0, list(range(n))
-    for w, i, j in sorted(A):
-        if find(i) != find(j):
-            union(i, j)
-            res += w
-    return res
+        n = len(points)
+        vis = [0]*n
+        d = [inf]*n
+        d[0] = 0
+        res = 0
+        for _ in range(n):
+            _,i = min((d[i],i) for i in range(n) if not vis[i])
+            res += d[i]
+            vis[i] = 1
+            for j in range(n):
+                if not vis[j]:
+                    d[j] = min(d[j],cal(points[i],points[j]))
+        return res
 ```
-2516 ms
-
-
+595 ms
