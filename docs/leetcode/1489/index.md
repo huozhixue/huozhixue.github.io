@@ -53,65 +53,59 @@
 
 ## 分析
 
-先求出 MST 的代价 s。如果去掉某条边，不存在 MST 或者 s 变大，即说明是关键边。
-
-如果先连某条边，s 不变，说明该边出现在 MST 中，那么它要么是关键边，要么是伪关键边。
+- 先求出 MST 的代价 s
+- 如果去掉某条边，不存在 MST 或者 s 变大，即说明是关键边
+- 如果先连某条边，s 不变，说明该边出现在 MST 中，那么它要么是关键边，要么是伪关键边
 
 ## 解答
 
 ```python
-def findCriticalAndPseudoCriticalEdges(self, n: int, edges: List[List[int]]) -> List[List[int]]:
-    def find(x):
-        if f[x] != x:
-            f[x] = find(f[x])
-        return f[x]
+class Solution:
+    def findCriticalAndPseudoCriticalEdges(self, n: int, edges: List[List[int]]) -> List[List[int]]:
+        def find(x):
+            if f[x] != x:
+                f[x] = find(f[x])
+            return f[x]
 
-    def union(x, y):
-        f[find(x)] = find(y)
-    
-    def cal(A):
-        f[:], s, cnt = list(range(n)), 0, 0
-        for w, u, v, idx in A:
-            if find(u) != find(v):
-                union(u, v)
-                s += w
-                cnt += 1
-        return s if cnt==n-1 else float('inf')
-    
-    f, A = [], sorted((w,u,v,idx) for idx,(u,v,w) in enumerate(edges))
-    s = cal(A)
-    res1 = {A[i][-1] for i in range(len(A)) if cal(A[:i]+A[i+1:])>s}
-    res2 = [e[-1] for e in A if e[-1] not in res1 and cal([e]+A)==s]
-    return [list(res1), res2]
+        def union(x, y):
+            f[find(x)] = find(y)
+        
+        def cal(A):
+            f[:], s, cnt = list(range(n)), 0, 0
+            for w, u, v, idx in A:
+                if find(u) != find(v):
+                    union(u, v)
+                    s += w
+                    cnt += 1
+            return s if cnt==n-1 else inf
+        
+        f, A = [], sorted((w,u,v,idx) for idx,(u,v,w) in enumerate(edges))
+        s = cal(A)
+        res1 = {A[i][-1] for i in range(len(A)) if cal(A[:i]+A[i+1:])>s}
+        res2 = [e[-1] for e in A if e[-1] not in res1 and cal([e]+A)==s]
+        return [list(res1), res2]
 ```
-时间复杂度 O(M^2)，1132 ms
+时间复杂度 O(M^2)，771 ms
 
 ## *附加
 
-本题还有更优的算法。
-
-假设边的权重各不相同，那么显然生成 MST 的每一步都是确定的，MST 唯一。因此该唯一的 MST 中的都是关键边，不存在伪关键边。
-
-存在相同权重的边时，情况复杂很多。假设生成 MST 的过程遍历到权重 w，权重等于 w 的边的集合是 A。
-并设此时的并查集状态是 U0，将 A 的边都相连后的并查集状态是 U1。
-
-那么 A 中的边有三种情况：
-
-    假如边的两个顶点在 U0 状态下已连通，该边多余
-    假如去掉该边后，U1 状态变化，该边是关键边
-    否则该边是伪关键边
-    
-然后有个巧妙的想法，将 U0 状态下的连通块看作是点，将 A 的边都相连后得到一个图 G，那么 A 中的边的三种情况分别对应为：
-
-    自环边，改边多余
-    桥边，去掉改边后图 G 的连通性变化
-    非桥边
-  
-求桥边可以用 tarjan 算法。
-
-> 注意图 G 可能有重复边，所以用 tarjan 算法遍历时记录上一条边的 idx 而不是上一个节点。
+本题还有更优的算法
+- 假设边的权重各不相同，显然生成 MST 的每一步都是确定的
+	- 该唯一的 MST 中的都是关键边，不存在伪关键边
+- 存在相同权重的边时，假设生成过程遍历到权重 w，权重等于 w 的边的集合是 A
+	- 设此时的并查集状态是 U0，将 A 的边都相连后的并查集状态是 U1
+	- 假如边的两个顶点在 U0 状态下已连通，该边多余
+	- 假如去掉该边后，U1 状态变化，该边是关键边
+	- 否则该边是伪关键边
+- 将 U0 状态下的连通块看作是点，将 A 的边都相连后得到图 G，三种情况分别对应为：
+	- 自环边，改边多余
+	- 桥边，去掉改边后图 G 的连通性变化
+	- 非桥边
+- 用 tarjan 算法求桥边即可
+- 注意图 G 可能有重复边，所以用 tarjan 算法遍历时记录上一条边的 idx 而不是上一个节点
 
 ```python
+class Solution:
     def findCriticalAndPseudoCriticalEdges(self, n: int, edges: List[List[int]]) -> List[List[int]]:
         def find(x):
             if f[x] != x:
@@ -121,9 +115,10 @@ def findCriticalAndPseudoCriticalEdges(self, n: int, edges: List[List[int]]) -> 
         def union(x, y):
             f[find(x)] = find(y)
 
-        def tarjan(p, fidx):
-            dfn[p] = low[p] = self.t = self.t + 1
-            for q, idx in nxt[p]:
+        def tarjan(p,fidx):
+            nonlocal t
+            dfn[p] = low[p] = t = t + 1
+            for q, idx in g[p]:
                 if q not in dfn:
                     tarjan(q, idx)
                     low[p] = min(low[p], low[q])
@@ -139,22 +134,22 @@ def findCriticalAndPseudoCriticalEdges(self, n: int, edges: List[List[int]]) -> 
             d[w].append((idx, u, v))
         f = list(range(n))
         for w in sorted(d):
-            nxt = defaultdict(list)
+            g = defaultdict(list)
             for idx, u, v in d[w]:
                 fu, fv = find(u), find(v)
                 if fu != fv:
                     res2.add(idx)
-                    nxt[fu].append((fv, idx))
-                    nxt[fv].append((fu, idx))
-            dfn, low, self.t = {}, {}, 0
-            for u in nxt:
+                    g[fu].append((fv, idx))
+                    g[fv].append((fu, idx))
+            dfn, low, t = {}, {}, 0
+            for u in g:
                 if u not in dfn:
                     tarjan(u, None)
-            for u in nxt:
-                for v, idx in nxt[u]:
+            for u in g:
+                for v, idx in g[u]:
                     union(u, v)
         return [list(res1), list(res2)]
 ```
-时间复杂度 O(M*logM)，36 ms
+时间复杂度 O(M*logM)，11 ms
     
 

@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1489\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1289 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1234 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1489\/","datePublished": "2020-06-21T11:00:00+08:00","dateModified": "2020-06-21T11:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1489：找到最小生成树里的关键边和伪关键边（2571 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-21">2020-06-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1289 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-21">2020-06-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1234 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/1489/" class="leancloud_visitors" data-flag-title="1489：找到最小生成树里的关键边和伪关键边（2571 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -160,8 +160,11 @@
 <li>所有 <code>(from<sub>i</sub>, to<sub>i</sub>)</code> 数对都是互不相同的。</li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>先求出 MST 的代价 s。如果去掉某条边，不存在 MST 或者 s 变大，即说明是关键边。</p>
-<p>如果先连某条边，s 不变，说明该边出现在 MST 中，那么它要么是关键边，要么是伪关键边。</p>
+<ul>
+<li>先求出 MST 的代价 s</li>
+<li>如果去掉某条边，不存在 MST 或者 s 变大，即说明是关键边</li>
+<li>如果先连某条边，s 不变，说明该边出现在 MST 中，那么它要么是关键边，要么是伪关键边</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -188,53 +191,62 @@
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
+</span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findCriticalAndPseudoCriticalEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findCriticalAndPseudoCriticalEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[:],</span> <span class="n">s</span><span class="p">,</span> <span class="n">cnt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">find</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">!=</span> <span class="n">find</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="n">union</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="n">s</span> <span class="o">+=</span> <span class="n">w</span>
-</span></span><span class="line"><span class="cl">                <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">s</span> <span class="k">if</span> <span class="n">cnt</span><span class="o">==</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="p">,</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[],</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">w</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">idx</span><span class="p">)</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">edges</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">cal</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res1</span> <span class="o">=</span> <span class="p">{</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> <span class="k">if</span> <span class="n">cal</span><span class="p">(</span><span class="n">A</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span><span class="o">&gt;</span><span class="n">s</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res2</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res1</span> <span class="ow">and</span> <span class="n">cal</span><span class="p">([</span><span class="n">e</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">)</span><span class="o">==</span><span class="n">s</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">res1</span><span class="p">),</span> <span class="n">res2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[:],</span> <span class="n">s</span><span class="p">,</span> <span class="n">cnt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">find</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">!=</span> <span class="n">find</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">union</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">s</span> <span class="o">+=</span> <span class="n">w</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">s</span> <span class="k">if</span> <span class="n">cnt</span><span class="o">==</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">inf</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">,</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[],</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">w</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">idx</span><span class="p">)</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">edges</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="n">cal</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res1</span> <span class="o">=</span> <span class="p">{</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> <span class="k">if</span> <span class="n">cal</span><span class="p">(</span><span class="n">A</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span><span class="o">&gt;</span><span class="n">s</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res2</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res1</span> <span class="ow">and</span> <span class="n">cal</span><span class="p">([</span><span class="n">e</span><span class="p">]</span><span class="o">+</span><span class="n">A</span><span class="p">)</span><span class="o">==</span><span class="n">s</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">res1</span><span class="p">),</span> <span class="n">res2</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(M^2)，1132 ms</p>
+</div><p>时间复杂度 O(M^2)，771 ms</p>
 <h2 id="附加">*附加</h2>
-<p>本题还有更优的算法。</p>
-<p>假设边的权重各不相同，那么显然生成 MST 的每一步都是确定的，MST 唯一。因此该唯一的 MST 中的都是关键边，不存在伪关键边。</p>
-<p>存在相同权重的边时，情况复杂很多。假设生成 MST 的过程遍历到权重 w，权重等于 w 的边的集合是 A。
-并设此时的并查集状态是 U0，将 A 的边都相连后的并查集状态是 U1。</p>
-<p>那么 A 中的边有三种情况：</p>
-<pre><code>假如边的两个顶点在 U0 状态下已连通，该边多余
-假如去掉该边后，U1 状态变化，该边是关键边
-否则该边是伪关键边
-</code></pre>
-<p>然后有个巧妙的想法，将 U0 状态下的连通块看作是点，将 A 的边都相连后得到一个图 G，那么 A 中的边的三种情况分别对应为：</p>
-<pre><code>自环边，改边多余
-桥边，去掉改边后图 G 的连通性变化
-非桥边
-</code></pre>
-<p>求桥边可以用 tarjan 算法。</p>
-<blockquote>
-<p>注意图 G 可能有重复边，所以用 tarjan 算法遍历时记录上一条边的 idx 而不是上一个节点。</p>
-</blockquote>
+<p>本题还有更优的算法</p>
+<ul>
+<li>假设边的权重各不相同，显然生成 MST 的每一步都是确定的
+<ul>
+<li>该唯一的 MST 中的都是关键边，不存在伪关键边</li>
+</ul>
+</li>
+<li>存在相同权重的边时，假设生成过程遍历到权重 w，权重等于 w 的边的集合是 A
+<ul>
+<li>设此时的并查集状态是 U0，将 A 的边都相连后的并查集状态是 U1</li>
+<li>假如边的两个顶点在 U0 状态下已连通，该边多余</li>
+<li>假如去掉该边后，U1 状态变化，该边是关键边</li>
+<li>否则该边是伪关键边</li>
+</ul>
+</li>
+<li>将 U0 状态下的连通块看作是点，将 A 的边都相连后得到图 G，三种情况分别对应为：
+<ul>
+<li>自环边，改边多余</li>
+<li>桥边，去掉改边后图 G 的连通性变化</li>
+<li>非桥边</li>
+</ul>
+</li>
+<li>用 tarjan 算法求桥边即可</li>
+<li>注意图 G 可能有重复边，所以用 tarjan 算法遍历时记录上一条边的 idx 而不是上一个节点</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -279,9 +291,12 @@
 </span><span class="lnt">40
 </span><span class="lnt">41
 </span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findCriticalAndPseudoCriticalEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">findCriticalAndPseudoCriticalEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
@@ -290,9 +305,10 @@
 </span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">tarjan</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">fidx</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">dfn</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">low</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">nxt</span><span class="p">[</span><span class="n">p</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">tarjan</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">fidx</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">nonlocal</span> <span class="n">t</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dfn</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">low</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">q</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dfn</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">tarjan</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">low</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">low</span><span class="p">[</span><span class="n">p</span><span class="p">],</span> <span class="n">low</span><span class="p">[</span><span class="n">q</span><span class="p">])</span>
@@ -308,24 +324,24 @@
 </span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">idx</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">nxt</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">                <span class="n">fu</span><span class="p">,</span> <span class="n">fv</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">find</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">fu</span> <span class="o">!=</span> <span class="n">fv</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">res2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">nxt</span><span class="p">[</span><span class="n">fu</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">fv</span><span class="p">,</span> <span class="n">idx</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">nxt</span><span class="p">[</span><span class="n">fv</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">fu</span><span class="p">,</span> <span class="n">idx</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">            <span class="n">dfn</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{},</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">nxt</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">fu</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">fv</span><span class="p">,</span> <span class="n">idx</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">fv</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">fu</span><span class="p">,</span> <span class="n">idx</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dfn</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{},</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">u</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dfn</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">tarjan</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">nxt</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">nxt</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">union</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">res1</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">res2</span><span class="p">)]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度 O(M*logM)，36 ms</p>
+</div><p>时间复杂度 O(M*logM)，11 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -345,7 +361,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">双连通分量</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E5%9B%B0%E9%9A%BE/">困难</a>,&nbsp;<a href="/leetcode_tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>,&nbsp;<a href="/leetcode_tags/%E5%9B%BE/">图</a>,&nbsp;<a href="/leetcode_tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a>,&nbsp;<a href="/leetcode_tags/%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">双连通分量</a>,&nbsp;<a href="/leetcode_tags/%E4%BC%98%E5%8C%96/">优化</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
