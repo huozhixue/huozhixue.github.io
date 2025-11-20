@@ -65,13 +65,14 @@
 
 ## 系列
 
-|     | 系列名                                         | 首播时间       | 话数/时长 | 观看地址                                                       |
-| :-- | :------------------------------------------ | :--------- | :---- | :--------------------------------------------------------- |
-| 1   | [鬼灭之刃](https://bgm.tv/subject/245665)       | 2019-04-06 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ep267851) |
-| 2   | [鬼灭之刃 无限列车篇](https://bgm.tv/subject/350764) | 2021-10-10 | 7     | [bilibili](https://www.bilibili.com/bangumi/play/ss39444)  |
-| 3   | [鬼灭之刃 游郭篇](https://bgm.tv/subject/328195)   | 2021-12-05 | 11    | [bilibili](https://www.bilibili.com/bangumi/play/ss39433)  |
-| 4   | [鬼灭之刃 刀匠村篇](https://bgm.tv/subject/369768)  | 2023-04-09 | 11    | [bilibili](https://www.bilibili.com/bangumi/play/ep752432) |
-| 5   | [鬼灭之刃 柱训练篇](https://bgm.tv/subject/441939)  | 2024-05-12 | 8     | [bilibili](https://www.bilibili.com/bangumi/play/ss47836)  |
+|     | 系列名                                                      | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :------------------------------------------------------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | [鬼灭之刃](https://bgm.tv/subject/245665)                    | 2019-04-06 | 26    | [bilibili](https://www.bilibili.com/bangumi/play/ep267851) |
+| 2   | [鬼灭之刃 无限列车篇](https://bgm.tv/subject/350764)              | 2021-10-10 | 7     | [bilibili](https://www.bilibili.com/bangumi/play/ss39444)  |
+| 3   | [鬼灭之刃 游郭篇](https://bgm.tv/subject/328195)                | 2021-12-05 | 11    | [bilibili](https://www.bilibili.com/bangumi/play/ss39433)  |
+| 4   | [鬼灭之刃 刀匠村篇](https://bgm.tv/subject/369768)               | 2023-04-09 | 11    | [bilibili](https://www.bilibili.com/bangumi/play/ep752432) |
+| 5   | [鬼灭之刃 柱训练篇](https://bgm.tv/subject/441939)               | 2024-05-12 | 8     | [bilibili](https://www.bilibili.com/bangumi/play/ss47836)  |
+| 6   | [剧场版 鬼灭之刃 无限城篇 第一章 猗窝座再袭](https://bgm.tv/subject/501958) | 2025-07-18 | 155 m |                                                            |
 ## 配乐
 
 {{< media "https://music.163.com/#/playlist?id=3131060649"
