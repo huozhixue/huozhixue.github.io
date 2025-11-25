@@ -18,9 +18,10 @@
 
 ## 系列
 
-|     | 系列名                                        | 首播时间       | 话数/时长 | 观看地址                                                     |
-| :-- | :----------------------------------------- | :--------- | :---- | :------------------------------------------------------- |
-| 1   | [枕刀歌：千里不留行](https://bgm.tv/subject/328514) | 2021-02-05 | 12+2  | [keke1](https://www.keke1.app/play/27480-4-239103.html)  |
-| 2   | [枕刀歌之尘世行](https://bgm.tv/subject/333381)   | 2022-02-01 | 1     | [keke1](https://www.keke1.app/play/178986-4-188657.html) |
-| 3   | [枕刀歌之将军卸印](https://bgm.tv/subject/345812)  | 2023-12-05 | 14    | [keke1](https://www.keke1.app/play/206174-32-8270.html)  |
+|     | 系列名                                        | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :----------------------------------------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | [枕刀歌：千里不留行](https://bgm.tv/subject/328514) | 2021-02-05 | 12+2  | [bilibili](https://www.bilibili.com/bangumi/play/ss76342)  |
+| 2   | [枕刀歌之尘世行](https://bgm.tv/subject/333381)   | 2022-02-01 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss76349)  |
+| 3   | [枕刀歌之将军卸印](https://bgm.tv/subject/345812)  | 2023-12-05 | 14    | [bilibili](https://www.bilibili.com/bangumi/play/ss76347)  |
+| 4   | [枕刀歌3：孤城闭雪](https://bgm.tv/subject/432776) | 2025-09-19 | 14    | [bilibili](https://www.bilibili.com/bangumi/play/ss107369) |
 
