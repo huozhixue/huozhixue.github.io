@@ -67,6 +67,6 @@
 "music" >}}
 ## MAD
 
-{{< media  "BV1Cx411F7mk-BV1As411Z7WT" 
-"【EF*天使的童话】「 与你约定的未来――」,【EF/悠久之翼mad】天使的心愿"  >}}
+{{< media  "BV1Cx411F7mk-BV1As411Z7WT-BV1tx411c7Zf" 
+"【EF*天使的童话】「 与你约定的未来――」,【EF/悠久之翼mad】天使的心愿,【ef2-OP全改造】CLANNAD至神手绘[修复完毕]"  >}}
 
