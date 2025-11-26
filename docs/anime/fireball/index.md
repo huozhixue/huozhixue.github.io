@@ -23,12 +23,12 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 |[火球](https://bgm.tv/subject/3515)| 2008-04-07 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss3232)  |
-| 2 |[火球 魅力之章](https://bgm.tv/subject/14996)| 2011-04-04 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss2885)  |
-| 3 |[火球 幽默之章](https://bgm.tv/subject/223134)| 2017-10-06 | 3 | [bilibili](https://www.bilibili.com/bangumi/play/ss20603)  |
-| 4 |[火球最终章](https://bgm.tv/subject/316612)| 2020-11-08 | 10 | [bilibili](https://www.bilibili.com/video/BV1d44y1479t/)  |
+|     | 系列名                                      | 首播时间       | 话数/时长 | 观看地址                                                      |
+| :-- | :--------------------------------------- | :--------- | :---- | :-------------------------------------------------------- |
+| 1   | [火球](https://bgm.tv/subject/3515)        | 2008-04-07 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ss3232)  |
+| 2   | [火球 魅力之章](https://bgm.tv/subject/14996)  | 2011-04-04 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ss2885)  |
+| 3   | [火球 幽默之章](https://bgm.tv/subject/223134) | 2017-10-06 | 3     | [bilibili](https://www.bilibili.com/bangumi/play/ss20603) |
+| 4   | [火球最终章](https://bgm.tv/subject/316612)   | 2020-11-08 | 10    | [bilibili](https://www.bilibili.com/video/BV1d44y1479t/)  |
 
 
 
