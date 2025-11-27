@@ -656,8 +656,9 @@ class Theme {
     initMedia() {
         this.util.forEach(document.getElementsByClassName('media'), $media => {
 			const data = this.config.media[$media.id];
+			const pair = data.pop();
+			let cur = pair[0];
 			const len = data.length;
-			let cur = 0;
 			const type = $media.getAttribute('type');
 			const $player = $media.lastElementChild;
 			const $link = $player.previousElementSibling;
@@ -673,7 +674,7 @@ class Theme {
                 cur = (cur + 1) % len;
                 this.switchMedia($media, $link, data[cur], type);
             }, false);
-            if (type=='tv') {
+            if (pair[1]) {
                 const $input = $media.firstElementChild;
                 const $btn0 = $input.nextElementSibling;
                 $input.addEventListener('keydown', () => {

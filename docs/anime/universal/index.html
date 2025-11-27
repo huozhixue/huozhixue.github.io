@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/anime\/universal\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "短片","wordcount":  84 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "短片","wordcount":  61 ,
         "url": "https:\/\/huozhixue.github.io\/anime\/universal\/","datePublished": "1930-07-14T00:00:00+08:00","dateModified": "1930-07-14T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">环球早期动画短片</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="1930-07-14">1930-07-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 84 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="1930-07-14">1930-07-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 61 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/anime/universal/" class="leancloud_visitors" data-flag-title="环球早期动画短片">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -132,8 +132,11 @@
     <li><a href="#系列">系列</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="简介">简介</h2>
-<p>本合集收录环球影业早期代表性的动画短片，从 1930《Spooks》 到 1954 《I&rsquo;m Cold》。</p>
+            </div><div class="content" id="content"><blockquote>
+<p><strong>本合集收录环球影业早期代表性的动画短片</strong></p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>从 1930 <a href="https://bgm.tv/subject/535120" target="_blank" rel="noopener noreffer">Spooks</a> 到 1954 <a href="https://bgm.tv/subject/280548" target="_blank" rel="noopener noreffer">我好冷</a>。</p>
 <h2 id="系列">系列</h2>
 <table>
 <thead>
@@ -155,14 +158,15 @@
 </tr>
 </tbody>
 </table>
-<div class="media" id="id-1" type="tv"><input type="text" />
-			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+<div class="media" id="id-1" type="tv" >
+		<input type="text" />
+		<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button>
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
 		<a target="_blank"></a>
 		<div></div>
 	</div>
 	<script>
-		var random = "";
 		var data = $.ajax({url: "/tv\/universal",async:false}).responseText.split(/[\n\r]+/);
 		var len = data.length;
 		for (let i = 0; i < len; i++) {
@@ -194,15 +198,7 @@
 		}
 		var t = new Date();
 		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
-		data = data.slice(cur,len).concat(data.slice(0, cur));
-		if (random){
-			for (let i = 1; i < len - 1; i++) {
-				var j = parseInt(i + Math.random() * (len - i));
-				var temp = data[i];
-				data[i] = data[j];
-				data[j] = temp;
-			}
-		}
+		data.push([cur,1])
 		window.config.media["id-1"] = data;
 	</script>
 </div><div class="post-footer" id="post-footer">

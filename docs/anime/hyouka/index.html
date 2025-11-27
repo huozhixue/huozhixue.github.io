@@ -305,16 +305,19 @@
 			let title = '#'+(i+1)+' '+titles[i];
 			data.push([url, title, raw]);
 		}
+		data.push([0,0]);
 		window.config.media["id-1"] = data;
 	</script>
 <h2 id="mad">MAD</h2>
-<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+<div class="media" id="id-2" type="mad" >
+		<input type="text" />
+		<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button>
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
 		<a target="_blank"></a>
 		<div></div>
 	</div>
 	<script>
-		var random = "";
 		var data = $.ajax({url: "/mad\/hyouka",async:false}).responseText.split(/[\n\r]+/);
 		var len = data.length;
 		for (let i = 0; i < len; i++) {
@@ -346,15 +349,7 @@
 		}
 		var t = new Date();
 		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
-		data = data.slice(cur,len).concat(data.slice(0, cur));
-		if (random){
-			for (let i = 1; i < len - 1; i++) {
-				var j = parseInt(i + Math.random() * (len - i));
-				var temp = data[i];
-				data[i] = data[j];
-				data[j] = temp;
-			}
-		}
+		data.push([cur,1])
 		window.config.media["id-2"] = data;
 	</script>
 </div><div class="post-footer" id="post-footer">

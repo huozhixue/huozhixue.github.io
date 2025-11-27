@@ -142,7 +142,9 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>2019 动画年终盘点</p>
+            </div><div class="content" id="content"><blockquote>
+<p><strong>2019 动画年终盘点</strong></p>
+</blockquote>
 <div class="media" id="id-1" type="video">
 		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
@@ -177,17 +179,20 @@
 			let title = '#'+(i+1)+' '+titles[i];
 			data.push([url, title, raw]);
 		}
+		data.push([0,0]);
 		window.config.media["id-1"] = data;
 	</script>
 <h2 id="mad">MAD</h2>
 <h3 id="单素材">单素材</h3>
-<div class="media" id="id-2" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+<div class="media" id="id-2" type="mad" >
+		<input type="text" />
+		<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button>
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
 		<a target="_blank"></a>
 		<div></div>
 	</div>
 	<script>
-		var random = "";
 		var data = $.ajax({url: "/mad\/2019",async:false}).responseText.split(/[\n\r]+/);
 		var len = data.length;
 		for (let i = 0; i < len; i++) {
@@ -219,25 +224,19 @@
 		}
 		var t = new Date();
 		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
-		data = data.slice(cur,len).concat(data.slice(0, cur));
-		if (random){
-			for (let i = 1; i < len - 1; i++) {
-				var j = parseInt(i + Math.random() * (len - i));
-				var temp = data[i];
-				data[i] = data[j];
-				data[j] = temp;
-			}
-		}
+		data.push([cur,1])
 		window.config.media["id-2"] = data;
 	</script>
 <h3 id="多素材">多素材</h3>
-<div class="media" id="id-3" type="mad"><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+<div class="media" id="id-3" type="mad" >
+		<input type="text" />
+		<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button>
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
 		<a target="_blank"></a>
 		<div></div>
 	</div>
 	<script>
-		var random = "";
 		var data = $.ajax({url: "/mad\/2019_1",async:false}).responseText.split(/[\n\r]+/);
 		var len = data.length;
 		for (let i = 0; i < len; i++) {
@@ -269,15 +268,7 @@
 		}
 		var t = new Date();
 		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
-		data = data.slice(cur,len).concat(data.slice(0, cur));
-		if (random){
-			for (let i = 1; i < len - 1; i++) {
-				var j = parseInt(i + Math.random() * (len - i));
-				var temp = data[i];
-				data[i] = data[j];
-				data[j] = temp;
-			}
-		}
+		data.push([cur,1])
 		window.config.media["id-3"] = data;
 	</script>
 <h2 id="短片">短片</h2>
@@ -316,6 +307,7 @@
 			let title = '#'+(i+1)+' '+titles[i];
 			data.push([url, title, raw]);
 		}
+		data.push([0,0]);
 		window.config.media["id-4"] = data;
 	</script>
 <h3 id="同人">同人</h3>
@@ -353,6 +345,7 @@
 			let title = '#'+(i+1)+' '+titles[i];
 			data.push([url, title, raw]);
 		}
+		data.push([0,0]);
 		window.config.media["id-5"] = data;
 	</script>
 </div><div class="post-footer" id="post-footer">

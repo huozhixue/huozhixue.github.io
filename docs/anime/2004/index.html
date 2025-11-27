@@ -131,7 +131,9 @@
     <li><a href="#短片">短片</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>2004 动画年终盘点</p>
+            </div><div class="content" id="content"><blockquote>
+<p><strong>2004 动画年终盘点</strong></p>
+</blockquote>
 <div class="media" id="id-1" type="video">
 		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
@@ -141,7 +143,7 @@
 	<script>
 		var data = [];
 		var urls = "BV17y4y1U71Y\u0026p=13-BV17y4y1U71Y\u0026p=12-BV17y4y1U71Y\u0026p=4".split(/-/);
-		var titles = "「圣诞MTV」奇迹之钟,全年读者票选动画排位」最人气动画歌曲,「全年读者票选动画排位」最人气动画作品".split(/,/);
+		var titles = "「圣诞MTV」奇迹之钟,最人气动画歌曲,最人气动画作品".split(/,/);
 		for (let i = 0; i < urls.length; i++) {
 			let raw = url = urls[i];
 			if (url.substr(0, 2) == 'BV') {
@@ -166,6 +168,7 @@
 			let title = '#'+(i+1)+' '+titles[i];
 			data.push([url, title, raw]);
 		}
+		data.push([0,0]);
 		window.config.media["id-1"] = data;
 	</script>
 <h2 id="短片">短片</h2>

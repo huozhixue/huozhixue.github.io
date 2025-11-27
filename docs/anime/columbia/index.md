@@ -1,10 +1,9 @@
 # 哥伦比亚早期动画短片
 
-
+> **本合集收录哥伦比亚影业早期代表性的动画短片**
 ## 简介
 
-
-本合集收录哥伦比亚影业早期代表性的动画短片，从 1934《Holiday Land》到 1957《Trees and Jamaica Daddy》。
+从 1934《Holiday Land》到 1957《Trees and Jamaica Daddy》。
 
 ## 系列
 

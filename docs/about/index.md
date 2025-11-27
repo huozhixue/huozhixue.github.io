@@ -5,12 +5,12 @@ Ian 的个人博客（[github](https://huozhixue.github.io/about) | [netlify](ht
 
 ### 今日歌单
 
-{{< media auto="music/00"  >}}
+{{< media auto="music/00"  jump=1  >}}
 
 
 ### 今日MAD
 
-{{< media auto="mad/00" random=0 >}}
+{{< media auto="mad/00"  jump=1 >}}
 
 
 

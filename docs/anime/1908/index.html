@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/anime\/1908\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "短片","wordcount":  238 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "短片","wordcount":  260 ,
         "url": "https:\/\/huozhixue.github.io\/anime\/1908\/","datePublished": "1908-08-17T00:00:00+08:00","dateModified": "1908-08-17T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">动画的世纪·100 部作品</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="1908-08-17">1908-08-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 238 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="1908-08-17">1908-08-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 260 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/anime/1908/" class="leancloud_visitors" data-flag-title="动画的世纪·100 部作品">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,12 +133,12 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://bgm.tv/subject/80198" target="_blank" rel="noopener noreffer">幻影集</a></strong></u>，又名：Fantasmagorie、ファンタスマゴリー</p>
+<p><strong>2006年法国昂西评选的100部短篇动画作品</strong></p>
 </blockquote>
 <h2 id="简介">简介</h2>
-<p>本片是电影史上世界上第一部抽象动画，无声黑白，2006年法国安锡（Annecy）国际动画电影节上，被评为“动画的世纪•100部作品”第二名。
-　　
-本片无情节无主题，不到两分钟的影像里，导演émile Cohl用再简单不过的线条为观众做了多次变形：人变为酒瓶、酒瓶变为花朵、大象变为房子等等，今天看来，想象力也美得让人叫奇。</p>
+<p>从 1908 第一部抽象动画 <a href="https://bgm.tv/subject/80198" target="_blank" rel="noopener noreffer">幻影集</a> 到 2004 奥斯卡最佳动画短片 <a href="https://bgm.tv/subject/111877" target="_blank" rel="noopener noreffer">拯救大师雷恩</a></p>
+<p>幻影集 是电影史上世界上第一部抽象动画，无声黑白，2006年法国安锡（Annecy）国际动画电影节上，被评为“动画的世纪•100部作品”第二名。</p>
+<p>本片无情节无主题，不到两分钟的影像里，导演émile Cohl用再简单不过的线条为观众做了多次变形：人变为酒瓶、酒瓶变为花朵、大象变为房子等等，今天看来，想象力也美得让人叫奇。</p>
 <p><strong>制作人员：</strong></p>
 <ul>
 <li>导演：<a href="https://bgm.tv/person/33229" target="_blank" rel="noopener noreffer">Émile Cohl</a></li>
@@ -164,14 +164,15 @@
 </tr>
 </tbody>
 </table>
-<div class="media" id="id-1" type="tv"><input type="text" />
-			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+<div class="media" id="id-1" type="tv" >
+		<input type="text" />
+		<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button>
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
 		<a target="_blank"></a>
 		<div></div>
 	</div>
 	<script>
-		var random = "";
 		var data = $.ajax({url: "/tv\/1908",async:false}).responseText.split(/[\n\r]+/);
 		var len = data.length;
 		for (let i = 0; i < len; i++) {
@@ -203,15 +204,7 @@
 		}
 		var t = new Date();
 		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
-		data = data.slice(cur,len).concat(data.slice(0, cur));
-		if (random){
-			for (let i = 1; i < len - 1; i++) {
-				var j = parseInt(i + Math.random() * (len - i));
-				var temp = data[i];
-				data[i] = data[j];
-				data[j] = temp;
-			}
-		}
+		data.push([cur,1])
 		window.config.media["id-1"] = data;
 	</script>
 </div><div class="post-footer" id="post-footer">

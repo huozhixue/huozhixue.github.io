@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/anime\/silly_symphony\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "短片","wordcount":  151 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "短片","wordcount":  137 ,
         "url": "https:\/\/huozhixue.github.io\/anime\/silly_symphony\/","datePublished": "1929-08-29T00:00:00+08:00","dateModified": "1929-08-29T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">迪士尼糊涂交响曲</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="1929-08-29">1929-08-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 151 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="1929-08-29">1929-08-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 137 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/anime/silly_symphony/" class="leancloud_visitors" data-flag-title="迪士尼糊涂交响曲">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -133,10 +133,11 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://bgm.tv/subject/136879" target="_blank" rel="noopener noreffer">骷髅舞</a></strong></u>，又名：The Skeleton Dance、骨骼的舞蹈</p>
+<p><strong>本合集是迪斯尼在 1929-1939 十年期间推出的一系列动画短片</strong></p>
 </blockquote>
 <h2 id="简介">简介</h2>
-<p>本合集是迪斯尼在 1929-1939 十年期间推出的一系列动画短片，包括几部奥斯卡最佳短片：1932花与树、1933 三只小猪、1934 龟兔赛跑、1935 三只孤儿猫、1936 乡巴佬、1937 老磨坊、1939 丑小鸭。</p>
+<p>从 1932 <a href="https://bgm.tv/subject/113649" target="_blank" rel="noopener noreffer">花与树</a> 到 1939 <a href="https://bgm.tv/subject/132363" target="_blank" rel="noopener noreffer">丑小鸭</a></p>
+<p>包含的奥斯卡最佳短片：1932 花与树、1933 三只小猪、1934 龟兔赛跑、1935 三只孤儿猫、1936 乡巴佬、1937 老磨坊、1939 丑小鸭。</p>
 <h2 id="系列">系列</h2>
 <table>
 <thead>
@@ -158,14 +159,15 @@
 </tr>
 </tbody>
 </table>
-<div class="media" id="id-1" type="tv"><input type="text" />
-			<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button><button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+<div class="media" id="id-1" type="tv" >
+		<input type="text" />
+		<button class="media-jump"><i class="fa fa-hand-point-right" aria-hidden="true"></i></button>
+		<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
 		<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
 		<a target="_blank"></a>
 		<div></div>
 	</div>
 	<script>
-		var random = "";
 		var data = $.ajax({url: "/tv\/silly_symphony",async:false}).responseText.split(/[\n\r]+/);
 		var len = data.length;
 		for (let i = 0; i < len; i++) {
@@ -197,15 +199,7 @@
 		}
 		var t = new Date();
 		var cur = Math.floor(t / (24 * 3600 * 1000)) % len;
-		data = data.slice(cur,len).concat(data.slice(0, cur));
-		if (random){
-			for (let i = 1; i < len - 1; i++) {
-				var j = parseInt(i + Math.random() * (len - i));
-				var temp = data[i];
-				data[i] = data[j];
-				data[j] = temp;
-			}
-		}
+		data.push([cur,1])
 		window.config.media["id-1"] = data;
 	</script>
 </div><div class="post-footer" id="post-footer">

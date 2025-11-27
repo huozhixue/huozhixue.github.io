@@ -1,14 +1,13 @@
 # 米高梅早期动画短片
 
 
-> <u>**[乳白星路](https://bgm.tv/subject/132364)**</u>，又名：The Milky Way、银河
+> **本合集收录米高梅早期代表性的动画短片**
 
 ## 简介
 
-本合集收录米高梅早期代表性的动画短片，从 1930《Fiddlesticks》到 1967《The Bear That Wasn't》。包括两部奥斯卡最佳短片：1940 The Milky Way、1965 The Dot and the Line。
+从 1930《Fiddlesticks》到 1967 [The Bear That Wasn’t](https://bgm.tv/subject/402691)。
 
-
-
+包括两部奥斯卡最佳短片：1940 The Milky Way、1965 The Dot and the Line。
 
 
 ## 系列
