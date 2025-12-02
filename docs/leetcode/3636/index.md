@@ -128,7 +128,59 @@
 
 ## 分析
 
-采用回滚莫队
+### #1
+
+- 区间众数问题首先想到用莫队
+- 转移时要维护 (频率,元素) 的有序集合
+- 直接用 SortedList 会超时，可以用懒删除堆来维护
+
+
+```python
+class Solution:
+    def subarrayMajority(self, nums: List[int], queries: List[List[int]]) -> List[int]:
+        def add(i):
+            a = nums[i]
+            ct[a] += 1
+            heappush(pq,(-ct[a],a))
+        
+        def pop(i):
+            a = nums[i]
+            ct[a] -= 1
+            if ct[a]>0:
+                heappush(pq,(-ct[a],a))
+
+        n,m = len(nums),len(queries)
+        sq = isqrt(n*n//m)+1
+        ct = defaultdict(int)
+        pq = []
+        res = [-1]*m
+        Q = [(l,r,t,i) for i,(l,r,t) in enumerate(queries)]
+        Q.sort(key=lambda p:(p[0]//sq,p[1]//sq*(1 if p[0]//sq&1 else -1)))
+        l0,r0 = 1,0
+        for l,r,t,i in Q:
+            while l0>l:
+                l0 -= 1
+                add(l0)
+            while r0<r:
+                r0 += 1
+                add(r0)
+            while l0<l:
+                pop(l0)
+                l0 += 1
+            while r0>r:
+                pop(r0)
+                r0 -= 1
+            while ct[pq[0][1]]!=-pq[0][0]:
+                heappop(pq)
+            w,a = pq[0]
+            if -w>=t:
+                res[i] = a
+        return res
+```
+8017 ms
+### #2
+
+还可以用回滚莫队优化掉 log
 - 先分块，查询在块内直接暴力统计
 - 查询按左端点所处块分组，组内按右端点排序
 - 固定左端点的块 a，遍历右端点可以统计 a 右边的部分
