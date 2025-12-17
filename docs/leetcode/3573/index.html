@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title> - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="" />
-<meta property="og:description" content="题目 实数 a,b 满足 $ab&#43;\sqrt{ab&#43;1}&#43;\sqrt{a^2&#43;b}·\sqrt{b^2&#43;a}=0$，求 $a\sqrt{b^2&#43;a}&#43;b\sqrt{a^2&#43;b}$ 的值。 解答 1、先求 a、b 范围 易知" />
+        <title>3573：买卖股票的最佳时机 V（1777 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="3573：买卖股票的最佳时机 V（1777 分）" />
+<meta property="og:description" content="力扣第 158 场双周赛第 2 题 题目 给你一个整数数组 prices，其中 prices[i] 是第 i 天股票的价格（美元），以及一个整数 k。 你最多可以进行 k 笔交易，每笔交易可" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/math/20240710/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="math" />
-
-
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/3573/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2025-06-07T22:40:00+08:00" />
+<meta property="article:modified_time" content="2025-06-07T22:40:00+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="题目 实数 a,b 满足 $ab&#43;\sqrt{ab&#43;1}&#43;\sqrt{a^2&#43;b}·\sqrt{b^2&#43;a}=0$，求 $a\sqrt{b^2&#43;a}&#43;b\sqrt{a^2&#43;b}$ 的值。 解答 1、先求 a、b 范围 易知"/>
+<meta name="twitter:title" content="3573：买卖股票的最佳时机 V（1777 分）"/>
+<meta name="twitter:description" content="力扣第 158 场双周赛第 2 题 题目 给你一个整数数组 prices，其中 prices[i] 是第 i 天股票的价格（美元），以及一个整数 k。 你最多可以进行 k 笔交易，每笔交易可"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/math/20240710/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/3573/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/3562/" /><link rel="next" href="https://huozhixue.github.io/leetcode/3594/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "",
+        "headline": "3573：买卖股票的最佳时机 V（1777 分）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/math\/20240710\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "math","wordcount":  423 ,
-        "url": "https:\/\/huozhixue.github.io\/math\/20240710\/","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/3573\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  691 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/3573\/","datePublished": "2025-06-07T22:40:00+08:00","dateModified": "2025-06-07T22:40:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">3573：买卖股票的最佳时机 V（1777 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 423 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/math/20240710/" class="leancloud_visitors" data-flag-title="">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2025-06-07">2025-06-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 691 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/3573/" class="leancloud_visitors" data-flag-title="3573：买卖股票的最佳时机 V（1777 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -122,66 +122,157 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#解答">解答</a>
+    <li><a href="#分析">分析</a>
       <ul>
-        <li>
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#1先求-ab-范围">1、先求 a、b 范围</a></li>
-                <li><a href="#2展开配方">2、展开配方</a></li>
-                <li><a href="#3开方">3、开方</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        <li><a href="#1">#1</a></li>
+        <li><a href="#2">#2</a></li>
       </ul>
     </li>
+    <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p>实数 a,b 满足 $ab+\sqrt{ab+1}+\sqrt{a^2+b}·\sqrt{b^2+a}=0$，求 $a\sqrt{b^2+a}+b\sqrt{a^2+b}$ 的值。</p>
-<h2 id="解答">解答</h2>
-<h5 id="1先求-ab-范围">1、先求 a、b 范围</h5>
+            </div><div class="content" id="content"><blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/" target="_blank" rel="noopener noreffer">力扣第 158 场双周赛第 2 题</a></strong></u></p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<p>给你一个整数数组 <code>prices</code>，其中 <code>prices[i]</code> 是第 <code>i</code> 天股票的价格（美元），以及一个整数 <code>k</code>。</p>
+<p>你最多可以进行 <code>k</code> 笔交易，每笔交易可以是以下任一类型：</p>
 <ul>
-<li>易知 ab&lt;=0，代入可知 a、b 不为 0，所以 ab&lt;0</li>
-<li>a、b 对称，不妨设 a&lt;b，便有 $a&lt;0&lt;b$</li>
-<li>为了方便，令 $x=-a&gt;0，y=b&gt;0$，原等式变为  $$ -xy+ \sqrt{1-xy}+\sqrt{(x^2+y)(y^2-x)}=0 &hellip;&hellip;&hellip;&hellip;.(1)$$要求的是 $$ y\sqrt{x^2+y}-x\sqrt{y^x-x}，即 \sqrt{x^2y^2+y^3}-\sqrt{x^2y^2-x^3} &hellip;&hellip;..(2) $$</li>
-</ul>
-<h5 id="2展开配方">2、展开配方</h5>
-<ul>
-<li>(1) 式变形得：$$ \sqrt{(x^2+y)(y^2-x)} = xy- \sqrt{1-xy} &hellip;&hellip;&hellip;(3) $$</li>
-<li>两边平方并消除得：$$ x^3-y^3+1=2xy\sqrt{1-xy}$$</li>
-<li>再次平方并消除得：$$ x^6-2x^3y^3+y^6+2x^3-2y^3+1=4x^2y^2-4x^3y^3 &hellip;&hellip;&hellip;..(4)$$</li>
-<li>(4) 式两边同时加上 $4x^3y^3+4y^3$ 得：$$ x^6+2x^3y^3+y^6+2x^3+2y^3+1=4(x^2y^2+y^3) $$
-配方得： $$(x^3+y^3+1)^2=4(x^2y^2+y^3) &hellip;&hellip;..(5)$$</li>
-<li>同理，(4)式两边同时加上 $4x^3y^3-4x^3$，并配方 $$(x^3+y^3-1)^2=4(x^2y^2-x^3) &hellip;&hellip;&hellip;(6)$$</li>
-</ul>
-<h5 id="3开方">3、开方</h5>
-<ul>
-<li>最后来证明 $x^3+y^3&gt;=1$</li>
-<li>首先由 (1) 式可知 $x&lt;=y^2，xy&lt;=1$
-<ul>
-<li>故 $x^3&lt;=x^2y^2&lt;=1,x&lt;=1$</li>
-<li>故 $y&gt;=\sqrt x&gt;=x^2$</li>
-</ul>
+<li>
+<p><strong>普通交易</strong>：在第 <code>i</code> 天买入，然后在之后的第 <code>j</code> 天卖出，其中 <code>i &lt; j</code>。你的利润是 <code>prices[j] - prices[i]</code>。</p>
 </li>
-<li>由 (3) 式可知  $xy- \sqrt{1-xy}&gt;=0$，消除根号得：$$ x^2y^2+xy&gt;=1$$</li>
-<li>又有 $$x^3+y^3-x^2y^2-xy=(y-x^2)(y^2-x)&gt;=0$$</li>
-<li>故 $$x^3+y^3&gt;=x^2y^2+xy&gt;=1$$</li>
-<li>将 (5)、(6) 式开方相减即得 (2) 式结果为 1</li>
+<li>
+<p><strong>做空交易</strong>：在第 <code>i</code> 天卖出，然后在之后的第 <code>j</code> 天买回，其中 <code>i &lt; j</code>。你的利润是 <code>prices[i] - prices[j]</code>。</p>
+</li>
 </ul>
+<p><strong>注意</strong>：你必须在开始下一笔交易之前完成当前交易。此外，你不能在已经进行买入或卖出操作的同一天再次进行买入或卖出操作。</p>
+<p>通过进行 <strong>最多</strong> <code>k</code> 笔交易，返回你可以获得的最大总利润。</p>
+<p><strong class="example">示例 1:</strong></p>
+<div class="example-block">
+<p><strong>输入:</strong> <span class="example-io">prices = [1,7,9,8,2], k = 2</span></p>
+<p><strong>输出:</strong> <span class="example-io">14</span></p>
+<p><strong>解释:</strong></p>
+我们可以通过 2 笔交易获得 14 美元的利润：
+<ul>
+<li>一笔普通交易：第 0 天以 1 美元买入，第 2 天以 9 美元卖出。</li>
+<li>一笔做空交易：第 3 天以 8 美元卖出，第 4 天以 2 美元买回。</li>
+</ul>
+</div>
+<p><strong class="example">示例 2:</strong></p>
+<div class="example-block">
+<p><strong>输入:</strong> <span class="example-io">prices = [12,16,19,19,8,1,19,13,9], k = 3</span></p>
+<p><strong>输出:</strong> <span class="example-io">36</span></p>
+<p><strong>解释:</strong></p>
+我们可以通过 3 笔交易获得 36 美元的利润：
+<ul>
+<li>一笔普通交易：第 0 天以 12 美元买入，第 2 天以 19 美元卖出。</li>
+<li>一笔做空交易：第 3 天以 19 美元卖出，第 4 天以 8 美元买回。</li>
+<li>一笔普通交易：第 5 天以 1 美元买入，第 6 天以 19 美元卖出。</li>
+</ul>
+</div>
+<p><strong>提示:</strong></p>
+<ul>
+<li><code>2 &lt;= prices.length &lt;= 10<sup>3</sup></code></li>
+<li><code>1 &lt;= prices[i] &lt;= 10<sup>9</sup></code></li>
+<li><code>1 &lt;= k &lt;= prices.length / 2</code></li>
+</ul>
+<p><strong>相似问题：</strong></p>
+<ul>
+<li><a href="/leetcode/0121" rel="">0121：买卖股票的最佳时机</a></li>
+</ul>
+<h2 id="分析">分析</h2>
+<h3 id="1">#1</h3>
+<ul>
+<li>类似 <a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a>，只是多了个卖出状态</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maximumProfit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">prices</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">i</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>1691 ms</p>
+<h3 id="2">#2</h3>
+<ul>
+<li>类似的，也可以用 wqs 二分优化</li>
+</ul>
+<h2 id="解答">解答</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maximumProfit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                 <span class="c1"># 选一个的额外代价是x时，最大收益s及对应最小次数c</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">prices</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">,(</span><span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">),(</span><span class="n">h</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)),</span><span class="nb">max</span><span class="p">(</span><span class="n">g</span><span class="p">,(</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span><span class="nb">max</span><span class="p">(</span><span class="n">h</span><span class="p">,(</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="p">,</span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">l</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">cal</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">c</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="n">mid</span>
+</span></span><span class="line"><span class="cl">                <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>499 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 0001-01-01</span>
+                <span>更新于 2025-06-07</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/math/20240710/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/3573/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -190,13 +281,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E4%B8%AD%E7%AD%89/">中等</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/dp/">dp</a>,&nbsp;<a href="/leetcode_tags/wqs%E4%BA%8C%E5%88%86/">wqs二分</a>,&nbsp;<a href="/leetcode_tags/%E4%BC%98%E5%8C%96/">优化</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"></div>
+    <div class="post-nav"><a href="/leetcode/3594/" class="prev" rel="prev" title="3594：所有人渡河所需的最短时间（2604 分）"><i class="fas fa-angle-left fa-fw"></i>3594：所有人渡河所需的最短时间（2604 分）</a>
+            <a href="/leetcode/3562/" class="next" rel="next" title="3562：折扣价交易股票的最大利润（2458 分）">3562：折扣价交易股票的最大利润（2458 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

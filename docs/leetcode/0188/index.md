@@ -55,12 +55,15 @@
 ```python
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
-        f = [0 if i%2 else -inf for i in range(2*k)]
+        f = [[0,-inf] for _ in range(k+1)]
         for x in prices:
-            f = [max(f[i],(f[i-1] if i else 0)+(x if i%2 else -x)) for i in range(2*k)]
-        return f[-1]
+            for i in range(k,-1,-1):
+                f[i][1] = max(f[i][1],f[i][0]-x)
+                if i:
+                    f[i][0] = max(f[i][0],f[i-1][1]+x)
+        return f[-1][0]
 ```
-63 ms
+59 ms
 
 ### #2 反悔贪心
 
@@ -145,19 +148,20 @@ $O(N*logN)$，3 ms
 ```python []
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
+        def cal(x):                 # 选一个的额外代价是x时，最大收益s及对应最小次数c
+            f,g = (-inf,0),(0,0)
+            for a in A:
+                f,g = max(f,(g[0]-a-x,g[1]-1)),max(g,(f[0]+a,f[1]))
+            return g[0],-g[1]
+
         A = [c for c,_ in groupby(prices)]
         l, r = 0, max(A)
         res = 0
         while l<=r:
             mid = (l+r)//2
-            a,b,aw,bw = -inf,0,0,0
-            for x in A:
-                if b-x-mid>a:
-                    a,aw = b-x-mid,bw+1
-                if a+x>b:
-                    b,bw = a+x,aw
-            if bw<=k:
-                res = b+k*mid
+            s,c = cal(mid)
+            if c<=k:
+                res = s+k*mid
                 r = mid-1
             else:
                 l = mid+1

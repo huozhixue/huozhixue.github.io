@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0672\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  488 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  851 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0672\/","datePublished": "2016-11-02T00:00:00+08:00","dateModified": "2016-11-02T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0672：灯泡开关 Ⅱ（★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-02">2016-11-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 488 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/0672/" class="leancloud_visitors" data-flag-title="0672：灯泡开关 Ⅱ（★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-11-02">2016-11-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 851 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0672/" class="leancloud_visitors" data-flag-title="0672：灯泡开关 Ⅱ（★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -178,14 +178,52 @@
 <li><a href="/leetcode/1375" rel="">1375：二进制字符串前缀一致的次数（1438 分）</a></li>
 </ul>
 <h2 id="分析">分析</h2>
+<ul>
+<li>令 0/1 分别代表灯泡打开/关闭状态，并假设 4 个开关的状态分别是 a/b/c/d</li>
+<li>可以得到每个灯泡的状态：
+<ul>
+<li>a^c^d, a^b, a^c, a^b^d, a^c, a^b, a^c^d, &hellip;.</li>
+<li>以 6 个为一组循环</li>
+<li>注意到灯泡4的状态 a^b^d = (a^c^d)^(a^b)^(a^c)，所以前三个灯泡的状态决定了所有灯泡的状态</li>
+</ul>
+</li>
+<li>再考察下哪些灯泡的状态能达到
+<ul>
+<li>若刚好开关一次，前三个灯泡的状态可以为 111、101、010、100</li>
+<li>若刚好开关两次，前三个灯泡的状态可以为 000、101、010、011、111、001、110，只有 100 无法得到</li>
+<li>若刚好开关三次，可以基于开关两次的所有状态，按压开关1，得到除 011 的所有状态，而 011 可以通过按压开关 2/3/4 得到，所以能得到所有状态</li>
+<li>若刚好开关三次以上，可以基于开关三次的所有状态，一直按压开关1，得到所有状态</li>
+</ul>
+</li>
+<li>再特判下 n&lt;3 的情况即可</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">flipLights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">presses</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">presses</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">3</span><span class="o">+</span><span class="p">(</span><span class="n">presses</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">4</span> <span class="k">if</span> <span class="n">presses</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="mi">7</span> <span class="k">if</span> <span class="n">presses</span><span class="o">==</span><span class="mi">2</span> <span class="k">else</span> <span class="mi">8</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><p>0 ms</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

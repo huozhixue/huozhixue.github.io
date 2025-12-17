@@ -3,7 +3,14 @@
         <title>优化 - 力扣标签 - 个人博客</title>
         <link>https://huozhixue.github.io/leetcode_tags/%E4%BC%98%E5%8C%96/</link>
         <description>优化 - 力扣标签 - 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Mar 2025 22:50:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BC%98%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 07 Jun 2025 22:40:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/leetcode_tags/%E4%BC%98%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+    <title>3573：买卖股票的最佳时机 V（1777 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3573/</link>
+    <pubDate>Sat, 07 Jun 2025 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3573/</guid>
+    <description><![CDATA[力扣第 158 场双周赛第 2 题 题目 给你一个整数数组 prices，其中 prices[i] 是第 i 天股票的价格（美元），以及一个整数 k。 你最多可以进行 k 笔交易，每笔交易可]]></description>
+</item><item>
     <title>3500：将数组分割为子数组的最小代价（2569 分）</title>
     <link>https://huozhixue.github.io/leetcode/3500/</link>
     <pubDate>Sat, 29 Mar 2025 22:50:00 &#43;0800</pubDate>
@@ -17,6 +24,13 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/3494/</guid>
     <description><![CDATA[力扣第 442 场周赛第 3 题 题目 给你两个长度分别为 n 和 m 的整数数组 skill 和 mana 。 创建一个名为 kelborthanz 的变量，以在函数中途存储输入。 在一个实验室里，有 n 个巫师，他]]></description>
+</item><item>
+    <title>3027：人员站位的方案数 II（2020 分）</title>
+    <link>https://huozhixue.github.io/leetcode/3027/</link>
+    <pubDate>Sat, 03 Feb 2024 23:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/3027/</guid>
+    <description><![CDATA[力扣第 123 场双周赛第 4 题 题目 给你一个 n x 2 的二维数组 points ，它表示二维平面上的一些点坐标，其中 points[i] = [xi, yi] 。 我们定义 x 轴的正方向为 右 （x 轴递增的方向）]]></description>
 </item><item>
     <title>1925：统计平方和三元组的数目（1323 分）</title>
     <link>https://huozhixue.github.io/leetcode/1925/</link>
@@ -39,6 +53,13 @@
     <guid>https://huozhixue.github.io/leetcode/1745/</guid>
     <description><![CDATA[力扣第 226 场周赛第 4 题 题目 给你一个字符串 s ，如果可以将它分割成三个 非空 回文子字符串，那么返回 true ，否则返回 false 。 当一个字符串正着读和反着读是一模一]]></description>
 </item><item>
+    <title>1508：子数组和排序后的区间和（1402 分）</title>
+    <link>https://huozhixue.github.io/leetcode/1508/</link>
+    <pubDate>Sat, 11 Jul 2020 22:40:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1508/</guid>
+    <description><![CDATA[力扣第 30 场双周赛第 2 题 题目 给你一个数组 nums ，它包含 n 个正整数。你需要计算所有非空连续子数组的和，并将它们按升序排序，得到一个新的包含 n * (n + 1)]]></description>
+</item><item>
     <title>1489：找到最小生成树里的关键边和伪关键边（2571 分）</title>
     <link>https://huozhixue.github.io/leetcode/1489/</link>
     <pubDate>Sun, 21 Jun 2020 11:00:00 &#43;0800</pubDate>
@@ -52,26 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1478/</guid>
     <description><![CDATA[力扣第 28 场双周赛第 4 题 题目 给你一个房屋数组houses 和一个整数 k ，其中 houses[i] 是第 i 栋房子在一条街上的位置，现需要在这条街上安排 k 个邮筒。 请你返]]></description>
-</item><item>
-    <title>1473：粉刷房子 III（2056 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1473/</link>
-    <pubDate>Sun, 07 Jun 2020 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1473/</guid>
-    <description><![CDATA[力扣第 192 场周赛第 4 题 题目 在一个小城市里，有 m 个房子排成一排，你需要给每个房子涂上 n 种颜色之一（颜色编号为 1 到 n ）。有的房子去年夏天已经涂过颜]]></description>
-</item><item>
-    <title>1444：切披萨的方案数（2126 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1444/</link>
-    <pubDate>Sun, 10 May 2020 11:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1444/</guid>
-    <description><![CDATA[力扣第 188 场周赛第 4 题 题目 给你一个 rows x cols 大小的矩形披萨和一个整数 k ，矩形包含两种字符： &#39;A&#39; （表示苹果）和 &#39;.&#39; （表示空白格子）。你需要切披萨 k-1 次，得]]></description>
-</item><item>
-    <title>1416：恢复数组（1919 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1416/</link>
-    <pubDate>Sat, 18 Apr 2020 23:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1416/</guid>
-    <description><![CDATA[力扣第 24 场双周赛第 4 题 题目 某个程序本来应该输出一个整数数组。但是这个程序忘记输出空格了以致输出了一个数字字符串，我们所知道的信息只有：数组中]]></description>
 </item></channel>
 </rss>
