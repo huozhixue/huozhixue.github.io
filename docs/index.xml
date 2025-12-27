@@ -6,6 +6,20 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 30 Nov 2025 11:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://huozhixue.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>清单：算法</title>
+    <link>https://huozhixue.github.io/list-algo/</link>
+    <pubDate>Sat, 21 Jun 2025 17:49:40 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/list-algo/</guid>
+    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 并查集 难度 题目 关键词 2400 cf593d 树的路径 贪心 难度 题目 关键词 1600 GYM105805D 逆序对]]></description>
+</item><item>
+    <title>清单：小说</title>
+    <link>https://huozhixue.github.io/list-novel/</link>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/list-novel/</guid>
+    <description><![CDATA[小说清单 时间 名称 作者 其它作品 赏析 1997 《风姿物语》 罗森 2000 《悟空传》 今何在 《若星汉天空》《九州·羽传说》《海上牧云记》 《2050年的母系氏族 Ⅰ》 《]]></description>
+</item><item>
     <title>网络流入门</title>
     <link>https://huozhixue.github.io/graph-flow/</link>
     <pubDate>Wed, 01 Jan 2025 00:00:00 &#43;0800</pubDate>
@@ -131,24 +145,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-bit/</guid>
     <description><![CDATA[子集 算法学习笔记(75): Gosper&rsquo;s Hack 1 2 3 4 y = st # 生成所有子集 while y: # 处理子集 y y = (y-1)&amp;st 1 2 3 4 5 6 7 8 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成所有 k 元子集 while st&lt;ma: # 处理子集 st lb]]></description>
-</item><item>
-    <title>算法（零）：基础</title>
-    <link>https://huozhixue.github.io/algo-basic/</link>
-    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algo-basic/</guid>
-    <description><![CDATA[#1 位运算与进位制 位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;） 很]]></description>
-</item><item>
-    <title>后 BERT 时代小结</title>
-    <link>https://huozhixue.github.io/nlp-bert_family/</link>
-    <pubDate>Sun, 21 Jun 2020 17:49:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/nlp-bert_family/</guid>
-    <description><![CDATA[<p>2018年10月，Google 发布 BERT 模型，然后 BERT 横扫了 NLP 的各个任务：
-文本分类、序列标注、文本摘要、信息检索、问答系统、阅读理解等等。</p>
-<p>到如今，BERT 及其变种几乎一统了 NLU（Natural Language Understanding，自然语言理解）领域，
-只有 GPT 模型依托 NLG（Natural Language Generation，自然语言生成）领域能与之周旋。
-而细究下来，GPT 与 BERT 的结构其实只有一处不同。</p>
-<p>不夸张地说，这是属于 BERT 的时代。因此，本文对 BERT 及其之后的发展作一个粗略的小结，以供参考。</p>]]></description>
 </item></channel>
 </rss>

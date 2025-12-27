@@ -3,7 +3,21 @@
         <title>所有文章 - 个人博客</title>
         <link>https://huozhixue.github.io/posts/</link>
         <description>所有文章 | 个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Jan 2025 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 Jun 2025 17:49:40 &#43;0000</lastBuildDate><atom:link href="https://huozhixue.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>清单：算法</title>
+    <link>https://huozhixue.github.io/list-algo/</link>
+    <pubDate>Sat, 21 Jun 2025 17:49:40 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/list-algo/</guid>
+    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 并查集 难度 题目 关键词 2400 cf593d 树的路径 贪心 难度 题目 关键词 1600 GYM105805D 逆序对]]></description>
+</item><item>
+    <title>清单：小说</title>
+    <link>https://huozhixue.github.io/list-novel/</link>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/list-novel/</guid>
+    <description><![CDATA[小说清单 时间 名称 作者 其它作品 赏析 1997 《风姿物语》 罗森 2000 《悟空传》 今何在 《若星汉天空》《九州·羽传说》《海上牧云记》 《2050年的母系氏族 Ⅰ》 《]]></description>
+</item><item>
     <title>网络流入门</title>
     <link>https://huozhixue.github.io/graph-flow/</link>
     <pubDate>Wed, 01 Jan 2025 00:00:00 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-string/</guid>
     <description><![CDATA[最小表示法 最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i] 字符串匹配 前缀函数与 KMP 算法 Manacher Z]]></description>
-</item><item>
-    <title>数据结构（一）：链表</title>
-    <link>https://huozhixue.github.io/ds-linked/</link>
-    <pubDate>Mon, 03 Jan 2022 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/ds-linked/</guid>
-    <description><![CDATA[1 2 3 4 5 6 7 8 9 # 反转链表 def reverse(head): tail = head while tail and tail.next: tmp = tail.next tail.next = tmp.next tmp.next = head head = tmp return head 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 双向链表 class Node: # 提高访问]]></description>
-</item><item>
-    <title>数据结构（零）：基础</title>
-    <link>https://huozhixue.github.io/ds-basic/</link>
-    <pubDate>Sat, 01 Jan 2022 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/ds-basic/</guid>
-    <description><![CDATA[#1 链表与数组 链表和数组是最基本的数据结构，是其他数据结构的基础 数组和链表的区别 数组和链表都是线性数据结构，区别在于数组具有索引，数组中的元素]]></description>
 </item></channel>
 </rss>
