@@ -10,9 +10,12 @@ class DSU:
         self.cc = n
     
     def find(self,x):
-        if self.f[x]!=x:
-            self.f[x] = self.find(self.f[x])
-        return self.f[x]
+        f,y = self.f,x
+        while f[y]!=y:
+            y = f[y]
+        while f[x]!=y:
+            f[x],x = y,f[x]
+        return y
     
     def union(self,x,y):
         f,sz = self.f,self.sz
@@ -28,17 +31,18 @@ class DSU:
 ```
 
 
-例题
 - {{< lc "0200" >}} 岛屿数量
+- {{< lc "0305" >}} 岛屿数量 II
 - {{< lc "0547" >}} 省份数量
 - {{< lc "0684" >}} 冗余连接
 - {{< lc "0839" >}} 相似字符串组
 - {{< lc "0990" >}} 等式方程的可满足性
-- {{< lc "0130" >}} 被围绕的区域
 - {{< lc "0695" >}} 岛屿的最大面积
 - {{< lc "0721" >}} 账户合并
 - {{< lc "0959" >}} 由斜杠划分区域
-- {{< lc "0399" >}} 除法求值
 - {{< lc "0407" >}} 接雨水 II
 - {{< lc "0685" >}} 冗余连接 II
 - {{< lc "0803" >}} 打砖块
+
+带权并查集
+- {{< lc "0399" >}} 除法求值

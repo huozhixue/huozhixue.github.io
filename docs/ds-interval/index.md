@@ -342,10 +342,11 @@ seg.build(A)
 
 单点修改
 - {{< lc "0307" >}} [区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable/)
-- {{< lc "0308" >}} 二维区域和检索 - 可变
 - {{< lc "2407" >}} [最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/)
 - {{< lc "2736" >}} [最大和查询](https://leetcode.cn/problems/maximum-sum-queries/)
 - {{< lc "0673" >}} [最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/)
+二维
+- {{< lc "0308" >}} 二维区域和检索 - 可变
 
 区间修改
 - {{< lc "0699" >}} [掉落的方块](https://leetcode.cn/problems/falling-squares/)

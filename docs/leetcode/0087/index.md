@@ -70,23 +70,24 @@
 - 假设 s2 是 s1 的扰乱字符串，且对应的 s1 的分割点在位置 i，那么有两种情况：
 	- 分割的两部分没有交换：s2[:i] 是 s1[:i] 的扰乱字符串，s2[i:] 是 s1[i:] 的扰乱字符串
 	- 分割开的两部分交换了：s2[-i:] 是 s1[:i] 的扰乱字符串，s2[:-i] 是 s1[i:] 的扰乱字符串
-- 令 dfs(i,j,n) 为 s1[i:i+n] 和 s2[j:j+n] 的匹配情况，用记忆化递归即可解决
+- 令 f(i,j,n) 表示 s1[i:i+n] 和 s2[j:j+n] 的匹配情况，即可递推
 
 ## 解答
 
 ```python
 class Solution:
     def isScramble(self, s1: str, s2: str) -> bool:
-        @cache
-        def dfs(i,j,n):
-            if n==1:
-                return s1[i]==s2[j]
-            for k in range(1,n):
-                if dfs(i,j,k) and dfs(i+k,j+k,n-k):
-                    return True
-                if dfs(i,j+n-k,k) and dfs(i+k,j,n-k):
-                    return True
-            return False
-        return dfs(0,0,len(s1))
+        n = len(s1)
+        f = [[[0]*(n+1) for _ in range(n)] for _ in range(n)]
+        for i in range(n-1,-1,-1):
+            for j in range(n-1,-1,-1):
+                f[i][j][1] = s1[i]==s2[j]
+                for k in range(2,n-max(i,j)+1):
+                    for l in range(1,k):
+                        if f[i][j][l] and f[i+l][j+l][k-l]:
+                            f[i][j][k] = 1
+                        if f[i][j+k-l][l] and f[i+l][j][k-l]:
+                            f[i][j][k] = 1
+        return bool(f[0][0][n])
 ```
-80 ms
+127 ms

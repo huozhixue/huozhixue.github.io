@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>算法（四）：动态规划 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（四）：动态规划" />
-<meta property="og:description" content="排列 dp 0903 DI 序列的有效排列 数位 dp 1 2 3 4 5 6 7 8 9 10 11 @cache def dfs(i,st,bd): if i==len(s): return st res = 0 cur = int(s[i]) up = cur if bd else 9 for x in range(up&#43;1): res &#43;= dfs(i&#43;1,st&#43;(x==1),bd and x==cur) return res s = str(n) 0233 数字 1 的个数 0600 不含" />
+<meta property="og:description" content="经典类型 匹配 0010 正则表达式匹配 0044 通配符匹配 括号： 0032 最长有效括号 接雨水 0042 接雨水 0042 接雨水 II 排列 0060 排列序列 0903 DI 序列的有效排列 股票 0123 买卖股票的最佳时机" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-dp/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-06T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="算法（四）：动态规划"/>
-<meta name="twitter:description" content="排列 dp 0903 DI 序列的有效排列 数位 dp 1 2 3 4 5 6 7 8 9 10 11 @cache def dfs(i,st,bd): if i==len(s): return st res = 0 cur = int(s[i]) up = cur if bd else 9 for x in range(up&#43;1): res &#43;= dfs(i&#43;1,st&#43;(x==1),bd and x==cur) return res s = str(n) 0233 数字 1 的个数 0600 不含"/>
+<meta name="twitter:description" content="经典类型 匹配 0010 正则表达式匹配 0044 通配符匹配 括号： 0032 最长有效括号 接雨水 0042 接雨水 0042 接雨水 II 排列 0060 排列序列 0903 DI 序列的有效排列 股票 0123 买卖股票的最佳时机"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algo-dp/" /><link rel="prev" href="https://huozhixue.github.io/algo-divide/" /><link rel="next" href="https://huozhixue.github.io/algo-greedy/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-dp\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  591 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  536 ,
         "url": "https:\/\/huozhixue.github.io\/algo-dp\/","datePublished": "2021-01-06T00:00:00+08:00","dateModified": "2021-01-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（四）：动态规划</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 591 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 536 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/algo-dp/" class="leancloud_visitors" data-flag-title="算法（四）：动态规划">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -121,16 +121,43 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#排列-dp">排列 dp</a></li>
+    <li><a href="#经典类型">经典类型</a></li>
+    <li><a href="#子序列">子序列</a></li>
+    <li><a href="#区间">区间</a></li>
     <li><a href="#数位-dp">数位 dp</a></li>
     <li><a href="#概率-dp">概率 dp</a></li>
     <li><a href="#插头-dp">插头 dp</a></li>
     <li><a href="#dp-优化">dp 优化</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="排列-dp">排列 dp</h2>
+            </div><div class="content" id="content"><h2 id="经典类型">经典类型</h2>
+<p>匹配</p>
 <ul>
-<li><a href="/leetcode/0903" title="0903" rel="noopener noreferrer">0903</a> <a href="https://leetcode.cn/problems/valid-permutations-for-di-sequence/" target="_blank" rel="noopener noreffer">DI 序列的有效排列</a></li>
+<li><a href="/leetcode/0010" title="0010" rel="noopener noreferrer">0010</a> 正则表达式匹配</li>
+<li><a href="/leetcode/0044" title="0044" rel="noopener noreferrer">0044</a> 通配符匹配
+括号：</li>
+<li><a href="/leetcode/0032" title="0032" rel="noopener noreferrer">0032</a> 最长有效括号
+接雨水</li>
+<li><a href="/leetcode/0042" title="0042" rel="noopener noreferrer">0042</a> 接雨水</li>
+<li><a href="/leetcode/0042" title="0042" rel="noopener noreferrer">0042</a> 接雨水 II
+排列</li>
+<li><a href="/leetcode/0060" title="0060" rel="noopener noreferrer">0060</a> 排列序列</li>
+<li><a href="/leetcode/0903" title="0903" rel="noopener noreferrer">0903</a> DI 序列的有效排列
+股票</li>
+<li><a href="/leetcode/0123" title="0123" rel="noopener noreferrer">0123</a> 买卖股票的最佳时机 III</li>
+<li><a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a> 买卖股票的最佳时机 IV
+颜色</li>
+<li><a href="/leetcode/0265" title="0265" rel="noopener noreferrer">0265</a> 粉刷房子 II</li>
+</ul>
+<h2 id="子序列">子序列</h2>
+<ul>
+<li><a href="/leetcode/0115" title="0115" rel="noopener noreferrer">0115</a> 不同的子序列</li>
+<li><a href="/leetcode/0354" title="0354" rel="noopener noreferrer">0354</a> 俄罗斯套娃信封问题</li>
+</ul>
+<h2 id="区间">区间</h2>
+<ul>
+<li><a href="/leetcode/0087" title="0087" rel="noopener noreferrer">0087</a> 扰乱字符串</li>
+<li><a href="/leetcode/0312" title="0312" rel="noopener noreferrer">0312</a> 戳气球</li>
 </ul>
 <h2 id="数位-dp">数位 dp</h2>
 <div class="highlight"><div class="chroma">
@@ -148,28 +175,30 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@cache</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">st</span><span class="p">,</span><span class="n">bd</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">st</span>
-</span></span><span class="line"><span class="cl">	<span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="n">cur</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">	<span class="n">up</span> <span class="o">=</span> <span class="n">cur</span> <span class="k">if</span> <span class="n">bd</span> <span class="k">else</span> <span class="mi">9</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">up</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span> <span class="o">+=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">st</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">1</span><span class="p">),</span><span class="n">bd</span> <span class="ow">and</span> <span class="n">x</span><span class="o">==</span><span class="n">cur</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@cache</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">st</span><span class="p">,</span><span class="n">bd</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">st</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">up</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">if</span> <span class="n">bd</span> <span class="k">else</span> <span class="mi">9</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">up</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">st</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">1</span><span class="p">),</span><span class="n">bd</span> <span class="ow">and</span> <span class="n">x</span><span class="o">==</span><span class="n">up</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><a href="/leetcode/0233" title="0233" rel="noopener noreferrer">0233</a> 数字 1 的个数</li>
 <li><a href="/leetcode/0600" title="0600" rel="noopener noreferrer">0600</a> 不含连续1的非负整数</li>
 <li><a href="/leetcode/0788" title="0788" rel="noopener noreferrer">0788</a> 旋转数字</li>
-<li><a href="/leetcode/1397" title="1397" rel="noopener noreferrer">1397</a> <a href="https://leetcode.cn/contest/weekly-contest-182/problems/find-all-good-strings/" target="_blank" rel="noopener noreffer">找到所有好字符串</a> （2666分）</li>
+<li><a href="/leetcode/1397" title="1397" rel="noopener noreferrer">1397</a> 找到所有好字符串（2666分）
+分段计数法</li>
+<li><a href="/leetcode/0248" title="0248" rel="noopener noreferrer">0248</a> 0248：中心对称数 III</li>
 </ul>
 <h2 id="概率-dp">概率 dp</h2>
 <ul>
-<li><a href="/leetcode/1227" title="1227" rel="noopener noreferrer">1227</a> <a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/" target="_blank" rel="noopener noreffer">飞机座位分配概率</a></li>
+<li><a href="/leetcode/1227" title="1227" rel="noopener noreferrer">1227</a> 飞机座位分配概率]</li>
 </ul>
 <h2 id="插头-dp">插头 dp</h2>
 <ul>
@@ -184,100 +213,6 @@
 <li>四边形不等式优化</li>
 </ul>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 矩阵快速幂</span>
-</span></span><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">res</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">                <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
-</span></span><span class="line"><span class="cl">                <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">%=</span> <span class="n">mod</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mpow</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">f</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">res</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span> <span class="k">else</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl">        <span class="n">g</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 矩阵快速幂 可复用</span>
-</span></span><span class="line"><span class="cl"><span class="n">mod</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="o">+</span><span class="mi">7</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[[</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">%</span><span class="n">mod</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">))</span><span class="o">%</span><span class="n">mod</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">B</span><span class="p">)]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">N</span><span class="p">,</span><span class="n">M</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">g</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl"><span class="n">g0</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">N</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">g0</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">g</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">g0</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">g0</span><span class="p">,</span><span class="n">g0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mpow</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">f</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">^=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">f</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -369,7 +304,11 @@
 </span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">g</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><p>wqs 二分</p>
+<ul>
+<li><a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a> 买卖股票的最佳时机 IV</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

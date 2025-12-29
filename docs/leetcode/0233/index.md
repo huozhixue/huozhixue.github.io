@@ -47,28 +47,59 @@
 	- bd 代表前面取的数是否贴着 n 的上界
 - 即可递归
 
-
-
 ```python
+def get(s):
+    @cache
+    def dfs(i,st,bd):
+        if i==len(s):
+            return st
+        res = 0
+        up = int(s[i]) if bd else 9
+        for x in range(up+1):
+            res += dfs(i+1,st+(x==1),bd and x==up)
+        return res
+    return dfs(0,0,1)
+    
 class Solution:
     def countDigitOne(self, n: int) -> int:
-        @cache
-        def dfs(i,st,bd):
-            if i==len(s):
-                return st
-            res = 0
-            cur = int(s[i])
-            up = cur if bd else 9
-            for x in range(up+1):
-                res += dfs(i+1,st+(x==1),bd and x==cur)
-            return res
-        s = str(n)
-        return dfs(0,0,True)
+        return get(str(n))
+```
+3 ms
+
+### #2
+
+本题的数位 dp 还有种更优的写法
+- 只记忆化非上界的状态，并令 i 代表还剩 i 位
+- 这样的状态的结果跟 n 无关，可以通用
+- 其实就是分段计数中，把每一段的结果记忆化了
+
+注意一定要先判断状态的结果跟 n 无关，memo 才可以通用
+
+```python []
+memo = {}
+def get(s):
+    def dfs(i,st,bd):
+        if not bd and (i,st) in memo:
+            return memo[(i,st)]
+        if i<0:
+            return st
+        res = 0
+        up = int(s[i]) if bd else 9
+        for x in range(up+1):
+            res += dfs(i-1,st+(x==1),bd and x==up)
+        if not bd:
+            memo[(i,st)] = res
+        return res
+    s = s[::-1]
+    return dfs(len(s)-1,0,1)
+
+class Solution:
+    def countDigitOne(self, n: int) -> int:
+        return get(str(n))
 ```
 0 ms
 
-
-### #2
+### #3
 
 还可以用贡献法，计算每一位上 1 的个数
 - 以百位为例，百位上的数字以 1000 为周期循环，一个完整周期内有 100 个 1

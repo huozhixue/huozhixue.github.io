@@ -1,32 +1,55 @@
 # 算法（四）：动态规划
 
-## 排列 dp
+## 经典类型
 
-- {{< lc "0903" >}} [DI 序列的有效排列](https://leetcode.cn/problems/valid-permutations-for-di-sequence/)
+匹配
+- {{< lc "0010" >}} 正则表达式匹配
+- {{< lc "0044" >}} 通配符匹配
+括号：
+- {{< lc "0032" >}} 最长有效括号
+接雨水
+- {{< lc "0042" >}} 接雨水
+- {{< lc "0042" >}} 接雨水 II
+排列
+- {{< lc "0060" >}} 排列序列
+- {{< lc "0903" >}} DI 序列的有效排列
+股票
+- {{< lc "0123" >}} 买卖股票的最佳时机 III
+- {{< lc "0188" >}} 买卖股票的最佳时机 IV
+颜色
+- {{< lc "0265" >}} 粉刷房子 II
+## 子序列
+- {{< lc "0115" >}} 不同的子序列
+- {{< lc "0354" >}} 俄罗斯套娃信封问题
+## 区间
+- {{< lc "0087" >}} 扰乱字符串
+- {{< lc "0312" >}} 戳气球
 ##  数位 dp
 
 ```python
-@cache
-def dfs(i,st,bd):
-	if i==len(s):
-		return st
-	res = 0
-	cur = int(s[i])
-	up = cur if bd else 9
-	for x in range(up+1):
-		res += dfs(i+1,st+(x==1),bd and x==cur)
-	return res
-s = str(n)
+def get(s):
+    @cache
+    def dfs(i,st,bd):
+        if i==len(s):
+            return st
+        res = 0
+        up = int(s[i]) if bd else 9
+        for x in range(up+1):
+            res += dfs(i+1,st+(x==1),bd and x==up)
+        return res
+    return dfs(0,0,1)
 ```
 
 - {{< lc "0233" >}} 数字 1 的个数
 - {{< lc "0600" >}} 不含连续1的非负整数
 - {{< lc "0788" >}} 旋转数字
-- {{< lc "1397" >}} [找到所有好字符串](https://leetcode.cn/contest/weekly-contest-182/problems/find-all-good-strings/) （2666分）
+- {{< lc "1397" >}} 找到所有好字符串（2666分）
+分段计数法
+- {{< lc "0248" >}} 0248：中心对称数 III
 
 ## 概率 dp
 
-- {{< lc "1227" >}} [飞机座位分配概率](https://leetcode.cn/problems/airplane-seat-assignment-probability/)
+- {{< lc "1227" >}} 飞机座位分配概率]
 
 ## 插头 dp
 
@@ -41,53 +64,6 @@ s = str(n)
 - 斜率优化
 - 四边形不等式优化
 
-
-```python
-# 矩阵快速幂
-mod = 10**9+7
-def mul(A,B):
-    res = [[0]*len(B[0]) for _ in range(len(A))]
-    for i, row in enumerate(res):
-        for k,a in enumerate(A[i]):
-            for j,b in enumerate(B[k]):
-                row[j] += a*b
-                row[j] %= mod
-    return res
-def mpow(g,n,f):
-    res = f
-    while n:
-        res = mul(g,res) if n&1 else res
-        g = mul(g,g)
-        n >>= 1
-    return res
-```
-
-```python
-# 矩阵快速幂 可复用
-mod = 10**9+7
-def mul(A,B):
-    return [[sum(a*b%mod for a,b in zip(r,c))%mod for c in zip(*B)] for r in A]
-
-N,M = 0,0
-f = [[0] for _ in range(N)]
-for i in range(N):
-    f[i][0] = 0
-g = []
-g0 = [[0]*N for _ in range(N)]
-for i in range(N):
-    for j in range(N):
-        g0[i][j] = 0
-for _ in range(M):
-    g.append(g0)
-    g0 = mul(g0,g0)
-
-def mpow(g,n,f):
-    while n:
-        i = n.bit_length()-1
-        f = mul(g[i],f)
-        n ^= 1<<i
-    return sum(a[0] for a in f)%mod
-```
 
 ```python []
 # 斜率优化
@@ -134,3 +110,7 @@ for j in range(1,n+1):
 			Q.append([j,a,n])
 return g
 ```
+
+
+wqs 二分
+- {{< lc "0188" >}} 买卖股票的最佳时机 IV

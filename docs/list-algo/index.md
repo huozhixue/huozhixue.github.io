@@ -7,7 +7,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 | 难度   | 题目                                                     | 关键词  |
 | :--- | :----------------------------------------------------- | :--- |
-| 2400 | [cf593d](https://codeforces.com/contest/593/problem/D) | 树的路径 |
+| 2400 | [cf593d](https://codeforces.com/contest/593/problem/D) | 树上路径 |
 
 ## 贪心
 

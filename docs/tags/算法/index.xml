@@ -11,12 +11,19 @@
     <guid>https://huozhixue.github.io/graph-flow/</guid>
     <description><![CDATA[最大流 FF 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 # FF 最大流 class MF: def __init__(self,N): self.g = [[] for _ in range(N)] self.vis = [0]*N self.N = N def add(self,u,v,c): self.g[u].append([v,len(self.g[v]),c]) self.g[v].append([u,len(self.g[u])-1,0]) def dfs(self,u,t,flow): g = self.g if u==t: return]]></description>
 </item><item>
-    <title>算法（八）：技巧</title>
+    <title>算法（九）：技巧</title>
     <link>https://huozhixue.github.io/algo-trick/</link>
-    <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <pubDate>Fri, 15 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-trick/</guid>
     <description><![CDATA[剪枝 收敛：n 足够大时，答案与收敛值的差可以忽略不计，因此只需要考虑 n 较小的情形 0808 分汤 根号 根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将]]></description>
+</item><item>
+    <title>算法（八）：模拟</title>
+    <link>https://huozhixue.github.io/algo-simulate/</link>
+    <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/algo-simulate/</guid>
+    <description><![CDATA[0068 文本左右对齐 0158 用 Read4 读取 N 个字符 II 0273 整数转换英文表示 较麻烦的回溯 0282 给表达式添加运算符]]></description>
 </item><item>
     <title>算法（七）：几何</title>
     <link>https://huozhixue.github.io/algo-math_geometry/</link>
@@ -37,28 +44,28 @@
     <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-greedy/</guid>
-    <description><![CDATA[偏序 0342 摆动排序 II 间隔 0621 任务调度器]]></description>
+    <description><![CDATA[最值 0135 分发糖果 中位数 0296 最佳的碰头地点 最大/小/少序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序 II 间隔 0358 K 距离间隔重排字符串 0621 任务调度器]]></description>
 </item><item>
     <title>算法（四）：动态规划</title>
     <link>https://huozhixue.github.io/algo-dp/</link>
     <pubDate>Wed, 06 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-dp/</guid>
-    <description><![CDATA[排列 dp 0903 DI 序列的有效排列 数位 dp 1 2 3 4 5 6 7 8 9 10 11 @cache def dfs(i,st,bd): if i==len(s): return st res = 0 cur = int(s[i]) up = cur if bd else 9 for x in range(up+1): res += dfs(i+1,st+(x==1),bd and x==cur) return res s = str(n) 0233 数字 1 的个数 0600 不含]]></description>
+    <description><![CDATA[经典类型 匹配 0010 正则表达式匹配 0044 通配符匹配 括号： 0032 最长有效括号 接雨水 0042 接雨水 0042 接雨水 II 排列 0060 排列序列 0903 DI 序列的有效排列 股票 0123 买卖股票的最佳时机]]></description>
 </item><item>
     <title>算法（三）：分治</title>
     <link>https://huozhixue.github.io/algo-divide/</link>
     <pubDate>Tue, 05 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-divide/</guid>
-    <description><![CDATA[cdq 分治]]></description>
+    <description><![CDATA[cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数]]></description>
 </item><item>
     <title>算法（二）：二分与倍增</title>
     <link>https://huozhixue.github.io/algo-binary/</link>
     <pubDate>Mon, 04 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-binary/</guid>
-    <description><![CDATA[统计二分 3261 统计满足 K 约束的子字符串数量 II （2659 分） 答案二分 倍增]]></description>
+    <description><![CDATA[二分 0004 寻找两个正序数组的中位数 0302 包含全部黑色像素的最小矩形 二分统计 3261 统计满足 K 约束的子字符串数量 II 二分答案 0410 分割数组的最大值 倍增]]></description>
 </item><item>
     <title>算法（一）：位运算</title>
     <link>https://huozhixue.github.io/algo-bit/</link>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-bit/</guid>
     <description><![CDATA[子集 算法学习笔记(75): Gosper&rsquo;s Hack 1 2 3 4 y = st # 生成所有子集 while y: # 处理子集 y y = (y-1)&amp;st 1 2 3 4 5 6 7 8 st,ma = (1&lt;&lt;k)-1, 1&lt;&lt;n # 生成所有 k 元子集 while st&lt;ma: # 处理子集 st lb]]></description>
-</item><item>
-    <title>算法（零）：基础</title>
-    <link>https://huozhixue.github.io/algo-basic/</link>
-    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/algo-basic/</guid>
-    <description><![CDATA[#1 位运算与进位制 位运算是计算机最基础的运算，包括位模式或二进制数的一元和二元操作（&amp;、|、^、~、&laquo;、&raquo;） 很]]></description>
 </item></channel>
 </rss>
