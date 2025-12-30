@@ -165,8 +165,8 @@
 <ul>
 <li>先考虑 n 放哪，假如 n 放到位置 i，包含 n 的逆序对有 n-i-1，转为子问题：1 到 n-1 的排列中恰好 k-(n-i-1) 个逆序对的个数</li>
 <li>n 产生的逆序对个数范围为 [0,n-1]</li>
-<li>令 f[i][j] 代表 1 到 i 的排列中恰好 j 个逆序对的个数，即可递推：
-f[i][j] = sum(f[i-1][j-a] for a in range(i) if j&gt;=a)</li>
+<li>令 f(i,j) 代表 1 到 i 的排列中恰好 j 个逆序对的个数，即可递推：
+f(i,j) = sum(f(i-1,j-a) for a in range(i) if a&lt;=j)</li>
 <li>显然递推式可以用前缀和优化</li>
 <li>还可以用滚动数组将 f 优化为一维数组</li>
 </ul>

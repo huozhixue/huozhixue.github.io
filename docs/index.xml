@@ -11,14 +11,14 @@
     <pubDate>Sat, 21 Jun 2025 17:49:40 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/list-algo/</guid>
-    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 并查集 难度 题目 关键词 2400 cf593d 树上路径 贪心 难度 题目 关键词 1600 GYM105805D 逆序对]]></description>
+    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 并查集 难度 题目 关键词 2400 cf593d 树上路径 贪心 难度 题目 关键词 1600 GYM105805D 逆序对 组合]]></description>
 </item><item>
     <title>清单：小说</title>
     <link>https://huozhixue.github.io/list-novel/</link>
     <pubDate>Wed, 01 Jan 2025 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/list-novel/</guid>
-    <description><![CDATA[小说清单 时间 名称 作者 其它作品 赏析 1997 《风姿物语》 罗森 2000 《悟空传》 今何在 《若星汉天空》《九州·羽传说》《海上牧云记》 《2050年的母系氏族 Ⅰ》 《]]></description>
+    <description><![CDATA[小说清单 时间 名称 作者 其它作品 赏析 2024 《太平令》 阎ZK 《镇妖博物馆》我为长生仙 2023 《天才俱乐部》 城城与蝉 2022 《仙人消失之后》 风行水云间 2021 《道诡异仙》]]></description>
 </item><item>
     <title>网络流入门</title>
     <link>https://huozhixue.github.io/graph-flow/</link>
@@ -60,7 +60,7 @@
     <pubDate>Sun, 09 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-tree/</guid>
-    <description><![CDATA[树哈希 0297 二叉树的序列化与反序列化 0449 序列化和反序列化二叉搜索树 0572 另一个树的子树 0652 寻找重复的子树 树上路径 0124 二叉树中的最大路径和 lca 1 2 3 4 5 6 7 8]]></description>
+    <description><![CDATA[树哈希 0297 二叉树的序列化与反序列化 0428 序列化和反序列化 N 叉树 0449 序列化和反序列化二叉搜索树 0572 另一个树的子树 0652 寻找重复的子树 树上路径 0124 二叉树中的最大]]></description>
 </item><item>
     <title>数据结构（三）：栈与队列</title>
     <link>https://huozhixue.github.io/ds-stack/</link>
@@ -95,14 +95,14 @@
     <pubDate>Fri, 15 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-trick/</guid>
-    <description><![CDATA[剪枝 收敛：n 足够大时，答案与收敛值的差可以忽略不计，因此只需要考虑 n 较小的情形 0808 分汤 根号 根号分治 根号限制 总和为 n 的若干个数，最多只有 $\sqrt n$ 种 将]]></description>
+    <description><![CDATA[逆向 0458 可怜的小猪 剪枝 0488 祖玛游戏 收敛：n 足够大时，答案与收敛值的差可以忽略不计，因此只需要考虑 n 较小的情形 0808 分汤] 根号 根号分治 根号限制 总和为 n]]></description>
 </item><item>
     <title>算法（八）：模拟</title>
     <link>https://huozhixue.github.io/algo-simulate/</link>
     <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-simulate/</guid>
-    <description><![CDATA[0068 文本左右对齐 0158 用 Read4 读取 N 个字符 II 0273 整数转换英文表示 较麻烦的回溯 0282 给表达式添加运算符]]></description>
+    <description><![CDATA[0068 文本左右对齐 0158 用 Read4 读取 N 个字符 II 0273 整数转换英文表示 0514 自由之路 较麻烦的回溯 0282 给表达式添加运算符 0425 单词方块 0489 扫地机器人 循环节 0466 统计重复个数]]></description>
 </item><item>
     <title>算法（七）：几何</title>
     <link>https://huozhixue.github.io/algo-math_geometry/</link>
@@ -116,14 +116,14 @@
     <pubDate>Sat, 09 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-math_algebra/</guid>
-    <description><![CDATA[代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 1130 翻转子数组得到最大的数组值 （2482分） 组合 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def]]></description>
+    <description><![CDATA[代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 回文数 0479 最大回文数乘积 0564 寻找最近的回文数 进制 0483 最小好进制 0660 移除 9 绝对值 1130 翻转子数组得到最]]></description>
 </item><item>
     <title>算法（五）：贪心与构造</title>
     <link>https://huozhixue.github.io/algo-greedy/</link>
     <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-greedy/</guid>
-    <description><![CDATA[最值 0135 分发糖果 中位数 0296 最佳的碰头地点 最大/小/少序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序 II 间隔 0358 K 距离间隔重排字符串 0621 任务调度器]]></description>
+    <description><![CDATA[最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序 II 连续 0420 强密码检验器 间隔 0358 K 距离间隔重排字]]></description>
 </item><item>
     <title>算法（四）：动态规划</title>
     <link>https://huozhixue.github.io/algo-dp/</link>
@@ -137,13 +137,13 @@
     <pubDate>Tue, 05 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-divide/</guid>
-    <description><![CDATA[cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数]]></description>
+    <description><![CDATA[cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数 0493 翻转对]]></description>
 </item><item>
     <title>算法（二）：二分与倍增</title>
     <link>https://huozhixue.github.io/algo-binary/</link>
     <pubDate>Mon, 04 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-binary/</guid>
-    <description><![CDATA[二分 0004 寻找两个正序数组的中位数 0302 包含全部黑色像素的最小矩形 二分统计 3261 统计满足 K 约束的子字符串数量 II 二分答案 0410 分割数组的最大值 倍增]]></description>
+    <description><![CDATA[二分 0004 寻找两个正序数组的中位数 0302 包含全部黑色像素的最小矩形 二分统计 3261 统计满足 K 约束的子字符串数量 II 二分答案 0410 分割数组的最大值 0644 子数组最大平均]]></description>
 </item></channel>
 </rss>

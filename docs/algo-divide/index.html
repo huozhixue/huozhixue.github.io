@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>算法（三）：分治 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（三）：分治" />
-<meta property="og:description" content="cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数" />
+<meta property="og:description" content="cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数 0493 翻转对" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-divide/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-05T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="算法（三）：分治"/>
-<meta name="twitter:description" content="cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数"/>
+<meta name="twitter:description" content="cdq 分治 0315 计算右侧小于当前元素的个数 0327 区间和的个数 0493 翻转对"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algo-divide/" /><link rel="prev" href="https://huozhixue.github.io/algo-binary/" /><link rel="next" href="https://huozhixue.github.io/algo-dp/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-divide\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  24 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  28 ,
         "url": "https:\/\/huozhixue.github.io\/algo-divide\/","datePublished": "2021-01-05T00:00:00+08:00","dateModified": "2021-01-05T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（三）：分治</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-05">2021-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 24 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-05">2021-01-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 28 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-divide/" class="leancloud_visitors" data-flag-title="算法（三）：分治">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -128,6 +128,7 @@
 <ul>
 <li><a href="/leetcode/0315" title="0315" rel="noopener noreferrer">0315</a> 计算右侧小于当前元素的个数</li>
 <li><a href="/leetcode/0327" title="0327" rel="noopener noreferrer">0327</a> 区间和的个数</li>
+<li><a href="/leetcode/0493" title="0493" rel="noopener noreferrer">0493</a> 翻转对</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

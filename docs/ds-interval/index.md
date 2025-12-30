@@ -348,7 +348,7 @@ seg.build(A)
 二维
 - {{< lc "0308" >}} 二维区域和检索 - 可变
 
-区间修改
+区间修改（赋相同值可用珂朵莉树）
 - {{< lc "0699" >}} [掉落的方块](https://leetcode.cn/problems/falling-squares/)
 - {{< lc "0715" >}} [Range 模块](https://leetcode.cn/problems/range-module/)
 - {{< lc "0732" >}} [我的日程安排表 III](https://leetcode.cn/problems/my-calendar-iii/)

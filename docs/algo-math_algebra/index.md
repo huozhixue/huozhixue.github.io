@@ -11,7 +11,21 @@ def myround(x):
     return Decimal(x).quantize(Decimal('.00'), rounding=ROUND_HALF_UP)
 ```
 
-- {{< lc "1130" >}} [翻转子数组得到最大的数组值](https://leetcode.cn/problems/reverse-subarray-to-maximize-array-value/) （2482分）
+回文数
+- {{< lc "0479" >}} 最大回文数乘积
+- {{< lc "0564" >}} 寻找最近的回文数
+进制
+- {{< lc "0483" >}} 最小好进制
+- {{< lc "0660" >}} 移除 9
+绝对值
+- {{< lc "1130" >}} 翻转子数组得到最大的数组值
+## 统计
+
+分段计数法
+- {{< lc "0248" >}} 中心对称数 III
+试填法
+- {{< lc "0440" >}} 字典序的第K小数字
+
 
 ## 组合
 

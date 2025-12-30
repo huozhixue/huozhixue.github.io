@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-dp\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  536 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  617 ,
         "url": "https:\/\/huozhixue.github.io\/algo-dp\/","datePublished": "2021-01-06T00:00:00+08:00","dateModified": "2021-01-06T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（四）：动态规划</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 536 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 617 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/algo-dp/" class="leancloud_visitors" data-flag-title="算法（四）：动态规划">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -122,8 +122,11 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#经典类型">经典类型</a></li>
+    <li><a href="#子数组">子数组</a></li>
     <li><a href="#子序列">子序列</a></li>
     <li><a href="#区间">区间</a></li>
+    <li><a href="#背包-dp">背包 dp</a></li>
+    <li><a href="#状压-dp">状压 dp</a></li>
     <li><a href="#数位-dp">数位 dp</a></li>
     <li><a href="#概率-dp">概率 dp</a></li>
     <li><a href="#插头-dp">插头 dp</a></li>
@@ -147,17 +150,36 @@
 <li><a href="/leetcode/0123" title="0123" rel="noopener noreferrer">0123</a> 买卖股票的最佳时机 III</li>
 <li><a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a> 买卖股票的最佳时机 IV
 颜色</li>
-<li><a href="/leetcode/0265" title="0265" rel="noopener noreferrer">0265</a> 粉刷房子 II</li>
+<li><a href="/leetcode/0265" title="0265" rel="noopener noreferrer">0265</a> 粉刷房子 II
+逆序对</li>
+<li><a href="/leetcode/0629" title="0629" rel="noopener noreferrer">0629</a> K 个逆序对数组</li>
+</ul>
+<h2 id="子数组">子数组</h2>
+<ul>
+<li><a href="/leetcode/0689" title="0689" rel="noopener noreferrer">0689</a> 三个无重叠子数组的最大和</li>
 </ul>
 <h2 id="子序列">子序列</h2>
 <ul>
 <li><a href="/leetcode/0115" title="0115" rel="noopener noreferrer">0115</a> 不同的子序列</li>
 <li><a href="/leetcode/0354" title="0354" rel="noopener noreferrer">0354</a> 俄罗斯套娃信封问题</li>
+<li><a href="/leetcode/0446" title="0446" rel="noopener noreferrer">0446</a> 等差数列划分 II - 子序列</li>
 </ul>
 <h2 id="区间">区间</h2>
 <ul>
 <li><a href="/leetcode/0087" title="0087" rel="noopener noreferrer">0087</a> 扰乱字符串</li>
 <li><a href="/leetcode/0312" title="0312" rel="noopener noreferrer">0312</a> 戳气球</li>
+<li><a href="/leetcode/0471" title="0471" rel="noopener noreferrer">0471</a> 编码最短长度的字符串</li>
+<li><a href="/leetcode/0546" title="0546" rel="noopener noreferrer">0546</a> 移除盒子</li>
+<li><a href="/leetcode/0664" title="0664" rel="noopener noreferrer">0664</a> 奇怪的打印机</li>
+</ul>
+<h2 id="背包-dp">背包 dp</h2>
+<ul>
+<li><a href="/leetcode/0691" title="0691" rel="noopener noreferrer">0691</a> 贴纸拼词</li>
+</ul>
+<h2 id="状压-dp">状压 dp</h2>
+<ul>
+<li><a href="/leetcode/0465" title="0465" rel="noopener noreferrer">0465</a> 最优账单平衡</li>
+<li><a href="/leetcode/0679" title="0679" rel="noopener noreferrer">0679</a> 24 点游戏</li>
 </ul>
 <h2 id="数位-dp">数位 dp</h2>
 <div class="highlight"><div class="chroma">
@@ -192,9 +214,7 @@
 <li><a href="/leetcode/0233" title="0233" rel="noopener noreferrer">0233</a> 数字 1 的个数</li>
 <li><a href="/leetcode/0600" title="0600" rel="noopener noreferrer">0600</a> 不含连续1的非负整数</li>
 <li><a href="/leetcode/0788" title="0788" rel="noopener noreferrer">0788</a> 旋转数字</li>
-<li><a href="/leetcode/1397" title="1397" rel="noopener noreferrer">1397</a> 找到所有好字符串（2666分）
-分段计数法</li>
-<li><a href="/leetcode/0248" title="0248" rel="noopener noreferrer">0248</a> 0248：中心对称数 III</li>
+<li><a href="/leetcode/1397" title="1397" rel="noopener noreferrer">1397</a> 找到所有好字符串（2666分）</li>
 </ul>
 <h2 id="概率-dp">概率 dp</h2>
 <ul>
@@ -205,13 +225,18 @@
 <li><a href="https://leetcode.cn/problems/unique-paths-iii/solutions/3084233/cha-tou-dp-by-kamio_misuzu-48t0/" target="_blank" rel="noopener noreffer">插头 dp</a></li>
 </ul>
 <h2 id="dp-优化">dp 优化</h2>
+<p>单调栈/队列</p>
 <ul>
-<li>对称性</li>
-<li>矩阵快速幂</li>
-<li>wqs 二分</li>
-<li>斜率优化</li>
-<li>四边形不等式优化</li>
+<li><a href="/leetcode/0656" title="0656" rel="noopener noreferrer">0656</a> 金币路径</li>
 </ul>
+<p>矩阵快速幂</p>
+<ul>
+<li><a href="/leetcode/0552" title="0552" rel="noopener noreferrer">0552</a> 学生出勤记录 II
+wqs 二分</li>
+<li><a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a> 买卖股票的最佳时机 IV
+斜率优化</li>
+</ul>
+<p>四边形不等式优化</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -304,11 +329,7 @@
 </span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">g</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>wqs 二分</p>
-<ul>
-<li><a href="/leetcode/0188" title="0188" rel="noopener noreferrer">0188</a> 买卖股票的最佳时机 IV</li>
-</ul>
-</div><div class="post-footer" id="post-footer">
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
