@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/ds-union_find\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  225 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "数据结构","wordcount":  135 ,
         "url": "https:\/\/huozhixue.github.io\/ds-union_find\/","datePublished": "2022-01-15T00:00:00+08:00","dateModified": "2022-01-15T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数据结构（七）：并查集</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-15">2022-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 225 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-15">2022-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 135 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/ds-union_find/" class="leancloud_visitors" data-flag-title="数据结构（七）：并查集">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -120,75 +120,16 @@
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><ul>
-<li>并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构，专门用于 动态处理 不相交集合的「查询」与「合并」问题</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">DSU</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">sz</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cc</span> <span class="o">=</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span><span class="n">x</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">f</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">!=</span><span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">!=</span><span class="n">y</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">y</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">,</span><span class="n">sz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">sz</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fx</span><span class="p">,</span><span class="n">fy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">fx</span><span class="o">==</span><span class="n">fy</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">sz</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">fy</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">fx</span><span class="p">,</span><span class="n">fy</span> <span class="o">=</span> <span class="n">fy</span><span class="p">,</span><span class="n">fx</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span> <span class="o">=</span> <span class="n">fy</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sz</span><span class="p">[</span><span class="n">fy</span><span class="p">]</span> <span class="o">+=</span> <span class="n">sz</span><span class="p">[</span><span class="n">fx</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cc</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+            </div><div class="content" id="content"><p>并查集（Union Find）也叫「不相交集合（Disjoint Set）」，是一种树型的数据结构，专门用于 动态处理 不相交集合的「查询」与「合并」问题</p>
+<ul>
 <li><a href="/leetcode/0305" title="0305" rel="noopener noreferrer">0305</a> 岛屿数量 II</li>
 <li><a href="/leetcode/0407" title="0407" rel="noopener noreferrer">0407</a> 接雨水 II</li>
 <li><a href="/leetcode/0685" title="0685" rel="noopener noreferrer">0685</a> 冗余连接 II</li>
-<li><a href="/leetcode/0695" title="0695" rel="noopener noreferrer">0695</a> 岛屿的最大面积</li>
-<li><a href="/leetcode/0839" title="0839" rel="noopener noreferrer">0839</a> 相似字符串组</li>
-<li><a href="/leetcode/0990" title="0990" rel="noopener noreferrer">0990</a> 等式方程的可满足性</li>
 <li><a href="/leetcode/0721" title="0721" rel="noopener noreferrer">0721</a> 账户合并</li>
-<li><a href="/leetcode/0959" title="0959" rel="noopener noreferrer">0959</a> 由斜杠划分区域</li>
 <li><a href="/leetcode/0803" title="0803" rel="noopener noreferrer">0803</a> 打砖块</li>
+<li><a href="/leetcode/0827" title="0827" rel="noopener noreferrer">0827</a> 最大人工岛</li>
+<li><a href="/leetcode/0959" title="0959" rel="noopener noreferrer">0959</a> 由斜杠划分区域</li>
+<li><a href="/leetcode/1970" title="1970" rel="noopener noreferrer">1970</a> 你能穿过矩阵的最后一天</li>
 </ul>
 <p>带权并查集</p>
 <ul>

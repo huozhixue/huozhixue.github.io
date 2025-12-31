@@ -16,14 +16,14 @@
     <pubDate>Fri, 15 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-trick/</guid>
-    <description><![CDATA[逆向 0458 可怜的小猪 剪枝 0488 祖玛游戏 收敛：n 足够大时，答案与收敛值的差可以忽略不计，因此只需要考虑 n 较小的情形 0808 分汤] 根号 根号分治 根号限制 总和为 n]]></description>
+    <description><![CDATA[差分 0391 完美矩形 0759 员工空闲时间 0798 得分最高的最小轮调 逆向 0458 可怜的小猪 0780 到达终点 折半搜索 0805 数组的均值分割 剪枝 0488 祖玛游戏 收敛：n 足够大时，答案与收敛]]></description>
 </item><item>
     <title>算法（八）：模拟</title>
     <link>https://huozhixue.github.io/algo-simulate/</link>
     <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-simulate/</guid>
-    <description><![CDATA[0068 文本左右对齐 0158 用 Read4 读取 N 个字符 II 0273 整数转换英文表示 0514 自由之路 较麻烦的回溯 0282 给表达式添加运算符 0425 单词方块 0489 扫地机器人 循环节 0466 统计重复个数]]></description>
+    <description><![CDATA[0068 文本左右对齐 0158 用 Read4 读取 N 个字符 II 0273 整数转换英文表示 0514 自由之路 遍历 0749 隔离病毒 0773 滑动谜题 0815 公交路线 较麻烦的回溯 0282 给表达式添加运算符 0425 单词方块 0489]]></description>
 </item><item>
     <title>算法（七）：几何</title>
     <link>https://huozhixue.github.io/algo-math_geometry/</link>
@@ -37,14 +37,14 @@
     <pubDate>Sat, 09 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-math_algebra/</guid>
-    <description><![CDATA[代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 回文数 0479 最大回文数乘积 0564 寻找最近的回文数 进制 0483 最小好进制 0660 移除 9 绝对值 1130 翻转子数组得到最]]></description>
+    <description><![CDATA[代数 高精度运算 1 2 3 4 # 四舍五入 from decimal import Decimal, ROUND_HALF_UP def myround(x): return Decimal(x).quantize(Decimal(&#39;.00&#39;), rounding=ROUND_HALF_UP) 回文数 0479 最大回文数乘积 0564 寻找最近的回文数 进制 0483 最小好进制 0660 移除 9 0793 阶乘函数后 K 个零 绝对值]]></description>
 </item><item>
     <title>算法（五）：贪心与构造</title>
     <link>https://huozhixue.github.io/algo-greedy/</link>
     <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-greedy/</guid>
-    <description><![CDATA[最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序 II 连续 0420 强密码检验器 间隔 0358 K 距离间隔重排字]]></description>
+    <description><![CDATA[0782 变为棋盘 0818 赛车 最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 拆分 0768 最多能完成排序的块 II 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序]]></description>
 </item><item>
     <title>算法（四）：动态规划</title>
     <link>https://huozhixue.github.io/algo-dp/</link>

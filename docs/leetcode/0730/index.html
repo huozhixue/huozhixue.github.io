@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0730\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  1012 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  999 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0730\/","datePublished": "2016-12-30T00:00:00+08:00","dateModified": "2016-12-30T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0730：统计不同回文子序列（★★）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-30">2016-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1012 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/leetcode/0730/" class="leancloud_visitors" data-flag-title="0730：统计不同回文子序列（★★）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-12-30">2016-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 999 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0730/" class="leancloud_visitors" data-flag-title="0730：统计不同回文子序列（★★）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -175,19 +175,19 @@
 <li>因此 s 的序列个数=s[1:-1]的序列个数*2+2-s[1:-1] 首尾是 &lsquo;a&rsquo; 的序列个数</li>
 </ul>
 </li>
-<li>所以考虑将首尾是哪个字符加入状态定义，用 f[i][j][c] 代表 s[i:j+1] 首尾是 c 的序列个数，进行递推
+<li>所以考虑将首尾是哪个字符加入状态定义，用 f(i,j,c) 代表 s[i:j+1] 首尾是 c 的序列个数，进行递推
 <ul>
 <li>假如 s[i:j+1] 的首尾都是 c
 <ul>
-<li>f[i][j][c] = sum(f[i+1][j-1])+2</li>
-<li>其它字符状态和 f[i+1][j-1] 一样</li>
+<li>f(i,j,c)= sum(f(i+1,j-1,*))+2</li>
+<li>其它字符状态和 f(i+1,j-1,*) 一样</li>
 </ul>
 </li>
 <li>否则，假如首尾分别是 a、b
 <ul>
-<li>f[i][j][a] = f[i][j-1][a]</li>
-<li>f[i][j][b] = f[i+1][j][b]</li>
-<li>其它字符状态和 f[i+1][j-1] 一样</li>
+<li>f(i,j,a) = f(i,j-1,a)</li>
+<li>f(i,j,b) = f(i+1,j,b)</li>
+<li>其它字符状态和 f(i+1,j-1,*) 一样</li>
 </ul>
 </li>
 </ul>
@@ -238,22 +238,22 @@
 <li>观察最开始的递推式：
 <ul>
 <li>当 s 首尾是 c 时，s 的序列个数=s[1:-1]的序列个数*2+2-s[1:-1] 首尾是 c 的序列个数</li>
-<li>考虑换种方法计算 s[1:-1] 首尾是 c 的序列个数，即 f[1][n-2][c]</li>
-<li>找到 s[1:-1] 中最左和最右的 c 位置 l、r，f[1][n-2][c] = f[l][r][c]</li>
-<li>而 f[l][r][c] = sum(f[l+1][r-1][c]) + 2</li>
+<li>考虑换种方法计算 s[1:-1] 首尾是 c 的序列个数，即 f(1,-1,c)</li>
+<li>找到 s[1:-1] 中最左和最右的 c 位置 l、r，f(1,-1,c) = f(l,r,c)</li>
+<li>而 f(l,r,c) = sum(f(l+1,r-1,*)) + 2</li>
 </ul>
 </li>
-<li>因此，令 g[i][j] 代表 s[i:j+1] 的序列个数，进行递推
+<li>因此，令 g(i,j) 代表 sum(f(l+1,r-1,*)) ，进行递推
 <ul>
 <li>假如 s[i:j+1] 的首尾都是 c
 <ul>
-<li>g[i][j] = g[i+1][j-1]*2+2-(g[l+1][r-1]+2)</li>
-<li>注意 l 和 r 不存在时，f[l][r][c] = 0，l 和 r 相等时，f[l][r][c] = 1，要特殊处理</li>
+<li>g(i,j) = g(i+1,j-1)*2+2-(g(l+1,r-1)+2)</li>
+<li>注意 l 和 r 不合法时，f(l,r,c) = 0，l 和 r 相等时，f(l,r,c) = 1，要特殊处理</li>
 </ul>
 </li>
 <li>否则，由容斥可得
 <ul>
-<li>g[i][j] = g[i][j-1]+g[i+1][j]-g[i+1][j-1]</li>
+<li>g(i,j) = g(i,j-1)+g(i+1,j)-g(i+1,j-1)</li>
 </ul>
 </li>
 </ul>

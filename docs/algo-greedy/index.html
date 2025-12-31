@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>算法（五）：贪心与构造 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（五）：贪心与构造" />
-<meta property="og:description" content="最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序 II 连续 0420 强密码检验器 间隔 0358 K 距离间隔重排字" />
+<meta property="og:description" content="0782 变为棋盘 0818 赛车 最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 拆分 0768 最多能完成排序的块 II 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-greedy/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-07T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="算法（五）：贪心与构造"/>
-<meta name="twitter:description" content="最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序 II 连续 0420 强密码检验器 间隔 0358 K 距离间隔重排字"/>
+<meta name="twitter:description" content="0782 变为棋盘 0818 赛车 最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 拆分 0768 最多能完成排序的块 II 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algo-greedy/" /><link rel="prev" href="https://huozhixue.github.io/algo-dp/" /><link rel="next" href="https://huozhixue.github.io/algo-math_algebra/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-greedy\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  99 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  131 ,
         "url": "https:\/\/huozhixue.github.io\/algo-greedy\/","datePublished": "2021-01-07T00:00:00+08:00","dateModified": "2021-01-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（五）：贪心与构造</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-07">2021-01-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 99 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-07">2021-01-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 131 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-greedy/" class="leancloud_visitors" data-flag-title="算法（五）：贪心与构造">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -123,6 +123,7 @@
   <ul>
     <li><a href="#最值">最值</a></li>
     <li><a href="#中位数">中位数</a></li>
+    <li><a href="#拆分">拆分</a></li>
     <li><a href="#序列">序列</a></li>
     <li><a href="#偏序">偏序</a></li>
     <li><a href="#连续">连续</a></li>
@@ -131,7 +132,11 @@
     <li><a href="#反悔贪心">反悔贪心</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="最值">最值</h2>
+            </div><div class="content" id="content"><ul>
+<li><a href="/leetcode/0782" title="0782" rel="noopener noreferrer">0782</a> 变为棋盘</li>
+<li><a href="/leetcode/0818" title="0818" rel="noopener noreferrer">0818</a> 赛车</li>
+</ul>
+<h2 id="最值">最值</h2>
 <ul>
 <li><a href="/leetcode/0135" title="0135" rel="noopener noreferrer">0135</a> 分发糖果</li>
 <li><a href="/leetcode/0502" title="0502" rel="noopener noreferrer">0502</a> IPO</li>
@@ -140,6 +145,10 @@
 <h2 id="中位数">中位数</h2>
 <ul>
 <li><a href="/leetcode/0296" title="0296" rel="noopener noreferrer">0296</a> 最佳的碰头地点</li>
+</ul>
+<h2 id="拆分">拆分</h2>
+<ul>
+<li><a href="/leetcode/0768" title="0768" rel="noopener noreferrer">0768</a> 最多能完成排序的块 II</li>
 </ul>
 <h2 id="序列">序列</h2>
 <ul>
@@ -163,6 +172,7 @@
 <ul>
 <li><a href="/leetcode/0527" title="0527" rel="noopener noreferrer">0527</a> 单词缩写</li>
 <li><a href="/leetcode/0632" title="0632" rel="noopener noreferrer">0632</a> 最小区间</li>
+<li><a href="/leetcode/0757" title="0757" rel="noopener noreferrer">0757</a> 设置交集大小至少为2</li>
 </ul>
 <h2 id="反悔贪心">反悔贪心</h2>
 <ul>
