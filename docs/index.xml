@@ -11,7 +11,7 @@
     <pubDate>Sat, 21 Jun 2025 17:49:40 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/list-algo/</guid>
-    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 并查集 难度 题目 关键词 2400 cf593d 树上路径 贪心 难度 题目 关键词 1600 GYM105805D 逆序对 组合]]></description>
+    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 并查集 难度 题目 关键词 2400 cf593d 树上路径 贪心 难度 题目 关键词 1600 GYM105805D 逆序对 构造]]></description>
 </item><item>
     <title>清单：小说</title>
     <link>https://huozhixue.github.io/list-novel/</link>
@@ -74,7 +74,7 @@
     <pubDate>Wed, 05 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-string/</guid>
-    <description><![CDATA[最小表示法 最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i] 字符串匹配 前缀函数与 KMP 算法 Manacher Z]]></description>
+    <description><![CDATA[最小表示法 最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i] 3406 从盒子中找出字典序最大的字符]]></description>
 </item><item>
     <title>数据结构（一）：链表</title>
     <link>https://huozhixue.github.io/ds-linked/</link>
@@ -123,7 +123,7 @@
     <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-greedy/</guid>
-    <description><![CDATA[0782 变为棋盘 0818 赛车 最值 0135 分发糖果 0502 IPO 0517 超级洗衣机 中位数 0296 最佳的碰头地点 拆分 0768 最多能完成排序的块 II 序列 0321 拼接最大数 0330 按要求补齐数组 偏序 0342 摆动排序]]></description>
+    <description><![CDATA[0782 变为棋盘 0818 赛车 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i+1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j] &lt;= A[i]: j -= 1 A[i], A[j] = A[j], A[i] A[i+1:] =]]></description>
 </item><item>
     <title>算法（四）：动态规划</title>
     <link>https://huozhixue.github.io/algo-dp/</link>

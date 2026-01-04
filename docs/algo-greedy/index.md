@@ -3,6 +3,23 @@
 - {{< lc "0782" >}} 变为棋盘
 - {{< lc "0818" >}} 赛车
 
+
+```python
+# 下一个排列
+def nxt(A):
+	n = len(A)
+	i = n-2
+	while i >= 0 and A[i] >= A[i+1]:
+		i -= 1
+	if i < 0:
+		return []
+	j = n-1
+	while A[j] <= A[i]:
+		j -= 1
+	A[i], A[j] = A[j], A[i]
+	A[i+1:] = A[i+1:][::-1]
+	return A
+```
 ## 最值
 
 - {{< lc "0135" >}} 分发糖果

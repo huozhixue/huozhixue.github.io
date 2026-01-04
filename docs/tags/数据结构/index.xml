@@ -51,7 +51,7 @@
     <pubDate>Wed, 05 Jan 2022 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-string/</guid>
-    <description><![CDATA[最小表示法 最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i] 字符串匹配 前缀函数与 KMP 算法 Manacher Z]]></description>
+    <description><![CDATA[最小表示法 最小表示法 1 2 3 4 5 6 7 8 9 10 11 12 def minimal(s): n = len(s) i,j,a = 0,1,0 while i&lt;n and j&lt;n and a&lt;n: x,y = s[(i+a)%n],s[(j+a)%n] if x==y: a += 1 elif x&gt;y: i,j,a = j,max(i+a,j)+1,0 else: j,a = j+a+1,0 return s[i:]+s[:i] 3406 从盒子中找出字典序最大的字符]]></description>
 </item><item>
     <title>数据结构（一）：链表</title>
     <link>https://huozhixue.github.io/ds-linked/</link>

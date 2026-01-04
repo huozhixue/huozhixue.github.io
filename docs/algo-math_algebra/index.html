@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-math_algebra\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  386 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  346 ,
         "url": "https:\/\/huozhixue.github.io\/algo-math_algebra\/","datePublished": "2021-01-09T00:00:00+08:00","dateModified": "2021-01-09T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（六）：代数</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-09">2021-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 386 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-09">2021-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 346 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-math_algebra/" class="leancloud_visitors" data-flag-title="算法（六）：代数">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -123,8 +123,8 @@
   <ul>
     <li><a href="#代数">代数</a></li>
     <li><a href="#统计">统计</a></li>
-    <li><a href="#组合">组合</a></li>
     <li><a href="#数论">数论</a></li>
+    <li><a href="#组合">组合</a></li>
     <li><a href="#随机化">随机化</a></li>
     <li><a href="#线性代数">线性代数</a></li>
     <li><a href="#多项式与生成函数">多项式与生成函数</a></li>
@@ -175,45 +175,16 @@
 <ul>
 <li><a href="/leetcode/0828" title="0828" rel="noopener noreferrer">0828</a> 统计子串中的唯一字符</li>
 </ul>
-<h2 id="组合">组合</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 下一个排列</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nxt</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">	<span class="n">j</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">		<span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">	<span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">A</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li><a href="/leetcode/1830" title="1830" rel="noopener noreferrer">1830</a> 使字符串有序的最少操作次数</li>
-</ul>
 <h2 id="数论">数论</h2>
+<p>因数</p>
+<ul>
+<li><a href="/leetcode/1390" title="1390" rel="noopener noreferrer">1390</a> 四因数</li>
+</ul>
+<h2 id="组合">组合</h2>
+<ul>
+<li><a href="/leetcode/1830" title="1830" rel="noopener noreferrer">1830</a> 使字符串有序的最少操作次数</li>
+<li><a href="/leetcode/3405" title="3405" rel="noopener noreferrer">3405</a> 统计恰好有 K 个相等相邻元素的数组数目</li>
+</ul>
 <h2 id="随机化">随机化</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -333,7 +304,7 @@
             </script></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.106.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

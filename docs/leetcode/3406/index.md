@@ -61,11 +61,6 @@
 <li><code>1 &lt;= numFriends &lt;= word.length</code></li>
 </ul>
 
-
-
-
-
-
 ## 分析
 
 - 类似 {{< lc "1163" >}}，用最小表示法求最大后缀即可

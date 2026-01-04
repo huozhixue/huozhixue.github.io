@@ -21,6 +21,7 @@ def minimal(s):
     return s[i:]+s[:i]
 ```
 
+- {{< lc "3406" >}} 从盒子中找出字典序最大的字符串 II
 ## 字符串匹配
 
 - [前缀函数与 KMP 算法](https://oi.wiki/string/kmp/)
