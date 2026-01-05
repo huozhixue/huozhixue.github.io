@@ -73,9 +73,9 @@ master.guess("abcczz") 返回 4 ，因为 "abcczz" 共有 4 个字母匹配。
 - 因此只考虑 x=guess(word) 是有用信息的情况，可以通过 x 缩小查找范围
 	- 比如示例 1 中，若选择了单词 word='ccbazz'，那么可以根据 guess(word)=3，更新 words 为与该单词匹配 3 项的单词列表 ['acckzz']
 - 显然希望每一步得到的查找范围 cands 更小
-	- 先预处理与单词 u 匹配 x 的列表 f[u][x]
-	- 假如选择单词 u，guess 得到结果 x，查找范围变为 cands&f[u][x]
-	- 选择单词 u 的最坏结果即是 g=max(len(cands&f[u][x]) for x in range(6))
+	- 先预处理与单词 u 匹配 x 的列表 f(u,x)
+	- 假如选择单词 u，guess 得到结果 x，查找范围变为 cands&f(u,x)
+	- 选择单词 u 的最坏结果即是 g=max(len(cands&f(u,x)) for x in range(6))
 	- 遍历单词，选择 g 最小的单词即可 
 
 

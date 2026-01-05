@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/0843\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  961 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  960 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/0843\/","datePublished": "2018-05-27T10:00:00+08:00","dateModified": "2018-05-27T10:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">0843：猜猜这个单词（2077 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-27">2018-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 961 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-27">2018-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 960 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/0843/" class="leancloud_visitors" data-flag-title="0843：猜猜这个单词（2077 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -184,9 +184,9 @@ master.guess("abcczz") 返回 4 ，因为 "abcczz" 共有 4 个字母匹配。
 </li>
 <li>显然希望每一步得到的查找范围 cands 更小
 <ul>
-<li>先预处理与单词 u 匹配 x 的列表 f[u]<i class="far fa-check-square fa-fw"></i> </li>
-<li>假如选择单词 u，guess 得到结果 x，查找范围变为 cands&amp;f[u]<i class="far fa-check-square fa-fw"></i> </li>
-<li>选择单词 u 的最坏结果即是 g=max(len(cands&amp;f[u]<i class="far fa-check-square fa-fw"></i> ) for x in range(6))</li>
+<li>先预处理与单词 u 匹配 x 的列表 f(u,x)</li>
+<li>假如选择单词 u，guess 得到结果 x，查找范围变为 cands&amp;f(u,x)</li>
+<li>选择单词 u 的最坏结果即是 g=max(len(cands&amp;f(u,x)) for x in range(6))</li>
 <li>遍历单词，选择 g 最小的单词即可</li>
 </ul>
 </li>

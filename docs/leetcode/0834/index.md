@@ -63,40 +63,49 @@
 
 ## 分析
 
-- 典型的换根 dp，通用的方法是先 dfs 一次求出根节点 0 的值，然后再 dfs 一次，根据相邻节点的关系更新其它节点的值
-- 本题中，第一次 dfs 时，求节点 u 到所有子节点的距离之和 f[u]
-	- 除了知道每个子结点 v 的值 f[v] 外，还需要知道 v 的节点个数
-	- 因此维护 sz[u] 表示 u 的节点个数，即可递推
-	- dfs 结束后，f[0] 即是节点 0 的最终值
-- 第二次 dfs 时，假如已知节点 u 的最终值为 g[u]
-	- 对于 u 的子节点 v，v 相比于 u，到 v 的子节点的距离都少了 1，到其它节点的距离都多了 1
-	- 因此可以递推 g[v]=g[u]-sz[v]+n-sz[v]
-
+- 典型的换根 dp，通用的方法是两次 dfs
+	- 第一次从下往上求出根节点 0 的值
+	- 第二次从上往下根据相邻节点的关系更新值
+- 本题中，第一次求节点 u 到所有子节点的距离之和 f[u]
+	- 除了知道每个子结点 v 的值 f[v] 外，还需要知道 v 的节点个数 sz[v]
+- 第二次，对于 u 的子节点 v
+	- v 的子节点到 v 的距离都比 u 少 1，而其它节点到 v 的距离都比 u 多 1
+	- 因此 f2[v]=f2[u]-sz[v]+n-sz[v]
 ## 解答
 
 ```python
+# dfs序预处理树
+def prep(edges):
+    n = len(edges)+1
+    g = [[] for _ in range(n)]
+    for u,v in edges:
+        g[u].append(v)
+        g[v].append(u)
+    fa = [-1]*n
+    order = []
+    sk = [0]
+    while sk:
+        u = sk.pop()
+        order.append(u)
+        g[u] = [v for v in g[u] if v!=fa[u]]
+        for v in g[u]:
+            fa[v] = u
+            sk.append(v)
+    return g,order,fa
+
 class Solution:
     def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
-        g = [[] for _ in range(n)]
-        for a,b in edges:
-            g[a].append(b)
-            g[b].append(a)
-        res = [0]*n
+        g,order,_ = prep(edges)
+        f = [0]*n
         sz = [1]*n
-        def dfs(u,fa):
+        for u in order[::-1]:
             for v in g[u]:
-                if v!=fa:
-                    dfs(v,u)
-                    sz[u] += sz[v]
-                    res[u] += res[v]+sz[v]
-        dfs(0,-1)
-        def dfs(u,fa):
+                sz[u] += sz[v]
+                f[u] += f[v]+sz[v]
+        for u in order:
             for v in g[u]:
-                if v!=fa:
-                    res[v] = res[u]+n-sz[v]-sz[v]
-                    dfs(v,u)
-        dfs(0,-1)
-        return res
+                f[v] = f[u]+n-sz[v]-sz[v]
+        return f
 ```
-127 ms
+131 ms
 

@@ -62,17 +62,19 @@
 class Solution:
     def shortestPathLength(self, graph: List[List[int]]) -> int:
         n = len(graph)
-        Q = deque([(0,i,1<<i) for i in range(n)])
-        vis = {(i,1<<i) for i in range(n)}
-        while Q:
-            w,i,st = Q.popleft()
-            if st==(1<<n)-1:
+        dq = deque([(0,i,1<<i) for i in range(n)])
+        vis = [[0]*(1<<n) for _ in range(n)]
+        for i in range(n):
+            vis[i][1<<i] = 1
+        while dq:
+            w,i,u = dq.popleft()
+            if u==(1<<n)-1:
                 return w
             for j in graph[i]:
-                st2 = st|1<<j
-                if (j,st2) not in vis:
-                    vis.add((j,st2))
-                    Q.append((w+1,j,st2))
+                v = u|1<<j
+                if not vis[j][v]:
+                    dq.append((w+1,j,v))
+                    vis[j][v] = 1
 ```
-131 ms
+55 ms
 
