@@ -42,7 +42,15 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 | 难度   | 题目                                                        | 关键词    |
 | :--- | :-------------------------------------------------------- | :----- |
+| 1700 | [GYM104287K](https://codeforces.com/gym/104287/problem/K) | 组合 dp  |
 | 1900 | [GYM105948H](https://codeforces.com/gym/105948/problem/H) | 背包dp撤销 |
 
+## 数据结构
 
+
+
+| 难度   | 题目                                                        | 关键词      |
+| :--- | :-------------------------------------------------------- | :------- |
+| 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O) | 区间加、等差数列 |
+| 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H) | 区间不同元素   |
 
