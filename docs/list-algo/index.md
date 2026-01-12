@@ -20,6 +20,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 难度   | 题目                                                        | 关键词   |
 | :--- | :-------------------------------------------------------- | :---- |
 | 1800 | [GYM106049G](https://codeforces.com/gym/106049/problem/G) | 连续数之积 |
+| 2000 | [GYM106296F](https://codeforces.com/gym/106296/problem/F) | 独立选择  |
 
 #### 数论
 

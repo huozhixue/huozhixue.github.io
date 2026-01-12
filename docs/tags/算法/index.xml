@@ -44,7 +44,7 @@
     <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/algo-greedy/</guid>
-    <description><![CDATA[0782 变为棋盘 0818 赛车 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i+1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j] &lt;= A[i]: j -= 1 A[i], A[j] = A[j], A[i] A[i+1:] =]]></description>
+    <description><![CDATA[0782 变为棋盘 0818 赛车 0857 雇佣 K 名工人的最低成本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i+1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j]]]></description>
 </item><item>
     <title>算法（四）：动态规划</title>
     <link>https://huozhixue.github.io/algo-dp/</link>

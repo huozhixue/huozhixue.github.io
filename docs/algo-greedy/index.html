@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>算法（五）：贪心与构造 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="算法（五）：贪心与构造" />
-<meta property="og:description" content="0782 变为棋盘 0818 赛车 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j] &lt;= A[i]: j -= 1 A[i], A[j] = A[j], A[i] A[i&#43;1:] =" />
+<meta property="og:description" content="0782 变为棋盘 0818 赛车 0857 雇佣 K 名工人的最低成本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://huozhixue.github.io/algo-greedy/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-07T00:00:00+08:00" />
@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
 <meta name="twitter:title" content="算法（五）：贪心与构造"/>
-<meta name="twitter:description" content="0782 变为棋盘 0818 赛车 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j] &lt;= A[i]: j -= 1 A[i], A[j] = A[j], A[i] A[i&#43;1:] ="/>
+<meta name="twitter:description" content="0782 变为棋盘 0818 赛车 0857 雇佣 K 名工人的最低成本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 下一个排列 def nxt(A): n = len(A) i = n-2 while i &gt;= 0 and A[i] &gt;= A[i&#43;1]: i -= 1 if i &lt; 0: return [] j = n-1 while A[j]"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
 <link rel="canonical" href="https://huozhixue.github.io/algo-greedy/" /><link rel="prev" href="https://huozhixue.github.io/algo-dp/" /><link rel="next" href="https://huozhixue.github.io/algo-math_algebra/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/algo-greedy\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  196 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法","wordcount":  208 ,
         "url": "https:\/\/huozhixue.github.io\/algo-greedy\/","datePublished": "2021-01-07T00:00:00+08:00","dateModified": "2021-01-07T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">算法（五）：贪心与构造</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-07">2021-01-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 196 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-07">2021-01-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 208 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/algo-greedy/" class="leancloud_visitors" data-flag-title="算法（五）：贪心与构造">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -135,6 +135,7 @@
             </div><div class="content" id="content"><ul>
 <li><a href="/leetcode/0782" title="0782" rel="noopener noreferrer">0782</a> 变为棋盘</li>
 <li><a href="/leetcode/0818" title="0818" rel="noopener noreferrer">0818</a> 赛车</li>
+<li><a href="/leetcode/0857" title="0857" rel="noopener noreferrer">0857</a> 雇佣 K 名工人的最低成本</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
