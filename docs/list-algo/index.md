@@ -2,7 +2,11 @@
 
 coderforces、nowcoder、atcoder 等算法网站的题目清单
 
+## 字符串
 
+| 难度   | 题目                                                        | 关键词 |
+| :--- | :-------------------------------------------------------- | :-- |
+| 1700 | [GYM105018A](https://codeforces.com/gym/105018/problem/A) | 匹配  |
 ## 贪心
 
 | 难度   | 题目                                                        | 关键词 |
@@ -11,9 +15,11 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 ## 构造
 
-| 难度   | 题目                                                        | 关键词 |
-| :--- | :-------------------------------------------------------- | :-- |
-| 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D) | 归一  |
+| 难度   | 题目                                                          | 关键词 |
+| :--- | :---------------------------------------------------------- | :-- |
+| 1600 | [cf2112d](https://codeforces.com/problemset/problem/2112/D) | 度数  |
+| 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D)   | 归一  |
+| 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)   | 置换环 |
 ## 数学
 #### 组合
 
