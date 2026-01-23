@@ -51,34 +51,34 @@
 ### #1
 
 - 类似 {{< lc "0218" >}}，不过遍历坐标 x 时，要维护的不是高度集合，而是区间集合
-- 每一轮根据当前横坐标 x 、上一轮横坐标 pre，上一轮区间集合覆盖的长度 w，即可计算出 pre 到 x 的面积
+- 每一轮根据当前横坐标 x2 、上一轮横坐标 x1，上一轮区间集合覆盖的长度 w，即可计算出 x1 到 x2 的面积
 
 
 ```python
+from sortedcontainers import SortedList
+mod = 10**9+7
 class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
-        mod = 10**9+7
+        def cal(A):
+            res, end = 0, 0
+            for s, e in A:
+                res += max(end, e) - max(s, end)
+                end = max(end, e)
+            return res
         d = defaultdict(list)
         for x1,y1,x2,y2 in rectangles:
             d[x1].append((1,y1,y2))
-            d[x2].append((-1,y1,y2))
-            
-        def cal(ct):
-            res, r = 0, -inf
-            for a,b in sorted(ct):
-                res += max(0,b-max(a,r))
-                r = max(r,b)
-            return res
+            d[x2].append((0,y1,y2))
         res = 0
-        ct, pre = defaultdict(int),0
-        for x in sorted(d):
-            res += (x-pre)*cal(ct)
+        H = SortedList()
+        for x1,x2 in pairwise(sorted(d)):
+            for flag,y1,y2 in d[x1]:
+                if flag:
+                    H.add((y1,y2))
+                else:
+                    H.remove((y1,y2))
+            res += cal(H)*(x2-x1)
             res %= mod
-            for add,y1,y2 in d[x]:
-                ct[(y1,y2)] += add
-                if not ct[(y1,y2)]:
-                    del ct[(y1,y2)]
-            pre = x
         return res
 ```
 时间复杂度 O(N^2)，15 ms
@@ -86,127 +86,79 @@ class Solution:
 ### #2
 
 - 还可以用线段树维护区间覆盖的长度 w
-- 直接维护覆盖的长度不好处理，一种方法是维护"区间的最小值" t 和 t 对应的长度 sz
-	- 那么假如总区间的最小值 t>0，说明整个区间都被覆盖
-	- 否则 t=0，那么覆盖的长度为总区间长度 s - (t 对应的 sz)
+- 直接维护覆盖的长度不好处理，一种方法是维护 区间的最小值 t 和 t 对应的长度 sz
+	- 假如总区间的最小值 t>0，说明整个区间都被覆盖
+	- 否则 t=0，覆盖的长度为总区间长度 s - (t 对应的 sz)
 
 ## 解答
 
 ```python
+class Seg:
+    def __init__(self,n):
+        self.L = n.bit_length()
+        self.N = N = 1<<self.L
+        self.t = [0]*N*2
+        self.f = [0]*N*2
+        self.sz = [0]*N*2
+        
+    def apply(self,o,x):            
+        self.t[o] += x
+        self.f[o] += x
+
+    def build(self,A):
+        for i in range(len(A)-1):
+            self.sz[self.N+i] = A[i+1]-A[i]
+        for o in range(self.N-1,0,-1):
+            self.pull(o)
+
+    def pull(self,o):
+        t,sz = self.t,self.sz
+        t[o] = min(t[o*2],t[o*2+1])
+        sz[o] = sz[o*2]*(t[o]==t[o*2])+sz[o*2+1]*(t[o]==t[o*2+1])
+
+    def push(self,o):
+        if self.f[o] != self.f[0]:
+            self.apply(o*2,self.f[o])
+            self.apply(o*2+1,self.f[o])
+            self.f[o] = self.f[0]
+
+    def modify(self,a,b,x):
+        a,b = a+self.N-1,b+self.N+1  
+        for i in range(self.L,0,-1):  
+            self.push(a>>i)  
+            self.push(b>>i)  
+        while a^b^1:  
+            if not a&1: self.apply(a^1,x)  
+            if b&1: self.apply(b^1,x)  
+            a,b = a>>1,b>>1  
+            self.pull(a)  
+            self.pull(b)  
+        while a>>1:
+            a >>= 1
+            self.pull(a)
+    
+mod = 10**9+7
 class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
-        def build(o,l,r):
-            if l==r:
-                sz[o] = H[r+1]-H[r]
-                return
-            m = (l+r)//2
-            build(o*2,l,m)
-            build(o*2+1,m+1,r)
-            sz[o] = sz[o*2]+sz[o*2+1]
-
-        def do(o,x):           
-            t[o] += x
-            f[o] += x
-
-        def down(o):
-            if f[o]:
-                do(o*2,f[o])
-                do(o*2+1,f[o])
-                f[o] = 0
-
-        def update(a,b,x,o,l,r):
-            if a<=l and r<=b:
-                do(o,x)
-                return 
-            m = (l+r)//2
-            down(o)
-            if a<=m: update(a,b,x,o*2,l,m)
-            if m<b: update(a,b,x,o*2+1,m+1,r)
-            t[o] = min(t[o*2],t[o*2+1])
-            sz[o] = sz[o*2]*(t[o]==t[o*2])+sz[o*2+1]*(t[o]==t[o*2+1])
-
-        H = sorted({y for x1,y1,x2,y2 in rectangles for y in [y1,y2]})
-        N = len(H)-1
-        t,f,sz = [0]*N*4,[0]*N*4,[0]*N*4
-        build(1,0,N-1)
         d = defaultdict(list)
+        V = sorted({y for _,y1,_,y2 in rectangles for y in [y1,y2]})
+        mp = {y:i for i,y in enumerate(V)}
         for x1,y1,x2,y2 in rectangles:
-            d[x1].append((1,y1,y2))
-            d[x2].append((-1,y1,y2))
-        res,pre = 0,0
-        mod = 10**9+7
-        s = H[-1]-H[0]
-        for x in sorted(d):
-            w = s-(sz[1] if t[1]==0 else 0)
-            res += (x-pre)*w
+            y1,y2 = mp[y1],mp[y2]-1
+            d[x1].append((y1,y2,1))
+            d[x2].append((y1,y2,-1))
+        res = 0
+        seg = Seg(len(V)-1)
+        seg.build(V)
+        for x1,x2 in pairwise(sorted(d)):
+            for y1,y2,flag in d[x1]:
+                seg.modify(y1,y2,flag)
+            w = V[-1]-V[0]-(seg.sz[1] if seg.t[1]==0 else 0)
+            res += w*(x2-x1)
             res %= mod
-            for add,y1,y2 in d[x]:
-                i = bisect_left(H,y1)
-                j = bisect_left(H,y2)
-                update(i,j-1,add,1,0,N-1)
-            pre = x
         return res
 ```
 19 ms
 
 
-### *附加
 
-- 还有种特殊的写法
-- 本题的线段树有两个特殊性
-	- 只查询根节点
-	- 只删除之前添加过的区间
-- 所以可以不用下传懒标记
-
-
-```python
-class Solution:
-    def rectangleArea(self, rectangles: List[List[int]]) -> int:
-        def build(o,l,r):
-            if l==r:
-                sz[o] = H[r+1]-H[r]
-                return
-            m = (l+r)//2
-            build(o*2,l,m)
-            build(o*2+1,m+1,r)
-            sz[o] = sz[o*2]+sz[o*2+1]
-
-        def up(o,l,r):            
-            if f[o]>0:
-                t[o] = sz[o]
-            elif l==r:
-                t[o] = 0
-            else:
-                t[o] = t[o*2]+t[o*2+1]
-
-        def update(a,b,x,o,l,r):
-            if a<=l and r<=b:
-                f[o] += x
-                up(o,l,r)
-                return 
-            m = (l+r)//2
-            if a<=m: update(a,b,x,o*2,l,m)
-            if m<b: update(a,b,x,o*2+1,m+1,r)
-            up(o,l,r)
-
-        H = sorted({y for x1,y1,x2,y2 in rectangles for y in [y1,y2]})
-        N = len(H)-1
-        t,f,sz = [0]*N*4,[0]*N*4,[0]*N*4
-        build(1,0,N-1)
-        d = defaultdict(list)
-        for x1,y1,x2,y2 in rectangles:
-            d[x1].append((1,y1,y2))
-            d[x2].append((-1,y1,y2))
-        res,pre = 0,0
-        mod = 10**9+7
-        for x in sorted(d):
-            res += (x-pre)*t[1]
-            res %= mod
-            for add,y1,y2 in d[x]:
-                i = bisect_left(H,y1)
-                j = bisect_left(H,y2)
-                update(i,j-1,add,1,0,N-1)
-            pre = x
-        return res
-```
-11 ms
