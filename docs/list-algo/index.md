@@ -27,14 +27,18 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 ## 构造
 
-| 难度   | 题目                                                          | 关键词 |
-| :--- | :---------------------------------------------------------- | :-- |
-| 1600 | [cf2112d](https://codeforces.com/problemset/problem/2112/D) | 度数  |
-| 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D)   | 归一  |
-| 1900 | [GYM105803C](https://codeforces.com/gym/105803/problem/C)   | 加减  |
-| 2000 | [cf1991d](https://codeforces.com/problemset/problem/1991/D) | 二分图 |
-| 2000 | [GYM105813M](https://codeforces.com/gym/105813/problem/M)   | mex |
-| 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)   | 置换环 |
+| 难度   | 题目                                                          | 关键词  |
+| :--- | :---------------------------------------------------------- | :--- |
+| 1300 | [cf2108b](https://codeforces.com/problemset/problem/2108/B) | 异或   |
+| 1600 | [cf2112d](https://codeforces.com/problemset/problem/2112/D) | 度数   |
+| 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D)   | 归一   |
+| 1900 | [GYM105803C](https://codeforces.com/gym/105803/problem/C)   | 加减   |
+| 1900 | [GYM105667B](https://codeforces.com/gym/105667/problem/B)   | 形状   |
+| 1900 | [GYM105198G](https://codeforces.com/gym/105198/problem/G)   | 矩阵   |
+| 2000 | [cf1991d](https://codeforces.com/problemset/problem/1991/D) | 二分图  |
+| 2000 | [GYM105813M](https://codeforces.com/gym/105813/problem/M)   | mex  |
+| 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)   | 置换环  |
+|      | [cf2193g](https://codeforces.com/contest/2193/problem/G)    | 树上路径 |
 ## 数学
 #### 组合
 
@@ -75,6 +79,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 2000 | [GYM105633K](https://codeforces.com/gym/105633/problem/K)   | sosdp  |
 | 2000 | [GYM105364F](https://codeforces.com/gym/105364/problem/F)   | 最优状态   |
 | 2000 | [cf1646d](https://codeforces.com/problemset/problem/1646/D) | 树形     |
+| 2400 | [cf2171h](https://codeforces.com/contest/2171/problem/H)    | 懒更新    |
 | 2500 | [cf845f](https://codeforces.com/problemset/problem/845/F)   | 轮廓线    |
 
 
