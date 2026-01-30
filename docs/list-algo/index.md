@@ -23,6 +23,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 难度   | 题目                                                        | 关键词 |
 | :--- | :-------------------------------------------------------- | :-- |
 | 1600 | [GYM105805D](https://codeforces.com/gym/105805/problem/D) | 逆序对 |
+| 1800 | [GYM102890M](https://codeforces.com/gym/102890/problem/M) | 按位  |
 | 2500 | [cf1407e](https://codeforces.com/contest/1407/problem/E)  | 逆向  |
 
 ## 构造
