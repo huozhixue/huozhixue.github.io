@@ -5,11 +5,12 @@
 - {{< lc "0391" >}} 完美矩形
 - {{< lc "0759" >}} 员工空闲时间
 - {{< lc "0798" >}} 得分最高的最小轮调
+- {{< lc "2132" >}} 用邮票贴满网格图
 ## 逆向
 
 - {{< lc "0458" >}} 可怜的小猪
 - {{< lc "0780" >}} 到达终点
-
+- {{< lc "0803" >}} 打砖块
 ## 折半搜索
 
 - {{< lc "0805" >}} 数组的均值分割
@@ -36,12 +37,15 @@
 
 遍历统计时考虑只计算增量，节省时间
 
-- {{< lc "1830" >}} [使字符串有序的最少操作次数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted/) （2620分）
+- {{< lc "1830" >}} [使字符串有序的最少操作次数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted/) 
 - {{< lc "2484" >}} [统计回文子序列数目](https://leetcode.cn/problems/count-palindromic-subsequences/)
 - {{< lc "3395" >}} [唯一中间众数子序列 I](https://leetcode.cn/problems/subsequences-with-a-unique-middle-mode-i/)
 
 ## log trick
 
+右端点固定的子数组的 或值/与值/gcd 至多 logU 个
+
+- {{< lc "3605" >}} [数组的最小稳定性因子](https://leetcode.cn/problems/minimum-stability-factor-of-array/)
 
 
 
