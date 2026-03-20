@@ -25,8 +25,8 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 2000 | [cf2181d](https://codeforces.com/problemset/problem/2181/D) | 区间重叠 |
 | 2100 | [GYM106124D](https://codeforces.com/gym/106124/problem/D)   | 排序   |
 | 2500 | [cf1407e](https://codeforces.com/contest/1407/problem/E)    | 逆向   |
+| 2500 | [cf2197f](https://codeforces.com/contest/2197/problem/F)    | 括号   |
 | 2900 | [cf725e](https://codeforces.com/contest/725/problem/F)      | 博弈   |
-|      | [cf2197f](https://codeforces.com/contest/2197/problem/F)    | 括号   |
 
 ## 构造
 
@@ -40,6 +40,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1700 | [GYM106391B](https://codeforces.com/gym/106391/problem/B)      | 抽屉   |
 | 1700 | [GYM103059I](https://codeforces.com/gym/103059/problem/I)      | 逆元   |
 | 1700 | [cf2122c](https://codeforces.com/problemset/problem/2122/C)    | 距离   |
+| 1700 | [cf2202c2](https://codeforces.com/contest/2202/problem/C2)     | 栈    |
 | 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D)      | 归一   |
 | 1900 | [GYM105803C](https://codeforces.com/gym/105803/problem/C)      | 加减   |
 | 1900 | [GYM105667B](https://codeforces.com/gym/105667/problem/B)      | 形状   |
@@ -49,11 +50,10 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 2000 | [cf1951d](https://codeforces.com/problemset/problem/1951/D)    | 取模   |
 | 2000 | [cf1991d](https://codeforces.com/problemset/problem/1991/D)    | 二分图  |
 | 2000 | [GYM105813M](https://codeforces.com/gym/105813/problem/M)      | mex  |
+| 2100 | [cf2193g](https://codeforces.com/contest/2193/problem/G)       | 树上路径 |
 | 2400 | [cf1592e](https://codeforces.com/problemset/problem/1592/E)    | 异或   |
 | 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)      | 置换环  |
-|      | [cf2193g](https://codeforces.com/contest/2193/problem/G)       | 树上路径 |
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
-|      | [cf2202c2](https://codeforces.com/contest/2202/problem/C2)     | 栈    |
 ## 数学
 #### 组合
 
@@ -68,6 +68,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | :--- | :-------------------------------------------------------- | :--- |
 | 1700 | [GYM103347J](https://codeforces.com/gym/103347/problem/J) | 模    |
 | 1800 | [GYM105930E](https://codeforces.com/gym/105930/problem/E) | 调和级数 |
+| 1800 | [GYM106430H](https://codeforces.com/gym/106430/problem/H) | 欧拉函数 |
 
 #### 博弈
 
@@ -108,10 +109,11 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 2000 | [GYM105633K](https://codeforces.com/gym/105633/problem/K)   | sosdp  |
 | 2000 | [GYM105364F](https://codeforces.com/gym/105364/problem/F)   | 最优状态   |
 | 2000 | [cf1646d](https://codeforces.com/problemset/problem/1646/D) | 树形     |
+| 2000 | [cf2202e](https://codeforces.com/contest/2202/problem/E)    | 子序列    |
 | 2400 | [cf2171h](https://codeforces.com/contest/2171/problem/H)    | 懒更新    |
 | 2400 | [cf1715e](https://codeforces.com/contest/1715/problem/E)    | 斜率优化   |
 | 2500 | [cf845f](https://codeforces.com/problemset/problem/845/F)   | 轮廓线    |
-|      | [cf2202e](https://codeforces.com/contest/2202/problem/E)    | 子序列    |
+| 2600 | [cf1793e](https://codeforces.com/problemset/problem/1793/E) | 划分     |
 
 
 ## 数据结构
@@ -138,6 +140,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 难度   | 题目                                                        | 关键词 |
 | :--- | :-------------------------------------------------------- | :-- |
 | 2000 | [GYM104158K](https://codeforces.com/gym/104158/problem/K) | lca |
+| 2300 | [cf2188e](https://codeforces.com/contest/2188/problem/E)  | lca |
 |      | [cf2203f](https://codeforces.com/contest/2203/problem/F)  | 二分  |
 ## 图论
 
@@ -147,7 +150,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1600 | [GYM105327B](https://codeforces.com/gym/105327/problem/B)   | 生成树 |
 | 1700 | [GYM104847E](https://codeforces.com/gym/104847/problem/E)   | 升序边 |
 | 1800 | [cf2176d](https://codeforces.com/problemset/problem/2176/D) | 升序边 |
-|      | [cf2192e](https://codeforces.com/contest/2192/problem/E)    | 欧拉图 |
+| 2100 | [cf2192e](https://codeforces.com/contest/2192/problem/E)    | 欧拉图 |
 
 
 ## trick
