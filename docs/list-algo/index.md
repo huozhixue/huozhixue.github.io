@@ -46,6 +46,8 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1900 | [GYM105667B](https://codeforces.com/gym/105667/problem/B)      | 形状   |
 | 1900 | [GYM105198G](https://codeforces.com/gym/105198/problem/G)      | 矩阵   |
 | 1900 | [cf2180c](https://codeforces.com/problemset/problem/2180/C)    | 异或   |
+| 1900 | [GYM103439N](https://codeforces.com/gym/103439/problem/N)      | 配对   |
+| 2000 | [cf2165c](https://codeforces.com/problemset/problem/2165/C)    | 异或   |
 | 2000 | [GYM106409E](https://codeforces.com/gym/106409/problem/E)      | 交换   |
 | 2000 | [cf1951d](https://codeforces.com/problemset/problem/1951/D)    | 取模   |
 | 2000 | [cf1991d](https://codeforces.com/problemset/problem/1991/D)    | 二分图  |
@@ -160,4 +162,5 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1600 | [GYM104855D](https://codeforces.com/gym/104855/problem/D) | bfs |
 | 1900 | [GYM104020L](https://codeforces.com/gym/104020/problem/L) | 随机  |
 | 2000 | [GYM104020J](https://codeforces.com/gym/104020/problem/J) | 随机  |
+| 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C) | 逆向  |
 
