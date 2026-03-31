@@ -37,11 +37,11 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 |[罗小黑战记](https://bgm.tv/subject/13603)| 2011-03-17 | 40 | [bilibili](https://www.bilibili.com/bangumi/play/ep32374)  |
-| 2 |[罗小黑战记电影版](https://bgm.tv/subject/159725)| 2019-09-07 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss28198)  |
-
+|     | 系列名                                       | 首播时间       | 话数/时长 | 观看地址                                                        |
+| :-- | :---------------------------------------- | :--------- | :---- | :---------------------------------------------------------- |
+| 1   | [罗小黑战记](https://bgm.tv/subject/13603)     | 2011-03-17 | 40    | [bilibili](https://www.bilibili.com/bangumi/play/ep32374)   |
+| 2   | [罗小黑战记电影版](https://bgm.tv/subject/159725) | 2019-09-07 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ss28198)   |
+| 3   | [罗小黑战记2](https://bgm.tv/subject/442114)   | 2025-07-18 | 1     | [bilibili](https://www.bilibili.com/bangumi/play/ep2243434) |
 
 ## MAD
 
