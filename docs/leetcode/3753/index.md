@@ -90,30 +90,28 @@
 
 ### #1
 
-- 典型的数位 dp，记录前一个数 pre，前两个数大小的状态 st 即可
+- 典型的数位 dp，记录前一个数 pre，前两个数大小的状态 cmp 即可
 - 注意前导 0 的特殊情况
 
 ```python []
-def f(s):
+def cal(s):
     @cache
-    def dfs(i,pre,st,bd,c):
+    def dfs(i,is0,pre,cmp,c,bd):
         if i==len(s):
             return c
-        up = int(s[i]) if bd else 9
         res = 0
+        up = int(s[i]) if bd else 9
         for x in range(up+1):
-            pre2 = -1 if pre==-1 and x==0 else x
-            st2 = 0 if pre in [-1,x] else 1 if pre<x else -1
-            c2 = c+(st*st2==-1)
-            res += dfs(i+1,pre2,st2,bd and x==up,c2)
+            cmp2 = 0 if is0 or x==pre else 1 if x>pre else -1
+            c2 = c+(cmp*cmp2==-1)
+            res += dfs(i+1,is0 and x==0,x,cmp2,c2,bd and x==up)
         return res
-    return dfs(0,-1,0,1,0)
-    
+    return dfs(0,1,0,0,0,1)
 class Solution:
     def totalWaviness(self, num1: int, num2: int) -> int:
-        return f(str(num2))-f(str(num1-1))
+        return cal(str(num2))-cal(str(num1-1))
 ```
-587 ms
+565 ms
 
 ### #2
 
@@ -124,26 +122,26 @@ class Solution:
 
 ```python []
 memo = {}
-def f(s):
-    def dfs(i,pre,st,bd,c):
-        if i==-1:
+def cal(s):
+    def dfs(i,is0,pre,cmp,c,bd):
+        if not bd and (i,is0,pre,cmp,c) in memo:
+            return memo[(i,is0,pre,cmp,c)]
+        if i<0:
             return c
-        if not bd and (i,pre,st,c) in memo:
-            return memo[(i,pre,st,c)]
-        up = int(s[i]) if bd else 9
         res = 0
+        up = int(s[i]) if bd else 9
         for x in range(up+1):
-            pre2 = -1 if pre==-1 and x==0 else x
-            st2 = 0 if pre in [-1,x] else 1 if pre<x else -1
-            res += dfs(i-1,pre2,st2,bd and x==up,c+(st*st2==-1))
+            cmp2 = 0 if is0 or x==pre else 1 if x>pre else -1
+            c2 = c+(cmp*cmp2==-1)
+            res += dfs(i-1,is0 and x==0,x,cmp2,c2,bd and x==up)
         if not bd:
-            memo[(i,pre,st,c)] = res
+            memo[(i,is0,pre,cmp,c)] = res
         return res
-    return dfs(len(s)-1,-1,0,1,0)
-    
+    s = s[::-1]
+    return dfs(len(s)-1,1,0,0,0,1)
 class Solution:
     def totalWaviness(self, num1: int, num2: int) -> int:
-        return f(str(num2)[::-1])-f(str(num1-1)[::-1])
+        return cal(str(num2))-cal(str(num1-1))
 ```
 23 ms
 
