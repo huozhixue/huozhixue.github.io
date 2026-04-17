@@ -3,7 +3,7 @@
 
 > <u>**[牛客周赛 Round 108](https://ac.nowcoder.com/acm/contest/116658)**</u>
 
-## F. AND VS MEX
+## F. AND VS MEX 
 ### sosdp
 
 - 从二进制集合考虑
