@@ -78,6 +78,7 @@
 ## 分析
 
 - 用 f(i)/g(i) 分别代表以 i 结尾且前一个数更小/大的方案数，即可递推
+- f 和 g 完全对称，可以只求一个，最后结果乘 2 即可
 - n 很大，用矩阵快速幂优化
 ## 解答
 
@@ -147,19 +148,16 @@ class MatPow:
 class Solution:
     def zigZagArrays(self, n: int, l: int, r: int) -> int:
         N = r-l+1
-        f = list(range(N))
-        g = f[::-1]
-        A = [N*(N-1)]
-        for _ in range(N*2-1):
-            nf,ng = [0]*N,[0]*N
-            for i in range(1,N):
-                nf[i] = (nf[i-1]+g[i-1])%mod
-            for i in range(N-2,-1,-1):
-                ng[i] = (ng[i+1]+f[i+1])%mod
-            f,g = nf,ng
-            A.append((sum(f)+sum(g))%mod)
+        f = [1]*N
+        A = [N]
+        for _ in range(N*2):
+            nf = [0]*N
+            for j in range(1,N):
+                nf[j] = (nf[j-1]+f[j-1])%mod
+            f = nf[::-1]
+            A.append(sum(f)%mod)
         mp = MatPow(A)
-        return mp.get(n-2)
+        return mp.get(n-1)*2%mod
 ```
 207 ms
 
