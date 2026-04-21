@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/leetcode\/1478\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  821 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  966 ,
         "url": "https:\/\/huozhixue.github.io\/leetcode\/1478\/","datePublished": "2020-06-13T23:00:00+08:00","dateModified": "2020-06-13T23:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">1478：安排邮筒（2190 分）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-13">2020-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 821 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-13">2020-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 966 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/leetcode/1478/" class="leancloud_visitors" data-flag-title="1478：安排邮筒（2190 分）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -126,10 +126,10 @@
       <ul>
         <li><a href="#1">#1</a></li>
         <li><a href="#2">#2</a></li>
-        <li><a href="#3">#3</a></li>
       </ul>
     </li>
     <li><a href="#解答">解答</a></li>
+    <li><a href="#附加"><em>附加</em></a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -193,31 +193,38 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cclass</span> <span class="n">Solution</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">houses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">p</span><span class="p">[</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">p</span><span class="p">[(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">houses</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">,(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">+</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="n">houses</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">g</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">g</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nf</span> <span class="o">=</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">nf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nf</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">nf</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>520 ms</p>
+</div><p>399 ms</p>
 <h3 id="2">#2</h3>
 <ul>
 <li>区间代价函数 w 满足四边形不等式，可以利用决策单调性优化，详细见 <a href="https://oi-wiki.org/dp/opt/quadrangle/" target="_blank" rel="noopener noreffer">四边形不等式优化</a></li>
-<li>可以用分治，但更通用的是二分队列</li>
+<li>针对刚好 k 个区间问题，利用 opt⁡(k−1,i)≤opt⁡(k,i)≤opt⁡(k,i+1) 即可优化，简单高效</li>
 </ul>
+<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -244,49 +251,41 @@
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">houses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">quad</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">+</span><span class="n">p</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">p</span><span class="p">[(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">]])</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">Q</span> <span class="ow">and</span> <span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;</span><span class="n">j</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">j</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">Q</span> <span class="ow">and</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="o">&lt;</span><span class="n">w</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="ow">not</span> <span class="n">Q</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">a</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="kc">True</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">a</span><span class="p">:</span><span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">&lt;</span><span class="n">w</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">a</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">j</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">n</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">g</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">houses</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">,(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">+</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="n">houses</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">quad</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nf</span> <span class="o">=</span> <span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">npt</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">npt</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">tmp</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">tmp</span><span class="o">&lt;</span><span class="n">nf</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">nf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">npt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">nf</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pt</span> <span class="o">=</span> <span class="n">npt</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>243 ms</p>
-<h3 id="3">#3</h3>
+</div><p>35 ms</p>
+<h2 id="附加"><em>附加</em></h2>
 <ul>
 <li>这类问题还可以结合 wqs 二分进一步优化</li>
 <li>证明见 <a href="https://oi-wiki.org/dp/opt/quadrangle/#%E9%99%90%E5%88%B6%E5%8C%BA%E9%97%B4%E4%B8%AA%E6%95%B0%E7%9A%84%E6%83%85%E5%BD%A2" target="_blank" rel="noopener noreffer">四边形不等式优化</a></li>
+<li>此时采用通用的简化 LARSCH 算法 ，当 𝑤(𝑗,𝑖) 需要动态计算，或者只支持移动访问时都能处理</li>
 </ul>
-<h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -327,41 +326,67 @@
 </span><span class="lnt">36
 </span><span class="lnt">37
 </span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">minDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">houses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">quad</span><span class="p">(</span><span class="n">mid</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">mid</span><span class="o">+</span><span class="n">g</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">+</span><span class="n">p</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">p</span><span class="p">[(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">inf</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">            <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">]])</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">Q</span> <span class="ow">and</span> <span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;</span><span class="n">j</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="n">g</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">j</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="n">h</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span><span class="p">[</span><span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span><span class="o">+</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="n">Q</span> <span class="ow">and</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="o">&lt;</span><span class="n">w</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="ow">not</span> <span class="n">Q</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">a</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="kc">True</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">a</span><span class="p">:</span><span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">&lt;</span><span class="n">w</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">a</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">Q</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">a</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">Q</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">j</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">n</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span>
-</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">houses</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                 <span class="c1"># 选一个的额外代价是x时，最大收益s及对应最小次数c</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">,(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">                <span class="n">a</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">+</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="n">x</span><span class="p">,</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tmp</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">tmp</span><span class="o">&lt;</span><span class="n">f</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">pt</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 递归求解区间 (l, r] 内的问题</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="n">l</span><span class="p">],</span><span class="n">pt</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">update</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">mid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">mid</span><span class="o">&lt;</span><span class="n">r</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dfs</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">update</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">mid</span><span class="o">&gt;</span><span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dfs</span><span class="p">(</span><span class="n">mid</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="p">[(</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">A</span> <span class="o">=</span> <span class="n">houses</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">l</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl">            <span class="n">g</span><span class="p">,</span><span class="n">h</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">h</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">mid</span><span class="o">*</span><span class="n">k</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">h</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">cal</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">c</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">s</span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">mid</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">c</span><span class="o">==</span><span class="n">k</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                    <span class="k">break</span>
 </span></span><span class="line"><span class="cl">                <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span>
 </span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
@@ -369,7 +394,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>95 ms</p>
+</div><p>90 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

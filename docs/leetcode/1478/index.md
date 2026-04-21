@@ -70,107 +70,120 @@
 - 计算一个邮筒覆盖区间 [a,b] 的最小和，将邮筒放在区间中位数即可，可以预处理前缀和，快速计算得到
 
 ```python
-class Solution:
+cclass Solution:
     def minDistance(self, houses: List[int], k: int) -> int:
-        def w(a,b):
-            return p[b+1]-p[(a+b+1)//2]-(p[(a+b)//2+1]-p[a])
-        A = sorted(houses)
+        def w(i,j):
+            l,r = (i+j)//2,(i+j+1)//2
+            return p[j]-p[r]-p[l]+p[i]+f[i]
+
+        A = houses
+        A.sort()
         n = len(A)
         p = [0]+list(accumulate(A))
         f = [0]+[inf]*n
-        for i in range(1,k+1):
-            g = [0]+[inf]*n
-            for j in range(1,n+1):
-                for a in range(j):
-                    g[j] = min(g[j],f[a]+w(a,j-1))
-            f = g
+        for _ in range(k):
+            nf = [inf]*(n+1)
+            for i in range(n+1):
+                for j in range(i):
+                    nf[i] = min(nf[i],w(j,i))
+            f = nf
         return f[-1]
 ```
-520 ms
+399 ms
 
 ### #2
 
 - 区间代价函数 w 满足四边形不等式，可以利用决策单调性优化，详细见 [四边形不等式优化](https://oi-wiki.org/dp/opt/quadrangle/)
-- 可以用分治，但更通用的是二分队列
-
-```python
-class Solution:
-    def minDistance(self, houses: List[int], k: int) -> int:
-        def quad():
-            def w(a,b):
-                return f[a]+p[b]-p[(a+b)//2]-(p[(a+b+1)//2]-p[a])
-            g = [0]+[inf]*n
-            Q = deque([[0,1,n]])
-            for j in range(1,n+1):
-                while Q and Q[0][2]<j:
-                    Q.popleft()
-                g[j] = w(Q[0][0],j)
-                while Q and w(j,Q[-1][1])<w(Q[-1][0],Q[-1][1]):
-                    Q.pop()
-                if not Q:
-                    Q.append([j,j+1,n])
-                else:
-                    a = bisect_left(range(Q[-1][2]+1),True,j,key=lambda a:w(j,a)<w(Q[-1][0],a))
-                    Q[-1][2] = a-1
-                    if a<=n:
-                        Q.append([j,a,n])
-            return g
-        A = sorted(houses)
-        n = len(A)
-        p = [0]+list(accumulate(A))
-        f = [0]+[inf]*n
-        for i in range(1,k+1):
-            f = quad()
-        return f[-1]
-```
-243 ms
-
-### #3
-
-- 这类问题还可以结合 wqs 二分进一步优化
-- 证明见 [四边形不等式优化](https://oi-wiki.org/dp/opt/quadrangle/#%E9%99%90%E5%88%B6%E5%8C%BA%E9%97%B4%E4%B8%AA%E6%95%B0%E7%9A%84%E6%83%85%E5%BD%A2)
+- 针对刚好 k 个区间问题，利用 opt⁡(k−1,i)≤opt⁡(k,i)≤opt⁡(k,i+1) 即可优化，简单高效
 
 ## 解答
 
+```python
+class Solution:
+    def minDistance(self, houses: List[int], k: int) -> int:
+        def w(i,j):
+            l,r = (i+j)//2,(i+j+1)//2
+            return p[j]-p[r]-p[l]+p[i]+f[i]
+
+        A = houses
+        A.sort()
+        n = len(A)
+        p = [0]+list(accumulate(A))
+        f = [0]+[inf]*n
+        pt = [0]*(n+1)
+        for _ in range(k):
+            nf = [inf]*(n+1)
+            npt = [n]*(n+2)
+            for i in range(n,-1,-1):
+                for j in range(pt[i],npt[i+1]+1):
+                    tmp = w(j,i)
+                    if tmp<nf[i]:
+                        nf[i] = tmp
+                        npt[i] = j
+            f = nf
+            pt = npt
+        return f[-1]
+```
+35 ms
+
+## *附加*
+
+- 这类问题还可以结合 wqs 二分进一步优化
+- 证明见 [四边形不等式优化](https://oi-wiki.org/dp/opt/quadrangle/#%E9%99%90%E5%88%B6%E5%8C%BA%E9%97%B4%E4%B8%AA%E6%95%B0%E7%9A%84%E6%83%85%E5%BD%A2)
+- 此时采用通用的简化 LARSCH 算法 ，当 𝑤(𝑗,𝑖) 需要动态计算，或者只支持移动访问时都能处理
+
 
 ```python
 class Solution:
     def minDistance(self, houses: List[int], k: int) -> int:
-        def quad(mid):
-            def w(a,b):
-                return mid+g[a]+p[b]-p[(a+b)//2]-(p[(a+b+1)//2]-p[a])
-            g = [0]+[inf]*n
-            h = [0]*(n+1)
-            Q = deque([[0,1,n]])
-            for j in range(1,n+1):
-                while Q and Q[0][2]<j:
-                    Q.popleft()
-                g[j] = w(Q[0][0],j)
-                h[j] = h[Q[0][0]]+1
-                while Q and w(j,Q[-1][1])<w(Q[-1][0],Q[-1][1]):
-                    Q.pop()
-                if not Q:
-                    Q.append([j,j+1,n])
-                else:
-                    a = bisect_left(range(Q[-1][2]+1),True,j,key=lambda a:w(j,a)<w(Q[-1][0],a))
-                    Q[-1][2] = a-1
-                    if a<=n:
-                        Q.append([j,a,n])
-            return g,h
-        A = sorted(houses)
+        def cal(x):                 # 选一个的额外代价是x时，最大收益s及对应最小次数c
+            def w(i,j):
+                l,r = (i+j)//2,(i+j+1)//2
+                a,c = f[i]
+                return (p[j]-p[r]-p[l]+p[i]+a+x,c+1)
+
+            def update(i,j):
+                tmp = w(i,j)
+                if tmp<f[j]:
+                    f[j] = tmp
+                    pt[j] = i
+
+            # 递归求解区间 (l, r] 内的问题
+            def dfs(l,r):
+                mid = (l+r+1)//2
+                for j in range(pt[l],pt[r]+1):
+                    update(j,mid)
+                if mid<r:
+                    dfs(l,mid)
+                for j in range(l+1,mid+1):
+                    update(j,r)
+                if mid>l:
+                    dfs(mid,r)
+
+            f = [(inf,0) for _ in range(n+1)]
+            f[0] = (0,0)
+            pt = [0]*(n+1)
+            update(0,0)
+            update(0,n)
+            dfs(0,n)
+            return f[-1][0],f[-1][1]
+
+        A = houses
+        A.sort()
         n = len(A)
         p = [0]+list(accumulate(A))
         l,r = 0,p[-1]
+        res = 0
         while l<=r:
             mid = (l+r)//2
-            g,h = quad(mid)
-            if h[-1]<=k:
-                res = g[-1]-mid*k
-                if h[-1]==k:
+            s,c = cal(mid)
+            if c<=k:
+                res = s-k*mid
+                if c==k:
                     break
                 r = mid-1
             else:
                 l = mid+1
         return res
 ```
-95 ms
+90 ms
