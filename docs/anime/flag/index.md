@@ -40,11 +40,11 @@
 
 ## 系列
 
-|     | 系列名            | 首播时间       | 话数/时长 | 观看地址                                                    |
-| :-- | :------------- | :--------- | :---- | :------------------------------------------------------ |
-| 1   |[FLAG](https://bgm.tv/subject/1788)| 2006-06-16 | 13    | [aniwave](https://aniwave.to/watch/flag.zxow)           |
-| 2   |[FLAG 一千万库夫拉的记录](https://bgm.tv/subject/132467)| 2007-08-08 | 1     | [bilibili](https://www.bilibili.com/video/BV1Sb411S7Pc) |
-|     |                |            |       |                                                         |
+|     | 系列名                                             | 首播时间       | 话数/时长 | 观看地址                                                    |
+| :-- | :---------------------------------------------- | :--------- | :---- | :------------------------------------------------------ |
+| 1   | [FLAG](https://bgm.tv/subject/1788)             | 2006-06-16 | 13    | [aniwave](https://aniwave.to/watch/flag.zxow)           |
+| 2   | [FLAG 一千万库夫拉的记录](https://bgm.tv/subject/132467) | 2007-08-08 | 1     | [bilibili](https://www.bilibili.com/video/BV1Sb411S7Pc) |
+
 
 
 

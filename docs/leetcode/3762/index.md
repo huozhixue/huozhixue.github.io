@@ -305,53 +305,45 @@ class Solution:
 
 ```python []
 class Seg:
-    __slots__ = 'lo','ro','c','s','i','V','m','t'
-    def __init__(self,A):
-        n = len(A)
+    __slots__ = 'lo','ro','s','c','i','m'
+    def __init__(self,n,m):
         N = n*(n.bit_length()+2)
         self.lo = [0]*N
         self.ro = [0]*N
-        self.c = [0]*N
         self.s = [0]*N
+        self.c = [0]*N
         self.i = 1
-        self.V = V = sorted(set(A))
-        self.m = m = len(V)
-        mp = {x:i for i,x in enumerate(V)}
-        self.t = t = [1]*(n+1)
-        for i,x in enumerate(A):
-            t[i+1] = self.add(0,m-1,t[i],mp[x],x)
-    
-    def add(self,l,r,old,i,val):
-        o = self.i = self.i+1
-        self.lo[o] = self.lo[old]
-        self.ro[o] = self.ro[old]
-        self.c[o] = self.c[old]+1
-        self.s[o] = self.s[old]+val
+        self.m = m
+
+    def upd(self,i,val,o,l=0,r=None):
+        r = self.m-1 if r is None else r
+        new = self.i = self.i+1
+        self.lo[new] = self.lo[o]
+        self.ro[new] = self.ro[o]
+        self.s[new] = self.s[o]+val
+        self.c[new] = self.c[o]+1
         if l==r:
-            return o
+            return new
         m = (l+r)//2
         if i <= m:
-            self.lo[o] = self.add(l,m,self.lo[o],i,val)
+            self.lo[new] = self.upd(i,val,self.lo[new],l,m)
         else:
-            self.ro[o] = self.add(m+1,r,self.ro[o],i,val)
-        return o
+            self.ro[new] = self.upd(i,val,self.ro[new],m+1,r)
+        return new
 
-    def query(self,l,r,k):  # 查询A[l:r+1]的第k小mid、小于mid的个数c及其总和s
-        old,new = self.t[l],self.t[r]
-        l,r = 0,self.m-1
-        c,s = 0,0
-        while l<r:
-            lo,ro = self.lo[old],self.ro[old]
-            lo2,ro2 = self.lo[new],self.ro[new]
-            m = (l+r)//2
-            cnt_l = self.c[lo2]-self.c[lo]
-            if k <= cnt_l:
-                l,r,old,new,k = l,m,lo,lo2,k
-            else:
-                c += cnt_l
-                s += self.s[lo2] - self.s[lo]
-                l,r,old,new,k = m+1,r,ro,ro2,k-cnt_l
-        return self.V[l], c, s
+    def kth(self,k,o1,o2,l=0,r=None):  # 查询A[o1:o2+1]的第k小mid、小于mid的个数c及其总和s
+        r = self.m-1 if r is None else r
+        if l==r:
+            return l,0,0
+        lo1,ro1 = self.lo[o1],self.ro[o1]
+        lo2,ro2 = self.lo[o2],self.ro[o2]
+        m = (l+r)//2
+        c1 = self.c[lo2]-self.c[lo1]
+        if k<=c1:
+            return self.kth(k,lo1,lo2,l,m)
+        s1 = self.s[lo2]-self.s[lo1]
+        mid,c2,s2 = self.kth(k-c1,ro1,ro2,m+1,r)
+        return mid,c1+c2,s1+s2
 
 class Solution(object):
    def minOperations(self, nums: List[int], k: int, queries: List[List[int]]) -> List[int]:
@@ -361,17 +353,22 @@ class Solution(object):
             f[i] = f[i-1] if nums[i]%k==nums[i-1]%k else i
         A = [x//k for x in nums]
         P = list(accumulate([0]+A))
-        seg = Seg(A)
+        V = sorted(set(A))
+        m = len(V)
+        mp = {x:i for i,x in enumerate(V)}
+        seg = Seg(n,m)
+        t = [1]*(n+1)
+        for i,x in enumerate(A):
+            t[i+1] = seg.upd(mp[x],x,t[i])
         res = [-1]*len(queries)
         for i,(l,r) in enumerate(queries):
             if f[r]<=l:
                 r += 1
-                s = P[r]-P[l]
-                mid,c,s1 = seg.query(l,r,(r-l)//2+1)
-                res[i] = s-s1-mid*(r-l-c)+mid*c-s1
+                mid,c,s = seg.kth((r-l)//2+1,t[l],t[r])
+                mid = V[mid]
+                res[i] = P[r]-P[l]-s-mid*(r-l-c)+mid*c-s
         return res
 ```
-
 2627 ms
   
 ### #4 划分树
