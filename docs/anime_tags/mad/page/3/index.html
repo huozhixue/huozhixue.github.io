@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta name="referrer" content="no-referrer" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>MAD - anime_tag - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="MAD" />
+<meta property="og:description" content="Ian 的博客" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://huozhixue.github.io/anime_tags/mad/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+
+<meta name="twitter:title" content="MAD"/>
+<meta name="twitter:description" content="Ian 的博客"/>
+<meta name="application-name" content="个人博客">
+<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/anime_tags/mad/" /><link rel="alternate" href="/anime_tags/mad/index.xml" type="application/rss+xml" title="个人博客">
+    <link rel="feed" href="/anime_tags/mad/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/contest/"> 竞赛 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/anime/" title="">动画</a><a class="menu-item" href="/game/" title="">游戏</a><a class="menu-item" href="/leetcode/" title="">力扣</a><a class="menu-item" href="/contest/" title="">竞赛</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
+            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" ></meting-js>
+            <main class="main">
+                <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster"><i class="fas fa-tag fa-fw"></i>&nbsp;MAD</h2><div class="tag-cloud-tags"><a href="/anime_tags/tv/">TV <sup>417</sup></a><a href="/anime_tags/%E5%9B%9B%E6%98%9F/">四星 <sup>251</sup></a><a href="/anime_tags/mad/">MAD <sup>222</sup></a><a href="/anime_tags/%E4%BA%94%E6%98%9F/">五星 <sup>172</sup></a><a href="/anime_tags/%E9%9F%B3%E4%B9%90/">音乐 <sup>155</sup></a><a href="/anime_tags/%E5%89%A7%E5%9C%BA%E7%89%88/">剧场版 <sup>117</sup></a><a href="/anime_tags/%E4%B8%89%E6%98%9F/">三星 <sup>108</sup></a><a href="/anime_tags/%E7%AB%A5%E5%B9%B4/">童年 <sup>75</sup></a><a href="/anime_tags/%E7%9F%AD%E7%89%87/">短片 <sup>33</sup></a><a href="/anime_tags/%E7%9B%98%E7%82%B9/">盘点 <sup>31</sup></a><a href="/anime_tags/%E4%BA%8C%E6%98%9F/">二星 <sup>22</sup></a><a href="/anime_tags/%E5%85%AD%E6%98%9F/">六星 <sup>20</sup></a><a href="/anime_tags/%E5%AE%9E%E9%AA%8C/">实验 <sup>11</sup></a><a href="/anime_tags/%E6%B3%A1%E9%9D%A2%E7%95%AA/">泡面番 <sup>11</sup></a><a href="/anime_tags/%E5%AE%9A%E6%A0%BC/">定格 <sup>5</sup></a><a href="/anime_tags/%E4%B8%80%E6%98%9F/">一星 <sup>2</sup></a><a href="/anime_tags/nsfw/">nsfw <sup>1</sup></a><a href="/anime_tags/%E5%90%8C%E4%BA%BA/">同人 <sup>1</sup></a></div><h3 class="group-title">2002年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/2f/2b/334_MWQMC.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.0</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        全金属狂潮
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="1月15日 全金属狂潮">
+                                <div class="ab_desTitle">全金属狂潮</div>
+                                <div class="ab_desText">在20世纪，世界格局比较稳定的时候，各大国都想增强自己的军事力量，从而称霸世界。而Whisper[耳语者]这种特殊的人类，自从出生开始就拥有特殊的能力，不用学习也能知道超越当时科技几十年的被称为黑科技的高科技手段。为了保护世界格局的稳定，神秘组织Mithril[米斯利尔]派出了相良中士等三人去保护一名已知的Whisper[耳语者]，即千鸟香奈。其中相良中士装成转校生随时跟踪保护，由于长期处于军队的生活，完全没有普通高中生的生活常识的相良中士在学校里闹了不少笑话。在学校期间也发生了不少恐怖的事情，如苏联为绑架香奈制造的劫机事件等。宗介和千鸟之间也因为发生的各种事件产生了特殊的感情。</div>
+                                <a class="ab_bangumiGo" href="/anime/full_metal_panic/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">2001年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/c3/61/605_CZYx4.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">9.0</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        棋魂
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="10月10日 棋魂">
+                                <div class="ab_desTitle">棋魂</div>
+                                <div class="ab_desText">       小学生进藤光在爷爷家的仓库玩耍时，邂逅了千年前的棋士藤原佐为的魂魄并被强行附体，对围棋原本毫无兴趣的他要如何与佐为相处？
+在佐为的帮助下进藤光意外打败了棋坛明日之星塔矢亮，受到众人关注的他要如何面对自己的人生之路？
+一段联结千年时光的围棋物语就此徐徐展开......</div>
+                                <a class="ab_bangumiGo" href="/anime/hikaru_no_go/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/fa/83/840_JRk3Z.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">9.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        千年女优
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="7月28日 千年女优">
+                                <div class="ab_desTitle">千年女优</div>
+                                <div class="ab_desText">风靡日本的女明星藤原千代子，三十年前当红之际，突然从银幕消声匿迹。
+三十年后，千代子的影迷费尽千辛万苦，终于在人烟稀少的寂静山庄中，找到了隐居数十年的她，并献上了一把千代子当年不慎遗失的神秘钥匙。
+神秘钥匙宛若开启了记忆之门，引领千代子划入回忆的大海，挖掘出一段她从不为人知的爱情故事。那故事像是从千代子辉煌年代的河流溢出，一路流向她无数的电影与映像汇集而成的海洋；也像从遥远的战国时代奔驰而来，再闯进无边无际的时空未来。
+而倾听入神的影迷，则随着千代子在记忆的逆流波谷间摆荡，体验她那令人怜惜的悲欢爱情；更在波涛汹涌的时空浪潮中，猛然惊觉到那股横亘千年的浓绵相思，神秘钥匙开启被千代子封锁隐藏了的记忆，解开了她的重要秘密。那正是在无情的时间洪流里，当记忆与爱情最灿烂交会时，所浮现出最真实且永恒的一代巨星千代子。</div>
+                                <a class="ab_bangumiGo" href="/anime/millennium_actress/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">2000年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/b64543a98226cffcf8b981e2b6014a90f703eacb"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        犬夜叉
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="10月16日 犬夜叉">
+                                <div class="ab_desTitle">犬夜叉</div>
+                                <div class="ab_desText">日暮戈薇是就读于国中三年级的15岁普通小女生，某日，她偶然通过家中神社的枯井来到了500年前的战国时代。时狼烟四起，妖怪横行，世间大地生灵涂炭。戈薇在御神木那里邂逅了被封印的半妖犬夜叉。50年前，意欲变成真正妖怪的犬夜叉，为了得到四魂之玉结识拥有强大灵力的巫女桔梗。经过一段时间相处，两人之间产生了感情。犬夜叉因此希望变成人类，而桔梗也打算在净化完四魂之玉后过回普通人的生活。然而，对桔梗心存邪念的盗贼鬼蜘蛛将灵魂和肉体献给妖怪，继而转生变成邪恶的半妖奈落。在他的一番挑拨下，犬夜叉被桔梗封印在神木之上，重伤的桔梗也在悲伤绝望中死去。
+桔梗转生的戈薇解救了犬夜叉，却不慎将四魂之玉射成碎片。为了找回碎片，她和犬夜叉以及随后遇到的伙伴：七宝、弥勒、珊瑚踏上了充满艰难险阻的旅途…… </div>
+                                <a class="ab_bangumiGo" href="/anime/inuyasha/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/af/da/822_9y55j.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.3</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        FLCL
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="4月26日 FLCL">
+                                <div class="ab_desTitle">FLCL</div>
+                                <div class="ab_desText">近未来的日本，一个叫做“疏濑”的城市中，市民过着平凡的生活，只不过，在城市的一角，山冈上面耸立着医疗机器制造厂建造的外形酷似熨斗的工厂，每天固定时刻，那个工厂都像刚烫完东西一样散发出大量蒸汽。
+小学六年级学生直太，与高中女生真见美，直太那个留学的哥哥的女友，一起在河边打发时间。本该是继续平凡的日子，随着传说中的蜜蜂女——睛子驾驶的电车撞上直太而结束了。直太头上长出了奇怪的角！而睛子居然成为直太家的佣人进入了直太家。睛子的秘密与她口中常念起的“FLCL”的含义，令直太的生活有了翻天覆地的改变。</div>
+                                <a class="ab_bangumiGo" href="/anime/flcl/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1999年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/92/97/975_YKuWd.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.0</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        海贼王
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="10月20日 海贼王">
+                                <div class="ab_desTitle">海贼王</div>
+                                <div class="ab_desText">传说中海贼王哥尔·D·罗杰在死前说出他留下了具有财富、名声、力量的宝藏「ONE PIECE」，许多人为了争夺ONE PIECE，争相出海，许多海贼开始树立霸权，而形成了大海贼时代。十年后，草帽小子 蒙其·D·路飞为了要实现与因救他而断臂的海贼红发香克斯的约定而出海，在遥远的路途上找寻着志同道合的伙伴，一起进入「伟大的航道」，目标当上海贼王。</div>
+                                <a class="ab_bangumiGo" href="/anime/one_piece/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/df/f8/3128_4QNAH.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.3</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        数码宝贝大冒险
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="3月7日 数码宝贝大冒险">
+                                <div class="ab_desTitle">数码宝贝大冒险</div>
+                                <div class="ab_desText">　　八神太一、石田大和、武之内素娜、城户丈、泉光子郎、太刀川美美、高石武、八神嘉儿这八位小朋友，在夏令营中受到召唤而到进入数码世界进行冒险。
+1999年，由于数码世界资料异常增生，导致数码世界和现实世界的连接发生紊乱。地球上相应地出现奇怪的自然现象：东南亚没有下雨，池塘全部干涸；中东却因为连场大雨发生洪水,美国则遇到有史以来最寒冷的夏天，日本则突降大雪。
+11岁的少年八神太一和他的六个朋友一起参加了夏令营，却奇怪的被神秘地送到了一个多彩的数码世界。在那里，他们得到了叫做“数码宝贝”的搭档。这些孩子被认为是数字世界的未来，他们与数码宝贝们一起要解开控制这个可怕的数码世界之谜。当他们踏上这个伟大的征程时，因特网成了他们的战场……</div>
+                                <a class="ab_bangumiGo" href="/anime/digimon_adventure/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1998年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5536b609f46da81cb39db90c8"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.1</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        玲音
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="7月6日 玲音">
+                                <div class="ab_desTitle">玲音</div>
+                                <div class="ab_desText">岩仓玲音的同学四方田千砂自杀了。没有任何前兆的自杀事件让同学们不知所措，一周后，玲音收到了千砂的短信。明明已死的千砂居然以手机短信和玲音开始了交流。回到家，玲音用爸爸给她的电脑开始与千砂联系。当谈及为何自杀时，千砂回答说“因为我已经不需要身体了，没有身体，我可以在wired网络之间继续活着。”不解的玲音继续调查千砂的事件，发现wired网络之中隐藏的巨大秘密，玲音自己的身世也出现了谜团。玲音面对网络世界中的真相，耳边不断响起千砂的话“我生存在wired中，因为神在那里。”</div>
+                                <a class="ab_bangumiGo" href="/anime/lain/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/7dd98d1001e93901d0f63db77dec54e737d19647"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">7.7</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        头文字D
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="4月19日 头文字D">
+                                <div class="ab_desTitle">头文字D</div>
+                                <div class="ab_desText">故事的主人公藤原拓海是个普通的高中男生，拥有无与伦比的飞车天赋。从中一开始，每天早上驾驶那辆AE86在秋名山上飞驰，练成了华丽(注意：是华丽)的驾驶技术。必须注意，他的车技之所以高明，是有赖于每天凌晨必须将父亲做的豆腐送到秋名山山顶的饭店。无论刮风、下雨、下雪，五年间车技竟然突飞猛进。黑白颜色的AE86是一辆只有130匹马力的日本“国宝级”旧款跑车，但凭着藤原拓海超凡的技术和天分，先后击败同样是天才少年Red Sun车队的高桥启介；驾驶令人望而生畏的黑色R32的中里毅；采用死亡胶布赛(用胶布粘绑住右手，使方向盘无法扭到空手时的最大限度)战胜了NightKids的第二把交椅；更在秋名山的山道中击败Red Sun第一把交椅，驾驶着代表高贵的FC3S的高桥凉介。当然，拓海的成长不止这些，“他的技术就像艺术一样”，我们最熟悉的就是AE86那华丽的甩尾(汽车用语。指车疾速行驶时疾速拐弯，车轮横向滑动的状态。)以及排水道跑法。秋名山下坡最快的AE86神话正式开始。</div>
+                                <a class="ab_bangumiGo" href="/anime/initial_d/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/95/e6/1940_o9Lto.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.1</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        魔卡少女樱
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="4月7日 魔卡少女樱">
+                                <div class="ab_desTitle">魔卡少女樱</div>
+                                <div class="ab_desText">故事讲述10岁的木之本樱打开了她父亲所藏的魔法书，意外把有魔法力量的“库洛牌”释放。由于她把卡弄失，要负责寻回，于是看守库洛牌守护兽可鲁贝洛斯，便给予小樱封印之杖，任命她为“库洛魔法使”，陪同并帮助小樱寻找回魔法卡。随后的故事，围绕着小樱寻找和收服库洛牌的经历而发展。在库洛牌收服完后，通过了身为审判者的月之考验，成为库洛牌的新主人。一天一位神秘的转校生柊泽出现，他引发不可思议的事件，让小樱将库洛牌转换为小樱卡，也避免了库洛牌魔力流失的危机。
+
+动画分上下两篇：
+库洛牌篇1998年4月7日－1999年6月22日，全46话（35话&#43;11话）
+樱之卡篇1999年9月7日－2000年3月21日，全24话</div>
+                                <a class="ab_bangumiGo" href="/anime/cardcaptor_sakura/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/d1/09/12344_Kec1G.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">7.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        游戏王
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="4月4日 游戏王">
+                                <div class="ab_desTitle">游戏王</div>
+                                <div class="ab_desText">武藤游戏是童实野高中的一名普通学生，除了喜欢玩各种游戏外没有任何优点，运动神经也不好，除了青梅竹马的真崎杏子外没有任何朋友。经常自己一个人玩的游戏其实心里很想要有朋友。
+
+游戏认为只要拼好爷爷武藤双六给自己的古埃及宝物千年积木并对它许愿，愿望就会成真，在这八年中游戏总是无法拼好了这个神秘的宝物。
+
+以某件事为契机，游戏和班里的城之内克也结下了深厚的友谊，也在这件事中游戏成功地完成了千年积木。在千年积木的力量下，游戏得到了另一个黑暗的人格，继承了三千年来所有游戏知识，成为使用“黑暗游戏”来制裁各种行恶之人的正义使者。</div>
+                                <a class="ab_bangumiGo" href="/anime/yu_gi_oh/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/d4628535e5dde711bb222a4aa5efce1b9c16619d"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.7</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        蓝色恐惧
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="2月28日 蓝色恐惧">
+                                <div class="ab_desTitle">蓝色恐惧</div>
+                                <div class="ab_desText">雾越未麻是流行音乐偶像团体“CHAM!”中的成员之一，但是在公司的决策下，她开始转型为演员。但她却感觉内心有个声音在拒绝自己的选择，而未麻的一些歌迷也反对这个决定。随着越来越多电视剧的演出，未麻却觉得自己的头脑越来越奇怪，仿佛有“另一个自己”正在形成。这时，她身边的工作人员竟一个个接连被杀。在面对社会压力和疑云之际，未麻感到越来越混乱…</div>
+                                <a class="ab_bangumiGo" href="/anime/perfect_blue/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/b5/75/25469_f0f6Z.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">7.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        风筝
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="2月25日 风筝">
+                                <div class="ab_desTitle">风筝</div>
+                                <div class="ab_desText">A Kite的故事不复杂，就是某个杀手组织的贱男人干掉了女孩的双亲并占有了她，把她训练成了顶尖的杀手，最后女孩终于反过来对贱男进行复仇，干掉了他；中间穿插着女孩与同组织准备退出的年轻男杀手若隐若现的爱情，最后这名男子命丧另一名少女杀手手中。</div>
+                                <a class="ab_bangumiGo" href="/anime/a_kite/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1997年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/13/16/1891_qDgl0.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.9</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        少女革命
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="4月2日 少女革命">
+                                <div class="ab_desTitle">少女革命</div>
+                                <div class="ab_desText">天上欧蒂娜是一位穿着男生制服的性格少女。年幼时为一位王子所救，由于心怀憧憬而期望自己能成为王子。
+入读凤学园之后，欧蒂娜因为特立独行的作风而受到校方责难，但同时也成为了众人目光的焦点。这样的欧蒂娜遇到了被称为“蔷薇的新娘”的柔弱少女姬宫安希，同情安希的遭遇而决定保护她的欧蒂娜，被卷入了学生会争夺“改革世界的力量”的一系列决斗中，向“世界的尽头”发起挑战。
+
+少女革命的原作是以幾原邦彦为首的原创团队ビーパパス（Bepapas），团队成员包括榎户洋司、さいとうちほ(斋藤千穗)、長谷川眞也、小黒祐一郎等人。有些人以为由斋藤千穗执笔的漫画是《少女革命》的原作，这其实是误解，实际上少女漫画家出身的斋藤与幾原就《少女革命》的主题意见相左，这一点在漫画版《少女革命》中亦有所体现。而《少女革命》的TV动画由于其隐晦深刻的内涵和独特的世界观而与EVA、机动战舰并称为OTAKU三大经典。</div>
+                                <a class="ab_bangumiGo" href="/anime/shoujo_kakumei_utena/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1996年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/01/88/899_Q3F3X.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">7.8</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        名侦探柯南
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="1月8日 名侦探柯南">
+                                <div class="ab_desTitle">名侦探柯南</div>
+                                <div class="ab_desText">主角工藤新一原本是一位颇具名声的高中生侦探，在目击黑暗组织的地下交易后，正准备追踪时却被突袭击昏，并被灌下代号为“APTX4869”（アポトキシン4869）的不明药物。后来虽然幸免于死，但身体就此缩小为小学时期的模样。之后他化名为江户川柯南，在邻居阿笠博士的建议下，寄住在女友毛利兰的父亲—侦探毛利小五郎家中，继续秘密从事追查黑暗组织的工作，并私下探寻获得解药的管道，希望能够恢复原来新一的样貌。与此同时，柯南凭着自己的推理天份，配合阿笠博士为他发明的道具，帮助毛利小五郎成为出名的大侦探。故事内容当中穿插许多爱情、友情、犯罪、背叛、复仇等情节。</div>
+                                <a class="ab_bangumiGo" href="/anime/conan/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1995年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/d53f8794a4c27d1ed21b8dcd2d8fba6eddc451da923a"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.9</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        攻壳机动队
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="11月18日 攻壳机动队">
+                                <div class="ab_desTitle">攻壳机动队</div>
+                                <div class="ab_desText">       2029年，公安九课在市容很像香港的日本城市“新港市”中执行各种秘密任务。九课因为不顾正当程序的自作主张、强硬行事，往往与政府其他部门起冲突，例如负责外交的公安六课就与九课不合。另一方面，九课之中的重要人物，全身是义体的机械生化人草薙素子，对于自己的现状一直隐隐感到不满。有一天，公安九课因为一件外国政要的刺杀未遂案而开始追查神秘的黑客“傀儡师”。傀儡师能透过网络入侵人脑，植入虚拟记忆，再利用记忆被窜改的对象来达成目的。虽然九课的追查没有成功，藏有傀儡师的“灵魂”的机械生化人却自行来到九课。公安六课随后赶来将傀儡师绑走。草薙素子因为在事前就推测出六课的绑架行动而成功拦截傀儡师。这时发现原来傀儡师并不是人类，而是公安六课设计来非法操纵人类的电脑程式“2501计划”。2501计划在意外中产生自觉意识，决定逃出六课以求生存，并且要求和草薙素子的灵魂“融合”以求进一步发展。草薙素子最后在同事巴特的协助与掩护下完成融合并且脱离政府掌握，下落不明，其意识与整个网络融合。</div>
+                                <a class="ab_bangumiGo" href="/anime/ghost_in_the_shell/">更多</a>
+                            </div>
+                        </div><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/241f95cad1c8a786d5b8ea806e09c93d71cf50a9"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">9.2</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        新世纪福音战士
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="10月4日 新世纪福音战士">
+                                <div class="ab_desTitle">新世纪福音战士</div>
+                                <div class="ab_desText">　　2000年，一个科学探险队在南极洲针对被称作“第一使徒”亚当的“光之巨人”进行探险。在对其进行接触实验时，“光之巨人”自毁，从而发生了“第二次冲击”，进而导致世界大战。最后，人类人口减半，地轴偏转、气候改变。根据对“第二次冲击”的调查，联合国在日本箱根成立人工进化研究所（即 GEHIRN）从事EVA（指机器人）的发展研究，后GEHIRN利用在人工进化研究所下方发现的巨大空洞建造了总部。
+另一方面，联合国下属秘密组织SEELE为了使人类进化，开始实行人类补完计划，就是将所有人的灵魂汇集在一起，通过中和每个人的AT力场，使每个人回归LCL之海。
+2004年，EVA初号机进行启动试验时发生事故，碇真嗣的母亲碇唯消失，碇源渡开始执行“碇源渡版本的人类补完计划”。2010年，GEHIRN被改建成NERV。
+2015年开始，根据SEELE人类补完计划剧本的安排，一种巨型人形生物“使徒”开始在日本登陆，并向NERV总部进攻，NERV组织EVA消灭使徒。在NERV与使徒作战的同时，碇源渡秘密地执行它自己的计划。随着时间推移，碇源渡的计划逐渐被SEELE发现，NERV与SEELE产生了矛盾并不断恶化。
+Director&#39;s Cut版本的第21～24集由剧场版《Death》篇剪辑而成，收录在20周年纪念版的蓝光中。</div>
+                                <a class="ab_bangumiGo" href="/anime/evangelion/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1992年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/07/60/1583_n3zxN.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">7.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        电影少女
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="3月27日 电影少女">
+                                <div class="ab_desTitle">电影少女</div>
+                                <div class="ab_desText">东京私立贵大高等学校高一年级的学生弄内洋太追求同学早川然美，正当他准备告白时，却发现然美喜欢的是他的好友——同班同学新舞贵志，于是他陷入了无奈与失落。一个人走在回到家的路上，洋太的情绪十分低落，自己也不知道怎么就走到了一家名叫GOKURAU的出租录影带的商店前。洋太走过一排排录影带架后，在一盒录影带前停了下来：《安慰——天野爱》。借回家的录影带在播放过程中，天野爱居然从画面中走出！爱鼓励洋太要努力追求真爱，并以洋太妹妹的身份住在洋太家中。谁也没有想到，一段感人的恋爱故事就这样开始。</div>
+                                <a class="ab_bangumiGo" href="/anime/video_girl/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1988年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/b9/b5/57105_b467o.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.2</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        飞跃巅峰！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="10月7日 飞跃巅峰！">
+                                <div class="ab_desTitle">飞跃巅峰！</div>
+                                <div class="ab_desText">　　21世纪人类开始开发宇宙。但是宇宙生物群(通称宇宙怪兽, STMC)，一种以恒星作载体繁殖的生物来袭，使人类文明受到重大威胁。
+　　为了对抗宇宙怪兽，机械人兵器和宇宙战舰持续开发中，由地球上的机械人训练学校找出优胜的驾驶员控制。
+　　2015年，在人类史上第一次和宇宙怪兽接触后，故事的女主角高屋法子进入了机械人训练学校接受训练，驾驶人类对抗宇宙怪兽最强武器Gunbuster，开始了她守护地球使命的故事。 </div>
+                                <a class="ab_bangumiGo" href="/anime/gunbuster/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1986年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://bkimg.cdn.bcebos.com/pic/8601a18b87d6277f9e2f4abe98710830e924b99956a9"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.0</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        龙珠
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="2月26日 龙珠">
+                                <div class="ab_desTitle">龙珠</div>
+                                <div class="ab_desText">鸟山明最早在《少年JUMP》周刊连载《龙珠》时，该漫画早期（1-194篇）比较偏重于搞笑，而且打斗一般并不在这儿占主流，因此这个时期，鸟山明的画风对人物性格刻画得很精准，可以让人爆笑起来，因此东映动画公司决定把这个时期的漫画改成一部153集的动画，这也是中国内地在三部《龙珠》系列动画中唯一引进的一部，故也称龙珠TV。而且第一部有很多风格和人物剧情都根源于《西游记》，而且鸟山明的前作《阿拉蕾》中的人物也有客串。</div>
+                                <a class="ab_bangumiGo" href="/anime/dragonball/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1979年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://lain.bgm.tv/pic/cover/l/64/b3/37460_gtg0V.jpg"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">8.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        哆啦A梦
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="4月2日 哆啦A梦">
+                                <div class="ab_desTitle">哆啦A梦</div>
+                                <div class="ab_desText">《哆啦A梦》（日语：ドラえもん；英语：Doraemon；旧译叮当 / 小叮当）是日本漫画家藤本弘（笔名藤子·F·不二雄）创作的漫画。
+漫画叙述了一只来自22世纪的猫型机器人——哆啦A梦，受主人野比世修的托付，回到20世纪，借助从四维口袋里拿出来的各种未来道具，
+来帮助世修的高祖父——小学生野比大雄化解身边的种种困难问题，以及生活中和妈妈野比玉子、身边的小伙伴静香、胖虎、小夫发生的轻松幽默搞笑感人的故事。</div>
+                                <a class="ab_bangumiGo" href="/anime/doraemon/">更多</a>
+                            </div>
+                        </div></div><h3 class="group-title">1940年</h3>
+                    <div id="ab_bangumi_content"><div class="ab_bangumiItem">
+                            <div class="ab_bangumiCover">
+                                <img referrerpolicy="no-referrer"
+                                    src="https://n.sinaimg.cn/sinakd20121/605/w302h303/20250521/e0e7-gifea7a5e060c13ef5059416057fd6a5152.gif"
+                                    class="ab_bangumiCoverImg">
+                                <div class="ab_bangumiScore">9.5</div>
+                                <div class="ab_bangumiProgress">
+                                    <div class="ab_realPr"></div>
+                                    <div class="ab_textContainer">
+                                        <div class="ab_ProgressText" >
+                                        猫和老鼠
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab_bangumiDestription"  title="2月10日 猫和老鼠">
+                                <div class="ab_desTitle">猫和老鼠</div>
+                                <div class="ab_desText">《猫和老鼠》（Tom and Jerry）是米高梅电影公司于1939年制作的一部动画，该片由威廉·汉纳、约瑟夫·巴伯拉编写，
+弗雷德·昆比制作，首部剧集《甜蜜的家》于1940年2月10日在美国首播。
+
+
+《猫和老鼠》以闹剧为特色，描绘了一对水火不容的冤家：汤姆和杰瑞猫鼠之间的战争，片中的汤姆经常使用狡诈的诡计来对付杰瑞，
+而杰瑞则时常利用汤姆诡计中的漏洞逃脱他的迫害并给予报复。</div>
+                                <a class="ab_bangumiGo" href="/anime/tom_and_jerry/">更多</a>
+                            </div>
+                        </div></div><ul class="pagination"><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/anime_tags/mad/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/anime_tags/mad/page/2/">2</a>
+                    </span>
+                </li><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/anime_tags/mad/page/3/">3</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.106.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Ian</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/mapbox-gl/mapbox-gl.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/abbangumi/abbangumi.css"><link rel="stylesheet" href="/lib/flexslider/flexslider.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/echarts/echarts.min.js"></script><script type="text/javascript" src="/lib/echarts/macarons.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl-language.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/flexslider/jquery.flexslider.js"></script><link rel="stylesheet" href="/css/index.css">
+<script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"mapbox":{"RTLTextPlugin":"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js","accessToken":"pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"JV81838M8P","algoliaIndex":"blog","algoliaSearchKey":"ca1b2e648cc573a011423af837810e7b","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
+<script src="/js/jquery.pjax.min.js"></script>
+<script src="/js/autoload.js"></script>
+<script src="/js/theme.js"></script></body>
+</html>

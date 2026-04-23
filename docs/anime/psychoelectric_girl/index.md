@@ -68,7 +68,4 @@
 | 1 |[电波女与青春男](https://bgm.tv/subject/10377)| 2011-04-14 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep247861)  |
 
 
-## MAD
 
-{{< media  "BV1Qx411c7F9"
-"电波女萌战应援MAD"  >}}

@@ -68,13 +68,6 @@
 |:---  |:------    |:----      |:---       |:---  |
 | 1 |[夏日重现](https://bgm.tv/subject/326895)| 2022-04-14 | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ss41417)  |
 
-<!--
-
-## MAD
-
-{{< media auto="mad/summer_time_rendering" >}}
-
--->
 
 
 

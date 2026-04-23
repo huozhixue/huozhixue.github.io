@@ -67,19 +67,6 @@
 | 1   | [碧蓝之海](https://bgm.tv/subject/235130)     | 2018-07-13 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss24581)  |
 | 2   | [碧蓝之海 第二季](https://bgm.tv/subject/515880) | 2025-07-07 | 12    | [bilibili](https://www.bilibili.com/bangumi/play/ss102891) |
 
-<!--
-
-## 配乐
-
-{{< media ""
-""
-"music">}}
-
-## MAD
-
-{{< media auto="mad/grand_blue" >}}
-
--->
 
 
 
