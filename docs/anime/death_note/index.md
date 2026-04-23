@@ -66,5 +66,5 @@
 "music" >}}
 ## MAD
 
-{{< media  "BV1Ex411P7vD-BV1Cx411F76j-BV1Nx411c7jf" 
-"新世界的Flower Dance,咱的夜神月不可能这么治愈,【Death Note】Change The world"  >}}
+{{< media  "BV1FdTzeWEMJ-BV1Ex411P7vD-BV1Cx411F76j-BV1Nx411c7jf" 
+"励 志 动 漫【大梦想家】,新世界的Flower Dance,咱的夜神月不可能这么治愈,【Death Note】Change The world"  >}}

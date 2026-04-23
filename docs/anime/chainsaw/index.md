@@ -79,19 +79,13 @@
 | 1   | [链锯人](https://bgm.tv/subject/321885)         | 2022-10-11 | 12    | [keke1](https://www.keke1.app/play/24238-4-191077.html) |
 | 2   | [剧场版 链锯人 蕾塞篇](https://bgm.tv/subject/470660) | 2025-09-19 | 1     | [bilibili](https://search.bilibili.com/all?keyword=蕾塞篇) |
 
-<!--
 
-## 配乐
-
-{{< media ""
-""
-"music">}}
 
 ## MAD
 
-{{< media auto="mad/chainsaw" >}}
+{{< media "BV18rzyB6EDa" 
+"藤本树江郎才尽前的走马灯罢了" >}}
 
--->
 
 
 

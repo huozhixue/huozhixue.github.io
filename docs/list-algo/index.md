@@ -107,6 +107,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1700 | [GYM104287K](https://codeforces.com/gym/104287/problem/K)   | 组合 dp  |
 | 1900 | [GYM105948H](https://codeforces.com/gym/105948/problem/H)   | 背包dp撤销 |
 | 1900 | [cf2173d](https://codeforces.com/problemset/problem/2173/D) | 最优状态   |
+| 1900 | [cf2049d](https://codeforces.com/problemset/problem/2049/D) | 网格dp   |
 | 2000 | [GYM104523D](https://codeforces.com/gym/104523/problem/D)   | 区间dp   |
 | 2000 | [GYM105633K](https://codeforces.com/gym/105633/problem/K)   | sosdp  |
 | 2000 | [GYM105364F](https://codeforces.com/gym/105364/problem/F)   | 最优状态   |

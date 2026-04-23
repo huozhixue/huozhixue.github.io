@@ -60,4 +60,9 @@
 | 1   |[日在校园](https://bgm.tv/subject/827)| 2007-07-03 | 12    | [keke1](https://www.keke1.app/play/22268-4-166752.html) |
 
 
+## MAD
+
+
+{{< media "BV1yrXCBZEKB"
+"诚哥之死，但是插入的是AIZO" >}}
 

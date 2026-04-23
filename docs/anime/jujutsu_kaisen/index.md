@@ -90,19 +90,11 @@
 | 3   | [咒术回战 怀玉･玉折 / 涩谷事变](https://bgm.tv/subject/369304) | 2023-07-06 | 23    | [bilibili](https://www.bilibili.com/bangumi/play/ss45574) |
 | 4   | [咒术回战 死灭回游 前篇](https://bgm.tv/subject/472741)      | 2026-01-08 | 12    | [bilibili](https://www.bilibili.com/video/BV1BzkNBJE5r)   |
 
-<!--
-
-## 配乐
-
-{{< media ""
-""
-"music">}}
 
 ## MAD
 
-{{< media auto="mad/jujutsu_kaisen" >}}
-
--->
+{{< media "BV1z7zMBnEHJ"
+"“初恋和术式都是你”" >}}
 
 
 

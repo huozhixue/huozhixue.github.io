@@ -76,7 +76,7 @@
 
 ## MAD
 
-{{< media "BV1mU4y1e7gB" 
-"【Aegisub特效字幕】よふかしのうた 彻夜之歌 ED" >}}
+{{< media "BV15sznYREdN-BV1mU4y1e7gB" 
+"⚡星と僕らと × 彻夜之歌⚡,【Aegisub特效字幕】よふかしのうた 彻夜之歌 ED" >}}
 
 
