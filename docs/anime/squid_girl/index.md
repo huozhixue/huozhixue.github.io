@@ -60,4 +60,7 @@
 | 3   |[侵略！！乌贼娘 OAD](https://bgm.tv/subject/46703)| 2012-08-08 | 3     | [bilibili](https://www.bilibili.com/video/BV1iW411h7RB) |
 
 
+## MAD
 
+{{< media "BV1Bx411c71q"
+"早苗の盛夏果实" >}}

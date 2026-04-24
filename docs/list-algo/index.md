@@ -41,6 +41,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1700 | [GYM103059I](https://codeforces.com/gym/103059/problem/I)      | 逆元   |
 | 1700 | [cf2122c](https://codeforces.com/problemset/problem/2122/C)    | 距离   |
 | 1700 | [cf2202c2](https://codeforces.com/contest/2202/problem/C2)     | 栈    |
+| 1700 | [GYM106495E](https://codeforces.com/gym/106495/problem/E)      | 排序   |
 | 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D)      | 归一   |
 | 1900 | [GYM105803C](https://codeforces.com/gym/105803/problem/C)      | 加减   |
 | 1900 | [GYM105667B](https://codeforces.com/gym/105667/problem/B)      | 形状   |
