@@ -57,6 +57,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 2400 | [cf1592e](https://codeforces.com/problemset/problem/1592/E)    | 异或   |
 | 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)      | 置换环  |
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
+|      | [cf2226f](https://codeforces.com/contest/2226/problem/F)       | gcd  |
 ## 数学
 #### 组合
 
@@ -105,6 +106,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 | 难度   | 题目                                                          | 关键词    |
 | :--- | :---------------------------------------------------------- | :----- |
+| 1500 | [cf2163c](https://codeforces.com/problemset/problem/2163/C) | 区间     |
 | 1700 | [GYM104287K](https://codeforces.com/gym/104287/problem/K)   | 组合 dp  |
 | 1900 | [GYM105948H](https://codeforces.com/gym/105948/problem/H)   | 背包dp撤销 |
 | 1900 | [cf2173d](https://codeforces.com/problemset/problem/2173/D) | 最优状态   |
@@ -129,6 +131,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O)  | 区间加、等差数列 |
 | 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)  | 区间不同元素   |
 | 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2) | 区间乘      |
+|      | [cf2226e](https://codeforces.com/contest/2226/problem/E)   | 分配       |
 
 ## 并查集
 
