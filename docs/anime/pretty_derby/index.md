@@ -51,11 +51,11 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 |[赛马娘 Pretty Derby](https://bgm.tv/subject/212003)| 2018-04-01 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep199681)  |
-| 2 |[赛马娘 Pretty Derby 第二季](https://bgm.tv/subject/315574)| 2021-01-04 | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss36579)  |
-
+|     | 系列名                                                   | 首播时间       | 话数/时长 | 观看地址                                                       |
+| :-- | :---------------------------------------------------- | :--------- | :---- | :--------------------------------------------------------- |
+| 1   | [赛马娘 Pretty Derby](https://bgm.tv/subject/212003)     | 2018-04-01 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ep199681) |
+| 2   | [赛马娘 Pretty Derby 第二季](https://bgm.tv/subject/315574) | 2021-01-04 | 13    | [bilibili](https://www.bilibili.com/bangumi/play/ss36579)  |
+| 3   | [赛马娘 芦毛灰姑娘](https://bgm.tv/subject/509297)            | 2025-04-06 | 23    | [bilibili](https://www.bilibili.com/bangumi/play/ss91812)  |
 
 ## MAD
 

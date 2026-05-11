@@ -42,10 +42,12 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1700 | [cf2122c](https://codeforces.com/problemset/problem/2122/C)    | 距离   |
 | 1700 | [cf2202c2](https://codeforces.com/contest/2202/problem/C2)     | 栈    |
 | 1700 | [GYM106495E](https://codeforces.com/gym/106495/problem/E)      | 排序   |
+| 1800 | [GYM106414J](https://codeforces.com/gym/106414/problem/J)      | 几何   |
 | 1800 | [GYM104770D](https://codeforces.com/gym/104770/problem/D)      | 归一   |
 | 1900 | [GYM105803C](https://codeforces.com/gym/105803/problem/C)      | 加减   |
 | 1900 | [GYM105667B](https://codeforces.com/gym/105667/problem/B)      | 形状   |
 | 1900 | [GYM105198G](https://codeforces.com/gym/105198/problem/G)      | 矩阵   |
+| 1900 | [GYM106414K](https://codeforces.com/gym/106414/problem/K)      | 网格   |
 | 1900 | [cf2180c](https://codeforces.com/problemset/problem/2180/C)    | 异或   |
 | 1900 | [GYM103439N](https://codeforces.com/gym/103439/problem/N)      | 配对   |
 | 2000 | [cf2165c](https://codeforces.com/problemset/problem/2165/C)    | 异或   |
@@ -168,4 +170,11 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1900 | [GYM104020L](https://codeforces.com/gym/104020/problem/L) | 随机  |
 | 2000 | [GYM104020J](https://codeforces.com/gym/104020/problem/J) | 随机  |
 | 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C) | 逆向  |
+
+## 定理
+
+| 难度  | 题目                                                           | 关键词      |
+| :-- | :----------------------------------------------------------- | :------- |
+|     | [abc457g](https://atcoder.jp/contests/abc457/tasks/abc457_g) | Dilworth |
+
 
