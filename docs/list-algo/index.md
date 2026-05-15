@@ -1,6 +1,6 @@
 # 清单：算法
 
-coderforces、nowcoder、atcoder 等算法网站的题目清单
+ coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 
 ## 二分
@@ -9,6 +9,13 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 难度   | 题目                                                       | 关键词 |
 | :--- | :------------------------------------------------------- | :-- |
 | 2400 | [cf2185h](https://codeforces.com/contest/2185/problem/H) | 倍增  |
+
+## 位运算
+
+
+| 难度   | 题目                                                       | 关键词 |
+| :--- | :------------------------------------------------------- | :-- |
+| 2300 | [cf2217f](https://codeforces.com/contest/2217/problem/F) | 异或  |
 
 ## 字符串
 
@@ -33,6 +40,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 难度   | 题目                                                             | 关键词  |
 | :--- | :------------------------------------------------------------- | :--- |
 | 1300 | [cf2108b](https://codeforces.com/problemset/problem/2108/B)    | 异或   |
+| 1300 | [GYM106164C](https://codeforces.com/gym/106164/problem/C)      | 加减   |
 | 1500 | [cf1753_a2](https://codeforces.com/problemset/problem/1753/A2) | 划分   |
 | 1600 | [cf2085c](https://codeforces.com/problemset/problem/2085/C)    | 异或   |
 | 1600 | [cf2112d](https://codeforces.com/problemset/problem/2112/D)    | 度数   |
@@ -169,6 +177,7 @@ coderforces、nowcoder、atcoder 等算法网站的题目清单
 | 1600 | [GYM104855D](https://codeforces.com/gym/104855/problem/D) | bfs |
 | 1900 | [GYM104020L](https://codeforces.com/gym/104020/problem/L) | 随机  |
 | 2000 | [GYM104020J](https://codeforces.com/gym/104020/problem/J) | 随机  |
+| 2000 | [GYM106164F](https://codeforces.com/gym/106164/problem/F) | log |
 | 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C) | 逆向  |
 
 ## 定理
