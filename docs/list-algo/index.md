@@ -34,6 +34,7 @@
 | 2500 | [cf1407e](https://codeforces.com/contest/1407/problem/E)    | 逆向   |
 | 2500 | [cf2197f](https://codeforces.com/contest/2197/problem/F)    | 括号   |
 | 2900 | [cf725e](https://codeforces.com/contest/725/problem/F)      | 博弈   |
+|      | [cf2230e](https://codeforces.com/contest/2230/problem/E)    | 分类讨论 |
 
 ## 构造
 
@@ -58,6 +59,7 @@
 | 1900 | [GYM106414K](https://codeforces.com/gym/106414/problem/K)      | 网格   |
 | 1900 | [cf2180c](https://codeforces.com/problemset/problem/2180/C)    | 异或   |
 | 1900 | [GYM103439N](https://codeforces.com/gym/103439/problem/N)      | 配对   |
+| 1900 | [GYM106531D](https://codeforces.com/gym/106531/problem/D)      | 分配   |
 | 2000 | [cf2165c](https://codeforces.com/problemset/problem/2165/C)    | 异或   |
 | 2000 | [GYM106409E](https://codeforces.com/gym/106409/problem/E)      | 交换   |
 | 2000 | [cf1951d](https://codeforces.com/problemset/problem/1951/D)    | 取模   |
@@ -172,18 +174,19 @@
 
 ## trick
 
-| 难度   | 题目                                                        | 关键词 |
-| :--- | :-------------------------------------------------------- | :-- |
-| 1600 | [GYM104855D](https://codeforces.com/gym/104855/problem/D) | bfs |
-| 1900 | [GYM104020L](https://codeforces.com/gym/104020/problem/L) | 随机  |
-| 2000 | [GYM104020J](https://codeforces.com/gym/104020/problem/J) | 随机  |
-| 2000 | [GYM106164F](https://codeforces.com/gym/106164/problem/F) | log |
-| 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C) | 逆向  |
+| 难度   | 题目                                                            | 关键词   |
+| :--- | :------------------------------------------------------------ | :---- |
+| 1600 | [GYM104855D](https://codeforces.com/gym/104855/problem/D)     | bfs   |
+| 1900 | [GYM104020L](https://codeforces.com/gym/104020/problem/L)     | 随机    |
+| 2000 | [GYM104020J](https://codeforces.com/gym/104020/problem/J)     | 随机    |
+| 2000 | [GYM106164F](https://codeforces.com/gym/106164/problem/F)     | log   |
+| 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C)     | 逆向    |
+|      | [abc458_g](https://atcoder.jp/contests/abc458/tasks/abc458_g) | slope |
 
 ## 定理
 
-| 难度  | 题目                                                           | 关键词      |
-| :-- | :----------------------------------------------------------- | :------- |
-|     | [abc457g](https://atcoder.jp/contests/abc457/tasks/abc457_g) | Dilworth |
+| 难度  | 题目                                                            | 关键词      |
+| :-- | :------------------------------------------------------------ | :------- |
+|     | [abc457_g](https://atcoder.jp/contests/abc457/tasks/abc457_g) | Dilworth |
 
 
