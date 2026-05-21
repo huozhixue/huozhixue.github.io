@@ -47,7 +47,9 @@
 
 - {{< lc "3605" >}} [数组的最小稳定性因子](https://leetcode.cn/problems/minimum-stability-factor-of-array/)
 
+## slope trick
 
+- {{< lc "lcp59" >}} [搭桥过河](https://leetcode.cn/problems/NfY1m5/)
 
 ## 其它优化
 

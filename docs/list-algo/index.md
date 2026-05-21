@@ -180,6 +180,7 @@
 | 1900 | [GYM104020L](https://codeforces.com/gym/104020/problem/L)     | 随机    |
 | 2000 | [GYM104020J](https://codeforces.com/gym/104020/problem/J)     | 随机    |
 | 2000 | [GYM106164F](https://codeforces.com/gym/106164/problem/F)     | log   |
+| 2300 | [cf713c](https://codeforces.com/contest/713/problem/C)        | slope |
 | 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C)     | 逆向    |
 |      | [abc458_g](https://atcoder.jp/contests/abc458/tasks/abc458_g) | slope |
 
