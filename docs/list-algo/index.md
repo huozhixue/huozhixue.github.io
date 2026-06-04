@@ -31,10 +31,10 @@
 | 1900 | [cf2180d](https://codeforces.com/problemset/problem/2180/D)   | 间距   |
 | 2000 | [cf2181d](https://codeforces.com/problemset/problem/2181/D)   | 区间重叠 |
 | 2100 | [GYM106124D](https://codeforces.com/gym/106124/problem/D)     | 排序   |
+| 2100 | [cf2230e](https://codeforces.com/contest/2230/problem/E)      | 分类讨论 |
 | 2500 | [cf1407e](https://codeforces.com/contest/1407/problem/E)      | 逆向   |
 | 2500 | [cf2197f](https://codeforces.com/contest/2197/problem/F)      | 括号   |
 | 2900 | [cf725e](https://codeforces.com/contest/725/problem/F)        | 博弈   |
-|      | [cf2230e](https://codeforces.com/contest/2230/problem/E)      | 分类讨论 |
 |      | [abc459_f](https://atcoder.jp/contests/abc459/tasks/abc459_f) | 递增   |
 
 ## 构造
@@ -69,15 +69,17 @@
 | 2100 | [cf2193g](https://codeforces.com/contest/2193/problem/G)       | 树上路径 |
 | 2400 | [cf1592e](https://codeforces.com/problemset/problem/1592/E)    | 异或   |
 | 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)      | 置换环  |
+| 2800 | [cf2226f](https://codeforces.com/contest/2226/problem/F)       | gcd  |
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
-|      | [cf2226f](https://codeforces.com/contest/2226/problem/F)       | gcd  |
 ## 数学
 #### 组合
 
-| 难度   | 题目                                                        | 关键词   |
-| :--- | :-------------------------------------------------------- | :---- |
-| 1800 | [GYM106049G](https://codeforces.com/gym/106049/problem/G) | 连续数之积 |
-| 2000 | [GYM106296F](https://codeforces.com/gym/106296/problem/F) | 独立选择  |
+| 难度   | 题目                                                            | 关键词   |
+| :--- | :------------------------------------------------------------ | :---- |
+| 1400 | [GYM106539D](https://codeforces.com/gym/106539/problem/D)     | 转化    |
+| 1800 | [GYM106049G](https://codeforces.com/gym/106049/problem/G)     | 连续数之积 |
+| 1931 | [abc431_f](https://atcoder.jp/contests/abc431/tasks/abc431_f) | 排列枚举  |
+| 2000 | [GYM106296F](https://codeforces.com/gym/106296/problem/F)     | 独立选择  |
 
 #### 数论
 
@@ -103,7 +105,8 @@
 | :--- | :-------------------------------------------------------- | :-- |
 | 1500 | [GYM105813J](https://codeforces.com/gym/105813/problem/J) | 均值  |
 | 1700 | [GYM104020C](https://codeforces.com/gym/104020/problem/C) | 次数  |
-|      | [cf2200g](https://codeforces.com/contest/2200/problem/G)  | 加权  |
+| 2200 | [cf2200g](https://codeforces.com/contest/2200/problem/G)  | 加权  |
+| 2300 | [GYM106523M](https://codeforces.com/gym/106523/problem/M) | 函数  |
 
 
 #### 几何
@@ -138,13 +141,14 @@
 ## 数据结构
 
 
-| 难度   | 题目                                                         | 关键词      |
-| :--- | :--------------------------------------------------------- | :------- |
-| 1800 | [GYM105813D](https://codeforces.com/gym/105813/problem/D)  | 按位计算     |
-| 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O)  | 区间加、等差数列 |
-| 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)  | 区间不同元素   |
-| 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2) | 区间乘      |
-|      | [cf2226e](https://codeforces.com/contest/2226/problem/E)   | 分配       |
+| 难度   | 题目                                                            | 关键词      |
+| :--- | :------------------------------------------------------------ | :------- |
+| 1800 | [GYM105813D](https://codeforces.com/gym/105813/problem/D)     | 按位计算     |
+| 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O)     | 区间加、等差数列 |
+| 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)     | 区间不同元素   |
+| 2300 | [cf2226e](https://codeforces.com/contest/2226/problem/E)      | 分配       |
+| 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2)    | 区间乘      |
+
 
 ## 并查集
 
@@ -153,15 +157,17 @@
 | 1700 | [GYM103575B](https://codeforces.com/gym/103575/problem/B) | 生成树  |
 | 2400 | [cf593d](https://codeforces.com/contest/593/problem/D)    | 树上路径 |
 | 2400 | [cf990g](https://codeforces.com/contest/990/problem/G)    | 容斥   |
-|      | [cf2205f](https://codeforces.com/contest/2205/problem/F)  | 网格   |
+| 2400 | [cf2205f](https://codeforces.com/contest/2205/problem/F)  | 网格   |
 
 ## 树
 
-| 难度   | 题目                                                        | 关键词 |
-| :--- | :-------------------------------------------------------- | :-- |
-| 2000 | [GYM104158K](https://codeforces.com/gym/104158/problem/K) | lca |
-| 2300 | [cf2188e](https://codeforces.com/contest/2188/problem/E)  | lca |
-|      | [cf2203f](https://codeforces.com/contest/2203/problem/F)  | 二分  |
+| 难度   | 题目                                                            | 关键词  |
+| :--- | :------------------------------------------------------------ | :--- |
+| 2000 | [GYM104158K](https://codeforces.com/gym/104158/problem/K)     | lca  |
+| 2300 | [cf2188e](https://codeforces.com/contest/2188/problem/E)      | lca  |
+| 2600 | [cf2203f](https://codeforces.com/contest/2203/problem/F)      | 二分   |
+|      | [abc460_f](https://atcoder.jp/contests/abc460/tasks/abc460_f) | 树的直径 |
+|      | [abc460_g](https://atcoder.jp/contests/abc460/tasks/abc460_g) | 树链剖分 |
 ## 图论
 
 
@@ -169,6 +175,7 @@
 | :--- | :---------------------------------------------------------- | :-- |
 | 1600 | [GYM105327B](https://codeforces.com/gym/105327/problem/B)   | 生成树 |
 | 1700 | [GYM104847E](https://codeforces.com/gym/104847/problem/E)   | 升序边 |
+| 1700 | [GYM105059C](https://codeforces.com/gym/105059/problem/C)   | 二分图 |
 | 1800 | [cf2176d](https://codeforces.com/problemset/problem/2176/D) | 升序边 |
 | 2100 | [cf2192e](https://codeforces.com/contest/2192/problem/E)    | 欧拉图 |
 
@@ -194,7 +201,7 @@
 ## 复杂度分析
 
 
-| 难度  | 题目                                                       | 关键词   |
-| :-- | :------------------------------------------------------- | :---- |
-|     | [cf2231e](https://codeforces.com/contest/2231/problem/E) | 树上路径数 |
+| 难度   | 题目                                                       | 关键词   |
+| :--- | :------------------------------------------------------- | :---- |
+| 2300 | [cf2231e](https://codeforces.com/contest/2231/problem/E) | 树上路径数 |
 
