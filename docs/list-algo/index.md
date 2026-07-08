@@ -27,15 +27,19 @@
 | 难度   | 题目                                                            | 关键词  |
 | :--- | :------------------------------------------------------------ | :--- |
 | 1600 | [GYM105805D](https://codeforces.com/gym/105805/problem/D)     | 逆序对  |
+| 1700 | [cf2229d](https://codeforces.com/contest/2229/problem/D)      | 删除   |
 | 1800 | [GYM102890M](https://codeforces.com/gym/102890/problem/M)     | 按位   |
 | 1900 | [cf2180d](https://codeforces.com/problemset/problem/2180/D)   | 间距   |
 | 2000 | [cf2181d](https://codeforces.com/problemset/problem/2181/D)   | 区间重叠 |
 | 2100 | [GYM106124D](https://codeforces.com/gym/106124/problem/D)     | 排序   |
 | 2100 | [cf2230e](https://codeforces.com/contest/2230/problem/E)      | 分类讨论 |
+| 2400 | [cf2229f](https://codeforces.com/contest/2229/problem/F)      | 最值   |
 | 2500 | [cf1407e](https://codeforces.com/contest/1407/problem/E)      | 逆向   |
 | 2500 | [cf2197f](https://codeforces.com/contest/2197/problem/F)      | 括号   |
 | 2900 | [cf725e](https://codeforces.com/contest/725/problem/F)        | 博弈   |
+| 2900 | [cf2229g](https://codeforces.com/contest/2229/problem/G)      | 数轴   |
 |      | [abc459_f](https://atcoder.jp/contests/abc459/tasks/abc459_f) | 递增   |
+|      | [cf2233c](https://codeforces.com/contest/2233/problem/C)      | 括号   |
 
 ## 构造
 
@@ -69,6 +73,7 @@
 | 2100 | [cf2193g](https://codeforces.com/contest/2193/problem/G)       | 树上路径 |
 | 2400 | [cf1592e](https://codeforces.com/problemset/problem/1592/E)    | 异或   |
 | 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)      | 置换环  |
+| 2600 | [cf2232e](https://codeforces.com/contest/2232/problem/E)       | 网格   |
 | 2800 | [cf2226f](https://codeforces.com/contest/2226/problem/F)       | gcd  |
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
 ## 数学
@@ -112,30 +117,32 @@
 #### 几何
 
 
-| 难度  | 题目  | 关键词 |
-| :-- | :-- | :-- |
-|     |     |     |
+| 难度  | 题目                                                     | 关键词      |
+| :-- | :----------------------------------------------------- | :------- |
+|     | [cf600d](https://codeforces.com/contest/600/problem/D) | 两圆相交、高精度 |
 
 
 ## dp
 
 
-| 难度   | 题目                                                          | 关键词    |
-| :--- | :---------------------------------------------------------- | :----- |
-| 1500 | [cf2163c](https://codeforces.com/problemset/problem/2163/C) | 区间     |
-| 1700 | [GYM104287K](https://codeforces.com/gym/104287/problem/K)   | 组合 dp  |
-| 1900 | [GYM105948H](https://codeforces.com/gym/105948/problem/H)   | 背包dp撤销 |
-| 1900 | [cf2173d](https://codeforces.com/problemset/problem/2173/D) | 最优状态   |
-| 1900 | [cf2049d](https://codeforces.com/problemset/problem/2049/D) | 网格dp   |
-| 2000 | [GYM104523D](https://codeforces.com/gym/104523/problem/D)   | 区间dp   |
-| 2000 | [GYM105633K](https://codeforces.com/gym/105633/problem/K)   | sosdp  |
-| 2000 | [GYM105364F](https://codeforces.com/gym/105364/problem/F)   | 最优状态   |
-| 2000 | [cf1646d](https://codeforces.com/problemset/problem/1646/D) | 树形     |
-| 2000 | [cf2202e](https://codeforces.com/contest/2202/problem/E)    | 子序列    |
-| 2400 | [cf2171h](https://codeforces.com/contest/2171/problem/H)    | 懒更新    |
-| 2400 | [cf1715e](https://codeforces.com/contest/1715/problem/E)    | 斜率优化   |
-| 2500 | [cf845f](https://codeforces.com/problemset/problem/845/F)   | 轮廓线    |
-| 2600 | [cf1793e](https://codeforces.com/problemset/problem/1793/E) | 划分     |
+| 难度   | 题目                                                            | 关键词    |
+| :--- | :------------------------------------------------------------ | :----- |
+| 1500 | [cf2163c](https://codeforces.com/problemset/problem/2163/C)   | 区间     |
+| 1700 | [GYM104287K](https://codeforces.com/gym/104287/problem/K)     | 组合 dp  |
+| 1900 | [GYM105948H](https://codeforces.com/gym/105948/problem/H)     | 背包dp撤销 |
+| 1900 | [cf2173d](https://codeforces.com/problemset/problem/2173/D)   | 最优状态   |
+| 1900 | [cf2049d](https://codeforces.com/problemset/problem/2049/D)   | 网格dp   |
+| 2000 | [GYM104523D](https://codeforces.com/gym/104523/problem/D)     | 区间dp   |
+| 2000 | [GYM105633K](https://codeforces.com/gym/105633/problem/K)     | sosdp  |
+| 2000 | [GYM105364F](https://codeforces.com/gym/105364/problem/F)     | 最优状态   |
+| 2000 | [cf1646d](https://codeforces.com/problemset/problem/1646/D)   | 树形     |
+| 2000 | [cf2202e](https://codeforces.com/contest/2202/problem/E)      | 子序列    |
+| 2400 | [cf2171h](https://codeforces.com/contest/2171/problem/H)      | 懒更新    |
+| 2400 | [cf1715e](https://codeforces.com/contest/1715/problem/E)      | 斜率优化   |
+| 2500 | [cf845f](https://codeforces.com/problemset/problem/845/F)     | 轮廓线    |
+| 2600 | [cf1793e](https://codeforces.com/problemset/problem/1793/E)   | 划分     |
+|      | [cf2236f2](https://codeforces.com/contest/2236/problem/F2)    | 恰好型    |
+|      | [abc462_f](https://atcoder.jp/contests/abc462/tasks/abc462_f) | 状态设计   |
 
 
 ## 数据结构
@@ -192,6 +199,7 @@
 | 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C)     | 逆向    |
 |      | [abc458_g](https://atcoder.jp/contests/abc458/tasks/abc458_g) | slope |
 
+
 ## 定理
 
 | 难度  | 题目                                                            | 关键词      |
@@ -201,7 +209,8 @@
 ## 复杂度分析
 
 
-| 难度   | 题目                                                       | 关键词   |
-| :--- | :------------------------------------------------------- | :---- |
-| 2300 | [cf2231e](https://codeforces.com/contest/2231/problem/E) | 树上路径数 |
+| 难度   | 题目                                                       | 关键词       |
+| :--- | :------------------------------------------------------- | :-------- |
+| 2300 | [cf2231e](https://codeforces.com/contest/2231/problem/E) | 树上路径数     |
+|      | [cf2234e](https://codeforces.com/contest/2234/problem/E) | 从外到内找分割点  |
 
