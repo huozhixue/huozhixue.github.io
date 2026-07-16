@@ -112,7 +112,7 @@ class Seg:
             self.apply(o*2+1,self.f[o])
             self.f[o] = self.f[0]
 
-    def modify(self,a,b,x):
+    def upd(self,a,b,x):
         a,b = a+self.N-1,b+self.N+1  
         for i in range(self.L,0,-1):  
             self.push(a>>i)  
@@ -143,10 +143,10 @@ class Solution:
         mp = defaultdict(lambda:-1)
         res = 0
         for i,x in enumerate(nums):
-            seg.modify(mp[x]+1,i,1 if x&1 else -1)
+            seg.upd(mp[x]+1,i,1 if x&1 else -1)
             j = seg.find_first()
             res = max(res,i-j+1)
             mp[x] = i
         return res
 ```
-8880 ms
+8915 ms

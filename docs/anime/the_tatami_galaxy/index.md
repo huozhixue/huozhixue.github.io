@@ -52,10 +52,10 @@
 
 ## 系列
 
-|     |   系列名   |   首播时间  | 话数/时长  | 观看地址 |
-|:---  |:------    |:----      |:---       |:---  |
-| 1 |[四叠半神话大系](https://bgm.tv/subject/4019)| 2010-04-22 | 11 | [bilibili](https://www.bilibili.com/video/BV1ds411B7fR)  |
-
+|     | 系列名                                        | 首播时间       | 话数/时长 | 观看地址                                                      |
+| :-- | :----------------------------------------- | :--------- | :---- | :-------------------------------------------------------- |
+| 1   | [四叠半神话大系](https://bgm.tv/subject/4019)     | 2010-04-22 | 11    | [bilibili](https://www.bilibili.com/video/BV1ds411B7fR)   |
+| 2   | [四叠半时光机布鲁斯](https://bgm.tv/subject/345980) | 2022-09-14 | 6     | [bilibili](https://www.bilibili.com/bangumi/play/ss43166) |
 
 ## MAD
 

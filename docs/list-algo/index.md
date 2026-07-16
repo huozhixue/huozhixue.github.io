@@ -76,6 +76,7 @@
 | 2600 | [cf2232e](https://codeforces.com/contest/2232/problem/E)       | 网格   |
 | 2800 | [cf2226f](https://codeforces.com/contest/2226/problem/F)       | gcd  |
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
+|      | [cf2246f](https://codeforces.com/contest/2246/problem/F)       | 排列   |
 ## 数学
 #### 组合
 
@@ -112,6 +113,7 @@
 | 1700 | [GYM104020C](https://codeforces.com/gym/104020/problem/C) | 次数  |
 | 2200 | [cf2200g](https://codeforces.com/contest/2200/problem/G)  | 加权  |
 | 2300 | [GYM106523M](https://codeforces.com/gym/106523/problem/M) | 函数  |
+|      | [ac137448f](https://ac.nowcoder.com/acm/contest/137448/F) | 尾和  |
 
 
 #### 几何
@@ -155,6 +157,7 @@
 | 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)     | 区间不同元素   |
 | 2300 | [cf2226e](https://codeforces.com/contest/2226/problem/E)      | 分配       |
 | 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2)    | 区间乘      |
+|      | [abc441_g](https://atcoder.jp/contests/abc441/tasks/abc441_g) | 区间加、区间翻转 |
 
 
 ## 并查集
