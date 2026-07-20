@@ -77,6 +77,7 @@
 | 2800 | [cf2226f](https://codeforces.com/contest/2226/problem/F)       | gcd  |
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
 |      | [cf2246f](https://codeforces.com/contest/2246/problem/F)       | 排列   |
+|      | [cf2247e](https://codeforces.com/contest/2247/problem/E)       | 树上路径 |
 ## 数学
 #### 组合
 
