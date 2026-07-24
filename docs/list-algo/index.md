@@ -70,7 +70,9 @@
 | 2000 | [cf1951d](https://codeforces.com/problemset/problem/1951/D)    | 取模   |
 | 2000 | [cf1991d](https://codeforces.com/problemset/problem/1991/D)    | 二分图  |
 | 2000 | [GYM105813M](https://codeforces.com/gym/105813/problem/M)      | mex  |
+| 2000 | [cf2237e](https://codeforces.com/contest/2237/problem/E)       | 置换环  |
 | 2100 | [cf2193g](https://codeforces.com/contest/2193/problem/G)       | 树上路径 |
+| 2200 | [cf2240e](https://codeforces.com/contest/2240/problem/E)       | 逆序对  |
 | 2400 | [cf1592e](https://codeforces.com/problemset/problem/1592/E)    | 异或   |
 | 2400 | [GYM105047E](https://codeforces.com/gym/105047/problem/E)      | 置换环  |
 | 2600 | [cf2232e](https://codeforces.com/contest/2232/problem/E)       | 网格   |
@@ -78,6 +80,9 @@
 |      | [abc443_f](https://atcoder.jp/contests/abc443/tasks/abc443_f)  | 状态设计 |
 |      | [cf2246f](https://codeforces.com/contest/2246/problem/F)       | 排列   |
 |      | [cf2247e](https://codeforces.com/contest/2247/problem/E)       | 树上路径 |
+|      | [cf2245e](https://codeforces.com/contest/2245/problem/E)       | 树上路径 |
+|      | [cf2245d2](https://codeforces.com/contest/2245/problem/D2)     | 拓扑序  |
+|      | [ac137561g](https://ac.nowcoder.com/acm/contest/137561/G)      | 网格   |
 ## 数学
 #### 组合
 
@@ -189,6 +194,7 @@
 | 1700 | [GYM105059C](https://codeforces.com/gym/105059/problem/C)   | 二分图 |
 | 1800 | [cf2176d](https://codeforces.com/problemset/problem/2176/D) | 升序边 |
 | 2100 | [cf2192e](https://codeforces.com/contest/2192/problem/E)    | 欧拉图 |
+
 
 
 ## trick
