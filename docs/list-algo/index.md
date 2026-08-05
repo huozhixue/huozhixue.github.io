@@ -83,6 +83,7 @@
 |      | [cf2245e](https://codeforces.com/contest/2245/problem/E)       | 树上路径 |
 |      | [cf2245d2](https://codeforces.com/contest/2245/problem/D2)     | 拓扑序  |
 |      | [ac137561g](https://ac.nowcoder.com/acm/contest/137561/G)      | 网格   |
+|      | [cf2250d](https://codeforces.com/contest/2250/problem/D)       | 排列   |
 ## 数学
 #### 组合
 
@@ -162,8 +163,12 @@
 | 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O)     | 区间加、等差数列 |
 | 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)     | 区间不同元素   |
 | 2300 | [cf2226e](https://codeforces.com/contest/2226/problem/E)      | 分配       |
+| 2400 | [cf115e](https://codeforces.com/contest/115/problem/E)        | 偏移       |
+| 2400 | [cf1114f](https://codeforces.com/contest/1114/problem/F)      | 区间或      |
+| 2400 | [cf446c](https://codeforces.com/contest/446/problem/C)        | 区间加斐波拉契  |
 | 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2)    | 区间乘      |
 |      | [abc441_g](https://atcoder.jp/contests/abc441/tasks/abc441_g) | 区间加、区间翻转 |
+|      | [cf2250e](https://codeforces.com/contest/2250/problem/E)      | 循环数组     |
 
 
 ## 并查集
@@ -194,6 +199,7 @@
 | 1700 | [GYM105059C](https://codeforces.com/gym/105059/problem/C)   | 二分图 |
 | 1800 | [cf2176d](https://codeforces.com/problemset/problem/2176/D) | 升序边 |
 | 2100 | [cf2192e](https://codeforces.com/contest/2192/problem/E)    | 欧拉图 |
+| 2300 | [cf786b](https://codeforces.com/contest/786/problem/B)      | 建图  |
 
 
 
