@@ -136,6 +136,8 @@
 | :-- | :------------------------------------------------------------ | :------- |
 |     | [cf600d](https://codeforces.com/contest/600/problem/D)        | 两圆相交、高精度 |
 |     | [abc472_f](https://atcoder.jp/contests/abc472/tasks/abc472_f) | 多边形重心    |
+|     | [abc478_g](https://atcoder.jp/contests/abc478/tasks/abc478_g) | 闵可夫斯基和   |
+|     | [abc479_g](https://atcoder.jp/contests/abc479/tasks/abc479_g) | 共线，加权中位数 |
 
 
 ## dp
@@ -155,6 +157,7 @@
 | 2000 | [cf2202e](https://codeforces.com/contest/2202/problem/E)      | 子序列    |
 | 2400 | [cf2171h](https://codeforces.com/contest/2171/problem/H)      | 懒更新    |
 | 2400 | [cf1715e](https://codeforces.com/contest/1715/problem/E)      | 斜率优化   |
+| 2400 | [cf2266h](https://codeforces.com/contest/2266/problem/H)      | 转化     |
 | 2500 | [cf845f](https://codeforces.com/problemset/problem/845/F)     | 轮廓线    |
 | 2600 | [cf1793e](https://codeforces.com/problemset/problem/1793/E)   | 划分     |
 |      | [cf2236f2](https://codeforces.com/contest/2236/problem/F2)    | 恰好型    |
@@ -198,7 +201,7 @@
 |      | [abc460_f](https://atcoder.jp/contests/abc460/tasks/abc460_f) | 树的直径 |
 |      | [abc460_g](https://atcoder.jp/contests/abc460/tasks/abc460_g) | 树链剖分 |
 |      | [cf2252f](https://codeforces.com/contest/2252/problem/F)      | 虚树   |
-|      |                                                               |      |
+|      | [ac141721e](https://ac.nowcoder.com/acm/contest/141721/E)     | 缩点   |
 ## 图论
 
 
@@ -240,4 +243,10 @@
 | :--- | :------------------------------------------------------- | :-------- |
 | 2300 | [cf2231e](https://codeforces.com/contest/2231/problem/E) | 树上路径数     |
 |      | [cf2234e](https://codeforces.com/contest/2234/problem/E) | 从外到内找分割点  |
+
+## 逆序数
+
+| 难度  | 题目                                                            | 关键词 |
+| :-- | :------------------------------------------------------------ | :-- |
+|     | [abc479_f](https://atcoder.jp/contests/abc479/tasks/abc479_f) | 转换  |
 
