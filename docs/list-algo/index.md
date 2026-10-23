@@ -162,6 +162,7 @@
 | 2600 | [cf1793e](https://codeforces.com/problemset/problem/1793/E)   | 划分     |
 |      | [cf2236f2](https://codeforces.com/contest/2236/problem/F2)    | 恰好型    |
 |      | [abc462_f](https://atcoder.jp/contests/abc462/tasks/abc462_f) | 状态设计   |
+|      | [abc480_g](https://atcoder.jp/contests/abc480/tasks/abc480_g) | dp+线段树 |
 
 
 ## 数据结构
