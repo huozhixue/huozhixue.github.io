@@ -54,6 +54,7 @@
 
 ## MAD
 
-{{< media "BV13s411m73d" "Ib恐怖美术馆 X Bad Apple【唯美推荐】" >}}
+{{< media "BV13s411m73d-BV1Mx411F7FE" 
+"Ib恐怖美术馆 X Bad Apple【唯美推荐】,【Ib手绘MAD】唯一的思念【真.完美结局】" >}}
 
 

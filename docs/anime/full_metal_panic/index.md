@@ -64,5 +64,5 @@
 "music" >}}
 ## MAD
 
-{{< media  "BV15x411F7ce" 
-"【全金属狂潮】好男人之歌【AMV】" >}}
+{{< media  "BV15x411F7ce-BV14x411c73k" 
+"【全金属狂潮】好男人之歌【AMV】,We Will Rock You!【修复不同步】" >}}

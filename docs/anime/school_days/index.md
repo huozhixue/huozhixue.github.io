@@ -63,6 +63,6 @@
 ## MAD
 
 
-{{< media "BV1yrXCBZEKB"
-"诚哥之死，但是插入的是AIZO" >}}
+{{< media "BV1yrXCBZEKB-BV11s411o7Zc"
+"诚哥之死，但是插入的是AIZO,【日在校园】choose me" >}}
 
