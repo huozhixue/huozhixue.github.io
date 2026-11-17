@@ -3,26 +3,14 @@
  coderforces、nowcoder、atcoder 等算法网站的题目清单
 
 
-## 二分
+## #1 基础算法
 
+#### 二分
 
 | 难度   | 题目                                                       | 关键词 |
 | :--- | :------------------------------------------------------- | :-- |
 | 2400 | [cf2185h](https://codeforces.com/contest/2185/problem/H) | 倍增  |
-
-## 位运算
-
-
-| 难度   | 题目                                                       | 关键词 |
-| :--- | :------------------------------------------------------- | :-- |
-| 2300 | [cf2217f](https://codeforces.com/contest/2217/problem/F) | 异或  |
-
-## 字符串
-
-| 难度   | 题目                                                        | 关键词 |
-| :--- | :-------------------------------------------------------- | :-- |
-| 1700 | [GYM105018A](https://codeforces.com/gym/105018/problem/A) | 匹配  |
-## 贪心
+#### 贪心
 
 | 难度   | 题目                                                            | 关键词  |
 | :--- | :------------------------------------------------------------ | :--- |
@@ -41,7 +29,7 @@
 |      | [abc459_f](https://atcoder.jp/contests/abc459/tasks/abc459_f) | 递增   |
 |      | [cf2233c](https://codeforces.com/contest/2233/problem/C)      | 括号   |
 
-## 构造
+#### 构造
 
 | 难度   | 题目                                                             | 关键词  |
 | :--- | :------------------------------------------------------------- | :--- |
@@ -84,63 +72,17 @@
 |      | [cf2245d2](https://codeforces.com/contest/2245/problem/D2)     | 拓扑序  |
 |      | [ac137561g](https://ac.nowcoder.com/acm/contest/137561/G)      | 网格   |
 |      | [cf2250d](https://codeforces.com/contest/2250/problem/D)       | 排列   |
-## 数学
+|      | [ac143199f](https://ac.nowcoder.com/acm/contest/143199/F)      | 排列   |
 
-#### 快速变换
-
-| 难度  | 题目                                                            | 关键词 |
-| :-- | :------------------------------------------------------------ | :-- |
-|     | [abc471_g](https://atcoder.jp/contests/abc471/tasks/abc471_g) | ntt |
-#### 组合
-
-| 难度   | 题目                                                            | 关键词   |
-| :--- | :------------------------------------------------------------ | :---- |
-| 1400 | [GYM106539D](https://codeforces.com/gym/106539/problem/D)     | 转化    |
-| 1800 | [GYM106049G](https://codeforces.com/gym/106049/problem/G)     | 连续数之积 |
-| 1931 | [abc431_f](https://atcoder.jp/contests/abc431/tasks/abc431_f) | 排列枚举  |
-| 2000 | [GYM106296F](https://codeforces.com/gym/106296/problem/F)     | 独立选择  |
-
-#### 数论
-
-| 难度   | 题目                                                        | 关键词  |
-| :--- | :-------------------------------------------------------- | :--- |
-| 1700 | [GYM103347J](https://codeforces.com/gym/103347/problem/J) | 模    |
-| 1800 | [GYM105930E](https://codeforces.com/gym/105930/problem/E) | 调和级数 |
-| 1800 | [GYM106430H](https://codeforces.com/gym/106430/problem/H) | 欧拉函数 |
-
-#### 博弈
+#### 差分
 
 
-| 难度   | 题目                                                          | 关键词  |
-| :--- | :---------------------------------------------------------- | :--- |
-| 1300 | [GYM106407A](https://codeforces.com/gym/106407/problem/A)   | 对称   |
-| 1600 | [GYM105390C2](https://codeforces.com/gym/105390/problem/C2) | 奇偶性  |
-| 1800 | [GYM105813I](https://codeforces.com/gym/105813/problem/I)   | 必胜策略 |
+| 难度  | 题目                                                          | 关键词   |
+| :-- | :---------------------------------------------------------- | :---- |
+|     | [cf2276e](https://codeforces.com/problemset/problem/2276/E) | 区间加等差 |
+## #2 搜索
 
-#### 期望
-
-
-| 难度   | 题目                                                        | 关键词 |
-| :--- | :-------------------------------------------------------- | :-- |
-| 1500 | [GYM105813J](https://codeforces.com/gym/105813/problem/J) | 均值  |
-| 1700 | [GYM104020C](https://codeforces.com/gym/104020/problem/C) | 次数  |
-| 2200 | [cf2200g](https://codeforces.com/contest/2200/problem/G)  | 加权  |
-| 2300 | [GYM106523M](https://codeforces.com/gym/106523/problem/M) | 函数  |
-|      | [ac137448f](https://ac.nowcoder.com/acm/contest/137448/F) | 尾和  |
-
-
-#### 几何
-
-
-| 难度  | 题目                                                            | 关键词      |
-| :-- | :------------------------------------------------------------ | :------- |
-|     | [cf600d](https://codeforces.com/contest/600/problem/D)        | 两圆相交、高精度 |
-|     | [abc472_f](https://atcoder.jp/contests/abc472/tasks/abc472_f) | 多边形重心    |
-|     | [abc478_g](https://atcoder.jp/contests/abc478/tasks/abc478_g) | 闵可夫斯基和   |
-|     | [abc479_g](https://atcoder.jp/contests/abc479/tasks/abc479_g) | 共线，加权中位数 |
-
-
-## dp
+## #3 dp
 
 
 | 难度   | 题目                                                            | 关键词    |
@@ -163,27 +105,80 @@
 |      | [cf2236f2](https://codeforces.com/contest/2236/problem/F2)    | 恰好型    |
 |      | [abc462_f](https://atcoder.jp/contests/abc462/tasks/abc462_f) | 状态设计   |
 |      | [abc480_g](https://atcoder.jp/contests/abc480/tasks/abc480_g) | dp+线段树 |
+|      | [abc484_g](https://atcoder.jp/contests/abc484/tasks/abc484_g) | 自动机dp  |
 
 
-## 数据结构
+## #4 字符串
+
+| 难度   | 题目                                                        | 关键词 |
+| :--- | :-------------------------------------------------------- | :-- |
+| 1700 | [GYM105018A](https://codeforces.com/gym/105018/problem/A) | 匹配  |
+| 2000 | [cf1200e](https://codeforces.com/contest/1200/problem/E)  | 匹配  |
 
 
-| 难度   | 题目                                                            | 关键词       |
-| :--- | :------------------------------------------------------------ | :-------- |
-| 1800 | [GYM105813D](https://codeforces.com/gym/105813/problem/D)     | 按位计算      |
-| 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O)     | 区间加、等差数列  |
-| 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)     | 区间不同元素    |
-| 2300 | [cf2226e](https://codeforces.com/contest/2226/problem/E)      | 分配        |
-| 2400 | [cf115e](https://codeforces.com/contest/115/problem/E)        | 偏移        |
-| 2400 | [cf1114f](https://codeforces.com/contest/1114/problem/F)      | 区间或       |
-| 2400 | [cf446c](https://codeforces.com/contest/446/problem/C)        | 区间加斐波拉契   |
-| 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2)    | 区间乘       |
-|      | [abc441_g](https://atcoder.jp/contests/abc441/tasks/abc441_g) | 区间加、区间翻转  |
-|      | [cf2250e](https://codeforces.com/contest/2250/problem/E)      | 循环数组      |
-|      | [abc470_g](https://atcoder.jp/contests/abc470/tasks/abc470_g) | 区间min，区间加 |
+## #5 数学
+
+#### 位运算
+
+| 难度   | 题目                                                       | 关键词 |
+| :--- | :------------------------------------------------------- | :-- |
+| 2300 | [cf2217f](https://codeforces.com/contest/2217/problem/F) | 异或  |
+#### 博弈
+
+| 难度   | 题目                                                          | 关键词  |
+| :--- | :---------------------------------------------------------- | :--- |
+| 1300 | [GYM106407A](https://codeforces.com/gym/106407/problem/A)   | 对称   |
+| 1600 | [GYM105390C2](https://codeforces.com/gym/105390/problem/C2) | 奇偶性  |
+| 1800 | [GYM105813I](https://codeforces.com/gym/105813/problem/I)   | 必胜策略 |
+#### 数论
+
+| 难度   | 题目                                                        | 关键词  |
+| :--- | :-------------------------------------------------------- | :--- |
+| 1700 | [GYM103347J](https://codeforces.com/gym/103347/problem/J) | 模    |
+| 1800 | [GYM105930E](https://codeforces.com/gym/105930/problem/E) | 调和级数 |
+| 1800 | [GYM106430H](https://codeforces.com/gym/106430/problem/H) | 欧拉函数 |
+#### 期望
+
+| 难度   | 题目                                                            | 关键词  |
+| :--- | :------------------------------------------------------------ | :--- |
+| 1500 | [GYM105813J](https://codeforces.com/gym/105813/problem/J)     | 均值   |
+| 1700 | [GYM104020C](https://codeforces.com/gym/104020/problem/C)     | 次数   |
+| 2000 | [cf235b](https://codeforces.com/problemset/problem/235/B)     | 转换   |
+| 2200 | [cf2200g](https://codeforces.com/contest/2200/problem/G)      | 加权   |
+| 2300 | [GYM106523M](https://codeforces.com/gym/106523/problem/M)     | 函数   |
+|      | [ac137448f](https://ac.nowcoder.com/acm/contest/137448/F)     | 尾和   |
+|      | [abc483_g](https://atcoder.jp/contests/abc483/tasks/abc483_g) | 排列组合 |
+#### 组合
+
+| 难度   | 题目                                                            | 关键词   |
+| :--- | :------------------------------------------------------------ | :---- |
+| 1400 | [GYM106539D](https://codeforces.com/gym/106539/problem/D)     | 转化    |
+| 1800 | [GYM106049G](https://codeforces.com/gym/106049/problem/G)     | 连续数之积 |
+| 1931 | [abc431_f](https://atcoder.jp/contests/abc431/tasks/abc431_f) | 排列枚举  |
+| 2000 | [GYM106296F](https://codeforces.com/gym/106296/problem/F)     | 独立选择  |
+
+#### 多项式
+
+| 难度  | 题目                                                            | 关键词 |
+| :-- | :------------------------------------------------------------ | :-- |
+|     | [abc471_g](https://atcoder.jp/contests/abc471/tasks/abc471_g) | ntt |
+
+#### 几何
 
 
-## 并查集
+| 难度  | 题目                                                            | 关键词      |
+| :-- | :------------------------------------------------------------ | :------- |
+|     | [cf600d](https://codeforces.com/contest/600/problem/D)        | 两圆相交、高精度 |
+|     | [abc472_f](https://atcoder.jp/contests/abc472/tasks/abc472_f) | 多边形重心    |
+|     | [abc478_g](https://atcoder.jp/contests/abc478/tasks/abc478_g) | 闵可夫斯基和   |
+|     | [abc479_g](https://atcoder.jp/contests/abc479/tasks/abc479_g) | 共线，加权中位数 |
+
+
+
+
+## #6 数据结构
+
+#### 并查集
 
 | 难度   | 题目                                                        | 关键词  |
 | :--- | :-------------------------------------------------------- | :--- |
@@ -191,34 +186,52 @@
 | 2400 | [cf593d](https://codeforces.com/contest/593/problem/D)    | 树上路径 |
 | 2400 | [cf990g](https://codeforces.com/contest/990/problem/G)    | 容斥   |
 | 2400 | [cf2205f](https://codeforces.com/contest/2205/problem/F)  | 网格   |
+#### 区间信息
 
-## 树
+| 难度   | 题目                                                            | 关键词        |
+| :--- | :------------------------------------------------------------ | :--------- |
+| 1800 | [GYM105813D](https://codeforces.com/gym/105813/problem/D)     | 按位计算       |
+| 2100 | [GYM104287O](https://codeforces.com/gym/104287/problem/O)     | 区间加、等差数列   |
+| 2100 | [GYM106290H](https://codeforces.com/gym/106290/problem/H)     | 区间不同元素     |
+| 2300 | [cf2226e](https://codeforces.com/contest/2226/problem/E)      | 分配         |
+| 2400 | [cf115e](https://codeforces.com/contest/115/problem/E)        | 偏移         |
+| 2400 | [cf1114f](https://codeforces.com/contest/1114/problem/F)      | 区间或        |
+| 2400 | [cf446c](https://codeforces.com/contest/446/problem/C)        | 区间加斐波拉契    |
+| 2500 | [cf2144e2](https://codeforces.com/contest/2144/problem/E2)    | 区间乘        |
+| 2700 | [cf2009g3](https://codeforces.com/contest/2009/problem/G3)    | 区间的子数组最小值和 |
+|      | [abc441_g](https://atcoder.jp/contests/abc441/tasks/abc441_g) | 区间加、区间翻转   |
+|      | [cf2250e](https://codeforces.com/contest/2250/problem/E)      | 循环数组       |
+|      | [abc470_g](https://atcoder.jp/contests/abc470/tasks/abc470_g) | 区间min，区间加  |
+
+## #7 图论
+#### 树上问题
+
+| 难度   | 题目                                                            | 关键词   |
+| :--- | :------------------------------------------------------------ | :---- |
+| 2000 | [GYM104158K](https://codeforces.com/gym/104158/problem/K)     | lca   |
+| 2300 | [cf2188e](https://codeforces.com/contest/2188/problem/E)      | lca   |
+| 2300 | [cf2231e](https://codeforces.com/contest/2231/problem/E)      | 树上路径数 |
+| 2600 | [cf2203f](https://codeforces.com/contest/2203/problem/F)      | 二分    |
+|      | [abc460_f](https://atcoder.jp/contests/abc460/tasks/abc460_f) | 树的直径  |
+|      | [abc460_g](https://atcoder.jp/contests/abc460/tasks/abc460_g) | 树链剖分  |
+|      | [cf2252f](https://codeforces.com/contest/2252/problem/F)      | 虚树    |
+|      | [ac141721e](https://ac.nowcoder.com/acm/contest/141721/E)     | 缩点    |
 
 | 难度   | 题目                                                            | 关键词  |
 | :--- | :------------------------------------------------------------ | :--- |
-| 2000 | [GYM104158K](https://codeforces.com/gym/104158/problem/K)     | lca  |
-| 2300 | [cf2188e](https://codeforces.com/contest/2188/problem/E)      | lca  |
-| 2600 | [cf2203f](https://codeforces.com/contest/2203/problem/F)      | 二分   |
-|      | [abc460_f](https://atcoder.jp/contests/abc460/tasks/abc460_f) | 树的直径 |
-|      | [abc460_g](https://atcoder.jp/contests/abc460/tasks/abc460_g) | 树链剖分 |
-|      | [cf2252f](https://codeforces.com/contest/2252/problem/F)      | 虚树   |
-|      | [ac141721e](https://ac.nowcoder.com/acm/contest/141721/E)     | 缩点   |
-## 图论
+| 1400 | [cf2276d](https://codeforces.com/problemset/problem/2276/D)   | 图的结构 |
+| 1600 | [GYM105327B](https://codeforces.com/gym/105327/problem/B)     | 生成树  |
+| 1700 | [GYM104847E](https://codeforces.com/gym/104847/problem/E)     | 升序边  |
+| 1700 | [GYM105059C](https://codeforces.com/gym/105059/problem/C)     | 二分图  |
+| 1800 | [cf2176d](https://codeforces.com/problemset/problem/2176/D)   | 升序边  |
+| 2100 | [cf2192e](https://codeforces.com/contest/2192/problem/E)      | 欧拉图  |
+| 2300 | [cf786b](https://codeforces.com/contest/786/problem/B)        | 建图   |
+|      | [abc472_g](https://atcoder.jp/contests/abc472/tasks/abc472_g) | 网络流  |
 
 
-| 难度   | 题目                                                            | 关键词 |
-| :--- | :------------------------------------------------------------ | :-- |
-| 1600 | [GYM105327B](https://codeforces.com/gym/105327/problem/B)     | 生成树 |
-| 1700 | [GYM104847E](https://codeforces.com/gym/104847/problem/E)     | 升序边 |
-| 1700 | [GYM105059C](https://codeforces.com/gym/105059/problem/C)     | 二分图 |
-| 1800 | [cf2176d](https://codeforces.com/problemset/problem/2176/D)   | 升序边 |
-| 2100 | [cf2192e](https://codeforces.com/contest/2192/problem/E)      | 欧拉图 |
-| 2300 | [cf786b](https://codeforces.com/contest/786/problem/B)        | 建图  |
-|      | [abc472_g](https://atcoder.jp/contests/abc472/tasks/abc472_g) | 网络流 |
+## #8 杂项
 
-
-
-## trick
+#### trick
 
 | 难度   | 题目                                                            | 关键词   |
 | :--- | :------------------------------------------------------------ | :---- |
@@ -230,24 +243,10 @@
 | 2400 | [GYM102154C](https://codeforces.com/gym/102154/problem/C)     | 逆向    |
 |      | [abc458_g](https://atcoder.jp/contests/abc458/tasks/abc458_g) | slope |
 
-
-## 定理
-
-| 难度  | 题目                                                            | 关键词      |
-| :-- | :------------------------------------------------------------ | :------- |
-|     | [abc457_g](https://atcoder.jp/contests/abc457/tasks/abc457_g) | Dilworth |
-
-## 复杂度分析
-
-
-| 难度   | 题目                                                       | 关键词       |
-| :--- | :------------------------------------------------------- | :-------- |
-| 2300 | [cf2231e](https://codeforces.com/contest/2231/problem/E) | 树上路径数     |
-|      | [cf2234e](https://codeforces.com/contest/2234/problem/E) | 从外到内找分割点  |
-
-## 逆序数
-
-| 难度  | 题目                                                            | 关键词 |
-| :-- | :------------------------------------------------------------ | :-- |
-|     | [abc479_f](https://atcoder.jp/contests/abc479/tasks/abc479_f) | 转换  |
+| 难度  | 题目                                                            | 关键词        |
+| :-- | :------------------------------------------------------------ | :--------- |
+|     | [abc479_f](https://atcoder.jp/contests/abc479/tasks/abc479_f) | 逆序数转换      |
+|     | [cf2285e](https://codeforces.com/contest/2285/problem/E)      | 等差数列       |
+|     | [abc457_g](https://atcoder.jp/contests/abc457/tasks/abc457_g) | Dilworth定理 |
+|     | [cf2234e](https://codeforces.com/contest/2234/problem/E)      | 从外到内找分割点   |
 

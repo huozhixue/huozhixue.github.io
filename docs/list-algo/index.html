@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/list-algo\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "清单","wordcount":  852 ,
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "清单","wordcount":  922 ,
         "url": "https:\/\/huozhixue.github.io\/list-algo\/","datePublished": "2025-06-21T17:49:40+00:00","dateModified": "2025-06-21T17:49:40+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">清单：算法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2025-06-21">2025-06-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 852 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2025-06-21">2025-06-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 922 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/list-algo/" class="leancloud_visitors" data-flag-title="清单：算法">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -121,38 +121,69 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#二分">二分</a></li>
-    <li><a href="#位运算">位运算</a></li>
-    <li><a href="#字符串">字符串</a></li>
-    <li><a href="#贪心">贪心</a></li>
-    <li><a href="#构造">构造</a></li>
-    <li><a href="#数学">数学</a>
+    <li><a href="#1-基础算法">#1 基础算法</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#快速变换">快速变换</a></li>
-            <li><a href="#组合">组合</a></li>
-            <li><a href="#数论">数论</a></li>
+            <li><a href="#二分">二分</a></li>
+            <li><a href="#贪心">贪心</a></li>
+            <li><a href="#构造">构造</a></li>
+            <li><a href="#差分">差分</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-搜索">#2 搜索</a></li>
+    <li><a href="#3-dp">#3 dp</a></li>
+    <li><a href="#4-字符串">#4 字符串</a></li>
+    <li><a href="#5-数学">#5 数学</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#位运算">位运算</a></li>
             <li><a href="#博弈">博弈</a></li>
+            <li><a href="#数论">数论</a></li>
             <li><a href="#期望">期望</a></li>
+            <li><a href="#组合">组合</a></li>
+            <li><a href="#多项式">多项式</a></li>
             <li><a href="#几何">几何</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#dp">dp</a></li>
-    <li><a href="#数据结构">数据结构</a></li>
-    <li><a href="#并查集">并查集</a></li>
-    <li><a href="#树">树</a></li>
-    <li><a href="#图论">图论</a></li>
-    <li><a href="#trick">trick</a></li>
-    <li><a href="#定理">定理</a></li>
-    <li><a href="#复杂度分析">复杂度分析</a></li>
-    <li><a href="#逆序数">逆序数</a></li>
+    <li><a href="#6-数据结构">#6 数据结构</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#并查集">并查集</a></li>
+            <li><a href="#区间信息">区间信息</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#7-图论">#7 图论</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#树上问题">树上问题</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#8-杂项">#8 杂项</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#trick">trick</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>coderforces、nowcoder、atcoder 等算法网站的题目清单</p>
-<h2 id="二分">二分</h2>
+<h2 id="1-基础算法">#1 基础算法</h2>
+<h4 id="二分">二分</h4>
 <table>
 <thead>
 <tr>
@@ -169,41 +200,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="位运算">位运算</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2300</td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/2217/problem/F" target="_blank" rel="noopener noreffer">cf2217f</a></td>
-<td style="text-align:left">异或</td>
-</tr>
-</tbody>
-</table>
-<h2 id="字符串">字符串</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1700</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/105018/problem/A" target="_blank" rel="noopener noreffer">GYM105018A</a></td>
-<td style="text-align:left">匹配</td>
-</tr>
-</tbody>
-</table>
-<h2 id="贪心">贪心</h2>
+<h4 id="贪心">贪心</h4>
 <table>
 <thead>
 <tr>
@@ -285,7 +282,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="构造">构造</h2>
+<h4 id="构造">构造</h4>
 <table>
 <thead>
 <tr>
@@ -490,10 +487,14 @@
 <td style="text-align:left"><a href="https://codeforces.com/contest/2250/problem/D" target="_blank" rel="noopener noreffer">cf2250d</a></td>
 <td style="text-align:left">排列</td>
 </tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://ac.nowcoder.com/acm/contest/143199/F" target="_blank" rel="noopener noreffer">ac143199f</a></td>
+<td style="text-align:left">排列</td>
+</tr>
 </tbody>
 </table>
-<h2 id="数学">数学</h2>
-<h4 id="快速变换">快速变换</h4>
+<h4 id="差分">差分</h4>
 <table>
 <thead>
 <tr>
@@ -505,167 +506,13 @@
 <tbody>
 <tr>
 <td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://atcoder.jp/contests/abc471/tasks/abc471_g" target="_blank" rel="noopener noreffer">abc471_g</a></td>
-<td style="text-align:left">ntt</td>
+<td style="text-align:left"><a href="https://codeforces.com/problemset/problem/2276/E" target="_blank" rel="noopener noreffer">cf2276e</a></td>
+<td style="text-align:left">区间加等差</td>
 </tr>
 </tbody>
 </table>
-<h4 id="组合">组合</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1400</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/106539/problem/D" target="_blank" rel="noopener noreffer">GYM106539D</a></td>
-<td style="text-align:left">转化</td>
-</tr>
-<tr>
-<td style="text-align:left">1800</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/106049/problem/G" target="_blank" rel="noopener noreffer">GYM106049G</a></td>
-<td style="text-align:left">连续数之积</td>
-</tr>
-<tr>
-<td style="text-align:left">1931</td>
-<td style="text-align:left"><a href="https://atcoder.jp/contests/abc431/tasks/abc431_f" target="_blank" rel="noopener noreffer">abc431_f</a></td>
-<td style="text-align:left">排列枚举</td>
-</tr>
-<tr>
-<td style="text-align:left">2000</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/106296/problem/F" target="_blank" rel="noopener noreffer">GYM106296F</a></td>
-<td style="text-align:left">独立选择</td>
-</tr>
-</tbody>
-</table>
-<h4 id="数论">数论</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1700</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/103347/problem/J" target="_blank" rel="noopener noreffer">GYM103347J</a></td>
-<td style="text-align:left">模</td>
-</tr>
-<tr>
-<td style="text-align:left">1800</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/105930/problem/E" target="_blank" rel="noopener noreffer">GYM105930E</a></td>
-<td style="text-align:left">调和级数</td>
-</tr>
-<tr>
-<td style="text-align:left">1800</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/106430/problem/H" target="_blank" rel="noopener noreffer">GYM106430H</a></td>
-<td style="text-align:left">欧拉函数</td>
-</tr>
-</tbody>
-</table>
-<h4 id="博弈">博弈</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1300</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/106407/problem/A" target="_blank" rel="noopener noreffer">GYM106407A</a></td>
-<td style="text-align:left">对称</td>
-</tr>
-<tr>
-<td style="text-align:left">1600</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/105390/problem/C2" target="_blank" rel="noopener noreffer">GYM105390C2</a></td>
-<td style="text-align:left">奇偶性</td>
-</tr>
-<tr>
-<td style="text-align:left">1800</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/105813/problem/I" target="_blank" rel="noopener noreffer">GYM105813I</a></td>
-<td style="text-align:left">必胜策略</td>
-</tr>
-</tbody>
-</table>
-<h4 id="期望">期望</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1500</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/105813/problem/J" target="_blank" rel="noopener noreffer">GYM105813J</a></td>
-<td style="text-align:left">均值</td>
-</tr>
-<tr>
-<td style="text-align:left">1700</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/104020/problem/C" target="_blank" rel="noopener noreffer">GYM104020C</a></td>
-<td style="text-align:left">次数</td>
-</tr>
-<tr>
-<td style="text-align:left">2200</td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/2200/problem/G" target="_blank" rel="noopener noreffer">cf2200g</a></td>
-<td style="text-align:left">加权</td>
-</tr>
-<tr>
-<td style="text-align:left">2300</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/106523/problem/M" target="_blank" rel="noopener noreffer">GYM106523M</a></td>
-<td style="text-align:left">函数</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://ac.nowcoder.com/acm/contest/137448/F" target="_blank" rel="noopener noreffer">ac137448f</a></td>
-<td style="text-align:left">尾和</td>
-</tr>
-</tbody>
-</table>
-<h4 id="几何">几何</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/600/problem/D" target="_blank" rel="noopener noreffer">cf600d</a></td>
-<td style="text-align:left">两圆相交、高精度</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://atcoder.jp/contests/abc472/tasks/abc472_f" target="_blank" rel="noopener noreffer">abc472_f</a></td>
-<td style="text-align:left">多边形重心</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://atcoder.jp/contests/abc478/tasks/abc478_g" target="_blank" rel="noopener noreffer">abc478_g</a></td>
-<td style="text-align:left">闵可夫斯基和</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://atcoder.jp/contests/abc479/tasks/abc479_g" target="_blank" rel="noopener noreffer">abc479_g</a></td>
-<td style="text-align:left">共线，加权中位数</td>
-</tr>
-</tbody>
-</table>
-<h2 id="dp">dp</h2>
+<h2 id="2-搜索">#2 搜索</h2>
+<h2 id="3-dp">#3 dp</h2>
 <table>
 <thead>
 <tr>
@@ -765,9 +612,269 @@
 <td style="text-align:left"><a href="https://atcoder.jp/contests/abc480/tasks/abc480_g" target="_blank" rel="noopener noreffer">abc480_g</a></td>
 <td style="text-align:left">dp+线段树</td>
 </tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc484/tasks/abc484_g" target="_blank" rel="noopener noreffer">abc484_g</a></td>
+<td style="text-align:left">自动机dp</td>
+</tr>
 </tbody>
 </table>
-<h2 id="数据结构">数据结构</h2>
+<h2 id="4-字符串">#4 字符串</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1700</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/105018/problem/A" target="_blank" rel="noopener noreffer">GYM105018A</a></td>
+<td style="text-align:left">匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">2000</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/1200/problem/E" target="_blank" rel="noopener noreffer">cf1200e</a></td>
+<td style="text-align:left">匹配</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-数学">#5 数学</h2>
+<h4 id="位运算">位运算</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2300</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2217/problem/F" target="_blank" rel="noopener noreffer">cf2217f</a></td>
+<td style="text-align:left">异或</td>
+</tr>
+</tbody>
+</table>
+<h4 id="博弈">博弈</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1300</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/106407/problem/A" target="_blank" rel="noopener noreffer">GYM106407A</a></td>
+<td style="text-align:left">对称</td>
+</tr>
+<tr>
+<td style="text-align:left">1600</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/105390/problem/C2" target="_blank" rel="noopener noreffer">GYM105390C2</a></td>
+<td style="text-align:left">奇偶性</td>
+</tr>
+<tr>
+<td style="text-align:left">1800</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/105813/problem/I" target="_blank" rel="noopener noreffer">GYM105813I</a></td>
+<td style="text-align:left">必胜策略</td>
+</tr>
+</tbody>
+</table>
+<h4 id="数论">数论</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1700</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/103347/problem/J" target="_blank" rel="noopener noreffer">GYM103347J</a></td>
+<td style="text-align:left">模</td>
+</tr>
+<tr>
+<td style="text-align:left">1800</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/105930/problem/E" target="_blank" rel="noopener noreffer">GYM105930E</a></td>
+<td style="text-align:left">调和级数</td>
+</tr>
+<tr>
+<td style="text-align:left">1800</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/106430/problem/H" target="_blank" rel="noopener noreffer">GYM106430H</a></td>
+<td style="text-align:left">欧拉函数</td>
+</tr>
+</tbody>
+</table>
+<h4 id="期望">期望</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1500</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/105813/problem/J" target="_blank" rel="noopener noreffer">GYM105813J</a></td>
+<td style="text-align:left">均值</td>
+</tr>
+<tr>
+<td style="text-align:left">1700</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/104020/problem/C" target="_blank" rel="noopener noreffer">GYM104020C</a></td>
+<td style="text-align:left">次数</td>
+</tr>
+<tr>
+<td style="text-align:left">2000</td>
+<td style="text-align:left"><a href="https://codeforces.com/problemset/problem/235/B" target="_blank" rel="noopener noreffer">cf235b</a></td>
+<td style="text-align:left">转换</td>
+</tr>
+<tr>
+<td style="text-align:left">2200</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2200/problem/G" target="_blank" rel="noopener noreffer">cf2200g</a></td>
+<td style="text-align:left">加权</td>
+</tr>
+<tr>
+<td style="text-align:left">2300</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/106523/problem/M" target="_blank" rel="noopener noreffer">GYM106523M</a></td>
+<td style="text-align:left">函数</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://ac.nowcoder.com/acm/contest/137448/F" target="_blank" rel="noopener noreffer">ac137448f</a></td>
+<td style="text-align:left">尾和</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc483/tasks/abc483_g" target="_blank" rel="noopener noreffer">abc483_g</a></td>
+<td style="text-align:left">排列组合</td>
+</tr>
+</tbody>
+</table>
+<h4 id="组合">组合</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1400</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/106539/problem/D" target="_blank" rel="noopener noreffer">GYM106539D</a></td>
+<td style="text-align:left">转化</td>
+</tr>
+<tr>
+<td style="text-align:left">1800</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/106049/problem/G" target="_blank" rel="noopener noreffer">GYM106049G</a></td>
+<td style="text-align:left">连续数之积</td>
+</tr>
+<tr>
+<td style="text-align:left">1931</td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc431/tasks/abc431_f" target="_blank" rel="noopener noreffer">abc431_f</a></td>
+<td style="text-align:left">排列枚举</td>
+</tr>
+<tr>
+<td style="text-align:left">2000</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/106296/problem/F" target="_blank" rel="noopener noreffer">GYM106296F</a></td>
+<td style="text-align:left">独立选择</td>
+</tr>
+</tbody>
+</table>
+<h4 id="多项式">多项式</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc471/tasks/abc471_g" target="_blank" rel="noopener noreffer">abc471_g</a></td>
+<td style="text-align:left">ntt</td>
+</tr>
+</tbody>
+</table>
+<h4 id="几何">几何</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/600/problem/D" target="_blank" rel="noopener noreffer">cf600d</a></td>
+<td style="text-align:left">两圆相交、高精度</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc472/tasks/abc472_f" target="_blank" rel="noopener noreffer">abc472_f</a></td>
+<td style="text-align:left">多边形重心</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc478/tasks/abc478_g" target="_blank" rel="noopener noreffer">abc478_g</a></td>
+<td style="text-align:left">闵可夫斯基和</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc479/tasks/abc479_g" target="_blank" rel="noopener noreffer">abc479_g</a></td>
+<td style="text-align:left">共线，加权中位数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-数据结构">#6 数据结构</h2>
+<h4 id="并查集">并查集</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">难度</th>
+<th style="text-align:left">题目</th>
+<th style="text-align:left">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1700</td>
+<td style="text-align:left"><a href="https://codeforces.com/gym/103575/problem/B" target="_blank" rel="noopener noreffer">GYM103575B</a></td>
+<td style="text-align:left">生成树</td>
+</tr>
+<tr>
+<td style="text-align:left">2400</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/593/problem/D" target="_blank" rel="noopener noreffer">cf593d</a></td>
+<td style="text-align:left">树上路径</td>
+</tr>
+<tr>
+<td style="text-align:left">2400</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/990/problem/G" target="_blank" rel="noopener noreffer">cf990g</a></td>
+<td style="text-align:left">容斥</td>
+</tr>
+<tr>
+<td style="text-align:left">2400</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2205/problem/F" target="_blank" rel="noopener noreffer">cf2205f</a></td>
+<td style="text-align:left">网格</td>
+</tr>
+</tbody>
+</table>
+<h4 id="区间信息">区间信息</h4>
 <table>
 <thead>
 <tr>
@@ -818,6 +925,11 @@
 <td style="text-align:left">区间乘</td>
 </tr>
 <tr>
+<td style="text-align:left">2700</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2009/problem/G3" target="_blank" rel="noopener noreffer">cf2009g3</a></td>
+<td style="text-align:left">区间的子数组最小值和</td>
+</tr>
+<tr>
 <td style="text-align:left"></td>
 <td style="text-align:left"><a href="https://atcoder.jp/contests/abc441/tasks/abc441_g" target="_blank" rel="noopener noreffer">abc441_g</a></td>
 <td style="text-align:left">区间加、区间翻转</td>
@@ -834,39 +946,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="并查集">并查集</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1700</td>
-<td style="text-align:left"><a href="https://codeforces.com/gym/103575/problem/B" target="_blank" rel="noopener noreffer">GYM103575B</a></td>
-<td style="text-align:left">生成树</td>
-</tr>
-<tr>
-<td style="text-align:left">2400</td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/593/problem/D" target="_blank" rel="noopener noreffer">cf593d</a></td>
-<td style="text-align:left">树上路径</td>
-</tr>
-<tr>
-<td style="text-align:left">2400</td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/990/problem/G" target="_blank" rel="noopener noreffer">cf990g</a></td>
-<td style="text-align:left">容斥</td>
-</tr>
-<tr>
-<td style="text-align:left">2400</td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/2205/problem/F" target="_blank" rel="noopener noreffer">cf2205f</a></td>
-<td style="text-align:left">网格</td>
-</tr>
-</tbody>
-</table>
-<h2 id="树">树</h2>
+<h2 id="7-图论">#7 图论</h2>
+<h4 id="树上问题">树上问题</h4>
 <table>
 <thead>
 <tr>
@@ -885,6 +966,11 @@
 <td style="text-align:left">2300</td>
 <td style="text-align:left"><a href="https://codeforces.com/contest/2188/problem/E" target="_blank" rel="noopener noreffer">cf2188e</a></td>
 <td style="text-align:left">lca</td>
+</tr>
+<tr>
+<td style="text-align:left">2300</td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2231/problem/E" target="_blank" rel="noopener noreffer">cf2231e</a></td>
+<td style="text-align:left">树上路径数</td>
 </tr>
 <tr>
 <td style="text-align:left">2600</td>
@@ -913,7 +999,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="图论">图论</h2>
 <table>
 <thead>
 <tr>
@@ -923,6 +1008,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left">1400</td>
+<td style="text-align:left"><a href="https://codeforces.com/problemset/problem/2276/D" target="_blank" rel="noopener noreffer">cf2276d</a></td>
+<td style="text-align:left">图的结构</td>
+</tr>
 <tr>
 <td style="text-align:left">1600</td>
 <td style="text-align:left"><a href="https://codeforces.com/gym/105327/problem/B" target="_blank" rel="noopener noreffer">GYM105327B</a></td>
@@ -960,7 +1050,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="trick">trick</h2>
+<h2 id="8-杂项">#8 杂项</h2>
+<h4 id="trick">trick</h4>
 <table>
 <thead>
 <tr>
@@ -1007,46 +1098,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="定理">定理</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://atcoder.jp/contests/abc457/tasks/abc457_g" target="_blank" rel="noopener noreffer">abc457_g</a></td>
-<td style="text-align:left">Dilworth</td>
-</tr>
-</tbody>
-</table>
-<h2 id="复杂度分析">复杂度分析</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">难度</th>
-<th style="text-align:left">题目</th>
-<th style="text-align:left">关键词</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2300</td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/2231/problem/E" target="_blank" rel="noopener noreffer">cf2231e</a></td>
-<td style="text-align:left">树上路径数</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"><a href="https://codeforces.com/contest/2234/problem/E" target="_blank" rel="noopener noreffer">cf2234e</a></td>
-<td style="text-align:left">从外到内找分割点</td>
-</tr>
-</tbody>
-</table>
-<h2 id="逆序数">逆序数</h2>
 <table>
 <thead>
 <tr>
@@ -1059,7 +1110,22 @@
 <tr>
 <td style="text-align:left"></td>
 <td style="text-align:left"><a href="https://atcoder.jp/contests/abc479/tasks/abc479_f" target="_blank" rel="noopener noreffer">abc479_f</a></td>
-<td style="text-align:left">转换</td>
+<td style="text-align:left">逆序数转换</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2285/problem/E" target="_blank" rel="noopener noreffer">cf2285e</a></td>
+<td style="text-align:left">等差数列</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://atcoder.jp/contests/abc457/tasks/abc457_g" target="_blank" rel="noopener noreffer">abc457_g</a></td>
+<td style="text-align:left">Dilworth定理</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://codeforces.com/contest/2234/problem/E" target="_blank" rel="noopener noreffer">cf2234e</a></td>
+<td style="text-align:left">从外到内找分割点</td>
 </tr>
 </tbody>
 </table>

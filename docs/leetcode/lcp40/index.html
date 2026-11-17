@@ -7,31 +7,31 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>1287：有序数组中出现次数超过25%的元素（1179 分） - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="1287：有序数组中出现次数超过25%的元素（1179 分）" />
-<meta property="og:description" content="力扣第 15 场双周赛第 1 题 题目 给你一个非递减的 有序 整数数组，已知这个数组中恰好有一个整数，它的出现次数超过数组元素总数的 25%。 请你找到并返回这" />
+        <title>LCP 40：心算挑战 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="LCP 40：心算挑战" />
+<meta property="og:description" content="ttps://lee 力扣第 LCP 40 题 题目 「力扣挑战赛」心算项目的挑战比赛中，要求选手从 N 张卡牌中选出 cnt 张卡牌，若这 cnt 张卡牌数字总和为偶数，则选手成绩「有效」且得分" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://huozhixue.github.io/leetcode/1287/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2019-12-14T22:30:00+08:00" />
-<meta property="article:modified_time" content="2019-12-14T22:30:00+08:00" />
+<meta property="og:url" content="https://huozhixue.github.io/leetcode/lcp40/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2021-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-11T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
 
-<meta name="twitter:title" content="1287：有序数组中出现次数超过25%的元素（1179 分）"/>
-<meta name="twitter:description" content="力扣第 15 场双周赛第 1 题 题目 给你一个非递减的 有序 整数数组，已知这个数组中恰好有一个整数，它的出现次数超过数组元素总数的 25%。 请你找到并返回这"/>
+<meta name="twitter:title" content="LCP 40：心算挑战"/>
+<meta name="twitter:description" content="ttps://lee 力扣第 LCP 40 题 题目 「力扣挑战赛」心算项目的挑战比赛中，要求选手从 N 张卡牌中选出 cnt 张卡牌，若这 cnt 张卡牌数字总和为偶数，则选手成绩「有效」且得分"/>
 <meta name="application-name" content="个人博客">
 <meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/leetcode/1287/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1284/" /><link rel="next" href="https://huozhixue.github.io/leetcode/1288/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<link rel="canonical" href="https://huozhixue.github.io/leetcode/lcp40/" /><link rel="prev" href="https://huozhixue.github.io/leetcode/1998/" /><link rel="next" href="https://huozhixue.github.io/leetcode/2001/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "1287：有序数组中出现次数超过25%的元素（1179 分）",
+        "headline": "LCP 40：心算挑战",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/huozhixue.github.io\/leetcode\/1287\/"
-        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  140 ,
-        "url": "https:\/\/huozhixue.github.io\/leetcode\/1287\/","datePublished": "2019-12-14T22:30:00+08:00","dateModified": "2019-12-14T22:30:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/huozhixue.github.io\/leetcode\/lcp40\/"
+        },"image": ["https:\/\/huozhixue.github.io\/images\/Apple-Devices-Preview.png"],"genre": "leetcode","wordcount":  391 ,
+        "url": "https:\/\/huozhixue.github.io\/leetcode\/lcp40\/","datePublished": "2021-09-11T00:00:00+00:00","dateModified": "2021-09-11T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -108,10 +108,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">1287：有序数组中出现次数超过25%的元素（1179 分）</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">LCP 40：心算挑战</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-14">2019-12-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 140 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/1287/" class="leancloud_visitors" data-flag-title="1287：有序数组中出现次数超过25%的元素（1179 分）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-11">2021-09-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 391 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/leetcode/lcp40/" class="leancloud_visitors" data-flag-title="LCP 40：心算挑战">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -126,47 +126,77 @@
     <li><a href="#解答">解答</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p><u><strong><a href="https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array/" target="_blank" rel="noopener noreffer">力扣第 15 场双周赛第 1 题</a></strong></u></p>
+            </div><div class="content" id="content"><p>ttps://lee</p>
+<blockquote>
+<p><u><strong><a href="https://leetcode.cn/problems/uOAnQW/" target="_blank" rel="noopener noreffer">力扣第 LCP 40 题</a></strong></u></p>
 </blockquote>
 <h2 id="题目">题目</h2>
-<p>给你一个非递减的 <strong>有序 </strong>整数数组，已知这个数组中恰好有一个整数，它的出现次数超过数组元素总数的 25%。</p>
-<p>请你找到并返回这个整数</p>
-<p><strong>示例：</strong></p>
-<pre>
-<strong>输入：</strong>arr = [1,2,2,6,6,6,6,7,10]
-<strong>输出：</strong>6
-</pre>
+<p>「力扣挑战赛」心算项目的挑战比赛中，要求选手从 <code>N</code> 张卡牌中选出 <code>cnt</code> 张卡牌，若这 <code>cnt</code> 张卡牌数字总和为偶数，则选手成绩「有效」且得分为 <code>cnt</code> 张卡牌数字总和。
+给定数组 <code>cards</code> 和 <code>cnt</code>，其中 <code>cards[i]</code> 表示第 <code>i</code> 张卡牌上的数字。 请帮参赛选手计算最大的有效得分。若不存在获取有效得分的卡牌方案，则返回 0。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入：<code>cards = [1,2,8,9], cnt = 3</code></p>
+<p>输出：<code>18</code></p>
+<p>解释：选择数字为 1、8、9 的这三张卡牌，此时可获得最大的有效得分 1+8+9=18。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：<code>cards = [3,3,1], cnt = 1</code></p>
+<p>输出：<code>0</code></p>
+<p>解释：不存在获取有效得分的卡牌方案。</p>
+</blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= arr.length &lt;= 10^4</code></li>
-<li><code>0 &lt;= arr[i] &lt;= 10^5</code></li>
+<li><code>1 &lt;= cnt &lt;= cards.length &lt;= 10^5</code></li>
+<li><code>1 &lt;= cards[i] &lt;= 1000</code></li>
 </ul>
 <h2 id="分析">分析</h2>
-<p>题目明确有且仅有1个，因此返回频数最大的即可。</p>
+<ul>
+<li>分为奇偶两组，显然奇数卡牌只能选偶数个</li>
+<li>遍历奇数卡牌的个数 i，偶数卡牌个数 cnt-i，显然都取组内最大的一部分数</li>
+<li>将组内排序并预处理前缀和，即可节省时间</li>
+</ul>
 <h2 id="解答">解答</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">findSpecialInteger</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">maxmiumScore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cards</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">cnt</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">A</span><span class="p">,</span><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cards</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="k">else</span> <span class="n">B</span>
+</span></span><span class="line"><span class="cl">            <span class="n">C</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">C</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">cnt</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">and</span> <span class="n">cnt</span><span class="o">-</span><span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">B</span><span class="p">[</span><span class="n">cnt</span><span class="o">-</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>44 ms</p>
+</div><p>562 ms</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2019-12-14</span>
+                <span>更新于 2021-09-11</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/leetcode/1287/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode/lcp40/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -175,14 +205,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/leetcode_tags/%E7%AE%80%E5%8D%95/">简单</a>,&nbsp;<a href="/leetcode_tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/leetcode_tags/%E6%95%B0%E7%BB%84/">数组</a>,&nbsp;<a href="/leetcode_tags/%E6%8E%92%E5%BA%8F/">排序</a>,&nbsp;<a href="/leetcode_tags/%E5%8A%9B%E6%89%A3%E6%9D%AF/">力扣杯</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/leetcode/1288/" class="prev" rel="prev" title="1288：删除被覆盖区间（1375 分）"><i class="fas fa-angle-left fa-fw"></i>1288：删除被覆盖区间（1375 分）</a>
-            <a href="/leetcode/1284/" class="next" rel="next" title="1284：转化为全零矩阵的最少反转次数（1810 分）">1284：转化为全零矩阵的最少反转次数（1810 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/leetcode/2001/" class="prev" rel="prev" title="2001：可互换矩形的组数（1435 分）"><i class="fas fa-angle-left fa-fw"></i>2001：可互换矩形的组数（1435 分）</a>
+            <a href="/leetcode/1998/" class="next" rel="next" title="1998：数组的最大公因数排序（2429 分）">1998：数组的最大公因数排序（2429 分）<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

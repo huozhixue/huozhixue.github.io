@@ -38,12 +38,5 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1115/</guid>
     <description><![CDATA[力扣第 1115 题 题目 给你一个类： class FooBar { public void foo() { for (int i = 0; i &lt; n; i++) { print("foo"); } } public void bar() { for (int i = 0; i &lt; n; i++) { print("bar"); } } } 两个不同的线程将会共用一个 FooBar 实例： 线程]]></description>
-</item><item>
-    <title>1114：按序打印</title>
-    <link>https://huozhixue.github.io/leetcode/1114/</link>
-    <pubDate>Wed, 10 Jul 2019 00:00:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1114/</guid>
-    <description><![CDATA[力扣第 1114 题 题目 给你一个类： public class Foo { public void first() { print("first"); } public void second() { print("second"); } public void third() { print("third"); } } 三个不同的线程 A、B、C 将会共用一个 Foo 实例。 线程 A 将会调用 first() 方法 线程]]></description>
 </item></channel>
 </rss>

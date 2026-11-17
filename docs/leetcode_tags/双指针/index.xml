@@ -25,13 +25,6 @@
     <guid>https://huozhixue.github.io/leetcode/2604/</guid>
     <description><![CDATA[力扣第 2604 题 题目 一条线上有 n 只母鸡和 m 颗谷子。给定两个整数数组 hens 和 grains ，它们的大小分别为 n 和 m ，表示母鸡和谷子的初始位置。 如果一只母鸡和一颗谷子]]></description>
 </item><item>
-    <title>2367：算术三元组的数目（1203 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2367/</link>
-    <pubDate>Sun, 07 Aug 2022 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2367/</guid>
-    <description><![CDATA[力扣第 305 场周赛第 1 题 题目 给你一个下标从 0 开始、严格递增 的整数数组 nums 和一个正整数 diff 。如果满足下述全部条件，则三元组 (i, j, k) 就是一个 算术三元组 ： i]]></description>
-</item><item>
     <title>2300：咒语和药水的成功对数（1476 分）</title>
     <link>https://huozhixue.github.io/leetcode/2300/</link>
     <pubDate>Sat, 11 Jun 2022 22:40:00 &#43;0800</pubDate>
@@ -46,13 +39,6 @@
     <guid>https://huozhixue.github.io/leetcode/2105/</guid>
     <description><![CDATA[力扣第 271 场周赛第 3 题 题目 Alice 和 Bob 打算给花园里的 n 株植物浇水。植物排成一行，从左到右进行标记，编号从 0 到 n - 1 。其中，第 i 株植物的位置是 x = i 。]]></description>
 </item><item>
-    <title>2000：反转单词前缀（1199 分）</title>
-    <link>https://huozhixue.github.io/leetcode/2000/</link>
-    <pubDate>Sun, 12 Sep 2021 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/2000/</guid>
-    <description><![CDATA[力扣第 258 场周赛第 1 题 题目 给你一个下标从 0 开始的字符串 word 和一个字符 ch 。找出 ch 第一次出现的下标 i ，反转 word 中从下标 0 开始、直到下标 i 结束（含下标 i]]></description>
-</item><item>
     <title>1508：子数组和排序后的区间和（1402 分）</title>
     <link>https://huozhixue.github.io/leetcode/1508/</link>
     <pubDate>Sat, 11 Jul 2020 22:40:00 &#43;0800</pubDate>
@@ -60,18 +46,32 @@
     <guid>https://huozhixue.github.io/leetcode/1508/</guid>
     <description><![CDATA[力扣第 30 场双周赛第 2 题 题目 给你一个数组 nums ，它包含 n 个正整数。你需要计算所有非空连续子数组的和，并将它们按升序排序，得到一个新的包含 n * (n + 1)]]></description>
 </item><item>
-    <title>1332：删除回文子序列（1628 分）</title>
-    <link>https://huozhixue.github.io/leetcode/1332/</link>
-    <pubDate>Sun, 26 Jan 2020 10:30:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/leetcode/1332/</guid>
-    <description><![CDATA[力扣第 173 场周赛第 1 题 题目 给你一个字符串 s，它仅由字母 'a' 和 'b' 组成。每一次删除操作都可以从 s 中删除一个回文 子序列。 返回删除给定字符串中所有字符（]]></description>
-</item><item>
     <title>1163：按字典序排在最后的子串（1864 分）</title>
     <link>https://huozhixue.github.io/leetcode/1163/</link>
     <pubDate>Sun, 18 Aug 2019 11:00:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://huozhixue.github.io/leetcode/1163/</guid>
     <description><![CDATA[力扣第 150 场周赛第 4 题 题目 给你一个字符串 s ，找出它的所有子串并按字典序排列，返回排在最后的那个子串。 示例 1： 输入：s = "abab" 输出："bab" 解释：]]></description>
+</item><item>
+    <title>1147：段式回文（1912 分）</title>
+    <link>https://huozhixue.github.io/leetcode/1147/</link>
+    <pubDate>Sun, 04 Aug 2019 11:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1147/</guid>
+    <description><![CDATA[力扣第 148 场周赛第 4 题 题目 你会得到一个字符串 text 。你应该把它分成 k 个子字符串 (subtext1, subtext2，…， subtextk) ，要求满足: subtexti 是 非空 字符串 所有子字符串的连]]></description>
+</item><item>
+    <title>1055：形成字符串的最短路径（★）</title>
+    <link>https://huozhixue.github.io/leetcode/1055/</link>
+    <pubDate>Mon, 27 May 2019 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1055/</guid>
+    <description><![CDATA[力扣第 1055 题 题目 对于任何字符串，我们可以通过删除其中一些字符（也可能不删除）来构造该字符串的 子序列 。(例如，“ace” 是 “abcde” 的子序列]]></description>
+</item><item>
+    <title>1023：驼峰式匹配（1537 分）</title>
+    <link>https://huozhixue.github.io/leetcode/1023/</link>
+    <pubDate>Sun, 07 Apr 2019 10:50:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/leetcode/1023/</guid>
+    <description><![CDATA[力扣第 131 场周赛第 3 题 题目 给你一个字符串数组 queries，和一个表示模式的字符串 pattern，请你返回一个布尔数组 answer 。只有在待查项 queries[i] 与模式]]></description>
 </item></channel>
 </rss>
