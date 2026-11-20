@@ -101,6 +101,7 @@
 | 2400 | [cf1715e](https://codeforces.com/contest/1715/problem/E)      | 斜率优化   |
 | 2400 | [cf2266h](https://codeforces.com/contest/2266/problem/H)      | 转化     |
 | 2500 | [cf845f](https://codeforces.com/problemset/problem/845/F)     | 轮廓线    |
+| 2500 | [cf729f](https://codeforces.com/problemset/problem/729/F)     | 状态设计   |
 | 2600 | [cf1793e](https://codeforces.com/problemset/problem/1793/E)   | 划分     |
 |      | [cf2236f2](https://codeforces.com/contest/2236/problem/F2)    | 恰好型    |
 |      | [abc462_f](https://atcoder.jp/contests/abc462/tasks/abc462_f) | 状态设计   |
