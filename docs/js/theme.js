@@ -1,3 +1,8 @@
+// pjax 返回时会用缓存的 HTML 字符串还原 DOM：元素上的 data-* 标记会被保留，
+// 但事件监听器丢失。用 WeakSet 按“元素对象”判重（每次都是新对象），确保重新初始化。
+const tagFilterReady = new WeakSet();
+const tagCloudMoreReady = new WeakSet();
+
 class Util {
     forEach(elements, handler) {
         elements = elements || [];
@@ -663,8 +668,19 @@ class Theme {
 
     initTagFilter() {
         this.util.forEach(document.getElementsByClassName('tag-filter'), $filter => {
-            if ($filter.dataset && $filter.dataset.filterReady) { return; }
-            if ($filter.dataset) { $filter.dataset.filterReady = 'true'; }
+            if (tagFilterReady.has($filter)) { return; }
+            tagFilterReady.add($filter);
+            // pjax 返回时缓存 DOM 里可能残留旧的 combo（原生 select 被隐藏、插入了 input+panel），
+            // 先移除它们、恢复原生 select，避免重复插入导致筛选失效。
+            Array.from($filter.querySelectorAll('.tf-combo')).forEach($wrap => {
+                const $sel = $wrap.parentNode.querySelector('select');
+                if ($sel) {
+                    $sel.style.display = '';
+                    $sel.classList.add('tag-filter-select');
+                    $wrap.parentNode.insertBefore($sel, $wrap);
+                }
+                $wrap.parentNode.removeChild($wrap);
+            });
             const $items = Array.from($filter.querySelectorAll('.tag-filter-item'));
             const $groups = Array.from($filter.querySelectorAll('.tag-filter-group'));
             const $select = $filter.querySelector('.tag-filter-select');
@@ -674,7 +690,125 @@ class Theme {
             const $clear = $filter.querySelector('.tag-filter-clear');
             const $count = $filter.querySelector('.tag-filter-count');
             const $pager = $filter.querySelector('.tag-filter-pager');
+            const $selectedBox = $filter.querySelector('.tag-filter-selected');
+            // 清除 pjax 缓存 DOM 里残留的已选 chip（selected 状态是全新的）
+            if ($selectedBox) {
+                while ($selectedBox.firstChild) { $selectedBox.removeChild($selectedBox.firstChild); }
+            }
             const perPage = parseInt($filter.getAttribute('data-paginate') || '0', 10) || 0;
+
+            // 为标签下拉提供“输入即过滤”体验：外观沿用原生 select，原生 select 隐藏作数据源
+            const makeSearchable = ($select) => {
+                if (!$select || !$select.options || !$select.parentNode) { return null; }
+                const entries = Array.from($select.options).map($o => ({
+                    value: $o.value, text: $o.textContent, $option: $o
+                }));
+                const $wrap = document.createElement('div');
+                $wrap.className = 'tf-combo';
+                const $input = document.createElement('input');
+                $input.type = 'text';
+                $input.className = 'tf-combo-input tag-filter-select';
+                $input.autocomplete = 'off';
+                $input.placeholder = ($select.options[0] && $select.options[0].textContent) || '选择标签…';
+                if ($select.getAttribute('aria-label')) {
+                    $input.setAttribute('aria-label', $select.getAttribute('aria-label'));
+                }
+                const $panel = document.createElement('div');
+                $panel.className = 'tf-combo-panel';
+                $wrap.appendChild($input);
+                $wrap.appendChild($panel);
+                $select.parentNode.insertBefore($wrap, $select);
+                $select.style.display = 'none';
+
+                let isOpen = false;
+                const selectedText = () => {
+                    const v = $select.value;
+                    const hit = entries.filter(e => e.value === v)[0];
+                    return v && hit ? hit.text : '';
+                };
+                const fireChange = () => {
+                    const evt = document.createEvent('HTMLEvents');
+                    evt.initEvent('change', true, true);
+                    $select.dispatchEvent(evt);
+                };
+                const render = () => {
+                    const kw = ($input.value || '').trim().toLowerCase();
+                    // 空值占位项（选择标签…）不在面板显示，仅作输入框 placeholder
+                    const list = entries.filter(e => e.value && e.text.toLowerCase().indexOf(kw) > -1);
+                    while ($panel.firstChild) { $panel.removeChild($panel.firstChild); }
+                    list.forEach(e => {
+                        const $item = document.createElement('div');
+                        $item.className = 'tf-combo-option' + (e.$option.disabled ? ' disabled' : '');
+                        $item.textContent = e.text;
+                        $item.addEventListener('mousedown', ev => {
+                            if (ev && ev.preventDefault) { ev.preventDefault(); }
+                            if (e.$option.disabled) { return; }
+                            $select.value = e.value;
+                            fireChange();
+                            closePanel();
+                        }, false);
+                        $panel.appendChild($item);
+                    });
+                    if (!$panel.firstChild) {
+                        const $none = document.createElement('div');
+                        $none.className = 'tf-combo-none';
+                        $none.textContent = '无匹配项';
+                        $panel.appendChild($none);
+                    }
+                };
+                let blurTimer = null;
+                const openPanel = () => {
+                    if (blurTimer) { clearTimeout(blurTimer); blurTimer = null; }
+                    isOpen = true;
+                    $panel.style.display = 'block';
+                    $input.value = '';
+                    render();
+                };
+                const closePanel = () => {
+                    if (blurTimer) { clearTimeout(blurTimer); blurTimer = null; }
+                    isOpen = false;
+                    $panel.style.display = 'none';
+                    $input.value = selectedText();
+                };
+                $input.addEventListener('focus', openPanel, false);
+                // 选中某项后面板关闭但输入框仍聚焦，此时再点输入框不会触发 focus，
+                // 需显式重新打开面板，才能连续选多个标签而无需先点外面失焦。
+                $input.addEventListener('click', () => {
+                    if (!isOpen) { openPanel(); }
+                }, false);
+                $input.addEventListener('input', () => {
+                    if (!isOpen) { isOpen = true; $panel.style.display = 'block'; }
+                    render();
+                }, false);
+                $input.addEventListener('blur', () => {
+                    blurTimer = setTimeout(closePanel, 150);
+                }, false);
+                $input.addEventListener('keydown', ev => {
+                    if (ev.key === 'Escape') { closePanel(); $input.blur(); }
+                    else if (ev.key === 'Enter') {
+                        const kw = ($input.value || '').trim().toLowerCase();
+                        const hit = entries.filter(e => e.value && !e.$option.disabled
+                            && e.text.toLowerCase().indexOf(kw) > -1)[0];
+                        if (hit) {
+                            $select.value = hit.value;
+                            fireChange();
+                            closePanel();
+                        }
+                    }
+                }, false);
+                // 绑定到组件容器而非 document：pjax 往返后旧容器被回收，监听器不会累积
+                $filter.addEventListener('click', ev => {
+                    if (isOpen && $wrap && !$wrap.contains(ev.target)) { closePanel(); }
+                }, false);
+                return {
+                    sync() {
+                        if (isOpen) { render(); }
+                        else { $input.value = selectedText(); }
+                    }
+                };
+            };
+            const $tagCombo = makeSearchable($select);
+
             const selected = [];
             let page = 1;
 
@@ -766,6 +900,7 @@ class Theme {
                     });
                 }
                 syncTagCloud();
+                if ($tagCombo) { $tagCombo.sync(); }
                 renderPager(totalPages);
             };
 
@@ -831,8 +966,8 @@ class Theme {
                 }, false);
             });
             this.util.forEach(document.getElementsByClassName('tag-cloud-more'), $more => {
-                if ($more.dataset && $more.dataset.cloudReady) { return; }
-                if ($more.dataset) { $more.dataset.cloudReady = 'true'; }
+                if (tagCloudMoreReady.has($more)) { return; }
+                tagCloudMoreReady.add($more);
                 $more.addEventListener('click', () => {
                     const $parent = $more.parentNode || $more.parentElement;
                     const $extra = $parent && $parent.querySelector
