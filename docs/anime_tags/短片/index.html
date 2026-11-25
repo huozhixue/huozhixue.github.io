@@ -7,26 +7,26 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>短片 - anime_tag - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="短片" />
+        <title>短片 - anime_tag - Ian 的博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="短片" />
 <meta property="og:description" content="Ian 的博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://huozhixue.github.io/anime_tags/%E7%9F%AD%E7%89%87/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+<meta property="og:url" content="https://huozhixue.github.io/anime_tags/%E7%9F%AD%E7%89%87/" /><meta property="og:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:title" content="短片"/>
 <meta name="twitter:description" content="Ian 的博客"/>
-<meta name="application-name" content="个人博客">
-<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/anime_tags/%E7%9F%AD%E7%89%87/" /><link rel="alternate" href="/anime_tags/%E7%9F%AD%E7%89%87/index.xml" type="application/rss+xml" title="个人博客">
-    <link rel="feed" href="/anime_tags/%E7%9F%AD%E7%89%87/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
+<meta name="application-name" content="Ian 的博客">
+<meta name="apple-mobile-web-app-title" content="Ian 的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/anime_tags/%E7%9F%AD%E7%89%87/" /><link rel="alternate" href="/anime_tags/%E7%9F%AD%E7%89%87/index.xml" type="application/rss+xml" title="Ian 的博客">
+    <link rel="feed" href="/anime_tags/%E7%9F%AD%E7%89%87/index.xml" type="application/rss+xml" title="Ian 的博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/contest/"> 竞赛 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -50,7 +50,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+                <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -84,14 +84,42 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <script src="/js/jquery.min.js"></script>
-            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
-            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" ></meting-js>
+            <script type="text/javascript">
+                window.config = {'data': {}, 'media':{}, 'typeit': {'data': {}}};
+                
+                window.resolveMediaUrl = function (raw) {
+                    raw = String(raw).replace(/^[\uFEFF]/, '').trim();
+                    
+                    var bv = raw.match(/(BV[0-9A-Za-z]+)/);
+                    if (bv) {
+                        var id = bv[1];
+                        var page = raw.match(/[?&]p=(\d+)/);
+                        var suffix = page ? '&p=' + page[1] : '';
+                        
+                        
+                        
+                        
+                        return [
+                            'https://player.bilibili.com/player.html?bvid=' + id + suffix + '&autoplay=0&as_wide=1&high_quality=1&danmaku=1',
+                            'https://www.bilibili.com/video/' + id + (page ? '?p=' + page[1] : ''),
+                            'bili'
+                        ];
+                    }
+                    
+                    return [raw, raw, 'link'];
+                };
+                
+                
+                
+                window.meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';
+            </script>
+            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" list-max-height="263px"></meting-js>
             <main class="main">
                 <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster"><i class="fas fa-tag fa-fw"></i>&nbsp;短片</h2><div class="tag-cloud-tags"><a href="/anime_tags/tv/">TV <sup>428</sup></a><a href="/anime_tags/%E5%9B%9B%E6%98%9F/">四星 <sup>256</sup></a><a href="/anime_tags/mad/">MAD <sup>224</sup></a><a href="/anime_tags/%E4%BA%94%E6%98%9F/">五星 <sup>176</sup></a><a href="/anime_tags/%E9%9F%B3%E4%B9%90/">音乐 <sup>155</sup></a><a href="/anime_tags/%E5%89%A7%E5%9C%BA%E7%89%88/">剧场版 <sup>118</sup></a><a href="/anime_tags/%E4%B8%89%E6%98%9F/">三星 <sup>113</sup></a><a href="/anime_tags/%E7%AB%A5%E5%B9%B4/">童年 <sup>75</sup></a><a href="/anime_tags/%E7%9F%AD%E7%89%87/">短片 <sup>37</sup></a><a href="/anime_tags/%E7%9B%98%E7%82%B9/">盘点 <sup>31</sup></a><a href="/anime_tags/%E4%BA%8C%E6%98%9F/">二星 <sup>24</sup></a><a href="/anime_tags/%E5%85%AD%E6%98%9F/">六星 <sup>20</sup></a><a href="/anime_tags/%E5%AE%9E%E9%AA%8C/">实验 <sup>11</sup></a><a href="/anime_tags/%E6%B3%A1%E9%9D%A2%E7%95%AA/">泡面番 <sup>11</sup></a><a href="/anime_tags/%E5%AE%9A%E6%A0%BC/">定格 <sup>5</sup></a><a href="/anime_tags/%E4%B8%80%E6%98%9F/">一星 <sup>2</sup></a><a href="/anime_tags/%E5%90%8C%E4%BA%BA/">同人 <sup>2</sup></a><a href="/anime_tags/nsfw/">nsfw <sup>1</sup></a></div><h3 class="group-title">2025年</h3>
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/fb/2b/582501_A5ytA.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_fb_2b_582501_A5ytA.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -115,7 +143,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/be/42/518519_DMDo8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_be_42_518519_DMDo8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -136,7 +164,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e2/97/358660_M4986.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e2_97_358660_M4986.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -157,7 +185,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/7a/60/328674_5EIi5.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_7a_60_328674_5EIi5.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -178,7 +206,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/68/b8/274613_sx1iX.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_68_b8_274613_sx1iX.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -199,7 +227,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/38/f8/116370_mOhOD.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_38_f8_116370_mOhOD.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -243,7 +271,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/44/6b/84521_wUhHZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_44_6b_84521_wUhHZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -309,7 +337,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e6/9c/10613_sqlb3.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e6_9c_10613_sqlb3.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -332,7 +360,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4b/37/75898_BIe3r.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4b_37_75898_BIe3r.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.8</div>
                                 <div class="ab_bangumiProgress">
@@ -358,7 +386,7 @@ Monty之后在A-Kon 22上发表评论表示在DF10之前不会再提及莉诺雅
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/37/70/4193_acm67.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_37_70_4193_acm67.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.6</div>
                                 <div class="ab_bangumiProgress">
@@ -403,7 +431,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/87/db/36338_W6oNQ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_87_db_36338_W6oNQ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">9.2</div>
                                 <div class="ab_bangumiProgress">
@@ -425,7 +453,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/11/f5/1898_vMn62.jpg"
+                                    src="/bgm/cover/pic_cover_l_11_f5_1898_vMn62.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -450,7 +478,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/16/e6/13823_ub5r1.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_16_e6_13823_ub5r1.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -471,7 +499,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b5/34/496_1D61r.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b5_34_496_1D61r.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -517,7 +545,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4c/21/18575_PDDQz.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4c_21_18575_PDDQz.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -540,7 +568,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f5/3e/243343_JqzL5.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f5_3e_243343_JqzL5.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -585,7 +613,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/be/3d/280583_VTqZB.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_be_3d_280583_VTqZB.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -863,7 +891,7 @@ NHK在这之前也挑战过1分钟电视剧《EL POPO TOWN》等各种各样新�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e6/7e/80197_TUeQD.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e6_7e_80197_TUeQD.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">

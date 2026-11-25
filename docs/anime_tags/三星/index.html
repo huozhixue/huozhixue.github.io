@@ -7,26 +7,26 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>三星 - anime_tag - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="三星" />
+        <title>三星 - anime_tag - Ian 的博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="三星" />
 <meta property="og:description" content="Ian 的博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://huozhixue.github.io/anime_tags/%E4%B8%89%E6%98%9F/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+<meta property="og:url" content="https://huozhixue.github.io/anime_tags/%E4%B8%89%E6%98%9F/" /><meta property="og:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:title" content="三星"/>
 <meta name="twitter:description" content="Ian 的博客"/>
-<meta name="application-name" content="个人博客">
-<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/anime_tags/%E4%B8%89%E6%98%9F/" /><link rel="alternate" href="/anime_tags/%E4%B8%89%E6%98%9F/index.xml" type="application/rss+xml" title="个人博客">
-    <link rel="feed" href="/anime_tags/%E4%B8%89%E6%98%9F/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
+<meta name="application-name" content="Ian 的博客">
+<meta name="apple-mobile-web-app-title" content="Ian 的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/anime_tags/%E4%B8%89%E6%98%9F/" /><link rel="alternate" href="/anime_tags/%E4%B8%89%E6%98%9F/index.xml" type="application/rss+xml" title="Ian 的博客">
+    <link rel="feed" href="/anime_tags/%E4%B8%89%E6%98%9F/index.xml" type="application/rss+xml" title="Ian 的博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/contest/"> 竞赛 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -50,7 +50,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+                <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -84,14 +84,42 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <script src="/js/jquery.min.js"></script>
-            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
-            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" ></meting-js>
+            <script type="text/javascript">
+                window.config = {'data': {}, 'media':{}, 'typeit': {'data': {}}};
+                
+                window.resolveMediaUrl = function (raw) {
+                    raw = String(raw).replace(/^[\uFEFF]/, '').trim();
+                    
+                    var bv = raw.match(/(BV[0-9A-Za-z]+)/);
+                    if (bv) {
+                        var id = bv[1];
+                        var page = raw.match(/[?&]p=(\d+)/);
+                        var suffix = page ? '&p=' + page[1] : '';
+                        
+                        
+                        
+                        
+                        return [
+                            'https://player.bilibili.com/player.html?bvid=' + id + suffix + '&autoplay=0&as_wide=1&high_quality=1&danmaku=1',
+                            'https://www.bilibili.com/video/' + id + (page ? '?p=' + page[1] : ''),
+                            'bili'
+                        ];
+                    }
+                    
+                    return [raw, raw, 'link'];
+                };
+                
+                
+                
+                window.meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';
+            </script>
+            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" list-max-height="263px"></meting-js>
             <main class="main">
                 <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster"><i class="fas fa-tag fa-fw"></i>&nbsp;三星</h2><div class="tag-cloud-tags"><a href="/anime_tags/tv/">TV <sup>428</sup></a><a href="/anime_tags/%E5%9B%9B%E6%98%9F/">四星 <sup>256</sup></a><a href="/anime_tags/mad/">MAD <sup>224</sup></a><a href="/anime_tags/%E4%BA%94%E6%98%9F/">五星 <sup>176</sup></a><a href="/anime_tags/%E9%9F%B3%E4%B9%90/">音乐 <sup>155</sup></a><a href="/anime_tags/%E5%89%A7%E5%9C%BA%E7%89%88/">剧场版 <sup>118</sup></a><a href="/anime_tags/%E4%B8%89%E6%98%9F/">三星 <sup>113</sup></a><a href="/anime_tags/%E7%AB%A5%E5%B9%B4/">童年 <sup>75</sup></a><a href="/anime_tags/%E7%9F%AD%E7%89%87/">短片 <sup>37</sup></a><a href="/anime_tags/%E7%9B%98%E7%82%B9/">盘点 <sup>31</sup></a><a href="/anime_tags/%E4%BA%8C%E6%98%9F/">二星 <sup>24</sup></a><a href="/anime_tags/%E5%85%AD%E6%98%9F/">六星 <sup>20</sup></a><a href="/anime_tags/%E5%AE%9E%E9%AA%8C/">实验 <sup>11</sup></a><a href="/anime_tags/%E6%B3%A1%E9%9D%A2%E7%95%AA/">泡面番 <sup>11</sup></a><a href="/anime_tags/%E5%AE%9A%E6%A0%BC/">定格 <sup>5</sup></a><a href="/anime_tags/%E4%B8%80%E6%98%9F/">一星 <sup>2</sup></a><a href="/anime_tags/%E5%90%8C%E4%BA%BA/">同人 <sup>2</sup></a><a href="/anime_tags/nsfw/">nsfw <sup>1</sup></a></div><h3 class="group-title">2025年</h3>
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/17/82/526448_ssr71.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_17_82_526448_ssr71.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -115,7 +143,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4a/46/513352_BsaEZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4a_46_513352_BsaEZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.7</div>
                                 <div class="ab_bangumiProgress">
@@ -136,7 +164,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/23/ce/363957_pgptl.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_23_ce_363957_pgptl.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -169,7 +197,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c4/b5/504678_iCezc.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c4_b5_504678_iCezc.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -195,7 +223,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/31/d7/425991_JFQel.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_31_d7_425991_JFQel.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -215,7 +243,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/8c/a2/418548_zd135.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_8c_a2_418548_zd135.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -235,7 +263,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e4/dc/464376_NsZRw.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e4_dc_464376_NsZRw.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -261,7 +289,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4b/52/362255_MjGGW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4b_52_362255_MjGGW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -282,7 +310,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e2/97/358660_M4986.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e2_97_358660_M4986.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -303,7 +331,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d9/03/362577_Ku9z8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d9_03_362577_Ku9z8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -330,7 +358,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/8c/71/265372_wHpoW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_8c_71_265372_wHpoW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -350,7 +378,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e5/c8/253997_dM0nF.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e5_c8_253997_dM0nF.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -375,7 +403,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c7/2a/238006_OJZy1.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c7_2a_238006_OJZy1.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -397,7 +425,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b9/45/240038_b5j7g.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b9_45_240038_b5j7g.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -421,7 +449,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/50/29/227718_50fU0.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_50_29_227718_50fU0.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -443,7 +471,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/94/21/225022_UWYZz.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_94_21_225022_UWYZz.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -495,7 +523,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/92/d1/228591_QVmrV.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_92_d1_228591_QVmrV.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -516,7 +544,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b1/ea/200704_bJl22.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b1_ea_200704_bJl22.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -545,7 +573,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/9f/9d/230453_Rp9b6.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_9f_9d_230453_Rp9b6.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -565,7 +593,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/52/aa/203010_k9ZiP.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_52_aa_203010_k9ZiP.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.6</div>
                                 <div class="ab_bangumiProgress">
@@ -591,7 +619,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv//pic/cover/l/84/33/189446_xLEhG.jpg"
+                                    src="https://bgmimg.anibt.net//pic/cover/l/84/33/189446_xLEhG.jpg"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -643,7 +671,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e4/4f/185420_99QQy.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e4_4f_185420_99QQy.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.6</div>
                                 <div class="ab_bangumiProgress">
@@ -684,7 +712,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/7c/01/165829_cwSZV.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_7c_01_165829_cwSZV.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.4</div>
                                 <div class="ab_bangumiProgress">
@@ -732,7 +760,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/85/40/153140_MFeS7.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_85_40_153140_MFeS7.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.7</div>
                                 <div class="ab_bangumiProgress">
@@ -773,7 +801,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/95/fe/119344_MSXEm.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_95_fe_119344_MSXEm.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -818,7 +846,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/cd/a9/112146_qr9m3.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_cd_a9_112146_qr9m3.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -858,7 +886,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e3/97/129087_3XC7m.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e3_97_129087_3XC7m.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.6</div>
                                 <div class="ab_bangumiProgress">
@@ -886,7 +914,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a5/2e/163831_4J210.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a5_2e_163831_4J210.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -906,7 +934,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/9a/02/116034_5p5tr.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_9a_02_116034_5p5tr.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.6</div>
                                 <div class="ab_bangumiProgress">
@@ -969,7 +997,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/69/e5/93545_zYRKK.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_69_e5_93545_zYRKK.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1029,7 +1057,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/54/bd/79227_052R3.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_54_bd_79227_052R3.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1091,7 +1119,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f7/11/330057_wMWZn.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f7_11_330057_wMWZn.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.6</div>
                                 <div class="ab_bangumiProgress">
@@ -1152,7 +1180,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e5/0d/48034_eD6G8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e5_0d_48034_eD6G8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1193,7 +1221,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/98/ae/66360_L2dLv.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_98_ae_66360_L2dLv.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1213,7 +1241,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c2/38/43557_jUaQk.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c2_38_43557_jUaQk.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1233,7 +1261,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ad/6b/43197_0bLWN.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ad_6b_43197_0bLWN.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1339,7 +1367,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/80/d1/17883_58mrm.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_80_d1_17883_58mrm.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1527,7 +1555,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/0f/bc/9800_eIkZW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_0f_bc_9800_eIkZW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1550,7 +1578,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/6e/01/7157_QV8Rz.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_6e_01_7157_QV8Rz.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1599,7 +1627,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d9/89/3183_ooozz.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d9_89_3183_ooozz.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1644,7 +1672,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/41/86/10286_Z44f4.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_41_86_10286_Z44f4.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1670,7 +1698,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/dd/a0/2567_Vg1Y8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_dd_a0_2567_Vg1Y8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1770,7 +1798,7 @@ LOLI娘学生会会长・樱野真红。
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/23/ce/916_5JUCJ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_23_ce_916_5JUCJ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1874,7 +1902,7 @@ LOLI娘学生会会长・樱野真红。
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/cc/b0/755_bx9fi.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_cc_b0_755_bx9fi.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1940,7 +1968,7 @@ LOLI娘学生会会长・樱野真红。
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/0c/e2/1265_4Axlo.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_0c_e2_1265_4Axlo.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1962,7 +1990,7 @@ LOLI娘学生会会长・樱野真红。
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/cd/47/4192_t2mZE.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_cd_47_4192_t2mZE.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -2140,7 +2168,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/82/36/37418_TVEHD.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_82_36_37418_TVEHD.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -2160,7 +2188,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f6/d4/47630_Q32yQ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f6_d4_47630_Q32yQ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.4</div>
                                 <div class="ab_bangumiProgress">
@@ -2184,7 +2212,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/08/52/10745_M7v4t.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_08_52_10745_M7v4t.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.9</div>
                                 <div class="ab_bangumiProgress">
@@ -2225,7 +2253,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/73/43/40380_IL3Cb.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_73_43_40380_IL3Cb.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -2246,7 +2274,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/da/51/10220_3tGGW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_da_51_10220_3tGGW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2271,7 +2299,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/11/5a/28956_27tfu.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_11_5a_28956_27tfu.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.4</div>
                                 <div class="ab_bangumiProgress">
@@ -2292,7 +2320,7 @@ FREEDOM-PROJECT（自由计划）是日清食品的合味道杯面与漫画家�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a5/9a/30627_gPkqp.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a5_9a_30627_gPkqp.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.9</div>
                                 <div class="ab_bangumiProgress">

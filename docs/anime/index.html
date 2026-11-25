@@ -7,26 +7,26 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>所有动画 - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="Animes" />
+        <title>所有动画 - Ian 的博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="Animes" />
 <meta property="og:description" content="Ian 的博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://huozhixue.github.io/anime/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+<meta property="og:url" content="https://huozhixue.github.io/anime/" /><meta property="og:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:title" content="Animes"/>
 <meta name="twitter:description" content="Ian 的博客"/>
-<meta name="application-name" content="个人博客">
-<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/anime/" /><link rel="alternate" href="/anime/index.xml" type="application/rss+xml" title="个人博客">
-    <link rel="feed" href="/anime/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
+<meta name="application-name" content="Ian 的博客">
+<meta name="apple-mobile-web-app-title" content="Ian 的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/anime/" /><link rel="alternate" href="/anime/index.xml" type="application/rss+xml" title="Ian 的博客">
+    <link rel="feed" href="/anime/index.xml" type="application/rss+xml" title="Ian 的博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item active" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/contest/"> 竞赛 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -50,7 +50,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+                <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -84,15 +84,43 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <script src="/js/jquery.min.js"></script>
-            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
-            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" ></meting-js>
+            <script type="text/javascript">
+                window.config = {'data': {}, 'media':{}, 'typeit': {'data': {}}};
+                
+                window.resolveMediaUrl = function (raw) {
+                    raw = String(raw).replace(/^[\uFEFF]/, '').trim();
+                    
+                    var bv = raw.match(/(BV[0-9A-Za-z]+)/);
+                    if (bv) {
+                        var id = bv[1];
+                        var page = raw.match(/[?&]p=(\d+)/);
+                        var suffix = page ? '&p=' + page[1] : '';
+                        
+                        
+                        
+                        
+                        return [
+                            'https://player.bilibili.com/player.html?bvid=' + id + suffix + '&autoplay=0&as_wide=1&high_quality=1&danmaku=1',
+                            'https://www.bilibili.com/video/' + id + (page ? '?p=' + page[1] : ''),
+                            'bili'
+                        ];
+                    }
+                    
+                    return [raw, raw, 'link'];
+                };
+                
+                
+                
+                window.meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';
+            </script>
+            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" list-max-height="263px"></meting-js>
             <main class="main">
                 <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster">所有动画<sup>  611</sup>
         </h2><div class="tag-cloud-tags"><a href="/anime_tags/tv/">TV <sup>428</sup></a><a href="/anime_tags/%E5%9B%9B%E6%98%9F/">四星 <sup>256</sup></a><a href="/anime_tags/mad/">MAD <sup>224</sup></a><a href="/anime_tags/%E4%BA%94%E6%98%9F/">五星 <sup>176</sup></a><a href="/anime_tags/%E9%9F%B3%E4%B9%90/">音乐 <sup>155</sup></a><a href="/anime_tags/%E5%89%A7%E5%9C%BA%E7%89%88/">剧场版 <sup>118</sup></a><a href="/anime_tags/%E4%B8%89%E6%98%9F/">三星 <sup>113</sup></a><a href="/anime_tags/%E7%AB%A5%E5%B9%B4/">童年 <sup>75</sup></a><a href="/anime_tags/%E7%9F%AD%E7%89%87/">短片 <sup>37</sup></a><a href="/anime_tags/%E7%9B%98%E7%82%B9/">盘点 <sup>31</sup></a><a href="/anime_tags/%E4%BA%8C%E6%98%9F/">二星 <sup>24</sup></a><a href="/anime_tags/%E5%85%AD%E6%98%9F/">六星 <sup>20</sup></a><a href="/anime_tags/%E5%AE%9E%E9%AA%8C/">实验 <sup>11</sup></a><a href="/anime_tags/%E6%B3%A1%E9%9D%A2%E7%95%AA/">泡面番 <sup>11</sup></a><a href="/anime_tags/%E5%AE%9A%E6%A0%BC/">定格 <sup>5</sup></a><a href="/anime_tags/%E4%B8%80%E6%98%9F/">一星 <sup>2</sup></a><a href="/anime_tags/%E5%90%8C%E4%BA%BA/">同人 <sup>2</sup></a><a href="/anime_tags/nsfw/">nsfw <sup>1</sup></a></div><h3 class="group-title">2026年</h3>
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/27/b5/615835_IbNAh.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_27_b5_615835_IbNAh.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -122,7 +150,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/28/41/552533_E9DF9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_28_41_552533_E9DF9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.8</div>
                                 <div class="ab_bangumiProgress">
@@ -146,7 +174,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f6/0f/604826_2XWRN.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f6_0f_604826_2XWRN.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -171,7 +199,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/71/50/525565_OxOv7.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_71_50_525565_OxOv7.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -195,7 +223,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/fe/bf/493016_Qqmf5.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_fe_bf_493016_Qqmf5.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">9.0</div>
                                 <div class="ab_bangumiProgress">
@@ -219,7 +247,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f0/51/443831_CNG0F.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f0_51_443831_CNG0F.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -252,7 +280,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/fb/2b/582501_A5ytA.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_fb_2b_582501_A5ytA.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -275,7 +303,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/17/82/526448_ssr71.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_17_82_526448_ssr71.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -299,7 +327,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/1a/31/496135_wVkYe.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_1a_31_496135_wVkYe.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -322,7 +350,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/93/79/440095_HJh7H.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_93_79_440095_HJh7H.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -342,7 +370,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/27/d7/512190_3FtCT.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_27_d7_512190_3FtCT.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -364,7 +392,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/46/4d/545328_2RRhx.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_46_4d_545328_2RRhx.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -384,7 +412,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4a/46/513352_BsaEZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4a_46_513352_BsaEZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.7</div>
                                 <div class="ab_bangumiProgress">
@@ -405,7 +433,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/6e/1a/509986_99qsc.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_6e_1a_509986_99qsc.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -429,7 +457,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/23/ce/363957_pgptl.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_23_ce_363957_pgptl.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -462,7 +490,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c4/b5/504678_iCezc.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c4_b5_504678_iCezc.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -487,7 +515,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ce/3c/430699_hsj90.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ce_3c_430699_hsj90.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -511,7 +539,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/be/42/518519_DMDo8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_be_42_518519_DMDo8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -531,7 +559,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/31/d7/425991_JFQel.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_31_d7_425991_JFQel.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -551,7 +579,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/5f/84/389156_J4gqQ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_5f_84_389156_J4gqQ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -573,7 +601,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/8c/a2/418548_zd135.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_8c_a2_418548_zd135.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -593,7 +621,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/44/7d/467461_HHw4K.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_44_7d_467461_HHw4K.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -619,7 +647,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e4/dc/464376_NsZRw.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e4_dc_464376_NsZRw.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -644,7 +672,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/9f/21/490824_8oJpo.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_9f_21_490824_8oJpo.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -664,7 +692,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/32/14/424573_YYLzT.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_32_14_424573_YYLzT.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">5.6</div>
                                 <div class="ab_bangumiProgress">
@@ -694,7 +722,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/40/01/393037_I7mvN.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_40_01_393037_I7mvN.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -726,7 +754,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/7c/8e/424883_BpzVb.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_7c_8e_424883_BpzVb.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">5.5</div>
                                 <div class="ab_bangumiProgress">
@@ -776,7 +804,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/9c/d2/394623_qErlO.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_9c_d2_394623_qErlO.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -796,7 +824,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/70/80/448478_47IsZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_70_80_448478_47IsZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -818,7 +846,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/75/c1/431767_bX7FZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_75_c1_431767_bX7FZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.9</div>
                                 <div class="ab_bangumiProgress">
@@ -841,7 +869,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f5/2e/390353_07vz7.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f5_2e_390353_07vz7.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -864,7 +892,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c5/88/395378_jztpO.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c5_88_395378_jztpO.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8</div>
                                 <div class="ab_bangumiProgress">
@@ -913,7 +941,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4b/52/362255_MjGGW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4b_52_362255_MjGGW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -934,7 +962,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/13/c5/400602_ZI8Y9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_13_c5_400602_ZI8Y9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -958,7 +986,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/2e/df/397534_kMDKF.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_2e_df_397534_kMDKF.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.3</div>
                                 <div class="ab_bangumiProgress">
@@ -979,7 +1007,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e7/a7/428735_1v11n.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e7_a7_428735_1v11n.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.9</div>
                                 <div class="ab_bangumiProgress">
@@ -1007,7 +1035,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f7/14/438632_Wq33Q.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f7_14_438632_Wq33Q.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1029,7 +1057,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e5/59/377607_8w26i.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e5_59_377607_8w26i.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -1049,7 +1077,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ba/7e/441795_q6Sc3.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ba_7e_441795_q6Sc3.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1071,7 +1099,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ba/c9/404804_1sTp8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ba_c9_404804_1sTp8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1098,7 +1126,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f6/94/151101_zQq20.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f6_94_151101_zQq20.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1142,7 +1170,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e2/97/358660_M4986.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e2_97_358660_M4986.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1163,7 +1191,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d9/03/362577_Ku9z8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d9_03_362577_Ku9z8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1189,7 +1217,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/26/b4/321885_92uzU.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_26_b4_321885_92uzU.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1209,7 +1237,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e2/e7/328609_2EHLJ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e2_e7_328609_2EHLJ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.3</div>
                                 <div class="ab_bangumiProgress">
@@ -1229,7 +1257,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/39/83/309311_dJU58.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_39_83_309311_dJU58.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -1251,7 +1279,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/dd/cd/356774_zOW55.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_dd_cd_356774_zOW55.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1282,7 +1310,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/1a/75/339326_v466V.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_1a_75_339326_v466V.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1308,7 +1336,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d9/f5/326895_j1S2n.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d9_f5_326895_j1S2n.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1333,7 +1361,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/de/4a/329906_hmtVD.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_de_4a_329906_hmtVD.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1359,7 +1387,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/9c/4d/333158_qc7CC.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_9c_4d_333158_qc7CC.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1404,7 +1432,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/7a/60/328674_5EIi5.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_7a_60_328674_5EIi5.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1424,7 +1452,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/30/fb/332649_32TAQ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_30_fb_332649_32TAQ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -1444,7 +1472,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c7/f7/223563_FgHea.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c7_f7_223563_FgHea.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1464,7 +1492,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/65/90/325285_4688X.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_65_90_325285_4688X.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1487,7 +1515,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c4/dd/328514_83G3j.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c4_dd_328514_83G3j.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1507,7 +1535,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/13/15/325003_E6w02.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_13_15_325003_E6w02.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1530,7 +1558,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/94/8c/297396_hNlBL.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_94_8c_297396_hNlBL.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1571,7 +1599,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/60/fe/294993_JrrzK.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_60_fe_294993_JrrzK.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.1</div>
                                 <div class="ab_bangumiProgress">
@@ -1596,7 +1624,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/99/17/292970_mxMxx.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_99_17_292970_mxMxx.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1628,7 +1656,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a6/fe/305515_105cI.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a6_fe_305515_105cI.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1648,7 +1676,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/13/da/280516_TvEE7.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_13_da_280516_TvEE7.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1668,7 +1696,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/73/90/285776_57c5p.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_73_90_285776_57c5p.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1690,7 +1718,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/5f/18/282433_9wDx9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_5f_18_282433_9wDx9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1731,7 +1759,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f6/f2/273843_YMdDZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f6_f2_273843_YMdDZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.6</div>
                                 <div class="ab_bangumiProgress">
@@ -1758,7 +1786,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b9/4e/231261_Ae9qE.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b9_4e_231261_Ae9qE.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1778,7 +1806,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/00/e8/269235_Dg6gZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_00_e8_269235_Dg6gZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1834,7 +1862,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/8c/71/265372_wHpoW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_8c_71_265372_wHpoW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1854,7 +1882,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e5/c8/253997_dM0nF.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e5_c8_253997_dM0nF.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1878,7 +1906,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a9/e5/218713_CxZL2.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a9_e5_218713_CxZL2.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1901,7 +1929,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c0/e9/262865_P6q49.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c0_e9_262865_P6q49.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1951,7 +1979,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/68/b8/274613_sx1iX.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_68_b8_274613_sx1iX.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1971,7 +1999,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/2a/f7/248175_2w4zT.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_2a_f7_248175_2w4zT.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.3</div>
                                 <div class="ab_bangumiProgress">
@@ -1992,7 +2020,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/06/81/265554_Z3OCr.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_06_81_265554_Z3OCr.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -2033,7 +2061,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/82/57/282413_CX6cl.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_82_57_282413_CX6cl.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -2053,7 +2081,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c7/2a/238006_OJZy1.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c7_2a_238006_OJZy1.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2075,7 +2103,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a4/ef/252655_8X396.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a4_ef_252655_8X396.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -2095,7 +2123,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b9/45/240038_b5j7g.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b9_45_240038_b5j7g.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2119,7 +2147,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/79/bb/91205_WzBkF.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_79_bb_91205_WzBkF.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -2141,7 +2169,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/1f/13/235130_suy3s.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_1f_13_235130_suy3s.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2165,7 +2193,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ca/48/214265_uHAIG.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ca_48_214265_uHAIG.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -2191,7 +2219,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/fb/c2/236020_6wt6b.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_fb_c2_236020_6wt6b.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -2253,7 +2281,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/50/29/227718_50fU0.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_50_29_227718_50fU0.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -2275,7 +2303,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/94/21/225022_UWYZz.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_94_21_225022_UWYZz.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.0</div>
                                 <div class="ab_bangumiProgress">
@@ -2301,7 +2329,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/91/c0/212003_pPk1M.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_91_c0_212003_pPk1M.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">9.0</div>
                                 <div class="ab_bangumiProgress">
@@ -2368,7 +2396,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/94/f9/233861_qIeCS.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_94_f9_233861_qIeCS.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -2393,7 +2421,7 @@ PART.2聚焦于《22-26》系列，包括以海中钢琴谱写少年与人鱼浪
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a5/1a/210230_S71UE.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a5_1a_210230_S71UE.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">

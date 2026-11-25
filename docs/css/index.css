@@ -4,3 +4,72 @@
 .home[posts] .summary .featured-image-preview {
 	padding-top: 50%;
 }
+.media-link-tip {
+	text-align: center;
+	padding: 1rem;
+	font-size: .9em;
+	opacity: .85;
+}
+.bilibili {
+	position: relative;
+}
+.bilibili {
+	width: 100%;
+}
+.bilibili iframe {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	height: auto;
+}
+.media-controls {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: .5rem;
+}
+.media-nav {
+	display: inline-flex;
+	align-items: center;
+}
+.media-playlist {
+	margin: 0;
+}
+.media-playlist-select {
+	width: auto;
+	min-width: 150px;
+	max-width: min(52vw, 360px);
+	padding: .35rem .5rem;
+	border: 1px solid rgba(128, 128, 128, .3);
+	border-radius: 6px;
+	background: rgba(128, 128, 128, .06);
+	color: #2d96bd;
+	font-size: .9em;
+	font-weight: 600;
+	cursor: pointer;
+}
+.media-playlist-select:hover,
+.media-playlist-select:focus {
+	border-color: rgba(45, 150, 189, .6);
+	background: rgba(128, 128, 128, .1);
+	outline: none;
+}
+.media-source-link {
+	white-space: nowrap;
+	font-size: .9em;
+}
+.media-playlist-select option {
+	background: #fff;
+	color: #161209;
+}
+.media-playlist-select option:checked {
+	color: #2d96bd;
+	background: rgba(45, 150, 189, .08);
+}
+.media-playlist-select option:hover {
+	color: #2d96bd;
+	background: rgba(45, 150, 189, .14);
+}
+@media (max-width: 680px) {
+	.bilibili iframe { aspect-ratio: 16 / 9; }
+}

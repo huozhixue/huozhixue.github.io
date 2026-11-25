@@ -7,26 +7,26 @@
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>音乐 - anime_tag - 个人博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="音乐" />
+        <title>音乐 - anime_tag - Ian 的博客</title><meta name="Description" content="Ian 的博客"><meta property="og:title" content="音乐" />
 <meta property="og:description" content="Ian 的博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://huozhixue.github.io/anime_tags/%E9%9F%B3%E4%B9%90/" /><meta property="og:image" content="https://huozhixue.github.io/logo.png"/>
+<meta property="og:url" content="https://huozhixue.github.io/anime_tags/%E9%9F%B3%E4%B9%90/" /><meta property="og:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://huozhixue.github.io/logo.png"/>
+<meta name="twitter:image" content="https://huozhixue.github.io/img/social-preview.png"/>
 
 <meta name="twitter:title" content="音乐"/>
 <meta name="twitter:description" content="Ian 的博客"/>
-<meta name="application-name" content="个人博客">
-<meta name="apple-mobile-web-app-title" content="个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="canonical" href="https://huozhixue.github.io/anime_tags/%E9%9F%B3%E4%B9%90/" /><link rel="alternate" href="/anime_tags/%E9%9F%B3%E4%B9%90/index.xml" type="application/rss+xml" title="个人博客">
-    <link rel="feed" href="/anime_tags/%E9%9F%B3%E4%B9%90/index.xml" type="application/rss+xml" title="个人博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
+<meta name="application-name" content="Ian 的博客">
+<meta name="apple-mobile-web-app-title" content="Ian 的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="canonical" href="https://huozhixue.github.io/anime_tags/%E9%9F%B3%E4%B9%90/" /><link rel="alternate" href="/anime_tags/%E9%9F%B3%E4%B9%90/index.xml" type="application/rss+xml" title="Ian 的博客">
+    <link rel="feed" href="/anime_tags/%E9%9F%B3%E4%B9%90/index.xml" type="application/rss+xml" title="Ian 的博客"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+            <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/anime/"> 动画 </a><a class="menu-item" href="/game/"> 游戏 </a><a class="menu-item" href="/leetcode/"> 力扣 </a><a class="menu-item" href="/contest/"> 竞赛 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -50,7 +50,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="个人博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
+                <a href="/" title="Ian 的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Ian</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -84,14 +84,42 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <script src="/js/jquery.min.js"></script>
-            <script type="text/javascript">window.config={'data': {}, 'media':{}, 'typeit': {'data': {}}};</script>
-            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" ></meting-js>
+            <script type="text/javascript">
+                window.config = {'data': {}, 'media':{}, 'typeit': {'data': {}}};
+                
+                window.resolveMediaUrl = function (raw) {
+                    raw = String(raw).replace(/^[\uFEFF]/, '').trim();
+                    
+                    var bv = raw.match(/(BV[0-9A-Za-z]+)/);
+                    if (bv) {
+                        var id = bv[1];
+                        var page = raw.match(/[?&]p=(\d+)/);
+                        var suffix = page ? '&p=' + page[1] : '';
+                        
+                        
+                        
+                        
+                        return [
+                            'https://player.bilibili.com/player.html?bvid=' + id + suffix + '&autoplay=0&as_wide=1&high_quality=1&danmaku=1',
+                            'https://www.bilibili.com/video/' + id + (page ? '?p=' + page[1] : ''),
+                            'bili'
+                        ];
+                    }
+                    
+                    return [raw, raw, 'link'];
+                };
+                
+                
+                
+                window.meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';
+            </script>
+            <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" list-max-height="263px"></meting-js>
             <main class="main">
                 <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster"><i class="fas fa-tag fa-fw"></i>&nbsp;音乐</h2><div class="tag-cloud-tags"><a href="/anime_tags/tv/">TV <sup>428</sup></a><a href="/anime_tags/%E5%9B%9B%E6%98%9F/">四星 <sup>256</sup></a><a href="/anime_tags/mad/">MAD <sup>224</sup></a><a href="/anime_tags/%E4%BA%94%E6%98%9F/">五星 <sup>176</sup></a><a href="/anime_tags/%E9%9F%B3%E4%B9%90/">音乐 <sup>155</sup></a><a href="/anime_tags/%E5%89%A7%E5%9C%BA%E7%89%88/">剧场版 <sup>118</sup></a><a href="/anime_tags/%E4%B8%89%E6%98%9F/">三星 <sup>113</sup></a><a href="/anime_tags/%E7%AB%A5%E5%B9%B4/">童年 <sup>75</sup></a><a href="/anime_tags/%E7%9F%AD%E7%89%87/">短片 <sup>37</sup></a><a href="/anime_tags/%E7%9B%98%E7%82%B9/">盘点 <sup>31</sup></a><a href="/anime_tags/%E4%BA%8C%E6%98%9F/">二星 <sup>24</sup></a><a href="/anime_tags/%E5%85%AD%E6%98%9F/">六星 <sup>20</sup></a><a href="/anime_tags/%E5%AE%9E%E9%AA%8C/">实验 <sup>11</sup></a><a href="/anime_tags/%E6%B3%A1%E9%9D%A2%E7%95%AA/">泡面番 <sup>11</sup></a><a href="/anime_tags/%E5%AE%9A%E6%A0%BC/">定格 <sup>5</sup></a><a href="/anime_tags/%E4%B8%80%E6%98%9F/">一星 <sup>2</sup></a><a href="/anime_tags/%E5%90%8C%E4%BA%BA/">同人 <sup>2</sup></a><a href="/anime_tags/nsfw/">nsfw <sup>1</sup></a></div><h3 class="group-title">2024年</h3>
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/40/01/393037_I7mvN.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_40_01_393037_I7mvN.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -123,7 +151,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/75/c1/431767_bX7FZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_75_c1_431767_bX7FZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.9</div>
                                 <div class="ab_bangumiProgress">
@@ -147,7 +175,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/13/c5/400602_ZI8Y9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_13_c5_400602_ZI8Y9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -171,7 +199,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e7/a7/428735_1v11n.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e7_a7_428735_1v11n.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.9</div>
                                 <div class="ab_bangumiProgress">
@@ -199,7 +227,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ba/7e/441795_q6Sc3.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ba_7e_441795_q6Sc3.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -221,7 +249,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ba/c9/404804_1sTp8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ba_c9_404804_1sTp8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.8</div>
                                 <div class="ab_bangumiProgress">
@@ -248,7 +276,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/f6/94/151101_zQq20.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_f6_94_151101_zQq20.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -296,7 +324,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a4/ef/252655_8X396.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a4_ef_252655_8X396.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -316,7 +344,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/79/bb/91205_WzBkF.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_79_bb_91205_WzBkF.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -338,7 +366,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ca/48/214265_uHAIG.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ca_48_214265_uHAIG.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -364,7 +392,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/50/29/227718_50fU0.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_50_29_227718_50fU0.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.3</div>
                                 <div class="ab_bangumiProgress">
@@ -435,7 +463,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/c2/c7/211311_778A7.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_c2_c7_211311_778A7.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -479,7 +507,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b1/c7/193378_KgztF.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b1_c7_193378_KgztF.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.8</div>
                                 <div class="ab_bangumiProgress">
@@ -503,7 +531,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/e9/15/179949_c2j50.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_e9_15_179949_c2j50.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.3</div>
                                 <div class="ab_bangumiProgress">
@@ -527,7 +555,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/18/1f/176478_kk61b.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_18_1f_176478_kk61b.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -579,7 +607,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/20/15/160209_2UzU8.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_20_15_160209_2UzU8.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -612,7 +640,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a1/1f/176518_Ny137.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a1_1f_176518_Ny137.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.4</div>
                                 <div class="ab_bangumiProgress">
@@ -638,7 +666,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/72/ef/296195_n0KqL.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_72_ef_296195_n0KqL.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -658,7 +686,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/eb/e9/168204_Mymk9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_eb_e9_168204_Mymk9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -678,7 +706,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/56/de/135275_G3liq.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_56_de_135275_G3liq.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.6</div>
                                 <div class="ab_bangumiProgress">
@@ -698,7 +726,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/10/10/119394_06TrB.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_10_10_119394_06TrB.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.6</div>
                                 <div class="ab_bangumiProgress">
@@ -719,7 +747,7 @@
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/37/df/115908_c0uQj.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_37_df_115908_c0uQj.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.6</div>
                                 <div class="ab_bangumiProgress">
@@ -759,7 +787,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/13/ed/115732_ae4L6.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_13_ed_115732_ae4L6.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -821,7 +849,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ec/c7/100444_yGsJZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ec_c7_100444_yGsJZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -841,7 +869,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/73/26/110467_Fx9tT.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_73_26_110467_Fx9tT.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -932,7 +960,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a7/5a/103671_guH2K.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a7_5a_103671_guH2K.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.6</div>
                                 <div class="ab_bangumiProgress">
@@ -978,7 +1006,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/1e/63/93739_TZ9dS.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_1e_63_93739_TZ9dS.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.9</div>
                                 <div class="ab_bangumiProgress">
@@ -1039,7 +1067,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/47/fa/78405_dodKZ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_47_fa_78405_dodKZ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.3</div>
                                 <div class="ab_bangumiProgress">
@@ -1079,7 +1107,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d5/d7/72941_q1DiW.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d5_d7_72941_q1DiW.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1123,7 +1151,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/0f/31/113134_NkaCg.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_0f_31_113134_NkaCg.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1143,7 +1171,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/07/bd/69494_83NJ1.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_07_bd_69494_83NJ1.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1164,7 +1192,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/78/c9/55770_HsJfh.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_78_c9_55770_HsJfh.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1184,7 +1212,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/98/ae/66360_L2dLv.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_98_ae_66360_L2dLv.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1204,7 +1232,7 @@
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/ad/6b/43197_0bLWN.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_ad_6b_43197_0bLWN.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1248,7 +1276,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/r/400/pic/cover/l/1c/4e/37673_HpP99.jpg"
+                                    src="https://bgmimg.anibt.net/r/400/pic/cover/l/1c/4e/37673_HpP99.jpg"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1268,7 +1296,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/46/ea/38040_KFMP9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_46_ea_38040_KFMP9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1315,7 +1343,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d0/13/55103_nxS27.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d0_13_55103_nxS27.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1335,7 +1363,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/41/39/26449_G0Xzx.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_41_39_26449_G0Xzx.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -1395,7 +1423,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/cd/38/27364_B4xxy.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_cd_38_27364_B4xxy.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1436,7 +1464,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4a/48/29323_aBaT9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4a_48_29323_aBaT9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.9</div>
                                 <div class="ab_bangumiProgress">
@@ -1479,7 +1507,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b1/b2/18294_be4AB.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b1_b2_18294_be4AB.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.8</div>
                                 <div class="ab_bangumiProgress">
@@ -1520,7 +1548,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/92/f6/18624_ZFj5M.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_92_f6_18624_ZFj5M.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">9.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1542,7 +1570,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a8/6a/11577_5U5G1.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a8_6a_11577_5U5G1.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">9.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1669,7 +1697,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/cb/57/9717_sAVag.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_cb_57_9717_sAVag.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.7</div>
                                 <div class="ab_bangumiProgress">
@@ -1713,7 +1741,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/d6/f8/8726_C8wW0.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_d6_f8_8726_C8wW0.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1735,7 +1763,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/6e/01/7157_QV8Rz.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_6e_01_7157_QV8Rz.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">6.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1760,7 +1788,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a7/49/8402_Q9mLv.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a7_49_8402_Q9mLv.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -1846,7 +1874,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/7d/c3/4124_pPP9r.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_7d_c3_4124_pPP9r.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.5</div>
                                 <div class="ab_bangumiProgress">
@@ -1931,7 +1959,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/64/7c/1671_vQ2W9.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_64_7c_1671_vQ2W9.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.6</div>
                                 <div class="ab_bangumiProgress">
@@ -1953,7 +1981,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/af/e4/1444_n67JG.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_af_e4_1444_n67JG.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.6</div>
                                 <div class="ab_bangumiProgress">
@@ -1973,7 +2001,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/48/9d/1424_q8FMQ.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_48_9d_1424_q8FMQ.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.0</div>
                                 <div class="ab_bangumiProgress">
@@ -2015,7 +2043,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                     <div id="ab_bangumi_content"><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/49/8f/11153_jp.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_49_8f_11153_jp.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.5</div>
                                 <div class="ab_bangumiProgress">
@@ -2060,7 +2088,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/a9/81/1625_59HVn.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_a9_81_1625_59HVn.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">9.1</div>
                                 <div class="ab_bangumiProgress">
@@ -2146,7 +2174,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/28/26/799_C3Ypp.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_28_26_799_C3Ypp.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.8</div>
                                 <div class="ab_bangumiProgress">
@@ -2225,7 +2253,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/db/8e/276_1Cr5K.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_db_8e_276_1Cr5K.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2247,7 +2275,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/8e/93/2940_5649o.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_8e_93_2940_5649o.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2267,7 +2295,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/b2/53/1662_u9Z32.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_b2_53_1662_u9Z32.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">7.2</div>
                                 <div class="ab_bangumiProgress">
@@ -2293,7 +2321,7 @@ RWBY是由外国知名同人（非职业）创作团队Monty Oum工作室制作�
                         </div><div class="ab_bangumiItem">
                             <div class="ab_bangumiCover">
                                 <img referrerpolicy="no-referrer"
-                                    src="https://lain.bgm.tv/pic/cover/l/4e/a0/770_EvrMq.jpg"
+                                    src="/bgm/cover/thumb/pic_cover_l_4e_a0_770_EvrMq.webp"
                                     class="ab_bangumiCoverImg">
                                 <div class="ab_bangumiScore">8.9</div>
                                 <div class="ab_bangumiProgress">

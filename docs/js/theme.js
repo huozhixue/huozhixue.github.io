@@ -640,67 +640,84 @@ class Theme {
     }
 
     switchMedia($media, $link, curData, type){
-        $link.innerText = curData[1];
-		$link.href = curData[2];
-        $media.removeChild($media.lastElementChild);
-        let player = ``;
-        if (type=='music') {
-            player = `<meting-js auto="${curData[0]}" list-max-height="263px" order="random"></meting-js>`;
+        if ($link) {
+            $link.href = curData[2];
+            $link.target = '_blank';
+            $link.title = curData[1];
+            $link.innerText = '跳转原网站 ↗';
         }
-		else {
-			player = `<div class="bilibili"><iframe src="${curData[0]}" high_quality="1" scrolling="no" border="0"  frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-same-origin allow-scripts"></iframe></div>`;
-		};
+        $media.removeChild($media.lastElementChild);
+        var embedUrl = curData[0], linkUrl = curData[2], kind = curData[3];
+        var player = ``;
+        if (type === 'music') {
+            player = `<meting-js auto="${linkUrl}" list-max-height="263px" order="random"></meting-js>`;
+        } else if (kind === 'bili') {
+            // 标准播放器 + 防跳转 sandbox；原网站链接统一放在控制行。
+            player = `<div class="bilibili"><iframe src="${embedUrl}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe></div>`;
+        } else {
+            // 非 B 站链接（如 keke）没有 iframe，提示用控制行的原网站链接观看。
+            player = `<div class="media-link-tip">本站不内嵌该站点，请点击上方链接观看。</div>`;
+        }
         $media.insertAdjacentHTML('beforeEnd', player);
     }
 
     initMedia() {
         this.util.forEach(document.getElementsByClassName('media'), $media => {
 			const data = this.config.media[$media.id];
+			if (!data || !data.length) { return; }
 			const pair = data.pop();
-			let cur = pair[0];
+			let cur = pair[0] % data.length;
 			const len = data.length;
 			const type = $media.getAttribute('type');
-			const $player = $media.lastElementChild;
-			const $link = $player.previousElementSibling;
-            const $btn2 = $link.previousElementSibling;
-            const $btn1 = $btn2.previousElementSibling;
-            this.switchMedia($media, $link, data[cur], type);
-            $btn1.addEventListener('click', () => {
-                if (cur == 0) { cur = len};
-                cur = (cur - 1) % len;
+			const $playlist = $media.querySelector('.media-playlist');
+			const $link = $media.querySelector('.media-source-link');
+            const $btn2 = $media.querySelector('.media-next');
+            const $btn1 = $media.querySelector('.media-prev');
+            let $select = null;
+
+            // 统一切换入口：切换播放器、更新链接、同步下拉框选中项
+            const select = (index) => {
+                cur = ((index % len) + len) % len;
                 this.switchMedia($media, $link, data[cur], type);
-            }, false);
-            $btn2.addEventListener('click', () => {
-                cur = (cur + 1) % len;
-                this.switchMedia($media, $link, data[cur], type);
-            }, false);
-            if (pair[1]) {
-                const $input = $media.firstElementChild;
-                const $btn0 = $input.nextElementSibling;
-                $input.addEventListener('keydown', () => {
-                    const e = window.event || arguments.callee.caller.arguments[0];
-                    if (e && e.keyCode == 13) {
-                        const input = $input.value;
-                        if (/(^[1-9]\d*$)/.test(input)) {
-                            cur = (input-1) % len;
-                            this.switchMedia($media, $link, data[cur], type);
-                        }
-                    }
-                }, false);
-                $btn0.addEventListener('click', () => {
-                    const input = $input.value;
-                    if (/(^[1-9]\d*$)/.test(input)) {
-                        cur = (input-1) % len;
-                        this.switchMedia($media, $link, data[cur], type);
-                    }
-                }, false);
+                if ($select) { $select.value = String(cur); }
             };
+
+            // 构建下拉选择框：紧凑、选中即播放
+            if ($playlist && len >= 1) {
+                $select = document.createElement('select');
+                $select.className = 'media-playlist-select';
+                for (let i = 0; i < len; i++) {
+                    const $opt = document.createElement('option');
+                    $opt.value = String(i);
+                    $opt.textContent = data[i][1] || ('#' + (i + 1));
+                    $select.appendChild($opt);
+                }
+                $select.addEventListener('change', () => {
+                    select(parseInt($select.value, 10));
+                }, false);
+                $playlist.appendChild($select);
+            }
+
+            select(cur);
+            if ($btn1) {
+                $btn1.addEventListener('click', () => { select(cur - 1); }, false);
+            }
+            if ($btn2) {
+                $btn2.addEventListener('click', () => { select(cur + 1); }, false);
+            }
         });
     }
 	
 	initSlider() {
 		$('.flexslider').flexslider({
 			animation: "slide",
+			// flexslider 切换时手动触发 lazysizes 加载当前帧的角色图，避免轮播到懒加载图片时空白
+			before: function (slider) {
+				const $cur = slider.slides.eq(slider.currentSlide).find('img.lazyload');
+				if ($cur.length && window.lazySizes) {
+					window.lazySizes.loader.unveil($cur[0]);
+				}
+			}
 		  });
 	}
 
