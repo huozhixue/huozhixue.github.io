@@ -661,6 +661,191 @@ class Theme {
         $media.insertAdjacentHTML('beforeEnd', player);
     }
 
+    initTagFilter() {
+        this.util.forEach(document.getElementsByClassName('tag-filter'), $filter => {
+            if ($filter.dataset && $filter.dataset.filterReady) { return; }
+            if ($filter.dataset) { $filter.dataset.filterReady = 'true'; }
+            const $items = Array.from($filter.querySelectorAll('.tag-filter-item'));
+            const $groups = Array.from($filter.querySelectorAll('.tag-filter-group'));
+            const $select = $filter.querySelector('.tag-filter-select');
+            const $selected = $filter.querySelector('.tag-filter-selected');
+            const $mode = $filter.querySelector('.tag-filter-mode');
+            const $year = $filter.querySelector('.tag-filter-year');
+            const $clear = $filter.querySelector('.tag-filter-clear');
+            const $count = $filter.querySelector('.tag-filter-count');
+            const $pager = $filter.querySelector('.tag-filter-pager');
+            const perPage = parseInt($filter.getAttribute('data-paginate') || '0', 10) || 0;
+            const selected = [];
+            let page = 1;
+
+            // 标签列表点击 = 下拉框选一个标签，复用同一套筛选状态
+            const $cloudButtons = [];
+            this.util.forEach(document.getElementsByClassName('tag-cloud-tag'), $button => {
+                if ($button.getAttribute && $button.getAttribute('data-tag')) { $cloudButtons.push($button); }
+            });
+            const syncTagCloud = () => {
+                $cloudButtons.forEach($button => {
+                    const active = selected.indexOf($button.getAttribute('data-tag')) > -1;
+                    if ($button.classList) { $button.classList.toggle('active', active); }
+                });
+            };
+
+            const renderPager = totalPages => {
+                if (!$pager) { return; }
+                while ($pager.firstChild) { $pager.removeChild($pager.firstChild); }
+                if (totalPages <= 1) { return; }
+                const $ul = document.createElement('ul');
+                $ul.className = 'pagination';
+                let ellipsed = false;
+                for (let p = 1; p <= totalPages; p++) {
+                    const show = p === 1 || p === totalPages || Math.abs(p - page) < 3;
+                    if (!show) {
+                        if (!ellipsed) {
+                            const $li = document.createElement('li');
+                            $li.className = 'page-item';
+                            const $span = document.createElement('span');
+                            $span.className = 'page-link';
+                            $span.textContent = '…';
+                            $li.appendChild($span);
+                            $ul.appendChild($li);
+                            ellipsed = true;
+                        }
+                        continue;
+                    }
+                    ellipsed = false;
+                    const $li = document.createElement('li');
+                    $li.className = 'page-item' + (p === page ? ' active' : '');
+                    const $span = document.createElement('span');
+                    $span.className = 'page-link';
+                    const $link = document.createElement('a');
+                    $link.href = '#';
+                    $link.textContent = String(p);
+                    $link.addEventListener('click', event => {
+                        if (event && event.preventDefault) { event.preventDefault(); }
+                        page = p;
+                        apply();
+                    }, false);
+                    $span.appendChild($link);
+                    $li.appendChild($span);
+                    $ul.appendChild($li);
+                }
+                $pager.appendChild($ul);
+            };
+
+            const apply = () => {
+                const isAny = $mode && $mode.value === 'any';
+                const year = $year && $year.value ? $year.value : '';
+                const matched = [];
+                $items.forEach($item => {
+                    if (year && $item.getAttribute('data-year') !== year) { return; }
+                    const tags = ($item.getAttribute('data-tags') || '').split('|').filter(Boolean);
+                    const match = selected.length === 0 || (isAny
+                        ? selected.some(tag => tags.indexOf(tag) > -1)
+                        : selected.every(tag => tags.indexOf(tag) > -1));
+                    if (match) { matched.push($item); }
+                });
+                const totalPages = perPage ? Math.max(1, Math.ceil(matched.length / perPage)) : 1;
+                if (page > totalPages) { page = totalPages; }
+                const visible = perPage ? matched.slice((page - 1) * perPage, page * perPage) : matched;
+                $items.forEach($item => {
+                    $item.style.display = visible.indexOf($item) > -1 ? '' : 'none';
+                });
+                $groups.forEach($group => {
+                    const hasVisible = Array.from($group.querySelectorAll('.tag-filter-item'))
+                        .some($item => $item.style.display !== 'none');
+                    $group.style.display = hasVisible ? '' : 'none';
+                });
+                if ($count) {
+                    $count.textContent = perPage && matched.length > perPage
+                        ? `显示 ${(page - 1) * perPage + 1}-${Math.min(page * perPage, matched.length)} / ${matched.length}（共 ${$items.length}）`
+                        : `显示 ${matched.length} / ${$items.length}`;
+                }
+                if ($select && $select.options) {
+                    Array.from($select.options).forEach($option => {
+                        if ($option.value) { $option.disabled = selected.indexOf($option.value) > -1; }
+                    });
+                }
+                syncTagCloud();
+                renderPager(totalPages);
+            };
+
+            const removeTag = tag => {
+                const index = selected.indexOf(tag);
+                if (index < 0) { return; }
+                selected.splice(index, 1);
+                if ($selected) {
+                    Array.from($selected.children).forEach($chip => {
+                        if ($chip.getAttribute && $chip.getAttribute('data-tag') === tag) {
+                            $selected.removeChild($chip);
+                        }
+                    });
+                }
+                page = 1;
+                apply();
+            };
+
+            const addTag = tag => {
+                if (!tag || selected.indexOf(tag) > -1) { return; }
+                selected.push(tag);
+                page = 1;
+                if ($selected) {
+                    const $chip = document.createElement('button');
+                    $chip.type = 'button';
+                    $chip.className = 'tag-filter-chip';
+                    $chip.setAttribute('data-tag', tag);
+                    $chip.title = '点击移除';
+                    $chip.textContent = tag + ' ×';
+                    $chip.addEventListener('click', () => { removeTag(tag); }, false);
+                    $selected.appendChild($chip);
+                }
+                if ($select) { $select.value = ''; }
+                apply();
+            };
+
+            if ($select) {
+                $select.addEventListener('change', () => { addTag($select.value); }, false);
+            }
+            if ($mode) {
+                $mode.addEventListener('change', () => { page = 1; apply(); }, false);
+            }
+            if ($year) {
+                $year.addEventListener('change', () => { page = 1; apply(); }, false);
+            }
+            if ($clear) {
+                $clear.addEventListener('click', () => {
+                    selected.length = 0;
+                    if ($selected) {
+                        while ($selected.firstChild) { $selected.removeChild($selected.firstChild); }
+                    }
+                    if ($select) { $select.value = ''; }
+                    if ($year) { $year.value = ''; }
+                    page = 1;
+                    apply();
+                }, false);
+            }
+            $cloudButtons.forEach($button => {
+                $button.addEventListener('click', () => {
+                    const tag = $button.getAttribute('data-tag');
+                    if (selected.indexOf(tag) > -1) { removeTag(tag); }
+                    else { addTag(tag); }
+                }, false);
+            });
+            this.util.forEach(document.getElementsByClassName('tag-cloud-more'), $more => {
+                if ($more.dataset && $more.dataset.cloudReady) { return; }
+                if ($more.dataset) { $more.dataset.cloudReady = 'true'; }
+                $more.addEventListener('click', () => {
+                    const $parent = $more.parentNode || $more.parentElement;
+                    const $extra = $parent && $parent.querySelector
+                        ? $parent.querySelector('.tag-cloud-extra') : null;
+                    if (!$extra || typeof $extra.hidden === 'undefined') { return; }
+                    $extra.hidden = !$extra.hidden;
+                    $more.textContent = $extra.hidden ? '…' : '收起';
+                }, false);
+            });
+            apply();
+        });
+    }
+
     initMedia() {
         this.util.forEach(document.getElementsByClassName('media'), $media => {
 			const data = this.config.media[$media.id];
@@ -801,7 +986,8 @@ class Theme {
             this.initEcharts();
             this.initTypeit();
             this.initMapbox();
-            this.initCookieconsent();
+			this.initCookieconsent();
+			this.initTagFilter();
 			this.initMedia();
 			this.initSlider();
         } catch (err) {
@@ -831,6 +1017,7 @@ class Theme {
             this.initEcharts();
             this.initTypeit();
             this.initMapbox();
+            this.initTagFilter();
             this.initMedia();
 			this.initSlider();
         } catch (err) {
@@ -868,7 +1055,10 @@ if (document.readyState !== 'loading') {
  */
  
  /*pjax starts*/
-$(document).pjax('a[target!=_blank]', '.container', {fragment: '.container',timeout: 8000});
+// 回到顶部/评论按钮以及所有 # 锚点都是页内跳转，不能交给 pjax 处理，
+// 否则点击「回到顶部」会被当成一次导航：URL 变成 /#top、容器被替换，
+// 标签筛选组件随之重建导致点击失效。页内滚动交给主题自带的 SmoothScroll。
+$(document).pjax('a[target!=_blank]:not([href^="#"])', '.container', {fragment: '.container',timeout: 8000});
 $(document).on('ready pjax:end', function() {const theme = new Theme(); theme.init2();})
 $(document).on('pjax:click', function() {window.config.data = {}; window.config.media={}; window.config.typeit.data = {};})
 /*pjax ends*/

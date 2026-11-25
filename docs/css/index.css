@@ -73,3 +73,127 @@
 @media (max-width: 680px) {
 	.bilibili iframe { aspect-ratio: 16 / 9; }
 }
+
+.tag-filter {
+	margin: 1.2rem 0 2rem;
+}
+.tag-cloud-tags .tag-cloud-tag,
+.tag-cloud-tags .tag-cloud-more {
+	display: inline-block;
+	position: relative;
+	margin: 5px 10px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+.tag-cloud-tags .tag-cloud-tag:hover,
+.tag-cloud-tags .tag-cloud-tag:focus,
+.tag-cloud-tags .tag-cloud-tag.active,
+.tag-cloud-tags .tag-cloud-more:hover {
+	color: #2d96bd;
+}
+.tag-cloud-tags .tag-cloud-tag.active {
+	font-weight: 600;
+}
+.tag-cloud-extra[hidden] {
+	display: none;
+}
+.tag-filter-bar {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: .5rem;
+	padding: .6rem .8rem;
+	border: 1px solid rgba(128, 128, 128, .25);
+	border-radius: 8px;
+	background: rgba(128, 128, 128, .05);
+}
+.tag-filter-select,
+.tag-filter-year,
+.tag-filter-mode {
+	max-width: min(240px, 46vw);
+	padding: .3rem .45rem;
+	border: 1px solid rgba(128, 128, 128, .3);
+	border-radius: 6px;
+	background: transparent;
+	color: inherit;
+	font-size: .85em;
+	cursor: pointer;
+}
+.tag-filter-select {
+	color: #2d96bd;
+	font-weight: 600;
+}
+.tag-filter-clear {
+	padding: .3rem .65rem;
+	border: 1px solid rgba(128, 128, 128, .3);
+	border-radius: 6px;
+	background: transparent;
+	color: inherit;
+	font-size: .85em;
+	cursor: pointer;
+}
+.tag-filter-clear:hover,
+.tag-filter-select:hover,
+.tag-filter-year:hover,
+.tag-filter-mode:hover {
+	border-color: #2d96bd;
+	color: #2d96bd;
+}
+.tag-filter-count {
+	font-size: .8em;
+	opacity: .75;
+	white-space: nowrap;
+}
+.tag-filter-selected {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .35rem;
+	margin-top: .55rem;
+}
+.tag-filter-selected:empty {
+	display: none;
+}
+.tag-filter-chip {
+	padding: .2rem .55rem;
+	border: 1px solid rgba(45, 150, 189, .45);
+	border-radius: 999px;
+	background: rgba(45, 150, 189, .1);
+	color: #2d96bd;
+	font-size: .82em;
+	line-height: 1.4;
+	cursor: pointer;
+}
+.tag-filter-chip:hover {
+	background: rgba(45, 150, 189, .2);
+}
+.tag-filter-results {
+	margin-top: 1rem;
+}
+.tag-filter-results:not(#ab_bangumi_content) {
+	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+}
+.tag-filter-group {
+	display: contents;
+}
+.ab_bangumi_content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tag-filter-pager:empty {
+	display: none;
+}
+.tag-filter-link {
+	display: inline-block;
+	margin-bottom: 1rem;
+	color: #2d96bd;
+	font-size: .9em;
+}
