@@ -2,6 +2,11 @@
 // 但事件监听器丢失。用 WeakSet 按“元素对象”判重（每次都是新对象），确保重新初始化。
 const tagFilterReady = new WeakSet();
 const tagCloudMoreReady = new WeakSet();
+// 全局事件（scroll/resize/mask）只绑定一次：pjax 往返会反复 new Theme()，
+// 若每次都 addEventListener，监听器会不断累积导致页面越用越卡。
+// 统一通过 currentTheme 转发到当前实例，保证回调作用于最新 DOM 与最新的事件集合。
+let currentTheme = null;
+const globalEventsBound = { scroll: false, resize: false, mask: false };
 
 class Util {
     forEach(elements, handler) {
@@ -35,6 +40,7 @@ class Util {
 
 class Theme {
     constructor() {
+        currentTheme = this;
         this.config = window.config;
         this.data = this.config.data;
         this.isDark = document.body.getAttribute('theme') === 'dark';
@@ -92,7 +98,8 @@ class Theme {
                 else document.body.setAttribute('theme', 'dark');
                 this.isDark = !this.isDark;
                 window.localStorage && localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
-                for (let event of this.switchThemeEventSet) event();
+                const self = currentTheme || this;
+                for (let event of self.switchThemeEventSet) event();
             }, false);
         });
     }
@@ -1042,67 +1049,81 @@ class Theme {
 	}
 
     onScroll() {
-        const $headers = [];
-        if (document.body.getAttribute('header-desktop') === 'auto') $headers.push(document.getElementById('header-desktop'));
-        if (document.body.getAttribute('header-mobile') === 'auto') $headers.push(document.getElementById('header-mobile'));
-        if (document.getElementById('comments')) {
-            const $viewComments = document.getElementById('view-comments');
-            $viewComments.href = `#comments`;
-            $viewComments.style.display = 'block';
-        }
-        const $fixedButtons = document.getElementById('fixed-buttons');
+        if (globalEventsBound.scroll) { return; }
+        globalEventsBound.scroll = true;
         const ACCURACY = 20, MINIMUM = 100;
         window.addEventListener('scroll', () => {
-            this.newScrollTop = this.util.getScrollTop();
-            const scroll = this.newScrollTop - this.oldScrollTop;
-            const isMobile = this.util.isMobile();
-            this.util.forEach($headers, $header => {
+            const self = currentTheme;
+            if (!self) { return; }
+            // 每次重新取元素：pjax 会替换 .container，缓存旧节点会导致操作失效。
+            const $headers = [];
+            if (document.body.getAttribute('header-desktop') === 'auto') $headers.push(document.getElementById('header-desktop'));
+            if (document.body.getAttribute('header-mobile') === 'auto') $headers.push(document.getElementById('header-mobile'));
+            const $viewComments = document.getElementById('view-comments');
+            if (document.getElementById('comments') && $viewComments) {
+                $viewComments.href = `#comments`;
+                $viewComments.style.display = 'block';
+            }
+            const $fixedButtons = document.getElementById('fixed-buttons');
+            if (!$fixedButtons) { return; }
+            self.newScrollTop = self.util.getScrollTop();
+            const scroll = self.newScrollTop - self.oldScrollTop;
+            const isMobile = self.util.isMobile();
+            self.util.forEach($headers, $header => {
+                if (!$header) { return; }
                 if (scroll > ACCURACY) {
                     $header.classList.remove('fadeInDown');
-                    this.util.animateCSS($header, ['fadeOutUp', 'faster'], true);
+                    self.util.animateCSS($header, ['fadeOutUp', 'faster'], true);
                 } else if (scroll < - ACCURACY) {
                     $header.classList.remove('fadeOutUp');
-                    this.util.animateCSS($header, ['fadeInDown', 'faster'], true);
+                    self.util.animateCSS($header, ['fadeInDown', 'faster'], true);
                 }
             });
-            if (this.newScrollTop > MINIMUM) {
+            if (self.newScrollTop > MINIMUM) {
                 if (isMobile && scroll > ACCURACY) {
                     $fixedButtons.classList.remove('fadeIn');
-                    this.util.animateCSS($fixedButtons, ['fadeOut', 'faster'], true);
+                    self.util.animateCSS($fixedButtons, ['fadeOut', 'faster'], true);
                 } else if (!isMobile || scroll < - ACCURACY) {
                     $fixedButtons.style.display = 'block';
                     $fixedButtons.classList.remove('fadeOut');
-                    this.util.animateCSS($fixedButtons, ['fadeIn', 'faster'], true);
+                    self.util.animateCSS($fixedButtons, ['fadeIn', 'faster'], true);
                 }
             } else {
                 if (!isMobile) {
                     $fixedButtons.classList.remove('fadeIn');
-                    this.util.animateCSS($fixedButtons, ['fadeOut', 'faster'], true);
+                    self.util.animateCSS($fixedButtons, ['fadeOut', 'faster'], true);
                 }
                 $fixedButtons.style.display = 'none';
             }
-            for (let event of this.scrollEventSet) event();
-            this.oldScrollTop = this.newScrollTop;
+            for (let event of self.scrollEventSet) event();
+            self.oldScrollTop = self.newScrollTop;
         }, false);
     }
 
     onResize() {
+        if (globalEventsBound.resize) { return; }
+        globalEventsBound.resize = true;
         window.addEventListener('resize', () => {
-            if (!this._resizeTimeout) {
-                this._resizeTimeout = window.setTimeout(() => {
-                    this._resizeTimeout = null;
-                    for (let event of this.resizeEventSet) event();
-                    this.initToc();
-                    this.initMermaid();
-                    this.initSearch();
-                }, 100);
-            }
+            const self = currentTheme;
+            if (!self || self._resizeTimeout) { return; }
+            self._resizeTimeout = window.setTimeout(() => {
+                self._resizeTimeout = null;
+                for (let event of self.resizeEventSet) event();
+                self.initToc();
+                self.initMermaid();
+                self.initSearch();
+            }, 100);
         }, false);
     }
 
     onClickMask() {
+        if (globalEventsBound.mask) { return; }
+        globalEventsBound.mask = true;
         document.getElementById('mask').addEventListener('click', () => {
-            for (let event of this.clickMaskEventSet) event();
+            const self = currentTheme;
+            if (self) {
+                for (let event of self.clickMaskEventSet) event();
+            }
             document.body.classList.remove('blur');
         }, false);
     }
@@ -1177,23 +1198,12 @@ $(function(){
 	theme.init();
 })
 
-/* const themeInit = () => {
-    const theme = new Theme();
-    theme.init();
-};
-
-if (document.readyState !== 'loading') {
-    themeInit();
-} else {
-    document.addEventListener('DOMContentLoaded', themeInit, false);
-}
- */
- 
  /*pjax starts*/
 // 回到顶部/评论按钮以及所有 # 锚点都是页内跳转，不能交给 pjax 处理，
 // 否则点击「回到顶部」会被当成一次导航：URL 变成 /#top、容器被替换，
 // 标签筛选组件随之重建导致点击失效。页内滚动交给主题自带的 SmoothScroll。
 $(document).pjax('a[target!=_blank]:not([href^="#"])', '.container', {fragment: '.container',timeout: 8000});
-$(document).on('ready pjax:end', function() {const theme = new Theme(); theme.init2();})
+// 不监听 ready：首次加载已由上面的 $(function) 调用 init()，再监听会重复初始化。
+$(document).on('pjax:end', function() {const theme = new Theme(); theme.init2();})
 $(document).on('pjax:click', function() {window.config.data = {}; window.config.media={}; window.config.typeit.data = {};})
 /*pjax ends*/
