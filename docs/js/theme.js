@@ -8,6 +8,58 @@ const tagCloudMoreReady = new WeakSet();
 let currentTheme = null;
 const globalEventsBound = { scroll: false, resize: false, mask: false };
 
+// 按需加载重型库：katex。
+// 用全局 Map 缓存 Promise，保证同一地址只注入一次；pjax 换页后新页 config 覆盖，
+// 但已加载的库命中缓存，不会重复请求。
+const loadedAssets = new Map();
+function loadAsset(url, type) {
+    if (!url) { return Promise.resolve(); }
+    const key = type + ':' + url;
+    if (loadedAssets.has(key)) { return loadedAssets.get(key); }
+    const p = new Promise((resolve, _reject) => {
+        const el = document.createElement(type === 'css' ? 'link' : 'script');
+        if (type === 'css') { el.rel = 'stylesheet'; el.href = url; }
+        else { el.src = url; }
+        el.onload = () => { resolve(); };
+        el.onerror = () => { loadedAssets.delete(key); resolve(); }; // 失败不阻塞其它初始化
+        (type === 'css' ? document.head : document.body).appendChild(el);
+    });
+    loadedAssets.set(key, p);
+    return p;
+}
+// 兜底库路径表：路径固定，pjax 换页不重载 head/config，据此判断当前页需要哪些库。
+// config.deferredLibs 由首次加载的页面提供；pjax 后以 DOM 里的元素为准，用这张表补齐。
+const DEFAULT_LIBS = {
+    math: { katex: 'lib/katex/katex.min.js', render: 'lib/katex/auto-render.min.js' }
+};
+function resolveLibUrl(path) {
+    // 相对路径补成站点根路径（config.baseURL 可能是子路径，用 JS 侧统一处理）
+    return /^https?:\/\//.test(path) ? path : '/' + String(path).replace(/^\//, '');
+}
+function loadDeferred(name) {
+    const cfg = (window.config && window.config.deferredLibs) || {};
+    let lib = cfg[name] || DEFAULT_LIBS[name];
+    if (!lib) { return Promise.resolve(); }
+    // 路径统一补前缀
+    if (typeof lib === 'string') { lib = resolveLibUrl(lib); }
+    else {
+        lib = Object.assign({}, lib);
+        ['css', 'js', 'render', 'copyTex', 'mhchem'].forEach(k => {
+            if (lib[k]) { lib[k] = resolveLibUrl(lib[k]); }
+        });
+    }
+    const jobs = [];
+    if (typeof lib === 'string') { jobs.push(loadAsset(lib, 'js')); }
+    else {
+        if (lib.css) { jobs.push(loadAsset(lib.css, 'css')); }
+        if (lib.js) { jobs.push(loadAsset(lib.js, 'js')); }
+        if (lib.render) { jobs.push(loadAsset(lib.render, 'js')); }
+        if (lib.copyTex) { jobs.push(loadAsset(lib.copyTex, 'js')); }
+        if (lib.mhchem) { jobs.push(loadAsset(lib.mhchem, 'js')); }
+    }
+    return Promise.all(jobs);
+}
+
 class Util {
     forEach(elements, handler) {
         elements = elements || [];
@@ -297,7 +349,7 @@ class Theme {
                 for (let event of this.clickMaskEventSet) event();
                 document.body.classList.remove('blur');
 				$.pjax({url: suggestion.uri, container: '.container', fragment: '.container', timeout: 8000});
-				window.config.data = {}; window.config.media={}; window.config.typeit.data = {};
+				window.config.data = {}; window.config.media={};
 				this.init2();
             });
             if (isMobile) this._searchMobile = autosearch;
@@ -483,164 +535,19 @@ class Theme {
     }
 
     initMath() {
-        if (this.config.math) renderMathInElement(document.body, this.config.math);
-    }
-
-    initMermaid() {
-        const $mermaidElements = document.getElementsByClassName('mermaid');
-        if ($mermaidElements.length) {
-            mermaid.initialize({startOnLoad: false, theme: 'null'});
-            this.util.forEach($mermaidElements, $mermaid => {
-                mermaid.mermaidAPI.render('svg-' + $mermaid.id, this.data[$mermaid.id], svgCode => {
-                    $mermaid.insertAdjacentHTML('afterbegin', svgCode);
-                }, $mermaid);
-            });
-        }
-    }
-
-    initEcharts() {
-        this._echartsOnSwitchTheme = this._echartsOnSwitchTheme || (() => {
-            this._echartsArr = this._echartsArr || [];
-            for (let i = 0; i < this._echartsArr.length; i++) {
-                this._echartsArr[i].dispose();
-            }
-            this._echartsArr = [];
-            this.util.forEach(document.getElementsByClassName('echarts'), $echarts => {
-                const chart = echarts.init($echarts, this.isDark ? 'dark' : 'macarons', {renderer: 'svg'});
-                chart.setOption(JSON.parse(this.data[$echarts.id]));
-                this._echartsArr.push(chart);
-            });
-        });
-        this.switchThemeEventSet.add(this._echartsOnSwitchTheme);
-        this._echartsOnSwitchTheme();
-        this._echartsOnResize = this._echartsOnResize || (() => {
-            for (let i = 0; i < this._echartsArr.length; i++) {
-                this._echartsArr[i].resize();
+        if (!this.config.math) { return Promise.resolve(); }
+        // 力扣等页面的公式是正文里裸写的 $$...$$ / $...$，没有 .math 类名，
+        // 必须按定界符检测，否则 KaTeX 不会加载、公式不渲染。
+        const bodyText = document.body.innerText || document.body.textContent || '';
+        const hasMath = document.querySelector('.katex, .math, [class*=math]') ||
+            /\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|\$[^$\n]+\$/.test(bodyText);
+        if (!hasMath) { return Promise.resolve(); }
+        const self = this;
+        return loadDeferred('math').then(() => {
+            if (typeof renderMathInElement === 'function') {
+                renderMathInElement(document.body, self.config.math);
             }
         });
-        this.resizeEventSet.add(this._echartsOnResize);
-    }
-
-    initMapbox() {
-        if (this.config.mapbox) {
-            mapboxgl.accessToken = this.config.mapbox.accessToken;
-            if (mapboxgl.getRTLTextPluginStatus() !== 'loaded'){
-                mapboxgl.setRTLTextPlugin(this.config.mapbox.RTLTextPlugin);
-            }
-            this._mapboxArr = this._mapboxArr || [];
-            this.util.forEach(document.getElementsByClassName('mapbox'), $mapbox => {
-                const { lng, lat, zoom, lightStyle, darkStyle, marked, navigation, geolocate, scale, fullscreen } = this.data[$mapbox.id];
-                const mapbox = new mapboxgl.Map({
-                    container: $mapbox,
-                    center: [lng, lat],
-                    zoom: zoom,
-                    minZoom: .2,
-                    style: this.isDark ? darkStyle : lightStyle,
-                    attributionControl: false,
-                });
-                if (marked) {
-                    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(mapbox);
-                }
-                if (navigation) {
-                    mapbox.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-                }
-                if (geolocate) {
-                    mapbox.addControl(new mapboxgl.GeolocateControl({
-                        positionOptions: {
-                            enableHighAccuracy: true,
-                        },
-                        showUserLocation: true,
-                        trackUserLocation: true,
-                    }), 'bottom-right');
-                }
-                if (scale) {
-                    mapbox.addControl(new mapboxgl.ScaleControl());
-                }
-                if (fullscreen) {
-                    mapbox.addControl(new mapboxgl.FullscreenControl());
-                }
-                mapbox.addControl(new MapboxLanguage());
-                this._mapboxArr.push(mapbox);
-            });
-            this._mapboxOnSwitchTheme = this._mapboxOnSwitchTheme || (() => {
-                this.util.forEach(this._mapboxArr, mapbox => {
-                    const $mapbox = mapbox.getContainer();
-                    const { lightStyle, darkStyle } = this.data[$mapbox.id];
-                    mapbox.setStyle(this.isDark ? darkStyle : lightStyle);
-                    mapbox.addControl(new MapboxLanguage());
-                });
-            });
-            this.switchThemeEventSet.add(this._mapboxOnSwitchTheme);
-        }
-    }
-
-    initTypeit() {
-        if (this.config.typeit) {
-            const typeitConfig = this.config.typeit;
-            const speed = typeitConfig.speed ? typeitConfig.speed : 100;
-            const cursorSpeed = typeitConfig.cursorSpeed ? typeitConfig.cursorSpeed : 1000;
-            const cursorChar = typeitConfig.cursorChar ? typeitConfig.cursorChar : '|';
-            Object.values(typeitConfig.data).forEach(group => {
-                const typeone = (i) => {
-                    const id = group[i];
-                    const instance = new TypeIt(`#${id}`, {
-                        strings: this.data[id],
-                        speed: speed,
-                        lifeLike: true,
-                        cursorSpeed: cursorSpeed,
-                        cursorChar: cursorChar,
-                        waitUntilVisible: true,
-                        afterComplete: () => {
-                            if (i === group.length - 1) {
-                                if (typeitConfig.duration >= 0) window.setTimeout(() => {
-                                    instance.destroy();
-                                }, typeitConfig.duration);
-                                return;
-                            }
-                            instance.destroy();
-                            typeone(i + 1);
-                        },
-                    }).go();
-                };
-                typeone(0);
-            });
-        }
-    }
-
-    initComment() {
-        if (this.config.data.valine){
-            this.config.data.valine['path'] = window.location.pathname;
-            new Valine(this.config.data.valine);
-        }
-        else if (this.config.comment) {
-            if (this.config.comment.gitalk) {
-                this.config.comment.gitalk.body = decodeURI(window.location.href);
-                const gitalk = new Gitalk(this.config.comment.gitalk);
-                gitalk.render('gitalk');
-            }
-            if (this.config.comment.utterances) {
-                const utterancesConfig = this.config.comment.utterances;
-                const script = document.createElement('script');
-                script.src = 'https://utteranc.es/client.js';
-                script.type = 'text/javascript';
-                script.setAttribute('repo', utterancesConfig.repo);
-                script.setAttribute('issue-term', utterancesConfig.issueTerm);
-                if (utterancesConfig.label) script.setAttribute('label', utterancesConfig.label);
-                script.setAttribute('theme', this.isDark ? utterancesConfig.darkTheme : utterancesConfig.lightTheme);
-                script.crossOrigin = 'anonymous';
-                script.async = true;
-                document.getElementById('utterances').appendChild(script);
-                this._utterancesOnSwitchTheme = this._utterancesOnSwitchTheme || (() => {
-                    const message = {
-                        type: 'set-theme',
-                        theme: this.isDark ? utterancesConfig.darkTheme : utterancesConfig.lightTheme,
-                    };
-                    const iframe = document.querySelector('.utterances-frame');
-                    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
-                });
-                this.switchThemeEventSet.add(this._utterancesOnSwitchTheme);
-            }
-        }
     }
 
     initSmoothScroll() {
@@ -1059,11 +966,6 @@ class Theme {
             const $headers = [];
             if (document.body.getAttribute('header-desktop') === 'auto') $headers.push(document.getElementById('header-desktop'));
             if (document.body.getAttribute('header-mobile') === 'auto') $headers.push(document.getElementById('header-mobile'));
-            const $viewComments = document.getElementById('view-comments');
-            if (document.getElementById('comments') && $viewComments) {
-                $viewComments.href = `#comments`;
-                $viewComments.style.display = 'block';
-            }
             const $fixedButtons = document.getElementById('fixed-buttons');
             if (!$fixedButtons) { return; }
             self.newScrollTop = self.util.getScrollTop();
@@ -1110,7 +1012,6 @@ class Theme {
                 self._resizeTimeout = null;
                 for (let event of self.resizeEventSet) event();
                 self.initToc();
-                self.initMermaid();
                 self.initSearch();
             }, 100);
         }, false);
@@ -1138,10 +1039,6 @@ class Theme {
             this.initSearch();
             this.initDetails();
             this.initLightGallery();
-            this.initMermaid();
-            this.initEcharts();
-            this.initTypeit();
-            this.initMapbox();
 			this.initCookieconsent();
 			this.initTagFilter();
 			this.initMedia();
@@ -1154,7 +1051,6 @@ class Theme {
 			this.initHighlight();
 			this.initMath();
             this.initToc();
-            this.initComment();
 			this.initHeaderLink();
             this.onScroll();
             this.onResize();
@@ -1169,10 +1065,6 @@ class Theme {
             this.initSVGIcon();
             this.initDetails();
             this.initLightGallery();
-            this.initMermaid();
-            this.initEcharts();
-            this.initTypeit();
-            this.initMapbox();
             this.initTagFilter();
             this.initMedia();
 			this.initSlider();
@@ -1183,7 +1075,6 @@ class Theme {
 			this.initHighlight();
 			this.initMath();
             this.initToc();
-            this.initComment();
 			this.initHeaderLink();
             this.onScroll();
             this.onResize();
@@ -1205,5 +1096,5 @@ $(function(){
 $(document).pjax('a[target!=_blank]:not([href^="#"])', '.container', {fragment: '.container',timeout: 8000});
 // 不监听 ready：首次加载已由上面的 $(function) 调用 init()，再监听会重复初始化。
 $(document).on('pjax:end', function() {const theme = new Theme(); theme.init2();})
-$(document).on('pjax:click', function() {window.config.data = {}; window.config.media={}; window.config.typeit.data = {};})
+$(document).on('pjax:click', function() {window.config.data = {}; window.config.media={};})
 /*pjax ends*/

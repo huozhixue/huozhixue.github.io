@@ -249,8 +249,6 @@ hugo
       pre = ""
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
-      # {{< version 0.2.5 >}} 是否为标题显示打字机动画
-      typeit = false
 
   # 页面底部信息配置
   [params.footer]
@@ -303,8 +301,6 @@ hugo
       title = ""
       # 主页显示的网站副标题
       subtitle = "这是我的全新 Hugo 网站"
-      # 是否为副标题显示打字机动画
-      typeit = true
       # 是否显示社交账号
       social = true
       # {{< version 0.2.0 >}} 免责声明 (支持 HTML 格式)
@@ -495,27 +491,6 @@ hugo
         repo = ""
         clientId = ""
         clientSecret = ""
-      # {{< link "https://github.com/xCss/Valine" Valine >}} 评论系统设置
-      [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta= ""
-        pageSize = 10
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # {{< version 0.2.6 >}} emoji 数据文件名称, 默认是 "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # 位于 "themes/LoveIt/assets/data/emoji/" 目录
-        # 可以在你的项目下相同路径存放你自己的数据文件:
-        # "assets/data/emoji/"
-        emoji = ""
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置
       [params.page.comment.facebook]
         enable = false
@@ -565,17 +540,6 @@ hugo
       [params.page.seo.publisher]
         name = ""
         logoUrl = ""
-
-  # {{< version 0.2.5 >}} TypeIt 配置
-  [params.typeit]
-    # 每一步的打字速度 (单位是毫秒)
-    speed = 100
-    # 光标的闪烁速度 (单位是毫秒)
-    cursorSpeed = 1000
-    # 光标的字符 (支持 HTML 格式)
-    cursorChar = "|"
-    # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
-    duration = -1
 
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
   [params.verification]

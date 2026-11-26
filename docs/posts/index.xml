@@ -3,14 +3,7 @@
         <title>所有文章 - Ian 的博客</title>
         <link>https://huozhixue.github.io/posts/</link>
         <description>所有文章 | Ian 的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 Jun 2025 17:49:40 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>清单：算法</title>
-    <link>https://huozhixue.github.io/list-algo/</link>
-    <pubDate>Sat, 21 Jun 2025 17:49:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://huozhixue.github.io/list-algo/</guid>
-    <description><![CDATA[coderforces、nowcoder、atcoder 等算法网站的题目清单 #1 基础算法 二分 难度 题目 关键词 2400 cf2185h 倍增 贪心 难度 题目 关键词 1600 GYM105805D 逆序对]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Jan 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://huozhixue.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>进阶算法（一）：网络流入门</title>
     <link>https://huozhixue.github.io/algo2-flow/</link>
     <pubDate>Sun, 01 Jan 2023 00:00:00 &#43;0800</pubDate>
@@ -73,5 +66,12 @@
     <author>作者</author>
     <guid>https://huozhixue.github.io/ds-linked/</guid>
     <description><![CDATA[1 2 3 4 5 6 7 8 9 # 反转链表 def reverse(head): tail = head while tail and tail.next: tmp = tail.next tail.next = tmp.next tmp.next = head head = tmp return head 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 双向链表 class Node: # 提高访问]]></description>
+</item><item>
+    <title>数据结构（零）：基础</title>
+    <link>https://huozhixue.github.io/ds-basic/</link>
+    <pubDate>Sat, 01 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://huozhixue.github.io/ds-basic/</guid>
+    <description><![CDATA[#1 链表与数组 链表和数组是最基本的数据结构，是其他数据结构的基础 数组和链表的区别 数组和链表都是线性数据结构，区别在于数组具有索引，数组中的元素]]></description>
 </item></channel>
 </rss>

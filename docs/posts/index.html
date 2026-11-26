@@ -85,7 +85,7 @@
 </div>
 <script src="/js/jquery.min.js"></script>
             <script type="text/javascript">
-                window.config = {'data': {}, 'media':{}, 'typeit': {'data': {}}};
+                window.config = {'data': {}, 'media':{}};
                 
                 window.resolveMediaUrl = function (raw) {
                     raw = String(raw).replace(/^[\uFEFF]/, '').trim();
@@ -121,7 +121,7 @@
         <select class="tag-filter-select" aria-label="选择标签">
             <option value="">选择标签…</option><option value="算法">算法 (11)</option><option value="数据结构">数据结构 (9)</option><option value="博客">博客 (3)</option><option value="清单">清单 (2)</option><option value="nlp">nlp (1)</option></select>
         <select class="tag-filter-year" aria-label="选择年份">
-            <option value="">全部年份</option><option value="2025">2025 (1)</option><option value="2023">2023 (1)</option><option value="2022">2022 (9)</option><option value="2021">2021 (10)</option><option value="2020">2020 (5)</option></select>
+            <option value="">全部年份</option><option value="2023">2023 (1)</option><option value="2022">2022 (9)</option><option value="2021">2021 (10)</option><option value="2020">2020 (6)</option></select>
         <select class="tag-filter-mode" aria-label="匹配模式">
             <option value="all">全部匹配</option>
             <option value="any">任一匹配</option>
@@ -131,10 +131,6 @@
     </div>
     <div class="tag-filter-selected" aria-label="已选标签"></div>
     <div class="tag-filter-results"><div class="tag-filter-group">
-                    <h3 class="group-title">2025年06月</h3><article class="archive-item tag-filter-item" data-tags="清单" data-year="2025">
-                                <a href="/list-algo/" class="archive-item-link" title="清单">清单：算法</a>
-                                <span class="archive-item-date">06-21</span>
-                            </article></div><div class="tag-filter-group">
                     <h3 class="group-title">2023年01月</h3><article class="archive-item tag-filter-item" data-tags="算法" data-year="2023">
                                 <a href="/algo2-flow/" class="archive-item-link" title="算法">进阶算法（一）：网络流入门</a>
                                 <span class="archive-item-date">01-01</span>
@@ -198,6 +194,14 @@
                                 <a href="/algo-basic/" class="archive-item-link" title="算法">算法（零）：基础</a>
                                 <span class="archive-item-date">01-01</span>
                             </article></div><div class="tag-filter-group">
+                    <h3 class="group-title">2020年09月</h3><article class="archive-item tag-filter-item" data-tags="清单" data-year="2020">
+                                <a href="/list-algo/" class="archive-item-link" title="清单">清单：算法</a>
+                                <span class="archive-item-date">09-01</span>
+                            </article></div><div class="tag-filter-group">
+                    <h3 class="group-title">2020年08月</h3><article class="archive-item tag-filter-item" data-tags="清单" data-year="2020">
+                                <a href="/list-novel/" class="archive-item-link" title="清单">清单：小说</a>
+                                <span class="archive-item-date">08-01</span>
+                            </article></div><div class="tag-filter-group">
                     <h3 class="group-title">2020年06月</h3><article class="archive-item tag-filter-item" data-tags="nlp" data-year="2020">
                                 <a href="/nlp-bert_family/" class="archive-item-link" title="nlp">后 BERT 时代小结</a>
                                 <span class="archive-item-date">06-21</span>
@@ -211,10 +215,6 @@
                             </article><article class="archive-item tag-filter-item" data-tags="博客" data-year="2020">
                                 <a href="/hugo-basics/" class="archive-item-link" title="博客">博客 - 基本概念</a>
                                 <span class="archive-item-date">03-06</span>
-                            </article></div><div class="tag-filter-group">
-                    <h3 class="group-title">2020年01月</h3><article class="archive-item tag-filter-item" data-tags="清单" data-year="2020">
-                                <a href="/list-novel/" class="archive-item-link" title="清单">清单：小说</a>
-                                <span class="archive-item-date">01-01</span>
                             </article></div></div>
     <div class="tag-filter-pager"></div>
 </div>
@@ -227,11 +227,10 @@
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><link rel="stylesheet" href="/lib/mapbox-gl/mapbox-gl.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/abbangumi/abbangumi.css"><link rel="stylesheet" href="/lib/flexslider/flexslider.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript" src="/lib/echarts/echarts.min.js"></script><script type="text/javascript" src="/lib/echarts/macarons.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl.min.js"></script><script type="text/javascript" src="/lib/mapbox-gl/mapbox-gl-language.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/flexslider/jquery.flexslider.js"></script><link rel="stylesheet" href="/css/index.css">
-<script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"mapbox":{"RTLTextPlugin":"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js","accessToken":"pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"JV81838M8P","algoliaIndex":"blog","algoliaSearchKey":"ca1b2e648cc573a011423af837810e7b","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
+
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/abbangumi/abbangumi.css"><link rel="stylesheet" href="/lib/flexslider/flexslider.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/flexslider/jquery.flexslider.js"></script><link rel="stylesheet" href="/css/index.css">
+<script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"deferredLibs":{"math":{"copyTex":"lib/katex/copy-tex.min.js","katex":"lib/katex/katex.min.js","mhchem":"lib/katex/mhchem.min.js","render":"lib/katex/auto-render.min.js"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"JV81838M8P","algoliaIndex":"blog","algoliaSearchKey":"ca1b2e648cc573a011423af837810e7b","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
 <script src="/js/jquery.pjax.min.js"></script>
 <script src="/js/autoload.js"></script>
 <script src="/js/theme.js"></script></body>
