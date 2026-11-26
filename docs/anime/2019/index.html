@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/huozhixue.github.io\/anime\/2019\/"
-        },"image": ["https:\/\/huozhixue.github.io\/img\/social-preview.png"],"genre": "anime","wordcount":  724 ,
+        },"image": ["https:\/\/huozhixue.github.io\/img\/social-preview.png"],"genre": "anime","wordcount":  603 ,
         "url": "https:\/\/huozhixue.github.io\/anime\/2019\/","datePublished": "2019-12-31T23:00:00+08:00","dateModified": "2019-12-31T23:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/huozhixue.github.io\/img\/avatar.png"},"author": {
@@ -138,7 +138,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">2019 年终盘点</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Ian</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-31">2019-12-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 724 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-31">2019-12-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 603 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;
             </div>
         </div><div class="featured-image"><img
@@ -161,12 +161,7 @@
         <li><a href="#多素材">多素材</a></li>
       </ul>
     </li>
-    <li><a href="#短片">短片</a>
-      <ul>
-        <li><a href="#原创">原创</a></li>
-        <li><a href="#同人">同人</a></li>
-      </ul>
-    </li>
+    <li><a href="#短片">短片</a></li>
     <li><a href="#个人记录">个人记录</a></li>
   </ul>
 </nav></div>
@@ -250,8 +245,7 @@
 		window.config.media["id-3"] = data;
 	</script>
 <h2 id="短片">短片</h2>
-<h3 id="原创">原创</h3>
-<div class="media" id="id-4" type="video">
+<div class="media" id="id-4" type="mad">
 		<div class="media-controls">
 			<span class="media-nav">
 				<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
@@ -263,82 +257,260 @@
 		<div></div>
 	</div>
 	<script>
+		var pairs = [{"raw":"BV1Yb411v7eN","title":"【短篇动画】去往你的身旁~太阳雨~(丸井 X 东宝 X Orange制作)【F宅/1080P+】"},{"raw":"BV1xb411e7PB","title":"僕らまだアンダーグラウンド - Eve MV"},{"raw":"BV1Yb411V7w2","title":"【Resh个人动画】Crimson Alpine"},{"raw":"BV1mb411r7sb","title":"【脑洞/乱入】2019动漫贺年乱入"},{"raw":"BV1gb411K7Lo","title":"【脑洞/误解】龙套与齐木楠雄的相遇"},{"raw":"BV1rE41197S9","title":"【定格动画】童年回忆大乱斗！"},{"raw":"BV19J411K74n","title":"【耗时近千小时！每月电费上千！】新人自制攻壳机动队Title开场设计"}];
 		var data = [];
-		var urls = "BV1Yb411v7eN-BV1xb411e7PB-BV1Yb411V7w2".split(/-/);
-		var titles = "【短篇动画】去往你的身旁~太阳雨~(丸井 X 东宝 X Orange制作)【F宅/1080P+】,僕らまだアンダーグラウンド - Eve MV,【Resh个人动画】Crimson Alpine".split(/,/);
-		for (let i = 0; i < urls.length; i++) {
-			var raw = urls[i].trim();
+		for (let i = 0; i < pairs.length; i++) {
+			var raw = String(pairs[i].raw).replace(/^[\uFEFF]/, '').trim();
+			var title = '#' + (i + 1) + ' ' + pairs[i].title;
 			var resolved = window.resolveMediaUrl(raw);
-			data.push([resolved[0], '#' + (i + 1) + ' ' + (titles[i] || ''), resolved[1], resolved[2]]);
+			data.push([resolved[0], title, resolved[1], resolved[2]]);
 		}
-		data.push([0, 0]);
+		var len = data.length;
+		var cur = Math.floor(new Date() / (24 * 3600 * 1000)) % len;
+		data.push([cur, 0]);
 		window.config.media["id-4"] = data;
 	</script>
-<h3 id="同人">同人</h3>
-<div class="media" id="id-5" type="video">
-		<div class="media-controls">
-			<span class="media-nav">
-				<button class="media-prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
-				<button class="media-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
-			</span>
-			<div class="media-playlist"></div>
-			<a class="media-source-link" target="_blank" rel="noopener noreferrer">跳转原网站 ↗</a>
-		</div>
-		<div></div>
-	</div>
-	<script>
-		var data = [];
-		var urls = "BV1mb411r7sb-BV1gb411K7Lo-BV19J411K74n-BV1rE41197S9".split(/-/);
-		var titles = "【脑洞/乱入】2019动漫贺年乱入,【脑洞/误解】龙套与齐木楠雄的相遇,【耗时近千小时！每月电费上千！】新人自制攻壳机动队Title开场设计,【定格动画】童年回忆大乱斗！".split(/,/);
-		for (let i = 0; i < urls.length; i++) {
-			var raw = urls[i].trim();
-			var resolved = window.resolveMediaUrl(raw);
-			data.push([resolved[0], '#' + (i + 1) + ' ' + (titles[i] || ''), resolved[1], resolved[2]]);
-		}
-		data.push([0, 0]);
-		window.config.media["id-5"] = data;
-	</script>
 <h2 id="个人记录">个人记录</h2>
-<ul>
-<li>01-07：<a href="/anime/mob_psycho_100" rel="">灵能百分百</a> 第二季</li>
-<li>01-11：<a href="/anime/white_snake" rel="">白蛇：缘起</a></li>
-<li>01-12：<a href="/anime/fate_stay_night" rel="">Fate/stay night</a> <a href="https://bgm.tv/subject/175599" target="_blank" rel="noopener noreffer">剧场版 Fate/stay night [Heaven&rsquo;s Feel] II.lost butterfly</a></li>
-<li>01-12：<a href="/anime/kaguya_love" rel="">辉夜大小姐想让我告白～天才们的恋爱头脑战～</a></li>
-<li>03-15：<a href="/anime/love_death_and_robots" rel="">爱、死亡 &amp; 机器人</a> 爱、死亡 &amp; 机器人</li>
-<li>03-20：<a href="/anime/hi_score_girl" rel="">高分少女</a> EXTRA STAGE</li>
-<li>04-02：<a href="/anime/one_punch_man" rel="">一拳超人</a> 第二季</li>
-<li>04-06：<a href="/anime/kimetsu_no_yaiba" rel="">鬼灭之刃</a></li>
-<li>04-09：<a href="/anime/isekai_quartet" rel="">异世界四重奏</a></li>
-<li>04-19：<a href="/anime/hibike_euphonium" rel="">吹响！悠风号</a> 剧场版 吹响！悠风号～誓言的终章～</li>
-<li>04-28：<a href="/anime/shingeki_no_kyojin" rel="">进击的巨人</a> 第三季 Part.2</li>
-<li>05-24：<a href="/anime/promare" rel="">Promare</a></li>
-<li>06-07：<a href="/anime/children_of_the_sea" rel="">海兽之子</a></li>
-<li>06-14：<a href="/anime/fate_kaleid_liner_prisma_illya" rel="">魔法少女☆伊莉雅</a> Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm</li>
-<li>06-15：<a href="/anime/girls_und_panzer" rel="">少女与战车</a> 最终章 第2话</li>
-<li>06-15：<a href="/anime/rascal_does_not_dream_of_bunny_girl_senpai" rel="">青春笨蛋少年不做兔女郎学姐的梦</a> 青春笨蛋少年不做怀梦美少女的梦</li>
-<li>06-21：<a href="/anime/kimi_nami" rel="">若能与你共乘海浪之上</a></li>
-<li>07-05：<a href="/anime/jyoshi_muda" rel="">女高中生的无所事事</a></li>
-<li>07-07：<a href="/anime/vinland_saga" rel="">冰海战记</a></li>
-<li>07-12：<a href="/anime/the_lion_king" rel="">狮子王</a></li>
-<li>07-19：<a href="/anime/tenki_no_ko" rel="">天气之子</a></li>
-<li>07-26：<a href="/anime/ne_zha" rel="">哪吒之魔童降世</a></li>
-<li>08-30：<a href="/anime/konosuba" rel="">为美好的世界献上祝福！</a> 电影 为美好的世界献上祝福！红传说</li>
-<li>09-06：<a href="/anime/violet_evergarden" rel="">紫罗兰永恒花园</a> 外传 - 永远与自动手记人偶 -</li>
-<li>09-07：<a href="/anime/luo_xiao_hei" rel="">罗小黑战记</a> 电影版</li>
-<li>09-25：<a href="/anime/mob_psycho_100" rel="">灵能百分百</a> 第一回灵能相谈所犒劳旅行～心满意足的治愈之旅～</li>
-<li>09-26：<a href="/anime/is_the_order_a_rabbit" rel="">请问您今天要来点兔子吗？</a> ？～Sing for You～</li>
-<li>09-27：<a href="/anime/legend_of_galactic_heroes" rel="">银河英雄传说</a> Die Neue These 星乱 第1章</li>
-<li>10-09：<a href="/anime/beastars" rel="">动物狂想曲</a></li>
-<li>10-11：<a href="/anime/shokugeki_no_souma" rel="">食戟之灵</a> 神之皿</li>
-<li>10-22：<a href="/anime/chihaya_furu" rel="">歌牌情缘</a> 3</li>
-<li>10-23：<a href="/anime/killer_seven" rel="">刺客伍六七</a> 伍六七之最强发型师</li>
-<li>10-25：<a href="/anime/hi_score_girl" rel="">高分少女</a> 第二季</li>
-<li>10-26：<a href="/anime/saekano" rel="">路人女主的养成方法</a> Fine</li>
-<li>11-10：<a href="/anime/rick_and_morty" rel="">瑞克和莫蒂</a> 第四季</li>
-<li>11-13：<a href="/anime/yuruyuri" rel="">摇曳百合</a> 、</li>
-<li>11-22：<a href="/anime/frozen" rel="">冰雪奇缘</a> 2</li>
-<li>12-30：<a href="/anime/saiki_kusuo" rel="">齐木楠雄的灾难</a> 再始动篇</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>动画</th>
+<th>话数/时长</th>
+<th>观看地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-07</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_48_a6_228109_wb3bL.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/mob_psycho_100" rel="">灵能百分百</a> 第二季</td>
+<td>13</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss26297" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>01-11</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_06_81_265554_Z3OCr.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/white_snake" rel="">白蛇：缘起</a></td>
+<td>99m</td>
+<td><a href="https://www.keke1.app/play/176573-4-1371.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>01-12</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b3b7d0a20cf431adffbb46b74536acaf2fdd98d6" referrerpolicy="no-referrer" alt=""> <a href="/anime/fate_stay_night" rel="">Fate/stay night</a> <a href="https://bgm.tv/subject/175599" target="_blank" rel="noopener noreffer">剧场版 Fate/stay night [Heaven&rsquo;s Feel] II.lost butterfly</a></td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28332" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>01-12</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_2a_f7_248175_2w4zT.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/kaguya_love" rel="">辉夜大小姐想让我告白～天才们的恋爱头脑战～</a></td>
+<td>12</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep259770" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>03-15</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_68_b8_274613_sx1iX.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/love_death_and_robots" rel="">爱、死亡 &amp; 机器人</a> 爱、死亡 &amp; 机器人</td>
+<td>18</td>
+<td><a href="https://www.kkys01.com/play/26204-4-216587.html" target="_blank" rel="noopener noreffer">kkys01</a></td>
+</tr>
+<tr>
+<td>03-20</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_79_bb_91205_WzBkF.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/hi_score_girl" rel="">高分少女</a> EXTRA STAGE</td>
+<td>3</td>
+<td><a href="https://www.keke1.app/play/23847-4-186964.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>04-02</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_8c_a2_127563_nl66u.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/one_punch_man" rel="">一拳超人</a> 第二季</td>
+<td>12</td>
+<td><a href="https://www.keke1.app/play/23422-4-182284.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>04-06</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://s2.loli.net/2025/11/10/XD2lnQLFV4pPu91.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/kimetsu_no_yaiba" rel="">鬼灭之刃</a></td>
+<td>26</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep267851" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>04-09</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c0_e9_262865_P6q49.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/isekai_quartet" rel="">异世界四重奏</a></td>
+<td>12</td>
+<td><a href="https://www.keke1.app/play/28264-4-248294.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>04-19</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_37_df_115908_c0uQj.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/hibike_euphonium" rel="">吹响！悠风号</a> 剧场版 吹响！悠风号～誓言的终章～</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28951" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>04-28</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_78_c9_55770_HsJfh.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/shingeki_no_kyojin" rel="">进击的巨人</a> 第三季 Part.2</td>
+<td>10</td>
+<td><a href="https://www.keke1.app/play/20145-4-136013.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>05-24</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_a9_e5_218713_CxZL2.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/promare" rel="">Promare</a></td>
+<td>111m</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss38790" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>06-07</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_e5_c8_253997_dM0nF.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/children_of_the_sea" rel="">海兽之子</a></td>
+<td>01:51:18</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep394623" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>06-14</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_0f_31_113134_NkaCg.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/fate_kaleid_liner_prisma_illya" rel="">魔法少女☆伊莉雅</a> Fate/kaleid liner 魔法少女☆伊莉雅 Prisma☆Phantasm</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28400" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>06-15</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_a3_af_40310_suEF6.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/girls_und_panzer" rel="">少女与战车</a> 最终章 第2话</td>
+<td>1</td>
+<td><a href="https://www.keke1.app/play/21138-4-147234.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>06-15</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_b9_45_240038_b5j7g.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/rascal_does_not_dream_of_bunny_girl_senpai" rel="">青春笨蛋少年不做兔女郎学姐的梦</a> 青春笨蛋少年不做怀梦美少女的梦</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28965" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>06-21</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_8c_71_265372_wHpoW.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/kimi_nami" rel="">若能与你共乘海浪之上</a></td>
+<td>95m</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep336913" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>07-05</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://s2.loli.net/2025/11/10/u3j8NRAYU5cpFVn.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/jyoshi_muda" rel="">女高中生的无所事事</a></td>
+<td>12</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep276680" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>07-07</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_31_8f_240386_6Q62q.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/vinland_saga" rel="">冰海战记</a></td>
+<td>24</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss27395" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>07-12</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_f7_2b_22985_uoFW6.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/the_lion_king" rel="">狮子王</a></td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss46289" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>07-19</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_00_e8_269235_Dg6gZ.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/tenki_no_ko" rel="">天气之子</a></td>
+<td>112m</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep332611" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>07-26</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_b9_4e_231261_Ae9qE.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/ne_zha" rel="">哪吒之魔童降世</a></td>
+<td>110分钟</td>
+<td><a href="https://www.keke1.app/play/9294-4-57496.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>08-30</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_56_de_135275_G3liq.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/konosuba" rel="">为美好的世界献上祝福！</a> 电影 为美好的世界献上祝福！红传说</td>
+<td>1</td>
+<td><a href="https://www.keke1.app/play/278069-37-413570.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>09-06</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/bd3eb13533fa828b914ac2e4f21f4134970a5a4f" referrerpolicy="no-referrer" alt=""> <a href="/anime/violet_evergarden" rel="">紫罗兰永恒花园</a> 外传 - 永远与自动手记人偶 -</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss31779" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>09-07</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/00e93901213fb80e7bec3ac1c19b382eb9389b503ed8" referrerpolicy="no-referrer" alt=""> <a href="/anime/luo_xiao_hei" rel="">罗小黑战记</a> 电影版</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28198" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>09-25</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_48_a6_228109_wb3bL.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/mob_psycho_100" rel="">灵能百分百</a> 第一回灵能相谈所犒劳旅行～心满意足的治愈之旅～</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28610" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>09-26</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/c9fcc3cec3fdfc038edb7439da3f8794a5c2268b" referrerpolicy="no-referrer" alt=""> <a href="/anime/is_the_order_a_rabbit" rel="">请问您今天要来点兔子吗？</a> ？～Sing for You～</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss30288" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>09-27</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109aa1c15e6d258ccbf6d814de2" referrerpolicy="no-referrer" alt=""> <a href="/anime/legend_of_galactic_heroes" rel="">银河英雄传说</a> Die Neue These 星乱 第1章</td>
+<td>12</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28616" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>10-09</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_f6_f2_273843_YMdDZ.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/beastars" rel="">动物狂想曲</a></td>
+<td>12</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep285054" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>10-11</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/cefc1e178a82b9010ba94a01758da9773912eff8" referrerpolicy="no-referrer" alt=""> <a href="/anime/shokugeki_no_souma" rel="">食戟之灵</a> 神之皿</td>
+<td>12</td>
+<td><a href="https://www.keke1.app/play/22883-4-176652.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>10-22</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_b1_b2_18294_be4AB.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/chihaya_furu" rel="">歌牌情缘</a> 3</td>
+<td>24</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28584" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>10-23</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://s2.loli.net/2025/11/10/L95fAleEap6JGjg.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/killer_seven" rel="">刺客伍六七</a> 伍六七之最强发型师</td>
+<td>10</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss28510" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>10-25</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_79_bb_91205_WzBkF.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/hi_score_girl" rel="">高分少女</a> 第二季</td>
+<td>9</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ep288534" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>10-26</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://s2.loli.net/2025/11/11/g3LdOzDc8Gm9eYq.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/saekano" rel="">路人女主的养成方法</a> Fine</td>
+<td>1</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss34394" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+<tr>
+<td>11-10</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_db_e4_93377_TEzAK.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/rick_and_morty" rel="">瑞克和莫蒂</a> 第四季</td>
+<td>10</td>
+<td><a href="https://www.keke1.app/play/26174-4-216438.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>11-13</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/908fa0ec08fa513d2697dd98a93142fbb2fb4316737a" referrerpolicy="no-referrer" alt=""> <a href="/anime/yuruyuri" rel="">摇曳百合</a> 、</td>
+<td>1</td>
+<td><a href="https://www.keke1.app/play/29056-4-256591.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>11-22</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_4d_92_93044_7s3LU.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/frozen" rel="">冰雪奇缘</a> 2</td>
+<td>1</td>
+<td><a href="https://www.keke1.app/play/30569-4-278991.html" target="_blank" rel="noopener noreffer">keke1</a></td>
+</tr>
+<tr>
+<td>12-30</td>
+<td><img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_b3_28_181354_smUU3.webp" referrerpolicy="no-referrer" alt=""> <a href="/anime/saiki_kusuo" rel="">齐木楠雄的灾难</a> 再始动篇</td>
+<td>6</td>
+<td><a href="https://www.bilibili.com/bangumi/play/ss29052" target="_blank" rel="noopener noreffer">bilibili</a></td>
+</tr>
+</tbody>
+</table>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -378,8 +550,8 @@
                 <i class="fas fa-arrow-up fa-fw"></i>
             </a>
 
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/abbangumi/abbangumi.css"><link rel="stylesheet" href="/lib/flexslider/flexslider.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/flexslider/jquery.flexslider.js"></script><link rel="stylesheet" href="/css/index.css">
-<script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{},"data":{"id-1":"BV1EJ411b71H-BV1D541147iF","id-2":"mad/2019","id-3":"mad/2019_1","id-4":"BV1Yb411v7eN-BV1xb411e7PB-BV1Yb411V7w2","id-5":"BV1mb411r7sb-BV1gb411K7Lo-BV19J411K74n-BV1rE41197S9"},"deferredLibs":{"math":{"copyTex":"lib/katex/copy-tex.min.js","katex":"lib/katex/katex.min.js","mhchem":"lib/katex/mhchem.min.js","render":"lib/katex/auto-render.min.js"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"JV81838M8P","algoliaIndex":"blog","algoliaSearchKey":"ca1b2e648cc573a011423af837810e7b","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><link rel="stylesheet" href="/css/index.css">
+<script type="text/javascript">$.extend(window.config, {"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{},"data":{"id-1":"BV1EJ411b71H-BV1D541147iF","id-2":"mad/2019","id-3":"mad/2019_1","id-4":"mad/2019_2"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"JV81838M8P","algoliaIndex":"blog","algoliaSearchKey":"ca1b2e648cc573a011423af837810e7b","highlightTag":"em","maxResultLength":20,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}});</script>
 <script src="/js/jquery.pjax.min.js"></script>
 <script src="/js/autoload.js"></script>
 <script src="/js/theme.js"></script></body>

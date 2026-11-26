@@ -14,41 +14,43 @@
 
 ## 个人记录
 
-- 01-05：[死后文](/anime/shigofumi)
-- 01-05：[真实之泪](/anime/true_tears)
-- 01-06：[南家三姐妹](/anime/minami-ke) 再来一碗
-- 01-07：[水星领航员](/anime/aria) 第三季
-- 01-08：[狼与香辛料](/anime/spice_and_wolf)
-- 02-03：[记忆女神的女儿们](/anime/daughters_of_mnemosyne)
-- 02-09：[空之境界](/anime/kara_no_kyoukai) 剧场版 空之境界 第三章 痛觉残留
-- 03-17：[搞笑漫画日和](/anime/gyagu_manga_biyori) 3
-- 04-02：[游戏王](/anime/yu_gi_oh) 5D's
-- 04-06：[Code Geass 反叛的鲁路修](/anime/code_geass) R2
-- 04-07：[火球](/anime/fireball)
-- 04-10：[海马](/anime/kaiba)
-- 05-02：[糖果男孩](/anime/candy_boy)
-- 05-13：[和巴什尔跳华尔兹](/anime/waltz_with_bashir)
-- 05-24：[空之境界](/anime/kara_no_kyoukai) 剧场版 空之境界 第四章 伽蓝之洞
-- 06-27：[机器人总动员](/anime/wall-e)
-- 07-06：[零之使魔](/anime/zero_no_tsukaima) 三美姬的轮舞
-- 07-07：[夏目友人帐](/anime/natsume_yuujinchou)
-- 07-16：[CLANNAD](/anime/clannad) 另一个世界 智代篇
-- 07-19：[崖上的波妞](/anime/ponyo)
-- 07-30：[犬夜叉](/anime/inuyasha) 黑色铁碎牙
-- 08-01：[夏娃的时间](/anime/time_of_eve)
-- 08-02：[空中杀手](/anime/the_sky_crawlers)
-- 08-16：[空之境界](/anime/kara_no_kyoukai) 剧场版 空之境界 第五章 矛盾螺旋
-- 09-04：[9.99澳元](/anime/9.99)
-- 10-01：[龙与虎](/anime/toradora)
-- 10-02：[CLANNAD](/anime/clannad) ～AFTER STORY～
-- 10-04：[神薙](/anime/kannagi)
-- 10-04：[魔法禁书目录](/anime/to_aru_majutsu_no_index)
-- 10-05：[食灵-零-](/anime/ga_rei_zero)
-- 10-06：[悠久之翼](/anime/ef) 2
-- 10-07：[超智游戏](/anime/one_outs)
-- 10-07：[魍魉之匣](/anime/mouryou)
-- 10-11：[天才嘉年华](/anime/genius_party) BEYOND
-- 10-15：[道子与哈金](/anime/michiko_to_hatchin)
-- 12-20：[空之境界](/anime/kara_no_kyoukai) 剧场版 空之境界 第六章 忘却录音
-- 12-30：[东方同人](/anime/touhou_project) 东方梦想夏乡
+| 时间    | 动画                                                                                                                                                                                                                                                                                            | 话数/时长    | 观看地址                                                       |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| 01-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/4bed2e738bd4b31cdbe50f078fd6277f9f2ff8b5" referrerpolicy="no-referrer" alt=""> [死后文](/anime/shigofumi)                      | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ss1262)   |
+| 01-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/a044ad345982b2b7dc8b6fb831adcbef76099bb1" referrerpolicy="no-referrer" alt=""> [真实之泪](/anime/true_tears)                    | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ep75640)  |
+| 01-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_6e_1b_47685_QC42y.webp" referrerpolicy="no-referrer" alt=""> [南家三姐妹](/anime/minami-ke) 再来一碗                                     | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ss621)    |
+| 01-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/a8014c086e061d95a6d06c337df40ad162d9ca23" referrerpolicy="no-referrer" alt=""> [水星领航员](/anime/aria) 第三季                     | 14       | [keke1](https://www.keke1.app/play/23915-4-187821.html)    |
+| 01-08 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/9825bc315c6034a8bfa3398dcc1349540923767d" referrerpolicy="no-referrer" alt=""> [狼与香辛料](/anime/spice_and_wolf)               | 13       | [keke1](https://www.keke1.app/play/28345-4-249741.html)    |
+| 02-03 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_cd_75_1257_G620W.webp" referrerpolicy="no-referrer" alt=""> [记忆女神的女儿们](/anime/daughters_of_mnemosyne)                           | 6        | [keke1](https://www.keke1.app/play/20048-4-135357.html)    |
+| 02-09 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/50da81cb39dbb6fd6f1e49a30c24ab18962b37e9" referrerpolicy="no-referrer" alt=""> [空之境界](/anime/kara_no_kyoukai) 剧场版  第三章 痛觉残留 | 1        | [bilibili](https://www.bilibili.com/video/BV1Ds411J77v)    |
+| 03-17 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/8d5494eef01f3a292df5876a8f79ab315c6034a8d659" referrerpolicy="no-referrer" alt=""> [搞笑漫画日和](/anime/gyagu_manga_biyori) 3    | 12       | [bilibili](https://www.bilibili.com/bangumi/play/ss1595)   |
+| 04-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_d1_09_12344_Kec1G.webp" referrerpolicy="no-referrer" alt=""> [游戏王](/anime/yu_gi_oh) 5D's                                        | 154      | [bilibili](https://www.bilibili.com/video/BV1hx411j7zV/)   |
+| 04-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b6a79cbc003d162d9f2d3c962" referrerpolicy="no-referrer" alt=""> [Code Geass 反叛的鲁路修](/anime/code_geass) R2    | 25       | [keke1](https://www.keke1.app/play/22149-4-163609.html)    |
+| 04-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/d058ccbf6c81800a19d867a9066724fa828ba61ee943" referrerpolicy="no-referrer" alt=""> [火球](/anime/fireball)                    | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ss3232)   |
+| 04-10 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_a9_81_1625_59HVn.webp" referrerpolicy="no-referrer" alt=""> [海马](/anime/kaiba)                                                  | 12       | [bilibili](https://www.bilibili.com/video/BV12x411r7KL)    |
+| 05-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/738b4710b912c8fccd997223f6039245d78821f1" referrerpolicy="no-referrer" alt=""> [糖果男孩](/anime/candy_boy)                     | 9        | [keke1](https://www.keke1.app/play/20063-4-135510.html)    |
+| 05-13 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_3b_d4_2693_w6WJW.webp" referrerpolicy="no-referrer" alt=""> [和巴什尔跳华尔兹](/anime/waltz_with_bashir)                                | 1        | [keke1](https://www.keke1.app/play/11195-4-66273.html)     |
+| 05-24 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/50da81cb39dbb6fd6f1e49a30c24ab18962b37e9" referrerpolicy="no-referrer" alt=""> [空之境界](/anime/kara_no_kyoukai) 剧场版  第四章 伽蓝之洞 | 1        | [bilibili](https://www.bilibili.com/video/BV1Rs411J7xi)    |
+| 06-27 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/0e655ca7abbaaad9d0435872" referrerpolicy="no-referrer" alt=""> [机器人总动员](/anime/wall-e)                                      | 1        | [keke1](https://www.keke1.app/play/181305-31-446251.html)  |
+| 07-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b3b7d0a20cf431adcbefce46ea60bbaf2edda3cc320f" referrerpolicy="no-referrer" alt=""> [零之使魔](/anime/zero_no_tsukaima) 三美姬的轮舞   | 12       | [bilibili](https://www.bilibili.com/video/BV1is411V7Eh/)   |
+| 07-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_cf_a0_259_7C5D9.webp" referrerpolicy="no-referrer" alt=""> [夏目友人帐](/anime/natsume_yuujinchou)                                   | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ep30134)  |
+| 07-16 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b8389b504fc2d5620622e651e71190ef76c66c67" referrerpolicy="no-referrer" alt=""> [CLANNAD](/anime/clannad) 另一个世界 智代篇          | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss2655)   |
+| 07-19 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_15_8f_313_GE8EP.webp" referrerpolicy="no-referrer" alt=""> [崖上的波妞](/anime/ponyo)                                                | 1        | [keke1](https://www.keke1.app/play/178057-4-99713.html)    |
+| 07-30 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b64543a98226cffcf8b981e2b6014a90f703eacb" referrerpolicy="no-referrer" alt=""> [犬夜叉](/anime/inuyasha) 黑色铁碎牙                 | 1        | [keke1](https://www.keke1.app/play/181312-4-506925.html)   |
+| 08-01 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/d01373f082025aaf3c4406aaf0edab64034f1a58" referrerpolicy="no-referrer" alt=""> [夏娃的时间](/anime/time_of_eve)                  | 6        | [bilibili](https://www.bilibili.com/bangumi/play/ep83917)  |
+| 08-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/503d269759ee3d6deb5cc47b43166d224e4adeec" referrerpolicy="no-referrer" alt=""> [空中杀手](/anime/the_sky_crawlers)              | 122min   | [keke1](https://www.keke1.app/play/30942-4-283084.html)    |
+| 08-16 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/50da81cb39dbb6fd6f1e49a30c24ab18962b37e9" referrerpolicy="no-referrer" alt=""> [空之境界](/anime/kara_no_kyoukai) 剧场版  第五章 矛盾螺旋 | 1        | [bilibili](https://www.bilibili.com/video/BV1Us411w7pb)    |
+| 09-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/63d9f2d3572c11dfd46e15eb6f2762d0f603c2bf" referrerpolicy="no-referrer" alt=""> [9.99澳元](/anime/9.99)                        | 1        | [youtube](https://www.youtube.com/watch?v=rF2tNr2LWl8)     |
+| 10-01 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/3ac79f3df8dcd100aea96175718b4710b9122fa8" referrerpolicy="no-referrer" alt=""> [龙与虎](/anime/toradora)                       | 25       | [bilibili](https://www.bilibili.com/bangumi/play/ss1672)   |
+| 10-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b8389b504fc2d5620622e651e71190ef76c66c67" referrerpolicy="no-referrer" alt=""> [CLANNAD](/anime/clannad) ～AFTER STORY～      | 24       | [bilibili](https://www.bilibili.com/bangumi/play/ss1178)   |
+| 10-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/a08b87d6277f9e2f070874d3bd66fe24b899a80155eb" referrerpolicy="no-referrer" alt=""> [神薙](/anime/kannagi)                     | 14       | [bilibili](https://www.bilibili.com/bangumi/play/ss1185)   |
+| 10-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/c995d143ad4bd1139a26801558afa40f4bfb0529" referrerpolicy="no-referrer" alt=""> [魔法禁书目录](/anime/to_aru_majutsu_no_index)     | 24       | [bilibili](https://www.bilibili.com/bangumi/play/ep83810)  |
+| 10-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_49_8f_11153_jp.webp" referrerpolicy="no-referrer" alt=""> [食灵-零-](/anime/ga_rei_zero)                                           | 12       | [keke1](https://www.keke1.app/play/23861-4-187157.html)    |
+| 10-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_28_26_799_C3Ypp.webp" referrerpolicy="no-referrer" alt=""> [悠久之翼](/anime/ef) 2                                                  | 12       | [bilibili](https://www.bilibili.com/bangumi/play/ss1182)   |
+| 10-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b977bfebc0dd162d9f2d3c978" referrerpolicy="no-referrer" alt=""> [超智游戏](/anime/one_outs)                      | 25       | [bilibili](https://www.bilibili.com/bangumi/play/ss1205)   |
+| 10-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_23_ce_916_5JUCJ.webp" referrerpolicy="no-referrer" alt=""> [魍魉之匣](/anime/mouryou)                                               | 13       | [bilibili](https://search.bilibili.com/all?keyword=魍魉之匣)   |
+| 10-11 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_29_9d_8181_8FWNw.webp" referrerpolicy="no-referrer" alt=""> [天才嘉年华](/anime/genius_party) BEYOND                                 | 5        | [bilibili](https://www.bilibili.com/video/BV1fs411m75m)    |
+| 10-15 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_3e_89_919_2yj4O.webp" referrerpolicy="no-referrer" alt=""> [道子与哈金](/anime/michiko_to_hatchin)                                   | 22       | [bilibili](https://www.bilibili.com/bangumi/play/ep84290?) |
+| 12-20 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/50da81cb39dbb6fd6f1e49a30c24ab18962b37e9" referrerpolicy="no-referrer" alt=""> [空之境界](/anime/kara_no_kyoukai) 剧场版  第六章 忘却录音 | 1        | [bilibili](https://www.bilibili.com/video/BV12s41177nC)    |
+| 12-30 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/9f2f070828381f30ffd54410a1014c086f06f0bf" referrerpolicy="no-referrer" alt=""> [东方同人](/anime/touhou_project) 东方梦想夏乡         | 00:20:30 | [bilibili](https://www.bilibili.com/video/BV1Cv411B7go)    |
 

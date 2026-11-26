@@ -21,33 +21,35 @@
 
 ## 个人记录
 
-- 01-07：[JOJO的奇妙冒险](/anime/jojos_bizarre_adventure) 石之海
-- 01-08：[更衣人偶坠入爱河](/anime/my_dress-up_darling)
-- 01-09：[进击的巨人](/anime/shingeki_no_kyojin) 最终季 Part.2
-- 02-01：[枕刀歌](/anime/zhen_dao_ge) 之尘世行
-- 03-04：[银河英雄传说](/anime/legend_of_galactic_heroes) Die Neue These 激突 第1章
-- 03-23：[悠哉日常大王](/anime/non_non_biyori) Nonstop OAD
-- 04-08：[辉夜大小姐想让我告白～天才们的恋爱头脑战～](/anime/kaguya_love) 辉夜大小姐想让我告白-超级浪漫-
-- 04-09：[间谍过家家](/anime/spy_family)
-- 04-14：[夏日重现](/anime/summer_time_rendering)
-- 04-29：[回转企鹅罐](/anime/penguin_drum) [RE:cycle of the PENGUINDRUM [前篇] 你的列车是生存战略](https://bgm.tv/subject/331946)
-- 05-20：[爱、死亡 & 机器人](/anime/love_death_and_robots) 爱、死亡 &amp; 机器人 第三季
-- 06-10：[异世界四重奏](/anime/isekai_quartet) 剧场版 异世界四重奏 ～Another World～
-- 07-01：[摇曳露营△](/anime/yuru_camp) 电影 摇曳露营△
-- 07-02：[传颂之物](/anime/utawarerumono) 二人的白皇
-- 07-05：[OVERLORD](/anime/overlord) IV
-- 07-06：[异世界舅舅](/anime/isekai_ojisan)
-- 07-06：[来自深渊](/anime/made_in_abyss) 烈日的黄金乡
-- 07-07：[彻夜之歌](/anime/yofukashi_no_uta)
-- 07-22：[回转企鹅罐](/anime/penguin_drum) [RE:cycle of the PENGUINDRUM [后篇] 我爱你](https://bgm.tv/subject/379789)
-- 09-04：[瑞克和莫蒂](/anime/rick_and_morty) 第六季
-- 09-13：[赛博浪客](/anime/cyberpunk)
-- 09-14：[四叠半神话大系](/anime/the_tatami_galaxy) 四叠半时光机布鲁斯
-- 09-30：[银河英雄传说](/anime/legend_of_galactic_heroes) Die Neue These 策谋 第1章
-- 10-02：[机动战士高达](/anime/gundam) 水星的魔女
-- 10-05：[灵能百分百](/anime/mob_psycho_100) 第三季
-- 10-07：[JOJO的奇妙冒险](/anime/jojos_bizarre_adventure) 石之海 Part.2
-- 10-08：[孤独摇滚！](/anime/bocchi_the_rock)
-- 10-11：[链锯人](/anime/chainsaw)
-- 11-11：[铃芽之旅](/anime/suzume_no_tojimari)
+| 时间 | 动画 | 话数/时长 | 观看地址 |
+| --- | --- | --- | --- |
+| 01-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/574e9258d109b3de9c82f300a7eb7b81800a19d8e605" referrerpolicy="no-referrer" alt=""> [JOJO的奇妙冒险](/anime/jojos_bizarre_adventure) 石之海 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss39431) |
+| 01-08 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_9c_4d_333158_qc7CC.webp" referrerpolicy="no-referrer" alt=""> [更衣人偶坠入爱河](/anime/my_dress-up_darling) | 12 | [keke1](https://www.keke1.app/play/21961-4-160832.html) |
+| 01-09 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_78_c9_55770_HsJfh.webp" referrerpolicy="no-referrer" alt=""> [进击的巨人](/anime/shingeki_no_kyojin) 最终季 Part.2 | 12 | [keke1](https://www.keke1.app/play/178572-4-136320.html) |
+| 02-01 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c4_dd_328514_83G3j.webp" referrerpolicy="no-referrer" alt=""> [枕刀歌](/anime/zhen_dao_ge) 之尘世行 | 1 | [bilibili](https://www.bilibili.com/bangumi/play/ss76349) |
+| 03-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109aa1c15e6d258ccbf6d814de2" referrerpolicy="no-referrer" alt=""> [银河英雄传说](/anime/legend_of_galactic_heroes) Die Neue These 激突 第1章 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss41534) |
+| 03-23 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_47_fa_78405_dodKZ.webp" referrerpolicy="no-referrer" alt=""> [悠哉日常大王](/anime/non_non_biyori) Nonstop OAD | 1 | [bilibili](https://www.bilibili.com/video/BV1xS4y117e2) |
+| 04-08 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_2a_f7_248175_2w4zT.webp" referrerpolicy="no-referrer" alt=""> [辉夜大小姐想让我告白～天才们的恋爱头脑战～](/anime/kaguya_love) 辉夜大小姐想让我告白-超级浪漫- | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ss41411) |
+| 04-09 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_de_4a_329906_hmtVD.webp" referrerpolicy="no-referrer" alt=""> [间谍过家家](/anime/spy_family) | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ep508404) |
+| 04-14 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_d9_f5_326895_j1S2n.webp" referrerpolicy="no-referrer" alt=""> [夏日重现](/anime/summer_time_rendering) | 25 | [bilibili](https://www.bilibili.com/bangumi/play/ss41417) |
+| 04-29 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_92_f6_18624_ZFj5M.webp" referrerpolicy="no-referrer" alt=""> [回转企鹅罐](/anime/penguin_drum) [RE:cycle of the PENGUINDRUM [前篇] 你的列车是生存战略](https://bgm.tv/subject/331946) | 1 | [bilibili](https://www.bilibili.com/video/BV1Zh4y1R7X1/?t=1h10m32s) |
+| 05-20 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_68_b8_274613_sx1iX.webp" referrerpolicy="no-referrer" alt=""> [爱、死亡 & 机器人](/anime/love_death_and_robots) 爱、死亡 &amp; 机器人 第三季 | 9 | [kkys01](https://www.kkys01.com/play/26206-4-216613.html) |
+| 06-10 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c0_e9_262865_P6q49.webp" referrerpolicy="no-referrer" alt=""> [异世界四重奏](/anime/isekai_quartet) 剧场版 异世界四重奏 ～Another World～ | 1 | [bilibili](https://www.bilibili.com/video/BV1Xt4y1h7t6) |
+| 07-01 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_18_bc_207195_2Cp3o.webp" referrerpolicy="no-referrer" alt=""> [摇曳露营△](/anime/yuru_camp) 电影 摇曳露营△ | 1 | [keke1](https://www.keke1.app/play/30056-4-268954.html) |
+| 07-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/0dd7912397dda144ad34ed352de1c7a20cf430ad28a7" referrerpolicy="no-referrer" alt=""> [传颂之物](/anime/utawarerumono) 二人的白皇 | 28 | [bilibili](https://www.bilibili.com/bangumi/play/ss42104) |
+| 07-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_cd_a9_112146_qr9m3.webp" referrerpolicy="no-referrer" alt=""> [OVERLORD](/anime/overlord) IV | 13 | [keke1](https://www.keke1.app/play/21441-4-150543.html) |
+| 07-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_1a_75_339326_v466V.webp" referrerpolicy="no-referrer" alt=""> [异世界舅舅](/anime/isekai_ojisan) | 13 | [bilibili](https://www.bilibili.com/bangumi/play/ep674238) |
+| 07-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_f7_bf_203526_q2P6P.webp" referrerpolicy="no-referrer" alt=""> [来自深渊](/anime/made_in_abyss) 烈日的黄金乡 | 12 | [kkys01](https://www.kkys01.com/play/27935-32-281454.html) |
+| 07-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_dd_cd_356774_zOW55.webp" referrerpolicy="no-referrer" alt=""> [彻夜之歌](/anime/yofukashi_no_uta) | 13 | [bilibili](https://www.bilibili.com/video/BV1xBrDB9EKe) |
+| 07-22 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_92_f6_18624_ZFj5M.webp" referrerpolicy="no-referrer" alt=""> [回转企鹅罐](/anime/penguin_drum) [RE:cycle of the PENGUINDRUM [后篇] 我爱你](https://bgm.tv/subject/379789) | 1 | [bilibili](https://www.bilibili.com/video/BV15k4y1s7s6/?t=1h8m52s) |
+| 09-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_db_e4_93377_TEzAK.webp" referrerpolicy="no-referrer" alt=""> [瑞克和莫蒂](/anime/rick_and_morty) 第六季 | 10 | [keke1](https://www.keke1.app/play/20378-4-138321.html) |
+| 09-13 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_39_83_309311_dJU58.webp" referrerpolicy="no-referrer" alt=""> [赛博浪客](/anime/cyberpunk) | 10 | [keke1](https://www.keke1.app/play/24998-4-201192.html) |
+| 09-14 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_7f_c6_4019_f34f4.webp" referrerpolicy="no-referrer" alt=""> [四叠半神话大系](/anime/the_tatami_galaxy) 四叠半时光机布鲁斯 | 6 | [bilibili](https://www.bilibili.com/bangumi/play/ss43166) |
+| 09-30 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109aa1c15e6d258ccbf6d814de2" referrerpolicy="no-referrer" alt=""> [银河英雄传说](/anime/legend_of_galactic_heroes) Die Neue These 策谋 第1章 | * | [bilibili](https://www.bilibili.com/bangumi/play/ss43149) |
+| 10-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c0_c7_50_8rPUO.webp" referrerpolicy="no-referrer" alt=""> [机动战士高达](/anime/gundam) 水星的魔女 | 12 | [keke1](https://www.keke1.app/play/27044-4-231557.html) |
+| 10-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_48_a6_228109_wb3bL.webp" referrerpolicy="no-referrer" alt=""> [灵能百分百](/anime/mob_psycho_100) 第三季 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ss43141) |
+| 10-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/574e9258d109b3de9c82f300a7eb7b81800a19d8e605" referrerpolicy="no-referrer" alt=""> [JOJO的奇妙冒险](/anime/jojos_bizarre_adventure) 石之海 Part.2 | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep674949) |
+| 10-08 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_e2_e7_328609_2EHLJ.webp" referrerpolicy="no-referrer" alt=""> [孤独摇滚！](/anime/bocchi_the_rock) | 12 | [bilibili](https://www.bilibili.com/bangumi/play/ep693247) |
+| 10-11 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_26_b4_321885_92uzU.webp" referrerpolicy="no-referrer" alt=""> [链锯人](/anime/chainsaw) | 12 | [kkys01](https://www.kkys01.com/play/24238-32-728314.html) |
+| 11-11 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_d9_03_362577_Ku9z8.webp" referrerpolicy="no-referrer" alt=""> [铃芽之旅](/anime/suzume_no_tojimari) | 121分钟 | [bilibili](https://www.bilibili.com/bangumi/play/ss45005) |
 

@@ -11,26 +11,28 @@
 
 ## 个人记录
 
-- 01-03：[棋魂](/anime/hikaru_no_go) 特别篇 迈向北斗杯之路
-- 01-16：[落叶](/anime/dead_leaves)
-- 02-02：[妄想代理人](/anime/paranoia_agent)
-- 03-06：[攻壳机动队](/anime/ghost_in_the_shell) 2 无罪
-- 04-17：[头文字D](/anime/initial_d) Fourth Stage
-- 05-19：[混沌武士](/anime/samurai_champloo)
-- 06-10：[海豚便利店](/anime/grrl_power)
-- 06-24：[库拉乌 幻之记忆](/anime/kurau_phantom_memory)
-- 07-07：[银河天使](/anime/galaxy_angel) X
-- 07-25：[妖精的旋律](/anime/elfen_lied)
-- 08-07：[心灵游戏](/anime/mind_game)
-- 10-01：[魔法少女奈叶](/anime/mahou_shoujo_lyrical_nanoha)
-- 10-06：[游戏王](/anime/yu_gi_oh) －怪兽之决斗GX
-- 10-07：[蔷薇少女](/anime/rozen_maiden)
-- 10-09：[机动战士高达](/anime/gundam) SEED DESTINY
-- 10-10：[现视研](/anime/genshiken)
-- 10-22：[百变之星](/anime/kaleido_star) 崭新之翼 EXTRA STAGE 不笑的公主
-- 11-10：[极地特快](/anime/the_polar_express)
-- 11-20：[云之彼端，约定的地方](/anime/the_place_promised_in_our_early_days)
-- 11-20：[哈尔的移动城堡](/anime/howls_moving_castle)
-- 11-26：[飞跃巅峰！](/anime/gunbuster) 2
-- 12-23：[犬夜叉](/anime/inuyasha) 红莲之蓬莱岛
+| 时间    | 动画                                                                                                                                                                                                                                                                                                  | 话数/时长    | 观看地址                                                      |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------- |
+| 01-03 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c3_61_605_CZYx4.webp" referrerpolicy="no-referrer" alt=""> [棋魂](/anime/hikaru_no_go) 特别篇 迈向北斗杯之路                                      | 1        | [bilibili](https://www.bilibili.com/video/BV1Ax41157HN)   |
+| 01-16 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_fc_1a_8461_8FhmL.webp" referrerpolicy="no-referrer" alt=""> [落叶](/anime/dead_leaves)                                                  | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss1927)  |
+| 02-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_3d_8e_843_6wj9L.webp" referrerpolicy="no-referrer" alt=""> [妄想代理人](/anime/paranoia_agent)                                             | 13       | [keke1](https://www.keke1.app/play/57343-31-298823.html)  |
+| 03-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/d53f8794a4c27d1ed21b8dcd2d8fba6eddc451da923a" referrerpolicy="no-referrer" alt=""> [攻壳机动队](/anime/ghost_in_the_shell) 2 无罪        | 1        | [bilibili](https://www.bilibili.com/video/BV174411s73J)   |
+| 04-17 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/7dd98d1001e93901d0f63db77dec54e737d19647" referrerpolicy="no-referrer" alt=""> [头文字D](/anime/initial_d) Fourth Stage              | 24       | [bilibili](https://www.bilibili.com/bangumi/play/ss210)   |
+| 05-19 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c5_2f_254_PLvyV.webp" referrerpolicy="no-referrer" alt=""> [混沌武士](/anime/samurai_champloo)                                            | 26       | [bilibili](https://www.bilibili.com/video/BV1hx411c7bg)   |
+| 06-10 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_16_e6_13823_ub5r1.webp" referrerpolicy="no-referrer" alt=""> [海豚便利店](/anime/grrl_power)                                               | 1        | [bilibili](https://www.bilibili.com/video/BV1xx411u7Vc/)  |
+| 06-24 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://i0.hdslb.com/bfs/bangumi/ca82a70b888aa9f828f34b66d0b8c9829791897b.jpg" referrerpolicy="no-referrer" alt=""> [库拉乌 幻之记忆](/anime/kurau_phantom_memory)        | 24       | [bilibili](https://www.bilibili.com/bangumi/play/ep40104) |
+| 07-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/d009b3de9c82d158f91b1fcd800a19d8bc3e4234" referrerpolicy="no-referrer" alt=""> [银河天使](/anime/galaxy_angel) X                      | 26       | [acfun](https://www.acfun.cn/v/ac3819764)                 |
+| 07-25 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_65_65_536_MKMkg.webp" referrerpolicy="no-referrer" alt=""> [妖精的旋律](/anime/elfen_lied)                                                 | 14       | [agedm](http://www.agedm.org/play/20040001/1/1)           |
+| 08-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/5366d0160924ab18edd4b67d36fae6cd7a890bbd" referrerpolicy="no-referrer" alt=""> [心灵游戏](/anime/mind_game)                           | 1        | [keke1](https://www.keke1.app/play/179432-4-225350.html)  |
+| 10-01 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_dc_4c_1262_PLm8W.webp" referrerpolicy="no-referrer" alt=""> [魔法少女奈叶](/anime/mahou_shoujo_lyrical_nanoha)                              | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ep28677) |
+| 10-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_d1_09_12344_Kec1G.webp" referrerpolicy="no-referrer" alt=""> [游戏王](/anime/yu_gi_oh) －怪兽之决斗GX                                          | 180      | [bilibili](https://www.bilibili.com/video/BV1Kx41137ET)   |
+| 10-07 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/8ad4b31c8701a18b71453ccb9d2f07082938fe8c" referrerpolicy="no-referrer" alt=""> [蔷薇少女](/anime/rozen_maiden)                        | 12       | [bilibili](https://www.bilibili.com/bangumi/play/ss522)   |
+| 10-09 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_c0_c7_50_8rPUO.webp" referrerpolicy="no-referrer" alt=""> [机动战士高达](/anime/gundam) SEED DESTINY                                        | 50       | [bilibili](https://www.bilibili.com/bangumi/play/ss499)   |
+| 10-10 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72acac58754d72a2834359bbbd2" referrerpolicy="no-referrer" alt=""> [现视研](/anime/genshiken)                            | 12       | [bilibili](https://www.bilibili.com/bangumi/play/ss517)   |
+| 10-22 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/e4dde71190ef76c60b8b16309a16fdfaaf516754" referrerpolicy="no-referrer" alt=""> [百变之星](/anime/kaleido_star) 崭新之翼 EXTRA STAGE 不笑的公主 | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss21473) |
+| 11-10 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_22_55_39270_wLwSV.webp" referrerpolicy="no-referrer" alt=""> [极地特快](/anime/the_polar_express)                                         | 1        | [keke1](https://www.keke1.app/play/176643-4-5047.html)    |
+| 11-20 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_02_f0_1707_8HGku.webp" referrerpolicy="no-referrer" alt=""> [云之彼端，约定的地方](/anime/the_place_promised_in_our_early_days)                 | 01:30:21 | [bilibili](https://www.bilibili.com/bangumi/play/ss2545)  |
+| 11-20 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/91ef76c6a7efce1b9d16da2ae209e4deb48f8d54cf81" referrerpolicy="no-referrer" alt=""> [哈尔的移动城堡](/anime/howls_moving_castle)          | 1        | [keke1](https://www.keke1.app/play/179823-4-271797.html)  |
+| 11-26 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_b9_b5_57105_b467o.webp" referrerpolicy="no-referrer" alt=""> [飞跃巅峰！](/anime/gunbuster) 2                                              | 6        | [bilibili](https://www.bilibili.com/video/BV1kW411p7Xh)   |
+| 12-23 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b64543a98226cffcf8b981e2b6014a90f703eacb" referrerpolicy="no-referrer" alt=""> [犬夜叉](/anime/inuyasha) 红莲之蓬莱岛                      | 1        | [keke1](https://www.keke1.app/play/179389-4-223382.html)  |
 

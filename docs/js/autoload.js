@@ -25,7 +25,8 @@ function loadExternalResource(url, type) {
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 350) {
+// 看板娘是装饰性内容：放到浏览器空闲时再加载，不跟正文抢首屏带宽。
+const startLive2D = () => {
 	Promise.all([
 		loadExternalResource(live2d_path+"waifu.css", "css"),
 		loadExternalResource(live2d_path+"live2d.min.js", "js"),
@@ -37,6 +38,13 @@ if (screen.width >= 350) {
 			cdnPath: live2d_path
 		});
 	});
+};
+if (screen.width >= 350) {
+	if (window.requestIdleCallback) {
+		window.requestIdleCallback(startLive2D, { timeout: 3000 });
+	} else {
+		window.setTimeout(startLive2D, 1500);
+	}
 }
 // initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
 // API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api

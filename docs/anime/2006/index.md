@@ -15,37 +15,38 @@
 
 ## 个人记录
 
-- 01-06：[Fate/stay night](/anime/fate_stay_night)
-- 01-18：[苍之茧](/anime/pale_cocoon)
-- 01-25：[灼眼的夏娜](/anime/shakugan_no_shana) 炭
-- 01-27：[百变之星](/anime/kaleido_star) 不死鸟传说 ～蕾拉・汉密尔顿物语～
-- 02-02：[备长炭](/anime/binchou-tan)
-- 03-04：[哆啦A梦](/anime/doraemon) 新剧场版
-- 04-02：[凉宫春日的忧郁](/anime/suzumiya_haruhi)
-- 04-02：[水星领航员](/anime/aria) 第二季
-- 04-03：[传颂之物](/anime/utawarerumono)
-- 04-03：[西蒙](/anime/simoun)
-- 04-04：[寒蝉鸣泣之时](/anime/when_they_cry)
-- 04-05：[大魔法峠](/anime/dai_mahou_touge)
-- 05-26：[全金属狂潮](/anime/full_metal_panic) The Second Raid OVA 战队长悠闲的一天
-- 06-16：[FLAG](/anime/flag)
-- 06-17：[银河铁道之夜](/anime/railroad)
-- 07-02：[零之使魔](/anime/zero_no_tsukaima)
-- 07-09：[欢迎加入NHK！](/anime/welcome_to_nhk)
-- 07-15：[穿越时空的少女](/anime/the_girl_who_leapt_through_time)
-- 08-05：[兽爪](/anime/kemonozume)
-- 08-05：[搞笑漫画日和](/anime/gyagu_manga_biyori) 2
-- 08-27：[春之觉醒](/anime/my_love)
-- 09-27：[百变之星](/anime/kaleido_star) 妙啊！妙！
-- 09-28：[精灵宝可梦](/anime/pokemon) 钻石&amp;珍珠
-- 10-04：[死亡笔记](/anime/death_note)
-- 10-05：[Code Geass 反叛的鲁路修](/anime/code_geass)
-- 10-05：[Kanon](/anime/kanon)
-- 10-14：[调酒师](/anime/bartender)
-- 11-17：[快乐的大脚](/anime/happy_feet)
-- 11-24：[FREEDOM](/anime/freedom)
-- 11-25：[红辣椒](/anime/paprika)
-- 12-08：[灼眼的夏娜](/anime/shakugan_no_shana) 恋爱和温泉校外学习
-- 12-15：[圣斗士星矢](/anime/saint_seiya) 冥界篇 后章
-- 12-23：[恶童](/anime/tekkon_kinkurîto)
+| 时间    | 动画                                                                                                                                                                                                                                                                                                     | 话数/时长    | 观看地址                                                      |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------------------- |
+| 01-06 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b3b7d0a20cf431adffbb46b74536acaf2fdd98d6" referrerpolicy="no-referrer" alt=""> [Fate/stay night](/anime/fate_stay_night)             | 24       | [bilibili](https://www.bilibili.com/bangumi/play/ss25210) |
+| 01-18 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_11_f5_1898_vMn62.webp" referrerpolicy="no-referrer" alt=""> [苍之茧](/anime/pale_cocoon)                                                    | 1        | [bilibili](https://www.bilibili.com/video/BV1As411y7uh)   |
+| 01-25 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/14ce36d3d539b600ac9a8030e250352ac75cb7e5" referrerpolicy="no-referrer" alt=""> [灼眼的夏娜](/anime/shakugan_no_shana) 炭                   | 15       | [bilibili](https://www.bilibili.com/bangumi/play/ss4949)  |
+| 01-27 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/e4dde71190ef76c60b8b16309a16fdfaaf516754" referrerpolicy="no-referrer" alt=""> [百变之星](/anime/kaleido_star) 不死鸟传说 ～蕾拉・汉密尔顿物语～         | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss3778)  |
+| 02-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/fc1f4134970a304e251f319f2892b086c9177f3ef619" referrerpolicy="no-referrer" alt=""> [备长炭](/anime/binchou-tan)                         | 12       | [bilibili](https://www.bilibili.com/bangumi/play/ep25976) |
+| 03-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_64_b3_37460_gtg0V.webp" referrerpolicy="no-referrer" alt=""> [哆啦A梦](/anime/doraemon) 新剧场版                                                | 10       | [bilibili](https://www.bilibili.com/video/BV1Js411o78A)   |
+| 04-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_21_8a_485_Et062.webp" referrerpolicy="no-referrer" alt=""> [凉宫春日的忧郁](/anime/suzumiya_haruhi)                                             | 14       | [bilibili](https://www.bilibili.com/bangumi/play/ep18901) |
+| 04-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/a8014c086e061d95a6d06c337df40ad162d9ca23" referrerpolicy="no-referrer" alt=""> [水星领航员](/anime/aria) 第二季                              | 26       | [keke1](https://www.keke1.app/play/23916-4-187835.html)   |
+| 04-03 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/0dd7912397dda144ad34ed352de1c7a20cf430ad28a7" referrerpolicy="no-referrer" alt=""> [传颂之物](/anime/utawarerumono)                      | 26       | [bilibili](https://www.bilibili.com/bangumi/play/ss1388)  |
+| 04-03 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/4e4a20a4462309f78ee486b3720e0cf3d6cad683" referrerpolicy="no-referrer" alt=""> [西蒙](/anime/simoun)                                   | 26       | [下方](#id-1)                                               |
+| 04-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/_placeholder.webp" referrerpolicy="no-referrer" alt=""> [寒蝉鸣泣之时](/anime/when_they_cry)                                                               | 26       | [keke1](https://www.keke1.app/play/28315-4-249067.html)   |
+| 04-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/2f738bd4b31c8701ef4b3000297f9e2f0608ff53" referrerpolicy="no-referrer" alt=""> [大魔法峠](/anime/dai_mahou_touge)                        | 8        | [bilibili](https://www.bilibili.com/bangumi/play/ss4926)  |
+| 05-26 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_2f_2b_334_MWQMC.webp" referrerpolicy="no-referrer" alt=""> [全金属狂潮](/anime/full_metal_panic) The Second Raid OVA 战队长悠闲的一天                 | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss3572)  |
+| 06-16 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_db_95_1788_b7bZz.webp" referrerpolicy="no-referrer" alt=""> [FLAG](/anime/flag)                                                          | 13       | [aniwave](https://aniwave.to/watch/flag.zxow)             |
+| 06-17 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/d01373f082025aaff2aadc79f8edab64024f1ae3" referrerpolicy="no-referrer" alt=""> [银河铁道之夜](/anime/railroad)                             | 48:21    | [bilibili](https://www.bilibili.com/bangumi/play/ss3053)  |
+| 07-02 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/b3b7d0a20cf431adcbefce46ea60bbaf2edda3cc320f" referrerpolicy="no-referrer" alt=""> [零之使魔](/anime/zero_no_tsukaima)                   | 13       | [bilibili](https://www.bilibili.com/bangumi/play/ep14754) |
+| 07-09 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/35a85edf8db1cb139366b414d554564e92584bae" referrerpolicy="no-referrer" alt=""> [欢迎加入NHK！](/anime/welcome_to_nhk)                     | 24       | [keke1](https://www.keke1.app/play/20014-4-134832.html)   |
+| 07-15 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72a6059e421a1733f34349b033b0dcf" referrerpolicy="no-referrer" alt=""> [穿越时空的少女](/anime/the_girl_who_leapt_through_time) | 01:38:00 | [bilibili](https://www.bilibili.com/bangumi/play/ep65786) |
+| 08-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/aa18972bd40735facd3bd19793510fb30e2408d0" referrerpolicy="no-referrer" alt=""> [兽爪](/anime/kemonozume)                               | 13       | [keke1](https://www.keke1.app/play/78262-31-62001.html)   |
+| 08-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/8d5494eef01f3a292df5876a8f79ab315c6034a8d659" referrerpolicy="no-referrer" alt=""> [搞笑漫画日和](/anime/gyagu_manga_biyori) 2             | 12       | [bilibili](https://www.bilibili.com/bangumi/play/ss1594)  |
+| 08-27 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_87_db_36338_W6oNQ.webp" referrerpolicy="no-referrer" alt=""> [春之觉醒](/anime/my_love)                                                      | 1        | [bilibili](https://www.bilibili.com/video/BV1Zs411U7Xr/)  |
+| 09-27 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/e4dde71190ef76c60b8b16309a16fdfaaf516754" referrerpolicy="no-referrer" alt=""> [百变之星](/anime/kaleido_star) 妙啊！妙！                     | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss3779)  |
+| 10-04 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/5243fbf2b2119313ab828ce361380cd790238d9b" referrerpolicy="no-referrer" alt=""> [死亡笔记](/anime/death_note)                             | 37       | [keke1](https://www.keke1.app/play/183110-4-250623.html)  |
+| 10-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b6a79cbc003d162d9f2d3c962" referrerpolicy="no-referrer" alt=""> [Code Geass 反叛的鲁路修](/anime/code_geass)                | 25       | [keke1](https://www.keke1.app/play/22150-4-163634.html)   |
+| 10-05 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_d9_47_274_jNWMv.webp" referrerpolicy="no-referrer" alt=""> [Kanon](/anime/kanon)                                                         | 24       | [bilibili](https://www.bilibili.com/bangumi/play/ep25593) |
+| 10-14 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/203fb80e7bec54e77a7405ecb3389b504ec26aa3" referrerpolicy="no-referrer" alt=""> [调酒师](/anime/bartender)                               | 11       | [bilibili](https://www.bilibili.com/bangumi/play/ss1422)  |
+| 11-17 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_a1_93_36067_GWJRZ.webp" referrerpolicy="no-referrer" alt=""> [快乐的大脚](/anime/happy_feet)                                                  | 1        | [keke1](https://www.keke1.app/play/5680-4-32967.html)     |
+| 11-24 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_cd_47_4192_t2mZE.webp" referrerpolicy="no-referrer" alt=""> [FREEDOM](/anime/freedom)                                                    | 7        | [keke1](https://www.keke1.app/play/219943-2-436401.html)  |
+| 11-25 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_02_a3_841_P6wS5.webp" referrerpolicy="no-referrer" alt=""> [红辣椒](/anime/paprika)                                                         | 01:30:32 | [bilibili](https://www.bilibili.com/video/BV1Ts411q75z/)  |
+| 12-08 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/14ce36d3d539b600ac9a8030e250352ac75cb7e5" referrerpolicy="no-referrer" alt=""> [灼眼的夏娜](/anime/shakugan_no_shana) 恋爱和温泉校外学习           | 1        | [bilibili](https://www.bilibili.com/bangumi/play/ss1607)  |
+| 12-15 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/bgm/cover/thumb/pic_cover_l_02_24_4843_ol9aY.webp" referrerpolicy="no-referrer" alt=""> [圣斗士星矢](/anime/saint_seiya) 冥界篇 后章                                           | 6        | [keke1](https://www.keke1.app/detail/40822.html)          |
+| 12-23 | <img class="lazyload anime-thumb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bkimg.cdn.bcebos.com/pic/e7cd7b899e510fb370e422acde33c895d1430c0f" referrerpolicy="no-referrer" alt=""> [恶童](/anime/tekkon_kinkurîto)                         | 1        | [bilibili](https://www.bilibili.com/video/BV1ZW411y7M8)   |
 

@@ -8,7 +8,7 @@ const tagCloudMoreReady = new WeakSet();
 let currentTheme = null;
 const globalEventsBound = { scroll: false, resize: false, mask: false };
 
-// 按需加载重型库：katex。
+// 按需加载重型库：KaTeX / 搜索 / 灯箱 / 轮播 / Bangumi 样式。
 // 用全局 Map 缓存 Promise，保证同一地址只注入一次；pjax 换页后新页 config 覆盖，
 // 但已加载的库命中缓存，不会重复请求。
 const loadedAssets = new Map();
@@ -27,36 +27,62 @@ function loadAsset(url, type) {
     loadedAssets.set(key, p);
     return p;
 }
-// 兜底库路径表：路径固定，pjax 换页不重载 head/config，据此判断当前页需要哪些库。
-// config.deferredLibs 由首次加载的页面提供；pjax 后以 DOM 里的元素为准，用这张表补齐。
+// 库路径表：DEFAULT_LIBS 是唯一维护点（模板不再往 config 里写路径）。
+// 仍保留 config.deferredLibs 读取，方便以后需要临时覆盖 CDN 路径时不用改 JS。
 const DEFAULT_LIBS = {
-    math: { katex: 'lib/katex/katex.min.js', render: 'lib/katex/auto-render.min.js' }
+    math: {
+        katex: 'lib/katex/katex.min.js',
+        render: 'lib/katex/auto-render.min.js',
+        copyTex: 'lib/katex/copy-tex.min.js',
+        mhchem: 'lib/katex/mhchem.min.js',
+        sequential: true
+    },
+    search: {
+        js: [
+            'lib/autocomplete/autocomplete.min.js',
+            'lib/algoliasearch/algoliasearch-lite.umd.min.js'
+        ]
+    },
+    lightgallery: {
+        css: ['lib/lightgallery/lightgallery.min.css'],
+        js: [
+            'lib/lightgallery/lightgallery.min.js',
+            'lib/lightgallery/lg-thumbnail.min.js',
+            'lib/lightgallery/lg-zoom.min.js'
+        ],
+        sequential: true
+    },
+    abbangumi: { css: ['lib/abbangumi/abbangumi.css'] },
+    flexslider: {
+        css: ['lib/flexslider/flexslider.css'],
+        js: ['lib/flexslider/jquery.flexslider.js']
+    }
 };
 function resolveLibUrl(path) {
     // 相对路径补成站点根路径（config.baseURL 可能是子路径，用 JS 侧统一处理）
     return /^https?:\/\//.test(path) ? path : '/' + String(path).replace(/^\//, '');
 }
+function normalizeLibList(value) {
+    if (!value) { return []; }
+    return (Array.isArray(value) ? value : [value]).filter(Boolean).map(resolveLibUrl);
+}
+function loadAssetSeries(urls, type) {
+    return urls.reduce((chain, url) => chain.then(() => loadAsset(url, type)), Promise.resolve());
+}
 function loadDeferred(name) {
     const cfg = (window.config && window.config.deferredLibs) || {};
     let lib = cfg[name] || DEFAULT_LIBS[name];
     if (!lib) { return Promise.resolve(); }
-    // 路径统一补前缀
-    if (typeof lib === 'string') { lib = resolveLibUrl(lib); }
-    else {
-        lib = Object.assign({}, lib);
-        ['css', 'js', 'render', 'copyTex', 'mhchem'].forEach(k => {
-            if (lib[k]) { lib[k] = resolveLibUrl(lib[k]); }
-        });
-    }
-    const jobs = [];
-    if (typeof lib === 'string') { jobs.push(loadAsset(lib, 'js')); }
-    else {
-        if (lib.css) { jobs.push(loadAsset(lib.css, 'css')); }
-        if (lib.js) { jobs.push(loadAsset(lib.js, 'js')); }
-        if (lib.render) { jobs.push(loadAsset(lib.render, 'js')); }
-        if (lib.copyTex) { jobs.push(loadAsset(lib.copyTex, 'js')); }
-        if (lib.mhchem) { jobs.push(loadAsset(lib.mhchem, 'js')); }
-    }
+    if (typeof lib === 'string') { lib = { js: [lib] }; }
+    const css = normalizeLibList(lib.css);
+    const js = normalizeLibList(lib.js);
+    // math 的 katex/render/copyTex/mhchem 平铺键（katex 主程序必须先加载）
+    ['katex', 'render', 'copyTex', 'mhchem'].forEach(key => {
+        if (lib[key]) { js.push(resolveLibUrl(lib[key])); }
+    });
+    const jobs = css.map(url => loadAsset(url, 'css'));
+    if (lib.sequential) { jobs.push(loadAssetSeries(js, 'js')); }
+    else { js.forEach(url => jobs.push(loadAsset(url, 'js'))); }
     return Promise.all(jobs);
 }
 
@@ -156,10 +182,40 @@ class Theme {
         });
     }
 
+    closeSearch() {
+        const isMobile = this.util.isMobile();
+        const suffix = isMobile ? 'mobile' : 'desktop';
+        const $header = document.getElementById(`header-${suffix}`);
+        const $searchInput = document.getElementById(`search-input-${suffix}`);
+        const $searchLoading = document.getElementById(`search-loading-${suffix}`);
+        const $searchClear = document.getElementById(`search-clear-${suffix}`);
+        if ($header) { $header.classList.remove('open'); }
+        document.body.classList.remove('blur');
+        if ($searchLoading) { $searchLoading.style.display = 'none'; }
+        if ($searchClear) { $searchClear.style.display = 'none'; }
+        const autosearch = isMobile ? this._searchMobile : this._searchDesktop;
+        if (autosearch && autosearch.autocomplete) { autosearch.autocomplete.setVal(''); }
+        if ($searchInput && document.activeElement === $searchInput) { $searchInput.blur(); }
+        if (isMobile) {
+            const $toggle = document.getElementById('menu-toggle-mobile');
+            const $menu = document.getElementById('menu-mobile');
+            if ($toggle) { $toggle.classList.remove('active'); }
+            if ($menu) { $menu.classList.remove('active'); }
+        }
+    }
+
     initSearch() {
         const searchConfig = this.config.search;
         const isMobile = this.util.isMobile();
         if (!searchConfig || isMobile && this._searchMobileOnce || !isMobile && this._searchDesktopOnce) return;
+        const self = this;
+        // 搜索依赖只在用户真正准备搜索时加载：点按钮、鼠标移入按钮或输入框获得焦点。
+        function ensureSearchLibraries() {
+            if (self._searchLibReady) { return; }
+            self._searchLibReady = true;
+            self._searchLibsPromise = self._searchLibsPromise || loadDeferred('search');
+            self._searchLibsPromise.then(startAutosearch);
+        }
 
         const maxResultLength = searchConfig.maxResultLength ? searchConfig.maxResultLength : 10;
         const snippetLength = searchConfig.snippetLength ? searchConfig.snippetLength : 50;
@@ -174,51 +230,58 @@ class Theme {
         if (isMobile) {
             this._searchMobileOnce = true;
             $searchInput.addEventListener('focus', () => {
+                ensureSearchLibraries();
                 document.body.classList.add('blur');
                 $header.classList.add('open');
             }, false);
             document.getElementById('search-cancel-mobile').addEventListener('click', () => {
-                $header.classList.remove('open');
-                document.body.classList.remove('blur');
-                document.getElementById('menu-toggle-mobile').classList.remove('active');
-                document.getElementById('menu-mobile').classList.remove('active');
-                $searchLoading.style.display = 'none';
-                $searchClear.style.display = 'none';
-                this._searchMobile && this._searchMobile.autocomplete.setVal('');
+                this.closeSearch();
             }, false);
             $searchClear.addEventListener('click', () => {
                 $searchClear.style.display = 'none';
                 this._searchMobile && this._searchMobile.autocomplete.setVal('');
             }, false);
             this._searchMobileOnClickMask = this._searchMobileOnClickMask || (() => {
-                $header.classList.remove('open');
-                $searchLoading.style.display = 'none';
-                $searchClear.style.display = 'none';
-                this._searchMobile && this._searchMobile.autocomplete.setVal('');
+                this.closeSearch();
             });
             this.clickMaskEventSet.add(this._searchMobileOnClickMask);
         } else {
             this._searchDesktopOnce = true;
             $searchToggle.addEventListener('click', () => {
+                if ($header.classList.contains('open')) { this.closeSearch(); return; }
+                ensureSearchLibraries();
                 document.body.classList.add('blur');
                 $header.classList.add('open');
                 $searchInput.focus();
             }, false);
+            $searchToggle.addEventListener('mouseenter', ensureSearchLibraries, false);
+            $searchInput.addEventListener('focus', ensureSearchLibraries, false);
             $searchClear.addEventListener('click', () => {
                 $searchClear.style.display = 'none';
                 this._searchDesktop && this._searchDesktop.autocomplete.setVal('');
             }, false);
             this._searchDesktopOnClickMask = this._searchDesktopOnClickMask || (() => {
-                $header.classList.remove('open');
-                $searchLoading.style.display = 'none';
-                $searchClear.style.display = 'none';
-                this._searchDesktop && this._searchDesktop.autocomplete.setVal('');
+                this.closeSearch();
             });
             this.clickMaskEventSet.add(this._searchDesktopOnClickMask);
         }
         $searchInput.addEventListener('input', () => {
             if ($searchInput.value === '') $searchClear.style.display = 'none';
             else $searchClear.style.display = 'inline';
+        }, false);
+        // 搜索框失焦（点到正文/其它菜单）或按 Esc 时自动收起，避免一直展开占着导航栏
+        $searchInput.addEventListener('blur', (event) => {
+            const next = event.relatedTarget;
+            if (next && next.closest && (next.closest('.search') || next.closest('.search-dropdown'))) { return; }
+            window.setTimeout(() => {
+                const $currentHeader = document.getElementById(`header-${suffix}`);
+                if ($currentHeader && $currentHeader.classList.contains('open') && document.activeElement !== $searchInput) {
+                    this.closeSearch();
+                }
+            }, 120);
+        }, false);
+        $searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') { this.closeSearch(); }
         }, false);
 
         const initAutosearch = () => {
@@ -355,26 +418,29 @@ class Theme {
             if (isMobile) this._searchMobile = autosearch;
             else this._searchDesktop = autosearch;
         };
-        if (searchConfig.lunrSegmentitURL && !document.getElementById('lunr-segmentit')) {
-            const script = document.createElement('script');
-            script.id = 'lunr-segmentit';
-            script.type = 'text/javascript';
-            script.src = searchConfig.lunrSegmentitURL;
-            script.async = true;
-            if (script.readyState) {
-                script.onreadystatechange = () => {
-                    if (script.readyState == 'loaded' || script.readyState == 'complete'){
-                        script.onreadystatechange = null;
+        const startAutosearch = () => {
+            if (searchConfig.lunrSegmentitURL && !document.getElementById('lunr-segmentit')) {
+                const script = document.createElement('script');
+                script.id = 'lunr-segmentit';
+                script.type = 'text/javascript';
+                script.src = searchConfig.lunrSegmentitURL;
+                script.async = true;
+                if (script.readyState) {
+                    script.onreadystatechange = () => {
+                        if (script.readyState == 'loaded' || script.readyState == 'complete'){
+                            script.onreadystatechange = null;
+                            initAutosearch();
+                        }
+                    };
+                } else {
+                    script.onload = () => {
                         initAutosearch();
-                    }
-                };
-            } else {
-                script.onload = () => {
-                    initAutosearch();
-                };
-            }
-            document.body.appendChild(script);
-        } else initAutosearch();
+                    };
+                }
+                document.body.appendChild(script);
+            } else initAutosearch();
+        };
+        // 搜索依赖（autocomplete / algoliasearch）由 ensureSearchLibraries() 在用户交互时触发。
     }
 
     initDetails() {
@@ -387,7 +453,15 @@ class Theme {
     }
 
     initLightGallery() {
-        if (this.config.lightGallery) lightGallery(document.getElementById('content'), this.config.lightGallery);
+        if (!this.config.lightGallery) { return; }
+        const $content = document.getElementById('content');
+        if (!$content || !$content.querySelector('.lightgallery')) { return; }
+        loadDeferred('lightgallery').then(() => {
+            const $target = document.getElementById('content');
+            if ($target && $target.querySelector('.lightgallery') && typeof lightGallery === 'function') {
+                lightGallery($target, this.config.lightGallery);
+            }
+        });
     }
 
     initHighlight() {
@@ -943,16 +1017,27 @@ class Theme {
     }
 	
 	initSlider() {
-		$('.flexslider').flexslider({
-			animation: "slide",
-			// flexslider 切换时手动触发 lazysizes 加载当前帧的角色图，避免轮播到懒加载图片时空白
-			before: function (slider) {
-				const $cur = slider.slides.eq(slider.currentSlide).find('img.lazyload');
-				if ($cur.length && window.lazySizes) {
-					window.lazySizes.loader.unveil($cur[0]);
+		if (!document.querySelector('.flexslider')) { return; }
+		loadDeferred('flexslider').then(() => {
+			const $sliders = $('.flexslider');
+			if (!$sliders.length || !$.fn.flexslider) { return; }
+			$sliders.flexslider({
+				animation: "slide",
+				// flexslider 切换时手动触发 lazysizes 加载当前帧的角色图，避免轮播到懒加载图片时空白
+				before: function (slider) {
+					const $cur = slider.slides.eq(slider.currentSlide).find('img.lazyload');
+					if ($cur.length && window.lazySizes) {
+						window.lazySizes.loader.unveil($cur[0]);
+					}
 				}
-			}
-		  });
+			});
+		});
+	}
+
+	initBangumiStyle() {
+		if (document.querySelector('.ab_bangumiItem, #ab_bangumi_content')) {
+			loadDeferred('abbangumi');
+		}
 	}
 
     onScroll() {
@@ -1041,6 +1126,7 @@ class Theme {
             this.initLightGallery();
 			this.initCookieconsent();
 			this.initTagFilter();
+			this.initBangumiStyle();
 			this.initMedia();
 			this.initSlider();
         } catch (err) {
@@ -1066,6 +1152,7 @@ class Theme {
             this.initDetails();
             this.initLightGallery();
             this.initTagFilter();
+            this.initBangumiStyle();
             this.initMedia();
 			this.initSlider();
         } catch (err) {
@@ -1096,5 +1183,5 @@ $(function(){
 $(document).pjax('a[target!=_blank]:not([href^="#"])', '.container', {fragment: '.container',timeout: 8000});
 // 不监听 ready：首次加载已由上面的 $(function) 调用 init()，再监听会重复初始化。
 $(document).on('pjax:end', function() {const theme = new Theme(); theme.init2();})
-$(document).on('pjax:click', function() {window.config.data = {}; window.config.media={};})
+$(document).on('pjax:click', function() {if (currentTheme && currentTheme.closeSearch) {currentTheme.closeSearch();} window.config.data = {}; window.config.media={};})
 /*pjax ends*/

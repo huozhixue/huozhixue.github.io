@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .katex-display {
     overflow: auto hidden;
 }
@@ -268,4 +269,87 @@ body[theme="dark"] .tf-combo-option:hover {
 	margin-bottom: 1rem;
 	color: #2d96bd;
 	font-size: .9em;
+}
+/* 年终盘点表格：只作用于「个人记录」标题后的表格（选择器用 Unicode 转义，避免编码问题导致整块失效） */
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table {
+	table-layout: fixed;
+	font-size: .95rem;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table th,
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table td {
+	padding: .25rem .55rem;
+	vertical-align: middle;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table td:nth-child(2) {
+	overflow-wrap: anywhere;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table thead th {
+	white-space: nowrap;
+	font-weight: 600;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tbody tr:nth-child(even) {
+	background-color: rgba(127, 127, 127, .045);
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tbody tr:hover {
+	background-color: rgba(45, 150, 189, .09);
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table th,
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table td {
+	border-color: rgba(127, 127, 127, .18);
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(1) {
+	width: 4rem;
+	white-space: nowrap;
+	overflow-wrap: normal;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table td:nth-child(2) {
+	position: relative;
+	padding-left: calc(.55rem + 66px + .75rem);
+	height: 96px;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(3) {
+	width: 5.2rem;
+	text-align: center;
+}
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(4) {
+	width: 6rem;
+}
+
+/* 系列封面：左侧固定 66x88、垂直居中；文字从图片右侧开始，多行也不绕到图下方 */
+.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table .anime-thumb {
+	position: absolute;
+	left: .55rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 66px;
+	height: 88px;
+	object-fit: cover;
+	object-position: center top;
+	margin: 0 !important;
+	border-radius: 3px;
+	background-color: rgba(127, 127, 127, .15);
+}
+
+@media (max-width: 576px) {
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table {
+		table-layout: auto;
+	}
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(1),
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(2),
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(3),
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table tr > :nth-child(4) {
+		width: auto;
+	}
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table td:nth-child(2) {
+		padding-left: .55rem;
+		height: auto;
+	}
+	.content [id="\4e2a \4eba \8bb0 \5f55"] + .table-wrapper table .anime-thumb {
+		position: static;
+		transform: none;
+		width: 32px;
+		height: 44px;
+		margin-right: .4rem !important;
+		vertical-align: -10px;
+	}
 }
