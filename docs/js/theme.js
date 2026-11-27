@@ -973,31 +973,41 @@ class Theme {
         this.util.forEach(document.getElementsByClassName('media'), $media => {
 			const data = this.config.media[$media.id];
 			if (!data || !data.length) { return; }
-			const pair = data.pop();
-			let cur = pair[0] % data.length;
-			const len = data.length;
+			// 末项是「今日选中序号」，不要 pop 掉原始数据：pjax 返回时 config.media
+			// 未必会被重置，重复 pop 会让后续初始化读到错误的数据。
+			const items = data.slice(0, -1);
+			const len = items.length;
+			if (!len) { return; }
+			let cur = data[len][0] % len;
 			const type = $media.getAttribute('type');
 			const $playlist = $media.querySelector('.media-playlist');
 			const $link = $media.querySelector('.media-source-link');
-            const $btn2 = $media.querySelector('.media-next');
-            const $btn1 = $media.querySelector('.media-prev');
+            let $btn2 = $media.querySelector('.media-next');
+            let $btn1 = $media.querySelector('.media-prev');
+            // pjax 往返会还原/克隆 DOM：旧监听器可能残留、也可能已经丢失。
+            // 克隆按钮再绑定，保证上一条/下一条始终只有一份且必然有效。
+            if ($btn1) { const $fresh = $btn1.cloneNode(true); $btn1.replaceWith($fresh); $btn1 = $fresh; }
+            if ($btn2) { const $fresh = $btn2.cloneNode(true); $btn2.replaceWith($fresh); $btn2 = $fresh; }
             let $select = null;
 
             // 统一切换入口：切换播放器、更新链接、同步下拉框选中项
             const select = (index) => {
                 cur = ((index % len) + len) % len;
-                this.switchMedia($media, $link, data[cur], type);
+                this.switchMedia($media, $link, items[cur], type);
                 if ($select) { $select.value = String(cur); }
             };
 
             // 构建下拉选择框：紧凑、选中即播放
             if ($playlist && len >= 1) {
+                // 兼容修复前已经残留的重复下拉框，保证始终只有一个
+                const $oldSelect = $playlist.querySelector('.media-playlist-select');
+                if ($oldSelect) { $oldSelect.remove(); }
                 $select = document.createElement('select');
                 $select.className = 'media-playlist-select';
                 for (let i = 0; i < len; i++) {
                     const $opt = document.createElement('option');
                     $opt.value = String(i);
-                    $opt.textContent = data[i][1] || ('#' + (i + 1));
+                    $opt.textContent = items[i][1] || ('#' + (i + 1));
                     $select.appendChild($opt);
                 }
                 $select.addEventListener('change', () => {
