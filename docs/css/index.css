@@ -353,3 +353,8 @@ body[theme="dark"] .tf-combo-option:hover {
 		vertical-align: -10px;
 	}
 }
+
+/* 404 / 无链接提示页：主题用 transform 下移内容但不占布局高度，补回间距避免与页脚重叠 */
+#content-404 {
+	margin-bottom: 30vh;
+}

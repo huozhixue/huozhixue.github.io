@@ -115,15 +115,32 @@
             <meting-js auto="https://music.163.com/#/playlist?id=13910351276" fixed="true" order="random" list-max-height="263px"></meting-js>
             <main class="main">
                 <div class="container"><div class="page" id="content-404">
-        <h1 id="error-emoji"></h1>
-        <p class="error-text">抱歉，您要查找的页面不存在。&nbsp;
-            <a href="javascript:void(0);" title="返回" onclick="window.history.back();"><i class="far fa-hand-point-left fa-fw"></i></a>
-        </p>
-    </div>
-    <script type="text/javascript">
-        (function() {
-            var emojiArray = ['\\(o_o)/', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)','(=\'X\'=)', '(>_<)', '(;-;)'];
-            document.getElementById('error-emoji').appendChild(document.createTextNode(emojiArray[Math.floor(Math.random() * emojiArray.length)]));
+    <h1 id="error-emoji"></h1>
+    <p class="error-text">没有找到对应的链接或页面，它可能已被移除或从未存在。</p>
+    <p class="error-text" id="missing-link-path"></p>
+    <p class="error-text">
+        <a href="/">返回首页</a>&nbsp;·&nbsp;
+        <a href="javascript:void(0);" title="返回上一页" onclick="window.history.back();">返回上一页</a>
+    </p>
+</div>
+<script type="text/javascript">
+    (function () {
+        var emojis = ['\\(o_o)/', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)', '(=\'X\'=)', '(>_<)', '(;-;)'];
+        var emoji = document.getElementById('error-emoji');
+        if (emoji) {
+            emoji.appendChild(document.createTextNode(emojis[Math.floor(Math.random() * emojis.length)]));
+        }
+        var from = new URLSearchParams(window.location.search).get('from') || '';
+        var path = document.getElementById('missing-link-path');
+        if (from && path) {
+            path.textContent = '你访问的是：' + from;
+        }
+    })();
+</script>
+<script type="text/javascript">
+        (function () {
+            var from = window.location.pathname + window.location.search;
+            window.location.replace('/link-not-found/?from=' + encodeURIComponent(from));
         })();
     </script></div>
             </main><footer class="footer">

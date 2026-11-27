@@ -1209,6 +1209,22 @@ $(function(){
 // 否则点击「回到顶部」会被当成一次导航：URL 变成 /#top、容器被替换，
 // 标签筛选组件随之重建导致点击失效。页内滚动交给主题自带的 SmoothScroll。
 $(document).pjax('a[target!=_blank]:not([href^="#"])', '.container', {fragment: '.container',timeout: 8000});
+// 404 时 pjax 默认整页回退；这里拦下来，改用 pjax 打开统一提示页，保留无刷新体验。
+$(document).on('pjax:error', function(event, xhr, textStatus, errorThrown, options) {
+    if (!xhr || xhr.status !== 404 || textStatus === 'abort') { return; }
+    event.preventDefault();
+    var target = (options && (options.requestUrl || options.url)) || window.location.href;
+    var url;
+    try { url = new URL(target, window.location.href); } catch (e) { return; }
+    if (url.pathname === '/link-not-found/') { return; }
+    $.pjax({
+        url: '/link-not-found/?from=' + encodeURIComponent(url.pathname + url.search),
+        container: '.container',
+        fragment: '.container',
+        replace: true,
+        timeout: 8000
+    });
+});
 // 不监听 ready：首次加载已由上面的 $(function) 调用 init()，再监听会重复初始化。
 $(document).on('pjax:end', function() {const theme = new Theme(); theme.init2();})
 $(document).on('pjax:click', function() {if (currentTheme && currentTheme.closeSearch) {currentTheme.closeSearch();} window.config.data = {}; window.config.media={};})
