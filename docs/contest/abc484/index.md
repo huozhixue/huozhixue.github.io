@@ -1,7 +1,7 @@
 # AtCoder Beginner Contest 484
 
 
-> <u>** [AtCoder Beginner Contest 484](https://atcoder.jp/contests/abc484)**</u>
+> <u>**[AtCoder Beginner Contest 484](https://atcoder.jp/contests/abc484)**</u>
 
 
 ## D - Move One Card Left

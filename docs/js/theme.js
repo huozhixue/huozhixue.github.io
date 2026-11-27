@@ -965,6 +965,24 @@ class Theme {
                     $more.textContent = $extra.hidden ? '…' : '收起';
                 }, false);
             });
+            // 详情页的标签链接指向 /anime/?tag=xxx 这类筛选视图，
+            // 进入页面后按 URL 参数预选标签（pjax 换页同样会走到这里）。
+            try {
+                if (window.URLSearchParams) {
+                    const params = new URLSearchParams(window.location.search);
+                    const fromUrl = [];
+                    params.getAll('tag').forEach(value => {
+                        (value || '').split(',').forEach(tag => {
+                            if (tag && fromUrl.indexOf(tag) < 0) { fromUrl.push(tag); }
+                        });
+                    });
+                    fromUrl.forEach(tag => {
+                        const valid = !$select || !$select.options
+                            || Array.from($select.options).some($option => $option.value === tag);
+                        if (valid) { addTag(tag); }
+                    });
+                }
+            } catch (err) { /* 老浏览器不支持时忽略，不影响正常筛选 */ }
             apply();
         });
     }
